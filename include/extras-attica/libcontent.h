@@ -41,7 +41,7 @@ void k_attica__content_set_id(void* self, const char* id);
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#id)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Content*
 ///
@@ -56,7 +56,7 @@ void k_attica__content_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Content*
 ///
@@ -129,7 +129,7 @@ QDateTime* k_attica__content_updated(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#summary)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Content*
 ///
@@ -137,7 +137,7 @@ const char* k_attica__content_summary(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#description)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Content*
 ///
@@ -151,7 +151,7 @@ QUrl* k_attica__content_detailpage(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#changelog)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Content*
 ///
@@ -159,7 +159,7 @@ const char* k_attica__content_changelog(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#version)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Content*
 ///
@@ -167,7 +167,7 @@ const char* k_attica__content_version(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#depend)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Content*
 ///
@@ -201,7 +201,7 @@ libqt_list /* of Attica__HomePageEntry* */ k_attica__content_home_page_entries(v
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#previewPicture)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Content*
 ///
@@ -209,7 +209,7 @@ const char* k_attica__content_preview_picture(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#smallPreviewPicture)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Content*
 ///
@@ -217,7 +217,7 @@ const char* k_attica__content_small_preview_picture(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#license)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Content*
 ///
@@ -225,7 +225,7 @@ const char* k_attica__content_license(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#licenseName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Content*
 ///
@@ -233,7 +233,7 @@ const char* k_attica__content_license_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#author)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Content*
 ///
@@ -273,7 +273,7 @@ void k_attica__content_set_videos(void* self, libqt_list videos);
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#tags)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self Attica__Content*
 ///
@@ -296,7 +296,7 @@ void k_attica__content_add_attribute(void* self, const char* key, const char* va
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#attribute)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Content*
 /// @param key const char*
@@ -317,7 +317,7 @@ bool k_attica__content_is_valid(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#previewPicture)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Content*
 /// @param number const char*
@@ -326,7 +326,7 @@ const char* k_attica__content_preview_picture1(void* self, const char* number);
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#smallPreviewPicture)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Content*
 /// @param number const char*

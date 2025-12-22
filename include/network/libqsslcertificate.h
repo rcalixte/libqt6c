@@ -113,7 +113,7 @@ void q_sslcertificate_clear(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#version)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSslCertificate*
 ///
@@ -121,7 +121,7 @@ char* q_sslcertificate_version(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#serialNumber)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSslCertificate*
 ///
@@ -129,7 +129,7 @@ char* q_sslcertificate_serial_number(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#digest)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSslCertificate*
 ///
@@ -137,7 +137,7 @@ char* q_sslcertificate_digest(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#issuerInfo)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSslCertificate*
 /// @param info enum QSslCertificate__SubjectInfo
@@ -146,7 +146,7 @@ const char** q_sslcertificate_issuer_info(void* self, int32_t info);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#issuerInfo)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSslCertificate*
 /// @param attribute const char*
@@ -155,7 +155,7 @@ const char** q_sslcertificate_issuer_info2(void* self, const char* attribute);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#subjectInfo)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSslCertificate*
 /// @param info enum QSslCertificate__SubjectInfo
@@ -164,7 +164,7 @@ const char** q_sslcertificate_subject_info(void* self, int32_t info);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#subjectInfo)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSslCertificate*
 /// @param attribute const char*
@@ -173,7 +173,7 @@ const char** q_sslcertificate_subject_info2(void* self, const char* attribute);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#issuerDisplayName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSslCertificate*
 ///
@@ -181,7 +181,7 @@ const char* q_sslcertificate_issuer_display_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#subjectDisplayName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSslCertificate*
 ///
@@ -189,7 +189,7 @@ const char* q_sslcertificate_subject_display_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#subjectInfoAttributes)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSslCertificate*
 ///
@@ -197,7 +197,7 @@ const char** q_sslcertificate_subject_info_attributes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#issuerInfoAttributes)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSslCertificate*
 ///
@@ -229,7 +229,7 @@ libqt_list /* of QSslCertificateExtension* */ q_sslcertificate_extensions(void* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#toPem)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSslCertificate*
 ///
@@ -237,7 +237,7 @@ char* q_sslcertificate_to_pem(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#toDer)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSslCertificate*
 ///
@@ -245,7 +245,7 @@ char* q_sslcertificate_to_der(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#toText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSslCertificate*
 ///
@@ -291,7 +291,7 @@ void* q_sslcertificate_handle(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#digest)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSslCertificate*
 /// @param algorithm enum QCryptographicHash__Algorithm

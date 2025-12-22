@@ -15,7 +15,7 @@
 
 /// [Upstream resources](https://api.kde.org/ktimezone.html#fromLocation)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 float
 /// @param param2 float

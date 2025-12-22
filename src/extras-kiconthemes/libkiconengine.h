@@ -181,7 +181,7 @@ QPixmap* k_iconengine_qbase_scaled_pixmap(void* self, void* size, int32_t mode, 
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#iconName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KIconEngine*
 ///
@@ -256,7 +256,7 @@ bool k_iconengine_qbase_is_null(void* self);
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#key)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KIconEngine*
 ///

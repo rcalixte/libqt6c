@@ -41,7 +41,7 @@ void k_attica__buildservicejoboutput_set_output(void* self, const char* output);
 
 /// [Upstream resources](https://api.kde.org/attica-buildservicejoboutput.html#output)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__BuildServiceJobOutput*
 ///

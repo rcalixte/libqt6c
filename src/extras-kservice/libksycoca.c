@@ -115,18 +115,6 @@ void k_sycoca_database_changed(void* self) {
     KSycoca_DatabaseChanged((KSycoca*)self);
 }
 
-QDataStream** k_sycoca_stream(void* self) {
-    return KSycoca_Stream((KSycoca*)self);
-}
-
-void k_sycoca_on_stream(void* self, QDataStream** (*callback)()) {
-    KSycoca_OnStream((KSycoca*)self, (intptr_t)callback);
-}
-
-QDataStream** k_sycoca_qbase_stream(void* self) {
-    return KSycoca_QBaseStream((KSycoca*)self);
-}
-
 void k_sycoca_connect_notify(void* self, void* signal) {
     KSycoca_ConnectNotify((KSycoca*)self, (QMetaMethod*)signal);
 }

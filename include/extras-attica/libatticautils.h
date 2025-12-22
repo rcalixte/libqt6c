@@ -49,7 +49,7 @@ QDateTime* k_attica__utils_parse_qt_date_time_iso8601(const char* str);
 
 /// [Upstream resources](https://api.kde.org/attica-utils.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param operation enum QNetworkAccessManager__Operation
 ///

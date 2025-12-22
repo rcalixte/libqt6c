@@ -15,7 +15,7 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetinterface.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerCustomWidgetInterface*
 ///
@@ -23,7 +23,7 @@ const char* q_designercustomwidgetinterface_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetinterface.html#group)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerCustomWidgetInterface*
 ///
@@ -31,7 +31,7 @@ const char* q_designercustomwidgetinterface_group(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetinterface.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerCustomWidgetInterface*
 ///
@@ -39,7 +39,7 @@ const char* q_designercustomwidgetinterface_tool_tip(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetinterface.html#whatsThis)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerCustomWidgetInterface*
 ///
@@ -47,7 +47,7 @@ const char* q_designercustomwidgetinterface_whats_this(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetinterface.html#includeFile)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerCustomWidgetInterface*
 ///
@@ -87,7 +87,7 @@ void q_designercustomwidgetinterface_initialize(void* self, void* core);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetinterface.html#domXml)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerCustomWidgetInterface*
 ///
@@ -95,7 +95,7 @@ const char* q_designercustomwidgetinterface_dom_xml(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetinterface.html#codeTemplate)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerCustomWidgetInterface*
 ///

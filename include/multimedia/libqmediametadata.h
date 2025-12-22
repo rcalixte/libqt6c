@@ -76,7 +76,7 @@ bool q_mediametadata_is_empty(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html#stringValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QMediaMetaData*
 /// @param k enum QMediaMetaData__Key
@@ -85,7 +85,7 @@ const char* q_mediametadata_string_value(void* self, int32_t k);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html#metaDataKeyToString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param k enum QMediaMetaData__Key
 ///

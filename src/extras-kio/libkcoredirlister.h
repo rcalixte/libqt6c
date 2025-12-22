@@ -61,7 +61,7 @@ int32_t k_coredirlister_qbase_metacall(void* self, int32_t param1, int param2, v
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -219,7 +219,7 @@ void k_coredirlister_set_name_filter(void* self, const char* filter);
 
 /// [Upstream resources](https://api.kde.org/kcoredirlister.html#nameFilter)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KCoreDirLister*
 ///
@@ -247,7 +247,7 @@ void k_coredirlister_clear_mime_filter(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoredirlister.html#mimeFilters)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KCoreDirLister*
 ///
@@ -563,7 +563,7 @@ void k_coredirlister_qbase_job_started(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -572,7 +572,7 @@ const char* k_coredirlister_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -607,7 +607,7 @@ KFileItemList* k_coredirlister_items_for_dir2(void* self, void* dirUrl, int32_t 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KCoreDirLister*
 ///
@@ -822,7 +822,7 @@ QVariant* k_coredirlister_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KCoreDirLister*
 ///

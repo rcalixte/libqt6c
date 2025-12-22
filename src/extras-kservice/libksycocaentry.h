@@ -34,7 +34,7 @@ int32_t k_sycocaentry_sycoca_type(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KSycocaEntry*
 ///
@@ -42,7 +42,7 @@ const char* k_sycocaentry_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#entryPath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KSycocaEntry*
 ///
@@ -50,7 +50,7 @@ const char* k_sycocaentry_entry_path(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#storageId)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KSycocaEntry*
 ///

@@ -33,7 +33,7 @@ int32_t q_clipboard_metacall(void* self, int32_t param1, int param2, void* param
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -77,7 +77,7 @@ bool q_clipboard_owns_find_buffer(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qclipboard.html#text)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QClipboard*
 ///
@@ -85,7 +85,7 @@ const char* q_clipboard_text(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qclipboard.html#text)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QClipboard*
 /// @param subtype const char*
@@ -193,7 +193,7 @@ void q_clipboard_on_data_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -202,7 +202,7 @@ const char* q_clipboard_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -219,7 +219,7 @@ void q_clipboard_clear1(void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qclipboard.html#text)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QClipboard*
 /// @param mode enum QClipboard__Mode
@@ -228,7 +228,7 @@ const char* q_clipboard_text1(void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qclipboard.html#text)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QClipboard*
 /// @param subtype const char*
@@ -312,7 +312,7 @@ bool q_clipboard_event_filter(void* self, void* watched, void* event);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QClipboard*
 ///
@@ -527,7 +527,7 @@ QVariant* q_clipboard_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QClipboard*
 ///

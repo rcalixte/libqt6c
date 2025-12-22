@@ -64,7 +64,7 @@ int32_t q_nmeapositioninfosource_qbase_metacall(void* self, int32_t param1, int 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -389,7 +389,7 @@ void q_nmeapositioninfosource_qbase_set_error(void* self, int32_t positionError)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -398,7 +398,7 @@ const char* q_nmeapositioninfosource_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -428,7 +428,7 @@ int64_t q_nmeapositioninfosource_preferred_positioning_methods(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#sourceName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QNmeaPositionInfoSource*
 ///
@@ -474,7 +474,7 @@ QGeoPositionInfoSource* q_nmeapositioninfosource_create_source2(const char* sour
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#availableSources)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 const char** q_nmeapositioninfosource_available_sources();
 
@@ -535,7 +535,7 @@ void q_nmeapositioninfosource_on_supported_positioning_methods_changed(void* sel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QNmeaPositionInfoSource*
 ///
@@ -750,7 +750,7 @@ QVariant* q_nmeapositioninfosource_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QNmeaPositionInfoSource*
 ///

@@ -85,7 +85,7 @@ void k_zipfileentry_set_c_r_c32(void* self, uint64_t crc32);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#path)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KZipFileEntry*
 ///
@@ -93,7 +93,7 @@ const char* k_zipfileentry_path(void* self);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#data)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KZipFileEntry*
 ///
@@ -185,7 +185,7 @@ QDateTime* k_zipfileentry_date(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KZipFileEntry*
 ///
@@ -203,7 +203,7 @@ mode_t k_zipfileentry_permissions(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#user)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KZipFileEntry*
 ///
@@ -213,7 +213,7 @@ const char* k_zipfileentry_user(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#group)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KZipFileEntry*
 ///
@@ -223,7 +223,7 @@ const char* k_zipfileentry_group(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#symLinkTarget)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KZipFileEntry*
 ///

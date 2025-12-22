@@ -33,7 +33,7 @@ int32_t q_webengineclienthints_metacall(void* self, int32_t param1, int param2, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -41,7 +41,7 @@ const char* q_webengineclienthints_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineclienthints.html#arch)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QWebEngineClientHints*
 ///
@@ -49,7 +49,7 @@ const char* q_webengineclienthints_arch(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineclienthints.html#platform)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QWebEngineClientHints*
 ///
@@ -57,7 +57,7 @@ const char* q_webengineclienthints_platform(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineclienthints.html#model)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QWebEngineClientHints*
 ///
@@ -71,7 +71,7 @@ bool q_webengineclienthints_is_mobile(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineclienthints.html#fullVersion)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QWebEngineClientHints*
 ///
@@ -79,7 +79,7 @@ const char* q_webengineclienthints_full_version(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineclienthints.html#platformVersion)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QWebEngineClientHints*
 ///
@@ -87,7 +87,7 @@ const char* q_webengineclienthints_platform_version(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineclienthints.html#bitness)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QWebEngineClientHints*
 ///
@@ -189,7 +189,7 @@ void q_webengineclienthints_reset_all(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -198,7 +198,7 @@ const char* q_webengineclienthints_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -229,7 +229,7 @@ bool q_webengineclienthints_event_filter(void* self, void* watched, void* event)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QWebEngineClientHints*
 ///
@@ -444,7 +444,7 @@ QVariant* q_webengineclienthints_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QWebEngineClientHints*
 ///

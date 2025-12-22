@@ -55,7 +55,7 @@ int32_t q_geoareamonitorsource_qbase_metacall(void* self, int32_t param1, int pa
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -76,7 +76,7 @@ QGeoAreaMonitorSource* q_geoareamonitorsource_create_source(const char* sourceNa
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorsource.html#availableSources)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 const char** q_geoareamonitorsource_available_sources();
 
@@ -130,7 +130,7 @@ QGeoPositionInfoSource* q_geoareamonitorsource_qbase_position_info_source(void* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorsource.html#sourceName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGeoAreaMonitorSource*
 ///
@@ -427,7 +427,7 @@ void q_geoareamonitorsource_on_error_occurred(void* self, void (*callback)(void*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -436,7 +436,7 @@ const char* q_geoareamonitorsource_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -448,7 +448,7 @@ const char* q_geoareamonitorsource_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGeoAreaMonitorSource*
 ///
@@ -663,7 +663,7 @@ QVariant* q_geoareamonitorsource_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QGeoAreaMonitorSource*
 ///

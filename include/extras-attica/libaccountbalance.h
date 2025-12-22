@@ -41,7 +41,7 @@ void k_attica__accountbalance_set_currency(void* self, const char* currency);
 
 /// [Upstream resources](https://api.kde.org/attica-accountbalance.html#currency)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__AccountBalance*
 ///
@@ -56,7 +56,7 @@ void k_attica__accountbalance_set_balance(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/attica-accountbalance.html#balance)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__AccountBalance*
 ///

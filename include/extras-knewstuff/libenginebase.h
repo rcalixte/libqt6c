@@ -61,7 +61,7 @@ int32_t k_nscore__enginebase_qbase_metacall(void* self, int32_t param1, int para
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -69,7 +69,7 @@ const char* k_nscore__enginebase_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#availableConfigFiles)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 const char** k_nscore__enginebase_available_config_files();
 
@@ -100,7 +100,7 @@ bool k_nscore__enginebase_qbase_init(void* self, const char* configfile);
 
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSCore__EngineBase*
 ///
@@ -108,7 +108,7 @@ const char* k_nscore__enginebase_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#useLabel)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSCore__EngineBase*
 ///
@@ -134,7 +134,7 @@ void k_nscore__enginebase_upload_enabled_changed(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#categories)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KNSCore__EngineBase*
 ///
@@ -179,7 +179,7 @@ void k_nscore__enginebase_set_tag_filter(void* self, const char* filter[static 1
 
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#tagFilter)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KNSCore__EngineBase*
 ///
@@ -201,7 +201,7 @@ void k_nscore__enginebase_set_download_tag_filter(void* self, const char* filter
 
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#downloadTagFilter)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KNSCore__EngineBase*
 ///
@@ -245,7 +245,7 @@ void k_nscore__enginebase_become_fan(void* self, void* entry);
 
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#providerIDs)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KNSCore__EngineBase*
 ///
@@ -379,7 +379,7 @@ void k_nscore__enginebase_qbase_update_status(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -388,7 +388,7 @@ const char* k_nscore__enginebase_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -400,7 +400,7 @@ const char* k_nscore__enginebase_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSCore__EngineBase*
 ///
@@ -615,7 +615,7 @@ QVariant* k_nscore__enginebase_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KNSCore__EngineBase*
 ///

@@ -51,7 +51,7 @@ bool k_filefilter_operator_equal(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/kfilefilter.html#label)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KFileFilter*
 ///
@@ -59,7 +59,7 @@ const char* k_filefilter_label(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilefilter.html#filePatterns)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KFileFilter*
 ///
@@ -67,7 +67,7 @@ const char** k_filefilter_file_patterns(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilefilter.html#mimePatterns)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KFileFilter*
 ///
@@ -75,7 +75,7 @@ const char** k_filefilter_mime_patterns(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilefilter.html#toFilterString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KFileFilter*
 ///

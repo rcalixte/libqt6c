@@ -21,7 +21,7 @@ const QMetaObject* k_nscore__errorcode_get_enum_meta_object(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/knscore-errorcode.html#qt_getEnumName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 enum KNSCore__ErrorCode__ErrorCode
 ///

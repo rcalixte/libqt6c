@@ -57,7 +57,7 @@ int32_t k_io__namefinderjob_qbase_metacall(void* self, int32_t param1, int param
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -100,7 +100,7 @@ QUrl* k_io__namefinderjob_base_url(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-namefinderjob.html#finalName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KIO__NameFinderJob*
 ///
@@ -108,7 +108,7 @@ const char* k_io__namefinderjob_final_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -117,7 +117,7 @@ const char* k_io__namefinderjob_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -204,7 +204,7 @@ int32_t k_io__namefinderjob_error(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#errorText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KIO__NameFinderJob*
 ///
@@ -402,7 +402,7 @@ void k_io__namefinderjob_set_finished_notification_hidden1(void* self, bool hide
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KIO__NameFinderJob*
 ///
@@ -617,7 +617,7 @@ QVariant* k_io__namefinderjob_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KIO__NameFinderJob*
 ///
@@ -974,7 +974,7 @@ void k_io__namefinderjob_on_do_resume(void* self, bool (*callback)());
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#errorString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -986,7 +986,7 @@ const char* k_io__namefinderjob_error_string(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#errorString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

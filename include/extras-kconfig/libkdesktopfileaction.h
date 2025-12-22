@@ -46,7 +46,7 @@ void k_desktopfileaction_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfileaction.html#actionsKey)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KDesktopFileAction*
 ///
@@ -54,7 +54,7 @@ const char* k_desktopfileaction_actions_key(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfileaction.html#desktopFilePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KDesktopFileAction*
 ///
@@ -62,7 +62,7 @@ const char* k_desktopfileaction_desktop_file_path(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfileaction.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KDesktopFileAction*
 ///
@@ -70,7 +70,7 @@ const char* k_desktopfileaction_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfileaction.html#icon)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KDesktopFileAction*
 ///
@@ -78,7 +78,7 @@ const char* k_desktopfileaction_icon(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdesktopfileaction.html#exec)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KDesktopFileAction*
 ///

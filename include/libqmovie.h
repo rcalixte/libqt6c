@@ -115,7 +115,7 @@ int32_t q_movie_qbase_metacall(void* self, int32_t param1, int param2, void* par
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -123,7 +123,7 @@ const char* q_movie_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmovie.html#supportedFormats)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 const char** q_movie_supported_formats();
 
@@ -149,7 +149,7 @@ void q_movie_set_file_name(void* self, const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmovie.html#fileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QMovie*
 ///
@@ -164,7 +164,7 @@ void q_movie_set_format(void* self, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmovie.html#format)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QMovie*
 ///
@@ -225,7 +225,7 @@ int32_t q_movie_last_error(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmovie.html#lastErrorString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QMovie*
 ///
@@ -426,7 +426,7 @@ void q_movie_set_speed(void* self, int percentSpeed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -435,7 +435,7 @@ const char* q_movie_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -447,7 +447,7 @@ const char* q_movie_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QMovie*
 ///
@@ -662,7 +662,7 @@ QVariant* q_movie_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QMovie*
 ///

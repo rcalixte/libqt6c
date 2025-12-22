@@ -135,7 +135,7 @@ QGeoCoordinate* q_geocoordinate_at_distance_and_azimuth(void* self, double dista
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocoordinate.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGeoCoordinate*
 ///
@@ -152,7 +152,7 @@ QGeoCoordinate* q_geocoordinate_at_distance_and_azimuth3(void* self, double dist
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocoordinate.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGeoCoordinate*
 /// @param format enum QGeoCoordinate__CoordinateFormat

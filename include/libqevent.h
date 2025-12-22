@@ -4730,7 +4730,7 @@ QKeyCombination* q_keyevent_key_combination(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeyevent.html#text)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QKeyEvent*
 ///
@@ -6905,7 +6905,7 @@ libqt_list /* of QInputMethodEvent__Attribute* */ q_inputmethodevent_attributes(
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputmethodevent.html#preeditString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QInputMethodEvent*
 ///
@@ -6913,7 +6913,7 @@ const char* q_inputmethodevent_preedit_string(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputmethodevent.html#commitString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QInputMethodEvent*
 ///
@@ -8506,7 +8506,7 @@ QStatusTipEvent* q_statustipevent_qbase_clone(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatustipevent.html#tip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QStatusTipEvent*
 ///
@@ -8666,7 +8666,7 @@ QWhatsThisClickedEvent* q_whatsthisclickedevent_qbase_clone(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwhatsthisclickedevent.html#href)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QWhatsThisClickedEvent*
 ///
@@ -9009,7 +9009,7 @@ QFileOpenEvent* q_fileopenevent_qbase_clone(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileopenevent.html#file)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileOpenEvent*
 ///

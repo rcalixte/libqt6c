@@ -138,7 +138,7 @@ QVersionNumber* q_versionnumber_common_prefix(void* v1, void* v2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QVersionNumber*
 ///

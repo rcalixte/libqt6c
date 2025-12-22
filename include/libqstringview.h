@@ -33,7 +33,7 @@ void q_stringview_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QStringView*
 ///
@@ -66,7 +66,7 @@ QChar* q_stringview_operator_subscript(void* self, int64_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#toLatin1)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QStringView*
 ///
@@ -74,7 +74,7 @@ char* q_stringview_to_latin1(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#toUtf8)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QStringView*
 ///
@@ -82,7 +82,7 @@ char* q_stringview_to_utf8(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#toLocal8Bit)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QStringView*
 ///

@@ -33,7 +33,7 @@ bool k_iconeffect_has_effect(void* self, int group, int state);
 
 /// [Upstream resources](https://api.kde.org/kiconeffect.html#fingerprint)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KIconEffect*
 /// @param group int

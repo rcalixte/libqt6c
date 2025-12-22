@@ -70,7 +70,7 @@ int32_t q_designerwidgetboxinterface_qbase_metacall(void* self, int32_t param1, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -341,7 +341,7 @@ void q_designerwidgetboxinterface_qbase_set_file_name(void* self, const char* fi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#fileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerWidgetBoxInterface*
 ///
@@ -412,7 +412,7 @@ bool q_designerwidgetboxinterface_qbase_save(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -421,7 +421,7 @@ const char* q_designerwidgetboxinterface_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1290,7 +1290,7 @@ void q_designerwidgetboxinterface_set_style_sheet(void* self, const char* styleS
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerWidgetBoxInterface*
 ///
@@ -1300,7 +1300,7 @@ const char* q_designerwidgetboxinterface_style_sheet(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerWidgetBoxInterface*
 ///
@@ -1336,7 +1336,7 @@ void q_designerwidgetboxinterface_set_window_icon_text(void* self, const char* w
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerWidgetBoxInterface*
 ///
@@ -1355,7 +1355,7 @@ void q_designerwidgetboxinterface_set_window_role(void* self, const char* window
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerWidgetBoxInterface*
 ///
@@ -1374,7 +1374,7 @@ void q_designerwidgetboxinterface_set_window_file_path(void* self, const char* f
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerWidgetBoxInterface*
 ///
@@ -1418,7 +1418,7 @@ void q_designerwidgetboxinterface_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerWidgetBoxInterface*
 ///
@@ -1454,7 +1454,7 @@ void q_designerwidgetboxinterface_set_status_tip(void* self, const char* statusT
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerWidgetBoxInterface*
 ///
@@ -1473,7 +1473,7 @@ void q_designerwidgetboxinterface_set_whats_this(void* self, const char* whatsTh
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerWidgetBoxInterface*
 ///
@@ -1483,7 +1483,7 @@ const char* q_designerwidgetboxinterface_whats_this(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerWidgetBoxInterface*
 ///
@@ -1502,7 +1502,7 @@ void q_designerwidgetboxinterface_set_accessible_name(void* self, const char* na
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerWidgetBoxInterface*
 ///
@@ -2041,7 +2041,7 @@ void q_designerwidgetboxinterface_set_geometry2(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDesignerWidgetBoxInterface*
 ///
@@ -2847,7 +2847,7 @@ QWidget* q_designerwidgetboxinterface_create_window_container3(void* window, voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerWidgetBoxInterface*
 ///
@@ -3053,7 +3053,7 @@ QVariant* q_designerwidgetboxinterface_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDesignerWidgetBoxInterface*
 ///
@@ -5225,7 +5225,7 @@ void q_designerwidgetboxinterface__widget_operator_assign(void* self, void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface-widget.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerWidgetBoxInterface__Widget*
 ///
@@ -5240,7 +5240,7 @@ void q_designerwidgetboxinterface__widget_set_name(void* self, const char* aname
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface-widget.html#domXml)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerWidgetBoxInterface__Widget*
 ///
@@ -5255,7 +5255,7 @@ void q_designerwidgetboxinterface__widget_set_dom_xml(void* self, const char* xm
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface-widget.html#iconName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerWidgetBoxInterface__Widget*
 ///
@@ -5328,7 +5328,7 @@ QDesignerWidgetBoxInterface__Category* q_designerwidgetboxinterface__category_ne
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface-category.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerWidgetBoxInterface__Category*
 ///

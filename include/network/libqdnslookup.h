@@ -41,7 +41,7 @@ void q_dnsdomainnamerecord_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsdomainnamerecord.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDnsDomainNameRecord*
 ///
@@ -55,7 +55,7 @@ uint32_t q_dnsdomainnamerecord_time_to_live(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsdomainnamerecord.html#value)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDnsDomainNameRecord*
 ///
@@ -99,7 +99,7 @@ void q_dnshostaddressrecord_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnshostaddressrecord.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDnsHostAddressRecord*
 ///
@@ -155,7 +155,7 @@ void q_dnsmailexchangerecord_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsmailexchangerecord.html#exchange)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDnsMailExchangeRecord*
 ///
@@ -163,7 +163,7 @@ const char* q_dnsmailexchangerecord_exchange(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsmailexchangerecord.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDnsMailExchangeRecord*
 ///
@@ -219,7 +219,7 @@ void q_dnsservicerecord_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsservicerecord.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDnsServiceRecord*
 ///
@@ -239,7 +239,7 @@ unsigned short q_dnsservicerecord_priority(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsservicerecord.html#target)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDnsServiceRecord*
 ///
@@ -295,7 +295,7 @@ void q_dnstextrecord_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnstextrecord.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDnsTextRecord*
 ///
@@ -309,7 +309,7 @@ uint32_t q_dnstextrecord_time_to_live(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnstextrecord.html#values)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDnsTextRecord*
 ///
@@ -353,7 +353,7 @@ void q_dnstlsassociationrecord_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnstlsassociationrecord.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDnsTlsAssociationRecord*
 ///
@@ -391,7 +391,7 @@ uint8_t q_dnstlsassociationrecord_match_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnstlsassociationrecord.html#value)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDnsTlsAssociationRecord*
 ///
@@ -554,7 +554,7 @@ int32_t q_dnslookup_qbase_metacall(void* self, int32_t param1, int param2, void*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -576,7 +576,7 @@ int32_t q_dnslookup_error(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#errorString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDnsLookup*
 ///
@@ -590,7 +590,7 @@ bool q_dnslookup_is_finished(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDnsLookup*
 ///
@@ -845,7 +845,7 @@ void q_dnslookup_on_nameserver_protocol_changed(void* self, void (*callback)(voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -854,7 +854,7 @@ const char* q_dnslookup_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -875,7 +875,7 @@ void q_dnslookup_set_nameserver32(void* self, uint8_t protocol, void* nameserver
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDnsLookup*
 ///
@@ -1090,7 +1090,7 @@ QVariant* q_dnslookup_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDnsLookup*
 ///

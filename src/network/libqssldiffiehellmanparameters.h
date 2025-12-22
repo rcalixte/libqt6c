@@ -77,7 +77,7 @@ int32_t q_ssldiffiehellmanparameters_error(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#errorString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSslDiffieHellmanParameters*
 ///

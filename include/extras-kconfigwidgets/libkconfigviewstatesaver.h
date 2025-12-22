@@ -61,7 +61,7 @@ int32_t k_configviewstatesaver_qbase_metacall(void* self, int32_t param1, int pa
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -83,7 +83,7 @@ void k_configviewstatesaver_restore_state(void* self, void* configGroup);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -92,7 +92,7 @@ const char* k_configviewstatesaver_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -138,7 +138,7 @@ void k_configviewstatesaver_set_selection_model(void* self, void* selectionModel
 ///
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#selectionKeys)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KConfigViewStateSaver*
 ///
@@ -148,7 +148,7 @@ const char** k_configviewstatesaver_selection_keys(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#expansionKeys)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KConfigViewStateSaver*
 ///
@@ -158,7 +158,7 @@ const char** k_configviewstatesaver_expansion_keys(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#currentIndexKey)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KConfigViewStateSaver*
 ///
@@ -213,7 +213,7 @@ void k_configviewstatesaver_restore_scroll_state(void* self, int verticalScoll, 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KConfigViewStateSaver*
 ///
@@ -428,7 +428,7 @@ QVariant* k_configviewstatesaver_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KConfigViewStateSaver*
 ///
@@ -593,7 +593,7 @@ void k_configviewstatesaver_on_index_from_config_string(void* self, QModelIndex*
 ///
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#indexToConfigString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -606,7 +606,7 @@ const char* k_configviewstatesaver_index_to_config_string(void* self, void* inde
 ///
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#indexToConfigString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

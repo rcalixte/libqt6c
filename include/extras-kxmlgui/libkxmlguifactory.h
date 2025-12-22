@@ -64,7 +64,7 @@ int32_t k_xmlguifactory_qbase_metacall(void* self, int32_t param1, int param2, v
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -72,7 +72,7 @@ const char* k_xmlguifactory_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kxmlguifactory.html#readConfigFile)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param filename const char*
 ///
@@ -240,7 +240,7 @@ void k_xmlguifactory_on_shortcuts_saved(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -249,7 +249,7 @@ const char* k_xmlguifactory_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -259,7 +259,7 @@ const char* k_xmlguifactory_tr3(const char* s, const char* c, int n);
 
 /// [Upstream resources](https://api.kde.org/kxmlguifactory.html#readConfigFile)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param filename const char*
 /// @param componentName const char*
@@ -295,7 +295,7 @@ void k_xmlguifactory_reset_container2(void* self, const char* containerName, boo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KXMLGUIFactory*
 ///
@@ -510,7 +510,7 @@ QVariant* k_xmlguifactory_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KXMLGUIFactory*
 ///

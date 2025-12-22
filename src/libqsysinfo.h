@@ -43,67 +43,67 @@ void q_sysinfo_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#buildCpuArchitecture)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_sysinfo_build_cpu_architecture();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#currentCpuArchitecture)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_sysinfo_current_cpu_architecture();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#buildAbi)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_sysinfo_build_abi();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#kernelType)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_sysinfo_kernel_type();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#kernelVersion)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_sysinfo_kernel_version();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#productType)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_sysinfo_product_type();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#productVersion)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_sysinfo_product_version();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#prettyProductName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_sysinfo_pretty_product_name();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#machineHostName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_sysinfo_machine_host_name();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#machineUniqueId)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 char* q_sysinfo_machine_unique_id();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#bootUniqueId)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 char* q_sysinfo_boot_unique_id();
 

@@ -430,7 +430,8 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 
 func (p CppParameter) returnAllocComment(returnType string) string {
 	if strings.HasPrefix(returnType, "char*") || strings.HasPrefix(returnType, "const char*") {
-		return "\n/// @warning Caller is responsible for freeing the returned memory\n///"
+		freeMethod := ifv(returnType == "const char*", "libqt_", "") + "free()"
+		return "\n/// @warning Caller is responsible for freeing the returned memory using `" + freeMethod + "`\n///"
 	}
 	return ""
 }

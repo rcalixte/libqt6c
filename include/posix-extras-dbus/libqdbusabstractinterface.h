@@ -39,7 +39,7 @@ void* q_dbusabstractinterfacebase_metacast(void* self, const char* param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -68,7 +68,7 @@ bool q_dbusabstractinterfacebase_event_filter(void* self, void* watched, void* e
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDBusAbstractInterfaceBase*
 ///
@@ -283,7 +283,7 @@ QVariant* q_dbusabstractinterfacebase_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDBusAbstractInterfaceBase*
 ///
@@ -351,7 +351,7 @@ void q_dbusabstractinterfacebase_delete_later(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -362,7 +362,7 @@ const char* q_dbusabstractinterfacebase_tr2(const char* s, const char* c);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -473,7 +473,7 @@ int32_t q_dbusabstractinterface_metacall(void* self, int32_t param1, int param2,
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -493,7 +493,7 @@ QDBusConnection* q_dbusabstractinterface_connection(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#service)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDBusAbstractInterface*
 ///
@@ -501,7 +501,7 @@ const char* q_dbusabstractinterface_service(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#path)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDBusAbstractInterface*
 ///
@@ -509,7 +509,7 @@ const char* q_dbusabstractinterface_path(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#interface)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDBusAbstractInterface*
 ///
@@ -588,7 +588,7 @@ QDBusPendingCall* q_dbusabstractinterface_async_call_with_argument_list(void* se
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -597,7 +597,7 @@ const char* q_dbusabstractinterface_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -628,7 +628,7 @@ bool q_dbusabstractinterface_event_filter(void* self, void* watched, void* event
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDBusAbstractInterface*
 ///
@@ -843,7 +843,7 @@ QVariant* q_dbusabstractinterface_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDBusAbstractInterface*
 ///

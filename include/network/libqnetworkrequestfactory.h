@@ -122,7 +122,7 @@ void q_networkrequestfactory_clear_common_headers(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#bearerToken)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QNetworkRequestFactory*
 ///
@@ -143,7 +143,7 @@ void q_networkrequestfactory_clear_bearer_token(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#userName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QNetworkRequestFactory*
 ///
@@ -164,7 +164,7 @@ void q_networkrequestfactory_clear_user_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#password)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QNetworkRequestFactory*
 ///

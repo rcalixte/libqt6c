@@ -70,7 +70,7 @@ int32_t k_parts__part_qbase_metacall(void* self, int32_t param1, int param2, voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -355,7 +355,7 @@ void k_parts__part_qbase_slot_widget_destroyed(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -364,7 +364,7 @@ const char* k_parts__part_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -376,7 +376,7 @@ const char* k_parts__part_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KParts__Part*
 ///
@@ -591,7 +591,7 @@ QVariant* k_parts__part_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KParts__Part*
 ///
@@ -859,7 +859,7 @@ void k_parts__part_unplug_action_list(void* self, const char* name);
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#findMostRecentXMLFile)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param files const char**
 /// @param doc const char*
@@ -935,7 +935,7 @@ void k_parts__part_replace_x_m_l_file(void* self, const char* xmlfile, const cha
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#findVersionNumber)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param xml const char*
 ///
@@ -1220,7 +1220,7 @@ void k_parts__part_on_action_collection(void* self, KActionCollection* (*callbac
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#componentName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1232,7 +1232,7 @@ const char* k_parts__part_component_name(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#componentName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1286,7 +1286,7 @@ void k_parts__part_on_dom_document(void* self, QDomDocument* (*callback)());
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlFile)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1298,7 +1298,7 @@ const char* k_parts__part_xml_file(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlFile)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1321,7 +1321,7 @@ void k_parts__part_on_xml_file(void* self, const char* (*callback)());
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#localXMLFile)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1333,7 +1333,7 @@ const char* k_parts__part_local_x_m_l_file(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#localXMLFile)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1694,7 +1694,7 @@ void k_parts__part_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1706,7 +1706,7 @@ const char* k_parts__part_standards_xml_file_location(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

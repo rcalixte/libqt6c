@@ -61,7 +61,7 @@ int32_t k_sonnet__dictionarycombobox_qbase_metacall(void* self, int32_t param1, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -75,7 +75,7 @@ void k_sonnet__dictionarycombobox_reload_combo(void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-dictionarycombobox.html#currentDictionaryName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Sonnet__DictionaryComboBox*
 ///
@@ -83,7 +83,7 @@ const char* k_sonnet__dictionarycombobox_current_dictionary_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-dictionarycombobox.html#currentDictionary)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Sonnet__DictionaryComboBox*
 ///
@@ -147,7 +147,7 @@ void k_sonnet__dictionarycombobox_on_dictionary_name_changed(void* self, void (*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -156,7 +156,7 @@ const char* k_sonnet__dictionarycombobox_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -343,7 +343,7 @@ void k_sonnet__dictionarycombobox_set_placeholder_text(void* self, const char* p
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#placeholderText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Sonnet__DictionaryComboBox*
 ///
@@ -488,7 +488,7 @@ int32_t k_sonnet__dictionarycombobox_current_index(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#currentText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Sonnet__DictionaryComboBox*
 ///
@@ -506,7 +506,7 @@ QVariant* k_sonnet__dictionarycombobox_current_data(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#itemText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Sonnet__DictionaryComboBox*
 /// @param index int
@@ -1800,7 +1800,7 @@ void k_sonnet__dictionarycombobox_set_style_sheet(void* self, const char* styleS
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Sonnet__DictionaryComboBox*
 ///
@@ -1810,7 +1810,7 @@ const char* k_sonnet__dictionarycombobox_style_sheet(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Sonnet__DictionaryComboBox*
 ///
@@ -1846,7 +1846,7 @@ void k_sonnet__dictionarycombobox_set_window_icon_text(void* self, const char* w
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Sonnet__DictionaryComboBox*
 ///
@@ -1865,7 +1865,7 @@ void k_sonnet__dictionarycombobox_set_window_role(void* self, const char* window
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Sonnet__DictionaryComboBox*
 ///
@@ -1884,7 +1884,7 @@ void k_sonnet__dictionarycombobox_set_window_file_path(void* self, const char* f
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Sonnet__DictionaryComboBox*
 ///
@@ -1928,7 +1928,7 @@ void k_sonnet__dictionarycombobox_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Sonnet__DictionaryComboBox*
 ///
@@ -1964,7 +1964,7 @@ void k_sonnet__dictionarycombobox_set_status_tip(void* self, const char* statusT
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Sonnet__DictionaryComboBox*
 ///
@@ -1983,7 +1983,7 @@ void k_sonnet__dictionarycombobox_set_whats_this(void* self, const char* whatsTh
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Sonnet__DictionaryComboBox*
 ///
@@ -1993,7 +1993,7 @@ const char* k_sonnet__dictionarycombobox_whats_this(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Sonnet__DictionaryComboBox*
 ///
@@ -2012,7 +2012,7 @@ void k_sonnet__dictionarycombobox_set_accessible_name(void* self, const char* na
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Sonnet__DictionaryComboBox*
 ///
@@ -2551,7 +2551,7 @@ void k_sonnet__dictionarycombobox_set_geometry2(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self Sonnet__DictionaryComboBox*
 ///
@@ -3357,7 +3357,7 @@ QWidget* k_sonnet__dictionarycombobox_create_window_container3(void* window, voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Sonnet__DictionaryComboBox*
 ///
@@ -3563,7 +3563,7 @@ QVariant* k_sonnet__dictionarycombobox_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self Sonnet__DictionaryComboBox*
 ///

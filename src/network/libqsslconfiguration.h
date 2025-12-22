@@ -246,7 +246,7 @@ bool q_sslconfiguration_test_ssl_option(void* self, int32_t option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#sessionTicket)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSslConfiguration*
 ///
@@ -290,7 +290,7 @@ libqt_list /* of QSslEllipticCurve* */ q_sslconfiguration_supported_elliptic_cur
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#preSharedKeyIdentityHint)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSslConfiguration*
 ///
@@ -411,7 +411,7 @@ void q_sslconfiguration_set_allowed_next_protocols(void* self, const char* proto
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#allowedNextProtocols)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSslConfiguration*
 ///
@@ -419,7 +419,7 @@ const char** q_sslconfiguration_allowed_next_protocols(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#nextNegotiatedProtocol)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSslConfiguration*
 ///

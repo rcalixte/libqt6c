@@ -61,7 +61,7 @@ int32_t k_process_qbase_metacall(void* self, int32_t param1, int param2, void* p
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -153,7 +153,7 @@ void k_process_set_shell_command(void* self, const char* cmd);
 
 /// [Upstream resources](https://api.kde.org/kprocess.html#program)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KProcess*
 ///
@@ -203,7 +203,7 @@ int32_t k_process_start_detached3(const char* argv[static 1]);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -212,7 +212,7 @@ const char* k_process_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -294,7 +294,7 @@ void k_process_start_command(void* self, const char* command);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#arguments)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KProcess*
 ///
@@ -458,7 +458,7 @@ void k_process_set_unix_process_parameters2(void* self, uint32_t flagsOnly);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#workingDirectory)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KProcess*
 ///
@@ -486,7 +486,7 @@ void k_process_set_environment(void* self, const char* environment[static 1]);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#environment)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KProcess*
 ///
@@ -557,7 +557,7 @@ bool k_process_wait_for_finished(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#readAllStandardOutput)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KProcess*
 ///
@@ -567,7 +567,7 @@ char* k_process_read_all_standard_output(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#readAllStandardError)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KProcess*
 ///
@@ -595,7 +595,7 @@ int32_t k_process_exit_status(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#systemEnvironment)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 const char** k_process_system_environment();
 
@@ -603,7 +603,7 @@ const char** k_process_system_environment();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#nullDevice)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* k_process_null_device();
 
@@ -901,7 +901,7 @@ long long k_process_read(void* self, char* data, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#read)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KProcess*
 /// @param maxlen long long
@@ -912,7 +912,7 @@ char* k_process_read2(void* self, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readAll)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KProcess*
 ///
@@ -932,7 +932,7 @@ long long k_process_read_line(void* self, char* data, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KProcess*
 ///
@@ -1012,7 +1012,7 @@ long long k_process_peek(void* self, char* data, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#peek)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KProcess*
 /// @param maxlen long long
@@ -1059,7 +1059,7 @@ bool k_process_get_char(void* self, char* c);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#errorString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KProcess*
 ///
@@ -1175,7 +1175,7 @@ void k_process_on_read_channel_finished(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KProcess*
 /// @param maxlen long long
@@ -1186,7 +1186,7 @@ char* k_process_read_line1(void* self, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KProcess*
 ///
@@ -1401,7 +1401,7 @@ QVariant* k_process_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KProcess*
 ///

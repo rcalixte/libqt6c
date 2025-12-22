@@ -57,7 +57,7 @@ void q_dbusobjectpath_set_path(void* self, const char* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusobjectpath.html#path)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDBusObjectPath*
 ///
@@ -123,7 +123,7 @@ void q_dbussignature_set_signature(void* self, const char* signature);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbussignature.html#signature)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDBusSignature*
 ///

@@ -155,7 +155,7 @@ bool k_protocolmanager_can_delete_recursive(void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#defaultMimetype)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param url QUrl*
 ///
@@ -179,7 +179,7 @@ int32_t k_protocolmanager_output_type(void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#listing)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param url QUrl*
 ///
@@ -193,7 +193,7 @@ bool k_protocolmanager_is_source_protocol(void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#protocolForArchiveMimetype)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param mimeType const char*
 ///
@@ -205,7 +205,7 @@ void k_protocolmanager_reparse_configuration();
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#charsetFor)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param url QUrl*
 ///

@@ -115,7 +115,7 @@ void k_plotpoint_set_y(void* self, double y);
 
 /// [Upstream resources](https://api.kde.org/kplotpoint.html#label)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KPlotPoint*
 ///

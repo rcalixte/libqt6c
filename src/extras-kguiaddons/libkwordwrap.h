@@ -36,7 +36,7 @@ QRect* k_wordwrap_bounding_rect(void* self);
 
 /// [Upstream resources](https://api.kde.org/kwordwrap.html#wrappedString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KWordWrap*
 ///
@@ -44,7 +44,7 @@ const char* k_wordwrap_wrapped_string(void* self);
 
 /// [Upstream resources](https://api.kde.org/kwordwrap.html#truncatedString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KWordWrap*
 ///
@@ -98,7 +98,7 @@ KWordWrap* k_wordwrap_format_text5(void* fm, void* r, int flags, const char* str
 
 /// [Upstream resources](https://api.kde.org/kwordwrap.html#truncatedString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KWordWrap*
 /// @param dots bool

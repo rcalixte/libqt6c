@@ -61,7 +61,7 @@ int32_t q_sqldriver_qbase_metacall(void* self, int32_t param1, int param2, void*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -167,7 +167,7 @@ bool q_sqldriver_qbase_rollback_transaction(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#tables)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSqlDriver*
 /// @param tableType enum QSql__TableType
@@ -244,7 +244,7 @@ QSqlRecord* q_sqldriver_qbase_record(void* self, const char* tableName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#formatValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSqlDriver*
 /// @param field QSqlField*
@@ -273,7 +273,7 @@ const char* q_sqldriver_qbase_format_value(void* self, void* field, bool trimStr
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#escapeIdentifier)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSqlDriver*
 /// @param identifier const char*
@@ -302,7 +302,7 @@ const char* q_sqldriver_qbase_escape_identifier(void* self, const char* identifi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#sqlStatement)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSqlDriver*
 /// @param type enum QSqlDriver__StatementType
@@ -520,7 +520,7 @@ bool q_sqldriver_qbase_unsubscribe_from_notification(void* self, const char* nam
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#subscribedToNotifications)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSqlDriver*
 ///
@@ -572,7 +572,7 @@ bool q_sqldriver_qbase_is_identifier_escaped(void* self, const char* identifier,
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldriver.html#stripDelimiters)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSqlDriver*
 /// @param identifier const char*
@@ -763,7 +763,7 @@ void q_sqldriver_qbase_set_last_error(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -772,7 +772,7 @@ const char* q_sqldriver_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -784,7 +784,7 @@ const char* q_sqldriver_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSqlDriver*
 ///
@@ -999,7 +999,7 @@ QVariant* q_sqldriver_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSqlDriver*
 ///

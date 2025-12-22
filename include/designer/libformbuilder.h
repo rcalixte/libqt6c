@@ -19,7 +19,7 @@ QFormBuilder* q_formbuilder_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qformbuilder.html#pluginPaths)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFormBuilder*
 ///
@@ -180,7 +180,7 @@ void q_formbuilder_set_working_directory(void* self, void* directory);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#errorString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFormBuilder*
 ///

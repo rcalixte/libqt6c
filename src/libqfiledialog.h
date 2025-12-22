@@ -100,7 +100,7 @@ int32_t q_filedialog_qbase_metacall(void* self, int32_t param1, int param2, void
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -148,7 +148,7 @@ void q_filedialog_select_file(void* self, const char* filename);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#selectedFiles)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileDialog*
 ///
@@ -183,7 +183,7 @@ void q_filedialog_set_name_filters(void* self, const char* filters[static 1]);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#nameFilters)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileDialog*
 ///
@@ -198,7 +198,7 @@ void q_filedialog_select_name_filter(void* self, const char* filter);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#selectedMimeTypeFilter)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileDialog*
 ///
@@ -206,7 +206,7 @@ const char* q_filedialog_selected_mime_type_filter(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#selectedNameFilter)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileDialog*
 ///
@@ -221,7 +221,7 @@ void q_filedialog_set_mime_type_filters(void* self, const char* filters[static 1
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#mimeTypeFilters)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileDialog*
 ///
@@ -309,7 +309,7 @@ libqt_list /* of QUrl* */ q_filedialog_sidebar_urls(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#saveState)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileDialog*
 ///
@@ -331,7 +331,7 @@ void q_filedialog_set_default_suffix(void* self, const char* suffix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#defaultSuffix)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileDialog*
 ///
@@ -346,7 +346,7 @@ void q_filedialog_set_history(void* self, const char* paths[static 1]);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#history)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileDialog*
 ///
@@ -388,7 +388,7 @@ void q_filedialog_set_label_text(void* self, int32_t label, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#labelText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileDialog*
 /// @param label enum QFileDialog__DialogLabel
@@ -404,7 +404,7 @@ void q_filedialog_set_supported_schemes(void* self, const char* schemes[static 1
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#supportedSchemes)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileDialog*
 ///
@@ -605,7 +605,7 @@ void q_filedialog_on_filter_selected(void* self, void (*callback)(void*, const c
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getOpenFileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_filedialog_get_open_file_name();
 
@@ -615,7 +615,7 @@ QUrl* q_filedialog_get_open_file_url();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getSaveFileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_filedialog_get_save_file_name();
 
@@ -625,7 +625,7 @@ QUrl* q_filedialog_get_save_file_url();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getExistingDirectory)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_filedialog_get_existing_directory();
 
@@ -635,7 +635,7 @@ QUrl* q_filedialog_get_existing_directory_url();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getOpenFileNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 const char** q_filedialog_get_open_file_names();
 
@@ -725,7 +725,7 @@ void q_filedialog_qbase_change_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -734,7 +734,7 @@ const char* q_filedialog_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -752,7 +752,7 @@ void q_filedialog_set_option2(void* self, int32_t option, bool on);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getOpenFileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param parent QWidget*
 ///
@@ -760,7 +760,7 @@ const char* q_filedialog_get_open_file_name1(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getOpenFileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param parent QWidget*
 /// @param caption const char*
@@ -769,7 +769,7 @@ const char* q_filedialog_get_open_file_name2(void* parent, const char* caption);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getOpenFileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param parent QWidget*
 /// @param caption const char*
@@ -779,7 +779,7 @@ const char* q_filedialog_get_open_file_name3(void* parent, const char* caption, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getOpenFileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param parent QWidget*
 /// @param caption const char*
@@ -820,7 +820,7 @@ QUrl* q_filedialog_get_open_file_url4(void* parent, const char* caption, void* d
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getSaveFileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param parent QWidget*
 ///
@@ -828,7 +828,7 @@ const char* q_filedialog_get_save_file_name1(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getSaveFileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param parent QWidget*
 /// @param caption const char*
@@ -837,7 +837,7 @@ const char* q_filedialog_get_save_file_name2(void* parent, const char* caption);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getSaveFileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param parent QWidget*
 /// @param caption const char*
@@ -847,7 +847,7 @@ const char* q_filedialog_get_save_file_name3(void* parent, const char* caption, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getSaveFileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param parent QWidget*
 /// @param caption const char*
@@ -888,7 +888,7 @@ QUrl* q_filedialog_get_save_file_url4(void* parent, const char* caption, void* d
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getExistingDirectory)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param parent QWidget*
 ///
@@ -896,7 +896,7 @@ const char* q_filedialog_get_existing_directory1(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getExistingDirectory)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param parent QWidget*
 /// @param caption const char*
@@ -905,7 +905,7 @@ const char* q_filedialog_get_existing_directory2(void* parent, const char* capti
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getExistingDirectory)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param parent QWidget*
 /// @param caption const char*
@@ -915,7 +915,7 @@ const char* q_filedialog_get_existing_directory3(void* parent, const char* capti
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getExistingDirectory)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param parent QWidget*
 /// @param caption const char*
@@ -966,7 +966,7 @@ QUrl* q_filedialog_get_existing_directory_url5(void* parent, const char* caption
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getOpenFileNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param parent QWidget*
 ///
@@ -974,7 +974,7 @@ const char** q_filedialog_get_open_file_names1(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getOpenFileNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param parent QWidget*
 /// @param caption const char*
@@ -983,7 +983,7 @@ const char** q_filedialog_get_open_file_names2(void* parent, const char* caption
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getOpenFileNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param parent QWidget*
 /// @param caption const char*
@@ -993,7 +993,7 @@ const char** q_filedialog_get_open_file_names3(void* parent, const char* caption
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getOpenFileNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param parent QWidget*
 /// @param caption const char*
@@ -1996,7 +1996,7 @@ void q_filedialog_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileDialog*
 ///
@@ -2006,7 +2006,7 @@ const char* q_filedialog_style_sheet(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileDialog*
 ///
@@ -2042,7 +2042,7 @@ void q_filedialog_set_window_icon_text(void* self, const char* windowIconText);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileDialog*
 ///
@@ -2061,7 +2061,7 @@ void q_filedialog_set_window_role(void* self, const char* windowRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileDialog*
 ///
@@ -2080,7 +2080,7 @@ void q_filedialog_set_window_file_path(void* self, const char* filePath);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileDialog*
 ///
@@ -2124,7 +2124,7 @@ void q_filedialog_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileDialog*
 ///
@@ -2160,7 +2160,7 @@ void q_filedialog_set_status_tip(void* self, const char* statusTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileDialog*
 ///
@@ -2179,7 +2179,7 @@ void q_filedialog_set_whats_this(void* self, const char* whatsThis);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileDialog*
 ///
@@ -2189,7 +2189,7 @@ const char* q_filedialog_whats_this(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileDialog*
 ///
@@ -2208,7 +2208,7 @@ void q_filedialog_set_accessible_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileDialog*
 ///
@@ -2747,7 +2747,7 @@ void q_filedialog_set_geometry2(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileDialog*
 ///
@@ -3553,7 +3553,7 @@ QWidget* q_filedialog_create_window_container3(void* window, void* parent, int64
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileDialog*
 ///
@@ -3759,7 +3759,7 @@ QVariant* q_filedialog_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileDialog*
 ///

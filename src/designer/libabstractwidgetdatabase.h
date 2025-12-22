@@ -19,7 +19,7 @@ QDesignerWidgetDataBaseItemInterface* q_designerwidgetdatabaseiteminterface_new(
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerWidgetDataBaseItemInterface*
 ///
@@ -69,7 +69,7 @@ void q_designerwidgetdatabaseiteminterface_qbase_set_name(void* self, const char
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#group)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerWidgetDataBaseItemInterface*
 ///
@@ -119,7 +119,7 @@ void q_designerwidgetdatabaseiteminterface_qbase_set_group(void* self, const cha
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerWidgetDataBaseItemInterface*
 ///
@@ -169,7 +169,7 @@ void q_designerwidgetdatabaseiteminterface_qbase_set_tool_tip(void* self, const 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#whatsThis)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerWidgetDataBaseItemInterface*
 ///
@@ -219,7 +219,7 @@ void q_designerwidgetdatabaseiteminterface_qbase_set_whats_this(void* self, cons
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#includeFile)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerWidgetDataBaseItemInterface*
 ///
@@ -461,7 +461,7 @@ void q_designerwidgetdatabaseiteminterface_qbase_set_custom(void* self, bool cus
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#pluginPath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerWidgetDataBaseItemInterface*
 ///
@@ -559,7 +559,7 @@ void q_designerwidgetdatabaseiteminterface_qbase_set_promoted(void* self, bool b
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#extends)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerWidgetDataBaseItemInterface*
 ///
@@ -713,7 +713,7 @@ int32_t q_designerwidgetdatabaseinterface_qbase_metacall(void* self, int32_t par
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -950,7 +950,7 @@ void q_designerwidgetdatabaseinterface_on_changed(void* self, void (*callback)(v
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -959,7 +959,7 @@ const char* q_designerwidgetdatabaseinterface_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -987,7 +987,7 @@ bool q_designerwidgetdatabaseinterface_is_custom2(void* self, void* object, bool
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerWidgetDataBaseInterface*
 ///
@@ -1202,7 +1202,7 @@ QVariant* q_designerwidgetdatabaseinterface_property(void* self, const char* nam
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDesignerWidgetDataBaseInterface*
 ///

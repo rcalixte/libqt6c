@@ -59,7 +59,7 @@ int32_t k_imageannotator__kimageannotator_qbase_metacall(void* self, int32_t par
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -367,7 +367,7 @@ void k_imageannotator__kimageannotator_on_tab_context_menu_opened(void* self, vo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -376,7 +376,7 @@ const char* k_imageannotator__kimageannotator_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1245,7 +1245,7 @@ void k_imageannotator__kimageannotator_set_style_sheet(void* self, const char* s
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self kImageAnnotator__KImageAnnotator*
 ///
@@ -1255,7 +1255,7 @@ const char* k_imageannotator__kimageannotator_style_sheet(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self kImageAnnotator__KImageAnnotator*
 ///
@@ -1291,7 +1291,7 @@ void k_imageannotator__kimageannotator_set_window_icon_text(void* self, const ch
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self kImageAnnotator__KImageAnnotator*
 ///
@@ -1310,7 +1310,7 @@ void k_imageannotator__kimageannotator_set_window_role(void* self, const char* w
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self kImageAnnotator__KImageAnnotator*
 ///
@@ -1329,7 +1329,7 @@ void k_imageannotator__kimageannotator_set_window_file_path(void* self, const ch
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self kImageAnnotator__KImageAnnotator*
 ///
@@ -1373,7 +1373,7 @@ void k_imageannotator__kimageannotator_set_tool_tip(void* self, const char* tool
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self kImageAnnotator__KImageAnnotator*
 ///
@@ -1409,7 +1409,7 @@ void k_imageannotator__kimageannotator_set_status_tip(void* self, const char* st
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self kImageAnnotator__KImageAnnotator*
 ///
@@ -1428,7 +1428,7 @@ void k_imageannotator__kimageannotator_set_whats_this(void* self, const char* wh
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self kImageAnnotator__KImageAnnotator*
 ///
@@ -1438,7 +1438,7 @@ const char* k_imageannotator__kimageannotator_whats_this(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self kImageAnnotator__KImageAnnotator*
 ///
@@ -1457,7 +1457,7 @@ void k_imageannotator__kimageannotator_set_accessible_name(void* self, const cha
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self kImageAnnotator__KImageAnnotator*
 ///
@@ -1996,7 +1996,7 @@ void k_imageannotator__kimageannotator_set_geometry2(void* self, void* geometry)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self kImageAnnotator__KImageAnnotator*
 ///
@@ -2802,7 +2802,7 @@ QWidget* k_imageannotator__kimageannotator_create_window_container3(void* window
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self kImageAnnotator__KImageAnnotator*
 ///
@@ -3008,7 +3008,7 @@ QVariant* k_imageannotator__kimageannotator_property(void* self, const char* nam
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self kImageAnnotator__KImageAnnotator*
 ///

@@ -67,13 +67,13 @@ libqt_list /* of int32_t */ q_fontdatabase_writing_systems2(const char* family);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#families)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 const char** q_fontdatabase_families();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#styles)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param family const char*
 ///
@@ -94,7 +94,7 @@ libqt_list /* of int */ q_fontdatabase_smooth_sizes(const char* family, const ch
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#styleString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param font QFont*
 ///
@@ -102,7 +102,7 @@ const char* q_fontdatabase_style_string(void* font);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#styleString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param fontInfo QFontInfo*
 ///
@@ -175,7 +175,7 @@ bool q_fontdatabase_is_private_family(const char* family);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#writingSystemName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param writingSystem enum QFontDatabase__WritingSystem
 ///
@@ -183,7 +183,7 @@ const char* q_fontdatabase_writing_system_name(int32_t writingSystem);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#writingSystemSample)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param writingSystem enum QFontDatabase__WritingSystem
 ///
@@ -203,7 +203,7 @@ int32_t q_fontdatabase_add_application_font_from_data(const char* fontData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#applicationFontFamilies)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param id int
 ///
@@ -242,7 +242,7 @@ void q_fontdatabase_set_application_fallback_font_families(int32_t param1, const
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#applicationFallbackFontFamilies)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param script enum QChar__Script
 ///
@@ -256,7 +256,7 @@ QFont* q_fontdatabase_system_font(int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#families)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param writingSystem enum QFontDatabase__WritingSystem
 ///

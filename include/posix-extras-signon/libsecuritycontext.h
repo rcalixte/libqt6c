@@ -43,7 +43,7 @@ void q_signon__securitycontext_set_system_context(void* self, const char* system
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SecurityContext.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self SignOn__SecurityContext*
 ///
@@ -58,7 +58,7 @@ void q_signon__securitycontext_set_application_context(void* self, const char* a
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SecurityContext.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self SignOn__SecurityContext*
 ///

@@ -41,7 +41,7 @@ void k_attica__activity_set_id(void* self, const char* id);
 
 /// [Upstream resources](https://api.kde.org/attica-activity.html#id)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Activity*
 ///
@@ -82,7 +82,7 @@ void k_attica__activity_set_message(void* self, const char* message);
 
 /// [Upstream resources](https://api.kde.org/attica-activity.html#message)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Activity*
 ///

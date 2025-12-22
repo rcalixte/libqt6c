@@ -41,7 +41,7 @@ void q_sslcertificateextension_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificateextension.html#oid)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSslCertificateExtension*
 ///
@@ -49,7 +49,7 @@ const char* q_sslcertificateextension_oid(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificateextension.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSslCertificateExtension*
 ///

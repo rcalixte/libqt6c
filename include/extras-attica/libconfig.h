@@ -34,7 +34,7 @@ void k_attica__config_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-config.html#contact)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Config*
 ///
@@ -42,7 +42,7 @@ const char* k_attica__config_contact(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-config.html#host)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Config*
 ///
@@ -50,7 +50,7 @@ const char* k_attica__config_host(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-config.html#version)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Config*
 ///
@@ -64,7 +64,7 @@ bool k_attica__config_ssl(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-config.html#website)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Config*
 ///

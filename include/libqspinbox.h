@@ -61,7 +61,7 @@ int32_t q_spinbox_qbase_metacall(void* self, int32_t param1, int param2, void* p
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -75,7 +75,7 @@ int32_t q_spinbox_value(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#prefix)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSpinBox*
 ///
@@ -90,7 +90,7 @@ void q_spinbox_set_prefix(void* self, const char* prefix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#suffix)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSpinBox*
 ///
@@ -105,7 +105,7 @@ void q_spinbox_set_suffix(void* self, const char* suffix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#cleanText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSpinBox*
 ///
@@ -269,7 +269,7 @@ int32_t q_spinbox_qbase_value_from_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#textFromValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSpinBox*
 /// @param val int
@@ -356,7 +356,7 @@ void q_spinbox_on_text_changed(void* self, void (*callback)(void*, const char*))
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -365,7 +365,7 @@ const char* q_spinbox_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -423,7 +423,7 @@ bool q_spinbox_has_acceptable_input(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#text)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSpinBox*
 ///
@@ -433,7 +433,7 @@ const char* q_spinbox_text(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#specialValueText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSpinBox*
 ///
@@ -1479,7 +1479,7 @@ void q_spinbox_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSpinBox*
 ///
@@ -1489,7 +1489,7 @@ const char* q_spinbox_style_sheet(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSpinBox*
 ///
@@ -1525,7 +1525,7 @@ void q_spinbox_set_window_icon_text(void* self, const char* windowIconText);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSpinBox*
 ///
@@ -1544,7 +1544,7 @@ void q_spinbox_set_window_role(void* self, const char* windowRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSpinBox*
 ///
@@ -1563,7 +1563,7 @@ void q_spinbox_set_window_file_path(void* self, const char* filePath);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSpinBox*
 ///
@@ -1607,7 +1607,7 @@ void q_spinbox_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSpinBox*
 ///
@@ -1643,7 +1643,7 @@ void q_spinbox_set_status_tip(void* self, const char* statusTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSpinBox*
 ///
@@ -1662,7 +1662,7 @@ void q_spinbox_set_whats_this(void* self, const char* whatsThis);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSpinBox*
 ///
@@ -1672,7 +1672,7 @@ const char* q_spinbox_whats_this(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSpinBox*
 ///
@@ -1691,7 +1691,7 @@ void q_spinbox_set_accessible_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSpinBox*
 ///
@@ -2230,7 +2230,7 @@ void q_spinbox_set_geometry2(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSpinBox*
 ///
@@ -3036,7 +3036,7 @@ QWidget* q_spinbox_create_window_container3(void* window, void* parent, int64_t 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSpinBox*
 ///
@@ -3242,7 +3242,7 @@ QVariant* q_spinbox_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSpinBox*
 ///
@@ -5566,7 +5566,7 @@ int32_t q_doublespinbox_qbase_metacall(void* self, int32_t param1, int param2, v
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -5580,7 +5580,7 @@ double q_doublespinbox_value(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdoublespinbox.html#prefix)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDoubleSpinBox*
 ///
@@ -5595,7 +5595,7 @@ void q_doublespinbox_set_prefix(void* self, const char* prefix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdoublespinbox.html#suffix)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDoubleSpinBox*
 ///
@@ -5610,7 +5610,7 @@ void q_doublespinbox_set_suffix(void* self, const char* suffix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdoublespinbox.html#cleanText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDoubleSpinBox*
 ///
@@ -5749,7 +5749,7 @@ double q_doublespinbox_qbase_value_from_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdoublespinbox.html#textFromValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDoubleSpinBox*
 /// @param val double
@@ -5836,7 +5836,7 @@ void q_doublespinbox_on_text_changed(void* self, void (*callback)(void*, const c
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -5845,7 +5845,7 @@ const char* q_doublespinbox_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -5903,7 +5903,7 @@ bool q_doublespinbox_has_acceptable_input(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#text)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDoubleSpinBox*
 ///
@@ -5913,7 +5913,7 @@ const char* q_doublespinbox_text(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#specialValueText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDoubleSpinBox*
 ///
@@ -6959,7 +6959,7 @@ void q_doublespinbox_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDoubleSpinBox*
 ///
@@ -6969,7 +6969,7 @@ const char* q_doublespinbox_style_sheet(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDoubleSpinBox*
 ///
@@ -7005,7 +7005,7 @@ void q_doublespinbox_set_window_icon_text(void* self, const char* windowIconText
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDoubleSpinBox*
 ///
@@ -7024,7 +7024,7 @@ void q_doublespinbox_set_window_role(void* self, const char* windowRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDoubleSpinBox*
 ///
@@ -7043,7 +7043,7 @@ void q_doublespinbox_set_window_file_path(void* self, const char* filePath);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDoubleSpinBox*
 ///
@@ -7087,7 +7087,7 @@ void q_doublespinbox_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDoubleSpinBox*
 ///
@@ -7123,7 +7123,7 @@ void q_doublespinbox_set_status_tip(void* self, const char* statusTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDoubleSpinBox*
 ///
@@ -7142,7 +7142,7 @@ void q_doublespinbox_set_whats_this(void* self, const char* whatsThis);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDoubleSpinBox*
 ///
@@ -7152,7 +7152,7 @@ const char* q_doublespinbox_whats_this(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDoubleSpinBox*
 ///
@@ -7171,7 +7171,7 @@ void q_doublespinbox_set_accessible_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDoubleSpinBox*
 ///
@@ -7710,7 +7710,7 @@ void q_doublespinbox_set_geometry2(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDoubleSpinBox*
 ///
@@ -8516,7 +8516,7 @@ QWidget* q_doublespinbox_create_window_container3(void* window, void* parent, in
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDoubleSpinBox*
 ///
@@ -8722,7 +8722,7 @@ QVariant* q_doublespinbox_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDoubleSpinBox*
 ///

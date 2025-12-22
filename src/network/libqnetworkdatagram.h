@@ -151,7 +151,7 @@ void q_networkdatagram_set_hop_limit(void* self, int count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#data)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QNetworkDatagram*
 ///

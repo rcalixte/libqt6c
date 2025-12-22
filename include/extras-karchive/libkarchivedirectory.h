@@ -35,7 +35,7 @@ KArchiveDirectory* k_archivedirectory_new2(void* param1);
 
 /// [Upstream resources](https://api.kde.org/karchivedirectory.html#entries)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KArchiveDirectory*
 ///
@@ -160,7 +160,7 @@ QDateTime* k_archivedirectory_date(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KArchiveDirectory*
 ///
@@ -178,7 +178,7 @@ mode_t k_archivedirectory_permissions(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#user)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KArchiveDirectory*
 ///
@@ -188,7 +188,7 @@ const char* k_archivedirectory_user(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#group)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KArchiveDirectory*
 ///
@@ -198,7 +198,7 @@ const char* k_archivedirectory_group(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#symLinkTarget)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KArchiveDirectory*
 ///

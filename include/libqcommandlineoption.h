@@ -111,7 +111,7 @@ void q_commandlineoption_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineoption.html#names)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QCommandLineOption*
 ///
@@ -126,7 +126,7 @@ void q_commandlineoption_set_value_name(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineoption.html#valueName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QCommandLineOption*
 ///
@@ -141,7 +141,7 @@ void q_commandlineoption_set_description(void* self, const char* description);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineoption.html#description)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QCommandLineOption*
 ///
@@ -163,7 +163,7 @@ void q_commandlineoption_set_default_values(void* self, const char* defaultValue
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineoption.html#defaultValues)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QCommandLineOption*
 ///

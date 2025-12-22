@@ -41,7 +41,7 @@ void k_attica__person_set_id(void* self, const char* id);
 
 /// [Upstream resources](https://api.kde.org/attica-person.html#id)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Person*
 ///
@@ -56,7 +56,7 @@ void k_attica__person_set_first_name(void* self, const char* firstName);
 
 /// [Upstream resources](https://api.kde.org/attica-person.html#firstName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Person*
 ///
@@ -71,7 +71,7 @@ void k_attica__person_set_last_name(void* self, const char* lastName);
 
 /// [Upstream resources](https://api.kde.org/attica-person.html#lastName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Person*
 ///
@@ -99,7 +99,7 @@ void k_attica__person_set_country(void* self, const char* country);
 
 /// [Upstream resources](https://api.kde.org/attica-person.html#country)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Person*
 ///
@@ -153,7 +153,7 @@ void k_attica__person_set_homepage(void* self, const char* homepage);
 
 /// [Upstream resources](https://api.kde.org/attica-person.html#homepage)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Person*
 ///
@@ -168,7 +168,7 @@ void k_attica__person_set_city(void* self, const char* city);
 
 /// [Upstream resources](https://api.kde.org/attica-person.html#city)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Person*
 ///
@@ -184,7 +184,7 @@ void k_attica__person_add_extended_attribute(void* self, const char* key, const 
 
 /// [Upstream resources](https://api.kde.org/attica-person.html#extendedAttribute)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Person*
 /// @param key const char*

@@ -43,7 +43,7 @@ void q_libraryinfo_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html#build)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_libraryinfo_build();
 
@@ -61,7 +61,7 @@ QVersionNumber* q_libraryinfo_version();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html#path)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param p enum QLibraryInfo__LibraryPath
 ///
@@ -69,7 +69,7 @@ const char* q_libraryinfo_path(int32_t p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html#paths)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param p enum QLibraryInfo__LibraryPath
 ///
@@ -77,7 +77,7 @@ const char** q_libraryinfo_paths(int32_t p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html#location)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param location enum QLibraryInfo__LibraryPath
 ///
@@ -85,7 +85,7 @@ const char* q_libraryinfo_location(int32_t location);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html#platformPluginArguments)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param platformName const char*
 ///

@@ -63,7 +63,7 @@ int32_t q_pdfwriter_qbase_metacall(void* self, int32_t param1, int param2, void*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -86,7 +86,7 @@ int32_t q_pdfwriter_pdf_version(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfwriter.html#title)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QPdfWriter*
 ///
@@ -101,7 +101,7 @@ void q_pdfwriter_set_title(void* self, const char* title);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfwriter.html#creator)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QPdfWriter*
 ///
@@ -172,7 +172,7 @@ void q_pdfwriter_set_document_xmp_metadata(void* self, const char* xmpMetadata);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfwriter.html#documentXmpMetadata)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QPdfWriter*
 ///
@@ -264,7 +264,7 @@ int32_t q_pdfwriter_qbase_metric(void* self, int32_t id);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -273,7 +273,7 @@ const char* q_pdfwriter_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -294,7 +294,7 @@ void q_pdfwriter_add_file_attachment3(void* self, const char* fileName, const ch
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QPdfWriter*
 ///
@@ -509,7 +509,7 @@ QVariant* q_pdfwriter_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QPdfWriter*
 ///

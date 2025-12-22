@@ -1142,7 +1142,7 @@ void q_styleoptionheader_set_section(void* self, int section);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#text-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QStyleOptionHeader*
 ///
@@ -1505,7 +1505,7 @@ void q_styleoptionheaderv2_set_section(void* self, int section);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#text-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QStyleOptionHeaderV2*
 ///
@@ -1839,7 +1839,7 @@ void q_styleoptionbutton_set_features(void* self, int32_t features);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionbutton.html#text-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QStyleOptionButton*
 ///
@@ -2073,7 +2073,7 @@ void q_styleoptiontab_set_shape(void* self, int32_t shape);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#text-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QStyleOptionTab*
 ///
@@ -2720,7 +2720,7 @@ void q_styleoptionprogressbar_set_progress(void* self, int progress);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionprogressbar.html#text-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QStyleOptionProgressBar*
 ///
@@ -3036,7 +3036,7 @@ void q_styleoptionmenuitem_set_menu_rect(void* self, void* menuRect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionmenuitem.html#text-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QStyleOptionMenuItem*
 ///
@@ -3281,7 +3281,7 @@ QStyleOptionDockWidget* q_styleoptiondockwidget_new2(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiondockwidget.html#title-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QStyleOptionDockWidget*
 ///
@@ -3707,7 +3707,7 @@ void q_styleoptionviewitem_set_icon(void* self, void* icon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#text-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QStyleOptionViewItem*
 ///
@@ -3928,7 +3928,7 @@ QStyleOptionToolBox* q_styleoptiontoolbox_new2(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbox.html#text-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QStyleOptionToolBox*
 ///
@@ -5286,7 +5286,7 @@ void q_styleoptiontoolbutton_set_icon_size(void* self, void* iconSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbutton.html#text-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QStyleOptionToolButton*
 ///
@@ -5612,7 +5612,7 @@ void q_styleoptioncombobox_set_frame(void* self, bool frame);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncombobox.html#currentText-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QStyleOptionComboBox*
 ///
@@ -5884,7 +5884,7 @@ QStyleOptionTitleBar* q_styleoptiontitlebar_new2(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontitlebar.html#text-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QStyleOptionTitleBar*
 ///
@@ -6171,7 +6171,7 @@ void q_styleoptiongroupbox_set_features(void* self, int32_t features);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiongroupbox.html#text-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QStyleOptionGroupBox*
 ///

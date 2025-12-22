@@ -41,7 +41,7 @@ void k_attica__publisherfield_set_name(void* self, const char* value);
 
 /// [Upstream resources](https://api.kde.org/attica-publisherfield.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__PublisherField*
 ///
@@ -56,7 +56,7 @@ void k_attica__publisherfield_set_type(void* self, const char* value);
 
 /// [Upstream resources](https://api.kde.org/attica-publisherfield.html#type)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__PublisherField*
 ///
@@ -71,7 +71,7 @@ void k_attica__publisherfield_set_data(void* self, const char* value);
 
 /// [Upstream resources](https://api.kde.org/attica-publisherfield.html#data)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__PublisherField*
 ///

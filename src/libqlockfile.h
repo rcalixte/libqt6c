@@ -21,7 +21,7 @@ QLockFile* q_lockfile_new(const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlockfile.html#fileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QLockFile*
 ///

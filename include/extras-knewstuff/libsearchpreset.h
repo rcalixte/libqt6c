@@ -27,7 +27,7 @@ KNSCore__SearchRequest* k_nscore__searchpreset_request(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-searchpreset.html#displayName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSCore__SearchPreset*
 ///
@@ -35,7 +35,7 @@ const char* k_nscore__searchpreset_display_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-searchpreset.html#iconName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSCore__SearchPreset*
 ///
@@ -51,7 +51,7 @@ int32_t k_nscore__searchpreset_type(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-searchpreset.html#providerId)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSCore__SearchPreset*
 ///

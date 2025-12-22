@@ -61,7 +61,7 @@ int32_t q_fileselector_qbase_metacall(void* self, int32_t param1, int param2, vo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -69,7 +69,7 @@ const char* q_fileselector_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileselector.html#select)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileSelector*
 /// @param filePath const char*
@@ -85,7 +85,7 @@ QUrl* q_fileselector_select2(void* self, void* filePath);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileselector.html#extraSelectors)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileSelector*
 ///
@@ -100,7 +100,7 @@ void q_fileselector_set_extra_selectors(void* self, const char* list[static 1]);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileselector.html#allSelectors)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileSelector*
 ///
@@ -108,7 +108,7 @@ const char** q_fileselector_all_selectors(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -117,7 +117,7 @@ const char* q_fileselector_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -129,7 +129,7 @@ const char* q_fileselector_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileSelector*
 ///
@@ -344,7 +344,7 @@ QVariant* q_fileselector_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileSelector*
 ///

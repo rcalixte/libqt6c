@@ -36,7 +36,7 @@ void k_io__desktopexecparser_set_suggested_file_name(void* self, const char* sug
 
 /// [Upstream resources](https://api.kde.org/kio-desktopexecparser.html#resultingArguments)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KIO__DesktopExecParser*
 ///
@@ -44,7 +44,7 @@ const char** k_io__desktopexecparser_resulting_arguments(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-desktopexecparser.html#errorMessage)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KIO__DesktopExecParser*
 ///
@@ -52,7 +52,7 @@ const char* k_io__desktopexecparser_error_message(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-desktopexecparser.html#supportedProtocols)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param service KService*
 ///
@@ -73,7 +73,7 @@ bool k_io__desktopexecparser_has_scheme_handler(void* url);
 
 /// [Upstream resources](https://api.kde.org/kio-desktopexecparser.html#executableName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param execLine const char*
 ///
@@ -81,7 +81,7 @@ const char* k_io__desktopexecparser_executable_name(const char* execLine);
 
 /// [Upstream resources](https://api.kde.org/kio-desktopexecparser.html#executablePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param execLine const char*
 ///

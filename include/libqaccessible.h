@@ -80,7 +80,7 @@ int32_t q_accessibleinterface_index_of_child(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleinterface.html#text)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAccessibleInterface*
 /// @param t enum QAccessible__Text
@@ -258,7 +258,7 @@ void q_accessibletextinterface_set_cursor_position(void* self, int position);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibletextinterface.html#text)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAccessibleTextInterface*
 /// @param startOffset int
@@ -268,7 +268,7 @@ const char* q_accessibletextinterface_text(void* self, int startOffset, int endO
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibletextinterface.html#textBeforeOffset)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAccessibleTextInterface*
 /// @param offset int
@@ -280,7 +280,7 @@ const char* q_accessibletextinterface_text_before_offset(void* self, int offset,
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibletextinterface.html#textAfterOffset)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAccessibleTextInterface*
 /// @param offset int
@@ -292,7 +292,7 @@ const char* q_accessibletextinterface_text_after_offset(void* self, int offset, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibletextinterface.html#textAtOffset)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAccessibleTextInterface*
 /// @param offset int
@@ -332,7 +332,7 @@ void q_accessibletextinterface_scroll_to_substring(void* self, int startIndex, i
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibletextinterface.html#attributes)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAccessibleTextInterface*
 /// @param offset int
@@ -547,7 +547,7 @@ libqt_list /* of QAccessibleInterface* */ q_accessibletableinterface_selected_ce
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibletableinterface.html#columnDescription)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAccessibleTableInterface*
 /// @param column int
@@ -556,7 +556,7 @@ const char* q_accessibletableinterface_column_description(void* self, int column
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibletableinterface.html#rowDescription)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAccessibleTableInterface*
 /// @param row int
@@ -660,7 +660,7 @@ void q_accessibletableinterface_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param sourceText const char*
 ///
@@ -668,7 +668,7 @@ const char* q_accessibleactioninterface_tr(const char* sourceText);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#actionNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QAccessibleActionInterface*
 ///
@@ -676,7 +676,7 @@ const char** q_accessibleactioninterface_action_names(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#localizedActionName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAccessibleActionInterface*
 /// @param name const char*
@@ -685,7 +685,7 @@ const char* q_accessibleactioninterface_localized_action_name(void* self, const 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#localizedActionDescription)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAccessibleActionInterface*
 /// @param name const char*
@@ -701,7 +701,7 @@ void q_accessibleactioninterface_do_action(void* self, const char* actionName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#keyBindingsForAction)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QAccessibleActionInterface*
 /// @param actionName const char*
@@ -710,73 +710,73 @@ const char** q_accessibleactioninterface_key_bindings_for_action(void* self, con
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#pressAction)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_accessibleactioninterface_press_action();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#increaseAction)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_accessibleactioninterface_increase_action();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#decreaseAction)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_accessibleactioninterface_decrease_action();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#showMenuAction)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_accessibleactioninterface_show_menu_action();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#setFocusAction)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_accessibleactioninterface_set_focus_action();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#toggleAction)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_accessibleactioninterface_toggle_action();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#scrollLeftAction)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_accessibleactioninterface_scroll_left_action();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#scrollRightAction)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_accessibleactioninterface_scroll_right_action();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#scrollUpAction)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_accessibleactioninterface_scroll_up_action();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#scrollDownAction)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_accessibleactioninterface_scroll_down_action();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#nextPageAction)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_accessibleactioninterface_next_page_action();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#previousPageAction)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_accessibleactioninterface_previous_page_action();
 
@@ -789,7 +789,7 @@ void q_accessibleactioninterface_operator_assign(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param sourceText const char*
 /// @param disambiguation const char*
@@ -798,7 +798,7 @@ const char* q_accessibleactioninterface_tr2(const char* sourceText, const char* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param sourceText const char*
 /// @param disambiguation const char*
@@ -818,7 +818,7 @@ void q_accessibleactioninterface_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleimageinterface.html#imageDescription)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAccessibleImageInterface*
 ///
@@ -855,7 +855,7 @@ void q_accessibleimageinterface_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblehyperlinkinterface.html#anchor)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAccessibleHyperlinkInterface*
 ///
@@ -863,7 +863,7 @@ const char* q_accessiblehyperlinkinterface_anchor(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblehyperlinkinterface.html#anchorTarget)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAccessibleHyperlinkInterface*
 ///
@@ -1465,7 +1465,7 @@ QAccessibleTextInsertEvent* q_accessibletextinsertevent_new2(void* iface, int po
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibletextinsertevent.html#textInserted)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAccessibleTextInsertEvent*
 ///
@@ -1598,7 +1598,7 @@ QAccessibleTextRemoveEvent* q_accessibletextremoveevent_new2(void* iface, int po
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibletextremoveevent.html#textRemoved)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAccessibleTextRemoveEvent*
 ///
@@ -1733,7 +1733,7 @@ QAccessibleTextUpdateEvent* q_accessibletextupdateevent_new2(void* iface, int po
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibletextupdateevent.html#textRemoved)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAccessibleTextUpdateEvent*
 ///
@@ -1741,7 +1741,7 @@ const char* q_accessibletextupdateevent_text_removed(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibletextupdateevent.html#textInserted)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAccessibleTextUpdateEvent*
 ///
@@ -2152,7 +2152,7 @@ QAccessibleAnnouncementEvent* q_accessibleannouncementevent_new2(void* iface, co
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleannouncementevent.html#message)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAccessibleAnnouncementEvent*
 ///

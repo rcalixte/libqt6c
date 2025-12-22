@@ -33,7 +33,7 @@ int32_t k_solid__camera_metacall(void* self, int32_t param1, int param2, void* p
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -47,7 +47,7 @@ int32_t k_solid__camera_device_interface_type();
 
 /// [Upstream resources](https://api.kde.org/solid-camera.html#supportedProtocols)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self Solid__Camera*
 ///
@@ -55,7 +55,7 @@ const char** k_solid__camera_supported_protocols(void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-camera.html#supportedDrivers)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self Solid__Camera*
 ///
@@ -70,7 +70,7 @@ QVariant* k_solid__camera_driver_handle(void* self, const char* driver);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -79,7 +79,7 @@ const char* k_solid__camera_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -89,7 +89,7 @@ const char* k_solid__camera_tr3(const char* s, const char* c, int n);
 
 /// [Upstream resources](https://api.kde.org/solid-camera.html#supportedDrivers)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self Solid__Camera*
 /// @param protocol const char*
@@ -108,7 +108,7 @@ bool k_solid__camera_is_valid(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/solid-deviceinterface.html#typeToString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param type enum Solid__DeviceInterface__Type
 ///
@@ -128,7 +128,7 @@ int32_t k_solid__camera_string_to_type(const char* type);
 ///
 /// [Upstream resources](https://api.kde.org/solid-deviceinterface.html#typeDescription)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param type enum Solid__DeviceInterface__Type
 ///
@@ -157,7 +157,7 @@ bool k_solid__camera_event_filter(void* self, void* watched, void* event);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Solid__Camera*
 ///
@@ -372,7 +372,7 @@ QVariant* k_solid__camera_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self Solid__Camera*
 ///

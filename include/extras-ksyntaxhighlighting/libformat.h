@@ -40,7 +40,7 @@ bool k_syntaxhighlighting__format_is_valid(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-format.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KSyntaxHighlighting__Format*
 ///

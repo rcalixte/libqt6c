@@ -56,7 +56,7 @@ int32_t k_configdialogmanager_qbase_metacall(void* self, int32_t param1, int par
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -190,7 +190,7 @@ bool k_configdialogmanager_qbase_parse_children(void* self, void* widget, bool t
 
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getUserProperty)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KConfigDialogManager*
 /// @param widget QWidget*
@@ -217,7 +217,7 @@ char* k_configdialogmanager_qbase_get_user_property(void* self, void* widget);
 
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getCustomProperty)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KConfigDialogManager*
 /// @param widget QWidget*
@@ -244,7 +244,7 @@ char* k_configdialogmanager_qbase_get_custom_property(void* self, void* widget);
 
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getUserPropertyChangedSignal)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KConfigDialogManager*
 /// @param widget QWidget*
@@ -271,7 +271,7 @@ char* k_configdialogmanager_qbase_get_user_property_changed_signal(void* self, v
 
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getCustomPropertyChangedSignal)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KConfigDialogManager*
 /// @param widget QWidget*
@@ -400,7 +400,7 @@ void k_configdialogmanager_qbase_init_maps(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -409,7 +409,7 @@ const char* k_configdialogmanager_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -421,7 +421,7 @@ const char* k_configdialogmanager_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KConfigDialogManager*
 ///
@@ -617,7 +617,7 @@ void k_configdialogmanager_dump_object_info(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KConfigDialogManager*
 ///

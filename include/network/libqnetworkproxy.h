@@ -157,7 +157,7 @@ void q_networkproxyquery_set_peer_port(void* self, int port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyquery.html#peerHostName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QNetworkProxyQuery*
 ///
@@ -185,7 +185,7 @@ void q_networkproxyquery_set_local_port(void* self, int port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyquery.html#protocolTag)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QNetworkProxyQuery*
 ///
@@ -362,7 +362,7 @@ void q_networkproxy_set_user(void* self, const char* userName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#user)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QNetworkProxy*
 ///
@@ -377,7 +377,7 @@ void q_networkproxy_set_password(void* self, const char* password);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#password)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QNetworkProxy*
 ///
@@ -392,7 +392,7 @@ void q_networkproxy_set_host_name(void* self, const char* hostName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#hostName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QNetworkProxy*
 ///
@@ -458,7 +458,7 @@ bool q_networkproxy_has_raw_header(void* self, const char* headerName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#rawHeaderList)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QNetworkProxy*
 ///
@@ -466,7 +466,7 @@ const char** q_networkproxy_raw_header_list(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#rawHeader)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QNetworkProxy*
 /// @param headerName const char*

@@ -61,7 +61,7 @@ int32_t k_globalshortcutinfo_qbase_metacall(void* self, int32_t param1, int para
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -76,7 +76,7 @@ void k_globalshortcutinfo_operator_assign(void* self, void* rhs);
 
 /// [Upstream resources](https://api.kde.org/kglobalshortcutinfo.html#contextFriendlyName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KGlobalShortcutInfo*
 ///
@@ -84,7 +84,7 @@ const char* k_globalshortcutinfo_context_friendly_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kglobalshortcutinfo.html#contextUniqueName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KGlobalShortcutInfo*
 ///
@@ -92,7 +92,7 @@ const char* k_globalshortcutinfo_context_unique_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kglobalshortcutinfo.html#componentFriendlyName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KGlobalShortcutInfo*
 ///
@@ -100,7 +100,7 @@ const char* k_globalshortcutinfo_component_friendly_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kglobalshortcutinfo.html#componentUniqueName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KGlobalShortcutInfo*
 ///
@@ -114,7 +114,7 @@ libqt_list /* of QKeySequence* */ k_globalshortcutinfo_default_keys(void* self);
 
 /// [Upstream resources](https://api.kde.org/kglobalshortcutinfo.html#friendlyName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KGlobalShortcutInfo*
 ///
@@ -128,7 +128,7 @@ libqt_list /* of QKeySequence* */ k_globalshortcutinfo_keys(void* self);
 
 /// [Upstream resources](https://api.kde.org/kglobalshortcutinfo.html#uniqueName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KGlobalShortcutInfo*
 ///
@@ -136,7 +136,7 @@ const char* k_globalshortcutinfo_unique_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -145,7 +145,7 @@ const char* k_globalshortcutinfo_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -157,7 +157,7 @@ const char* k_globalshortcutinfo_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KGlobalShortcutInfo*
 ///
@@ -372,7 +372,7 @@ QVariant* k_globalshortcutinfo_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KGlobalShortcutInfo*
 ///

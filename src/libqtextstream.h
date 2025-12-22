@@ -111,7 +111,7 @@ QIODevice* q_textstream_device(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#string)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTextStream*
 ///
@@ -177,7 +177,7 @@ void q_textstream_skip_white_space(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#readLine)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTextStream*
 ///
@@ -185,7 +185,7 @@ const char* q_textstream_read_line(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#readAll)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTextStream*
 ///
@@ -193,7 +193,7 @@ const char* q_textstream_read_all(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#read)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTextStream*
 /// @param maxlen long long
@@ -520,7 +520,7 @@ QTextStream* q_textstream_operator_shift_left19(void* self, void* ptr);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#readLine)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTextStream*
 /// @param maxlen long long

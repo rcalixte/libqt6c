@@ -19,7 +19,7 @@ QDesignerOptionsPageInterface* q_designeroptionspageinterface_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesigneroptionspageinterface.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerOptionsPageInterface*
 ///

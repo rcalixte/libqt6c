@@ -42,7 +42,7 @@ void k_format_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatByteSize)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KFormat*
 /// @param size double
@@ -51,7 +51,7 @@ const char* k_format_format_byte_size(void* self, double size);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatDuration)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KFormat*
 /// @param msecs uint64_t
@@ -60,7 +60,7 @@ const char* k_format_format_duration(void* self, uint64_t msecs);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatDecimalDuration)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KFormat*
 /// @param msecs uint64_t
@@ -69,7 +69,7 @@ const char* k_format_format_decimal_duration(void* self, uint64_t msecs);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatSpelloutDuration)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KFormat*
 /// @param msecs uint64_t
@@ -78,7 +78,7 @@ const char* k_format_format_spellout_duration(void* self, uint64_t msecs);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatRelativeDate)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KFormat*
 /// @param date QDate*
@@ -88,7 +88,7 @@ const char* k_format_format_relative_date(void* self, void* date, int32_t format
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatRelativeDateTime)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KFormat*
 /// @param dateTime QDateTime*
@@ -98,7 +98,7 @@ const char* k_format_format_relative_date_time(void* self, void* dateTime, int32
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KFormat*
 /// @param value double
@@ -108,7 +108,7 @@ const char* k_format_format_value(void* self, double value, int32_t unit);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KFormat*
 /// @param value double
@@ -118,7 +118,7 @@ const char* k_format_format_value2(void* self, double value, const char* unit);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KFormat*
 /// @param value double
@@ -131,7 +131,7 @@ const char* k_format_format_value3(void* self, double value, const char* unit, i
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatDistance)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KFormat*
 /// @param distance double
@@ -140,7 +140,7 @@ const char* k_format_format_distance(void* self, double distance);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatByteSize)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KFormat*
 /// @param size double
@@ -150,7 +150,7 @@ const char* k_format_format_byte_size2(void* self, double size, int precision);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatByteSize)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KFormat*
 /// @param size double
@@ -161,7 +161,7 @@ const char* k_format_format_byte_size3(void* self, double size, int precision, i
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatByteSize)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KFormat*
 /// @param size double
@@ -173,7 +173,7 @@ const char* k_format_format_byte_size4(void* self, double size, int precision, i
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatDuration)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KFormat*
 /// @param msecs uint64_t
@@ -183,7 +183,7 @@ const char* k_format_format_duration2(void* self, uint64_t msecs, int32_t option
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatDecimalDuration)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KFormat*
 /// @param msecs uint64_t
@@ -193,7 +193,7 @@ const char* k_format_format_decimal_duration2(void* self, uint64_t msecs, int de
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KFormat*
 /// @param value double
@@ -204,7 +204,7 @@ const char* k_format_format_value32(void* self, double value, int32_t unit, int 
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KFormat*
 /// @param value double
@@ -216,7 +216,7 @@ const char* k_format_format_value4(void* self, double value, int32_t unit, int p
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KFormat*
 /// @param value double
@@ -229,7 +229,7 @@ const char* k_format_format_value5(void* self, double value, int32_t unit, int p
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KFormat*
 /// @param value double
@@ -240,7 +240,7 @@ const char* k_format_format_value33(void* self, double value, const char* unit, 
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KFormat*
 /// @param value double
@@ -252,7 +252,7 @@ const char* k_format_format_value42(void* self, double value, const char* unit, 
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatDistance)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KFormat*
 /// @param distance double

@@ -64,7 +64,7 @@ int32_t q_designerintegrationinterface_qbase_metacall(void* self, int32_t param1
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -128,7 +128,7 @@ QDesignerResourceBrowserInterface* q_designerintegrationinterface_qbase_create_r
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#headerSuffix)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerIntegrationInterface*
 ///
@@ -312,7 +312,7 @@ void q_designerintegrationinterface_qbase_set_resource_file_watcher_behaviour(vo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#contextHelpId)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerIntegrationInterface*
 ///
@@ -668,7 +668,7 @@ void q_designerintegrationinterface_qbase_update_custom_widget_plugins(void* sel
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -677,7 +677,7 @@ const char* q_designerintegrationinterface_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -689,7 +689,7 @@ const char* q_designerintegrationinterface_tr3(const char* s, const char* c, int
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerIntegrationInterface*
 ///
@@ -904,7 +904,7 @@ QVariant* q_designerintegrationinterface_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDesignerIntegrationInterface*
 ///
@@ -1452,7 +1452,7 @@ int32_t q_designerintegration_qbase_metacall(void* self, int32_t param1, int par
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -1460,7 +1460,7 @@ const char* q_designerintegration_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegration.html#headerSuffix)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerIntegration*
 ///
@@ -1718,7 +1718,7 @@ QDesignerResourceBrowserInterface* q_designerintegration_qbase_create_resource_b
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegration.html#contextHelpId)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerIntegration*
 ///
@@ -1972,7 +1972,7 @@ void q_designerintegration_qbase_update_custom_widget_plugins(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1981,7 +1981,7 @@ const char* q_designerintegration_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -2105,7 +2105,7 @@ void q_designerintegration_navigate_to_slot2(void* self, const char* slotSignatu
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerIntegration*
 ///
@@ -2320,7 +2320,7 @@ QVariant* q_designerintegration_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDesignerIntegration*
 ///

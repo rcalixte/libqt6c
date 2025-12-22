@@ -78,7 +78,7 @@ bool q_sslcipher_is_null(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcipher.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSslCipher*
 ///
@@ -98,7 +98,7 @@ int32_t q_sslcipher_used_bits(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcipher.html#keyExchangeMethod)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSslCipher*
 ///
@@ -106,7 +106,7 @@ const char* q_sslcipher_key_exchange_method(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcipher.html#authenticationMethod)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSslCipher*
 ///
@@ -114,7 +114,7 @@ const char* q_sslcipher_authentication_method(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcipher.html#encryptionMethod)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSslCipher*
 ///
@@ -122,7 +122,7 @@ const char* q_sslcipher_encryption_method(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcipher.html#protocolString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSslCipher*
 ///

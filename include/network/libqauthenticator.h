@@ -48,7 +48,7 @@ bool q_authenticator_operator_not_equal(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qauthenticator.html#user)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAuthenticator*
 ///
@@ -63,7 +63,7 @@ void q_authenticator_set_user(void* self, const char* user);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qauthenticator.html#password)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAuthenticator*
 ///
@@ -78,7 +78,7 @@ void q_authenticator_set_password(void* self, const char* password);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qauthenticator.html#realm)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAuthenticator*
 ///

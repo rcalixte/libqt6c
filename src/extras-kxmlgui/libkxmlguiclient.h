@@ -82,7 +82,7 @@ KActionCollection* k_xmlguiclient_qbase_action_collection(void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#componentName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KXMLGUIClient*
 ///
@@ -130,7 +130,7 @@ QDomDocument* k_xmlguiclient_qbase_dom_document(void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlFile)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KXMLGUIClient*
 ///
@@ -155,7 +155,7 @@ const char* k_xmlguiclient_qbase_xml_file(void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#localXMLFile)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KXMLGUIClient*
 ///
@@ -266,7 +266,7 @@ void k_xmlguiclient_unplug_action_list(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#findMostRecentXMLFile)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param files const char**
 /// @param doc const char*
@@ -326,7 +326,7 @@ void k_xmlguiclient_replace_x_m_l_file(void* self, const char* xmlfile, const ch
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#findVersionNumber)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param xml const char*
 ///
@@ -390,7 +390,7 @@ void k_xmlguiclient_qbase_set_x_m_l_file(void* self, const char* file, bool merg
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KXMLGUIClient*
 ///
@@ -563,7 +563,7 @@ void k_xmlguiclient_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient-statechange.html#actionsToEnable-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KXMLGUIClient__StateChange*
 ///
@@ -578,7 +578,7 @@ void k_xmlguiclient__statechange_set_actions_to_enable(void* self, const char* a
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient-statechange.html#actionsToDisable-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KXMLGUIClient__StateChange*
 ///

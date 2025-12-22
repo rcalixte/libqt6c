@@ -48,7 +48,7 @@ int32_t q_webengineloadinginfo_status(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#errorString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QWebEngineLoadingInfo*
 ///

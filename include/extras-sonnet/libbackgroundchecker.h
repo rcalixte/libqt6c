@@ -78,7 +78,7 @@ int32_t k_sonnet__backgroundchecker_qbase_metacall(void* self, int32_t param1, i
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -93,7 +93,7 @@ void k_sonnet__backgroundchecker_set_text(void* self, const char* text);
 
 /// [Upstream resources](https://api.kde.org/sonnet-backgroundchecker.html#text)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Sonnet__BackgroundChecker*
 ///
@@ -101,7 +101,7 @@ const char* k_sonnet__backgroundchecker_text(void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-backgroundchecker.html#currentContext)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Sonnet__BackgroundChecker*
 ///
@@ -129,7 +129,7 @@ bool k_sonnet__backgroundchecker_check_word(void* self, const char* word);
 
 /// [Upstream resources](https://api.kde.org/sonnet-backgroundchecker.html#suggest)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self Sonnet__BackgroundChecker*
 /// @param word const char*
@@ -278,7 +278,7 @@ void k_sonnet__backgroundchecker_on_done(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/sonnet-backgroundchecker.html#fetchMoreText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Sonnet__BackgroundChecker*
 ///
@@ -349,7 +349,7 @@ void k_sonnet__backgroundchecker_qbase_slot_engine_done(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -358,7 +358,7 @@ const char* k_sonnet__backgroundchecker_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -370,7 +370,7 @@ const char* k_sonnet__backgroundchecker_tr3(const char* s, const char* c, int n)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Sonnet__BackgroundChecker*
 ///
@@ -585,7 +585,7 @@ QVariant* k_sonnet__backgroundchecker_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self Sonnet__BackgroundChecker*
 ///

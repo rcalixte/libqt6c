@@ -66,7 +66,7 @@ int32_t k_io__previewjob_qbase_metacall(void* self, int32_t param1, int param2, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -134,7 +134,7 @@ void k_io__previewjob_set_device_pixel_ratio(void* self, double dpr);
 
 /// [Upstream resources](https://api.kde.org/kio-previewjob.html#availablePlugins)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 const char** k_io__previewjob_available_plugins();
 
@@ -144,13 +144,13 @@ libqt_list /* of KPluginMetaData* */ k_io__previewjob_available_thumbnailer_plug
 
 /// [Upstream resources](https://api.kde.org/kio-previewjob.html#defaultPlugins)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 const char** k_io__previewjob_default_plugins();
 
 /// [Upstream resources](https://api.kde.org/kio-previewjob.html#supportedMimeTypes)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 const char** k_io__previewjob_supported_mime_types();
 
@@ -216,7 +216,7 @@ void k_io__previewjob_set_default_device_pixel_ratio(double devicePixelRatio);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -225,7 +225,7 @@ const char* k_io__previewjob_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -261,7 +261,7 @@ void k_io__previewjob_set_ui_delegate_extension(void* self, void* extension);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#detailedErrorStrings)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KIO__PreviewJob*
 ///
@@ -341,7 +341,7 @@ KIO__MetaData* k_io__previewjob_meta_data(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#queryMetaData)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KIO__PreviewJob*
 /// @param key const char*
@@ -370,7 +370,7 @@ void k_io__previewjob_on_connected(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#detailedErrorStrings)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KIO__PreviewJob*
 /// @param reqUrl QUrl*
@@ -381,7 +381,7 @@ const char** k_io__previewjob_detailed_error_strings1(void* self, void* reqUrl);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#detailedErrorStrings)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KIO__PreviewJob*
 /// @param reqUrl QUrl*
@@ -468,7 +468,7 @@ int32_t k_io__previewjob_error(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#errorText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KIO__PreviewJob*
 ///
@@ -666,7 +666,7 @@ void k_io__previewjob_set_finished_notification_hidden1(void* self, bool hide);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KIO__PreviewJob*
 ///
@@ -881,7 +881,7 @@ QVariant* k_io__previewjob_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KIO__PreviewJob*
 ///
@@ -1135,7 +1135,7 @@ void k_io__previewjob_on_do_resume(void* self, bool (*callback)());
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#errorString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1147,7 +1147,7 @@ const char* k_io__previewjob_error_string(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#errorString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

@@ -61,7 +61,7 @@ int32_t q_barcategoryaxis_qbase_metacall(void* self, int32_t param1, int param2,
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -146,7 +146,7 @@ void q_barcategoryaxis_set_categories(void* self, const char* categories[static 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#categories)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QBarCategoryAxis*
 ///
@@ -160,7 +160,7 @@ int32_t q_barcategoryaxis_count(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#at)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QBarCategoryAxis*
 /// @param index int
@@ -176,7 +176,7 @@ void q_barcategoryaxis_set_min(void* self, const char* minCategory);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#min)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QBarCategoryAxis*
 ///
@@ -191,7 +191,7 @@ void q_barcategoryaxis_set_max(void* self, const char* maxCategory);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#max)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QBarCategoryAxis*
 ///
@@ -276,7 +276,7 @@ void q_barcategoryaxis_on_count_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -285,7 +285,7 @@ const char* q_barcategoryaxis_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -622,7 +622,7 @@ void q_barcategoryaxis_set_title_text(void* self, const char* title);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#titleText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QBarCategoryAxis*
 ///
@@ -1386,7 +1386,7 @@ void q_barcategoryaxis_set_truncate_labels1(void* self, bool truncateLabels);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QBarCategoryAxis*
 ///
@@ -1601,7 +1601,7 @@ QVariant* q_barcategoryaxis_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QBarCategoryAxis*
 ///

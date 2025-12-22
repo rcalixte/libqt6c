@@ -53,7 +53,7 @@ int32_t k_shellcompletion_qbase_metacall(void* self, int32_t param1, int param2,
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -61,7 +61,7 @@ const char* k_shellcompletion_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kshellcompletion.html#makeCompletion)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KShellCompletion*
 /// @param text const char*
@@ -138,7 +138,7 @@ void k_shellcompletion_qbase_post_process_matches2(void* self, void* matches);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -147,7 +147,7 @@ const char* k_shellcompletion_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -159,7 +159,7 @@ const char* k_shellcompletion_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#replacedPath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KShellCompletion*
 /// @param text const char*
@@ -170,7 +170,7 @@ const char* k_shellcompletion_replaced_path(void* self, const char* text);
 ///
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#replacedPath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param text const char*
 /// @param replaceHome bool
@@ -190,7 +190,7 @@ void k_shellcompletion_set_mime_type_filters(void* self, const char* mimeTypes[s
 ///
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#mimeTypeFilters)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KShellCompletion*
 ///
@@ -200,7 +200,7 @@ const char** k_shellcompletion_mime_type_filters(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#replacedPath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param text const char*
 /// @param replaceHome bool
@@ -212,7 +212,7 @@ const char* k_shellcompletion_replaced_path3(const char* text, bool replaceHome,
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#substringCompletion)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KShellCompletion*
 /// @param stringVal const char*
@@ -223,7 +223,7 @@ const char** k_shellcompletion_substring_completion(void* self, const char* stri
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#items)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KShellCompletion*
 ///
@@ -277,7 +277,7 @@ bool k_shellcompletion_should_auto_suggest(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#allMatches)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KShellCompletion*
 ///
@@ -287,7 +287,7 @@ const char** k_shellcompletion_all_matches(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#allMatches)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KShellCompletion*
 /// @param stringVal const char*
@@ -331,7 +331,7 @@ bool k_shellcompletion_has_multiple_matches(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#previousMatch)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KShellCompletion*
 ///
@@ -341,7 +341,7 @@ const char* k_shellcompletion_previous_match(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#nextMatch)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KShellCompletion*
 ///
@@ -441,7 +441,7 @@ void k_shellcompletion_on_multiple_matches(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KShellCompletion*
 ///
@@ -656,7 +656,7 @@ QVariant* k_shellcompletion_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KShellCompletion*
 ///
@@ -1108,7 +1108,7 @@ void k_shellcompletion_on_set_replace_home(void* self, void (*callback)(void*, b
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#lastMatch)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1120,7 +1120,7 @@ const char* k_shellcompletion_last_match(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kcompletion.html#lastMatch)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

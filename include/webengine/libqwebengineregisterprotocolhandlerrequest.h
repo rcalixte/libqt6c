@@ -45,7 +45,7 @@ QUrl* q_webengineregisterprotocolhandlerrequest_origin(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineregisterprotocolhandlerrequest.html#scheme)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QWebEngineRegisterProtocolHandlerRequest*
 ///

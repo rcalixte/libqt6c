@@ -80,7 +80,7 @@ KTextEditor__Cursor* k_texteditor__cursor_start();
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__Cursor*
 ///

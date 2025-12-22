@@ -27,7 +27,7 @@ KSambaShareData* k_sambasharedata_new2(void* other);
 
 /// [Upstream resources](https://api.kde.org/ksambasharedata.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KSambaShareData*
 ///
@@ -35,7 +35,7 @@ const char* k_sambasharedata_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksambasharedata.html#path)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KSambaShareData*
 ///
@@ -43,7 +43,7 @@ const char* k_sambasharedata_path(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksambasharedata.html#comment)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KSambaShareData*
 ///
@@ -51,7 +51,7 @@ const char* k_sambasharedata_comment(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksambasharedata.html#acl)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KSambaShareData*
 ///

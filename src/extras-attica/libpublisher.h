@@ -21,7 +21,7 @@ Attica__Field* k_attica__field_new(void* param1);
 
 /// [Upstream resources](https://api.kde.org/attica-field.html#type-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Field*
 ///
@@ -36,7 +36,7 @@ void k_attica__field_set_type(void* self, const char* type);
 
 /// [Upstream resources](https://api.kde.org/attica-field.html#name-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Field*
 ///
@@ -77,7 +77,7 @@ void k_attica__field_set_required(void* self, bool required);
 
 /// [Upstream resources](https://api.kde.org/attica-field.html#options-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self Attica__Field*
 ///
@@ -133,7 +133,7 @@ void k_attica__publisher_set_id(void* self, const char* id);
 
 /// [Upstream resources](https://api.kde.org/attica-publisher.html#id)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Publisher*
 ///
@@ -148,7 +148,7 @@ void k_attica__publisher_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/attica-publisher.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Publisher*
 ///
@@ -163,7 +163,7 @@ void k_attica__publisher_set_url(void* self, const char* url);
 
 /// [Upstream resources](https://api.kde.org/attica-publisher.html#url)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Publisher*
 ///

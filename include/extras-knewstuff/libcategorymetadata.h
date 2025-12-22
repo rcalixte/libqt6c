@@ -21,7 +21,7 @@ KNSCore__CategoryMetadata* k_nscore__categorymetadata_new(void* param1);
 
 /// [Upstream resources](https://api.kde.org/knscore-categorymetadata.html#id)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSCore__CategoryMetadata*
 ///
@@ -29,7 +29,7 @@ const char* k_nscore__categorymetadata_id(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-categorymetadata.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSCore__CategoryMetadata*
 ///
@@ -37,7 +37,7 @@ const char* k_nscore__categorymetadata_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-categorymetadata.html#displayName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSCore__CategoryMetadata*
 ///

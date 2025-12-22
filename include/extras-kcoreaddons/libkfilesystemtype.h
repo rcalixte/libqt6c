@@ -23,7 +23,7 @@ int32_t k_filesystemtype_file_system_type(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/kfilesystemtype.html#fileSystemName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 enum KFileSystemType__Type
 ///

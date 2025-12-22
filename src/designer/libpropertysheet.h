@@ -67,7 +67,7 @@ int32_t q_designerpropertysheetextension_qbase_index_of(void* self, const char* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#propertyName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerPropertySheetExtension*
 /// @param index int
@@ -94,7 +94,7 @@ const char* q_designerpropertysheetextension_qbase_property_name(void* self, int
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#propertyGroup)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerPropertySheetExtension*
 /// @param index int

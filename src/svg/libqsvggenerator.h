@@ -27,7 +27,7 @@ QSvgGenerator* q_svggenerator_new2(int32_t version);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#title)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSvgGenerator*
 ///
@@ -42,7 +42,7 @@ void q_svggenerator_set_title(void* self, const char* title);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#description)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSvgGenerator*
 ///
@@ -96,7 +96,7 @@ void q_svggenerator_set_view_box2(void* self, void* viewBox);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#fileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSvgGenerator*
 ///

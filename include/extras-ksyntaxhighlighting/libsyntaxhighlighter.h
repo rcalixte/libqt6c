@@ -69,7 +69,7 @@ int32_t k_syntaxhighlighting__syntaxhighlighter_qbase_metacall(void* self, int32
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -224,7 +224,7 @@ void k_syntaxhighlighting__syntaxhighlighter_qbase_apply_folding(void* self, int
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -233,7 +233,7 @@ const char* k_syntaxhighlighting__syntaxhighlighter_tr2(const char* s, const cha
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -279,7 +279,7 @@ void k_syntaxhighlighting__syntaxhighlighter_rehighlight_block(void* self, void*
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 ///
@@ -494,7 +494,7 @@ QVariant* k_syntaxhighlighting__syntaxhighlighter_property(void* self, const cha
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 ///

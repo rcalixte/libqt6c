@@ -41,7 +41,7 @@ void k_attica__knowledgebaseentry_set_id(void* self, const char* id);
 
 /// [Upstream resources](https://api.kde.org/attica-knowledgebaseentry.html#id)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__KnowledgeBaseEntry*
 ///
@@ -69,7 +69,7 @@ void k_attica__knowledgebaseentry_set_user(void* self, const char* user);
 
 /// [Upstream resources](https://api.kde.org/attica-knowledgebaseentry.html#user)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__KnowledgeBaseEntry*
 ///
@@ -84,7 +84,7 @@ void k_attica__knowledgebaseentry_set_status(void* self, const char* status);
 
 /// [Upstream resources](https://api.kde.org/attica-knowledgebaseentry.html#status)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__KnowledgeBaseEntry*
 ///
@@ -112,7 +112,7 @@ void k_attica__knowledgebaseentry_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/attica-knowledgebaseentry.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__KnowledgeBaseEntry*
 ///
@@ -127,7 +127,7 @@ void k_attica__knowledgebaseentry_set_description(void* self, const char* descri
 
 /// [Upstream resources](https://api.kde.org/attica-knowledgebaseentry.html#description)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__KnowledgeBaseEntry*
 ///
@@ -142,7 +142,7 @@ void k_attica__knowledgebaseentry_set_answer(void* self, const char* answer);
 
 /// [Upstream resources](https://api.kde.org/attica-knowledgebaseentry.html#answer)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__KnowledgeBaseEntry*
 ///
@@ -184,7 +184,7 @@ void k_attica__knowledgebaseentry_add_extended_attribute(void* self, const char*
 
 /// [Upstream resources](https://api.kde.org/attica-knowledgebaseentry.html#extendedAttribute)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__KnowledgeBaseEntry*
 /// @param key const char*

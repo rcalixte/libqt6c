@@ -15,7 +15,7 @@
 
 /// [Upstream resources](https://api.kde.org/kio.html#buildErrorString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 int
 /// @param param2 const char*
@@ -24,7 +24,7 @@ const char* k_io_build_error_string(int param1, const char* param2);
 
 /// [Upstream resources](https://api.kde.org/kio.html#rawErrorDetail)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param param1 int
 /// @param param2 const char*

@@ -187,7 +187,7 @@ int32_t q_settings_qbase_metacall(void* self, int32_t param1, int param2, void* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -241,7 +241,7 @@ void q_settings_end_group(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#group)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSettings*
 ///
@@ -276,7 +276,7 @@ void q_settings_set_array_index(void* self, int i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#allKeys)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSettings*
 ///
@@ -284,7 +284,7 @@ const char** q_settings_all_keys(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#childKeys)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSettings*
 ///
@@ -292,7 +292,7 @@ const char** q_settings_child_keys(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#childGroups)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSettings*
 ///
@@ -356,7 +356,7 @@ bool q_settings_fallbacks_enabled(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#fileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSettings*
 ///
@@ -380,7 +380,7 @@ int32_t q_settings_scope(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#organizationName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSettings*
 ///
@@ -388,7 +388,7 @@ const char* q_settings_organization_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#applicationName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSettings*
 ///
@@ -441,7 +441,7 @@ bool q_settings_qbase_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -450,7 +450,7 @@ const char* q_settings_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -470,7 +470,7 @@ void q_settings_begin_write_array2(void* self, char* prefix, int size);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSettings*
 ///
@@ -685,7 +685,7 @@ QVariant* q_settings_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSettings*
 ///

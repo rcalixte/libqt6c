@@ -78,7 +78,7 @@ int32_t k_autosavefile_qbase_metacall(void* self, int32_t param1, int param2, vo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -157,7 +157,7 @@ libqt_list /* of KAutoSaveFile* */ k_autosavefile_all_stale_files();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -166,7 +166,7 @@ const char* k_autosavefile_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -200,7 +200,7 @@ void k_autosavefile_set_file_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qfile.html#encodeName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param fileName const char*
 ///
@@ -210,7 +210,7 @@ char* k_autosavefile_encode_name(const char* fileName);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qfile.html#decodeName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param localFileName const char*
 ///
@@ -220,7 +220,7 @@ const char* k_autosavefile_decode_name(const char* localFileName);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qfile.html#decodeName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param localFileName const char*
 ///
@@ -246,7 +246,7 @@ bool k_autosavefile_exists2(const char* fileName);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qfile.html#symLinkTarget)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KAutoSaveFile*
 ///
@@ -256,7 +256,7 @@ const char* k_autosavefile_sym_link_target(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qfile.html#symLinkTarget)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param fileName const char*
 ///
@@ -605,7 +605,7 @@ long long k_autosavefile_read(void* self, char* data, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#read)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KAutoSaveFile*
 /// @param maxlen long long
@@ -616,7 +616,7 @@ char* k_autosavefile_read2(void* self, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readAll)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KAutoSaveFile*
 ///
@@ -636,7 +636,7 @@ long long k_autosavefile_read_line(void* self, char* data, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KAutoSaveFile*
 ///
@@ -716,7 +716,7 @@ long long k_autosavefile_peek(void* self, char* data, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#peek)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KAutoSaveFile*
 /// @param maxlen long long
@@ -763,7 +763,7 @@ bool k_autosavefile_get_char(void* self, char* c);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#errorString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KAutoSaveFile*
 ///
@@ -879,7 +879,7 @@ void k_autosavefile_on_read_channel_finished(void* self, void (*callback)(void*)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KAutoSaveFile*
 /// @param maxlen long long
@@ -890,7 +890,7 @@ char* k_autosavefile_read_line1(void* self, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KAutoSaveFile*
 ///
@@ -1105,7 +1105,7 @@ QVariant* k_autosavefile_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KAutoSaveFile*
 ///
@@ -1235,7 +1235,7 @@ void k_autosavefile_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qfile.html#fileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1247,7 +1247,7 @@ const char* k_autosavefile_file_name(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qfile.html#fileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

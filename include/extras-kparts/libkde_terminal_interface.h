@@ -49,7 +49,7 @@ int32_t k_terminalinterface_foreground_process_id(void* self);
 
 /// [Upstream resources](https://api.kde.org/terminalinterface.html#foregroundProcessName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self TerminalInterface*
 ///
@@ -57,7 +57,7 @@ const char* k_terminalinterface_foreground_process_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/terminalinterface.html#currentWorkingDirectory)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self TerminalInterface*
 ///
@@ -65,7 +65,7 @@ const char* k_terminalinterface_current_working_directory(void* self);
 
 /// [Upstream resources](https://api.kde.org/terminalinterface.html#availableProfiles)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self TerminalInterface*
 ///
@@ -73,7 +73,7 @@ const char** k_terminalinterface_available_profiles(void* self);
 
 /// [Upstream resources](https://api.kde.org/terminalinterface.html#currentProfileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self TerminalInterface*
 ///

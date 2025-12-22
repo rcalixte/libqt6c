@@ -33,7 +33,7 @@ int32_t k_solid__storagevolume_metacall(void* self, int32_t param1, int param2, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -61,7 +61,7 @@ int32_t k_solid__storagevolume_usage(void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-storagevolume.html#fsType)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Solid__StorageVolume*
 ///
@@ -69,7 +69,7 @@ const char* k_solid__storagevolume_fs_type(void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-storagevolume.html#label)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Solid__StorageVolume*
 ///
@@ -77,7 +77,7 @@ const char* k_solid__storagevolume_label(void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-storagevolume.html#uuid)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Solid__StorageVolume*
 ///
@@ -91,7 +91,7 @@ uint64_t k_solid__storagevolume_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -100,7 +100,7 @@ const char* k_solid__storagevolume_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -120,7 +120,7 @@ bool k_solid__storagevolume_is_valid(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/solid-deviceinterface.html#typeToString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param type enum Solid__DeviceInterface__Type
 ///
@@ -140,7 +140,7 @@ int32_t k_solid__storagevolume_string_to_type(const char* type);
 ///
 /// [Upstream resources](https://api.kde.org/solid-deviceinterface.html#typeDescription)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param type enum Solid__DeviceInterface__Type
 ///
@@ -169,7 +169,7 @@ bool k_solid__storagevolume_event_filter(void* self, void* watched, void* event)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Solid__StorageVolume*
 ///
@@ -384,7 +384,7 @@ QVariant* k_solid__storagevolume_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self Solid__StorageVolume*
 ///

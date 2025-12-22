@@ -220,7 +220,7 @@ int32_t q_networkinterface_maximum_transmission_unit(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QNetworkInterface*
 ///
@@ -228,7 +228,7 @@ const char* q_networkinterface_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#humanReadableName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QNetworkInterface*
 ///
@@ -252,7 +252,7 @@ int32_t q_networkinterface_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#hardwareAddress)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QNetworkInterface*
 ///
@@ -284,7 +284,7 @@ QNetworkInterface* q_networkinterface_interface_from_index(int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#interfaceNameFromIndex)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param index int
 ///

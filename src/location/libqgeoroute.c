@@ -1,0 +1,135 @@
+#include "libqgeorouterequest.hpp"
+#include "libqgeoroutesegment.hpp"
+#include "../libqvariant.hpp"
+#include "libqgeoroute.hpp"
+#include "libqgeoroute.h"
+
+QGeoRoute* q_georoute_new() {
+    return QGeoRoute_new();
+}
+
+QGeoRoute* q_georoute_new2(void* other) {
+    return QGeoRoute_new2((QGeoRoute*)other);
+}
+
+void q_georoute_operator_assign(void* self, void* other) {
+    QGeoRoute_OperatorAssign((QGeoRoute*)self, (QGeoRoute*)other);
+}
+
+void q_georoute_swap(void* self, void* other) {
+    QGeoRoute_Swap((QGeoRoute*)self, (QGeoRoute*)other);
+}
+
+void q_georoute_set_route_id(void* self, const char* id) {
+    QGeoRoute_SetRouteId((QGeoRoute*)self, qstring(id));
+}
+
+const char* q_georoute_route_id(void* self) {
+    libqt_string _str = QGeoRoute_RouteId((QGeoRoute*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_georoute_set_request(void* self, void* request) {
+    QGeoRoute_SetRequest((QGeoRoute*)self, (QGeoRouteRequest*)request);
+}
+
+QGeoRouteRequest* q_georoute_request(void* self) {
+    return QGeoRoute_Request((QGeoRoute*)self);
+}
+
+void q_georoute_set_bounds(void* self, void* bounds) {
+    QGeoRoute_SetBounds((QGeoRoute*)self, (QGeoRectangle*)bounds);
+}
+
+QGeoRectangle* q_georoute_bounds(void* self) {
+    return QGeoRoute_Bounds((QGeoRoute*)self);
+}
+
+void q_georoute_set_first_route_segment(void* self, void* routeSegment) {
+    QGeoRoute_SetFirstRouteSegment((QGeoRoute*)self, (QGeoRouteSegment*)routeSegment);
+}
+
+QGeoRouteSegment* q_georoute_first_route_segment(void* self) {
+    return QGeoRoute_FirstRouteSegment((QGeoRoute*)self);
+}
+
+int64_t q_georoute_segments_count(void* self) {
+    return QGeoRoute_SegmentsCount((QGeoRoute*)self);
+}
+
+libqt_list /* of QGeoRouteSegment* */ q_georoute_segments(void* self) {
+    libqt_list _arr = QGeoRoute_Segments((QGeoRoute*)self);
+    return _arr;
+}
+
+void q_georoute_set_travel_time(void* self, int secs) {
+    QGeoRoute_SetTravelTime((QGeoRoute*)self, secs);
+}
+
+int32_t q_georoute_travel_time(void* self) {
+    return QGeoRoute_TravelTime((QGeoRoute*)self);
+}
+
+void q_georoute_set_distance(void* self, double distance) {
+    QGeoRoute_SetDistance((QGeoRoute*)self, distance);
+}
+
+double q_georoute_distance(void* self) {
+    return QGeoRoute_Distance((QGeoRoute*)self);
+}
+
+void q_georoute_set_travel_mode(void* self, int32_t mode) {
+    QGeoRoute_SetTravelMode((QGeoRoute*)self, mode);
+}
+
+int32_t q_georoute_travel_mode(void* self) {
+    return QGeoRoute_TravelMode((QGeoRoute*)self);
+}
+
+void q_georoute_set_path(void* self, libqt_list path) {
+    QGeoRoute_SetPath((QGeoRoute*)self, path);
+}
+
+libqt_list /* of QGeoCoordinate* */ q_georoute_path(void* self) {
+    libqt_list _arr = QGeoRoute_Path((QGeoRoute*)self);
+    return _arr;
+}
+
+void q_georoute_set_route_legs(void* self, libqt_list legs) {
+    QGeoRoute_SetRouteLegs((QGeoRoute*)self, legs);
+}
+
+libqt_list /* of QGeoRoute* */ q_georoute_route_legs(void* self) {
+    libqt_list _arr = QGeoRoute_RouteLegs((QGeoRoute*)self);
+    return _arr;
+}
+
+void q_georoute_set_extended_attributes(void* self, libqt_map /* of const char* to QVariant* */ extendedAttributes) {
+    QGeoRoute_SetExtendedAttributes((QGeoRoute*)self, extendedAttributes);
+}
+
+libqt_map /* of const char* to QVariant* */ q_georoute_extended_attributes(void* self) {
+    return QGeoRoute_ExtendedAttributes((QGeoRoute*)self);
+}
+
+void q_georoute_set_leg_index(void* self, int idx) {
+    QGeoRoute_SetLegIndex((QGeoRoute*)self, idx);
+}
+
+int32_t q_georoute_leg_index(void* self) {
+    return QGeoRoute_LegIndex((QGeoRoute*)self);
+}
+
+void q_georoute_set_overall_route(void* self, void* route) {
+    QGeoRoute_SetOverallRoute((QGeoRoute*)self, (QGeoRoute*)route);
+}
+
+QGeoRoute* q_georoute_overall_route(void* self) {
+    return QGeoRoute_OverallRoute((QGeoRoute*)self);
+}
+
+void q_georoute_delete(void* self) {
+    QGeoRoute_Delete((QGeoRoute*)(self));
+}

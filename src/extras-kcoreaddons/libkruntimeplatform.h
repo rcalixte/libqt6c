@@ -15,7 +15,7 @@
 
 /// [Upstream resources](https://api.kde.org/kruntimeplatform.html#runtimePlatform)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 const char** k_runtimeplatform_runtime_platform();
 #endif

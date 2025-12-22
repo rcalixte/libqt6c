@@ -34,7 +34,7 @@ void k_io__udsentry_operator_assign(void* self, void* param1);
 
 /// [Upstream resources](https://api.kde.org/kio-udsentry.html#stringValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KIO__UDSEntry*
 /// @param field uint32_t

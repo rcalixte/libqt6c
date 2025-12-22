@@ -41,7 +41,7 @@ void k_attica__topic_set_id(void* self, const char* id);
 
 /// [Upstream resources](https://api.kde.org/attica-topic.html#id)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Topic*
 ///
@@ -56,7 +56,7 @@ void k_attica__topic_set_forum_id(void* self, const char* forumId);
 
 /// [Upstream resources](https://api.kde.org/attica-topic.html#forumId)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Topic*
 ///
@@ -71,7 +71,7 @@ void k_attica__topic_set_user(void* self, const char* user);
 
 /// [Upstream resources](https://api.kde.org/attica-topic.html#user)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Topic*
 ///
@@ -99,7 +99,7 @@ void k_attica__topic_set_subject(void* self, const char* subject);
 
 /// [Upstream resources](https://api.kde.org/attica-topic.html#subject)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Topic*
 ///
@@ -114,7 +114,7 @@ void k_attica__topic_set_content(void* self, const char* content);
 
 /// [Upstream resources](https://api.kde.org/attica-topic.html#content)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Topic*
 ///
