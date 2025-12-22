@@ -33,7 +33,7 @@ int32_t q_networkinformation_metacall(void* self, int32_t param1, int param2, vo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -69,7 +69,7 @@ bool q_networkinformation_is_metered(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#backendName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QNetworkInformation*
 ///
@@ -108,7 +108,7 @@ bool q_networkinformation_load2(int32_t features);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#availableBackends)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 const char** q_networkinformation_available_backends();
 
@@ -174,7 +174,7 @@ void q_networkinformation_on_is_metered_changed(void* self, void (*callback)(voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -183,7 +183,7 @@ const char* q_networkinformation_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -214,7 +214,7 @@ bool q_networkinformation_event_filter(void* self, void* watched, void* event);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QNetworkInformation*
 ///
@@ -429,7 +429,7 @@ QVariant* q_networkinformation_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QNetworkInformation*
 ///

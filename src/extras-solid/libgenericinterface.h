@@ -33,7 +33,7 @@ int32_t k_solid__genericinterface_metacall(void* self, int32_t param1, int param
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -96,7 +96,7 @@ void k_solid__genericinterface_on_condition_raised(void* self, void (*callback)(
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -105,7 +105,7 @@ const char* k_solid__genericinterface_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -125,7 +125,7 @@ bool k_solid__genericinterface_is_valid(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/solid-deviceinterface.html#typeToString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param type enum Solid__DeviceInterface__Type
 ///
@@ -145,7 +145,7 @@ int32_t k_solid__genericinterface_string_to_type(const char* type);
 ///
 /// [Upstream resources](https://api.kde.org/solid-deviceinterface.html#typeDescription)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param type enum Solid__DeviceInterface__Type
 ///
@@ -174,7 +174,7 @@ bool k_solid__genericinterface_event_filter(void* self, void* watched, void* eve
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Solid__GenericInterface*
 ///
@@ -380,7 +380,7 @@ bool k_solid__genericinterface_set_property(void* self, const char* name, void* 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self Solid__GenericInterface*
 ///

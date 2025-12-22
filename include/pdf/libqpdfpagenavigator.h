@@ -61,7 +61,7 @@ int32_t q_pdfpagenavigator_qbase_metacall(void* self, int32_t param1, int param2
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -248,7 +248,7 @@ QPdfLink* q_pdfpagenavigator_qbase_current_link(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -257,7 +257,7 @@ const char* q_pdfpagenavigator_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -278,7 +278,7 @@ void q_pdfpagenavigator_jump3(void* self, int page, void* location, double zoom)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QPdfPageNavigator*
 ///
@@ -493,7 +493,7 @@ QVariant* q_pdfpagenavigator_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QPdfPageNavigator*
 ///

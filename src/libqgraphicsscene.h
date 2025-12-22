@@ -101,7 +101,7 @@ int32_t q_graphicsscene_qbase_metacall(void* self, int32_t param1, int param2, v
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -1239,7 +1239,7 @@ void q_graphicsscene_on_focus_item_changed(void* self, void (*callback)(void*, v
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1248,7 +1248,7 @@ const char* q_graphicsscene_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1611,7 +1611,7 @@ void q_graphicsscene_invalidate22(void* self, void* rect, int32_t layers);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGraphicsScene*
 ///
@@ -1826,7 +1826,7 @@ QVariant* q_graphicsscene_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QGraphicsScene*
 ///

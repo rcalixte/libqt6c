@@ -61,7 +61,7 @@ int32_t q_mediarecorder_qbase_metacall(void* self, int32_t param1, int param2, v
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -123,7 +123,7 @@ int32_t q_mediarecorder_error(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#errorString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QMediaRecorder*
 ///
@@ -549,7 +549,7 @@ void q_mediarecorder_on_auto_stop_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -558,7 +558,7 @@ const char* q_mediarecorder_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -570,7 +570,7 @@ const char* q_mediarecorder_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QMediaRecorder*
 ///
@@ -785,7 +785,7 @@ QVariant* q_mediarecorder_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QMediaRecorder*
 ///

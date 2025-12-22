@@ -34,7 +34,7 @@ void q_webenginescript_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginescript.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QWebEngineScript*
 ///
@@ -62,7 +62,7 @@ void q_webenginescript_set_source_url(void* self, void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginescript.html#sourceCode)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QWebEngineScript*
 ///

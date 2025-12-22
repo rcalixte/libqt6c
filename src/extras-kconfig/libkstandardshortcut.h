@@ -21,7 +21,7 @@ libqt_list /* of QKeySequence* */ k_standardshortcut_shortcut(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 enum KStandardShortcut__StandardShortcut
 ///
@@ -29,7 +29,7 @@ const char* k_standardshortcut_name(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#label)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 enum KStandardShortcut__StandardShortcut
 ///
@@ -37,7 +37,7 @@ const char* k_standardshortcut_label(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#whatsThis)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 enum KStandardShortcut__StandardShortcut
 ///

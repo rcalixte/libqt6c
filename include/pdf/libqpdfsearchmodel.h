@@ -61,7 +61,7 @@ int32_t q_pdfsearchmodel_qbase_metacall(void* self, int32_t param1, int param2, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -89,7 +89,7 @@ QPdfDocument* q_pdfsearchmodel_document(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfsearchmodel.html#searchString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QPdfSearchModel*
 ///
@@ -281,7 +281,7 @@ void q_pdfsearchmodel_qbase_timer_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -290,7 +290,7 @@ const char* q_pdfsearchmodel_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -702,7 +702,7 @@ void q_pdfsearchmodel_on_layout_about_to_be_changed2(void* self, void (*callback
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QPdfSearchModel*
 ///
@@ -917,7 +917,7 @@ QVariant* q_pdfsearchmodel_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QPdfSearchModel*
 ///
@@ -1405,7 +1405,7 @@ void q_pdfsearchmodel_on_clear_item_data(void* self, bool (*callback)(void*, voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeTypes)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1417,7 +1417,7 @@ const char** q_pdfsearchmodel_mime_types(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeTypes)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

@@ -86,7 +86,7 @@ void q_abstractformbuilder_qbase_save(void* self, void* dev, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#errorString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAbstractFormBuilder*
 ///

@@ -64,7 +64,7 @@ int32_t k_filepreviewgenerator_qbase_metacall(void* self, int32_t param1, int pa
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -92,7 +92,7 @@ void k_filepreviewgenerator_set_enabled_plugins(void* self, const char* list[sta
 
 /// [Upstream resources](https://api.kde.org/kfilepreviewgenerator.html#enabledPlugins)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KFilePreviewGenerator*
 ///
@@ -112,7 +112,7 @@ void k_filepreviewgenerator_cancel_previews(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -121,7 +121,7 @@ const char* k_filepreviewgenerator_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -133,7 +133,7 @@ const char* k_filepreviewgenerator_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KFilePreviewGenerator*
 ///
@@ -348,7 +348,7 @@ QVariant* k_filepreviewgenerator_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KFilePreviewGenerator*
 ///

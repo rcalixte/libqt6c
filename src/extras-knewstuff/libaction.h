@@ -57,7 +57,7 @@ int32_t k_nswidgets__action_qbase_metacall(void* self, int32_t param1, int param
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -79,7 +79,7 @@ void k_nswidgets__action_on_dialog_finished(void* self, void (*callback)(void*, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -88,7 +88,7 @@ const char* k_nswidgets__action_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -151,7 +151,7 @@ void k_nswidgets__action_set_text(void* self, const char* text);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#text)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSWidgets__Action*
 ///
@@ -170,7 +170,7 @@ void k_nswidgets__action_set_icon_text(void* self, const char* text);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#iconText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSWidgets__Action*
 ///
@@ -189,7 +189,7 @@ void k_nswidgets__action_set_tool_tip(void* self, const char* tip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSWidgets__Action*
 ///
@@ -208,7 +208,7 @@ void k_nswidgets__action_set_status_tip(void* self, const char* statusTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#statusTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSWidgets__Action*
 ///
@@ -227,7 +227,7 @@ void k_nswidgets__action_set_whats_this(void* self, const char* what);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#whatsThis)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSWidgets__Action*
 ///
@@ -714,7 +714,7 @@ void k_nswidgets__action_on_triggered1(void* self, void (*callback)(void*, bool)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSWidgets__Action*
 ///
@@ -929,7 +929,7 @@ QVariant* k_nswidgets__action_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KNSWidgets__Action*
 ///

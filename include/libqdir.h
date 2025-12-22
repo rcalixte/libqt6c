@@ -86,7 +86,7 @@ void q_dir_set_path(void* self, const char* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#path)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDir*
 ///
@@ -94,7 +94,7 @@ const char* q_dir_path(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#absolutePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDir*
 ///
@@ -102,7 +102,7 @@ const char* q_dir_absolute_path(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#canonicalPath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDir*
 ///
@@ -124,7 +124,7 @@ void q_dir_add_search_path(const char* prefix, const char* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#searchPaths)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param prefix const char*
 ///
@@ -132,7 +132,7 @@ const char** q_dir_search_paths(const char* prefix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#dirName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDir*
 ///
@@ -140,7 +140,7 @@ const char* q_dir_dir_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#filePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDir*
 /// @param fileName const char*
@@ -149,7 +149,7 @@ const char* q_dir_file_path(void* self, const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#absoluteFilePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDir*
 /// @param fileName const char*
@@ -158,7 +158,7 @@ const char* q_dir_absolute_file_path(void* self, const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#relativeFilePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDir*
 /// @param fileName const char*
@@ -167,7 +167,7 @@ const char* q_dir_relative_file_path(void* self, const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#toNativeSeparators)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param pathName const char*
 ///
@@ -175,7 +175,7 @@ const char* q_dir_to_native_separators(const char* pathName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#fromNativeSeparators)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param pathName const char*
 ///
@@ -196,7 +196,7 @@ bool q_dir_cd_up(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#nameFilters)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDir*
 ///
@@ -253,7 +253,7 @@ bool q_dir_is_empty(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#operator-5b-5d)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDir*
 /// @param param1 long long
@@ -262,7 +262,7 @@ const char* q_dir_operator_subscript(void* self, long long param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#nameFiltersFromString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param nameFilter const char*
 ///
@@ -270,7 +270,7 @@ const char** q_dir_name_filters_from_string(const char* nameFilter);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#entryList)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDir*
 ///
@@ -278,7 +278,7 @@ const char** q_dir_entry_list(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#entryList)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDir*
 /// @param nameFilters const char**
@@ -412,7 +412,7 @@ QDir* q_dir_current();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#currentPath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_dir_current_path();
 
@@ -422,7 +422,7 @@ QDir* q_dir_home();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#homePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_dir_home_path();
 
@@ -432,7 +432,7 @@ QDir* q_dir_root();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#rootPath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_dir_root_path();
 
@@ -442,7 +442,7 @@ QDir* q_dir_temp();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#tempPath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_dir_temp_path();
 
@@ -462,7 +462,7 @@ bool q_dir_match2(const char* filter, const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#cleanPath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param path const char*
 ///
@@ -490,7 +490,7 @@ bool q_dir_is_empty1(void* self, int32_t filters);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#entryList)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDir*
 /// @param filters flag of enum QDir__Filter
@@ -499,7 +499,7 @@ const char** q_dir_entry_list1(void* self, int32_t filters);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#entryList)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDir*
 /// @param filters flag of enum QDir__Filter
@@ -509,7 +509,7 @@ const char** q_dir_entry_list22(void* self, int32_t filters, int32_t sort);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#entryList)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDir*
 /// @param nameFilters const char**
@@ -519,7 +519,7 @@ const char** q_dir_entry_list23(void* self, const char* nameFilters[static 1], i
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#entryList)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDir*
 /// @param nameFilters const char**

@@ -48,7 +48,7 @@ bool q_webenginecertificateerror_is_overridable(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#description)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QWebEngineCertificateError*
 ///

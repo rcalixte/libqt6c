@@ -41,7 +41,7 @@ void k_attica__forum_set_id(void* self, const char* id);
 
 /// [Upstream resources](https://api.kde.org/attica-forum.html#id)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Forum*
 ///
@@ -56,7 +56,7 @@ void k_attica__forum_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/attica-forum.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Forum*
 ///
@@ -71,7 +71,7 @@ void k_attica__forum_set_description(void* self, const char* description);
 
 /// [Upstream resources](https://api.kde.org/attica-forum.html#description)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Forum*
 ///

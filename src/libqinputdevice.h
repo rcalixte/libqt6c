@@ -94,7 +94,7 @@ int32_t q_inputdevice_qbase_metacall(void* self, int32_t param1, int param2, voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -102,7 +102,7 @@ const char* q_inputdevice_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdevice.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QInputDevice*
 ///
@@ -139,7 +139,7 @@ long long q_inputdevice_system_id(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdevice.html#seatName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QInputDevice*
 ///
@@ -153,7 +153,7 @@ QRect* q_inputdevice_available_virtual_geometry(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdevice.html#seatNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 const char** q_inputdevice_seat_names();
 
@@ -188,7 +188,7 @@ void q_inputdevice_on_available_virtual_geometry_changed(void* self, void (*call
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -197,7 +197,7 @@ const char* q_inputdevice_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -215,7 +215,7 @@ const QInputDevice* q_inputdevice_primary_keyboard1(const char* seatName);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QInputDevice*
 ///
@@ -430,7 +430,7 @@ QVariant* q_inputdevice_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QInputDevice*
 ///

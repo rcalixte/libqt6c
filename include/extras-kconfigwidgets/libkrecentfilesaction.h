@@ -74,7 +74,7 @@ int32_t k_recentfilesaction_qbase_metacall(void* self, int32_t param1, int param
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -222,7 +222,7 @@ void k_recentfilesaction_on_recent_list_cleared(void* self, void (*callback)(voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -231,7 +231,7 @@ const char* k_recentfilesaction_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -323,7 +323,7 @@ int32_t k_recentfilesaction_current_item(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kselectaction.html#currentText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KRecentFilesAction*
 ///
@@ -414,7 +414,7 @@ void k_recentfilesaction_set_items(void* self, const char* lst[static 1]);
 ///
 /// [Upstream resources](https://api.kde.org/kselectaction.html#items)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KRecentFilesAction*
 ///
@@ -662,7 +662,7 @@ void k_recentfilesaction_set_text(void* self, const char* text);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#text)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KRecentFilesAction*
 ///
@@ -681,7 +681,7 @@ void k_recentfilesaction_set_icon_text(void* self, const char* text);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#iconText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KRecentFilesAction*
 ///
@@ -700,7 +700,7 @@ void k_recentfilesaction_set_tool_tip(void* self, const char* tip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KRecentFilesAction*
 ///
@@ -719,7 +719,7 @@ void k_recentfilesaction_set_status_tip(void* self, const char* statusTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#statusTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KRecentFilesAction*
 ///
@@ -738,7 +738,7 @@ void k_recentfilesaction_set_whats_this(void* self, const char* what);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#whatsThis)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KRecentFilesAction*
 ///
@@ -1225,7 +1225,7 @@ void k_recentfilesaction_on_triggered1(void* self, void (*callback)(void*, bool)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KRecentFilesAction*
 ///
@@ -1440,7 +1440,7 @@ QVariant* k_recentfilesaction_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KRecentFilesAction*
 ///

@@ -22,7 +22,7 @@ QAction* k_standardactions_kgui_create_internal(int32_t param1, void* param2);
 
 /// [Upstream resources](https://api.kde.org/kstandardactions.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 enum KStandardActions__StandardAction
 ///

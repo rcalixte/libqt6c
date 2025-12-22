@@ -56,7 +56,7 @@ void k_archivefile_set_size(void* self, long long s);
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#data)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KArchiveFile*
 ///
@@ -171,7 +171,7 @@ QDateTime* k_archivefile_date(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KArchiveFile*
 ///
@@ -189,7 +189,7 @@ mode_t k_archivefile_permissions(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#user)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KArchiveFile*
 ///
@@ -199,7 +199,7 @@ const char* k_archivefile_user(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#group)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KArchiveFile*
 ///
@@ -209,7 +209,7 @@ const char* k_archivefile_group(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#symLinkTarget)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KArchiveFile*
 ///

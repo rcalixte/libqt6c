@@ -65,7 +65,7 @@ libqt_map /* of const char* to QVariant* */ q_jsonobject_to_variant_hash(void* s
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonobject.html#keys)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QJsonObject*
 ///
@@ -263,7 +263,7 @@ void q_jsonobject__iterator_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonobject-iterator.html#key)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QJsonObject__iterator*
 ///
@@ -415,7 +415,7 @@ void q_jsonobject__const_iterator_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonobject-const-iterator.html#key)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QJsonObject__const_iterator*
 ///

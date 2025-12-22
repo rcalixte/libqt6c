@@ -61,7 +61,7 @@ int32_t q_datetimeaxis_qbase_metacall(void* self, int32_t param1, int param2, vo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -137,7 +137,7 @@ void q_datetimeaxis_set_format(void* self, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeaxis-qtcharts.html#format)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDateTimeAxis*
 ///
@@ -229,7 +229,7 @@ void q_datetimeaxis_on_tick_count_changed(void* self, void (*callback)(void*, in
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -238,7 +238,7 @@ const char* q_datetimeaxis_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -575,7 +575,7 @@ void q_datetimeaxis_set_title_text(void* self, const char* title);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#titleText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDateTimeAxis*
 ///
@@ -1339,7 +1339,7 @@ void q_datetimeaxis_set_truncate_labels1(void* self, bool truncateLabels);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDateTimeAxis*
 ///
@@ -1554,7 +1554,7 @@ QVariant* q_datetimeaxis_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDateTimeAxis*
 ///

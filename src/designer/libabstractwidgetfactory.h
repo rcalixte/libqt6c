@@ -61,7 +61,7 @@ int32_t q_designerwidgetfactoryinterface_qbase_metacall(void* self, int32_t para
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -248,7 +248,7 @@ void q_designerwidgetfactoryinterface_qbase_initialize(void* self, void* object)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -257,7 +257,7 @@ const char* q_designerwidgetfactoryinterface_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -269,7 +269,7 @@ const char* q_designerwidgetfactoryinterface_tr3(const char* s, const char* c, i
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerWidgetFactoryInterface*
 ///
@@ -484,7 +484,7 @@ QVariant* q_designerwidgetfactoryinterface_property(void* self, const char* name
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDesignerWidgetFactoryInterface*
 ///

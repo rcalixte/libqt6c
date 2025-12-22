@@ -53,7 +53,7 @@ int32_t k_sycoca_qbase_metacall(void* self, int32_t param1, int param2, void* pa
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -88,13 +88,13 @@ QDataStream* k_sycoca_find_factory(void* self, int32_t id);
 
 /// [Upstream resources](https://api.kde.org/ksycoca.html#absoluteFilePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* k_sycoca_absolute_file_path();
 
 /// [Upstream resources](https://api.kde.org/ksycoca.html#allResourceDirs)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KSycoca*
 ///
@@ -147,29 +147,6 @@ void k_sycoca_setup_test_menu();
 ///
 void k_sycoca_database_changed(void* self);
 
-/// [Upstream resources](https://api.kde.org/ksycoca.html#stream)
-///
-/// @param self KSycoca*
-///
-QDataStream** k_sycoca_stream(void* self);
-
-/// [Upstream resources](https://api.kde.org/ksycoca.html#stream)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KSycoca*
-/// @param callback QDataStream** func()
-///
-void k_sycoca_on_stream(void* self, QDataStream** (*callback)());
-
-/// [Upstream resources](https://api.kde.org/ksycoca.html#stream)
-///
-/// Base class method implementation
-///
-/// @param self KSycoca*
-///
-QDataStream** k_sycoca_qbase_stream(void* self);
-
 /// [Upstream resources](https://api.kde.org/ksycoca.html#connectNotify)
 ///
 /// @param self KSycoca*
@@ -197,7 +174,7 @@ void k_sycoca_qbase_connect_notify(void* self, void* signal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -206,7 +183,7 @@ const char* k_sycoca_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -218,7 +195,7 @@ const char* k_sycoca_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KSycoca*
 ///
@@ -433,7 +410,7 @@ QVariant* k_sycoca_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KSycoca*
 ///

@@ -107,7 +107,7 @@ void q_webenginehttprequest_set_url(void* self, void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#postData)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QWebEngineHttpRequest*
 ///
@@ -129,7 +129,7 @@ bool q_webenginehttprequest_has_header(void* self, const char* headerName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#headers)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QWebEngineHttpRequest*
 ///
@@ -137,7 +137,7 @@ const char** q_webenginehttprequest_headers(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#header)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QWebEngineHttpRequest*
 /// @param headerName const char*

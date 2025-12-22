@@ -187,7 +187,7 @@ float q_colorspace_gamma(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolorspace.html#description)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QColorSpace*
 ///
@@ -318,7 +318,7 @@ QColorSpace* q_colorspace_from_icc_profile(const char* iccProfile);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolorspace.html#iccProfile)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QColorSpace*
 ///

@@ -23,7 +23,7 @@ void q_webenginesettings_set_font_family(void* self, int32_t which, const char* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#fontFamily)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QWebEngineSettings*
 /// @param which enum QWebEngineSettings__FontFamily
@@ -90,7 +90,7 @@ void q_webenginesettings_set_default_text_encoding(void* self, const char* encod
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginesettings.html#defaultTextEncoding)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QWebEngineSettings*
 ///

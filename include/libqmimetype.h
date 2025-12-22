@@ -53,7 +53,7 @@ bool q_mimetype_is_default(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimetype.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QMimeType*
 ///
@@ -61,7 +61,7 @@ const char* q_mimetype_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimetype.html#comment)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QMimeType*
 ///
@@ -69,7 +69,7 @@ const char* q_mimetype_comment(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimetype.html#genericIconName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QMimeType*
 ///
@@ -77,7 +77,7 @@ const char* q_mimetype_generic_icon_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimetype.html#iconName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QMimeType*
 ///
@@ -85,7 +85,7 @@ const char* q_mimetype_icon_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimetype.html#globPatterns)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QMimeType*
 ///
@@ -93,7 +93,7 @@ const char** q_mimetype_glob_patterns(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimetype.html#parentMimeTypes)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QMimeType*
 ///
@@ -101,7 +101,7 @@ const char** q_mimetype_parent_mime_types(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimetype.html#allAncestors)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QMimeType*
 ///
@@ -109,7 +109,7 @@ const char** q_mimetype_all_ancestors(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimetype.html#aliases)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QMimeType*
 ///
@@ -117,7 +117,7 @@ const char** q_mimetype_aliases(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimetype.html#suffixes)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QMimeType*
 ///
@@ -125,7 +125,7 @@ const char** q_mimetype_suffixes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimetype.html#preferredSuffix)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QMimeType*
 ///
@@ -140,7 +140,7 @@ bool q_mimetype_inherits(void* self, const char* mimeTypeName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimetype.html#filterString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QMimeType*
 ///

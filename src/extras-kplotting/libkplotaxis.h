@@ -60,7 +60,7 @@ void k_plotaxis_set_label(void* self, const char* label);
 
 /// [Upstream resources](https://api.kde.org/kplotaxis.html#label)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KPlotAxis*
 ///
@@ -68,7 +68,7 @@ const char* k_plotaxis_label(void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotaxis.html#tickLabel)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KPlotAxis*
 /// @param value double

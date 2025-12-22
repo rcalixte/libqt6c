@@ -115,7 +115,7 @@ QWidget* q_designercomponents_create_signal_slot_editor(void* core, void* parent
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercomponents.html#defaultPluginPaths)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 const char** q_designercomponents_default_plugin_paths();
 

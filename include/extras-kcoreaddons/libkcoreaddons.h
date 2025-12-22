@@ -15,7 +15,7 @@
 
 /// [Upstream resources](https://api.kde.org/kcoreaddons.html#versionString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* k_coreaddons_version_string();
 

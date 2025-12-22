@@ -19,7 +19,7 @@ QCommandLineParser* q_commandlineparser_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param sourceText const char*
 ///
@@ -74,7 +74,7 @@ void q_commandlineparser_set_application_description(void* self, const char* des
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineparser.html#applicationDescription)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QCommandLineParser*
 ///
@@ -117,7 +117,7 @@ bool q_commandlineparser_parse(void* self, const char* arguments[static 1]);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineparser.html#errorText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QCommandLineParser*
 ///
@@ -132,7 +132,7 @@ bool q_commandlineparser_is_set(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineparser.html#value)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QCommandLineParser*
 /// @param name const char*
@@ -141,7 +141,7 @@ const char* q_commandlineparser_value(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineparser.html#values)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QCommandLineParser*
 /// @param name const char*
@@ -157,7 +157,7 @@ bool q_commandlineparser_is_set2(void* self, void* option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineparser.html#value)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QCommandLineParser*
 /// @param option QCommandLineOption*
@@ -166,7 +166,7 @@ const char* q_commandlineparser_value2(void* self, void* option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineparser.html#values)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QCommandLineParser*
 /// @param option QCommandLineOption*
@@ -175,7 +175,7 @@ const char** q_commandlineparser_values2(void* self, void* option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineparser.html#positionalArguments)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QCommandLineParser*
 ///
@@ -183,7 +183,7 @@ const char** q_commandlineparser_positional_arguments(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineparser.html#optionNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QCommandLineParser*
 ///
@@ -191,7 +191,7 @@ const char** q_commandlineparser_option_names(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineparser.html#unknownOptionNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QCommandLineParser*
 ///
@@ -211,7 +211,7 @@ void q_commandlineparser_show_help(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineparser.html#helpText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QCommandLineParser*
 ///
@@ -219,7 +219,7 @@ const char* q_commandlineparser_help_text(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param sourceText const char*
 /// @param disambiguation const char*
@@ -228,7 +228,7 @@ const char* q_commandlineparser_tr2(const char* sourceText, const char* disambig
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param sourceText const char*
 /// @param disambiguation const char*

@@ -33,7 +33,7 @@ int32_t q_abstractbarseries_metacall(void* self, int32_t param1, int param2, voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -127,7 +127,7 @@ void q_abstractbarseries_set_labels_format(void* self, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries-qtcharts.html#labelsFormat)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAbstractBarSeries*
 ///
@@ -362,7 +362,7 @@ void q_abstractbarseries_on_barsets_removed(void* self, void (*callback)(void*, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -371,7 +371,7 @@ const char* q_abstractbarseries_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -409,7 +409,7 @@ void q_abstractbarseries_set_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAbstractBarSeries*
 ///
@@ -623,7 +623,7 @@ bool q_abstractbarseries_event_filter(void* self, void* watched, void* event);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAbstractBarSeries*
 ///
@@ -838,7 +838,7 @@ QVariant* q_abstractbarseries_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QAbstractBarSeries*
 ///

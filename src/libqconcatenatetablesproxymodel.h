@@ -61,7 +61,7 @@ int32_t q_concatenatetablesproxymodel_qbase_metacall(void* self, int32_t param1,
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -373,7 +373,7 @@ int32_t q_concatenatetablesproxymodel_qbase_column_count(void* self, void* paren
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#mimeTypes)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QConcatenateTablesProxyModel*
 ///
@@ -514,7 +514,7 @@ QSize* q_concatenatetablesproxymodel_qbase_span(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -523,7 +523,7 @@ const char* q_concatenatetablesproxymodel_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -842,7 +842,7 @@ void q_concatenatetablesproxymodel_on_layout_about_to_be_changed2(void* self, vo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QConcatenateTablesProxyModel*
 ///
@@ -1057,7 +1057,7 @@ QVariant* q_concatenatetablesproxymodel_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QConcatenateTablesProxyModel*
 ///

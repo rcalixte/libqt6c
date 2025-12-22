@@ -55,7 +55,7 @@ int32_t k_listopenfilesjob_qbase_metacall(void* self, int32_t param1, int param2
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -92,7 +92,7 @@ libqt_list /* of KProcessList__KProcessInfo* */ k_listopenfilesjob_process_info_
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -101,7 +101,7 @@ const char* k_listopenfilesjob_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -188,7 +188,7 @@ int32_t k_listopenfilesjob_error(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#errorText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KListOpenFilesJob*
 ///
@@ -386,7 +386,7 @@ void k_listopenfilesjob_set_finished_notification_hidden1(void* self, bool hide)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KListOpenFilesJob*
 ///
@@ -601,7 +601,7 @@ QVariant* k_listopenfilesjob_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KListOpenFilesJob*
 ///
@@ -824,7 +824,7 @@ void k_listopenfilesjob_on_do_resume(void* self, bool (*callback)());
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#errorString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -836,7 +836,7 @@ const char* k_listopenfilesjob_error_string(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#errorString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

@@ -37,7 +37,7 @@ KAr* k_ar_new3(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param sourceText const char*
 ///
@@ -260,7 +260,7 @@ void k_ar_qbase_virtual_hook(void* self, int id, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param sourceText const char*
 /// @param disambiguation const char*
@@ -269,7 +269,7 @@ const char* k_ar_tr2(const char* sourceText, const char* disambiguation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param sourceText const char*
 /// @param disambiguation const char*
@@ -281,7 +281,7 @@ const char* k_ar_tr3(const char* sourceText, const char* disambiguation, int n);
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#errorString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KAr*
 ///
@@ -317,7 +317,7 @@ QIODevice* k_ar_device(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#fileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KAr*
 ///

@@ -121,7 +121,7 @@ void q_sqlfield_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSqlField*
 ///
@@ -136,7 +136,7 @@ void q_sqlfield_set_table_name(void* self, const char* tableName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#tableName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSqlField*
 ///

@@ -55,7 +55,7 @@ int32_t k_texteditor__codecompletionmodel_qbase_metacall(void* self, int32_t par
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -316,7 +316,7 @@ void k_texteditor__codecompletionmodel_qbase_set_has_groups(void* self, bool has
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -325,7 +325,7 @@ const char* k_texteditor__codecompletionmodel_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -644,7 +644,7 @@ void k_texteditor__codecompletionmodel_on_layout_about_to_be_changed2(void* self
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 ///
@@ -859,7 +859,7 @@ QVariant* k_texteditor__codecompletionmodel_property(void* self, const char* nam
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 ///
@@ -1267,7 +1267,7 @@ void k_texteditor__codecompletionmodel_on_clear_item_data(void* self, bool (*cal
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeTypes)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1279,7 +1279,7 @@ const char** k_texteditor__codecompletionmodel_mime_types(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeTypes)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

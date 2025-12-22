@@ -61,7 +61,7 @@ int32_t q_uiloader_qbase_metacall(void* self, int32_t param1, int param2, void* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -69,7 +69,7 @@ const char* q_uiloader_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quiloader.html#pluginPaths)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QUiLoader*
 ///
@@ -97,7 +97,7 @@ QWidget* q_uiloader_load(void* self, void* device);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quiloader.html#availableWidgets)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QUiLoader*
 ///
@@ -105,7 +105,7 @@ const char** q_uiloader_available_widgets(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quiloader.html#availableLayouts)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QUiLoader*
 ///
@@ -264,7 +264,7 @@ bool q_uiloader_is_translation_enabled(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quiloader.html#errorString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QUiLoader*
 ///
@@ -272,7 +272,7 @@ const char* q_uiloader_error_string(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -281,7 +281,7 @@ const char* q_uiloader_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -301,7 +301,7 @@ QWidget* q_uiloader_load2(void* self, void* device, void* parentWidget);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QUiLoader*
 ///
@@ -516,7 +516,7 @@ QVariant* q_uiloader_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QUiLoader*
 ///

@@ -71,7 +71,7 @@ uint32_t q_opengldebugmessage_id(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebugmessage.html#message)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QOpenGLDebugMessage*
 ///
@@ -209,7 +209,7 @@ int32_t q_opengldebuglogger_qbase_metacall(void* self, int32_t param1, int param
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -321,7 +321,7 @@ void q_opengldebuglogger_on_message_logged(void* self, void (*callback)(void*, v
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -330,7 +330,7 @@ const char* q_opengldebuglogger_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -448,7 +448,7 @@ void q_opengldebuglogger_start_logging1(void* self, int32_t loggingMode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QOpenGLDebugLogger*
 ///
@@ -663,7 +663,7 @@ QVariant* q_opengldebuglogger_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QOpenGLDebugLogger*
 ///

@@ -61,7 +61,7 @@ int32_t k_dirsortfilterproxymodel_qbase_metacall(void* self, int32_t param1, int
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -186,7 +186,7 @@ bool k_dirsortfilterproxymodel_qbase_sub_sort_less_than(void* self, void* left, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -195,7 +195,7 @@ const char* k_dirsortfilterproxymodel_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -927,7 +927,7 @@ void k_dirsortfilterproxymodel_on_layout_about_to_be_changed2(void* self, void (
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KDirSortFilterProxyModel*
 ///
@@ -1142,7 +1142,7 @@ QVariant* k_dirsortfilterproxymodel_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KDirSortFilterProxyModel*
 ///
@@ -2324,7 +2324,7 @@ void k_dirsortfilterproxymodel_on_span(void* self, QSize* (*callback)(void*, voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeTypes)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -2336,7 +2336,7 @@ const char** k_dirsortfilterproxymodel_mime_types(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeTypes)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

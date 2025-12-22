@@ -56,7 +56,7 @@ void q_statictext_set_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatictext.html#text)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QStaticText*
 ///

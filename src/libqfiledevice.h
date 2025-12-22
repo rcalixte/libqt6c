@@ -33,7 +33,7 @@ int32_t q_filedevice_metacall(void* self, int32_t param1, int param2, void* para
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -73,7 +73,7 @@ int32_t q_filedevice_handle(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#fileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileDevice*
 ///
@@ -164,7 +164,7 @@ bool q_filedevice_set_file_time(void* self, void* newDate, int32_t fileTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -173,7 +173,7 @@ const char* q_filedevice_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -338,7 +338,7 @@ long long q_filedevice_read(void* self, char* data, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#read)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileDevice*
 /// @param maxlen long long
@@ -349,7 +349,7 @@ char* q_filedevice_read2(void* self, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readAll)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileDevice*
 ///
@@ -369,7 +369,7 @@ long long q_filedevice_read_line(void* self, char* data, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileDevice*
 ///
@@ -457,7 +457,7 @@ long long q_filedevice_peek(void* self, char* data, long long maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#peek)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileDevice*
 /// @param maxlen long long
@@ -522,7 +522,7 @@ bool q_filedevice_get_char(void* self, char* c);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#errorString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileDevice*
 ///
@@ -638,7 +638,7 @@ void q_filedevice_on_read_channel_finished(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileDevice*
 /// @param maxlen long long
@@ -668,7 +668,7 @@ bool q_filedevice_event_filter(void* self, void* watched, void* event);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileDevice*
 ///
@@ -883,7 +883,7 @@ QVariant* q_filedevice_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileDevice*
 ///

@@ -29,7 +29,7 @@ Konsole__KeyboardTranslator* k_onsole__keyboardtranslator_new2(void* param1);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Konsole__KeyboardTranslator*
 ///
@@ -44,7 +44,7 @@ void k_onsole__keyboardtranslator_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Konsole__KeyboardTranslator*
 ///
@@ -118,7 +118,7 @@ Konsole__KeyboardTranslatorReader* k_onsole__keyboardtranslatorreader_new(void* 
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Konsole__KeyboardTranslatorReader*
 ///
@@ -218,7 +218,7 @@ const Konsole__KeyboardTranslator* k_onsole__keyboardtranslatormanager_find_tran
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self Konsole__KeyboardTranslatorManager*
 ///
@@ -279,7 +279,7 @@ void k_onsole__keyboardtranslator__entry_set_command(void* self, int32_t command
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 ///
@@ -294,7 +294,7 @@ void k_onsole__keyboardtranslator__entry_set_text(void* self, const char* text);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 ///
@@ -375,7 +375,7 @@ void k_onsole__keyboardtranslator__entry_set_state_mask(void* self, int32_t mask
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 ///
@@ -383,7 +383,7 @@ const char* k_onsole__keyboardtranslator__entry_condition_to_string(void* self);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 ///
@@ -407,7 +407,7 @@ bool k_onsole__keyboardtranslator__entry_operator_equal(void* self, void* rhs);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 /// @param expandWildCards bool
@@ -416,7 +416,7 @@ char* k_onsole__keyboardtranslator__entry_text1(void* self, bool expandWildCards
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 /// @param expandWildCards bool
@@ -426,7 +426,7 @@ char* k_onsole__keyboardtranslator__entry_text2(void* self, bool expandWildCards
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 /// @param expandWildCards bool
@@ -435,7 +435,7 @@ char* k_onsole__keyboardtranslator__entry_escaped_text1(void* self, bool expandW
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 /// @param expandWildCards bool
@@ -445,7 +445,7 @@ char* k_onsole__keyboardtranslator__entry_escaped_text2(void* self, bool expandW
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 /// @param expandWildCards bool
@@ -454,7 +454,7 @@ const char* k_onsole__keyboardtranslator__entry_result_to_string1(void* self, bo
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
 /// @param expandWildCards bool

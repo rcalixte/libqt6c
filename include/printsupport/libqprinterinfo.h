@@ -42,7 +42,7 @@ void q_printerinfo_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#printerName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QPrinterInfo*
 ///
@@ -50,7 +50,7 @@ const char* q_printerinfo_printer_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#description)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QPrinterInfo*
 ///
@@ -58,7 +58,7 @@ const char* q_printerinfo_description(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#location)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QPrinterInfo*
 ///
@@ -66,7 +66,7 @@ const char* q_printerinfo_location(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#makeAndModel)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QPrinterInfo*
 ///
@@ -168,7 +168,7 @@ libqt_list /* of int32_t */ q_printerinfo_supported_color_modes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#availablePrinterNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 const char** q_printerinfo_available_printer_names();
 
@@ -178,7 +178,7 @@ libqt_list /* of QPrinterInfo* */ q_printerinfo_available_printers();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#defaultPrinterName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_printerinfo_default_printer_name();
 

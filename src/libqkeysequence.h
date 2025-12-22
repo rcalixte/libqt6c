@@ -140,7 +140,7 @@ bool q_keysequence_is_empty(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QKeySequence*
 ///
@@ -160,7 +160,7 @@ libqt_list /* of QKeySequence* */ q_keysequence_list_from_string(const char* str
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#listToString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param list libqt_list /* of QKeySequence* */
 ///
@@ -264,7 +264,7 @@ bool q_keysequence_is_detached(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QKeySequence*
 /// @param format enum QKeySequence__SequenceFormat
@@ -287,7 +287,7 @@ libqt_list /* of QKeySequence* */ q_keysequence_list_from_string2(const char* st
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#listToString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param list libqt_list /* of QKeySequence* */
 /// @param format enum QKeySequence__SequenceFormat

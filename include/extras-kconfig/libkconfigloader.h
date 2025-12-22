@@ -80,7 +80,7 @@ bool k_configloader_has_group(void* self, const char* group);
 
 /// [Upstream resources](https://api.kde.org/kconfigloader.html#groupList)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KConfigLoader*
 ///
@@ -128,7 +128,7 @@ void* k_configloader_metacast(void* self, const char* param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -158,7 +158,7 @@ KConfigSkeleton__ItemFont* k_configloader_add_item_font(void* self, const char* 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -169,7 +169,7 @@ const char* k_configloader_tr2(const char* s, const char* c);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -268,7 +268,7 @@ void k_configloader_set_current_group(void* self, const char* group);
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#currentGroup)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KConfigLoader*
 ///
@@ -999,7 +999,7 @@ KCoreConfigSkeleton__ItemIntList* k_configloader_add_item_int_list4(void* self, 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KConfigLoader*
 ///
@@ -1205,7 +1205,7 @@ bool k_configloader_set_property(void* self, const char* name, void* value);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KConfigLoader*
 ///

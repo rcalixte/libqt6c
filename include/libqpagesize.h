@@ -119,7 +119,7 @@ bool q_pagesize_is_valid(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html#key)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QPageSize*
 ///
@@ -127,7 +127,7 @@ const char* q_pagesize_key(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QPageSize*
 ///
@@ -203,7 +203,7 @@ QRect* q_pagesize_rect_pixels(void* self, int resolution);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html#key)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param pageSizeId enum QPageSize__PageSizeId
 ///
@@ -211,7 +211,7 @@ const char* q_pagesize_key2(int32_t pageSizeId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param pageSizeId enum QPageSize__PageSizeId
 ///

@@ -111,7 +111,7 @@ bool q_networkrequest_has_raw_header(void* self, char* headerName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequest.html#rawHeaderList)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QNetworkRequest*
 ///
@@ -119,7 +119,7 @@ const char** q_networkrequest_raw_header_list(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequest.html#rawHeader)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QNetworkRequest*
 /// @param headerName char*
@@ -205,7 +205,7 @@ void q_networkrequest_set_maximum_redirects_allowed(void* self, int maximumRedir
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequest.html#peerVerifyName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QNetworkRequest*
 ///

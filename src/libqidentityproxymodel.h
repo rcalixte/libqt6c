@@ -61,7 +61,7 @@ int32_t q_identityproxymodel_qbase_metacall(void* self, int32_t param1, int para
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -666,7 +666,7 @@ void q_identityproxymodel_qbase_set_handle_source_data_changes(void* self, bool 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -675,7 +675,7 @@ const char* q_identityproxymodel_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1002,7 +1002,7 @@ void q_identityproxymodel_on_layout_about_to_be_changed2(void* self, void (*call
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QIdentityProxyModel*
 ///
@@ -1217,7 +1217,7 @@ QVariant* q_identityproxymodel_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QIdentityProxyModel*
 ///
@@ -1924,7 +1924,7 @@ void q_identityproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#mimeTypes)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1936,7 +1936,7 @@ const char** q_identityproxymodel_mime_types(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#mimeTypes)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

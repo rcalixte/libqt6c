@@ -72,7 +72,7 @@ bool q_messageauthenticationcode_add_data3(void* self, void* device);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessageauthenticationcode.html#resultView)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QMessageAuthenticationCode*
 ///
@@ -80,7 +80,7 @@ const char* q_messageauthenticationcode_result_view(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessageauthenticationcode.html#result)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QMessageAuthenticationCode*
 ///
@@ -88,7 +88,7 @@ char* q_messageauthenticationcode_result(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessageauthenticationcode.html#hash)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param message const char*
 /// @param key const char*
@@ -98,7 +98,7 @@ char* q_messageauthenticationcode_hash(const char* message, const char* key, int
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessageauthenticationcode.html#hashInto)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param buffer libqt_list /* of char */
 /// @param message const char*
@@ -109,7 +109,7 @@ const char* q_messageauthenticationcode_hash_into(libqt_list buffer, const char*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessageauthenticationcode.html#hashInto)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param buffer libqt_list /* of unsigned char */
 /// @param message const char*
@@ -120,7 +120,7 @@ const char* q_messageauthenticationcode_hash_into2(libqt_list buffer, const char
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessageauthenticationcode.html#hashInto)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param buffer libqt_list /* of char */
 /// @param messageParts libqt_list /* of const char* */
@@ -131,7 +131,7 @@ const char* q_messageauthenticationcode_hash_into4(libqt_list buffer, libqt_list
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessageauthenticationcode.html#hashInto)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param buffer libqt_list /* of unsigned char */
 /// @param messageParts libqt_list /* of const char* */

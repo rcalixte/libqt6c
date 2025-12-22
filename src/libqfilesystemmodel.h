@@ -61,7 +61,7 @@ int32_t q_filesystemmodel_qbase_metacall(void* self, int32_t param1, int param2,
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -475,7 +475,7 @@ void q_filesystemmodel_qbase_sort(void* self, int column, int32_t order);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#mimeTypes)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileSystemModel*
 ///
@@ -615,7 +615,7 @@ QModelIndex* q_filesystemmodel_set_root_path(void* self, const char* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#rootPath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileSystemModel*
 ///
@@ -703,7 +703,7 @@ void q_filesystemmodel_set_name_filters(void* self, const char* filters[static 1
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#nameFilters)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileSystemModel*
 ///
@@ -740,7 +740,7 @@ int32_t q_filesystemmodel_options(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#filePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileSystemModel*
 /// @param index QModelIndex*
@@ -763,7 +763,7 @@ long long q_filesystemmodel_size(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#type)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileSystemModel*
 /// @param index QModelIndex*
@@ -802,7 +802,7 @@ bool q_filesystemmodel_rmdir(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#fileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileSystemModel*
 /// @param index QModelIndex*
@@ -891,7 +891,7 @@ bool q_filesystemmodel_qbase_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -900,7 +900,7 @@ const char* q_filesystemmodel_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1242,7 +1242,7 @@ void q_filesystemmodel_on_layout_about_to_be_changed2(void* self, void (*callbac
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileSystemModel*
 ///
@@ -1457,7 +1457,7 @@ QVariant* q_filesystemmodel_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileSystemModel*
 ///

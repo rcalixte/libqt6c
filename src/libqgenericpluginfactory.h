@@ -43,7 +43,7 @@ void q_genericpluginfactory_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgenericpluginfactory.html#keys)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 const char** q_genericpluginfactory_keys();
 

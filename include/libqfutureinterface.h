@@ -142,7 +142,7 @@ void q_futureinterfacebase_set_progress_value_and_text(void* self, int progressV
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#progressText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFutureInterfaceBase*
 ///

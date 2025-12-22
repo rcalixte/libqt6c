@@ -41,7 +41,7 @@ void k_attica__folder_set_id(void* self, const char* id);
 
 /// [Upstream resources](https://api.kde.org/attica-folder.html#id)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Folder*
 ///
@@ -56,7 +56,7 @@ void k_attica__folder_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/attica-folder.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Folder*
 ///
@@ -84,7 +84,7 @@ void k_attica__folder_set_type(void* self, const char* type);
 
 /// [Upstream resources](https://api.kde.org/attica-folder.html#type)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__Folder*
 ///

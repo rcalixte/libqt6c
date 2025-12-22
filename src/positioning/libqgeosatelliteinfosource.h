@@ -55,7 +55,7 @@ int32_t q_geosatelliteinfosource_qbase_metacall(void* self, int32_t param1, int 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -91,13 +91,13 @@ QGeoSatelliteInfoSource* q_geosatelliteinfosource_create_source2(const char* sou
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfosource.html#availableSources)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 const char** q_geosatelliteinfosource_available_sources();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfosource.html#sourceName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGeoSatelliteInfoSource*
 ///
@@ -351,7 +351,7 @@ void q_geosatelliteinfosource_on_error_occurred(void* self, void (*callback)(voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -360,7 +360,7 @@ const char* q_geosatelliteinfosource_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -372,7 +372,7 @@ const char* q_geosatelliteinfosource_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGeoSatelliteInfoSource*
 ///
@@ -587,7 +587,7 @@ QVariant* q_geosatelliteinfosource_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QGeoSatelliteInfoSource*
 ///

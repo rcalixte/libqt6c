@@ -61,7 +61,7 @@ int32_t k_colorschememanager_qbase_metacall(void* self, int32_t param1, int para
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -103,7 +103,7 @@ void k_colorschememanager_set_autosave_changes(void* self, bool autosaveChanges)
 
 /// [Upstream resources](https://api.kde.org/kcolorschememanager.html#activeSchemeId)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KColorSchemeManager*
 ///
@@ -111,7 +111,7 @@ const char* k_colorschememanager_active_scheme_id(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolorschememanager.html#activeSchemeName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KColorSchemeManager*
 ///
@@ -130,7 +130,7 @@ void k_colorschememanager_activate_scheme(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -139,7 +139,7 @@ const char* k_colorschememanager_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -151,7 +151,7 @@ const char* k_colorschememanager_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KColorSchemeManager*
 ///
@@ -366,7 +366,7 @@ QVariant* k_colorschememanager_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KColorSchemeManager*
 ///

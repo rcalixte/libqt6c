@@ -67,7 +67,7 @@ long long k_processlist__kprocessinfo_pid(void* self);
 
 /// [Upstream resources](https://api.kde.org/kprocesslist-kprocessinfo.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KProcessList__KProcessInfo*
 ///
@@ -75,7 +75,7 @@ const char* k_processlist__kprocessinfo_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kprocesslist-kprocessinfo.html#user)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KProcessList__KProcessInfo*
 ///
@@ -83,7 +83,7 @@ const char* k_processlist__kprocessinfo_user(void* self);
 
 /// [Upstream resources](https://api.kde.org/kprocesslist-kprocessinfo.html#command)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KProcessList__KProcessInfo*
 ///

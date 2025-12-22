@@ -102,7 +102,7 @@ bool k_pluginmetadata_is_hidden(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#fileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KPluginMetaData*
 ///
@@ -116,7 +116,7 @@ QJsonObject* k_pluginmetadata_raw_data(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KPluginMetaData*
 ///
@@ -124,7 +124,7 @@ const char* k_pluginmetadata_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#description)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KPluginMetaData*
 ///
@@ -150,7 +150,7 @@ libqt_list /* of KAboutPerson* */ k_pluginmetadata_other_contributors(void* self
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#category)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KPluginMetaData*
 ///
@@ -158,7 +158,7 @@ const char* k_pluginmetadata_category(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#iconName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KPluginMetaData*
 ///
@@ -166,7 +166,7 @@ const char* k_pluginmetadata_icon_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#license)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KPluginMetaData*
 ///
@@ -174,7 +174,7 @@ const char* k_pluginmetadata_license(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#licenseText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KPluginMetaData*
 ///
@@ -182,7 +182,7 @@ const char* k_pluginmetadata_license_text(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#copyrightText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KPluginMetaData*
 ///
@@ -190,7 +190,7 @@ const char* k_pluginmetadata_copyright_text(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#pluginId)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KPluginMetaData*
 ///
@@ -198,7 +198,7 @@ const char* k_pluginmetadata_plugin_id(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#version)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KPluginMetaData*
 ///
@@ -206,7 +206,7 @@ const char* k_pluginmetadata_version(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#website)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KPluginMetaData*
 ///
@@ -214,7 +214,7 @@ const char* k_pluginmetadata_website(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#bugReportUrl)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KPluginMetaData*
 ///
@@ -222,7 +222,7 @@ const char* k_pluginmetadata_bug_report_url(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#mimeTypes)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KPluginMetaData*
 ///
@@ -237,7 +237,7 @@ bool k_pluginmetadata_supports_mime_type(void* self, const char* mimeType);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#formFactors)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KPluginMetaData*
 ///
@@ -251,7 +251,7 @@ bool k_pluginmetadata_is_enabled_by_default(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#value)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KPluginMetaData*
 /// @param key const char*
@@ -276,7 +276,7 @@ int32_t k_pluginmetadata_value6(void* self, const char* key, int defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#value)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KPluginMetaData*
 /// @param key const char*
@@ -314,7 +314,7 @@ KPluginMetaData* k_pluginmetadata_find_plugin_by_id3(const char* directory, cons
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#value)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KPluginMetaData*
 /// @param key const char*

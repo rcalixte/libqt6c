@@ -36,7 +36,7 @@ KTextEditor__Attribute* k_texteditor__attribute_new3(void* a);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-attribute.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__Attribute*
 ///
@@ -212,7 +212,7 @@ void k_texteditor__attribute_set_font_family(void* self, const char* family);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#fontFamily)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__Attribute*
 ///
@@ -619,7 +619,7 @@ void k_texteditor__attribute_set_tool_tip(void* self, const char* tip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__Attribute*
 ///
@@ -706,7 +706,7 @@ void k_texteditor__attribute_set_anchor_href(void* self, const char* value);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#anchorHref)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__Attribute*
 ///
@@ -725,7 +725,7 @@ void k_texteditor__attribute_set_anchor_names(void* self, const char* names[stat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#anchorNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KTextEditor__Attribute*
 ///
@@ -904,7 +904,7 @@ double k_texteditor__attribute_double_property(void* self, int propertyId);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#stringProperty)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__Attribute*
 /// @param propertyId int

@@ -55,7 +55,7 @@ int32_t q_packagekit__transaction_qbase_metacall(void* self, int32_t param1, int
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -81,7 +81,7 @@ bool q_packagekit__transaction_is_caller_active(void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self PackageKit__Transaction*
 ///
@@ -161,7 +161,7 @@ uint32_t q_packagekit__transaction_duration(void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self PackageKit__Transaction*
 ///
@@ -175,7 +175,7 @@ uint32_t q_packagekit__transaction_uid(void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self PackageKit__Transaction*
 ///
@@ -183,7 +183,7 @@ const char* q_packagekit__transaction_sender_name(void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self PackageKit__Transaction*
 ///
@@ -191,7 +191,7 @@ const char* q_packagekit__transaction_cmdline(void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param packageID const char*
 ///
@@ -199,7 +199,7 @@ const char* q_packagekit__transaction_package_name(const char* packageID);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param packageID const char*
 ///
@@ -207,7 +207,7 @@ const char* q_packagekit__transaction_package_version(const char* packageID);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param packageID const char*
 ///
@@ -215,7 +215,7 @@ const char* q_packagekit__transaction_package_arch(const char* packageID);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param packageID const char*
 ///
@@ -720,7 +720,7 @@ void q_packagekit__transaction_qbase_disconnect_notify(void* self, void* signal)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -729,7 +729,7 @@ const char* q_packagekit__transaction_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -741,7 +741,7 @@ const char* q_packagekit__transaction_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self PackageKit__Transaction*
 ///
@@ -956,7 +956,7 @@ QVariant* q_packagekit__transaction_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self PackageKit__Transaction*
 ///

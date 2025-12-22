@@ -114,7 +114,7 @@ void q_termwidgetinterface_set_working_directory(void* self, const char* dir);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTermWidgetInterface*
 ///
@@ -136,7 +136,7 @@ void q_termwidgetinterface_set_color_scheme(void* self, const char* name);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QTermWidgetInterface*
 ///
@@ -204,7 +204,7 @@ void q_termwidgetinterface_set_flow_control_warning_enabled(void* self, bool ena
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTermWidgetInterface*
 ///
@@ -269,7 +269,7 @@ void q_termwidgetinterface_get_selection_end(void* self, int* row, int* column);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTermWidgetInterface*
 /// @param preserveLineBreaks bool
@@ -339,7 +339,7 @@ void q_termwidgetinterface_set_auto_close(void* self, bool autoClose);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTermWidgetInterface*
 ///
@@ -347,7 +347,7 @@ const char* q_termwidgetinterface_title(void* self);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTermWidgetInterface*
 ///
@@ -422,7 +422,7 @@ void q_termwidgetinterface_set_trim_pasted_trailing_newlines(void* self, bool tr
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTermWidgetInterface*
 ///

@@ -33,7 +33,7 @@ int32_t q_designernewformwidgetinterface_metacall(void* self, int32_t param1, in
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -80,7 +80,7 @@ void q_designernewformwidgetinterface_on_current_template_changed(void* self, vo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -89,7 +89,7 @@ const char* q_designernewformwidgetinterface_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -973,7 +973,7 @@ void q_designernewformwidgetinterface_set_style_sheet(void* self, const char* st
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerNewFormWidgetInterface*
 ///
@@ -983,7 +983,7 @@ const char* q_designernewformwidgetinterface_style_sheet(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerNewFormWidgetInterface*
 ///
@@ -1019,7 +1019,7 @@ void q_designernewformwidgetinterface_set_window_icon_text(void* self, const cha
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerNewFormWidgetInterface*
 ///
@@ -1038,7 +1038,7 @@ void q_designernewformwidgetinterface_set_window_role(void* self, const char* wi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerNewFormWidgetInterface*
 ///
@@ -1057,7 +1057,7 @@ void q_designernewformwidgetinterface_set_window_file_path(void* self, const cha
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerNewFormWidgetInterface*
 ///
@@ -1101,7 +1101,7 @@ void q_designernewformwidgetinterface_set_tool_tip(void* self, const char* toolT
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerNewFormWidgetInterface*
 ///
@@ -1137,7 +1137,7 @@ void q_designernewformwidgetinterface_set_status_tip(void* self, const char* sta
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerNewFormWidgetInterface*
 ///
@@ -1156,7 +1156,7 @@ void q_designernewformwidgetinterface_set_whats_this(void* self, const char* wha
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerNewFormWidgetInterface*
 ///
@@ -1166,7 +1166,7 @@ const char* q_designernewformwidgetinterface_whats_this(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerNewFormWidgetInterface*
 ///
@@ -1185,7 +1185,7 @@ void q_designernewformwidgetinterface_set_accessible_name(void* self, const char
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerNewFormWidgetInterface*
 ///
@@ -1733,7 +1733,7 @@ void q_designernewformwidgetinterface_set_geometry2(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDesignerNewFormWidgetInterface*
 ///
@@ -2599,7 +2599,7 @@ bool q_designernewformwidgetinterface_event_filter(void* self, void* watched, vo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerNewFormWidgetInterface*
 ///
@@ -2805,7 +2805,7 @@ QVariant* q_designernewformwidgetinterface_property(void* self, const char* name
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDesignerNewFormWidgetInterface*
 ///

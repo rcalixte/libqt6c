@@ -42,7 +42,7 @@ void k_completionmatches_remove_duplicates(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionmatches.html#list)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KCompletionMatches*
 ///
@@ -56,7 +56,7 @@ bool k_completionmatches_sorting(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionmatches.html#list)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KCompletionMatches*
 /// @param sort bool

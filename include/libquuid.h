@@ -106,7 +106,7 @@ QUuid* q_uuid_from_string(char* stringVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QUuid*
 ///
@@ -114,7 +114,7 @@ const char* q_uuid_to_string(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#toByteArray)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QUuid*
 ///
@@ -128,7 +128,7 @@ QUuid__Id128Bytes* q_uuid_to_bytes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#toRfc4122)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QUuid*
 ///
@@ -227,7 +227,7 @@ void q_uuid_set_data3(void* self, unsigned short data3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QUuid*
 /// @param mode enum QUuid__StringFormat
@@ -236,7 +236,7 @@ const char* q_uuid_to_string1(void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#toByteArray)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QUuid*
 /// @param mode enum QUuid__StringFormat
@@ -281,7 +281,7 @@ QUuid__Id128Bytes* q_uuid__id128bytes_new2(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid-id128bytes.html#operator)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QUuid__Id128Bytes*
 ///

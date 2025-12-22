@@ -78,7 +78,7 @@ int32_t q_filesystemwatcher_qbase_metacall(void* self, int32_t param1, int param
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -93,7 +93,7 @@ bool q_filesystemwatcher_add_path(void* self, const char* file);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemwatcher.html#addPaths)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileSystemWatcher*
 /// @param files const char**
@@ -109,7 +109,7 @@ bool q_filesystemwatcher_remove_path(void* self, const char* file);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemwatcher.html#removePaths)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileSystemWatcher*
 /// @param files const char**
@@ -118,7 +118,7 @@ const char** q_filesystemwatcher_remove_paths(void* self, const char* files[stat
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemwatcher.html#files)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileSystemWatcher*
 ///
@@ -126,7 +126,7 @@ const char** q_filesystemwatcher_files(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemwatcher.html#directories)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileSystemWatcher*
 ///
@@ -134,7 +134,7 @@ const char** q_filesystemwatcher_directories(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -143,7 +143,7 @@ const char* q_filesystemwatcher_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -155,7 +155,7 @@ const char* q_filesystemwatcher_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileSystemWatcher*
 ///
@@ -370,7 +370,7 @@ QVariant* q_filesystemwatcher_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileSystemWatcher*
 ///

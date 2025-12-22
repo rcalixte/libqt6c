@@ -34,7 +34,7 @@ QNetworkReply* q_restreply_network_reply(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#readBody)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QRestReply*
 ///
@@ -42,7 +42,7 @@ char* q_restreply_read_body(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#readText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QRestReply*
 ///
@@ -82,7 +82,7 @@ int32_t q_restreply_error(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#errorString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QRestReply*
 ///

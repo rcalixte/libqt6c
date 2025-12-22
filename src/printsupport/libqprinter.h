@@ -104,7 +104,7 @@ void q_printer_set_printer_name(void* self, const char* printerName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#printerName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QPrinter*
 ///
@@ -125,7 +125,7 @@ void q_printer_set_output_file_name(void* self, const char* outputFileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#outputFileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QPrinter*
 ///
@@ -140,7 +140,7 @@ void q_printer_set_print_program(void* self, const char* printProgram);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#printProgram)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QPrinter*
 ///
@@ -155,7 +155,7 @@ void q_printer_set_doc_name(void* self, const char* docName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#docName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QPrinter*
 ///
@@ -170,7 +170,7 @@ void q_printer_set_creator(void* self, const char* creator);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#creator)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QPrinter*
 ///
@@ -329,7 +329,7 @@ QRectF* q_printer_page_rect(void* self, int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#printerSelectionOption)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QPrinter*
 ///

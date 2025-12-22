@@ -66,7 +66,7 @@ int32_t q_guiapplication_qbase_metacall(void* self, int32_t param1, int param2, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -80,7 +80,7 @@ void q_guiapplication_set_application_display_name(const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#applicationDisplayName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_guiapplication_application_display_name();
 
@@ -99,7 +99,7 @@ void q_guiapplication_set_desktop_file_name(const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#desktopFileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_guiapplication_desktop_file_name();
 
@@ -129,7 +129,7 @@ QIcon* q_guiapplication_window_icon();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#platformName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_guiapplication_platform_name();
 
@@ -332,7 +332,7 @@ bool q_guiapplication_is_session_restored(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#sessionId)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGuiApplication*
 ///
@@ -340,7 +340,7 @@ const char* q_guiapplication_session_id(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#sessionKey)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGuiApplication*
 ///
@@ -603,7 +603,7 @@ bool q_guiapplication_qbase_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -612,7 +612,7 @@ const char* q_guiapplication_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -624,7 +624,7 @@ const char* q_guiapplication_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#arguments)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 const char** q_guiapplication_arguments();
 
@@ -656,7 +656,7 @@ void q_guiapplication_set_organization_domain(const char* orgDomain);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#organizationDomain)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_guiapplication_organization_domain();
 
@@ -672,7 +672,7 @@ void q_guiapplication_set_organization_name(const char* orgName);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#organizationName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_guiapplication_organization_name();
 
@@ -688,7 +688,7 @@ void q_guiapplication_set_application_name(const char* application);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#applicationName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_guiapplication_application_name();
 
@@ -704,7 +704,7 @@ void q_guiapplication_set_application_version(const char* version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#applicationVersion)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_guiapplication_application_version();
 
@@ -814,7 +814,7 @@ bool q_guiapplication_closing_down();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#applicationDirPath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_guiapplication_application_dir_path();
 
@@ -822,7 +822,7 @@ const char* q_guiapplication_application_dir_path();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#applicationFilePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_guiapplication_application_file_path();
 
@@ -855,7 +855,7 @@ void q_guiapplication_set_library_paths(const char* libraryPaths[static 1]);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#libraryPaths)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 const char** q_guiapplication_library_paths();
 
@@ -895,7 +895,7 @@ bool q_guiapplication_remove_translator(void* messageFile);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#translate)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param context const char*
 /// @param key const char*
@@ -1089,7 +1089,7 @@ void q_guiapplication_remove_posted_events2(void* receiver, int eventType);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#translate)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param context const char*
 /// @param key const char*
@@ -1101,7 +1101,7 @@ const char* q_guiapplication_translate3(const char* context, const char* key, co
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#translate)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param context const char*
 /// @param key const char*
@@ -1122,7 +1122,7 @@ void q_guiapplication_exit1(int retcode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGuiApplication*
 ///
@@ -1337,7 +1337,7 @@ QVariant* q_guiapplication_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QGuiApplication*
 ///

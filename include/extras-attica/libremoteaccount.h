@@ -41,7 +41,7 @@ void k_attica__remoteaccount_set_id(void* self, const char* id);
 
 /// [Upstream resources](https://api.kde.org/attica-remoteaccount.html#id)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__RemoteAccount*
 ///
@@ -56,7 +56,7 @@ void k_attica__remoteaccount_set_type(void* self, const char* type);
 
 /// [Upstream resources](https://api.kde.org/attica-remoteaccount.html#type)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__RemoteAccount*
 ///
@@ -71,7 +71,7 @@ void k_attica__remoteaccount_set_remote_service_id(void* self, const char* remot
 
 /// [Upstream resources](https://api.kde.org/attica-remoteaccount.html#remoteServiceId)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__RemoteAccount*
 ///
@@ -86,7 +86,7 @@ void k_attica__remoteaccount_set_data(void* self, const char* data);
 
 /// [Upstream resources](https://api.kde.org/attica-remoteaccount.html#data)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__RemoteAccount*
 ///
@@ -101,7 +101,7 @@ void k_attica__remoteaccount_set_login(void* self, const char* login);
 
 /// [Upstream resources](https://api.kde.org/attica-remoteaccount.html#login)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__RemoteAccount*
 ///
@@ -116,7 +116,7 @@ void k_attica__remoteaccount_set_password(void* self, const char* password);
 
 /// [Upstream resources](https://api.kde.org/attica-remoteaccount.html#password)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__RemoteAccount*
 ///

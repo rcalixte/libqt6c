@@ -43,7 +43,7 @@ KStandardActions__RawStringData* k_standardactions__rawstringdata_new4(void* par
 
 /// [Upstream resources](https://api.kde.org/kstandardactions-rawstringdata.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KStandardActions__RawStringData*
 ///
@@ -95,7 +95,7 @@ void k_standardactions__kstandardactionsinfo_set_id_accel(void* self, int32_t id
 
 /// [Upstream resources](https://api.kde.org/kstandardactions-kstandardactionsinfo.html#psLabel-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KStandardActions__KStandardActionsInfo*
 ///
@@ -110,7 +110,7 @@ void k_standardactions__kstandardactionsinfo_set_ps_label(void* self, const char
 
 /// [Upstream resources](https://api.kde.org/kstandardactions-kstandardactionsinfo.html#psToolTip-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KStandardActions__KStandardActionsInfo*
 ///
@@ -139,7 +139,7 @@ const KStandardActions__KStandardActionsInfo* k_standardactions_info_ptr(int32_t
 
 /// [Upstream resources](https://api.kde.org/kstandardactions.html#internal_stdNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 const char** k_standardactions_internal_std_names();
 #endif

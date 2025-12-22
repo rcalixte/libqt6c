@@ -71,7 +71,7 @@ QUrl* q_pdflink_url(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflink.html#contextBefore)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QPdfLink*
 ///
@@ -79,7 +79,7 @@ const char* q_pdflink_context_before(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflink.html#contextAfter)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QPdfLink*
 ///
@@ -93,7 +93,7 @@ libqt_list /* of QRectF* */ q_pdflink_rectangles(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflink.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QPdfLink*
 ///

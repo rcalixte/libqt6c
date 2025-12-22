@@ -40,7 +40,7 @@ QWidget* k_xmlguibuilder_widget(void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#containerTags)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KXMLGUIBuilder*
 ///
@@ -127,7 +127,7 @@ void k_xmlguibuilder_qbase_remove_container(void* self, void* container, void* p
 
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#customTags)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KXMLGUIBuilder*
 ///

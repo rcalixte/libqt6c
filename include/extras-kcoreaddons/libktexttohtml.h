@@ -15,7 +15,7 @@
 
 /// [Upstream resources](https://api.kde.org/ktexttohtml.html#convertToHtml)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 const char*
 /// @param param2 flag of enum KTextToHTML__Option

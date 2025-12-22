@@ -47,7 +47,7 @@ bool q_capturablewindow_is_valid(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcapturablewindow.html#description)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QCapturableWindow*
 ///

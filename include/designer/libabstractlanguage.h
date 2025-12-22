@@ -15,7 +15,7 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlanguageextension.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerLanguageExtension*
 ///
@@ -53,7 +53,7 @@ bool q_designerlanguageextension_is_language_resource(void* self, const char* pa
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlanguageextension.html#classNameOf)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerLanguageExtension*
 /// @param object QObject*
@@ -70,7 +70,7 @@ bool q_designerlanguageextension_signal_matches_slot(void* self, const char* sig
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlanguageextension.html#widgetBoxContents)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerLanguageExtension*
 ///
@@ -78,7 +78,7 @@ const char* q_designerlanguageextension_widget_box_contents(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlanguageextension.html#uiExtension)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerLanguageExtension*
 ///

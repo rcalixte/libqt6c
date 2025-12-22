@@ -199,7 +199,7 @@ bool q_domnode_is_supported(void* self, const char* feature, const char* version
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomNode*
 ///
@@ -263,7 +263,7 @@ QDomDocument* q_domnode_owner_document(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namespaceURI)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomNode*
 ///
@@ -271,7 +271,7 @@ const char* q_domnode_namespace_u_r_i(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#localName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomNode*
 ///
@@ -285,7 +285,7 @@ bool q_domnode_has_attributes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomNode*
 ///
@@ -300,7 +300,7 @@ void q_domnode_set_node_value(void* self, const char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#prefix)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomNode*
 ///
@@ -720,7 +720,7 @@ void q_domdocumenttype_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocumenttype.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomDocumentType*
 ///
@@ -740,7 +740,7 @@ QDomNamedNodeMap* q_domdocumenttype_notations(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocumenttype.html#publicId)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomDocumentType*
 ///
@@ -748,7 +748,7 @@ const char* q_domdocumenttype_public_id(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocumenttype.html#systemId)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomDocumentType*
 ///
@@ -756,7 +756,7 @@ const char* q_domdocumenttype_system_id(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocumenttype.html#internalSubset)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomDocumentType*
 ///
@@ -874,7 +874,7 @@ bool q_domdocumenttype_is_supported(void* self, const char* feature, const char*
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomDocumentType*
 ///
@@ -948,7 +948,7 @@ QDomDocument* q_domdocumenttype_owner_document(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namespaceURI)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomDocumentType*
 ///
@@ -958,7 +958,7 @@ const char* q_domdocumenttype_namespace_u_r_i(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#localName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomDocumentType*
 ///
@@ -976,7 +976,7 @@ bool q_domdocumenttype_has_attributes(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomDocumentType*
 ///
@@ -995,7 +995,7 @@ void q_domdocumenttype_set_node_value(void* self, const char* value);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#prefix)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomDocumentType*
 ///
@@ -1625,7 +1625,7 @@ QDomDocument__ParseResult* q_domdocument_set_content10(void* self, void* reader)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomDocument*
 ///
@@ -1633,7 +1633,7 @@ const char* q_domdocument_to_string(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#toByteArray)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDomDocument*
 ///
@@ -1665,7 +1665,7 @@ QDomDocument__ParseResult* q_domdocument_set_content24(void* self, void* reader,
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomDocument*
 /// @param indent int
@@ -1674,7 +1674,7 @@ const char* q_domdocument_to_string1(void* self, int indent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#toByteArray)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDomDocument*
 /// @param indent int
@@ -1785,7 +1785,7 @@ bool q_domdocument_is_supported(void* self, const char* feature, const char* ver
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomDocument*
 ///
@@ -1859,7 +1859,7 @@ QDomDocument* q_domdocument_owner_document(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namespaceURI)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomDocument*
 ///
@@ -1869,7 +1869,7 @@ const char* q_domdocument_namespace_u_r_i(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#localName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomDocument*
 ///
@@ -1887,7 +1887,7 @@ bool q_domdocument_has_attributes(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomDocument*
 ///
@@ -1906,7 +1906,7 @@ void q_domdocument_set_node_value(void* self, const char* value);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#prefix)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomDocument*
 ///
@@ -2574,7 +2574,7 @@ bool q_domdocumentfragment_is_supported(void* self, const char* feature, const c
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomDocumentFragment*
 ///
@@ -2648,7 +2648,7 @@ QDomDocument* q_domdocumentfragment_owner_document(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namespaceURI)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomDocumentFragment*
 ///
@@ -2658,7 +2658,7 @@ const char* q_domdocumentfragment_namespace_u_r_i(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#localName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomDocumentFragment*
 ///
@@ -2676,7 +2676,7 @@ bool q_domdocumentfragment_has_attributes(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomDocumentFragment*
 ///
@@ -2695,7 +2695,7 @@ void q_domdocumentfragment_set_node_value(void* self, const char* value);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#prefix)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomDocumentFragment*
 ///
@@ -3128,7 +3128,7 @@ void q_domcharacterdata_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#substringData)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomCharacterData*
 /// @param offset uint64_t
@@ -3176,7 +3176,7 @@ int32_t q_domcharacterdata_length(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#data)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomCharacterData*
 ///
@@ -3301,7 +3301,7 @@ bool q_domcharacterdata_is_supported(void* self, const char* feature, const char
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomCharacterData*
 ///
@@ -3375,7 +3375,7 @@ QDomDocument* q_domcharacterdata_owner_document(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namespaceURI)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomCharacterData*
 ///
@@ -3385,7 +3385,7 @@ const char* q_domcharacterdata_namespace_u_r_i(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#localName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomCharacterData*
 ///
@@ -3403,7 +3403,7 @@ bool q_domcharacterdata_has_attributes(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomCharacterData*
 ///
@@ -3422,7 +3422,7 @@ void q_domcharacterdata_set_node_value(void* self, const char* value);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#prefix)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomCharacterData*
 ///
@@ -3855,7 +3855,7 @@ void q_domattr_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomattr.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomAttr*
 ///
@@ -3875,7 +3875,7 @@ QDomElement* q_domattr_owner_element(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomattr.html#value)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomAttr*
 ///
@@ -4000,7 +4000,7 @@ bool q_domattr_is_supported(void* self, const char* feature, const char* version
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomAttr*
 ///
@@ -4074,7 +4074,7 @@ QDomDocument* q_domattr_owner_document(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namespaceURI)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomAttr*
 ///
@@ -4084,7 +4084,7 @@ const char* q_domattr_namespace_u_r_i(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#localName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomAttr*
 ///
@@ -4102,7 +4102,7 @@ bool q_domattr_has_attributes(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomAttr*
 ///
@@ -4121,7 +4121,7 @@ void q_domattr_set_node_value(void* self, const char* value);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#prefix)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomAttr*
 ///
@@ -4554,7 +4554,7 @@ void q_domelement_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#attribute)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomElement*
 /// @param name const char*
@@ -4661,7 +4661,7 @@ bool q_domelement_has_attribute(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#attributeNS)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomElement*
 /// @param nsURI const char*
@@ -4764,7 +4764,7 @@ bool q_domelement_has_attribute_n_s(void* self, const char* nsURI, const char* l
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#tagName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomElement*
 ///
@@ -4793,7 +4793,7 @@ int32_t q_domelement_node_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#text)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomElement*
 ///
@@ -4801,7 +4801,7 @@ const char* q_domelement_text(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#attribute)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomElement*
 /// @param name const char*
@@ -4811,7 +4811,7 @@ const char* q_domelement_attribute2(void* self, const char* name, const char* de
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#attributeNS)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomElement*
 /// @param nsURI const char*
@@ -4924,7 +4924,7 @@ bool q_domelement_is_supported(void* self, const char* feature, const char* vers
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomElement*
 ///
@@ -4990,7 +4990,7 @@ QDomDocument* q_domelement_owner_document(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namespaceURI)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomElement*
 ///
@@ -5000,7 +5000,7 @@ const char* q_domelement_namespace_u_r_i(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#localName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomElement*
 ///
@@ -5018,7 +5018,7 @@ bool q_domelement_has_attributes(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomElement*
 ///
@@ -5037,7 +5037,7 @@ void q_domelement_set_node_value(void* self, const char* value);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#prefix)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomElement*
 ///
@@ -5487,7 +5487,7 @@ int32_t q_domtext_node_type(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#substringData)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomText*
 /// @param offset uint64_t
@@ -5547,7 +5547,7 @@ int32_t q_domtext_length(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#data)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomText*
 ///
@@ -5666,7 +5666,7 @@ bool q_domtext_is_supported(void* self, const char* feature, const char* version
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomText*
 ///
@@ -5740,7 +5740,7 @@ QDomDocument* q_domtext_owner_document(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namespaceURI)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomText*
 ///
@@ -5750,7 +5750,7 @@ const char* q_domtext_namespace_u_r_i(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#localName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomText*
 ///
@@ -5768,7 +5768,7 @@ bool q_domtext_has_attributes(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomText*
 ///
@@ -5787,7 +5787,7 @@ void q_domtext_set_node_value(void* self, const char* value);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#prefix)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomText*
 ///
@@ -6230,7 +6230,7 @@ int32_t q_domcomment_node_type(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#substringData)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomComment*
 /// @param offset uint64_t
@@ -6290,7 +6290,7 @@ int32_t q_domcomment_length(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#data)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomComment*
 ///
@@ -6409,7 +6409,7 @@ bool q_domcomment_is_supported(void* self, const char* feature, const char* vers
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomComment*
 ///
@@ -6483,7 +6483,7 @@ QDomDocument* q_domcomment_owner_document(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namespaceURI)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomComment*
 ///
@@ -6493,7 +6493,7 @@ const char* q_domcomment_namespace_u_r_i(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#localName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomComment*
 ///
@@ -6511,7 +6511,7 @@ bool q_domcomment_has_attributes(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomComment*
 ///
@@ -6530,7 +6530,7 @@ void q_domcomment_set_node_value(void* self, const char* value);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#prefix)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomComment*
 ///
@@ -6982,7 +6982,7 @@ QDomText* q_domcdatasection_split_text(void* self, int offset);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#substringData)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomCDATASection*
 /// @param offset uint64_t
@@ -7042,7 +7042,7 @@ int32_t q_domcdatasection_length(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#data)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomCDATASection*
 ///
@@ -7161,7 +7161,7 @@ bool q_domcdatasection_is_supported(void* self, const char* feature, const char*
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomCDATASection*
 ///
@@ -7235,7 +7235,7 @@ QDomDocument* q_domcdatasection_owner_document(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namespaceURI)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomCDATASection*
 ///
@@ -7245,7 +7245,7 @@ const char* q_domcdatasection_namespace_u_r_i(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#localName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomCDATASection*
 ///
@@ -7263,7 +7263,7 @@ bool q_domcdatasection_has_attributes(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomCDATASection*
 ///
@@ -7282,7 +7282,7 @@ void q_domcdatasection_set_node_value(void* self, const char* value);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#prefix)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomCDATASection*
 ///
@@ -7715,7 +7715,7 @@ void q_domnotation_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnotation.html#publicId)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomNotation*
 ///
@@ -7723,7 +7723,7 @@ const char* q_domnotation_public_id(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnotation.html#systemId)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomNotation*
 ///
@@ -7841,7 +7841,7 @@ bool q_domnotation_is_supported(void* self, const char* feature, const char* ver
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomNotation*
 ///
@@ -7915,7 +7915,7 @@ QDomDocument* q_domnotation_owner_document(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namespaceURI)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomNotation*
 ///
@@ -7925,7 +7925,7 @@ const char* q_domnotation_namespace_u_r_i(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#localName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomNotation*
 ///
@@ -7943,7 +7943,7 @@ bool q_domnotation_has_attributes(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomNotation*
 ///
@@ -7962,7 +7962,7 @@ void q_domnotation_set_node_value(void* self, const char* value);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#prefix)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomNotation*
 ///
@@ -8395,7 +8395,7 @@ void q_domentity_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomentity.html#publicId)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomEntity*
 ///
@@ -8403,7 +8403,7 @@ const char* q_domentity_public_id(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomentity.html#systemId)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomEntity*
 ///
@@ -8411,7 +8411,7 @@ const char* q_domentity_system_id(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomentity.html#notationName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomEntity*
 ///
@@ -8529,7 +8529,7 @@ bool q_domentity_is_supported(void* self, const char* feature, const char* versi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomEntity*
 ///
@@ -8603,7 +8603,7 @@ QDomDocument* q_domentity_owner_document(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namespaceURI)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomEntity*
 ///
@@ -8613,7 +8613,7 @@ const char* q_domentity_namespace_u_r_i(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#localName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomEntity*
 ///
@@ -8631,7 +8631,7 @@ bool q_domentity_has_attributes(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomEntity*
 ///
@@ -8650,7 +8650,7 @@ void q_domentity_set_node_value(void* self, const char* value);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#prefix)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomEntity*
 ///
@@ -9193,7 +9193,7 @@ bool q_domentityreference_is_supported(void* self, const char* feature, const ch
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomEntityReference*
 ///
@@ -9267,7 +9267,7 @@ QDomDocument* q_domentityreference_owner_document(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namespaceURI)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomEntityReference*
 ///
@@ -9277,7 +9277,7 @@ const char* q_domentityreference_namespace_u_r_i(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#localName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomEntityReference*
 ///
@@ -9295,7 +9295,7 @@ bool q_domentityreference_has_attributes(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomEntityReference*
 ///
@@ -9314,7 +9314,7 @@ void q_domentityreference_set_node_value(void* self, const char* value);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#prefix)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomEntityReference*
 ///
@@ -9747,7 +9747,7 @@ void q_domprocessinginstruction_operator_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomprocessinginstruction.html#target)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomProcessingInstruction*
 ///
@@ -9755,7 +9755,7 @@ const char* q_domprocessinginstruction_target(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomprocessinginstruction.html#data)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomProcessingInstruction*
 ///
@@ -9880,7 +9880,7 @@ bool q_domprocessinginstruction_is_supported(void* self, const char* feature, co
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomProcessingInstruction*
 ///
@@ -9954,7 +9954,7 @@ QDomDocument* q_domprocessinginstruction_owner_document(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#namespaceURI)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomProcessingInstruction*
 ///
@@ -9964,7 +9964,7 @@ const char* q_domprocessinginstruction_namespace_u_r_i(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#localName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomProcessingInstruction*
 ///
@@ -9982,7 +9982,7 @@ bool q_domprocessinginstruction_has_attributes(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#nodeValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomProcessingInstruction*
 ///
@@ -10001,7 +10001,7 @@ void q_domprocessinginstruction_set_node_value(void* self, const char* value);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomnode.html#prefix)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomProcessingInstruction*
 ///
@@ -10421,7 +10421,7 @@ QDomDocument__ParseResult* q_domdocument__parseresult_new(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument-parseresult.html#errorMessage-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomDocument__ParseResult*
 ///

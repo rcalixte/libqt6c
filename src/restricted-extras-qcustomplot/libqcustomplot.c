@@ -8658,10 +8658,6 @@ QCPAxisTickerText* q_cpaxistickertext_new() {
     return QCPAxisTickerText_new();
 }
 
-libqt_map /* of double to const char* */ q_cpaxistickertext_ticks(void* self) {
-    return QCPAxisTickerText_Ticks((QCPAxisTickerText*)self);
-}
-
 int32_t q_cpaxistickertext_sub_tick_count(void* self) {
     return QCPAxisTickerText_SubTickCount((QCPAxisTickerText*)self);
 }
@@ -16596,10 +16592,6 @@ bool q_cpcolorgradient_operator_not_equal(void* self, void* other) {
 
 int32_t q_cpcolorgradient_level_count(void* self) {
     return QCPColorGradient_LevelCount((QCPColorGradient*)self);
-}
-
-libqt_map /* of double to QColor* */ q_cpcolorgradient_color_stops(void* self) {
-    return QCPColorGradient_ColorStops((QCPColorGradient*)self);
 }
 
 int32_t q_cpcolorgradient_color_interpolation(void* self) {

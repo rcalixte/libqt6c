@@ -52,7 +52,7 @@ void q_textdocumentwriter_set_format(void* self, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentwriter.html#format)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QTextDocumentWriter*
 ///
@@ -80,7 +80,7 @@ void q_textdocumentwriter_set_file_name(void* self, const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentwriter.html#fileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTextDocumentWriter*
 ///
@@ -102,7 +102,7 @@ bool q_textdocumentwriter_write2(void* self, void* fragment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentwriter.html#supportedDocumentFormats)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 const char** q_textdocumentwriter_supported_document_formats();
 

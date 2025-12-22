@@ -49,7 +49,7 @@ bool q_dbusconnection_is_connected(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#baseService)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDBusConnection*
 ///
@@ -63,7 +63,7 @@ QDBusError* q_dbusconnection_last_error(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDBusConnection*
 ///
@@ -295,7 +295,7 @@ void q_dbusconnection_disconnect_from_peer(const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#localMachineId)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 char* q_dbusconnection_local_machine_id();
 

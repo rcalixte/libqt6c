@@ -27,7 +27,7 @@ int32_t k_sharedconfig_location_type(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KSharedConfig*
 ///
@@ -126,7 +126,7 @@ void k_sharedconfig_add_config_sources(void* self, const char* sources[static 1]
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#additionalConfigSources)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KSharedConfig*
 ///
@@ -136,7 +136,7 @@ const char** k_sharedconfig_additional_config_sources(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#locale)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KSharedConfig*
 ///
@@ -180,7 +180,7 @@ bool k_sharedconfig_is_immutable(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#groupList)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KSharedConfig*
 ///
@@ -206,7 +206,7 @@ void k_sharedconfig_set_main_config_name(const char* str);
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#mainConfigName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* k_sharedconfig_main_config_name();
 

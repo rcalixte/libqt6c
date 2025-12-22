@@ -189,7 +189,7 @@ bool q_graphicsitem_is_blocked_by_modal_panel(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGraphicsItem*
 ///
@@ -2218,7 +2218,7 @@ int32_t q_graphicsobject_qbase_metacall(void* self, int32_t param1, int param2, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -2444,7 +2444,7 @@ bool q_graphicsobject_qbase_event(void* self, void* ev);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -2453,7 +2453,7 @@ const char* q_graphicsobject_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -2473,7 +2473,7 @@ void q_graphicsobject_grab_gesture2(void* self, int64_t type, int32_t flags);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGraphicsObject*
 ///
@@ -2688,7 +2688,7 @@ QVariant* q_graphicsobject_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QGraphicsObject*
 ///
@@ -3030,7 +3030,7 @@ bool q_graphicsobject_is_blocked_by_modal_panel(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGraphicsObject*
 ///
@@ -6211,7 +6211,7 @@ bool q_abstractgraphicsshapeitem_is_blocked_by_modal_panel(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAbstractGraphicsShapeItem*
 ///
@@ -9258,7 +9258,7 @@ bool q_graphicspathitem_is_blocked_by_modal_panel(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGraphicsPathItem*
 ///
@@ -12074,7 +12074,7 @@ bool q_graphicsrectitem_is_blocked_by_modal_panel(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGraphicsRectItem*
 ///
@@ -14916,7 +14916,7 @@ bool q_graphicsellipseitem_is_blocked_by_modal_panel(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGraphicsEllipseItem*
 ///
@@ -17684,7 +17684,7 @@ bool q_graphicspolygonitem_is_blocked_by_modal_panel(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGraphicsPolygonItem*
 ///
@@ -20479,7 +20479,7 @@ bool q_graphicslineitem_is_blocked_by_modal_panel(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGraphicsLineItem*
 ///
@@ -23279,7 +23279,7 @@ bool q_graphicspixmapitem_is_blocked_by_modal_panel(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGraphicsPixmapItem*
 ///
@@ -25587,7 +25587,7 @@ int32_t q_graphicstextitem_qbase_metacall(void* self, int32_t param1, int param2
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -25595,7 +25595,7 @@ const char* q_graphicstextitem_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#toHtml)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGraphicsTextItem*
 ///
@@ -25610,7 +25610,7 @@ void q_graphicstextitem_set_html(void* self, const char* html);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstextitem.html#toPlainText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGraphicsTextItem*
 ///
@@ -26488,7 +26488,7 @@ QVariant* q_graphicstextitem_qbase_extension(void* self, void* variant);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -26497,7 +26497,7 @@ const char* q_graphicstextitem_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -26741,7 +26741,7 @@ void q_graphicstextitem_grab_gesture2(void* self, int64_t type, int32_t flags);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGraphicsTextItem*
 ///
@@ -26956,7 +26956,7 @@ QVariant* q_graphicstextitem_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QGraphicsTextItem*
 ///
@@ -27298,7 +27298,7 @@ bool q_graphicstextitem_is_blocked_by_modal_panel(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGraphicsTextItem*
 ///
@@ -29324,7 +29324,7 @@ void q_graphicssimpletextitem_set_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssimpletextitem.html#text)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGraphicsSimpleTextItem*
 ///
@@ -29841,7 +29841,7 @@ bool q_graphicssimpletextitem_is_blocked_by_modal_panel(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGraphicsSimpleTextItem*
 ///
@@ -32449,7 +32449,7 @@ bool q_graphicsitemgroup_is_blocked_by_modal_panel(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGraphicsItemGroup*
 ///

@@ -33,7 +33,7 @@ int32_t k_io__directorysizejob_metacall(void* self, int32_t param1, int param2, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -59,7 +59,7 @@ uint64_t k_io__directorysizejob_total_subdirs(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -68,7 +68,7 @@ const char* k_io__directorysizejob_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -105,7 +105,7 @@ void k_io__directorysizejob_set_ui_delegate_extension(void* self, void* extensio
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#errorString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KIO__DirectorySizeJob*
 ///
@@ -115,7 +115,7 @@ const char* k_io__directorysizejob_error_string(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#detailedErrorStrings)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KIO__DirectorySizeJob*
 ///
@@ -195,7 +195,7 @@ KIO__MetaData* k_io__directorysizejob_meta_data(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#queryMetaData)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KIO__DirectorySizeJob*
 /// @param key const char*
@@ -224,7 +224,7 @@ void k_io__directorysizejob_on_connected(void* self, void (*callback)(void*, voi
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#detailedErrorStrings)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KIO__DirectorySizeJob*
 /// @param reqUrl QUrl*
@@ -235,7 +235,7 @@ const char** k_io__directorysizejob_detailed_error_strings1(void* self, void* re
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#detailedErrorStrings)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KIO__DirectorySizeJob*
 /// @param reqUrl QUrl*
@@ -322,7 +322,7 @@ int32_t k_io__directorysizejob_error(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#errorText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KIO__DirectorySizeJob*
 ///
@@ -520,7 +520,7 @@ bool k_io__directorysizejob_event_filter(void* self, void* watched, void* event)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KIO__DirectorySizeJob*
 ///
@@ -735,7 +735,7 @@ QVariant* k_io__directorysizejob_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KIO__DirectorySizeJob*
 ///

@@ -53,7 +53,7 @@ int32_t k_nscore__provider_qbase_metacall(void* self, int32_t param1, int param2
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -61,7 +61,7 @@ const char* k_nscore__provider_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#id)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSCore__Provider*
 ///
@@ -159,7 +159,7 @@ void k_nscore__provider_qbase_set_cached_entries(void* self, libqt_list cachedEn
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSCore__Provider*
 ///
@@ -361,7 +361,7 @@ void k_nscore__provider_qbase_load_basics(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#version)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSCore__Provider*
 ///
@@ -402,7 +402,7 @@ void k_nscore__provider_set_host(void* self, void* host);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#contactEmail)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSCore__Provider*
 ///
@@ -535,7 +535,7 @@ void k_nscore__provider_set_tag_filter(void* self, const char* tagFilter[static 
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#tagFilter)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KNSCore__Provider*
 ///
@@ -550,7 +550,7 @@ void k_nscore__provider_set_download_tag_filter(void* self, const char* download
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#downloadTagFilter)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KNSCore__Provider*
 ///
@@ -790,7 +790,7 @@ void k_nscore__provider_qbase_set_icon(void* self, void* icon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -799,7 +799,7 @@ const char* k_nscore__provider_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -811,7 +811,7 @@ const char* k_nscore__provider_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSCore__Provider*
 ///
@@ -1026,7 +1026,7 @@ QVariant* k_nscore__provider_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KNSCore__Provider*
 ///
@@ -1639,7 +1639,7 @@ void k_nscore__provider__searchrequest_set_filter(void* self, int32_t filter);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchrequest.html#searchTerm-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSCore__Provider__SearchRequest*
 ///
@@ -1654,7 +1654,7 @@ void k_nscore__provider__searchrequest_set_search_term(void* self, const char* s
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchrequest.html#categories-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KNSCore__Provider__SearchRequest*
 ///
@@ -1695,7 +1695,7 @@ void k_nscore__provider__searchrequest_set_page_size(void* self, int pageSize);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchrequest.html#hashForRequest)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSCore__Provider__SearchRequest*
 ///
@@ -1731,7 +1731,7 @@ KNSCore__Provider__CategoryMetadata* k_nscore__provider__categorymetadata_new(vo
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-categorymetadata.html#id-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSCore__Provider__CategoryMetadata*
 ///
@@ -1746,7 +1746,7 @@ void k_nscore__provider__categorymetadata_set_id(void* self, const char* id);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-categorymetadata.html#name-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSCore__Provider__CategoryMetadata*
 ///
@@ -1761,7 +1761,7 @@ void k_nscore__provider__categorymetadata_set_name(void* self, const char* name)
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-categorymetadata.html#displayName-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSCore__Provider__CategoryMetadata*
 ///
@@ -1810,7 +1810,7 @@ void k_nscore__provider__searchpreset_set_request(void* self, void* request);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchpreset.html#displayName-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSCore__Provider__SearchPreset*
 ///
@@ -1825,7 +1825,7 @@ void k_nscore__provider__searchpreset_set_display_name(void* self, const char* d
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchpreset.html#iconName-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSCore__Provider__SearchPreset*
 ///
@@ -1855,7 +1855,7 @@ void k_nscore__provider__searchpreset_set_type(void* self, int32_t type);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchpreset.html#providerId-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KNSCore__Provider__SearchPreset*
 ///

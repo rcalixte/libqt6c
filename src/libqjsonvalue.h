@@ -199,7 +199,7 @@ double q_jsonvalue_to_double(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalue.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QJsonValue*
 ///
@@ -207,7 +207,7 @@ const char* q_jsonvalue_to_string(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalue.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QJsonValue*
 /// @param defaultValue const char*
@@ -394,7 +394,7 @@ double q_jsonvalueconstref_to_double(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueconstref.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QJsonValueConstRef*
 ///
@@ -449,7 +449,7 @@ double q_jsonvalueconstref_to_double1(void* self, double defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueconstref.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QJsonValueConstRef*
 /// @param defaultValue const char*
@@ -600,7 +600,7 @@ double q_jsonvalueref_to_double(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueref.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QJsonValueRef*
 ///
@@ -655,7 +655,7 @@ double q_jsonvalueref_to_double1(void* self, double defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueref.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QJsonValueRef*
 /// @param defaultValue const char*

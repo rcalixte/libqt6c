@@ -73,7 +73,7 @@ int32_t q_dbuserror_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDBusError*
 ///
@@ -81,7 +81,7 @@ const char* q_dbuserror_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#message)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDBusError*
 ///
@@ -95,7 +95,7 @@ bool q_dbuserror_is_valid(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbuserror.html#errorString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param error enum QDBusError__ErrorType
 ///

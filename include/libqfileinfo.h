@@ -106,7 +106,7 @@ void q_fileinfo_refresh(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#filePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileInfo*
 ///
@@ -114,7 +114,7 @@ const char* q_fileinfo_file_path(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#absoluteFilePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileInfo*
 ///
@@ -122,7 +122,7 @@ const char* q_fileinfo_absolute_file_path(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#canonicalFilePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileInfo*
 ///
@@ -130,7 +130,7 @@ const char* q_fileinfo_canonical_file_path(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#fileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileInfo*
 ///
@@ -138,7 +138,7 @@ const char* q_fileinfo_file_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#baseName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileInfo*
 ///
@@ -146,7 +146,7 @@ const char* q_fileinfo_base_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#completeBaseName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileInfo*
 ///
@@ -154,7 +154,7 @@ const char* q_fileinfo_complete_base_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#suffix)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileInfo*
 ///
@@ -162,7 +162,7 @@ const char* q_fileinfo_suffix(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#bundleName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileInfo*
 ///
@@ -170,7 +170,7 @@ const char* q_fileinfo_bundle_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#completeSuffix)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileInfo*
 ///
@@ -178,7 +178,7 @@ const char* q_fileinfo_complete_suffix(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#path)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileInfo*
 ///
@@ -186,7 +186,7 @@ const char* q_fileinfo_path(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#absolutePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileInfo*
 ///
@@ -194,7 +194,7 @@ const char* q_fileinfo_absolute_path(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#canonicalPath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileInfo*
 ///
@@ -316,7 +316,7 @@ bool q_fileinfo_is_bundle(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#symLinkTarget)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileInfo*
 ///
@@ -324,7 +324,7 @@ const char* q_fileinfo_sym_link_target(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#readSymLink)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileInfo*
 ///
@@ -332,7 +332,7 @@ const char* q_fileinfo_read_sym_link(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#junctionTarget)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileInfo*
 ///
@@ -340,7 +340,7 @@ const char* q_fileinfo_junction_target(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#owner)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileInfo*
 ///
@@ -354,7 +354,7 @@ uint32_t q_fileinfo_owner_id(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#group)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QFileInfo*
 ///

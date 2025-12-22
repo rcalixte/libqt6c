@@ -208,7 +208,7 @@ void q_textlayout_set_text(void* self, const char* stringVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlayout.html#text)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTextLayout*
 ///
@@ -243,7 +243,7 @@ int32_t q_textlayout_preedit_area_position(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlayout.html#preeditAreaText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTextLayout*
 ///

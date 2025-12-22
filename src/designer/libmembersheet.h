@@ -67,7 +67,7 @@ int32_t q_designermembersheetextension_qbase_index_of(void* self, const char* na
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermembersheetextension.html#memberName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerMemberSheetExtension*
 /// @param index int
@@ -94,7 +94,7 @@ const char* q_designermembersheetextension_qbase_member_name(void* self, int ind
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermembersheetextension.html#memberGroup)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerMemberSheetExtension*
 /// @param index int
@@ -275,7 +275,7 @@ bool q_designermembersheetextension_qbase_inherited_from_widget(void* self, int 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermembersheetextension.html#declaredInClass)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerMemberSheetExtension*
 /// @param index int
@@ -302,7 +302,7 @@ const char* q_designermembersheetextension_qbase_declared_in_class(void* self, i
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermembersheetextension.html#signature)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDesignerMemberSheetExtension*
 /// @param index int
@@ -329,7 +329,7 @@ const char* q_designermembersheetextension_qbase_signature(void* self, int index
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermembersheetextension.html#parameterTypes)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDesignerMemberSheetExtension*
 /// @param index int
@@ -356,7 +356,7 @@ const char** q_designermembersheetextension_qbase_parameter_types(void* self, in
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermembersheetextension.html#parameterNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QDesignerMemberSheetExtension*
 /// @param index int

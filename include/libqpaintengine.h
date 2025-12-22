@@ -83,7 +83,7 @@ int64_t q_textitem_render_flags(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextitem.html#text)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTextItem*
 ///

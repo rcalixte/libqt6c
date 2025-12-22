@@ -54,7 +54,7 @@ bool k_attica__downloaddescription_has_price(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-downloaddescription.html#category)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__DownloadDescription*
 ///
@@ -62,7 +62,7 @@ const char* k_attica__downloaddescription_category(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-downloaddescription.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__DownloadDescription*
 ///
@@ -70,7 +70,7 @@ const char* k_attica__downloaddescription_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-downloaddescription.html#link)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__DownloadDescription*
 ///
@@ -78,7 +78,7 @@ const char* k_attica__downloaddescription_link(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-downloaddescription.html#distributionType)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__DownloadDescription*
 ///
@@ -86,7 +86,7 @@ const char* k_attica__downloaddescription_distribution_type(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-downloaddescription.html#priceReason)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__DownloadDescription*
 ///
@@ -94,7 +94,7 @@ const char* k_attica__downloaddescription_price_reason(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-downloaddescription.html#priceAmount)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__DownloadDescription*
 ///
@@ -108,7 +108,7 @@ uint32_t k_attica__downloaddescription_size(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-downloaddescription.html#gpgFingerprint)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__DownloadDescription*
 ///
@@ -116,7 +116,7 @@ const char* k_attica__downloaddescription_gpg_fingerprint(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-downloaddescription.html#gpgSignature)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__DownloadDescription*
 ///
@@ -124,7 +124,7 @@ const char* k_attica__downloaddescription_gpg_signature(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-downloaddescription.html#packageName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__DownloadDescription*
 ///
@@ -132,7 +132,7 @@ const char* k_attica__downloaddescription_package_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-downloaddescription.html#repository)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__DownloadDescription*
 ///
@@ -140,7 +140,7 @@ const char* k_attica__downloaddescription_repository(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-downloaddescription.html#tags)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self Attica__DownloadDescription*
 ///
@@ -253,7 +253,7 @@ void k_attica__downloaddescription_set_tags(void* self, const char* tags[static 
 
 /// [Upstream resources](https://api.kde.org/attica-downloaddescription.html#version)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Attica__DownloadDescription*
 ///

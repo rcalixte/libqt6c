@@ -265,7 +265,7 @@ void q_videoframeformat_set_rotation(void* self, int32_t rotation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframeformat.html#vertexShaderFileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QVideoFrameFormat*
 ///
@@ -273,7 +273,7 @@ const char* q_videoframeformat_vertex_shader_file_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframeformat.html#fragmentShaderFileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QVideoFrameFormat*
 ///
@@ -310,7 +310,7 @@ int32_t q_videoframeformat_image_format_from_pixel_format(int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframeformat.html#pixelFormatToString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param pixelFormat enum QVideoFrameFormat__PixelFormat
 ///

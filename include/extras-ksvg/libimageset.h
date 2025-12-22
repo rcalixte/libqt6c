@@ -88,7 +88,7 @@ int32_t k_svg__imageset_qbase_metacall(void* self, int32_t param1, int param2, v
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -103,7 +103,7 @@ void k_svg__imageset_set_base_path(void* self, const char* basePath);
 
 /// [Upstream resources](https://api.kde.org/ksvg-imageset.html#basePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KSvg__ImageSet*
 ///
@@ -118,7 +118,7 @@ void k_svg__imageset_set_selectors(void* self, const char* selectors[static 1]);
 
 /// [Upstream resources](https://api.kde.org/ksvg-imageset.html#selectors)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KSvg__ImageSet*
 ///
@@ -133,7 +133,7 @@ void k_svg__imageset_set_image_set_name(void* self, const char* imageSetName);
 
 /// [Upstream resources](https://api.kde.org/ksvg-imageset.html#imageSetName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KSvg__ImageSet*
 ///
@@ -141,7 +141,7 @@ const char* k_svg__imageset_image_set_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksvg-imageset.html#imagePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KSvg__ImageSet*
 /// @param name const char*
@@ -150,7 +150,7 @@ const char* k_svg__imageset_image_path(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/ksvg-imageset.html#filePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KSvg__ImageSet*
 /// @param name const char*
@@ -220,7 +220,7 @@ void k_svg__imageset_on_base_path_changed(void* self, void (*callback)(void*, co
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -229,7 +229,7 @@ const char* k_svg__imageset_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -241,7 +241,7 @@ const char* k_svg__imageset_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KSvg__ImageSet*
 ///
@@ -456,7 +456,7 @@ QVariant* k_svg__imageset_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KSvg__ImageSet*
 ///

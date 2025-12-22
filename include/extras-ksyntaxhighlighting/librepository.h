@@ -53,7 +53,7 @@ int32_t k_syntaxhighlighting__repository_qbase_metacall(void* self, int32_t para
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -141,7 +141,7 @@ void k_syntaxhighlighting__repository_add_custom_search_path(void* self, const c
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-repository.html#customSearchPaths)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KSyntaxHighlighting__Repository*
 ///
@@ -175,7 +175,7 @@ void k_syntaxhighlighting__repository_on_reloaded(void* self, void (*callback)(v
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -184,7 +184,7 @@ const char* k_syntaxhighlighting__repository_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -203,7 +203,7 @@ KSyntaxHighlighting__Theme* k_syntaxhighlighting__repository_default_theme1(void
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KSyntaxHighlighting__Repository*
 ///
@@ -418,7 +418,7 @@ QVariant* k_syntaxhighlighting__repository_property(void* self, const char* name
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KSyntaxHighlighting__Repository*
 ///

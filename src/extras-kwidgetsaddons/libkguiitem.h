@@ -109,7 +109,7 @@ void k_guiitem_set_text(void* self, const char* text);
 
 /// [Upstream resources](https://api.kde.org/kguiitem.html#text)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KGuiItem*
 ///
@@ -117,7 +117,7 @@ const char* k_guiitem_text(void* self);
 
 /// [Upstream resources](https://api.kde.org/kguiitem.html#plainText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KGuiItem*
 ///
@@ -145,7 +145,7 @@ void k_guiitem_set_icon_name(void* self, const char* iconName);
 
 /// [Upstream resources](https://api.kde.org/kguiitem.html#iconName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KGuiItem*
 ///
@@ -166,7 +166,7 @@ void k_guiitem_set_tool_tip(void* self, const char* tooltip);
 
 /// [Upstream resources](https://api.kde.org/kguiitem.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KGuiItem*
 ///
@@ -181,7 +181,7 @@ void k_guiitem_set_whats_this(void* self, const char* whatsThis);
 
 /// [Upstream resources](https://api.kde.org/kguiitem.html#whatsThis)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KGuiItem*
 ///

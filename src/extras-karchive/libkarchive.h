@@ -15,7 +15,7 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param sourceText const char*
 ///
@@ -36,7 +36,7 @@ bool k_archive_close(void* self);
 
 /// [Upstream resources](https://api.kde.org/karchive.html#errorString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KArchive*
 ///
@@ -64,7 +64,7 @@ QIODevice* k_archive_device(void* self);
 
 /// [Upstream resources](https://api.kde.org/karchive.html#fileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KArchive*
 ///
@@ -149,7 +149,7 @@ bool k_archive_finish_writing(void* self, long long size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param sourceText const char*
 /// @param disambiguation const char*
@@ -158,7 +158,7 @@ const char* k_archive_tr2(const char* sourceText, const char* disambiguation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param sourceText const char*
 /// @param disambiguation const char*

@@ -80,7 +80,7 @@ int32_t k_iconloader_qbase_metacall(void* self, int32_t param1, int param2, void
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -115,7 +115,7 @@ QPixmap* k_iconloader_load_mime_type_icon(void* self, const char* iconName, int3
 
 /// [Upstream resources](https://api.kde.org/kiconloader.html#iconPath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KIconLoader*
 /// @param name const char*
@@ -125,7 +125,7 @@ const char* k_iconloader_icon_path(void* self, const char* name, int group_or_si
 
 /// [Upstream resources](https://api.kde.org/kiconloader.html#iconPath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KIconLoader*
 /// @param name const char*
@@ -145,7 +145,7 @@ QMovie* k_iconloader_load_movie(void* self, const char* name, int32_t group);
 
 /// [Upstream resources](https://api.kde.org/kiconloader.html#moviePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KIconLoader*
 /// @param name const char*
@@ -155,7 +155,7 @@ const char* k_iconloader_movie_path(void* self, const char* name, int32_t group)
 
 /// [Upstream resources](https://api.kde.org/kiconloader.html#loadAnimated)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KIconLoader*
 /// @param name const char*
@@ -165,7 +165,7 @@ const char** k_iconloader_load_animated(void* self, const char* name, int32_t gr
 
 /// [Upstream resources](https://api.kde.org/kiconloader.html#queryIcons)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KIconLoader*
 ///
@@ -173,7 +173,7 @@ const char** k_iconloader_query_icons(void* self);
 
 /// [Upstream resources](https://api.kde.org/kiconloader.html#queryIcons)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KIconLoader*
 /// @param group_or_size int
@@ -182,7 +182,7 @@ const char** k_iconloader_query_icons2(void* self, int group_or_size);
 
 /// [Upstream resources](https://api.kde.org/kiconloader.html#queryIconsByContext)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KIconLoader*
 /// @param group_or_size int
@@ -198,7 +198,7 @@ bool k_iconloader_has_context(void* self, int32_t context);
 
 /// [Upstream resources](https://api.kde.org/kiconloader.html#queryIconsByDir)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KIconLoader*
 /// @param iconsDir const char*
@@ -207,7 +207,7 @@ const char** k_iconloader_query_icons_by_dir(void* self, const char* iconsDir);
 
 /// [Upstream resources](https://api.kde.org/kiconloader.html#searchPaths)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KIconLoader*
 ///
@@ -325,7 +325,7 @@ void k_iconloader_on_icon_changed(void* self, void (*callback)(void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -334,7 +334,7 @@ const char* k_iconloader_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -412,7 +412,7 @@ QPixmap* k_iconloader_load_mime_type_icon5(void* self, const char* iconName, int
 
 /// [Upstream resources](https://api.kde.org/kiconloader.html#iconPath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KIconLoader*
 /// @param name const char*
@@ -442,7 +442,7 @@ QMovie* k_iconloader_load_movie4(void* self, const char* name, int32_t group, in
 
 /// [Upstream resources](https://api.kde.org/kiconloader.html#moviePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KIconLoader*
 /// @param name const char*
@@ -453,7 +453,7 @@ const char* k_iconloader_movie_path3(void* self, const char* name, int32_t group
 
 /// [Upstream resources](https://api.kde.org/kiconloader.html#loadAnimated)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KIconLoader*
 /// @param name const char*
@@ -464,7 +464,7 @@ const char** k_iconloader_load_animated3(void* self, const char* name, int32_t g
 
 /// [Upstream resources](https://api.kde.org/kiconloader.html#queryIcons)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KIconLoader*
 /// @param group_or_size int
@@ -474,7 +474,7 @@ const char** k_iconloader_query_icons22(void* self, int group_or_size, int32_t c
 
 /// [Upstream resources](https://api.kde.org/kiconloader.html#queryIconsByContext)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KIconLoader*
 /// @param group_or_size int
@@ -504,7 +504,7 @@ void k_iconloader_draw_overlays4(void* self, const char* overlays[static 1], voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KIconLoader*
 ///
@@ -719,7 +719,7 @@ QVariant* k_iconloader_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KIconLoader*
 ///

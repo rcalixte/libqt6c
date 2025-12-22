@@ -67,7 +67,7 @@ int32_t k_texteditor__document_metacall(void* self, int32_t param1, int param2, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -104,7 +104,7 @@ void k_texteditor__document_on_view_created(void* self, void (*callback)(void*, 
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#documentName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__Document*
 ///
@@ -112,7 +112,7 @@ const char* k_texteditor__document_document_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#mimeType)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__Document*
 ///
@@ -120,7 +120,7 @@ const char* k_texteditor__document_mime_type(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#checksum)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KTextEditor__Document*
 ///
@@ -191,7 +191,7 @@ bool k_texteditor__document_set_encoding(void* self, const char* encoding);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#encoding)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__Document*
 ///
@@ -300,7 +300,7 @@ bool k_texteditor__document_is_editing_transaction_running(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#text)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__Document*
 ///
@@ -308,7 +308,7 @@ const char* k_texteditor__document_text(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#text)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__Document*
 /// @param range KTextEditor__Range*
@@ -325,7 +325,7 @@ QChar* k_texteditor__document_character_at(void* self, void* position);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#wordAt)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__Document*
 /// @param cursor KTextEditor__Cursor*
@@ -348,7 +348,7 @@ bool k_texteditor__document_is_valid_text_position(void* self, void* cursor);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#textLines)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KTextEditor__Document*
 /// @param range KTextEditor__Range*
@@ -358,7 +358,7 @@ const char** k_texteditor__document_text_lines(void* self, void* range, bool blo
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#line)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__Document*
 /// @param line int
@@ -654,7 +654,7 @@ int32_t k_texteditor__document_default_style_at(void* self, void* position);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#mode)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__Document*
 ///
@@ -662,7 +662,7 @@ const char* k_texteditor__document_mode(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#highlightingMode)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__Document*
 ///
@@ -670,7 +670,7 @@ const char* k_texteditor__document_highlighting_mode(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#embeddedHighlightingModes)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KTextEditor__Document*
 ///
@@ -678,7 +678,7 @@ const char** k_texteditor__document_embedded_highlighting_modes(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#highlightingModeAt)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__Document*
 /// @param position KTextEditor__Cursor*
@@ -687,7 +687,7 @@ const char* k_texteditor__document_highlighting_mode_at(void* self, void* positi
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#modes)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KTextEditor__Document*
 ///
@@ -695,7 +695,7 @@ const char** k_texteditor__document_modes(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#highlightingModes)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KTextEditor__Document*
 ///
@@ -717,7 +717,7 @@ bool k_texteditor__document_set_highlighting_mode(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#highlightingModeSection)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__Document*
 /// @param index int
@@ -726,7 +726,7 @@ const char* k_texteditor__document_highlighting_mode_section(void* self, int ind
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#modeSection)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__Document*
 /// @param index int
@@ -933,7 +933,7 @@ void k_texteditor__document_on_about_to_invalidate_moving_interface_content(void
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#configKeys)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KTextEditor__Document*
 ///
@@ -1048,7 +1048,7 @@ void k_texteditor__document_set_mark_description(void* self, int64_t mark, const
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#markDescription)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__Document*
 /// @param mark enum KTextEditor__Document__MarkTypes
@@ -1178,7 +1178,7 @@ KTextEditor__AnnotationModel* k_texteditor__document_annotation_model(void* self
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1187,7 +1187,7 @@ const char* k_texteditor__document_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1609,7 +1609,7 @@ bool k_texteditor__document_event_filter(void* self, void* watched, void* event)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__Document*
 ///
@@ -1824,7 +1824,7 @@ QVariant* k_texteditor__document_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KTextEditor__Document*
 ///
@@ -1997,7 +1997,7 @@ KActionCollection* k_texteditor__document_action_collection(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#componentName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__Document*
 ///
@@ -2015,7 +2015,7 @@ QDomDocument* k_texteditor__document_dom_document(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlFile)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__Document*
 ///
@@ -2025,7 +2025,7 @@ const char* k_texteditor__document_xml_file(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#localXMLFile)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__Document*
 ///
@@ -2147,7 +2147,7 @@ void k_texteditor__document_unplug_action_list(void* self, const char* name);
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#findMostRecentXMLFile)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param files const char**
 /// @param doc const char*
@@ -2223,7 +2223,7 @@ void k_texteditor__document_replace_x_m_l_file(void* self, const char* xmlfile, 
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#findVersionNumber)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param xml const char*
 ///

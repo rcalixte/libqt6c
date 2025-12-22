@@ -21,7 +21,7 @@ KGuiItem* k_standardguiitem_gui_item(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardguiitem.html#standardItem)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 enum KStandardGuiItem__StandardItem
 ///

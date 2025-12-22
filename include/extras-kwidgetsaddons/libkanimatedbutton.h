@@ -61,7 +61,7 @@ int32_t k_animatedbutton_qbase_metacall(void* self, int32_t param1, int param2, 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -69,7 +69,7 @@ const char* k_animatedbutton_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kanimatedbutton.html#animationPath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KAnimatedButton*
 ///
@@ -96,7 +96,7 @@ void k_animatedbutton_stop(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -105,7 +105,7 @@ const char* k_animatedbutton_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -260,7 +260,7 @@ void k_animatedbutton_set_text(void* self, const char* text);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#text)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KAnimatedButton*
 ///
@@ -1416,7 +1416,7 @@ void k_animatedbutton_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KAnimatedButton*
 ///
@@ -1426,7 +1426,7 @@ const char* k_animatedbutton_style_sheet(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KAnimatedButton*
 ///
@@ -1462,7 +1462,7 @@ void k_animatedbutton_set_window_icon_text(void* self, const char* windowIconTex
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KAnimatedButton*
 ///
@@ -1481,7 +1481,7 @@ void k_animatedbutton_set_window_role(void* self, const char* windowRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KAnimatedButton*
 ///
@@ -1500,7 +1500,7 @@ void k_animatedbutton_set_window_file_path(void* self, const char* filePath);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KAnimatedButton*
 ///
@@ -1544,7 +1544,7 @@ void k_animatedbutton_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KAnimatedButton*
 ///
@@ -1580,7 +1580,7 @@ void k_animatedbutton_set_status_tip(void* self, const char* statusTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KAnimatedButton*
 ///
@@ -1599,7 +1599,7 @@ void k_animatedbutton_set_whats_this(void* self, const char* whatsThis);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KAnimatedButton*
 ///
@@ -1609,7 +1609,7 @@ const char* k_animatedbutton_whats_this(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KAnimatedButton*
 ///
@@ -1628,7 +1628,7 @@ void k_animatedbutton_set_accessible_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KAnimatedButton*
 ///
@@ -2167,7 +2167,7 @@ void k_animatedbutton_set_geometry2(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KAnimatedButton*
 ///
@@ -2973,7 +2973,7 @@ QWidget* k_animatedbutton_create_window_container3(void* window, void* parent, i
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KAnimatedButton*
 ///
@@ -3179,7 +3179,7 @@ QVariant* k_animatedbutton_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KAnimatedButton*
 ///

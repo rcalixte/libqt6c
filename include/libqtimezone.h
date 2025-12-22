@@ -152,7 +152,7 @@ bool q_timezone_has_alternative_name(void* self, const char* alias);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#id)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QTimeZone*
 ///
@@ -176,7 +176,7 @@ uint16_t q_timezone_country(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#comment)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTimeZone*
 ///
@@ -184,7 +184,7 @@ const char* q_timezone_comment(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#displayName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTimeZone*
 /// @param atDateTime QDateTime*
@@ -193,7 +193,7 @@ const char* q_timezone_display_name(void* self, void* atDateTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#displayName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTimeZone*
 /// @param timeType enum QTimeZone__TimeType
@@ -202,7 +202,7 @@ const char* q_timezone_display_name2(void* self, int32_t timeType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#abbreviation)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTimeZone*
 /// @param atDateTime QDateTime*
@@ -280,7 +280,7 @@ libqt_list /* of QTimeZone__OffsetData* */ q_timezone_transitions(void* self, vo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#systemTimeZoneId)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 char* q_timezone_system_time_zone_id();
 
@@ -300,13 +300,13 @@ bool q_timezone_is_time_zone_id_available(const char* ianaId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#availableTimeZoneIds)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 const char** q_timezone_available_time_zone_ids();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#availableTimeZoneIds)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param territory enum QLocale__Country
 ///
@@ -314,7 +314,7 @@ const char** q_timezone_available_time_zone_ids2(uint16_t territory);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#availableTimeZoneIds)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param offsetSeconds int
 ///
@@ -322,7 +322,7 @@ const char** q_timezone_available_time_zone_ids3(int offsetSeconds);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#ianaIdToWindowsId)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param ianaId const char*
 ///
@@ -330,7 +330,7 @@ char* q_timezone_iana_id_to_windows_id(const char* ianaId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#windowsIdToDefaultIanaId)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param windowsId const char*
 ///
@@ -338,7 +338,7 @@ char* q_timezone_windows_id_to_default_iana_id(const char* windowsId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#windowsIdToDefaultIanaId)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param windowsId const char*
 /// @param territory enum QLocale__Country
@@ -347,7 +347,7 @@ char* q_timezone_windows_id_to_default_iana_id2(const char* windowsId, uint16_t 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#windowsIdToIanaIds)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param windowsId const char*
 ///
@@ -355,7 +355,7 @@ const char** q_timezone_windows_id_to_iana_ids(const char* windowsId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#windowsIdToIanaIds)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param windowsId const char*
 /// @param territory enum QLocale__Country
@@ -364,7 +364,7 @@ const char** q_timezone_windows_id_to_iana_ids2(const char* windowsId, uint16_t 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#displayName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTimeZone*
 /// @param atDateTime QDateTime*
@@ -374,7 +374,7 @@ const char* q_timezone_display_name22(void* self, void* atDateTime, int32_t name
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#displayName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTimeZone*
 /// @param atDateTime QDateTime*
@@ -385,7 +385,7 @@ const char* q_timezone_display_name3(void* self, void* atDateTime, int32_t nameT
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#displayName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTimeZone*
 /// @param timeType enum QTimeZone__TimeType
@@ -395,7 +395,7 @@ const char* q_timezone_display_name23(void* self, int32_t timeType, int32_t name
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#displayName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTimeZone*
 /// @param timeType enum QTimeZone__TimeType
@@ -428,7 +428,7 @@ QTimeZone__OffsetData* q_timezone__offsetdata_new2();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone-offsetdata.html#abbreviation-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTimeZone__OffsetData*
 ///

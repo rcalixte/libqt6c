@@ -19,7 +19,7 @@ KTextEditor__TextHintProvider* k_texteditor__texthintprovider_new();
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-texthintprovider.html#textHint)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__TextHintProvider*
 /// @param view KTextEditor__View*

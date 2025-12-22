@@ -72,7 +72,7 @@ QMetaType* q_dbusmetatype_signature_to_meta_type(const char* signature);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmetatype.html#typeToSignature)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param type QMetaType*
 ///

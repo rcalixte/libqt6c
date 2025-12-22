@@ -120,7 +120,7 @@ int32_t q_sqlrecord_index_of(void* self, char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#fieldName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSqlRecord*
 /// @param i int

@@ -70,7 +70,7 @@ int32_t q_chart_qbase_metacall(void* self, int32_t param1, int param2, void* par
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -179,7 +179,7 @@ void q_chart_set_title(void* self, const char* title);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart-qtcharts.html#title)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QChart*
 ///
@@ -495,7 +495,7 @@ void q_chart_on_plot_area_changed(void* self, void (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -504,7 +504,7 @@ const char* q_chart_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -889,7 +889,7 @@ void q_chart_set_window_title(void* self, const char* title);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#windowTitle)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QChart*
 ///
@@ -1358,7 +1358,7 @@ void q_chart_grab_gesture2(void* self, int64_t type, int32_t flags);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QChart*
 ///
@@ -1573,7 +1573,7 @@ QVariant* q_chart_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QChart*
 ///
@@ -1915,7 +1915,7 @@ bool q_chart_is_blocked_by_modal_panel(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QChart*
 ///

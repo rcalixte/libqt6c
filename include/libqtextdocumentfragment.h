@@ -56,7 +56,7 @@ bool q_textdocumentfragment_is_empty(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentfragment.html#toPlainText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTextDocumentFragment*
 ///
@@ -64,7 +64,7 @@ const char* q_textdocumentfragment_to_plain_text(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentfragment.html#toRawText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTextDocumentFragment*
 ///
@@ -72,7 +72,7 @@ const char* q_textdocumentfragment_to_raw_text(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentfragment.html#toHtml)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTextDocumentFragment*
 ///
@@ -80,7 +80,7 @@ const char* q_textdocumentfragment_to_html(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentfragment.html#toMarkdown)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTextDocumentFragment*
 ///
@@ -106,7 +106,7 @@ QTextDocumentFragment* q_textdocumentfragment_from_markdown(const char* markdown
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentfragment.html#toMarkdown)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTextDocumentFragment*
 /// @param features flag of enum QTextDocument__MarkdownFeature

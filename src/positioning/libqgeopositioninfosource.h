@@ -55,7 +55,7 @@ int32_t q_geopositioninfosource_qbase_metacall(void* self, int32_t param1, int p
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -202,7 +202,7 @@ int32_t q_geopositioninfosource_qbase_minimum_update_interval(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#sourceName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGeoPositionInfoSource*
 ///
@@ -290,7 +290,7 @@ QGeoPositionInfoSource* q_geopositioninfosource_create_source2(const char* sourc
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#availableSources)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 const char** q_geopositioninfosource_available_sources();
 
@@ -435,7 +435,7 @@ void q_geopositioninfosource_on_supported_positioning_methods_changed(void* self
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -444,7 +444,7 @@ const char* q_geopositioninfosource_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -456,7 +456,7 @@ const char* q_geopositioninfosource_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QGeoPositionInfoSource*
 ///
@@ -671,7 +671,7 @@ QVariant* q_geopositioninfosource_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QGeoPositionInfoSource*
 ///

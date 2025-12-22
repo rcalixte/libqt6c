@@ -170,7 +170,7 @@ bool q_color_is_valid(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QColor*
 ///
@@ -185,7 +185,7 @@ void q_color_set_named_color(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#colorNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 const char** q_color_color_names();
 
@@ -807,7 +807,7 @@ bool q_color_is_valid_color_name(char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QColor*
 /// @param format enum QColor__NameFormat

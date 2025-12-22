@@ -30,7 +30,7 @@ void q_webengineglobalsettings__dnsmode_set_secure_mode(void* self, uint8_t secu
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineglobalsettings-dnsmode.html#serverTemplates-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QWebEngineGlobalSettings__DnsMode*
 ///

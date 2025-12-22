@@ -78,7 +78,7 @@ int32_t k_multitabbar_qbase_metacall(void* self, int32_t param1, int param2, voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -246,7 +246,7 @@ void k_multitabbar_qbase_update_separator(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -255,7 +255,7 @@ const char* k_multitabbar_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1159,7 +1159,7 @@ void k_multitabbar_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBar*
 ///
@@ -1169,7 +1169,7 @@ const char* k_multitabbar_style_sheet(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBar*
 ///
@@ -1205,7 +1205,7 @@ void k_multitabbar_set_window_icon_text(void* self, const char* windowIconText);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBar*
 ///
@@ -1224,7 +1224,7 @@ void k_multitabbar_set_window_role(void* self, const char* windowRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBar*
 ///
@@ -1243,7 +1243,7 @@ void k_multitabbar_set_window_file_path(void* self, const char* filePath);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBar*
 ///
@@ -1287,7 +1287,7 @@ void k_multitabbar_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBar*
 ///
@@ -1323,7 +1323,7 @@ void k_multitabbar_set_status_tip(void* self, const char* statusTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBar*
 ///
@@ -1342,7 +1342,7 @@ void k_multitabbar_set_whats_this(void* self, const char* whatsThis);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBar*
 ///
@@ -1352,7 +1352,7 @@ const char* k_multitabbar_whats_this(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBar*
 ///
@@ -1371,7 +1371,7 @@ void k_multitabbar_set_accessible_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBar*
 ///
@@ -1910,7 +1910,7 @@ void k_multitabbar_set_geometry2(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KMultiTabBar*
 ///
@@ -2716,7 +2716,7 @@ QWidget* k_multitabbar_create_window_container3(void* window, void* parent, int6
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBar*
 ///
@@ -2922,7 +2922,7 @@ QVariant* k_multitabbar_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KMultiTabBar*
 ///
@@ -5022,7 +5022,7 @@ int32_t k_multitabbarbutton_metacall(void* self, int32_t param1, int param2, voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -5057,7 +5057,7 @@ void k_multitabbarbutton_on_clicked(void* self, void (*callback)(void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -5066,7 +5066,7 @@ const char* k_multitabbarbutton_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -5170,7 +5170,7 @@ void k_multitabbarbutton_show_menu(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#text)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBarButton*
 ///
@@ -6317,7 +6317,7 @@ void k_multitabbarbutton_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBarButton*
 ///
@@ -6327,7 +6327,7 @@ const char* k_multitabbarbutton_style_sheet(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBarButton*
 ///
@@ -6363,7 +6363,7 @@ void k_multitabbarbutton_set_window_icon_text(void* self, const char* windowIcon
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBarButton*
 ///
@@ -6382,7 +6382,7 @@ void k_multitabbarbutton_set_window_role(void* self, const char* windowRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBarButton*
 ///
@@ -6401,7 +6401,7 @@ void k_multitabbarbutton_set_window_file_path(void* self, const char* filePath);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBarButton*
 ///
@@ -6445,7 +6445,7 @@ void k_multitabbarbutton_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBarButton*
 ///
@@ -6481,7 +6481,7 @@ void k_multitabbarbutton_set_status_tip(void* self, const char* statusTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBarButton*
 ///
@@ -6500,7 +6500,7 @@ void k_multitabbarbutton_set_whats_this(void* self, const char* whatsThis);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBarButton*
 ///
@@ -6510,7 +6510,7 @@ const char* k_multitabbarbutton_whats_this(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBarButton*
 ///
@@ -6529,7 +6529,7 @@ void k_multitabbarbutton_set_accessible_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBarButton*
 ///
@@ -7077,7 +7077,7 @@ void k_multitabbarbutton_set_geometry2(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KMultiTabBarButton*
 ///
@@ -7927,7 +7927,7 @@ bool k_multitabbarbutton_event_filter(void* self, void* watched, void* event);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBarButton*
 ///
@@ -8133,7 +8133,7 @@ QVariant* k_multitabbarbutton_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KMultiTabBarButton*
 ///
@@ -8403,7 +8403,7 @@ int32_t k_multitabbartab_metacall(void* self, int32_t param1, int param2, void* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -8444,7 +8444,7 @@ void k_multitabbartab_set_state(void* self, bool state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -8453,7 +8453,7 @@ const char* k_multitabbartab_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -8576,7 +8576,7 @@ void k_multitabbartab_show_menu(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#text)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBarTab*
 ///
@@ -9714,7 +9714,7 @@ void k_multitabbartab_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBarTab*
 ///
@@ -9724,7 +9724,7 @@ const char* k_multitabbartab_style_sheet(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBarTab*
 ///
@@ -9760,7 +9760,7 @@ void k_multitabbartab_set_window_icon_text(void* self, const char* windowIconTex
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBarTab*
 ///
@@ -9779,7 +9779,7 @@ void k_multitabbartab_set_window_role(void* self, const char* windowRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBarTab*
 ///
@@ -9798,7 +9798,7 @@ void k_multitabbartab_set_window_file_path(void* self, const char* filePath);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBarTab*
 ///
@@ -9842,7 +9842,7 @@ void k_multitabbartab_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBarTab*
 ///
@@ -9878,7 +9878,7 @@ void k_multitabbartab_set_status_tip(void* self, const char* statusTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBarTab*
 ///
@@ -9897,7 +9897,7 @@ void k_multitabbartab_set_whats_this(void* self, const char* whatsThis);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBarTab*
 ///
@@ -9907,7 +9907,7 @@ const char* k_multitabbartab_whats_this(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBarTab*
 ///
@@ -9926,7 +9926,7 @@ void k_multitabbartab_set_accessible_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBarTab*
 ///
@@ -10474,7 +10474,7 @@ void k_multitabbartab_set_geometry2(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KMultiTabBarTab*
 ///
@@ -11324,7 +11324,7 @@ bool k_multitabbartab_event_filter(void* self, void* watched, void* event);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KMultiTabBarTab*
 ///
@@ -11530,7 +11530,7 @@ QVariant* k_multitabbartab_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KMultiTabBarTab*
 ///

@@ -40,7 +40,7 @@ bool k_localizedstring_is_empty(void* self);
 
 /// [Upstream resources](https://api.kde.org/klocalizedstring.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KLocalizedString*
 ///
@@ -48,7 +48,7 @@ const char* k_localizedstring_to_string(void* self);
 
 /// [Upstream resources](https://api.kde.org/klocalizedstring.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KLocalizedString*
 /// @param languages const char**
@@ -57,7 +57,7 @@ const char* k_localizedstring_to_string2(void* self, const char* languages[stati
 
 /// [Upstream resources](https://api.kde.org/klocalizedstring.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KLocalizedString*
 /// @param domain const char*
@@ -66,7 +66,7 @@ const char* k_localizedstring_to_string3(void* self, const char* domain);
 
 /// [Upstream resources](https://api.kde.org/klocalizedstring.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KLocalizedString*
 /// @param format enum Kuit__VisualFormat
@@ -186,7 +186,7 @@ KLocalizedString* k_localizedstring_ignore_markup(void* self);
 
 /// [Upstream resources](https://api.kde.org/klocalizedstring.html#untranslatedText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KLocalizedString*
 ///
@@ -200,13 +200,13 @@ void k_localizedstring_set_application_domain(const char* domain);
 
 /// [Upstream resources](https://api.kde.org/klocalizedstring.html#applicationDomain)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 char* k_localizedstring_application_domain();
 
 /// [Upstream resources](https://api.kde.org/klocalizedstring.html#languages)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 const char** k_localizedstring_languages();
 
@@ -245,7 +245,7 @@ void k_localizedstring_add_domain_locale_dir(const char* domain, const char* pat
 
 /// [Upstream resources](https://api.kde.org/klocalizedstring.html#localizedFilePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param filePath const char*
 ///
@@ -253,7 +253,7 @@ const char* k_localizedstring_localized_file_path(const char* filePath);
 
 /// [Upstream resources](https://api.kde.org/klocalizedstring.html#removeAcceleratorMarker)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param label const char*
 ///

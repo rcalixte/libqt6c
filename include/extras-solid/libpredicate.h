@@ -139,7 +139,7 @@ libqt_list /* of int32_t */ k_solid__predicate_used_types(void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-predicate.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Solid__Predicate*
 ///
@@ -169,7 +169,7 @@ int32_t k_solid__predicate_interface_type(void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-predicate.html#propertyName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Solid__Predicate*
 ///

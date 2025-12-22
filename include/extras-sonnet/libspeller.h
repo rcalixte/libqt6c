@@ -55,7 +55,7 @@ void k_sonnet__speller_set_language(void* self, const char* lang);
 
 /// [Upstream resources](https://api.kde.org/sonnet-speller.html#language)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Sonnet__Speller*
 ///
@@ -77,7 +77,7 @@ bool k_sonnet__speller_is_misspelled(void* self, const char* word);
 
 /// [Upstream resources](https://api.kde.org/sonnet-speller.html#suggest)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self Sonnet__Speller*
 /// @param word const char*
@@ -128,7 +128,7 @@ void k_sonnet__speller_restore(void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-speller.html#availableBackends)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self Sonnet__Speller*
 ///
@@ -136,7 +136,7 @@ const char** k_sonnet__speller_available_backends(void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-speller.html#availableLanguages)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self Sonnet__Speller*
 ///
@@ -144,7 +144,7 @@ const char** k_sonnet__speller_available_languages(void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-speller.html#availableLanguageNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self Sonnet__Speller*
 ///
@@ -171,7 +171,7 @@ void k_sonnet__speller_set_default_language(void* self, const char* lang);
 
 /// [Upstream resources](https://api.kde.org/sonnet-speller.html#defaultLanguage)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Sonnet__Speller*
 ///
@@ -186,7 +186,7 @@ void k_sonnet__speller_set_default_client(void* self, const char* client);
 
 /// [Upstream resources](https://api.kde.org/sonnet-speller.html#defaultClient)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Sonnet__Speller*
 ///

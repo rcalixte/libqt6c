@@ -40,7 +40,7 @@ int32_t k_io__workerresult_error(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-workerresult.html#errorString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KIO__WorkerResult*
 ///
@@ -259,7 +259,7 @@ bool k_io__workerbase_has_meta_data(void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#metaData)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KIO__WorkerBase*
 /// @param key const char*
@@ -296,7 +296,7 @@ int32_t k_io__workerbase_config_value2(void* self, const char* key, int defaultV
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#configValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KIO__WorkerBase*
 /// @param key const char*
@@ -1233,7 +1233,7 @@ int32_t k_io__workerbase_message_box6(void* self, const char* text, int32_t type
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#configValue)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KIO__WorkerBase*
 /// @param key const char*
@@ -1277,7 +1277,7 @@ void k_io__workerbase_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio.html#unsupportedActionErrorString)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 const char*
 /// @param param2 int

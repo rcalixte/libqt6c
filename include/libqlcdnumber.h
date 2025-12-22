@@ -78,7 +78,7 @@ int32_t q_lcdnumber_qbase_metacall(void* self, int32_t param1, int param2, void*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 ///
@@ -299,7 +299,7 @@ void q_lcdnumber_qbase_paint_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -308,7 +308,7 @@ const char* q_lcdnumber_tr2(const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param s const char*
 /// @param c const char*
@@ -1291,7 +1291,7 @@ void q_lcdnumber_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QLCDNumber*
 ///
@@ -1301,7 +1301,7 @@ const char* q_lcdnumber_style_sheet(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QLCDNumber*
 ///
@@ -1337,7 +1337,7 @@ void q_lcdnumber_set_window_icon_text(void* self, const char* windowIconText);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QLCDNumber*
 ///
@@ -1356,7 +1356,7 @@ void q_lcdnumber_set_window_role(void* self, const char* windowRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QLCDNumber*
 ///
@@ -1375,7 +1375,7 @@ void q_lcdnumber_set_window_file_path(void* self, const char* filePath);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QLCDNumber*
 ///
@@ -1419,7 +1419,7 @@ void q_lcdnumber_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QLCDNumber*
 ///
@@ -1455,7 +1455,7 @@ void q_lcdnumber_set_status_tip(void* self, const char* statusTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QLCDNumber*
 ///
@@ -1474,7 +1474,7 @@ void q_lcdnumber_set_whats_this(void* self, const char* whatsThis);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QLCDNumber*
 ///
@@ -1484,7 +1484,7 @@ const char* q_lcdnumber_whats_this(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QLCDNumber*
 ///
@@ -1503,7 +1503,7 @@ void q_lcdnumber_set_accessible_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QLCDNumber*
 ///
@@ -2042,7 +2042,7 @@ void q_lcdnumber_set_geometry2(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QLCDNumber*
 ///
@@ -2848,7 +2848,7 @@ QWidget* q_lcdnumber_create_window_container3(void* window, void* parent, int64_
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QLCDNumber*
 ///
@@ -3054,7 +3054,7 @@ QVariant* q_lcdnumber_property(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QLCDNumber*
 ///

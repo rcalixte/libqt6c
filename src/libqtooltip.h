@@ -58,7 +58,7 @@ bool q_tooltip_is_visible();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#text)
 ///
-/// @warning Caller is responsible for freeing the returned memory
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 const char* q_tooltip_text();
 
