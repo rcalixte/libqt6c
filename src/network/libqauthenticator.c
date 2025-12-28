@@ -60,7 +60,23 @@ QVariant* q_authenticator_option(void* self, const char* opt) {
 }
 
 libqt_map /* of const char* to QVariant* */ q_authenticator_options(void* self) {
-    return QAuthenticator_Options((QAuthenticator*)self);
+    // Convert QHash<QString,QVariant> to libqt_map
+    libqt_map _out = QAuthenticator_Options((QAuthenticator*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_keys = (libqt_string*)_out.keys;
+    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_keys == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_authenticator_options");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_keys[i] = _out_keys[i].data;
+    }
+    _ret.keys = (void*)_ret_keys;
+    _ret.values = _out.values;
+    free(_out_keys);
+    return _ret;
 }
 
 void q_authenticator_set_option(void* self, const char* opt, void* value) {

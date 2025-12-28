@@ -153,11 +153,61 @@ const char** k_sonnet__speller_available_language_names(void* self) {
 }
 
 libqt_map /* of const char* to const char* */ k_sonnet__speller_available_dictionaries(void* self) {
-    return Sonnet__Speller_AvailableDictionaries((Sonnet__Speller*)self);
+    // Convert QMap<QString,QString> to libqt_map
+    libqt_map _out = Sonnet__Speller_AvailableDictionaries((Sonnet__Speller*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_keys = (libqt_string*)_out.keys;
+    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_keys == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_sonnet__speller_available_dictionaries");
+        abort();
+    }
+    libqt_string* _out_values = (libqt_string*)_out.values;
+    const char** _ret_values = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_values == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_sonnet__speller_available_dictionaries");
+        free(_out_keys);
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_keys[i] = _out_keys[i].data;
+        _ret_values[i] = _out_values[i].data;
+    }
+    _ret.keys = (void*)_ret_keys;
+    _ret.values = (void*)_ret_values;
+    free(_out_keys);
+    free(_out_values);
+    return _ret;
 }
 
 libqt_map /* of const char* to const char* */ k_sonnet__speller_preferred_dictionaries(void* self) {
-    return Sonnet__Speller_PreferredDictionaries((Sonnet__Speller*)self);
+    // Convert QMap<QString,QString> to libqt_map
+    libqt_map _out = Sonnet__Speller_PreferredDictionaries((Sonnet__Speller*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_keys = (libqt_string*)_out.keys;
+    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_keys == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_sonnet__speller_preferred_dictionaries");
+        abort();
+    }
+    libqt_string* _out_values = (libqt_string*)_out.values;
+    const char** _ret_values = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_values == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_sonnet__speller_preferred_dictionaries");
+        free(_out_keys);
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_keys[i] = _out_keys[i].data;
+        _ret_values[i] = _out_values[i].data;
+    }
+    _ret.keys = (void*)_ret_keys;
+    _ret.values = (void*)_ret_values;
+    free(_out_keys);
+    free(_out_values);
+    return _ret;
 }
 
 void k_sonnet__speller_set_default_language(void* self, const char* lang) {

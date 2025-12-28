@@ -80,7 +80,32 @@ QNetworkReply* q_restaccessmanager_post(void* self, void* request, void* data) {
 }
 
 QNetworkReply* q_restaccessmanager_post2(void* self, void* request, libqt_map /* of const char* to QVariant* */ data) {
-    return QRestAccessManager_Post2((QRestAccessManager*)self, (QNetworkRequest*)request, data);
+    // Convert libqt_map to QMap<QString,QVariant>
+    libqt_map data_ret;
+    data_ret.len = data.len;
+    data_ret.keys = malloc(data_ret.len * sizeof(libqt_string));
+    if (data_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    data_ret.values = malloc(data_ret.len * sizeof(QVariant*));
+    if (data_ret.values == NULL) {
+        free(data_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** data_karr = (const char**)data.keys;
+    libqt_string* data_kdest = (libqt_string*)data_ret.keys;
+    QVariant** data_varr = (QVariant**)data.values;
+    QVariant** data_vdest = (QVariant**)data_ret.values;
+    for (size_t i = 0; i < data_ret.len; ++i) {
+        data_kdest[i] = qstring(data_karr[i]);
+        data_vdest[i] = data_varr[i];
+    }
+    QNetworkReply* _out = QRestAccessManager_Post2((QRestAccessManager*)self, (QNetworkRequest*)request, data_ret);
+    libqt_free(data_ret.keys);
+    libqt_free(data_ret.values);
+    return _out;
 }
 
 QNetworkReply* q_restaccessmanager_post3(void* self, void* request, const char* data) {
@@ -100,7 +125,32 @@ QNetworkReply* q_restaccessmanager_put(void* self, void* request, void* data) {
 }
 
 QNetworkReply* q_restaccessmanager_put2(void* self, void* request, libqt_map /* of const char* to QVariant* */ data) {
-    return QRestAccessManager_Put2((QRestAccessManager*)self, (QNetworkRequest*)request, data);
+    // Convert libqt_map to QMap<QString,QVariant>
+    libqt_map data_ret;
+    data_ret.len = data.len;
+    data_ret.keys = malloc(data_ret.len * sizeof(libqt_string));
+    if (data_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    data_ret.values = malloc(data_ret.len * sizeof(QVariant*));
+    if (data_ret.values == NULL) {
+        free(data_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** data_karr = (const char**)data.keys;
+    libqt_string* data_kdest = (libqt_string*)data_ret.keys;
+    QVariant** data_varr = (QVariant**)data.values;
+    QVariant** data_vdest = (QVariant**)data_ret.values;
+    for (size_t i = 0; i < data_ret.len; ++i) {
+        data_kdest[i] = qstring(data_karr[i]);
+        data_vdest[i] = data_varr[i];
+    }
+    QNetworkReply* _out = QRestAccessManager_Put2((QRestAccessManager*)self, (QNetworkRequest*)request, data_ret);
+    libqt_free(data_ret.keys);
+    libqt_free(data_ret.values);
+    return _out;
 }
 
 QNetworkReply* q_restaccessmanager_put3(void* self, void* request, const char* data) {
@@ -120,7 +170,32 @@ QNetworkReply* q_restaccessmanager_patch(void* self, void* request, void* data) 
 }
 
 QNetworkReply* q_restaccessmanager_patch2(void* self, void* request, libqt_map /* of const char* to QVariant* */ data) {
-    return QRestAccessManager_Patch2((QRestAccessManager*)self, (QNetworkRequest*)request, data);
+    // Convert libqt_map to QMap<QString,QVariant>
+    libqt_map data_ret;
+    data_ret.len = data.len;
+    data_ret.keys = malloc(data_ret.len * sizeof(libqt_string));
+    if (data_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    data_ret.values = malloc(data_ret.len * sizeof(QVariant*));
+    if (data_ret.values == NULL) {
+        free(data_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** data_karr = (const char**)data.keys;
+    libqt_string* data_kdest = (libqt_string*)data_ret.keys;
+    QVariant** data_varr = (QVariant**)data.values;
+    QVariant** data_vdest = (QVariant**)data_ret.values;
+    for (size_t i = 0; i < data_ret.len; ++i) {
+        data_kdest[i] = qstring(data_karr[i]);
+        data_vdest[i] = data_varr[i];
+    }
+    QNetworkReply* _out = QRestAccessManager_Patch2((QRestAccessManager*)self, (QNetworkRequest*)request, data_ret);
+    libqt_free(data_ret.keys);
+    libqt_free(data_ret.values);
+    return _out;
 }
 
 QNetworkReply* q_restaccessmanager_patch3(void* self, void* request, const char* data) {

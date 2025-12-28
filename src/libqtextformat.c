@@ -168,7 +168,13 @@ void q_textformat_set_property2(void* self, int propertyId, libqt_list lengths) 
 }
 
 libqt_map /* of int to QVariant* */ q_textformat_properties(void* self) {
-    return QTextFormat_Properties((QTextFormat*)self);
+    // Convert QMap<int,QVariant> to libqt_map
+    libqt_map _out = QTextFormat_Properties((QTextFormat*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 int32_t q_textformat_property_count(void* self) {
@@ -706,7 +712,13 @@ void q_textcharformat_set_property2(void* self, int propertyId, libqt_list lengt
 }
 
 libqt_map /* of int to QVariant* */ q_textcharformat_properties(void* self) {
-    return QTextFormat_Properties((QTextFormat*)self);
+    // Convert QMap<int,QVariant> to libqt_map
+    libqt_map _out = QTextFormat_Properties((QTextFormat*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 int32_t q_textcharformat_property_count(void* self) {
@@ -1039,7 +1051,13 @@ void q_textblockformat_set_property2(void* self, int propertyId, libqt_list leng
 }
 
 libqt_map /* of int to QVariant* */ q_textblockformat_properties(void* self) {
-    return QTextFormat_Properties((QTextFormat*)self);
+    // Convert QMap<int,QVariant> to libqt_map
+    libqt_map _out = QTextFormat_Properties((QTextFormat*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 int32_t q_textblockformat_property_count(void* self) {
@@ -1305,7 +1323,13 @@ void q_textlistformat_set_property2(void* self, int propertyId, libqt_list lengt
 }
 
 libqt_map /* of int to QVariant* */ q_textlistformat_properties(void* self) {
-    return QTextFormat_Properties((QTextFormat*)self);
+    // Convert QMap<int,QVariant> to libqt_map
+    libqt_map _out = QTextFormat_Properties((QTextFormat*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 int32_t q_textlistformat_property_count(void* self) {
@@ -1890,7 +1914,13 @@ void q_textimageformat_set_property2(void* self, int propertyId, libqt_list leng
 }
 
 libqt_map /* of int to QVariant* */ q_textimageformat_properties(void* self) {
-    return QTextFormat_Properties((QTextFormat*)self);
+    // Convert QMap<int,QVariant> to libqt_map
+    libqt_map _out = QTextFormat_Properties((QTextFormat*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 int32_t q_textimageformat_property_count(void* self) {
@@ -2222,7 +2252,13 @@ void q_textframeformat_set_property2(void* self, int propertyId, libqt_list leng
 }
 
 libqt_map /* of int to QVariant* */ q_textframeformat_properties(void* self) {
-    return QTextFormat_Properties((QTextFormat*)self);
+    // Convert QMap<int,QVariant> to libqt_map
+    libqt_map _out = QTextFormat_Properties((QTextFormat*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 int32_t q_textframeformat_property_count(void* self) {
@@ -2615,7 +2651,13 @@ void q_texttableformat_set_property2(void* self, int propertyId, libqt_list leng
 }
 
 libqt_map /* of int to QVariant* */ q_texttableformat_properties(void* self) {
-    return QTextFormat_Properties((QTextFormat*)self);
+    // Convert QMap<int,QVariant> to libqt_map
+    libqt_map _out = QTextFormat_Properties((QTextFormat*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 int32_t q_texttableformat_property_count(void* self) {
@@ -3297,7 +3339,13 @@ void q_texttablecellformat_set_property2(void* self, int propertyId, libqt_list 
 }
 
 libqt_map /* of int to QVariant* */ q_texttablecellformat_properties(void* self) {
-    return QTextFormat_Properties((QTextFormat*)self);
+    // Convert QMap<int,QVariant> to libqt_map
+    libqt_map _out = QTextFormat_Properties((QTextFormat*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 int32_t q_texttablecellformat_property_count(void* self) {

@@ -146,7 +146,32 @@ int32_t k_io__workerbase_message_box2(void* self, const char* text, int32_t type
 }
 
 int32_t k_io__workerbase_ssl_error(void* self, libqt_map /* of const char* to QVariant* */ sslData) {
-    return KIO__WorkerBase_SslError((KIO__WorkerBase*)self, sslData);
+    // Convert libqt_map to QMap<QString,QVariant>
+    libqt_map sslData_ret;
+    sslData_ret.len = sslData.len;
+    sslData_ret.keys = malloc(sslData_ret.len * sizeof(libqt_string));
+    if (sslData_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    sslData_ret.values = malloc(sslData_ret.len * sizeof(QVariant*));
+    if (sslData_ret.values == NULL) {
+        free(sslData_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** sslData_karr = (const char**)sslData.keys;
+    libqt_string* sslData_kdest = (libqt_string*)sslData_ret.keys;
+    QVariant** sslData_varr = (QVariant**)sslData.values;
+    QVariant** sslData_vdest = (QVariant**)sslData_ret.values;
+    for (size_t i = 0; i < sslData_ret.len; ++i) {
+        sslData_kdest[i] = qstring(sslData_karr[i]);
+        sslData_vdest[i] = sslData_varr[i];
+    }
+    int32_t _out = KIO__WorkerBase_SslError((KIO__WorkerBase*)self, sslData_ret);
+    libqt_free(sslData_ret.keys);
+    libqt_free(sslData_ret.values);
+    return _out;
 }
 
 void k_io__workerbase_set_meta_data(void* self, const char* key, const char* value) {
@@ -169,7 +194,23 @@ KIO__MetaData* k_io__workerbase_all_meta_data(void* self) {
 }
 
 libqt_map /* of const char* to QVariant* */ k_io__workerbase_map_config(void* self) {
-    return KIO__WorkerBase_MapConfig((KIO__WorkerBase*)self);
+    // Convert QMap<QString,QVariant> to libqt_map
+    libqt_map _out = KIO__WorkerBase_MapConfig((KIO__WorkerBase*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_keys = (libqt_string*)_out.keys;
+    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_keys == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_io__workerbase_map_config");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_keys[i] = _out_keys[i].data;
+    }
+    _ret.keys = (void*)_ret_keys;
+    _ret.values = _out.values;
+    free(_out_keys);
+    return _ret;
 }
 
 bool k_io__workerbase_config_value(void* self, const char* key, bool defaultValue) {

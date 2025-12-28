@@ -7,7 +7,33 @@ PackageKit__Details* q_packagekit__details_new() {
 }
 
 PackageKit__Details* q_packagekit__details_new2(libqt_map /* of const char* to QVariant* */ other) {
-    return PackageKit__Details_new2(other);
+    // Convert libqt_map to QMap<QString,QVariant>
+    libqt_map other_ret;
+    other_ret.len = other.len;
+    other_ret.keys = malloc(other_ret.len * sizeof(libqt_string));
+    if (other_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    other_ret.values = malloc(other_ret.len * sizeof(QVariant*));
+    if (other_ret.values == NULL) {
+        free(other_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** other_karr = (const char**)other.keys;
+    libqt_string* other_kdest = (libqt_string*)other_ret.keys;
+    QVariant** other_varr = (QVariant**)other.values;
+    QVariant** other_vdest = (QVariant**)other_ret.values;
+    for (size_t i = 0; i < other_ret.len; ++i) {
+        other_kdest[i] = qstring(other_karr[i]);
+        other_vdest[i] = other_varr[i];
+    }
+
+    PackageKit__Details* _out = PackageKit__Details_new2(other_ret);
+    libqt_free(other_ret.keys);
+    libqt_free(other_ret.values);
+    return _out;
 }
 
 const char* q_packagekit__details_package_id(void* self) {

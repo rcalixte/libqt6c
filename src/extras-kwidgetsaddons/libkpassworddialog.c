@@ -136,7 +136,31 @@ void k_passworddialog_set_password(void* self, const char* password) {
 }
 
 void k_passworddialog_set_known_logins(void* self, libqt_map /* of const char* to const char* */ knownLogins) {
-    KPasswordDialog_SetKnownLogins((KPasswordDialog*)self, knownLogins);
+    // Convert libqt_map to QMap<QString,QString>
+    libqt_map knownLogins_ret;
+    knownLogins_ret.len = knownLogins.len;
+    knownLogins_ret.keys = malloc(knownLogins_ret.len * sizeof(libqt_string));
+    if (knownLogins_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    knownLogins_ret.values = malloc(knownLogins_ret.len * sizeof(libqt_string));
+    if (knownLogins_ret.values == NULL) {
+        free(knownLogins_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** knownLogins_karr = (const char**)knownLogins.keys;
+    libqt_string* knownLogins_kdest = (libqt_string*)knownLogins_ret.keys;
+    const char** knownLogins_varr = (const char**)knownLogins.values;
+    libqt_string* knownLogins_vdest = (libqt_string*)knownLogins_ret.values;
+    for (size_t i = 0; i < knownLogins_ret.len; ++i) {
+        knownLogins_kdest[i] = qstring(knownLogins_karr[i]);
+        knownLogins_vdest[i] = qstring(knownLogins_varr[i]);
+    }
+    KPasswordDialog_SetKnownLogins((KPasswordDialog*)self, knownLogins_ret);
+    libqt_free(knownLogins_ret.keys);
+    libqt_free(knownLogins_ret.values);
 }
 
 void k_passworddialog_accept(void* self) {

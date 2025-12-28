@@ -86,7 +86,33 @@ QVariant* q_variant_new16(void* datetime) {
 }
 
 QVariant* q_variant_new17(libqt_map /* of const char* to QVariant* */ hash) {
-    return QVariant_new17(hash);
+    // Convert libqt_map to QHash<QString,QVariant>
+    libqt_map hash_ret;
+    hash_ret.len = hash.len;
+    hash_ret.keys = malloc(hash_ret.len * sizeof(libqt_string));
+    if (hash_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    hash_ret.values = malloc(hash_ret.len * sizeof(QVariant*));
+    if (hash_ret.values == NULL) {
+        free(hash_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** hash_karr = (const char**)hash.keys;
+    libqt_string* hash_kdest = (libqt_string*)hash_ret.keys;
+    QVariant** hash_varr = (QVariant**)hash.values;
+    QVariant** hash_vdest = (QVariant**)hash_ret.values;
+    for (size_t i = 0; i < hash_ret.len; ++i) {
+        hash_kdest[i] = qstring(hash_karr[i]);
+        hash_vdest[i] = hash_varr[i];
+    }
+
+    QVariant* _out = QVariant_new17(hash_ret);
+    libqt_free(hash_ret.keys);
+    libqt_free(hash_ret.values);
+    return _out;
 }
 
 QVariant* q_variant_new18(void* jsonArray) {
@@ -106,7 +132,33 @@ QVariant* q_variant_new21(void* locale) {
 }
 
 QVariant* q_variant_new22(libqt_map /* of const char* to QVariant* */ mapVal) {
-    return QVariant_new22(mapVal);
+    // Convert libqt_map to QMap<QString,QVariant>
+    libqt_map mapVal_ret;
+    mapVal_ret.len = mapVal.len;
+    mapVal_ret.keys = malloc(mapVal_ret.len * sizeof(libqt_string));
+    if (mapVal_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    mapVal_ret.values = malloc(mapVal_ret.len * sizeof(QVariant*));
+    if (mapVal_ret.values == NULL) {
+        free(mapVal_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** mapVal_karr = (const char**)mapVal.keys;
+    libqt_string* mapVal_kdest = (libqt_string*)mapVal_ret.keys;
+    QVariant** mapVal_varr = (QVariant**)mapVal.values;
+    QVariant** mapVal_vdest = (QVariant**)mapVal_ret.values;
+    for (size_t i = 0; i < mapVal_ret.len; ++i) {
+        mapVal_kdest[i] = qstring(mapVal_karr[i]);
+        mapVal_vdest[i] = mapVal_varr[i];
+    }
+
+    QVariant* _out = QVariant_new22(mapVal_ret);
+    libqt_free(mapVal_ret.keys);
+    libqt_free(mapVal_ret.values);
+    return _out;
 }
 
 QVariant* q_variant_new23(void* re) {
@@ -361,11 +413,43 @@ libqt_list /* of QVariant* */ q_variant_to_list(void* self) {
 }
 
 libqt_map /* of const char* to QVariant* */ q_variant_to_map(void* self) {
-    return QVariant_ToMap((QVariant*)self);
+    // Convert QMap<QString,QVariant> to libqt_map
+    libqt_map _out = QVariant_ToMap((QVariant*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_keys = (libqt_string*)_out.keys;
+    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_keys == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_variant_to_map");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_keys[i] = _out_keys[i].data;
+    }
+    _ret.keys = (void*)_ret_keys;
+    _ret.values = _out.values;
+    free(_out_keys);
+    return _ret;
 }
 
 libqt_map /* of const char* to QVariant* */ q_variant_to_hash(void* self) {
-    return QVariant_ToHash((QVariant*)self);
+    // Convert QHash<QString,QVariant> to libqt_map
+    libqt_map _out = QVariant_ToHash((QVariant*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_keys = (libqt_string*)_out.keys;
+    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_keys == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_variant_to_hash");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_keys[i] = _out_keys[i].data;
+    }
+    _ret.keys = (void*)_ret_keys;
+    _ret.values = _out.values;
+    free(_out_keys);
+    return _ret;
 }
 
 QPoint* q_variant_to_point(void* self) {

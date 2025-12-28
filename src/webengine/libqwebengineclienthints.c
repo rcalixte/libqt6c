@@ -71,7 +71,23 @@ const char* q_webengineclienthints_bitness(void* self) {
 }
 
 libqt_map /* of const char* to QVariant* */ q_webengineclienthints_full_version_list(void* self) {
-    return QWebEngineClientHints_FullVersionList((QWebEngineClientHints*)self);
+    // Convert QMap<QString,QVariant> to libqt_map
+    libqt_map _out = QWebEngineClientHints_FullVersionList((QWebEngineClientHints*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_keys = (libqt_string*)_out.keys;
+    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_keys == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_webengineclienthints_full_version_list");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_keys[i] = _out_keys[i].data;
+    }
+    _ret.keys = (void*)_ret_keys;
+    _ret.values = _out.values;
+    free(_out_keys);
+    return _ret;
 }
 
 bool q_webengineclienthints_is_wow64(void* self) {
@@ -107,7 +123,31 @@ void q_webengineclienthints_set_bitness(void* self, const char* bitness) {
 }
 
 void q_webengineclienthints_set_full_version_list(void* self, libqt_map /* of const char* to QVariant* */ fullVersionList) {
-    QWebEngineClientHints_SetFullVersionList((QWebEngineClientHints*)self, fullVersionList);
+    // Convert libqt_map to QMap<QString,QVariant>
+    libqt_map fullVersionList_ret;
+    fullVersionList_ret.len = fullVersionList.len;
+    fullVersionList_ret.keys = malloc(fullVersionList_ret.len * sizeof(libqt_string));
+    if (fullVersionList_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    fullVersionList_ret.values = malloc(fullVersionList_ret.len * sizeof(QVariant*));
+    if (fullVersionList_ret.values == NULL) {
+        free(fullVersionList_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** fullVersionList_karr = (const char**)fullVersionList.keys;
+    libqt_string* fullVersionList_kdest = (libqt_string*)fullVersionList_ret.keys;
+    QVariant** fullVersionList_varr = (QVariant**)fullVersionList.values;
+    QVariant** fullVersionList_vdest = (QVariant**)fullVersionList_ret.values;
+    for (size_t i = 0; i < fullVersionList_ret.len; ++i) {
+        fullVersionList_kdest[i] = qstring(fullVersionList_karr[i]);
+        fullVersionList_vdest[i] = fullVersionList_varr[i];
+    }
+    QWebEngineClientHints_SetFullVersionList((QWebEngineClientHints*)self, fullVersionList_ret);
+    libqt_free(fullVersionList_ret.keys);
+    libqt_free(fullVersionList_ret.values);
 }
 
 void q_webengineclienthints_set_is_wow64(void* self, bool isWow64) {

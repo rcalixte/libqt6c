@@ -207,7 +207,32 @@ void k_texteditor__mainwindow_on_widget_removed(void* self, void (*callback)(voi
 }
 
 bool k_texteditor__mainwindow_show_message(void* self, libqt_map /* of const char* to QVariant* */ message) {
-    return KTextEditor__MainWindow_ShowMessage((KTextEditor__MainWindow*)self, message);
+    // Convert libqt_map to QMap<QString,QVariant>
+    libqt_map message_ret;
+    message_ret.len = message.len;
+    message_ret.keys = malloc(message_ret.len * sizeof(libqt_string));
+    if (message_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    message_ret.values = malloc(message_ret.len * sizeof(QVariant*));
+    if (message_ret.values == NULL) {
+        free(message_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** message_karr = (const char**)message.keys;
+    libqt_string* message_kdest = (libqt_string*)message_ret.keys;
+    QVariant** message_varr = (QVariant**)message.values;
+    QVariant** message_vdest = (QVariant**)message_ret.values;
+    for (size_t i = 0; i < message_ret.len; ++i) {
+        message_kdest[i] = qstring(message_karr[i]);
+        message_vdest[i] = message_varr[i];
+    }
+    bool _out = KTextEditor__MainWindow_ShowMessage((KTextEditor__MainWindow*)self, message_ret);
+    libqt_free(message_ret.keys);
+    libqt_free(message_ret.values);
+    return _out;
 }
 
 const char* k_texteditor__mainwindow_tr2(const char* s, const char* c) {

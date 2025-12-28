@@ -2090,6 +2090,7 @@ void k_imagefilepreview_qbase_set_supported_mime_types(void* self, const char* m
     }
     libqt_list mimeTypes_list = qlist(mimeTypes_qstr, mimeTypes_len);
     KImageFilePreview_QBaseSetSupportedMimeTypes((KImageFilePreview*)self, mimeTypes_list);
+    free(mimeTypes_qstr);
 }
 
 void k_imagefilepreview_on_set_supported_mime_types(void* self, void (*callback)(void*, const char**)) {

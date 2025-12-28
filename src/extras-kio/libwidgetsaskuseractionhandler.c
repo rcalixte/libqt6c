@@ -95,7 +95,31 @@ void k_io__widgetsaskuseractionhandler_qbase_request_user_message_box(void* self
 }
 
 void k_io__widgetsaskuseractionhandler_ask_ignore_ssl_errors(void* self, libqt_map /* of const char* to QVariant* */ sslErrorData, void* parent) {
-    KIO__WidgetsAskUserActionHandler_AskIgnoreSslErrors((KIO__WidgetsAskUserActionHandler*)self, sslErrorData, (QWidget*)parent);
+    // Convert libqt_map to QMap<QString,QVariant>
+    libqt_map sslErrorData_ret;
+    sslErrorData_ret.len = sslErrorData.len;
+    sslErrorData_ret.keys = malloc(sslErrorData_ret.len * sizeof(libqt_string));
+    if (sslErrorData_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    sslErrorData_ret.values = malloc(sslErrorData_ret.len * sizeof(QVariant*));
+    if (sslErrorData_ret.values == NULL) {
+        free(sslErrorData_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** sslErrorData_karr = (const char**)sslErrorData.keys;
+    libqt_string* sslErrorData_kdest = (libqt_string*)sslErrorData_ret.keys;
+    QVariant** sslErrorData_varr = (QVariant**)sslErrorData.values;
+    QVariant** sslErrorData_vdest = (QVariant**)sslErrorData_ret.values;
+    for (size_t i = 0; i < sslErrorData_ret.len; ++i) {
+        sslErrorData_kdest[i] = qstring(sslErrorData_karr[i]);
+        sslErrorData_vdest[i] = sslErrorData_varr[i];
+    }
+    KIO__WidgetsAskUserActionHandler_AskIgnoreSslErrors((KIO__WidgetsAskUserActionHandler*)self, sslErrorData_ret, (QWidget*)parent);
+    libqt_free(sslErrorData_ret.keys);
+    libqt_free(sslErrorData_ret.values);
 }
 
 void k_io__widgetsaskuseractionhandler_on_ask_ignore_ssl_errors(void* self, void (*callback)(void*, libqt_map /* of const char* to QVariant* */, void*)) {
@@ -103,7 +127,29 @@ void k_io__widgetsaskuseractionhandler_on_ask_ignore_ssl_errors(void* self, void
 }
 
 void k_io__widgetsaskuseractionhandler_qbase_ask_ignore_ssl_errors(void* self, libqt_map /* of const char* to QVariant* */ sslErrorData, void* parent) {
-    KIO__WidgetsAskUserActionHandler_QBaseAskIgnoreSslErrors((KIO__WidgetsAskUserActionHandler*)self, sslErrorData, (QWidget*)parent);
+    // Convert libqt_map to QMap<QString,QVariant>
+    libqt_map sslErrorData_ret;
+    sslErrorData_ret.len = sslErrorData.len;
+    sslErrorData_ret.keys = malloc(sslErrorData_ret.len * sizeof(libqt_string));
+    if (sslErrorData_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    sslErrorData_ret.values = malloc(sslErrorData_ret.len * sizeof(QVariant*));
+    if (sslErrorData_ret.values == NULL) {
+        free(sslErrorData_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** sslErrorData_karr = (const char**)sslErrorData.keys;
+    libqt_string* sslErrorData_kdest = (libqt_string*)sslErrorData_ret.keys;
+    QVariant** sslErrorData_varr = (QVariant**)sslErrorData.values;
+    QVariant** sslErrorData_vdest = (QVariant**)sslErrorData_ret.values;
+    for (size_t i = 0; i < sslErrorData_ret.len; ++i) {
+        sslErrorData_kdest[i] = qstring(sslErrorData_karr[i]);
+        sslErrorData_vdest[i] = sslErrorData_varr[i];
+    }
+    KIO__WidgetsAskUserActionHandler_QBaseAskIgnoreSslErrors((KIO__WidgetsAskUserActionHandler*)self, sslErrorData_ret, (QWidget*)parent);
 }
 
 void k_io__widgetsaskuseractionhandler_set_window(void* self, void* window) {

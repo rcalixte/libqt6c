@@ -510,7 +510,13 @@ void k_texteditor__attribute_set_property2(void* self, int propertyId, libqt_lis
 }
 
 libqt_map /* of int to QVariant* */ k_texteditor__attribute_properties(void* self) {
-    return QTextFormat_Properties((QTextFormat*)self);
+    // Convert QMap<int,QVariant> to libqt_map
+    libqt_map _out = QTextFormat_Properties((QTextFormat*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 int32_t k_texteditor__attribute_property_count(void* self) {

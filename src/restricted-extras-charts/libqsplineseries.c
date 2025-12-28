@@ -331,7 +331,31 @@ void q_splineseries_clear_points_configuration2(void* self, int32_t key) {
 }
 
 void q_splineseries_set_point_configuration(void* self, int index, libqt_map /* of int32_t to QVariant* */ configuration) {
-    QXYSeries_SetPointConfiguration((QXYSeries*)self, index, configuration);
+    // Convert libqt_map to QHash<QXYSeries::PointConfiguration,QVariant>
+    libqt_map configuration_ret;
+    configuration_ret.len = configuration.len;
+    configuration_ret.keys = malloc(configuration_ret.len * sizeof(int32_t));
+    if (configuration_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    configuration_ret.values = malloc(configuration_ret.len * sizeof(QVariant*));
+    if (configuration_ret.values == NULL) {
+        free(configuration_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    int32_t* configuration_karr = (int32_t*)configuration.keys;
+    int32_t* configuration_kdest = (int32_t*)configuration_ret.keys;
+    QVariant** configuration_varr = (QVariant**)configuration.values;
+    QVariant** configuration_vdest = (QVariant**)configuration_ret.values;
+    for (size_t i = 0; i < configuration_ret.len; ++i) {
+        configuration_kdest[i] = configuration_karr[i];
+        configuration_vdest[i] = configuration_varr[i];
+    }
+    QXYSeries_SetPointConfiguration((QXYSeries*)self, index, configuration_ret);
+    libqt_free(configuration_ret.keys);
+    libqt_free(configuration_ret.values);
 }
 
 void q_splineseries_set_point_configuration2(void* self, int index, int32_t key, void* value) {
@@ -339,15 +363,51 @@ void q_splineseries_set_point_configuration2(void* self, int index, int32_t key,
 }
 
 void q_splineseries_set_points_configuration(void* self, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ pointsConfiguration) {
-    QXYSeries_SetPointsConfiguration((QXYSeries*)self, pointsConfiguration);
+    // Convert libqt_map to QHash<int,QHash<QXYSeries::PointConfiguration, QVariant>>
+    libqt_map pointsConfiguration_ret;
+    pointsConfiguration_ret.len = pointsConfiguration.len;
+    pointsConfiguration_ret.keys = malloc(pointsConfiguration_ret.len * sizeof(int));
+    if (pointsConfiguration_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    pointsConfiguration_ret.values = malloc(pointsConfiguration_ret.len * sizeof(libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */));
+    if (pointsConfiguration_ret.values == NULL) {
+        free(pointsConfiguration_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    int* pointsConfiguration_karr = (int*)pointsConfiguration.keys;
+    int* pointsConfiguration_kdest = (int*)pointsConfiguration_ret.keys;
+    libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */* pointsConfiguration_varr = (libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */*)pointsConfiguration.values;
+    libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */* pointsConfiguration_vdest = (libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */*)pointsConfiguration_ret.values;
+    for (size_t i = 0; i < pointsConfiguration_ret.len; ++i) {
+        pointsConfiguration_kdest[i] = pointsConfiguration_karr[i];
+        pointsConfiguration_vdest[i] = pointsConfiguration_varr[i];
+    }
+    QXYSeries_SetPointsConfiguration((QXYSeries*)self, pointsConfiguration_ret);
+    libqt_free(pointsConfiguration_ret.keys);
+    libqt_free(pointsConfiguration_ret.values);
 }
 
 libqt_map /* of int32_t to QVariant* */ q_splineseries_point_configuration(void* self, int index) {
-    return QXYSeries_PointConfiguration((QXYSeries*)self, index);
+    // Convert QHash<QXYSeries::PointConfiguration,QVariant> to libqt_map
+    libqt_map _out = QXYSeries_PointConfiguration((QXYSeries*)self, index);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ q_splineseries_points_configuration(void* self) {
-    return QXYSeries_PointsConfiguration((QXYSeries*)self);
+    // Convert QHash<int,QHash<QXYSeries::PointConfiguration, QVariant>> to libqt_map
+    libqt_map _out = QXYSeries_PointsConfiguration((QXYSeries*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 void q_splineseries_size_by(void* self, libqt_list sourceData, double minSize, double maxSize) {
@@ -551,7 +611,31 @@ void q_splineseries_on_best_fit_line_color_changed(void* self, void (*callback)(
 }
 
 void q_splineseries_points_configuration_changed(void* self, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ configuration) {
-    QXYSeries_PointsConfigurationChanged((QXYSeries*)self, configuration);
+    // Convert libqt_map to QHash<int,QHash<QXYSeries::PointConfiguration, QVariant>>
+    libqt_map configuration_ret;
+    configuration_ret.len = configuration.len;
+    configuration_ret.keys = malloc(configuration_ret.len * sizeof(int));
+    if (configuration_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    configuration_ret.values = malloc(configuration_ret.len * sizeof(libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */));
+    if (configuration_ret.values == NULL) {
+        free(configuration_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    int* configuration_karr = (int*)configuration.keys;
+    int* configuration_kdest = (int*)configuration_ret.keys;
+    libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */* configuration_varr = (libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */*)configuration.values;
+    libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */* configuration_vdest = (libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */*)configuration_ret.values;
+    for (size_t i = 0; i < configuration_ret.len; ++i) {
+        configuration_kdest[i] = configuration_karr[i];
+        configuration_vdest[i] = configuration_varr[i];
+    }
+    QXYSeries_PointsConfigurationChanged((QXYSeries*)self, configuration_ret);
+    libqt_free(configuration_ret.keys);
+    libqt_free(configuration_ret.values);
 }
 
 void q_splineseries_on_points_configuration_changed(void* self, void (*callback)(void*, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */)) {

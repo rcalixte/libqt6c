@@ -4000,7 +4000,13 @@ QCPMarginGroup* q_cplayoutelement_margin_group(void* self, int32_t side) {
 }
 
 libqt_map /* of int32_t to QCPMarginGroup* */ q_cplayoutelement_margin_groups(void* self) {
-    return QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
+    // Convert QHash<QCP::MarginSide,QCPMarginGroup> to libqt_map
+    libqt_map _out = QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 void q_cplayoutelement_set_outer_rect(void* self, void* rect) {
@@ -4940,7 +4946,13 @@ QCPMarginGroup* q_cplayout_margin_group(void* self, int32_t side) {
 }
 
 libqt_map /* of int32_t to QCPMarginGroup* */ q_cplayout_margin_groups(void* self) {
-    return QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
+    // Convert QHash<QCP::MarginSide,QCPMarginGroup> to libqt_map
+    libqt_map _out = QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 void q_cplayout_set_outer_rect(void* self, void* rect) {
@@ -5932,7 +5944,13 @@ QCPMarginGroup* q_cplayoutgrid_margin_group(void* self, int32_t side) {
 }
 
 libqt_map /* of int32_t to QCPMarginGroup* */ q_cplayoutgrid_margin_groups(void* self) {
-    return QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
+    // Convert QHash<QCP::MarginSide,QCPMarginGroup> to libqt_map
+    libqt_map _out = QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 void q_cplayoutgrid_set_outer_rect(void* self, void* rect) {
@@ -6838,7 +6856,13 @@ QCPMarginGroup* q_cplayoutinset_margin_group(void* self, int32_t side) {
 }
 
 libqt_map /* of int32_t to QCPMarginGroup* */ q_cplayoutinset_margin_groups(void* self) {
-    return QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
+    // Convert QHash<QCP::MarginSide,QCPMarginGroup> to libqt_map
+    libqt_map _out = QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 void q_cplayoutinset_set_outer_rect(void* self, void* rect) {
@@ -8043,6 +8067,7 @@ void q_cpaxistickerdatetime_qbase_generate(void* self, void* range, void* locale
     }
     libqt_list tickLabels_list = qlist(tickLabels_qstr, tickLabels_len);
     QCPAxisTickerDateTime_QBaseGenerate((QCPAxisTickerDateTime*)self, (QCPRange*)range, (QLocale*)locale, (QChar*)formatChar, precision, ticks, subTicks, tickLabels_list);
+    free(tickLabels_qstr);
 }
 
 void q_cpaxistickerdatetime_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**)) {
@@ -8285,6 +8310,7 @@ void q_cpaxistickertime_qbase_generate(void* self, void* range, void* locale, vo
     }
     libqt_list tickLabels_list = qlist(tickLabels_qstr, tickLabels_len);
     QCPAxisTickerTime_QBaseGenerate((QCPAxisTickerTime*)self, (QCPRange*)range, (QLocale*)locale, (QChar*)formatChar, precision, ticks, subTicks, tickLabels_list);
+    free(tickLabels_qstr);
 }
 
 void q_cpaxistickertime_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**)) {
@@ -8496,6 +8522,7 @@ void q_cpaxistickerfixed_qbase_generate(void* self, void* range, void* locale, v
     }
     libqt_list tickLabels_list = qlist(tickLabels_qstr, tickLabels_len);
     QCPAxisTickerFixed_QBaseGenerate((QCPAxisTickerFixed*)self, (QCPRange*)range, (QLocale*)locale, (QChar*)formatChar, precision, ticks, subTicks, tickLabels_list);
+    free(tickLabels_qstr);
 }
 
 void q_cpaxistickerfixed_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**)) {
@@ -8663,7 +8690,31 @@ int32_t q_cpaxistickertext_sub_tick_count(void* self) {
 }
 
 void q_cpaxistickertext_set_ticks(void* self, libqt_map /* of double to const char* */ ticks) {
-    QCPAxisTickerText_SetTicks((QCPAxisTickerText*)self, ticks);
+    // Convert libqt_map to QMap<double,QString>
+    libqt_map ticks_ret;
+    ticks_ret.len = ticks.len;
+    ticks_ret.keys = malloc(ticks_ret.len * sizeof(double));
+    if (ticks_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    ticks_ret.values = malloc(ticks_ret.len * sizeof(libqt_string));
+    if (ticks_ret.values == NULL) {
+        free(ticks_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    double* ticks_karr = (double*)ticks.keys;
+    double* ticks_kdest = (double*)ticks_ret.keys;
+    const char** ticks_varr = (const char**)ticks.values;
+    libqt_string* ticks_vdest = (libqt_string*)ticks_ret.values;
+    for (size_t i = 0; i < ticks_ret.len; ++i) {
+        ticks_kdest[i] = ticks_karr[i];
+        ticks_vdest[i] = qstring(ticks_varr[i]);
+    }
+    QCPAxisTickerText_SetTicks((QCPAxisTickerText*)self, ticks_ret);
+    libqt_free(ticks_ret.keys);
+    libqt_free(ticks_ret.values);
 }
 
 void q_cpaxistickertext_set_ticks2(void* self, libqt_list positions, const char* labels[static 1]) {
@@ -8694,7 +8745,31 @@ void q_cpaxistickertext_add_tick(void* self, double position, const char* label)
 }
 
 void q_cpaxistickertext_add_ticks(void* self, libqt_map /* of double to const char* */ ticks) {
-    QCPAxisTickerText_AddTicks((QCPAxisTickerText*)self, ticks);
+    // Convert libqt_map to QMap<double,QString>
+    libqt_map ticks_ret;
+    ticks_ret.len = ticks.len;
+    ticks_ret.keys = malloc(ticks_ret.len * sizeof(double));
+    if (ticks_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    ticks_ret.values = malloc(ticks_ret.len * sizeof(libqt_string));
+    if (ticks_ret.values == NULL) {
+        free(ticks_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    double* ticks_karr = (double*)ticks.keys;
+    double* ticks_kdest = (double*)ticks_ret.keys;
+    const char** ticks_varr = (const char**)ticks.values;
+    libqt_string* ticks_vdest = (libqt_string*)ticks_ret.values;
+    for (size_t i = 0; i < ticks_ret.len; ++i) {
+        ticks_kdest[i] = ticks_karr[i];
+        ticks_vdest[i] = qstring(ticks_varr[i]);
+    }
+    QCPAxisTickerText_AddTicks((QCPAxisTickerText*)self, ticks_ret);
+    libqt_free(ticks_ret.keys);
+    libqt_free(ticks_ret.values);
 }
 
 void q_cpaxistickertext_add_ticks2(void* self, libqt_list positions, const char* labels[static 1]) {
@@ -8819,6 +8894,7 @@ void q_cpaxistickertext_qbase_generate(void* self, void* range, void* locale, vo
     }
     libqt_list tickLabels_list = qlist(tickLabels_qstr, tickLabels_len);
     QCPAxisTickerText_QBaseGenerate((QCPAxisTickerText*)self, (QCPRange*)range, (QLocale*)locale, (QChar*)formatChar, precision, ticks, subTicks, tickLabels_list);
+    free(tickLabels_qstr);
 }
 
 void q_cpaxistickertext_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**)) {
@@ -9149,6 +9225,7 @@ void q_cpaxistickerpi_qbase_generate(void* self, void* range, void* locale, void
     }
     libqt_list tickLabels_list = qlist(tickLabels_qstr, tickLabels_len);
     QCPAxisTickerPi_QBaseGenerate((QCPAxisTickerPi*)self, (QCPRange*)range, (QLocale*)locale, (QChar*)formatChar, precision, ticks, subTicks, tickLabels_list);
+    free(tickLabels_qstr);
 }
 
 void q_cpaxistickerpi_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**)) {
@@ -9374,6 +9451,7 @@ void q_cpaxistickerlog_qbase_generate(void* self, void* range, void* locale, voi
     }
     libqt_list tickLabels_list = qlist(tickLabels_qstr, tickLabels_len);
     QCPAxisTickerLog_QBaseGenerate((QCPAxisTickerLog*)self, (QCPRange*)range, (QLocale*)locale, (QChar*)formatChar, precision, ticks, subTicks, tickLabels_list);
+    free(tickLabels_qstr);
 }
 
 void q_cpaxistickerlog_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**)) {
@@ -16615,7 +16693,31 @@ void q_cpcolorgradient_set_level_count(void* self, int n) {
 }
 
 void q_cpcolorgradient_set_color_stops(void* self, libqt_map /* of double to QColor* */ colorStops) {
-    QCPColorGradient_SetColorStops((QCPColorGradient*)self, colorStops);
+    // Convert libqt_map to QMap<double,QColor>
+    libqt_map colorStops_ret;
+    colorStops_ret.len = colorStops.len;
+    colorStops_ret.keys = malloc(colorStops_ret.len * sizeof(double));
+    if (colorStops_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    colorStops_ret.values = malloc(colorStops_ret.len * sizeof(QColor*));
+    if (colorStops_ret.values == NULL) {
+        free(colorStops_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    double* colorStops_karr = (double*)colorStops.keys;
+    double* colorStops_kdest = (double*)colorStops_ret.keys;
+    QColor** colorStops_varr = (QColor**)colorStops.values;
+    QColor** colorStops_vdest = (QColor**)colorStops_ret.values;
+    for (size_t i = 0; i < colorStops_ret.len; ++i) {
+        colorStops_kdest[i] = colorStops_karr[i];
+        colorStops_vdest[i] = colorStops_varr[i];
+    }
+    QCPColorGradient_SetColorStops((QCPColorGradient*)self, colorStops_ret);
+    libqt_free(colorStops_ret.keys);
+    libqt_free(colorStops_ret.values);
 }
 
 void q_cpcolorgradient_set_color_stop_at(void* self, double position, void* color) {
@@ -17338,7 +17440,13 @@ QCPMarginGroup* q_cpaxisrect_margin_group(void* self, int32_t side) {
 }
 
 libqt_map /* of int32_t to QCPMarginGroup* */ q_cpaxisrect_margin_groups(void* self) {
-    return QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
+    // Convert QHash<QCP::MarginSide,QCPMarginGroup> to libqt_map
+    libqt_map _out = QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 void q_cpaxisrect_set_outer_rect(void* self, void* rect) {
@@ -18134,7 +18242,13 @@ QCPMarginGroup* q_cpabstractlegenditem_margin_group(void* self, int32_t side) {
 }
 
 libqt_map /* of int32_t to QCPMarginGroup* */ q_cpabstractlegenditem_margin_groups(void* self) {
-    return QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
+    // Convert QHash<QCP::MarginSide,QCPMarginGroup> to libqt_map
+    libqt_map _out = QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 void q_cpabstractlegenditem_set_outer_rect(void* self, void* rect) {
@@ -18948,7 +19062,13 @@ QCPMarginGroup* q_cpplottablelegenditem_margin_group(void* self, int32_t side) {
 }
 
 libqt_map /* of int32_t to QCPMarginGroup* */ q_cpplottablelegenditem_margin_groups(void* self) {
-    return QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
+    // Convert QHash<QCP::MarginSide,QCPMarginGroup> to libqt_map
+    libqt_map _out = QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 void q_cpplottablelegenditem_set_outer_rect(void* self, void* rect) {
@@ -20089,7 +20209,13 @@ QCPMarginGroup* q_cplegend_margin_group(void* self, int32_t side) {
 }
 
 libqt_map /* of int32_t to QCPMarginGroup* */ q_cplegend_margin_groups(void* self) {
-    return QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
+    // Convert QHash<QCP::MarginSide,QCPMarginGroup> to libqt_map
+    libqt_map _out = QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 void q_cplegend_set_outer_rect(void* self, void* rect) {
@@ -21176,7 +21302,13 @@ QCPMarginGroup* q_cptextelement_margin_group(void* self, int32_t side) {
 }
 
 libqt_map /* of int32_t to QCPMarginGroup* */ q_cptextelement_margin_groups(void* self) {
-    return QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
+    // Convert QHash<QCP::MarginSide,QCPMarginGroup> to libqt_map
+    libqt_map _out = QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 void q_cptextelement_set_outer_rect(void* self, void* rect) {
@@ -21998,7 +22130,13 @@ QCPMarginGroup* q_cpcolorscale_margin_group(void* self, int32_t side) {
 }
 
 libqt_map /* of int32_t to QCPMarginGroup* */ q_cpcolorscale_margin_groups(void* self) {
-    return QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
+    // Convert QHash<QCP::MarginSide,QCPMarginGroup> to libqt_map
+    libqt_map _out = QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 void q_cpcolorscale_set_outer_rect(void* self, void* rect) {
@@ -40704,7 +40842,13 @@ QCPMarginGroup* q_cppolaraxisangular_margin_group(void* self, int32_t side) {
 }
 
 libqt_map /* of int32_t to QCPMarginGroup* */ q_cppolaraxisangular_margin_groups(void* self) {
-    return QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
+    // Convert QHash<QCP::MarginSide,QCPMarginGroup> to libqt_map
+    libqt_map _out = QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 void q_cppolaraxisangular_set_outer_rect(void* self, void* rect) {
@@ -42204,7 +42348,13 @@ QCPMarginGroup* q_cppolarlegenditem_margin_group(void* self, int32_t side) {
 }
 
 libqt_map /* of int32_t to QCPMarginGroup* */ q_cppolarlegenditem_margin_groups(void* self) {
-    return QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
+    // Convert QHash<QCP::MarginSide,QCPMarginGroup> to libqt_map
+    libqt_map _out = QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 void q_cppolarlegenditem_set_outer_rect(void* self, void* rect) {

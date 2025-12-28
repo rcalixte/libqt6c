@@ -241,7 +241,32 @@ const char* k_attica__content_attribute(void* self, const char* key) {
 }
 
 libqt_map /* of const char* to const char* */ k_attica__content_attributes(void* self) {
-    return Attica__Content_Attributes((Attica__Content*)self);
+    // Convert QMap<QString,QString> to libqt_map
+    libqt_map _out = Attica__Content_Attributes((Attica__Content*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_keys = (libqt_string*)_out.keys;
+    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_keys == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_attica__content_attributes");
+        abort();
+    }
+    libqt_string* _out_values = (libqt_string*)_out.values;
+    const char** _ret_values = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_values == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_attica__content_attributes");
+        free(_out_keys);
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_keys[i] = _out_keys[i].data;
+        _ret_values[i] = _out_values[i].data;
+    }
+    _ret.keys = (void*)_ret_keys;
+    _ret.values = (void*)_ret_values;
+    free(_out_keys);
+    free(_out_values);
+    return _ret;
 }
 
 bool k_attica__content_is_valid(void* self) {

@@ -206,7 +206,32 @@ const char** k_config_qbase_group_list(void* self) {
 }
 
 libqt_map /* of const char* to const char* */ k_config_entry_map(void* self) {
-    return KConfig_EntryMap((KConfig*)self);
+    // Convert QMap<QString,QString> to libqt_map
+    libqt_map _out = KConfig_EntryMap((KConfig*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_keys = (libqt_string*)_out.keys;
+    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_keys == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_config_entry_map");
+        abort();
+    }
+    libqt_string* _out_values = (libqt_string*)_out.values;
+    const char** _ret_values = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_values == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_config_entry_map");
+        free(_out_keys);
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_keys[i] = _out_keys[i].data;
+        _ret_values[i] = _out_values[i].data;
+    }
+    _ret.keys = (void*)_ret_keys;
+    _ret.values = (void*)_ret_values;
+    free(_out_keys);
+    free(_out_values);
+    return _ret;
 }
 
 void k_config_set_main_config_name(const char* str) {
@@ -297,7 +322,32 @@ KConfig* k_config_copy_to2(void* self, const char* file, void* config) {
 }
 
 libqt_map /* of const char* to const char* */ k_config_entry_map1(void* self, const char* aGroup) {
-    return KConfig_EntryMap1((KConfig*)self, qstring(aGroup));
+    // Convert QMap<QString,QString> to libqt_map
+    libqt_map _out = KConfig_EntryMap1((KConfig*)self, qstring(aGroup));
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_keys = (libqt_string*)_out.keys;
+    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_keys == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_config_entry_map1");
+        abort();
+    }
+    libqt_string* _out_values = (libqt_string*)_out.values;
+    const char** _ret_values = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_values == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_config_entry_map1");
+        free(_out_keys);
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_keys[i] = _out_keys[i].data;
+        _ret_values[i] = _out_values[i].data;
+    }
+    _ret.keys = (void*)_ret_keys;
+    _ret.values = (void*)_ret_values;
+    free(_out_keys);
+    free(_out_values);
+    return _ret;
 }
 
 bool k_config_has_group(void* self, const char* group) {

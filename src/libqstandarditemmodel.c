@@ -537,11 +537,51 @@ const char* q_standarditemmodel_tr(const char* s) {
 }
 
 void q_standarditemmodel_set_item_role_names(void* self, libqt_map /* of int to char* */ roleNames) {
-    QStandardItemModel_SetItemRoleNames((QStandardItemModel*)self, roleNames);
+    // Convert libqt_map to QHash<int,QByteArray>
+    libqt_map roleNames_ret;
+    roleNames_ret.len = roleNames.len;
+    roleNames_ret.keys = malloc(roleNames_ret.len * sizeof(int));
+    if (roleNames_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    roleNames_ret.values = malloc(roleNames_ret.len * sizeof(libqt_string));
+    if (roleNames_ret.values == NULL) {
+        free(roleNames_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    int* roleNames_karr = (int*)roleNames.keys;
+    int* roleNames_kdest = (int*)roleNames_ret.keys;
+    char** roleNames_varr = (char**)roleNames.values;
+    libqt_string* roleNames_vdest = (libqt_string*)roleNames_ret.values;
+    for (size_t i = 0; i < roleNames_ret.len; ++i) {
+        roleNames_kdest[i] = roleNames_karr[i];
+        roleNames_vdest[i] = qstring(roleNames_varr[i]);
+    }
+    QStandardItemModel_SetItemRoleNames((QStandardItemModel*)self, roleNames_ret);
+    libqt_free(roleNames_ret.keys);
+    libqt_free(roleNames_ret.values);
 }
 
 libqt_map /* of int to char* */ q_standarditemmodel_role_names(void* self) {
-    return QStandardItemModel_RoleNames((QStandardItemModel*)self);
+    // Convert QHash<int,QByteArray> to libqt_map
+    libqt_map _out = QStandardItemModel_RoleNames((QStandardItemModel*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_values = (libqt_string*)_out.values;
+    char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
+    if (_ret_values == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_standarditemmodel_role_names");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_values[i] = (void*)_out_values[i].data;
+    }
+    _ret.keys = _out.keys;
+    _ret.values = (void*)_ret_values;
+    free(_out_values);
+    return _ret;
 }
 
 void q_standarditemmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)()) {
@@ -549,7 +589,23 @@ void q_standarditemmodel_on_role_names(void* self, libqt_map /* of int to char* 
 }
 
 libqt_map /* of int to char* */ q_standarditemmodel_qbase_role_names(void* self) {
-    return QStandardItemModel_QBaseRoleNames((QStandardItemModel*)self);
+    // Convert QHash<int,QByteArray> to libqt_map
+    libqt_map _out = QStandardItemModel_QBaseRoleNames((QStandardItemModel*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_values = (libqt_string*)_out.values;
+    char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
+    if (_ret_values == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_standarditemmodel_role_names");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_values[i] = (void*)_out_values[i].data;
+    }
+    _ret.keys = _out.keys;
+    _ret.values = (void*)_ret_values;
+    free(_out_values);
+    return _ret;
 }
 
 QModelIndex* q_standarditemmodel_index(void* self, int row, int column, void* parent) {
@@ -757,7 +813,13 @@ int32_t q_standarditemmodel_qbase_supported_drop_actions(void* self) {
 }
 
 libqt_map /* of int to QVariant* */ q_standarditemmodel_item_data(void* self, void* index) {
-    return QStandardItemModel_ItemData((QStandardItemModel*)self, (QModelIndex*)index);
+    // Convert QMap<int,QVariant> to libqt_map
+    libqt_map _out = QStandardItemModel_ItemData((QStandardItemModel*)self, (QModelIndex*)index);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 void q_standarditemmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*)) {
@@ -765,11 +827,42 @@ void q_standarditemmodel_on_item_data(void* self, libqt_map /* of int to QVarian
 }
 
 libqt_map /* of int to QVariant* */ q_standarditemmodel_qbase_item_data(void* self, void* index) {
-    return QStandardItemModel_QBaseItemData((QStandardItemModel*)self, (QModelIndex*)index);
+    // Convert QMap<int,QVariant> to libqt_map
+    libqt_map _out = QStandardItemModel_QBaseItemData((QStandardItemModel*)self, (QModelIndex*)index);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 bool q_standarditemmodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
-    return QStandardItemModel_SetItemData((QStandardItemModel*)self, (QModelIndex*)index, roles);
+    // Convert libqt_map to QMap<int,QVariant>
+    libqt_map roles_ret;
+    roles_ret.len = roles.len;
+    roles_ret.keys = malloc(roles_ret.len * sizeof(int));
+    if (roles_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    roles_ret.values = malloc(roles_ret.len * sizeof(QVariant*));
+    if (roles_ret.values == NULL) {
+        free(roles_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    int* roles_karr = (int*)roles.keys;
+    int* roles_kdest = (int*)roles_ret.keys;
+    QVariant** roles_varr = (QVariant**)roles.values;
+    QVariant** roles_vdest = (QVariant**)roles_ret.values;
+    for (size_t i = 0; i < roles_ret.len; ++i) {
+        roles_kdest[i] = roles_karr[i];
+        roles_vdest[i] = roles_varr[i];
+    }
+    bool _out = QStandardItemModel_SetItemData((QStandardItemModel*)self, (QModelIndex*)index, roles_ret);
+    libqt_free(roles_ret.keys);
+    libqt_free(roles_ret.values);
+    return _out;
 }
 
 void q_standarditemmodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */)) {
@@ -777,7 +870,29 @@ void q_standarditemmodel_on_set_item_data(void* self, bool (*callback)(void*, vo
 }
 
 bool q_standarditemmodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
-    return QStandardItemModel_QBaseSetItemData((QStandardItemModel*)self, (QModelIndex*)index, roles);
+    // Convert libqt_map to QMap<int,QVariant>
+    libqt_map roles_ret;
+    roles_ret.len = roles.len;
+    roles_ret.keys = malloc(roles_ret.len * sizeof(int));
+    if (roles_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    roles_ret.values = malloc(roles_ret.len * sizeof(QVariant*));
+    if (roles_ret.values == NULL) {
+        free(roles_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    int* roles_karr = (int*)roles.keys;
+    int* roles_kdest = (int*)roles_ret.keys;
+    QVariant** roles_varr = (QVariant**)roles.values;
+    QVariant** roles_vdest = (QVariant**)roles_ret.values;
+    for (size_t i = 0; i < roles_ret.len; ++i) {
+        roles_kdest[i] = roles_karr[i];
+        roles_vdest[i] = roles_varr[i];
+    }
+    return QStandardItemModel_QBaseSetItemData((QStandardItemModel*)self, (QModelIndex*)index, roles_ret);
 }
 
 void q_standarditemmodel_clear(void* self) {

@@ -1048,11 +1048,23 @@ void k_dirsortfilterproxymodel_on_revert(void* self, void (*callback)()) {
 }
 
 libqt_map /* of int to QVariant* */ k_dirsortfilterproxymodel_item_data(void* self, void* index) {
-    return KDirSortFilterProxyModel_ItemData((KDirSortFilterProxyModel*)self, (QModelIndex*)index);
+    // Convert QMap<int,QVariant> to libqt_map
+    libqt_map _out = KDirSortFilterProxyModel_ItemData((KDirSortFilterProxyModel*)self, (QModelIndex*)index);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 libqt_map /* of int to QVariant* */ k_dirsortfilterproxymodel_qbase_item_data(void* self, void* index) {
-    return KDirSortFilterProxyModel_QBaseItemData((KDirSortFilterProxyModel*)self, (QModelIndex*)index);
+    // Convert QMap<int,QVariant> to libqt_map
+    libqt_map _out = KDirSortFilterProxyModel_QBaseItemData((KDirSortFilterProxyModel*)self, (QModelIndex*)index);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 void k_dirsortfilterproxymodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*)) {
@@ -1060,11 +1072,61 @@ void k_dirsortfilterproxymodel_on_item_data(void* self, libqt_map /* of int to Q
 }
 
 bool k_dirsortfilterproxymodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
-    return KDirSortFilterProxyModel_SetItemData((KDirSortFilterProxyModel*)self, (QModelIndex*)index, roles);
+    // Convert libqt_map to QMap<int,QVariant>
+    libqt_map roles_ret;
+    roles_ret.len = roles.len;
+    roles_ret.keys = malloc(roles_ret.len * sizeof(int));
+    if (roles_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    roles_ret.values = malloc(roles_ret.len * sizeof(QVariant*));
+    if (roles_ret.values == NULL) {
+        free(roles_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    int* roles_karr = (int*)roles.keys;
+    int* roles_kdest = (int*)roles_ret.keys;
+    QVariant** roles_varr = (QVariant**)roles.values;
+    QVariant** roles_vdest = (QVariant**)roles_ret.values;
+    for (size_t i = 0; i < roles_ret.len; ++i) {
+        roles_kdest[i] = roles_karr[i];
+        roles_vdest[i] = roles_varr[i];
+    }
+    bool _out = KDirSortFilterProxyModel_SetItemData((KDirSortFilterProxyModel*)self, (QModelIndex*)index, roles_ret);
+    libqt_free(roles_ret.keys);
+    libqt_free(roles_ret.values);
+    return _out;
 }
 
 bool k_dirsortfilterproxymodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
-    return KDirSortFilterProxyModel_QBaseSetItemData((KDirSortFilterProxyModel*)self, (QModelIndex*)index, roles);
+    // Convert libqt_map to QMap<int,QVariant>
+    libqt_map roles_ret;
+    roles_ret.len = roles.len;
+    roles_ret.keys = malloc(roles_ret.len * sizeof(int));
+    if (roles_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    roles_ret.values = malloc(roles_ret.len * sizeof(QVariant*));
+    if (roles_ret.values == NULL) {
+        free(roles_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    int* roles_karr = (int*)roles.keys;
+    int* roles_kdest = (int*)roles_ret.keys;
+    QVariant** roles_varr = (QVariant**)roles.values;
+    QVariant** roles_vdest = (QVariant**)roles_ret.values;
+    for (size_t i = 0; i < roles_ret.len; ++i) {
+        roles_kdest[i] = roles_karr[i];
+        roles_vdest[i] = roles_varr[i];
+    }
+    bool _out = KDirSortFilterProxyModel_QBaseSetItemData((KDirSortFilterProxyModel*)self, (QModelIndex*)index, roles_ret);
+    libqt_free(roles_ret.keys);
+    libqt_free(roles_ret.values);
+    return _out;
 }
 
 void k_dirsortfilterproxymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */)) {
@@ -1108,11 +1170,43 @@ void k_dirsortfilterproxymodel_on_supported_drag_actions(void* self, int32_t (*c
 }
 
 libqt_map /* of int to char* */ k_dirsortfilterproxymodel_role_names(void* self) {
-    return KDirSortFilterProxyModel_RoleNames((KDirSortFilterProxyModel*)self);
+    // Convert QHash<int,QByteArray> to libqt_map
+    libqt_map _out = KDirSortFilterProxyModel_RoleNames((KDirSortFilterProxyModel*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_values = (libqt_string*)_out.values;
+    char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
+    if (_ret_values == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_dirsortfilterproxymodel_role_names");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_values[i] = (void*)_out_values[i].data;
+    }
+    _ret.keys = _out.keys;
+    _ret.values = (void*)_ret_values;
+    free(_out_values);
+    return _ret;
 }
 
 libqt_map /* of int to char* */ k_dirsortfilterproxymodel_qbase_role_names(void* self) {
-    return KDirSortFilterProxyModel_QBaseRoleNames((KDirSortFilterProxyModel*)self);
+    // Convert QHash<int,QByteArray> to libqt_map
+    libqt_map _out = KDirSortFilterProxyModel_QBaseRoleNames((KDirSortFilterProxyModel*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_values = (libqt_string*)_out.values;
+    char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
+    if (_ret_values == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_dirsortfilterproxymodel_role_names");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_values[i] = (void*)_out_values[i].data;
+    }
+    _ret.keys = _out.keys;
+    _ret.values = (void*)_ret_values;
+    free(_out_values);
+    return _ret;
 }
 
 void k_dirsortfilterproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)()) {

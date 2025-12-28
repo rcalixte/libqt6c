@@ -57,11 +57,61 @@ void k_parts__openurlarguments_set_action_requested_by_user(void* self, bool use
 }
 
 libqt_map /* of const char* to const char* */ k_parts__openurlarguments_meta_data(void* self) {
-    return KParts__OpenUrlArguments_MetaData((KParts__OpenUrlArguments*)self);
+    // Convert QMap<QString,QString> to libqt_map
+    libqt_map _out = KParts__OpenUrlArguments_MetaData((KParts__OpenUrlArguments*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_keys = (libqt_string*)_out.keys;
+    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_keys == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_parts__openurlarguments_meta_data");
+        abort();
+    }
+    libqt_string* _out_values = (libqt_string*)_out.values;
+    const char** _ret_values = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_values == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_parts__openurlarguments_meta_data");
+        free(_out_keys);
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_keys[i] = _out_keys[i].data;
+        _ret_values[i] = _out_values[i].data;
+    }
+    _ret.keys = (void*)_ret_keys;
+    _ret.values = (void*)_ret_values;
+    free(_out_keys);
+    free(_out_values);
+    return _ret;
 }
 
 libqt_map /* of const char* to const char* */ k_parts__openurlarguments_meta_data2(void* self) {
-    return KParts__OpenUrlArguments_MetaData2((KParts__OpenUrlArguments*)self);
+    // Convert QMap<QString,QString> to libqt_map
+    libqt_map _out = KParts__OpenUrlArguments_MetaData2((KParts__OpenUrlArguments*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_keys = (libqt_string*)_out.keys;
+    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_keys == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_parts__openurlarguments_meta_data2");
+        abort();
+    }
+    libqt_string* _out_values = (libqt_string*)_out.values;
+    const char** _ret_values = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_values == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_parts__openurlarguments_meta_data2");
+        free(_out_keys);
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_keys[i] = _out_keys[i].data;
+        _ret_values[i] = _out_values[i].data;
+    }
+    _ret.keys = (void*)_ret_keys;
+    _ret.values = (void*)_ret_values;
+    free(_out_keys);
+    free(_out_values);
+    return _ret;
 }
 
 void k_parts__openurlarguments_delete(void* self) {

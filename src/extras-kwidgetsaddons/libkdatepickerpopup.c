@@ -74,11 +74,51 @@ void k_datepickerpopup_set_date_range(void* self, void* minDate, void* maxDate) 
 }
 
 libqt_map /* of QDate* to const char* */ k_datepickerpopup_date_map(void* self) {
-    return KDatePickerPopup_DateMap((KDatePickerPopup*)self);
+    // Convert QMap<QDate,QString> to libqt_map
+    libqt_map _out = KDatePickerPopup_DateMap((KDatePickerPopup*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_values = (libqt_string*)_out.values;
+    const char** _ret_values = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_values == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_datepickerpopup_date_map");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_values[i] = _out_values[i].data;
+    }
+    _ret.keys = _out.keys;
+    _ret.values = (void*)_ret_values;
+    free(_out_values);
+    return _ret;
 }
 
 void k_datepickerpopup_set_date_map(void* self, libqt_map /* of QDate* to const char* */ dateMap) {
-    KDatePickerPopup_SetDateMap((KDatePickerPopup*)self, dateMap);
+    // Convert libqt_map to QMap<QDate,QString>
+    libqt_map dateMap_ret;
+    dateMap_ret.len = dateMap.len;
+    dateMap_ret.keys = malloc(dateMap_ret.len * sizeof(QDate*));
+    if (dateMap_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    dateMap_ret.values = malloc(dateMap_ret.len * sizeof(libqt_string));
+    if (dateMap_ret.values == NULL) {
+        free(dateMap_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    QDate** dateMap_karr = (QDate**)dateMap.keys;
+    QDate** dateMap_kdest = (QDate**)dateMap_ret.keys;
+    const char** dateMap_varr = (const char**)dateMap.values;
+    libqt_string* dateMap_vdest = (libqt_string*)dateMap_ret.values;
+    for (size_t i = 0; i < dateMap_ret.len; ++i) {
+        dateMap_kdest[i] = dateMap_karr[i];
+        dateMap_vdest[i] = qstring(dateMap_varr[i]);
+    }
+    KDatePickerPopup_SetDateMap((KDatePickerPopup*)self, dateMap_ret);
+    libqt_free(dateMap_ret.keys);
+    libqt_free(dateMap_ret.values);
 }
 
 KDatePicker* k_datepickerpopup_date_picker(void* self) {

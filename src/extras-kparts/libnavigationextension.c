@@ -229,7 +229,31 @@ void k_parts__navigationextension_popup_menu4(void* self, void* global, void* it
 }
 
 void k_parts__navigationextension_popup_menu5(void* self, void* global, void* items, void* arguments, int32_t flags, libqt_map /* of const char* to QAction* */ actionGroups) {
-    KParts__NavigationExtension_PopupMenu5((KParts__NavigationExtension*)self, (QPoint*)global, (KFileItemList*)items, (KParts__OpenUrlArguments*)arguments, flags, actionGroups);
+    // Convert libqt_map to QMap<QString,QList<QAction*>>
+    libqt_map actionGroups_ret;
+    actionGroups_ret.len = actionGroups.len;
+    actionGroups_ret.keys = malloc(actionGroups_ret.len * sizeof(libqt_string));
+    if (actionGroups_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    actionGroups_ret.values = malloc(actionGroups_ret.len * sizeof(QAction*));
+    if (actionGroups_ret.values == NULL) {
+        free(actionGroups_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** actionGroups_karr = (const char**)actionGroups.keys;
+    libqt_string* actionGroups_kdest = (libqt_string*)actionGroups_ret.keys;
+    QAction** actionGroups_varr = (QAction**)actionGroups.values;
+    QAction** actionGroups_vdest = (QAction**)actionGroups_ret.values;
+    for (size_t i = 0; i < actionGroups_ret.len; ++i) {
+        actionGroups_kdest[i] = qstring(actionGroups_karr[i]);
+        actionGroups_vdest[i] = actionGroups_varr[i];
+    }
+    KParts__NavigationExtension_PopupMenu5((KParts__NavigationExtension*)self, (QPoint*)global, (KFileItemList*)items, (KParts__OpenUrlArguments*)arguments, flags, actionGroups_ret);
+    libqt_free(actionGroups_ret.keys);
+    libqt_free(actionGroups_ret.values);
 }
 
 void k_parts__navigationextension_popup_menu32(void* self, void* global, void* url, mode_t mode) {
@@ -245,7 +269,31 @@ void k_parts__navigationextension_popup_menu52(void* self, void* global, void* u
 }
 
 void k_parts__navigationextension_popup_menu6(void* self, void* global, void* url, mode_t mode, void* arguments, int32_t flags, libqt_map /* of const char* to QAction* */ actionGroups) {
-    KParts__NavigationExtension_PopupMenu6((KParts__NavigationExtension*)self, (QPoint*)global, (QUrl*)url, mode, (KParts__OpenUrlArguments*)arguments, flags, actionGroups);
+    // Convert libqt_map to QMap<QString,QList<QAction*>>
+    libqt_map actionGroups_ret;
+    actionGroups_ret.len = actionGroups.len;
+    actionGroups_ret.keys = malloc(actionGroups_ret.len * sizeof(libqt_string));
+    if (actionGroups_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    actionGroups_ret.values = malloc(actionGroups_ret.len * sizeof(QAction*));
+    if (actionGroups_ret.values == NULL) {
+        free(actionGroups_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** actionGroups_karr = (const char**)actionGroups.keys;
+    libqt_string* actionGroups_kdest = (libqt_string*)actionGroups_ret.keys;
+    QAction** actionGroups_varr = (QAction**)actionGroups.values;
+    QAction** actionGroups_vdest = (QAction**)actionGroups_ret.values;
+    for (size_t i = 0; i < actionGroups_ret.len; ++i) {
+        actionGroups_kdest[i] = qstring(actionGroups_karr[i]);
+        actionGroups_vdest[i] = actionGroups_varr[i];
+    }
+    KParts__NavigationExtension_PopupMenu6((KParts__NavigationExtension*)self, (QPoint*)global, (QUrl*)url, mode, (KParts__OpenUrlArguments*)arguments, flags, actionGroups_ret);
+    libqt_free(actionGroups_ret.keys);
+    libqt_free(actionGroups_ret.values);
 }
 
 const char* k_parts__navigationextension_object_name(void* self) {
