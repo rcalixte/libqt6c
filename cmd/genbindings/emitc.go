@@ -733,9 +733,90 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 	} else if _, ok := p.QSetOf(); ok {
 		rvalue = nameprefix
 
-	} else if _, _, _, ok := p.QMapOf(); ok {
+	} else if k, v, containerType, ok := p.QMapOf(); ok {
 		// QMap<K,V>
-		rvalue = nameprefix
+		kType := k.RenderTypeC(cfs, false, true)
+		vType := v.RenderTypeC(cfs, false, true)
+
+		if e, ok := KnownEnums[k.ParameterType]; ok {
+			kType = e.EnumTypeC
+		}
+		if e, ok := KnownEnums[v.ParameterType]; ok {
+			vType = e.EnumTypeC
+		}
+
+		var maybeRef, keyIter, valueIter string
+
+		maybeDeref := "."
+		if p.Pointer {
+			maybeDeref = "->"
+			maybeRef = "&"
+		}
+
+		if v.ParameterType == "SignOn::MechanismsList" {
+			vType = "const char**"
+		}
+
+		keyDest := kType
+		valueDest := vType
+
+		if k.ParameterType == "QString" || k.ParameterType == "QByteArray" || k.ParameterType == "SignOn::MethodName" {
+			keyDest = "libqt_string"
+		}
+
+		if v.ParameterType == "QString" || v.ParameterType == "QByteArray" {
+			valueDest = "libqt_string"
+		}
+
+		preamble += "// Convert libqt_map to " + containerType + "<" + k.ParameterType + "," + v.ParameterType + ">\n"
+		preamble += "libqt_map " + nameprefix + "_ret;\n"
+		preamble += nameprefix + "_ret.len = " + p.ParameterName + maybeDeref + "len;\n"
+
+		preamble += nameprefix + "_ret.keys = malloc(" + nameprefix + "_ret.len * sizeof(" + keyDest + "));\n"
+		preamble += "if (" + nameprefix + "_ret.keys == NULL) {\n"
+		preamble += `    fprintf(stderr, "Failed to allocate memory for map keys\n");` + "\n"
+		preamble += "    abort();\n"
+		preamble += "}\n"
+
+		keyCleanup := "libqt_free(" + nameprefix + "_ret.keys);"
+		cfs.allocCleanups = append(cfs.allocCleanups, keyCleanup)
+
+		preamble += nameprefix + "_ret.values = malloc(" + nameprefix + "_ret.len * sizeof(" + valueDest + "));\n"
+		preamble += "if (" + nameprefix + "_ret.values == NULL) {\n"
+		preamble += "    free(" + nameprefix + "_ret.keys);\n"
+		preamble += `    fprintf(stderr, "Failed to allocate memory for map values\n");` + "\n"
+		preamble += "    abort();\n"
+		preamble += "}\n"
+
+		valCleanup := "libqt_free(" + nameprefix + "_ret.values);"
+		cfs.allocCleanups = append(cfs.allocCleanups, valCleanup)
+
+		preamble += kType + "* " + nameprefix + "_karr = (" + kType + "*)" + nameprefix + maybeDeref + "keys;\n"
+		preamble += keyDest + "* " + nameprefix + "_kdest = (" + keyDest + "*)" + nameprefix + "_ret.keys;\n"
+
+		if k.ParameterType == "QString" || k.ParameterType == "QByteArray" || k.ParameterType == "SignOn::MethodName" {
+			keyIter = nameprefix + "_kdest[i] = qstring(" + p.ParameterName + "_karr[i]);\n"
+
+		} else {
+			keyIter = nameprefix + "_kdest[i] = " + nameprefix + "_karr[i];\n"
+		}
+
+		preamble += vType + "* " + nameprefix + "_varr = (" + vType + "*)" + nameprefix + maybeDeref + "values;\n"
+		preamble += valueDest + "* " + nameprefix + "_vdest = (" + valueDest + "*)" + nameprefix + "_ret.values;\n"
+
+		if v.ParameterType == "QString" || v.ParameterType == "QByteArray" {
+			valueIter = nameprefix + "_vdest[i] = qstring(" + p.ParameterName + "_varr[i]);\n"
+
+		} else {
+			valueIter = nameprefix + "_vdest[i] = " + nameprefix + "_varr[i];\n"
+		}
+
+		preamble += "for (size_t i = 0; i < " + nameprefix + "_ret.len; ++i) {\n"
+		preamble += keyIter
+		preamble += valueIter
+		preamble += "}\n"
+
+		rvalue = maybeRef + nameprefix + "_ret"
 
 	} else if _, _, ok := p.QPairOf(); ok {
 		// QPair<K,V>
@@ -858,8 +939,80 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 	} else if _, ok := rt.QSetOf(); ok {
 		return shouldReturn + " " + rvalue + ";\n"
 
-	} else if _, _, _, ok := rt.QMapOf(); ok {
-		return shouldReturn + " " + rvalue + ";\n"
+	} else if k, v, containerType, ok := rt.QMapOf(); ok {
+		// QMap<K,V>
+		kType := k.RenderTypeC(cfs, false, true)
+		vType := v.RenderTypeC(cfs, false, true)
+
+		var keyAssign, keyFree, keyIter, valueAssign, valueFree, valueIter string
+		keyOut := kType
+		valueOut := vType
+
+		var maybePointer string
+		maybeDeref := "."
+
+		if rt.Pointer {
+			maybeDeref = "->"
+			maybePointer = "*"
+		}
+
+		if k.ParameterType == "QString" || k.ParameterType == "QByteArray" || k.ParameterType == "SignOn::MethodName" {
+			keyOut = "libqt_string"
+		}
+
+		if v.ParameterType == "QString" || v.ParameterType == "QByteArray" {
+			valueOut = "libqt_string"
+		}
+
+		preamble := "// Convert " + containerType + "<" + k.ParameterType + "," + v.ParameterType + "> to libqt_map\n"
+		preamble += "libqt_map" + maybePointer + " " + namePrefix + "_out = " + rvalue + ";\n"
+		preamble += "libqt_map" + maybePointer + " " + namePrefix + "_ret;\n"
+		preamble += namePrefix + "_ret" + maybeDeref + "len = " + namePrefix + "_out" + maybeDeref + "len;\n"
+
+		if k.ParameterType == "QString" || k.ParameterType == "QByteArray" || k.ParameterType == "SignOn::MethodName" {
+			preamble += keyOut + "* " + namePrefix + "_out_keys = (" + keyOut + "*)" + namePrefix + "_out" + maybeDeref + "keys;\n"
+			preamble += kType + "* " + namePrefix + "_ret_keys = (" + kType + "*)malloc(" + namePrefix + "_ret" + maybeDeref + "len * sizeof(" + kType + "));\n"
+			preamble += "if (" + namePrefix + "_ret_keys == NULL) {\n"
+			preamble += `    fprintf(stderr, "Memory allocation failed in ` + cfs.currentMethodName + `");` + "\n"
+			preamble += "    abort();\n"
+			preamble += "}\n"
+			maybeCast := ifv(kType == "char*", "(void*)", "")
+			keyIter = namePrefix + "_ret_keys[i] = " + maybeCast + namePrefix + "_out_keys[i].data;\n"
+			keyFree = "    free(" + namePrefix + "_out_keys);\n"
+			keyAssign = namePrefix + "_ret" + maybeDeref + "keys = (void*)" + namePrefix + "_ret_keys;\n"
+		} else {
+			keyAssign = namePrefix + "_ret" + maybeDeref + "keys = " + namePrefix + "_out" + maybeDeref + "keys;\n"
+		}
+
+		if v.ParameterType == "QString" || v.ParameterType == "QByteArray" {
+			preamble += valueOut + "* " + namePrefix + "_out_values = (" + valueOut + "*)" + namePrefix + "_out" + maybeDeref + "values;\n"
+			preamble += vType + "* " + namePrefix + "_ret_values = (" + vType + "*)malloc(" + namePrefix + "_ret" + maybeDeref + "len * sizeof(" + vType + "));\n"
+			preamble += "if (" + namePrefix + "_ret_values == NULL) {\n"
+			preamble += `    fprintf(stderr, "Memory allocation failed in ` + cfs.currentMethodName + `");` + "\n"
+			preamble += keyFree
+			preamble += "    abort();\n"
+			preamble += "}\n"
+			maybeCast := ifv(vType == "char*", "(void*)", "")
+			valueIter = namePrefix + "_ret_values[i] = " + maybeCast + namePrefix + "_out_values[i].data;\n"
+			valueFree = "    free(" + namePrefix + "_out_values);\n"
+			valueAssign = namePrefix + "_ret" + maybeDeref + "values = (void*)" + namePrefix + "_ret_values;\n"
+		} else {
+			valueAssign = namePrefix + "_ret" + maybeDeref + "values = " + namePrefix + "_out" + maybeDeref + "values;\n"
+		}
+
+		if keyIter != "" || valueIter != "" {
+			preamble += "for (size_t i = 0; i < " + namePrefix + "_ret" + maybeDeref + "len; ++i) {\n"
+			preamble += keyIter
+			preamble += valueIter
+			preamble += "}\n"
+		}
+
+		preamble += keyAssign
+		preamble += valueAssign
+		preamble += keyFree
+		preamble += valueFree
+
+		return preamble + shouldReturn + namePrefix + "_ret;\n" + afterword
 
 	} else if _, _, ok := rt.QPairOf(); ok {
 		return shouldReturn + " " + rvalue + ";\n"
@@ -920,7 +1073,7 @@ func (cfs *cFileState) checkAndClearAllocCleanups(resetAllocCleanups bool) strin
 	var maybeAllocCleanup string
 	if len(cfs.allocCleanups) > 0 {
 		for i, ac := range cfs.allocCleanups {
-			if strings.Contains(ac, "_qstr") {
+			if strings.Contains(ac, "_qstr") || strings.Contains(ac, ".keys") || strings.Contains(ac, ".values") {
 				maybeAllocCleanup += ac
 			}
 			cfs.allocCleanups[i] = ""
@@ -2175,6 +2328,9 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				maybeMacro = "#ifdef __linux__\n"
 				maybeEndMacro = "#endif\n"
 			}
+
+			preamble, forwarding = cfs.emitParametersC2CABIForwarding(m)
+			forwarding = strings.TrimPrefix(forwarding, "self")
 			returnFunc = cfs.emitCabiToC("return ", m.ReturnType, cmdStructName+"_QBase"+mSafeMethodName+"("+forwarding+")")
 			cfs.checkAndClearAllocCleanups(true)
 
