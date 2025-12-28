@@ -2,6 +2,7 @@ const std = @import("std");
 const host_os = @import("builtin").os.tag;
 const host_arch = @import("builtin").cpu.arch;
 
+var linux_isystem: std.ArrayList([]const u8) = .empty;
 var cpp_sources: std.ArrayList([]const u8) = .empty;
 var prefix_options: std.StringHashMapUnmanaged(bool) = .empty;
 var qt_include_path: std.ArrayList([]const u8) = .empty;
@@ -10,7 +11,6 @@ var cpp_flags: std.ArrayList([]const u8) = .empty;
 pub fn build(b: *std.Build) !void {
     const target = b.standardTargetOptions(.{});
     const linkage = b.option(std.builtin.LinkMode, "linkage", "Link mode for libqt6c") orelse .static;
-    const enable_workaround = b.option(bool, "enable-workaround", "Enable workaround for missing Qt C++ headers") orelse false;
     const extra_paths = b.option([]const []const u8, "extra-paths", "Extra library header search paths") orelse &.{};
 
     var optimize = b.standardOptimizeOption(.{});
@@ -22,13 +22,51 @@ pub fn build(b: *std.Build) !void {
     const is_macos = target.result.os.tag == .macos or host_os == .macos;
     const is_windows = target.result.os.tag == .windows or host_os == .windows;
 
-    const is_bsd_target = switch (target.result.os.tag) {
-        .dragonfly, .freebsd, .netbsd, .openbsd => true,
+    const is_linux_target = switch (target.result.os.tag) {
+        .linux => true,
         else => false,
     };
 
-    const is_bsd_family = is_bsd_host or is_bsd_target;
-    const workaround_os = is_bsd_family or is_macos or is_windows;
+    const is_linux = is_linux_host or is_linux_target;
+
+    // Add isystem paths for Linux
+    var distro: Distro = .none;
+    if (is_linux) {
+        const result = try std.process.Child.run(.{
+            .allocator = b.allocator,
+            .argv = &.{ "gcc", "-xc++", "-E", "-Wp,-v", "/dev/null" },
+        });
+
+        var lines = std.mem.splitScalar(u8, result.stderr, '\n');
+        while (lines.next()) |line| {
+            if (std.mem.startsWith(u8, line, " /usr/")) {
+                try linux_isystem.append(
+                    b.allocator,
+                    b.dupe(std.mem.trim(u8, line, &std.ascii.whitespace)),
+                );
+            }
+        }
+
+        for (linux_isystem.items) |isystem_path| {
+            if (distro == .none) {
+                if (std.mem.containsAtLeastScalar(u8, isystem_path, 2, '.') and !std.mem.containsAtLeast(u8, isystem_path, 1, "..")) {
+                    distro = .arch;
+                } else if (std.mem.containsAtLeast(u8, isystem_path, 1, "redhat-linux")) {
+                    distro = .fedora;
+                }
+            }
+            try cpp_flags.append(b.allocator, b.fmt("-isystem{s}", .{isystem_path}));
+        }
+
+        if (distro == .fedora) {
+            const version = try std.process.Child.run(.{
+                .allocator = b.allocator,
+                .argv = &.{ "lsb_release", "-rs" },
+            });
+            const version_str = std.mem.trim(u8, version.stdout, &std.ascii.whitespace);
+            try cpp_flags.append(b.allocator, b.fmt("-isystem{s}", .{b.fmt("/usr/" ++ @tagName(host_arch) ++ "-redhat-linux/sys-root/fc{s}/usr/include", .{version_str})}));
+        }
+    }
 
     var dir = try b.build_root.handle.openDir("src", .{ .iterate = true });
     defer dir.close();
@@ -41,7 +79,7 @@ pub fn build(b: *std.Build) !void {
                 var basename = std.fs.path.basename(entry.path);
                 basename = basename[3 .. basename.len - 4];
                 // conditional removals
-                if (workaroundNeeded(enable_workaround or workaround_os, basename))
+                if ((!is_linux or distro == .arch) and (std.mem.eql(u8, basename, "qsctpsocket") or std.mem.eql(u8, basename, "qsctpserver")))
                     continue;
                 if (is_windows and (std.mem.startsWith(u8, entry.path, "foss-") or std.mem.startsWith(u8, entry.path, "posix-")))
                     continue;
@@ -113,6 +151,12 @@ pub fn build(b: *std.Build) !void {
         try cpp_flags.append(b.allocator, b.dupe(flag));
     }
 
+    if (is_linux) {
+        inline for (linux_cpp_flags) |flag| {
+            try cpp_flags.append(b.allocator, b.dupe(flag));
+        }
+    }
+
     // Add include paths
     for (qt_include_path.items) |qt_path| {
         try cpp_flags.append(b.allocator, b.fmt("-I{s}", .{qt_path}));
@@ -141,12 +185,16 @@ pub fn build(b: *std.Build) !void {
                 .optimize = optimize,
                 .strip = optimize != .Debug,
                 .pic = true,
+                .link_libc = true,
             }),
             .linkage = linkage,
         });
 
+        if (!is_linux) {
+            lib.root_module.link_libcpp = true;
+        }
+
         lib.root_module.addIncludePath(b.path("include"));
-        lib.root_module.linkSystemLibrary("stdc++", .{});
         lib.root_module.addCSourceFiles(.{ .files = &.{source}, .flags = cpp_flags.items });
 
         // Add corresponding C wrapper
@@ -162,24 +210,13 @@ pub fn build(b: *std.Build) !void {
 
     // Add options
     const options = b.addOptions();
-    options.addOption(bool, "enable_workaround", enable_workaround);
     libqt6c.addOptions("build_options", options);
 
     try b.modules.put("libqt6c", libqt6c);
 }
 
-fn workaroundNeeded(workaround: bool, basename: []const u8) bool {
-    if (workaround) {
-        if (std.mem.eql(u8, basename, "qsctpsocket") or std.mem.eql(u8, basename, "qsctpserver")) {
-            return true;
-        }
-    }
-
-    return false;
-}
-
-const is_bsd_host = switch (host_os) {
-    .dragonfly, .freebsd, .netbsd, .openbsd => true,
+const is_linux_host = switch (host_os) {
+    .linux => true,
     else => false,
 };
 
@@ -223,8 +260,19 @@ const base_cpp_flags = &.{
     "-O2",
 };
 
+const linux_cpp_flags = &.{
+    "-nostdinc++",
+    "-nostdlib++",
+};
+
 const c_flags = &.{
     "-O2",
+};
+
+const Distro = enum {
+    arch,
+    fedora,
+    none,
 };
 
 const qt_modules = &.{
