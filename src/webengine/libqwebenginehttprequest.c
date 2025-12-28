@@ -23,7 +23,32 @@ void q_webenginehttprequest_operator_assign(void* self, void* other) {
 }
 
 QWebEngineHttpRequest* q_webenginehttprequest_post_request(void* url, libqt_map /* of const char* to const char* */ postData) {
-    return QWebEngineHttpRequest_PostRequest((QUrl*)url, postData);
+    // Convert libqt_map to QMap<QString,QString>
+    libqt_map postData_ret;
+    postData_ret.len = postData.len;
+    postData_ret.keys = malloc(postData_ret.len * sizeof(libqt_string));
+    if (postData_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    postData_ret.values = malloc(postData_ret.len * sizeof(libqt_string));
+    if (postData_ret.values == NULL) {
+        free(postData_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** postData_karr = (const char**)postData.keys;
+    libqt_string* postData_kdest = (libqt_string*)postData_ret.keys;
+    const char** postData_varr = (const char**)postData.values;
+    libqt_string* postData_vdest = (libqt_string*)postData_ret.values;
+    for (size_t i = 0; i < postData_ret.len; ++i) {
+        postData_kdest[i] = qstring(postData_karr[i]);
+        postData_vdest[i] = qstring(postData_varr[i]);
+    }
+    QWebEngineHttpRequest* _out = QWebEngineHttpRequest_PostRequest((QUrl*)url, postData_ret);
+    libqt_free(postData_ret.keys);
+    libqt_free(postData_ret.values);
+    return _out;
 }
 
 void q_webenginehttprequest_swap(void* self, void* other) {

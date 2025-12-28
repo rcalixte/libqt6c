@@ -83,11 +83,41 @@ void q_networkcachemetadata_set_save_to_disk(void* self, bool allow) {
 }
 
 libqt_map /* of int32_t to QVariant* */ q_networkcachemetadata_attributes(void* self) {
-    return QNetworkCacheMetaData_Attributes((QNetworkCacheMetaData*)self);
+    // Convert QHash<QNetworkRequest::Attribute,QVariant> to libqt_map
+    libqt_map _out = QNetworkCacheMetaData_Attributes((QNetworkCacheMetaData*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 void q_networkcachemetadata_set_attributes(void* self, libqt_map /* of int32_t to QVariant* */ attributes) {
-    QNetworkCacheMetaData_SetAttributes((QNetworkCacheMetaData*)self, attributes);
+    // Convert libqt_map to QHash<QNetworkRequest::Attribute,QVariant>
+    libqt_map attributes_ret;
+    attributes_ret.len = attributes.len;
+    attributes_ret.keys = malloc(attributes_ret.len * sizeof(int32_t));
+    if (attributes_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    attributes_ret.values = malloc(attributes_ret.len * sizeof(QVariant*));
+    if (attributes_ret.values == NULL) {
+        free(attributes_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    int32_t* attributes_karr = (int32_t*)attributes.keys;
+    int32_t* attributes_kdest = (int32_t*)attributes_ret.keys;
+    QVariant** attributes_varr = (QVariant**)attributes.values;
+    QVariant** attributes_vdest = (QVariant**)attributes_ret.values;
+    for (size_t i = 0; i < attributes_ret.len; ++i) {
+        attributes_kdest[i] = attributes_karr[i];
+        attributes_vdest[i] = attributes_varr[i];
+    }
+    QNetworkCacheMetaData_SetAttributes((QNetworkCacheMetaData*)self, attributes_ret);
+    libqt_free(attributes_ret.keys);
+    libqt_free(attributes_ret.values);
 }
 
 void q_networkcachemetadata_delete(void* self) {

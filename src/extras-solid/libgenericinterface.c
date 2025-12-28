@@ -34,7 +34,23 @@ QVariant* k_solid__genericinterface_property(void* self, const char* key) {
 }
 
 libqt_map /* of const char* to QVariant* */ k_solid__genericinterface_all_properties(void* self) {
-    return Solid__GenericInterface_AllProperties((Solid__GenericInterface*)self);
+    // Convert QMap<QString,QVariant> to libqt_map
+    libqt_map _out = Solid__GenericInterface_AllProperties((Solid__GenericInterface*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_keys = (libqt_string*)_out.keys;
+    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_keys == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_solid__genericinterface_all_properties");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_keys[i] = _out_keys[i].data;
+    }
+    _ret.keys = (void*)_ret_keys;
+    _ret.values = _out.values;
+    free(_out_keys);
+    return _ret;
 }
 
 bool k_solid__genericinterface_property_exists(void* self, const char* key) {
@@ -42,7 +58,31 @@ bool k_solid__genericinterface_property_exists(void* self, const char* key) {
 }
 
 void k_solid__genericinterface_property_changed(void* self, libqt_map /* of const char* to int */ changes) {
-    Solid__GenericInterface_PropertyChanged((Solid__GenericInterface*)self, changes);
+    // Convert libqt_map to QMap<QString,int>
+    libqt_map changes_ret;
+    changes_ret.len = changes.len;
+    changes_ret.keys = malloc(changes_ret.len * sizeof(libqt_string));
+    if (changes_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    changes_ret.values = malloc(changes_ret.len * sizeof(int));
+    if (changes_ret.values == NULL) {
+        free(changes_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** changes_karr = (const char**)changes.keys;
+    libqt_string* changes_kdest = (libqt_string*)changes_ret.keys;
+    int* changes_varr = (int*)changes.values;
+    int* changes_vdest = (int*)changes_ret.values;
+    for (size_t i = 0; i < changes_ret.len; ++i) {
+        changes_kdest[i] = qstring(changes_karr[i]);
+        changes_vdest[i] = changes_varr[i];
+    }
+    Solid__GenericInterface_PropertyChanged((Solid__GenericInterface*)self, changes_ret);
+    libqt_free(changes_ret.keys);
+    libqt_free(changes_ret.values);
 }
 
 void k_solid__genericinterface_on_property_changed(void* self, void (*callback)(void*, libqt_map /* of const char* to int */)) {

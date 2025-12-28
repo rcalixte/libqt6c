@@ -2088,6 +2088,7 @@ void k_filefiltercombo_qbase_set_completed_items(void* self, const char* items[s
     }
     libqt_list items_list = qlist(items_qstr, items_len);
     KFileFilterCombo_QBaseSetCompletedItems((KFileFilterCombo*)self, items_list, autoSuggest);
+    free(items_qstr);
 }
 
 void k_filefiltercombo_on_set_completed_items(void* self, void (*callback)(void*, const char**, bool)) {
@@ -2863,11 +2864,23 @@ void k_filefiltercombo_on_get_decoded_metric_f(void* self, double (*callback)(vo
 }
 
 libqt_map /* of int32_t to libqt_list  of QKeySequence*  */ k_filefiltercombo_key_binding_map(void* self) {
-    return KFileFilterCombo_KeyBindingMap((KFileFilterCombo*)self);
+    // Convert QMap<KCompletionBase::KeyBindingType,QList<QKeySequence>> to libqt_map
+    libqt_map _out = KFileFilterCombo_KeyBindingMap((KFileFilterCombo*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 libqt_map /* of int32_t to libqt_list  of QKeySequence*  */ k_filefiltercombo_qbase_key_binding_map(void* self) {
-    return KFileFilterCombo_QBaseKeyBindingMap((KFileFilterCombo*)self);
+    // Convert QMap<KCompletionBase::KeyBindingType,QList<QKeySequence>> to libqt_map
+    libqt_map _out = KFileFilterCombo_QBaseKeyBindingMap((KFileFilterCombo*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 void k_filefiltercombo_on_key_binding_map(void* self, libqt_map /* of int32_t to libqt_list  of QKeySequence*  */ (*callback)()) {
@@ -2875,11 +2888,59 @@ void k_filefiltercombo_on_key_binding_map(void* self, libqt_map /* of int32_t to
 }
 
 void k_filefiltercombo_set_key_binding_map(void* self, libqt_map /* of int32_t to QKeySequence* */ keyBindingMap) {
-    KFileFilterCombo_SetKeyBindingMap((KFileFilterCombo*)self, keyBindingMap);
+    // Convert libqt_map to QMap<KCompletionBase::KeyBindingType,QList<QKeySequence>>
+    libqt_map keyBindingMap_ret;
+    keyBindingMap_ret.len = keyBindingMap.len;
+    keyBindingMap_ret.keys = malloc(keyBindingMap_ret.len * sizeof(int32_t));
+    if (keyBindingMap_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    keyBindingMap_ret.values = malloc(keyBindingMap_ret.len * sizeof(QKeySequence*));
+    if (keyBindingMap_ret.values == NULL) {
+        free(keyBindingMap_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    int32_t* keyBindingMap_karr = (int32_t*)keyBindingMap.keys;
+    int32_t* keyBindingMap_kdest = (int32_t*)keyBindingMap_ret.keys;
+    QKeySequence** keyBindingMap_varr = (QKeySequence**)keyBindingMap.values;
+    QKeySequence** keyBindingMap_vdest = (QKeySequence**)keyBindingMap_ret.values;
+    for (size_t i = 0; i < keyBindingMap_ret.len; ++i) {
+        keyBindingMap_kdest[i] = keyBindingMap_karr[i];
+        keyBindingMap_vdest[i] = keyBindingMap_varr[i];
+    }
+    KFileFilterCombo_SetKeyBindingMap((KFileFilterCombo*)self, keyBindingMap_ret);
+    libqt_free(keyBindingMap_ret.keys);
+    libqt_free(keyBindingMap_ret.values);
 }
 
 void k_filefiltercombo_qbase_set_key_binding_map(void* self, libqt_map /* of int32_t to QKeySequence* */ keyBindingMap) {
-    KFileFilterCombo_QBaseSetKeyBindingMap((KFileFilterCombo*)self, keyBindingMap);
+    // Convert libqt_map to QMap<KCompletionBase::KeyBindingType,QList<QKeySequence>>
+    libqt_map keyBindingMap_ret;
+    keyBindingMap_ret.len = keyBindingMap.len;
+    keyBindingMap_ret.keys = malloc(keyBindingMap_ret.len * sizeof(int32_t));
+    if (keyBindingMap_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    keyBindingMap_ret.values = malloc(keyBindingMap_ret.len * sizeof(QKeySequence*));
+    if (keyBindingMap_ret.values == NULL) {
+        free(keyBindingMap_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    int32_t* keyBindingMap_karr = (int32_t*)keyBindingMap.keys;
+    int32_t* keyBindingMap_kdest = (int32_t*)keyBindingMap_ret.keys;
+    QKeySequence** keyBindingMap_varr = (QKeySequence**)keyBindingMap.values;
+    QKeySequence** keyBindingMap_vdest = (QKeySequence**)keyBindingMap_ret.values;
+    for (size_t i = 0; i < keyBindingMap_ret.len; ++i) {
+        keyBindingMap_kdest[i] = keyBindingMap_karr[i];
+        keyBindingMap_vdest[i] = keyBindingMap_varr[i];
+    }
+    KFileFilterCombo_QBaseSetKeyBindingMap((KFileFilterCombo*)self, keyBindingMap_ret);
+    libqt_free(keyBindingMap_ret.keys);
+    libqt_free(keyBindingMap_ret.values);
 }
 
 void k_filefiltercombo_on_set_key_binding_map(void* self, void (*callback)(void*, libqt_map /* of int32_t to QKeySequence* */)) {

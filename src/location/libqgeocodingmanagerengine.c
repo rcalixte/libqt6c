@@ -9,11 +9,63 @@
 #include "libqgeocodingmanagerengine.h"
 
 QGeoCodingManagerEngine* q_geocodingmanagerengine_new(libqt_map /* of const char* to QVariant* */ parameters) {
-    return QGeoCodingManagerEngine_new(parameters);
+    // Convert libqt_map to QMap<QString,QVariant>
+    libqt_map parameters_ret;
+    parameters_ret.len = parameters.len;
+    parameters_ret.keys = malloc(parameters_ret.len * sizeof(libqt_string));
+    if (parameters_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    parameters_ret.values = malloc(parameters_ret.len * sizeof(QVariant*));
+    if (parameters_ret.values == NULL) {
+        free(parameters_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** parameters_karr = (const char**)parameters.keys;
+    libqt_string* parameters_kdest = (libqt_string*)parameters_ret.keys;
+    QVariant** parameters_varr = (QVariant**)parameters.values;
+    QVariant** parameters_vdest = (QVariant**)parameters_ret.values;
+    for (size_t i = 0; i < parameters_ret.len; ++i) {
+        parameters_kdest[i] = qstring(parameters_karr[i]);
+        parameters_vdest[i] = parameters_varr[i];
+    }
+
+    QGeoCodingManagerEngine* _out = QGeoCodingManagerEngine_new(parameters_ret);
+    libqt_free(parameters_ret.keys);
+    libqt_free(parameters_ret.values);
+    return _out;
 }
 
 QGeoCodingManagerEngine* q_geocodingmanagerengine_new2(libqt_map /* of const char* to QVariant* */ parameters, void* parent) {
-    return QGeoCodingManagerEngine_new2(parameters, (QObject*)parent);
+    // Convert libqt_map to QMap<QString,QVariant>
+    libqt_map parameters_ret;
+    parameters_ret.len = parameters.len;
+    parameters_ret.keys = malloc(parameters_ret.len * sizeof(libqt_string));
+    if (parameters_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    parameters_ret.values = malloc(parameters_ret.len * sizeof(QVariant*));
+    if (parameters_ret.values == NULL) {
+        free(parameters_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** parameters_karr = (const char**)parameters.keys;
+    libqt_string* parameters_kdest = (libqt_string*)parameters_ret.keys;
+    QVariant** parameters_varr = (QVariant**)parameters.values;
+    QVariant** parameters_vdest = (QVariant**)parameters_ret.values;
+    for (size_t i = 0; i < parameters_ret.len; ++i) {
+        parameters_kdest[i] = qstring(parameters_karr[i]);
+        parameters_vdest[i] = parameters_varr[i];
+    }
+
+    QGeoCodingManagerEngine* _out = QGeoCodingManagerEngine_new2(parameters_ret, (QObject*)parent);
+    libqt_free(parameters_ret.keys);
+    libqt_free(parameters_ret.values);
+    return _out;
 }
 
 const QMetaObject* q_geocodingmanagerengine_meta_object(void* self) {

@@ -42,11 +42,51 @@ const char* q_webchannel_tr(const char* s) {
 }
 
 void q_webchannel_register_objects(void* self, libqt_map /* of const char* to QObject* */ objects) {
-    QWebChannel_RegisterObjects((QWebChannel*)self, objects);
+    // Convert libqt_map to QHash<QString,QObject>
+    libqt_map objects_ret;
+    objects_ret.len = objects.len;
+    objects_ret.keys = malloc(objects_ret.len * sizeof(libqt_string));
+    if (objects_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    objects_ret.values = malloc(objects_ret.len * sizeof(QObject*));
+    if (objects_ret.values == NULL) {
+        free(objects_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** objects_karr = (const char**)objects.keys;
+    libqt_string* objects_kdest = (libqt_string*)objects_ret.keys;
+    QObject** objects_varr = (QObject**)objects.values;
+    QObject** objects_vdest = (QObject**)objects_ret.values;
+    for (size_t i = 0; i < objects_ret.len; ++i) {
+        objects_kdest[i] = qstring(objects_karr[i]);
+        objects_vdest[i] = objects_varr[i];
+    }
+    QWebChannel_RegisterObjects((QWebChannel*)self, objects_ret);
+    libqt_free(objects_ret.keys);
+    libqt_free(objects_ret.values);
 }
 
 libqt_map /* of const char* to QObject* */ q_webchannel_registered_objects(void* self) {
-    return QWebChannel_RegisteredObjects((QWebChannel*)self);
+    // Convert QHash<QString,QObject> to libqt_map
+    libqt_map _out = QWebChannel_RegisteredObjects((QWebChannel*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_keys = (libqt_string*)_out.keys;
+    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_keys == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_webchannel_registered_objects");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_keys[i] = _out_keys[i].data;
+    }
+    _ret.keys = (void*)_ret_keys;
+    _ret.values = _out.values;
+    free(_out_keys);
+    return _ret;
 }
 
 void q_webchannel_register_object(void* self, const char* id, void* object) {

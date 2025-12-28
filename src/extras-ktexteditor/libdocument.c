@@ -740,7 +740,13 @@ void k_texteditor__document_remove_mark(void* self, int line, uint32_t markType)
 }
 
 libqt_map /* of int to KTextEditor__Mark* */ k_texteditor__document_marks(void* self) {
-    return KTextEditor__Document_Marks((KTextEditor__Document*)self);
+    // Convert QHash<int,KTextEditor::Mark> to libqt_map
+    libqt_map _out = KTextEditor__Document_Marks((KTextEditor__Document*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 void k_texteditor__document_clear_marks(void* self) {

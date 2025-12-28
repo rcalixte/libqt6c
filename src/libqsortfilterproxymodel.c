@@ -1018,11 +1018,23 @@ void q_sortfilterproxymodel_on_revert(void* self, void (*callback)()) {
 }
 
 libqt_map /* of int to QVariant* */ q_sortfilterproxymodel_item_data(void* self, void* index) {
-    return QSortFilterProxyModel_ItemData((QSortFilterProxyModel*)self, (QModelIndex*)index);
+    // Convert QMap<int,QVariant> to libqt_map
+    libqt_map _out = QSortFilterProxyModel_ItemData((QSortFilterProxyModel*)self, (QModelIndex*)index);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 libqt_map /* of int to QVariant* */ q_sortfilterproxymodel_qbase_item_data(void* self, void* index) {
-    return QSortFilterProxyModel_QBaseItemData((QSortFilterProxyModel*)self, (QModelIndex*)index);
+    // Convert QMap<int,QVariant> to libqt_map
+    libqt_map _out = QSortFilterProxyModel_QBaseItemData((QSortFilterProxyModel*)self, (QModelIndex*)index);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 void q_sortfilterproxymodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*)) {
@@ -1030,11 +1042,61 @@ void q_sortfilterproxymodel_on_item_data(void* self, libqt_map /* of int to QVar
 }
 
 bool q_sortfilterproxymodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
-    return QSortFilterProxyModel_SetItemData((QSortFilterProxyModel*)self, (QModelIndex*)index, roles);
+    // Convert libqt_map to QMap<int,QVariant>
+    libqt_map roles_ret;
+    roles_ret.len = roles.len;
+    roles_ret.keys = malloc(roles_ret.len * sizeof(int));
+    if (roles_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    roles_ret.values = malloc(roles_ret.len * sizeof(QVariant*));
+    if (roles_ret.values == NULL) {
+        free(roles_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    int* roles_karr = (int*)roles.keys;
+    int* roles_kdest = (int*)roles_ret.keys;
+    QVariant** roles_varr = (QVariant**)roles.values;
+    QVariant** roles_vdest = (QVariant**)roles_ret.values;
+    for (size_t i = 0; i < roles_ret.len; ++i) {
+        roles_kdest[i] = roles_karr[i];
+        roles_vdest[i] = roles_varr[i];
+    }
+    bool _out = QSortFilterProxyModel_SetItemData((QSortFilterProxyModel*)self, (QModelIndex*)index, roles_ret);
+    libqt_free(roles_ret.keys);
+    libqt_free(roles_ret.values);
+    return _out;
 }
 
 bool q_sortfilterproxymodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
-    return QSortFilterProxyModel_QBaseSetItemData((QSortFilterProxyModel*)self, (QModelIndex*)index, roles);
+    // Convert libqt_map to QMap<int,QVariant>
+    libqt_map roles_ret;
+    roles_ret.len = roles.len;
+    roles_ret.keys = malloc(roles_ret.len * sizeof(int));
+    if (roles_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    roles_ret.values = malloc(roles_ret.len * sizeof(QVariant*));
+    if (roles_ret.values == NULL) {
+        free(roles_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    int* roles_karr = (int*)roles.keys;
+    int* roles_kdest = (int*)roles_ret.keys;
+    QVariant** roles_varr = (QVariant**)roles.values;
+    QVariant** roles_vdest = (QVariant**)roles_ret.values;
+    for (size_t i = 0; i < roles_ret.len; ++i) {
+        roles_kdest[i] = roles_karr[i];
+        roles_vdest[i] = roles_varr[i];
+    }
+    bool _out = QSortFilterProxyModel_QBaseSetItemData((QSortFilterProxyModel*)self, (QModelIndex*)index, roles_ret);
+    libqt_free(roles_ret.keys);
+    libqt_free(roles_ret.values);
+    return _out;
 }
 
 void q_sortfilterproxymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */)) {
@@ -1078,11 +1140,43 @@ void q_sortfilterproxymodel_on_supported_drag_actions(void* self, int32_t (*call
 }
 
 libqt_map /* of int to char* */ q_sortfilterproxymodel_role_names(void* self) {
-    return QSortFilterProxyModel_RoleNames((QSortFilterProxyModel*)self);
+    // Convert QHash<int,QByteArray> to libqt_map
+    libqt_map _out = QSortFilterProxyModel_RoleNames((QSortFilterProxyModel*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_values = (libqt_string*)_out.values;
+    char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
+    if (_ret_values == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sortfilterproxymodel_role_names");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_values[i] = (void*)_out_values[i].data;
+    }
+    _ret.keys = _out.keys;
+    _ret.values = (void*)_ret_values;
+    free(_out_values);
+    return _ret;
 }
 
 libqt_map /* of int to char* */ q_sortfilterproxymodel_qbase_role_names(void* self) {
-    return QSortFilterProxyModel_QBaseRoleNames((QSortFilterProxyModel*)self);
+    // Convert QHash<int,QByteArray> to libqt_map
+    libqt_map _out = QSortFilterProxyModel_QBaseRoleNames((QSortFilterProxyModel*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_values = (libqt_string*)_out.values;
+    char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
+    if (_ret_values == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sortfilterproxymodel_role_names");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_values[i] = (void*)_out_values[i].data;
+    }
+    _ret.keys = _out.keys;
+    _ret.values = (void*)_ret_values;
+    free(_out_values);
+    return _ret;
 }
 
 void q_sortfilterproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)()) {

@@ -96,7 +96,13 @@ QModelIndex* k_texteditor__codecompletionmodel_qbase_index(void* self, int row, 
 }
 
 libqt_map /* of int to QVariant* */ k_texteditor__codecompletionmodel_item_data(void* self, void* index) {
-    return KTextEditor__CodeCompletionModel_ItemData((KTextEditor__CodeCompletionModel*)self, (QModelIndex*)index);
+    // Convert QMap<int,QVariant> to libqt_map
+    libqt_map _out = KTextEditor__CodeCompletionModel_ItemData((KTextEditor__CodeCompletionModel*)self, (QModelIndex*)index);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 void k_texteditor__codecompletionmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*)) {
@@ -104,7 +110,13 @@ void k_texteditor__codecompletionmodel_on_item_data(void* self, libqt_map /* of 
 }
 
 libqt_map /* of int to QVariant* */ k_texteditor__codecompletionmodel_qbase_item_data(void* self, void* index) {
-    return KTextEditor__CodeCompletionModel_QBaseItemData((KTextEditor__CodeCompletionModel*)self, (QModelIndex*)index);
+    // Convert QMap<int,QVariant> to libqt_map
+    libqt_map _out = KTextEditor__CodeCompletionModel_QBaseItemData((KTextEditor__CodeCompletionModel*)self, (QModelIndex*)index);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 QModelIndex* k_texteditor__codecompletionmodel_parent(void* self, void* index) {
@@ -545,11 +557,61 @@ void k_texteditor__codecompletionmodel_on_set_header_data(void* self, bool (*cal
 }
 
 bool k_texteditor__codecompletionmodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
-    return KTextEditor__CodeCompletionModel_SetItemData((KTextEditor__CodeCompletionModel*)self, (QModelIndex*)index, roles);
+    // Convert libqt_map to QMap<int,QVariant>
+    libqt_map roles_ret;
+    roles_ret.len = roles.len;
+    roles_ret.keys = malloc(roles_ret.len * sizeof(int));
+    if (roles_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    roles_ret.values = malloc(roles_ret.len * sizeof(QVariant*));
+    if (roles_ret.values == NULL) {
+        free(roles_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    int* roles_karr = (int*)roles.keys;
+    int* roles_kdest = (int*)roles_ret.keys;
+    QVariant** roles_varr = (QVariant**)roles.values;
+    QVariant** roles_vdest = (QVariant**)roles_ret.values;
+    for (size_t i = 0; i < roles_ret.len; ++i) {
+        roles_kdest[i] = roles_karr[i];
+        roles_vdest[i] = roles_varr[i];
+    }
+    bool _out = KTextEditor__CodeCompletionModel_SetItemData((KTextEditor__CodeCompletionModel*)self, (QModelIndex*)index, roles_ret);
+    libqt_free(roles_ret.keys);
+    libqt_free(roles_ret.values);
+    return _out;
 }
 
 bool k_texteditor__codecompletionmodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
-    return KTextEditor__CodeCompletionModel_QBaseSetItemData((KTextEditor__CodeCompletionModel*)self, (QModelIndex*)index, roles);
+    // Convert libqt_map to QMap<int,QVariant>
+    libqt_map roles_ret;
+    roles_ret.len = roles.len;
+    roles_ret.keys = malloc(roles_ret.len * sizeof(int));
+    if (roles_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    roles_ret.values = malloc(roles_ret.len * sizeof(QVariant*));
+    if (roles_ret.values == NULL) {
+        free(roles_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    int* roles_karr = (int*)roles.keys;
+    int* roles_kdest = (int*)roles_ret.keys;
+    QVariant** roles_varr = (QVariant**)roles.values;
+    QVariant** roles_vdest = (QVariant**)roles_ret.values;
+    for (size_t i = 0; i < roles_ret.len; ++i) {
+        roles_kdest[i] = roles_karr[i];
+        roles_vdest[i] = roles_varr[i];
+    }
+    bool _out = KTextEditor__CodeCompletionModel_QBaseSetItemData((KTextEditor__CodeCompletionModel*)self, (QModelIndex*)index, roles_ret);
+    libqt_free(roles_ret.keys);
+    libqt_free(roles_ret.values);
+    return _out;
 }
 
 void k_texteditor__codecompletionmodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */)) {
@@ -829,11 +891,43 @@ void k_texteditor__codecompletionmodel_on_span(void* self, QSize* (*callback)(vo
 }
 
 libqt_map /* of int to char* */ k_texteditor__codecompletionmodel_role_names(void* self) {
-    return KTextEditor__CodeCompletionModel_RoleNames((KTextEditor__CodeCompletionModel*)self);
+    // Convert QHash<int,QByteArray> to libqt_map
+    libqt_map _out = KTextEditor__CodeCompletionModel_RoleNames((KTextEditor__CodeCompletionModel*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_values = (libqt_string*)_out.values;
+    char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
+    if (_ret_values == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_texteditor__codecompletionmodel_role_names");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_values[i] = (void*)_out_values[i].data;
+    }
+    _ret.keys = _out.keys;
+    _ret.values = (void*)_ret_values;
+    free(_out_values);
+    return _ret;
 }
 
 libqt_map /* of int to char* */ k_texteditor__codecompletionmodel_qbase_role_names(void* self) {
-    return KTextEditor__CodeCompletionModel_QBaseRoleNames((KTextEditor__CodeCompletionModel*)self);
+    // Convert QHash<int,QByteArray> to libqt_map
+    libqt_map _out = KTextEditor__CodeCompletionModel_QBaseRoleNames((KTextEditor__CodeCompletionModel*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_values = (libqt_string*)_out.values;
+    char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
+    if (_ret_values == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_texteditor__codecompletionmodel_role_names");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_values[i] = (void*)_out_values[i].data;
+    }
+    _ret.keys = _out.keys;
+    _ret.values = (void*)_ret_values;
+    free(_out_values);
+    return _ret;
 }
 
 void k_texteditor__codecompletionmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)()) {

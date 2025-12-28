@@ -15,11 +15,63 @@ QGeoServiceProvider* q_geoserviceprovider_new(const char* providerName) {
 }
 
 QGeoServiceProvider* q_geoserviceprovider_new2(const char* providerName, libqt_map /* of const char* to QVariant* */ parameters) {
-    return QGeoServiceProvider_new2(qstring(providerName), parameters);
+    // Convert libqt_map to QMap<QString,QVariant>
+    libqt_map parameters_ret;
+    parameters_ret.len = parameters.len;
+    parameters_ret.keys = malloc(parameters_ret.len * sizeof(libqt_string));
+    if (parameters_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    parameters_ret.values = malloc(parameters_ret.len * sizeof(QVariant*));
+    if (parameters_ret.values == NULL) {
+        free(parameters_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** parameters_karr = (const char**)parameters.keys;
+    libqt_string* parameters_kdest = (libqt_string*)parameters_ret.keys;
+    QVariant** parameters_varr = (QVariant**)parameters.values;
+    QVariant** parameters_vdest = (QVariant**)parameters_ret.values;
+    for (size_t i = 0; i < parameters_ret.len; ++i) {
+        parameters_kdest[i] = qstring(parameters_karr[i]);
+        parameters_vdest[i] = parameters_varr[i];
+    }
+
+    QGeoServiceProvider* _out = QGeoServiceProvider_new2(qstring(providerName), parameters_ret);
+    libqt_free(parameters_ret.keys);
+    libqt_free(parameters_ret.values);
+    return _out;
 }
 
 QGeoServiceProvider* q_geoserviceprovider_new3(const char* providerName, libqt_map /* of const char* to QVariant* */ parameters, bool allowExperimental) {
-    return QGeoServiceProvider_new3(qstring(providerName), parameters, allowExperimental);
+    // Convert libqt_map to QMap<QString,QVariant>
+    libqt_map parameters_ret;
+    parameters_ret.len = parameters.len;
+    parameters_ret.keys = malloc(parameters_ret.len * sizeof(libqt_string));
+    if (parameters_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    parameters_ret.values = malloc(parameters_ret.len * sizeof(QVariant*));
+    if (parameters_ret.values == NULL) {
+        free(parameters_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** parameters_karr = (const char**)parameters.keys;
+    libqt_string* parameters_kdest = (libqt_string*)parameters_ret.keys;
+    QVariant** parameters_varr = (QVariant**)parameters.values;
+    QVariant** parameters_vdest = (QVariant**)parameters_ret.values;
+    for (size_t i = 0; i < parameters_ret.len; ++i) {
+        parameters_kdest[i] = qstring(parameters_karr[i]);
+        parameters_vdest[i] = parameters_varr[i];
+    }
+
+    QGeoServiceProvider* _out = QGeoServiceProvider_new3(qstring(providerName), parameters_ret, allowExperimental);
+    libqt_free(parameters_ret.keys);
+    libqt_free(parameters_ret.values);
+    return _out;
 }
 
 const QMetaObject* q_geoserviceprovider_meta_object(void* self) {
@@ -167,7 +219,31 @@ const char* q_geoserviceprovider_navigation_error_string(void* self) {
 }
 
 void q_geoserviceprovider_set_parameters(void* self, libqt_map /* of const char* to QVariant* */ parameters) {
-    QGeoServiceProvider_SetParameters((QGeoServiceProvider*)self, parameters);
+    // Convert libqt_map to QMap<QString,QVariant>
+    libqt_map parameters_ret;
+    parameters_ret.len = parameters.len;
+    parameters_ret.keys = malloc(parameters_ret.len * sizeof(libqt_string));
+    if (parameters_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    parameters_ret.values = malloc(parameters_ret.len * sizeof(QVariant*));
+    if (parameters_ret.values == NULL) {
+        free(parameters_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** parameters_karr = (const char**)parameters.keys;
+    libqt_string* parameters_kdest = (libqt_string*)parameters_ret.keys;
+    QVariant** parameters_varr = (QVariant**)parameters.values;
+    QVariant** parameters_vdest = (QVariant**)parameters_ret.values;
+    for (size_t i = 0; i < parameters_ret.len; ++i) {
+        parameters_kdest[i] = qstring(parameters_karr[i]);
+        parameters_vdest[i] = parameters_varr[i];
+    }
+    QGeoServiceProvider_SetParameters((QGeoServiceProvider*)self, parameters_ret);
+    libqt_free(parameters_ret.keys);
+    libqt_free(parameters_ret.values);
 }
 
 void q_geoserviceprovider_set_locale(void* self, void* locale) {

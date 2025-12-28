@@ -7,7 +7,32 @@ QIcon* k_iconutils_add_overlay(void* param1, void* param2, int32_t param3) {
 }
 
 QIcon* k_iconutils_add_overlays(void* param1, libqt_map /* of int32_t to QIcon* */ param2) {
-    return KIconUtils_AddOverlays((QIcon*)param1, param2);
+    // Convert libqt_map to QHash<Qt::Corner,QIcon>
+    libqt_map param2_ret;
+    param2_ret.len = param2.len;
+    param2_ret.keys = malloc(param2_ret.len * sizeof(int32_t));
+    if (param2_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    param2_ret.values = malloc(param2_ret.len * sizeof(QIcon*));
+    if (param2_ret.values == NULL) {
+        free(param2_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    int32_t* param2_karr = (int32_t*)param2.keys;
+    int32_t* param2_kdest = (int32_t*)param2_ret.keys;
+    QIcon** param2_varr = (QIcon**)param2.values;
+    QIcon** param2_vdest = (QIcon**)param2_ret.values;
+    for (size_t i = 0; i < param2_ret.len; ++i) {
+        param2_kdest[i] = param2_karr[i];
+        param2_vdest[i] = param2_varr[i];
+    }
+    QIcon* _out = KIconUtils_AddOverlays((QIcon*)param1, param2_ret);
+    libqt_free(param2_ret.keys);
+    libqt_free(param2_ret.values);
+    return _out;
 }
 
 QIcon* k_iconutils_add_overlays2(void* param1, const char* param2[static 1]) {

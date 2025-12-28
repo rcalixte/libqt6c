@@ -11,7 +11,33 @@ SignOn__IdentityInfo* q_signon__identityinfo_new2(void* other) {
 }
 
 SignOn__IdentityInfo* q_signon__identityinfo_new3(const char* caption, const char* userName, libqt_map /* of const char* to SignOn__MechanismsList */ methods) {
-    return SignOn__IdentityInfo_new3(qstring(caption), qstring(userName), methods);
+    // Convert libqt_map to QMap<SignOn::MethodName,SignOn::MechanismsList>
+    libqt_map methods_ret;
+    methods_ret.len = methods.len;
+    methods_ret.keys = malloc(methods_ret.len * sizeof(libqt_string));
+    if (methods_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    methods_ret.values = malloc(methods_ret.len * sizeof(const char**));
+    if (methods_ret.values == NULL) {
+        free(methods_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** methods_karr = (const char**)methods.keys;
+    libqt_string* methods_kdest = (libqt_string*)methods_ret.keys;
+    const char*** methods_varr = (const char***)methods.values;
+    const char*** methods_vdest = (const char***)methods_ret.values;
+    for (size_t i = 0; i < methods_ret.len; ++i) {
+        methods_kdest[i] = qstring(methods_karr[i]);
+        methods_vdest[i] = methods_varr[i];
+    }
+
+    SignOn__IdentityInfo* _out = SignOn__IdentityInfo_new3(qstring(caption), qstring(userName), methods_ret);
+    libqt_free(methods_ret.keys);
+    libqt_free(methods_ret.values);
+    return _out;
 }
 
 void q_signon__identityinfo_operator_assign(void* self, void* other) {

@@ -744,6 +744,7 @@ void k_shellcompletion_qbase_set_items(void* self, const char* itemList[static 1
     }
     libqt_list itemList_list = qlist(itemList_qstr, itemList_len);
     KShellCompletion_QBaseSetItems((KShellCompletion*)self, itemList_list);
+    free(itemList_qstr);
 }
 
 void k_shellcompletion_on_set_items(void* self, void (*callback)(void*, const char**)) {

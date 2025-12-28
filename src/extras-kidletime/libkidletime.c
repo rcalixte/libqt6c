@@ -32,7 +32,13 @@ int32_t k_idletime_idle_time(void* self) {
 }
 
 libqt_map /* of int to int */ k_idletime_idle_timeouts(void* self) {
-    return KIdleTime_IdleTimeouts((KIdleTime*)self);
+    // Convert QHash<int,int> to libqt_map
+    libqt_map _out = KIdleTime_IdleTimeouts((KIdleTime*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 void k_idletime_simulate_user_activity(void* self) {

@@ -205,11 +205,59 @@ void k_io__storedtransferjob_add_meta_data(void* self, const char* key, const ch
 }
 
 void k_io__storedtransferjob_add_meta_data2(void* self, libqt_map /* of const char* to const char* */ values) {
-    KIO__Job_AddMetaData2((KIO__Job*)self, values);
+    // Convert libqt_map to QMap<QString,QString>
+    libqt_map values_ret;
+    values_ret.len = values.len;
+    values_ret.keys = malloc(values_ret.len * sizeof(libqt_string));
+    if (values_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    values_ret.values = malloc(values_ret.len * sizeof(libqt_string));
+    if (values_ret.values == NULL) {
+        free(values_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** values_karr = (const char**)values.keys;
+    libqt_string* values_kdest = (libqt_string*)values_ret.keys;
+    const char** values_varr = (const char**)values.values;
+    libqt_string* values_vdest = (libqt_string*)values_ret.values;
+    for (size_t i = 0; i < values_ret.len; ++i) {
+        values_kdest[i] = qstring(values_karr[i]);
+        values_vdest[i] = qstring(values_varr[i]);
+    }
+    KIO__Job_AddMetaData2((KIO__Job*)self, values_ret);
+    libqt_free(values_ret.keys);
+    libqt_free(values_ret.values);
 }
 
 void k_io__storedtransferjob_merge_meta_data(void* self, libqt_map /* of const char* to const char* */ values) {
-    KIO__Job_MergeMetaData((KIO__Job*)self, values);
+    // Convert libqt_map to QMap<QString,QString>
+    libqt_map values_ret;
+    values_ret.len = values.len;
+    values_ret.keys = malloc(values_ret.len * sizeof(libqt_string));
+    if (values_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    values_ret.values = malloc(values_ret.len * sizeof(libqt_string));
+    if (values_ret.values == NULL) {
+        free(values_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** values_karr = (const char**)values.keys;
+    libqt_string* values_kdest = (libqt_string*)values_ret.keys;
+    const char** values_varr = (const char**)values.values;
+    libqt_string* values_vdest = (libqt_string*)values_ret.values;
+    for (size_t i = 0; i < values_ret.len; ++i) {
+        values_kdest[i] = qstring(values_karr[i]);
+        values_vdest[i] = qstring(values_varr[i]);
+    }
+    KIO__Job_MergeMetaData((KIO__Job*)self, values_ret);
+    libqt_free(values_ret.keys);
+    libqt_free(values_ret.values);
 }
 
 KIO__MetaData* k_io__storedtransferjob_outgoing_meta_data(void* self) {

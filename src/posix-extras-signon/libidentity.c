@@ -71,7 +71,31 @@ void q_signon__identity_verify_user(void* self) {
 }
 
 void q_signon__identity_verify_user2(void* self, libqt_map /* of const char* to QVariant* */ params) {
-    SignOn__Identity_VerifyUser2((SignOn__Identity*)self, params);
+    // Convert libqt_map to QMap<QString,QVariant>
+    libqt_map params_ret;
+    params_ret.len = params.len;
+    params_ret.keys = malloc(params_ret.len * sizeof(libqt_string));
+    if (params_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    params_ret.values = malloc(params_ret.len * sizeof(QVariant*));
+    if (params_ret.values == NULL) {
+        free(params_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** params_karr = (const char**)params.keys;
+    libqt_string* params_kdest = (libqt_string*)params_ret.keys;
+    QVariant** params_varr = (QVariant**)params.values;
+    QVariant** params_vdest = (QVariant**)params_ret.values;
+    for (size_t i = 0; i < params_ret.len; ++i) {
+        params_kdest[i] = qstring(params_karr[i]);
+        params_vdest[i] = params_varr[i];
+    }
+    SignOn__Identity_VerifyUser2((SignOn__Identity*)self, params_ret);
+    libqt_free(params_ret.keys);
+    libqt_free(params_ret.values);
 }
 
 void q_signon__identity_verify_secret(void* self, const char* secret) {

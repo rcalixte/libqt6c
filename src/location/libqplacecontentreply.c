@@ -56,7 +56,13 @@ int32_t q_placecontentreply_qbase_type(void* self) {
 }
 
 libqt_map /* of int to QPlaceContent* */ q_placecontentreply_content(void* self) {
-    return QPlaceContentReply_Content((QPlaceContentReply*)self);
+    // Convert QMap<int,QPlaceContent> to libqt_map
+    libqt_map _out = QPlaceContentReply_Content((QPlaceContentReply*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 int32_t q_placecontentreply_total_count(void* self) {
@@ -76,7 +82,31 @@ QPlaceContentRequest* q_placecontentreply_next_page_request(void* self) {
 }
 
 void q_placecontentreply_set_content(void* self, libqt_map /* of int to QPlaceContent* */ content) {
-    QPlaceContentReply_SetContent((QPlaceContentReply*)self, content);
+    // Convert libqt_map to QMap<int,QPlaceContent>
+    libqt_map content_ret;
+    content_ret.len = content.len;
+    content_ret.keys = malloc(content_ret.len * sizeof(int));
+    if (content_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    content_ret.values = malloc(content_ret.len * sizeof(QPlaceContent*));
+    if (content_ret.values == NULL) {
+        free(content_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    int* content_karr = (int*)content.keys;
+    int* content_kdest = (int*)content_ret.keys;
+    QPlaceContent** content_varr = (QPlaceContent**)content.values;
+    QPlaceContent** content_vdest = (QPlaceContent**)content_ret.values;
+    for (size_t i = 0; i < content_ret.len; ++i) {
+        content_kdest[i] = content_karr[i];
+        content_vdest[i] = content_varr[i];
+    }
+    QPlaceContentReply_SetContent((QPlaceContentReply*)self, content_ret);
+    libqt_free(content_ret.keys);
+    libqt_free(content_ret.values);
 }
 
 void q_placecontentreply_on_set_content(void* self, void (*callback)(void*, libqt_map /* of int to QPlaceContent* */)) {
@@ -84,7 +114,29 @@ void q_placecontentreply_on_set_content(void* self, void (*callback)(void*, libq
 }
 
 void q_placecontentreply_qbase_set_content(void* self, libqt_map /* of int to QPlaceContent* */ content) {
-    QPlaceContentReply_QBaseSetContent((QPlaceContentReply*)self, content);
+    // Convert libqt_map to QMap<int,QPlaceContent>
+    libqt_map content_ret;
+    content_ret.len = content.len;
+    content_ret.keys = malloc(content_ret.len * sizeof(int));
+    if (content_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    content_ret.values = malloc(content_ret.len * sizeof(QPlaceContent*));
+    if (content_ret.values == NULL) {
+        free(content_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    int* content_karr = (int*)content.keys;
+    int* content_kdest = (int*)content_ret.keys;
+    QPlaceContent** content_varr = (QPlaceContent**)content.values;
+    QPlaceContent** content_vdest = (QPlaceContent**)content_ret.values;
+    for (size_t i = 0; i < content_ret.len; ++i) {
+        content_kdest[i] = content_karr[i];
+        content_vdest[i] = content_varr[i];
+    }
+    QPlaceContentReply_QBaseSetContent((QPlaceContentReply*)self, content_ret);
 }
 
 void q_placecontentreply_set_total_count(void* self, int total) {

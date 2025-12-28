@@ -11,7 +11,33 @@ SignOn__SessionData* q_signon__sessiondata_new2(void* other) {
 }
 
 SignOn__SessionData* q_signon__sessiondata_new3(libqt_map /* of const char* to QVariant* */ data) {
-    return SignOn__SessionData_new3(data);
+    // Convert libqt_map to QMap<QString,QVariant>
+    libqt_map data_ret;
+    data_ret.len = data.len;
+    data_ret.keys = malloc(data_ret.len * sizeof(libqt_string));
+    if (data_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    data_ret.values = malloc(data_ret.len * sizeof(QVariant*));
+    if (data_ret.values == NULL) {
+        free(data_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** data_karr = (const char**)data.keys;
+    libqt_string* data_kdest = (libqt_string*)data_ret.keys;
+    QVariant** data_varr = (QVariant**)data.values;
+    QVariant** data_vdest = (QVariant**)data_ret.values;
+    for (size_t i = 0; i < data_ret.len; ++i) {
+        data_kdest[i] = qstring(data_karr[i]);
+        data_vdest[i] = data_varr[i];
+    }
+
+    SignOn__SessionData* _out = SignOn__SessionData_new3(data_ret);
+    libqt_free(data_ret.keys);
+    libqt_free(data_ret.values);
+    return _out;
 }
 
 void q_signon__sessiondata_operator_assign(void* self, void* other) {
@@ -65,7 +91,23 @@ const char** q_signon__sessiondata_get_access_control_tokens(void* self) {
 }
 
 libqt_map /* of const char* to QVariant* */ q_signon__sessiondata_to_map(void* self) {
-    return SignOn__SessionData_ToMap((SignOn__SessionData*)self);
+    // Convert QMap<QString,QVariant> to libqt_map
+    libqt_map _out = SignOn__SessionData_ToMap((SignOn__SessionData*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_keys = (libqt_string*)_out.keys;
+    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_keys == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_signon__sessiondata_to_map");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_keys[i] = _out_keys[i].data;
+    }
+    _ret.keys = (void*)_ret_keys;
+    _ret.values = _out.values;
+    free(_out_keys);
+    return _ret;
 }
 
 void q_signon__sessiondata_set_secret(void* self, const char* value) {

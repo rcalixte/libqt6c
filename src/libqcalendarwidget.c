@@ -177,7 +177,13 @@ void q_calendarwidget_set_weekday_text_format(void* self, int32_t dayOfWeek, voi
 }
 
 libqt_map /* of QDate* to QTextCharFormat* */ q_calendarwidget_date_text_format(void* self) {
-    return QCalendarWidget_DateTextFormat((QCalendarWidget*)self);
+    // Convert QMap<QDate,QTextCharFormat> to libqt_map
+    libqt_map _out = QCalendarWidget_DateTextFormat((QCalendarWidget*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 QTextCharFormat* q_calendarwidget_date_text_format2(void* self, void* date) {

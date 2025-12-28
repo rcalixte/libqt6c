@@ -222,11 +222,61 @@ QCborMap__Iterator* q_cbormap_insert5(void* self, libqt_pair /* tuple of QCborVa
 }
 
 QCborMap* q_cbormap_from_variant_map(libqt_map /* of const char* to QVariant* */ mapVal) {
-    return QCborMap_FromVariantMap(mapVal);
+    // Convert libqt_map to QMap<QString,QVariant>
+    libqt_map mapVal_ret;
+    mapVal_ret.len = mapVal.len;
+    mapVal_ret.keys = malloc(mapVal_ret.len * sizeof(libqt_string));
+    if (mapVal_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    mapVal_ret.values = malloc(mapVal_ret.len * sizeof(QVariant*));
+    if (mapVal_ret.values == NULL) {
+        free(mapVal_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** mapVal_karr = (const char**)mapVal.keys;
+    libqt_string* mapVal_kdest = (libqt_string*)mapVal_ret.keys;
+    QVariant** mapVal_varr = (QVariant**)mapVal.values;
+    QVariant** mapVal_vdest = (QVariant**)mapVal_ret.values;
+    for (size_t i = 0; i < mapVal_ret.len; ++i) {
+        mapVal_kdest[i] = qstring(mapVal_karr[i]);
+        mapVal_vdest[i] = mapVal_varr[i];
+    }
+    QCborMap* _out = QCborMap_FromVariantMap(mapVal_ret);
+    libqt_free(mapVal_ret.keys);
+    libqt_free(mapVal_ret.values);
+    return _out;
 }
 
 QCborMap* q_cbormap_from_variant_hash(libqt_map /* of const char* to QVariant* */ hash) {
-    return QCborMap_FromVariantHash(hash);
+    // Convert libqt_map to QHash<QString,QVariant>
+    libqt_map hash_ret;
+    hash_ret.len = hash.len;
+    hash_ret.keys = malloc(hash_ret.len * sizeof(libqt_string));
+    if (hash_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    hash_ret.values = malloc(hash_ret.len * sizeof(QVariant*));
+    if (hash_ret.values == NULL) {
+        free(hash_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** hash_karr = (const char**)hash.keys;
+    libqt_string* hash_kdest = (libqt_string*)hash_ret.keys;
+    QVariant** hash_varr = (QVariant**)hash.values;
+    QVariant** hash_vdest = (QVariant**)hash_ret.values;
+    for (size_t i = 0; i < hash_ret.len; ++i) {
+        hash_kdest[i] = qstring(hash_karr[i]);
+        hash_vdest[i] = hash_varr[i];
+    }
+    QCborMap* _out = QCborMap_FromVariantHash(hash_ret);
+    libqt_free(hash_ret.keys);
+    libqt_free(hash_ret.values);
+    return _out;
 }
 
 QCborMap* q_cbormap_from_json_object(void* o) {
@@ -234,11 +284,43 @@ QCborMap* q_cbormap_from_json_object(void* o) {
 }
 
 libqt_map /* of const char* to QVariant* */ q_cbormap_to_variant_map(void* self) {
-    return QCborMap_ToVariantMap((QCborMap*)self);
+    // Convert QMap<QString,QVariant> to libqt_map
+    libqt_map _out = QCborMap_ToVariantMap((QCborMap*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_keys = (libqt_string*)_out.keys;
+    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_keys == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_cbormap_to_variant_map");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_keys[i] = _out_keys[i].data;
+    }
+    _ret.keys = (void*)_ret_keys;
+    _ret.values = _out.values;
+    free(_out_keys);
+    return _ret;
 }
 
 libqt_map /* of const char* to QVariant* */ q_cbormap_to_variant_hash(void* self) {
-    return QCborMap_ToVariantHash((QCborMap*)self);
+    // Convert QHash<QString,QVariant> to libqt_map
+    libqt_map _out = QCborMap_ToVariantHash((QCborMap*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_keys = (libqt_string*)_out.keys;
+    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_keys == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_cbormap_to_variant_hash");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_keys[i] = _out_keys[i].data;
+    }
+    _ret.keys = (void*)_ret_keys;
+    _ret.values = _out.values;
+    free(_out_keys);
+    return _ret;
 }
 
 QJsonObject* q_cbormap_to_json_object(void* self) {

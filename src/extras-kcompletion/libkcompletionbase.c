@@ -138,7 +138,13 @@ KCompletion* k_completionbase_comp_obj(void* self) {
 }
 
 libqt_map /* of int32_t to libqt_list  of QKeySequence*  */ k_completionbase_key_binding_map(void* self) {
-    return KCompletionBase_KeyBindingMap((KCompletionBase*)self);
+    // Convert QMap<KCompletionBase::KeyBindingType,QList<QKeySequence>> to libqt_map
+    libqt_map _out = KCompletionBase_KeyBindingMap((KCompletionBase*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 void k_completionbase_on_key_binding_map(void* self, libqt_map /* of int32_t to libqt_list  of QKeySequence*  */ (*callback)()) {
@@ -146,11 +152,41 @@ void k_completionbase_on_key_binding_map(void* self, libqt_map /* of int32_t to 
 }
 
 libqt_map /* of int32_t to libqt_list  of QKeySequence*  */ k_completionbase_qbase_key_binding_map(void* self) {
-    return KCompletionBase_QBaseKeyBindingMap((KCompletionBase*)self);
+    // Convert QMap<KCompletionBase::KeyBindingType,QList<QKeySequence>> to libqt_map
+    libqt_map _out = KCompletionBase_QBaseKeyBindingMap((KCompletionBase*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 void k_completionbase_set_key_binding_map(void* self, libqt_map /* of int32_t to QKeySequence* */ keyBindingMap) {
-    KCompletionBase_SetKeyBindingMap((KCompletionBase*)self, keyBindingMap);
+    // Convert libqt_map to QMap<KCompletionBase::KeyBindingType,QList<QKeySequence>>
+    libqt_map keyBindingMap_ret;
+    keyBindingMap_ret.len = keyBindingMap.len;
+    keyBindingMap_ret.keys = malloc(keyBindingMap_ret.len * sizeof(int32_t));
+    if (keyBindingMap_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    keyBindingMap_ret.values = malloc(keyBindingMap_ret.len * sizeof(QKeySequence*));
+    if (keyBindingMap_ret.values == NULL) {
+        free(keyBindingMap_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    int32_t* keyBindingMap_karr = (int32_t*)keyBindingMap.keys;
+    int32_t* keyBindingMap_kdest = (int32_t*)keyBindingMap_ret.keys;
+    QKeySequence** keyBindingMap_varr = (QKeySequence**)keyBindingMap.values;
+    QKeySequence** keyBindingMap_vdest = (QKeySequence**)keyBindingMap_ret.values;
+    for (size_t i = 0; i < keyBindingMap_ret.len; ++i) {
+        keyBindingMap_kdest[i] = keyBindingMap_karr[i];
+        keyBindingMap_vdest[i] = keyBindingMap_varr[i];
+    }
+    KCompletionBase_SetKeyBindingMap((KCompletionBase*)self, keyBindingMap_ret);
+    libqt_free(keyBindingMap_ret.keys);
+    libqt_free(keyBindingMap_ret.values);
 }
 
 void k_completionbase_on_set_key_binding_map(void* self, void (*callback)(void*, libqt_map /* of int32_t to QKeySequence* */)) {
@@ -158,7 +194,29 @@ void k_completionbase_on_set_key_binding_map(void* self, void (*callback)(void*,
 }
 
 void k_completionbase_qbase_set_key_binding_map(void* self, libqt_map /* of int32_t to QKeySequence* */ keyBindingMap) {
-    KCompletionBase_QBaseSetKeyBindingMap((KCompletionBase*)self, keyBindingMap);
+    // Convert libqt_map to QMap<KCompletionBase::KeyBindingType,QList<QKeySequence>>
+    libqt_map keyBindingMap_ret;
+    keyBindingMap_ret.len = keyBindingMap.len;
+    keyBindingMap_ret.keys = malloc(keyBindingMap_ret.len * sizeof(int32_t));
+    if (keyBindingMap_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    keyBindingMap_ret.values = malloc(keyBindingMap_ret.len * sizeof(QKeySequence*));
+    if (keyBindingMap_ret.values == NULL) {
+        free(keyBindingMap_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    int32_t* keyBindingMap_karr = (int32_t*)keyBindingMap.keys;
+    int32_t* keyBindingMap_kdest = (int32_t*)keyBindingMap_ret.keys;
+    QKeySequence** keyBindingMap_varr = (QKeySequence**)keyBindingMap.values;
+    QKeySequence** keyBindingMap_vdest = (QKeySequence**)keyBindingMap_ret.values;
+    for (size_t i = 0; i < keyBindingMap_ret.len; ++i) {
+        keyBindingMap_kdest[i] = keyBindingMap_karr[i];
+        keyBindingMap_vdest[i] = keyBindingMap_varr[i];
+    }
+    KCompletionBase_QBaseSetKeyBindingMap((KCompletionBase*)self, keyBindingMap_ret);
 }
 
 void k_completionbase_set_delegate(void* self, void* delegate) {

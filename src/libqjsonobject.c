@@ -20,19 +20,101 @@ void q_jsonobject_swap(void* self, void* other) {
 }
 
 QJsonObject* q_jsonobject_from_variant_map(libqt_map /* of const char* to QVariant* */ mapVal) {
-    return QJsonObject_FromVariantMap(mapVal);
+    // Convert libqt_map to QMap<QString,QVariant>
+    libqt_map mapVal_ret;
+    mapVal_ret.len = mapVal.len;
+    mapVal_ret.keys = malloc(mapVal_ret.len * sizeof(libqt_string));
+    if (mapVal_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    mapVal_ret.values = malloc(mapVal_ret.len * sizeof(QVariant*));
+    if (mapVal_ret.values == NULL) {
+        free(mapVal_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** mapVal_karr = (const char**)mapVal.keys;
+    libqt_string* mapVal_kdest = (libqt_string*)mapVal_ret.keys;
+    QVariant** mapVal_varr = (QVariant**)mapVal.values;
+    QVariant** mapVal_vdest = (QVariant**)mapVal_ret.values;
+    for (size_t i = 0; i < mapVal_ret.len; ++i) {
+        mapVal_kdest[i] = qstring(mapVal_karr[i]);
+        mapVal_vdest[i] = mapVal_varr[i];
+    }
+    QJsonObject* _out = QJsonObject_FromVariantMap(mapVal_ret);
+    libqt_free(mapVal_ret.keys);
+    libqt_free(mapVal_ret.values);
+    return _out;
 }
 
 libqt_map /* of const char* to QVariant* */ q_jsonobject_to_variant_map(void* self) {
-    return QJsonObject_ToVariantMap((QJsonObject*)self);
+    // Convert QMap<QString,QVariant> to libqt_map
+    libqt_map _out = QJsonObject_ToVariantMap((QJsonObject*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_keys = (libqt_string*)_out.keys;
+    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_keys == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_jsonobject_to_variant_map");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_keys[i] = _out_keys[i].data;
+    }
+    _ret.keys = (void*)_ret_keys;
+    _ret.values = _out.values;
+    free(_out_keys);
+    return _ret;
 }
 
 QJsonObject* q_jsonobject_from_variant_hash(libqt_map /* of const char* to QVariant* */ mapVal) {
-    return QJsonObject_FromVariantHash(mapVal);
+    // Convert libqt_map to QHash<QString,QVariant>
+    libqt_map mapVal_ret;
+    mapVal_ret.len = mapVal.len;
+    mapVal_ret.keys = malloc(mapVal_ret.len * sizeof(libqt_string));
+    if (mapVal_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    mapVal_ret.values = malloc(mapVal_ret.len * sizeof(QVariant*));
+    if (mapVal_ret.values == NULL) {
+        free(mapVal_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    const char** mapVal_karr = (const char**)mapVal.keys;
+    libqt_string* mapVal_kdest = (libqt_string*)mapVal_ret.keys;
+    QVariant** mapVal_varr = (QVariant**)mapVal.values;
+    QVariant** mapVal_vdest = (QVariant**)mapVal_ret.values;
+    for (size_t i = 0; i < mapVal_ret.len; ++i) {
+        mapVal_kdest[i] = qstring(mapVal_karr[i]);
+        mapVal_vdest[i] = mapVal_varr[i];
+    }
+    QJsonObject* _out = QJsonObject_FromVariantHash(mapVal_ret);
+    libqt_free(mapVal_ret.keys);
+    libqt_free(mapVal_ret.values);
+    return _out;
 }
 
 libqt_map /* of const char* to QVariant* */ q_jsonobject_to_variant_hash(void* self) {
-    return QJsonObject_ToVariantHash((QJsonObject*)self);
+    // Convert QHash<QString,QVariant> to libqt_map
+    libqt_map _out = QJsonObject_ToVariantHash((QJsonObject*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_keys = (libqt_string*)_out.keys;
+    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_keys == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_jsonobject_to_variant_hash");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_keys[i] = _out_keys[i].data;
+    }
+    _ret.keys = (void*)_ret_keys;
+    _ret.values = _out.values;
+    free(_out_keys);
+    return _ret;
 }
 
 const char** q_jsonobject_keys(void* self) {

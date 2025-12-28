@@ -91,7 +91,13 @@ bool q_concatenatetablesproxymodel_qbase_set_data(void* self, void* index, void*
 }
 
 libqt_map /* of int to QVariant* */ q_concatenatetablesproxymodel_item_data(void* self, void* proxyIndex) {
-    return QConcatenateTablesProxyModel_ItemData((QConcatenateTablesProxyModel*)self, (QModelIndex*)proxyIndex);
+    // Convert QMap<int,QVariant> to libqt_map
+    libqt_map _out = QConcatenateTablesProxyModel_ItemData((QConcatenateTablesProxyModel*)self, (QModelIndex*)proxyIndex);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 void q_concatenatetablesproxymodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*)) {
@@ -99,11 +105,42 @@ void q_concatenatetablesproxymodel_on_item_data(void* self, libqt_map /* of int 
 }
 
 libqt_map /* of int to QVariant* */ q_concatenatetablesproxymodel_qbase_item_data(void* self, void* proxyIndex) {
-    return QConcatenateTablesProxyModel_QBaseItemData((QConcatenateTablesProxyModel*)self, (QModelIndex*)proxyIndex);
+    // Convert QMap<int,QVariant> to libqt_map
+    libqt_map _out = QConcatenateTablesProxyModel_QBaseItemData((QConcatenateTablesProxyModel*)self, (QModelIndex*)proxyIndex);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 bool q_concatenatetablesproxymodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
-    return QConcatenateTablesProxyModel_SetItemData((QConcatenateTablesProxyModel*)self, (QModelIndex*)index, roles);
+    // Convert libqt_map to QMap<int,QVariant>
+    libqt_map roles_ret;
+    roles_ret.len = roles.len;
+    roles_ret.keys = malloc(roles_ret.len * sizeof(int));
+    if (roles_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    roles_ret.values = malloc(roles_ret.len * sizeof(QVariant*));
+    if (roles_ret.values == NULL) {
+        free(roles_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    int* roles_karr = (int*)roles.keys;
+    int* roles_kdest = (int*)roles_ret.keys;
+    QVariant** roles_varr = (QVariant**)roles.values;
+    QVariant** roles_vdest = (QVariant**)roles_ret.values;
+    for (size_t i = 0; i < roles_ret.len; ++i) {
+        roles_kdest[i] = roles_karr[i];
+        roles_vdest[i] = roles_varr[i];
+    }
+    bool _out = QConcatenateTablesProxyModel_SetItemData((QConcatenateTablesProxyModel*)self, (QModelIndex*)index, roles_ret);
+    libqt_free(roles_ret.keys);
+    libqt_free(roles_ret.values);
+    return _out;
 }
 
 void q_concatenatetablesproxymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */)) {
@@ -111,7 +148,29 @@ void q_concatenatetablesproxymodel_on_set_item_data(void* self, bool (*callback)
 }
 
 bool q_concatenatetablesproxymodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
-    return QConcatenateTablesProxyModel_QBaseSetItemData((QConcatenateTablesProxyModel*)self, (QModelIndex*)index, roles);
+    // Convert libqt_map to QMap<int,QVariant>
+    libqt_map roles_ret;
+    roles_ret.len = roles.len;
+    roles_ret.keys = malloc(roles_ret.len * sizeof(int));
+    if (roles_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    roles_ret.values = malloc(roles_ret.len * sizeof(QVariant*));
+    if (roles_ret.values == NULL) {
+        free(roles_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    int* roles_karr = (int*)roles.keys;
+    int* roles_kdest = (int*)roles_ret.keys;
+    QVariant** roles_varr = (QVariant**)roles.values;
+    QVariant** roles_vdest = (QVariant**)roles_ret.values;
+    for (size_t i = 0; i < roles_ret.len; ++i) {
+        roles_kdest[i] = roles_karr[i];
+        roles_vdest[i] = roles_varr[i];
+    }
+    return QConcatenateTablesProxyModel_QBaseSetItemData((QConcatenateTablesProxyModel*)self, (QModelIndex*)index, roles_ret);
 }
 
 int32_t q_concatenatetablesproxymodel_flags(void* self, void* index) {
@@ -792,11 +851,43 @@ void q_concatenatetablesproxymodel_on_match(void* self, QModelIndex** (*callback
 }
 
 libqt_map /* of int to char* */ q_concatenatetablesproxymodel_role_names(void* self) {
-    return QConcatenateTablesProxyModel_RoleNames((QConcatenateTablesProxyModel*)self);
+    // Convert QHash<int,QByteArray> to libqt_map
+    libqt_map _out = QConcatenateTablesProxyModel_RoleNames((QConcatenateTablesProxyModel*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_values = (libqt_string*)_out.values;
+    char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
+    if (_ret_values == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_concatenatetablesproxymodel_role_names");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_values[i] = (void*)_out_values[i].data;
+    }
+    _ret.keys = _out.keys;
+    _ret.values = (void*)_ret_values;
+    free(_out_values);
+    return _ret;
 }
 
 libqt_map /* of int to char* */ q_concatenatetablesproxymodel_qbase_role_names(void* self) {
-    return QConcatenateTablesProxyModel_QBaseRoleNames((QConcatenateTablesProxyModel*)self);
+    // Convert QHash<int,QByteArray> to libqt_map
+    libqt_map _out = QConcatenateTablesProxyModel_QBaseRoleNames((QConcatenateTablesProxyModel*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_values = (libqt_string*)_out.values;
+    char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
+    if (_ret_values == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_concatenatetablesproxymodel_role_names");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_values[i] = (void*)_out_values[i].data;
+    }
+    _ret.keys = _out.keys;
+    _ret.values = (void*)_ret_values;
+    free(_out_values);
+    return _ret;
 }
 
 void q_concatenatetablesproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)()) {
