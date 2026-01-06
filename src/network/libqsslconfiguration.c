@@ -205,6 +205,26 @@ void q_sslconfiguration_set_diffie_hellman_parameters(void* self, void* dhparams
     QSslConfiguration_SetDiffieHellmanParameters((QSslConfiguration*)self, (QSslDiffieHellmanParameters*)dhparams);
 }
 
+libqt_map /* of char* to QVariant* */ q_sslconfiguration_backend_configuration(void* self) {
+    // Convert QMap<QByteArray,QVariant> to libqt_map
+    libqt_map _out = QSslConfiguration_BackendConfiguration((QSslConfiguration*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_keys = (libqt_string*)_out.keys;
+    char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
+    if (_ret_keys == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sslconfiguration_backend_configuration");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_keys[i] = (char*)_out_keys[i].data;
+    }
+    _ret.keys = (void*)_ret_keys;
+    _ret.values = _out.values;
+    free(_out_keys);
+    return _ret;
+}
+
 void q_sslconfiguration_set_backend_configuration_option(void* self, const char* name, void* value) {
     QSslConfiguration_SetBackendConfigurationOption((QSslConfiguration*)self, qstring(name), (QVariant*)value);
 }
@@ -312,6 +332,34 @@ bool q_sslconfiguration_add_ca_certificates22(void* self, const char* path, int3
 
 bool q_sslconfiguration_add_ca_certificates3(void* self, const char* path, int32_t format, int32_t syntax) {
     return QSslConfiguration_AddCaCertificates3((QSslConfiguration*)self, qstring(path), format, syntax);
+}
+
+void q_sslconfiguration_set_backend_configuration1(void* self, libqt_map /* of char* to QVariant* */ backendConfiguration) {
+    // Convert libqt_map to QMap<QByteArray,QVariant>
+    libqt_map backendConfiguration_ret;
+    backendConfiguration_ret.len = backendConfiguration.len;
+    backendConfiguration_ret.keys = malloc(backendConfiguration_ret.len * sizeof(libqt_string));
+    if (backendConfiguration_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        abort();
+    }
+    backendConfiguration_ret.values = malloc(backendConfiguration_ret.len * sizeof(QVariant*));
+    if (backendConfiguration_ret.values == NULL) {
+        free(backendConfiguration_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values\n");
+        abort();
+    }
+    char** backendConfiguration_karr = (char**)backendConfiguration.keys;
+    libqt_string* backendConfiguration_kdest = (libqt_string*)backendConfiguration_ret.keys;
+    QVariant** backendConfiguration_varr = (QVariant**)backendConfiguration.values;
+    QVariant** backendConfiguration_vdest = (QVariant**)backendConfiguration_ret.values;
+    for (size_t i = 0; i < backendConfiguration_ret.len; ++i) {
+        backendConfiguration_kdest[i] = qstring(backendConfiguration_karr[i]);
+        backendConfiguration_vdest[i] = backendConfiguration_varr[i];
+    }
+    QSslConfiguration_SetBackendConfiguration1((QSslConfiguration*)self, backendConfiguration_ret);
+    libqt_free(backendConfiguration_ret.keys);
+    libqt_free(backendConfiguration_ret.values);
 }
 
 void q_sslconfiguration_delete(void* self) {

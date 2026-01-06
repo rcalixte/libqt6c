@@ -19161,6 +19161,12 @@ QCPAxisTickerText* q_cpaxistickertext_new();
 ///
 /// @param self QCPAxisTickerText*
 ///
+libqt_map /* of double to const char* */ q_cpaxistickertext_ticks(void* self);
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerText.html)
+///
+/// @param self QCPAxisTickerText*
+///
 int32_t q_cpaxistickertext_sub_tick_count(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerText.html)
@@ -35983,6 +35989,12 @@ bool q_cpcolorgradient_operator_not_equal(void* self, void* other);
 /// @param self QCPColorGradient*
 ///
 int32_t q_cpcolorgradient_level_count(void* self);
+
+/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorGradient.html)
+///
+/// @param self QCPColorGradient*
+///
+libqt_map /* of double to QColor* */ q_cpcolorgradient_color_stops(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorGradient.html)
 ///

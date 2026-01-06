@@ -976,8 +976,7 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 			preamble += `    fprintf(stderr, "Memory allocation failed in ` + cfs.currentMethodName + `");` + "\n"
 			preamble += "    abort();\n"
 			preamble += "}\n"
-			maybeCast := ifv(kType == "char*", "(void*)", "")
-			keyIter = namePrefix + "_ret_keys[i] = " + maybeCast + namePrefix + "_out_keys[i].data;\n"
+			keyIter = namePrefix + "_ret_keys[i] = (" + kType + ")" + namePrefix + "_out_keys[i].data;\n"
 			keyFree = "    free(" + namePrefix + "_out_keys);\n"
 			keyAssign = namePrefix + "_ret" + maybeDeref + "keys = (void*)" + namePrefix + "_ret_keys;\n"
 		} else {
@@ -992,8 +991,7 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 			preamble += keyFree
 			preamble += "    abort();\n"
 			preamble += "}\n"
-			maybeCast := ifv(vType == "char*", "(void*)", "")
-			valueIter = namePrefix + "_ret_values[i] = " + maybeCast + namePrefix + "_out_values[i].data;\n"
+			valueIter = namePrefix + "_ret_values[i] = (" + vType + ")" + namePrefix + "_out_values[i].data;\n"
 			valueFree = "    free(" + namePrefix + "_out_values);\n"
 			valueAssign = namePrefix + "_ret" + maybeDeref + "values = (void*)" + namePrefix + "_ret_values;\n"
 		} else {

@@ -79,7 +79,7 @@ libqt_map /* of int to char* */ q_pdfsearchmodel_role_names(void* self) {
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_values[i] = (void*)_out_values[i].data;
+        _ret_values[i] = (char*)_out_values[i].data;
     }
     _ret.keys = _out.keys;
     _ret.values = (void*)_ret_values;
@@ -103,7 +103,7 @@ libqt_map /* of int to char* */ q_pdfsearchmodel_qbase_role_names(void* self) {
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_values[i] = (void*)_out_values[i].data;
+        _ret_values[i] = (char*)_out_values[i].data;
     }
     _ret.keys = _out.keys;
     _ret.values = (void*)_ret_values;

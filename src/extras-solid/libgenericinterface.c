@@ -45,7 +45,7 @@ libqt_map /* of const char* to QVariant* */ k_solid__genericinterface_all_proper
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_keys[i] = _out_keys[i].data;
+        _ret_keys[i] = (const char*)_out_keys[i].data;
     }
     _ret.keys = (void*)_ret_keys;
     _ret.values = _out.values;

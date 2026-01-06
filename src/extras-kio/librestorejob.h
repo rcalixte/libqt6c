@@ -39,6 +39,12 @@ int32_t k_io__restorejob_metacall(void* self, int32_t param1, int param2, void* 
 ///
 const char* k_io__restorejob_tr(const char* s);
 
+/// [Upstream resources](https://api.kde.org/kio-restorejob.html#trashUrls)
+///
+/// @param self KIO__RestoreJob*
+///
+libqt_list /* of QUrl* */ k_io__restorejob_trash_urls(void* self);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`

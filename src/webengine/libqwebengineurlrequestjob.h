@@ -59,6 +59,12 @@ char* q_webengineurlrequestjob_request_method(void* self);
 ///
 QUrl* q_webengineurlrequestjob_initiator(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#requestHeaders)
+///
+/// @param self QWebEngineUrlRequestJob*
+///
+libqt_map /* of char* to char* */ q_webengineurlrequestjob_request_headers(void* self);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#requestBody)
 ///
 /// @param self QWebEngineUrlRequestJob*

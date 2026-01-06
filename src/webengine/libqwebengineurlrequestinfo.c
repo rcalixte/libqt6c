@@ -49,3 +49,32 @@ void q_webengineurlrequestinfo_redirect(void* self, void* url) {
 void q_webengineurlrequestinfo_set_http_header(void* self, const char* name, const char* value) {
     QWebEngineUrlRequestInfo_SetHttpHeader((QWebEngineUrlRequestInfo*)self, qstring(name), qstring(value));
 }
+
+libqt_map /* of char* to char* */ q_webengineurlrequestinfo_http_headers(void* self) {
+    // Convert QHash<QByteArray,QByteArray> to libqt_map
+    libqt_map _out = QWebEngineUrlRequestInfo_HttpHeaders((QWebEngineUrlRequestInfo*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_keys = (libqt_string*)_out.keys;
+    char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
+    if (_ret_keys == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_webengineurlrequestinfo_http_headers");
+        abort();
+    }
+    libqt_string* _out_values = (libqt_string*)_out.values;
+    char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
+    if (_ret_values == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_webengineurlrequestinfo_http_headers");
+        free(_out_keys);
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_keys[i] = (char*)_out_keys[i].data;
+        _ret_values[i] = (char*)_out_values[i].data;
+    }
+    _ret.keys = (void*)_ret_keys;
+    _ret.values = (void*)_ret_values;
+    free(_out_keys);
+    free(_out_values);
+    return _ret;
+}

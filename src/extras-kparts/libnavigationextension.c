@@ -110,6 +110,35 @@ const char* k_parts__navigationextension_action_text(void* self, const char* nam
     return _ret;
 }
 
+libqt_map* /* of char* to char* */ k_parts__navigationextension_action_slot_map() {
+    // Convert QMap<QByteArray,QByteArray> to libqt_map
+    libqt_map* _out = KParts__NavigationExtension_ActionSlotMap();
+    libqt_map* _ret;
+    _ret->len = _out->len;
+    libqt_string* _out_keys = (libqt_string*)_out->keys;
+    char** _ret_keys = (char**)malloc(_ret->len * sizeof(char*));
+    if (_ret_keys == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_parts__navigationextension_action_slot_map");
+        abort();
+    }
+    libqt_string* _out_values = (libqt_string*)_out->values;
+    char** _ret_values = (char**)malloc(_ret->len * sizeof(char*));
+    if (_ret_values == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_parts__navigationextension_action_slot_map");
+        free(_out_keys);
+        abort();
+    }
+    for (size_t i = 0; i < _ret->len; ++i) {
+        _ret_keys[i] = (char*)_out_keys[i].data;
+        _ret_values[i] = (char*)_out_values[i].data;
+    }
+    _ret->keys = (void*)_ret_keys;
+    _ret->values = (void*)_ret_values;
+    free(_out_keys);
+    free(_out_values);
+    return _ret;
+}
+
 KParts__NavigationExtension* k_parts__navigationextension_child_object(void* obj) {
     return KParts__NavigationExtension_ChildObject((QObject*)obj);
 }

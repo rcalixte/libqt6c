@@ -207,6 +207,13 @@ void q_wavedecoder_on_pos(void* self, long long (*callback)());
 ///
 long long q_wavedecoder_qbase_pos(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qwavedecoder.html#setIODevice)
+///
+/// @param self QWaveDecoder*
+/// @param device QIODevice*
+///
+void q_wavedecoder_set_i_o_device(void* self, void* device);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwavedecoder.html#size)
 ///
 /// @param self QWaveDecoder*

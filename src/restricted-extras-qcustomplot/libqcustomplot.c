@@ -8685,6 +8685,26 @@ QCPAxisTickerText* q_cpaxistickertext_new() {
     return QCPAxisTickerText_new();
 }
 
+libqt_map /* of double to const char* */ q_cpaxistickertext_ticks(void* self) {
+    // Convert QMap<double,QString> to libqt_map
+    libqt_map _out = QCPAxisTickerText_Ticks((QCPAxisTickerText*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_string* _out_values = (libqt_string*)_out.values;
+    const char** _ret_values = (const char**)malloc(_ret.len * sizeof(const char*));
+    if (_ret_values == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_cpaxistickertext_ticks");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        _ret_values[i] = (const char*)_out_values[i].data;
+    }
+    _ret.keys = _out.keys;
+    _ret.values = (void*)_ret_values;
+    free(_out_values);
+    return _ret;
+}
+
 int32_t q_cpaxistickertext_sub_tick_count(void* self) {
     return QCPAxisTickerText_SubTickCount((QCPAxisTickerText*)self);
 }
@@ -16670,6 +16690,16 @@ bool q_cpcolorgradient_operator_not_equal(void* self, void* other) {
 
 int32_t q_cpcolorgradient_level_count(void* self) {
     return QCPColorGradient_LevelCount((QCPColorGradient*)self);
+}
+
+libqt_map /* of double to QColor* */ q_cpcolorgradient_color_stops(void* self) {
+    // Convert QMap<double,QColor> to libqt_map
+    libqt_map _out = QCPColorGradient_ColorStops((QCPColorGradient*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    _ret.keys = _out.keys;
+    _ret.values = _out.values;
+    return _ret;
 }
 
 int32_t q_cpcolorgradient_color_interpolation(void* self) {

@@ -167,6 +167,10 @@ const char* q_httpheaders_well_known_header_name(int32_t name) {
     return _ret;
 }
 
+QHttpHeaders* q_httpheaders_from_list_of_pairs(libqt_list /* of libqt_pair  tuple of char* and char*  */ headers) {
+    return QHttpHeaders_FromListOfPairs(headers);
+}
+
 libqt_list /* of libqt_pair  tuple of char* and char*  */ q_httpheaders_to_list_of_pairs(void* self) {
     libqt_list _arr = QHttpHeaders_ToListOfPairs((QHttpHeaders*)self);
     return _arr;

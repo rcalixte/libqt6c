@@ -186,6 +186,10 @@ bool k_parts__navigationextension_is_action_enabled(void* self, const char* name
 ///
 const char* k_parts__navigationextension_action_text(void* self, const char* name);
 
+/// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#actionSlotMap)
+///
+libqt_map* /* of char* to char* */ k_parts__navigationextension_action_slot_map();
+
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#childObject)
 ///
 /// @param obj QObject*
