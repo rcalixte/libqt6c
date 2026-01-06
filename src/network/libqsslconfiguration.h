@@ -316,6 +316,12 @@ QSslDiffieHellmanParameters* q_sslconfiguration_diffie_hellman_parameters(void* 
 ///
 void q_sslconfiguration_set_diffie_hellman_parameters(void* self, void* dhparams);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#backendConfiguration)
+///
+/// @param self QSslConfiguration*
+///
+libqt_map /* of char* to QVariant* */ q_sslconfiguration_backend_configuration(void* self);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setBackendConfigurationOption)
 ///
 /// @param self QSslConfiguration*
@@ -449,6 +455,13 @@ bool q_sslconfiguration_add_ca_certificates22(void* self, const char* path, int3
 /// @param syntax enum QSslCertificate__PatternSyntax
 ///
 bool q_sslconfiguration_add_ca_certificates3(void* self, const char* path, int32_t format, int32_t syntax);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setBackendConfiguration)
+///
+/// @param self QSslConfiguration*
+/// @param backendConfiguration libqt_map /* of char* to QVariant* */
+///
+void q_sslconfiguration_set_backend_configuration1(void* self, libqt_map /* of char* to QVariant* */ backendConfiguration);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#dtor.QSslConfiguration)
 ///

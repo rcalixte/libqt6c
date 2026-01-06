@@ -50,6 +50,10 @@ libqt_list /* of libqt_pair  tuple of char* and char*  */ q_networkcachemetadata
     return _arr;
 }
 
+void q_networkcachemetadata_set_raw_headers(void* self, libqt_list /* of libqt_pair  tuple of char* and char*  */ headers) {
+    QNetworkCacheMetaData_SetRawHeaders((QNetworkCacheMetaData*)self, headers);
+}
+
 QHttpHeaders* q_networkcachemetadata_headers(void* self) {
     return QNetworkCacheMetaData_Headers((QNetworkCacheMetaData*)self);
 }

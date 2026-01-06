@@ -115,6 +115,10 @@ long long q_wavedecoder_qbase_pos(void* self) {
     return QWaveDecoder_QBasePos((QWaveDecoder*)self);
 }
 
+void q_wavedecoder_set_i_o_device(void* self, void* device) {
+    QWaveDecoder_SetIODevice((QWaveDecoder*)self, (QIODevice*)device);
+}
+
 long long q_wavedecoder_size(void* self) {
     return QWaveDecoder_Size((QWaveDecoder*)self);
 }

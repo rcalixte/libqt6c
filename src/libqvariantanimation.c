@@ -72,6 +72,10 @@ libqt_list /* of libqt_pair  tuple of double and QVariant*  */ q_variantanimatio
     return _arr;
 }
 
+void q_variantanimation_set_key_values(void* self, libqt_list /* of libqt_pair  tuple of double and QVariant*  */ values) {
+    QVariantAnimation_SetKeyValues((QVariantAnimation*)self, values);
+}
+
 QVariant* q_variantanimation_current_value(void* self) {
     return QVariantAnimation_CurrentValue((QVariantAnimation*)self);
 }

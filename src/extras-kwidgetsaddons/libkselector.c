@@ -2369,6 +2369,10 @@ const char* k_gradientselector_tr(const char* s) {
     return _ret;
 }
 
+void k_gradientselector_set_stops(void* self, libqt_list /* of libqt_pair  tuple of double and QColor*  */ stops) {
+    KGradientSelector_SetStops((KGradientSelector*)self, stops);
+}
+
 libqt_list /* of libqt_pair  tuple of double and QColor*  */ k_gradientselector_stops(void* self) {
     libqt_list _arr = KGradientSelector_Stops((KGradientSelector*)self);
     return _arr;

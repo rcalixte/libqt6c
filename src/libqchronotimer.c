@@ -44,6 +44,10 @@ bool q_chronotimer_is_active(void* self) {
     return QChronoTimer_IsActive((QChronoTimer*)self);
 }
 
+int32_t q_chronotimer_id(void* self) {
+    return QChronoTimer_Id((QChronoTimer*)self);
+}
+
 void q_chronotimer_set_timer_type(void* self, int32_t atype) {
     QChronoTimer_SetTimerType((QChronoTimer*)self, atype);
 }

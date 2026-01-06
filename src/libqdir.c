@@ -303,8 +303,20 @@ libqt_list /* of QFileInfo* */ q_dir_entry_info_list2(void* self, const char* na
     return _arr;
 }
 
+bool q_dir_mkdir(void* self, const char* dirName) {
+    return QDir_Mkdir((QDir*)self, qstring(dirName));
+}
+
+bool q_dir_mkdir2(void* self, const char* dirName, int32_t permissions) {
+    return QDir_Mkdir2((QDir*)self, qstring(dirName), permissions);
+}
+
 bool q_dir_rmdir(void* self, const char* dirName) {
     return QDir_Rmdir((QDir*)self, qstring(dirName));
+}
+
+bool q_dir_mkpath(void* self, const char* dirPath) {
+    return QDir_Mkpath((QDir*)self, qstring(dirPath));
 }
 
 bool q_dir_rmpath(void* self, const char* dirPath) {

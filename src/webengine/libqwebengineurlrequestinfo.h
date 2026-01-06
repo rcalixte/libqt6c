@@ -89,6 +89,12 @@ void q_webengineurlrequestinfo_redirect(void* self, void* url);
 ///
 void q_webengineurlrequestinfo_set_http_header(void* self, const char* name, const char* value);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#httpHeaders)
+///
+/// @param self QWebEngineUrlRequestInfo*
+///
+libqt_map /* of char* to char* */ q_webengineurlrequestinfo_http_headers(void* self);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#public-types)
 
 typedef enum {

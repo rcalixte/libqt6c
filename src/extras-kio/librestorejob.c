@@ -27,6 +27,11 @@ const char* k_io__restorejob_tr(const char* s) {
     return _ret;
 }
 
+libqt_list /* of QUrl* */ k_io__restorejob_trash_urls(void* self) {
+    libqt_list _arr = KIO__RestoreJob_TrashUrls((KIO__RestoreJob*)self);
+    return _arr;
+}
+
 const char* k_io__restorejob_tr2(const char* s, const char* c) {
     libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);

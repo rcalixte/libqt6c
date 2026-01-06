@@ -73,6 +73,14 @@ const char* q_chronotimer_tr(const char* s);
 ///
 bool q_chronotimer_is_active(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qchronotimer.html#id)
+///
+/// @param self QChronoTimer*
+///
+/// @return enum Qt__TimerId
+///
+int32_t q_chronotimer_id(void* self);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qchronotimer.html#setTimerType)
 ///
 /// @param self QChronoTimer*

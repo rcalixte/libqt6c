@@ -100,7 +100,7 @@ libqt_map /* of QDate* to const char* */ k_datetimeedit_date_map(void* self) {
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_values[i] = _out_values[i].data;
+        _ret_values[i] = (const char*)_out_values[i].data;
     }
     _ret.keys = _out.keys;
     _ret.values = (void*)_ret_values;
