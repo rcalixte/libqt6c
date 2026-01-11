@@ -130,7 +130,7 @@ const char** k_service_keywords(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_service_keywords");
+        fprintf(stderr, "Failed to allocate memory for string list in k_service_keywords");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -149,7 +149,7 @@ const char** k_service_categories(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_service_categories");
+        fprintf(stderr, "Failed to allocate memory for string list in k_service_categories");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -168,7 +168,7 @@ const char** k_service_mime_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_service_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in k_service_mime_types");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -187,7 +187,7 @@ const char** k_service_scheme_handlers(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_service_scheme_handlers");
+        fprintf(stderr, "Failed to allocate memory for string list in k_service_scheme_handlers");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -206,7 +206,7 @@ const char** k_service_supported_protocols(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_service_supported_protocols");
+        fprintf(stderr, "Failed to allocate memory for string list in k_service_supported_protocols");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

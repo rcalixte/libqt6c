@@ -54,7 +54,7 @@ const char** q_designerformwindowinterface_check_contents(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_designerformwindowinterface_check_contents");
+        fprintf(stderr, "Failed to allocate memory for string list in q_designerformwindowinterface_check_contents");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -137,7 +137,7 @@ const char** q_designerformwindowinterface_include_hints(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_designerformwindowinterface_include_hints");
+        fprintf(stderr, "Failed to allocate memory for string list in q_designerformwindowinterface_include_hints");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -155,7 +155,7 @@ void q_designerformwindowinterface_set_include_hints(void* self, const char* inc
     size_t includeHints_len = libqt_strv_length(includeHints);
     libqt_string* includeHints_qstr = (libqt_string*)malloc(includeHints_len * sizeof(libqt_string));
     if (includeHints_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_designerformwindowinterface_set_include_hints");
+        fprintf(stderr, "Failed to allocate memory for string list in q_designerformwindowinterface_set_include_hints");
         abort();
     }
     for (size_t i = 0; i < includeHints_len; ++i) {
@@ -179,7 +179,7 @@ const char** q_designerformwindowinterface_active_resource_file_paths(void* self
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_designerformwindowinterface_active_resource_file_paths");
+        fprintf(stderr, "Failed to allocate memory for string list in q_designerformwindowinterface_active_resource_file_paths");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -278,7 +278,7 @@ const char** q_designerformwindowinterface_resource_files(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_designerformwindowinterface_resource_files");
+        fprintf(stderr, "Failed to allocate memory for string list in q_designerformwindowinterface_resource_files");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -348,7 +348,7 @@ void q_designerformwindowinterface_activate_resource_file_paths(void* self, cons
     size_t paths_len = libqt_strv_length(paths);
     libqt_string* paths_qstr = (libqt_string*)malloc(paths_len * sizeof(libqt_string));
     if (paths_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_designerformwindowinterface_activate_resource_file_paths");
+        fprintf(stderr, "Failed to allocate memory for string list in q_designerformwindowinterface_activate_resource_file_paths");
         abort();
     }
     for (size_t i = 0; i < paths_len; ++i) {
@@ -489,7 +489,7 @@ void q_designerformwindowinterface_activate_resource_file_paths2(void* self, con
     size_t paths_len = libqt_strv_length(paths);
     libqt_string* paths_qstr = (libqt_string*)malloc(paths_len * sizeof(libqt_string));
     if (paths_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_designerformwindowinterface_activate_resource_file_paths2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_designerformwindowinterface_activate_resource_file_paths2");
         abort();
     }
     for (size_t i = 0; i < paths_len; ++i) {
@@ -1755,7 +1755,7 @@ const char** q_designerformwindowinterface_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_designerformwindowinterface_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_designerformwindowinterface_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

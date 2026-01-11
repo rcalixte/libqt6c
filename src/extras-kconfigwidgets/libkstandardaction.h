@@ -47,7 +47,7 @@ const char** k_standardaction_std_names();
 ///
 /// @return libqt_list of enum KStandardAction__StandardAction
 ///
-libqt_list /* of int32_t */ k_standardaction_action_ids();
+libqt_list /* of enum KStandardAction__StandardAction */ k_standardaction_action_ids();
 
 /// [Upstream resources](https://api.kde.org/kstandardaction.html#shortcutForActionId)
 ///

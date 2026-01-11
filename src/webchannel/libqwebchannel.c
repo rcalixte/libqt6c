@@ -45,15 +45,15 @@ void q_webchannel_register_objects(void* self, libqt_map /* of const char* to QO
     // Convert libqt_map to QHash<QString,QObject>
     libqt_map objects_ret;
     objects_ret.len = objects.len;
-    objects_ret.keys = malloc(objects_ret.len * sizeof(libqt_string));
+    objects_ret.keys = (libqt_string*)malloc(objects_ret.len * sizeof(libqt_string));
     if (objects_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_webchannel_register_objects\n");
         abort();
     }
-    objects_ret.values = malloc(objects_ret.len * sizeof(QObject*));
+    objects_ret.values = (QObject**)malloc(objects_ret.len * sizeof(QObject*));
     if (objects_ret.values == NULL) {
         free(objects_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_webchannel_register_objects\n");
         abort();
     }
     const char** objects_karr = (const char**)objects.keys;
@@ -65,8 +65,8 @@ void q_webchannel_register_objects(void* self, libqt_map /* of const char* to QO
         objects_vdest[i] = objects_varr[i];
     }
     QWebChannel_RegisterObjects((QWebChannel*)self, objects_ret);
-    libqt_free(objects_ret.keys);
-    libqt_free(objects_ret.values);
+    free(objects_ret.keys);
+    free(objects_ret.values);
 }
 
 libqt_map /* of const char* to QObject* */ q_webchannel_registered_objects(void* self) {
@@ -75,17 +75,30 @@ libqt_map /* of const char* to QObject* */ q_webchannel_registered_objects(void*
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_keys = (libqt_string*)_out.keys;
-    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_webchannel_registered_objects");
+        fprintf(stderr, "Failed to allocate memory for map string keys in q_webchannel_registered_objects");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_keys[i] = (const char*)_out_keys[i].data;
+        _ret_keys[i] = (char*)malloc(_out_keys[i].len + 1);
+        if (_ret_keys[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_keys[j]);
+            }
+            free(_ret_keys);
+            fprintf(stderr, "Failed to allocate memory for map keys in q_webchannel_registered_objects");
+            abort();
+        }
+        memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
+        _ret_keys[i][_out_keys[i].len] = '\0';
     }
     _ret.keys = (void*)_ret_keys;
     _ret.values = _out.values;
-    free(_out_keys);
+    for (size_t i = 0; i < _out.len; ++i) {
+        libqt_free(_out_keys[i].data);
+    }
+    free(_out.keys);
     return _ret;
 }
 
@@ -248,7 +261,7 @@ const char** q_webchannel_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_webchannel_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_webchannel_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

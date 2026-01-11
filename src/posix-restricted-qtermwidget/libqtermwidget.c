@@ -222,7 +222,7 @@ void q_termwidget_set_environment(void* self, const char* environment[static 1])
     size_t environment_len = libqt_strv_length(environment);
     libqt_string* environment_qstr = (libqt_string*)malloc(environment_len * sizeof(libqt_string));
     if (environment_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_termwidget_set_environment");
+        fprintf(stderr, "Failed to allocate memory for string list in q_termwidget_set_environment");
         abort();
     }
     for (size_t i = 0; i < environment_len; ++i) {
@@ -241,7 +241,7 @@ void q_termwidget_qbase_set_environment(void* self, const char* environment[stat
     size_t environment_len = libqt_strv_length(environment);
     libqt_string* environment_qstr = (libqt_string*)malloc(environment_len * sizeof(libqt_string));
     if (environment_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_termwidget_set_environment");
+        fprintf(stderr, "Failed to allocate memory for string list in q_termwidget_set_environment");
         abort();
     }
     for (size_t i = 0; i < environment_len; ++i) {
@@ -297,7 +297,7 @@ void q_termwidget_set_args(void* self, const char* args[static 1]) {
     size_t args_len = libqt_strv_length(args);
     libqt_string* args_qstr = (libqt_string*)malloc(args_len * sizeof(libqt_string));
     if (args_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_termwidget_set_args");
+        fprintf(stderr, "Failed to allocate memory for string list in q_termwidget_set_args");
         abort();
     }
     for (size_t i = 0; i < args_len; ++i) {
@@ -316,7 +316,7 @@ void q_termwidget_qbase_set_args(void* self, const char* args[static 1]) {
     size_t args_len = libqt_strv_length(args);
     libqt_string* args_qstr = (libqt_string*)malloc(args_len * sizeof(libqt_string));
     if (args_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_termwidget_set_args");
+        fprintf(stderr, "Failed to allocate memory for string list in q_termwidget_set_args");
         abort();
     }
     for (size_t i = 0; i < args_len; ++i) {
@@ -343,7 +343,7 @@ const char** q_termwidget_get_available_color_schemes(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_termwidget_get_available_color_schemes");
+        fprintf(stderr, "Failed to allocate memory for string list in q_termwidget_get_available_color_schemes");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -366,7 +366,7 @@ const char** q_termwidget_qbase_get_available_color_schemes(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_termwidget_get_available_color_schemes");
+        fprintf(stderr, "Failed to allocate memory for string list in q_termwidget_get_available_color_schemes");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -385,7 +385,7 @@ const char** q_termwidget_available_color_schemes() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_termwidget_available_color_schemes");
+        fprintf(stderr, "Failed to allocate memory for string list in q_termwidget_available_color_schemes");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -516,7 +516,7 @@ const char** q_termwidget_available_key_bindings() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_termwidget_available_key_bindings");
+        fprintf(stderr, "Failed to allocate memory for string list in q_termwidget_available_key_bindings");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2399,7 +2399,7 @@ const char** q_termwidget_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_termwidget_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_termwidget_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

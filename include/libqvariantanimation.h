@@ -112,14 +112,14 @@ void q_variantanimation_set_key_value_at(void* self, double step, void* value);
 ///
 /// @param self QVariantAnimation*
 ///
-libqt_list /* of libqt_pair  tuple of double and QVariant*  */ q_variantanimation_key_values(void* self);
+libqt_list /* of libqt_pair tuple of double and QVariant* */ q_variantanimation_key_values(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariantanimation.html#setKeyValues)
 ///
 /// @param self QVariantAnimation*
-/// @param values libqt_list /* of libqt_pair  tuple of double and QVariant*  */
+/// @param values libqt_list /* of libqt_pair tuple of double and QVariant* */
 ///
-void q_variantanimation_set_key_values(void* self, libqt_list /* of libqt_pair  tuple of double and QVariant*  */ values);
+void q_variantanimation_set_key_values(void* self, libqt_list /* of libqt_pair tuple of double and QVariant* */ values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariantanimation.html#currentValue)
 ///

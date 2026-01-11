@@ -58,23 +58,47 @@ libqt_map /* of char* to char* */ q_webengineurlrequestinfo_http_headers(void* s
     libqt_string* _out_keys = (libqt_string*)_out.keys;
     char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_webengineurlrequestinfo_http_headers");
+        fprintf(stderr, "Failed to allocate memory for map string keys in q_webengineurlrequestinfo_http_headers");
         abort();
     }
     libqt_string* _out_values = (libqt_string*)_out.values;
     char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_webengineurlrequestinfo_http_headers");
-        free(_out_keys);
+        fprintf(stderr, "Failed to allocate memory for map string values in q_webengineurlrequestinfo_http_headers");
+        free(_out.keys);
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_keys[i] = (char*)_out_keys[i].data;
-        _ret_values[i] = (char*)_out_values[i].data;
+        _ret_keys[i] = (char*)malloc(_out_keys[i].len + 1);
+        if (_ret_keys[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_keys[j]);
+            }
+            free(_ret_keys);
+            fprintf(stderr, "Failed to allocate memory for map keys in q_webengineurlrequestinfo_http_headers");
+            abort();
+        }
+        memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
+        _ret_keys[i][_out_keys[i].len] = '\0';
+        _ret_values[i] = (char*)malloc(_out_values[i].len + 1);
+        if (_ret_values[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_keys[j]);
+                libqt_free(_ret_values[j]);
+            }
+            free(_ret_keys);
+            free(_ret_values);
+            fprintf(stderr, "Failed to allocate memory for map string values in q_webengineurlrequestinfo_http_headers");
+            abort();
+        }
     }
     _ret.keys = (void*)_ret_keys;
     _ret.values = (void*)_ret_values;
-    free(_out_keys);
-    free(_out_values);
+    for (size_t i = 0; i < _out.len; ++i) {
+        libqt_free(_out_keys[i].data);
+        libqt_free(_out_values[i].data);
+    }
+    free(_out.keys);
+    free(_out.values);
     return _ret;
 }

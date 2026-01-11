@@ -26,7 +26,7 @@ KMimeTypeChooser* k_mimetypechooser_new3(const char* text, const char* selectedM
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_mimetypechooser_new3");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new3");
         abort();
     }
     for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
@@ -43,7 +43,7 @@ KMimeTypeChooser* k_mimetypechooser_new4(const char* text, const char* selectedM
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_mimetypechooser_new4");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new4");
         abort();
     }
     for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
@@ -60,7 +60,7 @@ KMimeTypeChooser* k_mimetypechooser_new5(const char* text, const char* selectedM
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_mimetypechooser_new5");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new5");
         abort();
     }
     for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
@@ -70,7 +70,7 @@ KMimeTypeChooser* k_mimetypechooser_new5(const char* text, const char* selectedM
     size_t groupsToShow_len = libqt_strv_length(groupsToShow);
     libqt_string* groupsToShow_qstr = (libqt_string*)malloc(groupsToShow_len * sizeof(libqt_string));
     if (groupsToShow_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_mimetypechooser_new5");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new5");
         abort();
     }
     for (size_t i = 0; i < groupsToShow_len; ++i) {
@@ -88,7 +88,7 @@ KMimeTypeChooser* k_mimetypechooser_new6(const char* text, const char* selectedM
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_mimetypechooser_new6");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new6");
         abort();
     }
     for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
@@ -98,7 +98,7 @@ KMimeTypeChooser* k_mimetypechooser_new6(const char* text, const char* selectedM
     size_t groupsToShow_len = libqt_strv_length(groupsToShow);
     libqt_string* groupsToShow_qstr = (libqt_string*)malloc(groupsToShow_len * sizeof(libqt_string));
     if (groupsToShow_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_mimetypechooser_new6");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new6");
         abort();
     }
     for (size_t i = 0; i < groupsToShow_len; ++i) {
@@ -116,7 +116,7 @@ KMimeTypeChooser* k_mimetypechooser_new7(const char* text, const char* selectedM
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_mimetypechooser_new7");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new7");
         abort();
     }
     for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
@@ -126,7 +126,7 @@ KMimeTypeChooser* k_mimetypechooser_new7(const char* text, const char* selectedM
     size_t groupsToShow_len = libqt_strv_length(groupsToShow);
     libqt_string* groupsToShow_qstr = (libqt_string*)malloc(groupsToShow_len * sizeof(libqt_string));
     if (groupsToShow_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_mimetypechooser_new7");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new7");
         abort();
     }
     for (size_t i = 0; i < groupsToShow_len; ++i) {
@@ -172,7 +172,7 @@ const char** k_mimetypechooser_mime_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_mimetypechooser_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_mime_types");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -191,7 +191,7 @@ const char** k_mimetypechooser_patterns(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_mimetypechooser_patterns");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_patterns");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1442,7 +1442,7 @@ const char** k_mimetypechooser_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_mimetypechooser_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2260,7 +2260,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new2(const char* title, const ch
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_mimetypechooserdialog_new2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new2");
         abort();
     }
     for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
@@ -2285,7 +2285,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new5(const char* title, const ch
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_mimetypechooserdialog_new5");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new5");
         abort();
     }
     for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
@@ -2302,7 +2302,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new6(const char* title, const ch
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_mimetypechooserdialog_new6");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new6");
         abort();
     }
     for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
@@ -2319,7 +2319,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new7(const char* title, const ch
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_mimetypechooserdialog_new7");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new7");
         abort();
     }
     for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
@@ -2329,7 +2329,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new7(const char* title, const ch
     size_t groupsToShow_len = libqt_strv_length(groupsToShow);
     libqt_string* groupsToShow_qstr = (libqt_string*)malloc(groupsToShow_len * sizeof(libqt_string));
     if (groupsToShow_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_mimetypechooserdialog_new7");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new7");
         abort();
     }
     for (size_t i = 0; i < groupsToShow_len; ++i) {
@@ -2347,7 +2347,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new8(const char* title, const ch
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_mimetypechooserdialog_new8");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new8");
         abort();
     }
     for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
@@ -2357,7 +2357,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new8(const char* title, const ch
     size_t groupsToShow_len = libqt_strv_length(groupsToShow);
     libqt_string* groupsToShow_qstr = (libqt_string*)malloc(groupsToShow_len * sizeof(libqt_string));
     if (groupsToShow_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_mimetypechooserdialog_new8");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new8");
         abort();
     }
     for (size_t i = 0; i < groupsToShow_len; ++i) {
@@ -2375,7 +2375,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new9(const char* title, const ch
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_mimetypechooserdialog_new9");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new9");
         abort();
     }
     for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
@@ -2385,7 +2385,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new9(const char* title, const ch
     size_t groupsToShow_len = libqt_strv_length(groupsToShow);
     libqt_string* groupsToShow_qstr = (libqt_string*)malloc(groupsToShow_len * sizeof(libqt_string));
     if (groupsToShow_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_mimetypechooserdialog_new9");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new9");
         abort();
     }
     for (size_t i = 0; i < groupsToShow_len; ++i) {
@@ -2403,7 +2403,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new10(const char* title, const c
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_mimetypechooserdialog_new10");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new10");
         abort();
     }
     for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
@@ -3740,7 +3740,7 @@ const char** k_mimetypechooserdialog_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_mimetypechooserdialog_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

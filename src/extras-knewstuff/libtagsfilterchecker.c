@@ -5,7 +5,7 @@ KNSCore__TagsFilterChecker* k_nscore__tagsfilterchecker_new(const char* tagFilte
     size_t tagFilter_len = libqt_strv_length(tagFilter);
     libqt_string* tagFilter_qstr = (libqt_string*)malloc(tagFilter_len * sizeof(libqt_string));
     if (tagFilter_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_nscore__tagsfilterchecker_new");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__tagsfilterchecker_new");
         abort();
     }
     for (size_t i = 0; i < tagFilter_len; ++i) {
@@ -22,7 +22,7 @@ bool k_nscore__tagsfilterchecker_filter_accepts(void* self, const char* tags[sta
     size_t tags_len = libqt_strv_length(tags);
     libqt_string* tags_qstr = (libqt_string*)malloc(tags_len * sizeof(libqt_string));
     if (tags_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_nscore__tagsfilterchecker_filter_accepts");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__tagsfilterchecker_filter_accepts");
         abort();
     }
     for (size_t i = 0; i < tags_len; ++i) {

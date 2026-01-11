@@ -89,15 +89,15 @@ QVariant* q_variant_new17(libqt_map /* of const char* to QVariant* */ hash) {
     // Convert libqt_map to QHash<QString,QVariant>
     libqt_map hash_ret;
     hash_ret.len = hash.len;
-    hash_ret.keys = malloc(hash_ret.len * sizeof(libqt_string));
+    hash_ret.keys = (libqt_string*)malloc(hash_ret.len * sizeof(libqt_string));
     if (hash_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_variant_new17\n");
         abort();
     }
-    hash_ret.values = malloc(hash_ret.len * sizeof(QVariant*));
+    hash_ret.values = (QVariant**)malloc(hash_ret.len * sizeof(QVariant*));
     if (hash_ret.values == NULL) {
         free(hash_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_variant_new17\n");
         abort();
     }
     const char** hash_karr = (const char**)hash.keys;
@@ -110,8 +110,8 @@ QVariant* q_variant_new17(libqt_map /* of const char* to QVariant* */ hash) {
     }
 
     QVariant* _out = QVariant_new17(hash_ret);
-    libqt_free(hash_ret.keys);
-    libqt_free(hash_ret.values);
+    free(hash_ret.keys);
+    free(hash_ret.values);
     return _out;
 }
 
@@ -135,15 +135,15 @@ QVariant* q_variant_new22(libqt_map /* of const char* to QVariant* */ mapVal) {
     // Convert libqt_map to QMap<QString,QVariant>
     libqt_map mapVal_ret;
     mapVal_ret.len = mapVal.len;
-    mapVal_ret.keys = malloc(mapVal_ret.len * sizeof(libqt_string));
+    mapVal_ret.keys = (libqt_string*)malloc(mapVal_ret.len * sizeof(libqt_string));
     if (mapVal_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_variant_new22\n");
         abort();
     }
-    mapVal_ret.values = malloc(mapVal_ret.len * sizeof(QVariant*));
+    mapVal_ret.values = (QVariant**)malloc(mapVal_ret.len * sizeof(QVariant*));
     if (mapVal_ret.values == NULL) {
         free(mapVal_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_variant_new22\n");
         abort();
     }
     const char** mapVal_karr = (const char**)mapVal.keys;
@@ -156,8 +156,8 @@ QVariant* q_variant_new22(libqt_map /* of const char* to QVariant* */ mapVal) {
     }
 
     QVariant* _out = QVariant_new22(mapVal_ret);
-    libqt_free(mapVal_ret.keys);
-    libqt_free(mapVal_ret.values);
+    free(mapVal_ret.keys);
+    free(mapVal_ret.values);
     return _out;
 }
 
@@ -173,7 +173,7 @@ QVariant* q_variant_new25(const char* stringlist[static 1]) {
     size_t stringlist_len = libqt_strv_length(stringlist);
     libqt_string* stringlist_qstr = (libqt_string*)malloc(stringlist_len * sizeof(libqt_string));
     if (stringlist_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_variant_new25");
+        fprintf(stderr, "Failed to allocate memory for string list in q_variant_new25");
         abort();
     }
     for (size_t i = 0; i < stringlist_len; ++i) {
@@ -377,7 +377,7 @@ const char** q_variant_to_string_list(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_variant_to_string_list");
+        fprintf(stderr, "Failed to allocate memory for string list in q_variant_to_string_list");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -418,17 +418,30 @@ libqt_map /* of const char* to QVariant* */ q_variant_to_map(void* self) {
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_keys = (libqt_string*)_out.keys;
-    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_variant_to_map");
+        fprintf(stderr, "Failed to allocate memory for map string keys in q_variant_to_map");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_keys[i] = (const char*)_out_keys[i].data;
+        _ret_keys[i] = (char*)malloc(_out_keys[i].len + 1);
+        if (_ret_keys[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_keys[j]);
+            }
+            free(_ret_keys);
+            fprintf(stderr, "Failed to allocate memory for map keys in q_variant_to_map");
+            abort();
+        }
+        memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
+        _ret_keys[i][_out_keys[i].len] = '\0';
     }
     _ret.keys = (void*)_ret_keys;
     _ret.values = _out.values;
-    free(_out_keys);
+    for (size_t i = 0; i < _out.len; ++i) {
+        libqt_free(_out_keys[i].data);
+    }
+    free(_out.keys);
     return _ret;
 }
 
@@ -438,17 +451,30 @@ libqt_map /* of const char* to QVariant* */ q_variant_to_hash(void* self) {
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_keys = (libqt_string*)_out.keys;
-    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_variant_to_hash");
+        fprintf(stderr, "Failed to allocate memory for map string keys in q_variant_to_hash");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_keys[i] = (const char*)_out_keys[i].data;
+        _ret_keys[i] = (char*)malloc(_out_keys[i].len + 1);
+        if (_ret_keys[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_keys[j]);
+            }
+            free(_ret_keys);
+            fprintf(stderr, "Failed to allocate memory for map keys in q_variant_to_hash");
+            abort();
+        }
+        memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
+        _ret_keys[i][_out_keys[i].len] = '\0';
     }
     _ret.keys = (void*)_ret_keys;
     _ret.values = _out.values;
-    free(_out_keys);
+    for (size_t i = 0; i < _out.len; ++i) {
+        libqt_free(_out_keys[i].data);
+    }
+    free(_out.keys);
     return _ret;
 }
 

@@ -124,6 +124,16 @@ QVariant* q_webenginehistorymodel_data(void* self, void* index, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehistorymodel.html#roleNames)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QWebEngineHistoryModel*
 ///
 libqt_map /* of int to char* */ q_webenginehistorymodel_role_names(void* self);
@@ -273,6 +283,16 @@ bool q_webenginehistorymodel_set_header_data(void* self, int section, int32_t or
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#itemData)
+///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
 ///
 /// @param self QWebEngineHistoryModel*
 /// @param index QModelIndex*

@@ -40,7 +40,7 @@ int32_t q_placecontent_type(void* self) {
     return QPlaceContent_Type((QPlaceContent*)self);
 }
 
-libqt_list /* of int32_t */ q_placecontent_data_tags(void* self) {
+libqt_list /* of enum QPlaceContent__DataTag */ q_placecontent_data_tags(void* self) {
     libqt_list _arr = QPlaceContent_DataTags((QPlaceContent*)self);
     return _arr;
 }

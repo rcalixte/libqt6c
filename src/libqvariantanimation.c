@@ -67,12 +67,12 @@ void q_variantanimation_set_key_value_at(void* self, double step, void* value) {
     QVariantAnimation_SetKeyValueAt((QVariantAnimation*)self, step, (QVariant*)value);
 }
 
-libqt_list /* of libqt_pair  tuple of double and QVariant*  */ q_variantanimation_key_values(void* self) {
+libqt_list /* of libqt_pair tuple of double and QVariant* */ q_variantanimation_key_values(void* self) {
     libqt_list _arr = QVariantAnimation_KeyValues((QVariantAnimation*)self);
     return _arr;
 }
 
-void q_variantanimation_set_key_values(void* self, libqt_list /* of libqt_pair  tuple of double and QVariant*  */ values) {
+void q_variantanimation_set_key_values(void* self, libqt_list /* of libqt_pair tuple of double and QVariant* */ values) {
     QVariantAnimation_SetKeyValues((QVariantAnimation*)self, values);
 }
 
@@ -391,7 +391,7 @@ const char** q_variantanimation_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_variantanimation_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_variantanimation_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

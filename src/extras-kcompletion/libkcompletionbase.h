@@ -228,18 +228,31 @@ KCompletion* k_completionbase_comp_obj(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#keyBindingMap)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     for (size_t j = 0; ((QKeySequence**)map.values)[i][j] != NULL; j++) {
+///         free(((QKeySequence**)map.values)[i][j]);
+///     }
+///     free(((QKeySequence*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self KCompletionBase*
 ///
-libqt_map /* of int32_t to libqt_list  of QKeySequence*  */ k_completionbase_key_binding_map(void* self);
+libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* */ k_completionbase_key_binding_map(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#keyBindingMap)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KCompletionBase*
-/// @param callback libqt_map /* of int32_t to libqt_list  of QKeySequence*  */ func()
+/// @param callback libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* */ func()
 ///
-void k_completionbase_on_key_binding_map(void* self, libqt_map /* of int32_t to libqt_list  of QKeySequence*  */ (*callback)());
+void k_completionbase_on_key_binding_map(void* self, libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* */ (*callback)());
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#keyBindingMap)
 ///
@@ -247,14 +260,14 @@ void k_completionbase_on_key_binding_map(void* self, libqt_map /* of int32_t to 
 ///
 /// @param self KCompletionBase*
 ///
-libqt_map /* of int32_t to libqt_list  of QKeySequence*  */ k_completionbase_qbase_key_binding_map(void* self);
+libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* */ k_completionbase_qbase_key_binding_map(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setKeyBindingMap)
 ///
 /// @param self KCompletionBase*
 /// @param keyBindingMap libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence* */
 ///
-void k_completionbase_set_key_binding_map(void* self, libqt_map /* of int32_t to QKeySequence* */ keyBindingMap);
+void k_completionbase_set_key_binding_map(void* self, libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence** */ keyBindingMap);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setKeyBindingMap)
 ///
@@ -263,7 +276,7 @@ void k_completionbase_set_key_binding_map(void* self, libqt_map /* of int32_t to
 /// @param self KCompletionBase*
 /// @param callback void func(KCompletionBase* self, libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence* */ /* of enum KCompletionBase__KeyBindingType to QKeySequence* */)
 ///
-void k_completionbase_on_set_key_binding_map(void* self, void (*callback)(void*, libqt_map /* of int32_t to QKeySequence* */));
+void k_completionbase_on_set_key_binding_map(void* self, void (*callback)(void*, libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence** */));
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setKeyBindingMap)
 ///
@@ -272,7 +285,7 @@ void k_completionbase_on_set_key_binding_map(void* self, void (*callback)(void*,
 /// @param self KCompletionBase*
 /// @param keyBindingMap libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence* */
 ///
-void k_completionbase_qbase_set_key_binding_map(void* self, libqt_map /* of int32_t to QKeySequence* */ keyBindingMap);
+void k_completionbase_qbase_set_key_binding_map(void* self, libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence** */ keyBindingMap);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setDelegate)
 ///

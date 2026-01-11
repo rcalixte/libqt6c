@@ -213,15 +213,28 @@ libqt_map /* of char* to QVariant* */ q_sslconfiguration_backend_configuration(v
     libqt_string* _out_keys = (libqt_string*)_out.keys;
     char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sslconfiguration_backend_configuration");
+        fprintf(stderr, "Failed to allocate memory for map string keys in q_sslconfiguration_backend_configuration");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_keys[i] = (char*)_out_keys[i].data;
+        _ret_keys[i] = (char*)malloc(_out_keys[i].len + 1);
+        if (_ret_keys[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_keys[j]);
+            }
+            free(_ret_keys);
+            fprintf(stderr, "Failed to allocate memory for map keys in q_sslconfiguration_backend_configuration");
+            abort();
+        }
+        memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
+        _ret_keys[i][_out_keys[i].len] = '\0';
     }
     _ret.keys = (void*)_ret_keys;
     _ret.values = _out.values;
-    free(_out_keys);
+    for (size_t i = 0; i < _out.len; ++i) {
+        libqt_free(_out_keys[i].data);
+    }
+    free(_out.keys);
     return _ret;
 }
 
@@ -285,7 +298,7 @@ void q_sslconfiguration_set_allowed_next_protocols(void* self, const char* proto
     size_t protocols_len = libqt_strv_length(protocols);
     libqt_string* protocols_qstr = (libqt_string*)malloc(protocols_len * sizeof(libqt_string));
     if (protocols_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sslconfiguration_set_allowed_next_protocols");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sslconfiguration_set_allowed_next_protocols");
         abort();
     }
     for (size_t i = 0; i < protocols_len; ++i) {
@@ -301,7 +314,7 @@ const char** q_sslconfiguration_allowed_next_protocols(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sslconfiguration_allowed_next_protocols");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sslconfiguration_allowed_next_protocols");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -338,15 +351,15 @@ void q_sslconfiguration_set_backend_configuration1(void* self, libqt_map /* of c
     // Convert libqt_map to QMap<QByteArray,QVariant>
     libqt_map backendConfiguration_ret;
     backendConfiguration_ret.len = backendConfiguration.len;
-    backendConfiguration_ret.keys = malloc(backendConfiguration_ret.len * sizeof(libqt_string));
+    backendConfiguration_ret.keys = (libqt_string*)malloc(backendConfiguration_ret.len * sizeof(libqt_string));
     if (backendConfiguration_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_sslconfiguration_set_backend_configuration1\n");
         abort();
     }
-    backendConfiguration_ret.values = malloc(backendConfiguration_ret.len * sizeof(QVariant*));
+    backendConfiguration_ret.values = (QVariant**)malloc(backendConfiguration_ret.len * sizeof(QVariant*));
     if (backendConfiguration_ret.values == NULL) {
         free(backendConfiguration_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_sslconfiguration_set_backend_configuration1\n");
         abort();
     }
     char** backendConfiguration_karr = (char**)backendConfiguration.keys;
@@ -358,8 +371,8 @@ void q_sslconfiguration_set_backend_configuration1(void* self, libqt_map /* of c
         backendConfiguration_vdest[i] = backendConfiguration_varr[i];
     }
     QSslConfiguration_SetBackendConfiguration1((QSslConfiguration*)self, backendConfiguration_ret);
-    libqt_free(backendConfiguration_ret.keys);
-    libqt_free(backendConfiguration_ret.values);
+    free(backendConfiguration_ret.keys);
+    free(backendConfiguration_ret.values);
 }
 
 void q_sslconfiguration_delete(void* self) {

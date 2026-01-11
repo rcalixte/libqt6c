@@ -82,7 +82,7 @@ const char** k_completionbox_items(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_completionbox_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_completionbox_items");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -111,7 +111,7 @@ void k_completionbox_insert_items(void* self, const char* items[static 1]) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_completionbox_insert_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_completionbox_insert_items");
         abort();
     }
     for (size_t i = 0; i < items_len; ++i) {
@@ -126,7 +126,7 @@ void k_completionbox_set_items(void* self, const char* items[static 1]) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_completionbox_set_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_completionbox_set_items");
         abort();
     }
     for (size_t i = 0; i < items_len; ++i) {
@@ -291,7 +291,7 @@ void k_completionbox_insert_items2(void* self, const char* items[static 1], int 
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_completionbox_insert_items2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_completionbox_insert_items2");
         abort();
     }
     for (size_t i = 0; i < items_len; ++i) {
@@ -330,7 +330,7 @@ void k_completionbox_add_items(void* self, const char* labels[static 1]) {
     size_t labels_len = libqt_strv_length(labels);
     libqt_string* labels_qstr = (libqt_string*)malloc(labels_len * sizeof(libqt_string));
     if (labels_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_completionbox_add_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_completionbox_add_items");
         abort();
     }
     for (size_t i = 0; i < labels_len; ++i) {
@@ -2295,7 +2295,7 @@ const char** k_completionbox_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_completionbox_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_completionbox_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2454,7 +2454,7 @@ const char** k_completionbox_mime_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_completionbox_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in k_completionbox_mime_types");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2473,7 +2473,7 @@ const char** k_completionbox_qbase_mime_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_completionbox_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in k_completionbox_mime_types");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

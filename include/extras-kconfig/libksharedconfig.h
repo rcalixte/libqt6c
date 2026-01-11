@@ -190,6 +190,17 @@ const char** k_sharedconfig_group_list(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#entryMap)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self KSharedConfig*
 ///
 libqt_map /* of const char* to const char* */ k_sharedconfig_entry_map(void* self);
@@ -223,6 +234,17 @@ KConfig* k_sharedconfig_copy_to2(void* self, const char* file, void* config);
 /// Inherited from KConfig
 ///
 /// [Upstream resources](https://api.kde.org/kconfig.html#entryMap)
+///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
 ///
 /// @param self KSharedConfig*
 /// @param aGroup const char*

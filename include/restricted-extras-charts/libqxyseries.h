@@ -501,7 +501,7 @@ void q_xyseries_clear_points_configuration2(void* self, int32_t key);
 /// @param index int
 /// @param configuration libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */
 ///
-void q_xyseries_set_point_configuration(void* self, int index, libqt_map /* of int32_t to QVariant* */ configuration);
+void q_xyseries_set_point_configuration(void* self, int index, libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */ configuration);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointConfiguration)
 ///
@@ -515,22 +515,43 @@ void q_xyseries_set_point_configuration2(void* self, int index, int32_t key, voi
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointsConfiguration)
 ///
 /// @param self QXYSeries*
-/// @param pointsConfiguration libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */
+/// @param pointsConfiguration libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */
 ///
-void q_xyseries_set_points_configuration(void* self, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ pointsConfiguration);
+void q_xyseries_set_points_configuration(void* self, libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */ pointsConfiguration);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointConfiguration)
+///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
 ///
 /// @param self QXYSeries*
 /// @param index int
 ///
-libqt_map /* of int32_t to QVariant* */ q_xyseries_point_configuration(void* self, int index);
+libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */ q_xyseries_point_configuration(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointsConfiguration)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((libqt_map*)map.values)[i].keys);
+///     free(((libqt_map*)map.values)[i].values);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QXYSeries*
 ///
-libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ q_xyseries_points_configuration(void* self);
+libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */ q_xyseries_points_configuration(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#sizeBy)
 ///
@@ -887,16 +908,16 @@ void q_xyseries_on_best_fit_line_color_changed(void* self, void (*callback)(void
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointsConfigurationChanged)
 ///
 /// @param self QXYSeries*
-/// @param configuration libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */
+/// @param configuration libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */
 ///
-void q_xyseries_points_configuration_changed(void* self, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ configuration);
+void q_xyseries_points_configuration_changed(void* self, libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */ configuration);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointsConfigurationChanged)
 ///
 /// @param self QXYSeries*
-/// @param callback void func(QXYSeries* self, libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */ /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */)
+/// @param callback void func(QXYSeries* self, libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */ /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */)
 ///
-void q_xyseries_on_points_configuration_changed(void* self, void (*callback)(void*, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */));
+void q_xyseries_on_points_configuration_changed(void* self, void (*callback)(void*, libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#markerSizeChanged)
 ///

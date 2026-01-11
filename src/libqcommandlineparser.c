@@ -62,7 +62,7 @@ void q_commandlineparser_process(void* self, const char* arguments[static 1]) {
     size_t arguments_len = libqt_strv_length(arguments);
     libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
     if (arguments_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_commandlineparser_process");
+        fprintf(stderr, "Failed to allocate memory for string list in q_commandlineparser_process");
         abort();
     }
     for (size_t i = 0; i < arguments_len; ++i) {
@@ -81,7 +81,7 @@ bool q_commandlineparser_parse(void* self, const char* arguments[static 1]) {
     size_t arguments_len = libqt_strv_length(arguments);
     libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
     if (arguments_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_commandlineparser_parse");
+        fprintf(stderr, "Failed to allocate memory for string list in q_commandlineparser_parse");
         abort();
     }
     for (size_t i = 0; i < arguments_len; ++i) {
@@ -116,7 +116,7 @@ const char** q_commandlineparser_values(void* self, const char* name) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_commandlineparser_values");
+        fprintf(stderr, "Failed to allocate memory for string list in q_commandlineparser_values");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -146,7 +146,7 @@ const char** q_commandlineparser_values2(void* self, void* option) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_commandlineparser_values2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_commandlineparser_values2");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -165,7 +165,7 @@ const char** q_commandlineparser_positional_arguments(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_commandlineparser_positional_arguments");
+        fprintf(stderr, "Failed to allocate memory for string list in q_commandlineparser_positional_arguments");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -184,7 +184,7 @@ const char** q_commandlineparser_option_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_commandlineparser_option_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_commandlineparser_option_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -203,7 +203,7 @@ const char** q_commandlineparser_unknown_option_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_commandlineparser_unknown_option_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_commandlineparser_unknown_option_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

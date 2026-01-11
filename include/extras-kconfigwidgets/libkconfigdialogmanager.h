@@ -109,6 +109,17 @@ bool k_configdialogmanager_is_default(void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#propertyMap)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 libqt_map* /* of const char* to char* */ k_configdialogmanager_property_map();
 
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#updateSettings)

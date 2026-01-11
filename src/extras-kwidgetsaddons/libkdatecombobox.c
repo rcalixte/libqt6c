@@ -88,15 +88,26 @@ libqt_map /* of QDate* to const char* */ k_datecombobox_date_map(void* self) {
     libqt_string* _out_values = (libqt_string*)_out.values;
     const char** _ret_values = (const char**)malloc(_ret.len * sizeof(const char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_datecombobox_date_map");
+        fprintf(stderr, "Failed to allocate memory for map string values in k_datecombobox_date_map");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_values[i] = (const char*)_out_values[i].data;
+        _ret_values[i] = (const char*)malloc(_out_values[i].len + 1);
+        if (_ret_values[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_values[j]);
+            }
+            free(_ret_values);
+            fprintf(stderr, "Failed to allocate memory for map string values in k_datecombobox_date_map");
+            abort();
+        }
     }
     _ret.keys = _out.keys;
     _ret.values = (void*)_ret_values;
-    free(_out_values);
+    for (size_t i = 0; i < _out.len; ++i) {
+        libqt_free(_out_values[i].data);
+    }
+    free(_out.values);
     return _ret;
 }
 
@@ -164,15 +175,15 @@ void k_datecombobox_set_date_map(void* self, libqt_map /* of QDate* to const cha
     // Convert libqt_map to QMap<QDate,QString>
     libqt_map dateMap_ret;
     dateMap_ret.len = dateMap.len;
-    dateMap_ret.keys = malloc(dateMap_ret.len * sizeof(QDate*));
+    dateMap_ret.keys = (QDate**)malloc(dateMap_ret.len * sizeof(QDate*));
     if (dateMap_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in k_datecombobox_set_date_map\n");
         abort();
     }
-    dateMap_ret.values = malloc(dateMap_ret.len * sizeof(libqt_string));
+    dateMap_ret.values = (libqt_string*)malloc(dateMap_ret.len * sizeof(libqt_string));
     if (dateMap_ret.values == NULL) {
         free(dateMap_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in k_datecombobox_set_date_map\n");
         abort();
     }
     QDate** dateMap_karr = (QDate**)dateMap.keys;
@@ -184,8 +195,8 @@ void k_datecombobox_set_date_map(void* self, libqt_map /* of QDate* to const cha
         dateMap_vdest[i] = qstring(dateMap_varr[i]);
     }
     KDateComboBox_SetDateMap((KDateComboBox*)self, dateMap_ret);
-    libqt_free(dateMap_ret.keys);
-    libqt_free(dateMap_ret.values);
+    free(dateMap_ret.keys);
+    free(dateMap_ret.values);
 }
 
 bool k_datecombobox_event_filter(void* self, void* object, void* event) {
@@ -527,7 +538,7 @@ void k_datecombobox_add_items(void* self, const char* texts[static 1]) {
     size_t texts_len = libqt_strv_length(texts);
     libqt_string* texts_qstr = (libqt_string*)malloc(texts_len * sizeof(libqt_string));
     if (texts_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_datecombobox_add_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_datecombobox_add_items");
         abort();
     }
     for (size_t i = 0; i < texts_len; ++i) {
@@ -550,7 +561,7 @@ void k_datecombobox_insert_items(void* self, int index, const char* texts[static
     size_t texts_len = libqt_strv_length(texts);
     libqt_string* texts_qstr = (libqt_string*)malloc(texts_len * sizeof(libqt_string));
     if (texts_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_datecombobox_insert_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_datecombobox_insert_items");
         abort();
     }
     for (size_t i = 0; i < texts_len; ++i) {
@@ -1932,7 +1943,7 @@ const char** k_datecombobox_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_datecombobox_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_datecombobox_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

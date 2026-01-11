@@ -120,7 +120,7 @@ const char** k_xmlguiwindow_tool_bar_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_xmlguiwindow_tool_bar_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_xmlguiwindow_tool_bar_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1857,7 +1857,7 @@ const char** k_xmlguiwindow_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_xmlguiwindow_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_xmlguiwindow_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2048,7 +2048,7 @@ const char* k_xmlguiwindow_find_most_recent_x_m_l_file(const char* files[static 
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_xmlguiwindow_find_most_recent_x_m_l_file");
+        fprintf(stderr, "Failed to allocate memory for string list in k_xmlguiwindow_find_most_recent_x_m_l_file");
         abort();
     }
     for (size_t i = 0; i < files_len; ++i) {
@@ -2754,7 +2754,7 @@ const char** k_xmlguiwindow_container_tags(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_xmlguiwindow_container_tags");
+        fprintf(stderr, "Failed to allocate memory for string list in k_xmlguiwindow_container_tags");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2773,7 +2773,7 @@ const char** k_xmlguiwindow_qbase_container_tags(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_xmlguiwindow_container_tags");
+        fprintf(stderr, "Failed to allocate memory for string list in k_xmlguiwindow_container_tags");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2820,7 +2820,7 @@ const char** k_xmlguiwindow_custom_tags(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_xmlguiwindow_custom_tags");
+        fprintf(stderr, "Failed to allocate memory for string list in k_xmlguiwindow_custom_tags");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2839,7 +2839,7 @@ const char** k_xmlguiwindow_qbase_custom_tags(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_xmlguiwindow_custom_tags");
+        fprintf(stderr, "Failed to allocate memory for string list in k_xmlguiwindow_custom_tags");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

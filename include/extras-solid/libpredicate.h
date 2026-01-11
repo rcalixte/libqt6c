@@ -135,7 +135,7 @@ bool k_solid__predicate_matches(void* self, void* device);
 ///
 /// @param self Solid__Predicate*
 ///
-libqt_list /* of int32_t */ k_solid__predicate_used_types(void* self);
+libqt_list /* set of enum Solid__DeviceInterface__Type */ k_solid__predicate_used_types(void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-predicate.html#toString)
 ///

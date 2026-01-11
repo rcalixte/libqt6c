@@ -79,7 +79,7 @@ const char* k_parts__partbase_find_most_recent_x_m_l_file(const char* files[stat
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_parts__partbase_find_most_recent_x_m_l_file");
+        fprintf(stderr, "Failed to allocate memory for string list in k_parts__partbase_find_most_recent_x_m_l_file");
         abort();
     }
     for (size_t i = 0; i < files_len; ++i) {

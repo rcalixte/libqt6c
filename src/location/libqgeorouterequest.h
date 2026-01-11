@@ -133,7 +133,7 @@ int32_t q_georouterequest_feature_weight(void* self, int32_t featureType);
 ///
 /// @return libqt_list of enum QGeoRouteRequest__FeatureType
 ///
-libqt_list /* of int32_t */ q_georouterequest_feature_types(void* self);
+libqt_list /* of enum QGeoRouteRequest__FeatureType */ q_georouterequest_feature_types(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#setRouteOptimization)
 ///

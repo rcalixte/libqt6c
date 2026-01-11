@@ -316,7 +316,7 @@ void q_opengltexture_set_min_mag_filters(void* self, int32_t minificationFilter,
     QOpenGLTexture_SetMinMagFilters((QOpenGLTexture*)self, minificationFilter, magnificationFilter);
 }
 
-libqt_pair /* tuple of int32_t and int32_t */ q_opengltexture_min_mag_filters(void* self) {
+libqt_pair /* tuple of enum QOpenGLTexture__Filter and enum QOpenGLTexture__Filter */ q_opengltexture_min_mag_filters(void* self) {
     return QOpenGLTexture_MinMagFilters((QOpenGLTexture*)self);
 }
 

@@ -181,7 +181,7 @@ bool q_rawfont_supports_character2(void* self, void* character) {
     return QRawFont_SupportsCharacter2((QRawFont*)self, (QChar*)character);
 }
 
-libqt_list /* of int32_t */ q_rawfont_supported_writing_systems(void* self) {
+libqt_list /* of enum QFontDatabase__WritingSystem */ q_rawfont_supported_writing_systems(void* self) {
     libqt_list _arr = QRawFont_SupportedWritingSystems((QRawFont*)self);
     return _arr;
 }

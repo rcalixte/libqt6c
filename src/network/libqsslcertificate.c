@@ -88,7 +88,7 @@ const char** q_sslcertificate_issuer_info(void* self, int32_t info) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sslcertificate_issuer_info");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sslcertificate_issuer_info");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -107,7 +107,7 @@ const char** q_sslcertificate_issuer_info2(void* self, const char* attribute) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sslcertificate_issuer_info2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sslcertificate_issuer_info2");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -126,7 +126,7 @@ const char** q_sslcertificate_subject_info(void* self, int32_t info) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sslcertificate_subject_info");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sslcertificate_subject_info");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -145,7 +145,7 @@ const char** q_sslcertificate_subject_info2(void* self, const char* attribute) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sslcertificate_subject_info2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sslcertificate_subject_info2");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -178,7 +178,7 @@ const char** q_sslcertificate_subject_info_attributes(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sslcertificate_subject_info_attributes");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sslcertificate_subject_info_attributes");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -197,7 +197,7 @@ const char** q_sslcertificate_issuer_info_attributes(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sslcertificate_issuer_info_attributes");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sslcertificate_issuer_info_attributes");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -208,6 +208,71 @@ const char** q_sslcertificate_issuer_info_attributes(void* self) {
         libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
+    return _ret;
+}
+
+libqt_map /* of enum QSsl__AlternativeNameEntryType to const char** */ q_sslcertificate_subject_alternative_names(void* self) {
+    // Convert QMultiMap<QSsl::AlternativeNameEntryType,QString> to libqt_map
+    libqt_map _out = QSslCertificate_SubjectAlternativeNames((QSslCertificate*)self);
+    libqt_map _ret;
+    _ret.len = _out.len;
+    libqt_list* _out_values = (libqt_list*)_out.values;
+    char*** _ret_values = (char***)malloc(_ret.len * sizeof(char**));
+    if (_ret_values == NULL) {
+        free(_out.keys);
+        free(_out.values);
+        fprintf(stderr, "Failed to allocate memory for map value containers in q_sslcertificate_subject_alternative_names");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        libqt_list _value_list = _out_values[i];
+        _ret_values[i] = (char**)malloc((_value_list.len + 1) * sizeof(char*));
+        if (_ret_values[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                for (size_t k = 0; k < ((libqt_list*)_out.values)[j].len; k++) {
+                    libqt_free(_ret_values[j][k]);
+                }
+                libqt_free(_ret_values[j]);
+            }
+            free(_out.keys);
+            free(_ret_values);
+            free(_out.values);
+            fprintf(stderr, "Failed to allocate memory for map values in q_sslcertificate_subject_alternative_names");
+            abort();
+        }
+        libqt_string* _value_str = (libqt_string*)_value_list.data.ptr;
+        size_t j;
+        for (j = 0; j < _value_list.len; j++) {
+            _ret_values[i][j] = (char*)malloc(_value_str[j].len + 1);
+            if (_ret_values[i][j] == NULL) {
+                for (size_t k = 0; k < j; k++) {
+                    free(_ret_values[i][k]);
+                }
+                for (size_t k = 0; k < i; k++) {
+                    for (size_t l = 0; l < ((libqt_list*)_out.values)[k].len; l++) {
+                        free(_ret_values[k][l]);
+                    }
+                    free(_ret_values[k]);
+                }
+                free(_ret_values);
+                fprintf(stderr, "Failed to allocate memory for map value keys in q_sslcertificate_subject_alternative_names");
+                abort();
+            }
+            memcpy(_ret_values[i][j], _value_str[j].data, _value_str[j].len);
+            _ret_values[i][j][_value_str[j].len] = '\0';
+        }
+        _ret_values[i][j] = NULL;
+    }
+    _ret.keys = _out.keys;
+    _ret.values = (void*)_ret_values;
+    for (size_t i = 0; i < _out.len; ++i) {
+        libqt_string* _value_str = (libqt_string*)_out_values[i].data.ptr;
+        for (size_t j = 0; j < _out_values[i].len; j++) {
+            libqt_free(_value_str[j].data);
+        }
+        free(_out_values[i].data.ptr);
+    }
+    free(_out.values);
     return _ret;
 }
 

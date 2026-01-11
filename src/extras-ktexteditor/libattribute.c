@@ -130,7 +130,7 @@ void k_texteditor__attribute_set_font_families(void* self, const char* families[
     size_t families_len = libqt_strv_length(families);
     libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
     if (families_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_texteditor__attribute_set_font_families");
+        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__attribute_set_font_families");
         abort();
     }
     for (size_t i = 0; i < families_len; ++i) {
@@ -371,7 +371,7 @@ void k_texteditor__attribute_set_anchor_names(void* self, const char* names[stat
     size_t names_len = libqt_strv_length(names);
     libqt_string* names_qstr = (libqt_string*)malloc(names_len * sizeof(libqt_string));
     if (names_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_texteditor__attribute_set_anchor_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__attribute_set_anchor_names");
         abort();
     }
     for (size_t i = 0; i < names_len; ++i) {
@@ -387,7 +387,7 @@ const char** k_texteditor__attribute_anchor_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_texteditor__attribute_anchor_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__attribute_anchor_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

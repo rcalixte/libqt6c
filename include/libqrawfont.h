@@ -318,7 +318,7 @@ bool q_rawfont_supports_character2(void* self, void* character);
 ///
 /// @return libqt_list of enum QFontDatabase__WritingSystem
 ///
-libqt_list /* of int32_t */ q_rawfont_supported_writing_systems(void* self);
+libqt_list /* of enum QFontDatabase__WritingSystem */ q_rawfont_supported_writing_systems(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#fontTable)
 ///

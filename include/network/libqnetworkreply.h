@@ -145,7 +145,7 @@ char* q_networkreply_raw_header(void* self, char* headerName);
 ///
 /// @param self QNetworkReply*
 ///
-libqt_list /* of libqt_pair  tuple of char* and char*  */ q_networkreply_raw_header_pairs(void* self);
+libqt_list /* of libqt_pair tuple of char* and char* */ q_networkreply_raw_header_pairs(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkreply.html#headers)
 ///

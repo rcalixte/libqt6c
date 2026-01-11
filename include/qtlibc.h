@@ -34,13 +34,11 @@ extern "C" {
 
 struct libqt_string;
 struct libqt_list;
-struct libqt_bitarray;
 struct libqt_map;
 struct libqt_pair;
 
 typedef struct libqt_string libqt_string;
 typedef struct libqt_list libqt_list;
-typedef struct libqt_bitarray libqt_bitarray;
 typedef struct libqt_map libqt_map;
 typedef struct libqt_pair libqt_pair;
 
@@ -70,12 +68,6 @@ struct libqt_list {
         unsigned int* unsignedints;
         void* ptr;
     } data;
-};
-
-// QBitArray
-struct libqt_bitarray {
-    size_t len;
-    uint8_t* data;
 };
 
 // QMap

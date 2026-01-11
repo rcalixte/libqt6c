@@ -407,7 +407,7 @@ const char** q_sslsocket_available_backends() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sslsocket_available_backends");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sslsocket_available_backends");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -432,7 +432,7 @@ bool q_sslsocket_set_active_backend(const char* backendName) {
     return QSslSocket_SetActiveBackend(qstring(backendName));
 }
 
-libqt_list /* of int32_t */ q_sslsocket_supported_protocols() {
+libqt_list /* of enum QSsl__SslProtocol */ q_sslsocket_supported_protocols() {
     libqt_list _arr = QSslSocket_SupportedProtocols();
     return _arr;
 }
@@ -441,7 +441,7 @@ bool q_sslsocket_is_protocol_supported(int32_t protocol) {
     return QSslSocket_IsProtocolSupported(protocol);
 }
 
-libqt_list /* of int32_t */ q_sslsocket_implemented_classes() {
+libqt_list /* of enum QSsl__ImplementedClass */ q_sslsocket_implemented_classes() {
     libqt_list _arr = QSslSocket_ImplementedClasses();
     return _arr;
 }
@@ -450,7 +450,7 @@ bool q_sslsocket_is_class_implemented(int32_t cl) {
     return QSslSocket_IsClassImplemented(cl);
 }
 
-libqt_list /* of int32_t */ q_sslsocket_supported_features() {
+libqt_list /* of enum QSsl__SupportedFeature */ q_sslsocket_supported_features() {
     libqt_list _arr = QSslSocket_SupportedFeatures();
     return _arr;
 }
@@ -645,7 +645,7 @@ bool q_sslsocket_wait_for_encrypted1(void* self, int msecs) {
     return QSslSocket_WaitForEncrypted1((QSslSocket*)self, msecs);
 }
 
-libqt_list /* of int32_t */ q_sslsocket_supported_protocols1(const char* backendName) {
+libqt_list /* of enum QSsl__SslProtocol */ q_sslsocket_supported_protocols1(const char* backendName) {
     libqt_list _arr = QSslSocket_SupportedProtocols1(qstring(backendName));
     return _arr;
 }
@@ -654,7 +654,7 @@ bool q_sslsocket_is_protocol_supported2(int32_t protocol, const char* backendNam
     return QSslSocket_IsProtocolSupported2(protocol, qstring(backendName));
 }
 
-libqt_list /* of int32_t */ q_sslsocket_implemented_classes1(const char* backendName) {
+libqt_list /* of enum QSsl__ImplementedClass */ q_sslsocket_implemented_classes1(const char* backendName) {
     libqt_list _arr = QSslSocket_ImplementedClasses1(qstring(backendName));
     return _arr;
 }
@@ -663,7 +663,7 @@ bool q_sslsocket_is_class_implemented2(int32_t cl, const char* backendName) {
     return QSslSocket_IsClassImplemented2(cl, qstring(backendName));
 }
 
-libqt_list /* of int32_t */ q_sslsocket_supported_features1(const char* backendName) {
+libqt_list /* of enum QSsl__SupportedFeature */ q_sslsocket_supported_features1(const char* backendName) {
     libqt_list _arr = QSslSocket_SupportedFeatures1(qstring(backendName));
     return _arr;
 }
@@ -1121,7 +1121,7 @@ const char** q_sslsocket_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sslsocket_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sslsocket_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

@@ -176,16 +176,16 @@ void k_widgetitemdelegate_qbase_set_blocked_event_types(void* self, void* widget
 ///
 /// @return libqt_list of enum QEvent__Type
 ///
-libqt_list /* of int32_t */ k_widgetitemdelegate_blocked_event_types(void* self, void* widget);
+libqt_list /* of enum QEvent__Type */ k_widgetitemdelegate_blocked_event_types(void* self, void* widget);
 
 /// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#blockedEventTypes)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KWidgetItemDelegate*
-/// @param callback int* func(KWidgetItemDelegate* self, QWidget* widget)
+/// @param callback libqt_list /* of enum QEvent__Type */ func(KWidgetItemDelegate* self, QWidget* widget)
 ///
-void k_widgetitemdelegate_on_blocked_event_types(void* self, int* (*callback)(void*, void*));
+void k_widgetitemdelegate_on_blocked_event_types(void* self, libqt_list /* of enum QEvent__Type */ (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#blockedEventTypes)
 ///
@@ -196,7 +196,7 @@ void k_widgetitemdelegate_on_blocked_event_types(void* self, int* (*callback)(vo
 ///
 /// @return libqt_list of enum QEvent__Type
 ///
-libqt_list /* of int32_t */ k_widgetitemdelegate_qbase_blocked_event_types(void* self, void* widget);
+libqt_list /* of enum QEvent__Type */ k_widgetitemdelegate_qbase_blocked_event_types(void* self, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

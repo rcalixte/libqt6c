@@ -74,7 +74,7 @@ const char** k_io__batchrenamejob_detailed_error_strings(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_io__batchrenamejob_detailed_error_strings");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__batchrenamejob_detailed_error_strings");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -108,15 +108,15 @@ void k_io__batchrenamejob_add_meta_data2(void* self, libqt_map /* of const char*
     // Convert libqt_map to QMap<QString,QString>
     libqt_map values_ret;
     values_ret.len = values.len;
-    values_ret.keys = malloc(values_ret.len * sizeof(libqt_string));
+    values_ret.keys = (libqt_string*)malloc(values_ret.len * sizeof(libqt_string));
     if (values_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in k_io__batchrenamejob_add_meta_data2\n");
         abort();
     }
-    values_ret.values = malloc(values_ret.len * sizeof(libqt_string));
+    values_ret.values = (libqt_string*)malloc(values_ret.len * sizeof(libqt_string));
     if (values_ret.values == NULL) {
         free(values_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in k_io__batchrenamejob_add_meta_data2\n");
         abort();
     }
     const char** values_karr = (const char**)values.keys;
@@ -128,23 +128,23 @@ void k_io__batchrenamejob_add_meta_data2(void* self, libqt_map /* of const char*
         values_vdest[i] = qstring(values_varr[i]);
     }
     KIO__Job_AddMetaData2((KIO__Job*)self, values_ret);
-    libqt_free(values_ret.keys);
-    libqt_free(values_ret.values);
+    free(values_ret.keys);
+    free(values_ret.values);
 }
 
 void k_io__batchrenamejob_merge_meta_data(void* self, libqt_map /* of const char* to const char* */ values) {
     // Convert libqt_map to QMap<QString,QString>
     libqt_map values_ret;
     values_ret.len = values.len;
-    values_ret.keys = malloc(values_ret.len * sizeof(libqt_string));
+    values_ret.keys = (libqt_string*)malloc(values_ret.len * sizeof(libqt_string));
     if (values_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in k_io__batchrenamejob_merge_meta_data\n");
         abort();
     }
-    values_ret.values = malloc(values_ret.len * sizeof(libqt_string));
+    values_ret.values = (libqt_string*)malloc(values_ret.len * sizeof(libqt_string));
     if (values_ret.values == NULL) {
         free(values_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in k_io__batchrenamejob_merge_meta_data\n");
         abort();
     }
     const char** values_karr = (const char**)values.keys;
@@ -156,8 +156,8 @@ void k_io__batchrenamejob_merge_meta_data(void* self, libqt_map /* of const char
         values_vdest[i] = qstring(values_varr[i]);
     }
     KIO__Job_MergeMetaData((KIO__Job*)self, values_ret);
-    libqt_free(values_ret.keys);
-    libqt_free(values_ret.values);
+    free(values_ret.keys);
+    free(values_ret.values);
 }
 
 KIO__MetaData* k_io__batchrenamejob_outgoing_meta_data(void* self) {
@@ -188,7 +188,7 @@ const char** k_io__batchrenamejob_detailed_error_strings1(void* self, void* reqU
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_io__batchrenamejob_detailed_error_strings1");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__batchrenamejob_detailed_error_strings1");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -207,7 +207,7 @@ const char** k_io__batchrenamejob_detailed_error_strings2(void* self, void* reqU
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_io__batchrenamejob_detailed_error_strings2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__batchrenamejob_detailed_error_strings2");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -461,7 +461,7 @@ const char** k_io__batchrenamejob_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_io__batchrenamejob_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__batchrenamejob_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

@@ -111,6 +111,17 @@ void k_datepickerpopup_set_date_range(void* self, void* minDate, void* maxDate);
 
 /// [Upstream resources](https://api.kde.org/kdatepickerpopup.html#dateMap)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QDate*)map.keys)[i]);
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self KDatePickerPopup*
 ///
 libqt_map /* of QDate* to const char* */ k_datepickerpopup_date_map(void* self);

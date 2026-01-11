@@ -14,7 +14,7 @@ const char** k_stringhandler_capwords2(const char* param1[static 1]) {
     size_t param1_len = libqt_strv_length(param1);
     libqt_string* param1_qstr = (libqt_string*)malloc(param1_len * sizeof(libqt_string));
     if (param1_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_stringhandler_capwords2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_stringhandler_capwords2");
         abort();
     }
     for (size_t i = 0; i < param1_len; ++i) {
@@ -26,7 +26,7 @@ const char** k_stringhandler_capwords2(const char* param1[static 1]) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_stringhandler_capwords2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_stringhandler_capwords2");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -66,7 +66,7 @@ const char** k_stringhandler_perl_split2(const char* param1, const char* param2,
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_stringhandler_perl_split2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_stringhandler_perl_split2");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -85,7 +85,7 @@ const char** k_stringhandler_perl_split3(void* param1, const char* param2, int p
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_stringhandler_perl_split3");
+        fprintf(stderr, "Failed to allocate memory for string list in k_stringhandler_perl_split3");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -104,7 +104,7 @@ const char** k_stringhandler_perl_split4(void* param1, const char* param2, int p
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_stringhandler_perl_split4");
+        fprintf(stderr, "Failed to allocate memory for string list in k_stringhandler_perl_split4");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

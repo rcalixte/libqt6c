@@ -74,15 +74,15 @@ void q_signon__identity_verify_user2(void* self, libqt_map /* of const char* to 
     // Convert libqt_map to QMap<QString,QVariant>
     libqt_map params_ret;
     params_ret.len = params.len;
-    params_ret.keys = malloc(params_ret.len * sizeof(libqt_string));
+    params_ret.keys = (libqt_string*)malloc(params_ret.len * sizeof(libqt_string));
     if (params_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_signon__identity_verify_user2\n");
         abort();
     }
-    params_ret.values = malloc(params_ret.len * sizeof(QVariant*));
+    params_ret.values = (QVariant**)malloc(params_ret.len * sizeof(QVariant*));
     if (params_ret.values == NULL) {
         free(params_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_signon__identity_verify_user2\n");
         abort();
     }
     const char** params_karr = (const char**)params.keys;
@@ -94,8 +94,8 @@ void q_signon__identity_verify_user2(void* self, libqt_map /* of const char* to 
         params_vdest[i] = params_varr[i];
     }
     SignOn__Identity_VerifyUser2((SignOn__Identity*)self, params_ret);
-    libqt_free(params_ret.keys);
-    libqt_free(params_ret.values);
+    free(params_ret.keys);
+    free(params_ret.values);
 }
 
 void q_signon__identity_verify_secret(void* self, const char* secret) {
@@ -118,7 +118,7 @@ void q_signon__identity_methods_available(void* self, const char* methods[static
     size_t methods_len = libqt_strv_length(methods);
     libqt_string* methods_qstr = (libqt_string*)malloc(methods_len * sizeof(libqt_string));
     if (methods_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_signon__identity_methods_available");
+        fprintf(stderr, "Failed to allocate memory for string list in q_signon__identity_methods_available");
         abort();
     }
     for (size_t i = 0; i < methods_len; ++i) {
@@ -356,7 +356,7 @@ const char** q_signon__identity_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_signon__identity_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_signon__identity_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

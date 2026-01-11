@@ -213,6 +213,16 @@ int32_t q_pdfbookmarkmodel_qbase_column_count(void* self, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfbookmarkmodel.html#roleNames)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QPdfBookmarkModel*
 ///
 libqt_map /* of int to char* */ q_pdfbookmarkmodel_role_names(void* self);
@@ -1098,6 +1108,16 @@ void q_pdfbookmarkmodel_on_set_header_data(void* self, bool (*callback)(void*, i
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#itemData)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
@@ -1108,6 +1128,16 @@ libqt_map /* of int to QVariant* */ q_pdfbookmarkmodel_item_data(void* self, voi
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#itemData)
+///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

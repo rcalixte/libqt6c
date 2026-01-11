@@ -13,7 +13,7 @@ const char** q_standardpaths_standard_locations(int32_t type) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_standardpaths_standard_locations");
+        fprintf(stderr, "Failed to allocate memory for string list in q_standardpaths_standard_locations");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -39,7 +39,7 @@ const char** q_standardpaths_locate_all(int32_t type, const char* fileName) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_standardpaths_locate_all");
+        fprintf(stderr, "Failed to allocate memory for string list in q_standardpaths_locate_all");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -87,7 +87,7 @@ const char** q_standardpaths_locate_all3(int32_t type, const char* fileName, int
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_standardpaths_locate_all3");
+        fprintf(stderr, "Failed to allocate memory for string list in q_standardpaths_locate_all3");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -105,7 +105,7 @@ const char* q_standardpaths_find_executable2(const char* executableName, const c
     size_t paths_len = libqt_strv_length(paths);
     libqt_string* paths_qstr = (libqt_string*)malloc(paths_len * sizeof(libqt_string));
     if (paths_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_standardpaths_find_executable2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_standardpaths_find_executable2");
         abort();
     }
     for (size_t i = 0; i < paths_len; ++i) {

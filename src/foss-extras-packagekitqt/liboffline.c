@@ -30,17 +30,30 @@ libqt_map /* of const char* to QVariant* */ q_packagekit__offline_prepared_upgra
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_keys = (libqt_string*)_out.keys;
-    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_packagekit__offline_prepared_upgrade");
+        fprintf(stderr, "Failed to allocate memory for map string keys in q_packagekit__offline_prepared_upgrade");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_keys[i] = (const char*)_out_keys[i].data;
+        _ret_keys[i] = (char*)malloc(_out_keys[i].len + 1);
+        if (_ret_keys[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_keys[j]);
+            }
+            free(_ret_keys);
+            fprintf(stderr, "Failed to allocate memory for map keys in q_packagekit__offline_prepared_upgrade");
+            abort();
+        }
+        memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
+        _ret_keys[i][_out_keys[i].len] = '\0';
     }
     _ret.keys = (void*)_ret_keys;
     _ret.values = _out.values;
-    free(_out_keys);
+    for (size_t i = 0; i < _out.len; ++i) {
+        libqt_free(_out_keys[i].data);
+    }
+    free(_out.keys);
     return _ret;
 }
 
@@ -72,7 +85,7 @@ void q_packagekit__offline_prepared_updates(void* self, const char* updates[stat
     size_t updates_len = libqt_strv_length(updates);
     libqt_string* updates_qstr = (libqt_string*)malloc(updates_len * sizeof(libqt_string));
     if (updates_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_packagekit__offline_prepared_updates");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__offline_prepared_updates");
         abort();
     }
     for (size_t i = 0; i < updates_len; ++i) {
@@ -222,7 +235,7 @@ const char** q_packagekit__offline_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_packagekit__offline_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__offline_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

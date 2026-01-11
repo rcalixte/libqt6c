@@ -334,11 +334,11 @@ void k_texteditor__view_on_status_bar_enabled_changed(void* self, void (*callbac
     KTextEditor__View_Connect_StatusBarEnabledChanged((KTextEditor__View*)self, (intptr_t)callback);
 }
 
-void k_texteditor__view_read_session_config(void* self, void* config, libqt_list /* of const char* */ flags) {
+void k_texteditor__view_read_session_config(void* self, void* config, libqt_list /* set of const char* */ flags) {
     KTextEditor__View_ReadSessionConfig((KTextEditor__View*)self, (KConfigGroup*)config, flags);
 }
 
-void k_texteditor__view_write_session_config(void* self, void* config, libqt_list /* of const char* */ flags) {
+void k_texteditor__view_write_session_config(void* self, void* config, libqt_list /* set of const char* */ flags) {
     KTextEditor__View_WriteSessionConfig((KTextEditor__View*)self, (KConfigGroup*)config, flags);
 }
 
@@ -360,7 +360,7 @@ const char** k_texteditor__view_config_keys(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_texteditor__view_config_keys");
+        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__view_config_keys");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1792,7 +1792,7 @@ const char** k_texteditor__view_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_texteditor__view_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__view_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2004,7 +2004,7 @@ const char* k_texteditor__view_find_most_recent_x_m_l_file(const char* files[sta
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_texteditor__view_find_most_recent_x_m_l_file");
+        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__view_find_most_recent_x_m_l_file");
         abort();
     }
     for (size_t i = 0; i < files_len; ++i) {

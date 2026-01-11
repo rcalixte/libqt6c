@@ -61,6 +61,17 @@ QUrl* q_webengineurlrequestjob_initiator(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#requestHeaders)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QWebEngineUrlRequestJob*
 ///
 libqt_map /* of char* to char* */ q_webengineurlrequestjob_request_headers(void* self);
@@ -92,6 +103,13 @@ void q_webengineurlrequestjob_fail(void* self, int32_t error);
 /// @param url QUrl*
 ///
 void q_webengineurlrequestjob_redirect(void* self, void* url);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#setAdditionalResponseHeaders)
+///
+/// @param self QWebEngineUrlRequestJob*
+/// @param additionalResponseHeaders libqt_map /* of char* to char** */
+///
+void q_webengineurlrequestjob_set_additional_response_headers(void* self, libqt_map /* of char* to char** */ additionalResponseHeaders);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

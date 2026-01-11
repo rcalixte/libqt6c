@@ -15,7 +15,7 @@ const char* k_standardactions_name(int32_t param1) {
     return _ret;
 }
 
-libqt_list /* of int32_t */ k_standardactions_action_ids() {
+libqt_list /* of enum KStandardActions__StandardAction */ k_standardactions_action_ids() {
     libqt_list _arr = KStandardActions_ActionIds();
     return _arr;
 }

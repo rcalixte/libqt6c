@@ -398,11 +398,33 @@ QCborMap* q_cbormap_from_json_object(void* o);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#toVariantMap)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QCborMap*
 ///
 libqt_map /* of const char* to QVariant* */ q_cbormap_to_variant_map(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#toVariantHash)
+///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
 ///
 /// @param self QCborMap*
 ///

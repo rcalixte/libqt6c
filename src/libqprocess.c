@@ -63,7 +63,7 @@ const char** q_processenvironment_to_string_list(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_processenvironment_to_string_list");
+        fprintf(stderr, "Failed to allocate memory for string list in q_processenvironment_to_string_list");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -82,7 +82,7 @@ const char** q_processenvironment_keys(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_processenvironment_keys");
+        fprintf(stderr, "Failed to allocate memory for string list in q_processenvironment_keys");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -194,7 +194,7 @@ const char** q_process_arguments(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_process_arguments");
+        fprintf(stderr, "Failed to allocate memory for string list in q_process_arguments");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -212,7 +212,7 @@ void q_process_set_arguments(void* self, const char* arguments[static 1]) {
     size_t arguments_len = libqt_strv_length(arguments);
     libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
     if (arguments_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_process_set_arguments");
+        fprintf(stderr, "Failed to allocate memory for string list in q_process_set_arguments");
         abort();
     }
     for (size_t i = 0; i < arguments_len; ++i) {
@@ -302,7 +302,7 @@ void q_process_set_environment(void* self, const char* environment[static 1]) {
     size_t environment_len = libqt_strv_length(environment);
     libqt_string* environment_qstr = (libqt_string*)malloc(environment_len * sizeof(libqt_string));
     if (environment_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_process_set_environment");
+        fprintf(stderr, "Failed to allocate memory for string list in q_process_set_environment");
         abort();
     }
     for (size_t i = 0; i < environment_len; ++i) {
@@ -318,7 +318,7 @@ const char** q_process_environment(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_process_environment");
+        fprintf(stderr, "Failed to allocate memory for string list in q_process_environment");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -455,7 +455,7 @@ const char** q_process_system_environment() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_process_system_environment");
+        fprintf(stderr, "Failed to allocate memory for string list in q_process_system_environment");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -554,7 +554,7 @@ void q_process_start22(void* self, const char* program, const char* arguments[st
     size_t arguments_len = libqt_strv_length(arguments);
     libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
     if (arguments_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_process_start22");
+        fprintf(stderr, "Failed to allocate memory for string list in q_process_start22");
         abort();
     }
     for (size_t i = 0; i < arguments_len; ++i) {
@@ -569,7 +569,7 @@ void q_process_start3(void* self, const char* program, const char* arguments[sta
     size_t arguments_len = libqt_strv_length(arguments);
     libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
     if (arguments_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_process_start3");
+        fprintf(stderr, "Failed to allocate memory for string list in q_process_start3");
         abort();
     }
     for (size_t i = 0; i < arguments_len; ++i) {
@@ -616,7 +616,7 @@ int32_t q_process_execute2(const char* program, const char* arguments[static 1])
     size_t arguments_len = libqt_strv_length(arguments);
     libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
     if (arguments_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_process_execute2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_process_execute2");
         abort();
     }
     for (size_t i = 0; i < arguments_len; ++i) {
@@ -632,7 +632,7 @@ bool q_process_start_detached22(const char* program, const char* arguments[stati
     size_t arguments_len = libqt_strv_length(arguments);
     libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
     if (arguments_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_process_start_detached22");
+        fprintf(stderr, "Failed to allocate memory for string list in q_process_start_detached22");
         abort();
     }
     for (size_t i = 0; i < arguments_len; ++i) {
@@ -648,7 +648,7 @@ bool q_process_start_detached3(const char* program, const char* arguments[static
     size_t arguments_len = libqt_strv_length(arguments);
     libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
     if (arguments_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_process_start_detached3");
+        fprintf(stderr, "Failed to allocate memory for string list in q_process_start_detached3");
         abort();
     }
     for (size_t i = 0; i < arguments_len; ++i) {
@@ -664,7 +664,7 @@ bool q_process_start_detached4(const char* program, const char* arguments[static
     size_t arguments_len = libqt_strv_length(arguments);
     libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
     if (arguments_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_process_start_detached4");
+        fprintf(stderr, "Failed to allocate memory for string list in q_process_start_detached4");
         abort();
     }
     for (size_t i = 0; i < arguments_len; ++i) {
@@ -983,7 +983,7 @@ const char** q_process_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_process_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_process_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

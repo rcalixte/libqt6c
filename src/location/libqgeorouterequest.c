@@ -68,7 +68,7 @@ int32_t q_georouterequest_feature_weight(void* self, int32_t featureType) {
     return QGeoRouteRequest_FeatureWeight((QGeoRouteRequest*)self, featureType);
 }
 
-libqt_list /* of int32_t */ q_georouterequest_feature_types(void* self) {
+libqt_list /* of enum QGeoRouteRequest__FeatureType */ q_georouterequest_feature_types(void* self) {
     libqt_list _arr = QGeoRouteRequest_FeatureTypes((QGeoRouteRequest*)self);
     return _arr;
 }

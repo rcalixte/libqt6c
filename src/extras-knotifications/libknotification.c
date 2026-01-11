@@ -195,7 +195,7 @@ const char** k_notificationaction_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_notificationaction_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_notificationaction_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -716,17 +716,30 @@ libqt_map /* of const char* to QVariant* */ k_notification_hints(void* self) {
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_keys = (libqt_string*)_out.keys;
-    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_notification_hints");
+        fprintf(stderr, "Failed to allocate memory for map string keys in k_notification_hints");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_keys[i] = (const char*)_out_keys[i].data;
+        _ret_keys[i] = (char*)malloc(_out_keys[i].len + 1);
+        if (_ret_keys[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_keys[j]);
+            }
+            free(_ret_keys);
+            fprintf(stderr, "Failed to allocate memory for map keys in k_notification_hints");
+            abort();
+        }
+        memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
+        _ret_keys[i][_out_keys[i].len] = '\0';
     }
     _ret.keys = (void*)_ret_keys;
     _ret.values = _out.values;
-    free(_out_keys);
+    for (size_t i = 0; i < _out.len; ++i) {
+        libqt_free(_out_keys[i].data);
+    }
+    free(_out.keys);
     return _ret;
 }
 
@@ -734,15 +747,15 @@ void k_notification_set_hints(void* self, libqt_map /* of const char* to QVarian
     // Convert libqt_map to QMap<QString,QVariant>
     libqt_map hints_ret;
     hints_ret.len = hints.len;
-    hints_ret.keys = malloc(hints_ret.len * sizeof(libqt_string));
+    hints_ret.keys = (libqt_string*)malloc(hints_ret.len * sizeof(libqt_string));
     if (hints_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in k_notification_set_hints\n");
         abort();
     }
-    hints_ret.values = malloc(hints_ret.len * sizeof(QVariant*));
+    hints_ret.values = (QVariant**)malloc(hints_ret.len * sizeof(QVariant*));
     if (hints_ret.values == NULL) {
         free(hints_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in k_notification_set_hints\n");
         abort();
     }
     const char** hints_karr = (const char**)hints.keys;
@@ -754,8 +767,8 @@ void k_notification_set_hints(void* self, libqt_map /* of const char* to QVarian
         hints_vdest[i] = hints_varr[i];
     }
     KNotification_SetHints((KNotification*)self, hints_ret);
-    libqt_free(hints_ret.keys);
-    libqt_free(hints_ret.values);
+    free(hints_ret.keys);
+    free(hints_ret.values);
 }
 
 KNotification* k_notification_event(const char* eventId, const char* title, const char* text) {
@@ -973,7 +986,7 @@ const char** k_notification_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_notification_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_notification_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

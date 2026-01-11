@@ -210,15 +210,15 @@ bool k_texteditor__mainwindow_show_message(void* self, libqt_map /* of const cha
     // Convert libqt_map to QMap<QString,QVariant>
     libqt_map message_ret;
     message_ret.len = message.len;
-    message_ret.keys = malloc(message_ret.len * sizeof(libqt_string));
+    message_ret.keys = (libqt_string*)malloc(message_ret.len * sizeof(libqt_string));
     if (message_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in k_texteditor__mainwindow_show_message\n");
         abort();
     }
-    message_ret.values = malloc(message_ret.len * sizeof(QVariant*));
+    message_ret.values = (QVariant**)malloc(message_ret.len * sizeof(QVariant*));
     if (message_ret.values == NULL) {
         free(message_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in k_texteditor__mainwindow_show_message\n");
         abort();
     }
     const char** message_karr = (const char**)message.keys;
@@ -230,8 +230,8 @@ bool k_texteditor__mainwindow_show_message(void* self, libqt_map /* of const cha
         message_vdest[i] = message_varr[i];
     }
     bool _out = KTextEditor__MainWindow_ShowMessage((KTextEditor__MainWindow*)self, message_ret);
-    libqt_free(message_ret.keys);
-    libqt_free(message_ret.values);
+    free(message_ret.keys);
+    free(message_ret.values);
     return _out;
 }
 
@@ -358,7 +358,7 @@ const char** k_texteditor__mainwindow_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_texteditor__mainwindow_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__mainwindow_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

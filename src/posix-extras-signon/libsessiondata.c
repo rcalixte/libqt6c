@@ -14,15 +14,15 @@ SignOn__SessionData* q_signon__sessiondata_new3(libqt_map /* of const char* to Q
     // Convert libqt_map to QMap<QString,QVariant>
     libqt_map data_ret;
     data_ret.len = data.len;
-    data_ret.keys = malloc(data_ret.len * sizeof(libqt_string));
+    data_ret.keys = (libqt_string*)malloc(data_ret.len * sizeof(libqt_string));
     if (data_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_signon__sessiondata_new3\n");
         abort();
     }
-    data_ret.values = malloc(data_ret.len * sizeof(QVariant*));
+    data_ret.values = (QVariant**)malloc(data_ret.len * sizeof(QVariant*));
     if (data_ret.values == NULL) {
         free(data_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_signon__sessiondata_new3\n");
         abort();
     }
     const char** data_karr = (const char**)data.keys;
@@ -35,8 +35,8 @@ SignOn__SessionData* q_signon__sessiondata_new3(libqt_map /* of const char* to Q
     }
 
     SignOn__SessionData* _out = SignOn__SessionData_new3(data_ret);
-    libqt_free(data_ret.keys);
-    libqt_free(data_ret.values);
+    free(data_ret.keys);
+    free(data_ret.values);
     return _out;
 }
 
@@ -53,7 +53,7 @@ const char** q_signon__sessiondata_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_signon__sessiondata_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_signon__sessiondata_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -76,7 +76,7 @@ const char** q_signon__sessiondata_get_access_control_tokens(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_signon__sessiondata_get_access_control_tokens");
+        fprintf(stderr, "Failed to allocate memory for string list in q_signon__sessiondata_get_access_control_tokens");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -96,17 +96,30 @@ libqt_map /* of const char* to QVariant* */ q_signon__sessiondata_to_map(void* s
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_keys = (libqt_string*)_out.keys;
-    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_signon__sessiondata_to_map");
+        fprintf(stderr, "Failed to allocate memory for map string keys in q_signon__sessiondata_to_map");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_keys[i] = (const char*)_out_keys[i].data;
+        _ret_keys[i] = (char*)malloc(_out_keys[i].len + 1);
+        if (_ret_keys[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_keys[j]);
+            }
+            free(_ret_keys);
+            fprintf(stderr, "Failed to allocate memory for map keys in q_signon__sessiondata_to_map");
+            abort();
+        }
+        memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
+        _ret_keys[i][_out_keys[i].len] = '\0';
     }
     _ret.keys = (void*)_ret_keys;
     _ret.values = _out.values;
-    free(_out_keys);
+    for (size_t i = 0; i < _out.len; ++i) {
+        libqt_free(_out_keys[i].data);
+    }
+    free(_out.keys);
     return _ret;
 }
 

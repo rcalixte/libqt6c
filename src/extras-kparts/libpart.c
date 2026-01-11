@@ -314,7 +314,7 @@ const char** k_parts__part_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_parts__part_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_parts__part_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -449,7 +449,7 @@ const char* k_parts__part_find_most_recent_x_m_l_file(const char* files[static 1
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_parts__part_find_most_recent_x_m_l_file");
+        fprintf(stderr, "Failed to allocate memory for string list in k_parts__part_find_most_recent_x_m_l_file");
         abort();
     }
     for (size_t i = 0; i < files_len; ++i) {

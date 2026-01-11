@@ -148,7 +148,7 @@ int32_t q_printerinfo_default_duplex_mode(void* self);
 ///
 /// @return libqt_list of enum QPrinter__DuplexMode
 ///
-libqt_list /* of int32_t */ q_printerinfo_supported_duplex_modes(void* self);
+libqt_list /* of enum QPrinter__DuplexMode */ q_printerinfo_supported_duplex_modes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#defaultColorMode)
 ///
@@ -164,7 +164,7 @@ int32_t q_printerinfo_default_color_mode(void* self);
 ///
 /// @return libqt_list of enum QPrinter__ColorMode
 ///
-libqt_list /* of int32_t */ q_printerinfo_supported_color_modes(void* self);
+libqt_list /* of enum QPrinter__ColorMode */ q_printerinfo_supported_color_modes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#availablePrinterNames)
 ///

@@ -23,7 +23,7 @@ libqt_list /* of QDesignerPromotionInterface__PromotedClass* */ q_designerpromot
 ///
 /// @param self QDesignerPromotionInterface*
 ///
-libqt_list /* of const char* */ q_designerpromotioninterface_referenced_promoted_class_names(void* self);
+libqt_list /* set of const char* */ q_designerpromotioninterface_referenced_promoted_class_names(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpromotioninterface.html#promotionBaseClasses)
 ///

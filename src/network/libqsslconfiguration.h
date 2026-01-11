@@ -318,6 +318,17 @@ void q_sslconfiguration_set_diffie_hellman_parameters(void* self, void* dhparams
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#backendConfiguration)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QSslConfiguration*
 ///
 libqt_map /* of char* to QVariant* */ q_sslconfiguration_backend_configuration(void* self);

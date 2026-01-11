@@ -56,7 +56,7 @@ void k_fileitemactions_insert_open_with_actions_to(void* self, void* before, voi
     size_t excludedDesktopEntryNames_len = libqt_strv_length(excludedDesktopEntryNames);
     libqt_string* excludedDesktopEntryNames_qstr = (libqt_string*)malloc(excludedDesktopEntryNames_len * sizeof(libqt_string));
     if (excludedDesktopEntryNames_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_fileitemactions_insert_open_with_actions_to");
+        fprintf(stderr, "Failed to allocate memory for string list in k_fileitemactions_insert_open_with_actions_to");
         abort();
     }
     for (size_t i = 0; i < excludedDesktopEntryNames_len; ++i) {
@@ -117,7 +117,7 @@ void k_fileitemactions_add_actions_to4(void* self, void* menu, int32_t sources, 
     size_t excludeList_len = libqt_strv_length(excludeList);
     libqt_string* excludeList_qstr = (libqt_string*)malloc(excludeList_len * sizeof(libqt_string));
     if (excludeList_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_fileitemactions_add_actions_to4");
+        fprintf(stderr, "Failed to allocate memory for string list in k_fileitemactions_add_actions_to4");
         abort();
     }
     for (size_t i = 0; i < excludeList_len; ++i) {
@@ -233,7 +233,7 @@ const char** k_fileitemactions_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_fileitemactions_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_fileitemactions_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

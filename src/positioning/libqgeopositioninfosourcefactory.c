@@ -10,15 +10,15 @@ QGeoPositionInfoSource* q_geopositioninfosourcefactory_position_info_source(void
     // Convert libqt_map to QMap<QString,QVariant>
     libqt_map parameters_ret;
     parameters_ret.len = parameters.len;
-    parameters_ret.keys = malloc(parameters_ret.len * sizeof(libqt_string));
+    parameters_ret.keys = (libqt_string*)malloc(parameters_ret.len * sizeof(libqt_string));
     if (parameters_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_geopositioninfosourcefactory_position_info_source\n");
         abort();
     }
-    parameters_ret.values = malloc(parameters_ret.len * sizeof(QVariant*));
+    parameters_ret.values = (QVariant**)malloc(parameters_ret.len * sizeof(QVariant*));
     if (parameters_ret.values == NULL) {
         free(parameters_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_geopositioninfosourcefactory_position_info_source\n");
         abort();
     }
     const char** parameters_karr = (const char**)parameters.keys;
@@ -30,8 +30,8 @@ QGeoPositionInfoSource* q_geopositioninfosourcefactory_position_info_source(void
         parameters_vdest[i] = parameters_varr[i];
     }
     QGeoPositionInfoSource* _out = QGeoPositionInfoSourceFactory_PositionInfoSource((QGeoPositionInfoSourceFactory*)self, (QObject*)parent, parameters_ret);
-    libqt_free(parameters_ret.keys);
-    libqt_free(parameters_ret.values);
+    free(parameters_ret.keys);
+    free(parameters_ret.values);
     return _out;
 }
 
@@ -39,15 +39,15 @@ QGeoSatelliteInfoSource* q_geopositioninfosourcefactory_satellite_info_source(vo
     // Convert libqt_map to QMap<QString,QVariant>
     libqt_map parameters_ret;
     parameters_ret.len = parameters.len;
-    parameters_ret.keys = malloc(parameters_ret.len * sizeof(libqt_string));
+    parameters_ret.keys = (libqt_string*)malloc(parameters_ret.len * sizeof(libqt_string));
     if (parameters_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_geopositioninfosourcefactory_satellite_info_source\n");
         abort();
     }
-    parameters_ret.values = malloc(parameters_ret.len * sizeof(QVariant*));
+    parameters_ret.values = (QVariant**)malloc(parameters_ret.len * sizeof(QVariant*));
     if (parameters_ret.values == NULL) {
         free(parameters_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_geopositioninfosourcefactory_satellite_info_source\n");
         abort();
     }
     const char** parameters_karr = (const char**)parameters.keys;
@@ -59,8 +59,8 @@ QGeoSatelliteInfoSource* q_geopositioninfosourcefactory_satellite_info_source(vo
         parameters_vdest[i] = parameters_varr[i];
     }
     QGeoSatelliteInfoSource* _out = QGeoPositionInfoSourceFactory_SatelliteInfoSource((QGeoPositionInfoSourceFactory*)self, (QObject*)parent, parameters_ret);
-    libqt_free(parameters_ret.keys);
-    libqt_free(parameters_ret.values);
+    free(parameters_ret.keys);
+    free(parameters_ret.values);
     return _out;
 }
 
@@ -68,15 +68,15 @@ QGeoAreaMonitorSource* q_geopositioninfosourcefactory_area_monitor(void* self, v
     // Convert libqt_map to QMap<QString,QVariant>
     libqt_map parameters_ret;
     parameters_ret.len = parameters.len;
-    parameters_ret.keys = malloc(parameters_ret.len * sizeof(libqt_string));
+    parameters_ret.keys = (libqt_string*)malloc(parameters_ret.len * sizeof(libqt_string));
     if (parameters_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_geopositioninfosourcefactory_area_monitor\n");
         abort();
     }
-    parameters_ret.values = malloc(parameters_ret.len * sizeof(QVariant*));
+    parameters_ret.values = (QVariant**)malloc(parameters_ret.len * sizeof(QVariant*));
     if (parameters_ret.values == NULL) {
         free(parameters_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_geopositioninfosourcefactory_area_monitor\n");
         abort();
     }
     const char** parameters_karr = (const char**)parameters.keys;
@@ -88,8 +88,8 @@ QGeoAreaMonitorSource* q_geopositioninfosourcefactory_area_monitor(void* self, v
         parameters_vdest[i] = parameters_varr[i];
     }
     QGeoAreaMonitorSource* _out = QGeoPositionInfoSourceFactory_AreaMonitor((QGeoPositionInfoSourceFactory*)self, (QObject*)parent, parameters_ret);
-    libqt_free(parameters_ret.keys);
-    libqt_free(parameters_ret.values);
+    free(parameters_ret.keys);
+    free(parameters_ret.values);
     return _out;
 }
 

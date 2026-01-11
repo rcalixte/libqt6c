@@ -203,6 +203,25 @@ const char** q_sslcertificate_subject_info_attributes(void* self);
 ///
 const char** q_sslcertificate_issuer_info_attributes(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#subjectAlternativeNames)
+///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     for (size_t j = 0; ((const char**)map.values)[i][j] != NULL; j++) {
+///         libqt_free((map.values)[i][j]);
+///     }
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
+/// @param self QSslCertificate*
+///
+libqt_map /* of enum QSsl__AlternativeNameEntryType to const char** */ q_sslcertificate_subject_alternative_names(void* self);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#effectiveDate)
 ///
 /// @param self QSslCertificate*

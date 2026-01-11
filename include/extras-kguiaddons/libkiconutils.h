@@ -26,7 +26,7 @@ QIcon* k_iconutils_add_overlay(void* param1, void* param2, int32_t param3);
 /// @param param1 QIcon*
 /// @param param2 libqt_map /* of enum Qt__Corner to QIcon* */
 ///
-QIcon* k_iconutils_add_overlays(void* param1, libqt_map /* of int32_t to QIcon* */ param2);
+QIcon* k_iconutils_add_overlays(void* param1, libqt_map /* of enum Qt__Corner to QIcon* */ param2);
 
 /// [Upstream resources](https://api.kde.org/kiconutils.html#addOverlays)
 ///

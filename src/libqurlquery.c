@@ -69,7 +69,7 @@ QChar* q_urlquery_query_pair_delimiter(void* self) {
     return QUrlQuery_QueryPairDelimiter((QUrlQuery*)self);
 }
 
-libqt_list /* of libqt_pair  tuple of const char* and const char*  */ q_urlquery_query_items(void* self) {
+libqt_list /* of libqt_pair tuple of const char* and const char* */ q_urlquery_query_items(void* self) {
     libqt_list _arr = QUrlQuery_QueryItems((QUrlQuery*)self);
     return _arr;
 }
@@ -98,7 +98,7 @@ const char** q_urlquery_all_query_item_values(void* self, const char* key) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_urlquery_all_query_item_values");
+        fprintf(stderr, "Failed to allocate memory for string list in q_urlquery_all_query_item_values");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -130,7 +130,7 @@ const char* q_urlquery_to_string1(void* self, uint32_t encoding) {
     return _ret;
 }
 
-libqt_list /* of libqt_pair  tuple of const char* and const char*  */ q_urlquery_query_items1(void* self, uint32_t encoding) {
+libqt_list /* of libqt_pair tuple of const char* and const char* */ q_urlquery_query_items1(void* self, uint32_t encoding) {
     libqt_list _arr = QUrlQuery_QueryItems1((QUrlQuery*)self, encoding);
     return _arr;
 }
@@ -147,7 +147,7 @@ const char** q_urlquery_all_query_item_values2(void* self, const char* key, uint
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_urlquery_all_query_item_values2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_urlquery_all_query_item_values2");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

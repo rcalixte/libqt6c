@@ -51,6 +51,13 @@ int32_t k_idletime_idle_time(void* self);
 
 /// [Upstream resources](https://api.kde.org/kidletime.html#idleTimeouts)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self KIdleTime*
 ///
 libqt_map /* of int to int */ k_idletime_idle_timeouts(void* self);

@@ -1100,6 +1100,17 @@ KIO__MetaData* k_io__forwardingworkerbase_all_meta_data(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#mapConfig)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self KIO__ForwardingWorkerBase*
 ///
 libqt_map /* of const char* to QVariant* */ k_io__forwardingworkerbase_map_config(void* self);

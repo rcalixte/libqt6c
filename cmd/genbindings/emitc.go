@@ -214,24 +214,30 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 				return t.RenderTypeCabi(false) + maybePointer
 			}
 		}
-		return "libqt_list " + cppComment("of "+t.RenderTypeC(cfs, isReturnType, fullEnumName))
+		return "libqt_list" + cppComment("of "+strings.TrimSpace(t.RenderTypeC(cfs, isReturnType, true)))
 	}
 
 	if k, ok := p.QSetOf(); ok {
-		return "libqt_list" + ifv(p.Pointer, "* ", " ") + cppComment("of "+k.RenderTypeC(cfs, isReturnType, fullEnumName))
+		return "libqt_list" + ifv(p.Pointer, "*", "") + cppComment("set of "+strings.TrimSpace(k.RenderTypeC(cfs, isReturnType, true)))
 	}
 
-	if k, v, _, ok := p.QMapOf(); ok {
-		return "libqt_map" + ifv(p.Pointer, "* ", " ") + cppComment("of "+k.RenderTypeC(cfs, isReturnType, fullEnumName)+" to "+v.RenderTypeC(cfs, isReturnType, fullEnumName))
+	if k, v, containerType, ok := p.QMapOf(); ok {
+		maybePointer := ifv(containerType == "QMultiHash" || containerType == "QMultiMap", "*", "")
+		if maybePointer == "" && !isReturnType {
+			if _, _, ok := v.QListOf(); ok {
+				maybePointer = "*"
+			}
+		}
+		return "libqt_map" + ifv(p.Pointer, "*", "") + cppComment("of "+strings.TrimSpace(k.RenderTypeC(cfs, isReturnType, true))+" to "+strings.TrimSpace(v.RenderTypeC(cfs, isReturnType, true))+maybePointer)
 	}
 
 	if t1, t2, ok := p.QPairOf(); ok {
 		// Design QPair using capital-named members, in case it gets passed
 		// across packages
-		f := t1.RenderTypeC(cfs, isReturnType, fullEnumName)
-		s := t2.RenderTypeC(cfs, isReturnType, fullEnumName)
+		f := strings.TrimSpace(t1.RenderTypeC(cfs, isReturnType, true))
+		s := strings.TrimSpace(t2.RenderTypeC(cfs, isReturnType, true))
 
-		return "libqt_pair " + cppComment("tuple of "+f+" and "+s)
+		return "libqt_pair" + cppComment("tuple of "+f+" and "+s)
 	}
 
 	if (p.ParameterType == "void" || p.ParameterType == "GLvoid") && p.Pointer {
@@ -429,10 +435,75 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 }
 
 func (p CppParameter) returnAllocComment(returnType string) string {
-	if strings.HasPrefix(returnType, "char*") || strings.HasPrefix(returnType, "const char*") {
+	if p.ParameterType == "QString" || p.ParameterType == "QByteArray" ||
+		strings.HasPrefix(returnType, "char*") || strings.HasPrefix(returnType, "const char*") {
 		freeMethod := ifv(returnType == "const char*", "libqt_", "") + "free()"
 		return "\n/// @warning Caller is responsible for freeing the returned memory using `" + freeMethod + "`\n///"
+
+	} else if keyType, valueType, containerType, ok := p.QMapOf(); ok {
+		var freeLoop, keyFree, valueFree, innerFree string
+
+		isQMulti := ifv(containerType == "QMultiHash" || containerType == "QMultiMap", true, false)
+		inner := valueType.ParameterType
+
+		if keyType.ParameterType == "QString" || keyType.ParameterType == "QByteArray" {
+			keyFree = "\n///     libqt_free(map.keys[i]);"
+		} else if IsKnownClass(keyType.ParameterType) {
+			keyFree = "\n///     free(((" + keyType.ParameterType + "*)map.keys)[i]);"
+		}
+
+		if valueType.ParameterType == "QString" || valueType.ParameterType == "QByteArray" {
+			valueFree = "\n///     libqt_free(map.values[i]);"
+		} else if IsKnownClass(valueType.ParameterType) {
+			valueFree = "\n///     free(((" + valueType.ParameterType + "*)map.values)[i]);"
+		} else if innerType, _, ok := valueType.QListOf(); ok {
+			valueFree = "\n///     free(((" + innerType.ParameterType + "*)map.values)[i]);"
+		} else if _, _, _, ok := valueType.QMapOf(); ok {
+			// every current instance of this is fortunately a map consisting of primitive types
+			valueFree = "\n///     free(((libqt_map*)map.values)[i].keys);"
+			valueFree += "\n///     free(((libqt_map*)map.values)[i].values);"
+		}
+
+		if innerType, _, ok := valueType.QListOf(); ok {
+			inner = innerType.ParameterType
+			isQMulti = true
+		}
+
+		if isQMulti {
+			if inner == "QString" || inner == "QByteArray" {
+				var maybeConst, freeType string
+				if inner == "QString" {
+					maybeConst = "const "
+					freeType = "libqt_"
+				}
+
+				innerFree = "\n///     for (size_t j = 0; ((" + maybeConst + "char**)map.values)[i][j] != NULL; j++) {"
+				innerFree += "\n///         " + freeType + "free((map.values)[i][j]);"
+
+			} else if IsKnownClass(inner) {
+				innerFree = "\n///     for (size_t j = 0; ((" + inner + "**)map.values)[i][j] != NULL; j++) {"
+				innerFree += "\n///         free(((" + inner + "**)map.values)[i][j]);"
+			}
+
+			innerFree += "\n///     }"
+		}
+
+		if innerFree != "" || keyFree != "" || valueFree != "" {
+			freeLoop = "\n/// for (size_t i = 0; i < map.len; ++i) {"
+			freeLoop += innerFree
+			freeLoop += keyFree
+			freeLoop += valueFree
+			freeLoop += "\n/// }"
+		}
+
+		return "\n/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:" +
+			"\n/// ```c\n/// // Example for freeing the returned map" +
+			freeLoop +
+			"\n/// free(map.keys);" +
+			"\n/// free(map.values);" +
+			"\n/// ```\n///"
 	}
+
 	return ""
 }
 
@@ -506,8 +577,8 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 					pType = t.RenderTypeC(cfs, false, true) + "*"
 				} else if IsKnownClass(t.ParameterType) || strings.Contains(t.ParameterType, "::") ||
 					t.IntType() || strings.Contains(pType, "libqt_") {
-					pName = cppComment("of " + t.RenderTypeC(cfs, false, true))
-					pTypeSlot = " " + pName
+					pName = cppComment("of " + strings.TrimSpace(t.RenderTypeC(cfs, false, true)))
+					pTypeSlot = pName
 					pType = "libqt_list"
 				} else if (strings.Contains(pType, "char*") && !strings.Contains(pType, "libqt_")) ||
 					!strings.HasPrefix(pType, "libqt_") {
@@ -516,15 +587,16 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 				}
 			}
 
-			if k, v, _, ok := p.QMapOf(); ok {
-				pName = cppComment("of " + k.RenderTypeC(cfs, false, true) + " to " + v.RenderTypeC(cfs, false, true))
-				pTypeSlot = " " + pName
+			if k, v, containerType, ok := p.QMapOf(); ok {
+				maybePointer := ifv(containerType == "QMultiHash" || containerType == "QMultiMap", "*", "")
+				pName = cppComment("of " + strings.TrimSpace(k.RenderTypeC(cfs, false, true)) + " to " + strings.TrimSpace(v.RenderTypeC(cfs, false, true)) + maybePointer)
+				pTypeSlot = pName
 				pType = "libqt_map" + ifv(p.Pointer, "*", "")
 			}
 
 			if t1, t2, ok := p.QPairOf(); ok {
-				pName = cppComment("tuple of " + t1.RenderTypeC(cfs, false, true) + " and " + t2.RenderTypeC(cfs, false, true))
-				pTypeSlot = " " + pName
+				pName = cppComment("tuple of " + strings.TrimSpace(t1.RenderTypeC(cfs, false, true)) + " and " + strings.TrimSpace(t2.RenderTypeC(cfs, false, true)))
+				pTypeSlot = pName
 				pType = "libqt_pair"
 			}
 
@@ -539,10 +611,10 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 						resParam = resParam + "*"
 					}
 				}
-				tmp = append(tmp, resParam+" "+pName)
+				tmp = append(tmp, resParam+" "+strings.TrimSpace(pName))
 			} else {
 				if strings.Contains(pType, "libqt") {
-					tmp = append(tmp, "/// @param "+p.ParameterName+" "+pType+" "+pName)
+					tmp = append(tmp, "/// @param "+p.ParameterName+" "+pType+" "+strings.TrimSpace(pName))
 				} else {
 					tmp = append(tmp, "/// @param "+pName+" "+pType)
 				}
@@ -713,7 +785,7 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 			preamble += "size_t " + nameprefix + "_len = libqt_strv_length(" + p.ParameterName + ");\n"
 			preamble += "libqt_string* " + nameprefix + "_qstr = (libqt_string*)malloc(" + nameprefix + "_len * sizeof(libqt_string));\n"
 			preamble += "if (" + nameprefix + "_qstr == NULL) {\n"
-			preamble += `    fprintf(stderr, "Memory allocation failed in ` + cfs.currentMethodName + `");` + "\n"
+			preamble += `    fprintf(stderr, "Failed to allocate memory for string list in ` + cfs.currentMethodName + `");` + "\n"
 			preamble += "    abort();\n"
 			preamble += "}\n"
 			preamble += "for (size_t i = 0; i < " + nameprefix + "_len; ++i) {\n"
@@ -737,6 +809,8 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 		// QMap<K,V>
 		kType := k.RenderTypeC(cfs, false, true)
 		vType := v.RenderTypeC(cfs, false, true)
+		isQMulti := ifv(containerType == "QMultiHash" || containerType == "QMultiMap", true, false)
+		var isQList bool
 
 		if e, ok := KnownEnums[k.ParameterType]; ok {
 			kType = e.EnumTypeC
@@ -768,27 +842,42 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 			valueDest = "libqt_string"
 		}
 
+		if innerType, _, ok := v.QListOf(); ok {
+			if innerType.ParameterType == "QString" || innerType.ParameterType == "QByteArray" {
+				valueDest = "libqt_string"
+			} else if IsKnownClass(innerType.ParameterType) {
+				valueDest = "libqt_list"
+				vType = innerType.ParameterType
+				isQList = true
+			} else {
+				panic("UNHANDLED " + strings.ToUpper(containerType) + " VALUE TYPE: " + v.ParameterType)
+			}
+			isQMulti = true
+		}
+
 		preamble += "// Convert libqt_map to " + containerType + "<" + k.ParameterType + "," + v.ParameterType + ">\n"
 		preamble += "libqt_map " + nameprefix + "_ret;\n"
 		preamble += nameprefix + "_ret.len = " + p.ParameterName + maybeDeref + "len;\n"
 
-		preamble += nameprefix + "_ret.keys = malloc(" + nameprefix + "_ret.len * sizeof(" + keyDest + "));\n"
+		preamble += nameprefix + "_ret.keys = (" + keyDest + "*)malloc(" + nameprefix + "_ret.len * sizeof(" + keyDest + "));\n"
 		preamble += "if (" + nameprefix + "_ret.keys == NULL) {\n"
-		preamble += `    fprintf(stderr, "Failed to allocate memory for map keys\n");` + "\n"
+		preamble += `    fprintf(stderr, "Failed to allocate memory for map keys in ` + cfs.currentMethodName + `\n");` + "\n"
 		preamble += "    abort();\n"
 		preamble += "}\n"
 
-		keyCleanup := "libqt_free(" + nameprefix + "_ret.keys);"
+		keyCleanup := "free(" + nameprefix + "_ret.keys);"
 		cfs.allocCleanups = append(cfs.allocCleanups, keyCleanup)
 
-		preamble += nameprefix + "_ret.values = malloc(" + nameprefix + "_ret.len * sizeof(" + valueDest + "));\n"
+		mapValue := ifv(isQMulti, "libqt_list", valueDest)
+
+		preamble += nameprefix + "_ret.values = (" + mapValue + "*)malloc(" + nameprefix + "_ret.len * sizeof(" + mapValue + "));\n"
 		preamble += "if (" + nameprefix + "_ret.values == NULL) {\n"
 		preamble += "    free(" + nameprefix + "_ret.keys);\n"
-		preamble += `    fprintf(stderr, "Failed to allocate memory for map values\n");` + "\n"
+		preamble += `    fprintf(stderr, "Failed to allocate memory for map values in ` + cfs.currentMethodName + `\n");` + "\n"
 		preamble += "    abort();\n"
 		preamble += "}\n"
 
-		valCleanup := "libqt_free(" + nameprefix + "_ret.values);"
+		valCleanup := "free(" + nameprefix + "_ret.values);"
 		cfs.allocCleanups = append(cfs.allocCleanups, valCleanup)
 
 		preamble += kType + "* " + nameprefix + "_karr = (" + kType + "*)" + nameprefix + maybeDeref + "keys;\n"
@@ -801,10 +890,49 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 			keyIter = nameprefix + "_kdest[i] = " + nameprefix + "_karr[i];\n"
 		}
 
-		preamble += vType + "* " + nameprefix + "_varr = (" + vType + "*)" + nameprefix + maybeDeref + "values;\n"
-		preamble += valueDest + "* " + nameprefix + "_vdest = (" + valueDest + "*)" + nameprefix + "_ret.values;\n"
+		maybeValuePointer := ifv(isQMulti, "*", "") + ifv(isQList, "*", "")
+		preamble += vType + maybeValuePointer + "* " + nameprefix + "_varr = (" + vType + maybeValuePointer + "*)" + nameprefix + maybeDeref + "values;\n"
+		preamble += mapValue + "* " + nameprefix + "_vdest = (" + mapValue + "*)" + nameprefix + "_ret.values;\n"
 
-		if v.ParameterType == "QString" || v.ParameterType == "QByteArray" {
+		if isQMulti {
+			if v.ParameterType == "QString" || v.ParameterType == "QByteArray" || valueDest == "libqt_string" {
+				valueIter = vType + "* " + nameprefix + "_array = " + nameprefix + "_varr[i];\n"
+				valueIter += "size_t " + nameprefix + "_value_count = libqt_strv_length((const char**)" + nameprefix + "_array);\n"
+				valueIter += valueDest + "* " + nameprefix + "_value_strings = (" + valueDest + "*)malloc(" + nameprefix + "_value_count * sizeof(" + valueDest + "));\n"
+				valueIter += "if (" + nameprefix + "_value_strings == NULL) {\n"
+				valueIter += "    for (size_t j = 0; j < i; j++) {\n"
+				valueIter += "        free(((" + mapValue + "*)" + nameprefix + "_ret.values)[j].data.ptr);\n"
+				valueIter += "    }\n"
+				valueIter += "    free(" + nameprefix + "_ret.keys);\n"
+				valueIter += "    free(" + nameprefix + "_ret.values);\n"
+				valueIter += `    fprintf(stderr, "Failed to allocate memory for map string key in ` + cfs.currentMethodName + `");` + "\n"
+				valueIter += "    abort();\n"
+				valueIter += "}\n"
+				valueIter += "for (size_t j = 0; j < " + nameprefix + "_value_count; j++) {\n"
+				valueIter += "    " + nameprefix + "_value_strings[j] = qstring(" + nameprefix + "_array[j]);\n"
+				valueIter += "}\n"
+				valueIter += nameprefix + "_vdest[i].len = " + nameprefix + "_value_count;\n"
+				valueIter += nameprefix + "_vdest[i].data.ptr = " + nameprefix + "_value_strings;\n"
+
+				mapCleanup := "for (size_t i = 0; i < " + nameprefix + "_ret.len; ++i) {"
+				mapCleanup += "    free(((" + mapValue + "*)" + nameprefix + "_ret.values)[i].data.ptr);"
+				mapCleanup += "}\n"
+
+				cfs.allocCleanups = append([]string{mapCleanup}, cfs.allocCleanups...)
+
+			} else if IsKnownClass(vType) {
+				valueIter += "size_t " + nameprefix + "_value_count = 0;\n"
+				valueIter += "while (" + nameprefix + "_varr[i][" + nameprefix + "_value_count] != NULL) {\n"
+				valueIter += "    " + nameprefix + "_value_count++;\n"
+				valueIter += "}\n"
+				valueIter += nameprefix + "_vdest[i].len = " + nameprefix + "_value_count;\n"
+				valueIter += nameprefix + "_vdest[i].data.ptr = (void*)" + nameprefix + "_varr[i];\n"
+
+			} else {
+				panic("UNHANDLED " + strings.ToUpper(containerType) + " VALUE PARAMETER TYPE: " + v.ParameterType)
+			}
+
+		} else if v.ParameterType == "QString" || v.ParameterType == "QByteArray" {
 			valueIter = nameprefix + "_vdest[i] = qstring(" + p.ParameterName + "_varr[i]);\n"
 
 		} else {
@@ -910,7 +1038,7 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 			afterword += "const libqt_string* " + namePrefix + "_qstr = (libqt_string*)" + namePrefix + "_arr.data.ptr;\n"
 			afterword += "const char** " + namePrefix + "_ret = (const char**)malloc((" + namePrefix + "_arr.len + 1) * sizeof(const char*));\n"
 			afterword += "if (" + namePrefix + "_ret == NULL) {\n"
-			afterword += `    fprintf(stderr, "Memory allocation failed in ` + cfs.currentMethodName + `");` + "\n"
+			afterword += `    fprintf(stderr, "Failed to allocate memory for string list in ` + cfs.currentMethodName + `");` + "\n"
 			afterword += "    abort();\n"
 			afterword += "}\n"
 			afterword += "for (size_t i = 0; i < " + namePrefix + "_arr.len; ++i) {\n"
@@ -943,8 +1071,9 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 		// QMap<K,V>
 		kType := k.RenderTypeC(cfs, false, true)
 		vType := v.RenderTypeC(cfs, false, true)
+		isQMulti := ifv(containerType == "QMultiHash" || containerType == "QMultiMap", true, false)
 
-		var keyAssign, keyFree, keyIter, valueAssign, valueFree, valueIter string
+		var keyAssign, keyFree, keyInnerFree, keyMallocFree, keyIter, valueAssign, valueFree, valueInnerFree, valueIter string
 		keyOut := kType
 		valueOut := vType
 
@@ -964,6 +1093,12 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 			valueOut = "libqt_string"
 		}
 
+		vParamType := v.ParameterType
+		if innerType, _, ok := v.QListOf(); ok {
+			vParamType = innerType.ParameterType
+			isQMulti = true
+		}
+
 		preamble := "// Convert " + containerType + "<" + k.ParameterType + "," + v.ParameterType + "> to libqt_map\n"
 		preamble += "libqt_map" + maybePointer + " " + namePrefix + "_out = " + rvalue + ";\n"
 		preamble += "libqt_map" + maybePointer + " " + namePrefix + "_ret;\n"
@@ -971,29 +1106,153 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 
 		if k.ParameterType == "QString" || k.ParameterType == "QByteArray" || k.ParameterType == "SignOn::MethodName" {
 			preamble += keyOut + "* " + namePrefix + "_out_keys = (" + keyOut + "*)" + namePrefix + "_out" + maybeDeref + "keys;\n"
-			preamble += kType + "* " + namePrefix + "_ret_keys = (" + kType + "*)malloc(" + namePrefix + "_ret" + maybeDeref + "len * sizeof(" + kType + "));\n"
+			preamble += "char** " + namePrefix + "_ret_keys = (char**)malloc(" + namePrefix + "_ret" + maybeDeref + "len * sizeof(char*));\n"
 			preamble += "if (" + namePrefix + "_ret_keys == NULL) {\n"
-			preamble += `    fprintf(stderr, "Memory allocation failed in ` + cfs.currentMethodName + `");` + "\n"
+			preamble += `    fprintf(stderr, "Failed to allocate memory for map string keys in ` + cfs.currentMethodName + `");` + "\n"
 			preamble += "    abort();\n"
 			preamble += "}\n"
-			keyIter = namePrefix + "_ret_keys[i] = (" + kType + ")" + namePrefix + "_out_keys[i].data;\n"
-			keyFree = "    free(" + namePrefix + "_out_keys);\n"
+
+			keyIter = namePrefix + "_ret_keys[i] = (char*)malloc(" + namePrefix + "_out_keys[i].len + 1);\n"
+			keyIter += "if (" + namePrefix + "_ret_keys[i] == NULL) {\n"
+			keyIter += "    for (size_t j = 0; j < i; j++) {\n"
+			keyIter += "        libqt_free(" + namePrefix + "_ret_keys[j]);\n"
+			if isQMulti {
+				keyIter += "        for (size_t k = 0; k < ((libqt_list*)" + namePrefix + "_out" + maybeDeref + "values)[j]" + maybeDeref + "len; k++) {\n"
+				keyIter += "            free(" + namePrefix + "_ret_values[j][k]);\n"
+				keyIter += "        }\n"
+			}
+			keyIter += ifv(isQMulti, "free("+namePrefix+"_ret_values[j]);\n", "")
+			keyIter += "    }\n"
+			keyIter += "    free(" + namePrefix + "_ret_keys);\n"
+			keyIter += ifv(isQMulti, "free("+namePrefix+"_ret_values);\n", "")
+			keyIter += `    fprintf(stderr, "Failed to allocate memory for map keys in ` + cfs.currentMethodName + `");` + "\n"
+			keyIter += "    abort();\n"
+			keyIter += "}\n"
+			keyIter += "memcpy(" + namePrefix + "_ret_keys[i], " + namePrefix + "_out_keys[i].data, " + namePrefix + "_out_keys[i].len);\n"
+			keyIter += namePrefix + "_ret_keys[i][" + namePrefix + `_out_keys[i].len] = '\0';` + "\n"
+
+			keyMallocFree = "free(" + namePrefix + "_ret_keys);\n"
+			keyMallocFree += "free(" + namePrefix + "_out" + maybeDeref + "keys);\n"
+
 			keyAssign = namePrefix + "_ret" + maybeDeref + "keys = (void*)" + namePrefix + "_ret_keys;\n"
+			keyInnerFree = "    libqt_free(" + namePrefix + "_out_keys[i].data);\n"
+			keyFree = "    free(" + namePrefix + "_out" + maybeDeref + "keys);\n"
 		} else {
 			keyAssign = namePrefix + "_ret" + maybeDeref + "keys = " + namePrefix + "_out" + maybeDeref + "keys;\n"
+			keyMallocFree = "free(" + namePrefix + "_out" + maybeDeref + "keys);\n"
 		}
 
-		if v.ParameterType == "QString" || v.ParameterType == "QByteArray" {
+		if isQMulti {
+			preamble += "libqt_list* " + namePrefix + "_out_values = (libqt_list*)" + namePrefix + "_out" + maybeDeref + "values;\n"
+			if vParamType == "QByteArray" || vParamType == "QString" {
+				preamble += "char*** " + namePrefix + "_ret_values = (char***)malloc(" + namePrefix + "_ret" + maybeDeref + "len * sizeof(char**));\n"
+			} else if IsKnownClass(vParamType) {
+				preamble += vType + "** " + namePrefix + "_ret_values = (" + vType + "**)malloc(" + namePrefix + "_ret" + maybeDeref + "len * sizeof(" + vType + "*));\n"
+			}
+			preamble += "if (" + namePrefix + "_ret_values == NULL) {\n"
+			preamble += "    " + keyMallocFree
+			preamble += "    free(" + namePrefix + "_out" + maybeDeref + "values);\n"
+			preamble += `    fprintf(stderr, "Failed to allocate memory for map value containers in ` + cfs.currentMethodName + `");` + "\n"
+			preamble += "    abort();\n"
+			preamble += "}\n"
+
+			valueIter = "libqt_list " + namePrefix + "_value_list = " + namePrefix + "_out_values[i];\n"
+
+			if vParamType == "QByteArray" || vParamType == "QString" {
+				valueIter += namePrefix + "_ret_values[i] = (char**)malloc((" + namePrefix + "_value_list.len + 1) * sizeof(char*));\n"
+				valueIter += "if (" + namePrefix + "_ret_values[i] == NULL) {\n"
+			} else if IsKnownClass(vParamType) {
+				valueIter += vType + "* " + namePrefix + "_ret_arr = (" + vType + "*)malloc((" + namePrefix + "_value_list.len + 1) * sizeof(" + vType + "));\n"
+				valueIter += "if (" + namePrefix + "_ret_arr == NULL) {\n"
+			}
+
+			valueIter += "for (size_t j = 0; j < i; j++) {\n"
+			valueIter += ifv(keyIter != "", "        libqt_free("+namePrefix+"_ret_keys[j]);\n", "")
+			if vParamType == "QByteArray" || vParamType == "QString" {
+				valueIter += "for (size_t k = 0; k < ((libqt_list*)" + namePrefix + "_out" + maybeDeref + "values)[j].len; k++) {\n"
+				valueIter += "    libqt_free(" + namePrefix + "_ret_values[j][k]);\n"
+				valueIter += "}\n"
+			}
+			valueIter += "    libqt_free(" + namePrefix + "_ret_values[j]);\n"
+			valueIter += "}\n"
+			valueIter += "" + keyMallocFree
+			valueIter += "free(" + namePrefix + "_ret_values);\n"
+			valueIter += "free(" + namePrefix + "_out" + maybeDeref + "values);\n"
+			valueIter += `fprintf(stderr, "Failed to allocate memory for map values in ` + cfs.currentMethodName + `");` + "\n"
+			valueIter += "abort();\n"
+			valueIter += "}\n"
+
+			if vParamType == "QByteArray" || vParamType == "QString" {
+				valueIter += valueOut + "*" + namePrefix + "_value_str = (" + valueOut + "*)" + namePrefix + "_value_list.data.ptr;\n"
+				valueIter += "size_t j;\n"
+				valueIter += "for (j = 0; j < " + namePrefix + "_value_list.len; j++) {\n"
+				valueIter += namePrefix + "_ret_values[i][j] = (char*)malloc(" + namePrefix + "_value_str[j].len + 1);\n"
+				valueIter += "if (" + namePrefix + "_ret_values[i][j] == NULL) {\n"
+				valueIter += "    for (size_t k = 0; k < j; k++) {\n"
+				valueIter += "        free(" + namePrefix + "_ret_values[i][k]);\n"
+				valueIter += "    }\n"
+				valueIter += "    for (size_t k = 0; k < i; k++) {\n"
+				valueIter += ifv(keyIter != "", "free("+namePrefix+"_ret_keys[k]);\n", "")
+				valueIter += "    for (size_t l = 0; l < ((libqt_list*)" + namePrefix + "_out" + maybeDeref + "values)[k].len; l++) {\n"
+				valueIter += "        free(" + namePrefix + "_ret_values[k][l]);\n"
+				valueIter += "    }\n"
+				valueIter += "    free(" + namePrefix + "_ret_values[k]);\n"
+				valueIter += "}\n"
+				valueIter += ifv(keyIter != "", "free("+namePrefix+"_ret_keys);\n", "")
+				valueIter += "    free(" + namePrefix + "_ret_values);\n"
+				valueIter += `    fprintf(stderr, "Failed to allocate memory for map value keys in ` + cfs.currentMethodName + `");` + "\n"
+				valueIter += "    abort();\n"
+				valueIter += "}\n"
+				valueIter += "memcpy(" + namePrefix + "_ret_values[i][j], " + namePrefix + "_value_str[j].data, " + namePrefix + "_value_str[j].len);\n"
+				valueIter += namePrefix + "_ret_values[i][j][" + namePrefix + `_value_str[j].len] = '\0';` + "\n"
+				valueIter += "}\n"
+				valueIter += namePrefix + "_ret_values[i][j] = NULL;\n"
+
+				valueInnerFree = valueOut + "* " + namePrefix + "_value_str = (" + valueOut + "*)" + namePrefix + "_out_values[i].data.ptr;\n"
+				valueInnerFree += "for (size_t j = 0; j < " + namePrefix + "_out_values[i].len; j++) {\n"
+				valueInnerFree += "    libqt_free(" + namePrefix + "_value_str[j].data);\n"
+				valueInnerFree += "}\n"
+				valueInnerFree += "free(" + namePrefix + "_out_values[i].data.ptr);\n"
+
+			} else if IsKnownClass(vParamType) {
+				valueIter += "memcpy(" + namePrefix + "_ret_arr, " + namePrefix + "_value_list.data.ptr, " + namePrefix + "_value_list.len * sizeof(" + vType + "));\n"
+				valueIter += namePrefix + "_ret_arr[" + namePrefix + "_value_list.len] = NULL;\n"
+				valueIter += namePrefix + "_ret_values[i] = " + namePrefix + "_ret_arr;\n"
+
+				valueInnerFree = "free((" + vType + "*)" + namePrefix + "_out_values[i].data.ptr);\n"
+
+			} else {
+				panic("UNHANDLED " + strings.ToUpper(containerType) + " VALUE RETURN TYPE: " + v.ParameterType)
+			}
+
+			valueAssign = namePrefix + "_ret" + maybeDeref + "values = (void*)" + namePrefix + "_ret_values;\n"
+			valueFree = "    free(" + namePrefix + "_out" + maybeDeref + "values);\n"
+
+		} else if vParamType == "QString" || vParamType == "QByteArray" {
 			preamble += valueOut + "* " + namePrefix + "_out_values = (" + valueOut + "*)" + namePrefix + "_out" + maybeDeref + "values;\n"
 			preamble += vType + "* " + namePrefix + "_ret_values = (" + vType + "*)malloc(" + namePrefix + "_ret" + maybeDeref + "len * sizeof(" + vType + "));\n"
 			preamble += "if (" + namePrefix + "_ret_values == NULL) {\n"
-			preamble += `    fprintf(stderr, "Memory allocation failed in ` + cfs.currentMethodName + `");` + "\n"
+			preamble += `    fprintf(stderr, "Failed to allocate memory for map string values in ` + cfs.currentMethodName + `");` + "\n"
 			preamble += keyFree
 			preamble += "    abort();\n"
 			preamble += "}\n"
-			valueIter = namePrefix + "_ret_values[i] = (" + vType + ")" + namePrefix + "_out_values[i].data;\n"
-			valueFree = "    free(" + namePrefix + "_out_values);\n"
+
+			valueIter = namePrefix + "_ret_values[i] = (" + vType + ")malloc(" + namePrefix + "_out_values[i].len + 1);\n"
+			valueIter += "if (" + namePrefix + "_ret_values[i] == NULL) {\n"
+			valueIter += "    for (size_t j = 0; j < i; j++) {\n"
+			valueIter += ifv(keyIter != "", "libqt_free("+namePrefix+"_ret_keys[j]);\n", "")
+			valueIter += "        libqt_free(" + namePrefix + "_ret_values[j]);\n"
+			valueIter += "    }\n"
+			valueIter += ifv(keyIter != "", "free("+namePrefix+"_ret_keys);\n", "")
+			valueIter += "    free(" + namePrefix + "_ret_values);\n"
+			valueIter += `    fprintf(stderr, "Failed to allocate memory for map string values in ` + cfs.currentMethodName + `");` + "\n"
+			valueIter += "    abort();\n"
+			valueIter += "}\n"
+
 			valueAssign = namePrefix + "_ret" + maybeDeref + "values = (void*)" + namePrefix + "_ret_values;\n"
+			valueInnerFree = "    libqt_free(" + namePrefix + "_out_values[i].data);\n"
+			valueFree = "    free(" + namePrefix + "_out" + maybeDeref + "values);\n"
+
 		} else {
 			valueAssign = namePrefix + "_ret" + maybeDeref + "values = " + namePrefix + "_out" + maybeDeref + "values;\n"
 		}
@@ -1007,6 +1266,14 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 
 		preamble += keyAssign
 		preamble += valueAssign
+
+		if keyInnerFree != "" || valueInnerFree != "" {
+			preamble += "for (size_t i = 0; i < " + namePrefix + "_out" + maybeDeref + "len; ++i) {\n"
+			preamble += keyInnerFree
+			preamble += valueInnerFree
+			preamble += "}\n"
+		}
+
 		preamble += keyFree
 		preamble += valueFree
 

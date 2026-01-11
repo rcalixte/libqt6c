@@ -8745,9 +8745,19 @@ QCPMarginGroup* q_cplayoutelement_margin_group(void* self, int32_t side);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QCPMarginGroup*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QCPLayoutElement*
 ///
-libqt_map /* of int32_t to QCPMarginGroup* */ q_cplayoutelement_margin_groups(void* self);
+libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cplayoutelement_margin_groups(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
@@ -10839,9 +10849,19 @@ QCPMarginGroup* q_cplayout_margin_group(void* self, int32_t side);
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QCPMarginGroup*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QCPLayout*
 ///
-libqt_map /* of int32_t to QCPMarginGroup* */ q_cplayout_margin_groups(void* self);
+libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cplayout_margin_groups(void* self);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -13112,9 +13132,19 @@ QCPMarginGroup* q_cplayoutgrid_margin_group(void* self, int32_t side);
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QCPMarginGroup*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QCPLayoutGrid*
 ///
-libqt_map /* of int32_t to QCPMarginGroup* */ q_cplayoutgrid_margin_groups(void* self);
+libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cplayoutgrid_margin_groups(void* self);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -15274,9 +15304,19 @@ QCPMarginGroup* q_cplayoutinset_margin_group(void* self, int32_t side);
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QCPMarginGroup*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QCPLayoutInset*
 ///
-libqt_map /* of int32_t to QCPMarginGroup* */ q_cplayoutinset_margin_groups(void* self);
+libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cplayoutinset_margin_groups(void* self);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -19158,6 +19198,16 @@ void q_cpaxistickerfixed_delete(void* self);
 QCPAxisTickerText* q_cpaxistickertext_new();
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerText.html)
+///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
 ///
 /// @param self QCPAxisTickerText*
 ///
@@ -35992,6 +36042,16 @@ int32_t q_cpcolorgradient_level_count(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorGradient.html)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QColor*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QCPColorGradient*
 ///
 libqt_map /* of double to QColor* */ q_cpcolorgradient_color_stops(void* self);
@@ -37433,9 +37493,19 @@ QCPMarginGroup* q_cpaxisrect_margin_group(void* self, int32_t side);
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QCPMarginGroup*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QCPAxisRect*
 ///
-libqt_map /* of int32_t to QCPMarginGroup* */ q_cpaxisrect_margin_groups(void* self);
+libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cpaxisrect_margin_groups(void* self);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -39255,9 +39325,19 @@ QCPMarginGroup* q_cpabstractlegenditem_margin_group(void* self, int32_t side);
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QCPMarginGroup*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QCPAbstractLegendItem*
 ///
-libqt_map /* of int32_t to QCPMarginGroup* */ q_cpabstractlegenditem_margin_groups(void* self);
+libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cpabstractlegenditem_margin_groups(void* self);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -41143,9 +41223,19 @@ QCPMarginGroup* q_cpplottablelegenditem_margin_group(void* self, int32_t side);
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QCPMarginGroup*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QCPPlottableLegendItem*
 ///
-libqt_map /* of int32_t to QCPMarginGroup* */ q_cpplottablelegenditem_margin_groups(void* self);
+libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cpplottablelegenditem_margin_groups(void* self);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -43723,9 +43813,19 @@ QCPMarginGroup* q_cplegend_margin_group(void* self, int32_t side);
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QCPMarginGroup*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QCPLegend*
 ///
-libqt_map /* of int32_t to QCPMarginGroup* */ q_cplegend_margin_groups(void* self);
+libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cplegend_margin_groups(void* self);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -46247,9 +46347,19 @@ QCPMarginGroup* q_cptextelement_margin_group(void* self, int32_t side);
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QCPMarginGroup*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QCPTextElement*
 ///
-libqt_map /* of int32_t to QCPMarginGroup* */ q_cptextelement_margin_groups(void* self);
+libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cptextelement_margin_groups(void* self);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -48091,9 +48201,19 @@ QCPMarginGroup* q_cpcolorscale_margin_group(void* self, int32_t side);
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QCPMarginGroup*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QCPColorScale*
 ///
-libqt_map /* of int32_t to QCPMarginGroup* */ q_cpcolorscale_margin_groups(void* self);
+libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cpcolorscale_margin_groups(void* self);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -50312,16 +50432,16 @@ libqt_list /* of QCPDataRange* */ q_cpgraph_qbase_get_non_nan_segments(void* sel
 /// @param otherSegments libqt_list /* of QCPDataRange* */
 /// @param otherData libqt_list /* of QPointF* */
 ///
-libqt_list /* of libqt_pair  tuple of QCPDataRange* and QCPDataRange*  */ q_cpgraph_get_overlapping_segments(void* self, libqt_list thisSegments, libqt_list thisData, libqt_list otherSegments, libqt_list otherData);
+libqt_list /* of libqt_pair tuple of QCPDataRange* and QCPDataRange* */ q_cpgraph_get_overlapping_segments(void* self, libqt_list thisSegments, libqt_list thisData, libqt_list otherSegments, libqt_list otherData);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QCPGraph*
-/// @param callback libqt_list /* of libqt_pair  tuple of QCPDataRange* and QCPDataRange*  */ func(QCPGraph* self, QCPDataRange** thisSegments, QPointF** thisData, QCPDataRange** otherSegments, QPointF** otherData)
+/// @param callback libqt_list /* of libqt_pair tuple of QCPDataRange* and QCPDataRange* */ func(QCPGraph* self, QCPDataRange** thisSegments, QPointF** thisData, QCPDataRange** otherSegments, QPointF** otherData)
 ///
-void q_cpgraph_on_get_overlapping_segments(void* self, libqt_list /* of libqt_pair  tuple of QCPDataRange* and QCPDataRange*  */ (*callback)(void*, QCPDataRange**, QPointF**, QCPDataRange**, QPointF**));
+void q_cpgraph_on_get_overlapping_segments(void* self, libqt_list /* of libqt_pair tuple of QCPDataRange* and QCPDataRange* */ (*callback)(void*, QCPDataRange**, QPointF**, QCPDataRange**, QPointF**));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -50333,7 +50453,7 @@ void q_cpgraph_on_get_overlapping_segments(void* self, libqt_list /* of libqt_pa
 /// @param otherSegments libqt_list /* of QCPDataRange* */
 /// @param otherData libqt_list /* of QPointF* */
 ///
-libqt_list /* of libqt_pair  tuple of QCPDataRange* and QCPDataRange*  */ q_cpgraph_qbase_get_overlapping_segments(void* self, libqt_list thisSegments, libqt_list thisData, libqt_list otherSegments, libqt_list otherData);
+libqt_list /* of libqt_pair tuple of QCPDataRange* and QCPDataRange* */ q_cpgraph_qbase_get_overlapping_segments(void* self, libqt_list thisSegments, libqt_list thisData, libqt_list otherSegments, libqt_list otherData);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -90664,9 +90784,19 @@ QCPMarginGroup* q_cppolaraxisangular_margin_group(void* self, int32_t side);
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QCPMarginGroup*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QCPPolarAxisAngular*
 ///
-libqt_map /* of int32_t to QCPMarginGroup* */ q_cppolaraxisangular_margin_groups(void* self);
+libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cppolaraxisangular_margin_groups(void* self);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -94147,9 +94277,19 @@ QCPMarginGroup* q_cppolarlegenditem_margin_group(void* self, int32_t side);
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QCPMarginGroup*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QCPPolarLegendItem*
 ///
-libqt_map /* of int32_t to QCPMarginGroup* */ q_cppolarlegenditem_margin_groups(void* self);
+libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cppolarlegenditem_margin_groups(void* self);
 
 /// Inherited from QCPLayoutElement
 ///

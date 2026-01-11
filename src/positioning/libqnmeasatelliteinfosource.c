@@ -239,15 +239,15 @@ QGeoSatelliteInfoSource* q_nmeasatelliteinfosource_create_default_source2(libqt_
     // Convert libqt_map to QMap<QString,QVariant>
     libqt_map parameters_ret;
     parameters_ret.len = parameters.len;
-    parameters_ret.keys = malloc(parameters_ret.len * sizeof(libqt_string));
+    parameters_ret.keys = (libqt_string*)malloc(parameters_ret.len * sizeof(libqt_string));
     if (parameters_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_nmeasatelliteinfosource_create_default_source2\n");
         abort();
     }
-    parameters_ret.values = malloc(parameters_ret.len * sizeof(QVariant*));
+    parameters_ret.values = (QVariant**)malloc(parameters_ret.len * sizeof(QVariant*));
     if (parameters_ret.values == NULL) {
         free(parameters_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_nmeasatelliteinfosource_create_default_source2\n");
         abort();
     }
     const char** parameters_karr = (const char**)parameters.keys;
@@ -259,8 +259,8 @@ QGeoSatelliteInfoSource* q_nmeasatelliteinfosource_create_default_source2(libqt_
         parameters_vdest[i] = parameters_varr[i];
     }
     QGeoSatelliteInfoSource* _out = QGeoSatelliteInfoSource_CreateDefaultSource2(parameters_ret, (QObject*)parent);
-    libqt_free(parameters_ret.keys);
-    libqt_free(parameters_ret.values);
+    free(parameters_ret.keys);
+    free(parameters_ret.values);
     return _out;
 }
 
@@ -268,15 +268,15 @@ QGeoSatelliteInfoSource* q_nmeasatelliteinfosource_create_source2(const char* so
     // Convert libqt_map to QMap<QString,QVariant>
     libqt_map parameters_ret;
     parameters_ret.len = parameters.len;
-    parameters_ret.keys = malloc(parameters_ret.len * sizeof(libqt_string));
+    parameters_ret.keys = (libqt_string*)malloc(parameters_ret.len * sizeof(libqt_string));
     if (parameters_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_nmeasatelliteinfosource_create_source2\n");
         abort();
     }
-    parameters_ret.values = malloc(parameters_ret.len * sizeof(QVariant*));
+    parameters_ret.values = (QVariant**)malloc(parameters_ret.len * sizeof(QVariant*));
     if (parameters_ret.values == NULL) {
         free(parameters_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_nmeasatelliteinfosource_create_source2\n");
         abort();
     }
     const char** parameters_karr = (const char**)parameters.keys;
@@ -288,8 +288,8 @@ QGeoSatelliteInfoSource* q_nmeasatelliteinfosource_create_source2(const char* so
         parameters_vdest[i] = parameters_varr[i];
     }
     QGeoSatelliteInfoSource* _out = QGeoSatelliteInfoSource_CreateSource2(qstring(sourceName), parameters_ret, (QObject*)parent);
-    libqt_free(parameters_ret.keys);
-    libqt_free(parameters_ret.values);
+    free(parameters_ret.keys);
+    free(parameters_ret.values);
     return _out;
 }
 
@@ -298,7 +298,7 @@ const char** q_nmeasatelliteinfosource_available_sources() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_nmeasatelliteinfosource_available_sources");
+        fprintf(stderr, "Failed to allocate memory for string list in q_nmeasatelliteinfosource_available_sources");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -452,7 +452,7 @@ const char** q_nmeasatelliteinfosource_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_nmeasatelliteinfosource_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_nmeasatelliteinfosource_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

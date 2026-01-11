@@ -76,7 +76,7 @@ int32_t q_audiodevice_maximum_channel_count(void* self) {
     return QAudioDevice_MaximumChannelCount((QAudioDevice*)self);
 }
 
-libqt_list /* of uint16_t */ q_audiodevice_supported_sample_formats(void* self) {
+libqt_list /* of enum QAudioFormat__SampleFormat */ q_audiodevice_supported_sample_formats(void* self) {
     libqt_list _arr = QAudioDevice_SupportedSampleFormats((QAudioDevice*)self);
     return _arr;
 }

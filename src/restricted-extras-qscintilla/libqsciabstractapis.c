@@ -45,7 +45,7 @@ void q_sciabstractapis_update_auto_completion_list(void* self, const char* conte
     size_t context_len = libqt_strv_length(context);
     libqt_string* context_qstr = (libqt_string*)malloc(context_len * sizeof(libqt_string));
     if (context_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sciabstractapis_update_auto_completion_list");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sciabstractapis_update_auto_completion_list");
         abort();
     }
     for (size_t i = 0; i < context_len; ++i) {
@@ -55,7 +55,7 @@ void q_sciabstractapis_update_auto_completion_list(void* self, const char* conte
     size_t list_len = libqt_strv_length(list);
     libqt_string* list_qstr = (libqt_string*)malloc(list_len * sizeof(libqt_string));
     if (list_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sciabstractapis_update_auto_completion_list");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sciabstractapis_update_auto_completion_list");
         abort();
     }
     for (size_t i = 0; i < list_len; ++i) {
@@ -76,7 +76,7 @@ void q_sciabstractapis_qbase_update_auto_completion_list(void* self, const char*
     size_t context_len = libqt_strv_length(context);
     libqt_string* context_qstr = (libqt_string*)malloc(context_len * sizeof(libqt_string));
     if (context_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sciabstractapis_update_auto_completion_list");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sciabstractapis_update_auto_completion_list");
         abort();
     }
     for (size_t i = 0; i < context_len; ++i) {
@@ -86,7 +86,7 @@ void q_sciabstractapis_qbase_update_auto_completion_list(void* self, const char*
     size_t list_len = libqt_strv_length(list);
     libqt_string* list_qstr = (libqt_string*)malloc(list_len * sizeof(libqt_string));
     if (list_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sciabstractapis_update_auto_completion_list");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sciabstractapis_update_auto_completion_list");
         abort();
     }
     for (size_t i = 0; i < list_len; ++i) {
@@ -112,7 +112,7 @@ const char** q_sciabstractapis_call_tips(void* self, const char* context[static 
     size_t context_len = libqt_strv_length(context);
     libqt_string* context_qstr = (libqt_string*)malloc(context_len * sizeof(libqt_string));
     if (context_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sciabstractapis_call_tips");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sciabstractapis_call_tips");
         abort();
     }
     for (size_t i = 0; i < context_len; ++i) {
@@ -124,7 +124,7 @@ const char** q_sciabstractapis_call_tips(void* self, const char* context[static 
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sciabstractapis_call_tips");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sciabstractapis_call_tips");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -146,7 +146,7 @@ const char** q_sciabstractapis_qbase_call_tips(void* self, const char* context[s
     size_t context_len = libqt_strv_length(context);
     libqt_string* context_qstr = (libqt_string*)malloc(context_len * sizeof(libqt_string));
     if (context_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sciabstractapis_call_tips");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sciabstractapis_call_tips");
         abort();
     }
     for (size_t i = 0; i < context_len; ++i) {
@@ -157,7 +157,7 @@ const char** q_sciabstractapis_qbase_call_tips(void* self, const char* context[s
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sciabstractapis_call_tips");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sciabstractapis_call_tips");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -290,7 +290,7 @@ const char** q_sciabstractapis_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sciabstractapis_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sciabstractapis_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

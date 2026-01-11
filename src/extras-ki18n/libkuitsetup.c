@@ -10,7 +10,7 @@ void k_uitsetup_set_tag_pattern(void* self, const char* tagName, const char* att
     size_t attribNames_len = libqt_strv_length(attribNames);
     libqt_string* attribNames_qstr = (libqt_string*)malloc(attribNames_len * sizeof(libqt_string));
     if (attribNames_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_uitsetup_set_tag_pattern");
+        fprintf(stderr, "Failed to allocate memory for string list in k_uitsetup_set_tag_pattern");
         abort();
     }
     for (size_t i = 0; i < attribNames_len; ++i) {

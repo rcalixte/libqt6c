@@ -13,7 +13,7 @@ QFileSystemWatcher* q_filesystemwatcher_new2(const char* paths[static 1]) {
     size_t paths_len = libqt_strv_length(paths);
     libqt_string* paths_qstr = (libqt_string*)malloc(paths_len * sizeof(libqt_string));
     if (paths_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filesystemwatcher_new2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filesystemwatcher_new2");
         abort();
     }
     for (size_t i = 0; i < paths_len; ++i) {
@@ -34,7 +34,7 @@ QFileSystemWatcher* q_filesystemwatcher_new4(const char* paths[static 1], void* 
     size_t paths_len = libqt_strv_length(paths);
     libqt_string* paths_qstr = (libqt_string*)malloc(paths_len * sizeof(libqt_string));
     if (paths_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filesystemwatcher_new4");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filesystemwatcher_new4");
         abort();
     }
     for (size_t i = 0; i < paths_len; ++i) {
@@ -82,7 +82,7 @@ const char** q_filesystemwatcher_add_paths(void* self, const char* files[static 
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filesystemwatcher_add_paths");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filesystemwatcher_add_paths");
         abort();
     }
     for (size_t i = 0; i < files_len; ++i) {
@@ -94,7 +94,7 @@ const char** q_filesystemwatcher_add_paths(void* self, const char* files[static 
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filesystemwatcher_add_paths");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filesystemwatcher_add_paths");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -116,7 +116,7 @@ const char** q_filesystemwatcher_remove_paths(void* self, const char* files[stat
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filesystemwatcher_remove_paths");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filesystemwatcher_remove_paths");
         abort();
     }
     for (size_t i = 0; i < files_len; ++i) {
@@ -128,7 +128,7 @@ const char** q_filesystemwatcher_remove_paths(void* self, const char* files[stat
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filesystemwatcher_remove_paths");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filesystemwatcher_remove_paths");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -147,7 +147,7 @@ const char** q_filesystemwatcher_files(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filesystemwatcher_files");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filesystemwatcher_files");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -166,7 +166,7 @@ const char** q_filesystemwatcher_directories(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filesystemwatcher_directories");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filesystemwatcher_directories");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -299,7 +299,7 @@ const char** q_filesystemwatcher_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filesystemwatcher_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filesystemwatcher_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

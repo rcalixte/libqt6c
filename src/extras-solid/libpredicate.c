@@ -63,7 +63,7 @@ bool k_solid__predicate_matches(void* self, void* device) {
     return Solid__Predicate_Matches((Solid__Predicate*)self, (Solid__Device*)device);
 }
 
-libqt_list /* of int32_t */ k_solid__predicate_used_types(void* self) {
+libqt_list /* set of enum Solid__DeviceInterface__Type */ k_solid__predicate_used_types(void* self) {
     return Solid__Predicate_UsedTypes((Solid__Predicate*)self);
 }
 

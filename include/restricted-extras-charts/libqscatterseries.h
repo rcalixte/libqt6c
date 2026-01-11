@@ -852,7 +852,7 @@ void q_scatterseries_clear_points_configuration2(void* self, int32_t key);
 /// @param index int
 /// @param configuration libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */
 ///
-void q_scatterseries_set_point_configuration(void* self, int index, libqt_map /* of int32_t to QVariant* */ configuration);
+void q_scatterseries_set_point_configuration(void* self, int index, libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */ configuration);
 
 /// Inherited from QXYSeries
 ///
@@ -870,26 +870,47 @@ void q_scatterseries_set_point_configuration2(void* self, int index, int32_t key
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#setPointsConfiguration)
 ///
 /// @param self QScatterSeries*
-/// @param pointsConfiguration libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */
+/// @param pointsConfiguration libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */
 ///
-void q_scatterseries_set_points_configuration(void* self, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ pointsConfiguration);
+void q_scatterseries_set_points_configuration(void* self, libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */ pointsConfiguration);
 
 /// Inherited from QXYSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#pointConfiguration)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QScatterSeries*
 /// @param index int
 ///
-libqt_map /* of int32_t to QVariant* */ q_scatterseries_point_configuration(void* self, int index);
+libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */ q_scatterseries_point_configuration(void* self, int index);
 
 /// Inherited from QXYSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#pointsConfiguration)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((libqt_map*)map.values)[i].keys);
+///     free(((libqt_map*)map.values)[i].values);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QScatterSeries*
 ///
-libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ q_scatterseries_points_configuration(void* self);
+libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */ q_scatterseries_points_configuration(void* self);
 
 /// Inherited from QXYSeries
 ///
@@ -1330,18 +1351,18 @@ void q_scatterseries_on_best_fit_line_color_changed(void* self, void (*callback)
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#pointsConfigurationChanged)
 ///
 /// @param self QScatterSeries*
-/// @param configuration libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */
+/// @param configuration libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */
 ///
-void q_scatterseries_points_configuration_changed(void* self, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ configuration);
+void q_scatterseries_points_configuration_changed(void* self, libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */ configuration);
 
 /// Inherited from QXYSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#pointsConfigurationChanged)
 ///
 /// @param self QScatterSeries*
-/// @param callback void func(QScatterSeries* self, libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */ /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */)
+/// @param callback void func(QScatterSeries* self, libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */ /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */)
 ///
-void q_scatterseries_on_points_configuration_changed(void* self, void (*callback)(void*, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */));
+void q_scatterseries_on_points_configuration_changed(void* self, void (*callback)(void*, libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */));
 
 /// Inherited from QXYSeries
 ///

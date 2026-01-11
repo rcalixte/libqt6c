@@ -67,7 +67,7 @@ void k_messagedialog_set_list_widget_items(void* self, const char* strlist[stati
     size_t strlist_len = libqt_strv_length(strlist);
     libqt_string* strlist_qstr = (libqt_string*)malloc(strlist_len * sizeof(libqt_string));
     if (strlist_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_messagedialog_set_list_widget_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_messagedialog_set_list_widget_items");
         abort();
     }
     for (size_t i = 0; i < strlist_len; ++i) {
@@ -1427,7 +1427,7 @@ const char** k_messagedialog_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_messagedialog_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_messagedialog_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

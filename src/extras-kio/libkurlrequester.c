@@ -102,7 +102,7 @@ void k_urlrequester_set_name_filters(void* self, const char* filters[static 1]) 
     size_t filters_len = libqt_strv_length(filters);
     libqt_string* filters_qstr = (libqt_string*)malloc(filters_len * sizeof(libqt_string));
     if (filters_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_urlrequester_set_name_filters");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urlrequester_set_name_filters");
         abort();
     }
     for (size_t i = 0; i < filters_len; ++i) {
@@ -122,7 +122,7 @@ const char** k_urlrequester_name_filters(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_urlrequester_name_filters");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urlrequester_name_filters");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -140,7 +140,7 @@ void k_urlrequester_set_mime_type_filters(void* self, const char* mimeTypes[stat
     size_t mimeTypes_len = libqt_strv_length(mimeTypes);
     libqt_string* mimeTypes_qstr = (libqt_string*)malloc(mimeTypes_len * sizeof(libqt_string));
     if (mimeTypes_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_urlrequester_set_mime_type_filters");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urlrequester_set_mime_type_filters");
         abort();
     }
     for (size_t i = 0; i < mimeTypes_len; ++i) {
@@ -156,7 +156,7 @@ const char** k_urlrequester_mime_type_filters(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_urlrequester_mime_type_filters");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urlrequester_mime_type_filters");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1538,7 +1538,7 @@ const char** k_urlrequester_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_urlrequester_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urlrequester_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2408,7 +2408,7 @@ void k_urlcomborequester_set_name_filters(void* self, const char* filters[static
     size_t filters_len = libqt_strv_length(filters);
     libqt_string* filters_qstr = (libqt_string*)malloc(filters_len * sizeof(libqt_string));
     if (filters_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_urlcomborequester_set_name_filters");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urlcomborequester_set_name_filters");
         abort();
     }
     for (size_t i = 0; i < filters_len; ++i) {
@@ -2428,7 +2428,7 @@ const char** k_urlcomborequester_name_filters(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_urlcomborequester_name_filters");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urlcomborequester_name_filters");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2446,7 +2446,7 @@ void k_urlcomborequester_set_mime_type_filters(void* self, const char* mimeTypes
     size_t mimeTypes_len = libqt_strv_length(mimeTypes);
     libqt_string* mimeTypes_qstr = (libqt_string*)malloc(mimeTypes_len * sizeof(libqt_string));
     if (mimeTypes_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_urlcomborequester_set_mime_type_filters");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urlcomborequester_set_mime_type_filters");
         abort();
     }
     for (size_t i = 0; i < mimeTypes_len; ++i) {
@@ -2462,7 +2462,7 @@ const char** k_urlcomborequester_mime_type_filters(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_urlcomborequester_mime_type_filters");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urlcomborequester_mime_type_filters");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -3794,7 +3794,7 @@ const char** k_urlcomborequester_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_urlcomborequester_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urlcomborequester_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

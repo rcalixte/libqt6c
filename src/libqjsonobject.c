@@ -23,15 +23,15 @@ QJsonObject* q_jsonobject_from_variant_map(libqt_map /* of const char* to QVaria
     // Convert libqt_map to QMap<QString,QVariant>
     libqt_map mapVal_ret;
     mapVal_ret.len = mapVal.len;
-    mapVal_ret.keys = malloc(mapVal_ret.len * sizeof(libqt_string));
+    mapVal_ret.keys = (libqt_string*)malloc(mapVal_ret.len * sizeof(libqt_string));
     if (mapVal_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_jsonobject_from_variant_map\n");
         abort();
     }
-    mapVal_ret.values = malloc(mapVal_ret.len * sizeof(QVariant*));
+    mapVal_ret.values = (QVariant**)malloc(mapVal_ret.len * sizeof(QVariant*));
     if (mapVal_ret.values == NULL) {
         free(mapVal_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_jsonobject_from_variant_map\n");
         abort();
     }
     const char** mapVal_karr = (const char**)mapVal.keys;
@@ -43,8 +43,8 @@ QJsonObject* q_jsonobject_from_variant_map(libqt_map /* of const char* to QVaria
         mapVal_vdest[i] = mapVal_varr[i];
     }
     QJsonObject* _out = QJsonObject_FromVariantMap(mapVal_ret);
-    libqt_free(mapVal_ret.keys);
-    libqt_free(mapVal_ret.values);
+    free(mapVal_ret.keys);
+    free(mapVal_ret.values);
     return _out;
 }
 
@@ -54,17 +54,30 @@ libqt_map /* of const char* to QVariant* */ q_jsonobject_to_variant_map(void* se
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_keys = (libqt_string*)_out.keys;
-    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_jsonobject_to_variant_map");
+        fprintf(stderr, "Failed to allocate memory for map string keys in q_jsonobject_to_variant_map");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_keys[i] = (const char*)_out_keys[i].data;
+        _ret_keys[i] = (char*)malloc(_out_keys[i].len + 1);
+        if (_ret_keys[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_keys[j]);
+            }
+            free(_ret_keys);
+            fprintf(stderr, "Failed to allocate memory for map keys in q_jsonobject_to_variant_map");
+            abort();
+        }
+        memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
+        _ret_keys[i][_out_keys[i].len] = '\0';
     }
     _ret.keys = (void*)_ret_keys;
     _ret.values = _out.values;
-    free(_out_keys);
+    for (size_t i = 0; i < _out.len; ++i) {
+        libqt_free(_out_keys[i].data);
+    }
+    free(_out.keys);
     return _ret;
 }
 
@@ -72,15 +85,15 @@ QJsonObject* q_jsonobject_from_variant_hash(libqt_map /* of const char* to QVari
     // Convert libqt_map to QHash<QString,QVariant>
     libqt_map mapVal_ret;
     mapVal_ret.len = mapVal.len;
-    mapVal_ret.keys = malloc(mapVal_ret.len * sizeof(libqt_string));
+    mapVal_ret.keys = (libqt_string*)malloc(mapVal_ret.len * sizeof(libqt_string));
     if (mapVal_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_jsonobject_from_variant_hash\n");
         abort();
     }
-    mapVal_ret.values = malloc(mapVal_ret.len * sizeof(QVariant*));
+    mapVal_ret.values = (QVariant**)malloc(mapVal_ret.len * sizeof(QVariant*));
     if (mapVal_ret.values == NULL) {
         free(mapVal_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_jsonobject_from_variant_hash\n");
         abort();
     }
     const char** mapVal_karr = (const char**)mapVal.keys;
@@ -92,8 +105,8 @@ QJsonObject* q_jsonobject_from_variant_hash(libqt_map /* of const char* to QVari
         mapVal_vdest[i] = mapVal_varr[i];
     }
     QJsonObject* _out = QJsonObject_FromVariantHash(mapVal_ret);
-    libqt_free(mapVal_ret.keys);
-    libqt_free(mapVal_ret.values);
+    free(mapVal_ret.keys);
+    free(mapVal_ret.values);
     return _out;
 }
 
@@ -103,17 +116,30 @@ libqt_map /* of const char* to QVariant* */ q_jsonobject_to_variant_hash(void* s
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_keys = (libqt_string*)_out.keys;
-    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_jsonobject_to_variant_hash");
+        fprintf(stderr, "Failed to allocate memory for map string keys in q_jsonobject_to_variant_hash");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_keys[i] = (const char*)_out_keys[i].data;
+        _ret_keys[i] = (char*)malloc(_out_keys[i].len + 1);
+        if (_ret_keys[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_keys[j]);
+            }
+            free(_ret_keys);
+            fprintf(stderr, "Failed to allocate memory for map keys in q_jsonobject_to_variant_hash");
+            abort();
+        }
+        memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
+        _ret_keys[i][_out_keys[i].len] = '\0';
     }
     _ret.keys = (void*)_ret_keys;
     _ret.values = _out.values;
-    free(_out_keys);
+    for (size_t i = 0; i < _out.len; ++i) {
+        libqt_free(_out_keys[i].data);
+    }
+    free(_out.keys);
     return _ret;
 }
 
@@ -122,7 +148,7 @@ const char** q_jsonobject_keys(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_jsonobject_keys");
+        fprintf(stderr, "Failed to allocate memory for string list in q_jsonobject_keys");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

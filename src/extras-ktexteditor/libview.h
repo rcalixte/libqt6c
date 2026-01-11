@@ -525,17 +525,17 @@ void k_texteditor__view_on_status_bar_enabled_changed(void* self, void (*callbac
 ///
 /// @param self KTextEditor__View*
 /// @param config KConfigGroup*
-/// @param flags libqt_list /* of const char* */ flags
+/// @param flags libqt_list /* set of const char* */ flags
 ///
-void k_texteditor__view_read_session_config(void* self, void* config, libqt_list /* of const char* */ flags);
+void k_texteditor__view_read_session_config(void* self, void* config, libqt_list /* set of const char* */ flags);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-view.html#writeSessionConfig)
 ///
 /// @param self KTextEditor__View*
 /// @param config KConfigGroup*
-/// @param flags libqt_list /* of const char* */ flags
+/// @param flags libqt_list /* set of const char* */ flags
 ///
-void k_texteditor__view_write_session_config(void* self, void* config, libqt_list /* of const char* */ flags);
+void k_texteditor__view_write_session_config(void* self, void* config, libqt_list /* set of const char* */ flags);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-view.html#lineAttributes)
 ///

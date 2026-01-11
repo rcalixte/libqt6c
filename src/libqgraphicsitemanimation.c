@@ -64,7 +64,7 @@ QPointF* q_graphicsitemanimation_pos_at(void* self, double step) {
     return QGraphicsItemAnimation_PosAt((QGraphicsItemAnimation*)self, step);
 }
 
-libqt_list /* of libqt_pair  tuple of double and QPointF*  */ q_graphicsitemanimation_pos_list(void* self) {
+libqt_list /* of libqt_pair tuple of double and QPointF* */ q_graphicsitemanimation_pos_list(void* self) {
     libqt_list _arr = QGraphicsItemAnimation_PosList((QGraphicsItemAnimation*)self);
     return _arr;
 }
@@ -81,7 +81,7 @@ double q_graphicsitemanimation_rotation_at(void* self, double step) {
     return QGraphicsItemAnimation_RotationAt((QGraphicsItemAnimation*)self, step);
 }
 
-libqt_list /* of libqt_pair  tuple of double and double  */ q_graphicsitemanimation_rotation_list(void* self) {
+libqt_list /* of libqt_pair tuple of double and double */ q_graphicsitemanimation_rotation_list(void* self) {
     libqt_list _arr = QGraphicsItemAnimation_RotationList((QGraphicsItemAnimation*)self);
     return _arr;
 }
@@ -98,7 +98,7 @@ double q_graphicsitemanimation_y_translation_at(void* self, double step) {
     return QGraphicsItemAnimation_YTranslationAt((QGraphicsItemAnimation*)self, step);
 }
 
-libqt_list /* of libqt_pair  tuple of double and QPointF*  */ q_graphicsitemanimation_translation_list(void* self) {
+libqt_list /* of libqt_pair tuple of double and QPointF* */ q_graphicsitemanimation_translation_list(void* self) {
     libqt_list _arr = QGraphicsItemAnimation_TranslationList((QGraphicsItemAnimation*)self);
     return _arr;
 }
@@ -115,7 +115,7 @@ double q_graphicsitemanimation_horizontal_scale_at(void* self, double step) {
     return QGraphicsItemAnimation_HorizontalScaleAt((QGraphicsItemAnimation*)self, step);
 }
 
-libqt_list /* of libqt_pair  tuple of double and QPointF*  */ q_graphicsitemanimation_scale_list(void* self) {
+libqt_list /* of libqt_pair tuple of double and QPointF* */ q_graphicsitemanimation_scale_list(void* self) {
     libqt_list _arr = QGraphicsItemAnimation_ScaleList((QGraphicsItemAnimation*)self);
     return _arr;
 }
@@ -132,7 +132,7 @@ double q_graphicsitemanimation_horizontal_shear_at(void* self, double step) {
     return QGraphicsItemAnimation_HorizontalShearAt((QGraphicsItemAnimation*)self, step);
 }
 
-libqt_list /* of libqt_pair  tuple of double and QPointF*  */ q_graphicsitemanimation_shear_list(void* self) {
+libqt_list /* of libqt_pair tuple of double and QPointF* */ q_graphicsitemanimation_shear_list(void* self) {
     libqt_list _arr = QGraphicsItemAnimation_ShearList((QGraphicsItemAnimation*)self);
     return _arr;
 }
@@ -292,7 +292,7 @@ const char** q_graphicsitemanimation_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_graphicsitemanimation_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_graphicsitemanimation_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

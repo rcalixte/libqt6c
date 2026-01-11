@@ -53,7 +53,7 @@ const char** k_nscore__enginebase_available_config_files() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_nscore__enginebase_available_config_files");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__enginebase_available_config_files");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -110,7 +110,7 @@ const char** k_nscore__enginebase_categories(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_nscore__enginebase_categories");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__enginebase_categories");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -153,7 +153,7 @@ void k_nscore__enginebase_set_tag_filter(void* self, const char* filter[static 1
     size_t filter_len = libqt_strv_length(filter);
     libqt_string* filter_qstr = (libqt_string*)malloc(filter_len * sizeof(libqt_string));
     if (filter_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_nscore__enginebase_set_tag_filter");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__enginebase_set_tag_filter");
         abort();
     }
     for (size_t i = 0; i < filter_len; ++i) {
@@ -169,7 +169,7 @@ const char** k_nscore__enginebase_tag_filter(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_nscore__enginebase_tag_filter");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__enginebase_tag_filter");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -191,7 +191,7 @@ void k_nscore__enginebase_set_download_tag_filter(void* self, const char* filter
     size_t filter_len = libqt_strv_length(filter);
     libqt_string* filter_qstr = (libqt_string*)malloc(filter_len * sizeof(libqt_string));
     if (filter_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_nscore__enginebase_set_download_tag_filter");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__enginebase_set_download_tag_filter");
         abort();
     }
     for (size_t i = 0; i < filter_len; ++i) {
@@ -207,7 +207,7 @@ const char** k_nscore__enginebase_download_tag_filter(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_nscore__enginebase_download_tag_filter");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__enginebase_download_tag_filter");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -246,7 +246,7 @@ const char** k_nscore__enginebase_provider_i_ds(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_nscore__enginebase_provider_i_ds");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__enginebase_provider_i_ds");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -451,7 +451,7 @@ const char** k_nscore__enginebase_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_nscore__enginebase_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__enginebase_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

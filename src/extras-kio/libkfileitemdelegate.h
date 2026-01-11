@@ -288,7 +288,7 @@ void k_fileitemdelegate_set_show_information2(void* self, int32_t information);
 ///
 /// @return libqt_list of enum KFileItemDelegate__Information
 ///
-libqt_list /* of int32_t */ k_fileitemdelegate_show_information(void* self);
+libqt_list /* of enum KFileItemDelegate__Information */ k_fileitemdelegate_show_information(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#setShadowColor)
 ///

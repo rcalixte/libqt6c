@@ -19,7 +19,7 @@ QDirIterator* q_diriterator_new4(const char* path, const char* nameFilters[stati
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
     if (nameFilters_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_diriterator_new4");
+        fprintf(stderr, "Failed to allocate memory for string list in q_diriterator_new4");
         abort();
     }
     for (size_t i = 0; i < nameFilters_len; ++i) {
@@ -48,7 +48,7 @@ QDirIterator* q_diriterator_new8(const char* path, const char* nameFilters[stati
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
     if (nameFilters_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_diriterator_new8");
+        fprintf(stderr, "Failed to allocate memory for string list in q_diriterator_new8");
         abort();
     }
     for (size_t i = 0; i < nameFilters_len; ++i) {
@@ -65,7 +65,7 @@ QDirIterator* q_diriterator_new9(const char* path, const char* nameFilters[stati
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
     if (nameFilters_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_diriterator_new9");
+        fprintf(stderr, "Failed to allocate memory for string list in q_diriterator_new9");
         abort();
     }
     for (size_t i = 0; i < nameFilters_len; ++i) {

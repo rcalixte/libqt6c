@@ -54,6 +54,17 @@ QVariant* k_solid__genericinterface_property(void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/solid-genericinterface.html#allProperties)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self Solid__GenericInterface*
 ///
 libqt_map /* of const char* to QVariant* */ k_solid__genericinterface_all_properties(void* self);

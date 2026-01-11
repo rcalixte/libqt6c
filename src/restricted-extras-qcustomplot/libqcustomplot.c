@@ -1652,7 +1652,7 @@ const char** q_cplayer_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cplayer_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cplayer_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2268,7 +2268,7 @@ const char** q_cplayerable_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cplayerable_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cplayerable_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -3133,7 +3133,7 @@ const char** q_cpselectionrect_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpselectionrect_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpselectionrect_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -3718,7 +3718,7 @@ const char** q_cpmargingroup_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpmargingroup_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpmargingroup_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -3999,7 +3999,7 @@ QCPMarginGroup* q_cplayoutelement_margin_group(void* self, int32_t side) {
     return QCPLayoutElement_MarginGroup((QCPLayoutElement*)self, side);
 }
 
-libqt_map /* of int32_t to QCPMarginGroup* */ q_cplayoutelement_margin_groups(void* self) {
+libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cplayoutelement_margin_groups(void* self) {
     // Convert QHash<QCP::MarginSide,QCPMarginGroup> to libqt_map
     libqt_map _out = QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
     libqt_map _ret;
@@ -4338,7 +4338,7 @@ const char** q_cplayoutelement_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cplayoutelement_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cplayoutelement_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -4945,7 +4945,7 @@ QCPMarginGroup* q_cplayout_margin_group(void* self, int32_t side) {
     return QCPLayoutElement_MarginGroup((QCPLayoutElement*)self, side);
 }
 
-libqt_map /* of int32_t to QCPMarginGroup* */ q_cplayout_margin_groups(void* self) {
+libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cplayout_margin_groups(void* self) {
     // Convert QHash<QCP::MarginSide,QCPMarginGroup> to libqt_map
     libqt_map _out = QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
     libqt_map _ret;
@@ -5148,7 +5148,7 @@ const char** q_cplayout_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cplayout_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cplayout_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -5943,7 +5943,7 @@ QCPMarginGroup* q_cplayoutgrid_margin_group(void* self, int32_t side) {
     return QCPLayoutElement_MarginGroup((QCPLayoutElement*)self, side);
 }
 
-libqt_map /* of int32_t to QCPMarginGroup* */ q_cplayoutgrid_margin_groups(void* self) {
+libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cplayoutgrid_margin_groups(void* self) {
     // Convert QHash<QCP::MarginSide,QCPMarginGroup> to libqt_map
     libqt_map _out = QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
     libqt_map _ret;
@@ -6146,7 +6146,7 @@ const char** q_cplayoutgrid_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cplayoutgrid_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cplayoutgrid_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -6855,7 +6855,7 @@ QCPMarginGroup* q_cplayoutinset_margin_group(void* self, int32_t side) {
     return QCPLayoutElement_MarginGroup((QCPLayoutElement*)self, side);
 }
 
-libqt_map /* of int32_t to QCPMarginGroup* */ q_cplayoutinset_margin_groups(void* self) {
+libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cplayoutinset_margin_groups(void* self) {
     // Convert QHash<QCP::MarginSide,QCPMarginGroup> to libqt_map
     libqt_map _out = QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
     libqt_map _ret;
@@ -7058,7 +7058,7 @@ const char** q_cplayoutinset_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cplayoutinset_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cplayoutinset_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -7704,7 +7704,7 @@ void q_cpaxisticker_generate(void* self, void* range, void* locale, void* format
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxisticker_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxisticker_generate");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -7723,7 +7723,7 @@ void q_cpaxisticker_qbase_generate(void* self, void* range, void* locale, void* 
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxisticker_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxisticker_generate");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -7808,7 +7808,7 @@ const char** q_cpaxisticker_create_label_vector(void* self, libqt_list ticks, vo
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxisticker_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxisticker_create_label_vector");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -7831,7 +7831,7 @@ const char** q_cpaxisticker_qbase_create_label_vector(void* self, libqt_list tic
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxisticker_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxisticker_create_label_vector");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -8044,7 +8044,7 @@ void q_cpaxistickerdatetime_generate(void* self, void* range, void* locale, void
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickerdatetime_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerdatetime_generate");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -8059,7 +8059,7 @@ void q_cpaxistickerdatetime_qbase_generate(void* self, void* range, void* locale
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickerdatetime_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerdatetime_generate");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -8093,7 +8093,7 @@ const char** q_cpaxistickerdatetime_create_label_vector(void* self, libqt_list t
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickerdatetime_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerdatetime_create_label_vector");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -8112,7 +8112,7 @@ const char** q_cpaxistickerdatetime_qbase_create_label_vector(void* self, libqt_
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickerdatetime_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerdatetime_create_label_vector");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -8287,7 +8287,7 @@ void q_cpaxistickertime_generate(void* self, void* range, void* locale, void* fo
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickertime_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertime_generate");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -8302,7 +8302,7 @@ void q_cpaxistickertime_qbase_generate(void* self, void* range, void* locale, vo
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickertime_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertime_generate");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -8350,7 +8350,7 @@ const char** q_cpaxistickertime_create_label_vector(void* self, libqt_list ticks
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickertime_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertime_create_label_vector");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -8369,7 +8369,7 @@ const char** q_cpaxistickertime_qbase_create_label_vector(void* self, libqt_list
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickertime_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertime_create_label_vector");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -8499,7 +8499,7 @@ void q_cpaxistickerfixed_generate(void* self, void* range, void* locale, void* f
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickerfixed_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerfixed_generate");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -8514,7 +8514,7 @@ void q_cpaxistickerfixed_qbase_generate(void* self, void* range, void* locale, v
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickerfixed_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerfixed_generate");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -8592,7 +8592,7 @@ const char** q_cpaxistickerfixed_create_label_vector(void* self, libqt_list tick
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickerfixed_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerfixed_create_label_vector");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -8611,7 +8611,7 @@ const char** q_cpaxistickerfixed_qbase_create_label_vector(void* self, libqt_lis
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickerfixed_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerfixed_create_label_vector");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -8693,15 +8693,26 @@ libqt_map /* of double to const char* */ q_cpaxistickertext_ticks(void* self) {
     libqt_string* _out_values = (libqt_string*)_out.values;
     const char** _ret_values = (const char**)malloc(_ret.len * sizeof(const char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickertext_ticks");
+        fprintf(stderr, "Failed to allocate memory for map string values in q_cpaxistickertext_ticks");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_values[i] = (const char*)_out_values[i].data;
+        _ret_values[i] = (const char*)malloc(_out_values[i].len + 1);
+        if (_ret_values[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_values[j]);
+            }
+            free(_ret_values);
+            fprintf(stderr, "Failed to allocate memory for map string values in q_cpaxistickertext_ticks");
+            abort();
+        }
     }
     _ret.keys = _out.keys;
     _ret.values = (void*)_ret_values;
-    free(_out_values);
+    for (size_t i = 0; i < _out.len; ++i) {
+        libqt_free(_out_values[i].data);
+    }
+    free(_out.values);
     return _ret;
 }
 
@@ -8713,15 +8724,15 @@ void q_cpaxistickertext_set_ticks(void* self, libqt_map /* of double to const ch
     // Convert libqt_map to QMap<double,QString>
     libqt_map ticks_ret;
     ticks_ret.len = ticks.len;
-    ticks_ret.keys = malloc(ticks_ret.len * sizeof(double));
+    ticks_ret.keys = (double*)malloc(ticks_ret.len * sizeof(double));
     if (ticks_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_cpaxistickertext_set_ticks\n");
         abort();
     }
-    ticks_ret.values = malloc(ticks_ret.len * sizeof(libqt_string));
+    ticks_ret.values = (libqt_string*)malloc(ticks_ret.len * sizeof(libqt_string));
     if (ticks_ret.values == NULL) {
         free(ticks_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_cpaxistickertext_set_ticks\n");
         abort();
     }
     double* ticks_karr = (double*)ticks.keys;
@@ -8733,15 +8744,15 @@ void q_cpaxistickertext_set_ticks(void* self, libqt_map /* of double to const ch
         ticks_vdest[i] = qstring(ticks_varr[i]);
     }
     QCPAxisTickerText_SetTicks((QCPAxisTickerText*)self, ticks_ret);
-    libqt_free(ticks_ret.keys);
-    libqt_free(ticks_ret.values);
+    free(ticks_ret.keys);
+    free(ticks_ret.values);
 }
 
 void q_cpaxistickertext_set_ticks2(void* self, libqt_list positions, const char* labels[static 1]) {
     size_t labels_len = libqt_strv_length(labels);
     libqt_string* labels_qstr = (libqt_string*)malloc(labels_len * sizeof(libqt_string));
     if (labels_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickertext_set_ticks2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertext_set_ticks2");
         abort();
     }
     for (size_t i = 0; i < labels_len; ++i) {
@@ -8768,15 +8779,15 @@ void q_cpaxistickertext_add_ticks(void* self, libqt_map /* of double to const ch
     // Convert libqt_map to QMap<double,QString>
     libqt_map ticks_ret;
     ticks_ret.len = ticks.len;
-    ticks_ret.keys = malloc(ticks_ret.len * sizeof(double));
+    ticks_ret.keys = (double*)malloc(ticks_ret.len * sizeof(double));
     if (ticks_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_cpaxistickertext_add_ticks\n");
         abort();
     }
-    ticks_ret.values = malloc(ticks_ret.len * sizeof(libqt_string));
+    ticks_ret.values = (libqt_string*)malloc(ticks_ret.len * sizeof(libqt_string));
     if (ticks_ret.values == NULL) {
         free(ticks_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_cpaxistickertext_add_ticks\n");
         abort();
     }
     double* ticks_karr = (double*)ticks.keys;
@@ -8788,15 +8799,15 @@ void q_cpaxistickertext_add_ticks(void* self, libqt_map /* of double to const ch
         ticks_vdest[i] = qstring(ticks_varr[i]);
     }
     QCPAxisTickerText_AddTicks((QCPAxisTickerText*)self, ticks_ret);
-    libqt_free(ticks_ret.keys);
-    libqt_free(ticks_ret.values);
+    free(ticks_ret.keys);
+    free(ticks_ret.values);
 }
 
 void q_cpaxistickertext_add_ticks2(void* self, libqt_list positions, const char* labels[static 1]) {
     size_t labels_len = libqt_strv_length(labels);
     libqt_string* labels_qstr = (libqt_string*)malloc(labels_len * sizeof(libqt_string));
     if (labels_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickertext_add_ticks2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertext_add_ticks2");
         abort();
     }
     for (size_t i = 0; i < labels_len; ++i) {
@@ -8891,7 +8902,7 @@ void q_cpaxistickertext_generate(void* self, void* range, void* locale, void* fo
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickertext_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertext_generate");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -8906,7 +8917,7 @@ void q_cpaxistickertext_qbase_generate(void* self, void* range, void* locale, vo
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickertext_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertext_generate");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -8940,7 +8951,7 @@ const char** q_cpaxistickertext_create_label_vector(void* self, libqt_list ticks
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickertext_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertext_create_label_vector");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -8959,7 +8970,7 @@ const char** q_cpaxistickertext_qbase_create_label_vector(void* self, libqt_list
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickertext_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertext_create_label_vector");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -9222,7 +9233,7 @@ void q_cpaxistickerpi_generate(void* self, void* range, void* locale, void* form
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickerpi_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerpi_generate");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -9237,7 +9248,7 @@ void q_cpaxistickerpi_qbase_generate(void* self, void* range, void* locale, void
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickerpi_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerpi_generate");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -9285,7 +9296,7 @@ const char** q_cpaxistickerpi_create_label_vector(void* self, libqt_list ticks, 
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickerpi_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerpi_create_label_vector");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -9304,7 +9315,7 @@ const char** q_cpaxistickerpi_qbase_create_label_vector(void* self, libqt_list t
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickerpi_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerpi_create_label_vector");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -9448,7 +9459,7 @@ void q_cpaxistickerlog_generate(void* self, void* range, void* locale, void* for
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickerlog_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerlog_generate");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -9463,7 +9474,7 @@ void q_cpaxistickerlog_qbase_generate(void* self, void* range, void* locale, voi
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickerlog_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerlog_generate");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -9527,7 +9538,7 @@ const char** q_cpaxistickerlog_create_label_vector(void* self, libqt_list ticks,
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickerlog_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerlog_create_label_vector");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -9546,7 +9557,7 @@ const char** q_cpaxistickerlog_qbase_create_label_vector(void* self, libqt_list 
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxistickerlog_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerlog_create_label_vector");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -9910,7 +9921,7 @@ const char** q_cpgrid_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpgrid_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpgrid_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -10396,7 +10407,7 @@ const char** q_cpaxis_tick_vector_labels(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxis_tick_vector_labels");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxis_tick_vector_labels");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -11187,7 +11198,7 @@ const char** q_cpaxis_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxis_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxis_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -12206,7 +12217,7 @@ const char** q_cpabstractplottable_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpabstractplottable_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpabstractplottable_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -13214,7 +13225,7 @@ const char** q_cpabstractitem_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpabstractitem_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpabstractitem_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -15918,7 +15929,7 @@ const char** q_customplot_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_customplot_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_customplot_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -16726,15 +16737,15 @@ void q_cpcolorgradient_set_color_stops(void* self, libqt_map /* of double to QCo
     // Convert libqt_map to QMap<double,QColor>
     libqt_map colorStops_ret;
     colorStops_ret.len = colorStops.len;
-    colorStops_ret.keys = malloc(colorStops_ret.len * sizeof(double));
+    colorStops_ret.keys = (double*)malloc(colorStops_ret.len * sizeof(double));
     if (colorStops_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_cpcolorgradient_set_color_stops\n");
         abort();
     }
-    colorStops_ret.values = malloc(colorStops_ret.len * sizeof(QColor*));
+    colorStops_ret.values = (QColor**)malloc(colorStops_ret.len * sizeof(QColor*));
     if (colorStops_ret.values == NULL) {
         free(colorStops_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_cpcolorgradient_set_color_stops\n");
         abort();
     }
     double* colorStops_karr = (double*)colorStops.keys;
@@ -16746,8 +16757,8 @@ void q_cpcolorgradient_set_color_stops(void* self, libqt_map /* of double to QCo
         colorStops_vdest[i] = colorStops_varr[i];
     }
     QCPColorGradient_SetColorStops((QCPColorGradient*)self, colorStops_ret);
-    libqt_free(colorStops_ret.keys);
-    libqt_free(colorStops_ret.values);
+    free(colorStops_ret.keys);
+    free(colorStops_ret.values);
 }
 
 void q_cpcolorgradient_set_color_stop_at(void* self, double position, void* color) {
@@ -17469,7 +17480,7 @@ QCPMarginGroup* q_cpaxisrect_margin_group(void* self, int32_t side) {
     return QCPLayoutElement_MarginGroup((QCPLayoutElement*)self, side);
 }
 
-libqt_map /* of int32_t to QCPMarginGroup* */ q_cpaxisrect_margin_groups(void* self) {
+libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cpaxisrect_margin_groups(void* self) {
     // Convert QHash<QCP::MarginSide,QCPMarginGroup> to libqt_map
     libqt_map _out = QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
     libqt_map _ret;
@@ -17672,7 +17683,7 @@ const char** q_cpaxisrect_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpaxisrect_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxisrect_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -18271,7 +18282,7 @@ QCPMarginGroup* q_cpabstractlegenditem_margin_group(void* self, int32_t side) {
     return QCPLayoutElement_MarginGroup((QCPLayoutElement*)self, side);
 }
 
-libqt_map /* of int32_t to QCPMarginGroup* */ q_cpabstractlegenditem_margin_groups(void* self) {
+libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cpabstractlegenditem_margin_groups(void* self) {
     // Convert QHash<QCP::MarginSide,QCPMarginGroup> to libqt_map
     libqt_map _out = QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
     libqt_map _ret;
@@ -18474,7 +18485,7 @@ const char** q_cpabstractlegenditem_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpabstractlegenditem_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpabstractlegenditem_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -19091,7 +19102,7 @@ QCPMarginGroup* q_cpplottablelegenditem_margin_group(void* self, int32_t side) {
     return QCPLayoutElement_MarginGroup((QCPLayoutElement*)self, side);
 }
 
-libqt_map /* of int32_t to QCPMarginGroup* */ q_cpplottablelegenditem_margin_groups(void* self) {
+libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cpplottablelegenditem_margin_groups(void* self) {
     // Convert QHash<QCP::MarginSide,QCPMarginGroup> to libqt_map
     libqt_map _out = QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
     libqt_map _ret;
@@ -19294,7 +19305,7 @@ const char** q_cpplottablelegenditem_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpplottablelegenditem_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpplottablelegenditem_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -20238,7 +20249,7 @@ QCPMarginGroup* q_cplegend_margin_group(void* self, int32_t side) {
     return QCPLayoutElement_MarginGroup((QCPLayoutElement*)self, side);
 }
 
-libqt_map /* of int32_t to QCPMarginGroup* */ q_cplegend_margin_groups(void* self) {
+libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cplegend_margin_groups(void* self) {
     // Convert QHash<QCP::MarginSide,QCPMarginGroup> to libqt_map
     libqt_map _out = QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
     libqt_map _ret;
@@ -20441,7 +20452,7 @@ const char** q_cplegend_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cplegend_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cplegend_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -21331,7 +21342,7 @@ QCPMarginGroup* q_cptextelement_margin_group(void* self, int32_t side) {
     return QCPLayoutElement_MarginGroup((QCPLayoutElement*)self, side);
 }
 
-libqt_map /* of int32_t to QCPMarginGroup* */ q_cptextelement_margin_groups(void* self) {
+libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cptextelement_margin_groups(void* self) {
     // Convert QHash<QCP::MarginSide,QCPMarginGroup> to libqt_map
     libqt_map _out = QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
     libqt_map _ret;
@@ -21534,7 +21545,7 @@ const char** q_cptextelement_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cptextelement_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cptextelement_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -22159,7 +22170,7 @@ QCPMarginGroup* q_cpcolorscale_margin_group(void* self, int32_t side) {
     return QCPLayoutElement_MarginGroup((QCPLayoutElement*)self, side);
 }
 
-libqt_map /* of int32_t to QCPMarginGroup* */ q_cpcolorscale_margin_groups(void* self) {
+libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cpcolorscale_margin_groups(void* self) {
     // Convert QHash<QCP::MarginSide,QCPMarginGroup> to libqt_map
     libqt_map _out = QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
     libqt_map _ret;
@@ -22362,7 +22373,7 @@ const char** q_cpcolorscale_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpcolorscale_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpcolorscale_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -23145,16 +23156,16 @@ libqt_list /* of QCPDataRange* */ q_cpgraph_qbase_get_non_nan_segments(void* sel
     return _arr;
 }
 
-libqt_list /* of libqt_pair  tuple of QCPDataRange* and QCPDataRange*  */ q_cpgraph_get_overlapping_segments(void* self, libqt_list thisSegments, libqt_list thisData, libqt_list otherSegments, libqt_list otherData) {
+libqt_list /* of libqt_pair tuple of QCPDataRange* and QCPDataRange* */ q_cpgraph_get_overlapping_segments(void* self, libqt_list thisSegments, libqt_list thisData, libqt_list otherSegments, libqt_list otherData) {
     libqt_list _arr = QCPGraph_GetOverlappingSegments((QCPGraph*)self, thisSegments, thisData, otherSegments, otherData);
     return _arr;
 }
 
-void q_cpgraph_on_get_overlapping_segments(void* self, libqt_list /* of libqt_pair  tuple of QCPDataRange* and QCPDataRange*  */ (*callback)(void*, QCPDataRange**, QPointF**, QCPDataRange**, QPointF**)) {
+void q_cpgraph_on_get_overlapping_segments(void* self, libqt_list /* of libqt_pair tuple of QCPDataRange* and QCPDataRange* */ (*callback)(void*, QCPDataRange**, QPointF**, QCPDataRange**, QPointF**)) {
     QCPGraph_OnGetOverlappingSegments((QCPGraph*)self, (intptr_t)callback);
 }
 
-libqt_list /* of libqt_pair  tuple of QCPDataRange* and QCPDataRange*  */ q_cpgraph_qbase_get_overlapping_segments(void* self, libqt_list thisSegments, libqt_list thisData, libqt_list otherSegments, libqt_list otherData) {
+libqt_list /* of libqt_pair tuple of QCPDataRange* and QCPDataRange* */ q_cpgraph_qbase_get_overlapping_segments(void* self, libqt_list thisSegments, libqt_list thisData, libqt_list otherSegments, libqt_list otherData) {
     libqt_list _arr = QCPGraph_QBaseGetOverlappingSegments((QCPGraph*)self, thisSegments, thisData, otherSegments, otherData);
     return _arr;
 }
@@ -23569,7 +23580,7 @@ const char** q_cpgraph_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpgraph_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpgraph_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -24790,7 +24801,7 @@ const char** q_cpcurve_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpcurve_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpcurve_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -25583,7 +25594,7 @@ const char** q_cpbarsgroup_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpbarsgroup_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpbarsgroup_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -26430,7 +26441,7 @@ const char** q_cpbars_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpbars_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpbars_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -27562,7 +27573,7 @@ const char** q_cpstatisticalbox_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpstatisticalbox_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpstatisticalbox_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -28741,7 +28752,7 @@ const char** q_cpcolormap_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpcolormap_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpcolormap_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -29788,7 +29799,7 @@ const char** q_cpfinancial_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpfinancial_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpfinancial_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -31011,7 +31022,7 @@ const char** q_cperrorbars_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cperrorbars_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cperrorbars_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -31765,7 +31776,7 @@ const char** q_cpitemstraightline_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpitemstraightline_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpitemstraightline_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -32555,7 +32566,7 @@ const char** q_cpitemline_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpitemline_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpitemline_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -33341,7 +33352,7 @@ const char** q_cpitemcurve_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpitemcurve_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpitemcurve_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -34167,7 +34178,7 @@ const char** q_cpitemrect_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpitemrect_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpitemrect_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -35092,7 +35103,7 @@ const char** q_cpitemtext_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpitemtext_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpitemtext_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -35918,7 +35929,7 @@ const char** q_cpitemellipse_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpitemellipse_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpitemellipse_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -36820,7 +36831,7 @@ const char** q_cpitempixmap_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpitempixmap_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpitempixmap_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -37634,7 +37645,7 @@ const char** q_cpitemtracer_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpitemtracer_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpitemtracer_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -38428,7 +38439,7 @@ const char** q_cpitembracket_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cpitembracket_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpitembracket_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -38971,7 +38982,7 @@ const char** q_cppolaraxisradial_tick_vector_labels(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cppolaraxisradial_tick_vector_labels");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cppolaraxisradial_tick_vector_labels");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -39711,7 +39722,7 @@ const char** q_cppolaraxisradial_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cppolaraxisradial_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cppolaraxisradial_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -40121,7 +40132,7 @@ const char** q_cppolaraxisangular_tick_vector_labels(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cppolaraxisangular_tick_vector_labels");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cppolaraxisangular_tick_vector_labels");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -40871,7 +40882,7 @@ QCPMarginGroup* q_cppolaraxisangular_margin_group(void* self, int32_t side) {
     return QCPLayoutElement_MarginGroup((QCPLayoutElement*)self, side);
 }
 
-libqt_map /* of int32_t to QCPMarginGroup* */ q_cppolaraxisangular_margin_groups(void* self) {
+libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cppolaraxisangular_margin_groups(void* self) {
     // Convert QHash<QCP::MarginSide,QCPMarginGroup> to libqt_map
     libqt_map _out = QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
     libqt_map _ret;
@@ -41074,7 +41085,7 @@ const char** q_cppolaraxisangular_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cppolaraxisangular_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cppolaraxisangular_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -41774,7 +41785,7 @@ const char** q_cppolargrid_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cppolargrid_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cppolargrid_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -42377,7 +42388,7 @@ QCPMarginGroup* q_cppolarlegenditem_margin_group(void* self, int32_t side) {
     return QCPLayoutElement_MarginGroup((QCPLayoutElement*)self, side);
 }
 
-libqt_map /* of int32_t to QCPMarginGroup* */ q_cppolarlegenditem_margin_groups(void* self) {
+libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cppolarlegenditem_margin_groups(void* self) {
     // Convert QHash<QCP::MarginSide,QCPMarginGroup> to libqt_map
     libqt_map _out = QCPLayoutElement_MarginGroups((QCPLayoutElement*)self);
     libqt_map _ret;
@@ -42580,7 +42591,7 @@ const char** q_cppolarlegenditem_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cppolarlegenditem_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cppolarlegenditem_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -43699,7 +43710,7 @@ const char** q_cppolargraph_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_cppolargraph_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cppolargraph_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

@@ -181,6 +181,17 @@ void q_georoute_set_extended_attributes(void* self, libqt_map /* of const char* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroute.html#extendedAttributes)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QGeoRoute*
 ///
 libqt_map /* of const char* to QVariant* */ q_georoute_extended_attributes(void* self);

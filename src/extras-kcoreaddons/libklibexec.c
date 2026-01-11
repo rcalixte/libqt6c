@@ -13,7 +13,7 @@ const char** k_libexec_path_candidates(const char* param1) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_libexec_path_candidates");
+        fprintf(stderr, "Failed to allocate memory for string list in k_libexec_path_candidates");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -39,7 +39,7 @@ const char** k_libexec_kde_frameworks_paths(const char* param1) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_libexec_kde_frameworks_paths");
+        fprintf(stderr, "Failed to allocate memory for string list in k_libexec_kde_frameworks_paths");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

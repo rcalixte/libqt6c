@@ -72,6 +72,17 @@ const char** q_signon__sessiondata_get_access_control_tokens(void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SessionData.html)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self SignOn__SessionData*
 ///
 libqt_map /* of const char* to QVariant* */ q_signon__sessiondata_to_map(void* self);
