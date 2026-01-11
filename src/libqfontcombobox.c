@@ -337,7 +337,7 @@ void q_fontcombobox_add_items(void* self, const char* texts[static 1]) {
     size_t texts_len = libqt_strv_length(texts);
     libqt_string* texts_qstr = (libqt_string*)malloc(texts_len * sizeof(libqt_string));
     if (texts_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_fontcombobox_add_items");
+        fprintf(stderr, "Failed to allocate memory for string list in q_fontcombobox_add_items");
         abort();
     }
     for (size_t i = 0; i < texts_len; ++i) {
@@ -360,7 +360,7 @@ void q_fontcombobox_insert_items(void* self, int index, const char* texts[static
     size_t texts_len = libqt_strv_length(texts);
     libqt_string* texts_qstr = (libqt_string*)malloc(texts_len * sizeof(libqt_string));
     if (texts_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_fontcombobox_insert_items");
+        fprintf(stderr, "Failed to allocate memory for string list in q_fontcombobox_insert_items");
         abort();
     }
     for (size_t i = 0; i < texts_len; ++i) {
@@ -1742,7 +1742,7 @@ const char** q_fontcombobox_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_fontcombobox_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_fontcombobox_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

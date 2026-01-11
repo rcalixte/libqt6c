@@ -449,7 +449,7 @@ void q_tablewidget_set_vertical_header_labels(void* self, const char* labels[sta
     size_t labels_len = libqt_strv_length(labels);
     libqt_string* labels_qstr = (libqt_string*)malloc(labels_len * sizeof(libqt_string));
     if (labels_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_tablewidget_set_vertical_header_labels");
+        fprintf(stderr, "Failed to allocate memory for string list in q_tablewidget_set_vertical_header_labels");
         abort();
     }
     for (size_t i = 0; i < labels_len; ++i) {
@@ -464,7 +464,7 @@ void q_tablewidget_set_horizontal_header_labels(void* self, const char* labels[s
     size_t labels_len = libqt_strv_length(labels);
     libqt_string* labels_qstr = (libqt_string*)malloc(labels_len * sizeof(libqt_string));
     if (labels_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_tablewidget_set_horizontal_header_labels");
+        fprintf(stderr, "Failed to allocate memory for string list in q_tablewidget_set_horizontal_header_labels");
         abort();
     }
     for (size_t i = 0; i < labels_len; ++i) {
@@ -755,7 +755,7 @@ const char** q_tablewidget_mime_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_tablewidget_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in q_tablewidget_mime_types");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -778,7 +778,7 @@ const char** q_tablewidget_qbase_mime_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_tablewidget_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in q_tablewidget_mime_types");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2642,7 +2642,7 @@ const char** q_tablewidget_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_tablewidget_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_tablewidget_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

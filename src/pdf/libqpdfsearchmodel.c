@@ -75,15 +75,26 @@ libqt_map /* of int to char* */ q_pdfsearchmodel_role_names(void* self) {
     libqt_string* _out_values = (libqt_string*)_out.values;
     char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_pdfsearchmodel_role_names");
+        fprintf(stderr, "Failed to allocate memory for map string values in q_pdfsearchmodel_role_names");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_values[i] = (char*)_out_values[i].data;
+        _ret_values[i] = (char*)malloc(_out_values[i].len + 1);
+        if (_ret_values[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_values[j]);
+            }
+            free(_ret_values);
+            fprintf(stderr, "Failed to allocate memory for map string values in q_pdfsearchmodel_role_names");
+            abort();
+        }
     }
     _ret.keys = _out.keys;
     _ret.values = (void*)_ret_values;
-    free(_out_values);
+    for (size_t i = 0; i < _out.len; ++i) {
+        libqt_free(_out_values[i].data);
+    }
+    free(_out.values);
     return _ret;
 }
 
@@ -99,15 +110,26 @@ libqt_map /* of int to char* */ q_pdfsearchmodel_qbase_role_names(void* self) {
     libqt_string* _out_values = (libqt_string*)_out.values;
     char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_pdfsearchmodel_role_names");
+        fprintf(stderr, "Failed to allocate memory for map string values in q_pdfsearchmodel_role_names");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_values[i] = (char*)_out_values[i].data;
+        _ret_values[i] = (char*)malloc(_out_values[i].len + 1);
+        if (_ret_values[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_values[j]);
+            }
+            free(_ret_values);
+            fprintf(stderr, "Failed to allocate memory for map string values in q_pdfsearchmodel_role_names");
+            abort();
+        }
     }
     _ret.keys = _out.keys;
     _ret.values = (void*)_ret_values;
-    free(_out_values);
+    for (size_t i = 0; i < _out.len; ++i) {
+        libqt_free(_out_values[i].data);
+    }
+    free(_out.values);
     return _ret;
 }
 
@@ -478,7 +500,7 @@ const char** q_pdfsearchmodel_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_pdfsearchmodel_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_pdfsearchmodel_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -652,15 +674,15 @@ bool q_pdfsearchmodel_set_item_data(void* self, void* index, libqt_map /* of int
     // Convert libqt_map to QMap<int,QVariant>
     libqt_map roles_ret;
     roles_ret.len = roles.len;
-    roles_ret.keys = malloc(roles_ret.len * sizeof(int));
+    roles_ret.keys = (int*)malloc(roles_ret.len * sizeof(int));
     if (roles_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_pdfsearchmodel_set_item_data\n");
         abort();
     }
-    roles_ret.values = malloc(roles_ret.len * sizeof(QVariant*));
+    roles_ret.values = (QVariant**)malloc(roles_ret.len * sizeof(QVariant*));
     if (roles_ret.values == NULL) {
         free(roles_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_pdfsearchmodel_set_item_data\n");
         abort();
     }
     int* roles_karr = (int*)roles.keys;
@@ -672,8 +694,8 @@ bool q_pdfsearchmodel_set_item_data(void* self, void* index, libqt_map /* of int
         roles_vdest[i] = roles_varr[i];
     }
     bool _out = QPdfSearchModel_SetItemData((QPdfSearchModel*)self, (QModelIndex*)index, roles_ret);
-    libqt_free(roles_ret.keys);
-    libqt_free(roles_ret.values);
+    free(roles_ret.keys);
+    free(roles_ret.values);
     return _out;
 }
 
@@ -681,15 +703,15 @@ bool q_pdfsearchmodel_qbase_set_item_data(void* self, void* index, libqt_map /* 
     // Convert libqt_map to QMap<int,QVariant>
     libqt_map roles_ret;
     roles_ret.len = roles.len;
-    roles_ret.keys = malloc(roles_ret.len * sizeof(int));
+    roles_ret.keys = (int*)malloc(roles_ret.len * sizeof(int));
     if (roles_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_pdfsearchmodel_set_item_data\n");
         abort();
     }
-    roles_ret.values = malloc(roles_ret.len * sizeof(QVariant*));
+    roles_ret.values = (QVariant**)malloc(roles_ret.len * sizeof(QVariant*));
     if (roles_ret.values == NULL) {
         free(roles_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_pdfsearchmodel_set_item_data\n");
         abort();
     }
     int* roles_karr = (int*)roles.keys;
@@ -701,8 +723,8 @@ bool q_pdfsearchmodel_qbase_set_item_data(void* self, void* index, libqt_map /* 
         roles_vdest[i] = roles_varr[i];
     }
     bool _out = QPdfSearchModel_QBaseSetItemData((QPdfSearchModel*)self, (QModelIndex*)index, roles_ret);
-    libqt_free(roles_ret.keys);
-    libqt_free(roles_ret.values);
+    free(roles_ret.keys);
+    free(roles_ret.values);
     return _out;
 }
 
@@ -727,7 +749,7 @@ const char** q_pdfsearchmodel_mime_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_pdfsearchmodel_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in q_pdfsearchmodel_mime_types");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -746,7 +768,7 @@ const char** q_pdfsearchmodel_qbase_mime_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_pdfsearchmodel_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in q_pdfsearchmodel_mime_types");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

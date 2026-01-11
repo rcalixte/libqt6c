@@ -22,7 +22,7 @@ void q_mediametadata_remove(void* self, int32_t k) {
     QMediaMetaData_Remove((QMediaMetaData*)self, k);
 }
 
-libqt_list /* of int32_t */ q_mediametadata_keys(void* self) {
+libqt_list /* of enum QMediaMetaData__Key */ q_mediametadata_keys(void* self) {
     libqt_list _arr = QMediaMetaData_Keys((QMediaMetaData*)self);
     return _arr;
 }

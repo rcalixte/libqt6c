@@ -20,7 +20,7 @@ const char** k_languagename_all_language_codes() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_languagename_all_language_codes");
+        fprintf(stderr, "Failed to allocate memory for string list in k_languagename_all_language_codes");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

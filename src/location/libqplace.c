@@ -95,15 +95,15 @@ void q_place_set_content(void* self, int32_t type, libqt_map /* of int to QPlace
     // Convert libqt_map to QMap<int,QPlaceContent>
     libqt_map content_ret;
     content_ret.len = content.len;
-    content_ret.keys = malloc(content_ret.len * sizeof(int));
+    content_ret.keys = (int*)malloc(content_ret.len * sizeof(int));
     if (content_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_place_set_content\n");
         abort();
     }
-    content_ret.values = malloc(content_ret.len * sizeof(QPlaceContent*));
+    content_ret.values = (QPlaceContent**)malloc(content_ret.len * sizeof(QPlaceContent*));
     if (content_ret.values == NULL) {
         free(content_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_place_set_content\n");
         abort();
     }
     int* content_karr = (int*)content.keys;
@@ -115,23 +115,23 @@ void q_place_set_content(void* self, int32_t type, libqt_map /* of int to QPlace
         content_vdest[i] = content_varr[i];
     }
     QPlace_SetContent((QPlace*)self, type, content_ret);
-    libqt_free(content_ret.keys);
-    libqt_free(content_ret.values);
+    free(content_ret.keys);
+    free(content_ret.values);
 }
 
 void q_place_insert_content(void* self, int32_t type, libqt_map /* of int to QPlaceContent* */ content) {
     // Convert libqt_map to QMap<int,QPlaceContent>
     libqt_map content_ret;
     content_ret.len = content.len;
-    content_ret.keys = malloc(content_ret.len * sizeof(int));
+    content_ret.keys = (int*)malloc(content_ret.len * sizeof(int));
     if (content_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_place_insert_content\n");
         abort();
     }
-    content_ret.values = malloc(content_ret.len * sizeof(QPlaceContent*));
+    content_ret.values = (QPlaceContent**)malloc(content_ret.len * sizeof(QPlaceContent*));
     if (content_ret.values == NULL) {
         free(content_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_place_insert_content\n");
         abort();
     }
     int* content_karr = (int*)content.keys;
@@ -143,8 +143,8 @@ void q_place_insert_content(void* self, int32_t type, libqt_map /* of int to QPl
         content_vdest[i] = content_varr[i];
     }
     QPlace_InsertContent((QPlace*)self, type, content_ret);
-    libqt_free(content_ret.keys);
-    libqt_free(content_ret.values);
+    free(content_ret.keys);
+    free(content_ret.values);
 }
 
 int32_t q_place_total_content_count(void* self, int32_t type) {
@@ -215,7 +215,7 @@ const char** q_place_extended_attribute_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_place_extended_attribute_types");
+        fprintf(stderr, "Failed to allocate memory for string list in q_place_extended_attribute_types");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -246,7 +246,7 @@ const char** q_place_contact_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_place_contact_types");
+        fprintf(stderr, "Failed to allocate memory for string list in q_place_contact_types");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

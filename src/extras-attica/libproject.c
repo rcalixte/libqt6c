@@ -94,7 +94,7 @@ void k_attica__project_set_developers(void* self, const char* developers[static 
     size_t developers_len = libqt_strv_length(developers);
     libqt_string* developers_qstr = (libqt_string*)malloc(developers_len * sizeof(libqt_string));
     if (developers_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_attica__project_set_developers");
+        fprintf(stderr, "Failed to allocate memory for string list in k_attica__project_set_developers");
         abort();
     }
     for (size_t i = 0; i < developers_len; ++i) {
@@ -110,7 +110,7 @@ const char** k_attica__project_developers(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_attica__project_developers");
+        fprintf(stderr, "Failed to allocate memory for string list in k_attica__project_developers");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -163,26 +163,50 @@ libqt_map /* of const char* to const char* */ k_attica__project_extended_attribu
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_keys = (libqt_string*)_out.keys;
-    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_attica__project_extended_attributes");
+        fprintf(stderr, "Failed to allocate memory for map string keys in k_attica__project_extended_attributes");
         abort();
     }
     libqt_string* _out_values = (libqt_string*)_out.values;
     const char** _ret_values = (const char**)malloc(_ret.len * sizeof(const char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_attica__project_extended_attributes");
-        free(_out_keys);
+        fprintf(stderr, "Failed to allocate memory for map string values in k_attica__project_extended_attributes");
+        free(_out.keys);
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_keys[i] = (const char*)_out_keys[i].data;
-        _ret_values[i] = (const char*)_out_values[i].data;
+        _ret_keys[i] = (char*)malloc(_out_keys[i].len + 1);
+        if (_ret_keys[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_keys[j]);
+            }
+            free(_ret_keys);
+            fprintf(stderr, "Failed to allocate memory for map keys in k_attica__project_extended_attributes");
+            abort();
+        }
+        memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
+        _ret_keys[i][_out_keys[i].len] = '\0';
+        _ret_values[i] = (const char*)malloc(_out_values[i].len + 1);
+        if (_ret_values[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_keys[j]);
+                libqt_free(_ret_values[j]);
+            }
+            free(_ret_keys);
+            free(_ret_values);
+            fprintf(stderr, "Failed to allocate memory for map string values in k_attica__project_extended_attributes");
+            abort();
+        }
     }
     _ret.keys = (void*)_ret_keys;
     _ret.values = (void*)_ret_values;
-    free(_out_keys);
-    free(_out_values);
+    for (size_t i = 0; i < _out.len; ++i) {
+        libqt_free(_out_keys[i].data);
+        libqt_free(_out_values[i].data);
+    }
+    free(_out.keys);
+    free(_out.values);
     return _ret;
 }
 

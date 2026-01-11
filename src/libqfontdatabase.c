@@ -28,12 +28,12 @@ libqt_list /* of int */ q_fontdatabase_standard_sizes() {
     return _arr;
 }
 
-libqt_list /* of int32_t */ q_fontdatabase_writing_systems() {
+libqt_list /* of enum QFontDatabase__WritingSystem */ q_fontdatabase_writing_systems() {
     libqt_list _arr = QFontDatabase_WritingSystems();
     return _arr;
 }
 
-libqt_list /* of int32_t */ q_fontdatabase_writing_systems2(const char* family) {
+libqt_list /* of enum QFontDatabase__WritingSystem */ q_fontdatabase_writing_systems2(const char* family) {
     libqt_list _arr = QFontDatabase_WritingSystems2(qstring(family));
     return _arr;
 }
@@ -43,7 +43,7 @@ const char** q_fontdatabase_families() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_fontdatabase_families");
+        fprintf(stderr, "Failed to allocate memory for string list in q_fontdatabase_families");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -62,7 +62,7 @@ const char** q_fontdatabase_styles(const char* family) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_fontdatabase_styles");
+        fprintf(stderr, "Failed to allocate memory for string list in q_fontdatabase_styles");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -167,7 +167,7 @@ const char** q_fontdatabase_application_font_families(int id) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_fontdatabase_application_font_families");
+        fprintf(stderr, "Failed to allocate memory for string list in q_fontdatabase_application_font_families");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -201,7 +201,7 @@ void q_fontdatabase_set_application_fallback_font_families(int32_t param1, const
     size_t familyNames_len = libqt_strv_length(familyNames);
     libqt_string* familyNames_qstr = (libqt_string*)malloc(familyNames_len * sizeof(libqt_string));
     if (familyNames_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_fontdatabase_set_application_fallback_font_families");
+        fprintf(stderr, "Failed to allocate memory for string list in q_fontdatabase_set_application_fallback_font_families");
         abort();
     }
     for (size_t i = 0; i < familyNames_len; ++i) {
@@ -217,7 +217,7 @@ const char** q_fontdatabase_application_fallback_font_families(int32_t script) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_fontdatabase_application_fallback_font_families");
+        fprintf(stderr, "Failed to allocate memory for string list in q_fontdatabase_application_fallback_font_families");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -240,7 +240,7 @@ const char** q_fontdatabase_families1(int32_t writingSystem) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_fontdatabase_families1");
+        fprintf(stderr, "Failed to allocate memory for string list in q_fontdatabase_families1");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

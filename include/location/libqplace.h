@@ -128,6 +128,16 @@ void q_place_set_icon(void* self, void* icon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#content)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QPlaceContent*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QPlace*
 /// @param type enum QPlaceContent__Type
 ///

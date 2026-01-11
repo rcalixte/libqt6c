@@ -1232,6 +1232,16 @@ void k_nscore__itemsmodel_on_set_header_data(void* self, bool (*callback)(void*,
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#itemData)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KNSCore__ItemsModel*
@@ -1242,6 +1252,16 @@ libqt_map /* of int to QVariant* */ k_nscore__itemsmodel_item_data(void* self, v
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#itemData)
+///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1950,6 +1970,16 @@ void k_nscore__itemsmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KNSCore__ItemsModel*
@@ -1959,6 +1989,16 @@ libqt_map /* of int to char* */ k_nscore__itemsmodel_role_names(void* self);
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames)
+///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

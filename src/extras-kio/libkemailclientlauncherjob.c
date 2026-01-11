@@ -46,7 +46,7 @@ void k_emailclientlauncherjob_set_to(void* self, const char* to[static 1]) {
     size_t to_len = libqt_strv_length(to);
     libqt_string* to_qstr = (libqt_string*)malloc(to_len * sizeof(libqt_string));
     if (to_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_emailclientlauncherjob_set_to");
+        fprintf(stderr, "Failed to allocate memory for string list in k_emailclientlauncherjob_set_to");
         abort();
     }
     for (size_t i = 0; i < to_len; ++i) {
@@ -61,7 +61,7 @@ void k_emailclientlauncherjob_set_cc(void* self, const char* cc[static 1]) {
     size_t cc_len = libqt_strv_length(cc);
     libqt_string* cc_qstr = (libqt_string*)malloc(cc_len * sizeof(libqt_string));
     if (cc_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_emailclientlauncherjob_set_cc");
+        fprintf(stderr, "Failed to allocate memory for string list in k_emailclientlauncherjob_set_cc");
         abort();
     }
     for (size_t i = 0; i < cc_len; ++i) {
@@ -76,7 +76,7 @@ void k_emailclientlauncherjob_set_bcc(void* self, const char* bcc[static 1]) {
     size_t bcc_len = libqt_strv_length(bcc);
     libqt_string* bcc_qstr = (libqt_string*)malloc(bcc_len * sizeof(libqt_string));
     if (bcc_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_emailclientlauncherjob_set_bcc");
+        fprintf(stderr, "Failed to allocate memory for string list in k_emailclientlauncherjob_set_bcc");
         abort();
     }
     for (size_t i = 0; i < bcc_len; ++i) {
@@ -361,7 +361,7 @@ const char** k_emailclientlauncherjob_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_emailclientlauncherjob_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_emailclientlauncherjob_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

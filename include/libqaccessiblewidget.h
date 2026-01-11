@@ -137,16 +137,16 @@ int32_t q_accessiblewidget_qbase_index_of_child(void* self, void* child);
 /// @param self QAccessibleWidget*
 /// @param match flag of enum QAccessible__RelationFlag
 ///
-libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int64_t  */ q_accessiblewidget_relations(void* self, int64_t match);
+libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ q_accessiblewidget_relations(void* self, int64_t match);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#relations)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAccessibleWidget*
-/// @param callback libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int64_t  */ func(QAccessibleWidget* self, flag of enum QAccessible__RelationFlag match)
+/// @param callback libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ func(QAccessibleWidget* self, flag of enum QAccessible__RelationFlag match)
 ///
-void q_accessiblewidget_on_relations(void* self, libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int64_t  */ (*callback)(void*, int64_t));
+void q_accessiblewidget_on_relations(void* self, libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ (*callback)(void*, int64_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#relations)
 ///
@@ -155,7 +155,7 @@ void q_accessiblewidget_on_relations(void* self, libqt_list /* of libqt_pair  tu
 /// @param self QAccessibleWidget*
 /// @param match flag of enum QAccessible__RelationFlag
 ///
-libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int64_t  */ q_accessiblewidget_qbase_relations(void* self, int64_t match);
+libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ q_accessiblewidget_qbase_relations(void* self, int64_t match);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#focusChild)
 ///

@@ -263,7 +263,7 @@ libqt_pair /* tuple of const char* and const char* */ k_syntaxhighlighting__defi
 ///
 /// @param self KSyntaxHighlighting__Definition*
 ///
-libqt_list /* of libqt_pair  tuple of QChar* and const char*  */ k_syntaxhighlighting__definition_character_encodings(void* self);
+libqt_list /* of libqt_pair tuple of QChar* and const char* */ k_syntaxhighlighting__definition_character_encodings(void* self);
 
 /// Delete this object from C++ memory.
 ///

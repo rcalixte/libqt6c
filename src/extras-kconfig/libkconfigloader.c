@@ -47,7 +47,7 @@ const char** k_configloader_group_list(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configloader_group_list");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configloader_group_list");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -229,7 +229,7 @@ KCoreConfigSkeleton__ItemStringList* k_configloader_add_item_string_list(void* s
     size_t reference_len = libqt_strv_length(reference);
     libqt_string* reference_qstr = (libqt_string*)malloc(reference_len * sizeof(libqt_string));
     if (reference_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configloader_add_item_string_list");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configloader_add_item_string_list");
         abort();
     }
     for (size_t i = 0; i < reference_len; ++i) {
@@ -426,7 +426,7 @@ KCoreConfigSkeleton__ItemStringList* k_configloader_add_item_string_list3(void* 
     size_t reference_len = libqt_strv_length(reference);
     libqt_string* reference_qstr = (libqt_string*)malloc(reference_len * sizeof(libqt_string));
     if (reference_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configloader_add_item_string_list3");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configloader_add_item_string_list3");
         abort();
     }
     for (size_t i = 0; i < reference_len; ++i) {
@@ -436,7 +436,7 @@ KCoreConfigSkeleton__ItemStringList* k_configloader_add_item_string_list3(void* 
     size_t defaultValue_len = libqt_strv_length(defaultValue);
     libqt_string* defaultValue_qstr = (libqt_string*)malloc(defaultValue_len * sizeof(libqt_string));
     if (defaultValue_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configloader_add_item_string_list3");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configloader_add_item_string_list3");
         abort();
     }
     for (size_t i = 0; i < defaultValue_len; ++i) {
@@ -453,7 +453,7 @@ KCoreConfigSkeleton__ItemStringList* k_configloader_add_item_string_list4(void* 
     size_t reference_len = libqt_strv_length(reference);
     libqt_string* reference_qstr = (libqt_string*)malloc(reference_len * sizeof(libqt_string));
     if (reference_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configloader_add_item_string_list4");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configloader_add_item_string_list4");
         abort();
     }
     for (size_t i = 0; i < reference_len; ++i) {
@@ -463,7 +463,7 @@ KCoreConfigSkeleton__ItemStringList* k_configloader_add_item_string_list4(void* 
     size_t defaultValue_len = libqt_strv_length(defaultValue);
     libqt_string* defaultValue_qstr = (libqt_string*)malloc(defaultValue_len * sizeof(libqt_string));
     if (defaultValue_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configloader_add_item_string_list4");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configloader_add_item_string_list4");
         abort();
     }
     for (size_t i = 0; i < defaultValue_len; ++i) {
@@ -585,7 +585,7 @@ const char** k_configloader_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configloader_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configloader_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

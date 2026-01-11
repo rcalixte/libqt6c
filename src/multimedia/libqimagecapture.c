@@ -76,7 +76,7 @@ void q_imagecapture_set_file_format(void* self, int32_t format) {
     QImageCapture_SetFileFormat((QImageCapture*)self, format);
 }
 
-libqt_list /* of int32_t */ q_imagecapture_supported_formats() {
+libqt_list /* of enum QImageCapture__FileFormat */ q_imagecapture_supported_formats() {
     libqt_list _arr = QImageCapture_SupportedFormats();
     return _arr;
 }
@@ -354,7 +354,7 @@ const char** q_imagecapture_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_imagecapture_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_imagecapture_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

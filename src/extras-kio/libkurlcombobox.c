@@ -74,7 +74,7 @@ void k_urlcombobox_set_urls(void* self, const char* urls[static 1]) {
     size_t urls_len = libqt_strv_length(urls);
     libqt_string* urls_qstr = (libqt_string*)malloc(urls_len * sizeof(libqt_string));
     if (urls_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_urlcombobox_set_urls");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urlcombobox_set_urls");
         abort();
     }
     for (size_t i = 0; i < urls_len; ++i) {
@@ -89,7 +89,7 @@ void k_urlcombobox_set_urls2(void* self, const char* urls[static 1], int32_t rem
     size_t urls_len = libqt_strv_length(urls);
     libqt_string* urls_qstr = (libqt_string*)malloc(urls_len * sizeof(libqt_string));
     if (urls_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_urlcombobox_set_urls2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urlcombobox_set_urls2");
         abort();
     }
     for (size_t i = 0; i < urls_len; ++i) {
@@ -105,7 +105,7 @@ const char** k_urlcombobox_urls(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_urlcombobox_urls");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urlcombobox_urls");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -526,7 +526,7 @@ void k_urlcombobox_add_items(void* self, const char* texts[static 1]) {
     size_t texts_len = libqt_strv_length(texts);
     libqt_string* texts_qstr = (libqt_string*)malloc(texts_len * sizeof(libqt_string));
     if (texts_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_urlcombobox_add_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urlcombobox_add_items");
         abort();
     }
     for (size_t i = 0; i < texts_len; ++i) {
@@ -549,7 +549,7 @@ void k_urlcombobox_insert_items(void* self, int index, const char* texts[static 
     size_t texts_len = libqt_strv_length(texts);
     libqt_string* texts_qstr = (libqt_string*)malloc(texts_len * sizeof(libqt_string));
     if (texts_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_urlcombobox_insert_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urlcombobox_insert_items");
         abort();
     }
     for (size_t i = 0; i < texts_len; ++i) {
@@ -1931,7 +1931,7 @@ const char** k_urlcombobox_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_urlcombobox_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urlcombobox_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2154,7 +2154,7 @@ void k_urlcombobox_set_completed_items(void* self, const char* items[static 1], 
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_urlcombobox_set_completed_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urlcombobox_set_completed_items");
         abort();
     }
     for (size_t i = 0; i < items_len; ++i) {
@@ -2169,7 +2169,7 @@ void k_urlcombobox_qbase_set_completed_items(void* self, const char* items[stati
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_urlcombobox_set_completed_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urlcombobox_set_completed_items");
         abort();
     }
     for (size_t i = 0; i < items_len; ++i) {
@@ -2928,87 +2928,155 @@ void k_urlcombobox_on_get_decoded_metric_f(void* self, double (*callback)(void*,
     KUrlComboBox_OnGetDecodedMetricF((KUrlComboBox*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int32_t to libqt_list  of QKeySequence*  */ k_urlcombobox_key_binding_map(void* self) {
+libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* */ k_urlcombobox_key_binding_map(void* self) {
     // Convert QMap<KCompletionBase::KeyBindingType,QList<QKeySequence>> to libqt_map
     libqt_map _out = KUrlComboBox_KeyBindingMap((KUrlComboBox*)self);
     libqt_map _ret;
     _ret.len = _out.len;
+    libqt_list* _out_values = (libqt_list*)_out.values;
+    QKeySequence*** _ret_values = (QKeySequence***)malloc(_ret.len * sizeof(QKeySequence**));
+    if (_ret_values == NULL) {
+        free(_out.keys);
+        free(_out.values);
+        fprintf(stderr, "Failed to allocate memory for map value containers in k_urlcombobox_key_binding_map");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        libqt_list _value_list = _out_values[i];
+        QKeySequence** _ret_arr = (QKeySequence**)malloc((_value_list.len + 1) * sizeof(QKeySequence*));
+        if (_ret_arr == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_values[j]);
+            }
+            free(_out.keys);
+            free(_ret_values);
+            free(_out.values);
+            fprintf(stderr, "Failed to allocate memory for map values in k_urlcombobox_key_binding_map");
+            abort();
+        }
+        memcpy(_ret_arr, _value_list.data.ptr, _value_list.len * sizeof(QKeySequence*));
+        _ret_arr[_value_list.len] = NULL;
+        _ret_values[i] = _ret_arr;
+    }
     _ret.keys = _out.keys;
-    _ret.values = _out.values;
+    _ret.values = (void*)_ret_values;
+    for (size_t i = 0; i < _out.len; ++i) {
+        free((QKeySequence**)_out_values[i].data.ptr);
+    }
+    free(_out.values);
     return _ret;
 }
 
-libqt_map /* of int32_t to libqt_list  of QKeySequence*  */ k_urlcombobox_qbase_key_binding_map(void* self) {
+libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* */ k_urlcombobox_qbase_key_binding_map(void* self) {
     // Convert QMap<KCompletionBase::KeyBindingType,QList<QKeySequence>> to libqt_map
     libqt_map _out = KUrlComboBox_QBaseKeyBindingMap((KUrlComboBox*)self);
     libqt_map _ret;
     _ret.len = _out.len;
+    libqt_list* _out_values = (libqt_list*)_out.values;
+    QKeySequence*** _ret_values = (QKeySequence***)malloc(_ret.len * sizeof(QKeySequence**));
+    if (_ret_values == NULL) {
+        free(_out.keys);
+        free(_out.values);
+        fprintf(stderr, "Failed to allocate memory for map value containers in k_urlcombobox_key_binding_map");
+        abort();
+    }
+    for (size_t i = 0; i < _ret.len; ++i) {
+        libqt_list _value_list = _out_values[i];
+        QKeySequence** _ret_arr = (QKeySequence**)malloc((_value_list.len + 1) * sizeof(QKeySequence*));
+        if (_ret_arr == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_values[j]);
+            }
+            free(_out.keys);
+            free(_ret_values);
+            free(_out.values);
+            fprintf(stderr, "Failed to allocate memory for map values in k_urlcombobox_key_binding_map");
+            abort();
+        }
+        memcpy(_ret_arr, _value_list.data.ptr, _value_list.len * sizeof(QKeySequence*));
+        _ret_arr[_value_list.len] = NULL;
+        _ret_values[i] = _ret_arr;
+    }
     _ret.keys = _out.keys;
-    _ret.values = _out.values;
+    _ret.values = (void*)_ret_values;
+    for (size_t i = 0; i < _out.len; ++i) {
+        free((QKeySequence**)_out_values[i].data.ptr);
+    }
+    free(_out.values);
     return _ret;
 }
 
-void k_urlcombobox_on_key_binding_map(void* self, libqt_map /* of int32_t to libqt_list  of QKeySequence*  */ (*callback)()) {
+void k_urlcombobox_on_key_binding_map(void* self, libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* */ (*callback)()) {
     KUrlComboBox_OnKeyBindingMap((KUrlComboBox*)self, (intptr_t)callback);
 }
 
-void k_urlcombobox_set_key_binding_map(void* self, libqt_map /* of int32_t to QKeySequence* */ keyBindingMap) {
+void k_urlcombobox_set_key_binding_map(void* self, libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence** */ keyBindingMap) {
     // Convert libqt_map to QMap<KCompletionBase::KeyBindingType,QList<QKeySequence>>
     libqt_map keyBindingMap_ret;
     keyBindingMap_ret.len = keyBindingMap.len;
-    keyBindingMap_ret.keys = malloc(keyBindingMap_ret.len * sizeof(int32_t));
+    keyBindingMap_ret.keys = (int32_t*)malloc(keyBindingMap_ret.len * sizeof(int32_t));
     if (keyBindingMap_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in k_urlcombobox_set_key_binding_map\n");
         abort();
     }
-    keyBindingMap_ret.values = malloc(keyBindingMap_ret.len * sizeof(QKeySequence*));
+    keyBindingMap_ret.values = (libqt_list*)malloc(keyBindingMap_ret.len * sizeof(libqt_list));
     if (keyBindingMap_ret.values == NULL) {
         free(keyBindingMap_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in k_urlcombobox_set_key_binding_map\n");
         abort();
     }
     int32_t* keyBindingMap_karr = (int32_t*)keyBindingMap.keys;
     int32_t* keyBindingMap_kdest = (int32_t*)keyBindingMap_ret.keys;
-    QKeySequence** keyBindingMap_varr = (QKeySequence**)keyBindingMap.values;
-    QKeySequence** keyBindingMap_vdest = (QKeySequence**)keyBindingMap_ret.values;
+    QKeySequence*** keyBindingMap_varr = (QKeySequence***)keyBindingMap.values;
+    libqt_list* keyBindingMap_vdest = (libqt_list*)keyBindingMap_ret.values;
     for (size_t i = 0; i < keyBindingMap_ret.len; ++i) {
         keyBindingMap_kdest[i] = keyBindingMap_karr[i];
-        keyBindingMap_vdest[i] = keyBindingMap_varr[i];
+        size_t keyBindingMap_value_count = 0;
+        while (keyBindingMap_varr[i][keyBindingMap_value_count] != NULL) {
+            keyBindingMap_value_count++;
+        }
+        keyBindingMap_vdest[i].len = keyBindingMap_value_count;
+        keyBindingMap_vdest[i].data.ptr = (void*)keyBindingMap_varr[i];
     }
     KUrlComboBox_SetKeyBindingMap((KUrlComboBox*)self, keyBindingMap_ret);
-    libqt_free(keyBindingMap_ret.keys);
-    libqt_free(keyBindingMap_ret.values);
+    free(keyBindingMap_ret.keys);
+    free(keyBindingMap_ret.values);
 }
 
-void k_urlcombobox_qbase_set_key_binding_map(void* self, libqt_map /* of int32_t to QKeySequence* */ keyBindingMap) {
+void k_urlcombobox_qbase_set_key_binding_map(void* self, libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence** */ keyBindingMap) {
     // Convert libqt_map to QMap<KCompletionBase::KeyBindingType,QList<QKeySequence>>
     libqt_map keyBindingMap_ret;
     keyBindingMap_ret.len = keyBindingMap.len;
-    keyBindingMap_ret.keys = malloc(keyBindingMap_ret.len * sizeof(int32_t));
+    keyBindingMap_ret.keys = (int32_t*)malloc(keyBindingMap_ret.len * sizeof(int32_t));
     if (keyBindingMap_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in k_urlcombobox_set_key_binding_map\n");
         abort();
     }
-    keyBindingMap_ret.values = malloc(keyBindingMap_ret.len * sizeof(QKeySequence*));
+    keyBindingMap_ret.values = (libqt_list*)malloc(keyBindingMap_ret.len * sizeof(libqt_list));
     if (keyBindingMap_ret.values == NULL) {
         free(keyBindingMap_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in k_urlcombobox_set_key_binding_map\n");
         abort();
     }
     int32_t* keyBindingMap_karr = (int32_t*)keyBindingMap.keys;
     int32_t* keyBindingMap_kdest = (int32_t*)keyBindingMap_ret.keys;
-    QKeySequence** keyBindingMap_varr = (QKeySequence**)keyBindingMap.values;
-    QKeySequence** keyBindingMap_vdest = (QKeySequence**)keyBindingMap_ret.values;
+    QKeySequence*** keyBindingMap_varr = (QKeySequence***)keyBindingMap.values;
+    libqt_list* keyBindingMap_vdest = (libqt_list*)keyBindingMap_ret.values;
     for (size_t i = 0; i < keyBindingMap_ret.len; ++i) {
         keyBindingMap_kdest[i] = keyBindingMap_karr[i];
-        keyBindingMap_vdest[i] = keyBindingMap_varr[i];
+        size_t keyBindingMap_value_count = 0;
+        while (keyBindingMap_varr[i][keyBindingMap_value_count] != NULL) {
+            keyBindingMap_value_count++;
+        }
+        keyBindingMap_vdest[i].len = keyBindingMap_value_count;
+        keyBindingMap_vdest[i].data.ptr = (void*)keyBindingMap_varr[i];
     }
     KUrlComboBox_QBaseSetKeyBindingMap((KUrlComboBox*)self, keyBindingMap_ret);
-    libqt_free(keyBindingMap_ret.keys);
-    libqt_free(keyBindingMap_ret.values);
+    free(keyBindingMap_ret.keys);
+    free(keyBindingMap_ret.values);
 }
 
-void k_urlcombobox_on_set_key_binding_map(void* self, void (*callback)(void*, libqt_map /* of int32_t to QKeySequence* */)) {
+void k_urlcombobox_on_set_key_binding_map(void* self, void (*callback)(void*, libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence** */)) {
     KUrlComboBox_OnSetKeyBindingMap((KUrlComboBox*)self, (intptr_t)callback);
 }
 

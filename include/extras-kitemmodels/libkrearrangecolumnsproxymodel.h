@@ -1524,6 +1524,16 @@ void k_rearrangecolumnsproxymodel_on_data(void* self, QVariant* (*callback)(void
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KRearrangeColumnsProxyModel*
@@ -1534,6 +1544,16 @@ libqt_map /* of int to QVariant* */ k_rearrangecolumnsproxymodel_item_data(void*
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
+///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -2084,6 +2104,16 @@ void k_rearrangecolumnsproxymodel_on_supported_drop_actions(void* self, int32_t 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#roleNames)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KRearrangeColumnsProxyModel*
@@ -2093,6 +2123,16 @@ libqt_map /* of int to char* */ k_rearrangecolumnsproxymodel_role_names(void* se
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#roleNames)
+///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

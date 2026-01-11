@@ -398,7 +398,7 @@ int32_t q_locale_first_day_of_week(void* self) {
     return QLocale_FirstDayOfWeek((QLocale*)self);
 }
 
-libqt_list /* of int32_t */ q_locale_weekdays(void* self) {
+libqt_list /* of enum Qt__DayOfWeek */ q_locale_weekdays(void* self) {
     libqt_list _arr = QLocale_Weekdays((QLocale*)self);
     return _arr;
 }
@@ -518,7 +518,7 @@ const char** q_locale_ui_languages(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_locale_ui_languages");
+        fprintf(stderr, "Failed to allocate memory for string list in q_locale_ui_languages");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -605,7 +605,7 @@ libqt_list /* of QLocale* */ q_locale_matching_locales(uint16_t language, uint16
     return _arr;
 }
 
-libqt_list /* of uint16_t */ q_locale_countries_for_language(uint16_t lang) {
+libqt_list /* of enum QLocale__Country */ q_locale_countries_for_language(uint16_t lang) {
     libqt_list _arr = QLocale_CountriesForLanguage(lang);
     return _arr;
 }
@@ -629,7 +629,7 @@ const char* q_locale_create_separated_list(void* self, const char* strl[static 1
     size_t strl_len = libqt_strv_length(strl);
     libqt_string* strl_qstr = (libqt_string*)malloc(strl_len * sizeof(libqt_string));
     if (strl_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_locale_create_separated_list");
+        fprintf(stderr, "Failed to allocate memory for string list in q_locale_create_separated_list");
         abort();
     }
     for (size_t i = 0; i < strl_len; ++i) {
@@ -935,7 +935,7 @@ const char** q_locale_ui_languages1(void* self, int8_t separator) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_locale_ui_languages1");
+        fprintf(stderr, "Failed to allocate memory for string list in q_locale_ui_languages1");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

@@ -49,7 +49,7 @@ const char** k_attica__field_options(void* self) {
     const libqt_string* options_qstr = (libqt_string*)options_arr.data.ptr;
     const char** options_ret = (const char**)malloc((options_arr.len + 1) * sizeof(const char*));
     if (options_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_attica__field_options");
+        fprintf(stderr, "Failed to allocate memory for string list in k_attica__field_options");
         abort();
     }
     for (size_t i = 0; i < options_arr.len; ++i) {
@@ -67,7 +67,7 @@ void k_attica__field_set_options(void* self, const char* options[static 1]) {
     size_t options_len = libqt_strv_length(options);
     libqt_string* options_qstr = (libqt_string*)malloc(options_len * sizeof(libqt_string));
     if (options_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_attica__field_set_options");
+        fprintf(stderr, "Failed to allocate memory for string list in k_attica__field_set_options");
         abort();
     }
     for (size_t i = 0; i < options_len; ++i) {

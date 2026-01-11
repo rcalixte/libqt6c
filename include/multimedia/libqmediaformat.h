@@ -112,7 +112,7 @@ QMimeType* q_mediaformat_mime_type(void* self);
 ///
 /// @return libqt_list of enum QMediaFormat__FileFormat
 ///
-libqt_list /* of int32_t */ q_mediaformat_supported_file_formats(void* self, int32_t m);
+libqt_list /* of enum QMediaFormat__FileFormat */ q_mediaformat_supported_file_formats(void* self, int32_t m);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#supportedVideoCodecs)
 ///
@@ -121,7 +121,7 @@ libqt_list /* of int32_t */ q_mediaformat_supported_file_formats(void* self, int
 ///
 /// @return libqt_list of enum QMediaFormat__VideoCodec
 ///
-libqt_list /* of int32_t */ q_mediaformat_supported_video_codecs(void* self, int32_t m);
+libqt_list /* of enum QMediaFormat__VideoCodec */ q_mediaformat_supported_video_codecs(void* self, int32_t m);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#supportedAudioCodecs)
 ///
@@ -130,7 +130,7 @@ libqt_list /* of int32_t */ q_mediaformat_supported_video_codecs(void* self, int
 ///
 /// @return libqt_list of enum QMediaFormat__AudioCodec
 ///
-libqt_list /* of int32_t */ q_mediaformat_supported_audio_codecs(void* self, int32_t m);
+libqt_list /* of enum QMediaFormat__AudioCodec */ q_mediaformat_supported_audio_codecs(void* self, int32_t m);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaformat.html#fileFormatName)
 ///

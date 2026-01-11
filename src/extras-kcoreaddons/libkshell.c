@@ -6,7 +6,7 @@ const char** k_shell_split_args(const char* param1, int32_t param2, int32_t* par
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_shell_split_args");
+        fprintf(stderr, "Failed to allocate memory for string list in k_shell_split_args");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -24,7 +24,7 @@ const char* k_shell_join_args(const char* param1[static 1]) {
     size_t param1_len = libqt_strv_length(param1);
     libqt_string* param1_qstr = (libqt_string*)malloc(param1_len * sizeof(libqt_string));
     if (param1_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_shell_join_args");
+        fprintf(stderr, "Failed to allocate memory for string list in k_shell_join_args");
         abort();
     }
     for (size_t i = 0; i < param1_len; ++i) {

@@ -127,7 +127,7 @@ const char** k_texteditor__editor_command_list(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_texteditor__editor_command_list");
+        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__editor_command_list");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -178,7 +178,7 @@ void k_texteditor__editor_add_variable_expansion2(void* self, libqt_list widgets
     size_t variables_len = libqt_strv_length(variables);
     libqt_string* variables_qstr = (libqt_string*)malloc(variables_len * sizeof(libqt_string));
     if (variables_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_texteditor__editor_add_variable_expansion2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__editor_add_variable_expansion2");
         abort();
     }
     for (size_t i = 0; i < variables_len; ++i) {
@@ -302,7 +302,7 @@ const char** k_texteditor__editor_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_texteditor__editor_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__editor_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

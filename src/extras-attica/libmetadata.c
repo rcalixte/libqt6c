@@ -78,7 +78,7 @@ void k_attica__metadata_set_resulting_id(void* self, const char* id) {
     Attica__Metadata_SetResultingId((Attica__Metadata*)self, qstring(id));
 }
 
-libqt_list /* of libqt_pair  tuple of char* and char*  */ k_attica__metadata_headers(void* self) {
+libqt_list /* of libqt_pair tuple of char* and char* */ k_attica__metadata_headers(void* self) {
     libqt_list _arr = Attica__Metadata_Headers((Attica__Metadata*)self);
     return _arr;
 }

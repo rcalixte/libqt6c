@@ -149,7 +149,7 @@ const char** q_icon_theme_search_paths() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_icon_theme_search_paths");
+        fprintf(stderr, "Failed to allocate memory for string list in q_icon_theme_search_paths");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -167,7 +167,7 @@ void q_icon_set_theme_search_paths(const char* searchpath[static 1]) {
     size_t searchpath_len = libqt_strv_length(searchpath);
     libqt_string* searchpath_qstr = (libqt_string*)malloc(searchpath_len * sizeof(libqt_string));
     if (searchpath_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_icon_set_theme_search_paths");
+        fprintf(stderr, "Failed to allocate memory for string list in q_icon_set_theme_search_paths");
         abort();
     }
     for (size_t i = 0; i < searchpath_len; ++i) {
@@ -183,7 +183,7 @@ const char** q_icon_fallback_search_paths() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_icon_fallback_search_paths");
+        fprintf(stderr, "Failed to allocate memory for string list in q_icon_fallback_search_paths");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -201,7 +201,7 @@ void q_icon_set_fallback_search_paths(const char* paths[static 1]) {
     size_t paths_len = libqt_strv_length(paths);
     libqt_string* paths_qstr = (libqt_string*)malloc(paths_len * sizeof(libqt_string));
     if (paths_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_icon_set_fallback_search_paths");
+        fprintf(stderr, "Failed to allocate memory for string list in q_icon_set_fallback_search_paths");
         abort();
     }
     for (size_t i = 0; i < paths_len; ++i) {

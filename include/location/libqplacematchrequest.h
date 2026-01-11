@@ -61,6 +61,17 @@ void q_placematchrequest_set_results(void* self, libqt_list results);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacematchrequest.html#parameters)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QPlaceMatchRequest*
 ///
 libqt_map /* of const char* to QVariant* */ q_placematchrequest_parameters(void* self);

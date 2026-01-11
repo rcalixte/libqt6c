@@ -76,6 +76,17 @@ void q_webchannel_register_objects(void* self, libqt_map /* of const char* to QO
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebchannel.html#registeredObjects)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     free(((QObject*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QWebChannel*
 ///
 libqt_map /* of const char* to QObject* */ q_webchannel_registered_objects(void* self);

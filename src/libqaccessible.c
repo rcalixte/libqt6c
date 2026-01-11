@@ -21,7 +21,7 @@ QWindow* q_accessibleinterface_window(void* self) {
     return QAccessibleInterface_Window((QAccessibleInterface*)self);
 }
 
-libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int64_t  */ q_accessibleinterface_relations(void* self, int64_t match) {
+libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ q_accessibleinterface_relations(void* self, int64_t match) {
     libqt_list _arr = QAccessibleInterface_Relations((QAccessibleInterface*)self, match);
     return _arr;
 }
@@ -411,7 +411,7 @@ const char** q_accessibleactioninterface_action_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_accessibleactioninterface_action_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_accessibleactioninterface_action_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -448,7 +448,7 @@ const char** q_accessibleactioninterface_key_bindings_for_action(void* self, con
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_accessibleactioninterface_key_bindings_for_action");
+        fprintf(stderr, "Failed to allocate memory for string list in q_accessibleactioninterface_key_bindings_for_action");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -666,7 +666,7 @@ void q_accessibleselectioninterface_delete(void* self) {
     QAccessibleSelectionInterface_Delete((QAccessibleSelectionInterface*)(self));
 }
 
-libqt_list /* of int32_t */ q_accessibleattributesinterface_attribute_keys(void* self) {
+libqt_list /* of enum QAccessible__Attribute */ q_accessibleattributesinterface_attribute_keys(void* self) {
     libqt_list _arr = QAccessibleAttributesInterface_AttributeKeys((QAccessibleAttributesInterface*)self);
     return _arr;
 }

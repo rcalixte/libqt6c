@@ -154,7 +154,7 @@ bool k_modifierkeyinfoprovider_knows_key(void* self, int32_t key);
 ///
 /// @return libqt_list of enum Qt__Key
 ///
-libqt_list /* of int32_t */ k_modifierkeyinfoprovider_known_keys(void* self);
+libqt_list /* of enum Qt__Key */ k_modifierkeyinfoprovider_known_keys(void* self);
 
 /// [Upstream resources](https://api.kde.org/kmodifierkeyinfoprovider.html#keyLatched)
 ///

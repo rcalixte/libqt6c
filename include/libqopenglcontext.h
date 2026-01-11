@@ -623,7 +623,7 @@ QOpenGLExtraFunctions* q_openglcontext_extra_functions(void* self);
 ///
 /// @param self QOpenGLContext*
 ///
-libqt_list /* of char* */ q_openglcontext_extensions(void* self);
+libqt_list /* set of char* */ q_openglcontext_extensions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#hasExtension)
 ///

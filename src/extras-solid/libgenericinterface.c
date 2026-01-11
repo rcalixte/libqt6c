@@ -39,17 +39,30 @@ libqt_map /* of const char* to QVariant* */ k_solid__genericinterface_all_proper
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_keys = (libqt_string*)_out.keys;
-    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_solid__genericinterface_all_properties");
+        fprintf(stderr, "Failed to allocate memory for map string keys in k_solid__genericinterface_all_properties");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_keys[i] = (const char*)_out_keys[i].data;
+        _ret_keys[i] = (char*)malloc(_out_keys[i].len + 1);
+        if (_ret_keys[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_keys[j]);
+            }
+            free(_ret_keys);
+            fprintf(stderr, "Failed to allocate memory for map keys in k_solid__genericinterface_all_properties");
+            abort();
+        }
+        memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
+        _ret_keys[i][_out_keys[i].len] = '\0';
     }
     _ret.keys = (void*)_ret_keys;
     _ret.values = _out.values;
-    free(_out_keys);
+    for (size_t i = 0; i < _out.len; ++i) {
+        libqt_free(_out_keys[i].data);
+    }
+    free(_out.keys);
     return _ret;
 }
 
@@ -61,15 +74,15 @@ void k_solid__genericinterface_property_changed(void* self, libqt_map /* of cons
     // Convert libqt_map to QMap<QString,int>
     libqt_map changes_ret;
     changes_ret.len = changes.len;
-    changes_ret.keys = malloc(changes_ret.len * sizeof(libqt_string));
+    changes_ret.keys = (libqt_string*)malloc(changes_ret.len * sizeof(libqt_string));
     if (changes_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in k_solid__genericinterface_property_changed\n");
         abort();
     }
-    changes_ret.values = malloc(changes_ret.len * sizeof(int));
+    changes_ret.values = (int*)malloc(changes_ret.len * sizeof(int));
     if (changes_ret.values == NULL) {
         free(changes_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in k_solid__genericinterface_property_changed\n");
         abort();
     }
     const char** changes_karr = (const char**)changes.keys;
@@ -81,8 +94,8 @@ void k_solid__genericinterface_property_changed(void* self, libqt_map /* of cons
         changes_vdest[i] = changes_varr[i];
     }
     Solid__GenericInterface_PropertyChanged((Solid__GenericInterface*)self, changes_ret);
-    libqt_free(changes_ret.keys);
-    libqt_free(changes_ret.values);
+    free(changes_ret.keys);
+    free(changes_ret.values);
 }
 
 void k_solid__genericinterface_on_property_changed(void* self, void (*callback)(void*, libqt_map /* of const char* to int */)) {
@@ -242,7 +255,7 @@ const char** k_solid__genericinterface_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_solid__genericinterface_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_solid__genericinterface_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

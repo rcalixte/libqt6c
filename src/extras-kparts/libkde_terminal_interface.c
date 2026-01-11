@@ -6,7 +6,7 @@ void k_terminalinterface_start_program(void* self, const char* program, const ch
     size_t args_len = libqt_strv_length(args);
     libqt_string* args_qstr = (libqt_string*)malloc(args_len * sizeof(libqt_string));
     if (args_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_terminalinterface_start_program");
+        fprintf(stderr, "Failed to allocate memory for string list in k_terminalinterface_start_program");
         abort();
     }
     for (size_t i = 0; i < args_len; ++i) {
@@ -52,7 +52,7 @@ const char** k_terminalinterface_available_profiles(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_terminalinterface_available_profiles");
+        fprintf(stderr, "Failed to allocate memory for string list in k_terminalinterface_available_profiles");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

@@ -112,7 +112,7 @@ void k_attica__achievement_set_dependencies(void* self, const char* dependencies
     size_t dependencies_len = libqt_strv_length(dependencies);
     libqt_string* dependencies_qstr = (libqt_string*)malloc(dependencies_len * sizeof(libqt_string));
     if (dependencies_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_attica__achievement_set_dependencies");
+        fprintf(stderr, "Failed to allocate memory for string list in k_attica__achievement_set_dependencies");
         abort();
     }
     for (size_t i = 0; i < dependencies_len; ++i) {
@@ -136,7 +136,7 @@ const char** k_attica__achievement_dependencies(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_attica__achievement_dependencies");
+        fprintf(stderr, "Failed to allocate memory for string list in k_attica__achievement_dependencies");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -170,7 +170,7 @@ void k_attica__achievement_set_options(void* self, const char* options[static 1]
     size_t options_len = libqt_strv_length(options);
     libqt_string* options_qstr = (libqt_string*)malloc(options_len * sizeof(libqt_string));
     if (options_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_attica__achievement_set_options");
+        fprintf(stderr, "Failed to allocate memory for string list in k_attica__achievement_set_options");
         abort();
     }
     for (size_t i = 0; i < options_len; ++i) {
@@ -194,7 +194,7 @@ const char** k_attica__achievement_options(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_attica__achievement_options");
+        fprintf(stderr, "Failed to allocate memory for string list in k_attica__achievement_options");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

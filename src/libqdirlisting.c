@@ -12,7 +12,7 @@ QDirListing* q_dirlisting_new2(const char* path, const char* nameFilters[static 
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
     if (nameFilters_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_dirlisting_new2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_dirlisting_new2");
         abort();
     }
     for (size_t i = 0; i < nameFilters_len; ++i) {
@@ -33,7 +33,7 @@ QDirListing* q_dirlisting_new4(const char* path, const char* nameFilters[static 
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
     if (nameFilters_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_dirlisting_new4");
+        fprintf(stderr, "Failed to allocate memory for string list in q_dirlisting_new4");
         abort();
     }
     for (size_t i = 0; i < nameFilters_len; ++i) {
@@ -66,7 +66,7 @@ const char** q_dirlisting_name_filters(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_dirlisting_name_filters");
+        fprintf(stderr, "Failed to allocate memory for string list in q_dirlisting_name_filters");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

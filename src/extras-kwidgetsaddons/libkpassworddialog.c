@@ -139,15 +139,15 @@ void k_passworddialog_set_known_logins(void* self, libqt_map /* of const char* t
     // Convert libqt_map to QMap<QString,QString>
     libqt_map knownLogins_ret;
     knownLogins_ret.len = knownLogins.len;
-    knownLogins_ret.keys = malloc(knownLogins_ret.len * sizeof(libqt_string));
+    knownLogins_ret.keys = (libqt_string*)malloc(knownLogins_ret.len * sizeof(libqt_string));
     if (knownLogins_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in k_passworddialog_set_known_logins\n");
         abort();
     }
-    knownLogins_ret.values = malloc(knownLogins_ret.len * sizeof(libqt_string));
+    knownLogins_ret.values = (libqt_string*)malloc(knownLogins_ret.len * sizeof(libqt_string));
     if (knownLogins_ret.values == NULL) {
         free(knownLogins_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in k_passworddialog_set_known_logins\n");
         abort();
     }
     const char** knownLogins_karr = (const char**)knownLogins.keys;
@@ -159,8 +159,8 @@ void k_passworddialog_set_known_logins(void* self, libqt_map /* of const char* t
         knownLogins_vdest[i] = qstring(knownLogins_varr[i]);
     }
     KPasswordDialog_SetKnownLogins((KPasswordDialog*)self, knownLogins_ret);
-    libqt_free(knownLogins_ret.keys);
-    libqt_free(knownLogins_ret.values);
+    free(knownLogins_ret.keys);
+    free(knownLogins_ret.values);
 }
 
 void k_passworddialog_accept(void* self) {
@@ -1512,7 +1512,7 @@ const char** k_passworddialog_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_passworddialog_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_passworddialog_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

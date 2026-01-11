@@ -103,7 +103,7 @@ const char** q_sqldriver_tables(void* self, int32_t tableType) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sqldriver_tables");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sqldriver_tables");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -126,7 +126,7 @@ const char** q_sqldriver_qbase_tables(void* self, int32_t tableType) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sqldriver_tables");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sqldriver_tables");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -311,7 +311,7 @@ const char** q_sqldriver_subscribed_to_notifications(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sqldriver_subscribed_to_notifications");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sqldriver_subscribed_to_notifications");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -334,7 +334,7 @@ const char** q_sqldriver_qbase_subscribed_to_notifications(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sqldriver_subscribed_to_notifications");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sqldriver_subscribed_to_notifications");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -577,7 +577,7 @@ const char** q_sqldriver_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sqldriver_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sqldriver_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

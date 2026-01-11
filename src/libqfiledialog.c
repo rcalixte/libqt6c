@@ -99,7 +99,7 @@ const char** q_filedialog_selected_files(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filedialog_selected_files");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_selected_files");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -130,7 +130,7 @@ void q_filedialog_set_name_filters(void* self, const char* filters[static 1]) {
     size_t filters_len = libqt_strv_length(filters);
     libqt_string* filters_qstr = (libqt_string*)malloc(filters_len * sizeof(libqt_string));
     if (filters_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filedialog_set_name_filters");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_set_name_filters");
         abort();
     }
     for (size_t i = 0; i < filters_len; ++i) {
@@ -146,7 +146,7 @@ const char** q_filedialog_name_filters(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filedialog_name_filters");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_name_filters");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -182,7 +182,7 @@ void q_filedialog_set_mime_type_filters(void* self, const char* filters[static 1
     size_t filters_len = libqt_strv_length(filters);
     libqt_string* filters_qstr = (libqt_string*)malloc(filters_len * sizeof(libqt_string));
     if (filters_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filedialog_set_mime_type_filters");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_set_mime_type_filters");
         abort();
     }
     for (size_t i = 0; i < filters_len; ++i) {
@@ -198,7 +198,7 @@ const char** q_filedialog_mime_type_filters(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filedialog_mime_type_filters");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_mime_type_filters");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -283,7 +283,7 @@ void q_filedialog_set_history(void* self, const char* paths[static 1]) {
     size_t paths_len = libqt_strv_length(paths);
     libqt_string* paths_qstr = (libqt_string*)malloc(paths_len * sizeof(libqt_string));
     if (paths_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filedialog_set_history");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_set_history");
         abort();
     }
     for (size_t i = 0; i < paths_len; ++i) {
@@ -299,7 +299,7 @@ const char** q_filedialog_history(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filedialog_history");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_history");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -344,7 +344,7 @@ void q_filedialog_set_supported_schemes(void* self, const char* schemes[static 1
     size_t schemes_len = libqt_strv_length(schemes);
     libqt_string* schemes_qstr = (libqt_string*)malloc(schemes_len * sizeof(libqt_string));
     if (schemes_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filedialog_set_supported_schemes");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_set_supported_schemes");
         abort();
     }
     for (size_t i = 0; i < schemes_len; ++i) {
@@ -360,7 +360,7 @@ const char** q_filedialog_supported_schemes(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filedialog_supported_schemes");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_supported_schemes");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -422,7 +422,7 @@ void q_filedialog_files_selected(void* self, const char* files[static 1]) {
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filedialog_files_selected");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_files_selected");
         abort();
     }
     for (size_t i = 0; i < files_len; ++i) {
@@ -531,7 +531,7 @@ const char** q_filedialog_get_open_file_names() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filedialog_get_open_file_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_get_open_file_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -744,7 +744,7 @@ QUrl* q_filedialog_get_existing_directory_url5(void* parent, const char* caption
     size_t supportedSchemes_len = libqt_strv_length(supportedSchemes);
     libqt_string* supportedSchemes_qstr = (libqt_string*)malloc(supportedSchemes_len * sizeof(libqt_string));
     if (supportedSchemes_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filedialog_get_existing_directory_url5");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_get_existing_directory_url5");
         abort();
     }
     for (size_t i = 0; i < supportedSchemes_len; ++i) {
@@ -761,7 +761,7 @@ const char** q_filedialog_get_open_file_names1(void* parent) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filedialog_get_open_file_names1");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_get_open_file_names1");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -780,7 +780,7 @@ const char** q_filedialog_get_open_file_names2(void* parent, const char* caption
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filedialog_get_open_file_names2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_get_open_file_names2");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -799,7 +799,7 @@ const char** q_filedialog_get_open_file_names3(void* parent, const char* caption
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filedialog_get_open_file_names3");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_get_open_file_names3");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -818,7 +818,7 @@ const char** q_filedialog_get_open_file_names4(void* parent, const char* caption
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filedialog_get_open_file_names4");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_get_open_file_names4");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2123,7 +2123,7 @@ const char** q_filedialog_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_filedialog_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

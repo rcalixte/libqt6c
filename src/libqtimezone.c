@@ -184,7 +184,7 @@ const char** q_timezone_available_time_zone_ids() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_timezone_available_time_zone_ids");
+        fprintf(stderr, "Failed to allocate memory for string list in q_timezone_available_time_zone_ids");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -203,7 +203,7 @@ const char** q_timezone_available_time_zone_ids2(uint16_t territory) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_timezone_available_time_zone_ids2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_timezone_available_time_zone_ids2");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -222,7 +222,7 @@ const char** q_timezone_available_time_zone_ids3(int offsetSeconds) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_timezone_available_time_zone_ids3");
+        fprintf(stderr, "Failed to allocate memory for string list in q_timezone_available_time_zone_ids3");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -262,7 +262,7 @@ const char** q_timezone_windows_id_to_iana_ids(const char* windowsId) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_timezone_windows_id_to_iana_ids");
+        fprintf(stderr, "Failed to allocate memory for string list in q_timezone_windows_id_to_iana_ids");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -281,7 +281,7 @@ const char** q_timezone_windows_id_to_iana_ids2(const char* windowsId, uint16_t 
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_timezone_windows_id_to_iana_ids2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_timezone_windows_id_to_iana_ids2");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

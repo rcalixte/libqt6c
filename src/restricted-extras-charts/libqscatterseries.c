@@ -425,19 +425,19 @@ void q_scatterseries_clear_points_configuration2(void* self, int32_t key) {
     QXYSeries_ClearPointsConfiguration2((QXYSeries*)self, key);
 }
 
-void q_scatterseries_set_point_configuration(void* self, int index, libqt_map /* of int32_t to QVariant* */ configuration) {
+void q_scatterseries_set_point_configuration(void* self, int index, libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */ configuration) {
     // Convert libqt_map to QHash<QXYSeries::PointConfiguration,QVariant>
     libqt_map configuration_ret;
     configuration_ret.len = configuration.len;
-    configuration_ret.keys = malloc(configuration_ret.len * sizeof(int32_t));
+    configuration_ret.keys = (int32_t*)malloc(configuration_ret.len * sizeof(int32_t));
     if (configuration_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_scatterseries_set_point_configuration\n");
         abort();
     }
-    configuration_ret.values = malloc(configuration_ret.len * sizeof(QVariant*));
+    configuration_ret.values = (QVariant**)malloc(configuration_ret.len * sizeof(QVariant*));
     if (configuration_ret.values == NULL) {
         free(configuration_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_scatterseries_set_point_configuration\n");
         abort();
     }
     int32_t* configuration_karr = (int32_t*)configuration.keys;
@@ -449,27 +449,27 @@ void q_scatterseries_set_point_configuration(void* self, int index, libqt_map /*
         configuration_vdest[i] = configuration_varr[i];
     }
     QXYSeries_SetPointConfiguration((QXYSeries*)self, index, configuration_ret);
-    libqt_free(configuration_ret.keys);
-    libqt_free(configuration_ret.values);
+    free(configuration_ret.keys);
+    free(configuration_ret.values);
 }
 
 void q_scatterseries_set_point_configuration2(void* self, int index, int32_t key, void* value) {
     QXYSeries_SetPointConfiguration2((QXYSeries*)self, index, key, (QVariant*)value);
 }
 
-void q_scatterseries_set_points_configuration(void* self, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ pointsConfiguration) {
+void q_scatterseries_set_points_configuration(void* self, libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */ pointsConfiguration) {
     // Convert libqt_map to QHash<int,QHash<QXYSeries::PointConfiguration, QVariant>>
     libqt_map pointsConfiguration_ret;
     pointsConfiguration_ret.len = pointsConfiguration.len;
-    pointsConfiguration_ret.keys = malloc(pointsConfiguration_ret.len * sizeof(int));
+    pointsConfiguration_ret.keys = (int*)malloc(pointsConfiguration_ret.len * sizeof(int));
     if (pointsConfiguration_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_scatterseries_set_points_configuration\n");
         abort();
     }
-    pointsConfiguration_ret.values = malloc(pointsConfiguration_ret.len * sizeof(libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */));
+    pointsConfiguration_ret.values = (libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */*)malloc(pointsConfiguration_ret.len * sizeof(libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */));
     if (pointsConfiguration_ret.values == NULL) {
         free(pointsConfiguration_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_scatterseries_set_points_configuration\n");
         abort();
     }
     int* pointsConfiguration_karr = (int*)pointsConfiguration.keys;
@@ -481,11 +481,11 @@ void q_scatterseries_set_points_configuration(void* self, libqt_map /* of int to
         pointsConfiguration_vdest[i] = pointsConfiguration_varr[i];
     }
     QXYSeries_SetPointsConfiguration((QXYSeries*)self, pointsConfiguration_ret);
-    libqt_free(pointsConfiguration_ret.keys);
-    libqt_free(pointsConfiguration_ret.values);
+    free(pointsConfiguration_ret.keys);
+    free(pointsConfiguration_ret.values);
 }
 
-libqt_map /* of int32_t to QVariant* */ q_scatterseries_point_configuration(void* self, int index) {
+libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */ q_scatterseries_point_configuration(void* self, int index) {
     // Convert QHash<QXYSeries::PointConfiguration,QVariant> to libqt_map
     libqt_map _out = QXYSeries_PointConfiguration((QXYSeries*)self, index);
     libqt_map _ret;
@@ -495,7 +495,7 @@ libqt_map /* of int32_t to QVariant* */ q_scatterseries_point_configuration(void
     return _ret;
 }
 
-libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ q_scatterseries_points_configuration(void* self) {
+libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */ q_scatterseries_points_configuration(void* self) {
     // Convert QHash<int,QHash<QXYSeries::PointConfiguration, QVariant>> to libqt_map
     libqt_map _out = QXYSeries_PointsConfiguration((QXYSeries*)self);
     libqt_map _ret;
@@ -697,19 +697,19 @@ void q_scatterseries_on_best_fit_line_color_changed(void* self, void (*callback)
     QXYSeries_Connect_BestFitLineColorChanged((QXYSeries*)self, (intptr_t)callback);
 }
 
-void q_scatterseries_points_configuration_changed(void* self, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ configuration) {
+void q_scatterseries_points_configuration_changed(void* self, libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */ configuration) {
     // Convert libqt_map to QHash<int,QHash<QXYSeries::PointConfiguration, QVariant>>
     libqt_map configuration_ret;
     configuration_ret.len = configuration.len;
-    configuration_ret.keys = malloc(configuration_ret.len * sizeof(int));
+    configuration_ret.keys = (int*)malloc(configuration_ret.len * sizeof(int));
     if (configuration_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_scatterseries_points_configuration_changed\n");
         abort();
     }
-    configuration_ret.values = malloc(configuration_ret.len * sizeof(libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */));
+    configuration_ret.values = (libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */*)malloc(configuration_ret.len * sizeof(libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */));
     if (configuration_ret.values == NULL) {
         free(configuration_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_scatterseries_points_configuration_changed\n");
         abort();
     }
     int* configuration_karr = (int*)configuration.keys;
@@ -721,11 +721,11 @@ void q_scatterseries_points_configuration_changed(void* self, libqt_map /* of in
         configuration_vdest[i] = configuration_varr[i];
     }
     QXYSeries_PointsConfigurationChanged((QXYSeries*)self, configuration_ret);
-    libqt_free(configuration_ret.keys);
-    libqt_free(configuration_ret.values);
+    free(configuration_ret.keys);
+    free(configuration_ret.values);
 }
 
-void q_scatterseries_on_points_configuration_changed(void* self, void (*callback)(void*, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */)) {
+void q_scatterseries_on_points_configuration_changed(void* self, void (*callback)(void*, libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */)) {
     QXYSeries_Connect_PointsConfigurationChanged((QXYSeries*)self, (intptr_t)callback);
 }
 
@@ -954,7 +954,7 @@ const char** q_scatterseries_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_scatterseries_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_scatterseries_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

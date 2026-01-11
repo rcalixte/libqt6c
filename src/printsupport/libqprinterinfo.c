@@ -93,7 +93,7 @@ int32_t q_printerinfo_default_duplex_mode(void* self) {
     return QPrinterInfo_DefaultDuplexMode((QPrinterInfo*)self);
 }
 
-libqt_list /* of int32_t */ q_printerinfo_supported_duplex_modes(void* self) {
+libqt_list /* of enum QPrinter__DuplexMode */ q_printerinfo_supported_duplex_modes(void* self) {
     libqt_list _arr = QPrinterInfo_SupportedDuplexModes((QPrinterInfo*)self);
     return _arr;
 }
@@ -102,7 +102,7 @@ int32_t q_printerinfo_default_color_mode(void* self) {
     return QPrinterInfo_DefaultColorMode((QPrinterInfo*)self);
 }
 
-libqt_list /* of int32_t */ q_printerinfo_supported_color_modes(void* self) {
+libqt_list /* of enum QPrinter__ColorMode */ q_printerinfo_supported_color_modes(void* self) {
     libqt_list _arr = QPrinterInfo_SupportedColorModes((QPrinterInfo*)self);
     return _arr;
 }
@@ -112,7 +112,7 @@ const char** q_printerinfo_available_printer_names() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_printerinfo_available_printer_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_printerinfo_available_printer_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

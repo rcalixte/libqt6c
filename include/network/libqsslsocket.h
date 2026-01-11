@@ -722,7 +722,7 @@ bool q_sslsocket_set_active_backend(const char* backendName);
 ///
 /// @return libqt_list of enum QSsl__SslProtocol
 ///
-libqt_list /* of int32_t */ q_sslsocket_supported_protocols();
+libqt_list /* of enum QSsl__SslProtocol */ q_sslsocket_supported_protocols();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#isProtocolSupported)
 ///
@@ -734,7 +734,7 @@ bool q_sslsocket_is_protocol_supported(int32_t protocol);
 ///
 /// @return libqt_list of enum QSsl__ImplementedClass
 ///
-libqt_list /* of int32_t */ q_sslsocket_implemented_classes();
+libqt_list /* of enum QSsl__ImplementedClass */ q_sslsocket_implemented_classes();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#isClassImplemented)
 ///
@@ -746,7 +746,7 @@ bool q_sslsocket_is_class_implemented(int32_t cl);
 ///
 /// @return libqt_list of enum QSsl__SupportedFeature
 ///
-libqt_list /* of int32_t */ q_sslsocket_supported_features();
+libqt_list /* of enum QSsl__SupportedFeature */ q_sslsocket_supported_features();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#isFeatureSupported)
 ///
@@ -1113,7 +1113,7 @@ bool q_sslsocket_wait_for_encrypted1(void* self, int msecs);
 ///
 /// @return libqt_list of enum QSsl__SslProtocol
 ///
-libqt_list /* of int32_t */ q_sslsocket_supported_protocols1(const char* backendName);
+libqt_list /* of enum QSsl__SslProtocol */ q_sslsocket_supported_protocols1(const char* backendName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#isProtocolSupported)
 ///
@@ -1128,7 +1128,7 @@ bool q_sslsocket_is_protocol_supported2(int32_t protocol, const char* backendNam
 ///
 /// @return libqt_list of enum QSsl__ImplementedClass
 ///
-libqt_list /* of int32_t */ q_sslsocket_implemented_classes1(const char* backendName);
+libqt_list /* of enum QSsl__ImplementedClass */ q_sslsocket_implemented_classes1(const char* backendName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#isClassImplemented)
 ///
@@ -1143,7 +1143,7 @@ bool q_sslsocket_is_class_implemented2(int32_t cl, const char* backendName);
 ///
 /// @return libqt_list of enum QSsl__SupportedFeature
 ///
-libqt_list /* of int32_t */ q_sslsocket_supported_features1(const char* backendName);
+libqt_list /* of enum QSsl__SupportedFeature */ q_sslsocket_supported_features1(const char* backendName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#isFeatureSupported)
 ///

@@ -48,24 +48,48 @@ libqt_map /* of char* to char* */ q_webengineurlrequestjob_request_headers(void*
     libqt_string* _out_keys = (libqt_string*)_out.keys;
     char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_webengineurlrequestjob_request_headers");
+        fprintf(stderr, "Failed to allocate memory for map string keys in q_webengineurlrequestjob_request_headers");
         abort();
     }
     libqt_string* _out_values = (libqt_string*)_out.values;
     char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_webengineurlrequestjob_request_headers");
-        free(_out_keys);
+        fprintf(stderr, "Failed to allocate memory for map string values in q_webengineurlrequestjob_request_headers");
+        free(_out.keys);
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_keys[i] = (char*)_out_keys[i].data;
-        _ret_values[i] = (char*)_out_values[i].data;
+        _ret_keys[i] = (char*)malloc(_out_keys[i].len + 1);
+        if (_ret_keys[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_keys[j]);
+            }
+            free(_ret_keys);
+            fprintf(stderr, "Failed to allocate memory for map keys in q_webengineurlrequestjob_request_headers");
+            abort();
+        }
+        memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
+        _ret_keys[i][_out_keys[i].len] = '\0';
+        _ret_values[i] = (char*)malloc(_out_values[i].len + 1);
+        if (_ret_values[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_keys[j]);
+                libqt_free(_ret_values[j]);
+            }
+            free(_ret_keys);
+            free(_ret_values);
+            fprintf(stderr, "Failed to allocate memory for map string values in q_webengineurlrequestjob_request_headers");
+            abort();
+        }
     }
     _ret.keys = (void*)_ret_keys;
     _ret.values = (void*)_ret_values;
-    free(_out_keys);
-    free(_out_values);
+    for (size_t i = 0; i < _out.len; ++i) {
+        libqt_free(_out_keys[i].data);
+        libqt_free(_out_values[i].data);
+    }
+    free(_out.keys);
+    free(_out.values);
     return _ret;
 }
 
@@ -83,6 +107,54 @@ void q_webengineurlrequestjob_fail(void* self, int32_t error) {
 
 void q_webengineurlrequestjob_redirect(void* self, void* url) {
     QWebEngineUrlRequestJob_Redirect((QWebEngineUrlRequestJob*)self, (QUrl*)url);
+}
+
+void q_webengineurlrequestjob_set_additional_response_headers(void* self, libqt_map /* of char* to char** */ additionalResponseHeaders) {
+    // Convert libqt_map to QMultiMap<QByteArray,QByteArray>
+    libqt_map additionalResponseHeaders_ret;
+    additionalResponseHeaders_ret.len = additionalResponseHeaders.len;
+    additionalResponseHeaders_ret.keys = (libqt_string*)malloc(additionalResponseHeaders_ret.len * sizeof(libqt_string));
+    if (additionalResponseHeaders_ret.keys == NULL) {
+        fprintf(stderr, "Failed to allocate memory for map keys in q_webengineurlrequestjob_set_additional_response_headers\n");
+        abort();
+    }
+    additionalResponseHeaders_ret.values = (libqt_list*)malloc(additionalResponseHeaders_ret.len * sizeof(libqt_list));
+    if (additionalResponseHeaders_ret.values == NULL) {
+        free(additionalResponseHeaders_ret.keys);
+        fprintf(stderr, "Failed to allocate memory for map values in q_webengineurlrequestjob_set_additional_response_headers\n");
+        abort();
+    }
+    char** additionalResponseHeaders_karr = (char**)additionalResponseHeaders.keys;
+    libqt_string* additionalResponseHeaders_kdest = (libqt_string*)additionalResponseHeaders_ret.keys;
+    char*** additionalResponseHeaders_varr = (char***)additionalResponseHeaders.values;
+    libqt_list* additionalResponseHeaders_vdest = (libqt_list*)additionalResponseHeaders_ret.values;
+    for (size_t i = 0; i < additionalResponseHeaders_ret.len; ++i) {
+        additionalResponseHeaders_kdest[i] = qstring(additionalResponseHeaders_karr[i]);
+        char** additionalResponseHeaders_array = additionalResponseHeaders_varr[i];
+        size_t additionalResponseHeaders_value_count = libqt_strv_length((const char**)additionalResponseHeaders_array);
+        libqt_string* additionalResponseHeaders_value_strings = (libqt_string*)malloc(additionalResponseHeaders_value_count * sizeof(libqt_string));
+        if (additionalResponseHeaders_value_strings == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                free(((libqt_list*)additionalResponseHeaders_ret.values)[j].data.ptr);
+            }
+            free(additionalResponseHeaders_ret.keys);
+            free(additionalResponseHeaders_ret.values);
+            fprintf(stderr, "Failed to allocate memory for map string key in q_webengineurlrequestjob_set_additional_response_headers");
+            abort();
+        }
+        for (size_t j = 0; j < additionalResponseHeaders_value_count; j++) {
+            additionalResponseHeaders_value_strings[j] = qstring(additionalResponseHeaders_array[j]);
+        }
+        additionalResponseHeaders_vdest[i].len = additionalResponseHeaders_value_count;
+        additionalResponseHeaders_vdest[i].data.ptr = additionalResponseHeaders_value_strings;
+    }
+    QWebEngineUrlRequestJob_SetAdditionalResponseHeaders((QWebEngineUrlRequestJob*)self, additionalResponseHeaders_ret);
+    for (size_t i = 0; i < additionalResponseHeaders_ret.len; ++i) {
+        free(((libqt_list*)additionalResponseHeaders_ret.values)[i].data.ptr);
+    }
+
+    free(additionalResponseHeaders_ret.keys);
+    free(additionalResponseHeaders_ret.values);
 }
 
 const char* q_webengineurlrequestjob_tr2(const char* s, const char* c) {
@@ -212,7 +284,7 @@ const char** q_webengineurlrequestjob_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_webengineurlrequestjob_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_webengineurlrequestjob_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

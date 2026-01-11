@@ -70,7 +70,7 @@ const char** q_sciscintilla_api_context(void* self, int pos, int* context_start,
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sciscintilla_api_context");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sciscintilla_api_context");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -93,7 +93,7 @@ const char** q_sciscintilla_qbase_api_context(void* self, int pos, int* context_
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sciscintilla_api_context");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sciscintilla_api_context");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -592,7 +592,7 @@ void q_sciscintilla_set_auto_completion_word_separators(void* self, const char* 
     size_t separators_len = libqt_strv_length(separators);
     libqt_string* separators_qstr = (libqt_string*)malloc(separators_len * sizeof(libqt_string));
     if (separators_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sciscintilla_set_auto_completion_word_separators");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sciscintilla_set_auto_completion_word_separators");
         abort();
     }
     for (size_t i = 0; i < separators_len; ++i) {
@@ -830,7 +830,7 @@ void q_sciscintilla_show_user_list(void* self, int id, const char* list[static 1
     size_t list_len = libqt_strv_length(list);
     libqt_string* list_qstr = (libqt_string*)malloc(list_len * sizeof(libqt_string));
     if (list_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sciscintilla_show_user_list");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sciscintilla_show_user_list");
         abort();
     }
     for (size_t i = 0; i < list_len; ++i) {
@@ -3638,7 +3638,7 @@ const char** q_sciscintilla_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sciscintilla_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sciscintilla_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

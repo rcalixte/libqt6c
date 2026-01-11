@@ -55,7 +55,7 @@ libqt_list /* of int */ q_fontdatabase_standard_sizes();
 ///
 /// @return libqt_list of enum QFontDatabase__WritingSystem
 ///
-libqt_list /* of int32_t */ q_fontdatabase_writing_systems();
+libqt_list /* of enum QFontDatabase__WritingSystem */ q_fontdatabase_writing_systems();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#writingSystems)
 ///
@@ -63,7 +63,7 @@ libqt_list /* of int32_t */ q_fontdatabase_writing_systems();
 ///
 /// @return libqt_list of enum QFontDatabase__WritingSystem
 ///
-libqt_list /* of int32_t */ q_fontdatabase_writing_systems2(const char* family);
+libqt_list /* of enum QFontDatabase__WritingSystem */ q_fontdatabase_writing_systems2(const char* family);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#families)
 ///

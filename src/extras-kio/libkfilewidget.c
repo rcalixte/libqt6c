@@ -81,7 +81,7 @@ const char** k_filewidget_selected_files(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_filewidget_selected_files");
+        fprintf(stderr, "Failed to allocate memory for string list in k_filewidget_selected_files");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -219,7 +219,7 @@ void k_filewidget_set_supported_schemes(void* self, const char* schemes[static 1
     size_t schemes_len = libqt_strv_length(schemes);
     libqt_string* schemes_qstr = (libqt_string*)malloc(schemes_len * sizeof(libqt_string));
     if (schemes_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_filewidget_set_supported_schemes");
+        fprintf(stderr, "Failed to allocate memory for string list in k_filewidget_set_supported_schemes");
         abort();
     }
     for (size_t i = 0; i < schemes_len; ++i) {
@@ -235,7 +235,7 @@ const char** k_filewidget_supported_schemes(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_filewidget_supported_schemes");
+        fprintf(stderr, "Failed to allocate memory for string list in k_filewidget_supported_schemes");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1590,7 +1590,7 @@ const char** k_filewidget_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_filewidget_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_filewidget_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

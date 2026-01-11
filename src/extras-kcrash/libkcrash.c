@@ -30,15 +30,15 @@ void k_crash_set_error_tags(libqt_map /* of const char* to const char* */ param1
     // Convert libqt_map to QHash<QString,QString>
     libqt_map param1_ret;
     param1_ret.len = param1.len;
-    param1_ret.keys = malloc(param1_ret.len * sizeof(libqt_string));
+    param1_ret.keys = (libqt_string*)malloc(param1_ret.len * sizeof(libqt_string));
     if (param1_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in k_crash_set_error_tags\n");
         abort();
     }
-    param1_ret.values = malloc(param1_ret.len * sizeof(libqt_string));
+    param1_ret.values = (libqt_string*)malloc(param1_ret.len * sizeof(libqt_string));
     if (param1_ret.values == NULL) {
         free(param1_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in k_crash_set_error_tags\n");
         abort();
     }
     const char** param1_karr = (const char**)param1.keys;
@@ -50,23 +50,23 @@ void k_crash_set_error_tags(libqt_map /* of const char* to const char* */ param1
         param1_vdest[i] = qstring(param1_varr[i]);
     }
     KCrash_SetErrorTags(param1_ret);
-    libqt_free(param1_ret.keys);
-    libqt_free(param1_ret.values);
+    free(param1_ret.keys);
+    free(param1_ret.values);
 }
 
 void k_crash_set_error_extra_data(libqt_map /* of const char* to const char* */ param1) {
     // Convert libqt_map to QHash<QString,QString>
     libqt_map param1_ret;
     param1_ret.len = param1.len;
-    param1_ret.keys = malloc(param1_ret.len * sizeof(libqt_string));
+    param1_ret.keys = (libqt_string*)malloc(param1_ret.len * sizeof(libqt_string));
     if (param1_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in k_crash_set_error_extra_data\n");
         abort();
     }
-    param1_ret.values = malloc(param1_ret.len * sizeof(libqt_string));
+    param1_ret.values = (libqt_string*)malloc(param1_ret.len * sizeof(libqt_string));
     if (param1_ret.values == NULL) {
         free(param1_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in k_crash_set_error_extra_data\n");
         abort();
     }
     const char** param1_karr = (const char**)param1.keys;
@@ -78,23 +78,23 @@ void k_crash_set_error_extra_data(libqt_map /* of const char* to const char* */ 
         param1_vdest[i] = qstring(param1_varr[i]);
     }
     KCrash_SetErrorExtraData(param1_ret);
-    libqt_free(param1_ret.keys);
-    libqt_free(param1_ret.values);
+    free(param1_ret.keys);
+    free(param1_ret.values);
 }
 
 void k_crash_set_g_p_u_data(libqt_map /* of const char* to QVariant* */ param1) {
     // Convert libqt_map to QHash<QString,QVariant>
     libqt_map param1_ret;
     param1_ret.len = param1.len;
-    param1_ret.keys = malloc(param1_ret.len * sizeof(libqt_string));
+    param1_ret.keys = (libqt_string*)malloc(param1_ret.len * sizeof(libqt_string));
     if (param1_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in k_crash_set_g_p_u_data\n");
         abort();
     }
-    param1_ret.values = malloc(param1_ret.len * sizeof(QVariant*));
+    param1_ret.values = (QVariant**)malloc(param1_ret.len * sizeof(QVariant*));
     if (param1_ret.values == NULL) {
         free(param1_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in k_crash_set_g_p_u_data\n");
         abort();
     }
     const char** param1_karr = (const char**)param1.keys;
@@ -106,6 +106,6 @@ void k_crash_set_g_p_u_data(libqt_map /* of const char* to QVariant* */ param1) 
         param1_vdest[i] = param1_varr[i];
     }
     KCrash_SetGPUData(param1_ret);
-    libqt_free(param1_ret.keys);
-    libqt_free(param1_ret.values);
+    free(param1_ret.keys);
+    free(param1_ret.values);
 }

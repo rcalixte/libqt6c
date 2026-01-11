@@ -152,11 +152,33 @@ const char** k_sonnet__speller_available_language_names(void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-speller.html#availableDictionaries)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self Sonnet__Speller*
 ///
 libqt_map /* of const char* to const char* */ k_sonnet__speller_available_dictionaries(void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-speller.html#preferredDictionaries)
+///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
 ///
 /// @param self Sonnet__Speller*
 ///

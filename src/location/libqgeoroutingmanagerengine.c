@@ -14,15 +14,15 @@ QGeoRoutingManagerEngine* q_georoutingmanagerengine_new(libqt_map /* of const ch
     // Convert libqt_map to QMap<QString,QVariant>
     libqt_map parameters_ret;
     parameters_ret.len = parameters.len;
-    parameters_ret.keys = malloc(parameters_ret.len * sizeof(libqt_string));
+    parameters_ret.keys = (libqt_string*)malloc(parameters_ret.len * sizeof(libqt_string));
     if (parameters_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_georoutingmanagerengine_new\n");
         abort();
     }
-    parameters_ret.values = malloc(parameters_ret.len * sizeof(QVariant*));
+    parameters_ret.values = (QVariant**)malloc(parameters_ret.len * sizeof(QVariant*));
     if (parameters_ret.values == NULL) {
         free(parameters_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_georoutingmanagerengine_new\n");
         abort();
     }
     const char** parameters_karr = (const char**)parameters.keys;
@@ -35,8 +35,8 @@ QGeoRoutingManagerEngine* q_georoutingmanagerengine_new(libqt_map /* of const ch
     }
 
     QGeoRoutingManagerEngine* _out = QGeoRoutingManagerEngine_new(parameters_ret);
-    libqt_free(parameters_ret.keys);
-    libqt_free(parameters_ret.values);
+    free(parameters_ret.keys);
+    free(parameters_ret.values);
     return _out;
 }
 
@@ -44,15 +44,15 @@ QGeoRoutingManagerEngine* q_georoutingmanagerengine_new2(libqt_map /* of const c
     // Convert libqt_map to QMap<QString,QVariant>
     libqt_map parameters_ret;
     parameters_ret.len = parameters.len;
-    parameters_ret.keys = malloc(parameters_ret.len * sizeof(libqt_string));
+    parameters_ret.keys = (libqt_string*)malloc(parameters_ret.len * sizeof(libqt_string));
     if (parameters_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_georoutingmanagerengine_new2\n");
         abort();
     }
-    parameters_ret.values = malloc(parameters_ret.len * sizeof(QVariant*));
+    parameters_ret.values = (QVariant**)malloc(parameters_ret.len * sizeof(QVariant*));
     if (parameters_ret.values == NULL) {
         free(parameters_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_georoutingmanagerengine_new2\n");
         abort();
     }
     const char** parameters_karr = (const char**)parameters.keys;
@@ -65,8 +65,8 @@ QGeoRoutingManagerEngine* q_georoutingmanagerengine_new2(libqt_map /* of const c
     }
 
     QGeoRoutingManagerEngine* _out = QGeoRoutingManagerEngine_new2(parameters_ret, (QObject*)parent);
-    libqt_free(parameters_ret.keys);
-    libqt_free(parameters_ret.values);
+    free(parameters_ret.keys);
+    free(parameters_ret.values);
     return _out;
 }
 
@@ -387,7 +387,7 @@ const char** q_georoutingmanagerengine_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_georoutingmanagerengine_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_georoutingmanagerengine_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

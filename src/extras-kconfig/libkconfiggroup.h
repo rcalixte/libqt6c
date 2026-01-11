@@ -634,6 +634,17 @@ bool k_configgroup_has_default2(void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#entryMap)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self KConfigGroup*
 ///
 libqt_map /* of const char* to const char* */ k_configgroup_entry_map(void* self);

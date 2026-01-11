@@ -165,7 +165,7 @@ void k_imageannotator__kimageannotator_set_stickers(void* self, const char* stic
     size_t stickerPaths_len = libqt_strv_length(stickerPaths);
     libqt_string* stickerPaths_qstr = (libqt_string*)malloc(stickerPaths_len * sizeof(libqt_string));
     if (stickerPaths_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_imageannotator__kimageannotator_set_stickers");
+        fprintf(stderr, "Failed to allocate memory for string list in k_imageannotator__kimageannotator_set_stickers");
         abort();
     }
     for (size_t i = 0; i < stickerPaths_len; ++i) {
@@ -1473,7 +1473,7 @@ const char** k_imageannotator__kimageannotator_dynamic_property_names(void* self
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_imageannotator__kimageannotator_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_imageannotator__kimageannotator_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

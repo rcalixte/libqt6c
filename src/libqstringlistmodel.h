@@ -341,6 +341,16 @@ bool q_stringlistmodel_qbase_move_rows(void* self, void* sourceParent, int sourc
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringlistmodel.html#itemData)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QStringListModel*
 /// @param index QModelIndex*
 ///
@@ -1806,6 +1816,16 @@ void q_stringlistmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStringListModel*
@@ -1815,6 +1835,16 @@ libqt_map /* of int to char* */ q_stringlistmodel_role_names(void* self);
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames)
+///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

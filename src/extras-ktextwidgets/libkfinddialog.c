@@ -30,7 +30,7 @@ KFindDialog* k_finddialog_new4(void* parent, int64_t options, const char* findSt
     size_t findStrings_len = libqt_strv_length(findStrings);
     libqt_string* findStrings_qstr = (libqt_string*)malloc(findStrings_len * sizeof(libqt_string));
     if (findStrings_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_finddialog_new4");
+        fprintf(stderr, "Failed to allocate memory for string list in k_finddialog_new4");
         abort();
     }
     for (size_t i = 0; i < findStrings_len; ++i) {
@@ -47,7 +47,7 @@ KFindDialog* k_finddialog_new5(void* parent, int64_t options, const char* findSt
     size_t findStrings_len = libqt_strv_length(findStrings);
     libqt_string* findStrings_qstr = (libqt_string*)malloc(findStrings_len * sizeof(libqt_string));
     if (findStrings_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_finddialog_new5");
+        fprintf(stderr, "Failed to allocate memory for string list in k_finddialog_new5");
         abort();
     }
     for (size_t i = 0; i < findStrings_len; ++i) {
@@ -64,7 +64,7 @@ KFindDialog* k_finddialog_new6(void* parent, int64_t options, const char* findSt
     size_t findStrings_len = libqt_strv_length(findStrings);
     libqt_string* findStrings_qstr = (libqt_string*)malloc(findStrings_len * sizeof(libqt_string));
     if (findStrings_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_finddialog_new6");
+        fprintf(stderr, "Failed to allocate memory for string list in k_finddialog_new6");
         abort();
     }
     for (size_t i = 0; i < findStrings_len; ++i) {
@@ -108,7 +108,7 @@ void k_finddialog_set_find_history(void* self, const char* history[static 1]) {
     size_t history_len = libqt_strv_length(history);
     libqt_string* history_qstr = (libqt_string*)malloc(history_len * sizeof(libqt_string));
     if (history_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_finddialog_set_find_history");
+        fprintf(stderr, "Failed to allocate memory for string list in k_finddialog_set_find_history");
         abort();
     }
     for (size_t i = 0; i < history_len; ++i) {
@@ -124,7 +124,7 @@ const char** k_finddialog_find_history(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_finddialog_find_history");
+        fprintf(stderr, "Failed to allocate memory for string list in k_finddialog_find_history");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1502,7 +1502,7 @@ const char** k_finddialog_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_finddialog_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_finddialog_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

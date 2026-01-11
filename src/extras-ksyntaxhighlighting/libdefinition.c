@@ -46,7 +46,7 @@ const char** k_syntaxhighlighting__definition_alternative_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_syntaxhighlighting__definition_alternative_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_syntaxhighlighting__definition_alternative_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -86,7 +86,7 @@ const char** k_syntaxhighlighting__definition_mime_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_syntaxhighlighting__definition_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in k_syntaxhighlighting__definition_mime_types");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -105,7 +105,7 @@ const char** k_syntaxhighlighting__definition_extensions(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_syntaxhighlighting__definition_extensions");
+        fprintf(stderr, "Failed to allocate memory for string list in k_syntaxhighlighting__definition_extensions");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -180,7 +180,7 @@ const char** k_syntaxhighlighting__definition_folding_ignore_list(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_syntaxhighlighting__definition_folding_ignore_list");
+        fprintf(stderr, "Failed to allocate memory for string list in k_syntaxhighlighting__definition_folding_ignore_list");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -199,7 +199,7 @@ const char** k_syntaxhighlighting__definition_keyword_lists(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_syntaxhighlighting__definition_keyword_lists");
+        fprintf(stderr, "Failed to allocate memory for string list in k_syntaxhighlighting__definition_keyword_lists");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -218,7 +218,7 @@ const char** k_syntaxhighlighting__definition_keyword_list(void* self, const cha
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_syntaxhighlighting__definition_keyword_list");
+        fprintf(stderr, "Failed to allocate memory for string list in k_syntaxhighlighting__definition_keyword_list");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -236,7 +236,7 @@ bool k_syntaxhighlighting__definition_set_keyword_list(void* self, const char* n
     size_t content_len = libqt_strv_length(content);
     libqt_string* content_qstr = (libqt_string*)malloc(content_len * sizeof(libqt_string));
     if (content_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_syntaxhighlighting__definition_set_keyword_list");
+        fprintf(stderr, "Failed to allocate memory for string list in k_syntaxhighlighting__definition_set_keyword_list");
         abort();
     }
     for (size_t i = 0; i < content_len; ++i) {
@@ -273,7 +273,7 @@ libqt_pair /* tuple of const char* and const char* */ k_syntaxhighlighting__defi
     return KSyntaxHighlighting__Definition_MultiLineCommentMarker((KSyntaxHighlighting__Definition*)self);
 }
 
-libqt_list /* of libqt_pair  tuple of QChar* and const char*  */ k_syntaxhighlighting__definition_character_encodings(void* self) {
+libqt_list /* of libqt_pair tuple of QChar* and const char* */ k_syntaxhighlighting__definition_character_encodings(void* self) {
     libqt_list _arr = KSyntaxHighlighting__Definition_CharacterEncodings((KSyntaxHighlighting__Definition*)self);
     return _arr;
 }

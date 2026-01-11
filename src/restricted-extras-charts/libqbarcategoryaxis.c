@@ -57,7 +57,7 @@ void q_barcategoryaxis_append(void* self, const char* categories[static 1]) {
     size_t categories_len = libqt_strv_length(categories);
     libqt_string* categories_qstr = (libqt_string*)malloc(categories_len * sizeof(libqt_string));
     if (categories_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_barcategoryaxis_append");
+        fprintf(stderr, "Failed to allocate memory for string list in q_barcategoryaxis_append");
         abort();
     }
     for (size_t i = 0; i < categories_len; ++i) {
@@ -92,7 +92,7 @@ void q_barcategoryaxis_set_categories(void* self, const char* categories[static 
     size_t categories_len = libqt_strv_length(categories);
     libqt_string* categories_qstr = (libqt_string*)malloc(categories_len * sizeof(libqt_string));
     if (categories_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_barcategoryaxis_set_categories");
+        fprintf(stderr, "Failed to allocate memory for string list in q_barcategoryaxis_set_categories");
         abort();
     }
     for (size_t i = 0; i < categories_len; ++i) {
@@ -108,7 +108,7 @@ const char** q_barcategoryaxis_categories(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_barcategoryaxis_categories");
+        fprintf(stderr, "Failed to allocate memory for string list in q_barcategoryaxis_categories");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -821,7 +821,7 @@ const char** q_barcategoryaxis_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_barcategoryaxis_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_barcategoryaxis_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

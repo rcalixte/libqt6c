@@ -57,7 +57,7 @@ bool q_accounts__servicetype_has_tag(void* self, const char* tag) {
     return Accounts__ServiceType_HasTag((Accounts__ServiceType*)self, qstring(tag));
 }
 
-libqt_list /* of const char* */ q_accounts__servicetype_tags(void* self) {
+libqt_list /* set of const char* */ q_accounts__servicetype_tags(void* self) {
     return Accounts__ServiceType_Tags((Accounts__ServiceType*)self);
 }
 

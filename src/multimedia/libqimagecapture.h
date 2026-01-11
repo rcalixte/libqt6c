@@ -120,7 +120,7 @@ void q_imagecapture_set_file_format(void* self, int32_t format);
 ///
 /// @return libqt_list of enum QImageCapture__FileFormat
 ///
-libqt_list /* of int32_t */ q_imagecapture_supported_formats();
+libqt_list /* of enum QImageCapture__FileFormat */ q_imagecapture_supported_formats();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagecapture.html#fileFormatName)
 ///

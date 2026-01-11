@@ -784,17 +784,17 @@ bool k_texteditor__document_post_message(void* self, void* message);
 ///
 /// @param self KTextEditor__Document*
 /// @param config KConfigGroup*
-/// @param flags libqt_list /* of const char* */ flags
+/// @param flags libqt_list /* set of const char* */ flags
 ///
-void k_texteditor__document_read_session_config(void* self, void* config, libqt_list /* of const char* */ flags);
+void k_texteditor__document_read_session_config(void* self, void* config, libqt_list /* set of const char* */ flags);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#writeSessionConfig)
 ///
 /// @param self KTextEditor__Document*
 /// @param config KConfigGroup*
-/// @param flags libqt_list /* of const char* */ flags
+/// @param flags libqt_list /* set of const char* */ flags
 ///
-void k_texteditor__document_write_session_config(void* self, void* config, libqt_list /* of const char* */ flags);
+void k_texteditor__document_write_session_config(void* self, void* config, libqt_list /* set of const char* */ flags);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#isDataRecoveryAvailable)
 ///
@@ -1023,6 +1023,16 @@ void k_texteditor__document_add_mark(void* self, int line, uint32_t markType);
 void k_texteditor__document_remove_mark(void* self, int line, uint32_t markType);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#marks)
+///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((KTextEditor::Mark*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
 ///
 /// @param self KTextEditor__Document*
 ///

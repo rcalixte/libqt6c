@@ -115,6 +115,17 @@ QDate* k_datecombobox_maximum_date(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdatecombobox.html#dateMap)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QDate*)map.keys)[i]);
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self KDateComboBox*
 ///
 libqt_map /* of QDate* to const char* */ k_datecombobox_date_map(void* self);

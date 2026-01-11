@@ -55,7 +55,7 @@ void k_filepreviewgenerator_set_enabled_plugins(void* self, const char* list[sta
     size_t list_len = libqt_strv_length(list);
     libqt_string* list_qstr = (libqt_string*)malloc(list_len * sizeof(libqt_string));
     if (list_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_filepreviewgenerator_set_enabled_plugins");
+        fprintf(stderr, "Failed to allocate memory for string list in k_filepreviewgenerator_set_enabled_plugins");
         abort();
     }
     for (size_t i = 0; i < list_len; ++i) {
@@ -71,7 +71,7 @@ const char** k_filepreviewgenerator_enabled_plugins(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_filepreviewgenerator_enabled_plugins");
+        fprintf(stderr, "Failed to allocate memory for string list in k_filepreviewgenerator_enabled_plugins");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -212,7 +212,7 @@ const char** k_filepreviewgenerator_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_filepreviewgenerator_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_filepreviewgenerator_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

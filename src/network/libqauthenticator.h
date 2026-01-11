@@ -100,6 +100,17 @@ QVariant* q_authenticator_option(void* self, const char* opt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qauthenticator.html#options)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QAuthenticator*
 ///
 libqt_map /* of const char* to QVariant* */ q_authenticator_options(void* self);

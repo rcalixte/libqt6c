@@ -188,6 +188,17 @@ const char* k_parts__navigationextension_action_text(void* self, const char* nam
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#actionSlotMap)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 libqt_map* /* of char* to char* */ k_parts__navigationextension_action_slot_map();
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#childObject)
@@ -411,7 +422,7 @@ void k_parts__navigationextension_popup_menu4(void* self, void* global, void* it
 /// @param flags flag of enum KParts__NavigationExtension__PopupFlag
 /// @param actionGroups libqt_map /* of const char* to QAction* */
 ///
-void k_parts__navigationextension_popup_menu5(void* self, void* global, void* items, void* arguments, int32_t flags, libqt_map /* of const char* to QAction* */ actionGroups);
+void k_parts__navigationextension_popup_menu5(void* self, void* global, void* items, void* arguments, int32_t flags, libqt_map /* of const char* to QAction** */ actionGroups);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
 ///
@@ -453,7 +464,7 @@ void k_parts__navigationextension_popup_menu52(void* self, void* global, void* u
 /// @param flags flag of enum KParts__NavigationExtension__PopupFlag
 /// @param actionGroups libqt_map /* of const char* to QAction* */
 ///
-void k_parts__navigationextension_popup_menu6(void* self, void* global, void* url, mode_t mode, void* arguments, int32_t flags, libqt_map /* of const char* to QAction* */ actionGroups);
+void k_parts__navigationextension_popup_menu6(void* self, void* global, void* url, mode_t mode, void* arguments, int32_t flags, libqt_map /* of const char* to QAction** */ actionGroups);
 
 /// Inherited from QObject
 ///

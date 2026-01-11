@@ -145,7 +145,7 @@ void k_fileitemdelegate_set_show_information2(void* self, int32_t information) {
     KFileItemDelegate_SetShowInformation2((KFileItemDelegate*)self, information);
 }
 
-libqt_list /* of int32_t */ k_fileitemdelegate_show_information(void* self) {
+libqt_list /* of enum KFileItemDelegate__Information */ k_fileitemdelegate_show_information(void* self) {
     libqt_list _arr = KFileItemDelegate_ShowInformation((KFileItemDelegate*)self);
     return _arr;
 }
@@ -401,7 +401,7 @@ const char** k_fileitemdelegate_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_fileitemdelegate_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_fileitemdelegate_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

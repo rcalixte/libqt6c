@@ -149,15 +149,15 @@ int32_t k_io__workerbase_ssl_error(void* self, libqt_map /* of const char* to QV
     // Convert libqt_map to QMap<QString,QVariant>
     libqt_map sslData_ret;
     sslData_ret.len = sslData.len;
-    sslData_ret.keys = malloc(sslData_ret.len * sizeof(libqt_string));
+    sslData_ret.keys = (libqt_string*)malloc(sslData_ret.len * sizeof(libqt_string));
     if (sslData_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in k_io__workerbase_ssl_error\n");
         abort();
     }
-    sslData_ret.values = malloc(sslData_ret.len * sizeof(QVariant*));
+    sslData_ret.values = (QVariant**)malloc(sslData_ret.len * sizeof(QVariant*));
     if (sslData_ret.values == NULL) {
         free(sslData_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in k_io__workerbase_ssl_error\n");
         abort();
     }
     const char** sslData_karr = (const char**)sslData.keys;
@@ -169,8 +169,8 @@ int32_t k_io__workerbase_ssl_error(void* self, libqt_map /* of const char* to QV
         sslData_vdest[i] = sslData_varr[i];
     }
     int32_t _out = KIO__WorkerBase_SslError((KIO__WorkerBase*)self, sslData_ret);
-    libqt_free(sslData_ret.keys);
-    libqt_free(sslData_ret.values);
+    free(sslData_ret.keys);
+    free(sslData_ret.values);
     return _out;
 }
 
@@ -199,17 +199,30 @@ libqt_map /* of const char* to QVariant* */ k_io__workerbase_map_config(void* se
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_keys = (libqt_string*)_out.keys;
-    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_io__workerbase_map_config");
+        fprintf(stderr, "Failed to allocate memory for map string keys in k_io__workerbase_map_config");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_keys[i] = (const char*)_out_keys[i].data;
+        _ret_keys[i] = (char*)malloc(_out_keys[i].len + 1);
+        if (_ret_keys[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_keys[j]);
+            }
+            free(_ret_keys);
+            fprintf(stderr, "Failed to allocate memory for map keys in k_io__workerbase_map_config");
+            abort();
+        }
+        memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
+        _ret_keys[i][_out_keys[i].len] = '\0';
     }
     _ret.keys = (void*)_ret_keys;
     _ret.values = _out.values;
-    free(_out_keys);
+    for (size_t i = 0; i < _out.len; ++i) {
+        libqt_free(_out_keys[i].data);
+    }
+    free(_out.keys);
     return _ret;
 }
 

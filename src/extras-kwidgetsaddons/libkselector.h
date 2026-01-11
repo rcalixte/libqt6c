@@ -5368,15 +5368,15 @@ const char* k_gradientselector_tr(const char* s);
 /// [Upstream resources](https://api.kde.org/kgradientselector.html#setStops)
 ///
 /// @param self KGradientSelector*
-/// @param stops libqt_list /* of libqt_pair  tuple of double and QColor*  */
+/// @param stops libqt_list /* of libqt_pair tuple of double and QColor* */
 ///
-void k_gradientselector_set_stops(void* self, libqt_list /* of libqt_pair  tuple of double and QColor*  */ stops);
+void k_gradientselector_set_stops(void* self, libqt_list /* of libqt_pair tuple of double and QColor* */ stops);
 
 /// [Upstream resources](https://api.kde.org/kgradientselector.html#stops)
 ///
 /// @param self KGradientSelector*
 ///
-libqt_list /* of libqt_pair  tuple of double and QColor*  */ k_gradientselector_stops(void* self);
+libqt_list /* of libqt_pair tuple of double and QColor* */ k_gradientselector_stops(void* self);
 
 /// [Upstream resources](https://api.kde.org/kgradientselector.html#setColors)
 ///

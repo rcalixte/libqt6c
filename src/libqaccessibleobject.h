@@ -262,7 +262,7 @@ void q_accessibleobject_on_window(void* self, QWindow* (*callback)());
 /// @param self QAccessibleObject*
 /// @param match flag of enum QAccessible__RelationFlag
 ///
-libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int64_t  */ q_accessibleobject_relations(void* self, int64_t match);
+libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ q_accessibleobject_relations(void* self, int64_t match);
 
 /// Inherited from QAccessibleInterface
 ///
@@ -273,7 +273,7 @@ libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int64_t  */ q_ac
 /// @param self QAccessibleObject*
 /// @param match flag of enum QAccessible__RelationFlag
 ///
-libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int64_t  */ q_accessibleobject_qbase_relations(void* self, int64_t match);
+libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ q_accessibleobject_qbase_relations(void* self, int64_t match);
 
 /// Inherited from QAccessibleInterface
 ///
@@ -282,9 +282,9 @@ libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int64_t  */ q_ac
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessibleObject*
-/// @param callback libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int64_t  */ func(QAccessibleObject* self, flag of enum QAccessible__RelationFlag match)
+/// @param callback libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ func(QAccessibleObject* self, flag of enum QAccessible__RelationFlag match)
 ///
-void q_accessibleobject_on_relations(void* self, libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int64_t  */ (*callback)(void*, int64_t));
+void q_accessibleobject_on_relations(void* self, libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ (*callback)(void*, int64_t));
 
 /// Inherited from QAccessibleInterface
 ///
@@ -1155,7 +1155,7 @@ void q_accessibleapplication_on_child_at(void* self, QAccessibleInterface* (*cal
 /// @param self QAccessibleApplication*
 /// @param match flag of enum QAccessible__RelationFlag
 ///
-libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int64_t  */ q_accessibleapplication_relations(void* self, int64_t match);
+libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ q_accessibleapplication_relations(void* self, int64_t match);
 
 /// Inherited from QAccessibleInterface
 ///
@@ -1166,7 +1166,7 @@ libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int64_t  */ q_ac
 /// @param self QAccessibleApplication*
 /// @param match flag of enum QAccessible__RelationFlag
 ///
-libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int64_t  */ q_accessibleapplication_qbase_relations(void* self, int64_t match);
+libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ q_accessibleapplication_qbase_relations(void* self, int64_t match);
 
 /// Inherited from QAccessibleInterface
 ///
@@ -1175,9 +1175,9 @@ libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int64_t  */ q_ac
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessibleApplication*
-/// @param callback libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int64_t  */ func(QAccessibleApplication* self, flag of enum QAccessible__RelationFlag match)
+/// @param callback libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ func(QAccessibleApplication* self, flag of enum QAccessible__RelationFlag match)
 ///
-void q_accessibleapplication_on_relations(void* self, libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int64_t  */ (*callback)(void*, int64_t));
+void q_accessibleapplication_on_relations(void* self, libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ (*callback)(void*, int64_t));
 
 /// Inherited from QAccessibleInterface
 ///

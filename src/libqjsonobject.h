@@ -47,6 +47,17 @@ QJsonObject* q_jsonobject_from_variant_map(libqt_map /* of const char* to QVaria
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonobject.html#toVariantMap)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QJsonObject*
 ///
 libqt_map /* of const char* to QVariant* */ q_jsonobject_to_variant_map(void* self);
@@ -58,6 +69,17 @@ libqt_map /* of const char* to QVariant* */ q_jsonobject_to_variant_map(void* se
 QJsonObject* q_jsonobject_from_variant_hash(libqt_map /* of const char* to QVariant* */ mapVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonobject.html#toVariantHash)
+///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
 ///
 /// @param self QJsonObject*
 ///

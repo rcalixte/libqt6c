@@ -108,7 +108,7 @@ const char** k_configgroup_group_list(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_group_list");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_group_list");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -131,7 +131,7 @@ const char** k_configgroup_qbase_group_list(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_group_list");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_group_list");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -150,7 +150,7 @@ const char** k_configgroup_key_list(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_key_list");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_key_list");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -218,7 +218,7 @@ const char** k_configgroup_read_entry9(void* self, const char* key, const char* 
     size_t aDefault_len = libqt_strv_length(aDefault);
     libqt_string* aDefault_qstr = (libqt_string*)malloc(aDefault_len * sizeof(libqt_string));
     if (aDefault_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_read_entry9");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_read_entry9");
         abort();
     }
     for (size_t i = 0; i < aDefault_len; ++i) {
@@ -230,7 +230,7 @@ const char** k_configgroup_read_entry9(void* self, const char* key, const char* 
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_read_entry9");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_read_entry9");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -248,7 +248,7 @@ const char** k_configgroup_read_entry10(void* self, const char* key, const char*
     size_t aDefault_len = libqt_strv_length(aDefault);
     libqt_string* aDefault_qstr = (libqt_string*)malloc(aDefault_len * sizeof(libqt_string));
     if (aDefault_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_read_entry10");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_read_entry10");
         abort();
     }
     for (size_t i = 0; i < aDefault_len; ++i) {
@@ -260,7 +260,7 @@ const char** k_configgroup_read_entry10(void* self, const char* key, const char*
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_read_entry10");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_read_entry10");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -279,7 +279,7 @@ const char** k_configgroup_read_xdg_list_entry(void* self, const char* pKey) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_read_xdg_list_entry");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_read_xdg_list_entry");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -298,7 +298,7 @@ const char** k_configgroup_read_xdg_list_entry2(void* self, const char* key) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_read_xdg_list_entry2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_read_xdg_list_entry2");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -330,7 +330,7 @@ const char** k_configgroup_read_path_entry3(void* self, const char* pKey, const 
     size_t aDefault_len = libqt_strv_length(aDefault);
     libqt_string* aDefault_qstr = (libqt_string*)malloc(aDefault_len * sizeof(libqt_string));
     if (aDefault_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_read_path_entry3");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_read_path_entry3");
         abort();
     }
     for (size_t i = 0; i < aDefault_len; ++i) {
@@ -342,7 +342,7 @@ const char** k_configgroup_read_path_entry3(void* self, const char* pKey, const 
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_read_path_entry3");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_read_path_entry3");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -360,7 +360,7 @@ const char** k_configgroup_read_path_entry4(void* self, const char* key, const c
     size_t aDefault_len = libqt_strv_length(aDefault);
     libqt_string* aDefault_qstr = (libqt_string*)malloc(aDefault_len * sizeof(libqt_string));
     if (aDefault_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_read_path_entry4");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_read_path_entry4");
         abort();
     }
     for (size_t i = 0; i < aDefault_len; ++i) {
@@ -372,7 +372,7 @@ const char** k_configgroup_read_path_entry4(void* self, const char* key, const c
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_read_path_entry4");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_read_path_entry4");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -436,7 +436,7 @@ void k_configgroup_write_entry9(void* self, const char* key, const char* value[s
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_write_entry9");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_write_entry9");
         abort();
     }
     for (size_t i = 0; i < value_len; ++i) {
@@ -451,7 +451,7 @@ void k_configgroup_write_entry10(void* self, const char* key, const char* value[
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_write_entry10");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_write_entry10");
         abort();
     }
     for (size_t i = 0; i < value_len; ++i) {
@@ -474,7 +474,7 @@ void k_configgroup_write_xdg_list_entry(void* self, const char* pKey, const char
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_write_xdg_list_entry");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_write_xdg_list_entry");
         abort();
     }
     for (size_t i = 0; i < value_len; ++i) {
@@ -489,7 +489,7 @@ void k_configgroup_write_xdg_list_entry2(void* self, const char* key, const char
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_write_xdg_list_entry2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_write_xdg_list_entry2");
         abort();
     }
     for (size_t i = 0; i < value_len; ++i) {
@@ -512,7 +512,7 @@ void k_configgroup_write_path_entry3(void* self, const char* pKey, const char* v
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_write_path_entry3");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_write_path_entry3");
         abort();
     }
     for (size_t i = 0; i < value_len; ++i) {
@@ -527,7 +527,7 @@ void k_configgroup_write_path_entry4(void* self, const char* key, const char* va
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_write_path_entry4");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_write_path_entry4");
         abort();
     }
     for (size_t i = 0; i < value_len; ++i) {
@@ -596,26 +596,50 @@ libqt_map /* of const char* to const char* */ k_configgroup_entry_map(void* self
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_keys = (libqt_string*)_out.keys;
-    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_entry_map");
+        fprintf(stderr, "Failed to allocate memory for map string keys in k_configgroup_entry_map");
         abort();
     }
     libqt_string* _out_values = (libqt_string*)_out.values;
     const char** _ret_values = (const char**)malloc(_ret.len * sizeof(const char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_entry_map");
-        free(_out_keys);
+        fprintf(stderr, "Failed to allocate memory for map string values in k_configgroup_entry_map");
+        free(_out.keys);
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_keys[i] = (const char*)_out_keys[i].data;
-        _ret_values[i] = (const char*)_out_values[i].data;
+        _ret_keys[i] = (char*)malloc(_out_keys[i].len + 1);
+        if (_ret_keys[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_keys[j]);
+            }
+            free(_ret_keys);
+            fprintf(stderr, "Failed to allocate memory for map keys in k_configgroup_entry_map");
+            abort();
+        }
+        memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
+        _ret_keys[i][_out_keys[i].len] = '\0';
+        _ret_values[i] = (const char*)malloc(_out_values[i].len + 1);
+        if (_ret_values[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_keys[j]);
+                libqt_free(_ret_values[j]);
+            }
+            free(_ret_keys);
+            free(_ret_values);
+            fprintf(stderr, "Failed to allocate memory for map string values in k_configgroup_entry_map");
+            abort();
+        }
     }
     _ret.keys = (void*)_ret_keys;
     _ret.values = (void*)_ret_values;
-    free(_out_keys);
-    free(_out_values);
+    for (size_t i = 0; i < _out.len; ++i) {
+        libqt_free(_out_keys[i].data);
+        libqt_free(_out_values[i].data);
+    }
+    free(_out.keys);
+    free(_out.values);
     return _ret;
 }
 
@@ -717,7 +741,7 @@ const char** k_configgroup_read_xdg_list_entry22(void* self, const char* pKey, c
     size_t aDefault_len = libqt_strv_length(aDefault);
     libqt_string* aDefault_qstr = (libqt_string*)malloc(aDefault_len * sizeof(libqt_string));
     if (aDefault_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_read_xdg_list_entry22");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_read_xdg_list_entry22");
         abort();
     }
     for (size_t i = 0; i < aDefault_len; ++i) {
@@ -729,7 +753,7 @@ const char** k_configgroup_read_xdg_list_entry22(void* self, const char* pKey, c
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_read_xdg_list_entry22");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_read_xdg_list_entry22");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -747,7 +771,7 @@ const char** k_configgroup_read_xdg_list_entry23(void* self, const char* key, co
     size_t aDefault_len = libqt_strv_length(aDefault);
     libqt_string* aDefault_qstr = (libqt_string*)malloc(aDefault_len * sizeof(libqt_string));
     if (aDefault_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_read_xdg_list_entry23");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_read_xdg_list_entry23");
         abort();
     }
     for (size_t i = 0; i < aDefault_len; ++i) {
@@ -759,7 +783,7 @@ const char** k_configgroup_read_xdg_list_entry23(void* self, const char* key, co
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_read_xdg_list_entry23");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_read_xdg_list_entry23");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -823,7 +847,7 @@ void k_configgroup_write_entry310(void* self, const char* key, const char* value
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_write_entry310");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_write_entry310");
         abort();
     }
     for (size_t i = 0; i < value_len; ++i) {
@@ -838,7 +862,7 @@ void k_configgroup_write_entry311(void* self, const char* key, const char* value
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_write_entry311");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_write_entry311");
         abort();
     }
     for (size_t i = 0; i < value_len; ++i) {
@@ -861,7 +885,7 @@ void k_configgroup_write_xdg_list_entry3(void* self, const char* pKey, const cha
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_write_xdg_list_entry3");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_write_xdg_list_entry3");
         abort();
     }
     for (size_t i = 0; i < value_len; ++i) {
@@ -876,7 +900,7 @@ void k_configgroup_write_xdg_list_entry32(void* self, const char* key, const cha
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_write_xdg_list_entry32");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_write_xdg_list_entry32");
         abort();
     }
     for (size_t i = 0; i < value_len; ++i) {
@@ -899,7 +923,7 @@ void k_configgroup_write_path_entry34(void* self, const char* pKey, const char* 
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_write_path_entry34");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_write_path_entry34");
         abort();
     }
     for (size_t i = 0; i < value_len; ++i) {
@@ -914,7 +938,7 @@ void k_configgroup_write_path_entry35(void* self, const char* key, const char* v
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_configgroup_write_path_entry35");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configgroup_write_path_entry35");
         abort();
     }
     for (size_t i = 0; i < value_len; ++i) {

@@ -192,6 +192,16 @@ void k_checkableproxymodel_qbase_set_source_model(void* self, void* sourceModel)
 
 /// [Upstream resources](https://api.kde.org/kcheckableproxymodel.html#roleNames)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self KCheckableProxyModel*
 ///
 libqt_map /* of int to char* */ k_checkableproxymodel_role_names(void* self);
@@ -1647,6 +1657,16 @@ void k_checkableproxymodel_on_revert(void* self, void (*callback)());
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KCheckableProxyModel*
@@ -1657,6 +1677,16 @@ libqt_map /* of int to QVariant* */ k_checkableproxymodel_item_data(void* self, 
 /// Inherited from QAbstractProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
+///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

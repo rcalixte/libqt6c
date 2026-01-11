@@ -64,7 +64,7 @@ const char** k_viewstateserializer_selection_keys(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_viewstateserializer_selection_keys");
+        fprintf(stderr, "Failed to allocate memory for string list in k_viewstateserializer_selection_keys");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -83,7 +83,7 @@ const char** k_viewstateserializer_expansion_keys(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_viewstateserializer_expansion_keys");
+        fprintf(stderr, "Failed to allocate memory for string list in k_viewstateserializer_expansion_keys");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -112,7 +112,7 @@ void k_viewstateserializer_restore_selection(void* self, const char* indexString
     size_t indexStrings_len = libqt_strv_length(indexStrings);
     libqt_string* indexStrings_qstr = (libqt_string*)malloc(indexStrings_len * sizeof(libqt_string));
     if (indexStrings_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_viewstateserializer_restore_selection");
+        fprintf(stderr, "Failed to allocate memory for string list in k_viewstateserializer_restore_selection");
         abort();
     }
     for (size_t i = 0; i < indexStrings_len; ++i) {
@@ -131,7 +131,7 @@ void k_viewstateserializer_restore_expanded(void* self, const char* indexStrings
     size_t indexStrings_len = libqt_strv_length(indexStrings);
     libqt_string* indexStrings_qstr = (libqt_string*)malloc(indexStrings_len * sizeof(libqt_string));
     if (indexStrings_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_viewstateserializer_restore_expanded");
+        fprintf(stderr, "Failed to allocate memory for string list in k_viewstateserializer_restore_expanded");
         abort();
     }
     for (size_t i = 0; i < indexStrings_len; ++i) {
@@ -307,7 +307,7 @@ const char** k_viewstateserializer_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_viewstateserializer_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_viewstateserializer_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

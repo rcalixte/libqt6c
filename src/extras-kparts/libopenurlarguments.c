@@ -62,26 +62,50 @@ libqt_map /* of const char* to const char* */ k_parts__openurlarguments_meta_dat
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_keys = (libqt_string*)_out.keys;
-    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_parts__openurlarguments_meta_data");
+        fprintf(stderr, "Failed to allocate memory for map string keys in k_parts__openurlarguments_meta_data");
         abort();
     }
     libqt_string* _out_values = (libqt_string*)_out.values;
     const char** _ret_values = (const char**)malloc(_ret.len * sizeof(const char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_parts__openurlarguments_meta_data");
-        free(_out_keys);
+        fprintf(stderr, "Failed to allocate memory for map string values in k_parts__openurlarguments_meta_data");
+        free(_out.keys);
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_keys[i] = (const char*)_out_keys[i].data;
-        _ret_values[i] = (const char*)_out_values[i].data;
+        _ret_keys[i] = (char*)malloc(_out_keys[i].len + 1);
+        if (_ret_keys[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_keys[j]);
+            }
+            free(_ret_keys);
+            fprintf(stderr, "Failed to allocate memory for map keys in k_parts__openurlarguments_meta_data");
+            abort();
+        }
+        memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
+        _ret_keys[i][_out_keys[i].len] = '\0';
+        _ret_values[i] = (const char*)malloc(_out_values[i].len + 1);
+        if (_ret_values[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_keys[j]);
+                libqt_free(_ret_values[j]);
+            }
+            free(_ret_keys);
+            free(_ret_values);
+            fprintf(stderr, "Failed to allocate memory for map string values in k_parts__openurlarguments_meta_data");
+            abort();
+        }
     }
     _ret.keys = (void*)_ret_keys;
     _ret.values = (void*)_ret_values;
-    free(_out_keys);
-    free(_out_values);
+    for (size_t i = 0; i < _out.len; ++i) {
+        libqt_free(_out_keys[i].data);
+        libqt_free(_out_values[i].data);
+    }
+    free(_out.keys);
+    free(_out.values);
     return _ret;
 }
 
@@ -91,26 +115,50 @@ libqt_map /* of const char* to const char* */ k_parts__openurlarguments_meta_dat
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_keys = (libqt_string*)_out.keys;
-    const char** _ret_keys = (const char**)malloc(_ret.len * sizeof(const char*));
+    char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_parts__openurlarguments_meta_data2");
+        fprintf(stderr, "Failed to allocate memory for map string keys in k_parts__openurlarguments_meta_data2");
         abort();
     }
     libqt_string* _out_values = (libqt_string*)_out.values;
     const char** _ret_values = (const char**)malloc(_ret.len * sizeof(const char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_parts__openurlarguments_meta_data2");
-        free(_out_keys);
+        fprintf(stderr, "Failed to allocate memory for map string values in k_parts__openurlarguments_meta_data2");
+        free(_out.keys);
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_keys[i] = (const char*)_out_keys[i].data;
-        _ret_values[i] = (const char*)_out_values[i].data;
+        _ret_keys[i] = (char*)malloc(_out_keys[i].len + 1);
+        if (_ret_keys[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_keys[j]);
+            }
+            free(_ret_keys);
+            fprintf(stderr, "Failed to allocate memory for map keys in k_parts__openurlarguments_meta_data2");
+            abort();
+        }
+        memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
+        _ret_keys[i][_out_keys[i].len] = '\0';
+        _ret_values[i] = (const char*)malloc(_out_values[i].len + 1);
+        if (_ret_values[i] == NULL) {
+            for (size_t j = 0; j < i; j++) {
+                libqt_free(_ret_keys[j]);
+                libqt_free(_ret_values[j]);
+            }
+            free(_ret_keys);
+            free(_ret_values);
+            fprintf(stderr, "Failed to allocate memory for map string values in k_parts__openurlarguments_meta_data2");
+            abort();
+        }
     }
     _ret.keys = (void*)_ret_keys;
     _ret.values = (void*)_ret_values;
-    free(_out_keys);
-    free(_out_values);
+    for (size_t i = 0; i < _out.len; ++i) {
+        libqt_free(_out_keys[i].data);
+        libqt_free(_out_values[i].data);
+    }
+    free(_out.keys);
+    free(_out.values);
     return _ret;
 }
 

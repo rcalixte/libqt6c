@@ -60,7 +60,7 @@ const char** k_icontheme_inherits(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_icontheme_inherits");
+        fprintf(stderr, "Failed to allocate memory for string list in k_icontheme_inherits");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -100,7 +100,7 @@ const char** k_icontheme_query_icons(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_icontheme_query_icons");
+        fprintf(stderr, "Failed to allocate memory for string list in k_icontheme_query_icons");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -119,7 +119,7 @@ const char** k_icontheme_query_icons2(void* self, int size) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_icontheme_query_icons2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_icontheme_query_icons2");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -138,7 +138,7 @@ const char** k_icontheme_query_icons_by_context(void* self, int size) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_icontheme_query_icons_by_context");
+        fprintf(stderr, "Failed to allocate memory for string list in k_icontheme_query_icons_by_context");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -193,7 +193,7 @@ const char** k_icontheme_list() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_icontheme_list");
+        fprintf(stderr, "Failed to allocate memory for string list in k_icontheme_list");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -238,7 +238,7 @@ const char** k_icontheme_query_icons22(void* self, int size, int32_t context) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_icontheme_query_icons22");
+        fprintf(stderr, "Failed to allocate memory for string list in k_icontheme_query_icons22");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -257,7 +257,7 @@ const char** k_icontheme_query_icons_by_context2(void* self, int size, int32_t c
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_icontheme_query_icons_by_context2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_icontheme_query_icons_by_context2");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

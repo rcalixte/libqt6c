@@ -93,7 +93,7 @@ const char** q_imagereader_text_keys(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_imagereader_text_keys");
+        fprintf(stderr, "Failed to allocate memory for string list in q_imagereader_text_keys");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -182,7 +182,7 @@ const char** q_imagereader_supported_sub_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_imagereader_supported_sub_types");
+        fprintf(stderr, "Failed to allocate memory for string list in q_imagereader_supported_sub_types");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -270,7 +270,7 @@ const char** q_imagereader_supported_image_formats() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_imagereader_supported_image_formats");
+        fprintf(stderr, "Failed to allocate memory for string list in q_imagereader_supported_image_formats");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -289,7 +289,7 @@ const char** q_imagereader_supported_mime_types() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_imagereader_supported_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in q_imagereader_supported_mime_types");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -308,7 +308,7 @@ const char** q_imagereader_image_formats_for_mime_type(const char* mimeType) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_imagereader_image_formats_for_mime_type");
+        fprintf(stderr, "Failed to allocate memory for string list in q_imagereader_image_formats_for_mime_type");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

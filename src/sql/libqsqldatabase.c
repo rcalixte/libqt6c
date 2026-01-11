@@ -56,7 +56,7 @@ const char** q_sqldatabase_tables(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sqldatabase_tables");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sqldatabase_tables");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -232,7 +232,7 @@ const char** q_sqldatabase_drivers() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sqldatabase_drivers");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sqldatabase_drivers");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -251,7 +251,7 @@ const char** q_sqldatabase_connection_names() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sqldatabase_connection_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sqldatabase_connection_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -278,7 +278,7 @@ const char** q_sqldatabase_tables1(void* self, int32_t type) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_sqldatabase_tables1");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sqldatabase_tables1");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

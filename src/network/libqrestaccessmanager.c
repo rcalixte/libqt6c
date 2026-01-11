@@ -83,15 +83,15 @@ QNetworkReply* q_restaccessmanager_post2(void* self, void* request, libqt_map /*
     // Convert libqt_map to QMap<QString,QVariant>
     libqt_map data_ret;
     data_ret.len = data.len;
-    data_ret.keys = malloc(data_ret.len * sizeof(libqt_string));
+    data_ret.keys = (libqt_string*)malloc(data_ret.len * sizeof(libqt_string));
     if (data_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_restaccessmanager_post2\n");
         abort();
     }
-    data_ret.values = malloc(data_ret.len * sizeof(QVariant*));
+    data_ret.values = (QVariant**)malloc(data_ret.len * sizeof(QVariant*));
     if (data_ret.values == NULL) {
         free(data_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_restaccessmanager_post2\n");
         abort();
     }
     const char** data_karr = (const char**)data.keys;
@@ -103,8 +103,8 @@ QNetworkReply* q_restaccessmanager_post2(void* self, void* request, libqt_map /*
         data_vdest[i] = data_varr[i];
     }
     QNetworkReply* _out = QRestAccessManager_Post2((QRestAccessManager*)self, (QNetworkRequest*)request, data_ret);
-    libqt_free(data_ret.keys);
-    libqt_free(data_ret.values);
+    free(data_ret.keys);
+    free(data_ret.values);
     return _out;
 }
 
@@ -128,15 +128,15 @@ QNetworkReply* q_restaccessmanager_put2(void* self, void* request, libqt_map /* 
     // Convert libqt_map to QMap<QString,QVariant>
     libqt_map data_ret;
     data_ret.len = data.len;
-    data_ret.keys = malloc(data_ret.len * sizeof(libqt_string));
+    data_ret.keys = (libqt_string*)malloc(data_ret.len * sizeof(libqt_string));
     if (data_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_restaccessmanager_put2\n");
         abort();
     }
-    data_ret.values = malloc(data_ret.len * sizeof(QVariant*));
+    data_ret.values = (QVariant**)malloc(data_ret.len * sizeof(QVariant*));
     if (data_ret.values == NULL) {
         free(data_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_restaccessmanager_put2\n");
         abort();
     }
     const char** data_karr = (const char**)data.keys;
@@ -148,8 +148,8 @@ QNetworkReply* q_restaccessmanager_put2(void* self, void* request, libqt_map /* 
         data_vdest[i] = data_varr[i];
     }
     QNetworkReply* _out = QRestAccessManager_Put2((QRestAccessManager*)self, (QNetworkRequest*)request, data_ret);
-    libqt_free(data_ret.keys);
-    libqt_free(data_ret.values);
+    free(data_ret.keys);
+    free(data_ret.values);
     return _out;
 }
 
@@ -173,15 +173,15 @@ QNetworkReply* q_restaccessmanager_patch2(void* self, void* request, libqt_map /
     // Convert libqt_map to QMap<QString,QVariant>
     libqt_map data_ret;
     data_ret.len = data.len;
-    data_ret.keys = malloc(data_ret.len * sizeof(libqt_string));
+    data_ret.keys = (libqt_string*)malloc(data_ret.len * sizeof(libqt_string));
     if (data_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_restaccessmanager_patch2\n");
         abort();
     }
-    data_ret.values = malloc(data_ret.len * sizeof(QVariant*));
+    data_ret.values = (QVariant**)malloc(data_ret.len * sizeof(QVariant*));
     if (data_ret.values == NULL) {
         free(data_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_restaccessmanager_patch2\n");
         abort();
     }
     const char** data_karr = (const char**)data.keys;
@@ -193,8 +193,8 @@ QNetworkReply* q_restaccessmanager_patch2(void* self, void* request, libqt_map /
         data_vdest[i] = data_varr[i];
     }
     QNetworkReply* _out = QRestAccessManager_Patch2((QRestAccessManager*)self, (QNetworkRequest*)request, data_ret);
-    libqt_free(data_ret.keys);
-    libqt_free(data_ret.values);
+    free(data_ret.keys);
+    free(data_ret.values);
     return _out;
 }
 
@@ -337,7 +337,7 @@ const char** q_restaccessmanager_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_restaccessmanager_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_restaccessmanager_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

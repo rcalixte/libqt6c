@@ -69,6 +69,16 @@ const char* k_nscore__providersmodel_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/knscore-providersmodel.html#roleNames)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self KNSCore__ProvidersModel*
 ///
 libqt_map /* of int to char* */ k_nscore__providersmodel_role_names(void* self);
@@ -1186,6 +1196,16 @@ void k_nscore__providersmodel_on_set_header_data(void* self, bool (*callback)(vo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#itemData)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KNSCore__ProvidersModel*
@@ -1196,6 +1216,16 @@ libqt_map /* of int to QVariant* */ k_nscore__providersmodel_item_data(void* sel
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#itemData)
+///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

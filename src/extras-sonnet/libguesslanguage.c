@@ -20,7 +20,7 @@ const char* k_sonnet__guesslanguage_identify2(void* self, const char* text, cons
     size_t suggestions_len = libqt_strv_length(suggestions);
     libqt_string* suggestions_qstr = (libqt_string*)malloc(suggestions_len * sizeof(libqt_string));
     if (suggestions_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_sonnet__guesslanguage_identify2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_sonnet__guesslanguage_identify2");
         abort();
     }
     for (size_t i = 0; i < suggestions_len; ++i) {

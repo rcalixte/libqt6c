@@ -9,7 +9,7 @@ KFileFilter* k_filefilter_new2(const char* label, const char* filePatterns[stati
     size_t filePatterns_len = libqt_strv_length(filePatterns);
     libqt_string* filePatterns_qstr = (libqt_string*)malloc(filePatterns_len * sizeof(libqt_string));
     if (filePatterns_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_filefilter_new2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_filefilter_new2");
         abort();
     }
     for (size_t i = 0; i < filePatterns_len; ++i) {
@@ -19,7 +19,7 @@ KFileFilter* k_filefilter_new2(const char* label, const char* filePatterns[stati
     size_t mimePatterns_len = libqt_strv_length(mimePatterns);
     libqt_string* mimePatterns_qstr = (libqt_string*)malloc(mimePatterns_len * sizeof(libqt_string));
     if (mimePatterns_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_filefilter_new2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_filefilter_new2");
         abort();
     }
     for (size_t i = 0; i < mimePatterns_len; ++i) {
@@ -57,7 +57,7 @@ const char** k_filefilter_file_patterns(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_filefilter_file_patterns");
+        fprintf(stderr, "Failed to allocate memory for string list in k_filefilter_file_patterns");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -76,7 +76,7 @@ const char** k_filefilter_mime_patterns(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_filefilter_mime_patterns");
+        fprintf(stderr, "Failed to allocate memory for string list in k_filefilter_mime_patterns");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -113,7 +113,7 @@ libqt_list /* of KFileFilter* */ k_filefilter_from_mime_types(const char* mimeTy
     size_t mimeTypes_len = libqt_strv_length(mimeTypes);
     libqt_string* mimeTypes_qstr = (libqt_string*)malloc(mimeTypes_len * sizeof(libqt_string));
     if (mimeTypes_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_filefilter_from_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in k_filefilter_from_mime_types");
         abort();
     }
     for (size_t i = 0; i < mimeTypes_len; ++i) {

@@ -100,7 +100,7 @@ void k_editlistwidget_insert_string_list(void* self, const char* list[static 1])
     size_t list_len = libqt_strv_length(list);
     libqt_string* list_qstr = (libqt_string*)malloc(list_len * sizeof(libqt_string));
     if (list_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_editlistwidget_insert_string_list");
+        fprintf(stderr, "Failed to allocate memory for string list in k_editlistwidget_insert_string_list");
         abort();
     }
     for (size_t i = 0; i < list_len; ++i) {
@@ -142,7 +142,7 @@ const char** k_editlistwidget_items(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_editlistwidget_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_editlistwidget_items");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -160,7 +160,7 @@ void k_editlistwidget_set_items(void* self, const char* items[static 1]) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_editlistwidget_set_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_editlistwidget_set_items");
         abort();
     }
     for (size_t i = 0; i < items_len; ++i) {
@@ -245,7 +245,7 @@ void k_editlistwidget_insert_string_list2(void* self, const char* list[static 1]
     size_t list_len = libqt_strv_length(list);
     libqt_string* list_qstr = (libqt_string*)malloc(list_len * sizeof(libqt_string));
     if (list_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_editlistwidget_insert_string_list2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_editlistwidget_insert_string_list2");
         abort();
     }
     for (size_t i = 0; i < list_len; ++i) {
@@ -1483,7 +1483,7 @@ const char** k_editlistwidget_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_editlistwidget_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_editlistwidget_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

@@ -111,7 +111,7 @@ bool q_accounts__provider_has_tag(void* self, const char* tag);
 ///
 /// @param self Accounts__Provider*
 ///
-libqt_list /* of const char* */ q_accounts__provider_tags(void* self);
+libqt_list /* set of const char* */ q_accounts__provider_tags(void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Provider.html)
 ///

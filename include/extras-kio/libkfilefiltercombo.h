@@ -6466,21 +6466,47 @@ void k_filefiltercombo_on_get_decoded_metric_f(void* self, double (*callback)(vo
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#keyBindingMap)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     for (size_t j = 0; ((QKeySequence**)map.values)[i][j] != NULL; j++) {
+///         free(((QKeySequence**)map.values)[i][j]);
+///     }
+///     free(((QKeySequence*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFileFilterCombo*
 ///
-libqt_map /* of int32_t to libqt_list  of QKeySequence*  */ k_filefiltercombo_key_binding_map(void* self);
+libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* */ k_filefiltercombo_key_binding_map(void* self);
 
 /// Inherited from KCompletionBase
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#keyBindingMap)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     for (size_t j = 0; ((QKeySequence**)map.values)[i][j] != NULL; j++) {
+///         free(((QKeySequence**)map.values)[i][j]);
+///     }
+///     free(((QKeySequence*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFileFilterCombo*
 ///
-libqt_map /* of int32_t to libqt_list  of QKeySequence*  */ k_filefiltercombo_qbase_key_binding_map(void* self);
+libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* */ k_filefiltercombo_qbase_key_binding_map(void* self);
 
 /// Inherited from KCompletionBase
 ///
@@ -6489,9 +6515,9 @@ libqt_map /* of int32_t to libqt_list  of QKeySequence*  */ k_filefiltercombo_qb
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFileFilterCombo*
-/// @param callback libqt_map /* of int32_t to libqt_list  of QKeySequence*  */ func()
+/// @param callback libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* */ func()
 ///
-void k_filefiltercombo_on_key_binding_map(void* self, libqt_map /* of int32_t to libqt_list  of QKeySequence*  */ (*callback)());
+void k_filefiltercombo_on_key_binding_map(void* self, libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* */ (*callback)());
 
 /// Inherited from KCompletionBase
 ///
@@ -6502,7 +6528,7 @@ void k_filefiltercombo_on_key_binding_map(void* self, libqt_map /* of int32_t to
 /// @param self KFileFilterCombo*
 /// @param keyBindingMap libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence* */
 ///
-void k_filefiltercombo_set_key_binding_map(void* self, libqt_map /* of int32_t to QKeySequence* */ keyBindingMap);
+void k_filefiltercombo_set_key_binding_map(void* self, libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence** */ keyBindingMap);
 
 /// Inherited from KCompletionBase
 ///
@@ -6513,7 +6539,7 @@ void k_filefiltercombo_set_key_binding_map(void* self, libqt_map /* of int32_t t
 /// @param self KFileFilterCombo*
 /// @param keyBindingMap libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence* */
 ///
-void k_filefiltercombo_qbase_set_key_binding_map(void* self, libqt_map /* of int32_t to QKeySequence* */ keyBindingMap);
+void k_filefiltercombo_qbase_set_key_binding_map(void* self, libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence** */ keyBindingMap);
 
 /// Inherited from KCompletionBase
 ///
@@ -6524,7 +6550,7 @@ void k_filefiltercombo_qbase_set_key_binding_map(void* self, libqt_map /* of int
 /// @param self KFileFilterCombo*
 /// @param callback void func(KFileFilterCombo* self, libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence* */ /* of enum KCompletionBase__KeyBindingType to QKeySequence* */)
 ///
-void k_filefiltercombo_on_set_key_binding_map(void* self, void (*callback)(void*, libqt_map /* of int32_t to QKeySequence* */));
+void k_filefiltercombo_on_set_key_binding_map(void* self, void (*callback)(void*, libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence** */));
 
 /// Inherited from KCompletionBase
 ///

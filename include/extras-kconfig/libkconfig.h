@@ -287,6 +287,17 @@ const char** k_config_qbase_group_list(void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfig.html#entryMap)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self KConfig*
 ///
 libqt_map /* of const char* to const char* */ k_config_entry_map(void* self);
@@ -466,6 +477,17 @@ void k_config_qbase_virtual_hook(void* self, int id, void* data);
 KConfig* k_config_copy_to2(void* self, const char* file, void* config);
 
 /// [Upstream resources](https://api.kde.org/kconfig.html#entryMap)
+///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
 ///
 /// @param self KConfig*
 /// @param aGroup const char*

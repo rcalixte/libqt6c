@@ -104,7 +104,7 @@ const char** k_attica__downloaddescription_tags(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_attica__downloaddescription_tags");
+        fprintf(stderr, "Failed to allocate memory for string list in k_attica__downloaddescription_tags");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -178,7 +178,7 @@ void k_attica__downloaddescription_set_tags(void* self, const char* tags[static 
     size_t tags_len = libqt_strv_length(tags);
     libqt_string* tags_qstr = (libqt_string*)malloc(tags_len * sizeof(libqt_string));
     if (tags_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_attica__downloaddescription_set_tags");
+        fprintf(stderr, "Failed to allocate memory for string list in k_attica__downloaddescription_set_tags");
         abort();
     }
     for (size_t i = 0; i < tags_len; ++i) {

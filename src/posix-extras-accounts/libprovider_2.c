@@ -76,7 +76,7 @@ bool q_accounts__provider_has_tag(void* self, const char* tag) {
     return Accounts__Provider_HasTag((Accounts__Provider*)self, qstring(tag));
 }
 
-libqt_list /* of const char* */ q_accounts__provider_tags(void* self) {
+libqt_list /* set of const char* */ q_accounts__provider_tags(void* self) {
     return Accounts__Provider_Tags((Accounts__Provider*)self);
 }
 

@@ -41,6 +41,17 @@ const char* q_packagekit__offline_tr(const char* s);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self PackageKit__Offline*
 ///
 libqt_map /* of const char* to QVariant* */ q_packagekit__offline_prepared_upgrade(void* self);

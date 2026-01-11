@@ -132,7 +132,7 @@ int32_t q_audiodevice_maximum_channel_count(void* self);
 ///
 /// @return libqt_list of enum QAudioFormat__SampleFormat
 ///
-libqt_list /* of uint16_t */ q_audiodevice_supported_sample_formats(void* self);
+libqt_list /* of enum QAudioFormat__SampleFormat */ q_audiodevice_supported_sample_formats(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodevice.html#channelConfiguration)
 ///

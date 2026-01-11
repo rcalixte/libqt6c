@@ -104,7 +104,7 @@ QPointF* q_graphicsitemanimation_pos_at(void* self, double step);
 ///
 /// @param self QGraphicsItemAnimation*
 ///
-libqt_list /* of libqt_pair  tuple of double and QPointF*  */ q_graphicsitemanimation_pos_list(void* self);
+libqt_list /* of libqt_pair tuple of double and QPointF* */ q_graphicsitemanimation_pos_list(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#setPosAt)
 ///
@@ -132,7 +132,7 @@ double q_graphicsitemanimation_rotation_at(void* self, double step);
 ///
 /// @param self QGraphicsItemAnimation*
 ///
-libqt_list /* of libqt_pair  tuple of double and double  */ q_graphicsitemanimation_rotation_list(void* self);
+libqt_list /* of libqt_pair tuple of double and double */ q_graphicsitemanimation_rotation_list(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#setRotationAt)
 ///
@@ -160,7 +160,7 @@ double q_graphicsitemanimation_y_translation_at(void* self, double step);
 ///
 /// @param self QGraphicsItemAnimation*
 ///
-libqt_list /* of libqt_pair  tuple of double and QPointF*  */ q_graphicsitemanimation_translation_list(void* self);
+libqt_list /* of libqt_pair tuple of double and QPointF* */ q_graphicsitemanimation_translation_list(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#setTranslationAt)
 ///
@@ -189,7 +189,7 @@ double q_graphicsitemanimation_horizontal_scale_at(void* self, double step);
 ///
 /// @param self QGraphicsItemAnimation*
 ///
-libqt_list /* of libqt_pair  tuple of double and QPointF*  */ q_graphicsitemanimation_scale_list(void* self);
+libqt_list /* of libqt_pair tuple of double and QPointF* */ q_graphicsitemanimation_scale_list(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#setScaleAt)
 ///
@@ -218,7 +218,7 @@ double q_graphicsitemanimation_horizontal_shear_at(void* self, double step);
 ///
 /// @param self QGraphicsItemAnimation*
 ///
-libqt_list /* of libqt_pair  tuple of double and QPointF*  */ q_graphicsitemanimation_shear_list(void* self);
+libqt_list /* of libqt_pair tuple of double and QPointF* */ q_graphicsitemanimation_shear_list(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#setShearAt)
 ///

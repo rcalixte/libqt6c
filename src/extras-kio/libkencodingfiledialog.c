@@ -1485,7 +1485,7 @@ const char** k_encodingfiledialog_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_encodingfiledialog_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_encodingfiledialog_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1616,7 +1616,7 @@ const char** k_encodingfiledialog__result_file_names(void* self) {
     const libqt_string* fileNames_qstr = (libqt_string*)fileNames_arr.data.ptr;
     const char** fileNames_ret = (const char**)malloc((fileNames_arr.len + 1) * sizeof(const char*));
     if (fileNames_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_encodingfiledialog__result_file_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_encodingfiledialog__result_file_names");
         abort();
     }
     for (size_t i = 0; i < fileNames_arr.len; ++i) {
@@ -1634,7 +1634,7 @@ void k_encodingfiledialog__result_set_file_names(void* self, const char* fileNam
     size_t fileNames_len = libqt_strv_length(fileNames);
     libqt_string* fileNames_qstr = (libqt_string*)malloc(fileNames_len * sizeof(libqt_string));
     if (fileNames_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_encodingfiledialog__result_set_file_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_encodingfiledialog__result_set_file_names");
         abort();
     }
     for (size_t i = 0; i < fileNames_len; ++i) {

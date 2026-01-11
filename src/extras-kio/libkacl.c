@@ -81,7 +81,7 @@ bool k_acl_set_named_user_permissions(void* self, const char* name, unsigned sho
     return KACL_SetNamedUserPermissions((KACL*)self, qstring(name), param2);
 }
 
-libqt_list /* of libqt_pair  tuple of const char* and unsigned short  */ k_acl_all_user_permissions(void* self) {
+libqt_list /* of libqt_pair tuple of const char* and unsigned short */ k_acl_all_user_permissions(void* self) {
     libqt_list _arr = KACL_AllUserPermissions((KACL*)self);
     return _arr;
 }
@@ -94,7 +94,7 @@ bool k_acl_set_named_group_permissions(void* self, const char* name, unsigned sh
     return KACL_SetNamedGroupPermissions((KACL*)self, qstring(name), param2);
 }
 
-libqt_list /* of libqt_pair  tuple of const char* and unsigned short  */ k_acl_all_group_permissions(void* self) {
+libqt_list /* of libqt_pair tuple of const char* and unsigned short */ k_acl_all_group_permissions(void* self) {
     libqt_list _arr = KACL_AllGroupPermissions((KACL*)self);
     return _arr;
 }

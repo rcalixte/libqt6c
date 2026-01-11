@@ -165,7 +165,7 @@ const char** q_openglcontextgroup_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_openglcontextgroup_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_openglcontextgroup_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -346,7 +346,7 @@ QOpenGLExtraFunctions* q_openglcontext_extra_functions(void* self) {
     return QOpenGLContext_ExtraFunctions((QOpenGLContext*)self);
 }
 
-libqt_list /* of char* */ q_openglcontext_extensions(void* self) {
+libqt_list /* set of char* */ q_openglcontext_extensions(void* self) {
     return QOpenGLContext_Extensions((QOpenGLContext*)self);
 }
 
@@ -509,7 +509,7 @@ const char** q_openglcontext_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_openglcontext_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_openglcontext_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

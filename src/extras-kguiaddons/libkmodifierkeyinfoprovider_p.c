@@ -81,7 +81,7 @@ bool k_modifierkeyinfoprovider_knows_key(void* self, int32_t key) {
     return KModifierKeyInfoProvider_KnowsKey((KModifierKeyInfoProvider*)self, key);
 }
 
-libqt_list /* of int32_t */ k_modifierkeyinfoprovider_known_keys(void* self) {
+libqt_list /* of enum Qt__Key */ k_modifierkeyinfoprovider_known_keys(void* self) {
     libqt_list _arr = KModifierKeyInfoProvider_KnownKeys((KModifierKeyInfoProvider*)self);
     return _arr;
 }
@@ -265,7 +265,7 @@ const char** k_modifierkeyinfoprovider_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_modifierkeyinfoprovider_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_modifierkeyinfoprovider_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

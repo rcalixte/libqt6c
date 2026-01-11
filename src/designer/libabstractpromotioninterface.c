@@ -7,7 +7,7 @@ libqt_list /* of QDesignerPromotionInterface__PromotedClass* */ q_designerpromot
     return _arr;
 }
 
-libqt_list /* of const char* */ q_designerpromotioninterface_referenced_promoted_class_names(void* self) {
+libqt_list /* set of const char* */ q_designerpromotioninterface_referenced_promoted_class_names(void* self) {
     return QDesignerPromotionInterface_ReferencedPromotedClassNames((QDesignerPromotionInterface*)self);
 }
 

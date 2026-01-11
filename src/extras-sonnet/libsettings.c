@@ -56,7 +56,7 @@ void k_sonnet__settings_set_preferred_languages(void* self, const char* lang[sta
     size_t lang_len = libqt_strv_length(lang);
     libqt_string* lang_qstr = (libqt_string*)malloc(lang_len * sizeof(libqt_string));
     if (lang_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_sonnet__settings_set_preferred_languages");
+        fprintf(stderr, "Failed to allocate memory for string list in k_sonnet__settings_set_preferred_languages");
         abort();
     }
     for (size_t i = 0; i < lang_len; ++i) {
@@ -72,7 +72,7 @@ const char** k_sonnet__settings_preferred_languages(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_sonnet__settings_preferred_languages");
+        fprintf(stderr, "Failed to allocate memory for string list in k_sonnet__settings_preferred_languages");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -141,7 +141,7 @@ void k_sonnet__settings_set_current_ignore_list(void* self, const char* ignores[
     size_t ignores_len = libqt_strv_length(ignores);
     libqt_string* ignores_qstr = (libqt_string*)malloc(ignores_len * sizeof(libqt_string));
     if (ignores_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_sonnet__settings_set_current_ignore_list");
+        fprintf(stderr, "Failed to allocate memory for string list in k_sonnet__settings_set_current_ignore_list");
         abort();
     }
     for (size_t i = 0; i < ignores_len; ++i) {
@@ -157,7 +157,7 @@ const char** k_sonnet__settings_current_ignore_list(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_sonnet__settings_current_ignore_list");
+        fprintf(stderr, "Failed to allocate memory for string list in k_sonnet__settings_current_ignore_list");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -176,7 +176,7 @@ const char** k_sonnet__settings_clients(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_sonnet__settings_clients");
+        fprintf(stderr, "Failed to allocate memory for string list in k_sonnet__settings_clients");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -207,7 +207,7 @@ const char** k_sonnet__settings_default_ignore_list() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_sonnet__settings_default_ignore_list");
+        fprintf(stderr, "Failed to allocate memory for string list in k_sonnet__settings_default_ignore_list");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -253,7 +253,7 @@ const char** k_sonnet__settings_default_preferred_languages() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_sonnet__settings_default_preferred_languages");
+        fprintf(stderr, "Failed to allocate memory for string list in k_sonnet__settings_default_preferred_languages");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -466,7 +466,7 @@ const char** k_sonnet__settings_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in k_sonnet__settings_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_sonnet__settings_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

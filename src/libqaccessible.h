@@ -36,7 +36,7 @@ QWindow* q_accessibleinterface_window(void* self);
 /// @param self QAccessibleInterface*
 /// @param match flag of enum QAccessible__RelationFlag
 ///
-libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int64_t  */ q_accessibleinterface_relations(void* self, int64_t match);
+libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ q_accessibleinterface_relations(void* self, int64_t match);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleinterface.html#focusChild)
 ///
@@ -979,7 +979,7 @@ void q_accessibleselectioninterface_delete(void* self);
 ///
 /// @return libqt_list of enum QAccessible__Attribute
 ///
-libqt_list /* of int32_t */ q_accessibleattributesinterface_attribute_keys(void* self);
+libqt_list /* of enum QAccessible__Attribute */ q_accessibleattributesinterface_attribute_keys(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleattributesinterface.html#attributeValue)
 ///

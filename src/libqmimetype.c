@@ -58,7 +58,7 @@ const char** q_mimetype_glob_patterns(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_mimetype_glob_patterns");
+        fprintf(stderr, "Failed to allocate memory for string list in q_mimetype_glob_patterns");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -77,7 +77,7 @@ const char** q_mimetype_parent_mime_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_mimetype_parent_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in q_mimetype_parent_mime_types");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -96,7 +96,7 @@ const char** q_mimetype_all_ancestors(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_mimetype_all_ancestors");
+        fprintf(stderr, "Failed to allocate memory for string list in q_mimetype_all_ancestors");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -115,7 +115,7 @@ const char** q_mimetype_aliases(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_mimetype_aliases");
+        fprintf(stderr, "Failed to allocate memory for string list in q_mimetype_aliases");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -134,7 +134,7 @@ const char** q_mimetype_suffixes(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_mimetype_suffixes");
+        fprintf(stderr, "Failed to allocate memory for string list in q_mimetype_suffixes");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

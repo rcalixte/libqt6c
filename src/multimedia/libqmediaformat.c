@@ -54,17 +54,17 @@ QMimeType* q_mediaformat_mime_type(void* self) {
     return QMediaFormat_MimeType((QMediaFormat*)self);
 }
 
-libqt_list /* of int32_t */ q_mediaformat_supported_file_formats(void* self, int32_t m) {
+libqt_list /* of enum QMediaFormat__FileFormat */ q_mediaformat_supported_file_formats(void* self, int32_t m) {
     libqt_list _arr = QMediaFormat_SupportedFileFormats((QMediaFormat*)self, m);
     return _arr;
 }
 
-libqt_list /* of int32_t */ q_mediaformat_supported_video_codecs(void* self, int32_t m) {
+libqt_list /* of enum QMediaFormat__VideoCodec */ q_mediaformat_supported_video_codecs(void* self, int32_t m) {
     libqt_list _arr = QMediaFormat_SupportedVideoCodecs((QMediaFormat*)self, m);
     return _arr;
 }
 
-libqt_list /* of int32_t */ q_mediaformat_supported_audio_codecs(void* self, int32_t m) {
+libqt_list /* of enum QMediaFormat__AudioCodec */ q_mediaformat_supported_audio_codecs(void* self, int32_t m) {
     libqt_list _arr = QMediaFormat_SupportedAudioCodecs((QMediaFormat*)self, m);
     return _arr;
 }

@@ -127,6 +127,17 @@ int32_t k_datetimeedit_date_display_format(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#dateMap)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QDate*)map.keys)[i]);
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self KDateTimeEdit*
 ///
 libqt_map /* of QDate* to const char* */ k_datetimeedit_date_map(void* self);

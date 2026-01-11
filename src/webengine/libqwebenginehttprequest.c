@@ -26,15 +26,15 @@ QWebEngineHttpRequest* q_webenginehttprequest_post_request(void* url, libqt_map 
     // Convert libqt_map to QMap<QString,QString>
     libqt_map postData_ret;
     postData_ret.len = postData.len;
-    postData_ret.keys = malloc(postData_ret.len * sizeof(libqt_string));
+    postData_ret.keys = (libqt_string*)malloc(postData_ret.len * sizeof(libqt_string));
     if (postData_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys\n");
+        fprintf(stderr, "Failed to allocate memory for map keys in q_webenginehttprequest_post_request\n");
         abort();
     }
-    postData_ret.values = malloc(postData_ret.len * sizeof(libqt_string));
+    postData_ret.values = (libqt_string*)malloc(postData_ret.len * sizeof(libqt_string));
     if (postData_ret.values == NULL) {
         free(postData_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values\n");
+        fprintf(stderr, "Failed to allocate memory for map values in q_webenginehttprequest_post_request\n");
         abort();
     }
     const char** postData_karr = (const char**)postData.keys;
@@ -46,8 +46,8 @@ QWebEngineHttpRequest* q_webenginehttprequest_post_request(void* url, libqt_map 
         postData_vdest[i] = qstring(postData_varr[i]);
     }
     QWebEngineHttpRequest* _out = QWebEngineHttpRequest_PostRequest((QUrl*)url, postData_ret);
-    libqt_free(postData_ret.keys);
-    libqt_free(postData_ret.values);
+    free(postData_ret.keys);
+    free(postData_ret.values);
     return _out;
 }
 
@@ -99,7 +99,7 @@ const char** q_webenginehttprequest_headers(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_webenginehttprequest_headers");
+        fprintf(stderr, "Failed to allocate memory for string list in q_webenginehttprequest_headers");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

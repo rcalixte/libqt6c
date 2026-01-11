@@ -193,6 +193,17 @@ const char* k_attica__knowledgebaseentry_extended_attribute(void* self, const ch
 
 /// [Upstream resources](https://api.kde.org/attica-knowledgebaseentry.html#extendedAttributes)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self Attica__KnowledgeBaseEntry*
 ///
 libqt_map /* of const char* to const char* */ k_attica__knowledgebaseentry_extended_attributes(void* self);

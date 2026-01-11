@@ -569,11 +569,33 @@ libqt_list /* of QVariant* */ q_variant_to_list(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html#toMap)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QVariant*
 ///
 libqt_map /* of const char* to QVariant* */ q_variant_to_map(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html#toHash)
+///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.keys[i]);
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
 ///
 /// @param self QVariant*
 ///

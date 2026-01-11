@@ -433,7 +433,7 @@ const char** q_guiapplication_arguments() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_guiapplication_arguments");
+        fprintf(stderr, "Failed to allocate memory for string list in q_guiapplication_arguments");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -581,7 +581,7 @@ void q_guiapplication_set_library_paths(const char* libraryPaths[static 1]) {
     size_t libraryPaths_len = libqt_strv_length(libraryPaths);
     libqt_string* libraryPaths_qstr = (libqt_string*)malloc(libraryPaths_len * sizeof(libqt_string));
     if (libraryPaths_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_guiapplication_set_library_paths");
+        fprintf(stderr, "Failed to allocate memory for string list in q_guiapplication_set_library_paths");
         abort();
     }
     for (size_t i = 0; i < libraryPaths_len; ++i) {
@@ -597,7 +597,7 @@ const char** q_guiapplication_library_paths() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_guiapplication_library_paths");
+        fprintf(stderr, "Failed to allocate memory for string list in q_guiapplication_library_paths");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -845,7 +845,7 @@ const char** q_guiapplication_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_guiapplication_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_guiapplication_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

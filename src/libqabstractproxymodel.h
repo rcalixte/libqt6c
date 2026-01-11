@@ -302,6 +302,16 @@ QVariant* q_abstractproxymodel_qbase_header_data(void* self, int section, int32_
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
 ///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     free(((QVariant*)map.values)[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
+///
 /// @param self QAbstractProxyModel*
 /// @param index QModelIndex*
 ///
@@ -818,6 +828,16 @@ void q_abstractproxymodel_on_supported_drop_actions(void* self, int32_t (*callba
 int32_t q_abstractproxymodel_qbase_supported_drop_actions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#roleNames)
+///
+/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
+/// ```c
+/// // Example for freeing the returned map
+/// for (size_t i = 0; i < map.len; ++i) {
+///     libqt_free(map.values[i]);
+/// }
+/// free(map.keys);
+/// free(map.values);
+/// ```
 ///
 /// @param self QAbstractProxyModel*
 ///

@@ -135,7 +135,7 @@ void k_attica__metadata_set_resulting_id(void* self, const char* id);
 ///
 /// @param self Attica__Metadata*
 ///
-libqt_list /* of libqt_pair  tuple of char* and char*  */ k_attica__metadata_headers(void* self);
+libqt_list /* of libqt_pair tuple of char* and char* */ k_attica__metadata_headers(void* self);
 
 /// Delete this object from C++ memory.
 ///

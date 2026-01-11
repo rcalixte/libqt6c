@@ -37,7 +37,7 @@ QTreeWidgetItem* q_treewidgetitem_new2(const char* strings[static 1]) {
     size_t strings_len = libqt_strv_length(strings);
     libqt_string* strings_qstr = (libqt_string*)malloc(strings_len * sizeof(libqt_string));
     if (strings_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_treewidgetitem_new2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_treewidgetitem_new2");
         abort();
     }
     for (size_t i = 0; i < strings_len; ++i) {
@@ -58,7 +58,7 @@ QTreeWidgetItem* q_treewidgetitem_new4(void* treeview, const char* strings[stati
     size_t strings_len = libqt_strv_length(strings);
     libqt_string* strings_qstr = (libqt_string*)malloc(strings_len * sizeof(libqt_string));
     if (strings_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_treewidgetitem_new4");
+        fprintf(stderr, "Failed to allocate memory for string list in q_treewidgetitem_new4");
         abort();
     }
     for (size_t i = 0; i < strings_len; ++i) {
@@ -83,7 +83,7 @@ QTreeWidgetItem* q_treewidgetitem_new7(void* parent, const char* strings[static 
     size_t strings_len = libqt_strv_length(strings);
     libqt_string* strings_qstr = (libqt_string*)malloc(strings_len * sizeof(libqt_string));
     if (strings_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_treewidgetitem_new7");
+        fprintf(stderr, "Failed to allocate memory for string list in q_treewidgetitem_new7");
         abort();
     }
     for (size_t i = 0; i < strings_len; ++i) {
@@ -112,7 +112,7 @@ QTreeWidgetItem* q_treewidgetitem_new11(const char* strings[static 1], int type)
     size_t strings_len = libqt_strv_length(strings);
     libqt_string* strings_qstr = (libqt_string*)malloc(strings_len * sizeof(libqt_string));
     if (strings_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_treewidgetitem_new11");
+        fprintf(stderr, "Failed to allocate memory for string list in q_treewidgetitem_new11");
         abort();
     }
     for (size_t i = 0; i < strings_len; ++i) {
@@ -133,7 +133,7 @@ QTreeWidgetItem* q_treewidgetitem_new13(void* treeview, const char* strings[stat
     size_t strings_len = libqt_strv_length(strings);
     libqt_string* strings_qstr = (libqt_string*)malloc(strings_len * sizeof(libqt_string));
     if (strings_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_treewidgetitem_new13");
+        fprintf(stderr, "Failed to allocate memory for string list in q_treewidgetitem_new13");
         abort();
     }
     for (size_t i = 0; i < strings_len; ++i) {
@@ -158,7 +158,7 @@ QTreeWidgetItem* q_treewidgetitem_new16(void* parent, const char* strings[static
     size_t strings_len = libqt_strv_length(strings);
     libqt_string* strings_qstr = (libqt_string*)malloc(strings_len * sizeof(libqt_string));
     if (strings_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_treewidgetitem_new16");
+        fprintf(stderr, "Failed to allocate memory for string list in q_treewidgetitem_new16");
         abort();
     }
     for (size_t i = 0; i < strings_len; ++i) {
@@ -583,7 +583,7 @@ void q_treewidget_set_header_labels(void* self, const char* labels[static 1]) {
     size_t labels_len = libqt_strv_length(labels);
     libqt_string* labels_qstr = (libqt_string*)malloc(labels_len * sizeof(libqt_string));
     if (labels_qstr == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_treewidget_set_header_labels");
+        fprintf(stderr, "Failed to allocate memory for string list in q_treewidget_set_header_labels");
         abort();
     }
     for (size_t i = 0; i < labels_len; ++i) {
@@ -817,7 +817,7 @@ const char** q_treewidget_mime_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_treewidget_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in q_treewidget_mime_types");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -840,7 +840,7 @@ const char** q_treewidget_qbase_mime_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_treewidget_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in q_treewidget_mime_types");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2793,7 +2793,7 @@ const char** q_treewidget_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Memory allocation failed in q_treewidget_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_treewidget_dynamic_property_names");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
