@@ -234,14 +234,6 @@ int32_t q_texttable_last_position(void* self) {
     return QTextFrame_LastPosition((QTextFrame*)self);
 }
 
-QTextFrameLayoutData* q_texttable_layout_data(void* self) {
-    return QTextFrame_LayoutData((QTextFrame*)self);
-}
-
-void q_texttable_set_layout_data(void* self, void* data) {
-    QTextFrame_SetLayoutData((QTextFrame*)self, (QTextFrameLayoutData*)data);
-}
-
 libqt_list /* of QTextFrame* */ q_texttable_child_frames(void* self) {
     libqt_list _arr = QTextFrame_ChildFrames((QTextFrame*)self);
     return _arr;

@@ -911,23 +911,6 @@ void q_textblockgroup_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 void q_textblockgroup_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qtextframelayoutdata.html)
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qtextframelayoutdata.html#operator-eq)
-///
-/// @param self QTextFrameLayoutData*
-/// @param param1 QTextFrameLayoutData*
-///
-void q_textframelayoutdata_operator_assign(void* self, void* param1);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qtextframelayoutdata.html#dtor.QTextFrameLayoutData)
-///
-/// Delete this object from C++ memory.
-///
-/// @param self QTextFrameLayoutData*
-///
-void q_textframelayoutdata_delete(void* self);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframe.html)
 
 /// q_textframe_new constructs a new QTextFrame object.
@@ -1014,19 +997,6 @@ int32_t q_textframe_first_position(void* self);
 /// @param self QTextFrame*
 ///
 int32_t q_textframe_last_position(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qtextframe.html#layoutData)
-///
-/// @param self QTextFrame*
-///
-QTextFrameLayoutData* q_textframe_layout_data(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qtextframe.html#setLayoutData)
-///
-/// @param self QTextFrame*
-/// @param data QTextFrameLayoutData*
-///
-void q_textframe_set_layout_data(void* self, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframe.html#childFrames)
 ///

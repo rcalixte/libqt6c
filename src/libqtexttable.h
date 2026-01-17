@@ -401,23 +401,6 @@ int32_t q_texttable_last_position(void* self);
 
 /// Inherited from QTextFrame
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qtextframe.html#layoutData)
-///
-/// @param self QTextTable*
-///
-QTextFrameLayoutData* q_texttable_layout_data(void* self);
-
-/// Inherited from QTextFrame
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qtextframe.html#setLayoutData)
-///
-/// @param self QTextTable*
-/// @param data QTextFrameLayoutData*
-///
-void q_texttable_set_layout_data(void* self, void* data);
-
-/// Inherited from QTextFrame
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframe.html#childFrames)
 ///
 /// @param self QTextTable*
