@@ -475,14 +475,6 @@ void q_textblockgroup_on_object_name_changed(void* self, void (*callback)(void*,
     QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
-void q_textframelayoutdata_operator_assign(void* self, void* param1) {
-    QTextFrameLayoutData_OperatorAssign((QTextFrameLayoutData*)self, (QTextFrameLayoutData*)param1);
-}
-
-void q_textframelayoutdata_delete(void* self) {
-    QTextFrameLayoutData_Delete((QTextFrameLayoutData*)(self));
-}
-
 QTextFrame* q_textframe_new(void* doc) {
     return QTextFrame_new((QTextDocument*)doc);
 }
@@ -536,14 +528,6 @@ int32_t q_textframe_first_position(void* self) {
 
 int32_t q_textframe_last_position(void* self) {
     return QTextFrame_LastPosition((QTextFrame*)self);
-}
-
-QTextFrameLayoutData* q_textframe_layout_data(void* self) {
-    return QTextFrame_LayoutData((QTextFrame*)self);
-}
-
-void q_textframe_set_layout_data(void* self, void* data) {
-    QTextFrame_SetLayoutData((QTextFrame*)self, (QTextFrameLayoutData*)data);
 }
 
 libqt_list /* of QTextFrame* */ q_textframe_child_frames(void* self) {

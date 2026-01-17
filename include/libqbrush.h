@@ -243,49 +243,6 @@ bool q_brush_is_detached(void* self);
 ///
 void q_brush_delete(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qbrushdata.html)
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qbrushdata.html#style-var)
-///
-/// @param self QBrushData*
-///
-/// @return enum Qt__BrushStyle
-///
-int32_t q_brushdata_style(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qbrushdata.html#style-var)
-///
-/// @param self QBrushData*
-/// @param style enum Qt__BrushStyle
-///
-void q_brushdata_set_style(void* self, int32_t style);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qbrushdata.html#color-var)
-///
-/// @param self QBrushData*
-///
-QColor* q_brushdata_color(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qbrushdata.html#color-var)
-///
-/// @param self QBrushData*
-/// @param color QColor*
-///
-void q_brushdata_set_color(void* self, void* color);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qbrushdata.html#transform-var)
-///
-/// @param self QBrushData*
-///
-QTransform* q_brushdata_transform(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qbrushdata.html#transform-var)
-///
-/// @param self QBrushData*
-/// @param transform QTransform*
-///
-void q_brushdata_set_transform(void* self, void* transform);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgradient.html)
 
 /// q_gradient_new constructs a new QGradient object.
