@@ -243,7 +243,9 @@ void q_dtlsclientverifier_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QDtlsClientVerifier*
 ///
-libqt_list /* of QObject* */ q_dtlsclientverifier_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_dtlsclientverifier_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1100,14 +1102,16 @@ const char* q_dtls_dtls_error_string(void* self);
 ///
 /// @param self QDtls*
 ///
-libqt_list /* of QSslError* */ q_dtls_peer_verification_errors(void* self);
+/// @return libqt_list of QSslError*
+///
+libqt_list q_dtls_peer_verification_errors(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtls.html#ignoreVerificationErrors)
 ///
 /// @param self QDtls*
-/// @param errorsToIgnore libqt_list /* of QSslError* */
+/// @param errorsToIgnore libqt_list of QSslError*
 ///
-void q_dtls_ignore_verification_errors(void* self, libqt_list errorsToIgnore);
+void q_dtls_ignore_verification_errors(void* self, libqt_list /* of QSslError* */ errorsToIgnore);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtls.html#pskRequired)
 ///
@@ -1282,7 +1286,9 @@ void q_dtls_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QDtls*
 ///
-libqt_list /* of QObject* */ q_dtls_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_dtls_children(void* self);
 
 /// Inherited from QObject
 ///

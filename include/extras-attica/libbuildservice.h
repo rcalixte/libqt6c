@@ -139,7 +139,9 @@ void k_attica__buildservice_add_target(void* self, void* param1);
 ///
 /// @param self Attica__BuildService*
 ///
-libqt_list /* of Attica__Target* */ k_attica__buildservice_targets(void* self);
+/// @return libqt_list of Attica__Target*
+///
+libqt_list k_attica__buildservice_targets(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-buildservice.html#isValid)
 ///

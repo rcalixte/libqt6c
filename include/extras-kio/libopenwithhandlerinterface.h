@@ -43,10 +43,10 @@ const char* k_io__openwithhandlerinterface_tr(const char* s);
 ///
 /// @param self KIO__OpenWithHandlerInterface*
 /// @param job KJob*
-/// @param urls libqt_list /* of QUrl* */
+/// @param urls libqt_list of QUrl*
 /// @param mimeType const char*
 ///
-void k_io__openwithhandlerinterface_prompt_user_for_application(void* self, void* job, libqt_list urls, const char* mimeType);
+void k_io__openwithhandlerinterface_prompt_user_for_application(void* self, void* job, libqt_list /* of QUrl* */ urls, const char* mimeType);
 
 /// [Upstream resources](https://api.kde.org/kio-openwithhandlerinterface.html#canceled)
 ///
@@ -222,7 +222,9 @@ void k_io__openwithhandlerinterface_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KIO__OpenWithHandlerInterface*
 ///
-libqt_list /* of QObject* */ k_io__openwithhandlerinterface_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_io__openwithhandlerinterface_children(void* self);
 
 /// Inherited from QObject
 ///

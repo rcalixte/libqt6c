@@ -64,9 +64,9 @@ const char* k_filecopytomenu_tr(const char* s);
 /// [Upstream resources](https://api.kde.org/kfilecopytomenu.html#setUrls)
 ///
 /// @param self KFileCopyToMenu*
-/// @param urls libqt_list /* of QUrl* */
+/// @param urls libqt_list of QUrl*
 ///
-void k_filecopytomenu_set_urls(void* self, libqt_list urls);
+void k_filecopytomenu_set_urls(void* self, libqt_list /* of QUrl* */ urls);
 
 /// [Upstream resources](https://api.kde.org/kfilecopytomenu.html#setReadOnly)
 ///
@@ -233,7 +233,9 @@ void k_filecopytomenu_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KFileCopyToMenu*
 ///
-libqt_list /* of QObject* */ k_filecopytomenu_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_filecopytomenu_children(void* self);
 
 /// Inherited from QObject
 ///

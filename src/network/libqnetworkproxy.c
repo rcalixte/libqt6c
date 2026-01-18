@@ -260,7 +260,7 @@ const char** q_networkproxy_raw_header_list(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_networkproxy_raw_header_list");
+        fprintf(stderr, "Failed to allocate memory for string list in q_networkproxy_raw_header_list\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

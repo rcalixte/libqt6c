@@ -113,7 +113,8 @@ void k_datepickerpopup_set_date_range(void* self, void* minDate, void* maxDate);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of QDate* to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QDate*)map.keys)[i]);
 ///     libqt_free(map.values[i]);
@@ -124,14 +125,16 @@ void k_datepickerpopup_set_date_range(void* self, void* minDate, void* maxDate);
 ///
 /// @param self KDatePickerPopup*
 ///
-libqt_map /* of QDate* to const char* */ k_datepickerpopup_date_map(void* self);
+/// @return libqt_map of QDate* to const char*
+///
+libqt_map k_datepickerpopup_date_map(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdatepickerpopup.html#setDateMap)
 ///
 /// @param self KDatePickerPopup*
-/// @param dateMap libqt_map /* of QDate* to const char* */
+/// @param dateMap libqt_map of QDate* to const char*
 ///
-void k_datepickerpopup_set_date_map(void* self, libqt_map /* of QDate* to const char* */ dateMap);
+void k_datepickerpopup_set_date_map(void* self, libqt_map dateMap);
 
 /// [Upstream resources](https://api.kde.org/kdatepickerpopup.html#datePicker)
 ///
@@ -404,10 +407,10 @@ QAction* k_datepickerpopup_exec2(void* self, void* pos);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#exec)
 ///
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 /// @param pos QPoint*
 ///
-QAction* k_datepickerpopup_exec3(libqt_list actions, void* pos);
+QAction* k_datepickerpopup_exec3(libqt_list /* of QAction* */ actions, void* pos);
 
 /// Inherited from QMenu
 ///
@@ -616,22 +619,22 @@ QAction* k_datepickerpopup_exec22(void* self, void* pos, void* at);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#exec)
 ///
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 /// @param pos QPoint*
 /// @param at QAction*
 ///
-QAction* k_datepickerpopup_exec32(libqt_list actions, void* pos, void* at);
+QAction* k_datepickerpopup_exec32(libqt_list /* of QAction* */ actions, void* pos, void* at);
 
 /// Inherited from QMenu
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#exec)
 ///
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 /// @param pos QPoint*
 /// @param at QAction*
 /// @param parent QWidget*
 ///
-QAction* k_datepickerpopup_exec4(libqt_list actions, void* pos, void* at, void* parent);
+QAction* k_datepickerpopup_exec4(libqt_list /* of QAction* */ actions, void* pos, void* at, void* parent);
 
 /// Inherited from QWidget
 ///
@@ -1461,7 +1464,7 @@ void k_datepickerpopup_set_graphics_effect(void* self, void* effect);
 /// @param self KDatePickerPopup*
 /// @param type enum Qt__GestureType
 ///
-void k_datepickerpopup_grab_gesture(void* self, int64_t type);
+void k_datepickerpopup_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -1470,7 +1473,7 @@ void k_datepickerpopup_grab_gesture(void* self, int64_t type);
 /// @param self KDatePickerPopup*
 /// @param type enum Qt__GestureType
 ///
-void k_datepickerpopup_ungrab_gesture(void* self, int64_t type);
+void k_datepickerpopup_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2459,7 +2462,7 @@ void k_datepickerpopup_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void k_datepickerpopup_set_parent2(void* self, void* parent, int64_t f);
+void k_datepickerpopup_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -2537,9 +2540,9 @@ void k_datepickerpopup_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self KDatePickerPopup*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_datepickerpopup_add_actions(void* self, libqt_list actions);
+void k_datepickerpopup_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2547,9 +2550,9 @@ void k_datepickerpopup_add_actions(void* self, libqt_list actions);
 ///
 /// @param self KDatePickerPopup*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_datepickerpopup_insert_actions(void* self, void* before, libqt_list actions);
+void k_datepickerpopup_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2576,7 +2579,9 @@ void k_datepickerpopup_remove_action(void* self, void* action);
 ///
 /// @param self KDatePickerPopup*
 ///
-libqt_list /* of QAction* */ k_datepickerpopup_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_datepickerpopup_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2633,7 +2638,7 @@ QWidget* k_datepickerpopup_parent_widget(void* self);
 /// @param self KDatePickerPopup*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_datepickerpopup_set_window_flags(void* self, int64_t type);
+void k_datepickerpopup_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2643,7 +2648,7 @@ void k_datepickerpopup_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t k_datepickerpopup_window_flags(void* self);
+int32_t k_datepickerpopup_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2652,7 +2657,7 @@ int64_t k_datepickerpopup_window_flags(void* self);
 /// @param self KDatePickerPopup*
 /// @param param1 enum Qt__WindowType
 ///
-void k_datepickerpopup_set_window_flag(void* self, int64_t param1);
+void k_datepickerpopup_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2661,7 +2666,7 @@ void k_datepickerpopup_set_window_flag(void* self, int64_t param1);
 /// @param self KDatePickerPopup*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_datepickerpopup_override_window_flags(void* self, int64_t type);
+void k_datepickerpopup_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2671,7 +2676,7 @@ void k_datepickerpopup_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t k_datepickerpopup_window_type(void* self);
+int32_t k_datepickerpopup_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2882,7 +2887,7 @@ void k_datepickerpopup_on_custom_context_menu_requested(void* self, void (*callb
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t k_datepickerpopup_input_method_hints(void* self);
+int32_t k_datepickerpopup_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2891,7 +2896,7 @@ int64_t k_datepickerpopup_input_method_hints(void* self);
 /// @param self KDatePickerPopup*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void k_datepickerpopup_set_input_method_hints(void* self, int64_t hints);
+void k_datepickerpopup_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -2976,7 +2981,7 @@ QPixmap* k_datepickerpopup_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void k_datepickerpopup_grab_gesture2(void* self, int64_t type, int32_t flags);
+void k_datepickerpopup_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -3016,7 +3021,7 @@ void k_datepickerpopup_set_shortcut_auto_repeat2(void* self, int id, bool enable
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void k_datepickerpopup_set_window_flag2(void* self, int64_t param1, bool on);
+void k_datepickerpopup_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -3045,7 +3050,7 @@ QWidget* k_datepickerpopup_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* k_datepickerpopup_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* k_datepickerpopup_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -3157,7 +3162,9 @@ void k_datepickerpopup_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KDatePickerPopup*
 ///
-libqt_list /* of QObject* */ k_datepickerpopup_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_datepickerpopup_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4875,7 +4882,7 @@ void k_datepickerpopup_on_input_method_event(void* self, void (*callback)(void*,
 /// @param self KDatePickerPopup*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_datepickerpopup_input_method_query(void* self, int64_t param1);
+QVariant* k_datepickerpopup_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4886,7 +4893,7 @@ QVariant* k_datepickerpopup_input_method_query(void* self, int64_t param1);
 /// @param self KDatePickerPopup*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_datepickerpopup_qbase_input_method_query(void* self, int64_t param1);
+QVariant* k_datepickerpopup_qbase_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4897,7 +4904,7 @@ QVariant* k_datepickerpopup_qbase_input_method_query(void* self, int64_t param1)
 /// @param self KDatePickerPopup*
 /// @param callback QVariant* func(KDatePickerPopup* self, enum Qt__InputMethodQuery param1)
 ///
-void k_datepickerpopup_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void k_datepickerpopup_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QObject
 ///

@@ -223,7 +223,7 @@ void k_recentfilesaction_set_items(void* self, const char* lst[static 1]) {
     size_t lst_len = libqt_strv_length(lst);
     libqt_string* lst_qstr = (libqt_string*)malloc(lst_len * sizeof(libqt_string));
     if (lst_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_recentfilesaction_set_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_recentfilesaction_set_items\n");
         abort();
     }
     for (size_t i = 0; i < lst_len; ++i) {
@@ -239,7 +239,7 @@ const char** k_recentfilesaction_items(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_recentfilesaction_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_recentfilesaction_items\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -437,7 +437,7 @@ QKeySequence* k_recentfilesaction_shortcut(void* self) {
     return QAction_Shortcut((QAction*)self);
 }
 
-void k_recentfilesaction_set_shortcuts(void* self, libqt_list shortcuts) {
+void k_recentfilesaction_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts) {
     QAction_SetShortcuts((QAction*)self, shortcuts);
 }
 
@@ -739,7 +739,7 @@ const char** k_recentfilesaction_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_recentfilesaction_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_recentfilesaction_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

@@ -58,13 +58,13 @@ libqt_map /* of char* to char* */ q_webengineurlrequestinfo_http_headers(void* s
     libqt_string* _out_keys = (libqt_string*)_out.keys;
     char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string keys in q_webengineurlrequestinfo_http_headers");
+        fprintf(stderr, "Failed to allocate memory for map string keys in q_webengineurlrequestinfo_http_headers\n");
         abort();
     }
     libqt_string* _out_values = (libqt_string*)_out.values;
     char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string values in q_webengineurlrequestinfo_http_headers");
+        fprintf(stderr, "Failed to allocate memory for map string values in q_webengineurlrequestinfo_http_headers\n");
         free(_out.keys);
         abort();
     }
@@ -75,7 +75,7 @@ libqt_map /* of char* to char* */ q_webengineurlrequestinfo_http_headers(void* s
                 libqt_free(_ret_keys[j]);
             }
             free(_ret_keys);
-            fprintf(stderr, "Failed to allocate memory for map keys in q_webengineurlrequestinfo_http_headers");
+            fprintf(stderr, "Failed to allocate memory for map keys in q_webengineurlrequestinfo_http_headers\n");
             abort();
         }
         memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
@@ -88,9 +88,11 @@ libqt_map /* of char* to char* */ q_webengineurlrequestinfo_http_headers(void* s
             }
             free(_ret_keys);
             free(_ret_values);
-            fprintf(stderr, "Failed to allocate memory for map string values in q_webengineurlrequestinfo_http_headers");
+            fprintf(stderr, "Failed to allocate memory for map string values in q_webengineurlrequestinfo_http_headers\n");
             abort();
         }
+        memcpy(_ret_values[i], _out_values[i].data, _out_values[i].len);
+        _ret_values[i][_out_values[i].len] = '\0';
     }
     _ret.keys = (void*)_ret_keys;
     _ret.values = (void*)_ret_values;

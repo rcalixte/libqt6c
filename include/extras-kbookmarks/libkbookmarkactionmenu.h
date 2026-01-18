@@ -196,7 +196,9 @@ void k_bookmarkactionmenu_release_widget(void* self, void* widget);
 ///
 /// @param self KBookmarkActionMenu*
 ///
-libqt_list /* of QObject* */ k_bookmarkactionmenu_associated_objects(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_bookmarkactionmenu_associated_objects(void* self);
 
 /// Inherited from QAction
 ///
@@ -385,9 +387,9 @@ QKeySequence* k_bookmarkactionmenu_shortcut(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
 ///
 /// @param self KBookmarkActionMenu*
-/// @param shortcuts libqt_list /* of QKeySequence* */
+/// @param shortcuts libqt_list of QKeySequence*
 ///
-void k_bookmarkactionmenu_set_shortcuts(void* self, libqt_list shortcuts);
+void k_bookmarkactionmenu_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts);
 
 /// Inherited from QAction
 ///
@@ -404,7 +406,9 @@ void k_bookmarkactionmenu_set_shortcuts2(void* self, int32_t shortcuts);
 ///
 /// @param self KBookmarkActionMenu*
 ///
-libqt_list /* of QKeySequence* */ k_bookmarkactionmenu_shortcuts(void* self);
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_bookmarkactionmenu_shortcuts(void* self);
 
 /// Inherited from QAction
 ///
@@ -914,7 +918,9 @@ void k_bookmarkactionmenu_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KBookmarkActionMenu*
 ///
-libqt_list /* of QObject* */ k_bookmarkactionmenu_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_bookmarkactionmenu_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1464,7 +1470,9 @@ void k_bookmarkactionmenu_on_disconnect_notify(void* self, void (*callback)(void
 ///
 /// @param self KBookmarkActionMenu*
 ///
-libqt_list /* of QWidget* */ k_bookmarkactionmenu_created_widgets(void* self);
+/// @return libqt_list of QWidget*
+///
+libqt_list k_bookmarkactionmenu_created_widgets(void* self);
 
 /// Inherited from QWidgetAction
 ///
@@ -1474,7 +1482,9 @@ libqt_list /* of QWidget* */ k_bookmarkactionmenu_created_widgets(void* self);
 ///
 /// @param self KBookmarkActionMenu*
 ///
-libqt_list /* of QWidget* */ k_bookmarkactionmenu_qbase_created_widgets(void* self);
+/// @return libqt_list of QWidget*
+///
+libqt_list k_bookmarkactionmenu_qbase_created_widgets(void* self);
 
 /// Inherited from QWidgetAction
 ///

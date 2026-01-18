@@ -63,7 +63,7 @@ void q_stylepainter_draw_primitive(void* self, int32_t pe, void* opt);
 /// @param ce enum QStyle__ControlElement
 /// @param opt QStyleOption*
 ///
-void q_stylepainter_draw_control(void* self, int64_t ce, void* opt);
+void q_stylepainter_draw_control(void* self, int32_t ce, void* opt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylepainter.html#drawComplexControl)
 ///
@@ -71,7 +71,7 @@ void q_stylepainter_draw_control(void* self, int64_t ce, void* opt);
 /// @param cc enum QStyle__ComplexControl
 /// @param opt QStyleOptionComplex*
 ///
-void q_stylepainter_draw_complex_control(void* self, int64_t cc, void* opt);
+void q_stylepainter_draw_complex_control(void* self, int32_t cc, void* opt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylepainter.html#drawItemText)
 ///
@@ -791,9 +791,9 @@ void q_stylepainter_draw_lines(void* self, void* lines, int lineCount);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
 /// @param self QStylePainter*
-/// @param lines libqt_list /* of QLineF* */
+/// @param lines libqt_list of QLineF*
 ///
-void q_stylepainter_draw_lines2(void* self, libqt_list lines);
+void q_stylepainter_draw_lines2(void* self, libqt_list /* of QLineF* */ lines);
 
 /// Inherited from QPainter
 ///
@@ -810,9 +810,9 @@ void q_stylepainter_draw_lines3(void* self, void* pointPairs, int lineCount);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
 /// @param self QStylePainter*
-/// @param pointPairs libqt_list /* of QPointF* */
+/// @param pointPairs libqt_list of QPointF*
 ///
-void q_stylepainter_draw_lines4(void* self, libqt_list pointPairs);
+void q_stylepainter_draw_lines4(void* self, libqt_list /* of QPointF* */ pointPairs);
 
 /// Inherited from QPainter
 ///
@@ -829,9 +829,9 @@ void q_stylepainter_draw_lines5(void* self, void* lines, int lineCount);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
 /// @param self QStylePainter*
-/// @param lines libqt_list /* of QLine* */
+/// @param lines libqt_list of QLine*
 ///
-void q_stylepainter_draw_lines6(void* self, libqt_list lines);
+void q_stylepainter_draw_lines6(void* self, libqt_list /* of QLine* */ lines);
 
 /// Inherited from QPainter
 ///
@@ -848,9 +848,9 @@ void q_stylepainter_draw_lines7(void* self, void* pointPairs, int lineCount);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
 /// @param self QStylePainter*
-/// @param pointPairs libqt_list /* of QPoint* */
+/// @param pointPairs libqt_list of QPoint*
 ///
-void q_stylepainter_draw_lines8(void* self, libqt_list pointPairs);
+void q_stylepainter_draw_lines8(void* self, libqt_list /* of QPoint* */ pointPairs);
 
 /// Inherited from QPainter
 ///
@@ -897,9 +897,9 @@ void q_stylepainter_draw_rects(void* self, void* rects, int rectCount);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawRects)
 ///
 /// @param self QStylePainter*
-/// @param rectangles libqt_list /* of QRectF* */
+/// @param rectangles libqt_list of QRectF*
 ///
-void q_stylepainter_draw_rects2(void* self, libqt_list rectangles);
+void q_stylepainter_draw_rects2(void* self, libqt_list /* of QRectF* */ rectangles);
 
 /// Inherited from QPainter
 ///
@@ -916,9 +916,9 @@ void q_stylepainter_draw_rects3(void* self, void* rects, int rectCount);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawRects)
 ///
 /// @param self QStylePainter*
-/// @param rectangles libqt_list /* of QRect* */
+/// @param rectangles libqt_list of QRect*
 ///
-void q_stylepainter_draw_rects4(void* self, libqt_list rectangles);
+void q_stylepainter_draw_rects4(void* self, libqt_list /* of QRect* */ rectangles);
 
 /// Inherited from QPainter
 ///

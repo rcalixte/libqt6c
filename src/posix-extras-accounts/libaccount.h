@@ -210,7 +210,9 @@ void q_accounts__watch_kill_timer2(void* self, int32_t id);
 ///
 /// @param self Accounts__Watch*
 ///
-libqt_list /* of QObject* */ q_accounts__watch_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_accounts__watch_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -916,13 +918,17 @@ bool q_accounts__account_supports_service(void* self, const char* serviceType);
 ///
 /// @param self Accounts__Account*
 ///
-libqt_list /* of Accounts__Service* */ q_accounts__account_services(void* self);
+/// @return libqt_list of Accounts__Service*
+///
+libqt_list q_accounts__account_services(void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
 /// @param self Accounts__Account*
 ///
-libqt_list /* of Accounts__Service* */ q_accounts__account_enabled_services(void* self);
+/// @return libqt_list of Accounts__Service*
+///
+libqt_list q_accounts__account_enabled_services(void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
@@ -1167,9 +1173,9 @@ bool q_accounts__account_verify(void* self, const char* key, const char** token)
 ///
 /// @param self Accounts__Account*
 /// @param key const char*
-/// @param tokens libqt_list /* of const char* */
+/// @param tokens libqt_list of const char*
 ///
-bool q_accounts__account_verify_with_tokens(void* self, const char* key, libqt_list /* of const char* */ tokens);
+bool q_accounts__account_verify_with_tokens(void* self, const char* key, libqt_list tokens);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
@@ -1272,7 +1278,9 @@ Accounts__Account* q_accounts__account_from_id3(void* manager, uint32_t id, void
 /// @param self Accounts__Account*
 /// @param serviceType const char*
 ///
-libqt_list /* of Accounts__Service* */ q_accounts__account_services1(void* self, const char* serviceType);
+/// @return libqt_list of Accounts__Service*
+///
+libqt_list q_accounts__account_services1(void* self, const char* serviceType);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Account.html)
 ///
@@ -1487,7 +1495,9 @@ void q_accounts__account_kill_timer2(void* self, int32_t id);
 ///
 /// @param self Accounts__Account*
 ///
-libqt_list /* of QObject* */ q_accounts__account_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_accounts__account_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -21,7 +21,7 @@ KIO__PreviewJob* k_io__previewjob_new2(void* items, void* size, const char* enab
     size_t enabledPlugins_len = libqt_strv_length(enabledPlugins);
     libqt_string* enabledPlugins_qstr = (libqt_string*)malloc(enabledPlugins_len * sizeof(libqt_string));
     if (enabledPlugins_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__previewjob_new2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__previewjob_new2\n");
         abort();
     }
     for (size_t i = 0; i < enabledPlugins_len; ++i) {
@@ -102,7 +102,7 @@ const char** k_io__previewjob_available_plugins() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__previewjob_available_plugins");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__previewjob_available_plugins\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -126,7 +126,7 @@ const char** k_io__previewjob_default_plugins() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__previewjob_default_plugins");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__previewjob_default_plugins\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -145,7 +145,7 @@ const char** k_io__previewjob_supported_mime_types() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__previewjob_supported_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__previewjob_supported_mime_types\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -222,7 +222,7 @@ const char** k_io__previewjob_detailed_error_strings(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__previewjob_detailed_error_strings");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__previewjob_detailed_error_strings\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -336,7 +336,7 @@ const char** k_io__previewjob_detailed_error_strings1(void* self, void* reqUrl) 
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__previewjob_detailed_error_strings1");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__previewjob_detailed_error_strings1\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -355,7 +355,7 @@ const char** k_io__previewjob_detailed_error_strings2(void* self, void* reqUrl, 
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__previewjob_detailed_error_strings2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__previewjob_detailed_error_strings2\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -601,7 +601,7 @@ const char** k_io__previewjob_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__previewjob_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__previewjob_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1123,7 +1123,7 @@ KIO__PreviewJob* k_io_file_preview(void* param1, void* param2, const char* param
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io_file_preview");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io_file_preview\n");
         abort();
     }
     for (size_t i = 0; i < param3_len; ++i) {

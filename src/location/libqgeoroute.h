@@ -103,7 +103,9 @@ int64_t q_georoute_segments_count(void* self);
 ///
 /// @param self QGeoRoute*
 ///
-libqt_list /* of QGeoRouteSegment* */ q_georoute_segments(void* self);
+/// @return libqt_list of QGeoRouteSegment*
+///
+libqt_list q_georoute_segments(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroute.html#setTravelTime)
 ///
@@ -149,41 +151,46 @@ int32_t q_georoute_travel_mode(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroute.html#setPath)
 ///
 /// @param self QGeoRoute*
-/// @param path libqt_list /* of QGeoCoordinate* */
+/// @param path libqt_list of QGeoCoordinate*
 ///
-void q_georoute_set_path(void* self, libqt_list path);
+void q_georoute_set_path(void* self, libqt_list /* of QGeoCoordinate* */ path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroute.html#path)
 ///
 /// @param self QGeoRoute*
 ///
-libqt_list /* of QGeoCoordinate* */ q_georoute_path(void* self);
+/// @return libqt_list of QGeoCoordinate*
+///
+libqt_list q_georoute_path(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroute.html#setRouteLegs)
 ///
 /// @param self QGeoRoute*
-/// @param legs libqt_list /* of QGeoRoute* */
+/// @param legs libqt_list of QGeoRoute*
 ///
-void q_georoute_set_route_legs(void* self, libqt_list legs);
+void q_georoute_set_route_legs(void* self, libqt_list /* of QGeoRoute* */ legs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroute.html#routeLegs)
 ///
 /// @param self QGeoRoute*
 ///
-libqt_list /* of QGeoRoute* */ q_georoute_route_legs(void* self);
+/// @return libqt_list of QGeoRoute*
+///
+libqt_list q_georoute_route_legs(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroute.html#setExtendedAttributes)
 ///
 /// @param self QGeoRoute*
-/// @param extendedAttributes libqt_map /* of const char* to QVariant* */
+/// @param extendedAttributes libqt_map of const char* to QVariant*
 ///
-void q_georoute_set_extended_attributes(void* self, libqt_map /* of const char* to QVariant* */ extendedAttributes);
+void q_georoute_set_extended_attributes(void* self, libqt_map extendedAttributes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroute.html#extendedAttributes)
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     free(((QVariant*)map.values)[i]);
@@ -194,7 +201,9 @@ void q_georoute_set_extended_attributes(void* self, libqt_map /* of const char* 
 ///
 /// @param self QGeoRoute*
 ///
-libqt_map /* of const char* to QVariant* */ q_georoute_extended_attributes(void* self);
+/// @return libqt_map of const char* to QVariant*
+///
+libqt_map q_georoute_extended_attributes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroute.html#setLegIndex)
 ///

@@ -88,7 +88,9 @@ void k_listopenfilesjob_qbase_start(void* self);
 ///
 /// @param self KListOpenFilesJob*
 ///
-libqt_list /* of KProcessList__KProcessInfo* */ k_listopenfilesjob_process_info_list(void* self);
+/// @return libqt_list of KProcessList__KProcessInfo*
+///
+libqt_list k_listopenfilesjob_process_info_list(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -492,7 +494,9 @@ void k_listopenfilesjob_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KListOpenFilesJob*
 ///
-libqt_list /* of QObject* */ k_listopenfilesjob_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_listopenfilesjob_children(void* self);
 
 /// Inherited from QObject
 ///

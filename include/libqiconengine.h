@@ -270,7 +270,9 @@ bool q_iconengine_qbase_write(void* self, void* out);
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-libqt_list /* of QSize* */ q_iconengine_available_sizes(void* self, int32_t mode, int32_t state);
+/// @return libqt_list of QSize*
+///
+libqt_list q_iconengine_available_sizes(void* self, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#availableSizes)
 ///
@@ -289,7 +291,9 @@ void q_iconengine_on_available_sizes(void* self, QSize** (*callback)(void*, int3
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-libqt_list /* of QSize* */ q_iconengine_qbase_available_sizes(void* self, int32_t mode, int32_t state);
+/// @return libqt_list of QSize*
+///
+libqt_list q_iconengine_qbase_available_sizes(void* self, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#iconName)
 ///

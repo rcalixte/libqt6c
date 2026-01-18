@@ -32,7 +32,7 @@ QChart* q_chart_new2(void* parent);
 /// @param parent QGraphicsItem*
 /// @param wFlags flag of enum Qt__WindowType
 ///
-QChart* q_chart_new3(void* parent, int64_t wFlags);
+QChart* q_chart_new3(void* parent, int32_t wFlags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -100,7 +100,9 @@ void q_chart_remove_all_series(void* self);
 ///
 /// @param self QChart*
 ///
-libqt_list /* of QAbstractSeries* */ q_chart_series(void* self);
+/// @return libqt_list of QAbstractSeries*
+///
+libqt_list q_chart_series(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart-qtcharts.html#setAxisX)
 ///
@@ -147,7 +149,9 @@ void q_chart_remove_axis(void* self, void* axis);
 ///
 /// @param self QChart*
 ///
-libqt_list /* of QAbstractAxis* */ q_chart_axes(void* self);
+/// @return libqt_list of QAbstractAxis*
+///
+libqt_list q_chart_axes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart-qtcharts.html#createDefaultAxes)
 ///
@@ -547,7 +551,9 @@ QAbstractAxis* q_chart_axis_y1(void* self, void* series);
 /// @param self QChart*
 /// @param orientation flag of enum Qt__Orientation
 ///
-libqt_list /* of QAbstractAxis* */ q_chart_axes1(void* self, int32_t orientation);
+/// @return libqt_list of QAbstractAxis*
+///
+libqt_list q_chart_axes1(void* self, int32_t orientation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart-qtcharts.html#axes)
 ///
@@ -555,7 +561,9 @@ libqt_list /* of QAbstractAxis* */ q_chart_axes1(void* self, int32_t orientation
 /// @param orientation flag of enum Qt__Orientation
 /// @param series QAbstractSeries*
 ///
-libqt_list /* of QAbstractAxis* */ q_chart_axes2(void* self, int32_t orientation, void* series);
+/// @return libqt_list of QAbstractAxis*
+///
+libqt_list q_chart_axes2(void* self, int32_t orientation, void* series);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart-qtcharts.html#setBackgroundVisible)
 ///
@@ -847,7 +855,7 @@ QRectF* q_chart_window_frame_rect(void* self);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t q_chart_window_flags(void* self);
+int32_t q_chart_window_flags(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -857,7 +865,7 @@ int64_t q_chart_window_flags(void* self);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t q_chart_window_type(void* self);
+int32_t q_chart_window_type(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -866,7 +874,7 @@ int64_t q_chart_window_type(void* self);
 /// @param self QChart*
 /// @param wFlags flag of enum Qt__WindowType
 ///
-void q_chart_set_window_flags(void* self, int64_t wFlags);
+void q_chart_set_window_flags(void* self, int32_t wFlags);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -981,9 +989,9 @@ void q_chart_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#addActions)
 ///
 /// @param self QChart*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_chart_add_actions(void* self, libqt_list actions);
+void q_chart_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -991,9 +999,9 @@ void q_chart_add_actions(void* self, libqt_list actions);
 ///
 /// @param self QChart*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_chart_insert_actions(void* self, void* before, libqt_list actions);
+void q_chart_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -1020,7 +1028,9 @@ void q_chart_remove_action(void* self, void* action);
 ///
 /// @param self QChart*
 ///
-libqt_list /* of QAction* */ q_chart_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list q_chart_actions(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -1129,7 +1139,7 @@ void q_chart_set_attribute2(void* self, int32_t attribute, bool on);
 /// @param self QChart*
 /// @param type enum Qt__GestureType
 ///
-void q_chart_grab_gesture(void* self, int64_t type);
+void q_chart_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QGraphicsObject
 ///
@@ -1138,7 +1148,7 @@ void q_chart_grab_gesture(void* self, int64_t type);
 /// @param self QChart*
 /// @param type enum Qt__GestureType
 ///
-void q_chart_ungrab_gesture(void* self, int64_t type);
+void q_chart_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QGraphicsObject
 ///
@@ -1352,7 +1362,7 @@ void q_chart_on_height_changed(void* self, void (*callback)(void*));
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void q_chart_grab_gesture2(void* self, int64_t type, int32_t flags);
+void q_chart_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -1464,7 +1474,9 @@ void q_chart_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QChart*
 ///
-libqt_list /* of QObject* */ q_chart_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_chart_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1778,7 +1790,9 @@ void q_chart_set_parent_item(void* self, void* parent);
 ///
 /// @param self QChart*
 ///
-libqt_list /* of QGraphicsItem* */ q_chart_child_items(void* self);
+/// @return libqt_list of QGraphicsItem*
+///
+libqt_list q_chart_child_items(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2106,7 +2120,7 @@ void q_chart_set_graphics_effect(void* self, void* effect);
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int64_t q_chart_accepted_mouse_buttons(void* self);
+int32_t q_chart_accepted_mouse_buttons(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2115,7 +2129,7 @@ int64_t q_chart_accepted_mouse_buttons(void* self);
 /// @param self QChart*
 /// @param buttons flag of enum Qt__MouseButton
 ///
-void q_chart_set_accepted_mouse_buttons(void* self, int64_t buttons);
+void q_chart_set_accepted_mouse_buttons(void* self, int32_t buttons);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2481,16 +2495,18 @@ double q_chart_scale(void* self);
 ///
 /// @param self QChart*
 ///
-libqt_list /* of QGraphicsTransform* */ q_chart_transformations(void* self);
+/// @return libqt_list of QGraphicsTransform*
+///
+libqt_list q_chart_transformations(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setTransformations)
 ///
 /// @param self QChart*
-/// @param transformations libqt_list /* of QGraphicsTransform* */
+/// @param transformations libqt_list of QGraphicsTransform*
 ///
-void q_chart_set_transformations(void* self, libqt_list transformations);
+void q_chart_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2583,7 +2599,9 @@ QPainterPath* q_chart_clip_path(void* self);
 ///
 /// @param self QChart*
 ///
-libqt_list /* of QGraphicsItem* */ q_chart_colliding_items(void* self);
+/// @return libqt_list of QGraphicsItem*
+///
+libqt_list q_chart_colliding_items(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3008,7 +3026,7 @@ void q_chart_set_data(void* self, int key, void* value);
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t q_chart_input_method_hints(void* self);
+int32_t q_chart_input_method_hints(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3017,7 +3035,7 @@ int64_t q_chart_input_method_hints(void* self);
 /// @param self QChart*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void q_chart_set_input_method_hints(void* self, int64_t hints);
+void q_chart_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3150,7 +3168,9 @@ void q_chart_set_transform2(void* self, void* matrix, bool combine);
 /// @param self QChart*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-libqt_list /* of QGraphicsItem* */ q_chart_colliding_items1(void* self, int32_t mode);
+/// @return libqt_list of QGraphicsItem*
+///
+libqt_list q_chart_colliding_items1(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5454,7 +5474,7 @@ void q_chart_on_input_method_event(void* self, void (*callback)(void*, void*));
 /// @param self QChart*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_chart_input_method_query(void* self, int64_t query);
+QVariant* q_chart_input_method_query(void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5465,7 +5485,7 @@ QVariant* q_chart_input_method_query(void* self, int64_t query);
 /// @param self QChart*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_chart_qbase_input_method_query(void* self, int64_t query);
+QVariant* q_chart_qbase_input_method_query(void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5476,7 +5496,7 @@ QVariant* q_chart_qbase_input_method_query(void* self, int64_t query);
 /// @param self QChart*
 /// @param callback QVariant* func(QChart* self, enum Qt__InputMethodQuery query)
 ///
-void q_chart_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void q_chart_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -5487,7 +5507,7 @@ void q_chart_on_input_method_query(void* self, QVariant* (*callback)(void*, int6
 /// @param self QChart*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_chart_supports_extension(void* self, int64_t extension);
+bool q_chart_supports_extension(void* self, int32_t extension);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5498,7 +5518,7 @@ bool q_chart_supports_extension(void* self, int64_t extension);
 /// @param self QChart*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_chart_qbase_supports_extension(void* self, int64_t extension);
+bool q_chart_qbase_supports_extension(void* self, int32_t extension);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5509,7 +5529,7 @@ bool q_chart_qbase_supports_extension(void* self, int64_t extension);
 /// @param self QChart*
 /// @param callback bool func(QChart* self, enum QGraphicsItem__Extension extension)
 ///
-void q_chart_on_supports_extension(void* self, bool (*callback)(void*, int64_t));
+void q_chart_on_supports_extension(void* self, bool (*callback)(void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -5521,7 +5541,7 @@ void q_chart_on_supports_extension(void* self, bool (*callback)(void*, int64_t))
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_chart_set_extension(void* self, int64_t extension, void* variant);
+void q_chart_set_extension(void* self, int32_t extension, void* variant);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5533,7 +5553,7 @@ void q_chart_set_extension(void* self, int64_t extension, void* variant);
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_chart_qbase_set_extension(void* self, int64_t extension, void* variant);
+void q_chart_qbase_set_extension(void* self, int32_t extension, void* variant);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5544,7 +5564,7 @@ void q_chart_qbase_set_extension(void* self, int64_t extension, void* variant);
 /// @param self QChart*
 /// @param callback void func(QChart* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 ///
-void q_chart_on_set_extension(void* self, void (*callback)(void*, int64_t, void*));
+void q_chart_on_set_extension(void* self, void (*callback)(void*, int32_t, void*));
 
 /// Inherited from QGraphicsItem
 ///

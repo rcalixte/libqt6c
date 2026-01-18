@@ -19,7 +19,7 @@ QDesignerObjectInspectorInterface* q_designerobjectinspectorinterface_new(void* 
     return QDesignerObjectInspectorInterface_new((QWidget*)parent);
 }
 
-QDesignerObjectInspectorInterface* q_designerobjectinspectorinterface_new2(void* parent, int64_t flags) {
+QDesignerObjectInspectorInterface* q_designerobjectinspectorinterface_new2(void* parent, int32_t flags) {
     return QDesignerObjectInspectorInterface_new2((QWidget*)parent, flags);
 }
 
@@ -468,11 +468,11 @@ void q_designerobjectinspectorinterface_set_graphics_effect(void* self, void* ef
     QWidget_SetGraphicsEffect((QWidget*)self, (QGraphicsEffect*)effect);
 }
 
-void q_designerobjectinspectorinterface_grab_gesture(void* self, int64_t type) {
+void q_designerobjectinspectorinterface_grab_gesture(void* self, int32_t type) {
     QWidget_GrabGesture((QWidget*)self, type);
 }
 
-void q_designerobjectinspectorinterface_ungrab_gesture(void* self, int64_t type) {
+void q_designerobjectinspectorinterface_ungrab_gesture(void* self, int32_t type) {
     QWidget_UngrabGesture((QWidget*)self, type);
 }
 
@@ -953,7 +953,7 @@ void q_designerobjectinspectorinterface_set_parent(void* self, void* parent) {
     QWidget_SetParent((QWidget*)self, (QWidget*)parent);
 }
 
-void q_designerobjectinspectorinterface_set_parent2(void* self, void* parent, int64_t f) {
+void q_designerobjectinspectorinterface_set_parent2(void* self, void* parent, int32_t f) {
     QWidget_SetParent2((QWidget*)self, (QWidget*)parent, f);
 }
 
@@ -989,11 +989,11 @@ void q_designerobjectinspectorinterface_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_designerobjectinspectorinterface_add_actions(void* self, libqt_list actions) {
+void q_designerobjectinspectorinterface_add_actions(void* self, libqt_list /* of QAction* */ actions) {
     QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_designerobjectinspectorinterface_insert_actions(void* self, void* before, libqt_list actions) {
+void q_designerobjectinspectorinterface_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions) {
     QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
@@ -1030,23 +1030,23 @@ QWidget* q_designerobjectinspectorinterface_parent_widget(void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
-void q_designerobjectinspectorinterface_set_window_flags(void* self, int64_t type) {
+void q_designerobjectinspectorinterface_set_window_flags(void* self, int32_t type) {
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int64_t q_designerobjectinspectorinterface_window_flags(void* self) {
+int32_t q_designerobjectinspectorinterface_window_flags(void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
-void q_designerobjectinspectorinterface_set_window_flag(void* self, int64_t param1) {
+void q_designerobjectinspectorinterface_set_window_flag(void* self, int32_t param1) {
     QWidget_SetWindowFlag((QWidget*)self, param1);
 }
 
-void q_designerobjectinspectorinterface_override_window_flags(void* self, int64_t type) {
+void q_designerobjectinspectorinterface_override_window_flags(void* self, int32_t type) {
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int64_t q_designerobjectinspectorinterface_window_type(void* self) {
+int32_t q_designerobjectinspectorinterface_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
@@ -1142,11 +1142,11 @@ void q_designerobjectinspectorinterface_on_custom_context_menu_requested(void* s
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-int64_t q_designerobjectinspectorinterface_input_method_hints(void* self) {
+int32_t q_designerobjectinspectorinterface_input_method_hints(void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
-void q_designerobjectinspectorinterface_set_input_method_hints(void* self, int64_t hints) {
+void q_designerobjectinspectorinterface_set_input_method_hints(void* self, int32_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
@@ -1178,7 +1178,7 @@ QPixmap* q_designerobjectinspectorinterface_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void q_designerobjectinspectorinterface_grab_gesture2(void* self, int64_t type, int32_t flags) {
+void q_designerobjectinspectorinterface_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
@@ -1194,7 +1194,7 @@ void q_designerobjectinspectorinterface_set_shortcut_auto_repeat2(void* self, in
     QWidget_SetShortcutAutoRepeat2((QWidget*)self, id, enable);
 }
 
-void q_designerobjectinspectorinterface_set_window_flag2(void* self, int64_t param1, bool on) {
+void q_designerobjectinspectorinterface_set_window_flag2(void* self, int32_t param1, bool on) {
     QWidget_SetWindowFlag2((QWidget*)self, param1, on);
 }
 
@@ -1206,7 +1206,7 @@ QWidget* q_designerobjectinspectorinterface_create_window_container2(void* windo
     return QWidget_CreateWindowContainer2((QWindow*)window, (QWidget*)parent);
 }
 
-QWidget* q_designerobjectinspectorinterface_create_window_container3(void* window, void* parent, int64_t flags) {
+QWidget* q_designerobjectinspectorinterface_create_window_container3(void* window, void* parent, int32_t flags) {
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
@@ -1311,7 +1311,7 @@ const char** q_designerobjectinspectorinterface_dynamic_property_names(void* sel
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_designerobjectinspectorinterface_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_designerobjectinspectorinterface_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1897,15 +1897,15 @@ void q_designerobjectinspectorinterface_on_input_method_event(void* self, void (
     QDesignerObjectInspectorInterface_OnInputMethodEvent((QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
 }
 
-QVariant* q_designerobjectinspectorinterface_input_method_query(void* self, int64_t param1) {
+QVariant* q_designerobjectinspectorinterface_input_method_query(void* self, int32_t param1) {
     return QDesignerObjectInspectorInterface_InputMethodQuery((QDesignerObjectInspectorInterface*)self, param1);
 }
 
-QVariant* q_designerobjectinspectorinterface_qbase_input_method_query(void* self, int64_t param1) {
+QVariant* q_designerobjectinspectorinterface_qbase_input_method_query(void* self, int32_t param1) {
     return QDesignerObjectInspectorInterface_QBaseInputMethodQuery((QDesignerObjectInspectorInterface*)self, param1);
 }
 
-void q_designerobjectinspectorinterface_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void q_designerobjectinspectorinterface_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     QDesignerObjectInspectorInterface_OnInputMethodQuery((QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
 }
 

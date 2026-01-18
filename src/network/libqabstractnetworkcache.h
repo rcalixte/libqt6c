@@ -76,14 +76,16 @@ void q_networkcachemetadata_set_url(void* self, void* url);
 ///
 /// @param self QNetworkCacheMetaData*
 ///
-libqt_list /* of libqt_pair tuple of char* and char* */ q_networkcachemetadata_raw_headers(void* self);
+/// @return libqt_list of libqt_pair tuple of char* and char*
+///
+libqt_list q_networkcachemetadata_raw_headers(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#setRawHeaders)
 ///
 /// @param self QNetworkCacheMetaData*
-/// @param headers libqt_list /* of libqt_pair tuple of char* and char* */
+/// @param headers libqt_list of libqt_pair tuple of char* and char*
 ///
-void q_networkcachemetadata_set_raw_headers(void* self, libqt_list /* of libqt_pair tuple of char* and char* */ headers);
+void q_networkcachemetadata_set_raw_headers(void* self, libqt_list headers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#headers)
 ///
@@ -141,7 +143,8 @@ void q_networkcachemetadata_set_save_to_disk(void* self, bool allow);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of enum QNetworkRequest__Attribute to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -151,14 +154,16 @@ void q_networkcachemetadata_set_save_to_disk(void* self, bool allow);
 ///
 /// @param self QNetworkCacheMetaData*
 ///
-libqt_map /* of enum QNetworkRequest__Attribute to QVariant* */ q_networkcachemetadata_attributes(void* self);
+/// @return libqt_map of enum QNetworkRequest__Attribute to QVariant*
+///
+libqt_map q_networkcachemetadata_attributes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#setAttributes)
 ///
 /// @param self QNetworkCacheMetaData*
-/// @param attributes libqt_map /* of enum QNetworkRequest__Attribute to QVariant* */
+/// @param attributes libqt_map of enum QNetworkRequest__Attribute to QVariant*
 ///
-void q_networkcachemetadata_set_attributes(void* self, libqt_map /* of enum QNetworkRequest__Attribute to QVariant* */ attributes);
+void q_networkcachemetadata_set_attributes(void* self, libqt_map attributes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#dtor.QNetworkCacheMetaData)
 ///
@@ -398,7 +403,9 @@ void q_abstractnetworkcache_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QAbstractNetworkCache*
 ///
-libqt_list /* of QObject* */ q_abstractnetworkcache_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_abstractnetworkcache_children(void* self);
 
 /// Inherited from QObject
 ///

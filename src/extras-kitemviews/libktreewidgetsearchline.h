@@ -30,9 +30,9 @@ KTreeWidgetSearchLine* k_treewidgetsearchline_new2();
 /// k_treewidgetsearchline_new3 constructs a new KTreeWidgetSearchLine object.
 ///
 /// @param parent QWidget*
-/// @param treeWidgets libqt_list /* of QTreeWidget* */
+/// @param treeWidgets libqt_list of QTreeWidget*
 ///
-KTreeWidgetSearchLine* k_treewidgetsearchline_new3(void* parent, libqt_list treeWidgets);
+KTreeWidgetSearchLine* k_treewidgetsearchline_new3(void* parent, libqt_list /* of QTreeWidget* */ treeWidgets);
 
 /// [Upstream resources](https://api.kde.org/ktreewidgetsearchline.html)
 
@@ -97,7 +97,9 @@ int32_t k_treewidgetsearchline_case_sensitivity(void* self);
 ///
 /// @param self KTreeWidgetSearchLine*
 ///
-libqt_list /* of int */ k_treewidgetsearchline_search_columns(void* self);
+/// @return libqt_list of int
+///
+libqt_list k_treewidgetsearchline_search_columns(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktreewidgetsearchline.html#keepParentsVisible)
 ///
@@ -115,7 +117,9 @@ QTreeWidget* k_treewidgetsearchline_tree_widget(void* self);
 ///
 /// @param self KTreeWidgetSearchLine*
 ///
-libqt_list /* of QTreeWidget* */ k_treewidgetsearchline_tree_widgets(void* self);
+/// @return libqt_list of QTreeWidget*
+///
+libqt_list k_treewidgetsearchline_tree_widgets(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktreewidgetsearchline.html#hiddenChanged)
 ///
@@ -230,9 +234,9 @@ void k_treewidgetsearchline_set_keep_parents_visible(void* self, bool value);
 /// [Upstream resources](https://api.kde.org/ktreewidgetsearchline.html#setSearchColumns)
 ///
 /// @param self KTreeWidgetSearchLine*
-/// @param columns libqt_list /* of int */
+/// @param columns libqt_list of int
 ///
-void k_treewidgetsearchline_set_search_columns(void* self, libqt_list columns);
+void k_treewidgetsearchline_set_search_columns(void* self, libqt_list /* of int */ columns);
 
 /// [Upstream resources](https://api.kde.org/ktreewidgetsearchline.html#setTreeWidget)
 ///
@@ -244,9 +248,9 @@ void k_treewidgetsearchline_set_tree_widget(void* self, void* treeWidget);
 /// [Upstream resources](https://api.kde.org/ktreewidgetsearchline.html#setTreeWidgets)
 ///
 /// @param self KTreeWidgetSearchLine*
-/// @param treeWidgets libqt_list /* of QTreeWidget* */
+/// @param treeWidgets libqt_list of QTreeWidget*
 ///
-void k_treewidgetsearchline_set_tree_widgets(void* self, libqt_list treeWidgets);
+void k_treewidgetsearchline_set_tree_widgets(void* self, libqt_list /* of QTreeWidget* */ treeWidgets);
 
 /// [Upstream resources](https://api.kde.org/ktreewidgetsearchline.html#itemMatches)
 ///
@@ -1135,7 +1139,7 @@ void k_treewidgetsearchline_on_input_rejected(void* self, void (*callback)(void*
 /// @param property enum Qt__InputMethodQuery
 /// @param argument QVariant*
 ///
-QVariant* k_treewidgetsearchline_input_method_query2(void* self, int64_t property, void* argument);
+QVariant* k_treewidgetsearchline_input_method_query2(void* self, int32_t property, void* argument);
 
 /// Inherited from QLineEdit
 ///
@@ -1985,7 +1989,7 @@ void k_treewidgetsearchline_set_graphics_effect(void* self, void* effect);
 /// @param self KTreeWidgetSearchLine*
 /// @param type enum Qt__GestureType
 ///
-void k_treewidgetsearchline_grab_gesture(void* self, int64_t type);
+void k_treewidgetsearchline_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -1994,7 +1998,7 @@ void k_treewidgetsearchline_grab_gesture(void* self, int64_t type);
 /// @param self KTreeWidgetSearchLine*
 /// @param type enum Qt__GestureType
 ///
-void k_treewidgetsearchline_ungrab_gesture(void* self, int64_t type);
+void k_treewidgetsearchline_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2983,7 +2987,7 @@ void k_treewidgetsearchline_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void k_treewidgetsearchline_set_parent2(void* self, void* parent, int64_t f);
+void k_treewidgetsearchline_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -3052,9 +3056,9 @@ void k_treewidgetsearchline_set_accept_drops(void* self, bool on);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self KTreeWidgetSearchLine*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_treewidgetsearchline_add_actions(void* self, libqt_list actions);
+void k_treewidgetsearchline_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -3062,9 +3066,9 @@ void k_treewidgetsearchline_add_actions(void* self, libqt_list actions);
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_treewidgetsearchline_insert_actions(void* self, void* before, libqt_list actions);
+void k_treewidgetsearchline_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -3091,7 +3095,9 @@ void k_treewidgetsearchline_remove_action(void* self, void* action);
 ///
 /// @param self KTreeWidgetSearchLine*
 ///
-libqt_list /* of QAction* */ k_treewidgetsearchline_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_treewidgetsearchline_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3139,7 +3145,7 @@ QWidget* k_treewidgetsearchline_parent_widget(void* self);
 /// @param self KTreeWidgetSearchLine*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_treewidgetsearchline_set_window_flags(void* self, int64_t type);
+void k_treewidgetsearchline_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3149,7 +3155,7 @@ void k_treewidgetsearchline_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t k_treewidgetsearchline_window_flags(void* self);
+int32_t k_treewidgetsearchline_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3158,7 +3164,7 @@ int64_t k_treewidgetsearchline_window_flags(void* self);
 /// @param self KTreeWidgetSearchLine*
 /// @param param1 enum Qt__WindowType
 ///
-void k_treewidgetsearchline_set_window_flag(void* self, int64_t param1);
+void k_treewidgetsearchline_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3167,7 +3173,7 @@ void k_treewidgetsearchline_set_window_flag(void* self, int64_t param1);
 /// @param self KTreeWidgetSearchLine*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_treewidgetsearchline_override_window_flags(void* self, int64_t type);
+void k_treewidgetsearchline_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3177,7 +3183,7 @@ void k_treewidgetsearchline_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t k_treewidgetsearchline_window_type(void* self);
+int32_t k_treewidgetsearchline_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3388,7 +3394,7 @@ void k_treewidgetsearchline_on_custom_context_menu_requested(void* self, void (*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t k_treewidgetsearchline_input_method_hints(void* self);
+int32_t k_treewidgetsearchline_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3397,7 +3403,7 @@ int64_t k_treewidgetsearchline_input_method_hints(void* self);
 /// @param self KTreeWidgetSearchLine*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void k_treewidgetsearchline_set_input_method_hints(void* self, int64_t hints);
+void k_treewidgetsearchline_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -3482,7 +3488,7 @@ QPixmap* k_treewidgetsearchline_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void k_treewidgetsearchline_grab_gesture2(void* self, int64_t type, int32_t flags);
+void k_treewidgetsearchline_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -3522,7 +3528,7 @@ void k_treewidgetsearchline_set_shortcut_auto_repeat2(void* self, int id, bool e
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void k_treewidgetsearchline_set_window_flag2(void* self, int64_t param1, bool on);
+void k_treewidgetsearchline_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -3551,7 +3557,7 @@ QWidget* k_treewidgetsearchline_create_window_container2(void* window, void* par
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* k_treewidgetsearchline_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* k_treewidgetsearchline_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -3663,7 +3669,9 @@ void k_treewidgetsearchline_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KTreeWidgetSearchLine*
 ///
-libqt_list /* of QObject* */ k_treewidgetsearchline_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_treewidgetsearchline_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4591,7 +4599,7 @@ void k_treewidgetsearchline_on_init_style_option(void* self, void (*callback)(vo
 /// @param self KTreeWidgetSearchLine*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_treewidgetsearchline_input_method_query(void* self, int64_t param1);
+QVariant* k_treewidgetsearchline_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QLineEdit
 ///
@@ -4602,7 +4610,7 @@ QVariant* k_treewidgetsearchline_input_method_query(void* self, int64_t param1);
 /// @param self KTreeWidgetSearchLine*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_treewidgetsearchline_qbase_input_method_query(void* self, int64_t param1);
+QVariant* k_treewidgetsearchline_qbase_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QLineEdit
 ///
@@ -4613,7 +4621,7 @@ QVariant* k_treewidgetsearchline_qbase_input_method_query(void* self, int64_t pa
 /// @param self KTreeWidgetSearchLine*
 /// @param callback QVariant* func(KTreeWidgetSearchLine* self, enum Qt__InputMethodQuery param1)
 ///
-void k_treewidgetsearchline_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void k_treewidgetsearchline_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QLineEdit
 ///

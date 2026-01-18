@@ -23,7 +23,7 @@ QFileDialog* q_filedialog_new(void* parent) {
     return QFileDialog_new((QWidget*)parent);
 }
 
-QFileDialog* q_filedialog_new2(void* parent, int64_t f) {
+QFileDialog* q_filedialog_new2(void* parent, int32_t f) {
     return QFileDialog_new2((QWidget*)parent, f);
 }
 
@@ -99,7 +99,7 @@ const char** q_filedialog_selected_files(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_selected_files");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_selected_files\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -130,7 +130,7 @@ void q_filedialog_set_name_filters(void* self, const char* filters[static 1]) {
     size_t filters_len = libqt_strv_length(filters);
     libqt_string* filters_qstr = (libqt_string*)malloc(filters_len * sizeof(libqt_string));
     if (filters_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_set_name_filters");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_set_name_filters\n");
         abort();
     }
     for (size_t i = 0; i < filters_len; ++i) {
@@ -146,7 +146,7 @@ const char** q_filedialog_name_filters(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_name_filters");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_name_filters\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -182,7 +182,7 @@ void q_filedialog_set_mime_type_filters(void* self, const char* filters[static 1
     size_t filters_len = libqt_strv_length(filters);
     libqt_string* filters_qstr = (libqt_string*)malloc(filters_len * sizeof(libqt_string));
     if (filters_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_set_mime_type_filters");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_set_mime_type_filters\n");
         abort();
     }
     for (size_t i = 0; i < filters_len; ++i) {
@@ -198,7 +198,7 @@ const char** q_filedialog_mime_type_filters(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_mime_type_filters");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_mime_type_filters\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -248,7 +248,7 @@ int32_t q_filedialog_accept_mode(void* self) {
     return QFileDialog_AcceptMode((QFileDialog*)self);
 }
 
-void q_filedialog_set_sidebar_urls(void* self, libqt_list urls) {
+void q_filedialog_set_sidebar_urls(void* self, libqt_list /* of QUrl* */ urls) {
     QFileDialog_SetSidebarUrls((QFileDialog*)self, urls);
 }
 
@@ -283,7 +283,7 @@ void q_filedialog_set_history(void* self, const char* paths[static 1]) {
     size_t paths_len = libqt_strv_length(paths);
     libqt_string* paths_qstr = (libqt_string*)malloc(paths_len * sizeof(libqt_string));
     if (paths_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_set_history");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_set_history\n");
         abort();
     }
     for (size_t i = 0; i < paths_len; ++i) {
@@ -299,7 +299,7 @@ const char** q_filedialog_history(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_history");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_history\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -344,7 +344,7 @@ void q_filedialog_set_supported_schemes(void* self, const char* schemes[static 1
     size_t schemes_len = libqt_strv_length(schemes);
     libqt_string* schemes_qstr = (libqt_string*)malloc(schemes_len * sizeof(libqt_string));
     if (schemes_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_set_supported_schemes");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_set_supported_schemes\n");
         abort();
     }
     for (size_t i = 0; i < schemes_len; ++i) {
@@ -360,7 +360,7 @@ const char** q_filedialog_supported_schemes(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_supported_schemes");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_supported_schemes\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -422,7 +422,7 @@ void q_filedialog_files_selected(void* self, const char* files[static 1]) {
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_files_selected");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_files_selected\n");
         abort();
     }
     for (size_t i = 0; i < files_len; ++i) {
@@ -461,7 +461,7 @@ void q_filedialog_on_url_selected(void* self, void (*callback)(void*, void*)) {
     QFileDialog_Connect_UrlSelected((QFileDialog*)self, (intptr_t)callback);
 }
 
-void q_filedialog_urls_selected(void* self, libqt_list urls) {
+void q_filedialog_urls_selected(void* self, libqt_list /* of QUrl* */ urls) {
     QFileDialog_UrlsSelected((QFileDialog*)self, urls);
 }
 
@@ -531,7 +531,7 @@ const char** q_filedialog_get_open_file_names() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_get_open_file_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_get_open_file_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -744,7 +744,7 @@ QUrl* q_filedialog_get_existing_directory_url5(void* parent, const char* caption
     size_t supportedSchemes_len = libqt_strv_length(supportedSchemes);
     libqt_string* supportedSchemes_qstr = (libqt_string*)malloc(supportedSchemes_len * sizeof(libqt_string));
     if (supportedSchemes_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_get_existing_directory_url5");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_get_existing_directory_url5\n");
         abort();
     }
     for (size_t i = 0; i < supportedSchemes_len; ++i) {
@@ -761,7 +761,7 @@ const char** q_filedialog_get_open_file_names1(void* parent) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_get_open_file_names1");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_get_open_file_names1\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -780,7 +780,7 @@ const char** q_filedialog_get_open_file_names2(void* parent, const char* caption
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_get_open_file_names2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_get_open_file_names2\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -799,7 +799,7 @@ const char** q_filedialog_get_open_file_names3(void* parent, const char* caption
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_get_open_file_names3");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_get_open_file_names3\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -818,7 +818,7 @@ const char** q_filedialog_get_open_file_names4(void* parent, const char* caption
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_get_open_file_names4");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_get_open_file_names4\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1280,11 +1280,11 @@ void q_filedialog_set_graphics_effect(void* self, void* effect) {
     QWidget_SetGraphicsEffect((QWidget*)self, (QGraphicsEffect*)effect);
 }
 
-void q_filedialog_grab_gesture(void* self, int64_t type) {
+void q_filedialog_grab_gesture(void* self, int32_t type) {
     QWidget_GrabGesture((QWidget*)self, type);
 }
 
-void q_filedialog_ungrab_gesture(void* self, int64_t type) {
+void q_filedialog_ungrab_gesture(void* self, int32_t type) {
     QWidget_UngrabGesture((QWidget*)self, type);
 }
 
@@ -1765,7 +1765,7 @@ void q_filedialog_set_parent(void* self, void* parent) {
     QWidget_SetParent((QWidget*)self, (QWidget*)parent);
 }
 
-void q_filedialog_set_parent2(void* self, void* parent, int64_t f) {
+void q_filedialog_set_parent2(void* self, void* parent, int32_t f) {
     QWidget_SetParent2((QWidget*)self, (QWidget*)parent, f);
 }
 
@@ -1801,11 +1801,11 @@ void q_filedialog_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_filedialog_add_actions(void* self, libqt_list actions) {
+void q_filedialog_add_actions(void* self, libqt_list /* of QAction* */ actions) {
     QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_filedialog_insert_actions(void* self, void* before, libqt_list actions) {
+void q_filedialog_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions) {
     QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
@@ -1842,23 +1842,23 @@ QWidget* q_filedialog_parent_widget(void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
-void q_filedialog_set_window_flags(void* self, int64_t type) {
+void q_filedialog_set_window_flags(void* self, int32_t type) {
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int64_t q_filedialog_window_flags(void* self) {
+int32_t q_filedialog_window_flags(void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
-void q_filedialog_set_window_flag(void* self, int64_t param1) {
+void q_filedialog_set_window_flag(void* self, int32_t param1) {
     QWidget_SetWindowFlag((QWidget*)self, param1);
 }
 
-void q_filedialog_override_window_flags(void* self, int64_t type) {
+void q_filedialog_override_window_flags(void* self, int32_t type) {
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int64_t q_filedialog_window_type(void* self) {
+int32_t q_filedialog_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
@@ -1954,11 +1954,11 @@ void q_filedialog_on_custom_context_menu_requested(void* self, void (*callback)(
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-int64_t q_filedialog_input_method_hints(void* self) {
+int32_t q_filedialog_input_method_hints(void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
-void q_filedialog_set_input_method_hints(void* self, int64_t hints) {
+void q_filedialog_set_input_method_hints(void* self, int32_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
@@ -1990,7 +1990,7 @@ QPixmap* q_filedialog_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void q_filedialog_grab_gesture2(void* self, int64_t type, int32_t flags) {
+void q_filedialog_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
@@ -2006,7 +2006,7 @@ void q_filedialog_set_shortcut_auto_repeat2(void* self, int id, bool enable) {
     QWidget_SetShortcutAutoRepeat2((QWidget*)self, id, enable);
 }
 
-void q_filedialog_set_window_flag2(void* self, int64_t param1, bool on) {
+void q_filedialog_set_window_flag2(void* self, int32_t param1, bool on) {
     QWidget_SetWindowFlag2((QWidget*)self, param1, on);
 }
 
@@ -2018,7 +2018,7 @@ QWidget* q_filedialog_create_window_container2(void* window, void* parent) {
     return QWidget_CreateWindowContainer2((QWindow*)window, (QWidget*)parent);
 }
 
-QWidget* q_filedialog_create_window_container3(void* window, void* parent, int64_t flags) {
+QWidget* q_filedialog_create_window_container3(void* window, void* parent, int32_t flags) {
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
@@ -2123,7 +2123,7 @@ const char** q_filedialog_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_filedialog_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2733,15 +2733,15 @@ void q_filedialog_on_input_method_event(void* self, void (*callback)(void*, void
     QFileDialog_OnInputMethodEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
-QVariant* q_filedialog_input_method_query(void* self, int64_t param1) {
+QVariant* q_filedialog_input_method_query(void* self, int32_t param1) {
     return QFileDialog_InputMethodQuery((QFileDialog*)self, param1);
 }
 
-QVariant* q_filedialog_qbase_input_method_query(void* self, int64_t param1) {
+QVariant* q_filedialog_qbase_input_method_query(void* self, int32_t param1) {
     return QFileDialog_QBaseInputMethodQuery((QFileDialog*)self, param1);
 }
 
-void q_filedialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void q_filedialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     QFileDialog_OnInputMethodQuery((QFileDialog*)self, (intptr_t)callback);
 }
 

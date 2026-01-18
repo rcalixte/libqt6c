@@ -277,7 +277,9 @@ void q_webenginenotification_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QWebEngineNotification*
 ///
-libqt_list /* of QObject* */ q_webenginenotification_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_webenginenotification_children(void* self);
 
 /// Inherited from QObject
 ///

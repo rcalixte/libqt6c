@@ -482,15 +482,17 @@ void q_sslsocket_set_ssl_configuration(void* self, void* config);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#setLocalCertificateChain)
 ///
 /// @param self QSslSocket*
-/// @param localChain libqt_list /* of QSslCertificate* */
+/// @param localChain libqt_list of QSslCertificate*
 ///
-void q_sslsocket_set_local_certificate_chain(void* self, libqt_list localChain);
+void q_sslsocket_set_local_certificate_chain(void* self, libqt_list /* of QSslCertificate* */ localChain);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#localCertificateChain)
 ///
 /// @param self QSslSocket*
 ///
-libqt_list /* of QSslCertificate* */ q_sslsocket_local_certificate_chain(void* self);
+/// @return libqt_list of QSslCertificate*
+///
+libqt_list q_sslsocket_local_certificate_chain(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#setLocalCertificate)
 ///
@@ -522,7 +524,9 @@ QSslCertificate* q_sslsocket_peer_certificate(void* self);
 ///
 /// @param self QSslSocket*
 ///
-libqt_list /* of QSslCertificate* */ q_sslsocket_peer_certificate_chain(void* self);
+/// @return libqt_list of QSslCertificate*
+///
+libqt_list q_sslsocket_peer_certificate_chain(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#sessionCipher)
 ///
@@ -542,7 +546,9 @@ int32_t q_sslsocket_session_protocol(void* self);
 ///
 /// @param self QSslSocket*
 ///
-libqt_list /* of QOcspResponse* */ q_sslsocket_ocsp_responses(void* self);
+/// @return libqt_list of QOcspResponse*
+///
+libqt_list q_sslsocket_ocsp_responses(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#setPrivateKey)
 ///
@@ -674,7 +680,9 @@ bool q_sslsocket_qbase_wait_for_disconnected(void* self, int msecs);
 ///
 /// @param self QSslSocket*
 ///
-libqt_list /* of QSslError* */ q_sslsocket_ssl_handshake_errors(void* self);
+/// @return libqt_list of QSslError*
+///
+libqt_list q_sslsocket_ssl_handshake_errors(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#supportsSsl)
 ///
@@ -722,7 +730,7 @@ bool q_sslsocket_set_active_backend(const char* backendName);
 ///
 /// @return libqt_list of enum QSsl__SslProtocol
 ///
-libqt_list /* of enum QSsl__SslProtocol */ q_sslsocket_supported_protocols();
+libqt_list q_sslsocket_supported_protocols();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#isProtocolSupported)
 ///
@@ -734,7 +742,7 @@ bool q_sslsocket_is_protocol_supported(int32_t protocol);
 ///
 /// @return libqt_list of enum QSsl__ImplementedClass
 ///
-libqt_list /* of enum QSsl__ImplementedClass */ q_sslsocket_implemented_classes();
+libqt_list q_sslsocket_implemented_classes();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#isClassImplemented)
 ///
@@ -746,7 +754,7 @@ bool q_sslsocket_is_class_implemented(int32_t cl);
 ///
 /// @return libqt_list of enum QSsl__SupportedFeature
 ///
-libqt_list /* of enum QSsl__SupportedFeature */ q_sslsocket_supported_features();
+libqt_list q_sslsocket_supported_features();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#isFeatureSupported)
 ///
@@ -757,9 +765,9 @@ bool q_sslsocket_is_feature_supported(int32_t feat);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#ignoreSslErrors)
 ///
 /// @param self QSslSocket*
-/// @param errors libqt_list /* of QSslError* */
+/// @param errors libqt_list of QSslError*
 ///
-void q_sslsocket_ignore_ssl_errors(void* self, libqt_list errors);
+void q_sslsocket_ignore_ssl_errors(void* self, libqt_list /* of QSslError* */ errors);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#continueInterruptedHandshake)
 ///
@@ -815,9 +823,9 @@ void q_sslsocket_on_peer_verify_error(void* self, void (*callback)(void*, void*)
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#sslErrors)
 ///
 /// @param self QSslSocket*
-/// @param errors libqt_list /* of QSslError* */
+/// @param errors libqt_list of QSslError*
 ///
-void q_sslsocket_ssl_errors(void* self, libqt_list errors);
+void q_sslsocket_ssl_errors(void* self, libqt_list /* of QSslError* */ errors);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#sslErrors)
 ///
@@ -1113,7 +1121,7 @@ bool q_sslsocket_wait_for_encrypted1(void* self, int msecs);
 ///
 /// @return libqt_list of enum QSsl__SslProtocol
 ///
-libqt_list /* of enum QSsl__SslProtocol */ q_sslsocket_supported_protocols1(const char* backendName);
+libqt_list q_sslsocket_supported_protocols1(const char* backendName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#isProtocolSupported)
 ///
@@ -1128,7 +1136,7 @@ bool q_sslsocket_is_protocol_supported2(int32_t protocol, const char* backendNam
 ///
 /// @return libqt_list of enum QSsl__ImplementedClass
 ///
-libqt_list /* of enum QSsl__ImplementedClass */ q_sslsocket_implemented_classes1(const char* backendName);
+libqt_list q_sslsocket_implemented_classes1(const char* backendName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#isClassImplemented)
 ///
@@ -1143,7 +1151,7 @@ bool q_sslsocket_is_class_implemented2(int32_t cl, const char* backendName);
 ///
 /// @return libqt_list of enum QSsl__SupportedFeature
 ///
-libqt_list /* of enum QSsl__SupportedFeature */ q_sslsocket_supported_features1(const char* backendName);
+libqt_list q_sslsocket_supported_features1(const char* backendName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#isFeatureSupported)
 ///
@@ -1984,7 +1992,9 @@ void q_sslsocket_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QSslSocket*
 ///
-libqt_list /* of QObject* */ q_sslsocket_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_sslsocket_children(void* self);
 
 /// Inherited from QObject
 ///

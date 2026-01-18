@@ -111,7 +111,8 @@ bool k_configdialogmanager_is_default(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map* of const char* to char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     libqt_free(map.values[i]);
@@ -120,7 +121,9 @@ bool k_configdialogmanager_is_default(void* self);
 /// free(map.values);
 /// ```
 ///
-libqt_map* /* of const char* to char* */ k_configdialogmanager_property_map();
+/// @return libqt_map* of const char* to char*
+///
+libqt_map* k_configdialogmanager_property_map();
 
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#updateSettings)
 ///
@@ -538,7 +541,9 @@ void k_configdialogmanager_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KConfigDialogManager*
 ///
-libqt_list /* of QObject* */ k_configdialogmanager_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_configdialogmanager_children(void* self);
 
 /// Inherited from QObject
 ///

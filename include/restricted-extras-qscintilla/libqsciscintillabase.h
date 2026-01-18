@@ -861,7 +861,7 @@ void q_sciscintillabase_qbase_input_method_event(void* self, void* event);
 /// @param self QsciScintillaBase*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_sciscintillabase_input_method_query(void* self, int64_t query);
+QVariant* q_sciscintillabase_input_method_query(void* self, int32_t query);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
@@ -870,7 +870,7 @@ QVariant* q_sciscintillabase_input_method_query(void* self, int64_t query);
 /// @param self QsciScintillaBase*
 /// @param callback QVariant* func(QsciScintillaBase* self, enum Qt__InputMethodQuery query)
 ///
-void q_sciscintillabase_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void q_sciscintillabase_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
@@ -879,7 +879,7 @@ void q_sciscintillabase_on_input_method_query(void* self, QVariant* (*callback)(
 /// @param self QsciScintillaBase*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_sciscintillabase_qbase_input_method_query(void* self, int64_t query);
+QVariant* q_sciscintillabase_qbase_input_method_query(void* self, int32_t query);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
@@ -1250,7 +1250,9 @@ void q_sciscintillabase_add_scroll_bar_widget(void* self, void* widget, int32_t 
 /// @param self QsciScintillaBase*
 /// @param alignment flag of enum Qt__AlignmentFlag
 ///
-libqt_list /* of QWidget* */ q_sciscintillabase_scroll_bar_widgets(void* self, int32_t alignment);
+/// @return libqt_list of QWidget*
+///
+libqt_list q_sciscintillabase_scroll_bar_widgets(void* self, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2238,7 +2240,7 @@ void q_sciscintillabase_set_graphics_effect(void* self, void* effect);
 /// @param self QsciScintillaBase*
 /// @param type enum Qt__GestureType
 ///
-void q_sciscintillabase_grab_gesture(void* self, int64_t type);
+void q_sciscintillabase_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2247,7 +2249,7 @@ void q_sciscintillabase_grab_gesture(void* self, int64_t type);
 /// @param self QsciScintillaBase*
 /// @param type enum Qt__GestureType
 ///
-void q_sciscintillabase_ungrab_gesture(void* self, int64_t type);
+void q_sciscintillabase_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3236,7 +3238,7 @@ void q_sciscintillabase_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void q_sciscintillabase_set_parent2(void* self, void* parent, int64_t f);
+void q_sciscintillabase_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -3314,9 +3316,9 @@ void q_sciscintillabase_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self QsciScintillaBase*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_sciscintillabase_add_actions(void* self, libqt_list actions);
+void q_sciscintillabase_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -3324,9 +3326,9 @@ void q_sciscintillabase_add_actions(void* self, libqt_list actions);
 ///
 /// @param self QsciScintillaBase*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_sciscintillabase_insert_actions(void* self, void* before, libqt_list actions);
+void q_sciscintillabase_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -3353,7 +3355,9 @@ void q_sciscintillabase_remove_action(void* self, void* action);
 ///
 /// @param self QsciScintillaBase*
 ///
-libqt_list /* of QAction* */ q_sciscintillabase_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list q_sciscintillabase_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3410,7 +3414,7 @@ QWidget* q_sciscintillabase_parent_widget(void* self);
 /// @param self QsciScintillaBase*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_sciscintillabase_set_window_flags(void* self, int64_t type);
+void q_sciscintillabase_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3420,7 +3424,7 @@ void q_sciscintillabase_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t q_sciscintillabase_window_flags(void* self);
+int32_t q_sciscintillabase_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3429,7 +3433,7 @@ int64_t q_sciscintillabase_window_flags(void* self);
 /// @param self QsciScintillaBase*
 /// @param param1 enum Qt__WindowType
 ///
-void q_sciscintillabase_set_window_flag(void* self, int64_t param1);
+void q_sciscintillabase_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3438,7 +3442,7 @@ void q_sciscintillabase_set_window_flag(void* self, int64_t param1);
 /// @param self QsciScintillaBase*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_sciscintillabase_override_window_flags(void* self, int64_t type);
+void q_sciscintillabase_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3448,7 +3452,7 @@ void q_sciscintillabase_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t q_sciscintillabase_window_type(void* self);
+int32_t q_sciscintillabase_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3659,7 +3663,7 @@ void q_sciscintillabase_on_custom_context_menu_requested(void* self, void (*call
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t q_sciscintillabase_input_method_hints(void* self);
+int32_t q_sciscintillabase_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3668,7 +3672,7 @@ int64_t q_sciscintillabase_input_method_hints(void* self);
 /// @param self QsciScintillaBase*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void q_sciscintillabase_set_input_method_hints(void* self, int64_t hints);
+void q_sciscintillabase_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -3753,7 +3757,7 @@ QPixmap* q_sciscintillabase_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void q_sciscintillabase_grab_gesture2(void* self, int64_t type, int32_t flags);
+void q_sciscintillabase_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -3793,7 +3797,7 @@ void q_sciscintillabase_set_shortcut_auto_repeat2(void* self, int id, bool enabl
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void q_sciscintillabase_set_window_flag2(void* self, int64_t param1, bool on);
+void q_sciscintillabase_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -3822,7 +3826,7 @@ QWidget* q_sciscintillabase_create_window_container2(void* window, void* parent)
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* q_sciscintillabase_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* q_sciscintillabase_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -3934,7 +3938,9 @@ void q_sciscintillabase_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QsciScintillaBase*
 ///
-libqt_list /* of QObject* */ q_sciscintillabase_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_sciscintillabase_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -6612,7 +6618,7 @@ typedef enum {
     QSCISCINTILLABASE__SC_MARKNUM_FOLDERSUB = 29,
     QSCISCINTILLABASE__SC_MARKNUM_FOLDER = 30,
     QSCISCINTILLABASE__SC_MARKNUM_FOLDEROPEN = 31,
-    QSCISCINTILLABASE__SC_MASK_FOLDERS = 4261412864,
+    QSCISCINTILLABASE__SC_MASK_FOLDERS = -33554432,
     QSCISCINTILLABASE__SC_MARGIN_SYMBOL = 0,
     QSCISCINTILLABASE__SC_MARGIN_NUMBER = 1,
     QSCISCINTILLABASE__SC_MARGIN_BACK = 2,

@@ -264,7 +264,7 @@ void q_sslsocket_set_ssl_configuration(void* self, void* config) {
     QSslSocket_SetSslConfiguration((QSslSocket*)self, (QSslConfiguration*)config);
 }
 
-void q_sslsocket_set_local_certificate_chain(void* self, libqt_list localChain) {
+void q_sslsocket_set_local_certificate_chain(void* self, libqt_list /* of QSslCertificate* */ localChain) {
     QSslSocket_SetLocalCertificateChain((QSslSocket*)self, localChain);
 }
 
@@ -407,7 +407,7 @@ const char** q_sslsocket_available_backends() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_sslsocket_available_backends");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sslsocket_available_backends\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -459,7 +459,7 @@ bool q_sslsocket_is_feature_supported(int32_t feat) {
     return QSslSocket_IsFeatureSupported(feat);
 }
 
-void q_sslsocket_ignore_ssl_errors(void* self, libqt_list errors) {
+void q_sslsocket_ignore_ssl_errors(void* self, libqt_list /* of QSslError* */ errors) {
     QSslSocket_IgnoreSslErrors((QSslSocket*)self, errors);
 }
 
@@ -495,7 +495,7 @@ void q_sslsocket_on_peer_verify_error(void* self, void (*callback)(void*, void*)
     QSslSocket_Connect_PeerVerifyError((QSslSocket*)self, (intptr_t)callback);
 }
 
-void q_sslsocket_ssl_errors(void* self, libqt_list errors) {
+void q_sslsocket_ssl_errors(void* self, libqt_list /* of QSslError* */ errors) {
     QSslSocket_SslErrors((QSslSocket*)self, errors);
 }
 
@@ -1121,7 +1121,7 @@ const char** q_sslsocket_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_sslsocket_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sslsocket_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

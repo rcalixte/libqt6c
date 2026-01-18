@@ -56,9 +56,9 @@ void k_io__listjob_set_unrestricted(void* self, bool unrestricted);
 ///
 /// @param self KIO__ListJob*
 /// @param job KIO__Job*
-/// @param list libqt_list /* of KIO__UDSEntry* */
+/// @param list libqt_list of KIO__UDSEntry*
 ///
-void k_io__listjob_entries(void* self, void* job, libqt_list list);
+void k_io__listjob_entries(void* self, void* job, libqt_list /* of KIO__UDSEntry* */ list);
 
 /// [Upstream resources](https://api.kde.org/kio-listjob.html#entries)
 ///
@@ -267,18 +267,18 @@ void k_io__listjob_add_meta_data(void* self, const char* key, const char* value)
 /// [Upstream resources](https://api.kde.org/kio-job.html#addMetaData)
 ///
 /// @param self KIO__ListJob*
-/// @param values libqt_map /* of const char* to const char* */
+/// @param values libqt_map of const char* to const char*
 ///
-void k_io__listjob_add_meta_data2(void* self, libqt_map /* of const char* to const char* */ values);
+void k_io__listjob_add_meta_data2(void* self, libqt_map values);
 
 /// Inherited from KIO::Job
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#mergeMetaData)
 ///
 /// @param self KIO__ListJob*
-/// @param values libqt_map /* of const char* to const char* */
+/// @param values libqt_map of const char* to const char*
 ///
-void k_io__listjob_merge_meta_data(void* self, libqt_map /* of const char* to const char* */ values);
+void k_io__listjob_merge_meta_data(void* self, libqt_map values);
 
 /// Inherited from KIO::Job
 ///
@@ -750,7 +750,9 @@ void k_io__listjob_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KIO__ListJob*
 ///
-libqt_list /* of QObject* */ k_io__listjob_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_io__listjob_children(void* self);
 
 /// Inherited from QObject
 ///

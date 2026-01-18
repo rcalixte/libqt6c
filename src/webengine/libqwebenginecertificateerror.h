@@ -82,7 +82,9 @@ void q_webenginecertificateerror_accept_certificate(void* self);
 ///
 /// @param self QWebEngineCertificateError*
 ///
-libqt_list /* of QSslCertificate* */ q_webenginecertificateerror_certificate_chain(void* self);
+/// @return libqt_list of QSslCertificate*
+///
+libqt_list q_webenginecertificateerror_certificate_chain(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#dtor.QWebEngineCertificateError)
 ///

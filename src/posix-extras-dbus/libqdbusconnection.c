@@ -81,7 +81,7 @@ bool q_dbusconnection_connect3(void* self, const char* service, const char* path
     size_t argumentMatch_len = libqt_strv_length(argumentMatch);
     libqt_string* argumentMatch_qstr = (libqt_string*)malloc(argumentMatch_len * sizeof(libqt_string));
     if (argumentMatch_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_dbusconnection_connect3");
+        fprintf(stderr, "Failed to allocate memory for string list in q_dbusconnection_connect3\n");
         abort();
     }
     for (size_t i = 0; i < argumentMatch_len; ++i) {
@@ -105,7 +105,7 @@ bool q_dbusconnection_disconnect3(void* self, const char* service, const char* p
     size_t argumentMatch_len = libqt_strv_length(argumentMatch);
     libqt_string* argumentMatch_qstr = (libqt_string*)malloc(argumentMatch_len * sizeof(libqt_string));
     if (argumentMatch_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_dbusconnection_disconnect3");
+        fprintf(stderr, "Failed to allocate memory for string list in q_dbusconnection_disconnect3\n");
         abort();
     }
     for (size_t i = 0; i < argumentMatch_len; ++i) {

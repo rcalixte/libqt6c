@@ -42,7 +42,7 @@ const char* q_gesture_tr(const char* s) {
     return _ret;
 }
 
-int64_t q_gesture_gesture_type(void* self) {
+int32_t q_gesture_gesture_type(void* self) {
     return QGesture_GestureType((QGesture*)self);
 }
 
@@ -193,7 +193,7 @@ const char** q_gesture_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_gesture_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_gesture_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -476,7 +476,7 @@ const char* q_pangesture_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-int64_t q_pangesture_gesture_type(void* self) {
+int32_t q_pangesture_gesture_type(void* self) {
     return QGesture_GestureType((QGesture*)self);
 }
 
@@ -613,7 +613,7 @@ const char** q_pangesture_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_pangesture_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_pangesture_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -956,7 +956,7 @@ const char* q_pinchgesture_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-int64_t q_pinchgesture_gesture_type(void* self) {
+int32_t q_pinchgesture_gesture_type(void* self) {
     return QGesture_GestureType((QGesture*)self);
 }
 
@@ -1093,7 +1093,7 @@ const char** q_pinchgesture_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_pinchgesture_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_pinchgesture_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1364,7 +1364,7 @@ const char* q_swipegesture_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-int64_t q_swipegesture_gesture_type(void* self) {
+int32_t q_swipegesture_gesture_type(void* self) {
     return QGesture_GestureType((QGesture*)self);
 }
 
@@ -1501,7 +1501,7 @@ const char** q_swipegesture_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_swipegesture_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_swipegesture_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1764,7 +1764,7 @@ const char* q_tapgesture_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-int64_t q_tapgesture_gesture_type(void* self) {
+int32_t q_tapgesture_gesture_type(void* self) {
     return QGesture_GestureType((QGesture*)self);
 }
 
@@ -1901,7 +1901,7 @@ const char** q_tapgesture_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_tapgesture_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_tapgesture_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2172,7 +2172,7 @@ const char* q_tapandholdgesture_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-int64_t q_tapandholdgesture_gesture_type(void* self) {
+int32_t q_tapandholdgesture_gesture_type(void* self) {
     return QGesture_GestureType((QGesture*)self);
 }
 
@@ -2309,7 +2309,7 @@ const char** q_tapandholdgesture_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_tapandholdgesture_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_tapandholdgesture_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2515,7 +2515,7 @@ void q_tapandholdgesture_delete(void* self) {
     QTapAndHoldGesture_Delete((QTapAndHoldGesture*)(self));
 }
 
-QGestureEvent* q_gestureevent_new(libqt_list gestures) {
+QGestureEvent* q_gestureevent_new(libqt_list /* of QGesture* */ gestures) {
     return QGestureEvent_new(gestures);
 }
 
@@ -2528,7 +2528,7 @@ libqt_list /* of QGesture* */ q_gestureevent_gestures(void* self) {
     return _arr;
 }
 
-QGesture* q_gestureevent_gesture(void* self, int64_t type) {
+QGesture* q_gestureevent_gesture(void* self, int32_t type) {
     return QGestureEvent_Gesture((QGestureEvent*)self, type);
 }
 
@@ -2558,19 +2558,19 @@ bool q_gestureevent_is_accepted(void* self, void* param1) {
     return QGestureEvent_IsAccepted((QGestureEvent*)self, (QGesture*)param1);
 }
 
-void q_gestureevent_set_accepted2(void* self, int64_t param1, bool param2) {
+void q_gestureevent_set_accepted2(void* self, int32_t param1, bool param2) {
     QGestureEvent_SetAccepted2((QGestureEvent*)self, param1, param2);
 }
 
-void q_gestureevent_accept2(void* self, int64_t param1) {
+void q_gestureevent_accept2(void* self, int32_t param1) {
     QGestureEvent_Accept2((QGestureEvent*)self, param1);
 }
 
-void q_gestureevent_ignore2(void* self, int64_t param1) {
+void q_gestureevent_ignore2(void* self, int32_t param1) {
     QGestureEvent_Ignore2((QGestureEvent*)self, param1);
 }
 
-bool q_gestureevent_is_accepted2(void* self, int64_t param1) {
+bool q_gestureevent_is_accepted2(void* self, int32_t param1) {
     return QGestureEvent_IsAccepted2((QGestureEvent*)self, param1);
 }
 

@@ -30,9 +30,9 @@ KSslErrorUiData* k_sslerroruidata_new2(void* socket);
 /// k_sslerroruidata_new3 constructs a new KSslErrorUiData object.
 ///
 /// @param reply QNetworkReply*
-/// @param sslErrors libqt_list /* of QSslError* */
+/// @param sslErrors libqt_list of QSslError*
 ///
-KSslErrorUiData* k_sslerroruidata_new3(void* reply, libqt_list sslErrors);
+KSslErrorUiData* k_sslerroruidata_new3(void* reply, libqt_list /* of QSslError* */ sslErrors);
 
 /// [Upstream resources](https://api.kde.org/ksslerroruidata.html)
 

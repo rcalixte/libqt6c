@@ -133,7 +133,9 @@ KGuiItem* k_standardguiitem_configure();
 
 /// [Upstream resources](https://api.kde.org/kstandardguiitem.html#backAndForward)
 ///
-libqt_pair /* tuple of KGuiItem* and KGuiItem* */ k_standardguiitem_back_and_forward();
+/// @return libqt_pair tuple of KGuiItem* and KGuiItem*
+///
+libqt_pair k_standardguiitem_back_and_forward();
 
 /// [Upstream resources](https://api.kde.org/kstandardguiitem.html#quit)
 ///

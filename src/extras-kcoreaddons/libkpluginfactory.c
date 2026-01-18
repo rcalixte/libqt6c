@@ -47,7 +47,7 @@ void k_pluginfactory_set_meta_data(void* self, void* metaData) {
     KPluginFactory_SetMetaData((KPluginFactory*)self, (KPluginMetaData*)metaData);
 }
 
-QObject* k_pluginfactory_create(void* self, const char* iface, void* parentWidget, void* parent, libqt_list args) {
+QObject* k_pluginfactory_create(void* self, const char* iface, void* parentWidget, void* parent, libqt_list /* of QVariant* */ args) {
     return KPluginFactory_Create((KPluginFactory*)self, iface, (QWidget*)parentWidget, (QObject*)parent, args);
 }
 
@@ -55,7 +55,7 @@ void k_pluginfactory_on_create(void* self, QObject* (*callback)(void*, const cha
     KPluginFactory_OnCreate((KPluginFactory*)self, (intptr_t)callback);
 }
 
-QObject* k_pluginfactory_qbase_create(void* self, const char* iface, void* parentWidget, void* parent, libqt_list args) {
+QObject* k_pluginfactory_qbase_create(void* self, const char* iface, void* parentWidget, void* parent, libqt_list /* of QVariant* */ args) {
     return KPluginFactory_QBaseCreate((KPluginFactory*)self, iface, (QWidget*)parentWidget, (QObject*)parent, args);
 }
 
@@ -178,7 +178,7 @@ const char** k_pluginfactory_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_pluginfactory_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_pluginfactory_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

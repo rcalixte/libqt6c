@@ -145,7 +145,9 @@ char* q_networkreply_raw_header(void* self, char* headerName);
 ///
 /// @param self QNetworkReply*
 ///
-libqt_list /* of libqt_pair tuple of char* and char* */ q_networkreply_raw_header_pairs(void* self);
+/// @return libqt_list of libqt_pair tuple of char* and char*
+///
+libqt_list q_networkreply_raw_header_pairs(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkreply.html#headers)
 ///
@@ -176,9 +178,9 @@ void q_networkreply_set_ssl_configuration(void* self, void* configuration);
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkreply.html#ignoreSslErrors)
 ///
 /// @param self QNetworkReply*
-/// @param errors libqt_list /* of QSslError* */
+/// @param errors libqt_list of QSslError*
 ///
-void q_networkreply_ignore_ssl_errors(void* self, libqt_list errors);
+void q_networkreply_ignore_ssl_errors(void* self, libqt_list /* of QSslError* */ errors);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkreply.html#abort)
 ///
@@ -274,9 +276,9 @@ void q_networkreply_on_encrypted(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkreply.html#sslErrors)
 ///
 /// @param self QNetworkReply*
-/// @param errors libqt_list /* of QSslError* */
+/// @param errors libqt_list of QSslError*
 ///
-void q_networkreply_ssl_errors(void* self, libqt_list errors);
+void q_networkreply_ssl_errors(void* self, libqt_list /* of QSslError* */ errors);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkreply.html#sslErrors)
 ///
@@ -992,7 +994,9 @@ void q_networkreply_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QNetworkReply*
 ///
-libqt_list /* of QObject* */ q_networkreply_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_networkreply_children(void* self);
 
 /// Inherited from QObject
 ///

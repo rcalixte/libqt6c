@@ -642,7 +642,9 @@ void k_completion_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KCompletion*
 ///
-libqt_list /* of QObject* */ k_completion_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_completion_children(void* self);
 
 /// Inherited from QObject
 ///

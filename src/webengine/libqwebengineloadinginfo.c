@@ -45,7 +45,7 @@ libqt_map /* of char* to char** */ q_webengineloadinginfo_response_headers(void*
     libqt_string* _out_keys = (libqt_string*)_out.keys;
     char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string keys in q_webengineloadinginfo_response_headers");
+        fprintf(stderr, "Failed to allocate memory for map string keys in q_webengineloadinginfo_response_headers\n");
         abort();
     }
     libqt_list* _out_values = (libqt_list*)_out.values;
@@ -54,7 +54,7 @@ libqt_map /* of char* to char** */ q_webengineloadinginfo_response_headers(void*
         free(_ret_keys);
         free(_out.keys);
         free(_out.values);
-        fprintf(stderr, "Failed to allocate memory for map value containers in q_webengineloadinginfo_response_headers");
+        fprintf(stderr, "Failed to allocate memory for map value containers in q_webengineloadinginfo_response_headers\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
@@ -69,7 +69,7 @@ libqt_map /* of char* to char** */ q_webengineloadinginfo_response_headers(void*
             }
             free(_ret_keys);
             free(_ret_values);
-            fprintf(stderr, "Failed to allocate memory for map keys in q_webengineloadinginfo_response_headers");
+            fprintf(stderr, "Failed to allocate memory for map keys in q_webengineloadinginfo_response_headers\n");
             abort();
         }
         memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
@@ -88,7 +88,7 @@ libqt_map /* of char* to char** */ q_webengineloadinginfo_response_headers(void*
             free(_out.keys);
             free(_ret_values);
             free(_out.values);
-            fprintf(stderr, "Failed to allocate memory for map values in q_webengineloadinginfo_response_headers");
+            fprintf(stderr, "Failed to allocate memory for map values in q_webengineloadinginfo_response_headers\n");
             abort();
         }
         libqt_string* _value_str = (libqt_string*)_value_list.data.ptr;
@@ -108,7 +108,7 @@ libqt_map /* of char* to char** */ q_webengineloadinginfo_response_headers(void*
                 }
                 free(_ret_keys);
                 free(_ret_values);
-                fprintf(stderr, "Failed to allocate memory for map value keys in q_webengineloadinginfo_response_headers");
+                fprintf(stderr, "Failed to allocate memory for map value keys in q_webengineloadinginfo_response_headers\n");
                 abort();
             }
             memcpy(_ret_values[i][j], _value_str[j].data, _value_str[j].len);

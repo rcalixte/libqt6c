@@ -146,7 +146,7 @@ const char* k_twofingerswipe_tr3(const char* s, const char* c, int n);
 ///
 /// @return enum Qt__GestureType
 ///
-int64_t k_twofingerswipe_gesture_type(void* self);
+int32_t k_twofingerswipe_gesture_type(void* self);
 
 /// Inherited from QGesture
 ///
@@ -320,7 +320,9 @@ void k_twofingerswipe_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KTwoFingerSwipe*
 ///
-libqt_list /* of QObject* */ k_twofingerswipe_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_twofingerswipe_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1033,7 +1035,7 @@ void k_twofingerswiperecognizer_set_swipe_distance(void* self, int i);
 ///
 /// @return enum Qt__GestureType
 ///
-int64_t k_twofingerswiperecognizer_register_recognizer(void* recognizer);
+int32_t k_twofingerswiperecognizer_register_recognizer(void* recognizer);
 
 /// Inherited from QGestureRecognizer
 ///
@@ -1041,7 +1043,7 @@ int64_t k_twofingerswiperecognizer_register_recognizer(void* recognizer);
 ///
 /// @param type enum Qt__GestureType
 ///
-void k_twofingerswiperecognizer_unregister_recognizer(int64_t type);
+void k_twofingerswiperecognizer_unregister_recognizer(int32_t type);
 
 /// Inherited from QGestureRecognizer
 ///

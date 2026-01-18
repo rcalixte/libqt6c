@@ -79,12 +79,12 @@ libqt_list /* of uint32_t */ q_rawfont_glyph_indexes_for_string(void* self, cons
     return _arr;
 }
 
-libqt_list /* of QPointF* */ q_rawfont_advances_for_glyph_indexes(void* self, libqt_list glyphIndexes) {
+libqt_list /* of QPointF* */ q_rawfont_advances_for_glyph_indexes(void* self, libqt_list /* of uint32_t */ glyphIndexes) {
     libqt_list _arr = QRawFont_AdvancesForGlyphIndexes((QRawFont*)self, glyphIndexes);
     return _arr;
 }
 
-libqt_list /* of QPointF* */ q_rawfont_advances_for_glyph_indexes2(void* self, libqt_list glyphIndexes, int32_t layoutFlags) {
+libqt_list /* of QPointF* */ q_rawfont_advances_for_glyph_indexes2(void* self, libqt_list /* of uint32_t */ glyphIndexes, int32_t layoutFlags) {
     libqt_list _arr = QRawFont_AdvancesForGlyphIndexes2((QRawFont*)self, glyphIndexes, layoutFlags);
     return _arr;
 }

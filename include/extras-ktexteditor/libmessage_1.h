@@ -103,7 +103,9 @@ void k_texteditor__message_add_action(void* self, void* action);
 ///
 /// @param self KTextEditor__Message*
 ///
-libqt_list /* of QAction* */ k_texteditor__message_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_texteditor__message_actions(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-message.html#setAutoHide)
 ///
@@ -399,7 +401,9 @@ void k_texteditor__message_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KTextEditor__Message*
 ///
-libqt_list /* of QObject* */ k_texteditor__message_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_texteditor__message_children(void* self);
 
 /// Inherited from QObject
 ///

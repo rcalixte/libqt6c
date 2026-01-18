@@ -229,13 +229,17 @@ bool k_syntaxhighlighting__definition_set_keyword_list(void* self, const char* n
 ///
 /// @param self KSyntaxHighlighting__Definition*
 ///
-libqt_list /* of KSyntaxHighlighting__Format* */ k_syntaxhighlighting__definition_formats(void* self);
+/// @return libqt_list of KSyntaxHighlighting__Format*
+///
+libqt_list k_syntaxhighlighting__definition_formats(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-definition.html#includedDefinitions)
 ///
 /// @param self KSyntaxHighlighting__Definition*
 ///
-libqt_list /* of KSyntaxHighlighting__Definition* */ k_syntaxhighlighting__definition_included_definitions(void* self);
+/// @return libqt_list of KSyntaxHighlighting__Definition*
+///
+libqt_list k_syntaxhighlighting__definition_included_definitions(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-definition.html#singleLineCommentMarker)
 ///
@@ -257,13 +261,17 @@ int32_t k_syntaxhighlighting__definition_single_line_comment_position(void* self
 ///
 /// @param self KSyntaxHighlighting__Definition*
 ///
-libqt_pair /* tuple of const char* and const char* */ k_syntaxhighlighting__definition_multi_line_comment_marker(void* self);
+/// @return libqt_pair tuple of const char* and const char*
+///
+libqt_pair k_syntaxhighlighting__definition_multi_line_comment_marker(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-definition.html#characterEncodings)
 ///
 /// @param self KSyntaxHighlighting__Definition*
 ///
-libqt_list /* of libqt_pair tuple of QChar* and const char* */ k_syntaxhighlighting__definition_character_encodings(void* self);
+/// @return libqt_list of libqt_pair tuple of QChar* and const char*
+///
+libqt_list k_syntaxhighlighting__definition_character_encodings(void* self);
 
 /// Delete this object from C++ memory.
 ///

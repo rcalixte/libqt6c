@@ -144,31 +144,41 @@ const char** k_nscore__enginebase_categories(void* self);
 ///
 /// @param self KNSCore__EngineBase*
 ///
-libqt_list /* of KNSCore__Provider__CategoryMetadata* */ k_nscore__enginebase_categories_metadata(void* self);
+/// @return libqt_list of KNSCore__Provider__CategoryMetadata*
+///
+libqt_list k_nscore__enginebase_categories_metadata(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#categoriesMetadata2)
 ///
 /// @param self KNSCore__EngineBase*
 ///
-libqt_list /* of KNSCore__CategoryMetadata* */ k_nscore__enginebase_categories_metadata2(void* self);
+/// @return libqt_list of KNSCore__CategoryMetadata*
+///
+libqt_list k_nscore__enginebase_categories_metadata2(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#searchPresets)
 ///
 /// @param self KNSCore__EngineBase*
 ///
-libqt_list /* of KNSCore__Provider__SearchPreset* */ k_nscore__enginebase_search_presets(void* self);
+/// @return libqt_list of KNSCore__Provider__SearchPreset*
+///
+libqt_list k_nscore__enginebase_search_presets(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#searchPresets2)
 ///
 /// @param self KNSCore__EngineBase*
 ///
-libqt_list /* of KNSCore__SearchPreset* */ k_nscore__enginebase_search_presets2(void* self);
+/// @return libqt_list of KNSCore__SearchPreset*
+///
+libqt_list k_nscore__enginebase_search_presets2(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#atticaProviders)
 ///
 /// @param self KNSCore__EngineBase*
 ///
-libqt_list /* of Attica__Provider* */ k_nscore__enginebase_attica_providers(void* self);
+/// @return libqt_list of Attica__Provider*
+///
+libqt_list k_nscore__enginebase_attica_providers(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#setTagFilter)
 ///
@@ -310,30 +320,30 @@ void k_nscore__enginebase_signal_error_code(void* self, int32_t errorCode, const
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#signalCategoriesMetadataLoded)
 ///
 /// @param self KNSCore__EngineBase*
-/// @param categories libqt_list /* of KNSCore__Provider__CategoryMetadata* */
+/// @param categories libqt_list of KNSCore__Provider__CategoryMetadata*
 ///
-void k_nscore__enginebase_signal_categories_metadata_loded(void* self, libqt_list categories);
+void k_nscore__enginebase_signal_categories_metadata_loded(void* self, libqt_list /* of KNSCore__Provider__CategoryMetadata* */ categories);
 
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#signalCategoriesMetadataLoaded)
 ///
 /// @param self KNSCore__EngineBase*
-/// @param categories libqt_list /* of KNSCore__CategoryMetadata* */
+/// @param categories libqt_list of KNSCore__CategoryMetadata*
 ///
-void k_nscore__enginebase_signal_categories_metadata_loaded(void* self, libqt_list categories);
+void k_nscore__enginebase_signal_categories_metadata_loaded(void* self, libqt_list /* of KNSCore__CategoryMetadata* */ categories);
 
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#signalSearchPresetsLoaded)
 ///
 /// @param self KNSCore__EngineBase*
-/// @param presets libqt_list /* of KNSCore__Provider__SearchPreset* */
+/// @param presets libqt_list of KNSCore__Provider__SearchPreset*
 ///
-void k_nscore__enginebase_signal_search_presets_loaded(void* self, libqt_list presets);
+void k_nscore__enginebase_signal_search_presets_loaded(void* self, libqt_list /* of KNSCore__Provider__SearchPreset* */ presets);
 
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#signalSearchPresetsLoaded)
 ///
 /// @param self KNSCore__EngineBase*
-/// @param presets libqt_list /* of KNSCore__SearchPreset* */
+/// @param presets libqt_list of KNSCore__SearchPreset*
 ///
-void k_nscore__enginebase_signal_search_presets_loaded2(void* self, libqt_list presets);
+void k_nscore__enginebase_signal_search_presets_loaded2(void* self, libqt_list /* of KNSCore__SearchPreset* */ presets);
 
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#providersChanged)
 ///
@@ -506,7 +516,9 @@ void k_nscore__enginebase_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KNSCore__EngineBase*
 ///
-libqt_list /* of QObject* */ k_nscore__enginebase_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_nscore__enginebase_children(void* self);
 
 /// Inherited from QObject
 ///

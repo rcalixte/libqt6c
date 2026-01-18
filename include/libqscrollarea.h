@@ -465,7 +465,9 @@ void q_scrollarea_add_scroll_bar_widget(void* self, void* widget, int32_t alignm
 /// @param self QScrollArea*
 /// @param alignment flag of enum Qt__AlignmentFlag
 ///
-libqt_list /* of QWidget* */ q_scrollarea_scroll_bar_widgets(void* self, int32_t alignment);
+/// @return libqt_list of QWidget*
+///
+libqt_list q_scrollarea_scroll_bar_widgets(void* self, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1453,7 +1455,7 @@ void q_scrollarea_set_graphics_effect(void* self, void* effect);
 /// @param self QScrollArea*
 /// @param type enum Qt__GestureType
 ///
-void q_scrollarea_grab_gesture(void* self, int64_t type);
+void q_scrollarea_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -1462,7 +1464,7 @@ void q_scrollarea_grab_gesture(void* self, int64_t type);
 /// @param self QScrollArea*
 /// @param type enum Qt__GestureType
 ///
-void q_scrollarea_ungrab_gesture(void* self, int64_t type);
+void q_scrollarea_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2451,7 +2453,7 @@ void q_scrollarea_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void q_scrollarea_set_parent2(void* self, void* parent, int64_t f);
+void q_scrollarea_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -2529,9 +2531,9 @@ void q_scrollarea_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self QScrollArea*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_scrollarea_add_actions(void* self, libqt_list actions);
+void q_scrollarea_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2539,9 +2541,9 @@ void q_scrollarea_add_actions(void* self, libqt_list actions);
 ///
 /// @param self QScrollArea*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_scrollarea_insert_actions(void* self, void* before, libqt_list actions);
+void q_scrollarea_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2568,7 +2570,9 @@ void q_scrollarea_remove_action(void* self, void* action);
 ///
 /// @param self QScrollArea*
 ///
-libqt_list /* of QAction* */ q_scrollarea_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list q_scrollarea_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2625,7 +2629,7 @@ QWidget* q_scrollarea_parent_widget(void* self);
 /// @param self QScrollArea*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_scrollarea_set_window_flags(void* self, int64_t type);
+void q_scrollarea_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2635,7 +2639,7 @@ void q_scrollarea_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t q_scrollarea_window_flags(void* self);
+int32_t q_scrollarea_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2644,7 +2648,7 @@ int64_t q_scrollarea_window_flags(void* self);
 /// @param self QScrollArea*
 /// @param param1 enum Qt__WindowType
 ///
-void q_scrollarea_set_window_flag(void* self, int64_t param1);
+void q_scrollarea_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2653,7 +2657,7 @@ void q_scrollarea_set_window_flag(void* self, int64_t param1);
 /// @param self QScrollArea*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_scrollarea_override_window_flags(void* self, int64_t type);
+void q_scrollarea_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2663,7 +2667,7 @@ void q_scrollarea_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t q_scrollarea_window_type(void* self);
+int32_t q_scrollarea_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2874,7 +2878,7 @@ void q_scrollarea_on_custom_context_menu_requested(void* self, void (*callback)(
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t q_scrollarea_input_method_hints(void* self);
+int32_t q_scrollarea_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2883,7 +2887,7 @@ int64_t q_scrollarea_input_method_hints(void* self);
 /// @param self QScrollArea*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void q_scrollarea_set_input_method_hints(void* self, int64_t hints);
+void q_scrollarea_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -2968,7 +2972,7 @@ QPixmap* q_scrollarea_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void q_scrollarea_grab_gesture2(void* self, int64_t type, int32_t flags);
+void q_scrollarea_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -3008,7 +3012,7 @@ void q_scrollarea_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void q_scrollarea_set_window_flag2(void* self, int64_t param1, bool on);
+void q_scrollarea_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -3037,7 +3041,7 @@ QWidget* q_scrollarea_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* q_scrollarea_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* q_scrollarea_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -3149,7 +3153,9 @@ void q_scrollarea_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QScrollArea*
 ///
-libqt_list /* of QObject* */ q_scrollarea_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_scrollarea_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4768,7 +4774,7 @@ void q_scrollarea_on_input_method_event(void* self, void (*callback)(void*, void
 /// @param self QScrollArea*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_scrollarea_input_method_query(void* self, int64_t param1);
+QVariant* q_scrollarea_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4779,7 +4785,7 @@ QVariant* q_scrollarea_input_method_query(void* self, int64_t param1);
 /// @param self QScrollArea*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_scrollarea_qbase_input_method_query(void* self, int64_t param1);
+QVariant* q_scrollarea_qbase_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4790,7 +4796,7 @@ QVariant* q_scrollarea_qbase_input_method_query(void* self, int64_t param1);
 /// @param self QScrollArea*
 /// @param callback QVariant* func(QScrollArea* self, enum Qt__InputMethodQuery param1)
 ///
-void q_scrollarea_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void q_scrollarea_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QObject
 ///

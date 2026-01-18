@@ -109,7 +109,7 @@ QDBusMessage* q_dbusinterface_call2(void* self, int32_t mode, const char* method
     return QDBusAbstractInterface_Call2((QDBusAbstractInterface*)self, mode, qstring(method));
 }
 
-QDBusMessage* q_dbusinterface_call_with_argument_list(void* self, int32_t mode, const char* method, libqt_list args) {
+QDBusMessage* q_dbusinterface_call_with_argument_list(void* self, int32_t mode, const char* method, libqt_list /* of QVariant* */ args) {
     return QDBusAbstractInterface_CallWithArgumentList((QDBusAbstractInterface*)self, mode, qstring(method), args);
 }
 
@@ -117,7 +117,7 @@ QDBusPendingCall* q_dbusinterface_async_call(void* self, const char* method) {
     return QDBusAbstractInterface_AsyncCall((QDBusAbstractInterface*)self, qstring(method));
 }
 
-QDBusPendingCall* q_dbusinterface_async_call_with_argument_list(void* self, const char* method, libqt_list args) {
+QDBusPendingCall* q_dbusinterface_async_call_with_argument_list(void* self, const char* method, libqt_list /* of QVariant* */ args) {
     return QDBusAbstractInterface_AsyncCallWithArgumentList((QDBusAbstractInterface*)self, qstring(method), args);
 }
 
@@ -240,7 +240,7 @@ const char** q_dbusinterface_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_dbusinterface_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_dbusinterface_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

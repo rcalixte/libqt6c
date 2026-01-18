@@ -29,7 +29,7 @@ const char* k_localizedstring_to_string2(void* self, const char* languages[stati
     size_t languages_len = libqt_strv_length(languages);
     libqt_string* languages_qstr = (libqt_string*)malloc(languages_len * sizeof(libqt_string));
     if (languages_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_localizedstring_to_string2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_localizedstring_to_string2\n");
         abort();
     }
     for (size_t i = 0; i < languages_len; ++i) {
@@ -61,7 +61,7 @@ KLocalizedString* k_localizedstring_with_languages(void* self, const char* langu
     size_t languages_len = libqt_strv_length(languages);
     libqt_string* languages_qstr = (libqt_string*)malloc(languages_len * sizeof(libqt_string));
     if (languages_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_localizedstring_with_languages");
+        fprintf(stderr, "Failed to allocate memory for string list in k_localizedstring_with_languages\n");
         abort();
     }
     for (size_t i = 0; i < languages_len; ++i) {
@@ -156,7 +156,7 @@ const char** k_localizedstring_languages() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_localizedstring_languages");
+        fprintf(stderr, "Failed to allocate memory for string list in k_localizedstring_languages\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -174,7 +174,7 @@ void k_localizedstring_set_languages(const char* languages[static 1]) {
     size_t languages_len = libqt_strv_length(languages);
     libqt_string* languages_qstr = (libqt_string*)malloc(languages_len * sizeof(libqt_string));
     if (languages_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_localizedstring_set_languages");
+        fprintf(stderr, "Failed to allocate memory for string list in k_localizedstring_set_languages\n");
         abort();
     }
     for (size_t i = 0; i < languages_len; ++i) {

@@ -299,7 +299,9 @@ void q_keychain__job_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QKeychain__Job*
 ///
-libqt_list /* of QObject* */ q_keychain__job_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_keychain__job_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -901,7 +903,9 @@ void q_keychain__readpasswordjob_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QKeychain__ReadPasswordJob*
 ///
-libqt_list /* of QObject* */ q_keychain__readpasswordjob_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_keychain__readpasswordjob_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1893,7 +1897,9 @@ void q_keychain__writepasswordjob_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QKeychain__WritePasswordJob*
 ///
-libqt_list /* of QObject* */ q_keychain__writepasswordjob_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_keychain__writepasswordjob_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2871,7 +2877,9 @@ void q_keychain__deletepasswordjob_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QKeychain__DeletePasswordJob*
 ///
-libqt_list /* of QObject* */ q_keychain__deletepasswordjob_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_keychain__deletepasswordjob_children(void* self);
 
 /// Inherited from QObject
 ///

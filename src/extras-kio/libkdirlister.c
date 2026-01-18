@@ -185,7 +185,7 @@ void k_dirlister_set_mime_filter(void* self, const char* mimeList[static 1]) {
     size_t mimeList_len = libqt_strv_length(mimeList);
     libqt_string* mimeList_qstr = (libqt_string*)malloc(mimeList_len * sizeof(libqt_string));
     if (mimeList_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_dirlister_set_mime_filter");
+        fprintf(stderr, "Failed to allocate memory for string list in k_dirlister_set_mime_filter\n");
         abort();
     }
     for (size_t i = 0; i < mimeList_len; ++i) {
@@ -200,7 +200,7 @@ void k_dirlister_set_mime_exclude_filter(void* self, const char* mimeList[static
     size_t mimeList_len = libqt_strv_length(mimeList);
     libqt_string* mimeList_qstr = (libqt_string*)malloc(mimeList_len * sizeof(libqt_string));
     if (mimeList_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_dirlister_set_mime_exclude_filter");
+        fprintf(stderr, "Failed to allocate memory for string list in k_dirlister_set_mime_exclude_filter\n");
         abort();
     }
     for (size_t i = 0; i < mimeList_len; ++i) {
@@ -220,7 +220,7 @@ const char** k_dirlister_mime_filters(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_dirlister_mime_filters");
+        fprintf(stderr, "Failed to allocate memory for string list in k_dirlister_mime_filters\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -511,7 +511,7 @@ const char** k_dirlister_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_dirlister_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_dirlister_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

@@ -75,7 +75,7 @@ libqt_map /* of int to char* */ q_pdfsearchmodel_role_names(void* self) {
     libqt_string* _out_values = (libqt_string*)_out.values;
     char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string values in q_pdfsearchmodel_role_names");
+        fprintf(stderr, "Failed to allocate memory for map string values in q_pdfsearchmodel_role_names\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
@@ -85,9 +85,11 @@ libqt_map /* of int to char* */ q_pdfsearchmodel_role_names(void* self) {
                 libqt_free(_ret_values[j]);
             }
             free(_ret_values);
-            fprintf(stderr, "Failed to allocate memory for map string values in q_pdfsearchmodel_role_names");
+            fprintf(stderr, "Failed to allocate memory for map string values in q_pdfsearchmodel_role_names\n");
             abort();
         }
+        memcpy(_ret_values[i], _out_values[i].data, _out_values[i].len);
+        _ret_values[i][_out_values[i].len] = '\0';
     }
     _ret.keys = _out.keys;
     _ret.values = (void*)_ret_values;
@@ -110,7 +112,7 @@ libqt_map /* of int to char* */ q_pdfsearchmodel_qbase_role_names(void* self) {
     libqt_string* _out_values = (libqt_string*)_out.values;
     char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string values in q_pdfsearchmodel_role_names");
+        fprintf(stderr, "Failed to allocate memory for map string values in q_pdfsearchmodel_role_names\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
@@ -120,9 +122,11 @@ libqt_map /* of int to char* */ q_pdfsearchmodel_qbase_role_names(void* self) {
                 libqt_free(_ret_values[j]);
             }
             free(_ret_values);
-            fprintf(stderr, "Failed to allocate memory for map string values in q_pdfsearchmodel_role_names");
+            fprintf(stderr, "Failed to allocate memory for map string values in q_pdfsearchmodel_role_names\n");
             abort();
         }
+        memcpy(_ret_values[i], _out_values[i].data, _out_values[i].len);
+        _ret_values[i][_out_values[i].len] = '\0';
     }
     _ret.keys = _out.keys;
     _ret.values = (void*)_ret_values;
@@ -355,15 +359,15 @@ bool q_pdfsearchmodel_check_index2(void* self, void* index, int32_t options) {
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
-void q_pdfsearchmodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles) {
+void q_pdfsearchmodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles) {
     QAbstractItemModel_DataChanged3((QAbstractItemModel*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_pdfsearchmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*)) {
+void q_pdfsearchmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */)) {
     QAbstractItemModel_Connect_DataChanged3((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_pdfsearchmodel_layout_changed1(void* self, libqt_list parents) {
+void q_pdfsearchmodel_layout_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents) {
     QAbstractItemModel_LayoutChanged1((QAbstractItemModel*)self, parents);
 }
 
@@ -371,7 +375,7 @@ void q_pdfsearchmodel_on_layout_changed1(void* self, void (*callback)(void*, QPe
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_pdfsearchmodel_layout_changed2(void* self, libqt_list parents, int32_t hint) {
+void q_pdfsearchmodel_layout_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint) {
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
@@ -379,7 +383,7 @@ void q_pdfsearchmodel_on_layout_changed2(void* self, void (*callback)(void*, QPe
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_pdfsearchmodel_layout_about_to_be_changed1(void* self, libqt_list parents) {
+void q_pdfsearchmodel_layout_about_to_be_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents) {
     QAbstractItemModel_LayoutAboutToBeChanged1((QAbstractItemModel*)self, parents);
 }
 
@@ -387,7 +391,7 @@ void q_pdfsearchmodel_on_layout_about_to_be_changed1(void* self, void (*callback
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_pdfsearchmodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint) {
+void q_pdfsearchmodel_layout_about_to_be_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint) {
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
@@ -500,7 +504,7 @@ const char** q_pdfsearchmodel_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_pdfsearchmodel_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_pdfsearchmodel_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -749,7 +753,7 @@ const char** q_pdfsearchmodel_mime_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_pdfsearchmodel_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in q_pdfsearchmodel_mime_types\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -768,7 +772,7 @@ const char** q_pdfsearchmodel_qbase_mime_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_pdfsearchmodel_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in q_pdfsearchmodel_mime_types\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -786,11 +790,11 @@ void q_pdfsearchmodel_on_mime_types(void* self, const char** (*callback)()) {
     QPdfSearchModel_OnMimeTypes((QPdfSearchModel*)self, (intptr_t)callback);
 }
 
-QMimeData* q_pdfsearchmodel_mime_data(void* self, libqt_list indexes) {
+QMimeData* q_pdfsearchmodel_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
     return QPdfSearchModel_MimeData((QPdfSearchModel*)self, indexes);
 }
 
-QMimeData* q_pdfsearchmodel_qbase_mime_data(void* self, libqt_list indexes) {
+QMimeData* q_pdfsearchmodel_qbase_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
     return QPdfSearchModel_QBaseMimeData((QPdfSearchModel*)self, indexes);
 }
 
@@ -1112,11 +1116,11 @@ void q_pdfsearchmodel_on_create_index(void* self, QModelIndex* (*callback)(void*
     QPdfSearchModel_OnCreateIndex((QPdfSearchModel*)self, (intptr_t)callback);
 }
 
-void q_pdfsearchmodel_encode_data(void* self, libqt_list indexes, void* stream) {
+void q_pdfsearchmodel_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
     QPdfSearchModel_EncodeData((QPdfSearchModel*)self, indexes, (QDataStream*)stream);
 }
 
-void q_pdfsearchmodel_qbase_encode_data(void* self, libqt_list indexes, void* stream) {
+void q_pdfsearchmodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
     QPdfSearchModel_QBaseEncodeData((QPdfSearchModel*)self, indexes, (QDataStream*)stream);
 }
 
@@ -1316,11 +1320,11 @@ void q_pdfsearchmodel_on_change_persistent_index(void* self, void (*callback)(vo
     QPdfSearchModel_OnChangePersistentIndex((QPdfSearchModel*)self, (intptr_t)callback);
 }
 
-void q_pdfsearchmodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to) {
+void q_pdfsearchmodel_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
     QPdfSearchModel_ChangePersistentIndexList((QPdfSearchModel*)self, from, to);
 }
 
-void q_pdfsearchmodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to) {
+void q_pdfsearchmodel_qbase_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
     QPdfSearchModel_QBaseChangePersistentIndexList((QPdfSearchModel*)self, from, to);
 }
 

@@ -218,7 +218,9 @@ void k_io__kurifiltersearchprovideractions_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KIO__KUriFilterSearchProviderActions*
 ///
-libqt_list /* of QObject* */ k_io__kurifiltersearchprovideractions_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_io__kurifiltersearchprovideractions_children(void* self);
 
 /// Inherited from QObject
 ///

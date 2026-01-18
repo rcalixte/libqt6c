@@ -104,7 +104,9 @@ QGeoRouteRequest* q_georoutereply_request(void* self);
 ///
 /// @param self QGeoRouteReply*
 ///
-libqt_list /* of QGeoRoute* */ q_georoutereply_routes(void* self);
+/// @return libqt_list of QGeoRoute*
+///
+libqt_list q_georoutereply_routes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutereply.html#abort)
 ///
@@ -224,9 +226,9 @@ void q_georoutereply_qbase_set_finished(void* self, bool finished);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutereply.html#setRoutes)
 ///
 /// @param self QGeoRouteReply*
-/// @param routes libqt_list /* of QGeoRoute* */
+/// @param routes libqt_list of QGeoRoute*
 ///
-void q_georoutereply_set_routes(void* self, libqt_list routes);
+void q_georoutereply_set_routes(void* self, libqt_list /* of QGeoRoute* */ routes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutereply.html#setRoutes)
 ///
@@ -242,16 +244,16 @@ void q_georoutereply_on_set_routes(void* self, void (*callback)(void*, QGeoRoute
 /// Base class method implementation
 ///
 /// @param self QGeoRouteReply*
-/// @param routes libqt_list /* of QGeoRoute* */
+/// @param routes libqt_list of QGeoRoute*
 ///
-void q_georoutereply_qbase_set_routes(void* self, libqt_list routes);
+void q_georoutereply_qbase_set_routes(void* self, libqt_list /* of QGeoRoute* */ routes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutereply.html#addRoutes)
 ///
 /// @param self QGeoRouteReply*
-/// @param routes libqt_list /* of QGeoRoute* */
+/// @param routes libqt_list of QGeoRoute*
 ///
-void q_georoutereply_add_routes(void* self, libqt_list routes);
+void q_georoutereply_add_routes(void* self, libqt_list /* of QGeoRoute* */ routes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutereply.html#addRoutes)
 ///
@@ -267,9 +269,9 @@ void q_georoutereply_on_add_routes(void* self, void (*callback)(void*, QGeoRoute
 /// Base class method implementation
 ///
 /// @param self QGeoRouteReply*
-/// @param routes libqt_list /* of QGeoRoute* */
+/// @param routes libqt_list of QGeoRoute*
 ///
-void q_georoutereply_qbase_add_routes(void* self, libqt_list routes);
+void q_georoutereply_qbase_add_routes(void* self, libqt_list /* of QGeoRoute* */ routes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -415,7 +417,9 @@ void q_georoutereply_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QGeoRouteReply*
 ///
-libqt_list /* of QObject* */ q_georoutereply_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_georoutereply_children(void* self);
 
 /// Inherited from QObject
 ///

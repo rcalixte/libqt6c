@@ -1156,7 +1156,9 @@ Konsole__Filter__HotSpot* q_termwidget_get_hot_spot_at2(void* self, int row, int
 /// @param self QTermWidget*
 /// @param position QPoint*
 ///
-libqt_list /* of QAction* */ q_termwidget_filter_actions(void* self, void* position);
+/// @return libqt_list of QAction*
+///
+libqt_list q_termwidget_filter_actions(void* self, void* position);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -1174,7 +1176,9 @@ void q_termwidget_on_filter_actions(void* self, QAction** (*callback)(void*, voi
 /// @param self QTermWidget*
 /// @param position QPoint*
 ///
-libqt_list /* of QAction* */ q_termwidget_qbase_filter_actions(void* self, void* position);
+/// @return libqt_list of QAction*
+///
+libqt_list q_termwidget_qbase_filter_actions(void* self, void* position);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -2834,7 +2838,7 @@ void q_termwidget_set_graphics_effect(void* self, void* effect);
 /// @param self QTermWidget*
 /// @param type enum Qt__GestureType
 ///
-void q_termwidget_grab_gesture(void* self, int64_t type);
+void q_termwidget_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2843,7 +2847,7 @@ void q_termwidget_grab_gesture(void* self, int64_t type);
 /// @param self QTermWidget*
 /// @param type enum Qt__GestureType
 ///
-void q_termwidget_ungrab_gesture(void* self, int64_t type);
+void q_termwidget_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3832,7 +3836,7 @@ void q_termwidget_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void q_termwidget_set_parent2(void* self, void* parent, int64_t f);
+void q_termwidget_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -3910,9 +3914,9 @@ void q_termwidget_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self QTermWidget*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_termwidget_add_actions(void* self, libqt_list actions);
+void q_termwidget_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -3920,9 +3924,9 @@ void q_termwidget_add_actions(void* self, libqt_list actions);
 ///
 /// @param self QTermWidget*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_termwidget_insert_actions(void* self, void* before, libqt_list actions);
+void q_termwidget_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -3949,7 +3953,9 @@ void q_termwidget_remove_action(void* self, void* action);
 ///
 /// @param self QTermWidget*
 ///
-libqt_list /* of QAction* */ q_termwidget_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list q_termwidget_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4006,7 +4012,7 @@ QWidget* q_termwidget_parent_widget(void* self);
 /// @param self QTermWidget*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_termwidget_set_window_flags(void* self, int64_t type);
+void q_termwidget_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -4016,7 +4022,7 @@ void q_termwidget_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t q_termwidget_window_flags(void* self);
+int32_t q_termwidget_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4025,7 +4031,7 @@ int64_t q_termwidget_window_flags(void* self);
 /// @param self QTermWidget*
 /// @param param1 enum Qt__WindowType
 ///
-void q_termwidget_set_window_flag(void* self, int64_t param1);
+void q_termwidget_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4034,7 +4040,7 @@ void q_termwidget_set_window_flag(void* self, int64_t param1);
 /// @param self QTermWidget*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_termwidget_override_window_flags(void* self, int64_t type);
+void q_termwidget_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -4044,7 +4050,7 @@ void q_termwidget_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t q_termwidget_window_type(void* self);
+int32_t q_termwidget_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4255,7 +4261,7 @@ void q_termwidget_on_custom_context_menu_requested(void* self, void (*callback)(
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t q_termwidget_input_method_hints(void* self);
+int32_t q_termwidget_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4264,7 +4270,7 @@ int64_t q_termwidget_input_method_hints(void* self);
 /// @param self QTermWidget*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void q_termwidget_set_input_method_hints(void* self, int64_t hints);
+void q_termwidget_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -4349,7 +4355,7 @@ QPixmap* q_termwidget_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void q_termwidget_grab_gesture2(void* self, int64_t type, int32_t flags);
+void q_termwidget_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -4389,7 +4395,7 @@ void q_termwidget_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void q_termwidget_set_window_flag2(void* self, int64_t param1, bool on);
+void q_termwidget_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -4418,7 +4424,7 @@ QWidget* q_termwidget_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* q_termwidget_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* q_termwidget_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -4530,7 +4536,9 @@ void q_termwidget_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QTermWidget*
 ///
-libqt_list /* of QObject* */ q_termwidget_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_termwidget_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -6092,7 +6100,7 @@ void q_termwidget_on_input_method_event(void* self, void (*callback)(void*, void
 /// @param self QTermWidget*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_termwidget_input_method_query(void* self, int64_t param1);
+QVariant* q_termwidget_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -6103,7 +6111,7 @@ QVariant* q_termwidget_input_method_query(void* self, int64_t param1);
 /// @param self QTermWidget*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_termwidget_qbase_input_method_query(void* self, int64_t param1);
+QVariant* q_termwidget_qbase_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -6114,7 +6122,7 @@ QVariant* q_termwidget_qbase_input_method_query(void* self, int64_t param1);
 /// @param self QTermWidget*
 /// @param callback QVariant* func(QTermWidget* self, enum Qt__InputMethodQuery param1)
 ///
-void q_termwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void q_termwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///

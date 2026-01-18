@@ -553,7 +553,9 @@ void q_movie_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QMovie*
 ///
-libqt_list /* of QObject* */ q_movie_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_movie_children(void* self);
 
 /// Inherited from QObject
 ///

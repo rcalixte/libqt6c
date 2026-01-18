@@ -32,7 +32,7 @@ QGraphicsWidget* q_graphicswidget_new2(void* parent);
 /// @param parent QGraphicsItem*
 /// @param wFlags flag of enum Qt__WindowType
 ///
-QGraphicsWidget* q_graphicswidget_new3(void* parent, int64_t wFlags);
+QGraphicsWidget* q_graphicswidget_new3(void* parent, int32_t wFlags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -329,7 +329,7 @@ QRectF* q_graphicswidget_window_frame_rect(void* self);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t q_graphicswidget_window_flags(void* self);
+int32_t q_graphicswidget_window_flags(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#windowType)
 ///
@@ -337,14 +337,14 @@ int64_t q_graphicswidget_window_flags(void* self);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t q_graphicswidget_window_type(void* self);
+int32_t q_graphicswidget_window_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#setWindowFlags)
 ///
 /// @param self QGraphicsWidget*
 /// @param wFlags flag of enum Qt__WindowType
 ///
-void q_graphicswidget_set_window_flags(void* self, int64_t wFlags);
+void q_graphicswidget_set_window_flags(void* self, int32_t wFlags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#isActiveWindow)
 ///
@@ -433,17 +433,17 @@ void q_graphicswidget_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#addActions)
 ///
 /// @param self QGraphicsWidget*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_graphicswidget_add_actions(void* self, libqt_list actions);
+void q_graphicswidget_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#insertActions)
 ///
 /// @param self QGraphicsWidget*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_graphicswidget_insert_actions(void* self, void* before, libqt_list actions);
+void q_graphicswidget_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#insertAction)
 ///
@@ -464,7 +464,9 @@ void q_graphicswidget_remove_action(void* self, void* action);
 ///
 /// @param self QGraphicsWidget*
 ///
-libqt_list /* of QAction* */ q_graphicswidget_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list q_graphicswidget_actions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#setAttribute)
 ///
@@ -1328,7 +1330,7 @@ void q_graphicswidget_set_attribute2(void* self, int32_t attribute, bool on);
 /// @param self QGraphicsWidget*
 /// @param type enum Qt__GestureType
 ///
-void q_graphicswidget_grab_gesture(void* self, int64_t type);
+void q_graphicswidget_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QGraphicsObject
 ///
@@ -1337,7 +1339,7 @@ void q_graphicswidget_grab_gesture(void* self, int64_t type);
 /// @param self QGraphicsWidget*
 /// @param type enum Qt__GestureType
 ///
-void q_graphicswidget_ungrab_gesture(void* self, int64_t type);
+void q_graphicswidget_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QGraphicsObject
 ///
@@ -1551,7 +1553,7 @@ void q_graphicswidget_on_height_changed(void* self, void (*callback)(void*));
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void q_graphicswidget_grab_gesture2(void* self, int64_t type, int32_t flags);
+void q_graphicswidget_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -1663,7 +1665,9 @@ void q_graphicswidget_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QGraphicsWidget*
 ///
-libqt_list /* of QObject* */ q_graphicswidget_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_graphicswidget_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1977,7 +1981,9 @@ void q_graphicswidget_set_parent_item(void* self, void* parent);
 ///
 /// @param self QGraphicsWidget*
 ///
-libqt_list /* of QGraphicsItem* */ q_graphicswidget_child_items(void* self);
+/// @return libqt_list of QGraphicsItem*
+///
+libqt_list q_graphicswidget_child_items(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2305,7 +2311,7 @@ void q_graphicswidget_set_graphics_effect(void* self, void* effect);
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int64_t q_graphicswidget_accepted_mouse_buttons(void* self);
+int32_t q_graphicswidget_accepted_mouse_buttons(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2314,7 +2320,7 @@ int64_t q_graphicswidget_accepted_mouse_buttons(void* self);
 /// @param self QGraphicsWidget*
 /// @param buttons flag of enum Qt__MouseButton
 ///
-void q_graphicswidget_set_accepted_mouse_buttons(void* self, int64_t buttons);
+void q_graphicswidget_set_accepted_mouse_buttons(void* self, int32_t buttons);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2680,16 +2686,18 @@ double q_graphicswidget_scale(void* self);
 ///
 /// @param self QGraphicsWidget*
 ///
-libqt_list /* of QGraphicsTransform* */ q_graphicswidget_transformations(void* self);
+/// @return libqt_list of QGraphicsTransform*
+///
+libqt_list q_graphicswidget_transformations(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setTransformations)
 ///
 /// @param self QGraphicsWidget*
-/// @param transformations libqt_list /* of QGraphicsTransform* */
+/// @param transformations libqt_list of QGraphicsTransform*
 ///
-void q_graphicswidget_set_transformations(void* self, libqt_list transformations);
+void q_graphicswidget_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2782,7 +2790,9 @@ QPainterPath* q_graphicswidget_clip_path(void* self);
 ///
 /// @param self QGraphicsWidget*
 ///
-libqt_list /* of QGraphicsItem* */ q_graphicswidget_colliding_items(void* self);
+/// @return libqt_list of QGraphicsItem*
+///
+libqt_list q_graphicswidget_colliding_items(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3217,7 +3227,7 @@ void q_graphicswidget_set_data(void* self, int key, void* value);
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t q_graphicswidget_input_method_hints(void* self);
+int32_t q_graphicswidget_input_method_hints(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3226,7 +3236,7 @@ int64_t q_graphicswidget_input_method_hints(void* self);
 /// @param self QGraphicsWidget*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void q_graphicswidget_set_input_method_hints(void* self, int64_t hints);
+void q_graphicswidget_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3359,7 +3369,9 @@ void q_graphicswidget_set_transform2(void* self, void* matrix, bool combine);
 /// @param self QGraphicsWidget*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-libqt_list /* of QGraphicsItem* */ q_graphicswidget_colliding_items1(void* self, int32_t mode);
+/// @return libqt_list of QGraphicsItem*
+///
+libqt_list q_graphicswidget_colliding_items1(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -4593,7 +4605,7 @@ void q_graphicswidget_on_input_method_event(void* self, void (*callback)(void*, 
 /// @param self QGraphicsWidget*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicswidget_input_method_query(void* self, int64_t query);
+QVariant* q_graphicswidget_input_method_query(void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -4604,7 +4616,7 @@ QVariant* q_graphicswidget_input_method_query(void* self, int64_t query);
 /// @param self QGraphicsWidget*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicswidget_qbase_input_method_query(void* self, int64_t query);
+QVariant* q_graphicswidget_qbase_input_method_query(void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -4615,7 +4627,7 @@ QVariant* q_graphicswidget_qbase_input_method_query(void* self, int64_t query);
 /// @param self QGraphicsWidget*
 /// @param callback QVariant* func(QGraphicsWidget* self, enum Qt__InputMethodQuery query)
 ///
-void q_graphicswidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void q_graphicswidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -4626,7 +4638,7 @@ void q_graphicswidget_on_input_method_query(void* self, QVariant* (*callback)(vo
 /// @param self QGraphicsWidget*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicswidget_supports_extension(void* self, int64_t extension);
+bool q_graphicswidget_supports_extension(void* self, int32_t extension);
 
 /// Inherited from QGraphicsItem
 ///
@@ -4637,7 +4649,7 @@ bool q_graphicswidget_supports_extension(void* self, int64_t extension);
 /// @param self QGraphicsWidget*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicswidget_qbase_supports_extension(void* self, int64_t extension);
+bool q_graphicswidget_qbase_supports_extension(void* self, int32_t extension);
 
 /// Inherited from QGraphicsItem
 ///
@@ -4648,7 +4660,7 @@ bool q_graphicswidget_qbase_supports_extension(void* self, int64_t extension);
 /// @param self QGraphicsWidget*
 /// @param callback bool func(QGraphicsWidget* self, enum QGraphicsItem__Extension extension)
 ///
-void q_graphicswidget_on_supports_extension(void* self, bool (*callback)(void*, int64_t));
+void q_graphicswidget_on_supports_extension(void* self, bool (*callback)(void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -4660,7 +4672,7 @@ void q_graphicswidget_on_supports_extension(void* self, bool (*callback)(void*, 
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicswidget_set_extension(void* self, int64_t extension, void* variant);
+void q_graphicswidget_set_extension(void* self, int32_t extension, void* variant);
 
 /// Inherited from QGraphicsItem
 ///
@@ -4672,7 +4684,7 @@ void q_graphicswidget_set_extension(void* self, int64_t extension, void* variant
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicswidget_qbase_set_extension(void* self, int64_t extension, void* variant);
+void q_graphicswidget_qbase_set_extension(void* self, int32_t extension, void* variant);
 
 /// Inherited from QGraphicsItem
 ///
@@ -4683,7 +4695,7 @@ void q_graphicswidget_qbase_set_extension(void* self, int64_t extension, void* v
 /// @param self QGraphicsWidget*
 /// @param callback void func(QGraphicsWidget* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 ///
-void q_graphicswidget_on_set_extension(void* self, void (*callback)(void*, int64_t, void*));
+void q_graphicswidget_on_set_extension(void* self, void (*callback)(void*, int32_t, void*));
 
 /// Inherited from QGraphicsItem
 ///

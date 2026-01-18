@@ -115,7 +115,7 @@ QImage* q_image_convert_to_format(void* self, int32_t f) {
     return QImage_ConvertToFormat((QImage*)self, f);
 }
 
-QImage* q_image_convert_to_format2(void* self, int32_t f, libqt_list colorTable) {
+QImage* q_image_convert_to_format2(void* self, int32_t f, libqt_list /* of uint32_t */ colorTable) {
     return QImage_ConvertToFormat2((QImage*)self, f, colorTable);
 }
 
@@ -264,7 +264,7 @@ libqt_list /* of uint32_t */ q_image_color_table(void* self) {
     return _arr;
 }
 
-void q_image_set_color_table(void* self, libqt_list colors) {
+void q_image_set_color_table(void* self, libqt_list /* of uint32_t */ colors) {
     QImage_SetColorTable((QImage*)self, colors);
 }
 
@@ -481,7 +481,7 @@ const char** q_image_text_keys(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_image_text_keys");
+        fprintf(stderr, "Failed to allocate memory for string list in q_image_text_keys\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -634,7 +634,7 @@ QImage* q_image_convert_to_format22(void* self, int32_t f, int32_t flags) {
     return QImage_ConvertToFormat22((QImage*)self, f, flags);
 }
 
-QImage* q_image_convert_to_format3(void* self, int32_t f, libqt_list colorTable, int32_t flags) {
+QImage* q_image_convert_to_format3(void* self, int32_t f, libqt_list /* of uint32_t */ colorTable, int32_t flags) {
     return QImage_ConvertToFormat3((QImage*)self, f, colorTable, flags);
 }
 

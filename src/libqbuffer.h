@@ -900,7 +900,9 @@ void q_buffer_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QBuffer*
 ///
-libqt_list /* of QObject* */ q_buffer_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_buffer_children(void* self);
 
 /// Inherited from QObject
 ///

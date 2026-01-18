@@ -21,7 +21,7 @@ int32_t k_messagebox_question_two_actions_list(void* param1, const char* param2,
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_question_two_actions_list");
+        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_question_two_actions_list\n");
         abort();
     }
     for (size_t i = 0; i < param3_len; ++i) {
@@ -41,7 +41,7 @@ int32_t k_messagebox_warning_two_actions_list(void* param1, const char* param2, 
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_warning_two_actions_list");
+        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_warning_two_actions_list\n");
         abort();
     }
     for (size_t i = 0; i < param3_len; ++i) {
@@ -65,7 +65,7 @@ int32_t k_messagebox_warning_continue_cancel_list(void* param1, const char* para
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_warning_continue_cancel_list");
+        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_warning_continue_cancel_list\n");
         abort();
     }
     for (size_t i = 0; i < param3_len; ++i) {
@@ -85,7 +85,7 @@ int32_t k_messagebox_warning_two_actions_cancel_list(void* param1, const char* p
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_warning_two_actions_cancel_list");
+        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_warning_two_actions_cancel_list\n");
         abort();
     }
     for (size_t i = 0; i < param3_len; ++i) {
@@ -109,7 +109,7 @@ void k_messagebox_error_list(void* param1, const char* param2, const char* param
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_error_list");
+        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_error_list\n");
         abort();
     }
     for (size_t i = 0; i < param3_len; ++i) {
@@ -136,7 +136,7 @@ void k_messagebox_information_list(void* param1, const char* param2, const char*
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_information_list");
+        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_information_list\n");
         abort();
     }
     for (size_t i = 0; i < param3_len; ++i) {
@@ -191,7 +191,7 @@ int32_t k_messagebox_create_k_message_box(void* param1, void* param2, int32_t pa
     size_t param5_len = libqt_strv_length(param5);
     libqt_string* param5_qstr = (libqt_string*)malloc(param5_len * sizeof(libqt_string));
     if (param5_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_create_k_message_box");
+        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_create_k_message_box\n");
         abort();
     }
     for (size_t i = 0; i < param5_len; ++i) {
@@ -207,7 +207,7 @@ int32_t k_messagebox_create_k_message_box2(void* param1, void* param2, void* par
     size_t param5_len = libqt_strv_length(param5);
     libqt_string* param5_qstr = (libqt_string*)malloc(param5_len * sizeof(libqt_string));
     if (param5_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_create_k_message_box2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_create_k_message_box2\n");
         abort();
     }
     for (size_t i = 0; i < param5_len; ++i) {
@@ -231,7 +231,7 @@ int32_t k_messagebox_question_two_actions_list_w_id(uintptr_t param1, const char
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_question_two_actions_list_w_id");
+        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_question_two_actions_list_w_id\n");
         abort();
     }
     for (size_t i = 0; i < param3_len; ++i) {
@@ -251,7 +251,7 @@ int32_t k_messagebox_warning_two_actions_list_w_id(uintptr_t param1, const char*
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_warning_two_actions_list_w_id");
+        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_warning_two_actions_list_w_id\n");
         abort();
     }
     for (size_t i = 0; i < param3_len; ++i) {
@@ -271,7 +271,7 @@ int32_t k_messagebox_warning_continue_cancel_list_w_id(uintptr_t param1, const c
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_warning_continue_cancel_list_w_id");
+        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_warning_continue_cancel_list_w_id\n");
         abort();
     }
     for (size_t i = 0; i < param3_len; ++i) {
@@ -291,7 +291,7 @@ int32_t k_messagebox_warning_two_actions_cancel_list_w_id(uintptr_t param1, cons
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_warning_two_actions_cancel_list_w_id");
+        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_warning_two_actions_cancel_list_w_id\n");
         abort();
     }
     for (size_t i = 0; i < param3_len; ++i) {
@@ -311,7 +311,7 @@ void k_messagebox_error_list_w_id(uintptr_t param1, const char* param2, const ch
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_error_list_w_id");
+        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_error_list_w_id\n");
         abort();
     }
     for (size_t i = 0; i < param3_len; ++i) {
@@ -338,7 +338,7 @@ void k_messagebox_information_list_w_id(uintptr_t param1, const char* param2, co
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_information_list_w_id");
+        fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_information_list_w_id\n");
         abort();
     }
     for (size_t i = 0; i < param3_len; ++i) {

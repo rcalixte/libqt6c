@@ -17,11 +17,11 @@
 #include "libqguiapplication.hpp"
 #include "libqguiapplication.h"
 
-QGuiApplication* q_guiapplication_new(int* argc, char* argv[]) {
+QGuiApplication* q_guiapplication_new(int* argc, char** argv) {
     return QGuiApplication_new(argc, argv);
 }
 
-QGuiApplication* q_guiapplication_new2(int* argc, char* argv[], int param3) {
+QGuiApplication* q_guiapplication_new2(int* argc, char** argv, int param3) {
     return QGuiApplication_new2(argc, argv, param3);
 }
 
@@ -172,15 +172,15 @@ void q_guiapplication_set_palette(void* pal) {
     QGuiApplication_SetPalette((QPalette*)pal);
 }
 
-int64_t q_guiapplication_keyboard_modifiers() {
+int32_t q_guiapplication_keyboard_modifiers() {
     return QGuiApplication_KeyboardModifiers();
 }
 
-int64_t q_guiapplication_query_keyboard_modifiers() {
+int32_t q_guiapplication_query_keyboard_modifiers() {
     return QGuiApplication_QueryKeyboardModifiers();
 }
 
-int64_t q_guiapplication_mouse_buttons() {
+int32_t q_guiapplication_mouse_buttons() {
     return QGuiApplication_MouseButtons();
 }
 
@@ -433,7 +433,7 @@ const char** q_guiapplication_arguments() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_guiapplication_arguments");
+        fprintf(stderr, "Failed to allocate memory for string list in q_guiapplication_arguments\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -581,7 +581,7 @@ void q_guiapplication_set_library_paths(const char* libraryPaths[static 1]) {
     size_t libraryPaths_len = libqt_strv_length(libraryPaths);
     libqt_string* libraryPaths_qstr = (libqt_string*)malloc(libraryPaths_len * sizeof(libqt_string));
     if (libraryPaths_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_guiapplication_set_library_paths");
+        fprintf(stderr, "Failed to allocate memory for string list in q_guiapplication_set_library_paths\n");
         abort();
     }
     for (size_t i = 0; i < libraryPaths_len; ++i) {
@@ -597,7 +597,7 @@ const char** q_guiapplication_library_paths() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_guiapplication_library_paths");
+        fprintf(stderr, "Failed to allocate memory for string list in q_guiapplication_library_paths\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -845,7 +845,7 @@ const char** q_guiapplication_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_guiapplication_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_guiapplication_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

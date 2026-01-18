@@ -64,7 +64,9 @@ const char* k_texteditor__inlinenoteprovider_tr(const char* s);
 /// @param self KTextEditor__InlineNoteProvider*
 /// @param line int
 ///
-libqt_list /* of int */ k_texteditor__inlinenoteprovider_inline_notes(void* self, int line);
+/// @return libqt_list of int
+///
+libqt_list k_texteditor__inlinenoteprovider_inline_notes(void* self, int line);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-inlinenoteprovider.html#inlineNotes)
 ///
@@ -82,7 +84,9 @@ void k_texteditor__inlinenoteprovider_on_inline_notes(void* self, int* (*callbac
 /// @param self KTextEditor__InlineNoteProvider*
 /// @param line int
 ///
-libqt_list /* of int */ k_texteditor__inlinenoteprovider_qbase_inline_notes(void* self, int line);
+/// @return libqt_list of int
+///
+libqt_list k_texteditor__inlinenoteprovider_qbase_inline_notes(void* self, int line);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-inlinenoteprovider.html#inlineNoteSize)
 ///
@@ -145,7 +149,7 @@ void k_texteditor__inlinenoteprovider_qbase_paint_inline_note(void* self, void* 
 /// @param buttons flag of enum Qt__MouseButton
 /// @param globalPos QPoint*
 ///
-void k_texteditor__inlinenoteprovider_inline_note_activated(void* self, void* note, int64_t buttons, void* globalPos);
+void k_texteditor__inlinenoteprovider_inline_note_activated(void* self, void* note, int32_t buttons, void* globalPos);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-inlinenoteprovider.html#inlineNoteActivated)
 ///
@@ -154,7 +158,7 @@ void k_texteditor__inlinenoteprovider_inline_note_activated(void* self, void* no
 /// @param self KTextEditor__InlineNoteProvider*
 /// @param callback void func(KTextEditor__InlineNoteProvider* self, KTextEditor__InlineNote* note, flag of enum Qt__MouseButton buttons, QPoint* globalPos)
 ///
-void k_texteditor__inlinenoteprovider_on_inline_note_activated(void* self, void (*callback)(void*, void*, int64_t, void*));
+void k_texteditor__inlinenoteprovider_on_inline_note_activated(void* self, void (*callback)(void*, void*, int32_t, void*));
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-inlinenoteprovider.html#inlineNoteActivated)
 ///
@@ -165,7 +169,7 @@ void k_texteditor__inlinenoteprovider_on_inline_note_activated(void* self, void 
 /// @param buttons flag of enum Qt__MouseButton
 /// @param globalPos QPoint*
 ///
-void k_texteditor__inlinenoteprovider_qbase_inline_note_activated(void* self, void* note, int64_t buttons, void* globalPos);
+void k_texteditor__inlinenoteprovider_qbase_inline_note_activated(void* self, void* note, int32_t buttons, void* globalPos);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-inlinenoteprovider.html#inlineNoteFocusInEvent)
 ///
@@ -402,7 +406,9 @@ void k_texteditor__inlinenoteprovider_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KTextEditor__InlineNoteProvider*
 ///
-libqt_list /* of QObject* */ k_texteditor__inlinenoteprovider_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_texteditor__inlinenoteprovider_children(void* self);
 
 /// Inherited from QObject
 ///

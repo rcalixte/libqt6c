@@ -42,7 +42,7 @@ libqt_list /* of QKeySequence* */ k_standardshortcut_hardcoded_default_shortcut(
     return _arr;
 }
 
-void k_standardshortcut_save_shortcut(int32_t param1, libqt_list param2) {
+void k_standardshortcut_save_shortcut(int32_t param1, libqt_list /* of QKeySequence* */ param2) {
     KStandardShortcut_SaveShortcut(param1, param2);
 }
 

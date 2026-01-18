@@ -331,19 +331,6 @@ func (m *CppMethod) Rename(newName string) {
 	m.MethodName = newName
 }
 
-func IsArgcArgv(params []CppParameter, pos int) bool {
-	// Check if the arguments starting at position=pos are the argc/argv pattern.
-	// QApplication/QGuiApplication constructors are the only expected example of this.
-	return (len(params) > pos+1 &&
-		params[pos].ParameterName == "argc" &&
-		params[pos].ParameterType == "int" &&
-		params[pos].ByRef &&
-		params[pos+1].ParameterName == "argv" &&
-		params[pos+1].ParameterType == "char") &&
-		params[pos+1].Pointer &&
-		params[pos+1].PointerCount == 2
-}
-
 func IsReceiverMethod(params []CppParameter, pos int) bool {
 	// Check if the arguments starting at position=pos are the receiver/member pattern.
 	// QMenu->addAction is the main example of this

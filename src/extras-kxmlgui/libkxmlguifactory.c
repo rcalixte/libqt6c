@@ -72,7 +72,7 @@ void k_xmlguifactory_remove_client(void* self, void* client) {
     KXMLGUIFactory_RemoveClient((KXMLGUIFactory*)self, (KXMLGUIClient*)client);
 }
 
-void k_xmlguifactory_plug_action_list(void* self, void* client, const char* name, libqt_list actionList) {
+void k_xmlguifactory_plug_action_list(void* self, void* client, const char* name, libqt_list /* of QAction* */ actionList) {
     KXMLGUIFactory_PlugActionList((KXMLGUIFactory*)self, (KXMLGUIClient*)client, qstring(name), actionList);
 }
 
@@ -284,7 +284,7 @@ const char** k_xmlguifactory_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_xmlguifactory_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_xmlguifactory_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

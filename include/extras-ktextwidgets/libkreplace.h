@@ -579,7 +579,9 @@ void k_replace_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KReplace*
 ///
-libqt_list /* of QObject* */ k_replace_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_replace_children(void* self);
 
 /// Inherited from QObject
 ///

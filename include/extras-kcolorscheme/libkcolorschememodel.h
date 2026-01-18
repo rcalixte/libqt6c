@@ -451,27 +451,27 @@ bool k_colorschememodel_check_index2(void* self, void* index, int32_t options);
 /// @param self KColorSchemeModel*
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
-/// @param roles libqt_list /* of int */
+/// @param roles libqt_list of int
 ///
-void k_colorschememodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void k_colorschememodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KColorSchemeModel*
-/// @param callback void func(KColorSchemeModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
+/// @param callback void func(KColorSchemeModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
 ///
-void k_colorschememodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
+void k_colorschememodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KColorSchemeModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 ///
-void k_colorschememodel_layout_changed1(void* self, libqt_list parents);
+void k_colorschememodel_layout_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -487,10 +487,10 @@ void k_colorschememodel_on_layout_changed1(void* self, void (*callback)(void*, Q
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KColorSchemeModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
 ///
-void k_colorschememodel_layout_changed2(void* self, libqt_list parents, int32_t hint);
+void k_colorschememodel_layout_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -506,9 +506,9 @@ void k_colorschememodel_on_layout_changed2(void* self, void (*callback)(void*, Q
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KColorSchemeModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 ///
-void k_colorschememodel_layout_about_to_be_changed1(void* self, libqt_list parents);
+void k_colorschememodel_layout_about_to_be_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -524,10 +524,10 @@ void k_colorschememodel_on_layout_about_to_be_changed1(void* self, void (*callba
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KColorSchemeModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
 ///
-void k_colorschememodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint);
+void k_colorschememodel_layout_about_to_be_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -648,7 +648,9 @@ void k_colorschememodel_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KColorSchemeModel*
 ///
-libqt_list /* of QObject* */ k_colorschememodel_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_colorschememodel_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1146,7 +1148,8 @@ void k_colorschememodel_on_set_header_data(void* self, bool (*callback)(void*, i
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -1159,7 +1162,9 @@ void k_colorschememodel_on_set_header_data(void* self, bool (*callback)(void*, i
 /// @param self KColorSchemeModel*
 /// @param index QModelIndex*
 ///
-libqt_map /* of int to QVariant* */ k_colorschememodel_item_data(void* self, void* index);
+/// @return libqt_map of int to QVariant*
+///
+libqt_map k_colorschememodel_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1167,7 +1172,8 @@ libqt_map /* of int to QVariant* */ k_colorschememodel_item_data(void* self, voi
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -1180,7 +1186,9 @@ libqt_map /* of int to QVariant* */ k_colorschememodel_item_data(void* self, voi
 /// @param self KColorSchemeModel*
 /// @param index QModelIndex*
 ///
-libqt_map /* of int to QVariant* */ k_colorschememodel_qbase_item_data(void* self, void* index);
+/// @return libqt_map of int to QVariant*
+///
+libqt_map k_colorschememodel_qbase_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1189,9 +1197,9 @@ libqt_map /* of int to QVariant* */ k_colorschememodel_qbase_item_data(void* sel
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorSchemeModel*
-/// @param callback libqt_map /* of int to QVariant* */ func(KColorSchemeModel* self, QModelIndex* index)
+/// @param callback libqt_map of int to QVariant* func(KColorSchemeModel* self, QModelIndex* index)
 ///
-void k_colorschememodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
+void k_colorschememodel_on_item_data(void* self, libqt_map (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1201,9 +1209,9 @@ void k_colorschememodel_on_item_data(void* self, libqt_map /* of int to QVariant
 ///
 /// @param self KColorSchemeModel*
 /// @param index QModelIndex*
-/// @param roles libqt_map /* of int to QVariant* */
+/// @param roles libqt_map of int to QVariant*
 ///
-bool k_colorschememodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
+bool k_colorschememodel_set_item_data(void* self, void* index, libqt_map roles);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1213,9 +1221,9 @@ bool k_colorschememodel_set_item_data(void* self, void* index, libqt_map /* of i
 ///
 /// @param self KColorSchemeModel*
 /// @param index QModelIndex*
-/// @param roles libqt_map /* of int to QVariant* */
+/// @param roles libqt_map of int to QVariant*
 ///
-bool k_colorschememodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
+bool k_colorschememodel_qbase_set_item_data(void* self, void* index, libqt_map roles);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1224,9 +1232,9 @@ bool k_colorschememodel_qbase_set_item_data(void* self, void* index, libqt_map /
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorSchemeModel*
-/// @param callback bool func(KColorSchemeModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ /* of int to QVariant* */)
+/// @param callback bool func(KColorSchemeModel* self, QModelIndex* index, libqt_map of int to QVariant*)
 ///
-void k_colorschememodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
+void k_colorschememodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1303,9 +1311,9 @@ void k_colorschememodel_on_mime_types(void* self, const char** (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColorSchemeModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* k_colorschememodel_mime_data(void* self, libqt_list indexes);
+QMimeData* k_colorschememodel_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1314,9 +1322,9 @@ QMimeData* k_colorschememodel_mime_data(void* self, libqt_list indexes);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColorSchemeModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* k_colorschememodel_qbase_mime_data(void* self, libqt_list indexes);
+QMimeData* k_colorschememodel_qbase_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1817,7 +1825,9 @@ void k_colorschememodel_on_buddy(void* self, QModelIndex* (*callback)(void*, voi
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
 ///
-libqt_list /* of QModelIndex* */ k_colorschememodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_colorschememodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1832,7 +1842,9 @@ libqt_list /* of QModelIndex* */ k_colorschememodel_match(void* self, void* star
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
 ///
-libqt_list /* of QModelIndex* */ k_colorschememodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_colorschememodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1884,7 +1896,8 @@ void k_colorschememodel_on_span(void* self, QSize* (*callback)(void*, void*));
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -1896,7 +1909,9 @@ void k_colorschememodel_on_span(void* self, QSize* (*callback)(void*, void*));
 ///
 /// @param self KColorSchemeModel*
 ///
-libqt_map /* of int to char* */ k_colorschememodel_role_names(void* self);
+/// @return libqt_map of int to char*
+///
+libqt_map k_colorschememodel_role_names(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1904,7 +1919,8 @@ libqt_map /* of int to char* */ k_colorschememodel_role_names(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -1916,7 +1932,9 @@ libqt_map /* of int to char* */ k_colorschememodel_role_names(void* self);
 ///
 /// @param self KColorSchemeModel*
 ///
-libqt_map /* of int to char* */ k_colorschememodel_qbase_role_names(void* self);
+/// @return libqt_map of int to char*
+///
+libqt_map k_colorschememodel_qbase_role_names(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1925,9 +1943,9 @@ libqt_map /* of int to char* */ k_colorschememodel_qbase_role_names(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorSchemeModel*
-/// @param callback libqt_map /* of int to char* */ func()
+/// @param callback libqt_map of int to char* func()
 ///
-void k_colorschememodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
+void k_colorschememodel_on_role_names(void* self, libqt_map (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2332,10 +2350,10 @@ void k_colorschememodel_on_create_index(void* self, QModelIndex* (*callback)(voi
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColorSchemeModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void k_colorschememodel_encode_data(void* self, libqt_list indexes, void* stream);
+void k_colorschememodel_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2344,10 +2362,10 @@ void k_colorschememodel_encode_data(void* self, libqt_list indexes, void* stream
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColorSchemeModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void k_colorschememodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
+void k_colorschememodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2919,10 +2937,10 @@ void k_colorschememodel_on_change_persistent_index(void* self, void (*callback)(
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KColorSchemeModel*
-/// @param from libqt_list /* of QModelIndex* */
-/// @param to libqt_list /* of QModelIndex* */
+/// @param from libqt_list of QModelIndex*
+/// @param to libqt_list of QModelIndex*
 ///
-void k_colorschememodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
+void k_colorschememodel_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2931,10 +2949,10 @@ void k_colorschememodel_change_persistent_index_list(void* self, libqt_list from
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KColorSchemeModel*
-/// @param from libqt_list /* of QModelIndex* */
-/// @param to libqt_list /* of QModelIndex* */
+/// @param from libqt_list of QModelIndex*
+/// @param to libqt_list of QModelIndex*
 ///
-void k_colorschememodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
+void k_colorschememodel_qbase_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2955,7 +2973,9 @@ void k_colorschememodel_on_change_persistent_index_list(void* self, void (*callb
 ///
 /// @param self KColorSchemeModel*
 ///
-libqt_list /* of QModelIndex* */ k_colorschememodel_persistent_index_list(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_colorschememodel_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2965,7 +2985,9 @@ libqt_list /* of QModelIndex* */ k_colorschememodel_persistent_index_list(void* 
 ///
 /// @param self KColorSchemeModel*
 ///
-libqt_list /* of QModelIndex* */ k_colorschememodel_qbase_persistent_index_list(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_colorschememodel_qbase_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
 ///

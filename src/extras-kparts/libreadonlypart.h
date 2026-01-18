@@ -596,7 +596,9 @@ void k_parts__readonlypart_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KParts__ReadOnlyPart*
 ///
-libqt_list /* of QObject* */ k_parts__readonlypart_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_parts__readonlypart_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -923,7 +925,9 @@ void k_parts__readonlypart_remove_child_client(void* self, void* child);
 ///
 /// @param self KParts__ReadOnlyPart*
 ///
-libqt_list /* of KXMLGUIClient* */ k_parts__readonlypart_child_clients(void* self);
+/// @return libqt_list of KXMLGUIClient*
+///
+libqt_list k_parts__readonlypart_child_clients(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -956,9 +960,9 @@ void k_parts__readonlypart_reload_x_m_l(void* self);
 ///
 /// @param self KParts__ReadOnlyPart*
 /// @param name const char*
-/// @param actionList libqt_list /* of QAction* */
+/// @param actionList libqt_list of QAction*
 ///
-void k_parts__readonlypart_plug_action_list(void* self, const char* name, libqt_list actionList);
+void k_parts__readonlypart_plug_action_list(void* self, const char* name, libqt_list /* of QAction* */ actionList);
 
 /// Inherited from KXMLGUIClient
 ///

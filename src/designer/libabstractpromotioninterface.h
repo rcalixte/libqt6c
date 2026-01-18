@@ -17,19 +17,25 @@
 ///
 /// @param self QDesignerPromotionInterface*
 ///
-libqt_list /* of QDesignerPromotionInterface__PromotedClass* */ q_designerpromotioninterface_promoted_classes(void* self);
+/// @return libqt_list of QDesignerPromotionInterface__PromotedClass*
+///
+libqt_list q_designerpromotioninterface_promoted_classes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpromotioninterface.html#referencedPromotedClassNames)
 ///
 /// @param self QDesignerPromotionInterface*
 ///
-libqt_list /* set of const char* */ q_designerpromotioninterface_referenced_promoted_class_names(void* self);
+/// @return libqt_list set of const char*
+///
+libqt_list q_designerpromotioninterface_referenced_promoted_class_names(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpromotioninterface.html#promotionBaseClasses)
 ///
 /// @param self QDesignerPromotionInterface*
 ///
-libqt_list /* of QDesignerWidgetDataBaseItemInterface* */ q_designerpromotioninterface_promotion_base_classes(void* self);
+/// @return libqt_list of QDesignerWidgetDataBaseItemInterface*
+///
+libqt_list q_designerpromotioninterface_promotion_base_classes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpromotioninterface.html#dtor.QDesignerPromotionInterface)
 ///

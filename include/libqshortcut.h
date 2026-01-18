@@ -168,15 +168,17 @@ void q_shortcut_set_keys(void* self, int32_t key);
 /// [Upstream resources](https://doc.qt.io/qt-6/qshortcut.html#setKeys)
 ///
 /// @param self QShortcut*
-/// @param keys libqt_list /* of QKeySequence* */
+/// @param keys libqt_list of QKeySequence*
 ///
-void q_shortcut_set_keys2(void* self, libqt_list keys);
+void q_shortcut_set_keys2(void* self, libqt_list /* of QKeySequence* */ keys);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qshortcut.html#keys)
 ///
 /// @param self QShortcut*
 ///
-libqt_list /* of QKeySequence* */ q_shortcut_keys(void* self);
+/// @return libqt_list of QKeySequence*
+///
+libqt_list q_shortcut_keys(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qshortcut.html#setEnabled)
 ///
@@ -420,7 +422,9 @@ void q_shortcut_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QShortcut*
 ///
-libqt_list /* of QObject* */ q_shortcut_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_shortcut_children(void* self);
 
 /// Inherited from QObject
 ///

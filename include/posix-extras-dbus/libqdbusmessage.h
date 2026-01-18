@@ -233,15 +233,17 @@ bool q_dbusmessage_is_interactive_authorization_allowed(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#setArguments)
 ///
 /// @param self QDBusMessage*
-/// @param arguments libqt_list /* of QVariant* */
+/// @param arguments libqt_list of QVariant*
 ///
-void q_dbusmessage_set_arguments(void* self, libqt_list arguments);
+void q_dbusmessage_set_arguments(void* self, libqt_list /* of QVariant* */ arguments);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#arguments)
 ///
 /// @param self QDBusMessage*
 ///
-libqt_list /* of QVariant* */ q_dbusmessage_arguments(void* self);
+/// @return libqt_list of QVariant*
+///
+libqt_list q_dbusmessage_arguments(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#operator-lt-lt)
 ///
@@ -253,9 +255,9 @@ QDBusMessage* q_dbusmessage_operator_shift_left(void* self, void* arg);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#createReply)
 ///
 /// @param self QDBusMessage*
-/// @param arguments libqt_list /* of QVariant* */
+/// @param arguments libqt_list of QVariant*
 ///
-QDBusMessage* q_dbusmessage_create_reply1(void* self, libqt_list arguments);
+QDBusMessage* q_dbusmessage_create_reply1(void* self, libqt_list /* of QVariant* */ arguments);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#dtor.QDBusMessage)
 ///

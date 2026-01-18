@@ -402,7 +402,9 @@ void q_audioroom_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QAudioRoom*
 ///
-libqt_list /* of QObject* */ q_audioroom_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_audioroom_children(void* self);
 
 /// Inherited from QObject
 ///

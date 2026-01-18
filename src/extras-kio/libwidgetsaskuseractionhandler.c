@@ -70,7 +70,7 @@ void k_io__widgetsaskuseractionhandler_qbase_ask_user_skip(void* self, void* job
     KIO__WidgetsAskUserActionHandler_QBaseAskUserSkip((KIO__WidgetsAskUserActionHandler*)self, (KJob*)job, options, qstring(error_text));
 }
 
-void k_io__widgetsaskuseractionhandler_ask_user_delete(void* self, libqt_list urls, int32_t deletionType, int32_t confirmationType, void* parent) {
+void k_io__widgetsaskuseractionhandler_ask_user_delete(void* self, libqt_list /* of QUrl* */ urls, int32_t deletionType, int32_t confirmationType, void* parent) {
     KIO__WidgetsAskUserActionHandler_AskUserDelete((KIO__WidgetsAskUserActionHandler*)self, urls, deletionType, confirmationType, (QWidget*)parent);
 }
 
@@ -78,7 +78,7 @@ void k_io__widgetsaskuseractionhandler_on_ask_user_delete(void* self, void (*cal
     KIO__WidgetsAskUserActionHandler_OnAskUserDelete((KIO__WidgetsAskUserActionHandler*)self, (intptr_t)callback);
 }
 
-void k_io__widgetsaskuseractionhandler_qbase_ask_user_delete(void* self, libqt_list urls, int32_t deletionType, int32_t confirmationType, void* parent) {
+void k_io__widgetsaskuseractionhandler_qbase_ask_user_delete(void* self, libqt_list /* of QUrl* */ urls, int32_t deletionType, int32_t confirmationType, void* parent) {
     KIO__WidgetsAskUserActionHandler_QBaseAskUserDelete((KIO__WidgetsAskUserActionHandler*)self, urls, deletionType, confirmationType, (QWidget*)parent);
 }
 
@@ -186,7 +186,7 @@ void k_io__widgetsaskuseractionhandler_on_ask_user_skip_result(void* self, void 
     KIO__AskUserActionInterface_Connect_AskUserSkipResult((KIO__AskUserActionInterface*)self, (intptr_t)callback);
 }
 
-void k_io__widgetsaskuseractionhandler_ask_user_delete_result(void* self, bool allowDelete, libqt_list urls, int32_t deletionType, void* parent) {
+void k_io__widgetsaskuseractionhandler_ask_user_delete_result(void* self, bool allowDelete, libqt_list /* of QUrl* */ urls, int32_t deletionType, void* parent) {
     KIO__AskUserActionInterface_AskUserDeleteResult((KIO__AskUserActionInterface*)self, allowDelete, urls, deletionType, (QWidget*)parent);
 }
 
@@ -315,7 +315,7 @@ const char** k_io__widgetsaskuseractionhandler_dynamic_property_names(void* self
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__widgetsaskuseractionhandler_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__widgetsaskuseractionhandler_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

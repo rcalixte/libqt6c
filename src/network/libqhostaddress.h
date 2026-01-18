@@ -307,7 +307,9 @@ bool q_hostaddress_is_private_use(void* self);
 ///
 /// @param subnet const char*
 ///
-libqt_pair /* tuple of QHostAddress* and int */ q_hostaddress_parse_subnet(const char* subnet);
+/// @return libqt_pair tuple of QHostAddress* and int
+///
+libqt_pair q_hostaddress_parse_subnet(const char* subnet);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#toIPv4Address)
 ///

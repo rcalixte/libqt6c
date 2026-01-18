@@ -189,9 +189,9 @@ void k_nscore__itemsmodel_slot_entry_changed(void* self, void* entry);
 /// [Upstream resources](https://api.kde.org/knscore-itemsmodel.html#slotEntriesLoaded)
 ///
 /// @param self KNSCore__ItemsModel*
-/// @param entries libqt_list /* of KNSCore__Entry* */
+/// @param entries libqt_list of KNSCore__Entry*
 ///
-void k_nscore__itemsmodel_slot_entries_loaded(void* self, libqt_list entries);
+void k_nscore__itemsmodel_slot_entries_loaded(void* self, libqt_list /* of KNSCore__Entry* */ entries);
 
 /// [Upstream resources](https://api.kde.org/knscore-itemsmodel.html#clearEntries)
 ///
@@ -539,27 +539,27 @@ bool k_nscore__itemsmodel_check_index2(void* self, void* index, int32_t options)
 /// @param self KNSCore__ItemsModel*
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
-/// @param roles libqt_list /* of int */
+/// @param roles libqt_list of int
 ///
-void k_nscore__itemsmodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void k_nscore__itemsmodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KNSCore__ItemsModel*
-/// @param callback void func(KNSCore__ItemsModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
+/// @param callback void func(KNSCore__ItemsModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
 ///
-void k_nscore__itemsmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
+void k_nscore__itemsmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KNSCore__ItemsModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 ///
-void k_nscore__itemsmodel_layout_changed1(void* self, libqt_list parents);
+void k_nscore__itemsmodel_layout_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -575,10 +575,10 @@ void k_nscore__itemsmodel_on_layout_changed1(void* self, void (*callback)(void*,
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KNSCore__ItemsModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
 ///
-void k_nscore__itemsmodel_layout_changed2(void* self, libqt_list parents, int32_t hint);
+void k_nscore__itemsmodel_layout_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -594,9 +594,9 @@ void k_nscore__itemsmodel_on_layout_changed2(void* self, void (*callback)(void*,
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KNSCore__ItemsModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 ///
-void k_nscore__itemsmodel_layout_about_to_be_changed1(void* self, libqt_list parents);
+void k_nscore__itemsmodel_layout_about_to_be_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -612,10 +612,10 @@ void k_nscore__itemsmodel_on_layout_about_to_be_changed1(void* self, void (*call
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KNSCore__ItemsModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
 ///
-void k_nscore__itemsmodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint);
+void k_nscore__itemsmodel_layout_about_to_be_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -736,7 +736,9 @@ void k_nscore__itemsmodel_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KNSCore__ItemsModel*
 ///
-libqt_list /* of QObject* */ k_nscore__itemsmodel_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_nscore__itemsmodel_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1234,7 +1236,8 @@ void k_nscore__itemsmodel_on_set_header_data(void* self, bool (*callback)(void*,
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -1247,7 +1250,9 @@ void k_nscore__itemsmodel_on_set_header_data(void* self, bool (*callback)(void*,
 /// @param self KNSCore__ItemsModel*
 /// @param index QModelIndex*
 ///
-libqt_map /* of int to QVariant* */ k_nscore__itemsmodel_item_data(void* self, void* index);
+/// @return libqt_map of int to QVariant*
+///
+libqt_map k_nscore__itemsmodel_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1255,7 +1260,8 @@ libqt_map /* of int to QVariant* */ k_nscore__itemsmodel_item_data(void* self, v
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -1268,7 +1274,9 @@ libqt_map /* of int to QVariant* */ k_nscore__itemsmodel_item_data(void* self, v
 /// @param self KNSCore__ItemsModel*
 /// @param index QModelIndex*
 ///
-libqt_map /* of int to QVariant* */ k_nscore__itemsmodel_qbase_item_data(void* self, void* index);
+/// @return libqt_map of int to QVariant*
+///
+libqt_map k_nscore__itemsmodel_qbase_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1277,9 +1285,9 @@ libqt_map /* of int to QVariant* */ k_nscore__itemsmodel_qbase_item_data(void* s
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KNSCore__ItemsModel*
-/// @param callback libqt_map /* of int to QVariant* */ func(KNSCore__ItemsModel* self, QModelIndex* index)
+/// @param callback libqt_map of int to QVariant* func(KNSCore__ItemsModel* self, QModelIndex* index)
 ///
-void k_nscore__itemsmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
+void k_nscore__itemsmodel_on_item_data(void* self, libqt_map (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1289,9 +1297,9 @@ void k_nscore__itemsmodel_on_item_data(void* self, libqt_map /* of int to QVaria
 ///
 /// @param self KNSCore__ItemsModel*
 /// @param index QModelIndex*
-/// @param roles libqt_map /* of int to QVariant* */
+/// @param roles libqt_map of int to QVariant*
 ///
-bool k_nscore__itemsmodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
+bool k_nscore__itemsmodel_set_item_data(void* self, void* index, libqt_map roles);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1301,9 +1309,9 @@ bool k_nscore__itemsmodel_set_item_data(void* self, void* index, libqt_map /* of
 ///
 /// @param self KNSCore__ItemsModel*
 /// @param index QModelIndex*
-/// @param roles libqt_map /* of int to QVariant* */
+/// @param roles libqt_map of int to QVariant*
 ///
-bool k_nscore__itemsmodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
+bool k_nscore__itemsmodel_qbase_set_item_data(void* self, void* index, libqt_map roles);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1312,9 +1320,9 @@ bool k_nscore__itemsmodel_qbase_set_item_data(void* self, void* index, libqt_map
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KNSCore__ItemsModel*
-/// @param callback bool func(KNSCore__ItemsModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ /* of int to QVariant* */)
+/// @param callback bool func(KNSCore__ItemsModel* self, QModelIndex* index, libqt_map of int to QVariant*)
 ///
-void k_nscore__itemsmodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
+void k_nscore__itemsmodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1391,9 +1399,9 @@ void k_nscore__itemsmodel_on_mime_types(void* self, const char** (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KNSCore__ItemsModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* k_nscore__itemsmodel_mime_data(void* self, libqt_list indexes);
+QMimeData* k_nscore__itemsmodel_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1402,9 +1410,9 @@ QMimeData* k_nscore__itemsmodel_mime_data(void* self, libqt_list indexes);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KNSCore__ItemsModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* k_nscore__itemsmodel_qbase_mime_data(void* self, libqt_list indexes);
+QMimeData* k_nscore__itemsmodel_qbase_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1905,7 +1913,9 @@ void k_nscore__itemsmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, v
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
 ///
-libqt_list /* of QModelIndex* */ k_nscore__itemsmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_nscore__itemsmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1920,7 +1930,9 @@ libqt_list /* of QModelIndex* */ k_nscore__itemsmodel_match(void* self, void* st
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
 ///
-libqt_list /* of QModelIndex* */ k_nscore__itemsmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_nscore__itemsmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1972,7 +1984,8 @@ void k_nscore__itemsmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -1984,7 +1997,9 @@ void k_nscore__itemsmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 ///
 /// @param self KNSCore__ItemsModel*
 ///
-libqt_map /* of int to char* */ k_nscore__itemsmodel_role_names(void* self);
+/// @return libqt_map of int to char*
+///
+libqt_map k_nscore__itemsmodel_role_names(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1992,7 +2007,8 @@ libqt_map /* of int to char* */ k_nscore__itemsmodel_role_names(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -2004,7 +2020,9 @@ libqt_map /* of int to char* */ k_nscore__itemsmodel_role_names(void* self);
 ///
 /// @param self KNSCore__ItemsModel*
 ///
-libqt_map /* of int to char* */ k_nscore__itemsmodel_qbase_role_names(void* self);
+/// @return libqt_map of int to char*
+///
+libqt_map k_nscore__itemsmodel_qbase_role_names(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2013,9 +2031,9 @@ libqt_map /* of int to char* */ k_nscore__itemsmodel_qbase_role_names(void* self
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KNSCore__ItemsModel*
-/// @param callback libqt_map /* of int to char* */ func()
+/// @param callback libqt_map of int to char* func()
 ///
-void k_nscore__itemsmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
+void k_nscore__itemsmodel_on_role_names(void* self, libqt_map (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2420,10 +2438,10 @@ void k_nscore__itemsmodel_on_create_index(void* self, QModelIndex* (*callback)(v
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KNSCore__ItemsModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void k_nscore__itemsmodel_encode_data(void* self, libqt_list indexes, void* stream);
+void k_nscore__itemsmodel_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2432,10 +2450,10 @@ void k_nscore__itemsmodel_encode_data(void* self, libqt_list indexes, void* stre
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KNSCore__ItemsModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void k_nscore__itemsmodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
+void k_nscore__itemsmodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3007,10 +3025,10 @@ void k_nscore__itemsmodel_on_change_persistent_index(void* self, void (*callback
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KNSCore__ItemsModel*
-/// @param from libqt_list /* of QModelIndex* */
-/// @param to libqt_list /* of QModelIndex* */
+/// @param from libqt_list of QModelIndex*
+/// @param to libqt_list of QModelIndex*
 ///
-void k_nscore__itemsmodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
+void k_nscore__itemsmodel_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3019,10 +3037,10 @@ void k_nscore__itemsmodel_change_persistent_index_list(void* self, libqt_list fr
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KNSCore__ItemsModel*
-/// @param from libqt_list /* of QModelIndex* */
-/// @param to libqt_list /* of QModelIndex* */
+/// @param from libqt_list of QModelIndex*
+/// @param to libqt_list of QModelIndex*
 ///
-void k_nscore__itemsmodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
+void k_nscore__itemsmodel_qbase_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3043,7 +3061,9 @@ void k_nscore__itemsmodel_on_change_persistent_index_list(void* self, void (*cal
 ///
 /// @param self KNSCore__ItemsModel*
 ///
-libqt_list /* of QModelIndex* */ k_nscore__itemsmodel_persistent_index_list(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_nscore__itemsmodel_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3053,7 +3073,9 @@ libqt_list /* of QModelIndex* */ k_nscore__itemsmodel_persistent_index_list(void
 ///
 /// @param self KNSCore__ItemsModel*
 ///
-libqt_list /* of QModelIndex* */ k_nscore__itemsmodel_qbase_persistent_index_list(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_nscore__itemsmodel_qbase_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
 ///

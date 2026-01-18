@@ -175,7 +175,7 @@ void q_graphicsscene_set_selection_area2(void* self, void* path) {
     QGraphicsScene_SetSelectionArea2((QGraphicsScene*)self, (QPainterPath*)path);
 }
 
-QGraphicsItemGroup* q_graphicsscene_create_item_group(void* self, libqt_list items) {
+QGraphicsItemGroup* q_graphicsscene_create_item_group(void* self, libqt_list /* of QGraphicsItem* */ items) {
     return QGraphicsScene_CreateItemGroup((QGraphicsScene*)self, items);
 }
 
@@ -283,15 +283,15 @@ void q_graphicsscene_set_foreground_brush(void* self, void* brush) {
     QGraphicsScene_SetForegroundBrush((QGraphicsScene*)self, (QBrush*)brush);
 }
 
-QVariant* q_graphicsscene_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicsscene_input_method_query(void* self, int32_t query) {
     return QGraphicsScene_InputMethodQuery((QGraphicsScene*)self, query);
 }
 
-void q_graphicsscene_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void q_graphicsscene_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     QGraphicsScene_OnInputMethodQuery((QGraphicsScene*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicsscene_qbase_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicsscene_qbase_input_method_query(void* self, int32_t query) {
     return QGraphicsScene_QBaseInputMethodQuery((QGraphicsScene*)self, query);
 }
 
@@ -644,7 +644,7 @@ bool q_graphicsscene_qbase_focus_next_prev_child(void* self, bool next) {
     return QGraphicsScene_QBaseFocusNextPrevChild((QGraphicsScene*)self, next);
 }
 
-void q_graphicsscene_changed(void* self, libqt_list region) {
+void q_graphicsscene_changed(void* self, libqt_list /* of QRectF* */ region) {
     QGraphicsScene_Changed((QGraphicsScene*)self, region);
 }
 
@@ -810,7 +810,7 @@ QGraphicsSimpleTextItem* q_graphicsscene_add_simple_text2(void* self, const char
     return QGraphicsScene_AddSimpleText2((QGraphicsScene*)self, qstring(text), (QFont*)font);
 }
 
-QGraphicsProxyWidget* q_graphicsscene_add_widget2(void* self, void* widget, int64_t wFlags) {
+QGraphicsProxyWidget* q_graphicsscene_add_widget2(void* self, void* widget, int32_t wFlags) {
     return QGraphicsScene_AddWidget2((QGraphicsScene*)self, (QWidget*)widget, wFlags);
 }
 
@@ -963,7 +963,7 @@ const char** q_graphicsscene_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_graphicsscene_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_graphicsscene_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

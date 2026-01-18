@@ -116,14 +116,16 @@ void q_pen_set_style(void* self, int32_t style);
 ///
 /// @param self QPen*
 ///
-libqt_list /* of double */ q_pen_dash_pattern(void* self);
+/// @return libqt_list of double
+///
+libqt_list q_pen_dash_pattern(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#setDashPattern)
 ///
 /// @param self QPen*
-/// @param pattern libqt_list /* of double */
+/// @param pattern libqt_list of double
 ///
-void q_pen_set_dash_pattern(void* self, libqt_list pattern);
+void q_pen_set_dash_pattern(void* self, libqt_list /* of double */ pattern);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#dashOffset)
 ///

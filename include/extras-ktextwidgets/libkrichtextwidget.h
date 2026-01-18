@@ -82,7 +82,9 @@ const char* k_richtextwidget_tr(const char* s);
 ///
 /// @param self KRichTextWidget*
 ///
-libqt_list /* of QAction* */ k_richtextwidget_create_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_richtextwidget_create_actions(void* self);
 
 /// [Upstream resources](https://api.kde.org/krichtextwidget.html#createActions)
 ///
@@ -99,7 +101,9 @@ void k_richtextwidget_on_create_actions(void* self, QAction** (*callback)());
 ///
 /// @param self KRichTextWidget*
 ///
-libqt_list /* of QAction* */ k_richtextwidget_qbase_create_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_richtextwidget_qbase_create_actions(void* self);
 
 /// [Upstream resources](https://api.kde.org/krichtextwidget.html#richTextSupport)
 ///
@@ -107,7 +111,7 @@ libqt_list /* of QAction* */ k_richtextwidget_qbase_create_actions(void* self);
 ///
 /// @return flag of enum KRichTextWidget__RichTextSupportValues
 ///
-int64_t k_richtextwidget_rich_text_support(void* self);
+int32_t k_richtextwidget_rich_text_support(void* self);
 
 /// [Upstream resources](https://api.kde.org/krichtextwidget.html#updateActionStates)
 ///
@@ -945,7 +949,7 @@ QTextCharFormat* k_richtextwidget_current_char_format(void* self);
 ///
 /// @return flag of enum QTextEdit__AutoFormattingFlag
 ///
-int64_t k_richtextwidget_auto_formatting(void* self);
+int32_t k_richtextwidget_auto_formatting(void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -954,7 +958,7 @@ int64_t k_richtextwidget_auto_formatting(void* self);
 /// @param self KRichTextWidget*
 /// @param features flag of enum QTextEdit__AutoFormattingFlag
 ///
-void k_richtextwidget_set_auto_formatting(void* self, int64_t features);
+void k_richtextwidget_set_auto_formatting(void* self, int32_t features);
 
 /// Inherited from QTextEdit
 ///
@@ -1247,9 +1251,9 @@ void k_richtextwidget_set_accept_rich_text(void* self, bool accept);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#setExtraSelections)
 ///
 /// @param self KRichTextWidget*
-/// @param selections libqt_list /* of QTextEdit__ExtraSelection* */
+/// @param selections libqt_list of QTextEdit__ExtraSelection*
 ///
-void k_richtextwidget_set_extra_selections(void* self, libqt_list selections);
+void k_richtextwidget_set_extra_selections(void* self, libqt_list /* of QTextEdit__ExtraSelection* */ selections);
 
 /// Inherited from QTextEdit
 ///
@@ -1257,7 +1261,9 @@ void k_richtextwidget_set_extra_selections(void* self, libqt_list selections);
 ///
 /// @param self KRichTextWidget*
 ///
-libqt_list /* of QTextEdit__ExtraSelection* */ k_richtextwidget_extra_selections(void* self);
+/// @return libqt_list of QTextEdit__ExtraSelection*
+///
+libqt_list k_richtextwidget_extra_selections(void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -1293,7 +1299,7 @@ void k_richtextwidget_print(void* self, void* printer);
 /// @param query enum Qt__InputMethodQuery
 /// @param argument QVariant*
 ///
-QVariant* k_richtextwidget_input_method_query2(void* self, int64_t query, void* argument);
+QVariant* k_richtextwidget_input_method_query2(void* self, int32_t query, void* argument);
 
 /// Inherited from QTextEdit
 ///
@@ -1790,7 +1796,9 @@ void k_richtextwidget_add_scroll_bar_widget(void* self, void* widget, int32_t al
 /// @param self KRichTextWidget*
 /// @param alignment flag of enum Qt__AlignmentFlag
 ///
-libqt_list /* of QWidget* */ k_richtextwidget_scroll_bar_widgets(void* self, int32_t alignment);
+/// @return libqt_list of QWidget*
+///
+libqt_list k_richtextwidget_scroll_bar_widgets(void* self, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2769,7 +2777,7 @@ void k_richtextwidget_set_graphics_effect(void* self, void* effect);
 /// @param self KRichTextWidget*
 /// @param type enum Qt__GestureType
 ///
-void k_richtextwidget_grab_gesture(void* self, int64_t type);
+void k_richtextwidget_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2778,7 +2786,7 @@ void k_richtextwidget_grab_gesture(void* self, int64_t type);
 /// @param self KRichTextWidget*
 /// @param type enum Qt__GestureType
 ///
-void k_richtextwidget_ungrab_gesture(void* self, int64_t type);
+void k_richtextwidget_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3767,7 +3775,7 @@ void k_richtextwidget_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void k_richtextwidget_set_parent2(void* self, void* parent, int64_t f);
+void k_richtextwidget_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -3845,9 +3853,9 @@ void k_richtextwidget_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self KRichTextWidget*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_richtextwidget_add_actions(void* self, libqt_list actions);
+void k_richtextwidget_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -3855,9 +3863,9 @@ void k_richtextwidget_add_actions(void* self, libqt_list actions);
 ///
 /// @param self KRichTextWidget*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_richtextwidget_insert_actions(void* self, void* before, libqt_list actions);
+void k_richtextwidget_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -3884,7 +3892,9 @@ void k_richtextwidget_remove_action(void* self, void* action);
 ///
 /// @param self KRichTextWidget*
 ///
-libqt_list /* of QAction* */ k_richtextwidget_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_richtextwidget_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3941,7 +3951,7 @@ QWidget* k_richtextwidget_parent_widget(void* self);
 /// @param self KRichTextWidget*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_richtextwidget_set_window_flags(void* self, int64_t type);
+void k_richtextwidget_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3951,7 +3961,7 @@ void k_richtextwidget_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t k_richtextwidget_window_flags(void* self);
+int32_t k_richtextwidget_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3960,7 +3970,7 @@ int64_t k_richtextwidget_window_flags(void* self);
 /// @param self KRichTextWidget*
 /// @param param1 enum Qt__WindowType
 ///
-void k_richtextwidget_set_window_flag(void* self, int64_t param1);
+void k_richtextwidget_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3969,7 +3979,7 @@ void k_richtextwidget_set_window_flag(void* self, int64_t param1);
 /// @param self KRichTextWidget*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_richtextwidget_override_window_flags(void* self, int64_t type);
+void k_richtextwidget_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3979,7 +3989,7 @@ void k_richtextwidget_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t k_richtextwidget_window_type(void* self);
+int32_t k_richtextwidget_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4182,7 +4192,7 @@ void k_richtextwidget_on_custom_context_menu_requested(void* self, void (*callba
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t k_richtextwidget_input_method_hints(void* self);
+int32_t k_richtextwidget_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4191,7 +4201,7 @@ int64_t k_richtextwidget_input_method_hints(void* self);
 /// @param self KRichTextWidget*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void k_richtextwidget_set_input_method_hints(void* self, int64_t hints);
+void k_richtextwidget_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -4276,7 +4286,7 @@ QPixmap* k_richtextwidget_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void k_richtextwidget_grab_gesture2(void* self, int64_t type, int32_t flags);
+void k_richtextwidget_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -4316,7 +4326,7 @@ void k_richtextwidget_set_shortcut_auto_repeat2(void* self, int id, bool enable)
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void k_richtextwidget_set_window_flag2(void* self, int64_t param1, bool on);
+void k_richtextwidget_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -4345,7 +4355,7 @@ QWidget* k_richtextwidget_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* k_richtextwidget_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* k_richtextwidget_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -4457,7 +4467,9 @@ void k_richtextwidget_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KRichTextWidget*
 ///
-libqt_list /* of QObject* */ k_richtextwidget_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_richtextwidget_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -5216,7 +5228,7 @@ void k_richtextwidget_on_load_resource(void* self, QVariant* (*callback)(void*, 
 /// @param self KRichTextWidget*
 /// @param property enum Qt__InputMethodQuery
 ///
-QVariant* k_richtextwidget_input_method_query(void* self, int64_t property);
+QVariant* k_richtextwidget_input_method_query(void* self, int32_t property);
 
 /// Inherited from QTextEdit
 ///
@@ -5227,7 +5239,7 @@ QVariant* k_richtextwidget_input_method_query(void* self, int64_t property);
 /// @param self KRichTextWidget*
 /// @param property enum Qt__InputMethodQuery
 ///
-QVariant* k_richtextwidget_qbase_input_method_query(void* self, int64_t property);
+QVariant* k_richtextwidget_qbase_input_method_query(void* self, int32_t property);
 
 /// Inherited from QTextEdit
 ///
@@ -5238,7 +5250,7 @@ QVariant* k_richtextwidget_qbase_input_method_query(void* self, int64_t property
 /// @param self KRichTextWidget*
 /// @param callback QVariant* func(KRichTextWidget* self, enum Qt__InputMethodQuery property)
 ///
-void k_richtextwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void k_richtextwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QTextEdit
 ///
@@ -7628,7 +7640,7 @@ typedef enum {
     KRICHTEXTWIDGET_RICHTEXTSUPPORTVALUES_SUPPORTSUPERSCRIPTANDSUBSCRIPT = 67108864,
     KRICHTEXTWIDGET_RICHTEXTSUPPORTVALUES_SUPPORTDIRECTION = 134217728,
     KRICHTEXTWIDGET_RICHTEXTSUPPORTVALUES_SUPPORTHEADING = 268435456,
-    KRICHTEXTWIDGET_RICHTEXTSUPPORTVALUES_FULLSUPPORT = 4294967295
+    KRICHTEXTWIDGET_RICHTEXTSUPPORTVALUES_FULLSUPPORT = -1
 } KRichTextWidget__RichTextSupportValues;
 
 #endif

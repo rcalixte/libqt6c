@@ -194,7 +194,9 @@ void q_widgetaction_qbase_delete_widget(void* self, void* widget);
 ///
 /// @param self QWidgetAction*
 ///
-libqt_list /* of QWidget* */ q_widgetaction_created_widgets(void* self);
+/// @return libqt_list of QWidget*
+///
+libqt_list q_widgetaction_created_widgets(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
 ///
@@ -211,7 +213,9 @@ void q_widgetaction_on_created_widgets(void* self, QWidget** (*callback)());
 ///
 /// @param self QWidgetAction*
 ///
-libqt_list /* of QWidget* */ q_widgetaction_qbase_created_widgets(void* self);
+/// @return libqt_list of QWidget*
+///
+libqt_list q_widgetaction_qbase_created_widgets(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -238,7 +242,9 @@ const char* q_widgetaction_tr3(const char* s, const char* c, int n);
 ///
 /// @param self QWidgetAction*
 ///
-libqt_list /* of QObject* */ q_widgetaction_associated_objects(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_widgetaction_associated_objects(void* self);
 
 /// Inherited from QAction
 ///
@@ -427,9 +433,9 @@ QKeySequence* q_widgetaction_shortcut(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
 ///
 /// @param self QWidgetAction*
-/// @param shortcuts libqt_list /* of QKeySequence* */
+/// @param shortcuts libqt_list of QKeySequence*
 ///
-void q_widgetaction_set_shortcuts(void* self, libqt_list shortcuts);
+void q_widgetaction_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts);
 
 /// Inherited from QAction
 ///
@@ -446,7 +452,9 @@ void q_widgetaction_set_shortcuts2(void* self, int32_t shortcuts);
 ///
 /// @param self QWidgetAction*
 ///
-libqt_list /* of QKeySequence* */ q_widgetaction_shortcuts(void* self);
+/// @return libqt_list of QKeySequence*
+///
+libqt_list q_widgetaction_shortcuts(void* self);
 
 /// Inherited from QAction
 ///
@@ -956,7 +964,9 @@ void q_widgetaction_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QWidgetAction*
 ///
-libqt_list /* of QObject* */ q_widgetaction_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_widgetaction_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -306,27 +306,27 @@ bool k_pagemodel_check_index2(void* self, void* index, int32_t options);
 /// @param self KPageModel*
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
-/// @param roles libqt_list /* of int */
+/// @param roles libqt_list of int
 ///
-void k_pagemodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void k_pagemodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KPageModel*
-/// @param callback void func(KPageModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
+/// @param callback void func(KPageModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
 ///
-void k_pagemodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
+void k_pagemodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KPageModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 ///
-void k_pagemodel_layout_changed1(void* self, libqt_list parents);
+void k_pagemodel_layout_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -342,10 +342,10 @@ void k_pagemodel_on_layout_changed1(void* self, void (*callback)(void*, QPersist
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KPageModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
 ///
-void k_pagemodel_layout_changed2(void* self, libqt_list parents, int32_t hint);
+void k_pagemodel_layout_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -361,9 +361,9 @@ void k_pagemodel_on_layout_changed2(void* self, void (*callback)(void*, QPersist
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KPageModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 ///
-void k_pagemodel_layout_about_to_be_changed1(void* self, libqt_list parents);
+void k_pagemodel_layout_about_to_be_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -379,10 +379,10 @@ void k_pagemodel_on_layout_about_to_be_changed1(void* self, void (*callback)(voi
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KPageModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
 ///
-void k_pagemodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint);
+void k_pagemodel_layout_about_to_be_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -503,7 +503,9 @@ void k_pagemodel_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KPageModel*
 ///
-libqt_list /* of QObject* */ k_pagemodel_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_pagemodel_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1090,7 +1092,8 @@ void k_pagemodel_on_set_header_data(void* self, bool (*callback)(void*, int, int
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -1103,7 +1106,9 @@ void k_pagemodel_on_set_header_data(void* self, bool (*callback)(void*, int, int
 /// @param self KPageModel*
 /// @param index QModelIndex*
 ///
-libqt_map /* of int to QVariant* */ k_pagemodel_item_data(void* self, void* index);
+/// @return libqt_map of int to QVariant*
+///
+libqt_map k_pagemodel_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1111,7 +1116,8 @@ libqt_map /* of int to QVariant* */ k_pagemodel_item_data(void* self, void* inde
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -1124,7 +1130,9 @@ libqt_map /* of int to QVariant* */ k_pagemodel_item_data(void* self, void* inde
 /// @param self KPageModel*
 /// @param index QModelIndex*
 ///
-libqt_map /* of int to QVariant* */ k_pagemodel_qbase_item_data(void* self, void* index);
+/// @return libqt_map of int to QVariant*
+///
+libqt_map k_pagemodel_qbase_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1133,9 +1141,9 @@ libqt_map /* of int to QVariant* */ k_pagemodel_qbase_item_data(void* self, void
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageModel*
-/// @param callback libqt_map /* of int to QVariant* */ func(KPageModel* self, QModelIndex* index)
+/// @param callback libqt_map of int to QVariant* func(KPageModel* self, QModelIndex* index)
 ///
-void k_pagemodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
+void k_pagemodel_on_item_data(void* self, libqt_map (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1145,9 +1153,9 @@ void k_pagemodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*
 ///
 /// @param self KPageModel*
 /// @param index QModelIndex*
-/// @param roles libqt_map /* of int to QVariant* */
+/// @param roles libqt_map of int to QVariant*
 ///
-bool k_pagemodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
+bool k_pagemodel_set_item_data(void* self, void* index, libqt_map roles);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1157,9 +1165,9 @@ bool k_pagemodel_set_item_data(void* self, void* index, libqt_map /* of int to Q
 ///
 /// @param self KPageModel*
 /// @param index QModelIndex*
-/// @param roles libqt_map /* of int to QVariant* */
+/// @param roles libqt_map of int to QVariant*
 ///
-bool k_pagemodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
+bool k_pagemodel_qbase_set_item_data(void* self, void* index, libqt_map roles);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1168,9 +1176,9 @@ bool k_pagemodel_qbase_set_item_data(void* self, void* index, libqt_map /* of in
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageModel*
-/// @param callback bool func(KPageModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ /* of int to QVariant* */)
+/// @param callback bool func(KPageModel* self, QModelIndex* index, libqt_map of int to QVariant*)
 ///
-void k_pagemodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
+void k_pagemodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1247,9 +1255,9 @@ void k_pagemodel_on_mime_types(void* self, const char** (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KPageModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* k_pagemodel_mime_data(void* self, libqt_list indexes);
+QMimeData* k_pagemodel_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1258,9 +1266,9 @@ QMimeData* k_pagemodel_mime_data(void* self, libqt_list indexes);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KPageModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* k_pagemodel_qbase_mime_data(void* self, libqt_list indexes);
+QMimeData* k_pagemodel_qbase_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1839,7 +1847,9 @@ void k_pagemodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
 ///
-libqt_list /* of QModelIndex* */ k_pagemodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_pagemodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1854,7 +1864,9 @@ libqt_list /* of QModelIndex* */ k_pagemodel_match(void* self, void* start, int 
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
 ///
-libqt_list /* of QModelIndex* */ k_pagemodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_pagemodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1906,7 +1918,8 @@ void k_pagemodel_on_span(void* self, QSize* (*callback)(void*, void*));
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -1918,7 +1931,9 @@ void k_pagemodel_on_span(void* self, QSize* (*callback)(void*, void*));
 ///
 /// @param self KPageModel*
 ///
-libqt_map /* of int to char* */ k_pagemodel_role_names(void* self);
+/// @return libqt_map of int to char*
+///
+libqt_map k_pagemodel_role_names(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1926,7 +1941,8 @@ libqt_map /* of int to char* */ k_pagemodel_role_names(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -1938,7 +1954,9 @@ libqt_map /* of int to char* */ k_pagemodel_role_names(void* self);
 ///
 /// @param self KPageModel*
 ///
-libqt_map /* of int to char* */ k_pagemodel_qbase_role_names(void* self);
+/// @return libqt_map of int to char*
+///
+libqt_map k_pagemodel_qbase_role_names(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1947,9 +1965,9 @@ libqt_map /* of int to char* */ k_pagemodel_qbase_role_names(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageModel*
-/// @param callback libqt_map /* of int to char* */ func()
+/// @param callback libqt_map of int to char* func()
 ///
-void k_pagemodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
+void k_pagemodel_on_role_names(void* self, libqt_map (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2354,10 +2372,10 @@ void k_pagemodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KPageModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void k_pagemodel_encode_data(void* self, libqt_list indexes, void* stream);
+void k_pagemodel_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2366,10 +2384,10 @@ void k_pagemodel_encode_data(void* self, libqt_list indexes, void* stream);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KPageModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void k_pagemodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
+void k_pagemodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2941,10 +2959,10 @@ void k_pagemodel_on_change_persistent_index(void* self, void (*callback)(void*, 
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KPageModel*
-/// @param from libqt_list /* of QModelIndex* */
-/// @param to libqt_list /* of QModelIndex* */
+/// @param from libqt_list of QModelIndex*
+/// @param to libqt_list of QModelIndex*
 ///
-void k_pagemodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
+void k_pagemodel_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2953,10 +2971,10 @@ void k_pagemodel_change_persistent_index_list(void* self, libqt_list from, libqt
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KPageModel*
-/// @param from libqt_list /* of QModelIndex* */
-/// @param to libqt_list /* of QModelIndex* */
+/// @param from libqt_list of QModelIndex*
+/// @param to libqt_list of QModelIndex*
 ///
-void k_pagemodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
+void k_pagemodel_qbase_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2977,7 +2995,9 @@ void k_pagemodel_on_change_persistent_index_list(void* self, void (*callback)(vo
 ///
 /// @param self KPageModel*
 ///
-libqt_list /* of QModelIndex* */ k_pagemodel_persistent_index_list(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_pagemodel_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2987,7 +3007,9 @@ libqt_list /* of QModelIndex* */ k_pagemodel_persistent_index_list(void* self);
 ///
 /// @param self KPageModel*
 ///
-libqt_list /* of QModelIndex* */ k_pagemodel_qbase_persistent_index_list(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_pagemodel_qbase_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
 ///

@@ -78,7 +78,9 @@ KSyntaxHighlighting__Definition* k_syntaxhighlighting__repository_definition_for
 /// @param self KSyntaxHighlighting__Repository*
 /// @param fileName const char*
 ///
-libqt_list /* of KSyntaxHighlighting__Definition* */ k_syntaxhighlighting__repository_definitions_for_file_name(void* self, const char* fileName);
+/// @return libqt_list of KSyntaxHighlighting__Definition*
+///
+libqt_list k_syntaxhighlighting__repository_definitions_for_file_name(void* self, const char* fileName);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-repository.html#definitionForMimeType)
 ///
@@ -92,19 +94,25 @@ KSyntaxHighlighting__Definition* k_syntaxhighlighting__repository_definition_for
 /// @param self KSyntaxHighlighting__Repository*
 /// @param mimeType const char*
 ///
-libqt_list /* of KSyntaxHighlighting__Definition* */ k_syntaxhighlighting__repository_definitions_for_mime_type(void* self, const char* mimeType);
+/// @return libqt_list of KSyntaxHighlighting__Definition*
+///
+libqt_list k_syntaxhighlighting__repository_definitions_for_mime_type(void* self, const char* mimeType);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-repository.html#definitions)
 ///
 /// @param self KSyntaxHighlighting__Repository*
 ///
-libqt_list /* of KSyntaxHighlighting__Definition* */ k_syntaxhighlighting__repository_definitions(void* self);
+/// @return libqt_list of KSyntaxHighlighting__Definition*
+///
+libqt_list k_syntaxhighlighting__repository_definitions(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-repository.html#themes)
 ///
 /// @param self KSyntaxHighlighting__Repository*
 ///
-libqt_list /* of KSyntaxHighlighting__Theme* */ k_syntaxhighlighting__repository_themes(void* self);
+/// @return libqt_list of KSyntaxHighlighting__Theme*
+///
+libqt_list k_syntaxhighlighting__repository_themes(void* self);
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-repository.html#theme)
 ///
@@ -309,7 +317,9 @@ void k_syntaxhighlighting__repository_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KSyntaxHighlighting__Repository*
 ///
-libqt_list /* of QObject* */ k_syntaxhighlighting__repository_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_syntaxhighlighting__repository_children(void* self);
 
 /// Inherited from QObject
 ///

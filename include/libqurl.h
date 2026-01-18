@@ -409,15 +409,17 @@ const char** q_url_idn_whitelist();
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param uris libqt_list /* of QUrl* */
+/// @param uris libqt_list of QUrl*
 ///
-const char** q_url_to_string_list(libqt_list uris);
+const char** q_url_to_string_list(libqt_list /* of QUrl* */ uris);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#fromStringList)
 ///
 /// @param uris const char**
 ///
-libqt_list /* of QUrl* */ q_url_from_string_list(const char* uris[static 1]);
+/// @return libqt_list of QUrl*
+///
+libqt_list q_url_from_string_list(const char* uris[static 1]);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#setIdnWhitelist)
 ///
@@ -649,7 +651,9 @@ char* q_url_to_ace2(const char* domain, uint32_t options);
 /// @param uris const char**
 /// @param mode enum QUrl__ParsingMode
 ///
-libqt_list /* of QUrl* */ q_url_from_string_list2(const char* uris[static 1], int32_t mode);
+/// @return libqt_list of QUrl*
+///
+libqt_list q_url_from_string_list2(const char* uris[static 1], int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#dtor.QUrl)
 ///

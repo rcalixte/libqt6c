@@ -313,7 +313,9 @@ QVariant* q_sqlquery_bound_value2(void* self, int pos);
 ///
 /// @param self QSqlQuery*
 ///
-libqt_list /* of QVariant* */ q_sqlquery_bound_values(void* self);
+/// @return libqt_list of QVariant*
+///
+libqt_list q_sqlquery_bound_values(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquery.html#boundValueNames)
 ///

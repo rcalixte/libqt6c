@@ -26,7 +26,7 @@ KMimeTypeChooser* k_mimetypechooser_new3(const char* text, const char* selectedM
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new3");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new3\n");
         abort();
     }
     for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
@@ -43,7 +43,7 @@ KMimeTypeChooser* k_mimetypechooser_new4(const char* text, const char* selectedM
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new4");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new4\n");
         abort();
     }
     for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
@@ -60,7 +60,7 @@ KMimeTypeChooser* k_mimetypechooser_new5(const char* text, const char* selectedM
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new5");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new5\n");
         abort();
     }
     for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
@@ -70,7 +70,7 @@ KMimeTypeChooser* k_mimetypechooser_new5(const char* text, const char* selectedM
     size_t groupsToShow_len = libqt_strv_length(groupsToShow);
     libqt_string* groupsToShow_qstr = (libqt_string*)malloc(groupsToShow_len * sizeof(libqt_string));
     if (groupsToShow_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new5");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new5\n");
         abort();
     }
     for (size_t i = 0; i < groupsToShow_len; ++i) {
@@ -88,7 +88,7 @@ KMimeTypeChooser* k_mimetypechooser_new6(const char* text, const char* selectedM
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new6");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new6\n");
         abort();
     }
     for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
@@ -98,7 +98,7 @@ KMimeTypeChooser* k_mimetypechooser_new6(const char* text, const char* selectedM
     size_t groupsToShow_len = libqt_strv_length(groupsToShow);
     libqt_string* groupsToShow_qstr = (libqt_string*)malloc(groupsToShow_len * sizeof(libqt_string));
     if (groupsToShow_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new6");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new6\n");
         abort();
     }
     for (size_t i = 0; i < groupsToShow_len; ++i) {
@@ -116,7 +116,7 @@ KMimeTypeChooser* k_mimetypechooser_new7(const char* text, const char* selectedM
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new7");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new7\n");
         abort();
     }
     for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
@@ -126,7 +126,7 @@ KMimeTypeChooser* k_mimetypechooser_new7(const char* text, const char* selectedM
     size_t groupsToShow_len = libqt_strv_length(groupsToShow);
     libqt_string* groupsToShow_qstr = (libqt_string*)malloc(groupsToShow_len * sizeof(libqt_string));
     if (groupsToShow_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new7");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_new7\n");
         abort();
     }
     for (size_t i = 0; i < groupsToShow_len; ++i) {
@@ -172,7 +172,7 @@ const char** k_mimetypechooser_mime_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_mime_types\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -191,7 +191,7 @@ const char** k_mimetypechooser_patterns(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_patterns");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_patterns\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -599,11 +599,11 @@ void k_mimetypechooser_set_graphics_effect(void* self, void* effect) {
     QWidget_SetGraphicsEffect((QWidget*)self, (QGraphicsEffect*)effect);
 }
 
-void k_mimetypechooser_grab_gesture(void* self, int64_t type) {
+void k_mimetypechooser_grab_gesture(void* self, int32_t type) {
     QWidget_GrabGesture((QWidget*)self, type);
 }
 
-void k_mimetypechooser_ungrab_gesture(void* self, int64_t type) {
+void k_mimetypechooser_ungrab_gesture(void* self, int32_t type) {
     QWidget_UngrabGesture((QWidget*)self, type);
 }
 
@@ -1084,7 +1084,7 @@ void k_mimetypechooser_set_parent(void* self, void* parent) {
     QWidget_SetParent((QWidget*)self, (QWidget*)parent);
 }
 
-void k_mimetypechooser_set_parent2(void* self, void* parent, int64_t f) {
+void k_mimetypechooser_set_parent2(void* self, void* parent, int32_t f) {
     QWidget_SetParent2((QWidget*)self, (QWidget*)parent, f);
 }
 
@@ -1120,11 +1120,11 @@ void k_mimetypechooser_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void k_mimetypechooser_add_actions(void* self, libqt_list actions) {
+void k_mimetypechooser_add_actions(void* self, libqt_list /* of QAction* */ actions) {
     QWidget_AddActions((QWidget*)self, actions);
 }
 
-void k_mimetypechooser_insert_actions(void* self, void* before, libqt_list actions) {
+void k_mimetypechooser_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions) {
     QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
@@ -1161,23 +1161,23 @@ QWidget* k_mimetypechooser_parent_widget(void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
-void k_mimetypechooser_set_window_flags(void* self, int64_t type) {
+void k_mimetypechooser_set_window_flags(void* self, int32_t type) {
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int64_t k_mimetypechooser_window_flags(void* self) {
+int32_t k_mimetypechooser_window_flags(void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
-void k_mimetypechooser_set_window_flag(void* self, int64_t param1) {
+void k_mimetypechooser_set_window_flag(void* self, int32_t param1) {
     QWidget_SetWindowFlag((QWidget*)self, param1);
 }
 
-void k_mimetypechooser_override_window_flags(void* self, int64_t type) {
+void k_mimetypechooser_override_window_flags(void* self, int32_t type) {
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int64_t k_mimetypechooser_window_type(void* self) {
+int32_t k_mimetypechooser_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
@@ -1273,11 +1273,11 @@ void k_mimetypechooser_on_custom_context_menu_requested(void* self, void (*callb
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-int64_t k_mimetypechooser_input_method_hints(void* self) {
+int32_t k_mimetypechooser_input_method_hints(void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
-void k_mimetypechooser_set_input_method_hints(void* self, int64_t hints) {
+void k_mimetypechooser_set_input_method_hints(void* self, int32_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
@@ -1309,7 +1309,7 @@ QPixmap* k_mimetypechooser_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_mimetypechooser_grab_gesture2(void* self, int64_t type, int32_t flags) {
+void k_mimetypechooser_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
@@ -1325,7 +1325,7 @@ void k_mimetypechooser_set_shortcut_auto_repeat2(void* self, int id, bool enable
     QWidget_SetShortcutAutoRepeat2((QWidget*)self, id, enable);
 }
 
-void k_mimetypechooser_set_window_flag2(void* self, int64_t param1, bool on) {
+void k_mimetypechooser_set_window_flag2(void* self, int32_t param1, bool on) {
     QWidget_SetWindowFlag2((QWidget*)self, param1, on);
 }
 
@@ -1337,7 +1337,7 @@ QWidget* k_mimetypechooser_create_window_container2(void* window, void* parent) 
     return QWidget_CreateWindowContainer2((QWindow*)window, (QWidget*)parent);
 }
 
-QWidget* k_mimetypechooser_create_window_container3(void* window, void* parent, int64_t flags) {
+QWidget* k_mimetypechooser_create_window_container3(void* window, void* parent, int32_t flags) {
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
@@ -1442,7 +1442,7 @@ const char** k_mimetypechooser_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooser_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2028,15 +2028,15 @@ void k_mimetypechooser_on_input_method_event(void* self, void (*callback)(void*,
     KMimeTypeChooser_OnInputMethodEvent((KMimeTypeChooser*)self, (intptr_t)callback);
 }
 
-QVariant* k_mimetypechooser_input_method_query(void* self, int64_t param1) {
+QVariant* k_mimetypechooser_input_method_query(void* self, int32_t param1) {
     return KMimeTypeChooser_InputMethodQuery((KMimeTypeChooser*)self, param1);
 }
 
-QVariant* k_mimetypechooser_qbase_input_method_query(void* self, int64_t param1) {
+QVariant* k_mimetypechooser_qbase_input_method_query(void* self, int32_t param1) {
     return KMimeTypeChooser_QBaseInputMethodQuery((KMimeTypeChooser*)self, param1);
 }
 
-void k_mimetypechooser_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void k_mimetypechooser_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     KMimeTypeChooser_OnInputMethodQuery((KMimeTypeChooser*)self, (intptr_t)callback);
 }
 
@@ -2260,7 +2260,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new2(const char* title, const ch
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new2\n");
         abort();
     }
     for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
@@ -2285,7 +2285,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new5(const char* title, const ch
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new5");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new5\n");
         abort();
     }
     for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
@@ -2302,7 +2302,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new6(const char* title, const ch
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new6");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new6\n");
         abort();
     }
     for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
@@ -2319,7 +2319,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new7(const char* title, const ch
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new7");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new7\n");
         abort();
     }
     for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
@@ -2329,7 +2329,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new7(const char* title, const ch
     size_t groupsToShow_len = libqt_strv_length(groupsToShow);
     libqt_string* groupsToShow_qstr = (libqt_string*)malloc(groupsToShow_len * sizeof(libqt_string));
     if (groupsToShow_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new7");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new7\n");
         abort();
     }
     for (size_t i = 0; i < groupsToShow_len; ++i) {
@@ -2347,7 +2347,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new8(const char* title, const ch
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new8");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new8\n");
         abort();
     }
     for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
@@ -2357,7 +2357,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new8(const char* title, const ch
     size_t groupsToShow_len = libqt_strv_length(groupsToShow);
     libqt_string* groupsToShow_qstr = (libqt_string*)malloc(groupsToShow_len * sizeof(libqt_string));
     if (groupsToShow_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new8");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new8\n");
         abort();
     }
     for (size_t i = 0; i < groupsToShow_len; ++i) {
@@ -2375,7 +2375,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new9(const char* title, const ch
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new9");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new9\n");
         abort();
     }
     for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
@@ -2385,7 +2385,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new9(const char* title, const ch
     size_t groupsToShow_len = libqt_strv_length(groupsToShow);
     libqt_string* groupsToShow_qstr = (libqt_string*)malloc(groupsToShow_len * sizeof(libqt_string));
     if (groupsToShow_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new9");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new9\n");
         abort();
     }
     for (size_t i = 0; i < groupsToShow_len; ++i) {
@@ -2403,7 +2403,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new10(const char* title, const c
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new10");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_new10\n");
         abort();
     }
     for (size_t i = 0; i < selectedMimeTypes_len; ++i) {
@@ -2897,11 +2897,11 @@ void k_mimetypechooserdialog_set_graphics_effect(void* self, void* effect) {
     QWidget_SetGraphicsEffect((QWidget*)self, (QGraphicsEffect*)effect);
 }
 
-void k_mimetypechooserdialog_grab_gesture(void* self, int64_t type) {
+void k_mimetypechooserdialog_grab_gesture(void* self, int32_t type) {
     QWidget_GrabGesture((QWidget*)self, type);
 }
 
-void k_mimetypechooserdialog_ungrab_gesture(void* self, int64_t type) {
+void k_mimetypechooserdialog_ungrab_gesture(void* self, int32_t type) {
     QWidget_UngrabGesture((QWidget*)self, type);
 }
 
@@ -3382,7 +3382,7 @@ void k_mimetypechooserdialog_set_parent(void* self, void* parent) {
     QWidget_SetParent((QWidget*)self, (QWidget*)parent);
 }
 
-void k_mimetypechooserdialog_set_parent2(void* self, void* parent, int64_t f) {
+void k_mimetypechooserdialog_set_parent2(void* self, void* parent, int32_t f) {
     QWidget_SetParent2((QWidget*)self, (QWidget*)parent, f);
 }
 
@@ -3418,11 +3418,11 @@ void k_mimetypechooserdialog_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void k_mimetypechooserdialog_add_actions(void* self, libqt_list actions) {
+void k_mimetypechooserdialog_add_actions(void* self, libqt_list /* of QAction* */ actions) {
     QWidget_AddActions((QWidget*)self, actions);
 }
 
-void k_mimetypechooserdialog_insert_actions(void* self, void* before, libqt_list actions) {
+void k_mimetypechooserdialog_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions) {
     QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
@@ -3459,23 +3459,23 @@ QWidget* k_mimetypechooserdialog_parent_widget(void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
-void k_mimetypechooserdialog_set_window_flags(void* self, int64_t type) {
+void k_mimetypechooserdialog_set_window_flags(void* self, int32_t type) {
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int64_t k_mimetypechooserdialog_window_flags(void* self) {
+int32_t k_mimetypechooserdialog_window_flags(void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
-void k_mimetypechooserdialog_set_window_flag(void* self, int64_t param1) {
+void k_mimetypechooserdialog_set_window_flag(void* self, int32_t param1) {
     QWidget_SetWindowFlag((QWidget*)self, param1);
 }
 
-void k_mimetypechooserdialog_override_window_flags(void* self, int64_t type) {
+void k_mimetypechooserdialog_override_window_flags(void* self, int32_t type) {
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int64_t k_mimetypechooserdialog_window_type(void* self) {
+int32_t k_mimetypechooserdialog_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
@@ -3571,11 +3571,11 @@ void k_mimetypechooserdialog_on_custom_context_menu_requested(void* self, void (
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-int64_t k_mimetypechooserdialog_input_method_hints(void* self) {
+int32_t k_mimetypechooserdialog_input_method_hints(void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
-void k_mimetypechooserdialog_set_input_method_hints(void* self, int64_t hints) {
+void k_mimetypechooserdialog_set_input_method_hints(void* self, int32_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
@@ -3607,7 +3607,7 @@ QPixmap* k_mimetypechooserdialog_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_mimetypechooserdialog_grab_gesture2(void* self, int64_t type, int32_t flags) {
+void k_mimetypechooserdialog_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
@@ -3623,7 +3623,7 @@ void k_mimetypechooserdialog_set_shortcut_auto_repeat2(void* self, int id, bool 
     QWidget_SetShortcutAutoRepeat2((QWidget*)self, id, enable);
 }
 
-void k_mimetypechooserdialog_set_window_flag2(void* self, int64_t param1, bool on) {
+void k_mimetypechooserdialog_set_window_flag2(void* self, int32_t param1, bool on) {
     QWidget_SetWindowFlag2((QWidget*)self, param1, on);
 }
 
@@ -3635,7 +3635,7 @@ QWidget* k_mimetypechooserdialog_create_window_container2(void* window, void* pa
     return QWidget_CreateWindowContainer2((QWindow*)window, (QWidget*)parent);
 }
 
-QWidget* k_mimetypechooserdialog_create_window_container3(void* window, void* parent, int64_t flags) {
+QWidget* k_mimetypechooserdialog_create_window_container3(void* window, void* parent, int32_t flags) {
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
@@ -3740,7 +3740,7 @@ const char** k_mimetypechooserdialog_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_mimetypechooserdialog_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -4386,15 +4386,15 @@ void k_mimetypechooserdialog_on_input_method_event(void* self, void (*callback)(
     KMimeTypeChooserDialog_OnInputMethodEvent((KMimeTypeChooserDialog*)self, (intptr_t)callback);
 }
 
-QVariant* k_mimetypechooserdialog_input_method_query(void* self, int64_t param1) {
+QVariant* k_mimetypechooserdialog_input_method_query(void* self, int32_t param1) {
     return KMimeTypeChooserDialog_InputMethodQuery((KMimeTypeChooserDialog*)self, param1);
 }
 
-QVariant* k_mimetypechooserdialog_qbase_input_method_query(void* self, int64_t param1) {
+QVariant* k_mimetypechooserdialog_qbase_input_method_query(void* self, int32_t param1) {
     return KMimeTypeChooserDialog_QBaseInputMethodQuery((KMimeTypeChooserDialog*)self, param1);
 }
 
-void k_mimetypechooserdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void k_mimetypechooserdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     KMimeTypeChooserDialog_OnInputMethodQuery((KMimeTypeChooserDialog*)self, (intptr_t)callback);
 }
 

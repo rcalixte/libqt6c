@@ -188,7 +188,9 @@ bool q_legend_is_background_visible(void* self);
 ///
 /// @param self QLegend*
 ///
-libqt_list /* of QLegendMarker* */ q_legend_markers(void* self);
+/// @return libqt_list of QLegendMarker*
+///
+libqt_list q_legend_markers(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlegend-qtcharts.html#reverseMarkers)
 ///
@@ -414,7 +416,9 @@ void q_legend_set_background_visible1(void* self, bool visible);
 /// @param self QLegend*
 /// @param series QAbstractSeries*
 ///
-libqt_list /* of QLegendMarker* */ q_legend_markers1(void* self, void* series);
+/// @return libqt_list of QLegendMarker*
+///
+libqt_list q_legend_markers1(void* self, void* series);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlegend-qtcharts.html#setReverseMarkers)
 ///
@@ -680,7 +684,7 @@ QRectF* q_legend_window_frame_rect(void* self);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t q_legend_window_flags(void* self);
+int32_t q_legend_window_flags(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -690,7 +694,7 @@ int64_t q_legend_window_flags(void* self);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t q_legend_window_type(void* self);
+int32_t q_legend_window_type(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -699,7 +703,7 @@ int64_t q_legend_window_type(void* self);
 /// @param self QLegend*
 /// @param wFlags flag of enum Qt__WindowType
 ///
-void q_legend_set_window_flags(void* self, int64_t wFlags);
+void q_legend_set_window_flags(void* self, int32_t wFlags);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -814,9 +818,9 @@ void q_legend_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#addActions)
 ///
 /// @param self QLegend*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_legend_add_actions(void* self, libqt_list actions);
+void q_legend_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -824,9 +828,9 @@ void q_legend_add_actions(void* self, libqt_list actions);
 ///
 /// @param self QLegend*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_legend_insert_actions(void* self, void* before, libqt_list actions);
+void q_legend_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -853,7 +857,9 @@ void q_legend_remove_action(void* self, void* action);
 ///
 /// @param self QLegend*
 ///
-libqt_list /* of QAction* */ q_legend_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list q_legend_actions(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -997,7 +1003,7 @@ void q_legend_set_attribute2(void* self, int32_t attribute, bool on);
 /// @param self QLegend*
 /// @param type enum Qt__GestureType
 ///
-void q_legend_grab_gesture(void* self, int64_t type);
+void q_legend_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QGraphicsObject
 ///
@@ -1006,7 +1012,7 @@ void q_legend_grab_gesture(void* self, int64_t type);
 /// @param self QLegend*
 /// @param type enum Qt__GestureType
 ///
-void q_legend_ungrab_gesture(void* self, int64_t type);
+void q_legend_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QGraphicsObject
 ///
@@ -1220,7 +1226,7 @@ void q_legend_on_height_changed(void* self, void (*callback)(void*));
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void q_legend_grab_gesture2(void* self, int64_t type, int32_t flags);
+void q_legend_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -1342,7 +1348,9 @@ void q_legend_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QLegend*
 ///
-libqt_list /* of QObject* */ q_legend_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_legend_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1656,7 +1664,9 @@ void q_legend_set_parent_item(void* self, void* parent);
 ///
 /// @param self QLegend*
 ///
-libqt_list /* of QGraphicsItem* */ q_legend_child_items(void* self);
+/// @return libqt_list of QGraphicsItem*
+///
+libqt_list q_legend_child_items(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -1984,7 +1994,7 @@ void q_legend_set_graphics_effect(void* self, void* effect);
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int64_t q_legend_accepted_mouse_buttons(void* self);
+int32_t q_legend_accepted_mouse_buttons(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -1993,7 +2003,7 @@ int64_t q_legend_accepted_mouse_buttons(void* self);
 /// @param self QLegend*
 /// @param buttons flag of enum Qt__MouseButton
 ///
-void q_legend_set_accepted_mouse_buttons(void* self, int64_t buttons);
+void q_legend_set_accepted_mouse_buttons(void* self, int32_t buttons);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2359,16 +2369,18 @@ double q_legend_scale(void* self);
 ///
 /// @param self QLegend*
 ///
-libqt_list /* of QGraphicsTransform* */ q_legend_transformations(void* self);
+/// @return libqt_list of QGraphicsTransform*
+///
+libqt_list q_legend_transformations(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setTransformations)
 ///
 /// @param self QLegend*
-/// @param transformations libqt_list /* of QGraphicsTransform* */
+/// @param transformations libqt_list of QGraphicsTransform*
 ///
-void q_legend_set_transformations(void* self, libqt_list transformations);
+void q_legend_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2499,7 +2511,9 @@ bool q_legend_collides_with_path(void* self, void* path, int32_t mode);
 ///
 /// @param self QLegend*
 ///
-libqt_list /* of QGraphicsItem* */ q_legend_colliding_items(void* self);
+/// @return libqt_list of QGraphicsItem*
+///
+libqt_list q_legend_colliding_items(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2951,7 +2965,7 @@ void q_legend_set_data(void* self, int key, void* value);
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t q_legend_input_method_hints(void* self);
+int32_t q_legend_input_method_hints(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2960,7 +2974,7 @@ int64_t q_legend_input_method_hints(void* self);
 /// @param self QLegend*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void q_legend_set_input_method_hints(void* self, int64_t hints);
+void q_legend_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3093,7 +3107,9 @@ void q_legend_set_transform2(void* self, void* matrix, bool combine);
 /// @param self QLegend*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-libqt_list /* of QGraphicsItem* */ q_legend_colliding_items1(void* self, int32_t mode);
+/// @return libqt_list of QGraphicsItem*
+///
+libqt_list q_legend_colliding_items1(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///

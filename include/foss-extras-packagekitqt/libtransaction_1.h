@@ -847,7 +847,9 @@ void q_packagekit__transaction_kill_timer2(void* self, int32_t id);
 ///
 /// @param self PackageKit__Transaction*
 ///
-libqt_list /* of QObject* */ q_packagekit__transaction_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_packagekit__transaction_children(void* self);
 
 /// Inherited from QObject
 ///

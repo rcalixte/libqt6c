@@ -799,19 +799,25 @@ const char* k_aboutdata_internal_bug_address(void* self);
 ///
 /// @param self KAboutData*
 ///
-libqt_list /* of KAboutPerson* */ k_aboutdata_authors(void* self);
+/// @return libqt_list of KAboutPerson*
+///
+libqt_list k_aboutdata_authors(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#credits)
 ///
 /// @param self KAboutData*
 ///
-libqt_list /* of KAboutPerson* */ k_aboutdata_credits(void* self);
+/// @return libqt_list of KAboutPerson*
+///
+libqt_list k_aboutdata_credits(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#translators)
 ///
 /// @param self KAboutData*
 ///
-libqt_list /* of KAboutPerson* */ k_aboutdata_translators(void* self);
+/// @return libqt_list of KAboutPerson*
+///
+libqt_list k_aboutdata_translators(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#aboutTranslationTeam)
 ///
@@ -823,7 +829,9 @@ const char* k_aboutdata_about_translation_team();
 ///
 /// @param self KAboutData*
 ///
-libqt_list /* of KAboutComponent* */ k_aboutdata_components(void* self);
+/// @return libqt_list of KAboutComponent*
+///
+libqt_list k_aboutdata_components(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#otherText)
 ///
@@ -837,7 +845,9 @@ const char* k_aboutdata_other_text(void* self);
 ///
 /// @param self KAboutData*
 ///
-libqt_list /* of KAboutLicense* */ k_aboutdata_licenses(void* self);
+/// @return libqt_list of KAboutLicense*
+///
+libqt_list k_aboutdata_licenses(void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#copyrightStatement)
 ///

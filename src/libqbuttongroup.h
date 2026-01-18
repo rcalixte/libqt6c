@@ -98,7 +98,9 @@ void q_buttongroup_remove_button(void* self, void* param1);
 ///
 /// @param self QButtonGroup*
 ///
-libqt_list /* of QAbstractButton* */ q_buttongroup_buttons(void* self);
+/// @return libqt_list of QAbstractButton*
+///
+libqt_list q_buttongroup_buttons(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuttongroup.html#checkedButton)
 ///
@@ -385,7 +387,9 @@ void q_buttongroup_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QButtonGroup*
 ///
-libqt_list /* of QObject* */ q_buttongroup_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_buttongroup_children(void* self);
 
 /// Inherited from QObject
 ///

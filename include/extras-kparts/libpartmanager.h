@@ -309,7 +309,9 @@ QWidget* k_parts__partmanager_qbase_active_widget(void* self);
 ///
 /// @param self KParts__PartManager*
 ///
-libqt_list /* of KParts__Part* */ k_parts__partmanager_parts(void* self);
+/// @return libqt_list of KParts__Part*
+///
+libqt_list k_parts__partmanager_parts(void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-partmanager.html#addManagedTopLevelWidget)
 ///
@@ -596,7 +598,9 @@ void k_parts__partmanager_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KParts__PartManager*
 ///
-libqt_list /* of QObject* */ k_parts__partmanager_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_parts__partmanager_children(void* self);
 
 /// Inherited from QObject
 ///

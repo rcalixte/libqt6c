@@ -57,7 +57,7 @@ libqt_list /* of double */ q_pen_dash_pattern(void* self) {
     return _arr;
 }
 
-void q_pen_set_dash_pattern(void* self, libqt_list pattern) {
+void q_pen_set_dash_pattern(void* self, libqt_list /* of double */ pattern) {
     QPen_SetDashPattern((QPen*)self, pattern);
 }
 

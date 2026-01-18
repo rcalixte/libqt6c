@@ -169,7 +169,9 @@ QUrl* k_coredirlister_url(void* self);
 ///
 /// @param self KCoreDirLister*
 ///
-libqt_list /* of QUrl* */ k_coredirlister_directories(void* self);
+/// @return libqt_list of QUrl*
+///
+libqt_list k_coredirlister_directories(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoredirlister.html#emitChanges)
 ///
@@ -713,7 +715,9 @@ void k_coredirlister_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KCoreDirLister*
 ///
-libqt_list /* of QObject* */ k_coredirlister_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_coredirlister_children(void* self);
 
 /// Inherited from QObject
 ///

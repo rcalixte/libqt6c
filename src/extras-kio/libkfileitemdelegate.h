@@ -271,9 +271,9 @@ void k_fileitemdelegate_qbase_update_editor_geometry(void* self, void* editor, v
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#setShowInformation)
 ///
 /// @param self KFileItemDelegate*
-/// @param list libqt_list /* of enum KFileItemDelegate__Information */
+/// @param list libqt_list of enum KFileItemDelegate__Information
 ///
-void k_fileitemdelegate_set_show_information(void* self, libqt_list list);
+void k_fileitemdelegate_set_show_information(void* self, libqt_list /* of enum KFileItemDelegate__Information */ list);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#setShowInformation)
 ///
@@ -288,7 +288,7 @@ void k_fileitemdelegate_set_show_information2(void* self, int32_t information);
 ///
 /// @return libqt_list of enum KFileItemDelegate__Information
 ///
-libqt_list /* of enum KFileItemDelegate__Information */ k_fileitemdelegate_show_information(void* self);
+libqt_list k_fileitemdelegate_show_information(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#setShadowColor)
 ///
@@ -680,7 +680,9 @@ void k_fileitemdelegate_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KFileItemDelegate*
 ///
-libqt_list /* of QObject* */ k_fileitemdelegate_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_fileitemdelegate_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -958,7 +960,9 @@ void k_fileitemdelegate_on_destroy_editor(void* self, void (*callback)(void*, vo
 ///
 /// @param self KFileItemDelegate*
 ///
-libqt_list /* of int */ k_fileitemdelegate_painting_roles(void* self);
+/// @return libqt_list of int
+///
+libqt_list k_fileitemdelegate_painting_roles(void* self);
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -968,7 +972,9 @@ libqt_list /* of int */ k_fileitemdelegate_painting_roles(void* self);
 ///
 /// @param self KFileItemDelegate*
 ///
-libqt_list /* of int */ k_fileitemdelegate_qbase_painting_roles(void* self);
+/// @return libqt_list of int
+///
+libqt_list k_fileitemdelegate_qbase_painting_roles(void* self);
 
 /// Inherited from QAbstractItemDelegate
 ///

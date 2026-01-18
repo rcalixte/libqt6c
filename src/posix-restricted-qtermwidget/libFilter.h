@@ -268,7 +268,9 @@ void k_onsole__filter_kill_timer2(void* self, int32_t id);
 ///
 /// @param self Konsole__Filter*
 ///
-libqt_list /* of QObject* */ k_onsole__filter_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_onsole__filter_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1167,7 +1169,9 @@ void k_onsole__regexpfilter_kill_timer2(void* self, int32_t id);
 ///
 /// @param self Konsole__RegExpFilter*
 ///
-libqt_list /* of QObject* */ k_onsole__regexpfilter_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_onsole__regexpfilter_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2203,7 +2207,9 @@ void k_onsole__urlfilter_kill_timer2(void* self, int32_t id);
 ///
 /// @param self Konsole__UrlFilter*
 ///
-libqt_list /* of QObject* */ k_onsole__urlfilter_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_onsole__urlfilter_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -3160,7 +3166,9 @@ void k_onsole__filterobject_kill_timer2(void* self, int32_t id);
 ///
 /// @param self Konsole__FilterObject*
 ///
-libqt_list /* of QObject* */ k_onsole__filterobject_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_onsole__filterobject_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -3832,7 +3840,9 @@ Konsole__Filter__HotSpot* k_onsole__filterchain_hot_spot_at(void* self, int line
 ///
 /// @param self Konsole__FilterChain*
 ///
-libqt_list /* of Konsole__Filter__HotSpot* */ k_onsole__filterchain_hot_spots(void* self);
+/// @return libqt_list of Konsole__Filter__HotSpot*
+///
+libqt_list k_onsole__filterchain_hot_spots(void* self);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -3928,7 +3938,9 @@ Konsole__Filter__HotSpot* k_onsole__terminalimagefilterchain_hot_spot_at(void* s
 ///
 /// @param self Konsole__TerminalImageFilterChain*
 ///
-libqt_list /* of Konsole__Filter__HotSpot* */ k_onsole__terminalimagefilterchain_hot_spots(void* self);
+/// @return libqt_list of Konsole__Filter__HotSpot*
+///
+libqt_list k_onsole__terminalimagefilterchain_hot_spots(void* self);
 
 /// Inherited from Konsole::FilterChain
 ///
@@ -4025,7 +4037,9 @@ void k_onsole__filter__hotspot_qbase_activate(void* self, const char* action);
 ///
 /// @param self Konsole__Filter__HotSpot*
 ///
-libqt_list /* of QAction* */ k_onsole__filter__hotspot_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_onsole__filter__hotspot_actions(void* self);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -4042,7 +4056,9 @@ void k_onsole__filter__hotspot_on_actions(void* self, QAction** (*callback)());
 ///
 /// @param self Konsole__Filter__HotSpot*
 ///
-libqt_list /* of QAction* */ k_onsole__filter__hotspot_qbase_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_onsole__filter__hotspot_qbase_actions(void* self);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -4184,7 +4200,9 @@ int32_t k_onsole__regexpfilter__hotspot_type(void* self);
 ///
 /// @param self Konsole__RegExpFilter__HotSpot*
 ///
-libqt_list /* of QAction* */ k_onsole__regexpfilter__hotspot_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_onsole__regexpfilter__hotspot_actions(void* self);
 
 /// Inherited from Konsole::Filter::HotSpot
 ///
@@ -4194,7 +4212,9 @@ libqt_list /* of QAction* */ k_onsole__regexpfilter__hotspot_actions(void* self)
 ///
 /// @param self Konsole__RegExpFilter__HotSpot*
 ///
-libqt_list /* of QAction* */ k_onsole__regexpfilter__hotspot_qbase_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_onsole__regexpfilter__hotspot_qbase_actions(void* self);
 
 /// Inherited from Konsole::Filter::HotSpot
 ///
@@ -4267,7 +4287,9 @@ Konsole__FilterObject* k_onsole__urlfilter__hotspot_get_url_object(void* self);
 ///
 /// @param self Konsole__UrlFilter__HotSpot*
 ///
-libqt_list /* of QAction* */ k_onsole__urlfilter__hotspot_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_onsole__urlfilter__hotspot_actions(void* self);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -4284,7 +4306,9 @@ void k_onsole__urlfilter__hotspot_on_actions(void* self, QAction** (*callback)()
 ///
 /// @param self Konsole__UrlFilter__HotSpot*
 ///
-libqt_list /* of QAction* */ k_onsole__urlfilter__hotspot_qbase_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_onsole__urlfilter__hotspot_qbase_actions(void* self);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///

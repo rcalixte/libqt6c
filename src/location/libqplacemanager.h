@@ -143,13 +143,17 @@ QPlaceCategory* q_placemanager_category(void* self, const char* categoryId);
 ///
 /// @param self QPlaceManager*
 ///
-libqt_list /* of QPlaceCategory* */ q_placemanager_child_categories(void* self);
+/// @return libqt_list of QPlaceCategory*
+///
+libqt_list q_placemanager_child_categories(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#locales)
 ///
 /// @param self QPlaceManager*
 ///
-libqt_list /* of QLocale* */ q_placemanager_locales(void* self);
+/// @return libqt_list of QLocale*
+///
+libqt_list q_placemanager_locales(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#setLocale)
 ///
@@ -161,9 +165,9 @@ void q_placemanager_set_locale(void* self, void* locale);
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#setLocales)
 ///
 /// @param self QPlaceManager*
-/// @param locale libqt_list /* of QLocale* */
+/// @param locale libqt_list of QLocale*
 ///
-void q_placemanager_set_locales(void* self, libqt_list locale);
+void q_placemanager_set_locales(void* self, libqt_list /* of QLocale* */ locale);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#compatiblePlace)
 ///
@@ -349,7 +353,9 @@ const char** q_placemanager_child_category_ids1(void* self, const char* parentId
 /// @param self QPlaceManager*
 /// @param parentId const char*
 ///
-libqt_list /* of QPlaceCategory* */ q_placemanager_child_categories1(void* self, const char* parentId);
+/// @return libqt_list of QPlaceCategory*
+///
+libqt_list q_placemanager_child_categories1(void* self, const char* parentId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#errorOccurred)
 ///
@@ -496,7 +502,9 @@ void q_placemanager_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QPlaceManager*
 ///
-libqt_list /* of QObject* */ q_placemanager_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_placemanager_children(void* self);
 
 /// Inherited from QObject
 ///

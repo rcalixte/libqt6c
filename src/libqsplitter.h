@@ -218,14 +218,16 @@ QSize* q_splitter_qbase_minimum_size_hint(void* self);
 ///
 /// @param self QSplitter*
 ///
-libqt_list /* of int */ q_splitter_sizes(void* self);
+/// @return libqt_list of int
+///
+libqt_list q_splitter_sizes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsplitter.html#setSizes)
 ///
 /// @param self QSplitter*
-/// @param list libqt_list /* of int */
+/// @param list libqt_list of int
 ///
-void q_splitter_set_sizes(void* self, libqt_list list);
+void q_splitter_set_sizes(void* self, libqt_list /* of int */ list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsplitter.html#saveState)
 ///
@@ -1484,7 +1486,7 @@ void q_splitter_set_graphics_effect(void* self, void* effect);
 /// @param self QSplitter*
 /// @param type enum Qt__GestureType
 ///
-void q_splitter_grab_gesture(void* self, int64_t type);
+void q_splitter_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -1493,7 +1495,7 @@ void q_splitter_grab_gesture(void* self, int64_t type);
 /// @param self QSplitter*
 /// @param type enum Qt__GestureType
 ///
-void q_splitter_ungrab_gesture(void* self, int64_t type);
+void q_splitter_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2482,7 +2484,7 @@ void q_splitter_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void q_splitter_set_parent2(void* self, void* parent, int64_t f);
+void q_splitter_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -2560,9 +2562,9 @@ void q_splitter_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self QSplitter*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_splitter_add_actions(void* self, libqt_list actions);
+void q_splitter_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2570,9 +2572,9 @@ void q_splitter_add_actions(void* self, libqt_list actions);
 ///
 /// @param self QSplitter*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_splitter_insert_actions(void* self, void* before, libqt_list actions);
+void q_splitter_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2599,7 +2601,9 @@ void q_splitter_remove_action(void* self, void* action);
 ///
 /// @param self QSplitter*
 ///
-libqt_list /* of QAction* */ q_splitter_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list q_splitter_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2656,7 +2660,7 @@ QWidget* q_splitter_parent_widget(void* self);
 /// @param self QSplitter*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_splitter_set_window_flags(void* self, int64_t type);
+void q_splitter_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2666,7 +2670,7 @@ void q_splitter_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t q_splitter_window_flags(void* self);
+int32_t q_splitter_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2675,7 +2679,7 @@ int64_t q_splitter_window_flags(void* self);
 /// @param self QSplitter*
 /// @param param1 enum Qt__WindowType
 ///
-void q_splitter_set_window_flag(void* self, int64_t param1);
+void q_splitter_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2684,7 +2688,7 @@ void q_splitter_set_window_flag(void* self, int64_t param1);
 /// @param self QSplitter*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_splitter_override_window_flags(void* self, int64_t type);
+void q_splitter_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2694,7 +2698,7 @@ void q_splitter_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t q_splitter_window_type(void* self);
+int32_t q_splitter_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2905,7 +2909,7 @@ void q_splitter_on_custom_context_menu_requested(void* self, void (*callback)(vo
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t q_splitter_input_method_hints(void* self);
+int32_t q_splitter_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2914,7 +2918,7 @@ int64_t q_splitter_input_method_hints(void* self);
 /// @param self QSplitter*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void q_splitter_set_input_method_hints(void* self, int64_t hints);
+void q_splitter_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -2999,7 +3003,7 @@ QPixmap* q_splitter_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void q_splitter_grab_gesture2(void* self, int64_t type, int32_t flags);
+void q_splitter_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -3039,7 +3043,7 @@ void q_splitter_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void q_splitter_set_window_flag2(void* self, int64_t param1, bool on);
+void q_splitter_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -3068,7 +3072,7 @@ QWidget* q_splitter_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* q_splitter_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* q_splitter_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -3180,7 +3184,9 @@ void q_splitter_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QSplitter*
 ///
-libqt_list /* of QObject* */ q_splitter_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_splitter_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4669,7 +4675,7 @@ void q_splitter_on_input_method_event(void* self, void (*callback)(void*, void*)
 /// @param self QSplitter*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_splitter_input_method_query(void* self, int64_t param1);
+QVariant* q_splitter_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4680,7 +4686,7 @@ QVariant* q_splitter_input_method_query(void* self, int64_t param1);
 /// @param self QSplitter*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_splitter_qbase_input_method_query(void* self, int64_t param1);
+QVariant* q_splitter_qbase_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4691,7 +4697,7 @@ QVariant* q_splitter_qbase_input_method_query(void* self, int64_t param1);
 /// @param self QSplitter*
 /// @param callback QVariant* func(QSplitter* self, enum Qt__InputMethodQuery param1)
 ///
-void q_splitter_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void q_splitter_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -6411,7 +6417,7 @@ void q_splitterhandle_set_graphics_effect(void* self, void* effect);
 /// @param self QSplitterHandle*
 /// @param type enum Qt__GestureType
 ///
-void q_splitterhandle_grab_gesture(void* self, int64_t type);
+void q_splitterhandle_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -6420,7 +6426,7 @@ void q_splitterhandle_grab_gesture(void* self, int64_t type);
 /// @param self QSplitterHandle*
 /// @param type enum Qt__GestureType
 ///
-void q_splitterhandle_ungrab_gesture(void* self, int64_t type);
+void q_splitterhandle_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -7409,7 +7415,7 @@ void q_splitterhandle_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void q_splitterhandle_set_parent2(void* self, void* parent, int64_t f);
+void q_splitterhandle_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -7487,9 +7493,9 @@ void q_splitterhandle_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self QSplitterHandle*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_splitterhandle_add_actions(void* self, libqt_list actions);
+void q_splitterhandle_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -7497,9 +7503,9 @@ void q_splitterhandle_add_actions(void* self, libqt_list actions);
 ///
 /// @param self QSplitterHandle*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_splitterhandle_insert_actions(void* self, void* before, libqt_list actions);
+void q_splitterhandle_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -7526,7 +7532,9 @@ void q_splitterhandle_remove_action(void* self, void* action);
 ///
 /// @param self QSplitterHandle*
 ///
-libqt_list /* of QAction* */ q_splitterhandle_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list q_splitterhandle_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -7583,7 +7591,7 @@ QWidget* q_splitterhandle_parent_widget(void* self);
 /// @param self QSplitterHandle*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_splitterhandle_set_window_flags(void* self, int64_t type);
+void q_splitterhandle_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -7593,7 +7601,7 @@ void q_splitterhandle_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t q_splitterhandle_window_flags(void* self);
+int32_t q_splitterhandle_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -7602,7 +7610,7 @@ int64_t q_splitterhandle_window_flags(void* self);
 /// @param self QSplitterHandle*
 /// @param param1 enum Qt__WindowType
 ///
-void q_splitterhandle_set_window_flag(void* self, int64_t param1);
+void q_splitterhandle_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -7611,7 +7619,7 @@ void q_splitterhandle_set_window_flag(void* self, int64_t param1);
 /// @param self QSplitterHandle*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_splitterhandle_override_window_flags(void* self, int64_t type);
+void q_splitterhandle_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -7621,7 +7629,7 @@ void q_splitterhandle_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t q_splitterhandle_window_type(void* self);
+int32_t q_splitterhandle_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -7832,7 +7840,7 @@ void q_splitterhandle_on_custom_context_menu_requested(void* self, void (*callba
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t q_splitterhandle_input_method_hints(void* self);
+int32_t q_splitterhandle_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -7841,7 +7849,7 @@ int64_t q_splitterhandle_input_method_hints(void* self);
 /// @param self QSplitterHandle*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void q_splitterhandle_set_input_method_hints(void* self, int64_t hints);
+void q_splitterhandle_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -7926,7 +7934,7 @@ QPixmap* q_splitterhandle_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void q_splitterhandle_grab_gesture2(void* self, int64_t type, int32_t flags);
+void q_splitterhandle_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -7966,7 +7974,7 @@ void q_splitterhandle_set_shortcut_auto_repeat2(void* self, int id, bool enable)
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void q_splitterhandle_set_window_flag2(void* self, int64_t param1, bool on);
+void q_splitterhandle_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -7995,7 +8003,7 @@ QWidget* q_splitterhandle_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* q_splitterhandle_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* q_splitterhandle_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -8107,7 +8115,9 @@ void q_splitterhandle_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QSplitterHandle*
 ///
-libqt_list /* of QObject* */ q_splitterhandle_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_splitterhandle_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -9495,7 +9505,7 @@ void q_splitterhandle_on_input_method_event(void* self, void (*callback)(void*, 
 /// @param self QSplitterHandle*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_splitterhandle_input_method_query(void* self, int64_t param1);
+QVariant* q_splitterhandle_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -9506,7 +9516,7 @@ QVariant* q_splitterhandle_input_method_query(void* self, int64_t param1);
 /// @param self QSplitterHandle*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_splitterhandle_qbase_input_method_query(void* self, int64_t param1);
+QVariant* q_splitterhandle_qbase_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -9517,7 +9527,7 @@ QVariant* q_splitterhandle_qbase_input_method_query(void* self, int64_t param1);
 /// @param self QSplitterHandle*
 /// @param callback QVariant* func(QSplitterHandle* self, enum Qt__InputMethodQuery param1)
 ///
-void q_splitterhandle_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void q_splitterhandle_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///

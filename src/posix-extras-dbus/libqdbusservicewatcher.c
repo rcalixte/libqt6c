@@ -58,7 +58,7 @@ const char** q_dbusservicewatcher_watched_services(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_dbusservicewatcher_watched_services");
+        fprintf(stderr, "Failed to allocate memory for string list in q_dbusservicewatcher_watched_services\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -76,7 +76,7 @@ void q_dbusservicewatcher_set_watched_services(void* self, const char* services[
     size_t services_len = libqt_strv_length(services);
     libqt_string* services_qstr = (libqt_string*)malloc(services_len * sizeof(libqt_string));
     if (services_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_dbusservicewatcher_set_watched_services");
+        fprintf(stderr, "Failed to allocate memory for string list in q_dbusservicewatcher_set_watched_services\n");
         abort();
     }
     for (size_t i = 0; i < services_len; ++i) {
@@ -254,7 +254,7 @@ const char** q_dbusservicewatcher_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_dbusservicewatcher_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_dbusservicewatcher_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

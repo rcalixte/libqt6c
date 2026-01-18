@@ -45,7 +45,9 @@ const char* q_webengineframe_html_name(void* self);
 ///
 /// @param self QWebEngineFrame*
 ///
-libqt_list /* of QWebEngineFrame* */ q_webengineframe_children(void* self);
+/// @return libqt_list of QWebEngineFrame*
+///
+libqt_list q_webengineframe_children(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#url)
 ///

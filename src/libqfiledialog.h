@@ -26,7 +26,7 @@ QFileDialog* q_filedialog_new(void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-QFileDialog* q_filedialog_new2(void* parent, int64_t f);
+QFileDialog* q_filedialog_new2(void* parent, int32_t f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html)
 
@@ -165,7 +165,9 @@ void q_filedialog_select_url(void* self, void* url);
 ///
 /// @param self QFileDialog*
 ///
-libqt_list /* of QUrl* */ q_filedialog_selected_urls(void* self);
+/// @return libqt_list of QUrl*
+///
+libqt_list q_filedialog_selected_urls(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#setNameFilter)
 ///
@@ -297,15 +299,17 @@ int32_t q_filedialog_accept_mode(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#setSidebarUrls)
 ///
 /// @param self QFileDialog*
-/// @param urls libqt_list /* of QUrl* */
+/// @param urls libqt_list of QUrl*
 ///
-void q_filedialog_set_sidebar_urls(void* self, libqt_list urls);
+void q_filedialog_set_sidebar_urls(void* self, libqt_list /* of QUrl* */ urls);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#sidebarUrls)
 ///
 /// @param self QFileDialog*
 ///
-libqt_list /* of QUrl* */ q_filedialog_sidebar_urls(void* self);
+/// @return libqt_list of QUrl*
+///
+libqt_list q_filedialog_sidebar_urls(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#saveState)
 ///
@@ -550,9 +554,9 @@ void q_filedialog_on_url_selected(void* self, void (*callback)(void*, void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#urlsSelected)
 ///
 /// @param self QFileDialog*
-/// @param urls libqt_list /* of QUrl* */
+/// @param urls libqt_list of QUrl*
 ///
-void q_filedialog_urls_selected(void* self, libqt_list urls);
+void q_filedialog_urls_selected(void* self, libqt_list /* of QUrl* */ urls);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#urlsSelected)
 ///
@@ -641,7 +645,9 @@ const char** q_filedialog_get_open_file_names();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getOpenFileUrls)
 ///
-libqt_list /* of QUrl* */ q_filedialog_get_open_file_urls();
+/// @return libqt_list of QUrl*
+///
+libqt_list q_filedialog_get_open_file_urls();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#saveFileContent)
 ///
@@ -1006,14 +1012,18 @@ const char** q_filedialog_get_open_file_names4(void* parent, const char* caption
 ///
 /// @param parent QWidget*
 ///
-libqt_list /* of QUrl* */ q_filedialog_get_open_file_urls1(void* parent);
+/// @return libqt_list of QUrl*
+///
+libqt_list q_filedialog_get_open_file_urls1(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getOpenFileUrls)
 ///
 /// @param parent QWidget*
 /// @param caption const char*
 ///
-libqt_list /* of QUrl* */ q_filedialog_get_open_file_urls2(void* parent, const char* caption);
+/// @return libqt_list of QUrl*
+///
+libqt_list q_filedialog_get_open_file_urls2(void* parent, const char* caption);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getOpenFileUrls)
 ///
@@ -1021,7 +1031,9 @@ libqt_list /* of QUrl* */ q_filedialog_get_open_file_urls2(void* parent, const c
 /// @param caption const char*
 /// @param dir QUrl*
 ///
-libqt_list /* of QUrl* */ q_filedialog_get_open_file_urls3(void* parent, const char* caption, void* dir);
+/// @return libqt_list of QUrl*
+///
+libqt_list q_filedialog_get_open_file_urls3(void* parent, const char* caption, void* dir);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getOpenFileUrls)
 ///
@@ -1030,7 +1042,9 @@ libqt_list /* of QUrl* */ q_filedialog_get_open_file_urls3(void* parent, const c
 /// @param dir QUrl*
 /// @param filter const char*
 ///
-libqt_list /* of QUrl* */ q_filedialog_get_open_file_urls4(void* parent, const char* caption, void* dir, const char* filter);
+/// @return libqt_list of QUrl*
+///
+libqt_list q_filedialog_get_open_file_urls4(void* parent, const char* caption, void* dir, const char* filter);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#saveFileContent)
 ///
@@ -1963,7 +1977,7 @@ void q_filedialog_set_graphics_effect(void* self, void* effect);
 /// @param self QFileDialog*
 /// @param type enum Qt__GestureType
 ///
-void q_filedialog_grab_gesture(void* self, int64_t type);
+void q_filedialog_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -1972,7 +1986,7 @@ void q_filedialog_grab_gesture(void* self, int64_t type);
 /// @param self QFileDialog*
 /// @param type enum Qt__GestureType
 ///
-void q_filedialog_ungrab_gesture(void* self, int64_t type);
+void q_filedialog_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2961,7 +2975,7 @@ void q_filedialog_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void q_filedialog_set_parent2(void* self, void* parent, int64_t f);
+void q_filedialog_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -3039,9 +3053,9 @@ void q_filedialog_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self QFileDialog*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_filedialog_add_actions(void* self, libqt_list actions);
+void q_filedialog_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -3049,9 +3063,9 @@ void q_filedialog_add_actions(void* self, libqt_list actions);
 ///
 /// @param self QFileDialog*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_filedialog_insert_actions(void* self, void* before, libqt_list actions);
+void q_filedialog_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -3078,7 +3092,9 @@ void q_filedialog_remove_action(void* self, void* action);
 ///
 /// @param self QFileDialog*
 ///
-libqt_list /* of QAction* */ q_filedialog_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list q_filedialog_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3135,7 +3151,7 @@ QWidget* q_filedialog_parent_widget(void* self);
 /// @param self QFileDialog*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_filedialog_set_window_flags(void* self, int64_t type);
+void q_filedialog_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3145,7 +3161,7 @@ void q_filedialog_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t q_filedialog_window_flags(void* self);
+int32_t q_filedialog_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3154,7 +3170,7 @@ int64_t q_filedialog_window_flags(void* self);
 /// @param self QFileDialog*
 /// @param param1 enum Qt__WindowType
 ///
-void q_filedialog_set_window_flag(void* self, int64_t param1);
+void q_filedialog_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3163,7 +3179,7 @@ void q_filedialog_set_window_flag(void* self, int64_t param1);
 /// @param self QFileDialog*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_filedialog_override_window_flags(void* self, int64_t type);
+void q_filedialog_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3173,7 +3189,7 @@ void q_filedialog_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t q_filedialog_window_type(void* self);
+int32_t q_filedialog_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3384,7 +3400,7 @@ void q_filedialog_on_custom_context_menu_requested(void* self, void (*callback)(
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t q_filedialog_input_method_hints(void* self);
+int32_t q_filedialog_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3393,7 +3409,7 @@ int64_t q_filedialog_input_method_hints(void* self);
 /// @param self QFileDialog*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void q_filedialog_set_input_method_hints(void* self, int64_t hints);
+void q_filedialog_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -3478,7 +3494,7 @@ QPixmap* q_filedialog_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void q_filedialog_grab_gesture2(void* self, int64_t type, int32_t flags);
+void q_filedialog_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -3518,7 +3534,7 @@ void q_filedialog_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void q_filedialog_set_window_flag2(void* self, int64_t param1, bool on);
+void q_filedialog_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -3547,7 +3563,7 @@ QWidget* q_filedialog_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* q_filedialog_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* q_filedialog_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -3659,7 +3675,9 @@ void q_filedialog_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QFileDialog*
 ///
-libqt_list /* of QObject* */ q_filedialog_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_filedialog_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -5338,7 +5356,7 @@ void q_filedialog_on_input_method_event(void* self, void (*callback)(void*, void
 /// @param self QFileDialog*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_filedialog_input_method_query(void* self, int64_t param1);
+QVariant* q_filedialog_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5349,7 +5367,7 @@ QVariant* q_filedialog_input_method_query(void* self, int64_t param1);
 /// @param self QFileDialog*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_filedialog_qbase_input_method_query(void* self, int64_t param1);
+QVariant* q_filedialog_qbase_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5360,7 +5378,7 @@ QVariant* q_filedialog_qbase_input_method_query(void* self, int64_t param1);
 /// @param self QFileDialog*
 /// @param callback QVariant* func(QFileDialog* self, enum Qt__InputMethodQuery param1)
 ///
-void q_filedialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void q_filedialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///

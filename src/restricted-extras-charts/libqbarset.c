@@ -59,7 +59,7 @@ void q_barset_append(void* self, double value) {
     QBarSet_Append((QBarSet*)self, value);
 }
 
-void q_barset_append2(void* self, libqt_list values) {
+void q_barset_append2(void* self, libqt_list /* of double */ values) {
     QBarSet_Append2((QBarSet*)self, values);
 }
 
@@ -183,15 +183,15 @@ void q_barset_deselect_all_bars(void* self) {
     QBarSet_DeselectAllBars((QBarSet*)self);
 }
 
-void q_barset_select_bars(void* self, libqt_list indexes) {
+void q_barset_select_bars(void* self, libqt_list /* of int */ indexes) {
     QBarSet_SelectBars((QBarSet*)self, indexes);
 }
 
-void q_barset_deselect_bars(void* self, libqt_list indexes) {
+void q_barset_deselect_bars(void* self, libqt_list /* of int */ indexes) {
     QBarSet_DeselectBars((QBarSet*)self, indexes);
 }
 
-void q_barset_toggle_selection(void* self, libqt_list indexes) {
+void q_barset_toggle_selection(void* self, libqt_list /* of int */ indexes) {
     QBarSet_ToggleSelection((QBarSet*)self, indexes);
 }
 
@@ -336,11 +336,11 @@ void q_barset_on_value_changed(void* self, void (*callback)(void*, int)) {
     QBarSet_Connect_ValueChanged((QBarSet*)self, (intptr_t)callback);
 }
 
-void q_barset_selected_bars_changed(void* self, libqt_list indexes) {
+void q_barset_selected_bars_changed(void* self, libqt_list /* of int */ indexes) {
     QBarSet_SelectedBarsChanged((QBarSet*)self, indexes);
 }
 
-void q_barset_on_selected_bars_changed(void* self, void (*callback)(void*, int*)) {
+void q_barset_on_selected_bars_changed(void* self, void (*callback)(void*, libqt_list /* of int */)) {
     QBarSet_Connect_SelectedBarsChanged((QBarSet*)self, (intptr_t)callback);
 }
 
@@ -467,7 +467,7 @@ const char** q_barset_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_barset_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_barset_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

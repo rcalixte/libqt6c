@@ -97,7 +97,7 @@ int32_t q_geopositioninfosource_update_interval(void* self);
 /// @param self QGeoPositionInfoSource*
 /// @param methods flag of enum QGeoPositionInfoSource__PositioningMethod
 ///
-void q_geopositioninfosource_set_preferred_positioning_methods(void* self, int64_t methods);
+void q_geopositioninfosource_set_preferred_positioning_methods(void* self, int32_t methods);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#setPreferredPositioningMethods)
 ///
@@ -106,7 +106,7 @@ void q_geopositioninfosource_set_preferred_positioning_methods(void* self, int64
 /// @param self QGeoPositionInfoSource*
 /// @param callback void func(QGeoPositionInfoSource* self, flag of enum QGeoPositionInfoSource__PositioningMethod methods)
 ///
-void q_geopositioninfosource_on_set_preferred_positioning_methods(void* self, void (*callback)(void*, int64_t));
+void q_geopositioninfosource_on_set_preferred_positioning_methods(void* self, void (*callback)(void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#setPreferredPositioningMethods)
 ///
@@ -115,7 +115,7 @@ void q_geopositioninfosource_on_set_preferred_positioning_methods(void* self, vo
 /// @param self QGeoPositionInfoSource*
 /// @param methods flag of enum QGeoPositionInfoSource__PositioningMethod
 ///
-void q_geopositioninfosource_qbase_set_preferred_positioning_methods(void* self, int64_t methods);
+void q_geopositioninfosource_qbase_set_preferred_positioning_methods(void* self, int32_t methods);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#preferredPositioningMethods)
 ///
@@ -123,7 +123,7 @@ void q_geopositioninfosource_qbase_set_preferred_positioning_methods(void* self,
 ///
 /// @return flag of enum QGeoPositionInfoSource__PositioningMethod
 ///
-int64_t q_geopositioninfosource_preferred_positioning_methods(void* self);
+int32_t q_geopositioninfosource_preferred_positioning_methods(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#lastKnownPosition)
 ///
@@ -156,16 +156,16 @@ QGeoPositionInfo* q_geopositioninfosource_qbase_last_known_position(void* self, 
 ///
 /// @return flag of enum QGeoPositionInfoSource__PositioningMethod
 ///
-int64_t q_geopositioninfosource_supported_positioning_methods(void* self);
+int32_t q_geopositioninfosource_supported_positioning_methods(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#supportedPositioningMethods)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QGeoPositionInfoSource*
-/// @param callback int64_t func()
+/// @param callback int32_t func()
 ///
-void q_geopositioninfosource_on_supported_positioning_methods(void* self, int64_t (*callback)());
+void q_geopositioninfosource_on_supported_positioning_methods(void* self, int32_t (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#supportedPositioningMethods)
 ///
@@ -175,7 +175,7 @@ void q_geopositioninfosource_on_supported_positioning_methods(void* self, int64_
 ///
 /// @return flag of enum QGeoPositionInfoSource__PositioningMethod
 ///
-int64_t q_geopositioninfosource_qbase_supported_positioning_methods(void* self);
+int32_t q_geopositioninfosource_qbase_supported_positioning_methods(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#minimumUpdateInterval)
 ///
@@ -268,10 +268,10 @@ QGeoPositionInfoSource* q_geopositioninfosource_create_default_source(void* pare
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#createDefaultSource)
 ///
-/// @param parameters libqt_map /* of const char* to QVariant* */
+/// @param parameters libqt_map of const char* to QVariant*
 /// @param parent QObject*
 ///
-QGeoPositionInfoSource* q_geopositioninfosource_create_default_source2(libqt_map /* of const char* to QVariant* */ parameters, void* parent);
+QGeoPositionInfoSource* q_geopositioninfosource_create_default_source2(libqt_map parameters, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#createSource)
 ///
@@ -283,10 +283,10 @@ QGeoPositionInfoSource* q_geopositioninfosource_create_source(const char* source
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#createSource)
 ///
 /// @param sourceName const char*
-/// @param parameters libqt_map /* of const char* to QVariant* */
+/// @param parameters libqt_map of const char* to QVariant*
 /// @param parent QObject*
 ///
-QGeoPositionInfoSource* q_geopositioninfosource_create_source2(const char* sourceName, libqt_map /* of const char* to QVariant* */ parameters, void* parent);
+QGeoPositionInfoSource* q_geopositioninfosource_create_source2(const char* sourceName, libqt_map parameters, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#availableSources)
 ///
@@ -562,7 +562,9 @@ void q_geopositioninfosource_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QGeoPositionInfoSource*
 ///
-libqt_list /* of QObject* */ q_geopositioninfosource_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_geopositioninfosource_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1192,8 +1194,8 @@ typedef enum {
 typedef enum {
     QGEOPOSITIONINFOSOURCE_POSITIONINGMETHOD_NOPOSITIONINGMETHODS = 0,
     QGEOPOSITIONINFOSOURCE_POSITIONINGMETHOD_SATELLITEPOSITIONINGMETHODS = 255,
-    QGEOPOSITIONINFOSOURCE_POSITIONINGMETHOD_NONSATELLITEPOSITIONINGMETHODS = 4294967040,
-    QGEOPOSITIONINFOSOURCE_POSITIONINGMETHOD_ALLPOSITIONINGMETHODS = 4294967295
+    QGEOPOSITIONINFOSOURCE_POSITIONINGMETHOD_NONSATELLITEPOSITIONINGMETHODS = -256,
+    QGEOPOSITIONINFOSOURCE_POSITIONINGMETHOD_ALLPOSITIONINGMETHODS = -1
 } QGeoPositionInfoSource__PositioningMethod;
 
 #endif

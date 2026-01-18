@@ -1126,7 +1126,7 @@ void k_multitabbar_set_graphics_effect(void* self, void* effect);
 /// @param self KMultiTabBar*
 /// @param type enum Qt__GestureType
 ///
-void k_multitabbar_grab_gesture(void* self, int64_t type);
+void k_multitabbar_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -1135,7 +1135,7 @@ void k_multitabbar_grab_gesture(void* self, int64_t type);
 /// @param self KMultiTabBar*
 /// @param type enum Qt__GestureType
 ///
-void k_multitabbar_ungrab_gesture(void* self, int64_t type);
+void k_multitabbar_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2124,7 +2124,7 @@ void k_multitabbar_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void k_multitabbar_set_parent2(void* self, void* parent, int64_t f);
+void k_multitabbar_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -2202,9 +2202,9 @@ void k_multitabbar_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self KMultiTabBar*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_multitabbar_add_actions(void* self, libqt_list actions);
+void k_multitabbar_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2212,9 +2212,9 @@ void k_multitabbar_add_actions(void* self, libqt_list actions);
 ///
 /// @param self KMultiTabBar*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_multitabbar_insert_actions(void* self, void* before, libqt_list actions);
+void k_multitabbar_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2241,7 +2241,9 @@ void k_multitabbar_remove_action(void* self, void* action);
 ///
 /// @param self KMultiTabBar*
 ///
-libqt_list /* of QAction* */ k_multitabbar_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_multitabbar_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2298,7 +2300,7 @@ QWidget* k_multitabbar_parent_widget(void* self);
 /// @param self KMultiTabBar*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_multitabbar_set_window_flags(void* self, int64_t type);
+void k_multitabbar_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2308,7 +2310,7 @@ void k_multitabbar_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t k_multitabbar_window_flags(void* self);
+int32_t k_multitabbar_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2317,7 +2319,7 @@ int64_t k_multitabbar_window_flags(void* self);
 /// @param self KMultiTabBar*
 /// @param param1 enum Qt__WindowType
 ///
-void k_multitabbar_set_window_flag(void* self, int64_t param1);
+void k_multitabbar_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2326,7 +2328,7 @@ void k_multitabbar_set_window_flag(void* self, int64_t param1);
 /// @param self KMultiTabBar*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_multitabbar_override_window_flags(void* self, int64_t type);
+void k_multitabbar_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2336,7 +2338,7 @@ void k_multitabbar_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t k_multitabbar_window_type(void* self);
+int32_t k_multitabbar_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2547,7 +2549,7 @@ void k_multitabbar_on_custom_context_menu_requested(void* self, void (*callback)
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t k_multitabbar_input_method_hints(void* self);
+int32_t k_multitabbar_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2556,7 +2558,7 @@ int64_t k_multitabbar_input_method_hints(void* self);
 /// @param self KMultiTabBar*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void k_multitabbar_set_input_method_hints(void* self, int64_t hints);
+void k_multitabbar_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -2641,7 +2643,7 @@ QPixmap* k_multitabbar_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void k_multitabbar_grab_gesture2(void* self, int64_t type, int32_t flags);
+void k_multitabbar_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -2681,7 +2683,7 @@ void k_multitabbar_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void k_multitabbar_set_window_flag2(void* self, int64_t param1, bool on);
+void k_multitabbar_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -2710,7 +2712,7 @@ QWidget* k_multitabbar_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* k_multitabbar_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* k_multitabbar_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -2822,7 +2824,9 @@ void k_multitabbar_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KMultiTabBar*
 ///
-libqt_list /* of QObject* */ k_multitabbar_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_multitabbar_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4406,7 +4410,7 @@ void k_multitabbar_on_input_method_event(void* self, void (*callback)(void*, voi
 /// @param self KMultiTabBar*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_multitabbar_input_method_query(void* self, int64_t param1);
+QVariant* k_multitabbar_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4417,7 +4421,7 @@ QVariant* k_multitabbar_input_method_query(void* self, int64_t param1);
 /// @param self KMultiTabBar*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_multitabbar_qbase_input_method_query(void* self, int64_t param1);
+QVariant* k_multitabbar_qbase_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4428,7 +4432,7 @@ QVariant* k_multitabbar_qbase_input_method_query(void* self, int64_t param1);
 /// @param self KMultiTabBar*
 /// @param callback QVariant* func(KMultiTabBar* self, enum Qt__InputMethodQuery param1)
 ///
-void k_multitabbar_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void k_multitabbar_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -6284,7 +6288,7 @@ void k_multitabbarbutton_set_graphics_effect(void* self, void* effect);
 /// @param self KMultiTabBarButton*
 /// @param type enum Qt__GestureType
 ///
-void k_multitabbarbutton_grab_gesture(void* self, int64_t type);
+void k_multitabbarbutton_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -6293,7 +6297,7 @@ void k_multitabbarbutton_grab_gesture(void* self, int64_t type);
 /// @param self KMultiTabBarButton*
 /// @param type enum Qt__GestureType
 ///
-void k_multitabbarbutton_ungrab_gesture(void* self, int64_t type);
+void k_multitabbarbutton_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -7308,7 +7312,7 @@ void k_multitabbarbutton_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void k_multitabbarbutton_set_parent2(void* self, void* parent, int64_t f);
+void k_multitabbarbutton_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -7386,9 +7390,9 @@ void k_multitabbarbutton_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self KMultiTabBarButton*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_multitabbarbutton_add_actions(void* self, libqt_list actions);
+void k_multitabbarbutton_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -7396,9 +7400,9 @@ void k_multitabbarbutton_add_actions(void* self, libqt_list actions);
 ///
 /// @param self KMultiTabBarButton*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_multitabbarbutton_insert_actions(void* self, void* before, libqt_list actions);
+void k_multitabbarbutton_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -7425,7 +7429,9 @@ void k_multitabbarbutton_remove_action(void* self, void* action);
 ///
 /// @param self KMultiTabBarButton*
 ///
-libqt_list /* of QAction* */ k_multitabbarbutton_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_multitabbarbutton_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -7482,7 +7488,7 @@ QWidget* k_multitabbarbutton_parent_widget(void* self);
 /// @param self KMultiTabBarButton*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_multitabbarbutton_set_window_flags(void* self, int64_t type);
+void k_multitabbarbutton_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -7492,7 +7498,7 @@ void k_multitabbarbutton_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t k_multitabbarbutton_window_flags(void* self);
+int32_t k_multitabbarbutton_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -7501,7 +7507,7 @@ int64_t k_multitabbarbutton_window_flags(void* self);
 /// @param self KMultiTabBarButton*
 /// @param param1 enum Qt__WindowType
 ///
-void k_multitabbarbutton_set_window_flag(void* self, int64_t param1);
+void k_multitabbarbutton_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -7510,7 +7516,7 @@ void k_multitabbarbutton_set_window_flag(void* self, int64_t param1);
 /// @param self KMultiTabBarButton*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_multitabbarbutton_override_window_flags(void* self, int64_t type);
+void k_multitabbarbutton_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -7520,7 +7526,7 @@ void k_multitabbarbutton_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t k_multitabbarbutton_window_type(void* self);
+int32_t k_multitabbarbutton_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -7738,7 +7744,7 @@ void k_multitabbarbutton_on_custom_context_menu_requested(void* self, void (*cal
 /// @param self KMultiTabBarButton*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_multitabbarbutton_input_method_query(void* self, int64_t param1);
+QVariant* k_multitabbarbutton_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -7748,7 +7754,7 @@ QVariant* k_multitabbarbutton_input_method_query(void* self, int64_t param1);
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t k_multitabbarbutton_input_method_hints(void* self);
+int32_t k_multitabbarbutton_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -7757,7 +7763,7 @@ int64_t k_multitabbarbutton_input_method_hints(void* self);
 /// @param self KMultiTabBarButton*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void k_multitabbarbutton_set_input_method_hints(void* self, int64_t hints);
+void k_multitabbarbutton_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -7842,7 +7848,7 @@ QPixmap* k_multitabbarbutton_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void k_multitabbarbutton_grab_gesture2(void* self, int64_t type, int32_t flags);
+void k_multitabbarbutton_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -7882,7 +7888,7 @@ void k_multitabbarbutton_set_shortcut_auto_repeat2(void* self, int id, bool enab
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void k_multitabbarbutton_set_window_flag2(void* self, int64_t param1, bool on);
+void k_multitabbarbutton_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -7911,7 +7917,7 @@ QWidget* k_multitabbarbutton_create_window_container2(void* window, void* parent
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* k_multitabbarbutton_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* k_multitabbarbutton_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -8033,7 +8039,9 @@ void k_multitabbarbutton_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KMultiTabBarButton*
 ///
-libqt_list /* of QObject* */ k_multitabbarbutton_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_multitabbarbutton_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -9681,7 +9689,7 @@ void k_multitabbartab_set_graphics_effect(void* self, void* effect);
 /// @param self KMultiTabBarTab*
 /// @param type enum Qt__GestureType
 ///
-void k_multitabbartab_grab_gesture(void* self, int64_t type);
+void k_multitabbartab_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -9690,7 +9698,7 @@ void k_multitabbartab_grab_gesture(void* self, int64_t type);
 /// @param self KMultiTabBarTab*
 /// @param type enum Qt__GestureType
 ///
-void k_multitabbartab_ungrab_gesture(void* self, int64_t type);
+void k_multitabbartab_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -10705,7 +10713,7 @@ void k_multitabbartab_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void k_multitabbartab_set_parent2(void* self, void* parent, int64_t f);
+void k_multitabbartab_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -10783,9 +10791,9 @@ void k_multitabbartab_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self KMultiTabBarTab*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_multitabbartab_add_actions(void* self, libqt_list actions);
+void k_multitabbartab_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -10793,9 +10801,9 @@ void k_multitabbartab_add_actions(void* self, libqt_list actions);
 ///
 /// @param self KMultiTabBarTab*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_multitabbartab_insert_actions(void* self, void* before, libqt_list actions);
+void k_multitabbartab_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -10822,7 +10830,9 @@ void k_multitabbartab_remove_action(void* self, void* action);
 ///
 /// @param self KMultiTabBarTab*
 ///
-libqt_list /* of QAction* */ k_multitabbartab_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_multitabbartab_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -10879,7 +10889,7 @@ QWidget* k_multitabbartab_parent_widget(void* self);
 /// @param self KMultiTabBarTab*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_multitabbartab_set_window_flags(void* self, int64_t type);
+void k_multitabbartab_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -10889,7 +10899,7 @@ void k_multitabbartab_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t k_multitabbartab_window_flags(void* self);
+int32_t k_multitabbartab_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -10898,7 +10908,7 @@ int64_t k_multitabbartab_window_flags(void* self);
 /// @param self KMultiTabBarTab*
 /// @param param1 enum Qt__WindowType
 ///
-void k_multitabbartab_set_window_flag(void* self, int64_t param1);
+void k_multitabbartab_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -10907,7 +10917,7 @@ void k_multitabbartab_set_window_flag(void* self, int64_t param1);
 /// @param self KMultiTabBarTab*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_multitabbartab_override_window_flags(void* self, int64_t type);
+void k_multitabbartab_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -10917,7 +10927,7 @@ void k_multitabbartab_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t k_multitabbartab_window_type(void* self);
+int32_t k_multitabbartab_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -11135,7 +11145,7 @@ void k_multitabbartab_on_custom_context_menu_requested(void* self, void (*callba
 /// @param self KMultiTabBarTab*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_multitabbartab_input_method_query(void* self, int64_t param1);
+QVariant* k_multitabbartab_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -11145,7 +11155,7 @@ QVariant* k_multitabbartab_input_method_query(void* self, int64_t param1);
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t k_multitabbartab_input_method_hints(void* self);
+int32_t k_multitabbartab_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -11154,7 +11164,7 @@ int64_t k_multitabbartab_input_method_hints(void* self);
 /// @param self KMultiTabBarTab*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void k_multitabbartab_set_input_method_hints(void* self, int64_t hints);
+void k_multitabbartab_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -11239,7 +11249,7 @@ QPixmap* k_multitabbartab_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void k_multitabbartab_grab_gesture2(void* self, int64_t type, int32_t flags);
+void k_multitabbartab_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -11279,7 +11289,7 @@ void k_multitabbartab_set_shortcut_auto_repeat2(void* self, int id, bool enable)
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void k_multitabbartab_set_window_flag2(void* self, int64_t param1, bool on);
+void k_multitabbartab_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -11308,7 +11318,7 @@ QWidget* k_multitabbartab_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* k_multitabbartab_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* k_multitabbartab_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -11430,7 +11440,9 @@ void k_multitabbartab_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KMultiTabBarTab*
 ///
-libqt_list /* of QObject* */ k_multitabbartab_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_multitabbartab_children(void* self);
 
 /// Inherited from QObject
 ///

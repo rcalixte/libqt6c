@@ -91,9 +91,9 @@ bool q_boxplotseries_take(void* self, void* box);
 /// [Upstream resources](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#append)
 ///
 /// @param self QBoxPlotSeries*
-/// @param boxes libqt_list /* of QBoxSet* */
+/// @param boxes libqt_list of QBoxSet*
 ///
-bool q_boxplotseries_append2(void* self, libqt_list boxes);
+bool q_boxplotseries_append2(void* self, libqt_list /* of QBoxSet* */ boxes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#insert)
 ///
@@ -113,7 +113,9 @@ int32_t q_boxplotseries_count(void* self);
 ///
 /// @param self QBoxPlotSeries*
 ///
-libqt_list /* of QBoxSet* */ q_boxplotseries_box_sets(void* self);
+/// @return libqt_list of QBoxSet*
+///
+libqt_list q_boxplotseries_box_sets(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#clear)
 ///
@@ -339,9 +341,9 @@ void q_boxplotseries_on_box_width_changed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#boxsetsAdded)
 ///
 /// @param self QBoxPlotSeries*
-/// @param sets libqt_list /* of QBoxSet* */
+/// @param sets libqt_list of QBoxSet*
 ///
-void q_boxplotseries_boxsets_added(void* self, libqt_list sets);
+void q_boxplotseries_boxsets_added(void* self, libqt_list /* of QBoxSet* */ sets);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#boxsetsAdded)
 ///
@@ -353,9 +355,9 @@ void q_boxplotseries_on_boxsets_added(void* self, void (*callback)(void*, QBoxSe
 /// [Upstream resources](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#boxsetsRemoved)
 ///
 /// @param self QBoxPlotSeries*
-/// @param sets libqt_list /* of QBoxSet* */
+/// @param sets libqt_list of QBoxSet*
 ///
-void q_boxplotseries_boxsets_removed(void* self, libqt_list sets);
+void q_boxplotseries_boxsets_removed(void* self, libqt_list /* of QBoxSet* */ sets);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#boxsetsRemoved)
 ///
@@ -483,7 +485,9 @@ bool q_boxplotseries_detach_axis(void* self, void* axis);
 ///
 /// @param self QBoxPlotSeries*
 ///
-libqt_list /* of QAbstractAxis* */ q_boxplotseries_attached_axes(void* self);
+/// @return libqt_list of QAbstractAxis*
+///
+libqt_list q_boxplotseries_attached_axes(void* self);
 
 /// Inherited from QAbstractSeries
 ///
@@ -697,7 +701,9 @@ void q_boxplotseries_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QBoxPlotSeries*
 ///
-libqt_list /* of QObject* */ q_boxplotseries_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_boxplotseries_children(void* self);
 
 /// Inherited from QObject
 ///

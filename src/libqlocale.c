@@ -518,7 +518,7 @@ const char** q_locale_ui_languages(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_locale_ui_languages");
+        fprintf(stderr, "Failed to allocate memory for string list in q_locale_ui_languages\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -629,7 +629,7 @@ const char* q_locale_create_separated_list(void* self, const char* strl[static 1
     size_t strl_len = libqt_strv_length(strl);
     libqt_string* strl_qstr = (libqt_string*)malloc(strl_len * sizeof(libqt_string));
     if (strl_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_locale_create_separated_list");
+        fprintf(stderr, "Failed to allocate memory for string list in q_locale_create_separated_list\n");
         abort();
     }
     for (size_t i = 0; i < strl_len; ++i) {
@@ -935,7 +935,7 @@ const char** q_locale_ui_languages1(void* self, int8_t separator) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_locale_ui_languages1");
+        fprintf(stderr, "Failed to allocate memory for string list in q_locale_ui_languages1\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

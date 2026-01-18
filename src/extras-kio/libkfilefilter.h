@@ -103,7 +103,9 @@ KFileFilter* k_filefilter_from_mime_type(const char* mimeType);
 ///
 /// @param mimeTypes const char**
 ///
-libqt_list /* of KFileFilter* */ k_filefilter_from_mime_types(const char* mimeTypes[static 1]);
+/// @return libqt_list of KFileFilter*
+///
+libqt_list k_filefilter_from_mime_types(const char* mimeTypes[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kfilefilter.html#dtor.KFileFilter)
 ///

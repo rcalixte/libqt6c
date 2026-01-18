@@ -45,7 +45,8 @@ const char* q_accounts__authdata_mechanism(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     free(((QVariant*)map.values)[i]);
@@ -56,7 +57,9 @@ const char* q_accounts__authdata_mechanism(void* self);
 ///
 /// @param self Accounts__AuthData*
 ///
-libqt_map /* of const char* to QVariant* */ q_accounts__authdata_parameters(void* self);
+/// @return libqt_map of const char* to QVariant*
+///
+libqt_map q_accounts__authdata_parameters(void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1AuthData.html)
 ///

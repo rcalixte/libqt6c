@@ -67,7 +67,9 @@ const char* k_io__dndpopupmenuplugin_tr(const char* s);
 /// @param popupMenuInfo KFileItemListProperties*
 /// @param destination QUrl*
 ///
-libqt_list /* of QAction* */ k_io__dndpopupmenuplugin_setup(void* self, void* popupMenuInfo, void* destination);
+/// @return libqt_list of QAction*
+///
+libqt_list k_io__dndpopupmenuplugin_setup(void* self, void* popupMenuInfo, void* destination);
 
 /// [Upstream resources](https://api.kde.org/kio-dndpopupmenuplugin.html#setup)
 ///
@@ -86,7 +88,9 @@ void k_io__dndpopupmenuplugin_on_setup(void* self, QAction** (*callback)(void*, 
 /// @param popupMenuInfo KFileItemListProperties*
 /// @param destination QUrl*
 ///
-libqt_list /* of QAction* */ k_io__dndpopupmenuplugin_qbase_setup(void* self, void* popupMenuInfo, void* destination);
+/// @return libqt_list of QAction*
+///
+libqt_list k_io__dndpopupmenuplugin_qbase_setup(void* self, void* popupMenuInfo, void* destination);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -217,7 +221,9 @@ void k_io__dndpopupmenuplugin_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KIO__DndPopupMenuPlugin*
 ///
-libqt_list /* of QObject* */ k_io__dndpopupmenuplugin_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_io__dndpopupmenuplugin_children(void* self);
 
 /// Inherited from QObject
 ///

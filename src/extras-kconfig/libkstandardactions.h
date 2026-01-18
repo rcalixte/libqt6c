@@ -32,7 +32,7 @@ const char* k_standardactions_name(int32_t param1);
 ///
 /// @return libqt_list of enum KStandardActions__StandardAction
 ///
-libqt_list /* of enum KStandardActions__StandardAction */ k_standardactions_action_ids();
+libqt_list k_standardactions_action_ids();
 
 /// [Upstream resources](https://api.kde.org/kstandardactions.html#shortcutForActionId)
 ///

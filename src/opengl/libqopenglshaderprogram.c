@@ -216,7 +216,7 @@ const char** q_openglshader_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_openglshader_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_openglshader_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -557,7 +557,7 @@ int32_t q_openglshaderprogram_patch_vertex_count(void* self) {
     return QOpenGLShaderProgram_PatchVertexCount((QOpenGLShaderProgram*)self);
 }
 
-void q_openglshaderprogram_set_default_outer_tessellation_levels(void* self, libqt_list levels) {
+void q_openglshaderprogram_set_default_outer_tessellation_levels(void* self, libqt_list /* of float */ levels) {
     QOpenGLShaderProgram_SetDefaultOuterTessellationLevels((QOpenGLShaderProgram*)self, levels);
 }
 
@@ -566,7 +566,7 @@ libqt_list /* of float */ q_openglshaderprogram_default_outer_tessellation_level
     return _arr;
 }
 
-void q_openglshaderprogram_set_default_inner_tessellation_levels(void* self, libqt_list levels) {
+void q_openglshaderprogram_set_default_inner_tessellation_levels(void* self, libqt_list /* of float */ levels) {
     QOpenGLShaderProgram_SetDefaultInnerTessellationLevels((QOpenGLShaderProgram*)self, levels);
 }
 
@@ -1106,7 +1106,7 @@ const char** q_openglshaderprogram_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_openglshaderprogram_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_openglshaderprogram_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

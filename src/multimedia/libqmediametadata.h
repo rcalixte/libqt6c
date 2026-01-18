@@ -53,7 +53,7 @@ void q_mediametadata_remove(void* self, int32_t k);
 ///
 /// @return libqt_list of enum QMediaMetaData__Key
 ///
-libqt_list /* of enum QMediaMetaData__Key */ q_mediametadata_keys(void* self);
+libqt_list q_mediametadata_keys(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html#operator-5b-5d)
 ///

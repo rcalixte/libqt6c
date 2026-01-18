@@ -187,7 +187,9 @@ void k_io__workerfactory_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KIO__WorkerFactory*
 ///
-libqt_list /* of QObject* */ k_io__workerfactory_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_io__workerfactory_children(void* self);
 
 /// Inherited from QObject
 ///

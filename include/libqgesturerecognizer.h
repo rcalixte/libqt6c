@@ -106,13 +106,13 @@ void q_gesturerecognizer_qbase_reset(void* self, void* state);
 ///
 /// @return enum Qt__GestureType
 ///
-int64_t q_gesturerecognizer_register_recognizer(void* recognizer);
+int32_t q_gesturerecognizer_register_recognizer(void* recognizer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#unregisterRecognizer)
 ///
 /// @param type enum Qt__GestureType
 ///
-void q_gesturerecognizer_unregister_recognizer(int64_t type);
+void q_gesturerecognizer_unregister_recognizer(int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#operator-eq)
 ///

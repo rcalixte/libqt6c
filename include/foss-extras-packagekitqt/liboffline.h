@@ -43,7 +43,8 @@ const char* q_packagekit__offline_tr(const char* s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     free(((QVariant*)map.values)[i]);
@@ -54,7 +55,9 @@ const char* q_packagekit__offline_tr(const char* s);
 ///
 /// @param self PackageKit__Offline*
 ///
-libqt_map /* of const char* to QVariant* */ q_packagekit__offline_prepared_upgrade(void* self);
+/// @return libqt_map of const char* to QVariant*
+///
+libqt_map q_packagekit__offline_prepared_upgrade(void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -269,7 +272,9 @@ void q_packagekit__offline_kill_timer2(void* self, int32_t id);
 ///
 /// @param self PackageKit__Offline*
 ///
-libqt_list /* of QObject* */ q_packagekit__offline_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_packagekit__offline_children(void* self);
 
 /// Inherited from QObject
 ///

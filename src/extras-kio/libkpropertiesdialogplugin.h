@@ -268,7 +268,9 @@ void k_propertiesdialogplugin_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KPropertiesDialogPlugin*
 ///
-libqt_list /* of QObject* */ k_propertiesdialogplugin_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_propertiesdialogplugin_children(void* self);
 
 /// Inherited from QObject
 ///

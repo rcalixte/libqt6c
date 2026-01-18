@@ -54,19 +54,19 @@ int32_t q_geopositioninfosource_update_interval(void* self) {
     return QGeoPositionInfoSource_UpdateInterval((QGeoPositionInfoSource*)self);
 }
 
-void q_geopositioninfosource_set_preferred_positioning_methods(void* self, int64_t methods) {
+void q_geopositioninfosource_set_preferred_positioning_methods(void* self, int32_t methods) {
     QGeoPositionInfoSource_SetPreferredPositioningMethods((QGeoPositionInfoSource*)self, methods);
 }
 
-void q_geopositioninfosource_on_set_preferred_positioning_methods(void* self, void (*callback)(void*, int64_t)) {
+void q_geopositioninfosource_on_set_preferred_positioning_methods(void* self, void (*callback)(void*, int32_t)) {
     QGeoPositionInfoSource_OnSetPreferredPositioningMethods((QGeoPositionInfoSource*)self, (intptr_t)callback);
 }
 
-void q_geopositioninfosource_qbase_set_preferred_positioning_methods(void* self, int64_t methods) {
+void q_geopositioninfosource_qbase_set_preferred_positioning_methods(void* self, int32_t methods) {
     QGeoPositionInfoSource_QBaseSetPreferredPositioningMethods((QGeoPositionInfoSource*)self, methods);
 }
 
-int64_t q_geopositioninfosource_preferred_positioning_methods(void* self) {
+int32_t q_geopositioninfosource_preferred_positioning_methods(void* self) {
     return QGeoPositionInfoSource_PreferredPositioningMethods((QGeoPositionInfoSource*)self);
 }
 
@@ -82,15 +82,15 @@ QGeoPositionInfo* q_geopositioninfosource_qbase_last_known_position(void* self, 
     return QGeoPositionInfoSource_QBaseLastKnownPosition((QGeoPositionInfoSource*)self, fromSatellitePositioningMethodsOnly);
 }
 
-int64_t q_geopositioninfosource_supported_positioning_methods(void* self) {
+int32_t q_geopositioninfosource_supported_positioning_methods(void* self) {
     return QGeoPositionInfoSource_SupportedPositioningMethods((QGeoPositionInfoSource*)self);
 }
 
-void q_geopositioninfosource_on_supported_positioning_methods(void* self, int64_t (*callback)()) {
+void q_geopositioninfosource_on_supported_positioning_methods(void* self, int32_t (*callback)()) {
     QGeoPositionInfoSource_OnSupportedPositioningMethods((QGeoPositionInfoSource*)self, (intptr_t)callback);
 }
 
-int64_t q_geopositioninfosource_qbase_supported_positioning_methods(void* self) {
+int32_t q_geopositioninfosource_qbase_supported_positioning_methods(void* self) {
     return QGeoPositionInfoSource_QBaseSupportedPositioningMethods((QGeoPositionInfoSource*)self);
 }
 
@@ -208,7 +208,7 @@ const char** q_geopositioninfosource_available_sources() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_geopositioninfosource_available_sources");
+        fprintf(stderr, "Failed to allocate memory for string list in q_geopositioninfosource_available_sources\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -413,7 +413,7 @@ const char** q_geopositioninfosource_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_geopositioninfosource_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_geopositioninfosource_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

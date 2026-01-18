@@ -29,7 +29,7 @@ QPolarChart* q_polarchart_new2(void* parent) {
     return QPolarChart_new2((QGraphicsItem*)parent);
 }
 
-QPolarChart* q_polarchart_new3(void* parent, int64_t wFlags) {
+QPolarChart* q_polarchart_new3(void* parent, int32_t wFlags) {
     return QPolarChart_new3((QGraphicsItem*)parent, wFlags);
 }
 
@@ -489,15 +489,15 @@ QRectF* q_polarchart_window_frame_rect(void* self) {
     return QGraphicsWidget_WindowFrameRect((QGraphicsWidget*)self);
 }
 
-int64_t q_polarchart_window_flags(void* self) {
+int32_t q_polarchart_window_flags(void* self) {
     return QGraphicsWidget_WindowFlags((QGraphicsWidget*)self);
 }
 
-int64_t q_polarchart_window_type(void* self) {
+int32_t q_polarchart_window_type(void* self) {
     return QGraphicsWidget_WindowType((QGraphicsWidget*)self);
 }
 
-void q_polarchart_set_window_flags(void* self, int64_t wFlags) {
+void q_polarchart_set_window_flags(void* self, int32_t wFlags) {
     QGraphicsWidget_SetWindowFlags((QGraphicsWidget*)self, wFlags);
 }
 
@@ -552,11 +552,11 @@ void q_polarchart_add_action(void* self, void* action) {
     QGraphicsWidget_AddAction((QGraphicsWidget*)self, (QAction*)action);
 }
 
-void q_polarchart_add_actions(void* self, libqt_list actions) {
+void q_polarchart_add_actions(void* self, libqt_list /* of QAction* */ actions) {
     QGraphicsWidget_AddActions((QGraphicsWidget*)self, actions);
 }
 
-void q_polarchart_insert_actions(void* self, void* before, libqt_list actions) {
+void q_polarchart_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions) {
     QGraphicsWidget_InsertActions((QGraphicsWidget*)self, (QAction*)before, actions);
 }
 
@@ -617,11 +617,11 @@ void q_polarchart_set_attribute2(void* self, int32_t attribute, bool on) {
     QGraphicsWidget_SetAttribute2((QGraphicsWidget*)self, attribute, on);
 }
 
-void q_polarchart_grab_gesture(void* self, int64_t type) {
+void q_polarchart_grab_gesture(void* self, int32_t type) {
     QGraphicsObject_GrabGesture((QGraphicsObject*)self, type);
 }
 
-void q_polarchart_ungrab_gesture(void* self, int64_t type) {
+void q_polarchart_ungrab_gesture(void* self, int32_t type) {
     QGraphicsObject_UngrabGesture((QGraphicsObject*)self, type);
 }
 
@@ -721,7 +721,7 @@ void q_polarchart_on_height_changed(void* self, void (*callback)(void*)) {
     QGraphicsObject_Connect_HeightChanged((QGraphicsObject*)self, (intptr_t)callback);
 }
 
-void q_polarchart_grab_gesture2(void* self, int64_t type, int32_t flags) {
+void q_polarchart_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QGraphicsObject_GrabGesture2((QGraphicsObject*)self, type, flags);
 }
 
@@ -830,7 +830,7 @@ const char** q_polarchart_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_polarchart_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_polarchart_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1088,11 +1088,11 @@ void q_polarchart_set_graphics_effect(void* self, void* effect) {
     QGraphicsItem_SetGraphicsEffect((QGraphicsItem*)self, (QGraphicsEffect*)effect);
 }
 
-int64_t q_polarchart_accepted_mouse_buttons(void* self) {
+int32_t q_polarchart_accepted_mouse_buttons(void* self) {
     return QGraphicsItem_AcceptedMouseButtons((QGraphicsItem*)self);
 }
 
-void q_polarchart_set_accepted_mouse_buttons(void* self, int64_t buttons) {
+void q_polarchart_set_accepted_mouse_buttons(void* self, int32_t buttons) {
     QGraphicsItem_SetAcceptedMouseButtons((QGraphicsItem*)self, buttons);
 }
 
@@ -1269,7 +1269,7 @@ libqt_list /* of QGraphicsTransform* */ q_polarchart_transformations(void* self)
     return _arr;
 }
 
-void q_polarchart_set_transformations(void* self, libqt_list transformations) {
+void q_polarchart_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations) {
     QGraphicsItem_SetTransformations((QGraphicsItem*)self, transformations);
 }
 
@@ -1486,11 +1486,11 @@ void q_polarchart_set_data(void* self, int key, void* value) {
     QGraphicsItem_SetData((QGraphicsItem*)self, key, (QVariant*)value);
 }
 
-int64_t q_polarchart_input_method_hints(void* self) {
+int32_t q_polarchart_input_method_hints(void* self) {
     return QGraphicsItem_InputMethodHints((QGraphicsItem*)self);
 }
 
-void q_polarchart_set_input_method_hints(void* self, int64_t hints) {
+void q_polarchart_set_input_method_hints(void* self, int32_t hints) {
     QGraphicsItem_SetInputMethodHints((QGraphicsItem*)self, hints);
 }
 
@@ -2403,39 +2403,39 @@ void q_polarchart_on_input_method_event(void* self, void (*callback)(void*, void
     QPolarChart_OnInputMethodEvent((QPolarChart*)self, (intptr_t)callback);
 }
 
-QVariant* q_polarchart_input_method_query(void* self, int64_t query) {
+QVariant* q_polarchart_input_method_query(void* self, int32_t query) {
     return QPolarChart_InputMethodQuery((QPolarChart*)self, query);
 }
 
-QVariant* q_polarchart_qbase_input_method_query(void* self, int64_t query) {
+QVariant* q_polarchart_qbase_input_method_query(void* self, int32_t query) {
     return QPolarChart_QBaseInputMethodQuery((QPolarChart*)self, query);
 }
 
-void q_polarchart_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void q_polarchart_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     QPolarChart_OnInputMethodQuery((QPolarChart*)self, (intptr_t)callback);
 }
 
-bool q_polarchart_supports_extension(void* self, int64_t extension) {
+bool q_polarchart_supports_extension(void* self, int32_t extension) {
     return QPolarChart_SupportsExtension((QPolarChart*)self, extension);
 }
 
-bool q_polarchart_qbase_supports_extension(void* self, int64_t extension) {
+bool q_polarchart_qbase_supports_extension(void* self, int32_t extension) {
     return QPolarChart_QBaseSupportsExtension((QPolarChart*)self, extension);
 }
 
-void q_polarchart_on_supports_extension(void* self, bool (*callback)(void*, int64_t)) {
+void q_polarchart_on_supports_extension(void* self, bool (*callback)(void*, int32_t)) {
     QPolarChart_OnSupportsExtension((QPolarChart*)self, (intptr_t)callback);
 }
 
-void q_polarchart_set_extension(void* self, int64_t extension, void* variant) {
+void q_polarchart_set_extension(void* self, int32_t extension, void* variant) {
     QPolarChart_SetExtension((QPolarChart*)self, extension, (QVariant*)variant);
 }
 
-void q_polarchart_qbase_set_extension(void* self, int64_t extension, void* variant) {
+void q_polarchart_qbase_set_extension(void* self, int32_t extension, void* variant) {
     QPolarChart_QBaseSetExtension((QPolarChart*)self, extension, (QVariant*)variant);
 }
 
-void q_polarchart_on_set_extension(void* self, void (*callback)(void*, int64_t, void*)) {
+void q_polarchart_on_set_extension(void* self, void (*callback)(void*, int32_t, void*)) {
     QPolarChart_OnSetExtension((QPolarChart*)self, (intptr_t)callback);
 }
 

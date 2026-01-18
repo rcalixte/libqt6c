@@ -1094,7 +1094,9 @@ void q_gridlayout_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QGridLayout*
 ///
-libqt_list /* of QObject* */ q_gridlayout_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_gridlayout_children(void* self);
 
 /// Inherited from QObject
 ///

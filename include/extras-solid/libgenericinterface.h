@@ -56,7 +56,8 @@ QVariant* k_solid__genericinterface_property(void* self, const char* key);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     free(((QVariant*)map.values)[i]);
@@ -67,7 +68,9 @@ QVariant* k_solid__genericinterface_property(void* self, const char* key);
 ///
 /// @param self Solid__GenericInterface*
 ///
-libqt_map /* of const char* to QVariant* */ k_solid__genericinterface_all_properties(void* self);
+/// @return libqt_map of const char* to QVariant*
+///
+libqt_map k_solid__genericinterface_all_properties(void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-genericinterface.html#propertyExists)
 ///
@@ -79,16 +82,16 @@ bool k_solid__genericinterface_property_exists(void* self, const char* key);
 /// [Upstream resources](https://api.kde.org/solid-genericinterface.html#propertyChanged)
 ///
 /// @param self Solid__GenericInterface*
-/// @param changes libqt_map /* of const char* to int */
+/// @param changes libqt_map of const char* to int
 ///
-void k_solid__genericinterface_property_changed(void* self, libqt_map /* of const char* to int */ changes);
+void k_solid__genericinterface_property_changed(void* self, libqt_map changes);
 
 /// [Upstream resources](https://api.kde.org/solid-genericinterface.html#propertyChanged)
 ///
 /// @param self Solid__GenericInterface*
-/// @param callback void func(Solid__GenericInterface* self, libqt_map /* of const char* to int */ /* of const char* to int */)
+/// @param callback void func(Solid__GenericInterface* self, libqt_map of const char* to int)
 ///
-void k_solid__genericinterface_on_property_changed(void* self, void (*callback)(void*, libqt_map /* of const char* to int */));
+void k_solid__genericinterface_on_property_changed(void* self, void (*callback)(void*, libqt_map));
 
 /// [Upstream resources](https://api.kde.org/solid-genericinterface.html#conditionRaised)
 ///
@@ -291,7 +294,9 @@ void k_solid__genericinterface_kill_timer2(void* self, int32_t id);
 ///
 /// @param self Solid__GenericInterface*
 ///
-libqt_list /* of QObject* */ k_solid__genericinterface_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_solid__genericinterface_children(void* self);
 
 /// Inherited from QObject
 ///

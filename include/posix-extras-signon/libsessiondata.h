@@ -29,9 +29,9 @@ SignOn__SessionData* q_signon__sessiondata_new2(void* other);
 
 /// q_signon__sessiondata_new3 constructs a new SignOn::SessionData object.
 ///
-/// @param data libqt_map /* of const char* to QVariant* */
+/// @param data libqt_map of const char* to QVariant*
 ///
-SignOn__SessionData* q_signon__sessiondata_new3(libqt_map /* of const char* to QVariant* */ data);
+SignOn__SessionData* q_signon__sessiondata_new3(libqt_map data);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SessionData.html)
 ///
@@ -74,7 +74,8 @@ const char** q_signon__sessiondata_get_access_control_tokens(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     free(((QVariant*)map.values)[i]);
@@ -85,7 +86,9 @@ const char** q_signon__sessiondata_get_access_control_tokens(void* self);
 ///
 /// @param self SignOn__SessionData*
 ///
-libqt_map /* of const char* to QVariant* */ q_signon__sessiondata_to_map(void* self);
+/// @return libqt_map of const char* to QVariant*
+///
+libqt_map q_signon__sessiondata_to_map(void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1SessionData.html)
 ///

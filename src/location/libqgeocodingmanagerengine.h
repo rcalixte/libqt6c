@@ -15,18 +15,18 @@
 
 /// q_geocodingmanagerengine_new constructs a new QGeoCodingManagerEngine object.
 ///
-/// @param parameters libqt_map /* of const char* to QVariant* */
+/// @param parameters libqt_map of const char* to QVariant*
 ///
-QGeoCodingManagerEngine* q_geocodingmanagerengine_new(libqt_map /* of const char* to QVariant* */ parameters);
+QGeoCodingManagerEngine* q_geocodingmanagerengine_new(libqt_map parameters);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodingmanagerengine.html)
 
 /// q_geocodingmanagerengine_new2 constructs a new QGeoCodingManagerEngine object.
 ///
-/// @param parameters libqt_map /* of const char* to QVariant* */
+/// @param parameters libqt_map of const char* to QVariant*
 /// @param parent QObject*
 ///
-QGeoCodingManagerEngine* q_geocodingmanagerengine_new2(libqt_map /* of const char* to QVariant* */ parameters, void* parent);
+QGeoCodingManagerEngine* q_geocodingmanagerengine_new2(libqt_map parameters, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -356,7 +356,9 @@ void q_geocodingmanagerengine_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QGeoCodingManagerEngine*
 ///
-libqt_list /* of QObject* */ q_geocodingmanagerengine_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_geocodingmanagerengine_children(void* self);
 
 /// Inherited from QObject
 ///

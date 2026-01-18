@@ -225,7 +225,9 @@ bool k_service_has_mime_type(void* self, const char* mimeType);
 ///
 /// @param self KService*
 ///
-libqt_list /* of KServiceAction* */ k_service_actions(void* self);
+/// @return libqt_list of KServiceAction*
+///
+libqt_list k_service_actions(void* self);
 
 /// [Upstream resources](https://api.kde.org/kservice.html#allowMultipleFiles)
 ///

@@ -262,7 +262,9 @@ const char* q_networkinterface_hardware_address(void* self);
 ///
 /// @param self QNetworkInterface*
 ///
-libqt_list /* of QNetworkAddressEntry* */ q_networkinterface_address_entries(void* self);
+/// @return libqt_list of QNetworkAddressEntry*
+///
+libqt_list q_networkinterface_address_entries(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#interfaceIndexFromName)
 ///
@@ -292,11 +294,15 @@ const char* q_networkinterface_interface_name_from_index(int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#allInterfaces)
 ///
-libqt_list /* of QNetworkInterface* */ q_networkinterface_all_interfaces();
+/// @return libqt_list of QNetworkInterface*
+///
+libqt_list q_networkinterface_all_interfaces();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#allAddresses)
 ///
-libqt_list /* of QHostAddress* */ q_networkinterface_all_addresses();
+/// @return libqt_list of QHostAddress*
+///
+libqt_list q_networkinterface_all_addresses();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinterface.html#dtor.QNetworkInterface)
 ///

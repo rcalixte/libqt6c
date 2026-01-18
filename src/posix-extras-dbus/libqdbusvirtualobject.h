@@ -250,7 +250,9 @@ void q_dbusvirtualobject_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QDBusVirtualObject*
 ///
-libqt_list /* of QObject* */ q_dbusvirtualobject_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_dbusvirtualobject_children(void* self);
 
 /// Inherited from QObject
 ///

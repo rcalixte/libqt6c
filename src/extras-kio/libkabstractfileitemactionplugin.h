@@ -67,7 +67,9 @@ const char* k_abstractfileitemactionplugin_tr(const char* s);
 /// @param fileItemInfos KFileItemListProperties*
 /// @param parentWidget QWidget*
 ///
-libqt_list /* of QAction* */ k_abstractfileitemactionplugin_actions(void* self, void* fileItemInfos, void* parentWidget);
+/// @return libqt_list of QAction*
+///
+libqt_list k_abstractfileitemactionplugin_actions(void* self, void* fileItemInfos, void* parentWidget);
 
 /// [Upstream resources](https://api.kde.org/kabstractfileitemactionplugin.html#actions)
 ///
@@ -86,7 +88,9 @@ void k_abstractfileitemactionplugin_on_actions(void* self, QAction** (*callback)
 /// @param fileItemInfos KFileItemListProperties*
 /// @param parentWidget QWidget*
 ///
-libqt_list /* of QAction* */ k_abstractfileitemactionplugin_qbase_actions(void* self, void* fileItemInfos, void* parentWidget);
+/// @return libqt_list of QAction*
+///
+libqt_list k_abstractfileitemactionplugin_qbase_actions(void* self, void* fileItemInfos, void* parentWidget);
 
 /// [Upstream resources](https://api.kde.org/kabstractfileitemactionplugin.html#error)
 ///
@@ -231,7 +235,9 @@ void k_abstractfileitemactionplugin_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KAbstractFileItemActionPlugin*
 ///
-libqt_list /* of QObject* */ k_abstractfileitemactionplugin_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_abstractfileitemactionplugin_children(void* self);
 
 /// Inherited from QObject
 ///

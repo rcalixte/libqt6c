@@ -42,9 +42,9 @@ const char* k_io__dropjob_tr(const char* s);
 /// [Upstream resources](https://api.kde.org/kio-dropjob.html#setApplicationActions)
 ///
 /// @param self KIO__DropJob*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_io__dropjob_set_application_actions(void* self, libqt_list actions);
+void k_io__dropjob_set_application_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// [Upstream resources](https://api.kde.org/kio-dropjob.html#showMenu)
 ///
@@ -208,18 +208,18 @@ void k_io__dropjob_add_meta_data(void* self, const char* key, const char* value)
 /// [Upstream resources](https://api.kde.org/kio-job.html#addMetaData)
 ///
 /// @param self KIO__DropJob*
-/// @param values libqt_map /* of const char* to const char* */
+/// @param values libqt_map of const char* to const char*
 ///
-void k_io__dropjob_add_meta_data2(void* self, libqt_map /* of const char* to const char* */ values);
+void k_io__dropjob_add_meta_data2(void* self, libqt_map values);
 
 /// Inherited from KIO::Job
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#mergeMetaData)
 ///
 /// @param self KIO__DropJob*
-/// @param values libqt_map /* of const char* to const char* */
+/// @param values libqt_map of const char* to const char*
 ///
-void k_io__dropjob_merge_meta_data(void* self, libqt_map /* of const char* to const char* */ values);
+void k_io__dropjob_merge_meta_data(void* self, libqt_map values);
 
 /// Inherited from KIO::Job
 ///
@@ -691,7 +691,9 @@ void k_io__dropjob_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KIO__DropJob*
 ///
-libqt_list /* of QObject* */ k_io__dropjob_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_io__dropjob_children(void* self);
 
 /// Inherited from QObject
 ///

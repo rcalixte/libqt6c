@@ -158,18 +158,18 @@ void k_io__mkpathjob_add_meta_data(void* self, const char* key, const char* valu
 /// [Upstream resources](https://api.kde.org/kio-job.html#addMetaData)
 ///
 /// @param self KIO__MkpathJob*
-/// @param values libqt_map /* of const char* to const char* */
+/// @param values libqt_map of const char* to const char*
 ///
-void k_io__mkpathjob_add_meta_data2(void* self, libqt_map /* of const char* to const char* */ values);
+void k_io__mkpathjob_add_meta_data2(void* self, libqt_map values);
 
 /// Inherited from KIO::Job
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#mergeMetaData)
 ///
 /// @param self KIO__MkpathJob*
-/// @param values libqt_map /* of const char* to const char* */
+/// @param values libqt_map of const char* to const char*
 ///
-void k_io__mkpathjob_merge_meta_data(void* self, libqt_map /* of const char* to const char* */ values);
+void k_io__mkpathjob_merge_meta_data(void* self, libqt_map values);
 
 /// Inherited from KIO::Job
 ///
@@ -641,7 +641,9 @@ void k_io__mkpathjob_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KIO__MkpathJob*
 ///
-libqt_list /* of QObject* */ k_io__mkpathjob_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_io__mkpathjob_children(void* self);
 
 /// Inherited from QObject
 ///

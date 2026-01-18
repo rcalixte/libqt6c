@@ -16,7 +16,7 @@ QColorSpace* q_colorspace_new3(void* whitePoint, int32_t transferFunction) {
     return QColorSpace_new3((QPointF*)whitePoint, transferFunction);
 }
 
-QColorSpace* q_colorspace_new4(void* whitePoint, libqt_list transferFunctionTable) {
+QColorSpace* q_colorspace_new4(void* whitePoint, libqt_list /* of uint16_t */ transferFunctionTable) {
     return QColorSpace_new4((QPointF*)whitePoint, transferFunctionTable);
 }
 
@@ -28,7 +28,7 @@ QColorSpace* q_colorspace_new6(int32_t primaries, float gamma) {
     return QColorSpace_new6(primaries, gamma);
 }
 
-QColorSpace* q_colorspace_new7(int32_t primaries, libqt_list transferFunctionTable) {
+QColorSpace* q_colorspace_new7(int32_t primaries, libqt_list /* of uint16_t */ transferFunctionTable) {
     return QColorSpace_new7(primaries, transferFunctionTable);
 }
 
@@ -36,11 +36,11 @@ QColorSpace* q_colorspace_new8(void* whitePoint, void* redPoint, void* greenPoin
     return QColorSpace_new8((QPointF*)whitePoint, (QPointF*)redPoint, (QPointF*)greenPoint, (QPointF*)bluePoint, transferFunction);
 }
 
-QColorSpace* q_colorspace_new9(void* whitePoint, void* redPoint, void* greenPoint, void* bluePoint, libqt_list transferFunctionTable) {
+QColorSpace* q_colorspace_new9(void* whitePoint, void* redPoint, void* greenPoint, void* bluePoint, libqt_list /* of uint16_t */ transferFunctionTable) {
     return QColorSpace_new9((QPointF*)whitePoint, (QPointF*)redPoint, (QPointF*)greenPoint, (QPointF*)bluePoint, transferFunctionTable);
 }
 
-QColorSpace* q_colorspace_new10(void* whitePoint, void* redPoint, void* greenPoint, void* bluePoint, libqt_list redTransferFunctionTable, libqt_list greenTransferFunctionTable, libqt_list blueTransferFunctionTable) {
+QColorSpace* q_colorspace_new10(void* whitePoint, void* redPoint, void* greenPoint, void* bluePoint, libqt_list /* of uint16_t */ redTransferFunctionTable, libqt_list /* of uint16_t */ greenTransferFunctionTable, libqt_list /* of uint16_t */ blueTransferFunctionTable) {
     return QColorSpace_new10((QPointF*)whitePoint, (QPointF*)redPoint, (QPointF*)greenPoint, (QPointF*)bluePoint, redTransferFunctionTable, greenTransferFunctionTable, blueTransferFunctionTable);
 }
 
@@ -95,11 +95,11 @@ void q_colorspace_set_transfer_function(void* self, int32_t transferFunction) {
     QColorSpace_SetTransferFunction((QColorSpace*)self, transferFunction);
 }
 
-void q_colorspace_set_transfer_function2(void* self, libqt_list transferFunctionTable) {
+void q_colorspace_set_transfer_function2(void* self, libqt_list /* of uint16_t */ transferFunctionTable) {
     QColorSpace_SetTransferFunction2((QColorSpace*)self, transferFunctionTable);
 }
 
-void q_colorspace_set_transfer_functions(void* self, libqt_list redTransferFunctionTable, libqt_list greenTransferFunctionTable, libqt_list blueTransferFunctionTable) {
+void q_colorspace_set_transfer_functions(void* self, libqt_list /* of uint16_t */ redTransferFunctionTable, libqt_list /* of uint16_t */ greenTransferFunctionTable, libqt_list /* of uint16_t */ blueTransferFunctionTable) {
     QColorSpace_SetTransferFunctions((QColorSpace*)self, redTransferFunctionTable, greenTransferFunctionTable, blueTransferFunctionTable);
 }
 
@@ -107,11 +107,11 @@ QColorSpace* q_colorspace_with_transfer_function(void* self, int32_t transferFun
     return QColorSpace_WithTransferFunction((QColorSpace*)self, transferFunction);
 }
 
-QColorSpace* q_colorspace_with_transfer_function2(void* self, libqt_list transferFunctionTable) {
+QColorSpace* q_colorspace_with_transfer_function2(void* self, libqt_list /* of uint16_t */ transferFunctionTable) {
     return QColorSpace_WithTransferFunction2((QColorSpace*)self, transferFunctionTable);
 }
 
-QColorSpace* q_colorspace_with_transfer_functions(void* self, libqt_list redTransferFunctionTable, libqt_list greenTransferFunctionTable, libqt_list blueTransferFunctionTable) {
+QColorSpace* q_colorspace_with_transfer_functions(void* self, libqt_list /* of uint16_t */ redTransferFunctionTable, libqt_list /* of uint16_t */ greenTransferFunctionTable, libqt_list /* of uint16_t */ blueTransferFunctionTable) {
     return QColorSpace_WithTransferFunctions((QColorSpace*)self, redTransferFunctionTable, greenTransferFunctionTable, blueTransferFunctionTable);
 }
 

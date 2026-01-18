@@ -19,7 +19,7 @@ const char** q_formbuilder_plugin_paths(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_formbuilder_plugin_paths");
+        fprintf(stderr, "Failed to allocate memory for string list in q_formbuilder_plugin_paths\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -45,7 +45,7 @@ void q_formbuilder_set_plugin_path(void* self, const char* pluginPaths[static 1]
     size_t pluginPaths_len = libqt_strv_length(pluginPaths);
     libqt_string* pluginPaths_qstr = (libqt_string*)malloc(pluginPaths_len * sizeof(libqt_string));
     if (pluginPaths_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_formbuilder_set_plugin_path");
+        fprintf(stderr, "Failed to allocate memory for string list in q_formbuilder_set_plugin_path\n");
         abort();
     }
     for (size_t i = 0; i < pluginPaths_len; ++i) {

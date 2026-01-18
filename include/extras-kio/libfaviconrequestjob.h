@@ -526,7 +526,9 @@ void k_io__faviconrequestjob_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KIO__FavIconRequestJob*
 ///
-libqt_list /* of QObject* */ k_io__faviconrequestjob_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_io__faviconrequestjob_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1262,7 +1264,9 @@ void k_io__faviconrequestjob_on_has_subjobs(void* self, bool (*callback)());
 ///
 /// @param self KIO__FavIconRequestJob*
 ///
-libqt_list /* of KJob* */ k_io__faviconrequestjob_subjobs(void* self);
+/// @return libqt_list of KJob*
+///
+libqt_list k_io__faviconrequestjob_subjobs(void* self);
 
 /// Inherited from KCompositeJob
 ///
@@ -1272,7 +1276,9 @@ libqt_list /* of KJob* */ k_io__faviconrequestjob_subjobs(void* self);
 ///
 /// @param self KIO__FavIconRequestJob*
 ///
-libqt_list /* of KJob* */ k_io__faviconrequestjob_qbase_subjobs(void* self);
+/// @return libqt_list of KJob*
+///
+libqt_list k_io__faviconrequestjob_qbase_subjobs(void* self);
 
 /// Inherited from KCompositeJob
 ///

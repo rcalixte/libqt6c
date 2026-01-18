@@ -102,7 +102,9 @@ bool q_abstracteventdispatcher_unregister_timers(void* self, void* object);
 /// @param self QAbstractEventDispatcher*
 /// @param object QObject*
 ///
-libqt_list /* of QAbstractEventDispatcher__TimerInfo* */ q_abstracteventdispatcher_registered_timers(void* self, void* object);
+/// @return libqt_list of QAbstractEventDispatcher__TimerInfo*
+///
+libqt_list q_abstracteventdispatcher_registered_timers(void* self, void* object);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#remainingTime)
 ///
@@ -123,7 +125,9 @@ bool q_abstracteventdispatcher_unregister_timer2(void* self, int32_t timerId);
 /// @param self QAbstractEventDispatcher*
 /// @param object QObject*
 ///
-libqt_list /* of QAbstractEventDispatcher__TimerInfoV2* */ q_abstracteventdispatcher_timers_for_object(void* self, void* object);
+/// @return libqt_list of QAbstractEventDispatcher__TimerInfoV2*
+///
+libqt_list q_abstracteventdispatcher_timers_for_object(void* self, void* object);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#wakeUp)
 ///
@@ -352,7 +356,9 @@ void q_abstracteventdispatcher_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QAbstractEventDispatcher*
 ///
-libqt_list /* of QObject* */ q_abstracteventdispatcher_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_abstracteventdispatcher_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -646,7 +652,9 @@ bool q_abstracteventdispatcherv2_unregister_timer(void* self, int32_t timerId);
 /// @param self QAbstractEventDispatcherV2*
 /// @param object QObject*
 ///
-libqt_list /* of QAbstractEventDispatcher__TimerInfoV2* */ q_abstracteventdispatcherv2_timers_for_object(void* self, void* object);
+/// @return libqt_list of QAbstractEventDispatcher__TimerInfoV2*
+///
+libqt_list q_abstracteventdispatcherv2_timers_for_object(void* self, void* object);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcherv2.html#processEventsWithDeadline)
 ///
@@ -747,7 +755,9 @@ bool q_abstracteventdispatcherv2_unregister_timers(void* self, void* object);
 /// @param self QAbstractEventDispatcherV2*
 /// @param object QObject*
 ///
-libqt_list /* of QAbstractEventDispatcher__TimerInfo* */ q_abstracteventdispatcherv2_registered_timers(void* self, void* object);
+/// @return libqt_list of QAbstractEventDispatcher__TimerInfo*
+///
+libqt_list q_abstracteventdispatcherv2_registered_timers(void* self, void* object);
 
 /// Inherited from QAbstractEventDispatcher
 ///
@@ -999,7 +1009,9 @@ void q_abstracteventdispatcherv2_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QAbstractEventDispatcherV2*
 ///
-libqt_list /* of QObject* */ q_abstracteventdispatcherv2_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_abstracteventdispatcherv2_children(void* self);
 
 /// Inherited from QObject
 ///

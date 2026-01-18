@@ -417,7 +417,7 @@ const char** k_parts__readwritepart_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_parts__readwritepart_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_parts__readwritepart_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -540,7 +540,7 @@ void k_parts__readwritepart_reload_x_m_l(void* self) {
     KXMLGUIClient_ReloadXML((KXMLGUIClient*)self);
 }
 
-void k_parts__readwritepart_plug_action_list(void* self, const char* name, libqt_list actionList) {
+void k_parts__readwritepart_plug_action_list(void* self, const char* name, libqt_list /* of QAction* */ actionList) {
     KXMLGUIClient_PlugActionList((KXMLGUIClient*)self, qstring(name), actionList);
 }
 
@@ -552,7 +552,7 @@ const char* k_parts__readwritepart_find_most_recent_x_m_l_file(const char* files
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_parts__readwritepart_find_most_recent_x_m_l_file");
+        fprintf(stderr, "Failed to allocate memory for string list in k_parts__readwritepart_find_most_recent_x_m_l_file\n");
         abort();
     }
     for (size_t i = 0; i < files_len; ++i) {

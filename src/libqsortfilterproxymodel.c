@@ -404,7 +404,7 @@ bool q_sortfilterproxymodel_qbase_set_header_data(void* self, int section, int32
     return QSortFilterProxyModel_QBaseSetHeaderData((QSortFilterProxyModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-QMimeData* q_sortfilterproxymodel_mime_data(void* self, libqt_list indexes) {
+QMimeData* q_sortfilterproxymodel_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
     return QSortFilterProxyModel_MimeData((QSortFilterProxyModel*)self, indexes);
 }
 
@@ -412,7 +412,7 @@ void q_sortfilterproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void
     QSortFilterProxyModel_OnMimeData((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-QMimeData* q_sortfilterproxymodel_qbase_mime_data(void* self, libqt_list indexes) {
+QMimeData* q_sortfilterproxymodel_qbase_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
     return QSortFilterProxyModel_QBaseMimeData((QSortFilterProxyModel*)self, indexes);
 }
 
@@ -567,7 +567,7 @@ const char** q_sortfilterproxymodel_mime_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_sortfilterproxymodel_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sortfilterproxymodel_mime_types\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -590,7 +590,7 @@ const char** q_sortfilterproxymodel_qbase_mime_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_sortfilterproxymodel_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sortfilterproxymodel_mime_types\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -786,15 +786,15 @@ bool q_sortfilterproxymodel_check_index2(void* self, void* index, int32_t option
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
-void q_sortfilterproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles) {
+void q_sortfilterproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles) {
     QAbstractItemModel_DataChanged3((QAbstractItemModel*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_sortfilterproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*)) {
+void q_sortfilterproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */)) {
     QAbstractItemModel_Connect_DataChanged3((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_sortfilterproxymodel_layout_changed1(void* self, libqt_list parents) {
+void q_sortfilterproxymodel_layout_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents) {
     QAbstractItemModel_LayoutChanged1((QAbstractItemModel*)self, parents);
 }
 
@@ -802,7 +802,7 @@ void q_sortfilterproxymodel_on_layout_changed1(void* self, void (*callback)(void
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_sortfilterproxymodel_layout_changed2(void* self, libqt_list parents, int32_t hint) {
+void q_sortfilterproxymodel_layout_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint) {
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
@@ -810,7 +810,7 @@ void q_sortfilterproxymodel_on_layout_changed2(void* self, void (*callback)(void
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_sortfilterproxymodel_layout_about_to_be_changed1(void* self, libqt_list parents) {
+void q_sortfilterproxymodel_layout_about_to_be_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents) {
     QAbstractItemModel_LayoutAboutToBeChanged1((QAbstractItemModel*)self, parents);
 }
 
@@ -818,7 +818,7 @@ void q_sortfilterproxymodel_on_layout_about_to_be_changed1(void* self, void (*ca
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_sortfilterproxymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint) {
+void q_sortfilterproxymodel_layout_about_to_be_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint) {
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
@@ -931,7 +931,7 @@ const char** q_sortfilterproxymodel_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_sortfilterproxymodel_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sortfilterproxymodel_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1147,7 +1147,7 @@ libqt_map /* of int to char* */ q_sortfilterproxymodel_role_names(void* self) {
     libqt_string* _out_values = (libqt_string*)_out.values;
     char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string values in q_sortfilterproxymodel_role_names");
+        fprintf(stderr, "Failed to allocate memory for map string values in q_sortfilterproxymodel_role_names\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
@@ -1157,9 +1157,11 @@ libqt_map /* of int to char* */ q_sortfilterproxymodel_role_names(void* self) {
                 libqt_free(_ret_values[j]);
             }
             free(_ret_values);
-            fprintf(stderr, "Failed to allocate memory for map string values in q_sortfilterproxymodel_role_names");
+            fprintf(stderr, "Failed to allocate memory for map string values in q_sortfilterproxymodel_role_names\n");
             abort();
         }
+        memcpy(_ret_values[i], _out_values[i].data, _out_values[i].len);
+        _ret_values[i][_out_values[i].len] = '\0';
     }
     _ret.keys = _out.keys;
     _ret.values = (void*)_ret_values;
@@ -1178,7 +1180,7 @@ libqt_map /* of int to char* */ q_sortfilterproxymodel_qbase_role_names(void* se
     libqt_string* _out_values = (libqt_string*)_out.values;
     char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string values in q_sortfilterproxymodel_role_names");
+        fprintf(stderr, "Failed to allocate memory for map string values in q_sortfilterproxymodel_role_names\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
@@ -1188,9 +1190,11 @@ libqt_map /* of int to char* */ q_sortfilterproxymodel_qbase_role_names(void* se
                 libqt_free(_ret_values[j]);
             }
             free(_ret_values);
-            fprintf(stderr, "Failed to allocate memory for map string values in q_sortfilterproxymodel_role_names");
+            fprintf(stderr, "Failed to allocate memory for map string values in q_sortfilterproxymodel_role_names\n");
             abort();
         }
+        memcpy(_ret_values[i], _out_values[i].data, _out_values[i].len);
+        _ret_values[i][_out_values[i].len] = '\0';
     }
     _ret.keys = _out.keys;
     _ret.values = (void*)_ret_values;
@@ -1361,11 +1365,11 @@ void q_sortfilterproxymodel_on_create_index(void* self, QModelIndex* (*callback)
     QSortFilterProxyModel_OnCreateIndex((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-void q_sortfilterproxymodel_encode_data(void* self, libqt_list indexes, void* stream) {
+void q_sortfilterproxymodel_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
     QSortFilterProxyModel_EncodeData((QSortFilterProxyModel*)self, indexes, (QDataStream*)stream);
 }
 
-void q_sortfilterproxymodel_qbase_encode_data(void* self, libqt_list indexes, void* stream) {
+void q_sortfilterproxymodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
     QSortFilterProxyModel_QBaseEncodeData((QSortFilterProxyModel*)self, indexes, (QDataStream*)stream);
 }
 
@@ -1565,11 +1569,11 @@ void q_sortfilterproxymodel_on_change_persistent_index(void* self, void (*callba
     QSortFilterProxyModel_OnChangePersistentIndex((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-void q_sortfilterproxymodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to) {
+void q_sortfilterproxymodel_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
     QSortFilterProxyModel_ChangePersistentIndexList((QSortFilterProxyModel*)self, from, to);
 }
 
-void q_sortfilterproxymodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to) {
+void q_sortfilterproxymodel_qbase_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
     QSortFilterProxyModel_QBaseChangePersistentIndexList((QSortFilterProxyModel*)self, from, to);
 }
 

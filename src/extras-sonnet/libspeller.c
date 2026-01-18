@@ -45,7 +45,7 @@ const char** k_sonnet__speller_suggest(void* self, const char* word) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_sonnet__speller_suggest");
+        fprintf(stderr, "Failed to allocate memory for string list in k_sonnet__speller_suggest\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -63,7 +63,7 @@ bool k_sonnet__speller_check_and_suggest(void* self, const char* word, const cha
     size_t suggestions_len = libqt_strv_length(suggestions);
     libqt_string* suggestions_qstr = (libqt_string*)malloc(suggestions_len * sizeof(libqt_string));
     if (suggestions_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_sonnet__speller_check_and_suggest");
+        fprintf(stderr, "Failed to allocate memory for string list in k_sonnet__speller_check_and_suggest\n");
         abort();
     }
     for (size_t i = 0; i < suggestions_len; ++i) {
@@ -100,7 +100,7 @@ const char** k_sonnet__speller_available_backends(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_sonnet__speller_available_backends");
+        fprintf(stderr, "Failed to allocate memory for string list in k_sonnet__speller_available_backends\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -119,7 +119,7 @@ const char** k_sonnet__speller_available_languages(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_sonnet__speller_available_languages");
+        fprintf(stderr, "Failed to allocate memory for string list in k_sonnet__speller_available_languages\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -138,7 +138,7 @@ const char** k_sonnet__speller_available_language_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_sonnet__speller_available_language_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_sonnet__speller_available_language_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -160,13 +160,13 @@ libqt_map /* of const char* to const char* */ k_sonnet__speller_available_dictio
     libqt_string* _out_keys = (libqt_string*)_out.keys;
     char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string keys in k_sonnet__speller_available_dictionaries");
+        fprintf(stderr, "Failed to allocate memory for map string keys in k_sonnet__speller_available_dictionaries\n");
         abort();
     }
     libqt_string* _out_values = (libqt_string*)_out.values;
-    const char** _ret_values = (const char**)malloc(_ret.len * sizeof(const char*));
+    char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string values in k_sonnet__speller_available_dictionaries");
+        fprintf(stderr, "Failed to allocate memory for map string values in k_sonnet__speller_available_dictionaries\n");
         free(_out.keys);
         abort();
     }
@@ -177,12 +177,12 @@ libqt_map /* of const char* to const char* */ k_sonnet__speller_available_dictio
                 libqt_free(_ret_keys[j]);
             }
             free(_ret_keys);
-            fprintf(stderr, "Failed to allocate memory for map keys in k_sonnet__speller_available_dictionaries");
+            fprintf(stderr, "Failed to allocate memory for map keys in k_sonnet__speller_available_dictionaries\n");
             abort();
         }
         memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
         _ret_keys[i][_out_keys[i].len] = '\0';
-        _ret_values[i] = (const char*)malloc(_out_values[i].len + 1);
+        _ret_values[i] = (char*)malloc(_out_values[i].len + 1);
         if (_ret_values[i] == NULL) {
             for (size_t j = 0; j < i; j++) {
                 libqt_free(_ret_keys[j]);
@@ -190,9 +190,11 @@ libqt_map /* of const char* to const char* */ k_sonnet__speller_available_dictio
             }
             free(_ret_keys);
             free(_ret_values);
-            fprintf(stderr, "Failed to allocate memory for map string values in k_sonnet__speller_available_dictionaries");
+            fprintf(stderr, "Failed to allocate memory for map string values in k_sonnet__speller_available_dictionaries\n");
             abort();
         }
+        memcpy(_ret_values[i], _out_values[i].data, _out_values[i].len);
+        _ret_values[i][_out_values[i].len] = '\0';
     }
     _ret.keys = (void*)_ret_keys;
     _ret.values = (void*)_ret_values;
@@ -213,13 +215,13 @@ libqt_map /* of const char* to const char* */ k_sonnet__speller_preferred_dictio
     libqt_string* _out_keys = (libqt_string*)_out.keys;
     char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string keys in k_sonnet__speller_preferred_dictionaries");
+        fprintf(stderr, "Failed to allocate memory for map string keys in k_sonnet__speller_preferred_dictionaries\n");
         abort();
     }
     libqt_string* _out_values = (libqt_string*)_out.values;
-    const char** _ret_values = (const char**)malloc(_ret.len * sizeof(const char*));
+    char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string values in k_sonnet__speller_preferred_dictionaries");
+        fprintf(stderr, "Failed to allocate memory for map string values in k_sonnet__speller_preferred_dictionaries\n");
         free(_out.keys);
         abort();
     }
@@ -230,12 +232,12 @@ libqt_map /* of const char* to const char* */ k_sonnet__speller_preferred_dictio
                 libqt_free(_ret_keys[j]);
             }
             free(_ret_keys);
-            fprintf(stderr, "Failed to allocate memory for map keys in k_sonnet__speller_preferred_dictionaries");
+            fprintf(stderr, "Failed to allocate memory for map keys in k_sonnet__speller_preferred_dictionaries\n");
             abort();
         }
         memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
         _ret_keys[i][_out_keys[i].len] = '\0';
-        _ret_values[i] = (const char*)malloc(_out_values[i].len + 1);
+        _ret_values[i] = (char*)malloc(_out_values[i].len + 1);
         if (_ret_values[i] == NULL) {
             for (size_t j = 0; j < i; j++) {
                 libqt_free(_ret_keys[j]);
@@ -243,9 +245,11 @@ libqt_map /* of const char* to const char* */ k_sonnet__speller_preferred_dictio
             }
             free(_ret_keys);
             free(_ret_values);
-            fprintf(stderr, "Failed to allocate memory for map string values in k_sonnet__speller_preferred_dictionaries");
+            fprintf(stderr, "Failed to allocate memory for map string values in k_sonnet__speller_preferred_dictionaries\n");
             abort();
         }
+        memcpy(_ret_values[i], _out_values[i].data, _out_values[i].len);
+        _ret_values[i][_out_values[i].len] = '\0';
     }
     _ret.keys = (void*)_ret_keys;
     _ret.values = (void*)_ret_values;

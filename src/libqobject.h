@@ -203,7 +203,9 @@ void q_object_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QObject*
 ///
-libqt_list /* of QObject* */ q_object_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_object_children(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///

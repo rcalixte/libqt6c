@@ -252,7 +252,7 @@ const char** q_placemanagerengine_child_category_ids(void* self, const char* cat
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_placemanagerengine_child_category_ids");
+        fprintf(stderr, "Failed to allocate memory for string list in q_placemanagerengine_child_category_ids\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -275,7 +275,7 @@ const char** q_placemanagerengine_qbase_child_category_ids(void* self, const cha
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_placemanagerengine_child_category_ids");
+        fprintf(stderr, "Failed to allocate memory for string list in q_placemanagerengine_child_category_ids\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -329,7 +329,7 @@ libqt_list /* of QLocale* */ q_placemanagerengine_qbase_locales(void* self) {
     return _arr;
 }
 
-void q_placemanagerengine_set_locales(void* self, libqt_list locales) {
+void q_placemanagerengine_set_locales(void* self, libqt_list /* of QLocale* */ locales) {
     QPlaceManagerEngine_SetLocales((QPlaceManagerEngine*)self, locales);
 }
 
@@ -337,7 +337,7 @@ void q_placemanagerengine_on_set_locales(void* self, void (*callback)(void*, QLo
     QPlaceManagerEngine_OnSetLocales((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
-void q_placemanagerengine_qbase_set_locales(void* self, libqt_list locales) {
+void q_placemanagerengine_qbase_set_locales(void* self, libqt_list /* of QLocale* */ locales) {
     QPlaceManagerEngine_QBaseSetLocales((QPlaceManagerEngine*)self, locales);
 }
 
@@ -588,7 +588,7 @@ const char** q_placemanagerengine_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_placemanagerengine_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_placemanagerengine_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

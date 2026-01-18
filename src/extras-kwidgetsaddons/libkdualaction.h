@@ -269,7 +269,9 @@ const char* k_dualaction_tr3(const char* s, const char* c, int n);
 ///
 /// @param self KDualAction*
 ///
-libqt_list /* of QObject* */ k_dualaction_associated_objects(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_dualaction_associated_objects(void* self);
 
 /// Inherited from QAction
 ///
@@ -458,9 +460,9 @@ QKeySequence* k_dualaction_shortcut(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
 ///
 /// @param self KDualAction*
-/// @param shortcuts libqt_list /* of QKeySequence* */
+/// @param shortcuts libqt_list of QKeySequence*
 ///
-void k_dualaction_set_shortcuts(void* self, libqt_list shortcuts);
+void k_dualaction_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts);
 
 /// Inherited from QAction
 ///
@@ -477,7 +479,9 @@ void k_dualaction_set_shortcuts2(void* self, int32_t shortcuts);
 ///
 /// @param self KDualAction*
 ///
-libqt_list /* of QKeySequence* */ k_dualaction_shortcuts(void* self);
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_dualaction_shortcuts(void* self);
 
 /// Inherited from QAction
 ///
@@ -987,7 +991,9 @@ void k_dualaction_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KDualAction*
 ///
-libqt_list /* of QObject* */ k_dualaction_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_dualaction_children(void* self);
 
 /// Inherited from QObject
 ///

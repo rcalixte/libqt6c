@@ -69,7 +69,7 @@ const char** q_textbrowser_search_paths(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_textbrowser_search_paths");
+        fprintf(stderr, "Failed to allocate memory for string list in q_textbrowser_search_paths\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -87,7 +87,7 @@ void q_textbrowser_set_search_paths(void* self, const char* paths[static 1]) {
     size_t paths_len = libqt_strv_length(paths);
     libqt_string* paths_qstr = (libqt_string*)malloc(paths_len * sizeof(libqt_string));
     if (paths_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_textbrowser_set_search_paths");
+        fprintf(stderr, "Failed to allocate memory for string list in q_textbrowser_set_search_paths\n");
         abort();
     }
     for (size_t i = 0; i < paths_len; ++i) {
@@ -477,11 +477,11 @@ QTextCharFormat* q_textbrowser_current_char_format(void* self) {
     return QTextEdit_CurrentCharFormat((QTextEdit*)self);
 }
 
-int64_t q_textbrowser_auto_formatting(void* self) {
+int32_t q_textbrowser_auto_formatting(void* self) {
     return QTextEdit_AutoFormatting((QTextEdit*)self);
 }
 
-void q_textbrowser_set_auto_formatting(void* self, int64_t features) {
+void q_textbrowser_set_auto_formatting(void* self, int32_t features) {
     QTextEdit_SetAutoFormatting((QTextEdit*)self, features);
 }
 
@@ -628,7 +628,7 @@ void q_textbrowser_set_accept_rich_text(void* self, bool accept) {
     QTextEdit_SetAcceptRichText((QTextEdit*)self, accept);
 }
 
-void q_textbrowser_set_extra_selections(void* self, libqt_list selections) {
+void q_textbrowser_set_extra_selections(void* self, libqt_list /* of QTextEdit__ExtraSelection* */ selections) {
     QTextEdit_SetExtraSelections((QTextEdit*)self, selections);
 }
 
@@ -649,7 +649,7 @@ void q_textbrowser_print(void* self, void* printer) {
     QTextEdit_Print((QTextEdit*)self, (QPagedPaintDevice*)printer);
 }
 
-QVariant* q_textbrowser_input_method_query2(void* self, int64_t query, void* argument) {
+QVariant* q_textbrowser_input_method_query2(void* self, int32_t query, void* argument) {
     return QTextEdit_InputMethodQuery2((QTextEdit*)self, query, (QVariant*)argument);
 }
 
@@ -1341,11 +1341,11 @@ void q_textbrowser_set_graphics_effect(void* self, void* effect) {
     QWidget_SetGraphicsEffect((QWidget*)self, (QGraphicsEffect*)effect);
 }
 
-void q_textbrowser_grab_gesture(void* self, int64_t type) {
+void q_textbrowser_grab_gesture(void* self, int32_t type) {
     QWidget_GrabGesture((QWidget*)self, type);
 }
 
-void q_textbrowser_ungrab_gesture(void* self, int64_t type) {
+void q_textbrowser_ungrab_gesture(void* self, int32_t type) {
     QWidget_UngrabGesture((QWidget*)self, type);
 }
 
@@ -1826,7 +1826,7 @@ void q_textbrowser_set_parent(void* self, void* parent) {
     QWidget_SetParent((QWidget*)self, (QWidget*)parent);
 }
 
-void q_textbrowser_set_parent2(void* self, void* parent, int64_t f) {
+void q_textbrowser_set_parent2(void* self, void* parent, int32_t f) {
     QWidget_SetParent2((QWidget*)self, (QWidget*)parent, f);
 }
 
@@ -1862,11 +1862,11 @@ void q_textbrowser_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_textbrowser_add_actions(void* self, libqt_list actions) {
+void q_textbrowser_add_actions(void* self, libqt_list /* of QAction* */ actions) {
     QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_textbrowser_insert_actions(void* self, void* before, libqt_list actions) {
+void q_textbrowser_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions) {
     QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
@@ -1903,23 +1903,23 @@ QWidget* q_textbrowser_parent_widget(void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
-void q_textbrowser_set_window_flags(void* self, int64_t type) {
+void q_textbrowser_set_window_flags(void* self, int32_t type) {
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int64_t q_textbrowser_window_flags(void* self) {
+int32_t q_textbrowser_window_flags(void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
-void q_textbrowser_set_window_flag(void* self, int64_t param1) {
+void q_textbrowser_set_window_flag(void* self, int32_t param1) {
     QWidget_SetWindowFlag((QWidget*)self, param1);
 }
 
-void q_textbrowser_override_window_flags(void* self, int64_t type) {
+void q_textbrowser_override_window_flags(void* self, int32_t type) {
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int64_t q_textbrowser_window_type(void* self) {
+int32_t q_textbrowser_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
@@ -2011,11 +2011,11 @@ void q_textbrowser_on_custom_context_menu_requested(void* self, void (*callback)
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-int64_t q_textbrowser_input_method_hints(void* self) {
+int32_t q_textbrowser_input_method_hints(void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
-void q_textbrowser_set_input_method_hints(void* self, int64_t hints) {
+void q_textbrowser_set_input_method_hints(void* self, int32_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
@@ -2047,7 +2047,7 @@ QPixmap* q_textbrowser_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void q_textbrowser_grab_gesture2(void* self, int64_t type, int32_t flags) {
+void q_textbrowser_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
@@ -2063,7 +2063,7 @@ void q_textbrowser_set_shortcut_auto_repeat2(void* self, int id, bool enable) {
     QWidget_SetShortcutAutoRepeat2((QWidget*)self, id, enable);
 }
 
-void q_textbrowser_set_window_flag2(void* self, int64_t param1, bool on) {
+void q_textbrowser_set_window_flag2(void* self, int32_t param1, bool on) {
     QWidget_SetWindowFlag2((QWidget*)self, param1, on);
 }
 
@@ -2075,7 +2075,7 @@ QWidget* q_textbrowser_create_window_container2(void* window, void* parent) {
     return QWidget_CreateWindowContainer2((QWindow*)window, (QWidget*)parent);
 }
 
-QWidget* q_textbrowser_create_window_container3(void* window, void* parent, int64_t flags) {
+QWidget* q_textbrowser_create_window_container3(void* window, void* parent, int32_t flags) {
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
@@ -2180,7 +2180,7 @@ const char** q_textbrowser_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_textbrowser_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_textbrowser_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2298,15 +2298,15 @@ int32_t q_textbrowser_encode_metric_f(int32_t metric, double value) {
     return QPaintDevice_EncodeMetricF(metric, value);
 }
 
-QVariant* q_textbrowser_input_method_query(void* self, int64_t property) {
+QVariant* q_textbrowser_input_method_query(void* self, int32_t property) {
     return QTextBrowser_InputMethodQuery((QTextBrowser*)self, property);
 }
 
-QVariant* q_textbrowser_qbase_input_method_query(void* self, int64_t property) {
+QVariant* q_textbrowser_qbase_input_method_query(void* self, int32_t property) {
     return QTextBrowser_QBaseInputMethodQuery((QTextBrowser*)self, property);
 }
 
-void q_textbrowser_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void q_textbrowser_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     QTextBrowser_OnInputMethodQuery((QTextBrowser*)self, (intptr_t)callback);
 }
 

@@ -43,9 +43,9 @@ const char* k_standardshortcut__standardshortcutwatcher_tr(const char* s);
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param id enum KStandardShortcut__StandardShortcut
-/// @param shortcut libqt_list /* of QKeySequence* */
+/// @param shortcut libqt_list of QKeySequence*
 ///
-void k_standardshortcut__standardshortcutwatcher_shortcut_changed(void* self, int32_t id, libqt_list shortcut);
+void k_standardshortcut__standardshortcutwatcher_shortcut_changed(void* self, int32_t id, libqt_list /* of QKeySequence* */ shortcut);
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut-standardshortcutwatcher.html#shortcutChanged)
 ///
@@ -202,7 +202,9 @@ void k_standardshortcut__standardshortcutwatcher_kill_timer2(void* self, int32_t
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 ///
-libqt_list /* of QObject* */ k_standardshortcut__standardshortcutwatcher_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_standardshortcut__standardshortcutwatcher_children(void* self);
 
 /// Inherited from QObject
 ///

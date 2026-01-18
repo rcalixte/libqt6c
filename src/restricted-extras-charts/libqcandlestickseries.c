@@ -53,11 +53,11 @@ bool q_candlestickseries_remove(void* self, void* set) {
     return QCandlestickSeries_Remove((QCandlestickSeries*)self, (QCandlestickSet*)set);
 }
 
-bool q_candlestickseries_append2(void* self, libqt_list sets) {
+bool q_candlestickseries_append2(void* self, libqt_list /* of QCandlestickSet* */ sets) {
     return QCandlestickSeries_Append2((QCandlestickSeries*)self, sets);
 }
 
-bool q_candlestickseries_remove2(void* self, libqt_list sets) {
+bool q_candlestickseries_remove2(void* self, libqt_list /* of QCandlestickSet* */ sets) {
     return QCandlestickSeries_Remove2((QCandlestickSeries*)self, sets);
 }
 
@@ -214,7 +214,7 @@ void q_candlestickseries_on_double_clicked(void* self, void (*callback)(void*, v
     QCandlestickSeries_Connect_DoubleClicked((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
-void q_candlestickseries_candlestick_sets_added(void* self, libqt_list sets) {
+void q_candlestickseries_candlestick_sets_added(void* self, libqt_list /* of QCandlestickSet* */ sets) {
     QCandlestickSeries_CandlestickSetsAdded((QCandlestickSeries*)self, sets);
 }
 
@@ -222,7 +222,7 @@ void q_candlestickseries_on_candlestick_sets_added(void* self, void (*callback)(
     QCandlestickSeries_Connect_CandlestickSetsAdded((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
-void q_candlestickseries_candlestick_sets_removed(void* self, libqt_list sets) {
+void q_candlestickseries_candlestick_sets_removed(void* self, libqt_list /* of QCandlestickSet* */ sets) {
     QCandlestickSeries_CandlestickSetsRemoved((QCandlestickSeries*)self, sets);
 }
 
@@ -537,7 +537,7 @@ const char** q_candlestickseries_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_candlestickseries_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_candlestickseries_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

@@ -254,7 +254,7 @@ void q_listview_qbase_set_root_index(void* self, void* index) {
     QListView_QBaseSetRootIndex((QListView*)self, (QModelIndex*)index);
 }
 
-void q_listview_indexes_moved(void* self, libqt_list indexes) {
+void q_listview_indexes_moved(void* self, libqt_list /* of QModelIndex* */ indexes) {
     QListView_IndexesMoved((QListView*)self, indexes);
 }
 
@@ -310,15 +310,15 @@ QSize* q_listview_qbase_contents_size(void* self) {
     return QListView_QBaseContentsSize((QListView*)self);
 }
 
-void q_listview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles) {
+void q_listview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles) {
     QListView_DataChanged((QListView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_listview_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*)) {
+void q_listview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */)) {
     QListView_OnDataChanged((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles) {
+void q_listview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles) {
     QListView_QBaseDataChanged((QListView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
@@ -502,15 +502,15 @@ int32_t q_listview_qbase_vertical_offset(void* self) {
     return QListView_QBaseVerticalOffset((QListView*)self);
 }
 
-QModelIndex* q_listview_move_cursor(void* self, int32_t cursorAction, int64_t modifiers) {
+QModelIndex* q_listview_move_cursor(void* self, int32_t cursorAction, int32_t modifiers) {
     return QListView_MoveCursor((QListView*)self, cursorAction, modifiers);
 }
 
-void q_listview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int64_t)) {
+void q_listview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int32_t)) {
     QListView_OnMoveCursor((QListView*)self, (intptr_t)callback);
 }
 
-QModelIndex* q_listview_qbase_move_cursor(void* self, int32_t cursorAction, int64_t modifiers) {
+QModelIndex* q_listview_qbase_move_cursor(void* self, int32_t cursorAction, int32_t modifiers) {
     return QListView_QBaseMoveCursor((QListView*)self, cursorAction, modifiers);
 }
 
@@ -1435,11 +1435,11 @@ void q_listview_set_graphics_effect(void* self, void* effect) {
     QWidget_SetGraphicsEffect((QWidget*)self, (QGraphicsEffect*)effect);
 }
 
-void q_listview_grab_gesture(void* self, int64_t type) {
+void q_listview_grab_gesture(void* self, int32_t type) {
     QWidget_GrabGesture((QWidget*)self, type);
 }
 
-void q_listview_ungrab_gesture(void* self, int64_t type) {
+void q_listview_ungrab_gesture(void* self, int32_t type) {
     QWidget_UngrabGesture((QWidget*)self, type);
 }
 
@@ -1916,7 +1916,7 @@ void q_listview_set_parent(void* self, void* parent) {
     QWidget_SetParent((QWidget*)self, (QWidget*)parent);
 }
 
-void q_listview_set_parent2(void* self, void* parent, int64_t f) {
+void q_listview_set_parent2(void* self, void* parent, int32_t f) {
     QWidget_SetParent2((QWidget*)self, (QWidget*)parent, f);
 }
 
@@ -1952,11 +1952,11 @@ void q_listview_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_listview_add_actions(void* self, libqt_list actions) {
+void q_listview_add_actions(void* self, libqt_list /* of QAction* */ actions) {
     QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_listview_insert_actions(void* self, void* before, libqt_list actions) {
+void q_listview_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions) {
     QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
@@ -1993,23 +1993,23 @@ QWidget* q_listview_parent_widget(void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
-void q_listview_set_window_flags(void* self, int64_t type) {
+void q_listview_set_window_flags(void* self, int32_t type) {
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int64_t q_listview_window_flags(void* self) {
+int32_t q_listview_window_flags(void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
-void q_listview_set_window_flag(void* self, int64_t param1) {
+void q_listview_set_window_flag(void* self, int32_t param1) {
     QWidget_SetWindowFlag((QWidget*)self, param1);
 }
 
-void q_listview_override_window_flags(void* self, int64_t type) {
+void q_listview_override_window_flags(void* self, int32_t type) {
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int64_t q_listview_window_type(void* self) {
+int32_t q_listview_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
@@ -2105,11 +2105,11 @@ void q_listview_on_custom_context_menu_requested(void* self, void (*callback)(vo
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-int64_t q_listview_input_method_hints(void* self) {
+int32_t q_listview_input_method_hints(void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
-void q_listview_set_input_method_hints(void* self, int64_t hints) {
+void q_listview_set_input_method_hints(void* self, int32_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
@@ -2141,7 +2141,7 @@ QPixmap* q_listview_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void q_listview_grab_gesture2(void* self, int64_t type, int32_t flags) {
+void q_listview_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
@@ -2157,7 +2157,7 @@ void q_listview_set_shortcut_auto_repeat2(void* self, int id, bool enable) {
     QWidget_SetShortcutAutoRepeat2((QWidget*)self, id, enable);
 }
 
-void q_listview_set_window_flag2(void* self, int64_t param1, bool on) {
+void q_listview_set_window_flag2(void* self, int32_t param1, bool on) {
     QWidget_SetWindowFlag2((QWidget*)self, param1, on);
 }
 
@@ -2169,7 +2169,7 @@ QWidget* q_listview_create_window_container2(void* window, void* parent) {
     return QWidget_CreateWindowContainer2((QWindow*)window, (QWidget*)parent);
 }
 
-QWidget* q_listview_create_window_container3(void* window, void* parent, int64_t flags) {
+QWidget* q_listview_create_window_container3(void* window, void* parent, int32_t flags) {
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
@@ -2274,7 +2274,7 @@ const char** q_listview_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_listview_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_listview_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2464,15 +2464,15 @@ void q_listview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*
     QListView_OnItemDelegateForIndex((QListView*)self, (intptr_t)callback);
 }
 
-QVariant* q_listview_input_method_query(void* self, int64_t query) {
+QVariant* q_listview_input_method_query(void* self, int32_t query) {
     return QListView_InputMethodQuery((QListView*)self, query);
 }
 
-QVariant* q_listview_qbase_input_method_query(void* self, int64_t query) {
+QVariant* q_listview_qbase_input_method_query(void* self, int32_t query) {
     return QListView_QBaseInputMethodQuery((QListView*)self, query);
 }
 
-void q_listview_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void q_listview_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     QListView_OnInputMethodQuery((QListView*)self, (intptr_t)callback);
 }
 

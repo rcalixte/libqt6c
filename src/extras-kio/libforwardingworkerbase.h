@@ -618,7 +618,9 @@ void k_io__forwardingworkerbase_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KIO__ForwardingWorkerBase*
 ///
-libqt_list /* of QObject* */ k_io__forwardingworkerbase_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_io__forwardingworkerbase_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -910,9 +912,9 @@ void k_io__forwardingworkerbase_stat_entry(void* self, void* _entry);
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#listEntries)
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param _entry libqt_list /* of KIO__UDSEntry* */
+/// @param _entry libqt_list of KIO__UDSEntry*
 ///
-void k_io__forwardingworkerbase_list_entries(void* self, libqt_list _entry);
+void k_io__forwardingworkerbase_list_entries(void* self, libqt_list /* of KIO__UDSEntry* */ _entry);
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -1054,9 +1056,9 @@ int32_t k_io__forwardingworkerbase_message_box2(void* self, const char* text, in
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#sslError)
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param sslData libqt_map /* of const char* to QVariant* */
+/// @param sslData libqt_map of const char* to QVariant*
 ///
-int32_t k_io__forwardingworkerbase_ssl_error(void* self, libqt_map /* of const char* to QVariant* */ sslData);
+int32_t k_io__forwardingworkerbase_ssl_error(void* self, libqt_map sslData);
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -1102,7 +1104,8 @@ KIO__MetaData* k_io__forwardingworkerbase_all_meta_data(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     free(((QVariant*)map.values)[i]);
@@ -1113,7 +1116,9 @@ KIO__MetaData* k_io__forwardingworkerbase_all_meta_data(void* self);
 ///
 /// @param self KIO__ForwardingWorkerBase*
 ///
-libqt_map /* of const char* to QVariant* */ k_io__forwardingworkerbase_map_config(void* self);
+/// @return libqt_map of const char* to QVariant*
+///
+libqt_map k_io__forwardingworkerbase_map_config(void* self);
 
 /// Inherited from KIO::WorkerBase
 ///

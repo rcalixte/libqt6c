@@ -78,15 +78,15 @@ void k_texteditor__inlinenoteprovider_qbase_paint_inline_note(void* self, void* 
     KTextEditor__InlineNoteProvider_QBasePaintInlineNote((KTextEditor__InlineNoteProvider*)self, (KTextEditor__InlineNote*)note, (QPainter*)painter, direction);
 }
 
-void k_texteditor__inlinenoteprovider_inline_note_activated(void* self, void* note, int64_t buttons, void* globalPos) {
+void k_texteditor__inlinenoteprovider_inline_note_activated(void* self, void* note, int32_t buttons, void* globalPos) {
     KTextEditor__InlineNoteProvider_InlineNoteActivated((KTextEditor__InlineNoteProvider*)self, (KTextEditor__InlineNote*)note, buttons, (QPoint*)globalPos);
 }
 
-void k_texteditor__inlinenoteprovider_on_inline_note_activated(void* self, void (*callback)(void*, void*, int64_t, void*)) {
+void k_texteditor__inlinenoteprovider_on_inline_note_activated(void* self, void (*callback)(void*, void*, int32_t, void*)) {
     KTextEditor__InlineNoteProvider_OnInlineNoteActivated((KTextEditor__InlineNoteProvider*)self, (intptr_t)callback);
 }
 
-void k_texteditor__inlinenoteprovider_qbase_inline_note_activated(void* self, void* note, int64_t buttons, void* globalPos) {
+void k_texteditor__inlinenoteprovider_qbase_inline_note_activated(void* self, void* note, int32_t buttons, void* globalPos) {
     KTextEditor__InlineNoteProvider_QBaseInlineNoteActivated((KTextEditor__InlineNoteProvider*)self, (KTextEditor__InlineNote*)note, buttons, (QPoint*)globalPos);
 }
 
@@ -261,7 +261,7 @@ const char** k_texteditor__inlinenoteprovider_dynamic_property_names(void* self)
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__inlinenoteprovider_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__inlinenoteprovider_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

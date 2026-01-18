@@ -968,7 +968,9 @@ void q_layout_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QLayout*
 ///
-libqt_list /* of QObject* */ q_layout_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_layout_children(void* self);
 
 /// Inherited from QObject
 ///

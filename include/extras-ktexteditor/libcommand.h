@@ -371,7 +371,9 @@ void k_texteditor__command_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KTextEditor__Command*
 ///
-libqt_list /* of QObject* */ k_texteditor__command_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_texteditor__command_children(void* self);
 
 /// Inherited from QObject
 ///

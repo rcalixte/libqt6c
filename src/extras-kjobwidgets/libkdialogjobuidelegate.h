@@ -273,7 +273,9 @@ void k_dialogjobuidelegate_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KDialogJobUiDelegate*
 ///
-libqt_list /* of QObject* */ k_dialogjobuidelegate_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_dialogjobuidelegate_children(void* self);
 
 /// Inherited from QObject
 ///

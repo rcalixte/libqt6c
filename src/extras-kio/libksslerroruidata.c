@@ -12,7 +12,7 @@ KSslErrorUiData* k_sslerroruidata_new2(void* socket) {
     return KSslErrorUiData_new2((QSslSocket*)socket);
 }
 
-KSslErrorUiData* k_sslerroruidata_new3(void* reply, libqt_list sslErrors) {
+KSslErrorUiData* k_sslerroruidata_new3(void* reply, libqt_list /* of QSslError* */ sslErrors) {
     return KSslErrorUiData_new3((QNetworkReply*)reply, sslErrors);
 }
 

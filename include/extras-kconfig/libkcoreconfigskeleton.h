@@ -1474,9 +1474,9 @@ KCoreConfigSkeleton__ItemStringList* k_coreconfigskeleton_add_item_string_list(v
 ///
 /// @param self KCoreConfigSkeleton*
 /// @param name const char*
-/// @param reference libqt_list /* of int */
+/// @param reference libqt_list of int
 ///
-KCoreConfigSkeleton__ItemIntList* k_coreconfigskeleton_add_item_int_list(void* self, const char* name, libqt_list reference);
+KCoreConfigSkeleton__ItemIntList* k_coreconfigskeleton_add_item_int_list(void* self, const char* name, libqt_list /* of int */ reference);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#config)
 ///
@@ -1494,7 +1494,9 @@ const KConfig* k_coreconfigskeleton_config2(void* self);
 ///
 /// @param self KCoreConfigSkeleton*
 ///
-libqt_list /* of KConfigSkeletonItem* */ k_coreconfigskeleton_items(void* self);
+/// @return libqt_list of KConfigSkeletonItem*
+///
+libqt_list k_coreconfigskeleton_items(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#removeItem)
 ///
@@ -2034,20 +2036,20 @@ KCoreConfigSkeleton__ItemStringList* k_coreconfigskeleton_add_item_string_list4(
 ///
 /// @param self KCoreConfigSkeleton*
 /// @param name const char*
-/// @param reference libqt_list /* of int */
-/// @param defaultValue libqt_list /* of int */
+/// @param reference libqt_list of int
+/// @param defaultValue libqt_list of int
 ///
-KCoreConfigSkeleton__ItemIntList* k_coreconfigskeleton_add_item_int_list3(void* self, const char* name, libqt_list reference, libqt_list defaultValue);
+KCoreConfigSkeleton__ItemIntList* k_coreconfigskeleton_add_item_int_list3(void* self, const char* name, libqt_list /* of int */ reference, libqt_list /* of int */ defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemIntList)
 ///
 /// @param self KCoreConfigSkeleton*
 /// @param name const char*
-/// @param reference libqt_list /* of int */
-/// @param defaultValue libqt_list /* of int */
+/// @param reference libqt_list of int
+/// @param defaultValue libqt_list of int
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemIntList* k_coreconfigskeleton_add_item_int_list4(void* self, const char* name, libqt_list reference, libqt_list defaultValue, const char* key);
+KCoreConfigSkeleton__ItemIntList* k_coreconfigskeleton_add_item_int_list4(void* self, const char* name, libqt_list /* of int */ reference, libqt_list /* of int */ defaultValue, const char* key);
 
 /// Inherited from QObject
 ///
@@ -2159,7 +2161,9 @@ void k_coreconfigskeleton_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KCoreConfigSkeleton*
 ///
-libqt_list /* of QObject* */ k_coreconfigskeleton_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_coreconfigskeleton_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4181,9 +4185,9 @@ void k_coreconfigskeleton__itemenum__choice_delete(void* self);
 /// @param _group const char*
 /// @param _key const char*
 /// @param reference int*
-/// @param choices libqt_list /* of KCoreConfigSkeleton__ItemEnum__Choice* */
+/// @param choices libqt_list of KCoreConfigSkeleton__ItemEnum__Choice*
 ///
-KCoreConfigSkeleton__ItemEnum* k_coreconfigskeleton__itemenum_new(const char* _group, const char* _key, int* reference, libqt_list choices);
+KCoreConfigSkeleton__ItemEnum* k_coreconfigskeleton__itemenum_new(const char* _group, const char* _key, int* reference, libqt_list /* of KCoreConfigSkeleton__ItemEnum__Choice* */ choices);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemenum.html)
 
@@ -4192,16 +4196,18 @@ KCoreConfigSkeleton__ItemEnum* k_coreconfigskeleton__itemenum_new(const char* _g
 /// @param _group const char*
 /// @param _key const char*
 /// @param reference int*
-/// @param choices libqt_list /* of KCoreConfigSkeleton__ItemEnum__Choice* */
+/// @param choices libqt_list of KCoreConfigSkeleton__ItemEnum__Choice*
 /// @param defaultValue int
 ///
-KCoreConfigSkeleton__ItemEnum* k_coreconfigskeleton__itemenum_new2(const char* _group, const char* _key, int* reference, libqt_list choices, int defaultValue);
+KCoreConfigSkeleton__ItemEnum* k_coreconfigskeleton__itemenum_new2(const char* _group, const char* _key, int* reference, libqt_list /* of KCoreConfigSkeleton__ItemEnum__Choice* */ choices, int defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemenum.html#choices)
 ///
 /// @param self KCoreConfigSkeleton__ItemEnum*
 ///
-libqt_list /* of KCoreConfigSkeleton__ItemEnum__Choice* */ k_coreconfigskeleton__itemenum_choices(void* self);
+/// @return libqt_list of KCoreConfigSkeleton__ItemEnum__Choice*
+///
+libqt_list k_coreconfigskeleton__itemenum_choices(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemenum.html#readConfig)
 ///
@@ -6170,9 +6176,9 @@ void k_coreconfigskeleton__itempathlist_delete(void* self);
 ///
 /// @param _group const char*
 /// @param _key const char*
-/// @param reference libqt_list /* of QUrl* */
+/// @param reference libqt_list of QUrl*
 ///
-KCoreConfigSkeleton__ItemUrlList* k_coreconfigskeleton__itemurllist_new(const char* _group, const char* _key, libqt_list reference);
+KCoreConfigSkeleton__ItemUrlList* k_coreconfigskeleton__itemurllist_new(const char* _group, const char* _key, libqt_list /* of QUrl* */ reference);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurllist.html)
 
@@ -6180,10 +6186,10 @@ KCoreConfigSkeleton__ItemUrlList* k_coreconfigskeleton__itemurllist_new(const ch
 ///
 /// @param _group const char*
 /// @param _key const char*
-/// @param reference libqt_list /* of QUrl* */
-/// @param defaultValue libqt_list /* of QUrl* */
+/// @param reference libqt_list of QUrl*
+/// @param defaultValue libqt_list of QUrl*
 ///
-KCoreConfigSkeleton__ItemUrlList* k_coreconfigskeleton__itemurllist_new2(const char* _group, const char* _key, libqt_list reference, libqt_list defaultValue);
+KCoreConfigSkeleton__ItemUrlList* k_coreconfigskeleton__itemurllist_new2(const char* _group, const char* _key, libqt_list /* of QUrl* */ reference, libqt_list /* of QUrl* */ defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#readConfig)
 ///
@@ -6320,9 +6326,9 @@ void k_coreconfigskeleton__itemurllist_delete(void* self);
 ///
 /// @param _group const char*
 /// @param _key const char*
-/// @param reference libqt_list /* of int */
+/// @param reference libqt_list of int
 ///
-KCoreConfigSkeleton__ItemIntList* k_coreconfigskeleton__itemintlist_new(const char* _group, const char* _key, libqt_list reference);
+KCoreConfigSkeleton__ItemIntList* k_coreconfigskeleton__itemintlist_new(const char* _group, const char* _key, libqt_list /* of int */ reference);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemintlist.html)
 
@@ -6330,10 +6336,10 @@ KCoreConfigSkeleton__ItemIntList* k_coreconfigskeleton__itemintlist_new(const ch
 ///
 /// @param _group const char*
 /// @param _key const char*
-/// @param reference libqt_list /* of int */
-/// @param defaultValue libqt_list /* of int */
+/// @param reference libqt_list of int
+/// @param defaultValue libqt_list of int
 ///
-KCoreConfigSkeleton__ItemIntList* k_coreconfigskeleton__itemintlist_new2(const char* _group, const char* _key, libqt_list reference, libqt_list defaultValue);
+KCoreConfigSkeleton__ItemIntList* k_coreconfigskeleton__itemintlist_new2(const char* _group, const char* _key, libqt_list /* of int */ reference, libqt_list /* of int */ defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#readConfig)
 ///

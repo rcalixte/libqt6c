@@ -466,7 +466,9 @@ const char* q_xmlstreamreader_read_element_text(void* self);
 ///
 /// @param self QXmlStreamReader*
 ///
-libqt_list /* of QXmlStreamNamespaceDeclaration* */ q_xmlstreamreader_namespace_declarations(void* self);
+/// @return libqt_list of QXmlStreamNamespaceDeclaration*
+///
+libqt_list q_xmlstreamreader_namespace_declarations(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#addExtraNamespaceDeclaration)
 ///
@@ -478,21 +480,25 @@ void q_xmlstreamreader_add_extra_namespace_declaration(void* self, void* extraNa
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#addExtraNamespaceDeclarations)
 ///
 /// @param self QXmlStreamReader*
-/// @param extraNamespaceDeclaractions libqt_list /* of QXmlStreamNamespaceDeclaration* */
+/// @param extraNamespaceDeclaractions libqt_list of QXmlStreamNamespaceDeclaration*
 ///
-void q_xmlstreamreader_add_extra_namespace_declarations(void* self, libqt_list extraNamespaceDeclaractions);
+void q_xmlstreamreader_add_extra_namespace_declarations(void* self, libqt_list /* of QXmlStreamNamespaceDeclaration* */ extraNamespaceDeclaractions);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#notationDeclarations)
 ///
 /// @param self QXmlStreamReader*
 ///
-libqt_list /* of QXmlStreamNotationDeclaration* */ q_xmlstreamreader_notation_declarations(void* self);
+/// @return libqt_list of QXmlStreamNotationDeclaration*
+///
+libqt_list q_xmlstreamreader_notation_declarations(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#entityDeclarations)
 ///
 /// @param self QXmlStreamReader*
 ///
-libqt_list /* of QXmlStreamEntityDeclaration* */ q_xmlstreamreader_entity_declarations(void* self);
+/// @return libqt_list of QXmlStreamEntityDeclaration*
+///
+libqt_list q_xmlstreamreader_entity_declarations(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#entityExpansionLimit)
 ///

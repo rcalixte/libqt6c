@@ -144,7 +144,9 @@ bool k_compositejob_qbase_has_subjobs(void* self);
 ///
 /// @param self KCompositeJob*
 ///
-libqt_list /* of KJob* */ k_compositejob_subjobs(void* self);
+/// @return libqt_list of KJob*
+///
+libqt_list k_compositejob_subjobs(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompositejob.html#subjobs)
 ///
@@ -161,7 +163,9 @@ void k_compositejob_on_subjobs(void* self, KJob** (*callback)());
 ///
 /// @param self KCompositeJob*
 ///
-libqt_list /* of KJob* */ k_compositejob_qbase_subjobs(void* self);
+/// @return libqt_list of KJob*
+///
+libqt_list k_compositejob_qbase_subjobs(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompositejob.html#clearSubjobs)
 ///
@@ -640,7 +644,9 @@ void k_compositejob_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KCompositeJob*
 ///
-libqt_list /* of QObject* */ k_compositejob_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_compositejob_children(void* self);
 
 /// Inherited from QObject
 ///

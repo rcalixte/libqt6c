@@ -136,7 +136,7 @@ QKeyCombination* q_keycombination_new3();
 ///
 /// @param modifiers flag of enum Qt__Modifier
 ///
-QKeyCombination* q_keycombination_new4(int64_t modifiers);
+QKeyCombination* q_keycombination_new4(int32_t modifiers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html)
 
@@ -144,7 +144,7 @@ QKeyCombination* q_keycombination_new4(int64_t modifiers);
 ///
 /// @param modifiers flag of enum Qt__KeyboardModifier
 ///
-QKeyCombination* q_keycombination_new5(int64_t modifiers);
+QKeyCombination* q_keycombination_new5(int32_t modifiers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html)
 
@@ -169,7 +169,7 @@ QKeyCombination* q_keycombination_new7(int32_t key);
 /// @param modifiers flag of enum Qt__Modifier
 /// @param key enum Qt__Key
 ///
-QKeyCombination* q_keycombination_new8(int64_t modifiers, int32_t key);
+QKeyCombination* q_keycombination_new8(int32_t modifiers, int32_t key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html)
 
@@ -178,7 +178,7 @@ QKeyCombination* q_keycombination_new8(int64_t modifiers, int32_t key);
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param key enum Qt__Key
 ///
-QKeyCombination* q_keycombination_new9(int64_t modifiers, int32_t key);
+QKeyCombination* q_keycombination_new9(int32_t modifiers, int32_t key);
 
 /// q_keycombination_copy_assign shallow copies `other` into `self`.
 ///
@@ -200,7 +200,7 @@ void q_keycombination_move_assign(void* self, void* other);
 ///
 /// @return flag of enum Qt__KeyboardModifier
 ///
-int64_t q_keycombination_keyboard_modifiers(void* self);
+int32_t q_keycombination_keyboard_modifiers(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeycombination.html#key)
 ///
@@ -307,7 +307,7 @@ typedef enum {
     QT_MOUSEBUTTON_EXTRABUTTON24 = 67108864,
     QT_MOUSEBUTTON_ALLBUTTONS = 134217727,
     QT_MOUSEBUTTON_MAXMOUSEBUTTON = 67108864,
-    QT_MOUSEBUTTON_MOUSEBUTTONMASK = 4294967295
+    QT_MOUSEBUTTON_MOUSEBUTTONMASK = -1
 } Qt__MouseButton;
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
@@ -460,7 +460,7 @@ typedef enum {
     QT_WINDOWTYPE_MACWINDOWTOOLBARBUTTONHINT = 268435456,
     QT_WINDOWTYPE_BYPASSGRAPHICSPROXYWIDGET = 536870912,
     QT_WINDOWTYPE_NODROPSHADOWWINDOWHINT = 1073741824,
-    QT_WINDOWTYPE_WINDOWFULLSCREENBUTTONHINT = 2147483648
+    QT_WINDOWTYPE_WINDOWFULLSCREENBUTTONHINT = -2147483648
 } Qt__WindowType;
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
@@ -1152,7 +1152,7 @@ typedef enum {
     QT_KEYBOARDMODIFIER_METAMODIFIER = 268435456,
     QT_KEYBOARDMODIFIER_KEYPADMODIFIER = 536870912,
     QT_KEYBOARDMODIFIER_GROUPSWITCHMODIFIER = 1073741824,
-    QT_KEYBOARDMODIFIER_KEYBOARDMODIFIERMASK = 4261412864
+    QT_KEYBOARDMODIFIER_KEYBOARDMODIFIERMASK = -33554432
 } Qt__KeyboardModifier;
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
@@ -1162,7 +1162,7 @@ typedef enum {
     QT_MODIFIER_SHIFT = 33554432,
     QT_MODIFIER_CTRL = 67108864,
     QT_MODIFIER_ALT = 134217728,
-    QT_MODIFIER_MODIFIER_MASK = 4261412864
+    QT_MODIFIER_MODIFIER_MASK = -33554432
 } Qt__Modifier;
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
@@ -1520,9 +1520,9 @@ typedef enum {
     QT_INPUTMETHODQUERY_IMANCHORRECTANGLE = 16384,
     QT_INPUTMETHODQUERY_IMINPUTITEMCLIPRECTANGLE = 32768,
     QT_INPUTMETHODQUERY_IMREADONLY = 65536,
-    QT_INPUTMETHODQUERY_IMPLATFORMDATA = 2147483648,
+    QT_INPUTMETHODQUERY_IMPLATFORMDATA = -2147483648,
     QT_INPUTMETHODQUERY_IMQUERYINPUT = 16570,
-    QT_INPUTMETHODQUERY_IMQUERYALL = 4294967295
+    QT_INPUTMETHODQUERY_IMQUERYALL = -1
 } Qt__InputMethodQuery;
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
@@ -1550,7 +1550,7 @@ typedef enum {
     QT_INPUTMETHODHINT_IMHEMAILCHARACTERSONLY = 2097152,
     QT_INPUTMETHODHINT_IMHURLCHARACTERSONLY = 4194304,
     QT_INPUTMETHODHINT_IMHLATINONLY = 8388608,
-    QT_INPUTMETHODHINT_IMHEXCLUSIVEINPUTMASK = 4294901760
+    QT_INPUTMETHODHINT_IMHEXCLUSIVEINPUTMASK = -65536
 } Qt__InputMethodHint;
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)
@@ -1774,7 +1774,7 @@ typedef enum {
     QT_GESTURETYPE_PINCHGESTURE = 4,
     QT_GESTURETYPE_SWIPEGESTURE = 5,
     QT_GESTURETYPE_CUSTOMGESTURE = 256,
-    QT_GESTURETYPE_LASTGESTURETYPE = 4294967295
+    QT_GESTURETYPE_LASTGESTURETYPE = -1
 } Qt__GestureType;
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qt.html#types)

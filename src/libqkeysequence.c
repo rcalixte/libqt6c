@@ -79,7 +79,7 @@ libqt_list /* of QKeySequence* */ q_keysequence_list_from_string(const char* str
     return _arr;
 }
 
-const char* q_keysequence_list_to_string(libqt_list list) {
+const char* q_keysequence_list_to_string(libqt_list /* of QKeySequence* */ list) {
     libqt_string _str = QKeySequence_ListToString(list);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -159,7 +159,7 @@ libqt_list /* of QKeySequence* */ q_keysequence_list_from_string2(const char* st
     return _arr;
 }
 
-const char* q_keysequence_list_to_string2(libqt_list list, int32_t format) {
+const char* q_keysequence_list_to_string2(libqt_list /* of QKeySequence* */ list, int32_t format) {
     libqt_string _str = QKeySequence_ListToString2(list, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

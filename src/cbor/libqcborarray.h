@@ -335,9 +335,9 @@ QCborArray* q_cborarray_from_string_list(const char* list[static 1]);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray.html#fromVariantList)
 ///
-/// @param list libqt_list /* of QVariant* */
+/// @param list libqt_list of QVariant*
 ///
-QCborArray* q_cborarray_from_variant_list(libqt_list list);
+QCborArray* q_cborarray_from_variant_list(libqt_list /* of QVariant* */ list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray.html#fromJsonArray)
 ///
@@ -349,7 +349,9 @@ QCborArray* q_cborarray_from_json_array(void* array);
 ///
 /// @param self QCborArray*
 ///
-libqt_list /* of QVariant* */ q_cborarray_to_variant_list(void* self);
+/// @return libqt_list of QVariant*
+///
+libqt_list q_cborarray_to_variant_list(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray.html#toJsonArray)
 ///

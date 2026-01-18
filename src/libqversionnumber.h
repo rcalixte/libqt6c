@@ -21,9 +21,9 @@ QVersionNumber* q_versionnumber_new();
 
 /// q_versionnumber_new2 constructs a new QVersionNumber object.
 ///
-/// @param args libqt_list /* of int */
+/// @param args libqt_list of int
 ///
-QVersionNumber* q_versionnumber_new2(libqt_list args);
+QVersionNumber* q_versionnumber_new2(libqt_list /* of int */ args);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html)
 
@@ -100,7 +100,9 @@ QVersionNumber* q_versionnumber_normalized(void* self);
 ///
 /// @param self QVersionNumber*
 ///
-libqt_list /* of int */ q_versionnumber_segments(void* self);
+/// @return libqt_list of int
+///
+libqt_list q_versionnumber_segments(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#segmentAt)
 ///

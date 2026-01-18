@@ -91,7 +91,9 @@ void k_texteditor__mainwindow_on_unhandled_shortcut_override(void* self, void (*
 ///
 /// @param self KTextEditor__MainWindow*
 ///
-libqt_list /* of KTextEditor__View* */ k_texteditor__mainwindow_views(void* self);
+/// @return libqt_list of KTextEditor__View*
+///
+libqt_list k_texteditor__mainwindow_views(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-mainwindow.html#activeView)
 ///
@@ -302,7 +304,9 @@ bool k_texteditor__mainwindow_remove_widget(void* self, void* widget);
 ///
 /// @param self KTextEditor__MainWindow*
 ///
-libqt_list /* of QWidget* */ k_texteditor__mainwindow_widgets(void* self);
+/// @return libqt_list of QWidget*
+///
+libqt_list k_texteditor__mainwindow_widgets(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-mainwindow.html#activeWidget)
 ///
@@ -348,9 +352,9 @@ void k_texteditor__mainwindow_on_widget_removed(void* self, void (*callback)(voi
 /// [Upstream resources](https://api.kde.org/ktexteditor-mainwindow.html#showMessage)
 ///
 /// @param self KTextEditor__MainWindow*
-/// @param message libqt_map /* of const char* to QVariant* */
+/// @param message libqt_map of const char* to QVariant*
 ///
-bool k_texteditor__mainwindow_show_message(void* self, libqt_map /* of const char* to QVariant* */ message);
+bool k_texteditor__mainwindow_show_message(void* self, libqt_map message);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -489,7 +493,9 @@ void k_texteditor__mainwindow_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KTextEditor__MainWindow*
 ///
-libqt_list /* of QObject* */ k_texteditor__mainwindow_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_texteditor__mainwindow_children(void* self);
 
 /// Inherited from QObject
 ///

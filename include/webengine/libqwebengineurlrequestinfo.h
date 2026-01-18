@@ -93,7 +93,8 @@ void q_webengineurlrequestinfo_set_http_header(void* self, const char* name, con
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of char* to char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     libqt_free(map.values[i]);
@@ -104,7 +105,9 @@ void q_webengineurlrequestinfo_set_http_header(void* self, const char* name, con
 ///
 /// @param self QWebEngineUrlRequestInfo*
 ///
-libqt_map /* of char* to char* */ q_webengineurlrequestinfo_http_headers(void* self);
+/// @return libqt_map of char* to char*
+///
+libqt_map q_webengineurlrequestinfo_http_headers(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#public-types)
 

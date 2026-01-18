@@ -69,15 +69,21 @@ const char* q_mediadevices_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediadevices.html#audioInputs)
 ///
-libqt_list /* of QAudioDevice* */ q_mediadevices_audio_inputs();
+/// @return libqt_list of QAudioDevice*
+///
+libqt_list q_mediadevices_audio_inputs();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediadevices.html#audioOutputs)
 ///
-libqt_list /* of QAudioDevice* */ q_mediadevices_audio_outputs();
+/// @return libqt_list of QAudioDevice*
+///
+libqt_list q_mediadevices_audio_outputs();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediadevices.html#videoInputs)
 ///
-libqt_list /* of QCameraDevice* */ q_mediadevices_video_inputs();
+/// @return libqt_list of QCameraDevice*
+///
+libqt_list q_mediadevices_video_inputs();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediadevices.html#defaultAudioInput)
 ///
@@ -284,7 +290,9 @@ void q_mediadevices_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QMediaDevices*
 ///
-libqt_list /* of QObject* */ q_mediadevices_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_mediadevices_children(void* self);
 
 /// Inherited from QObject
 ///

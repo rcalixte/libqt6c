@@ -33,11 +33,11 @@ void q_stylepainter_draw_primitive(void* self, int32_t pe, void* opt) {
     QStylePainter_DrawPrimitive((QStylePainter*)self, pe, (QStyleOption*)opt);
 }
 
-void q_stylepainter_draw_control(void* self, int64_t ce, void* opt) {
+void q_stylepainter_draw_control(void* self, int32_t ce, void* opt) {
     QStylePainter_DrawControl((QStylePainter*)self, ce, (QStyleOption*)opt);
 }
 
-void q_stylepainter_draw_complex_control(void* self, int64_t cc, void* opt) {
+void q_stylepainter_draw_complex_control(void* self, int32_t cc, void* opt) {
     QStylePainter_DrawComplexControl((QStylePainter*)self, cc, (QStyleOptionComplex*)opt);
 }
 
@@ -357,7 +357,7 @@ void q_stylepainter_draw_lines(void* self, void* lines, int lineCount) {
     QPainter_DrawLines((QPainter*)self, (QLineF*)lines, lineCount);
 }
 
-void q_stylepainter_draw_lines2(void* self, libqt_list lines) {
+void q_stylepainter_draw_lines2(void* self, libqt_list /* of QLineF* */ lines) {
     QPainter_DrawLines2((QPainter*)self, lines);
 }
 
@@ -365,7 +365,7 @@ void q_stylepainter_draw_lines3(void* self, void* pointPairs, int lineCount) {
     QPainter_DrawLines3((QPainter*)self, (QPointF*)pointPairs, lineCount);
 }
 
-void q_stylepainter_draw_lines4(void* self, libqt_list pointPairs) {
+void q_stylepainter_draw_lines4(void* self, libqt_list /* of QPointF* */ pointPairs) {
     QPainter_DrawLines4((QPainter*)self, pointPairs);
 }
 
@@ -373,7 +373,7 @@ void q_stylepainter_draw_lines5(void* self, void* lines, int lineCount) {
     QPainter_DrawLines5((QPainter*)self, (QLine*)lines, lineCount);
 }
 
-void q_stylepainter_draw_lines6(void* self, libqt_list lines) {
+void q_stylepainter_draw_lines6(void* self, libqt_list /* of QLine* */ lines) {
     QPainter_DrawLines6((QPainter*)self, lines);
 }
 
@@ -381,7 +381,7 @@ void q_stylepainter_draw_lines7(void* self, void* pointPairs, int lineCount) {
     QPainter_DrawLines7((QPainter*)self, (QPoint*)pointPairs, lineCount);
 }
 
-void q_stylepainter_draw_lines8(void* self, libqt_list pointPairs) {
+void q_stylepainter_draw_lines8(void* self, libqt_list /* of QPoint* */ pointPairs) {
     QPainter_DrawLines8((QPainter*)self, pointPairs);
 }
 
@@ -401,7 +401,7 @@ void q_stylepainter_draw_rects(void* self, void* rects, int rectCount) {
     QPainter_DrawRects((QPainter*)self, (QRectF*)rects, rectCount);
 }
 
-void q_stylepainter_draw_rects2(void* self, libqt_list rectangles) {
+void q_stylepainter_draw_rects2(void* self, libqt_list /* of QRectF* */ rectangles) {
     QPainter_DrawRects2((QPainter*)self, rectangles);
 }
 
@@ -409,7 +409,7 @@ void q_stylepainter_draw_rects3(void* self, void* rects, int rectCount) {
     QPainter_DrawRects3((QPainter*)self, (QRect*)rects, rectCount);
 }
 
-void q_stylepainter_draw_rects4(void* self, libqt_list rectangles) {
+void q_stylepainter_draw_rects4(void* self, libqt_list /* of QRect* */ rectangles) {
     QPainter_DrawRects4((QPainter*)self, rectangles);
 }
 

@@ -242,7 +242,7 @@ const char** k_texteditor__document_text_lines(void* self, void* range, bool blo
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_text_lines");
+        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_text_lines\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -311,7 +311,7 @@ bool k_texteditor__document_set_text2(void* self, const char* text[static 1]) {
     size_t text_len = libqt_strv_length(text);
     libqt_string* text_qstr = (libqt_string*)malloc(text_len * sizeof(libqt_string));
     if (text_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_set_text2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_set_text2\n");
         abort();
     }
     for (size_t i = 0; i < text_len; ++i) {
@@ -335,7 +335,7 @@ bool k_texteditor__document_insert_text2(void* self, void* position, const char*
     size_t text_len = libqt_strv_length(text);
     libqt_string* text_qstr = (libqt_string*)malloc(text_len * sizeof(libqt_string));
     if (text_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_insert_text2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_insert_text2\n");
         abort();
     }
     for (size_t i = 0; i < text_len; ++i) {
@@ -355,7 +355,7 @@ bool k_texteditor__document_replace_text2(void* self, void* range, const char* t
     size_t text_len = libqt_strv_length(text);
     libqt_string* text_qstr = (libqt_string*)malloc(text_len * sizeof(libqt_string));
     if (text_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_replace_text2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_replace_text2\n");
         abort();
     }
     for (size_t i = 0; i < text_len; ++i) {
@@ -379,7 +379,7 @@ bool k_texteditor__document_insert_lines(void* self, int line, const char* text[
     size_t text_len = libqt_strv_length(text);
     libqt_string* text_qstr = (libqt_string*)malloc(text_len * sizeof(libqt_string));
     if (text_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_insert_lines");
+        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_insert_lines\n");
         abort();
     }
     for (size_t i = 0; i < text_len; ++i) {
@@ -487,7 +487,7 @@ const char** k_texteditor__document_embedded_highlighting_modes(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_embedded_highlighting_modes");
+        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_embedded_highlighting_modes\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -513,7 +513,7 @@ const char** k_texteditor__document_modes(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_modes");
+        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_modes\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -532,7 +532,7 @@ const char** k_texteditor__document_highlighting_modes(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_highlighting_modes");
+        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_highlighting_modes\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -681,7 +681,7 @@ const char** k_texteditor__document_config_keys(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_config_keys");
+        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_config_keys\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -757,11 +757,11 @@ int32_t k_texteditor__document_reserved_markers_count() {
     return KTextEditor__Document_ReservedMarkersCount();
 }
 
-void k_texteditor__document_set_mark_description(void* self, int64_t mark, const char* text) {
+void k_texteditor__document_set_mark_description(void* self, int32_t mark, const char* text) {
     KTextEditor__Document_SetMarkDescription((KTextEditor__Document*)self, mark, qstring(text));
 }
 
-const char* k_texteditor__document_mark_description(void* self, int64_t mark) {
+const char* k_texteditor__document_mark_description(void* self, int32_t mark) {
     libqt_string _str = KTextEditor__Document_MarkDescription((KTextEditor__Document*)self, mark);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -776,11 +776,11 @@ uint32_t k_texteditor__document_editable_marks(void* self) {
     return KTextEditor__Document_EditableMarks((KTextEditor__Document*)self);
 }
 
-void k_texteditor__document_set_mark_icon(void* self, int64_t markType, void* icon) {
+void k_texteditor__document_set_mark_icon(void* self, int32_t markType, void* icon) {
     KTextEditor__Document_SetMarkIcon((KTextEditor__Document*)self, markType, (QIcon*)icon);
 }
 
-QIcon* k_texteditor__document_mark_icon(void* self, int64_t markType) {
+QIcon* k_texteditor__document_mark_icon(void* self, int32_t markType) {
     return KTextEditor__Document_MarkIcon((KTextEditor__Document*)self, markType);
 }
 
@@ -846,7 +846,7 @@ const char* k_texteditor__document_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-libqt_list /* of KTextEditor__Range* */ k_texteditor__document_search_text3(void* self, void* range, const char* pattern, const int64_t options) {
+libqt_list /* of KTextEditor__Range* */ k_texteditor__document_search_text3(void* self, void* range, const char* pattern, const int32_t options) {
     libqt_list _arr = KTextEditor__Document_SearchText3((KTextEditor__Document*)self, (KTextEditor__Range*)range, qstring(pattern), options);
     return _arr;
 }
@@ -1140,7 +1140,7 @@ const char** k_texteditor__document_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1296,7 +1296,7 @@ void k_texteditor__document_reload_x_m_l(void* self) {
     KXMLGUIClient_ReloadXML((KXMLGUIClient*)self);
 }
 
-void k_texteditor__document_plug_action_list(void* self, const char* name, libqt_list actionList) {
+void k_texteditor__document_plug_action_list(void* self, const char* name, libqt_list /* of QAction* */ actionList) {
     KXMLGUIClient_PlugActionList((KXMLGUIClient*)self, qstring(name), actionList);
 }
 
@@ -1308,7 +1308,7 @@ const char* k_texteditor__document_find_most_recent_x_m_l_file(const char* files
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_find_most_recent_x_m_l_file");
+        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__document_find_most_recent_x_m_l_file\n");
         abort();
     }
     for (size_t i = 0; i < files_len; ++i) {

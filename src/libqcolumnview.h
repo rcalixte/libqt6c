@@ -308,15 +308,17 @@ void q_columnview_set_preview_widget(void* self, void* widget);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolumnview.html#setColumnWidths)
 ///
 /// @param self QColumnView*
-/// @param list libqt_list /* of int */
+/// @param list libqt_list of int
 ///
-void q_columnview_set_column_widths(void* self, libqt_list list);
+void q_columnview_set_column_widths(void* self, libqt_list /* of int */ list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolumnview.html#columnWidths)
 ///
 /// @param self QColumnView*
 ///
-libqt_list /* of int */ q_columnview_column_widths(void* self);
+/// @return libqt_list of int
+///
+libqt_list q_columnview_column_widths(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolumnview.html#isIndexHidden)
 ///
@@ -349,7 +351,7 @@ bool q_columnview_qbase_is_index_hidden(void* self, void* index);
 /// @param cursorAction enum QAbstractItemView__CursorAction
 /// @param modifiers flag of enum Qt__KeyboardModifier
 ///
-QModelIndex* q_columnview_move_cursor(void* self, int32_t cursorAction, int64_t modifiers);
+QModelIndex* q_columnview_move_cursor(void* self, int32_t cursorAction, int32_t modifiers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolumnview.html#moveCursor)
 ///
@@ -358,7 +360,7 @@ QModelIndex* q_columnview_move_cursor(void* self, int32_t cursorAction, int64_t 
 /// @param self QColumnView*
 /// @param callback QModelIndex* func(QColumnView* self, enum QAbstractItemView__CursorAction cursorAction, flag of enum Qt__KeyboardModifier modifiers)
 ///
-void q_columnview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int64_t));
+void q_columnview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolumnview.html#moveCursor)
 ///
@@ -368,7 +370,7 @@ void q_columnview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int
 /// @param cursorAction enum QAbstractItemView__CursorAction
 /// @param modifiers flag of enum Qt__KeyboardModifier
 ///
-QModelIndex* q_columnview_qbase_move_cursor(void* self, int32_t cursorAction, int64_t modifiers);
+QModelIndex* q_columnview_qbase_move_cursor(void* self, int32_t cursorAction, int32_t modifiers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolumnview.html#resizeEvent)
 ///
@@ -1382,7 +1384,9 @@ void q_columnview_add_scroll_bar_widget(void* self, void* widget, int32_t alignm
 /// @param self QColumnView*
 /// @param alignment flag of enum Qt__AlignmentFlag
 ///
-libqt_list /* of QWidget* */ q_columnview_scroll_bar_widgets(void* self, int32_t alignment);
+/// @return libqt_list of QWidget*
+///
+libqt_list q_columnview_scroll_bar_widgets(void* self, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2370,7 +2374,7 @@ void q_columnview_set_graphics_effect(void* self, void* effect);
 /// @param self QColumnView*
 /// @param type enum Qt__GestureType
 ///
-void q_columnview_grab_gesture(void* self, int64_t type);
+void q_columnview_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2379,7 +2383,7 @@ void q_columnview_grab_gesture(void* self, int64_t type);
 /// @param self QColumnView*
 /// @param type enum Qt__GestureType
 ///
-void q_columnview_ungrab_gesture(void* self, int64_t type);
+void q_columnview_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3360,7 +3364,7 @@ void q_columnview_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void q_columnview_set_parent2(void* self, void* parent, int64_t f);
+void q_columnview_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -3438,9 +3442,9 @@ void q_columnview_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self QColumnView*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_columnview_add_actions(void* self, libqt_list actions);
+void q_columnview_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -3448,9 +3452,9 @@ void q_columnview_add_actions(void* self, libqt_list actions);
 ///
 /// @param self QColumnView*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_columnview_insert_actions(void* self, void* before, libqt_list actions);
+void q_columnview_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -3477,7 +3481,9 @@ void q_columnview_remove_action(void* self, void* action);
 ///
 /// @param self QColumnView*
 ///
-libqt_list /* of QAction* */ q_columnview_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list q_columnview_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3534,7 +3540,7 @@ QWidget* q_columnview_parent_widget(void* self);
 /// @param self QColumnView*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_columnview_set_window_flags(void* self, int64_t type);
+void q_columnview_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3544,7 +3550,7 @@ void q_columnview_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t q_columnview_window_flags(void* self);
+int32_t q_columnview_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3553,7 +3559,7 @@ int64_t q_columnview_window_flags(void* self);
 /// @param self QColumnView*
 /// @param param1 enum Qt__WindowType
 ///
-void q_columnview_set_window_flag(void* self, int64_t param1);
+void q_columnview_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3562,7 +3568,7 @@ void q_columnview_set_window_flag(void* self, int64_t param1);
 /// @param self QColumnView*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_columnview_override_window_flags(void* self, int64_t type);
+void q_columnview_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3572,7 +3578,7 @@ void q_columnview_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t q_columnview_window_type(void* self);
+int32_t q_columnview_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3783,7 +3789,7 @@ void q_columnview_on_custom_context_menu_requested(void* self, void (*callback)(
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t q_columnview_input_method_hints(void* self);
+int32_t q_columnview_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3792,7 +3798,7 @@ int64_t q_columnview_input_method_hints(void* self);
 /// @param self QColumnView*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void q_columnview_set_input_method_hints(void* self, int64_t hints);
+void q_columnview_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -3877,7 +3883,7 @@ QPixmap* q_columnview_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void q_columnview_grab_gesture2(void* self, int64_t type, int32_t flags);
+void q_columnview_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -3917,7 +3923,7 @@ void q_columnview_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void q_columnview_set_window_flag2(void* self, int64_t param1, bool on);
+void q_columnview_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -3946,7 +3952,7 @@ QWidget* q_columnview_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* q_columnview_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* q_columnview_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -4058,7 +4064,9 @@ void q_columnview_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QColumnView*
 ///
-libqt_list /* of QObject* */ q_columnview_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_columnview_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4528,7 +4536,7 @@ void q_columnview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* 
 /// @param self QColumnView*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_columnview_input_method_query(void* self, int64_t query);
+QVariant* q_columnview_input_method_query(void* self, int32_t query);
 
 /// Inherited from QAbstractItemView
 ///
@@ -4539,7 +4547,7 @@ QVariant* q_columnview_input_method_query(void* self, int64_t query);
 /// @param self QColumnView*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_columnview_qbase_input_method_query(void* self, int64_t query);
+QVariant* q_columnview_qbase_input_method_query(void* self, int32_t query);
 
 /// Inherited from QAbstractItemView
 ///
@@ -4550,7 +4558,7 @@ QVariant* q_columnview_qbase_input_method_query(void* self, int64_t query);
 /// @param self QColumnView*
 /// @param callback QVariant* func(QColumnView* self, enum Qt__InputMethodQuery query)
 ///
-void q_columnview_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void q_columnview_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4623,9 +4631,9 @@ void q_columnview_on_do_items_layout(void* self, void (*callback)());
 /// @param self QColumnView*
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
-/// @param roles libqt_list /* of int */
+/// @param roles libqt_list of int
 ///
-void q_columnview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void q_columnview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
 
 /// Inherited from QAbstractItemView
 ///
@@ -4636,9 +4644,9 @@ void q_columnview_data_changed(void* self, void* topLeft, void* bottomRight, lib
 /// @param self QColumnView*
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
-/// @param roles libqt_list /* of int */
+/// @param roles libqt_list of int
 ///
-void q_columnview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void q_columnview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
 
 /// Inherited from QAbstractItemView
 ///
@@ -4647,9 +4655,9 @@ void q_columnview_qbase_data_changed(void* self, void* topLeft, void* bottomRigh
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColumnView*
-/// @param callback void func(QColumnView* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
+/// @param callback void func(QColumnView* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
 ///
-void q_columnview_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*));
+void q_columnview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5057,7 +5065,9 @@ void q_columnview_on_editor_destroyed(void* self, void (*callback)(void*, void*)
 ///
 /// @param self QColumnView*
 ///
-libqt_list /* of QModelIndex* */ q_columnview_selected_indexes(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list q_columnview_selected_indexes(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5067,7 +5077,9 @@ libqt_list /* of QModelIndex* */ q_columnview_selected_indexes(void* self);
 ///
 /// @param self QColumnView*
 ///
-libqt_list /* of QModelIndex* */ q_columnview_qbase_selected_indexes(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list q_columnview_qbase_selected_indexes(void* self);
 
 /// Inherited from QAbstractItemView
 ///

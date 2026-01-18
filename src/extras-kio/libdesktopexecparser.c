@@ -3,7 +3,7 @@
 #include "libdesktopexecparser.hpp"
 #include "libdesktopexecparser.h"
 
-KIO__DesktopExecParser* k_io__desktopexecparser_new(void* service, libqt_list urls) {
+KIO__DesktopExecParser* k_io__desktopexecparser_new(void* service, libqt_list /* of QUrl* */ urls) {
     return KIO__DesktopExecParser_new((KService*)service, urls);
 }
 
@@ -20,7 +20,7 @@ const char** k_io__desktopexecparser_resulting_arguments(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__desktopexecparser_resulting_arguments");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__desktopexecparser_resulting_arguments\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -46,7 +46,7 @@ const char** k_io__desktopexecparser_supported_protocols(void* service) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__desktopexecparser_supported_protocols");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__desktopexecparser_supported_protocols\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -64,7 +64,7 @@ bool k_io__desktopexecparser_is_protocol_in_supported_list(void* url, const char
     size_t supportedProtocols_len = libqt_strv_length(supportedProtocols);
     libqt_string* supportedProtocols_qstr = (libqt_string*)malloc(supportedProtocols_len * sizeof(libqt_string));
     if (supportedProtocols_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__desktopexecparser_is_protocol_in_supported_list");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__desktopexecparser_is_protocol_in_supported_list\n");
         abort();
     }
     for (size_t i = 0; i < supportedProtocols_len; ++i) {

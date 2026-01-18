@@ -264,7 +264,9 @@ QUrl* k_dirlister_url(void* self);
 ///
 /// @param self KDirLister*
 ///
-libqt_list /* of QUrl* */ k_dirlister_directories(void* self);
+/// @return libqt_list of QUrl*
+///
+libqt_list k_dirlister_directories(void* self);
 
 /// Inherited from KCoreDirLister
 ///
@@ -868,7 +870,9 @@ void k_dirlister_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KDirLister*
 ///
-libqt_list /* of QObject* */ k_dirlister_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_dirlister_children(void* self);
 
 /// Inherited from QObject
 ///

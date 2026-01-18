@@ -4391,14 +4391,14 @@ QStyleOptionComplex* q_styleoptioncomplex_new4(int version, int type);
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int64_t q_styleoptioncomplex_sub_controls(void* self);
+int32_t q_styleoptioncomplex_sub_controls(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#subControls-var)
 ///
 /// @param self QStyleOptionComplex*
 /// @param subControls flag of enum QStyle__SubControl
 ///
-void q_styleoptioncomplex_set_sub_controls(void* self, int64_t subControls);
+void q_styleoptioncomplex_set_sub_controls(void* self, int32_t subControls);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#activeSubControls-var)
 ///
@@ -4406,14 +4406,14 @@ void q_styleoptioncomplex_set_sub_controls(void* self, int64_t subControls);
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int64_t q_styleoptioncomplex_active_sub_controls(void* self);
+int32_t q_styleoptioncomplex_active_sub_controls(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#activeSubControls-var)
 ///
 /// @param self QStyleOptionComplex*
 /// @param activeSubControls flag of enum QStyle__SubControl
 ///
-void q_styleoptioncomplex_set_active_sub_controls(void* self, int64_t activeSubControls);
+void q_styleoptioncomplex_set_active_sub_controls(void* self, int32_t activeSubControls);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#operator-eq)
 ///
@@ -4759,14 +4759,14 @@ void q_styleoptionslider_set_dial_wrapping(void* self, bool dialWrapping);
 ///
 /// @return flag of enum Qt__KeyboardModifier
 ///
-int64_t q_styleoptionslider_keyboard_modifiers(void* self);
+int32_t q_styleoptionslider_keyboard_modifiers(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#keyboardModifiers-var)
 ///
 /// @param self QStyleOptionSlider*
 /// @param keyboardModifiers flag of enum Qt__KeyboardModifier
 ///
-void q_styleoptionslider_set_keyboard_modifiers(void* self, int64_t keyboardModifiers);
+void q_styleoptionslider_set_keyboard_modifiers(void* self, int32_t keyboardModifiers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#operator-eq)
 ///
@@ -4783,7 +4783,7 @@ void q_styleoptionslider_operator_assign(void* self, void* param1);
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int64_t q_styleoptionslider_sub_controls(void* self);
+int32_t q_styleoptionslider_sub_controls(void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -4792,7 +4792,7 @@ int64_t q_styleoptionslider_sub_controls(void* self);
 /// @param self QStyleOptionSlider*
 /// @param subControls flag of enum QStyle__SubControl
 ///
-void q_styleoptionslider_set_sub_controls(void* self, int64_t subControls);
+void q_styleoptionslider_set_sub_controls(void* self, int32_t subControls);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -4802,7 +4802,7 @@ void q_styleoptionslider_set_sub_controls(void* self, int64_t subControls);
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int64_t q_styleoptionslider_active_sub_controls(void* self);
+int32_t q_styleoptionslider_active_sub_controls(void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -4811,7 +4811,7 @@ int64_t q_styleoptionslider_active_sub_controls(void* self);
 /// @param self QStyleOptionSlider*
 /// @param activeSubControls flag of enum QStyle__SubControl
 ///
-void q_styleoptionslider_set_active_sub_controls(void* self, int64_t activeSubControls);
+void q_styleoptionslider_set_active_sub_controls(void* self, int32_t activeSubControls);
 
 /// Inherited from QStyleOption
 ///
@@ -5042,7 +5042,7 @@ void q_styleoptionspinbox_operator_assign(void* self, void* param1);
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int64_t q_styleoptionspinbox_sub_controls(void* self);
+int32_t q_styleoptionspinbox_sub_controls(void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -5051,7 +5051,7 @@ int64_t q_styleoptionspinbox_sub_controls(void* self);
 /// @param self QStyleOptionSpinBox*
 /// @param subControls flag of enum QStyle__SubControl
 ///
-void q_styleoptionspinbox_set_sub_controls(void* self, int64_t subControls);
+void q_styleoptionspinbox_set_sub_controls(void* self, int32_t subControls);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -5061,7 +5061,7 @@ void q_styleoptionspinbox_set_sub_controls(void* self, int64_t subControls);
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int64_t q_styleoptionspinbox_active_sub_controls(void* self);
+int32_t q_styleoptionspinbox_active_sub_controls(void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -5070,7 +5070,7 @@ int64_t q_styleoptionspinbox_active_sub_controls(void* self);
 /// @param self QStyleOptionSpinBox*
 /// @param activeSubControls flag of enum QStyle__SubControl
 ///
-void q_styleoptionspinbox_set_active_sub_controls(void* self, int64_t activeSubControls);
+void q_styleoptionspinbox_set_active_sub_controls(void* self, int32_t activeSubControls);
 
 /// Inherited from QStyleOption
 ///
@@ -5370,7 +5370,7 @@ void q_styleoptiontoolbutton_operator_assign(void* self, void* param1);
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int64_t q_styleoptiontoolbutton_sub_controls(void* self);
+int32_t q_styleoptiontoolbutton_sub_controls(void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -5379,7 +5379,7 @@ int64_t q_styleoptiontoolbutton_sub_controls(void* self);
 /// @param self QStyleOptionToolButton*
 /// @param subControls flag of enum QStyle__SubControl
 ///
-void q_styleoptiontoolbutton_set_sub_controls(void* self, int64_t subControls);
+void q_styleoptiontoolbutton_set_sub_controls(void* self, int32_t subControls);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -5389,7 +5389,7 @@ void q_styleoptiontoolbutton_set_sub_controls(void* self, int64_t subControls);
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int64_t q_styleoptiontoolbutton_active_sub_controls(void* self);
+int32_t q_styleoptiontoolbutton_active_sub_controls(void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -5398,7 +5398,7 @@ int64_t q_styleoptiontoolbutton_active_sub_controls(void* self);
 /// @param self QStyleOptionToolButton*
 /// @param activeSubControls flag of enum QStyle__SubControl
 ///
-void q_styleoptiontoolbutton_set_active_sub_controls(void* self, int64_t activeSubControls);
+void q_styleoptiontoolbutton_set_active_sub_controls(void* self, int32_t activeSubControls);
 
 /// Inherited from QStyleOption
 ///
@@ -5681,7 +5681,7 @@ void q_styleoptioncombobox_operator_assign(void* self, void* param1);
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int64_t q_styleoptioncombobox_sub_controls(void* self);
+int32_t q_styleoptioncombobox_sub_controls(void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -5690,7 +5690,7 @@ int64_t q_styleoptioncombobox_sub_controls(void* self);
 /// @param self QStyleOptionComboBox*
 /// @param subControls flag of enum QStyle__SubControl
 ///
-void q_styleoptioncombobox_set_sub_controls(void* self, int64_t subControls);
+void q_styleoptioncombobox_set_sub_controls(void* self, int32_t subControls);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -5700,7 +5700,7 @@ void q_styleoptioncombobox_set_sub_controls(void* self, int64_t subControls);
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int64_t q_styleoptioncombobox_active_sub_controls(void* self);
+int32_t q_styleoptioncombobox_active_sub_controls(void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -5709,7 +5709,7 @@ int64_t q_styleoptioncombobox_active_sub_controls(void* self);
 /// @param self QStyleOptionComboBox*
 /// @param activeSubControls flag of enum QStyle__SubControl
 ///
-void q_styleoptioncombobox_set_active_sub_controls(void* self, int64_t activeSubControls);
+void q_styleoptioncombobox_set_active_sub_controls(void* self, int32_t activeSubControls);
 
 /// Inherited from QStyleOption
 ///
@@ -5929,14 +5929,14 @@ void q_styleoptiontitlebar_set_title_bar_state(void* self, int titleBarState);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t q_styleoptiontitlebar_title_bar_flags(void* self);
+int32_t q_styleoptiontitlebar_title_bar_flags(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontitlebar.html#titleBarFlags-var)
 ///
 /// @param self QStyleOptionTitleBar*
 /// @param titleBarFlags flag of enum Qt__WindowType
 ///
-void q_styleoptiontitlebar_set_title_bar_flags(void* self, int64_t titleBarFlags);
+void q_styleoptiontitlebar_set_title_bar_flags(void* self, int32_t titleBarFlags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontitlebar.html#operator-eq)
 ///
@@ -5953,7 +5953,7 @@ void q_styleoptiontitlebar_operator_assign(void* self, void* param1);
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int64_t q_styleoptiontitlebar_sub_controls(void* self);
+int32_t q_styleoptiontitlebar_sub_controls(void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -5962,7 +5962,7 @@ int64_t q_styleoptiontitlebar_sub_controls(void* self);
 /// @param self QStyleOptionTitleBar*
 /// @param subControls flag of enum QStyle__SubControl
 ///
-void q_styleoptiontitlebar_set_sub_controls(void* self, int64_t subControls);
+void q_styleoptiontitlebar_set_sub_controls(void* self, int32_t subControls);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -5972,7 +5972,7 @@ void q_styleoptiontitlebar_set_sub_controls(void* self, int64_t subControls);
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int64_t q_styleoptiontitlebar_active_sub_controls(void* self);
+int32_t q_styleoptiontitlebar_active_sub_controls(void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -5981,7 +5981,7 @@ int64_t q_styleoptiontitlebar_active_sub_controls(void* self);
 /// @param self QStyleOptionTitleBar*
 /// @param activeSubControls flag of enum QStyle__SubControl
 ///
-void q_styleoptiontitlebar_set_active_sub_controls(void* self, int64_t activeSubControls);
+void q_styleoptiontitlebar_set_active_sub_controls(void* self, int32_t activeSubControls);
 
 /// Inherited from QStyleOption
 ///
@@ -6253,7 +6253,7 @@ void q_styleoptiongroupbox_operator_assign(void* self, void* param1);
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int64_t q_styleoptiongroupbox_sub_controls(void* self);
+int32_t q_styleoptiongroupbox_sub_controls(void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -6262,7 +6262,7 @@ int64_t q_styleoptiongroupbox_sub_controls(void* self);
 /// @param self QStyleOptionGroupBox*
 /// @param subControls flag of enum QStyle__SubControl
 ///
-void q_styleoptiongroupbox_set_sub_controls(void* self, int64_t subControls);
+void q_styleoptiongroupbox_set_sub_controls(void* self, int32_t subControls);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -6272,7 +6272,7 @@ void q_styleoptiongroupbox_set_sub_controls(void* self, int64_t subControls);
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int64_t q_styleoptiongroupbox_active_sub_controls(void* self);
+int32_t q_styleoptiongroupbox_active_sub_controls(void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -6281,7 +6281,7 @@ int64_t q_styleoptiongroupbox_active_sub_controls(void* self);
 /// @param self QStyleOptionGroupBox*
 /// @param activeSubControls flag of enum QStyle__SubControl
 ///
-void q_styleoptiongroupbox_set_active_sub_controls(void* self, int64_t activeSubControls);
+void q_styleoptiongroupbox_set_active_sub_controls(void* self, int32_t activeSubControls);
 
 /// Inherited from QStyleOption
 ///
@@ -6484,7 +6484,7 @@ void q_styleoptionsizegrip_operator_assign(void* self, void* param1);
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int64_t q_styleoptionsizegrip_sub_controls(void* self);
+int32_t q_styleoptionsizegrip_sub_controls(void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -6493,7 +6493,7 @@ int64_t q_styleoptionsizegrip_sub_controls(void* self);
 /// @param self QStyleOptionSizeGrip*
 /// @param subControls flag of enum QStyle__SubControl
 ///
-void q_styleoptionsizegrip_set_sub_controls(void* self, int64_t subControls);
+void q_styleoptionsizegrip_set_sub_controls(void* self, int32_t subControls);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -6503,7 +6503,7 @@ void q_styleoptionsizegrip_set_sub_controls(void* self, int64_t subControls);
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int64_t q_styleoptionsizegrip_active_sub_controls(void* self);
+int32_t q_styleoptionsizegrip_active_sub_controls(void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -6512,7 +6512,7 @@ int64_t q_styleoptionsizegrip_active_sub_controls(void* self);
 /// @param self QStyleOptionSizeGrip*
 /// @param activeSubControls flag of enum QStyle__SubControl
 ///
-void q_styleoptionsizegrip_set_active_sub_controls(void* self, int64_t activeSubControls);
+void q_styleoptionsizegrip_set_active_sub_controls(void* self, int32_t activeSubControls);
 
 /// Inherited from QStyleOption
 ///

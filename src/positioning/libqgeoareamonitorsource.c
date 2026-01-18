@@ -54,7 +54,7 @@ const char** q_geoareamonitorsource_available_sources() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_geoareamonitorsource_available_sources");
+        fprintf(stderr, "Failed to allocate memory for string list in q_geoareamonitorsource_available_sources\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -111,15 +111,15 @@ int32_t q_geoareamonitorsource_qbase_error(void* self) {
     return QGeoAreaMonitorSource_QBaseError((QGeoAreaMonitorSource*)self);
 }
 
-int64_t q_geoareamonitorsource_supported_area_monitor_features(void* self) {
+int32_t q_geoareamonitorsource_supported_area_monitor_features(void* self) {
     return QGeoAreaMonitorSource_SupportedAreaMonitorFeatures((QGeoAreaMonitorSource*)self);
 }
 
-void q_geoareamonitorsource_on_supported_area_monitor_features(void* self, int64_t (*callback)()) {
+void q_geoareamonitorsource_on_supported_area_monitor_features(void* self, int32_t (*callback)()) {
     QGeoAreaMonitorSource_OnSupportedAreaMonitorFeatures((QGeoAreaMonitorSource*)self, (intptr_t)callback);
 }
 
-int64_t q_geoareamonitorsource_qbase_supported_area_monitor_features(void* self) {
+int32_t q_geoareamonitorsource_qbase_supported_area_monitor_features(void* self) {
     return QGeoAreaMonitorSource_QBaseSupportedAreaMonitorFeatures((QGeoAreaMonitorSource*)self);
 }
 
@@ -362,7 +362,7 @@ const char** q_geoareamonitorsource_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_geoareamonitorsource_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_geoareamonitorsource_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

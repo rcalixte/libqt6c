@@ -2953,7 +2953,9 @@ void k_localizedcontext_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KLocalizedContext*
 ///
-libqt_list /* of QObject* */ k_localizedcontext_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_localizedcontext_children(void* self);
 
 /// Inherited from QObject
 ///

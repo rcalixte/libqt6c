@@ -586,7 +586,9 @@ void k_io__mimetypefinderjob_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KIO__MimeTypeFinderJob*
 ///
-libqt_list /* of QObject* */ k_io__mimetypefinderjob_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_io__mimetypefinderjob_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1291,7 +1293,9 @@ void k_io__mimetypefinderjob_on_has_subjobs(void* self, bool (*callback)());
 ///
 /// @param self KIO__MimeTypeFinderJob*
 ///
-libqt_list /* of KJob* */ k_io__mimetypefinderjob_subjobs(void* self);
+/// @return libqt_list of KJob*
+///
+libqt_list k_io__mimetypefinderjob_subjobs(void* self);
 
 /// Inherited from KCompositeJob
 ///
@@ -1301,7 +1305,9 @@ libqt_list /* of KJob* */ k_io__mimetypefinderjob_subjobs(void* self);
 ///
 /// @param self KIO__MimeTypeFinderJob*
 ///
-libqt_list /* of KJob* */ k_io__mimetypefinderjob_qbase_subjobs(void* self);
+/// @return libqt_list of KJob*
+///
+libqt_list k_io__mimetypefinderjob_qbase_subjobs(void* self);
 
 /// Inherited from KCompositeJob
 ///

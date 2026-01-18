@@ -21,9 +21,9 @@ PackageKit__Details* q_packagekit__details_new();
 
 /// q_packagekit__details_new2 constructs a new PackageKit::Details object.
 ///
-/// @param other libqt_map /* of const char* to QVariant* */
+/// @param other libqt_map of const char* to QVariant*
 ///
-PackageKit__Details* q_packagekit__details_new2(libqt_map /* of const char* to QVariant* */ other);
+PackageKit__Details* q_packagekit__details_new2(libqt_map other);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///

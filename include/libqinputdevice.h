@@ -159,7 +159,9 @@ const char** q_inputdevice_seat_names();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdevice.html#devices)
 ///
-libqt_list /* of QInputDevice* */ q_inputdevice_devices();
+/// @return libqt_list of QInputDevice*
+///
+libqt_list q_inputdevice_devices();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdevice.html#primaryKeyboard)
 ///
@@ -321,7 +323,9 @@ void q_inputdevice_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QInputDevice*
 ///
-libqt_list /* of QObject* */ q_inputdevice_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_inputdevice_children(void* self);
 
 /// Inherited from QObject
 ///

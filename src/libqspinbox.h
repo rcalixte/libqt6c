@@ -1446,7 +1446,7 @@ void q_spinbox_set_graphics_effect(void* self, void* effect);
 /// @param self QSpinBox*
 /// @param type enum Qt__GestureType
 ///
-void q_spinbox_grab_gesture(void* self, int64_t type);
+void q_spinbox_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -1455,7 +1455,7 @@ void q_spinbox_grab_gesture(void* self, int64_t type);
 /// @param self QSpinBox*
 /// @param type enum Qt__GestureType
 ///
-void q_spinbox_ungrab_gesture(void* self, int64_t type);
+void q_spinbox_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2444,7 +2444,7 @@ void q_spinbox_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void q_spinbox_set_parent2(void* self, void* parent, int64_t f);
+void q_spinbox_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -2522,9 +2522,9 @@ void q_spinbox_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self QSpinBox*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_spinbox_add_actions(void* self, libqt_list actions);
+void q_spinbox_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2532,9 +2532,9 @@ void q_spinbox_add_actions(void* self, libqt_list actions);
 ///
 /// @param self QSpinBox*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_spinbox_insert_actions(void* self, void* before, libqt_list actions);
+void q_spinbox_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2561,7 +2561,9 @@ void q_spinbox_remove_action(void* self, void* action);
 ///
 /// @param self QSpinBox*
 ///
-libqt_list /* of QAction* */ q_spinbox_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list q_spinbox_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2618,7 +2620,7 @@ QWidget* q_spinbox_parent_widget(void* self);
 /// @param self QSpinBox*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_spinbox_set_window_flags(void* self, int64_t type);
+void q_spinbox_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2628,7 +2630,7 @@ void q_spinbox_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t q_spinbox_window_flags(void* self);
+int32_t q_spinbox_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2637,7 +2639,7 @@ int64_t q_spinbox_window_flags(void* self);
 /// @param self QSpinBox*
 /// @param param1 enum Qt__WindowType
 ///
-void q_spinbox_set_window_flag(void* self, int64_t param1);
+void q_spinbox_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2646,7 +2648,7 @@ void q_spinbox_set_window_flag(void* self, int64_t param1);
 /// @param self QSpinBox*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_spinbox_override_window_flags(void* self, int64_t type);
+void q_spinbox_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2656,7 +2658,7 @@ void q_spinbox_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t q_spinbox_window_type(void* self);
+int32_t q_spinbox_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2867,7 +2869,7 @@ void q_spinbox_on_custom_context_menu_requested(void* self, void (*callback)(voi
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t q_spinbox_input_method_hints(void* self);
+int32_t q_spinbox_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2876,7 +2878,7 @@ int64_t q_spinbox_input_method_hints(void* self);
 /// @param self QSpinBox*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void q_spinbox_set_input_method_hints(void* self, int64_t hints);
+void q_spinbox_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -2961,7 +2963,7 @@ QPixmap* q_spinbox_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void q_spinbox_grab_gesture2(void* self, int64_t type, int32_t flags);
+void q_spinbox_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -3001,7 +3003,7 @@ void q_spinbox_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void q_spinbox_set_window_flag2(void* self, int64_t param1, bool on);
+void q_spinbox_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -3030,7 +3032,7 @@ QWidget* q_spinbox_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* q_spinbox_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* q_spinbox_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -3142,7 +3144,9 @@ void q_spinbox_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QSpinBox*
 ///
-libqt_list /* of QObject* */ q_spinbox_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_spinbox_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -3542,7 +3546,7 @@ void q_spinbox_on_minimum_size_hint(void* self, QSize* (*callback)());
 /// @param self QSpinBox*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_spinbox_input_method_query(void* self, int64_t param1);
+QVariant* q_spinbox_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -3553,7 +3557,7 @@ QVariant* q_spinbox_input_method_query(void* self, int64_t param1);
 /// @param self QSpinBox*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_spinbox_qbase_input_method_query(void* self, int64_t param1);
+QVariant* q_spinbox_qbase_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -3564,7 +3568,7 @@ QVariant* q_spinbox_qbase_input_method_query(void* self, int64_t param1);
 /// @param self QSpinBox*
 /// @param callback QVariant* func(QSpinBox* self, enum Qt__InputMethodQuery param1)
 ///
-void q_spinbox_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void q_spinbox_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -6926,7 +6930,7 @@ void q_doublespinbox_set_graphics_effect(void* self, void* effect);
 /// @param self QDoubleSpinBox*
 /// @param type enum Qt__GestureType
 ///
-void q_doublespinbox_grab_gesture(void* self, int64_t type);
+void q_doublespinbox_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -6935,7 +6939,7 @@ void q_doublespinbox_grab_gesture(void* self, int64_t type);
 /// @param self QDoubleSpinBox*
 /// @param type enum Qt__GestureType
 ///
-void q_doublespinbox_ungrab_gesture(void* self, int64_t type);
+void q_doublespinbox_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -7924,7 +7928,7 @@ void q_doublespinbox_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void q_doublespinbox_set_parent2(void* self, void* parent, int64_t f);
+void q_doublespinbox_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -8002,9 +8006,9 @@ void q_doublespinbox_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self QDoubleSpinBox*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_doublespinbox_add_actions(void* self, libqt_list actions);
+void q_doublespinbox_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -8012,9 +8016,9 @@ void q_doublespinbox_add_actions(void* self, libqt_list actions);
 ///
 /// @param self QDoubleSpinBox*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_doublespinbox_insert_actions(void* self, void* before, libqt_list actions);
+void q_doublespinbox_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -8041,7 +8045,9 @@ void q_doublespinbox_remove_action(void* self, void* action);
 ///
 /// @param self QDoubleSpinBox*
 ///
-libqt_list /* of QAction* */ q_doublespinbox_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list q_doublespinbox_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -8098,7 +8104,7 @@ QWidget* q_doublespinbox_parent_widget(void* self);
 /// @param self QDoubleSpinBox*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_doublespinbox_set_window_flags(void* self, int64_t type);
+void q_doublespinbox_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -8108,7 +8114,7 @@ void q_doublespinbox_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t q_doublespinbox_window_flags(void* self);
+int32_t q_doublespinbox_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -8117,7 +8123,7 @@ int64_t q_doublespinbox_window_flags(void* self);
 /// @param self QDoubleSpinBox*
 /// @param param1 enum Qt__WindowType
 ///
-void q_doublespinbox_set_window_flag(void* self, int64_t param1);
+void q_doublespinbox_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -8126,7 +8132,7 @@ void q_doublespinbox_set_window_flag(void* self, int64_t param1);
 /// @param self QDoubleSpinBox*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_doublespinbox_override_window_flags(void* self, int64_t type);
+void q_doublespinbox_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -8136,7 +8142,7 @@ void q_doublespinbox_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t q_doublespinbox_window_type(void* self);
+int32_t q_doublespinbox_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -8347,7 +8353,7 @@ void q_doublespinbox_on_custom_context_menu_requested(void* self, void (*callbac
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t q_doublespinbox_input_method_hints(void* self);
+int32_t q_doublespinbox_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -8356,7 +8362,7 @@ int64_t q_doublespinbox_input_method_hints(void* self);
 /// @param self QDoubleSpinBox*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void q_doublespinbox_set_input_method_hints(void* self, int64_t hints);
+void q_doublespinbox_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -8441,7 +8447,7 @@ QPixmap* q_doublespinbox_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void q_doublespinbox_grab_gesture2(void* self, int64_t type, int32_t flags);
+void q_doublespinbox_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -8481,7 +8487,7 @@ void q_doublespinbox_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void q_doublespinbox_set_window_flag2(void* self, int64_t param1, bool on);
+void q_doublespinbox_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -8510,7 +8516,7 @@ QWidget* q_doublespinbox_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* q_doublespinbox_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* q_doublespinbox_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -8622,7 +8628,9 @@ void q_doublespinbox_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QDoubleSpinBox*
 ///
-libqt_list /* of QObject* */ q_doublespinbox_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_doublespinbox_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -9055,7 +9063,7 @@ void q_doublespinbox_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QDoubleSpinBox*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_doublespinbox_input_method_query(void* self, int64_t param1);
+QVariant* q_doublespinbox_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -9066,7 +9074,7 @@ QVariant* q_doublespinbox_input_method_query(void* self, int64_t param1);
 /// @param self QDoubleSpinBox*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_doublespinbox_qbase_input_method_query(void* self, int64_t param1);
+QVariant* q_doublespinbox_qbase_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -9077,7 +9085,7 @@ QVariant* q_doublespinbox_qbase_input_method_query(void* self, int64_t param1);
 /// @param self QDoubleSpinBox*
 /// @param callback QVariant* func(QDoubleSpinBox* self, enum Qt__InputMethodQuery param1)
 ///
-void q_doublespinbox_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void q_doublespinbox_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSpinBox
 ///

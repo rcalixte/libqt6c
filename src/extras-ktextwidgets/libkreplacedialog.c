@@ -31,7 +31,7 @@ KReplaceDialog* k_replacedialog_new4(void* parent, int64_t options, const char* 
     size_t findStrings_len = libqt_strv_length(findStrings);
     libqt_string* findStrings_qstr = (libqt_string*)malloc(findStrings_len * sizeof(libqt_string));
     if (findStrings_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_new4");
+        fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_new4\n");
         abort();
     }
     for (size_t i = 0; i < findStrings_len; ++i) {
@@ -48,7 +48,7 @@ KReplaceDialog* k_replacedialog_new5(void* parent, int64_t options, const char* 
     size_t findStrings_len = libqt_strv_length(findStrings);
     libqt_string* findStrings_qstr = (libqt_string*)malloc(findStrings_len * sizeof(libqt_string));
     if (findStrings_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_new5");
+        fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_new5\n");
         abort();
     }
     for (size_t i = 0; i < findStrings_len; ++i) {
@@ -58,7 +58,7 @@ KReplaceDialog* k_replacedialog_new5(void* parent, int64_t options, const char* 
     size_t replaceStrings_len = libqt_strv_length(replaceStrings);
     libqt_string* replaceStrings_qstr = (libqt_string*)malloc(replaceStrings_len * sizeof(libqt_string));
     if (replaceStrings_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_new5");
+        fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_new5\n");
         abort();
     }
     for (size_t i = 0; i < replaceStrings_len; ++i) {
@@ -76,7 +76,7 @@ KReplaceDialog* k_replacedialog_new6(void* parent, int64_t options, const char* 
     size_t findStrings_len = libqt_strv_length(findStrings);
     libqt_string* findStrings_qstr = (libqt_string*)malloc(findStrings_len * sizeof(libqt_string));
     if (findStrings_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_new6");
+        fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_new6\n");
         abort();
     }
     for (size_t i = 0; i < findStrings_len; ++i) {
@@ -86,7 +86,7 @@ KReplaceDialog* k_replacedialog_new6(void* parent, int64_t options, const char* 
     size_t replaceStrings_len = libqt_strv_length(replaceStrings);
     libqt_string* replaceStrings_qstr = (libqt_string*)malloc(replaceStrings_len * sizeof(libqt_string));
     if (replaceStrings_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_new6");
+        fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_new6\n");
         abort();
     }
     for (size_t i = 0; i < replaceStrings_len; ++i) {
@@ -131,7 +131,7 @@ void k_replacedialog_set_replacement_history(void* self, const char* history[sta
     size_t history_len = libqt_strv_length(history);
     libqt_string* history_qstr = (libqt_string*)malloc(history_len * sizeof(libqt_string));
     if (history_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_set_replacement_history");
+        fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_set_replacement_history\n");
         abort();
     }
     for (size_t i = 0; i < history_len; ++i) {
@@ -147,7 +147,7 @@ const char** k_replacedialog_replacement_history(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_replacement_history");
+        fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_replacement_history\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -210,7 +210,7 @@ void k_replacedialog_set_find_history(void* self, const char* history[static 1])
     size_t history_len = libqt_strv_length(history);
     libqt_string* history_qstr = (libqt_string*)malloc(history_len * sizeof(libqt_string));
     if (history_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_set_find_history");
+        fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_set_find_history\n");
         abort();
     }
     for (size_t i = 0; i < history_len; ++i) {
@@ -226,7 +226,7 @@ const char** k_replacedialog_find_history(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_find_history");
+        fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_find_history\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -727,11 +727,11 @@ void k_replacedialog_set_graphics_effect(void* self, void* effect) {
     QWidget_SetGraphicsEffect((QWidget*)self, (QGraphicsEffect*)effect);
 }
 
-void k_replacedialog_grab_gesture(void* self, int64_t type) {
+void k_replacedialog_grab_gesture(void* self, int32_t type) {
     QWidget_GrabGesture((QWidget*)self, type);
 }
 
-void k_replacedialog_ungrab_gesture(void* self, int64_t type) {
+void k_replacedialog_ungrab_gesture(void* self, int32_t type) {
     QWidget_UngrabGesture((QWidget*)self, type);
 }
 
@@ -1212,7 +1212,7 @@ void k_replacedialog_set_parent(void* self, void* parent) {
     QWidget_SetParent((QWidget*)self, (QWidget*)parent);
 }
 
-void k_replacedialog_set_parent2(void* self, void* parent, int64_t f) {
+void k_replacedialog_set_parent2(void* self, void* parent, int32_t f) {
     QWidget_SetParent2((QWidget*)self, (QWidget*)parent, f);
 }
 
@@ -1248,11 +1248,11 @@ void k_replacedialog_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void k_replacedialog_add_actions(void* self, libqt_list actions) {
+void k_replacedialog_add_actions(void* self, libqt_list /* of QAction* */ actions) {
     QWidget_AddActions((QWidget*)self, actions);
 }
 
-void k_replacedialog_insert_actions(void* self, void* before, libqt_list actions) {
+void k_replacedialog_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions) {
     QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
@@ -1289,23 +1289,23 @@ QWidget* k_replacedialog_parent_widget(void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
-void k_replacedialog_set_window_flags(void* self, int64_t type) {
+void k_replacedialog_set_window_flags(void* self, int32_t type) {
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int64_t k_replacedialog_window_flags(void* self) {
+int32_t k_replacedialog_window_flags(void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
-void k_replacedialog_set_window_flag(void* self, int64_t param1) {
+void k_replacedialog_set_window_flag(void* self, int32_t param1) {
     QWidget_SetWindowFlag((QWidget*)self, param1);
 }
 
-void k_replacedialog_override_window_flags(void* self, int64_t type) {
+void k_replacedialog_override_window_flags(void* self, int32_t type) {
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int64_t k_replacedialog_window_type(void* self) {
+int32_t k_replacedialog_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
@@ -1401,11 +1401,11 @@ void k_replacedialog_on_custom_context_menu_requested(void* self, void (*callbac
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-int64_t k_replacedialog_input_method_hints(void* self) {
+int32_t k_replacedialog_input_method_hints(void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
-void k_replacedialog_set_input_method_hints(void* self, int64_t hints) {
+void k_replacedialog_set_input_method_hints(void* self, int32_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
@@ -1437,7 +1437,7 @@ QPixmap* k_replacedialog_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_replacedialog_grab_gesture2(void* self, int64_t type, int32_t flags) {
+void k_replacedialog_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
@@ -1453,7 +1453,7 @@ void k_replacedialog_set_shortcut_auto_repeat2(void* self, int id, bool enable) 
     QWidget_SetShortcutAutoRepeat2((QWidget*)self, id, enable);
 }
 
-void k_replacedialog_set_window_flag2(void* self, int64_t param1, bool on) {
+void k_replacedialog_set_window_flag2(void* self, int32_t param1, bool on) {
     QWidget_SetWindowFlag2((QWidget*)self, param1, on);
 }
 
@@ -1465,7 +1465,7 @@ QWidget* k_replacedialog_create_window_container2(void* window, void* parent) {
     return QWidget_CreateWindowContainer2((QWindow*)window, (QWidget*)parent);
 }
 
-QWidget* k_replacedialog_create_window_container3(void* window, void* parent, int64_t flags) {
+QWidget* k_replacedialog_create_window_container3(void* window, void* parent, int32_t flags) {
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
@@ -1570,7 +1570,7 @@ const char** k_replacedialog_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_replacedialog_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2216,15 +2216,15 @@ void k_replacedialog_on_input_method_event(void* self, void (*callback)(void*, v
     KReplaceDialog_OnInputMethodEvent((KReplaceDialog*)self, (intptr_t)callback);
 }
 
-QVariant* k_replacedialog_input_method_query(void* self, int64_t param1) {
+QVariant* k_replacedialog_input_method_query(void* self, int32_t param1) {
     return KReplaceDialog_InputMethodQuery((KReplaceDialog*)self, param1);
 }
 
-QVariant* k_replacedialog_qbase_input_method_query(void* self, int64_t param1) {
+QVariant* k_replacedialog_qbase_input_method_query(void* self, int32_t param1) {
     return KReplaceDialog_QBaseInputMethodQuery((KReplaceDialog*)self, param1);
 }
 
-void k_replacedialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void k_replacedialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     KReplaceDialog_OnInputMethodQuery((KReplaceDialog*)self, (intptr_t)callback);
 }
 

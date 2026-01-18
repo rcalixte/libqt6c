@@ -92,7 +92,9 @@ char* q_stringview_to_local8_bit(void* self);
 ///
 /// @param self QStringView*
 ///
-libqt_list /* of uint32_t */ q_stringview_to_ucs4(void* self);
+/// @return libqt_list of uint32_t
+///
+libqt_list q_stringview_to_ucs4(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#at)
 ///

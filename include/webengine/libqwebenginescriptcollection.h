@@ -37,7 +37,9 @@ bool q_webenginescriptcollection_contains(void* self, void* value);
 /// @param self QWebEngineScriptCollection*
 /// @param name const char*
 ///
-libqt_list /* of QWebEngineScript* */ q_webenginescriptcollection_find(void* self, const char* name);
+/// @return libqt_list of QWebEngineScript*
+///
+libqt_list q_webenginescriptcollection_find(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginescriptcollection.html#insert)
 ///
@@ -49,9 +51,9 @@ void q_webenginescriptcollection_insert(void* self, void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginescriptcollection.html#insert)
 ///
 /// @param self QWebEngineScriptCollection*
-/// @param list libqt_list /* of QWebEngineScript* */
+/// @param list libqt_list of QWebEngineScript*
 ///
-void q_webenginescriptcollection_insert2(void* self, libqt_list list);
+void q_webenginescriptcollection_insert2(void* self, libqt_list /* of QWebEngineScript* */ list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginescriptcollection.html#remove)
 ///
@@ -70,7 +72,9 @@ void q_webenginescriptcollection_clear(void* self);
 ///
 /// @param self QWebEngineScriptCollection*
 ///
-libqt_list /* of QWebEngineScript* */ q_webenginescriptcollection_to_list(void* self);
+/// @return libqt_list of QWebEngineScript*
+///
+libqt_list q_webenginescriptcollection_to_list(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginescriptcollection.html#dtor.QWebEngineScriptCollection)
 ///

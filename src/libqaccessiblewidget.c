@@ -69,16 +69,16 @@ int32_t q_accessiblewidget_qbase_index_of_child(void* self, void* child) {
     return QAccessibleWidget_QBaseIndexOfChild((QAccessibleWidget*)self, (QAccessibleInterface*)child);
 }
 
-libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ q_accessiblewidget_relations(void* self, int64_t match) {
+libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ q_accessiblewidget_relations(void* self, int32_t match) {
     libqt_list _arr = QAccessibleWidget_Relations((QAccessibleWidget*)self, match);
     return _arr;
 }
 
-void q_accessiblewidget_on_relations(void* self, libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ (*callback)(void*, int64_t)) {
+void q_accessiblewidget_on_relations(void* self, libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ (*callback)(void*, int32_t)) {
     QAccessibleWidget_OnRelations((QAccessibleWidget*)self, (intptr_t)callback);
 }
 
-libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ q_accessiblewidget_qbase_relations(void* self, int64_t match) {
+libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ q_accessiblewidget_qbase_relations(void* self, int32_t match) {
     libqt_list _arr = QAccessibleWidget_QBaseRelations((QAccessibleWidget*)self, match);
     return _arr;
 }
@@ -214,7 +214,7 @@ const char** q_accessiblewidget_action_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_accessiblewidget_action_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_accessiblewidget_action_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -237,7 +237,7 @@ const char** q_accessiblewidget_qbase_action_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_accessiblewidget_action_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_accessiblewidget_action_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -268,7 +268,7 @@ const char** q_accessiblewidget_key_bindings_for_action(void* self, const char* 
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_accessiblewidget_key_bindings_for_action");
+        fprintf(stderr, "Failed to allocate memory for string list in q_accessiblewidget_key_bindings_for_action\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -291,7 +291,7 @@ const char** q_accessiblewidget_qbase_key_bindings_for_action(void* self, const 
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_accessiblewidget_key_bindings_for_action");
+        fprintf(stderr, "Failed to allocate memory for string list in q_accessiblewidget_key_bindings_for_action\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

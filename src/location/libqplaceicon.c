@@ -41,7 +41,7 @@ libqt_map /* of const char* to QVariant* */ q_placeicon_parameters(void* self) {
     libqt_string* _out_keys = (libqt_string*)_out.keys;
     char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string keys in q_placeicon_parameters");
+        fprintf(stderr, "Failed to allocate memory for map string keys in q_placeicon_parameters\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
@@ -51,7 +51,7 @@ libqt_map /* of const char* to QVariant* */ q_placeicon_parameters(void* self) {
                 libqt_free(_ret_keys[j]);
             }
             free(_ret_keys);
-            fprintf(stderr, "Failed to allocate memory for map keys in q_placeicon_parameters");
+            fprintf(stderr, "Failed to allocate memory for map keys in q_placeicon_parameters\n");
             abort();
         }
         memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);

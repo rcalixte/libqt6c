@@ -463,7 +463,9 @@ bool q_font_is_feature_set(void* self, void* tag);
 ///
 /// @param self QFont*
 ///
-libqt_list /* of QFont__Tag* */ q_font_feature_tags(void* self);
+/// @return libqt_list of QFont__Tag*
+///
+libqt_list q_font_feature_tags(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfont.html#clearFeatures)
 ///
@@ -510,7 +512,9 @@ void q_font_clear_variable_axes(void* self);
 ///
 /// @param self QFont*
 ///
-libqt_list /* of QFont__Tag* */ q_font_variable_axis_tags(void* self);
+/// @return libqt_list of QFont__Tag*
+///
+libqt_list q_font_variable_axis_tags(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfont.html#exactMatch)
 ///

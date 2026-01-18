@@ -37,7 +37,7 @@ void k_io__jobuidelegate_unregister_window(void* window) {
     KIO__JobUiDelegate_UnregisterWindow((QWidget*)window);
 }
 
-bool k_io__jobuidelegate_ask_delete_confirmation(void* self, libqt_list urls, int32_t deletionType, int32_t confirmationType) {
+bool k_io__jobuidelegate_ask_delete_confirmation(void* self, libqt_list /* of QUrl* */ urls, int32_t deletionType, int32_t confirmationType) {
     return KIO__JobUiDelegate_AskDeleteConfirmation((KIO__JobUiDelegate*)self, urls, deletionType, confirmationType);
 }
 
@@ -208,7 +208,7 @@ const char** k_io__jobuidelegate_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__jobuidelegate_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__jobuidelegate_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

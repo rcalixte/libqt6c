@@ -71,7 +71,9 @@ bool k_texteditor__application_quit(void* self);
 ///
 /// @param self KTextEditor__Application*
 ///
-libqt_list /* of KTextEditor__MainWindow* */ k_texteditor__application_main_windows(void* self);
+/// @return libqt_list of KTextEditor__MainWindow*
+///
+libqt_list k_texteditor__application_main_windows(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-application.html#activeMainWindow)
 ///
@@ -83,7 +85,9 @@ KTextEditor__MainWindow* k_texteditor__application_active_main_window(void* self
 ///
 /// @param self KTextEditor__Application*
 ///
-libqt_list /* of KTextEditor__Document* */ k_texteditor__application_documents(void* self);
+/// @return libqt_list of KTextEditor__Document*
+///
+libqt_list k_texteditor__application_documents(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-application.html#findUrl)
 ///
@@ -109,9 +113,9 @@ bool k_texteditor__application_close_document(void* self, void* document);
 /// [Upstream resources](https://api.kde.org/ktexteditor-application.html#closeDocuments)
 ///
 /// @param self KTextEditor__Application*
-/// @param documents libqt_list /* of KTextEditor__Document* */
+/// @param documents libqt_list of KTextEditor__Document*
 ///
-bool k_texteditor__application_close_documents(void* self, libqt_list documents);
+bool k_texteditor__application_close_documents(void* self, libqt_list /* of KTextEditor__Document* */ documents);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-application.html#documentCreated)
 ///
@@ -329,7 +333,9 @@ void k_texteditor__application_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KTextEditor__Application*
 ///
-libqt_list /* of QObject* */ k_texteditor__application_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_texteditor__application_children(void* self);
 
 /// Inherited from QObject
 ///

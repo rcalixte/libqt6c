@@ -380,7 +380,9 @@ void q_accounts__accountservice_kill_timer2(void* self, int32_t id);
 ///
 /// @param self Accounts__AccountService*
 ///
-libqt_list /* of QObject* */ q_accounts__accountservice_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_accounts__accountservice_children(void* self);
 
 /// Inherited from QObject
 ///

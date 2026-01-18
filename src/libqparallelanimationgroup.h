@@ -609,7 +609,9 @@ void q_parallelanimationgroup_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QParallelAnimationGroup*
 ///
-libqt_list /* of QObject* */ q_parallelanimationgroup_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_parallelanimationgroup_children(void* self);
 
 /// Inherited from QObject
 ///

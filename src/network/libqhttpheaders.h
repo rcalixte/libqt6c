@@ -240,33 +240,36 @@ const char* q_httpheaders_well_known_header_name(int32_t name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttpheaders.html#fromListOfPairs)
 ///
-/// @param headers libqt_list /* of libqt_pair tuple of char* and char* */
+/// @param headers libqt_list of libqt_pair tuple of char* and char*
 ///
-QHttpHeaders* q_httpheaders_from_list_of_pairs(libqt_list /* of libqt_pair tuple of char* and char* */ headers);
+QHttpHeaders* q_httpheaders_from_list_of_pairs(libqt_list headers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttpheaders.html#fromMultiMap)
 ///
-/// @param headers libqt_map /* of char* to char** */
+/// @param headers libqt_map of char* to char**
 ///
-QHttpHeaders* q_httpheaders_from_multi_map(libqt_map /* of char* to char** */ headers);
+QHttpHeaders* q_httpheaders_from_multi_map(libqt_map headers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttpheaders.html#fromMultiHash)
 ///
-/// @param headers libqt_map /* of char* to char** */
+/// @param headers libqt_map of char* to char**
 ///
-QHttpHeaders* q_httpheaders_from_multi_hash(libqt_map /* of char* to char** */ headers);
+QHttpHeaders* q_httpheaders_from_multi_hash(libqt_map headers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttpheaders.html#toListOfPairs)
 ///
 /// @param self QHttpHeaders*
 ///
-libqt_list /* of libqt_pair tuple of char* and char* */ q_httpheaders_to_list_of_pairs(void* self);
+/// @return libqt_list of libqt_pair tuple of char* and char*
+///
+libqt_list q_httpheaders_to_list_of_pairs(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttpheaders.html#toMultiMap)
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of char* to char**
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     for (size_t j = 0; ((char**)map.values)[i][j] != NULL; j++) {
 ///         free((map.values)[i][j]);
@@ -280,13 +283,16 @@ libqt_list /* of libqt_pair tuple of char* and char* */ q_httpheaders_to_list_of
 ///
 /// @param self QHttpHeaders*
 ///
-libqt_map /* of char* to char** */ q_httpheaders_to_multi_map(void* self);
+/// @return libqt_map of char* to char**
+///
+libqt_map q_httpheaders_to_multi_map(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttpheaders.html#toMultiHash)
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of char* to char**
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     for (size_t j = 0; ((char**)map.values)[i][j] != NULL; j++) {
 ///         free((map.values)[i][j]);
@@ -300,7 +306,9 @@ libqt_map /* of char* to char** */ q_httpheaders_to_multi_map(void* self);
 ///
 /// @param self QHttpHeaders*
 ///
-libqt_map /* of char* to char** */ q_httpheaders_to_multi_hash(void* self);
+/// @return libqt_map of char* to char**
+///
+libqt_map q_httpheaders_to_multi_hash(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttpheaders.html#value)
 ///

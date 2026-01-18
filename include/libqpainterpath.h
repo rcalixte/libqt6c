@@ -672,15 +672,17 @@ void q_painterpathstroker_set_dash_pattern(void* self, int32_t dashPattern);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpathstroker.html#setDashPattern)
 ///
 /// @param self QPainterPathStroker*
-/// @param dashPattern libqt_list /* of double */
+/// @param dashPattern libqt_list of double
 ///
-void q_painterpathstroker_set_dash_pattern2(void* self, libqt_list dashPattern);
+void q_painterpathstroker_set_dash_pattern2(void* self, libqt_list /* of double */ dashPattern);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpathstroker.html#dashPattern)
 ///
 /// @param self QPainterPathStroker*
 ///
-libqt_list /* of double */ q_painterpathstroker_dash_pattern(void* self);
+/// @return libqt_list of double
+///
+libqt_list q_painterpathstroker_dash_pattern(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpathstroker.html#setDashOffset)
 ///

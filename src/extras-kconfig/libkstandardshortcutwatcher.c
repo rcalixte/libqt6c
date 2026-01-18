@@ -24,7 +24,7 @@ const char* k_standardshortcut__standardshortcutwatcher_tr(const char* s) {
     return _ret;
 }
 
-void k_standardshortcut__standardshortcutwatcher_shortcut_changed(void* self, int32_t id, libqt_list shortcut) {
+void k_standardshortcut__standardshortcutwatcher_shortcut_changed(void* self, int32_t id, libqt_list /* of QKeySequence* */ shortcut) {
     KStandardShortcut__StandardShortcutWatcher_ShortcutChanged((KStandardShortcut__StandardShortcutWatcher*)self, id, shortcut);
 }
 
@@ -159,7 +159,7 @@ const char** k_standardshortcut__standardshortcutwatcher_dynamic_property_names(
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_standardshortcut__standardshortcutwatcher_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_standardshortcut__standardshortcutwatcher_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

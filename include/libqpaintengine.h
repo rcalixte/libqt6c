@@ -79,7 +79,7 @@ double q_textitem_width(void* self);
 ///
 /// @return flag of enum QTextItem__RenderFlag
 ///
-int64_t q_textitem_render_flags(void* self);
+int32_t q_textitem_render_flags(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextitem.html#text)
 ///
@@ -115,7 +115,7 @@ QPaintEngine* q_paintengine_new();
 ///
 /// @param features flag of enum QPaintEngine__PaintEngineFeature
 ///
-QPaintEngine* q_paintengine_new2(int64_t features);
+QPaintEngine* q_paintengine_new2(int32_t features);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#isActive)
 ///
@@ -739,7 +739,7 @@ void q_paintengine_clear_dirty(void* self, int32_t df);
 /// @param self QPaintEngine*
 /// @param feature flag of enum QPaintEngine__PaintEngineFeature
 ///
-bool q_paintengine_has_feature(void* self, int64_t feature);
+bool q_paintengine_has_feature(void* self, int32_t feature);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#painter)
 ///
@@ -982,7 +982,7 @@ typedef enum {
     QTEXTITEM_RENDERFLAG_OVERLINE = 16,
     QTEXTITEM_RENDERFLAG_UNDERLINE = 32,
     QTEXTITEM_RENDERFLAG_STRIKEOUT = 64,
-    QTEXTITEM_RENDERFLAG_DUMMY = 4294967295
+    QTEXTITEM_RENDERFLAG_DUMMY = -1
 } QTextItem__RenderFlag;
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#public-types)
@@ -1007,7 +1007,7 @@ typedef enum {
     QPAINTENGINE_PAINTENGINEFEATURE_OBJECTBOUNDINGMODEGRADIENTS = 65536,
     QPAINTENGINE_PAINTENGINEFEATURE_RASTEROPMODES = 131072,
     QPAINTENGINE_PAINTENGINEFEATURE_PAINTOUTSIDEPAINTEVENT = 536870912,
-    QPAINTENGINE_PAINTENGINEFEATURE_ALLFEATURES = 4294967295
+    QPAINTENGINE_PAINTENGINEFEATURE_ALLFEATURES = -1
 } QPaintEngine__PaintEngineFeature;
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#public-types)

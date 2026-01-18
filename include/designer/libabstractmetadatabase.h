@@ -71,7 +71,9 @@ void q_designermetadatabaseiteminterface_qbase_set_name(void* self, const char* 
 ///
 /// @param self QDesignerMetaDataBaseItemInterface*
 ///
-libqt_list /* of QWidget* */ q_designermetadatabaseiteminterface_tab_order(void* self);
+/// @return libqt_list of QWidget*
+///
+libqt_list q_designermetadatabaseiteminterface_tab_order(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#tabOrder)
 ///
@@ -88,14 +90,16 @@ void q_designermetadatabaseiteminterface_on_tab_order(void* self, QWidget** (*ca
 ///
 /// @param self QDesignerMetaDataBaseItemInterface*
 ///
-libqt_list /* of QWidget* */ q_designermetadatabaseiteminterface_qbase_tab_order(void* self);
+/// @return libqt_list of QWidget*
+///
+libqt_list q_designermetadatabaseiteminterface_qbase_tab_order(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#setTabOrder)
 ///
 /// @param self QDesignerMetaDataBaseItemInterface*
-/// @param tabOrder libqt_list /* of QWidget* */
+/// @param tabOrder libqt_list of QWidget*
 ///
-void q_designermetadatabaseiteminterface_set_tab_order(void* self, libqt_list tabOrder);
+void q_designermetadatabaseiteminterface_set_tab_order(void* self, libqt_list /* of QWidget* */ tabOrder);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#setTabOrder)
 ///
@@ -111,9 +115,9 @@ void q_designermetadatabaseiteminterface_on_set_tab_order(void* self, void (*cal
 /// Base class method implementation
 ///
 /// @param self QDesignerMetaDataBaseItemInterface*
-/// @param tabOrder libqt_list /* of QWidget* */
+/// @param tabOrder libqt_list of QWidget*
 ///
-void q_designermetadatabaseiteminterface_qbase_set_tab_order(void* self, libqt_list tabOrder);
+void q_designermetadatabaseiteminterface_qbase_set_tab_order(void* self, libqt_list /* of QWidget* */ tabOrder);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#enabled)
 ///
@@ -306,7 +310,9 @@ void q_designermetadatabaseinterface_qbase_remove(void* self, void* object);
 ///
 /// @param self QDesignerMetaDataBaseInterface*
 ///
-libqt_list /* of QObject* */ q_designermetadatabaseinterface_objects(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_designermetadatabaseinterface_objects(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseinterface.html#objects)
 ///
@@ -323,7 +329,9 @@ void q_designermetadatabaseinterface_on_objects(void* self, QObject** (*callback
 ///
 /// @param self QDesignerMetaDataBaseInterface*
 ///
-libqt_list /* of QObject* */ q_designermetadatabaseinterface_qbase_objects(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_designermetadatabaseinterface_qbase_objects(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseinterface.html#core)
 ///
@@ -490,7 +498,9 @@ void q_designermetadatabaseinterface_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QDesignerMetaDataBaseInterface*
 ///
-libqt_list /* of QObject* */ q_designermetadatabaseinterface_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_designermetadatabaseinterface_children(void* self);
 
 /// Inherited from QObject
 ///

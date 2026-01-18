@@ -91,21 +91,23 @@ void k_shortcutwidget_set_clear_buttons_shown(void* self, bool show);
 ///
 /// @param self KShortcutWidget*
 ///
-libqt_list /* of QKeySequence* */ k_shortcutwidget_shortcut(void* self);
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_shortcutwidget_shortcut(void* self);
 
 /// [Upstream resources](https://api.kde.org/kshortcutwidget.html#setCheckActionCollections)
 ///
 /// @param self KShortcutWidget*
-/// @param actionCollections libqt_list /* of KActionCollection* */
+/// @param actionCollections libqt_list of KActionCollection*
 ///
-void k_shortcutwidget_set_check_action_collections(void* self, libqt_list actionCollections);
+void k_shortcutwidget_set_check_action_collections(void* self, libqt_list /* of KActionCollection* */ actionCollections);
 
 /// [Upstream resources](https://api.kde.org/kshortcutwidget.html#shortcutChanged)
 ///
 /// @param self KShortcutWidget*
-/// @param cut libqt_list /* of QKeySequence* */
+/// @param cut libqt_list of QKeySequence*
 ///
-void k_shortcutwidget_shortcut_changed(void* self, libqt_list cut);
+void k_shortcutwidget_shortcut_changed(void* self, libqt_list /* of QKeySequence* */ cut);
 
 /// [Upstream resources](https://api.kde.org/kshortcutwidget.html#shortcutChanged)
 ///
@@ -117,9 +119,9 @@ void k_shortcutwidget_on_shortcut_changed(void* self, void (*callback)(void*, QK
 /// [Upstream resources](https://api.kde.org/kshortcutwidget.html#setShortcut)
 ///
 /// @param self KShortcutWidget*
-/// @param cut libqt_list /* of QKeySequence* */
+/// @param cut libqt_list of QKeySequence*
 ///
-void k_shortcutwidget_set_shortcut(void* self, libqt_list cut);
+void k_shortcutwidget_set_shortcut(void* self, libqt_list /* of QKeySequence* */ cut);
 
 /// [Upstream resources](https://api.kde.org/kshortcutwidget.html#clearShortcut)
 ///
@@ -980,7 +982,7 @@ void k_shortcutwidget_set_graphics_effect(void* self, void* effect);
 /// @param self KShortcutWidget*
 /// @param type enum Qt__GestureType
 ///
-void k_shortcutwidget_grab_gesture(void* self, int64_t type);
+void k_shortcutwidget_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -989,7 +991,7 @@ void k_shortcutwidget_grab_gesture(void* self, int64_t type);
 /// @param self KShortcutWidget*
 /// @param type enum Qt__GestureType
 ///
-void k_shortcutwidget_ungrab_gesture(void* self, int64_t type);
+void k_shortcutwidget_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -1978,7 +1980,7 @@ void k_shortcutwidget_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void k_shortcutwidget_set_parent2(void* self, void* parent, int64_t f);
+void k_shortcutwidget_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -2056,9 +2058,9 @@ void k_shortcutwidget_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self KShortcutWidget*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_shortcutwidget_add_actions(void* self, libqt_list actions);
+void k_shortcutwidget_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2066,9 +2068,9 @@ void k_shortcutwidget_add_actions(void* self, libqt_list actions);
 ///
 /// @param self KShortcutWidget*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_shortcutwidget_insert_actions(void* self, void* before, libqt_list actions);
+void k_shortcutwidget_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2095,7 +2097,9 @@ void k_shortcutwidget_remove_action(void* self, void* action);
 ///
 /// @param self KShortcutWidget*
 ///
-libqt_list /* of QAction* */ k_shortcutwidget_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_shortcutwidget_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2152,7 +2156,7 @@ QWidget* k_shortcutwidget_parent_widget(void* self);
 /// @param self KShortcutWidget*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_shortcutwidget_set_window_flags(void* self, int64_t type);
+void k_shortcutwidget_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2162,7 +2166,7 @@ void k_shortcutwidget_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t k_shortcutwidget_window_flags(void* self);
+int32_t k_shortcutwidget_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2171,7 +2175,7 @@ int64_t k_shortcutwidget_window_flags(void* self);
 /// @param self KShortcutWidget*
 /// @param param1 enum Qt__WindowType
 ///
-void k_shortcutwidget_set_window_flag(void* self, int64_t param1);
+void k_shortcutwidget_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2180,7 +2184,7 @@ void k_shortcutwidget_set_window_flag(void* self, int64_t param1);
 /// @param self KShortcutWidget*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_shortcutwidget_override_window_flags(void* self, int64_t type);
+void k_shortcutwidget_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2190,7 +2194,7 @@ void k_shortcutwidget_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t k_shortcutwidget_window_type(void* self);
+int32_t k_shortcutwidget_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2401,7 +2405,7 @@ void k_shortcutwidget_on_custom_context_menu_requested(void* self, void (*callba
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t k_shortcutwidget_input_method_hints(void* self);
+int32_t k_shortcutwidget_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2410,7 +2414,7 @@ int64_t k_shortcutwidget_input_method_hints(void* self);
 /// @param self KShortcutWidget*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void k_shortcutwidget_set_input_method_hints(void* self, int64_t hints);
+void k_shortcutwidget_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -2495,7 +2499,7 @@ QPixmap* k_shortcutwidget_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void k_shortcutwidget_grab_gesture2(void* self, int64_t type, int32_t flags);
+void k_shortcutwidget_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -2535,7 +2539,7 @@ void k_shortcutwidget_set_shortcut_auto_repeat2(void* self, int id, bool enable)
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void k_shortcutwidget_set_window_flag2(void* self, int64_t param1, bool on);
+void k_shortcutwidget_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -2564,7 +2568,7 @@ QWidget* k_shortcutwidget_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* k_shortcutwidget_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* k_shortcutwidget_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -2676,7 +2680,9 @@ void k_shortcutwidget_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KShortcutWidget*
 ///
-libqt_list /* of QObject* */ k_shortcutwidget_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_shortcutwidget_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4293,7 +4299,7 @@ void k_shortcutwidget_on_input_method_event(void* self, void (*callback)(void*, 
 /// @param self KShortcutWidget*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_shortcutwidget_input_method_query(void* self, int64_t param1);
+QVariant* k_shortcutwidget_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4304,7 +4310,7 @@ QVariant* k_shortcutwidget_input_method_query(void* self, int64_t param1);
 /// @param self KShortcutWidget*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_shortcutwidget_qbase_input_method_query(void* self, int64_t param1);
+QVariant* k_shortcutwidget_qbase_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4315,7 +4321,7 @@ QVariant* k_shortcutwidget_qbase_input_method_query(void* self, int64_t param1);
 /// @param self KShortcutWidget*
 /// @param callback QVariant* func(KShortcutWidget* self, enum Qt__InputMethodQuery param1)
 ///
-void k_shortcutwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void k_shortcutwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///

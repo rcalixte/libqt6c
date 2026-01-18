@@ -70,9 +70,9 @@ const char* k_rearrangecolumnsproxymodel_tr(const char* s);
 /// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#setSourceColumns)
 ///
 /// @param self KRearrangeColumnsProxyModel*
-/// @param columns libqt_list /* of int */
+/// @param columns libqt_list of int
 ///
-void k_rearrangecolumnsproxymodel_set_source_columns(void* self, libqt_list columns);
+void k_rearrangecolumnsproxymodel_set_source_columns(void* self, libqt_list /* of int */ columns);
 
 /// [Upstream resources](https://api.kde.org/krearrangecolumnsproxymodel.html#columnCount)
 ///
@@ -588,27 +588,27 @@ bool k_rearrangecolumnsproxymodel_check_index2(void* self, void* index, int32_t 
 /// @param self KRearrangeColumnsProxyModel*
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
-/// @param roles libqt_list /* of int */
+/// @param roles libqt_list of int
 ///
-void k_rearrangecolumnsproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void k_rearrangecolumnsproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KRearrangeColumnsProxyModel*
-/// @param callback void func(KRearrangeColumnsProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
+/// @param callback void func(KRearrangeColumnsProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
 ///
-void k_rearrangecolumnsproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
+void k_rearrangecolumnsproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KRearrangeColumnsProxyModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 ///
-void k_rearrangecolumnsproxymodel_layout_changed1(void* self, libqt_list parents);
+void k_rearrangecolumnsproxymodel_layout_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -624,10 +624,10 @@ void k_rearrangecolumnsproxymodel_on_layout_changed1(void* self, void (*callback
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KRearrangeColumnsProxyModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
 ///
-void k_rearrangecolumnsproxymodel_layout_changed2(void* self, libqt_list parents, int32_t hint);
+void k_rearrangecolumnsproxymodel_layout_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -643,9 +643,9 @@ void k_rearrangecolumnsproxymodel_on_layout_changed2(void* self, void (*callback
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KRearrangeColumnsProxyModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 ///
-void k_rearrangecolumnsproxymodel_layout_about_to_be_changed1(void* self, libqt_list parents);
+void k_rearrangecolumnsproxymodel_layout_about_to_be_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -661,10 +661,10 @@ void k_rearrangecolumnsproxymodel_on_layout_about_to_be_changed1(void* self, voi
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KRearrangeColumnsProxyModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
 ///
-void k_rearrangecolumnsproxymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint);
+void k_rearrangecolumnsproxymodel_layout_about_to_be_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -785,7 +785,9 @@ void k_rearrangecolumnsproxymodel_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KRearrangeColumnsProxyModel*
 ///
-libqt_list /* of QObject* */ k_rearrangecolumnsproxymodel_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_rearrangecolumnsproxymodel_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1132,7 +1134,9 @@ void k_rearrangecolumnsproxymodel_on_map_selection_to_source(void* self, QItemSe
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
 ///
-libqt_list /* of QModelIndex* */ k_rearrangecolumnsproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_rearrangecolumnsproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1147,7 +1151,9 @@ libqt_list /* of QModelIndex* */ k_rearrangecolumnsproxymodel_match(void* self, 
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
 ///
-libqt_list /* of QModelIndex* */ k_rearrangecolumnsproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_rearrangecolumnsproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QIdentityProxyModel
 ///
@@ -1526,7 +1532,8 @@ void k_rearrangecolumnsproxymodel_on_data(void* self, QVariant* (*callback)(void
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -1539,7 +1546,9 @@ void k_rearrangecolumnsproxymodel_on_data(void* self, QVariant* (*callback)(void
 /// @param self KRearrangeColumnsProxyModel*
 /// @param index QModelIndex*
 ///
-libqt_map /* of int to QVariant* */ k_rearrangecolumnsproxymodel_item_data(void* self, void* index);
+/// @return libqt_map of int to QVariant*
+///
+libqt_map k_rearrangecolumnsproxymodel_item_data(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1547,7 +1556,8 @@ libqt_map /* of int to QVariant* */ k_rearrangecolumnsproxymodel_item_data(void*
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -1560,7 +1570,9 @@ libqt_map /* of int to QVariant* */ k_rearrangecolumnsproxymodel_item_data(void*
 /// @param self KRearrangeColumnsProxyModel*
 /// @param index QModelIndex*
 ///
-libqt_map /* of int to QVariant* */ k_rearrangecolumnsproxymodel_qbase_item_data(void* self, void* index);
+/// @return libqt_map of int to QVariant*
+///
+libqt_map k_rearrangecolumnsproxymodel_qbase_item_data(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1569,9 +1581,9 @@ libqt_map /* of int to QVariant* */ k_rearrangecolumnsproxymodel_qbase_item_data
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRearrangeColumnsProxyModel*
-/// @param callback libqt_map /* of int to QVariant* */ func(KRearrangeColumnsProxyModel* self, QModelIndex* index)
+/// @param callback libqt_map of int to QVariant* func(KRearrangeColumnsProxyModel* self, QModelIndex* index)
 ///
-void k_rearrangecolumnsproxymodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
+void k_rearrangecolumnsproxymodel_on_item_data(void* self, libqt_map (*callback)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1655,9 +1667,9 @@ void k_rearrangecolumnsproxymodel_on_set_data(void* self, bool (*callback)(void*
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param index QModelIndex*
-/// @param roles libqt_map /* of int to QVariant* */
+/// @param roles libqt_map of int to QVariant*
 ///
-bool k_rearrangecolumnsproxymodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
+bool k_rearrangecolumnsproxymodel_set_item_data(void* self, void* index, libqt_map roles);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1667,9 +1679,9 @@ bool k_rearrangecolumnsproxymodel_set_item_data(void* self, void* index, libqt_m
 ///
 /// @param self KRearrangeColumnsProxyModel*
 /// @param index QModelIndex*
-/// @param roles libqt_map /* of int to QVariant* */
+/// @param roles libqt_map of int to QVariant*
 ///
-bool k_rearrangecolumnsproxymodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
+bool k_rearrangecolumnsproxymodel_qbase_set_item_data(void* self, void* index, libqt_map roles);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1678,9 +1690,9 @@ bool k_rearrangecolumnsproxymodel_qbase_set_item_data(void* self, void* index, l
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRearrangeColumnsProxyModel*
-/// @param callback bool func(KRearrangeColumnsProxyModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ /* of int to QVariant* */)
+/// @param callback bool func(KRearrangeColumnsProxyModel* self, QModelIndex* index, libqt_map of int to QVariant*)
 ///
-void k_rearrangecolumnsproxymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
+void k_rearrangecolumnsproxymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1928,9 +1940,9 @@ void k_rearrangecolumnsproxymodel_on_span(void* self, QSize* (*callback)(void*, 
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KRearrangeColumnsProxyModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* k_rearrangecolumnsproxymodel_mime_data(void* self, libqt_list indexes);
+QMimeData* k_rearrangecolumnsproxymodel_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1939,9 +1951,9 @@ QMimeData* k_rearrangecolumnsproxymodel_mime_data(void* self, libqt_list indexes
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KRearrangeColumnsProxyModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* k_rearrangecolumnsproxymodel_qbase_mime_data(void* self, libqt_list indexes);
+QMimeData* k_rearrangecolumnsproxymodel_qbase_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2106,7 +2118,8 @@ void k_rearrangecolumnsproxymodel_on_supported_drop_actions(void* self, int32_t 
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -2118,7 +2131,9 @@ void k_rearrangecolumnsproxymodel_on_supported_drop_actions(void* self, int32_t 
 ///
 /// @param self KRearrangeColumnsProxyModel*
 ///
-libqt_map /* of int to char* */ k_rearrangecolumnsproxymodel_role_names(void* self);
+/// @return libqt_map of int to char*
+///
+libqt_map k_rearrangecolumnsproxymodel_role_names(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2126,7 +2141,8 @@ libqt_map /* of int to char* */ k_rearrangecolumnsproxymodel_role_names(void* se
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -2138,7 +2154,9 @@ libqt_map /* of int to char* */ k_rearrangecolumnsproxymodel_role_names(void* se
 ///
 /// @param self KRearrangeColumnsProxyModel*
 ///
-libqt_map /* of int to char* */ k_rearrangecolumnsproxymodel_qbase_role_names(void* self);
+/// @return libqt_map of int to char*
+///
+libqt_map k_rearrangecolumnsproxymodel_qbase_role_names(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2147,9 +2165,9 @@ libqt_map /* of int to char* */ k_rearrangecolumnsproxymodel_qbase_role_names(vo
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRearrangeColumnsProxyModel*
-/// @param callback libqt_map /* of int to char* */ func()
+/// @param callback libqt_map of int to char* func()
 ///
-void k_rearrangecolumnsproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
+void k_rearrangecolumnsproxymodel_on_role_names(void* self, libqt_map (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2595,10 +2613,10 @@ void k_rearrangecolumnsproxymodel_on_create_index(void* self, QModelIndex* (*cal
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KRearrangeColumnsProxyModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void k_rearrangecolumnsproxymodel_encode_data(void* self, libqt_list indexes, void* stream);
+void k_rearrangecolumnsproxymodel_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2607,10 +2625,10 @@ void k_rearrangecolumnsproxymodel_encode_data(void* self, libqt_list indexes, vo
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KRearrangeColumnsProxyModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void k_rearrangecolumnsproxymodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
+void k_rearrangecolumnsproxymodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3182,10 +3200,10 @@ void k_rearrangecolumnsproxymodel_on_change_persistent_index(void* self, void (*
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KRearrangeColumnsProxyModel*
-/// @param from libqt_list /* of QModelIndex* */
-/// @param to libqt_list /* of QModelIndex* */
+/// @param from libqt_list of QModelIndex*
+/// @param to libqt_list of QModelIndex*
 ///
-void k_rearrangecolumnsproxymodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
+void k_rearrangecolumnsproxymodel_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3194,10 +3212,10 @@ void k_rearrangecolumnsproxymodel_change_persistent_index_list(void* self, libqt
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KRearrangeColumnsProxyModel*
-/// @param from libqt_list /* of QModelIndex* */
-/// @param to libqt_list /* of QModelIndex* */
+/// @param from libqt_list of QModelIndex*
+/// @param to libqt_list of QModelIndex*
 ///
-void k_rearrangecolumnsproxymodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
+void k_rearrangecolumnsproxymodel_qbase_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3218,7 +3236,9 @@ void k_rearrangecolumnsproxymodel_on_change_persistent_index_list(void* self, vo
 ///
 /// @param self KRearrangeColumnsProxyModel*
 ///
-libqt_list /* of QModelIndex* */ k_rearrangecolumnsproxymodel_persistent_index_list(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_rearrangecolumnsproxymodel_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3228,7 +3248,9 @@ libqt_list /* of QModelIndex* */ k_rearrangecolumnsproxymodel_persistent_index_l
 ///
 /// @param self KRearrangeColumnsProxyModel*
 ///
-libqt_list /* of QModelIndex* */ k_rearrangecolumnsproxymodel_qbase_persistent_index_list(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_rearrangecolumnsproxymodel_qbase_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
 ///

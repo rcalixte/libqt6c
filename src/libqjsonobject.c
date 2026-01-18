@@ -56,7 +56,7 @@ libqt_map /* of const char* to QVariant* */ q_jsonobject_to_variant_map(void* se
     libqt_string* _out_keys = (libqt_string*)_out.keys;
     char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string keys in q_jsonobject_to_variant_map");
+        fprintf(stderr, "Failed to allocate memory for map string keys in q_jsonobject_to_variant_map\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
@@ -66,7 +66,7 @@ libqt_map /* of const char* to QVariant* */ q_jsonobject_to_variant_map(void* se
                 libqt_free(_ret_keys[j]);
             }
             free(_ret_keys);
-            fprintf(stderr, "Failed to allocate memory for map keys in q_jsonobject_to_variant_map");
+            fprintf(stderr, "Failed to allocate memory for map keys in q_jsonobject_to_variant_map\n");
             abort();
         }
         memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
@@ -118,7 +118,7 @@ libqt_map /* of const char* to QVariant* */ q_jsonobject_to_variant_hash(void* s
     libqt_string* _out_keys = (libqt_string*)_out.keys;
     char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string keys in q_jsonobject_to_variant_hash");
+        fprintf(stderr, "Failed to allocate memory for map string keys in q_jsonobject_to_variant_hash\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
@@ -128,7 +128,7 @@ libqt_map /* of const char* to QVariant* */ q_jsonobject_to_variant_hash(void* s
                 libqt_free(_ret_keys[j]);
             }
             free(_ret_keys);
-            fprintf(stderr, "Failed to allocate memory for map keys in q_jsonobject_to_variant_hash");
+            fprintf(stderr, "Failed to allocate memory for map keys in q_jsonobject_to_variant_hash\n");
             abort();
         }
         memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
@@ -148,7 +148,7 @@ const char** q_jsonobject_keys(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_jsonobject_keys");
+        fprintf(stderr, "Failed to allocate memory for string list in q_jsonobject_keys\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

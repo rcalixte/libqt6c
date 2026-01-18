@@ -533,7 +533,9 @@ void q_graphicseffect_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QGraphicsEffect*
 ///
-libqt_list /* of QObject* */ q_graphicseffect_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_graphicseffect_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1463,7 +1465,9 @@ void q_graphicscolorizeeffect_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QGraphicsColorizeEffect*
 ///
-libqt_list /* of QObject* */ q_graphicscolorizeeffect_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_graphicscolorizeeffect_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2643,7 +2647,9 @@ void q_graphicsblureffect_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QGraphicsBlurEffect*
 ///
-libqt_list /* of QObject* */ q_graphicsblureffect_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_graphicsblureffect_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -3856,7 +3862,9 @@ void q_graphicsdropshadoweffect_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QGraphicsDropShadowEffect*
 ///
-libqt_list /* of QObject* */ q_graphicsdropshadoweffect_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_graphicsdropshadoweffect_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4976,7 +4984,9 @@ void q_graphicsopacityeffect_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QGraphicsOpacityEffect*
 ///
-libqt_list /* of QObject* */ q_graphicsopacityeffect_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_graphicsopacityeffect_children(void* self);
 
 /// Inherited from QObject
 ///

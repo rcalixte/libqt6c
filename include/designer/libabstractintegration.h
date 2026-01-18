@@ -795,7 +795,9 @@ void q_designerintegrationinterface_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QDesignerIntegrationInterface*
 ///
-libqt_list /* of QObject* */ q_designerintegrationinterface_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_designerintegrationinterface_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2211,7 +2213,9 @@ void q_designerintegration_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QDesignerIntegration*
 ///
-libqt_list /* of QObject* */ q_designerintegration_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_designerintegration_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -822,7 +822,9 @@ void k_onsole__emulation_kill_timer2(void* self, int32_t id);
 ///
 /// @param self Konsole__Emulation*
 ///
-libqt_list /* of QObject* */ k_onsole__emulation_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_onsole__emulation_children(void* self);
 
 /// Inherited from QObject
 ///

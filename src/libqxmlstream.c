@@ -284,7 +284,7 @@ void q_xmlstreamreader_add_extra_namespace_declaration(void* self, void* extraNa
     QXmlStreamReader_AddExtraNamespaceDeclaration((QXmlStreamReader*)self, (QXmlStreamNamespaceDeclaration*)extraNamespaceDeclaraction);
 }
 
-void q_xmlstreamreader_add_extra_namespace_declarations(void* self, libqt_list extraNamespaceDeclaractions) {
+void q_xmlstreamreader_add_extra_namespace_declarations(void* self, libqt_list /* of QXmlStreamNamespaceDeclaration* */ extraNamespaceDeclaractions) {
     QXmlStreamReader_AddExtraNamespaceDeclarations((QXmlStreamReader*)self, extraNamespaceDeclaractions);
 }
 

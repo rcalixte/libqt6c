@@ -70,7 +70,7 @@ const char** q_sciscintilla_api_context(void* self, int pos, int* context_start,
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_sciscintilla_api_context");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sciscintilla_api_context\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -93,7 +93,7 @@ const char** q_sciscintilla_qbase_api_context(void* self, int pos, int* context_
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_sciscintilla_api_context");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sciscintilla_api_context\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -592,7 +592,7 @@ void q_sciscintilla_set_auto_completion_word_separators(void* self, const char* 
     size_t separators_len = libqt_strv_length(separators);
     libqt_string* separators_qstr = (libqt_string*)malloc(separators_len * sizeof(libqt_string));
     if (separators_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_sciscintilla_set_auto_completion_word_separators");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sciscintilla_set_auto_completion_word_separators\n");
         abort();
     }
     for (size_t i = 0; i < separators_len; ++i) {
@@ -627,7 +627,7 @@ void q_sciscintilla_set_call_tips_visible(void* self, int nr) {
     QsciScintilla_SetCallTipsVisible((QsciScintilla*)self, nr);
 }
 
-void q_sciscintilla_set_contracted_folds(void* self, libqt_list folds) {
+void q_sciscintilla_set_contracted_folds(void* self, libqt_list /* of int */ folds) {
     QsciScintilla_SetContractedFolds((QsciScintilla*)self, folds);
 }
 
@@ -830,7 +830,7 @@ void q_sciscintilla_show_user_list(void* self, int id, const char* list[static 1
     size_t list_len = libqt_strv_length(list);
     libqt_string* list_qstr = (libqt_string*)malloc(list_len * sizeof(libqt_string));
     if (list_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_sciscintilla_show_user_list");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sciscintilla_show_user_list\n");
         abort();
     }
     for (size_t i = 0; i < list_len; ++i) {
@@ -1860,19 +1860,19 @@ void q_sciscintilla_on_copy_available(void* self, void (*callback)(void*, bool))
     QsciScintilla_Connect_CopyAvailable((QsciScintilla*)self, (intptr_t)callback);
 }
 
-void q_sciscintilla_indicator_clicked(void* self, int line, int index, int64_t state) {
+void q_sciscintilla_indicator_clicked(void* self, int line, int index, int32_t state) {
     QsciScintilla_IndicatorClicked((QsciScintilla*)self, line, index, state);
 }
 
-void q_sciscintilla_on_indicator_clicked(void* self, void (*callback)(void*, int, int, int64_t)) {
+void q_sciscintilla_on_indicator_clicked(void* self, void (*callback)(void*, int, int, int32_t)) {
     QsciScintilla_Connect_IndicatorClicked((QsciScintilla*)self, (intptr_t)callback);
 }
 
-void q_sciscintilla_indicator_released(void* self, int line, int index, int64_t state) {
+void q_sciscintilla_indicator_released(void* self, int line, int index, int32_t state) {
     QsciScintilla_IndicatorReleased((QsciScintilla*)self, line, index, state);
 }
 
-void q_sciscintilla_on_indicator_released(void* self, void (*callback)(void*, int, int, int64_t)) {
+void q_sciscintilla_on_indicator_released(void* self, void (*callback)(void*, int, int, int32_t)) {
     QsciScintilla_Connect_IndicatorReleased((QsciScintilla*)self, (intptr_t)callback);
 }
 
@@ -1884,19 +1884,19 @@ void q_sciscintilla_on_lines_changed(void* self, void (*callback)(void*)) {
     QsciScintilla_Connect_LinesChanged((QsciScintilla*)self, (intptr_t)callback);
 }
 
-void q_sciscintilla_margin_clicked(void* self, int margin, int line, int64_t state) {
+void q_sciscintilla_margin_clicked(void* self, int margin, int line, int32_t state) {
     QsciScintilla_MarginClicked((QsciScintilla*)self, margin, line, state);
 }
 
-void q_sciscintilla_on_margin_clicked(void* self, void (*callback)(void*, int, int, int64_t)) {
+void q_sciscintilla_on_margin_clicked(void* self, void (*callback)(void*, int, int, int32_t)) {
     QsciScintilla_Connect_MarginClicked((QsciScintilla*)self, (intptr_t)callback);
 }
 
-void q_sciscintilla_margin_right_clicked(void* self, int margin, int line, int64_t state) {
+void q_sciscintilla_margin_right_clicked(void* self, int margin, int line, int32_t state) {
     QsciScintilla_MarginRightClicked((QsciScintilla*)self, margin, line, state);
 }
 
-void q_sciscintilla_on_margin_right_clicked(void* self, void (*callback)(void*, int, int, int64_t)) {
+void q_sciscintilla_on_margin_right_clicked(void* self, void (*callback)(void*, int, int, int32_t)) {
     QsciScintilla_Connect_MarginRightClicked((QsciScintilla*)self, (intptr_t)callback);
 }
 
@@ -2795,11 +2795,11 @@ void q_sciscintilla_set_graphics_effect(void* self, void* effect) {
     QWidget_SetGraphicsEffect((QWidget*)self, (QGraphicsEffect*)effect);
 }
 
-void q_sciscintilla_grab_gesture(void* self, int64_t type) {
+void q_sciscintilla_grab_gesture(void* self, int32_t type) {
     QWidget_GrabGesture((QWidget*)self, type);
 }
 
-void q_sciscintilla_ungrab_gesture(void* self, int64_t type) {
+void q_sciscintilla_ungrab_gesture(void* self, int32_t type) {
     QWidget_UngrabGesture((QWidget*)self, type);
 }
 
@@ -3280,7 +3280,7 @@ void q_sciscintilla_set_parent(void* self, void* parent) {
     QWidget_SetParent((QWidget*)self, (QWidget*)parent);
 }
 
-void q_sciscintilla_set_parent2(void* self, void* parent, int64_t f) {
+void q_sciscintilla_set_parent2(void* self, void* parent, int32_t f) {
     QWidget_SetParent2((QWidget*)self, (QWidget*)parent, f);
 }
 
@@ -3316,11 +3316,11 @@ void q_sciscintilla_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_sciscintilla_add_actions(void* self, libqt_list actions) {
+void q_sciscintilla_add_actions(void* self, libqt_list /* of QAction* */ actions) {
     QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_sciscintilla_insert_actions(void* self, void* before, libqt_list actions) {
+void q_sciscintilla_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions) {
     QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
@@ -3357,23 +3357,23 @@ QWidget* q_sciscintilla_parent_widget(void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
-void q_sciscintilla_set_window_flags(void* self, int64_t type) {
+void q_sciscintilla_set_window_flags(void* self, int32_t type) {
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int64_t q_sciscintilla_window_flags(void* self) {
+int32_t q_sciscintilla_window_flags(void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
-void q_sciscintilla_set_window_flag(void* self, int64_t param1) {
+void q_sciscintilla_set_window_flag(void* self, int32_t param1) {
     QWidget_SetWindowFlag((QWidget*)self, param1);
 }
 
-void q_sciscintilla_override_window_flags(void* self, int64_t type) {
+void q_sciscintilla_override_window_flags(void* self, int32_t type) {
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int64_t q_sciscintilla_window_type(void* self) {
+int32_t q_sciscintilla_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
@@ -3469,11 +3469,11 @@ void q_sciscintilla_on_custom_context_menu_requested(void* self, void (*callback
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-int64_t q_sciscintilla_input_method_hints(void* self) {
+int32_t q_sciscintilla_input_method_hints(void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
-void q_sciscintilla_set_input_method_hints(void* self, int64_t hints) {
+void q_sciscintilla_set_input_method_hints(void* self, int32_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
@@ -3505,7 +3505,7 @@ QPixmap* q_sciscintilla_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void q_sciscintilla_grab_gesture2(void* self, int64_t type, int32_t flags) {
+void q_sciscintilla_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
@@ -3521,7 +3521,7 @@ void q_sciscintilla_set_shortcut_auto_repeat2(void* self, int id, bool enable) {
     QWidget_SetShortcutAutoRepeat2((QWidget*)self, id, enable);
 }
 
-void q_sciscintilla_set_window_flag2(void* self, int64_t param1, bool on) {
+void q_sciscintilla_set_window_flag2(void* self, int32_t param1, bool on) {
     QWidget_SetWindowFlag2((QWidget*)self, param1, on);
 }
 
@@ -3533,7 +3533,7 @@ QWidget* q_sciscintilla_create_window_container2(void* window, void* parent) {
     return QWidget_CreateWindowContainer2((QWindow*)window, (QWidget*)parent);
 }
 
-QWidget* q_sciscintilla_create_window_container3(void* window, void* parent, int64_t flags) {
+QWidget* q_sciscintilla_create_window_container3(void* window, void* parent, int32_t flags) {
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
@@ -3638,7 +3638,7 @@ const char** q_sciscintilla_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_sciscintilla_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sciscintilla_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -3906,15 +3906,15 @@ void q_sciscintilla_on_input_method_event(void* self, void (*callback)(void*, vo
     QsciScintilla_OnInputMethodEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
-QVariant* q_sciscintilla_input_method_query(void* self, int64_t query) {
+QVariant* q_sciscintilla_input_method_query(void* self, int32_t query) {
     return QsciScintilla_InputMethodQuery((QsciScintilla*)self, query);
 }
 
-QVariant* q_sciscintilla_qbase_input_method_query(void* self, int64_t query) {
+QVariant* q_sciscintilla_qbase_input_method_query(void* self, int32_t query) {
     return QsciScintilla_QBaseInputMethodQuery((QsciScintilla*)self, query);
 }
 
-void q_sciscintilla_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void q_sciscintilla_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     QsciScintilla_OnInputMethodQuery((QsciScintilla*)self, (intptr_t)callback);
 }
 

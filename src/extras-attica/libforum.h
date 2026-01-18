@@ -132,15 +132,17 @@ int32_t k_attica__forum_topics(void* self);
 /// [Upstream resources](https://api.kde.org/attica-forum.html#setChildren)
 ///
 /// @param self Attica__Forum*
-/// @param comments libqt_list /* of Attica__Forum* */
+/// @param comments libqt_list of Attica__Forum*
 ///
-void k_attica__forum_set_children(void* self, libqt_list comments);
+void k_attica__forum_set_children(void* self, libqt_list /* of Attica__Forum* */ comments);
 
 /// [Upstream resources](https://api.kde.org/attica-forum.html#children)
 ///
 /// @param self Attica__Forum*
 ///
-libqt_list /* of Attica__Forum* */ k_attica__forum_children(void* self);
+/// @return libqt_list of Attica__Forum*
+///
+libqt_list k_attica__forum_children(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-forum.html#isValid)
 ///

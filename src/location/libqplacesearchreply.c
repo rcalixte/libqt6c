@@ -72,7 +72,7 @@ QPlaceSearchRequest* q_placesearchreply_next_page_request(void* self) {
     return QPlaceSearchReply_NextPageRequest((QPlaceSearchReply*)self);
 }
 
-void q_placesearchreply_set_results(void* self, libqt_list results) {
+void q_placesearchreply_set_results(void* self, libqt_list /* of QPlaceSearchResult* */ results) {
     QPlaceSearchReply_SetResults((QPlaceSearchReply*)self, results);
 }
 
@@ -80,7 +80,7 @@ void q_placesearchreply_on_set_results(void* self, void (*callback)(void*, QPlac
     QPlaceSearchReply_OnSetResults((QPlaceSearchReply*)self, (intptr_t)callback);
 }
 
-void q_placesearchreply_qbase_set_results(void* self, libqt_list results) {
+void q_placesearchreply_qbase_set_results(void* self, libqt_list /* of QPlaceSearchResult* */ results) {
     QPlaceSearchReply_QBaseSetResults((QPlaceSearchReply*)self, results);
 }
 
@@ -294,7 +294,7 @@ const char** q_placesearchreply_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_placesearchreply_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_placesearchreply_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

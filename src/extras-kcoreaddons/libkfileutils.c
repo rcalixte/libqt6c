@@ -20,7 +20,7 @@ const char** k_fileutils_find_all_unique_files(const char* param1[static 1], con
     size_t param1_len = libqt_strv_length(param1);
     libqt_string* param1_qstr = (libqt_string*)malloc(param1_len * sizeof(libqt_string));
     if (param1_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_fileutils_find_all_unique_files");
+        fprintf(stderr, "Failed to allocate memory for string list in k_fileutils_find_all_unique_files\n");
         abort();
     }
     for (size_t i = 0; i < param1_len; ++i) {
@@ -30,7 +30,7 @@ const char** k_fileutils_find_all_unique_files(const char* param1[static 1], con
     size_t param2_len = libqt_strv_length(param2);
     libqt_string* param2_qstr = (libqt_string*)malloc(param2_len * sizeof(libqt_string));
     if (param2_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_fileutils_find_all_unique_files");
+        fprintf(stderr, "Failed to allocate memory for string list in k_fileutils_find_all_unique_files\n");
         abort();
     }
     for (size_t i = 0; i < param2_len; ++i) {
@@ -43,7 +43,7 @@ const char** k_fileutils_find_all_unique_files(const char* param1[static 1], con
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_fileutils_find_all_unique_files");
+        fprintf(stderr, "Failed to allocate memory for string list in k_fileutils_find_all_unique_files\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

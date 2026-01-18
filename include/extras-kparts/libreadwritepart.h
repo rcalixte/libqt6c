@@ -694,7 +694,9 @@ void k_parts__readwritepart_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KParts__ReadWritePart*
 ///
-libqt_list /* of QObject* */ k_parts__readwritepart_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_parts__readwritepart_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1021,7 +1023,9 @@ void k_parts__readwritepart_remove_child_client(void* self, void* child);
 ///
 /// @param self KParts__ReadWritePart*
 ///
-libqt_list /* of KXMLGUIClient* */ k_parts__readwritepart_child_clients(void* self);
+/// @return libqt_list of KXMLGUIClient*
+///
+libqt_list k_parts__readwritepart_child_clients(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1054,9 +1058,9 @@ void k_parts__readwritepart_reload_x_m_l(void* self);
 ///
 /// @param self KParts__ReadWritePart*
 /// @param name const char*
-/// @param actionList libqt_list /* of QAction* */
+/// @param actionList libqt_list of QAction*
 ///
-void k_parts__readwritepart_plug_action_list(void* self, const char* name, libqt_list actionList);
+void k_parts__readwritepart_plug_action_list(void* self, const char* name, libqt_list /* of QAction* */ actionList);
 
 /// Inherited from KXMLGUIClient
 ///

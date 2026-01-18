@@ -83,7 +83,7 @@ void k_nscore__question_set_list(void* self, const char* newList[static 1]) {
     size_t newList_len = libqt_strv_length(newList);
     libqt_string* newList_qstr = (libqt_string*)malloc(newList_len * sizeof(libqt_string));
     if (newList_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__question_set_list");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__question_set_list\n");
         abort();
     }
     for (size_t i = 0; i < newList_len; ++i) {
@@ -99,7 +99,7 @@ const char** k_nscore__question_list(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__question_list");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__question_list\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -259,7 +259,7 @@ const char** k_nscore__question_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__question_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__question_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

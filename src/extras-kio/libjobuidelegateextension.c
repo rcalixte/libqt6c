@@ -2,7 +2,7 @@
 #include "libjobuidelegateextension.hpp"
 #include "libjobuidelegateextension.h"
 
-bool k_io__jobuidelegateextension_ask_delete_confirmation(void* self, libqt_list urls, int32_t deletionType, int32_t confirmationType) {
+bool k_io__jobuidelegateextension_ask_delete_confirmation(void* self, libqt_list /* of QUrl* */ urls, int32_t deletionType, int32_t confirmationType) {
     return KIO__JobUiDelegateExtension_AskDeleteConfirmation((KIO__JobUiDelegateExtension*)self, urls, deletionType, confirmationType);
 }
 

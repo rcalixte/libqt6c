@@ -130,7 +130,9 @@ void k_recentfilesmenu_set_maximum_items(void* self, uint64_t maximumItems);
 ///
 /// @param self KRecentFilesMenu*
 ///
-libqt_list /* of QUrl* */ k_recentfilesmenu_recent_files(void* self);
+/// @return libqt_list of QUrl*
+///
+libqt_list k_recentfilesmenu_recent_files(void* self);
 
 /// [Upstream resources](https://api.kde.org/krecentfilesmenu.html#clearRecentFiles)
 ///
@@ -417,10 +419,10 @@ QAction* k_recentfilesmenu_exec2(void* self, void* pos);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#exec)
 ///
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 /// @param pos QPoint*
 ///
-QAction* k_recentfilesmenu_exec3(libqt_list actions, void* pos);
+QAction* k_recentfilesmenu_exec3(libqt_list /* of QAction* */ actions, void* pos);
 
 /// Inherited from QMenu
 ///
@@ -629,22 +631,22 @@ QAction* k_recentfilesmenu_exec22(void* self, void* pos, void* at);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#exec)
 ///
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 /// @param pos QPoint*
 /// @param at QAction*
 ///
-QAction* k_recentfilesmenu_exec32(libqt_list actions, void* pos, void* at);
+QAction* k_recentfilesmenu_exec32(libqt_list /* of QAction* */ actions, void* pos, void* at);
 
 /// Inherited from QMenu
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#exec)
 ///
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 /// @param pos QPoint*
 /// @param at QAction*
 /// @param parent QWidget*
 ///
-QAction* k_recentfilesmenu_exec4(libqt_list actions, void* pos, void* at, void* parent);
+QAction* k_recentfilesmenu_exec4(libqt_list /* of QAction* */ actions, void* pos, void* at, void* parent);
 
 /// Inherited from QWidget
 ///
@@ -1474,7 +1476,7 @@ void k_recentfilesmenu_set_graphics_effect(void* self, void* effect);
 /// @param self KRecentFilesMenu*
 /// @param type enum Qt__GestureType
 ///
-void k_recentfilesmenu_grab_gesture(void* self, int64_t type);
+void k_recentfilesmenu_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -1483,7 +1485,7 @@ void k_recentfilesmenu_grab_gesture(void* self, int64_t type);
 /// @param self KRecentFilesMenu*
 /// @param type enum Qt__GestureType
 ///
-void k_recentfilesmenu_ungrab_gesture(void* self, int64_t type);
+void k_recentfilesmenu_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2472,7 +2474,7 @@ void k_recentfilesmenu_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void k_recentfilesmenu_set_parent2(void* self, void* parent, int64_t f);
+void k_recentfilesmenu_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -2550,9 +2552,9 @@ void k_recentfilesmenu_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self KRecentFilesMenu*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_recentfilesmenu_add_actions(void* self, libqt_list actions);
+void k_recentfilesmenu_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2560,9 +2562,9 @@ void k_recentfilesmenu_add_actions(void* self, libqt_list actions);
 ///
 /// @param self KRecentFilesMenu*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_recentfilesmenu_insert_actions(void* self, void* before, libqt_list actions);
+void k_recentfilesmenu_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2589,7 +2591,9 @@ void k_recentfilesmenu_remove_action(void* self, void* action);
 ///
 /// @param self KRecentFilesMenu*
 ///
-libqt_list /* of QAction* */ k_recentfilesmenu_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_recentfilesmenu_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2646,7 +2650,7 @@ QWidget* k_recentfilesmenu_parent_widget(void* self);
 /// @param self KRecentFilesMenu*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_recentfilesmenu_set_window_flags(void* self, int64_t type);
+void k_recentfilesmenu_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2656,7 +2660,7 @@ void k_recentfilesmenu_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t k_recentfilesmenu_window_flags(void* self);
+int32_t k_recentfilesmenu_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2665,7 +2669,7 @@ int64_t k_recentfilesmenu_window_flags(void* self);
 /// @param self KRecentFilesMenu*
 /// @param param1 enum Qt__WindowType
 ///
-void k_recentfilesmenu_set_window_flag(void* self, int64_t param1);
+void k_recentfilesmenu_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2674,7 +2678,7 @@ void k_recentfilesmenu_set_window_flag(void* self, int64_t param1);
 /// @param self KRecentFilesMenu*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_recentfilesmenu_override_window_flags(void* self, int64_t type);
+void k_recentfilesmenu_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2684,7 +2688,7 @@ void k_recentfilesmenu_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t k_recentfilesmenu_window_type(void* self);
+int32_t k_recentfilesmenu_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2895,7 +2899,7 @@ void k_recentfilesmenu_on_custom_context_menu_requested(void* self, void (*callb
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t k_recentfilesmenu_input_method_hints(void* self);
+int32_t k_recentfilesmenu_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2904,7 +2908,7 @@ int64_t k_recentfilesmenu_input_method_hints(void* self);
 /// @param self KRecentFilesMenu*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void k_recentfilesmenu_set_input_method_hints(void* self, int64_t hints);
+void k_recentfilesmenu_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -2989,7 +2993,7 @@ QPixmap* k_recentfilesmenu_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void k_recentfilesmenu_grab_gesture2(void* self, int64_t type, int32_t flags);
+void k_recentfilesmenu_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -3029,7 +3033,7 @@ void k_recentfilesmenu_set_shortcut_auto_repeat2(void* self, int id, bool enable
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void k_recentfilesmenu_set_window_flag2(void* self, int64_t param1, bool on);
+void k_recentfilesmenu_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -3058,7 +3062,7 @@ QWidget* k_recentfilesmenu_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* k_recentfilesmenu_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* k_recentfilesmenu_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -3170,7 +3174,9 @@ void k_recentfilesmenu_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KRecentFilesMenu*
 ///
-libqt_list /* of QObject* */ k_recentfilesmenu_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_recentfilesmenu_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4888,7 +4894,7 @@ void k_recentfilesmenu_on_input_method_event(void* self, void (*callback)(void*,
 /// @param self KRecentFilesMenu*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_recentfilesmenu_input_method_query(void* self, int64_t param1);
+QVariant* k_recentfilesmenu_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4899,7 +4905,7 @@ QVariant* k_recentfilesmenu_input_method_query(void* self, int64_t param1);
 /// @param self KRecentFilesMenu*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_recentfilesmenu_qbase_input_method_query(void* self, int64_t param1);
+QVariant* k_recentfilesmenu_qbase_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4910,7 +4916,7 @@ QVariant* k_recentfilesmenu_qbase_input_method_query(void* self, int64_t param1)
 /// @param self KRecentFilesMenu*
 /// @param callback QVariant* func(KRecentFilesMenu* self, enum Qt__InputMethodQuery param1)
 ///
-void k_recentfilesmenu_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void k_recentfilesmenu_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QObject
 ///

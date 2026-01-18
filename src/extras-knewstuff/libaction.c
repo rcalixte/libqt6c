@@ -38,7 +38,7 @@ const char* k_nswidgets__action_tr(const char* s) {
     return _ret;
 }
 
-void k_nswidgets__action_dialog_finished(void* self, libqt_list changedEntries) {
+void k_nswidgets__action_dialog_finished(void* self, libqt_list /* of KNSCore__Entry* */ changedEntries) {
     KNSWidgets__Action_DialogFinished((KNSWidgets__Action*)self, changedEntries);
 }
 
@@ -160,7 +160,7 @@ QKeySequence* k_nswidgets__action_shortcut(void* self) {
     return QAction_Shortcut((QAction*)self);
 }
 
-void k_nswidgets__action_set_shortcuts(void* self, libqt_list shortcuts) {
+void k_nswidgets__action_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts) {
     QAction_SetShortcuts((QAction*)self, shortcuts);
 }
 
@@ -462,7 +462,7 @@ const char** k_nswidgets__action_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nswidgets__action_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nswidgets__action_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

@@ -179,15 +179,15 @@ QDesignerFormWindowInterface* q_designerformwindowmanagerinterface_qbase_form_wi
     return QDesignerFormWindowManagerInterface_QBaseFormWindow((QDesignerFormWindowManagerInterface*)self, index);
 }
 
-QDesignerFormWindowInterface* q_designerformwindowmanagerinterface_create_form_window(void* self, void* parentWidget, int64_t flags) {
+QDesignerFormWindowInterface* q_designerformwindowmanagerinterface_create_form_window(void* self, void* parentWidget, int32_t flags) {
     return QDesignerFormWindowManagerInterface_CreateFormWindow((QDesignerFormWindowManagerInterface*)self, (QWidget*)parentWidget, flags);
 }
 
-void q_designerformwindowmanagerinterface_on_create_form_window(void* self, QDesignerFormWindowInterface* (*callback)(void*, void*, int64_t)) {
+void q_designerformwindowmanagerinterface_on_create_form_window(void* self, QDesignerFormWindowInterface* (*callback)(void*, void*, int32_t)) {
     QDesignerFormWindowManagerInterface_OnCreateFormWindow((QDesignerFormWindowManagerInterface*)self, (intptr_t)callback);
 }
 
-QDesignerFormWindowInterface* q_designerformwindowmanagerinterface_qbase_create_form_window(void* self, void* parentWidget, int64_t flags) {
+QDesignerFormWindowInterface* q_designerformwindowmanagerinterface_qbase_create_form_window(void* self, void* parentWidget, int32_t flags) {
     return QDesignerFormWindowManagerInterface_QBaseCreateFormWindow((QDesignerFormWindowManagerInterface*)self, (QWidget*)parentWidget, flags);
 }
 
@@ -203,7 +203,7 @@ QDesignerFormEditorInterface* q_designerformwindowmanagerinterface_qbase_core(vo
     return QDesignerFormWindowManagerInterface_QBaseCore((QDesignerFormWindowManagerInterface*)self);
 }
 
-void q_designerformwindowmanagerinterface_drag_items(void* self, libqt_list item_list) {
+void q_designerformwindowmanagerinterface_drag_items(void* self, libqt_list /* of QDesignerDnDItemInterface* */ item_list) {
     QDesignerFormWindowManagerInterface_DragItems((QDesignerFormWindowManagerInterface*)self, item_list);
 }
 
@@ -211,7 +211,7 @@ void q_designerformwindowmanagerinterface_on_drag_items(void* self, void (*callb
     QDesignerFormWindowManagerInterface_OnDragItems((QDesignerFormWindowManagerInterface*)self, (intptr_t)callback);
 }
 
-void q_designerformwindowmanagerinterface_qbase_drag_items(void* self, libqt_list item_list) {
+void q_designerformwindowmanagerinterface_qbase_drag_items(void* self, libqt_list /* of QDesignerDnDItemInterface* */ item_list) {
     QDesignerFormWindowManagerInterface_QBaseDragItems((QDesignerFormWindowManagerInterface*)self, item_list);
 }
 
@@ -450,7 +450,7 @@ const char** q_designerformwindowmanagerinterface_dynamic_property_names(void* s
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_designerformwindowmanagerinterface_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_designerformwindowmanagerinterface_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

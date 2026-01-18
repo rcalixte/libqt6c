@@ -137,7 +137,9 @@ int32_t q_accessiblewidget_qbase_index_of_child(void* self, void* child);
 /// @param self QAccessibleWidget*
 /// @param match flag of enum QAccessible__RelationFlag
 ///
-libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ q_accessiblewidget_relations(void* self, int64_t match);
+/// @return libqt_list of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag
+///
+libqt_list q_accessiblewidget_relations(void* self, int32_t match);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#relations)
 ///
@@ -146,7 +148,7 @@ libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAcc
 /// @param self QAccessibleWidget*
 /// @param callback libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ func(QAccessibleWidget* self, flag of enum QAccessible__RelationFlag match)
 ///
-void q_accessiblewidget_on_relations(void* self, libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ (*callback)(void*, int64_t));
+void q_accessiblewidget_on_relations(void* self, libqt_list (*callback)(void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#relations)
 ///
@@ -155,7 +157,9 @@ void q_accessiblewidget_on_relations(void* self, libqt_list /* of libqt_pair tup
 /// @param self QAccessibleWidget*
 /// @param match flag of enum QAccessible__RelationFlag
 ///
-libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ q_accessiblewidget_qbase_relations(void* self, int64_t match);
+/// @return libqt_list of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag
+///
+libqt_list q_accessiblewidget_qbase_relations(void* self, int32_t match);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html#focusChild)
 ///

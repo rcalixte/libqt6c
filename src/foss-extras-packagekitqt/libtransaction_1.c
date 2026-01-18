@@ -310,7 +310,7 @@ void q_packagekit__transaction_files(void* self, const char* packageID, const ch
     size_t filenames_len = libqt_strv_length(filenames);
     libqt_string* filenames_qstr = (libqt_string*)malloc(filenames_len * sizeof(libqt_string));
     if (filenames_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__transaction_files");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__transaction_files\n");
         abort();
     }
     for (size_t i = 0; i < filenames_len; ++i) {
@@ -353,7 +353,7 @@ void q_packagekit__transaction_update_detail(void* self, const char* packageID, 
     size_t updates_len = libqt_strv_length(updates);
     libqt_string* updates_qstr = (libqt_string*)malloc(updates_len * sizeof(libqt_string));
     if (updates_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__transaction_update_detail");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__transaction_update_detail\n");
         abort();
     }
     for (size_t i = 0; i < updates_len; ++i) {
@@ -363,7 +363,7 @@ void q_packagekit__transaction_update_detail(void* self, const char* packageID, 
     size_t obsoletes_len = libqt_strv_length(obsoletes);
     libqt_string* obsoletes_qstr = (libqt_string*)malloc(obsoletes_len * sizeof(libqt_string));
     if (obsoletes_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__transaction_update_detail");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__transaction_update_detail\n");
         abort();
     }
     for (size_t i = 0; i < obsoletes_len; ++i) {
@@ -373,7 +373,7 @@ void q_packagekit__transaction_update_detail(void* self, const char* packageID, 
     size_t vendorUrls_len = libqt_strv_length(vendorUrls);
     libqt_string* vendorUrls_qstr = (libqt_string*)malloc(vendorUrls_len * sizeof(libqt_string));
     if (vendorUrls_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__transaction_update_detail");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__transaction_update_detail\n");
         abort();
     }
     for (size_t i = 0; i < vendorUrls_len; ++i) {
@@ -383,7 +383,7 @@ void q_packagekit__transaction_update_detail(void* self, const char* packageID, 
     size_t bugzillaUrls_len = libqt_strv_length(bugzillaUrls);
     libqt_string* bugzillaUrls_qstr = (libqt_string*)malloc(bugzillaUrls_len * sizeof(libqt_string));
     if (bugzillaUrls_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__transaction_update_detail");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__transaction_update_detail\n");
         abort();
     }
     for (size_t i = 0; i < bugzillaUrls_len; ++i) {
@@ -393,7 +393,7 @@ void q_packagekit__transaction_update_detail(void* self, const char* packageID, 
     size_t cveUrls_len = libqt_strv_length(cveUrls);
     libqt_string* cveUrls_qstr = (libqt_string*)malloc(cveUrls_len * sizeof(libqt_string));
     if (cveUrls_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__transaction_update_detail");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__transaction_update_detail\n");
         abort();
     }
     for (size_t i = 0; i < cveUrls_len; ++i) {
@@ -603,7 +603,7 @@ const char** q_packagekit__transaction_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__transaction_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__transaction_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

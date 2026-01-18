@@ -80,7 +80,7 @@ int32_t k_attica__forum_topics(void* self) {
     return Attica__Forum_Topics((Attica__Forum*)self);
 }
 
-void k_attica__forum_set_children(void* self, libqt_list comments) {
+void k_attica__forum_set_children(void* self, libqt_list /* of Attica__Forum* */ comments) {
     Attica__Forum_SetChildren((Attica__Forum*)self, comments);
 }
 

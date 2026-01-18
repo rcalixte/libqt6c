@@ -76,18 +76,18 @@ QGeoSatelliteInfoSource* q_geosatelliteinfosource_create_source(const char* sour
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfosource.html#createDefaultSource)
 ///
-/// @param parameters libqt_map /* of const char* to QVariant* */
+/// @param parameters libqt_map of const char* to QVariant*
 /// @param parent QObject*
 ///
-QGeoSatelliteInfoSource* q_geosatelliteinfosource_create_default_source2(libqt_map /* of const char* to QVariant* */ parameters, void* parent);
+QGeoSatelliteInfoSource* q_geosatelliteinfosource_create_default_source2(libqt_map parameters, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfosource.html#createSource)
 ///
 /// @param sourceName const char*
-/// @param parameters libqt_map /* of const char* to QVariant* */
+/// @param parameters libqt_map of const char* to QVariant*
 /// @param parent QObject*
 ///
-QGeoSatelliteInfoSource* q_geosatelliteinfosource_create_source2(const char* sourceName, libqt_map /* of const char* to QVariant* */ parameters, void* parent);
+QGeoSatelliteInfoSource* q_geosatelliteinfosource_create_source2(const char* sourceName, libqt_map parameters, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfosource.html#availableSources)
 ///
@@ -310,9 +310,9 @@ void q_geosatelliteinfosource_qbase_request_update(void* self, int timeout);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfosource.html#satellitesInViewUpdated)
 ///
 /// @param self QGeoSatelliteInfoSource*
-/// @param satellites libqt_list /* of QGeoSatelliteInfo* */
+/// @param satellites libqt_list of QGeoSatelliteInfo*
 ///
-void q_geosatelliteinfosource_satellites_in_view_updated(void* self, libqt_list satellites);
+void q_geosatelliteinfosource_satellites_in_view_updated(void* self, libqt_list /* of QGeoSatelliteInfo* */ satellites);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfosource.html#satellitesInViewUpdated)
 ///
@@ -324,9 +324,9 @@ void q_geosatelliteinfosource_on_satellites_in_view_updated(void* self, void (*c
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfosource.html#satellitesInUseUpdated)
 ///
 /// @param self QGeoSatelliteInfoSource*
-/// @param satellites libqt_list /* of QGeoSatelliteInfo* */
+/// @param satellites libqt_list of QGeoSatelliteInfo*
 ///
-void q_geosatelliteinfosource_satellites_in_use_updated(void* self, libqt_list satellites);
+void q_geosatelliteinfosource_satellites_in_use_updated(void* self, libqt_list /* of QGeoSatelliteInfo* */ satellites);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfosource.html#satellitesInUseUpdated)
 ///
@@ -478,7 +478,9 @@ void q_geosatelliteinfosource_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QGeoSatelliteInfoSource*
 ///
-libqt_list /* of QObject* */ q_geosatelliteinfosource_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_geosatelliteinfosource_children(void* self);
 
 /// Inherited from QObject
 ///

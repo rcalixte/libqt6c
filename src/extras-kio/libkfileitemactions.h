@@ -163,19 +163,19 @@ void k_fileitemactions_add_actions_to2(void* self, void* menu, int32_t sources);
 /// @param self KFileItemActions*
 /// @param menu QMenu*
 /// @param sources flag of enum KFileItemActions__MenuActionSource
-/// @param additionalActions libqt_list /* of QAction* */
+/// @param additionalActions libqt_list of QAction*
 ///
-void k_fileitemactions_add_actions_to3(void* self, void* menu, int32_t sources, libqt_list additionalActions);
+void k_fileitemactions_add_actions_to3(void* self, void* menu, int32_t sources, libqt_list /* of QAction* */ additionalActions);
 
 /// [Upstream resources](https://api.kde.org/kfileitemactions.html#addActionsTo)
 ///
 /// @param self KFileItemActions*
 /// @param menu QMenu*
 /// @param sources flag of enum KFileItemActions__MenuActionSource
-/// @param additionalActions libqt_list /* of QAction* */
+/// @param additionalActions libqt_list of QAction*
 /// @param excludeList const char**
 ///
-void k_fileitemactions_add_actions_to4(void* self, void* menu, int32_t sources, libqt_list additionalActions, const char* excludeList[static 1]);
+void k_fileitemactions_add_actions_to4(void* self, void* menu, int32_t sources, libqt_list /* of QAction* */ additionalActions, const char* excludeList[static 1]);
 
 /// Inherited from QObject
 ///
@@ -287,7 +287,9 @@ void k_fileitemactions_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KFileItemActions*
 ///
-libqt_list /* of QObject* */ k_fileitemactions_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_fileitemactions_children(void* self);
 
 /// Inherited from QObject
 ///

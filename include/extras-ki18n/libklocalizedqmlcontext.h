@@ -2986,7 +2986,9 @@ void k_localizedqmlcontext_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KLocalizedQmlContext*
 ///
-libqt_list /* of QObject* */ k_localizedqmlcontext_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_localizedqmlcontext_children(void* self);
 
 /// Inherited from QObject
 ///

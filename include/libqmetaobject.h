@@ -1276,7 +1276,7 @@ const char* q_metaproperty_type_name(void* self);
 ///
 /// @return enum QVariant__Type
 ///
-int64_t q_metaproperty_type(void* self);
+int32_t q_metaproperty_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#userType)
 ///

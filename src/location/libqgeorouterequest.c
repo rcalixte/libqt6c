@@ -14,7 +14,7 @@ QGeoRouteRequest* q_georouterequest_new3(void* other) {
     return QGeoRouteRequest_new3((QGeoRouteRequest*)other);
 }
 
-QGeoRouteRequest* q_georouterequest_new4(libqt_list waypoints) {
+QGeoRouteRequest* q_georouterequest_new4(libqt_list /* of QGeoCoordinate* */ waypoints) {
     return QGeoRouteRequest_new4(waypoints);
 }
 
@@ -26,7 +26,7 @@ void q_georouterequest_swap(void* self, void* other) {
     QGeoRouteRequest_Swap((QGeoRouteRequest*)self, (QGeoRouteRequest*)other);
 }
 
-void q_georouterequest_set_waypoints(void* self, libqt_list waypoints) {
+void q_georouterequest_set_waypoints(void* self, libqt_list /* of QGeoCoordinate* */ waypoints) {
     QGeoRouteRequest_SetWaypoints((QGeoRouteRequest*)self, waypoints);
 }
 
@@ -35,7 +35,7 @@ libqt_list /* of QGeoCoordinate* */ q_georouterequest_waypoints(void* self) {
     return _arr;
 }
 
-void q_georouterequest_set_exclude_areas(void* self, libqt_list areas) {
+void q_georouterequest_set_exclude_areas(void* self, libqt_list /* of QGeoRectangle* */ areas) {
     QGeoRouteRequest_SetExcludeAreas((QGeoRouteRequest*)self, areas);
 }
 

@@ -213,7 +213,9 @@ void k_jobtrackerinterface_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KJobTrackerInterface*
 ///
-libqt_list /* of QObject* */ k_jobtrackerinterface_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_jobtrackerinterface_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -618,7 +618,9 @@ void q_scilexercsharp_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QsciLexerCSharp*
 ///
-libqt_list /* of QObject* */ q_scilexercsharp_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_scilexercsharp_children(void* self);
 
 /// Inherited from QObject
 ///

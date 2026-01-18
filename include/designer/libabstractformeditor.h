@@ -157,7 +157,9 @@ const char* q_designerformeditorinterface_resource_location(void* self);
 ///
 /// @param self QDesignerFormEditorInterface*
 ///
-libqt_list /* of QDesignerOptionsPageInterface* */ q_designerformeditorinterface_options_pages(void* self);
+/// @return libqt_list of QDesignerOptionsPageInterface*
+///
+libqt_list q_designerformeditorinterface_options_pages(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorinterface.html#setTopLevel)
 ///
@@ -211,15 +213,17 @@ void q_designerformeditorinterface_set_settings_manager(void* self, void* settin
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorinterface.html#setOptionsPages)
 ///
 /// @param self QDesignerFormEditorInterface*
-/// @param optionsPages libqt_list /* of QDesignerOptionsPageInterface* */
+/// @param optionsPages libqt_list of QDesignerOptionsPageInterface*
 ///
-void q_designerformeditorinterface_set_options_pages(void* self, libqt_list optionsPages);
+void q_designerformeditorinterface_set_options_pages(void* self, libqt_list /* of QDesignerOptionsPageInterface* */ optionsPages);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorinterface.html#pluginInstances)
 ///
 /// @param self QDesignerFormEditorInterface*
 ///
-libqt_list /* of QObject* */ q_designerformeditorinterface_plugin_instances(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_designerformeditorinterface_plugin_instances(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorinterface.html#createIcon)
 ///
@@ -506,7 +510,9 @@ void q_designerformeditorinterface_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QDesignerFormEditorInterface*
 ///
-libqt_list /* of QObject* */ q_designerformeditorinterface_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_designerformeditorinterface_children(void* self);
 
 /// Inherited from QObject
 ///

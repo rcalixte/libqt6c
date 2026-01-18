@@ -405,7 +405,9 @@ void q_sharedmemory_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QSharedMemory*
 ///
-libqt_list /* of QObject* */ q_sharedmemory_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_sharedmemory_children(void* self);
 
 /// Inherited from QObject
 ///

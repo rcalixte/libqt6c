@@ -70,19 +70,25 @@ bool k_configdialogmanager_is_default(void* self) {
 libqt_map* /* of const char* to char* */ k_configdialogmanager_property_map() {
     // Convert QHash<QString,QByteArray> to libqt_map
     libqt_map* _out = KConfigDialogManager_PropertyMap();
-    libqt_map* _ret;
+    libqt_map* _ret = (libqt_map*)malloc(sizeof(libqt_map));
+    if (_ret == NULL) {
+        fprintf(stderr, "Failed to allocate memory for return map in k_configdialogmanager_property_map\n");
+        abort();
+    }
     _ret->len = _out->len;
     libqt_string* _out_keys = (libqt_string*)_out->keys;
     char** _ret_keys = (char**)malloc(_ret->len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string keys in k_configdialogmanager_property_map");
+        free(_ret);
+        fprintf(stderr, "Failed to allocate memory for map string keys in k_configdialogmanager_property_map\n");
         abort();
     }
     libqt_string* _out_values = (libqt_string*)_out->values;
     char** _ret_values = (char**)malloc(_ret->len * sizeof(char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string values in k_configdialogmanager_property_map");
+        fprintf(stderr, "Failed to allocate memory for map string values in k_configdialogmanager_property_map\n");
         free(_out->keys);
+        free(_ret);
         abort();
     }
     for (size_t i = 0; i < _ret->len; ++i) {
@@ -92,7 +98,8 @@ libqt_map* /* of const char* to char* */ k_configdialogmanager_property_map() {
                 libqt_free(_ret_keys[j]);
             }
             free(_ret_keys);
-            fprintf(stderr, "Failed to allocate memory for map keys in k_configdialogmanager_property_map");
+            free(_ret);
+            fprintf(stderr, "Failed to allocate memory for map keys in k_configdialogmanager_property_map\n");
             abort();
         }
         memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
@@ -105,9 +112,12 @@ libqt_map* /* of const char* to char* */ k_configdialogmanager_property_map() {
             }
             free(_ret_keys);
             free(_ret_values);
-            fprintf(stderr, "Failed to allocate memory for map string values in k_configdialogmanager_property_map");
+            free(_ret);
+            fprintf(stderr, "Failed to allocate memory for map string values in k_configdialogmanager_property_map\n");
             abort();
         }
+        memcpy(_ret_values[i], _out_values[i].data, _out_values[i].len);
+        _ret_values[i][_out_values[i].len] = '\0';
     }
     _ret->keys = (void*)_ret_keys;
     _ret->values = (void*)_ret_values;
@@ -391,7 +401,7 @@ const char** k_configdialogmanager_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_configdialogmanager_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_configdialogmanager_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

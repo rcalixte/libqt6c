@@ -126,7 +126,7 @@ void q_georoutereply_qbase_set_finished(void* self, bool finished) {
     QGeoRouteReply_QBaseSetFinished((QGeoRouteReply*)self, finished);
 }
 
-void q_georoutereply_set_routes(void* self, libqt_list routes) {
+void q_georoutereply_set_routes(void* self, libqt_list /* of QGeoRoute* */ routes) {
     QGeoRouteReply_SetRoutes((QGeoRouteReply*)self, routes);
 }
 
@@ -134,11 +134,11 @@ void q_georoutereply_on_set_routes(void* self, void (*callback)(void*, QGeoRoute
     QGeoRouteReply_OnSetRoutes((QGeoRouteReply*)self, (intptr_t)callback);
 }
 
-void q_georoutereply_qbase_set_routes(void* self, libqt_list routes) {
+void q_georoutereply_qbase_set_routes(void* self, libqt_list /* of QGeoRoute* */ routes) {
     QGeoRouteReply_QBaseSetRoutes((QGeoRouteReply*)self, routes);
 }
 
-void q_georoutereply_add_routes(void* self, libqt_list routes) {
+void q_georoutereply_add_routes(void* self, libqt_list /* of QGeoRoute* */ routes) {
     QGeoRouteReply_AddRoutes((QGeoRouteReply*)self, routes);
 }
 
@@ -146,7 +146,7 @@ void q_georoutereply_on_add_routes(void* self, void (*callback)(void*, QGeoRoute
     QGeoRouteReply_OnAddRoutes((QGeoRouteReply*)self, (intptr_t)callback);
 }
 
-void q_georoutereply_qbase_add_routes(void* self, libqt_list routes) {
+void q_georoutereply_qbase_add_routes(void* self, libqt_list /* of QGeoRoute* */ routes) {
     QGeoRouteReply_QBaseAddRoutes((QGeoRouteReply*)self, routes);
 }
 
@@ -277,7 +277,7 @@ const char** q_georoutereply_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_georoutereply_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_georoutereply_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

@@ -47,7 +47,7 @@ const char* k_io__renamefiledialog_tr(const char* s) {
     return _ret;
 }
 
-void k_io__renamefiledialog_renaming_finished(void* self, libqt_list urls) {
+void k_io__renamefiledialog_renaming_finished(void* self, libqt_list /* of QUrl* */ urls) {
     KIO__RenameFileDialog_RenamingFinished((KIO__RenameFileDialog*)self, urls);
 }
 
@@ -501,11 +501,11 @@ void k_io__renamefiledialog_set_graphics_effect(void* self, void* effect) {
     QWidget_SetGraphicsEffect((QWidget*)self, (QGraphicsEffect*)effect);
 }
 
-void k_io__renamefiledialog_grab_gesture(void* self, int64_t type) {
+void k_io__renamefiledialog_grab_gesture(void* self, int32_t type) {
     QWidget_GrabGesture((QWidget*)self, type);
 }
 
-void k_io__renamefiledialog_ungrab_gesture(void* self, int64_t type) {
+void k_io__renamefiledialog_ungrab_gesture(void* self, int32_t type) {
     QWidget_UngrabGesture((QWidget*)self, type);
 }
 
@@ -986,7 +986,7 @@ void k_io__renamefiledialog_set_parent(void* self, void* parent) {
     QWidget_SetParent((QWidget*)self, (QWidget*)parent);
 }
 
-void k_io__renamefiledialog_set_parent2(void* self, void* parent, int64_t f) {
+void k_io__renamefiledialog_set_parent2(void* self, void* parent, int32_t f) {
     QWidget_SetParent2((QWidget*)self, (QWidget*)parent, f);
 }
 
@@ -1022,11 +1022,11 @@ void k_io__renamefiledialog_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void k_io__renamefiledialog_add_actions(void* self, libqt_list actions) {
+void k_io__renamefiledialog_add_actions(void* self, libqt_list /* of QAction* */ actions) {
     QWidget_AddActions((QWidget*)self, actions);
 }
 
-void k_io__renamefiledialog_insert_actions(void* self, void* before, libqt_list actions) {
+void k_io__renamefiledialog_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions) {
     QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
@@ -1063,23 +1063,23 @@ QWidget* k_io__renamefiledialog_parent_widget(void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
-void k_io__renamefiledialog_set_window_flags(void* self, int64_t type) {
+void k_io__renamefiledialog_set_window_flags(void* self, int32_t type) {
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int64_t k_io__renamefiledialog_window_flags(void* self) {
+int32_t k_io__renamefiledialog_window_flags(void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
-void k_io__renamefiledialog_set_window_flag(void* self, int64_t param1) {
+void k_io__renamefiledialog_set_window_flag(void* self, int32_t param1) {
     QWidget_SetWindowFlag((QWidget*)self, param1);
 }
 
-void k_io__renamefiledialog_override_window_flags(void* self, int64_t type) {
+void k_io__renamefiledialog_override_window_flags(void* self, int32_t type) {
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int64_t k_io__renamefiledialog_window_type(void* self) {
+int32_t k_io__renamefiledialog_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
@@ -1175,11 +1175,11 @@ void k_io__renamefiledialog_on_custom_context_menu_requested(void* self, void (*
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-int64_t k_io__renamefiledialog_input_method_hints(void* self) {
+int32_t k_io__renamefiledialog_input_method_hints(void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
-void k_io__renamefiledialog_set_input_method_hints(void* self, int64_t hints) {
+void k_io__renamefiledialog_set_input_method_hints(void* self, int32_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
@@ -1211,7 +1211,7 @@ QPixmap* k_io__renamefiledialog_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_io__renamefiledialog_grab_gesture2(void* self, int64_t type, int32_t flags) {
+void k_io__renamefiledialog_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
@@ -1227,7 +1227,7 @@ void k_io__renamefiledialog_set_shortcut_auto_repeat2(void* self, int id, bool e
     QWidget_SetShortcutAutoRepeat2((QWidget*)self, id, enable);
 }
 
-void k_io__renamefiledialog_set_window_flag2(void* self, int64_t param1, bool on) {
+void k_io__renamefiledialog_set_window_flag2(void* self, int32_t param1, bool on) {
     QWidget_SetWindowFlag2((QWidget*)self, param1, on);
 }
 
@@ -1239,7 +1239,7 @@ QWidget* k_io__renamefiledialog_create_window_container2(void* window, void* par
     return QWidget_CreateWindowContainer2((QWindow*)window, (QWidget*)parent);
 }
 
-QWidget* k_io__renamefiledialog_create_window_container3(void* window, void* parent, int64_t flags) {
+QWidget* k_io__renamefiledialog_create_window_container3(void* window, void* parent, int32_t flags) {
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
@@ -1344,7 +1344,7 @@ const char** k_io__renamefiledialog_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__renamefiledialog_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__renamefiledialog_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2002,15 +2002,15 @@ void k_io__renamefiledialog_on_input_method_event(void* self, void (*callback)(v
     KIO__RenameFileDialog_OnInputMethodEvent((KIO__RenameFileDialog*)self, (intptr_t)callback);
 }
 
-QVariant* k_io__renamefiledialog_input_method_query(void* self, int64_t param1) {
+QVariant* k_io__renamefiledialog_input_method_query(void* self, int32_t param1) {
     return KIO__RenameFileDialog_InputMethodQuery((KIO__RenameFileDialog*)self, param1);
 }
 
-QVariant* k_io__renamefiledialog_qbase_input_method_query(void* self, int64_t param1) {
+QVariant* k_io__renamefiledialog_qbase_input_method_query(void* self, int32_t param1) {
     return KIO__RenameFileDialog_QBaseInputMethodQuery((KIO__RenameFileDialog*)self, param1);
 }
 
-void k_io__renamefiledialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void k_io__renamefiledialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     KIO__RenameFileDialog_OnInputMethodQuery((KIO__RenameFileDialog*)self, (intptr_t)callback);
 }
 

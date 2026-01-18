@@ -55,7 +55,9 @@ int32_t k_parts__partloader_part_capabilities(void* param1);
 ///
 /// @param param1 const char*
 ///
-libqt_list /* of KPluginMetaData* */ k_parts__partloader_parts_for_mime_type(const char* param1);
+/// @return libqt_list of KPluginMetaData*
+///
+libqt_list k_parts__partloader_parts_for_mime_type(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/kparts-partloader.html#public-types)
 

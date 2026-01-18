@@ -46,7 +46,7 @@ const char** q_libraryinfo_paths(int32_t p) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_libraryinfo_paths");
+        fprintf(stderr, "Failed to allocate memory for string list in q_libraryinfo_paths\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -72,7 +72,7 @@ const char** q_libraryinfo_platform_plugin_arguments(const char* platformName) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_libraryinfo_platform_plugin_arguments");
+        fprintf(stderr, "Failed to allocate memory for string list in q_libraryinfo_platform_plugin_arguments\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

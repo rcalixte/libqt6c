@@ -406,7 +406,9 @@ void k_layershellqt__window_kill_timer2(void* self, int32_t id);
 ///
 /// @param self LayerShellQt__Window*
 ///
-libqt_list /* of QObject* */ k_layershellqt__window_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_layershellqt__window_children(void* self);
 
 /// Inherited from QObject
 ///

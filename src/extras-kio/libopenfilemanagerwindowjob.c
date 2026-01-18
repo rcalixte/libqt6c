@@ -47,7 +47,7 @@ libqt_list /* of QUrl* */ k_io__openfilemanagerwindowjob_highlight_urls(void* se
     return _arr;
 }
 
-void k_io__openfilemanagerwindowjob_set_highlight_urls(void* self, libqt_list highlightUrls) {
+void k_io__openfilemanagerwindowjob_set_highlight_urls(void* self, libqt_list /* of QUrl* */ highlightUrls) {
     KIO__OpenFileManagerWindowJob_SetHighlightUrls((KIO__OpenFileManagerWindowJob*)self, highlightUrls);
 }
 
@@ -320,7 +320,7 @@ const char** k_io__openfilemanagerwindowjob_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__openfilemanagerwindowjob_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__openfilemanagerwindowjob_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -752,6 +752,6 @@ void k_io__openfilemanagerwindowjob_delete(void* self) {
     KIO__OpenFileManagerWindowJob_Delete((KIO__OpenFileManagerWindowJob*)(self));
 }
 
-KIO__OpenFileManagerWindowJob* k_io_highlight_in_file_manager(libqt_list param1, const char* param2) {
+KIO__OpenFileManagerWindowJob* k_io_highlight_in_file_manager(libqt_list /* of QUrl* */ param1, const char* param2) {
     return KIO_HighlightInFileManager(param1, qstring(param2));
 }

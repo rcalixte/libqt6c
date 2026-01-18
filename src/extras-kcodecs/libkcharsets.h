@@ -61,7 +61,9 @@ const char** k_charsets_descriptive_encoding_names(void* self);
 ///
 /// @param self KCharsets*
 ///
-libqt_list /* of const char** */ k_charsets_encodings_by_script(void* self);
+/// @return libqt_list of const char**
+///
+libqt_list k_charsets_encodings_by_script(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcharsets.html#encodingForName)
 ///

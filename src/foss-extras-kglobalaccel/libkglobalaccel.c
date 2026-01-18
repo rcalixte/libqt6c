@@ -52,19 +52,19 @@ bool k_globalaccel_is_global_shortcut_available(void* seq) {
     return KGlobalAccel_IsGlobalShortcutAvailable((QKeySequence*)seq);
 }
 
-bool k_globalaccel_prompt_steal_shortcut_systemwide(void* parent, libqt_list shortcuts, void* seq) {
+bool k_globalaccel_prompt_steal_shortcut_systemwide(void* parent, libqt_list /* of KGlobalShortcutInfo* */ shortcuts, void* seq) {
     return KGlobalAccel_PromptStealShortcutSystemwide((QWidget*)parent, shortcuts, (QKeySequence*)seq);
 }
 
-bool k_globalaccel_set_default_shortcut(void* self, void* action, libqt_list shortcut) {
+bool k_globalaccel_set_default_shortcut(void* self, void* action, libqt_list /* of QKeySequence* */ shortcut) {
     return KGlobalAccel_SetDefaultShortcut((KGlobalAccel*)self, (QAction*)action, shortcut);
 }
 
-bool k_globalaccel_set_shortcut(void* self, void* action, libqt_list shortcut) {
+bool k_globalaccel_set_shortcut(void* self, void* action, libqt_list /* of QKeySequence* */ shortcut) {
     return KGlobalAccel_SetShortcut((KGlobalAccel*)self, (QAction*)action, shortcut);
 }
 
-bool k_globalaccel_set_global_shortcut(void* action, libqt_list shortcut) {
+bool k_globalaccel_set_global_shortcut(void* action, libqt_list /* of QKeySequence* */ shortcut) {
     return KGlobalAccel_SetGlobalShortcut((QAction*)action, shortcut);
 }
 
@@ -134,11 +134,11 @@ bool k_globalaccel_is_global_shortcut_available2(void* seq, const char* componen
     return KGlobalAccel_IsGlobalShortcutAvailable2((QKeySequence*)seq, qstring(component));
 }
 
-bool k_globalaccel_set_default_shortcut3(void* self, void* action, libqt_list shortcut, int32_t loadFlag) {
+bool k_globalaccel_set_default_shortcut3(void* self, void* action, libqt_list /* of QKeySequence* */ shortcut, int32_t loadFlag) {
     return KGlobalAccel_SetDefaultShortcut3((KGlobalAccel*)self, (QAction*)action, shortcut, loadFlag);
 }
 
-bool k_globalaccel_set_shortcut3(void* self, void* action, libqt_list shortcut, int32_t loadFlag) {
+bool k_globalaccel_set_shortcut3(void* self, void* action, libqt_list /* of QKeySequence* */ shortcut, int32_t loadFlag) {
     return KGlobalAccel_SetShortcut3((KGlobalAccel*)self, (QAction*)action, shortcut, loadFlag);
 }
 
@@ -255,7 +255,7 @@ const char** k_globalaccel_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_globalaccel_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_globalaccel_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

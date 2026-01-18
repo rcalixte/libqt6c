@@ -464,7 +464,9 @@ void q_scilexermasm_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QsciLexerMASM*
 ///
-libqt_list /* of QObject* */ q_scilexermasm_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_scilexermasm_children(void* self);
 
 /// Inherited from QObject
 ///

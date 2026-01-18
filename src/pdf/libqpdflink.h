@@ -89,7 +89,9 @@ const char* q_pdflink_context_after(void* self);
 ///
 /// @param self QPdfLink*
 ///
-libqt_list /* of QRectF* */ q_pdflink_rectangles(void* self);
+/// @return libqt_list of QRectF*
+///
+libqt_list q_pdflink_rectangles(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflink.html#toString)
 ///

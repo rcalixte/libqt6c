@@ -293,7 +293,9 @@ void q_audioinput_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QAudioInput*
 ///
-libqt_list /* of QObject* */ q_audioinput_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_audioinput_children(void* self);
 
 /// Inherited from QObject
 ///

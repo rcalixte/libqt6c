@@ -488,7 +488,9 @@ void q_textdocument_add_resource(void* self, int type, void* name, void* resourc
 ///
 /// @param self QTextDocument*
 ///
-libqt_list /* of QTextFormat* */ q_textdocument_all_formats(void* self);
+/// @return libqt_list of QTextFormat*
+///
+libqt_list q_textdocument_all_formats(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#markContentsDirty)
 ///
@@ -1138,7 +1140,9 @@ void q_textdocument_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QTextDocument*
 ///
-libqt_list /* of QObject* */ q_textdocument_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_textdocument_children(void* self);
 
 /// Inherited from QObject
 ///

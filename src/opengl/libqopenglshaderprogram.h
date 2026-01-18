@@ -276,7 +276,9 @@ void q_openglshader_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QOpenGLShader*
 ///
-libqt_list /* of QObject* */ q_openglshader_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_openglshader_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -965,7 +967,9 @@ void q_openglshaderprogram_remove_shader(void* self, void* shader);
 ///
 /// @param self QOpenGLShaderProgram*
 ///
-libqt_list /* of QOpenGLShader* */ q_openglshaderprogram_shaders(void* self);
+/// @return libqt_list of QOpenGLShader*
+///
+libqt_list q_openglshaderprogram_shaders(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#addShaderFromSourceCode)
 ///
@@ -1120,28 +1124,32 @@ int32_t q_openglshaderprogram_patch_vertex_count(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setDefaultOuterTessellationLevels)
 ///
 /// @param self QOpenGLShaderProgram*
-/// @param levels libqt_list /* of float */
+/// @param levels libqt_list of float
 ///
-void q_openglshaderprogram_set_default_outer_tessellation_levels(void* self, libqt_list levels);
+void q_openglshaderprogram_set_default_outer_tessellation_levels(void* self, libqt_list /* of float */ levels);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#defaultOuterTessellationLevels)
 ///
 /// @param self QOpenGLShaderProgram*
 ///
-libqt_list /* of float */ q_openglshaderprogram_default_outer_tessellation_levels(void* self);
+/// @return libqt_list of float
+///
+libqt_list q_openglshaderprogram_default_outer_tessellation_levels(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setDefaultInnerTessellationLevels)
 ///
 /// @param self QOpenGLShaderProgram*
-/// @param levels libqt_list /* of float */
+/// @param levels libqt_list of float
 ///
-void q_openglshaderprogram_set_default_inner_tessellation_levels(void* self, libqt_list levels);
+void q_openglshaderprogram_set_default_inner_tessellation_levels(void* self, libqt_list /* of float */ levels);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#defaultInnerTessellationLevels)
 ///
 /// @param self QOpenGLShaderProgram*
 ///
-libqt_list /* of float */ q_openglshaderprogram_default_inner_tessellation_levels(void* self);
+/// @return libqt_list of float
+///
+libqt_list q_openglshaderprogram_default_inner_tessellation_levels(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#bindAttributeLocation)
 ///
@@ -2156,7 +2164,9 @@ void q_openglshaderprogram_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QOpenGLShaderProgram*
 ///
-libqt_list /* of QObject* */ q_openglshaderprogram_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_openglshaderprogram_children(void* self);
 
 /// Inherited from QObject
 ///

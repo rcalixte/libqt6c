@@ -479,7 +479,9 @@ int32_t q_sciprinter_duplex(void* self);
 ///
 /// @param self QsciPrinter*
 ///
-libqt_list /* of int */ q_sciprinter_supported_resolutions(void* self);
+/// @return libqt_list of int
+///
+libqt_list q_sciprinter_supported_resolutions(void* self);
 
 /// Inherited from QPrinter
 ///

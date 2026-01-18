@@ -104,9 +104,9 @@ bool q_pieseries_append(void* self, void* slice);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#append)
 ///
 /// @param self QPieSeries*
-/// @param slices libqt_list /* of QPieSlice* */
+/// @param slices libqt_list of QPieSlice*
 ///
-bool q_pieseries_append2(void* self, libqt_list slices);
+bool q_pieseries_append2(void* self, libqt_list /* of QPieSlice* */ slices);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#operator-lt-lt)
 ///
@@ -155,7 +155,9 @@ void q_pieseries_clear(void* self);
 ///
 /// @param self QPieSeries*
 ///
-libqt_list /* of QPieSlice* */ q_pieseries_slices(void* self);
+/// @return libqt_list of QPieSlice*
+///
+libqt_list q_pieseries_slices(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#count)
 ///
@@ -269,9 +271,9 @@ void q_pieseries_set_labels_position(void* self, int32_t position);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#added)
 ///
 /// @param self QPieSeries*
-/// @param slices libqt_list /* of QPieSlice* */
+/// @param slices libqt_list of QPieSlice*
 ///
-void q_pieseries_added(void* self, libqt_list slices);
+void q_pieseries_added(void* self, libqt_list /* of QPieSlice* */ slices);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#added)
 ///
@@ -283,9 +285,9 @@ void q_pieseries_on_added(void* self, void (*callback)(void*, QPieSlice**));
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#removed)
 ///
 /// @param self QPieSeries*
-/// @param slices libqt_list /* of QPieSlice* */
+/// @param slices libqt_list of QPieSlice*
 ///
-void q_pieseries_removed(void* self, libqt_list slices);
+void q_pieseries_removed(void* self, libqt_list /* of QPieSlice* */ slices);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#removed)
 ///
@@ -517,7 +519,9 @@ bool q_pieseries_detach_axis(void* self, void* axis);
 ///
 /// @param self QPieSeries*
 ///
-libqt_list /* of QAbstractAxis* */ q_pieseries_attached_axes(void* self);
+/// @return libqt_list of QAbstractAxis*
+///
+libqt_list q_pieseries_attached_axes(void* self);
 
 /// Inherited from QAbstractSeries
 ///
@@ -731,7 +735,9 @@ void q_pieseries_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QPieSeries*
 ///
-libqt_list /* of QObject* */ q_pieseries_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_pieseries_children(void* self);
 
 /// Inherited from QObject
 ///

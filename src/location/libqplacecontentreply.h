@@ -98,7 +98,8 @@ int32_t q_placecontentreply_qbase_type(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QPlaceContent*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QPlaceContent*)map.values)[i]);
 /// }
@@ -108,7 +109,9 @@ int32_t q_placecontentreply_qbase_type(void* self);
 ///
 /// @param self QPlaceContentReply*
 ///
-libqt_map /* of int to QPlaceContent* */ q_placecontentreply_content(void* self);
+/// @return libqt_map of int to QPlaceContent*
+///
+libqt_map q_placecontentreply_content(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontentreply.html#totalCount)
 ///
@@ -137,27 +140,27 @@ QPlaceContentRequest* q_placecontentreply_next_page_request(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontentreply.html#setContent)
 ///
 /// @param self QPlaceContentReply*
-/// @param content libqt_map /* of int to QPlaceContent* */
+/// @param content libqt_map of int to QPlaceContent*
 ///
-void q_placecontentreply_set_content(void* self, libqt_map /* of int to QPlaceContent* */ content);
+void q_placecontentreply_set_content(void* self, libqt_map content);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontentreply.html#setContent)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QPlaceContentReply*
-/// @param callback void func(QPlaceContentReply* self, libqt_map /* of int to QPlaceContent* */ /* of int to QPlaceContent* */)
+/// @param callback void func(QPlaceContentReply* self, libqt_map of int to QPlaceContent*)
 ///
-void q_placecontentreply_on_set_content(void* self, void (*callback)(void*, libqt_map /* of int to QPlaceContent* */));
+void q_placecontentreply_on_set_content(void* self, void (*callback)(void*, libqt_map));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontentreply.html#setContent)
 ///
 /// Base class method implementation
 ///
 /// @param self QPlaceContentReply*
-/// @param content libqt_map /* of int to QPlaceContent* */
+/// @param content libqt_map of int to QPlaceContent*
 ///
-void q_placecontentreply_qbase_set_content(void* self, libqt_map /* of int to QPlaceContent* */ content);
+void q_placecontentreply_qbase_set_content(void* self, libqt_map content);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontentreply.html#setTotalCount)
 ///
@@ -504,7 +507,9 @@ void q_placecontentreply_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QPlaceContentReply*
 ///
-libqt_list /* of QObject* */ q_placecontentreply_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_placecontentreply_children(void* self);
 
 /// Inherited from QObject
 ///

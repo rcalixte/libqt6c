@@ -137,7 +137,9 @@ const char* k_toggleaction_tr3(const char* s, const char* c, int n);
 ///
 /// @param self KToggleAction*
 ///
-libqt_list /* of QObject* */ k_toggleaction_associated_objects(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_toggleaction_associated_objects(void* self);
 
 /// Inherited from QAction
 ///
@@ -326,9 +328,9 @@ QKeySequence* k_toggleaction_shortcut(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
 ///
 /// @param self KToggleAction*
-/// @param shortcuts libqt_list /* of QKeySequence* */
+/// @param shortcuts libqt_list of QKeySequence*
 ///
-void k_toggleaction_set_shortcuts(void* self, libqt_list shortcuts);
+void k_toggleaction_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts);
 
 /// Inherited from QAction
 ///
@@ -345,7 +347,9 @@ void k_toggleaction_set_shortcuts2(void* self, int32_t shortcuts);
 ///
 /// @param self KToggleAction*
 ///
-libqt_list /* of QKeySequence* */ k_toggleaction_shortcuts(void* self);
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_toggleaction_shortcuts(void* self);
 
 /// Inherited from QAction
 ///
@@ -855,7 +859,9 @@ void k_toggleaction_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KToggleAction*
 ///
-libqt_list /* of QObject* */ k_toggleaction_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_toggleaction_children(void* self);
 
 /// Inherited from QObject
 ///

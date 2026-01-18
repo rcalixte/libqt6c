@@ -22,19 +22,19 @@ KShortcutsEditor* k_shortcutseditor_new2(void* collection, void* parent) {
     return KShortcutsEditor_new2((KActionCollection*)collection, (QWidget*)parent);
 }
 
-KShortcutsEditor* k_shortcutseditor_new3(void* collection, void* parent, int64_t actionTypes) {
+KShortcutsEditor* k_shortcutseditor_new3(void* collection, void* parent, int32_t actionTypes) {
     return KShortcutsEditor_new3((KActionCollection*)collection, (QWidget*)parent, actionTypes);
 }
 
-KShortcutsEditor* k_shortcutseditor_new4(void* collection, void* parent, int64_t actionTypes, int32_t allowLetterShortcuts) {
+KShortcutsEditor* k_shortcutseditor_new4(void* collection, void* parent, int32_t actionTypes, int32_t allowLetterShortcuts) {
     return KShortcutsEditor_new4((KActionCollection*)collection, (QWidget*)parent, actionTypes, allowLetterShortcuts);
 }
 
-KShortcutsEditor* k_shortcutseditor_new5(void* parent, int64_t actionTypes) {
+KShortcutsEditor* k_shortcutseditor_new5(void* parent, int32_t actionTypes) {
     return KShortcutsEditor_new5((QWidget*)parent, actionTypes);
 }
 
-KShortcutsEditor* k_shortcutseditor_new6(void* parent, int64_t actionTypes, int32_t allowLetterShortcuts) {
+KShortcutsEditor* k_shortcutseditor_new6(void* parent, int32_t actionTypes, int32_t allowLetterShortcuts) {
     return KShortcutsEditor_new6((QWidget*)parent, actionTypes, allowLetterShortcuts);
 }
 
@@ -85,11 +85,11 @@ void k_shortcutseditor_save(void* self) {
     KShortcutsEditor_Save((KShortcutsEditor*)self);
 }
 
-void k_shortcutseditor_set_action_types(void* self, int64_t actionTypes) {
+void k_shortcutseditor_set_action_types(void* self, int32_t actionTypes) {
     KShortcutsEditor_SetActionTypes((KShortcutsEditor*)self, actionTypes);
 }
 
-int64_t k_shortcutseditor_action_types(void* self) {
+int32_t k_shortcutseditor_action_types(void* self) {
     return KShortcutsEditor_ActionTypes((KShortcutsEditor*)self);
 }
 
@@ -503,11 +503,11 @@ void k_shortcutseditor_set_graphics_effect(void* self, void* effect) {
     QWidget_SetGraphicsEffect((QWidget*)self, (QGraphicsEffect*)effect);
 }
 
-void k_shortcutseditor_grab_gesture(void* self, int64_t type) {
+void k_shortcutseditor_grab_gesture(void* self, int32_t type) {
     QWidget_GrabGesture((QWidget*)self, type);
 }
 
-void k_shortcutseditor_ungrab_gesture(void* self, int64_t type) {
+void k_shortcutseditor_ungrab_gesture(void* self, int32_t type) {
     QWidget_UngrabGesture((QWidget*)self, type);
 }
 
@@ -988,7 +988,7 @@ void k_shortcutseditor_set_parent(void* self, void* parent) {
     QWidget_SetParent((QWidget*)self, (QWidget*)parent);
 }
 
-void k_shortcutseditor_set_parent2(void* self, void* parent, int64_t f) {
+void k_shortcutseditor_set_parent2(void* self, void* parent, int32_t f) {
     QWidget_SetParent2((QWidget*)self, (QWidget*)parent, f);
 }
 
@@ -1024,11 +1024,11 @@ void k_shortcutseditor_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void k_shortcutseditor_add_actions(void* self, libqt_list actions) {
+void k_shortcutseditor_add_actions(void* self, libqt_list /* of QAction* */ actions) {
     QWidget_AddActions((QWidget*)self, actions);
 }
 
-void k_shortcutseditor_insert_actions(void* self, void* before, libqt_list actions) {
+void k_shortcutseditor_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions) {
     QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
@@ -1065,23 +1065,23 @@ QWidget* k_shortcutseditor_parent_widget(void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
-void k_shortcutseditor_set_window_flags(void* self, int64_t type) {
+void k_shortcutseditor_set_window_flags(void* self, int32_t type) {
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int64_t k_shortcutseditor_window_flags(void* self) {
+int32_t k_shortcutseditor_window_flags(void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
-void k_shortcutseditor_set_window_flag(void* self, int64_t param1) {
+void k_shortcutseditor_set_window_flag(void* self, int32_t param1) {
     QWidget_SetWindowFlag((QWidget*)self, param1);
 }
 
-void k_shortcutseditor_override_window_flags(void* self, int64_t type) {
+void k_shortcutseditor_override_window_flags(void* self, int32_t type) {
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int64_t k_shortcutseditor_window_type(void* self) {
+int32_t k_shortcutseditor_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
@@ -1177,11 +1177,11 @@ void k_shortcutseditor_on_custom_context_menu_requested(void* self, void (*callb
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-int64_t k_shortcutseditor_input_method_hints(void* self) {
+int32_t k_shortcutseditor_input_method_hints(void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
-void k_shortcutseditor_set_input_method_hints(void* self, int64_t hints) {
+void k_shortcutseditor_set_input_method_hints(void* self, int32_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
@@ -1213,7 +1213,7 @@ QPixmap* k_shortcutseditor_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_shortcutseditor_grab_gesture2(void* self, int64_t type, int32_t flags) {
+void k_shortcutseditor_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
@@ -1229,7 +1229,7 @@ void k_shortcutseditor_set_shortcut_auto_repeat2(void* self, int id, bool enable
     QWidget_SetShortcutAutoRepeat2((QWidget*)self, id, enable);
 }
 
-void k_shortcutseditor_set_window_flag2(void* self, int64_t param1, bool on) {
+void k_shortcutseditor_set_window_flag2(void* self, int32_t param1, bool on) {
     QWidget_SetWindowFlag2((QWidget*)self, param1, on);
 }
 
@@ -1241,7 +1241,7 @@ QWidget* k_shortcutseditor_create_window_container2(void* window, void* parent) 
     return QWidget_CreateWindowContainer2((QWindow*)window, (QWidget*)parent);
 }
 
-QWidget* k_shortcutseditor_create_window_container3(void* window, void* parent, int64_t flags) {
+QWidget* k_shortcutseditor_create_window_container3(void* window, void* parent, int32_t flags) {
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
@@ -1346,7 +1346,7 @@ const char** k_shortcutseditor_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_shortcutseditor_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_shortcutseditor_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1932,15 +1932,15 @@ void k_shortcutseditor_on_input_method_event(void* self, void (*callback)(void*,
     KShortcutsEditor_OnInputMethodEvent((KShortcutsEditor*)self, (intptr_t)callback);
 }
 
-QVariant* k_shortcutseditor_input_method_query(void* self, int64_t param1) {
+QVariant* k_shortcutseditor_input_method_query(void* self, int32_t param1) {
     return KShortcutsEditor_InputMethodQuery((KShortcutsEditor*)self, param1);
 }
 
-QVariant* k_shortcutseditor_qbase_input_method_query(void* self, int64_t param1) {
+QVariant* k_shortcutseditor_qbase_input_method_query(void* self, int32_t param1) {
     return KShortcutsEditor_QBaseInputMethodQuery((KShortcutsEditor*)self, param1);
 }
 
-void k_shortcutseditor_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void k_shortcutseditor_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     KShortcutsEditor_OnInputMethodQuery((KShortcutsEditor*)self, (intptr_t)callback);
 }
 

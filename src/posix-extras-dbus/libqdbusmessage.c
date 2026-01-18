@@ -144,7 +144,7 @@ bool q_dbusmessage_is_interactive_authorization_allowed(void* self) {
     return QDBusMessage_IsInteractiveAuthorizationAllowed((QDBusMessage*)self);
 }
 
-void q_dbusmessage_set_arguments(void* self, libqt_list arguments) {
+void q_dbusmessage_set_arguments(void* self, libqt_list /* of QVariant* */ arguments) {
     QDBusMessage_SetArguments((QDBusMessage*)self, arguments);
 }
 
@@ -157,7 +157,7 @@ QDBusMessage* q_dbusmessage_operator_shift_left(void* self, void* arg) {
     return QDBusMessage_OperatorShiftLeft((QDBusMessage*)self, (QVariant*)arg);
 }
 
-QDBusMessage* q_dbusmessage_create_reply1(void* self, libqt_list arguments) {
+QDBusMessage* q_dbusmessage_create_reply1(void* self, libqt_list /* of QVariant* */ arguments) {
     return QDBusMessage_CreateReply1((QDBusMessage*)self, arguments);
 }
 

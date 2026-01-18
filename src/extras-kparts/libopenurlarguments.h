@@ -103,7 +103,8 @@ void k_parts__openurlarguments_set_action_requested_by_user(void* self, bool use
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     libqt_free(map.values[i]);
@@ -114,13 +115,16 @@ void k_parts__openurlarguments_set_action_requested_by_user(void* self, bool use
 ///
 /// @param self KParts__OpenUrlArguments*
 ///
-libqt_map /* of const char* to const char* */ k_parts__openurlarguments_meta_data(void* self);
+/// @return libqt_map of const char* to const char*
+///
+libqt_map k_parts__openurlarguments_meta_data(void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-openurlarguments.html#metaData)
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     libqt_free(map.values[i]);
@@ -131,7 +135,9 @@ libqt_map /* of const char* to const char* */ k_parts__openurlarguments_meta_dat
 ///
 /// @param self KParts__OpenUrlArguments*
 ///
-libqt_map /* of const char* to const char* */ k_parts__openurlarguments_meta_data2(void* self);
+/// @return libqt_map of const char* to const char*
+///
+libqt_map k_parts__openurlarguments_meta_data2(void* self);
 
 /// Delete this object from C++ memory.
 ///

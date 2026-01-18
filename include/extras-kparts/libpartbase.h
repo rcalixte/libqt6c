@@ -105,7 +105,9 @@ void k_parts__partbase_remove_child_client(void* self, void* child);
 ///
 /// @param self KParts__PartBase*
 ///
-libqt_list /* of KXMLGUIClient* */ k_parts__partbase_child_clients(void* self);
+/// @return libqt_list of KXMLGUIClient*
+///
+libqt_list k_parts__partbase_child_clients(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -138,9 +140,9 @@ void k_parts__partbase_reload_x_m_l(void* self);
 ///
 /// @param self KParts__PartBase*
 /// @param name const char*
-/// @param actionList libqt_list /* of QAction* */
+/// @param actionList libqt_list of QAction*
 ///
-void k_parts__partbase_plug_action_list(void* self, const char* name, libqt_list actionList);
+void k_parts__partbase_plug_action_list(void* self, const char* name, libqt_list /* of QAction* */ actionList);
 
 /// Inherited from KXMLGUIClient
 ///

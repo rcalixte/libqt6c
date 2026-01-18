@@ -47,21 +47,21 @@ void k_crash_set_error_message(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/kcrash.html#setErrorTags)
 ///
-/// @param param1 libqt_map /* of const char* to const char* */
+/// @param param1 libqt_map of const char* to const char*
 ///
-void k_crash_set_error_tags(libqt_map /* of const char* to const char* */ param1);
+void k_crash_set_error_tags(libqt_map param1);
 
 /// [Upstream resources](https://api.kde.org/kcrash.html#setErrorExtraData)
 ///
-/// @param param1 libqt_map /* of const char* to const char* */
+/// @param param1 libqt_map of const char* to const char*
 ///
-void k_crash_set_error_extra_data(libqt_map /* of const char* to const char* */ param1);
+void k_crash_set_error_extra_data(libqt_map param1);
 
 /// [Upstream resources](https://api.kde.org/kcrash.html#setGPUData)
 ///
-/// @param param1 libqt_map /* of const char* to QVariant* */
+/// @param param1 libqt_map of const char* to QVariant*
 ///
-void k_crash_set_g_p_u_data(libqt_map /* of const char* to QVariant* */ param1);
+void k_crash_set_g_p_u_data(libqt_map param1);
 
 /// [Upstream resources](https://api.kde.org/kcrash.html#public-types)
 

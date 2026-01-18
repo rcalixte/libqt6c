@@ -1018,7 +1018,9 @@ void q_boxlayout_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QBoxLayout*
 ///
-libqt_list /* of QObject* */ q_boxlayout_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_boxlayout_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2761,7 +2763,9 @@ void q_hboxlayout_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QHBoxLayout*
 ///
-libqt_list /* of QObject* */ q_hboxlayout_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_hboxlayout_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4987,7 +4991,9 @@ void q_vboxlayout_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QVBoxLayout*
 ///
-libqt_list /* of QObject* */ q_vboxlayout_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_vboxlayout_children(void* self);
 
 /// Inherited from QObject
 ///

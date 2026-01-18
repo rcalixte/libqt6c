@@ -1187,9 +1187,9 @@ void q_cppainter_draw_lines(void* self, void* lines, int lineCount);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
 /// @param self QCPPainter*
-/// @param lines libqt_list /* of QLineF* */
+/// @param lines libqt_list of QLineF*
 ///
-void q_cppainter_draw_lines2(void* self, libqt_list lines);
+void q_cppainter_draw_lines2(void* self, libqt_list /* of QLineF* */ lines);
 
 /// Inherited from QPainter
 ///
@@ -1206,9 +1206,9 @@ void q_cppainter_draw_lines3(void* self, void* pointPairs, int lineCount);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
 /// @param self QCPPainter*
-/// @param pointPairs libqt_list /* of QPointF* */
+/// @param pointPairs libqt_list of QPointF*
 ///
-void q_cppainter_draw_lines4(void* self, libqt_list pointPairs);
+void q_cppainter_draw_lines4(void* self, libqt_list /* of QPointF* */ pointPairs);
 
 /// Inherited from QPainter
 ///
@@ -1225,9 +1225,9 @@ void q_cppainter_draw_lines5(void* self, void* lines, int lineCount);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
 /// @param self QCPPainter*
-/// @param lines libqt_list /* of QLine* */
+/// @param lines libqt_list of QLine*
 ///
-void q_cppainter_draw_lines6(void* self, libqt_list lines);
+void q_cppainter_draw_lines6(void* self, libqt_list /* of QLine* */ lines);
 
 /// Inherited from QPainter
 ///
@@ -1244,9 +1244,9 @@ void q_cppainter_draw_lines7(void* self, void* pointPairs, int lineCount);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
 /// @param self QCPPainter*
-/// @param pointPairs libqt_list /* of QPoint* */
+/// @param pointPairs libqt_list of QPoint*
 ///
-void q_cppainter_draw_lines8(void* self, libqt_list pointPairs);
+void q_cppainter_draw_lines8(void* self, libqt_list /* of QPoint* */ pointPairs);
 
 /// Inherited from QPainter
 ///
@@ -1293,9 +1293,9 @@ void q_cppainter_draw_rects(void* self, void* rects, int rectCount);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawRects)
 ///
 /// @param self QCPPainter*
-/// @param rectangles libqt_list /* of QRectF* */
+/// @param rectangles libqt_list of QRectF*
 ///
-void q_cppainter_draw_rects2(void* self, libqt_list rectangles);
+void q_cppainter_draw_rects2(void* self, libqt_list /* of QRectF* */ rectangles);
 
 /// Inherited from QPainter
 ///
@@ -1312,9 +1312,9 @@ void q_cppainter_draw_rects3(void* self, void* rects, int rectCount);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawRects)
 ///
 /// @param self QCPPainter*
-/// @param rectangles libqt_list /* of QRect* */
+/// @param rectangles libqt_list of QRect*
 ///
-void q_cppainter_draw_rects4(void* self, libqt_list rectangles);
+void q_cppainter_draw_rects4(void* self, libqt_list /* of QRect* */ rectangles);
 
 /// Inherited from QPainter
 ///
@@ -3283,7 +3283,9 @@ int32_t q_cplayer_index(void* self);
 ///
 /// @param self QCPLayer*
 ///
-libqt_list /* of QCPLayerable* */ q_cplayer_children(void* self);
+/// @return libqt_list of QCPLayerable*
+///
+libqt_list q_cplayer_children(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayer.html)
 ///
@@ -4880,7 +4882,9 @@ void q_cplayerable_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPLayerable*
 ///
-libqt_list /* of QObject* */ q_cplayerable_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cplayerable_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -5964,7 +5968,9 @@ QCPDataRange* q_cpdataselection_data_range(void* self);
 ///
 /// @param self QCPDataSelection*
 ///
-libqt_list /* of QCPDataRange* */ q_cpdataselection_data_ranges(void* self);
+/// @return libqt_list of QCPDataRange*
+///
+libqt_list q_cpdataselection_data_ranges(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPDataSelection.html)
 ///
@@ -6596,7 +6602,9 @@ void q_cpselectionrect_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPSelectionRect*
 ///
-libqt_list /* of QObject* */ q_cpselectionrect_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpselectionrect_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -7785,7 +7793,9 @@ const char* q_cpmargingroup_tr(const char* s);
 /// @param self QCPMarginGroup*
 /// @param side enum QCP__MarginSide
 ///
-libqt_list /* of QCPLayoutElement* */ q_cpmargingroup_elements(void* self, int32_t side);
+/// @return libqt_list of QCPLayoutElement*
+///
+libqt_list q_cpmargingroup_elements(void* self, int32_t side);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPMarginGroup.html)
 ///
@@ -8007,7 +8017,9 @@ void q_cpmargingroup_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPMarginGroup*
 ///
-libqt_list /* of QObject* */ q_cpmargingroup_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpmargingroup_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -8747,7 +8759,8 @@ QCPMarginGroup* q_cplayoutelement_margin_group(void* self, int32_t side);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of enum QCP__MarginSide to QCPMarginGroup*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QCPMarginGroup*)map.values)[i]);
 /// }
@@ -8757,7 +8770,9 @@ QCPMarginGroup* q_cplayoutelement_margin_group(void* self, int32_t side);
 ///
 /// @param self QCPLayoutElement*
 ///
-libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cplayoutelement_margin_groups(void* self);
+/// @return libqt_map of enum QCP__MarginSide to QCPMarginGroup*
+///
+libqt_map q_cplayoutelement_margin_groups(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
@@ -8908,7 +8923,9 @@ QSize* q_cplayoutelement_qbase_maximum_outer_size_hint(void* self);
 /// @param self QCPLayoutElement*
 /// @param recursive bool
 ///
-libqt_list /* of QCPLayoutElement* */ q_cplayoutelement_elements(void* self, bool recursive);
+/// @return libqt_list of QCPLayoutElement*
+///
+libqt_list q_cplayoutelement_elements(void* self, bool recursive);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
@@ -8926,7 +8943,9 @@ void q_cplayoutelement_on_elements(void* self, QCPLayoutElement** (*callback)(vo
 /// @param self QCPLayoutElement*
 /// @param recursive bool
 ///
-libqt_list /* of QCPLayoutElement* */ q_cplayoutelement_qbase_elements(void* self, bool recursive);
+/// @return libqt_list of QCPLayoutElement*
+///
+libqt_list q_cplayoutelement_qbase_elements(void* self, bool recursive);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
@@ -9311,7 +9330,9 @@ void q_cplayoutelement_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPLayoutElement*
 ///
-libqt_list /* of QObject* */ q_cplayoutelement_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cplayoutelement_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -10453,7 +10474,9 @@ void q_cplayout_qbase_update(void* self, int32_t phase);
 /// @param self QCPLayout*
 /// @param recursive bool
 ///
-libqt_list /* of QCPLayoutElement* */ q_cplayout_elements(void* self, bool recursive);
+/// @return libqt_list of QCPLayoutElement*
+///
+libqt_list q_cplayout_elements(void* self, bool recursive);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
 ///
@@ -10471,7 +10494,9 @@ void q_cplayout_on_elements(void* self, QCPLayoutElement** (*callback)(void*, bo
 /// @param self QCPLayout*
 /// @param recursive bool
 ///
-libqt_list /* of QCPLayoutElement* */ q_cplayout_qbase_elements(void* self, bool recursive);
+/// @return libqt_list of QCPLayoutElement*
+///
+libqt_list q_cplayout_qbase_elements(void* self, bool recursive);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
 ///
@@ -10713,33 +10738,37 @@ void q_cplayout_qbase_release_element(void* self, void* el);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
 ///
 /// @param self QCPLayout*
-/// @param maxSizes libqt_list /* of int */
-/// @param minSizes libqt_list /* of int */
-/// @param stretchFactors libqt_list /* of double */
+/// @param maxSizes libqt_list of int
+/// @param minSizes libqt_list of int
+/// @param stretchFactors libqt_list of double
 /// @param totalSize int
 ///
-libqt_list /* of int */ q_cplayout_get_section_sizes(void* self, libqt_list maxSizes, libqt_list minSizes, libqt_list stretchFactors, int totalSize);
+/// @return libqt_list of int
+///
+libqt_list q_cplayout_get_section_sizes(void* self, libqt_list /* of int */ maxSizes, libqt_list /* of int */ minSizes, libqt_list /* of double */ stretchFactors, int totalSize);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QCPLayout*
-/// @param callback int* func(QCPLayout* self, int* /* of int */, int* /* of int */, libqt_list /* of double */ /* of double */, int totalSize)
+/// @param callback int* func(QCPLayout* self, int* , int* , libqt_list of double of double, int totalSize)
 ///
-void q_cplayout_on_get_section_sizes(void* self, int* (*callback)(void*, int*, int*, libqt_list, int));
+void q_cplayout_on_get_section_sizes(void* self, int* (*callback)(void*, libqt_list /* of int */, libqt_list /* of int */, libqt_list /* of double */, int));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QCPLayout*
-/// @param maxSizes libqt_list /* of int */
-/// @param minSizes libqt_list /* of int */
-/// @param stretchFactors libqt_list /* of double */
+/// @param maxSizes libqt_list of int
+/// @param minSizes libqt_list of int
+/// @param stretchFactors libqt_list of double
 /// @param totalSize int
 ///
-libqt_list /* of int */ q_cplayout_qbase_get_section_sizes(void* self, libqt_list maxSizes, libqt_list minSizes, libqt_list stretchFactors, int totalSize);
+/// @return libqt_list of int
+///
+libqt_list q_cplayout_qbase_get_section_sizes(void* self, libqt_list /* of int */ maxSizes, libqt_list /* of int */ minSizes, libqt_list /* of double */ stretchFactors, int totalSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -10851,7 +10880,8 @@ QCPMarginGroup* q_cplayout_margin_group(void* self, int32_t side);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of enum QCP__MarginSide to QCPMarginGroup*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QCPMarginGroup*)map.values)[i]);
 /// }
@@ -10861,7 +10891,9 @@ QCPMarginGroup* q_cplayout_margin_group(void* self, int32_t side);
 ///
 /// @param self QCPLayout*
 ///
-libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cplayout_margin_groups(void* self);
+/// @return libqt_map of enum QCP__MarginSide to QCPMarginGroup*
+///
+libqt_map q_cplayout_margin_groups(void* self);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -11168,7 +11200,9 @@ void q_cplayout_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPLayout*
 ///
-libqt_list /* of QObject* */ q_cplayout_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cplayout_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -12558,13 +12592,17 @@ int32_t q_cplayoutgrid_column_count(void* self);
 ///
 /// @param self QCPLayoutGrid*
 ///
-libqt_list /* of double */ q_cplayoutgrid_column_stretch_factors(void* self);
+/// @return libqt_list of double
+///
+libqt_list q_cplayoutgrid_column_stretch_factors(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
 /// @param self QCPLayoutGrid*
 ///
-libqt_list /* of double */ q_cplayoutgrid_row_stretch_factors(void* self);
+/// @return libqt_list of double
+///
+libqt_list q_cplayoutgrid_row_stretch_factors(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
@@ -12603,9 +12641,9 @@ void q_cplayoutgrid_set_column_stretch_factor(void* self, int column, double fac
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
 /// @param self QCPLayoutGrid*
-/// @param factors libqt_list /* of double */
+/// @param factors libqt_list of double
 ///
-void q_cplayoutgrid_set_column_stretch_factors(void* self, libqt_list factors);
+void q_cplayoutgrid_set_column_stretch_factors(void* self, libqt_list /* of double */ factors);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
@@ -12618,9 +12656,9 @@ void q_cplayoutgrid_set_row_stretch_factor(void* self, int row, double factor);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
 /// @param self QCPLayoutGrid*
-/// @param factors libqt_list /* of double */
+/// @param factors libqt_list of double
 ///
-void q_cplayoutgrid_set_row_stretch_factors(void* self, libqt_list factors);
+void q_cplayoutgrid_set_row_stretch_factors(void* self, libqt_list /* of double */ factors);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
@@ -12776,7 +12814,9 @@ bool q_cplayoutgrid_qbase_take(void* self, void* element);
 /// @param self QCPLayoutGrid*
 /// @param recursive bool
 ///
-libqt_list /* of QCPLayoutElement* */ q_cplayoutgrid_elements(void* self, bool recursive);
+/// @return libqt_list of QCPLayoutElement*
+///
+libqt_list q_cplayoutgrid_elements(void* self, bool recursive);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
@@ -12794,7 +12834,9 @@ void q_cplayoutgrid_on_elements(void* self, QCPLayoutElement** (*callback)(void*
 /// @param self QCPLayoutGrid*
 /// @param recursive bool
 ///
-libqt_list /* of QCPLayoutElement* */ q_cplayoutgrid_qbase_elements(void* self, bool recursive);
+/// @return libqt_list of QCPLayoutElement*
+///
+libqt_list q_cplayoutgrid_qbase_elements(void* self, bool recursive);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
@@ -12939,56 +12981,56 @@ void q_cplayoutgrid_index_to_row_col(void* self, int index, int* row, int* colum
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
 /// @param self QCPLayoutGrid*
-/// @param minColWidths libqt_list /* of int */
-/// @param minRowHeights libqt_list /* of int */
+/// @param minColWidths libqt_list of int
+/// @param minRowHeights libqt_list of int
 ///
-void q_cplayoutgrid_get_minimum_row_col_sizes(void* self, libqt_list minColWidths, libqt_list minRowHeights);
+void q_cplayoutgrid_get_minimum_row_col_sizes(void* self, libqt_list /* of int */ minColWidths, libqt_list /* of int */ minRowHeights);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QCPLayoutGrid*
-/// @param callback void func(QCPLayoutGrid* self, int* /* of int */, int* /* of int */)
+/// @param callback void func(QCPLayoutGrid* self, int* , int* )
 ///
-void q_cplayoutgrid_on_get_minimum_row_col_sizes(void* self, void (*callback)(void*, int*, int*));
+void q_cplayoutgrid_on_get_minimum_row_col_sizes(void* self, void (*callback)(void*, libqt_list /* of int */, libqt_list /* of int */));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QCPLayoutGrid*
-/// @param minColWidths libqt_list /* of int */
-/// @param minRowHeights libqt_list /* of int */
+/// @param minColWidths libqt_list of int
+/// @param minRowHeights libqt_list of int
 ///
-void q_cplayoutgrid_qbase_get_minimum_row_col_sizes(void* self, libqt_list minColWidths, libqt_list minRowHeights);
+void q_cplayoutgrid_qbase_get_minimum_row_col_sizes(void* self, libqt_list /* of int */ minColWidths, libqt_list /* of int */ minRowHeights);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
 /// @param self QCPLayoutGrid*
-/// @param maxColWidths libqt_list /* of int */
-/// @param maxRowHeights libqt_list /* of int */
+/// @param maxColWidths libqt_list of int
+/// @param maxRowHeights libqt_list of int
 ///
-void q_cplayoutgrid_get_maximum_row_col_sizes(void* self, libqt_list maxColWidths, libqt_list maxRowHeights);
+void q_cplayoutgrid_get_maximum_row_col_sizes(void* self, libqt_list /* of int */ maxColWidths, libqt_list /* of int */ maxRowHeights);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QCPLayoutGrid*
-/// @param callback void func(QCPLayoutGrid* self, int* /* of int */, int* /* of int */)
+/// @param callback void func(QCPLayoutGrid* self, int* , int* )
 ///
-void q_cplayoutgrid_on_get_maximum_row_col_sizes(void* self, void (*callback)(void*, int*, int*));
+void q_cplayoutgrid_on_get_maximum_row_col_sizes(void* self, void (*callback)(void*, libqt_list /* of int */, libqt_list /* of int */));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QCPLayoutGrid*
-/// @param maxColWidths libqt_list /* of int */
-/// @param maxRowHeights libqt_list /* of int */
+/// @param maxColWidths libqt_list of int
+/// @param maxRowHeights libqt_list of int
 ///
-void q_cplayoutgrid_qbase_get_maximum_row_col_sizes(void* self, libqt_list maxColWidths, libqt_list maxRowHeights);
+void q_cplayoutgrid_qbase_get_maximum_row_col_sizes(void* self, libqt_list /* of int */ maxColWidths, libqt_list /* of int */ maxRowHeights);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -13134,7 +13176,8 @@ QCPMarginGroup* q_cplayoutgrid_margin_group(void* self, int32_t side);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of enum QCP__MarginSide to QCPMarginGroup*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QCPMarginGroup*)map.values)[i]);
 /// }
@@ -13144,7 +13187,9 @@ QCPMarginGroup* q_cplayoutgrid_margin_group(void* self, int32_t side);
 ///
 /// @param self QCPLayoutGrid*
 ///
-libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cplayoutgrid_margin_groups(void* self);
+/// @return libqt_map of enum QCP__MarginSide to QCPMarginGroup*
+///
+libqt_map q_cplayoutgrid_margin_groups(void* self);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -13451,7 +13496,9 @@ void q_cplayoutgrid_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPLayoutGrid*
 ///
-libqt_list /* of QObject* */ q_cplayoutgrid_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cplayoutgrid_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -14567,12 +14614,14 @@ void q_cplayoutgrid_on_release_element(void* self, void (*callback)(void*, void*
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QCPLayoutGrid*
-/// @param maxSizes libqt_list /* of int */
-/// @param minSizes libqt_list /* of int */
-/// @param stretchFactors libqt_list /* of double */
+/// @param maxSizes libqt_list of int
+/// @param minSizes libqt_list of int
+/// @param stretchFactors libqt_list of double
 /// @param totalSize int
 ///
-libqt_list /* of int */ q_cplayoutgrid_get_section_sizes(void* self, libqt_list maxSizes, libqt_list minSizes, libqt_list stretchFactors, int totalSize);
+/// @return libqt_list of int
+///
+libqt_list q_cplayoutgrid_get_section_sizes(void* self, libqt_list /* of int */ maxSizes, libqt_list /* of int */ minSizes, libqt_list /* of double */ stretchFactors, int totalSize);
 
 /// Inherited from QCPLayout
 ///
@@ -14581,12 +14630,14 @@ libqt_list /* of int */ q_cplayoutgrid_get_section_sizes(void* self, libqt_list 
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QCPLayoutGrid*
-/// @param maxSizes libqt_list /* of int */
-/// @param minSizes libqt_list /* of int */
-/// @param stretchFactors libqt_list /* of double */
+/// @param maxSizes libqt_list of int
+/// @param minSizes libqt_list of int
+/// @param stretchFactors libqt_list of double
 /// @param totalSize int
 ///
-libqt_list /* of int */ q_cplayoutgrid_qbase_get_section_sizes(void* self, libqt_list maxSizes, libqt_list minSizes, libqt_list stretchFactors, int totalSize);
+/// @return libqt_list of int
+///
+libqt_list q_cplayoutgrid_qbase_get_section_sizes(void* self, libqt_list /* of int */ maxSizes, libqt_list /* of int */ minSizes, libqt_list /* of double */ stretchFactors, int totalSize);
 
 /// Inherited from QCPLayout
 ///
@@ -14595,9 +14646,9 @@ libqt_list /* of int */ q_cplayoutgrid_qbase_get_section_sizes(void* self, libqt
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPLayoutGrid*
-/// @param callback int* func(QCPLayoutGrid* self, int* /* of int */, int* /* of int */, libqt_list /* of double */ /* of double */, int totalSize)
+/// @param callback int* func(QCPLayoutGrid* self, int* , int* , libqt_list of double of double, int totalSize)
 ///
-void q_cplayoutgrid_on_get_section_sizes(void* self, int* (*callback)(void*, int*, int*, libqt_list, int));
+void q_cplayoutgrid_on_get_section_sizes(void* self, int* (*callback)(void*, libqt_list /* of int */, libqt_list /* of int */, libqt_list /* of double */, int));
 
 /// Inherited from QCPLayerable
 ///
@@ -15306,7 +15357,8 @@ QCPMarginGroup* q_cplayoutinset_margin_group(void* self, int32_t side);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of enum QCP__MarginSide to QCPMarginGroup*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QCPMarginGroup*)map.values)[i]);
 /// }
@@ -15316,7 +15368,9 @@ QCPMarginGroup* q_cplayoutinset_margin_group(void* self, int32_t side);
 ///
 /// @param self QCPLayoutInset*
 ///
-libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cplayoutinset_margin_groups(void* self);
+/// @return libqt_map of enum QCP__MarginSide to QCPMarginGroup*
+///
+libqt_map q_cplayoutinset_margin_groups(void* self);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -15623,7 +15677,9 @@ void q_cplayoutinset_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPLayoutInset*
 ///
-libqt_list /* of QObject* */ q_cplayoutinset_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cplayoutinset_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -15900,7 +15956,9 @@ void q_cplayoutinset_on_update(void* self, void (*callback)(void*, int32_t));
 /// @param self QCPLayoutInset*
 /// @param recursive bool
 ///
-libqt_list /* of QCPLayoutElement* */ q_cplayoutinset_elements(void* self, bool recursive);
+/// @return libqt_list of QCPLayoutElement*
+///
+libqt_list q_cplayoutinset_elements(void* self, bool recursive);
 
 /// Inherited from QCPLayout
 ///
@@ -15911,7 +15969,9 @@ libqt_list /* of QCPLayoutElement* */ q_cplayoutinset_elements(void* self, bool 
 /// @param self QCPLayoutInset*
 /// @param recursive bool
 ///
-libqt_list /* of QCPLayoutElement* */ q_cplayoutinset_qbase_elements(void* self, bool recursive);
+/// @return libqt_list of QCPLayoutElement*
+///
+libqt_list q_cplayoutinset_qbase_elements(void* self, bool recursive);
 
 /// Inherited from QCPLayout
 ///
@@ -16797,12 +16857,14 @@ void q_cplayoutinset_on_release_element(void* self, void (*callback)(void*, void
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QCPLayoutInset*
-/// @param maxSizes libqt_list /* of int */
-/// @param minSizes libqt_list /* of int */
-/// @param stretchFactors libqt_list /* of double */
+/// @param maxSizes libqt_list of int
+/// @param minSizes libqt_list of int
+/// @param stretchFactors libqt_list of double
 /// @param totalSize int
 ///
-libqt_list /* of int */ q_cplayoutinset_get_section_sizes(void* self, libqt_list maxSizes, libqt_list minSizes, libqt_list stretchFactors, int totalSize);
+/// @return libqt_list of int
+///
+libqt_list q_cplayoutinset_get_section_sizes(void* self, libqt_list /* of int */ maxSizes, libqt_list /* of int */ minSizes, libqt_list /* of double */ stretchFactors, int totalSize);
 
 /// Inherited from QCPLayout
 ///
@@ -16811,12 +16873,14 @@ libqt_list /* of int */ q_cplayoutinset_get_section_sizes(void* self, libqt_list
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QCPLayoutInset*
-/// @param maxSizes libqt_list /* of int */
-/// @param minSizes libqt_list /* of int */
-/// @param stretchFactors libqt_list /* of double */
+/// @param maxSizes libqt_list of int
+/// @param minSizes libqt_list of int
+/// @param stretchFactors libqt_list of double
 /// @param totalSize int
 ///
-libqt_list /* of int */ q_cplayoutinset_qbase_get_section_sizes(void* self, libqt_list maxSizes, libqt_list minSizes, libqt_list stretchFactors, int totalSize);
+/// @return libqt_list of int
+///
+libqt_list q_cplayoutinset_qbase_get_section_sizes(void* self, libqt_list /* of int */ maxSizes, libqt_list /* of int */ minSizes, libqt_list /* of double */ stretchFactors, int totalSize);
 
 /// Inherited from QCPLayout
 ///
@@ -16825,9 +16889,9 @@ libqt_list /* of int */ q_cplayoutinset_qbase_get_section_sizes(void* self, libq
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPLayoutInset*
-/// @param callback int* func(QCPLayoutInset* self, int* /* of int */, int* /* of int */, libqt_list /* of double */ /* of double */, int totalSize)
+/// @param callback int* func(QCPLayoutInset* self, int* , int* , libqt_list of double of double, int totalSize)
 ///
-void q_cplayoutinset_on_get_section_sizes(void* self, int* (*callback)(void*, int*, int*, libqt_list, int));
+void q_cplayoutinset_on_get_section_sizes(void* self, int* (*callback)(void*, libqt_list /* of int */, libqt_list /* of int */, libqt_list /* of double */, int));
 
 /// Inherited from QCPLayerable
 ///
@@ -17342,20 +17406,20 @@ void q_cpaxisticker_set_tick_origin(void* self, double origin);
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
-/// @param ticks libqt_list /* of double */
-/// @param subTicks libqt_list /* of double */
+/// @param ticks libqt_list of double
+/// @param subTicks libqt_list of double
 /// @param tickLabels const char**
 ///
-void q_cpaxisticker_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
+void q_cpaxisticker_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QCPAxisTicker*
-/// @param callback void func(QCPAxisTicker* self, QCPRange* range, QLocale* locale, QChar* formatChar, int precision, libqt_list /* of double */ /* of double */, libqt_list /* of double */ /* of double */, const char** tickLabels)
+/// @param callback void func(QCPAxisTicker* self, QCPRange* range, QLocale* locale, QChar* formatChar, int precision, libqt_list of double of double, libqt_list of double of double, const char** tickLabels)
 ///
-void q_cpaxisticker_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**));
+void q_cpaxisticker_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
@@ -17366,11 +17430,11 @@ void q_cpaxisticker_on_generate(void* self, void (*callback)(void*, void*, void*
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
-/// @param ticks libqt_list /* of double */
-/// @param subTicks libqt_list /* of double */
+/// @param ticks libqt_list of double
+/// @param subTicks libqt_list of double
 /// @param tickLabels const char**
 ///
-void q_cpaxisticker_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
+void q_cpaxisticker_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
@@ -17461,7 +17525,9 @@ const char* q_cpaxisticker_qbase_get_tick_label(void* self, double tick, void* l
 /// @param tickStep double
 /// @param range QCPRange*
 ///
-libqt_list /* of double */ q_cpaxisticker_create_tick_vector(void* self, double tickStep, void* range);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxisticker_create_tick_vector(void* self, double tickStep, void* range);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
@@ -17470,7 +17536,7 @@ libqt_list /* of double */ q_cpaxisticker_create_tick_vector(void* self, double 
 /// @param self QCPAxisTicker*
 /// @param callback libqt_list /* of double */ func(QCPAxisTicker* self, double tickStep, QCPRange* range)
 ///
-void q_cpaxisticker_on_create_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, double, void*));
+void q_cpaxisticker_on_create_tick_vector(void* self, libqt_list (*callback)(void*, double, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
@@ -17480,24 +17546,28 @@ void q_cpaxisticker_on_create_tick_vector(void* self, libqt_list /* of double */
 /// @param tickStep double
 /// @param range QCPRange*
 ///
-libqt_list /* of double */ q_cpaxisticker_qbase_create_tick_vector(void* self, double tickStep, void* range);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxisticker_qbase_create_tick_vector(void* self, double tickStep, void* range);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
 /// @param self QCPAxisTicker*
 /// @param subTickCount int
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 ///
-libqt_list /* of double */ q_cpaxisticker_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxisticker_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QCPAxisTicker*
-/// @param callback libqt_list /* of double */ func(QCPAxisTicker* self, int subTickCount, libqt_list /* of double */ /* of double */)
+/// @param callback libqt_list /* of double */ func(QCPAxisTicker* self, int subTickCount, libqt_list of double of double)
 ///
-void q_cpaxisticker_on_create_sub_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, int, libqt_list));
+void q_cpaxisticker_on_create_sub_tick_vector(void* self, libqt_list (*callback)(void*, int, libqt_list /* of double */));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
@@ -17505,60 +17575,62 @@ void q_cpaxisticker_on_create_sub_tick_vector(void* self, libqt_list /* of doubl
 ///
 /// @param self QCPAxisTicker*
 /// @param subTickCount int
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 ///
-libqt_list /* of double */ q_cpaxisticker_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxisticker_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QCPAxisTicker*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
 ///
-const char** q_cpaxisticker_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision);
+const char** q_cpaxisticker_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QCPAxisTicker*
-/// @param callback const char** func(QCPAxisTicker* self, libqt_list /* of double */ /* of double */, QLocale* locale, QChar* formatChar, int precision)
+/// @param callback const char** func(QCPAxisTicker* self, libqt_list of double of double, QLocale* locale, QChar* formatChar, int precision)
 ///
-void q_cpaxisticker_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list, void*, void*, int));
+void q_cpaxisticker_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list /* of double */, void*, void*, int));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QCPAxisTicker*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
 ///
-const char** q_cpaxisticker_qbase_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision);
+const char** q_cpaxisticker_qbase_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
 /// @param self QCPAxisTicker*
 /// @param range QCPRange*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param keepOneOutlier bool
 ///
-void q_cpaxisticker_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier);
+void q_cpaxisticker_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QCPAxisTicker*
-/// @param callback void func(QCPAxisTicker* self, QCPRange* range, libqt_list /* of double */ /* of double */, bool keepOneOutlier)
+/// @param callback void func(QCPAxisTicker* self, QCPRange* range, libqt_list of double of double, bool keepOneOutlier)
 ///
-void q_cpaxisticker_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list, bool));
+void q_cpaxisticker_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list /* of double */, bool));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
@@ -17566,27 +17638,27 @@ void q_cpaxisticker_on_trim_ticks(void* self, void (*callback)(void*, void*, lib
 ///
 /// @param self QCPAxisTicker*
 /// @param range QCPRange*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param keepOneOutlier bool
 ///
-void q_cpaxisticker_qbase_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier);
+void q_cpaxisticker_qbase_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
 /// @param self QCPAxisTicker*
 /// @param target double
-/// @param candidates libqt_list /* of double */
+/// @param candidates libqt_list of double
 ///
-double q_cpaxisticker_pick_closest(void* self, double target, libqt_list candidates);
+double q_cpaxisticker_pick_closest(void* self, double target, libqt_list /* of double */ candidates);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QCPAxisTicker*
-/// @param callback double func(QCPAxisTicker* self, double target, libqt_list /* of double */ /* of double */)
+/// @param callback double func(QCPAxisTicker* self, double target, libqt_list of double of double)
 ///
-void q_cpaxisticker_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list));
+void q_cpaxisticker_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list /* of double */));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
@@ -17594,9 +17666,9 @@ void q_cpaxisticker_on_pick_closest(void* self, double (*callback)(void*, double
 ///
 /// @param self QCPAxisTicker*
 /// @param target double
-/// @param candidates libqt_list /* of double */
+/// @param candidates libqt_list of double
 ///
-double q_cpaxisticker_qbase_pick_closest(void* self, double target, libqt_list candidates);
+double q_cpaxisticker_qbase_pick_closest(void* self, double target, libqt_list /* of double */ candidates);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
@@ -17853,7 +17925,9 @@ const char* q_cpaxistickerdatetime_qbase_get_tick_label(void* self, double tick,
 /// @param tickStep double
 /// @param range QCPRange*
 ///
-libqt_list /* of double */ q_cpaxistickerdatetime_create_tick_vector(void* self, double tickStep, void* range);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxistickerdatetime_create_tick_vector(void* self, double tickStep, void* range);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerDateTime.html)
 ///
@@ -17862,7 +17936,7 @@ libqt_list /* of double */ q_cpaxistickerdatetime_create_tick_vector(void* self,
 /// @param self QCPAxisTickerDateTime*
 /// @param callback libqt_list /* of double */ func(QCPAxisTickerDateTime* self, double tickStep, QCPRange* range)
 ///
-void q_cpaxistickerdatetime_on_create_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, double, void*));
+void q_cpaxistickerdatetime_on_create_tick_vector(void* self, libqt_list (*callback)(void*, double, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerDateTime.html)
 ///
@@ -17872,7 +17946,9 @@ void q_cpaxistickerdatetime_on_create_tick_vector(void* self, libqt_list /* of d
 /// @param tickStep double
 /// @param range QCPRange*
 ///
-libqt_list /* of double */ q_cpaxistickerdatetime_qbase_create_tick_vector(void* self, double tickStep, void* range);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxistickerdatetime_qbase_create_tick_vector(void* self, double tickStep, void* range);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerDateTime.html)
 ///
@@ -17936,11 +18012,11 @@ void q_cpaxistickerdatetime_set_tick_count(void* self, int count);
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
-/// @param ticks libqt_list /* of double */
-/// @param subTicks libqt_list /* of double */
+/// @param ticks libqt_list of double
+/// @param subTicks libqt_list of double
 /// @param tickLabels const char**
 ///
-void q_cpaxistickerdatetime_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
+void q_cpaxistickerdatetime_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -17953,11 +18029,11 @@ void q_cpaxistickerdatetime_generate(void* self, void* range, void* locale, void
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
-/// @param ticks libqt_list /* of double */
-/// @param subTicks libqt_list /* of double */
+/// @param ticks libqt_list of double
+/// @param subTicks libqt_list of double
 /// @param tickLabels const char**
 ///
-void q_cpaxistickerdatetime_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
+void q_cpaxistickerdatetime_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -17966,9 +18042,9 @@ void q_cpaxistickerdatetime_qbase_generate(void* self, void* range, void* locale
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerDateTime*
-/// @param callback void func(QCPAxisTickerDateTime* self, QCPRange* range, QLocale* locale, QChar* formatChar, int precision, libqt_list /* of double */ /* of double */, libqt_list /* of double */ /* of double */, const char** tickLabels)
+/// @param callback void func(QCPAxisTickerDateTime* self, QCPRange* range, QLocale* locale, QChar* formatChar, int precision, libqt_list of double of double, libqt_list of double of double, const char** tickLabels)
 ///
-void q_cpaxistickerdatetime_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**));
+void q_cpaxistickerdatetime_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -17978,9 +18054,11 @@ void q_cpaxistickerdatetime_on_generate(void* self, void (*callback)(void*, void
 ///
 /// @param self QCPAxisTickerDateTime*
 /// @param subTickCount int
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 ///
-libqt_list /* of double */ q_cpaxistickerdatetime_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxistickerdatetime_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -17990,9 +18068,11 @@ libqt_list /* of double */ q_cpaxistickerdatetime_create_sub_tick_vector(void* s
 ///
 /// @param self QCPAxisTickerDateTime*
 /// @param subTickCount int
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 ///
-libqt_list /* of double */ q_cpaxistickerdatetime_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxistickerdatetime_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18001,9 +18081,9 @@ libqt_list /* of double */ q_cpaxistickerdatetime_qbase_create_sub_tick_vector(v
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerDateTime*
-/// @param callback libqt_list /* of double */ func(QCPAxisTickerDateTime* self, int subTickCount, libqt_list /* of double */ /* of double */)
+/// @param callback libqt_list /* of double */ func(QCPAxisTickerDateTime* self, int subTickCount, libqt_list of double of double)
 ///
-void q_cpaxistickerdatetime_on_create_sub_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, int, libqt_list));
+void q_cpaxistickerdatetime_on_create_sub_tick_vector(void* self, libqt_list (*callback)(void*, int, libqt_list /* of double */));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18014,12 +18094,12 @@ void q_cpaxistickerdatetime_on_create_sub_tick_vector(void* self, libqt_list /* 
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QCPAxisTickerDateTime*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
 ///
-const char** q_cpaxistickerdatetime_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision);
+const char** q_cpaxistickerdatetime_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18030,12 +18110,12 @@ const char** q_cpaxistickerdatetime_create_label_vector(void* self, libqt_list t
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QCPAxisTickerDateTime*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
 ///
-const char** q_cpaxistickerdatetime_qbase_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision);
+const char** q_cpaxistickerdatetime_qbase_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18044,9 +18124,9 @@ const char** q_cpaxistickerdatetime_qbase_create_label_vector(void* self, libqt_
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerDateTime*
-/// @param callback const char** func(QCPAxisTickerDateTime* self, libqt_list /* of double */ /* of double */, QLocale* locale, QChar* formatChar, int precision)
+/// @param callback const char** func(QCPAxisTickerDateTime* self, libqt_list of double of double, QLocale* locale, QChar* formatChar, int precision)
 ///
-void q_cpaxistickerdatetime_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list, void*, void*, int));
+void q_cpaxistickerdatetime_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list /* of double */, void*, void*, int));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18056,10 +18136,10 @@ void q_cpaxistickerdatetime_on_create_label_vector(void* self, const char** (*ca
 ///
 /// @param self QCPAxisTickerDateTime*
 /// @param range QCPRange*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param keepOneOutlier bool
 ///
-void q_cpaxistickerdatetime_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier);
+void q_cpaxistickerdatetime_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18069,10 +18149,10 @@ void q_cpaxistickerdatetime_trim_ticks(void* self, void* range, libqt_list ticks
 ///
 /// @param self QCPAxisTickerDateTime*
 /// @param range QCPRange*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param keepOneOutlier bool
 ///
-void q_cpaxistickerdatetime_qbase_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier);
+void q_cpaxistickerdatetime_qbase_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18081,9 +18161,9 @@ void q_cpaxistickerdatetime_qbase_trim_ticks(void* self, void* range, libqt_list
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerDateTime*
-/// @param callback void func(QCPAxisTickerDateTime* self, QCPRange* range, libqt_list /* of double */ /* of double */, bool keepOneOutlier)
+/// @param callback void func(QCPAxisTickerDateTime* self, QCPRange* range, libqt_list of double of double, bool keepOneOutlier)
 ///
-void q_cpaxistickerdatetime_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list, bool));
+void q_cpaxistickerdatetime_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list /* of double */, bool));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18093,9 +18173,9 @@ void q_cpaxistickerdatetime_on_trim_ticks(void* self, void (*callback)(void*, vo
 ///
 /// @param self QCPAxisTickerDateTime*
 /// @param target double
-/// @param candidates libqt_list /* of double */
+/// @param candidates libqt_list of double
 ///
-double q_cpaxistickerdatetime_pick_closest(void* self, double target, libqt_list candidates);
+double q_cpaxistickerdatetime_pick_closest(void* self, double target, libqt_list /* of double */ candidates);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18105,9 +18185,9 @@ double q_cpaxistickerdatetime_pick_closest(void* self, double target, libqt_list
 ///
 /// @param self QCPAxisTickerDateTime*
 /// @param target double
-/// @param candidates libqt_list /* of double */
+/// @param candidates libqt_list of double
 ///
-double q_cpaxistickerdatetime_qbase_pick_closest(void* self, double target, libqt_list candidates);
+double q_cpaxistickerdatetime_qbase_pick_closest(void* self, double target, libqt_list /* of double */ candidates);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18116,9 +18196,9 @@ double q_cpaxistickerdatetime_qbase_pick_closest(void* self, double target, libq
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerDateTime*
-/// @param callback double func(QCPAxisTickerDateTime* self, double target, libqt_list /* of double */ /* of double */)
+/// @param callback double func(QCPAxisTickerDateTime* self, double target, libqt_list of double of double)
 ///
-void q_cpaxistickerdatetime_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list));
+void q_cpaxistickerdatetime_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list /* of double */));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18406,11 +18486,11 @@ void q_cpaxistickertime_set_tick_origin(void* self, double origin);
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
-/// @param ticks libqt_list /* of double */
-/// @param subTicks libqt_list /* of double */
+/// @param ticks libqt_list of double
+/// @param subTicks libqt_list of double
 /// @param tickLabels const char**
 ///
-void q_cpaxistickertime_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
+void q_cpaxistickertime_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18423,11 +18503,11 @@ void q_cpaxistickertime_generate(void* self, void* range, void* locale, void* fo
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
-/// @param ticks libqt_list /* of double */
-/// @param subTicks libqt_list /* of double */
+/// @param ticks libqt_list of double
+/// @param subTicks libqt_list of double
 /// @param tickLabels const char**
 ///
-void q_cpaxistickertime_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
+void q_cpaxistickertime_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18436,9 +18516,9 @@ void q_cpaxistickertime_qbase_generate(void* self, void* range, void* locale, vo
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerTime*
-/// @param callback void func(QCPAxisTickerTime* self, QCPRange* range, QLocale* locale, QChar* formatChar, int precision, libqt_list /* of double */ /* of double */, libqt_list /* of double */ /* of double */, const char** tickLabels)
+/// @param callback void func(QCPAxisTickerTime* self, QCPRange* range, QLocale* locale, QChar* formatChar, int precision, libqt_list of double of double, libqt_list of double of double, const char** tickLabels)
 ///
-void q_cpaxistickertime_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**));
+void q_cpaxistickertime_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18450,7 +18530,9 @@ void q_cpaxistickertime_on_generate(void* self, void (*callback)(void*, void*, v
 /// @param tickStep double
 /// @param range QCPRange*
 ///
-libqt_list /* of double */ q_cpaxistickertime_create_tick_vector(void* self, double tickStep, void* range);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxistickertime_create_tick_vector(void* self, double tickStep, void* range);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18462,7 +18544,9 @@ libqt_list /* of double */ q_cpaxistickertime_create_tick_vector(void* self, dou
 /// @param tickStep double
 /// @param range QCPRange*
 ///
-libqt_list /* of double */ q_cpaxistickertime_qbase_create_tick_vector(void* self, double tickStep, void* range);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxistickertime_qbase_create_tick_vector(void* self, double tickStep, void* range);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18473,7 +18557,7 @@ libqt_list /* of double */ q_cpaxistickertime_qbase_create_tick_vector(void* sel
 /// @param self QCPAxisTickerTime*
 /// @param callback libqt_list /* of double */ func(QCPAxisTickerTime* self, double tickStep, QCPRange* range)
 ///
-void q_cpaxistickertime_on_create_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, double, void*));
+void q_cpaxistickertime_on_create_tick_vector(void* self, libqt_list (*callback)(void*, double, void*));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18483,9 +18567,11 @@ void q_cpaxistickertime_on_create_tick_vector(void* self, libqt_list /* of doubl
 ///
 /// @param self QCPAxisTickerTime*
 /// @param subTickCount int
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 ///
-libqt_list /* of double */ q_cpaxistickertime_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxistickertime_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18495,9 +18581,11 @@ libqt_list /* of double */ q_cpaxistickertime_create_sub_tick_vector(void* self,
 ///
 /// @param self QCPAxisTickerTime*
 /// @param subTickCount int
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 ///
-libqt_list /* of double */ q_cpaxistickertime_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxistickertime_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18506,9 +18594,9 @@ libqt_list /* of double */ q_cpaxistickertime_qbase_create_sub_tick_vector(void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerTime*
-/// @param callback libqt_list /* of double */ func(QCPAxisTickerTime* self, int subTickCount, libqt_list /* of double */ /* of double */)
+/// @param callback libqt_list /* of double */ func(QCPAxisTickerTime* self, int subTickCount, libqt_list of double of double)
 ///
-void q_cpaxistickertime_on_create_sub_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, int, libqt_list));
+void q_cpaxistickertime_on_create_sub_tick_vector(void* self, libqt_list (*callback)(void*, int, libqt_list /* of double */));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18519,12 +18607,12 @@ void q_cpaxistickertime_on_create_sub_tick_vector(void* self, libqt_list /* of d
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QCPAxisTickerTime*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
 ///
-const char** q_cpaxistickertime_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision);
+const char** q_cpaxistickertime_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18535,12 +18623,12 @@ const char** q_cpaxistickertime_create_label_vector(void* self, libqt_list ticks
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QCPAxisTickerTime*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
 ///
-const char** q_cpaxistickertime_qbase_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision);
+const char** q_cpaxistickertime_qbase_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18549,9 +18637,9 @@ const char** q_cpaxistickertime_qbase_create_label_vector(void* self, libqt_list
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerTime*
-/// @param callback const char** func(QCPAxisTickerTime* self, libqt_list /* of double */ /* of double */, QLocale* locale, QChar* formatChar, int precision)
+/// @param callback const char** func(QCPAxisTickerTime* self, libqt_list of double of double, QLocale* locale, QChar* formatChar, int precision)
 ///
-void q_cpaxistickertime_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list, void*, void*, int));
+void q_cpaxistickertime_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list /* of double */, void*, void*, int));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18561,10 +18649,10 @@ void q_cpaxistickertime_on_create_label_vector(void* self, const char** (*callba
 ///
 /// @param self QCPAxisTickerTime*
 /// @param range QCPRange*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param keepOneOutlier bool
 ///
-void q_cpaxistickertime_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier);
+void q_cpaxistickertime_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18574,10 +18662,10 @@ void q_cpaxistickertime_trim_ticks(void* self, void* range, libqt_list ticks, bo
 ///
 /// @param self QCPAxisTickerTime*
 /// @param range QCPRange*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param keepOneOutlier bool
 ///
-void q_cpaxistickertime_qbase_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier);
+void q_cpaxistickertime_qbase_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18586,9 +18674,9 @@ void q_cpaxistickertime_qbase_trim_ticks(void* self, void* range, libqt_list tic
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerTime*
-/// @param callback void func(QCPAxisTickerTime* self, QCPRange* range, libqt_list /* of double */ /* of double */, bool keepOneOutlier)
+/// @param callback void func(QCPAxisTickerTime* self, QCPRange* range, libqt_list of double of double, bool keepOneOutlier)
 ///
-void q_cpaxistickertime_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list, bool));
+void q_cpaxistickertime_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list /* of double */, bool));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18598,9 +18686,9 @@ void q_cpaxistickertime_on_trim_ticks(void* self, void (*callback)(void*, void*,
 ///
 /// @param self QCPAxisTickerTime*
 /// @param target double
-/// @param candidates libqt_list /* of double */
+/// @param candidates libqt_list of double
 ///
-double q_cpaxistickertime_pick_closest(void* self, double target, libqt_list candidates);
+double q_cpaxistickertime_pick_closest(void* self, double target, libqt_list /* of double */ candidates);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18610,9 +18698,9 @@ double q_cpaxistickertime_pick_closest(void* self, double target, libqt_list can
 ///
 /// @param self QCPAxisTickerTime*
 /// @param target double
-/// @param candidates libqt_list /* of double */
+/// @param candidates libqt_list of double
 ///
-double q_cpaxistickertime_qbase_pick_closest(void* self, double target, libqt_list candidates);
+double q_cpaxistickertime_qbase_pick_closest(void* self, double target, libqt_list /* of double */ candidates);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18621,9 +18709,9 @@ double q_cpaxistickertime_qbase_pick_closest(void* self, double target, libqt_li
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerTime*
-/// @param callback double func(QCPAxisTickerTime* self, double target, libqt_list /* of double */ /* of double */)
+/// @param callback double func(QCPAxisTickerTime* self, double target, libqt_list of double of double)
 ///
-void q_cpaxistickertime_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list));
+void q_cpaxistickertime_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list /* of double */));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18822,11 +18910,11 @@ void q_cpaxistickerfixed_set_tick_origin(void* self, double origin);
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
-/// @param ticks libqt_list /* of double */
-/// @param subTicks libqt_list /* of double */
+/// @param ticks libqt_list of double
+/// @param subTicks libqt_list of double
 /// @param tickLabels const char**
 ///
-void q_cpaxistickerfixed_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
+void q_cpaxistickerfixed_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18839,11 +18927,11 @@ void q_cpaxistickerfixed_generate(void* self, void* range, void* locale, void* f
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
-/// @param ticks libqt_list /* of double */
-/// @param subTicks libqt_list /* of double */
+/// @param ticks libqt_list of double
+/// @param subTicks libqt_list of double
 /// @param tickLabels const char**
 ///
-void q_cpaxistickerfixed_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
+void q_cpaxistickerfixed_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18852,9 +18940,9 @@ void q_cpaxistickerfixed_qbase_generate(void* self, void* range, void* locale, v
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerFixed*
-/// @param callback void func(QCPAxisTickerFixed* self, QCPRange* range, QLocale* locale, QChar* formatChar, int precision, libqt_list /* of double */ /* of double */, libqt_list /* of double */ /* of double */, const char** tickLabels)
+/// @param callback void func(QCPAxisTickerFixed* self, QCPRange* range, QLocale* locale, QChar* formatChar, int precision, libqt_list of double of double, libqt_list of double of double, const char** tickLabels)
 ///
-void q_cpaxistickerfixed_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**));
+void q_cpaxistickerfixed_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18942,7 +19030,9 @@ void q_cpaxistickerfixed_on_get_tick_label(void* self, const char* (*callback)(v
 /// @param tickStep double
 /// @param range QCPRange*
 ///
-libqt_list /* of double */ q_cpaxistickerfixed_create_tick_vector(void* self, double tickStep, void* range);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxistickerfixed_create_tick_vector(void* self, double tickStep, void* range);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18954,7 +19044,9 @@ libqt_list /* of double */ q_cpaxistickerfixed_create_tick_vector(void* self, do
 /// @param tickStep double
 /// @param range QCPRange*
 ///
-libqt_list /* of double */ q_cpaxistickerfixed_qbase_create_tick_vector(void* self, double tickStep, void* range);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxistickerfixed_qbase_create_tick_vector(void* self, double tickStep, void* range);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18965,7 +19057,7 @@ libqt_list /* of double */ q_cpaxistickerfixed_qbase_create_tick_vector(void* se
 /// @param self QCPAxisTickerFixed*
 /// @param callback libqt_list /* of double */ func(QCPAxisTickerFixed* self, double tickStep, QCPRange* range)
 ///
-void q_cpaxistickerfixed_on_create_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, double, void*));
+void q_cpaxistickerfixed_on_create_tick_vector(void* self, libqt_list (*callback)(void*, double, void*));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18975,9 +19067,11 @@ void q_cpaxistickerfixed_on_create_tick_vector(void* self, libqt_list /* of doub
 ///
 /// @param self QCPAxisTickerFixed*
 /// @param subTickCount int
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 ///
-libqt_list /* of double */ q_cpaxistickerfixed_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxistickerfixed_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18987,9 +19081,11 @@ libqt_list /* of double */ q_cpaxistickerfixed_create_sub_tick_vector(void* self
 ///
 /// @param self QCPAxisTickerFixed*
 /// @param subTickCount int
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 ///
-libqt_list /* of double */ q_cpaxistickerfixed_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxistickerfixed_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18998,9 +19094,9 @@ libqt_list /* of double */ q_cpaxistickerfixed_qbase_create_sub_tick_vector(void
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerFixed*
-/// @param callback libqt_list /* of double */ func(QCPAxisTickerFixed* self, int subTickCount, libqt_list /* of double */ /* of double */)
+/// @param callback libqt_list /* of double */ func(QCPAxisTickerFixed* self, int subTickCount, libqt_list of double of double)
 ///
-void q_cpaxistickerfixed_on_create_sub_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, int, libqt_list));
+void q_cpaxistickerfixed_on_create_sub_tick_vector(void* self, libqt_list (*callback)(void*, int, libqt_list /* of double */));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19011,12 +19107,12 @@ void q_cpaxistickerfixed_on_create_sub_tick_vector(void* self, libqt_list /* of 
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QCPAxisTickerFixed*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
 ///
-const char** q_cpaxistickerfixed_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision);
+const char** q_cpaxistickerfixed_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19027,12 +19123,12 @@ const char** q_cpaxistickerfixed_create_label_vector(void* self, libqt_list tick
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QCPAxisTickerFixed*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
 ///
-const char** q_cpaxistickerfixed_qbase_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision);
+const char** q_cpaxistickerfixed_qbase_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19041,9 +19137,9 @@ const char** q_cpaxistickerfixed_qbase_create_label_vector(void* self, libqt_lis
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerFixed*
-/// @param callback const char** func(QCPAxisTickerFixed* self, libqt_list /* of double */ /* of double */, QLocale* locale, QChar* formatChar, int precision)
+/// @param callback const char** func(QCPAxisTickerFixed* self, libqt_list of double of double, QLocale* locale, QChar* formatChar, int precision)
 ///
-void q_cpaxistickerfixed_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list, void*, void*, int));
+void q_cpaxistickerfixed_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list /* of double */, void*, void*, int));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19053,10 +19149,10 @@ void q_cpaxistickerfixed_on_create_label_vector(void* self, const char** (*callb
 ///
 /// @param self QCPAxisTickerFixed*
 /// @param range QCPRange*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param keepOneOutlier bool
 ///
-void q_cpaxistickerfixed_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier);
+void q_cpaxistickerfixed_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19066,10 +19162,10 @@ void q_cpaxistickerfixed_trim_ticks(void* self, void* range, libqt_list ticks, b
 ///
 /// @param self QCPAxisTickerFixed*
 /// @param range QCPRange*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param keepOneOutlier bool
 ///
-void q_cpaxistickerfixed_qbase_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier);
+void q_cpaxistickerfixed_qbase_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19078,9 +19174,9 @@ void q_cpaxistickerfixed_qbase_trim_ticks(void* self, void* range, libqt_list ti
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerFixed*
-/// @param callback void func(QCPAxisTickerFixed* self, QCPRange* range, libqt_list /* of double */ /* of double */, bool keepOneOutlier)
+/// @param callback void func(QCPAxisTickerFixed* self, QCPRange* range, libqt_list of double of double, bool keepOneOutlier)
 ///
-void q_cpaxistickerfixed_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list, bool));
+void q_cpaxistickerfixed_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list /* of double */, bool));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19090,9 +19186,9 @@ void q_cpaxistickerfixed_on_trim_ticks(void* self, void (*callback)(void*, void*
 ///
 /// @param self QCPAxisTickerFixed*
 /// @param target double
-/// @param candidates libqt_list /* of double */
+/// @param candidates libqt_list of double
 ///
-double q_cpaxistickerfixed_pick_closest(void* self, double target, libqt_list candidates);
+double q_cpaxistickerfixed_pick_closest(void* self, double target, libqt_list /* of double */ candidates);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19102,9 +19198,9 @@ double q_cpaxistickerfixed_pick_closest(void* self, double target, libqt_list ca
 ///
 /// @param self QCPAxisTickerFixed*
 /// @param target double
-/// @param candidates libqt_list /* of double */
+/// @param candidates libqt_list of double
 ///
-double q_cpaxistickerfixed_qbase_pick_closest(void* self, double target, libqt_list candidates);
+double q_cpaxistickerfixed_qbase_pick_closest(void* self, double target, libqt_list /* of double */ candidates);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19113,9 +19209,9 @@ double q_cpaxistickerfixed_qbase_pick_closest(void* self, double target, libqt_l
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerFixed*
-/// @param callback double func(QCPAxisTickerFixed* self, double target, libqt_list /* of double */ /* of double */)
+/// @param callback double func(QCPAxisTickerFixed* self, double target, libqt_list of double of double)
 ///
-void q_cpaxistickerfixed_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list));
+void q_cpaxistickerfixed_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list /* of double */));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19201,7 +19297,8 @@ QCPAxisTickerText* q_cpaxistickertext_new();
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of double to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -19211,7 +19308,9 @@ QCPAxisTickerText* q_cpaxistickertext_new();
 ///
 /// @param self QCPAxisTickerText*
 ///
-libqt_map /* of double to const char* */ q_cpaxistickertext_ticks(void* self);
+/// @return libqt_map of double to const char*
+///
+libqt_map q_cpaxistickertext_ticks(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerText.html)
 ///
@@ -19222,17 +19321,17 @@ int32_t q_cpaxistickertext_sub_tick_count(void* self);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerText.html)
 ///
 /// @param self QCPAxisTickerText*
-/// @param ticks libqt_map /* of double to const char* */
+/// @param ticks libqt_map of double to const char*
 ///
-void q_cpaxistickertext_set_ticks(void* self, libqt_map /* of double to const char* */ ticks);
+void q_cpaxistickertext_set_ticks(void* self, libqt_map ticks);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerText.html)
 ///
 /// @param self QCPAxisTickerText*
-/// @param positions libqt_list /* of double */
+/// @param positions libqt_list of double
 /// @param labels const char**
 ///
-void q_cpaxistickertext_set_ticks2(void* self, libqt_list positions, const char* labels[static 1]);
+void q_cpaxistickertext_set_ticks2(void* self, libqt_list /* of double */ positions, const char* labels[static 1]);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerText.html)
 ///
@@ -19258,17 +19357,17 @@ void q_cpaxistickertext_add_tick(void* self, double position, const char* label)
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerText.html)
 ///
 /// @param self QCPAxisTickerText*
-/// @param ticks libqt_map /* of double to const char* */
+/// @param ticks libqt_map of double to const char*
 ///
-void q_cpaxistickertext_add_ticks(void* self, libqt_map /* of double to const char* */ ticks);
+void q_cpaxistickertext_add_ticks(void* self, libqt_map ticks);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerText.html)
 ///
 /// @param self QCPAxisTickerText*
-/// @param positions libqt_list /* of double */
+/// @param positions libqt_list of double
 /// @param labels const char**
 ///
-void q_cpaxistickertext_add_ticks2(void* self, libqt_list positions, const char* labels[static 1]);
+void q_cpaxistickertext_add_ticks2(void* self, libqt_list /* of double */ positions, const char* labels[static 1]);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerText.html)
 ///
@@ -19359,7 +19458,9 @@ const char* q_cpaxistickertext_qbase_get_tick_label(void* self, double tick, voi
 /// @param tickStep double
 /// @param range QCPRange*
 ///
-libqt_list /* of double */ q_cpaxistickertext_create_tick_vector(void* self, double tickStep, void* range);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxistickertext_create_tick_vector(void* self, double tickStep, void* range);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerText.html)
 ///
@@ -19368,7 +19469,7 @@ libqt_list /* of double */ q_cpaxistickertext_create_tick_vector(void* self, dou
 /// @param self QCPAxisTickerText*
 /// @param callback libqt_list /* of double */ func(QCPAxisTickerText* self, double tickStep, QCPRange* range)
 ///
-void q_cpaxistickertext_on_create_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, double, void*));
+void q_cpaxistickertext_on_create_tick_vector(void* self, libqt_list (*callback)(void*, double, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerText.html)
 ///
@@ -19378,7 +19479,9 @@ void q_cpaxistickertext_on_create_tick_vector(void* self, libqt_list /* of doubl
 /// @param tickStep double
 /// @param range QCPRange*
 ///
-libqt_list /* of double */ q_cpaxistickertext_qbase_create_tick_vector(void* self, double tickStep, void* range);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxistickertext_qbase_create_tick_vector(void* self, double tickStep, void* range);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19444,11 +19547,11 @@ void q_cpaxistickertext_set_tick_origin(void* self, double origin);
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
-/// @param ticks libqt_list /* of double */
-/// @param subTicks libqt_list /* of double */
+/// @param ticks libqt_list of double
+/// @param subTicks libqt_list of double
 /// @param tickLabels const char**
 ///
-void q_cpaxistickertext_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
+void q_cpaxistickertext_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19461,11 +19564,11 @@ void q_cpaxistickertext_generate(void* self, void* range, void* locale, void* fo
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
-/// @param ticks libqt_list /* of double */
-/// @param subTicks libqt_list /* of double */
+/// @param ticks libqt_list of double
+/// @param subTicks libqt_list of double
 /// @param tickLabels const char**
 ///
-void q_cpaxistickertext_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
+void q_cpaxistickertext_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19474,9 +19577,9 @@ void q_cpaxistickertext_qbase_generate(void* self, void* range, void* locale, vo
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerText*
-/// @param callback void func(QCPAxisTickerText* self, QCPRange* range, QLocale* locale, QChar* formatChar, int precision, libqt_list /* of double */ /* of double */, libqt_list /* of double */ /* of double */, const char** tickLabels)
+/// @param callback void func(QCPAxisTickerText* self, QCPRange* range, QLocale* locale, QChar* formatChar, int precision, libqt_list of double of double, libqt_list of double of double, const char** tickLabels)
 ///
-void q_cpaxistickertext_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**));
+void q_cpaxistickertext_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19486,9 +19589,11 @@ void q_cpaxistickertext_on_generate(void* self, void (*callback)(void*, void*, v
 ///
 /// @param self QCPAxisTickerText*
 /// @param subTickCount int
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 ///
-libqt_list /* of double */ q_cpaxistickertext_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxistickertext_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19498,9 +19603,11 @@ libqt_list /* of double */ q_cpaxistickertext_create_sub_tick_vector(void* self,
 ///
 /// @param self QCPAxisTickerText*
 /// @param subTickCount int
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 ///
-libqt_list /* of double */ q_cpaxistickertext_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxistickertext_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19509,9 +19616,9 @@ libqt_list /* of double */ q_cpaxistickertext_qbase_create_sub_tick_vector(void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerText*
-/// @param callback libqt_list /* of double */ func(QCPAxisTickerText* self, int subTickCount, libqt_list /* of double */ /* of double */)
+/// @param callback libqt_list /* of double */ func(QCPAxisTickerText* self, int subTickCount, libqt_list of double of double)
 ///
-void q_cpaxistickertext_on_create_sub_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, int, libqt_list));
+void q_cpaxistickertext_on_create_sub_tick_vector(void* self, libqt_list (*callback)(void*, int, libqt_list /* of double */));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19522,12 +19629,12 @@ void q_cpaxistickertext_on_create_sub_tick_vector(void* self, libqt_list /* of d
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QCPAxisTickerText*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
 ///
-const char** q_cpaxistickertext_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision);
+const char** q_cpaxistickertext_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19538,12 +19645,12 @@ const char** q_cpaxistickertext_create_label_vector(void* self, libqt_list ticks
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QCPAxisTickerText*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
 ///
-const char** q_cpaxistickertext_qbase_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision);
+const char** q_cpaxistickertext_qbase_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19552,9 +19659,9 @@ const char** q_cpaxistickertext_qbase_create_label_vector(void* self, libqt_list
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerText*
-/// @param callback const char** func(QCPAxisTickerText* self, libqt_list /* of double */ /* of double */, QLocale* locale, QChar* formatChar, int precision)
+/// @param callback const char** func(QCPAxisTickerText* self, libqt_list of double of double, QLocale* locale, QChar* formatChar, int precision)
 ///
-void q_cpaxistickertext_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list, void*, void*, int));
+void q_cpaxistickertext_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list /* of double */, void*, void*, int));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19564,10 +19671,10 @@ void q_cpaxistickertext_on_create_label_vector(void* self, const char** (*callba
 ///
 /// @param self QCPAxisTickerText*
 /// @param range QCPRange*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param keepOneOutlier bool
 ///
-void q_cpaxistickertext_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier);
+void q_cpaxistickertext_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19577,10 +19684,10 @@ void q_cpaxistickertext_trim_ticks(void* self, void* range, libqt_list ticks, bo
 ///
 /// @param self QCPAxisTickerText*
 /// @param range QCPRange*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param keepOneOutlier bool
 ///
-void q_cpaxistickertext_qbase_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier);
+void q_cpaxistickertext_qbase_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19589,9 +19696,9 @@ void q_cpaxistickertext_qbase_trim_ticks(void* self, void* range, libqt_list tic
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerText*
-/// @param callback void func(QCPAxisTickerText* self, QCPRange* range, libqt_list /* of double */ /* of double */, bool keepOneOutlier)
+/// @param callback void func(QCPAxisTickerText* self, QCPRange* range, libqt_list of double of double, bool keepOneOutlier)
 ///
-void q_cpaxistickertext_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list, bool));
+void q_cpaxistickertext_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list /* of double */, bool));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19601,9 +19708,9 @@ void q_cpaxistickertext_on_trim_ticks(void* self, void (*callback)(void*, void*,
 ///
 /// @param self QCPAxisTickerText*
 /// @param target double
-/// @param candidates libqt_list /* of double */
+/// @param candidates libqt_list of double
 ///
-double q_cpaxistickertext_pick_closest(void* self, double target, libqt_list candidates);
+double q_cpaxistickertext_pick_closest(void* self, double target, libqt_list /* of double */ candidates);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19613,9 +19720,9 @@ double q_cpaxistickertext_pick_closest(void* self, double target, libqt_list can
 ///
 /// @param self QCPAxisTickerText*
 /// @param target double
-/// @param candidates libqt_list /* of double */
+/// @param candidates libqt_list of double
 ///
-double q_cpaxistickertext_qbase_pick_closest(void* self, double target, libqt_list candidates);
+double q_cpaxistickertext_qbase_pick_closest(void* self, double target, libqt_list /* of double */ candidates);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19624,9 +19731,9 @@ double q_cpaxistickertext_qbase_pick_closest(void* self, double target, libqt_li
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerText*
-/// @param callback double func(QCPAxisTickerText* self, double target, libqt_list /* of double */ /* of double */)
+/// @param callback double func(QCPAxisTickerText* self, double target, libqt_list of double of double)
 ///
-void q_cpaxistickertext_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list));
+void q_cpaxistickertext_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list /* of double */));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20050,11 +20157,11 @@ void q_cpaxistickerpi_set_tick_origin(void* self, double origin);
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
-/// @param ticks libqt_list /* of double */
-/// @param subTicks libqt_list /* of double */
+/// @param ticks libqt_list of double
+/// @param subTicks libqt_list of double
 /// @param tickLabels const char**
 ///
-void q_cpaxistickerpi_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
+void q_cpaxistickerpi_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20067,11 +20174,11 @@ void q_cpaxistickerpi_generate(void* self, void* range, void* locale, void* form
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
-/// @param ticks libqt_list /* of double */
-/// @param subTicks libqt_list /* of double */
+/// @param ticks libqt_list of double
+/// @param subTicks libqt_list of double
 /// @param tickLabels const char**
 ///
-void q_cpaxistickerpi_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
+void q_cpaxistickerpi_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20080,9 +20187,9 @@ void q_cpaxistickerpi_qbase_generate(void* self, void* range, void* locale, void
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerPi*
-/// @param callback void func(QCPAxisTickerPi* self, QCPRange* range, QLocale* locale, QChar* formatChar, int precision, libqt_list /* of double */ /* of double */, libqt_list /* of double */ /* of double */, const char** tickLabels)
+/// @param callback void func(QCPAxisTickerPi* self, QCPRange* range, QLocale* locale, QChar* formatChar, int precision, libqt_list of double of double, libqt_list of double of double, const char** tickLabels)
 ///
-void q_cpaxistickerpi_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**));
+void q_cpaxistickerpi_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20094,7 +20201,9 @@ void q_cpaxistickerpi_on_generate(void* self, void (*callback)(void*, void*, voi
 /// @param tickStep double
 /// @param range QCPRange*
 ///
-libqt_list /* of double */ q_cpaxistickerpi_create_tick_vector(void* self, double tickStep, void* range);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxistickerpi_create_tick_vector(void* self, double tickStep, void* range);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20106,7 +20215,9 @@ libqt_list /* of double */ q_cpaxistickerpi_create_tick_vector(void* self, doubl
 /// @param tickStep double
 /// @param range QCPRange*
 ///
-libqt_list /* of double */ q_cpaxistickerpi_qbase_create_tick_vector(void* self, double tickStep, void* range);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxistickerpi_qbase_create_tick_vector(void* self, double tickStep, void* range);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20117,7 +20228,7 @@ libqt_list /* of double */ q_cpaxistickerpi_qbase_create_tick_vector(void* self,
 /// @param self QCPAxisTickerPi*
 /// @param callback libqt_list /* of double */ func(QCPAxisTickerPi* self, double tickStep, QCPRange* range)
 ///
-void q_cpaxistickerpi_on_create_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, double, void*));
+void q_cpaxistickerpi_on_create_tick_vector(void* self, libqt_list (*callback)(void*, double, void*));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20127,9 +20238,11 @@ void q_cpaxistickerpi_on_create_tick_vector(void* self, libqt_list /* of double 
 ///
 /// @param self QCPAxisTickerPi*
 /// @param subTickCount int
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 ///
-libqt_list /* of double */ q_cpaxistickerpi_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxistickerpi_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20139,9 +20252,11 @@ libqt_list /* of double */ q_cpaxistickerpi_create_sub_tick_vector(void* self, i
 ///
 /// @param self QCPAxisTickerPi*
 /// @param subTickCount int
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 ///
-libqt_list /* of double */ q_cpaxistickerpi_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxistickerpi_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20150,9 +20265,9 @@ libqt_list /* of double */ q_cpaxistickerpi_qbase_create_sub_tick_vector(void* s
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerPi*
-/// @param callback libqt_list /* of double */ func(QCPAxisTickerPi* self, int subTickCount, libqt_list /* of double */ /* of double */)
+/// @param callback libqt_list /* of double */ func(QCPAxisTickerPi* self, int subTickCount, libqt_list of double of double)
 ///
-void q_cpaxistickerpi_on_create_sub_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, int, libqt_list));
+void q_cpaxistickerpi_on_create_sub_tick_vector(void* self, libqt_list (*callback)(void*, int, libqt_list /* of double */));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20163,12 +20278,12 @@ void q_cpaxistickerpi_on_create_sub_tick_vector(void* self, libqt_list /* of dou
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QCPAxisTickerPi*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
 ///
-const char** q_cpaxistickerpi_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision);
+const char** q_cpaxistickerpi_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20179,12 +20294,12 @@ const char** q_cpaxistickerpi_create_label_vector(void* self, libqt_list ticks, 
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QCPAxisTickerPi*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
 ///
-const char** q_cpaxistickerpi_qbase_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision);
+const char** q_cpaxistickerpi_qbase_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20193,9 +20308,9 @@ const char** q_cpaxistickerpi_qbase_create_label_vector(void* self, libqt_list t
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerPi*
-/// @param callback const char** func(QCPAxisTickerPi* self, libqt_list /* of double */ /* of double */, QLocale* locale, QChar* formatChar, int precision)
+/// @param callback const char** func(QCPAxisTickerPi* self, libqt_list of double of double, QLocale* locale, QChar* formatChar, int precision)
 ///
-void q_cpaxistickerpi_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list, void*, void*, int));
+void q_cpaxistickerpi_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list /* of double */, void*, void*, int));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20205,10 +20320,10 @@ void q_cpaxistickerpi_on_create_label_vector(void* self, const char** (*callback
 ///
 /// @param self QCPAxisTickerPi*
 /// @param range QCPRange*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param keepOneOutlier bool
 ///
-void q_cpaxistickerpi_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier);
+void q_cpaxistickerpi_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20218,10 +20333,10 @@ void q_cpaxistickerpi_trim_ticks(void* self, void* range, libqt_list ticks, bool
 ///
 /// @param self QCPAxisTickerPi*
 /// @param range QCPRange*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param keepOneOutlier bool
 ///
-void q_cpaxistickerpi_qbase_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier);
+void q_cpaxistickerpi_qbase_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20230,9 +20345,9 @@ void q_cpaxistickerpi_qbase_trim_ticks(void* self, void* range, libqt_list ticks
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerPi*
-/// @param callback void func(QCPAxisTickerPi* self, QCPRange* range, libqt_list /* of double */ /* of double */, bool keepOneOutlier)
+/// @param callback void func(QCPAxisTickerPi* self, QCPRange* range, libqt_list of double of double, bool keepOneOutlier)
 ///
-void q_cpaxistickerpi_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list, bool));
+void q_cpaxistickerpi_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list /* of double */, bool));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20242,9 +20357,9 @@ void q_cpaxistickerpi_on_trim_ticks(void* self, void (*callback)(void*, void*, l
 ///
 /// @param self QCPAxisTickerPi*
 /// @param target double
-/// @param candidates libqt_list /* of double */
+/// @param candidates libqt_list of double
 ///
-double q_cpaxistickerpi_pick_closest(void* self, double target, libqt_list candidates);
+double q_cpaxistickerpi_pick_closest(void* self, double target, libqt_list /* of double */ candidates);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20254,9 +20369,9 @@ double q_cpaxistickerpi_pick_closest(void* self, double target, libqt_list candi
 ///
 /// @param self QCPAxisTickerPi*
 /// @param target double
-/// @param candidates libqt_list /* of double */
+/// @param candidates libqt_list of double
 ///
-double q_cpaxistickerpi_qbase_pick_closest(void* self, double target, libqt_list candidates);
+double q_cpaxistickerpi_qbase_pick_closest(void* self, double target, libqt_list /* of double */ candidates);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20265,9 +20380,9 @@ double q_cpaxistickerpi_qbase_pick_closest(void* self, double target, libqt_list
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerPi*
-/// @param callback double func(QCPAxisTickerPi* self, double target, libqt_list /* of double */ /* of double */)
+/// @param callback double func(QCPAxisTickerPi* self, double target, libqt_list of double of double)
 ///
-void q_cpaxistickerpi_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list));
+void q_cpaxistickerpi_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list /* of double */));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20406,7 +20521,9 @@ int32_t q_cpaxistickerlog_qbase_get_sub_tick_count(void* self, double tickStep);
 /// @param tickStep double
 /// @param range QCPRange*
 ///
-libqt_list /* of double */ q_cpaxistickerlog_create_tick_vector(void* self, double tickStep, void* range);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxistickerlog_create_tick_vector(void* self, double tickStep, void* range);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerLog.html)
 ///
@@ -20415,7 +20532,7 @@ libqt_list /* of double */ q_cpaxistickerlog_create_tick_vector(void* self, doub
 /// @param self QCPAxisTickerLog*
 /// @param callback libqt_list /* of double */ func(QCPAxisTickerLog* self, double tickStep, QCPRange* range)
 ///
-void q_cpaxistickerlog_on_create_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, double, void*));
+void q_cpaxistickerlog_on_create_tick_vector(void* self, libqt_list (*callback)(void*, double, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerLog.html)
 ///
@@ -20425,7 +20542,9 @@ void q_cpaxistickerlog_on_create_tick_vector(void* self, libqt_list /* of double
 /// @param tickStep double
 /// @param range QCPRange*
 ///
-libqt_list /* of double */ q_cpaxistickerlog_qbase_create_tick_vector(void* self, double tickStep, void* range);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxistickerlog_qbase_create_tick_vector(void* self, double tickStep, void* range);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20491,11 +20610,11 @@ void q_cpaxistickerlog_set_tick_origin(void* self, double origin);
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
-/// @param ticks libqt_list /* of double */
-/// @param subTicks libqt_list /* of double */
+/// @param ticks libqt_list of double
+/// @param subTicks libqt_list of double
 /// @param tickLabels const char**
 ///
-void q_cpaxistickerlog_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
+void q_cpaxistickerlog_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20508,11 +20627,11 @@ void q_cpaxistickerlog_generate(void* self, void* range, void* locale, void* for
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
-/// @param ticks libqt_list /* of double */
-/// @param subTicks libqt_list /* of double */
+/// @param ticks libqt_list of double
+/// @param subTicks libqt_list of double
 /// @param tickLabels const char**
 ///
-void q_cpaxistickerlog_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
+void q_cpaxistickerlog_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20521,9 +20640,9 @@ void q_cpaxistickerlog_qbase_generate(void* self, void* range, void* locale, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerLog*
-/// @param callback void func(QCPAxisTickerLog* self, QCPRange* range, QLocale* locale, QChar* formatChar, int precision, libqt_list /* of double */ /* of double */, libqt_list /* of double */ /* of double */, const char** tickLabels)
+/// @param callback void func(QCPAxisTickerLog* self, QCPRange* range, QLocale* locale, QChar* formatChar, int precision, libqt_list of double of double, libqt_list of double of double, const char** tickLabels)
 ///
-void q_cpaxistickerlog_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**));
+void q_cpaxistickerlog_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20609,9 +20728,11 @@ void q_cpaxistickerlog_on_get_tick_label(void* self, const char* (*callback)(voi
 ///
 /// @param self QCPAxisTickerLog*
 /// @param subTickCount int
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 ///
-libqt_list /* of double */ q_cpaxistickerlog_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxistickerlog_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20621,9 +20742,11 @@ libqt_list /* of double */ q_cpaxistickerlog_create_sub_tick_vector(void* self, 
 ///
 /// @param self QCPAxisTickerLog*
 /// @param subTickCount int
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 ///
-libqt_list /* of double */ q_cpaxistickerlog_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxistickerlog_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20632,9 +20755,9 @@ libqt_list /* of double */ q_cpaxistickerlog_qbase_create_sub_tick_vector(void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerLog*
-/// @param callback libqt_list /* of double */ func(QCPAxisTickerLog* self, int subTickCount, libqt_list /* of double */ /* of double */)
+/// @param callback libqt_list /* of double */ func(QCPAxisTickerLog* self, int subTickCount, libqt_list of double of double)
 ///
-void q_cpaxistickerlog_on_create_sub_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, int, libqt_list));
+void q_cpaxistickerlog_on_create_sub_tick_vector(void* self, libqt_list (*callback)(void*, int, libqt_list /* of double */));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20645,12 +20768,12 @@ void q_cpaxistickerlog_on_create_sub_tick_vector(void* self, libqt_list /* of do
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QCPAxisTickerLog*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
 ///
-const char** q_cpaxistickerlog_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision);
+const char** q_cpaxistickerlog_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20661,12 +20784,12 @@ const char** q_cpaxistickerlog_create_label_vector(void* self, libqt_list ticks,
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QCPAxisTickerLog*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param locale QLocale*
 /// @param formatChar QChar*
 /// @param precision int
 ///
-const char** q_cpaxistickerlog_qbase_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision);
+const char** q_cpaxistickerlog_qbase_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20675,9 +20798,9 @@ const char** q_cpaxistickerlog_qbase_create_label_vector(void* self, libqt_list 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerLog*
-/// @param callback const char** func(QCPAxisTickerLog* self, libqt_list /* of double */ /* of double */, QLocale* locale, QChar* formatChar, int precision)
+/// @param callback const char** func(QCPAxisTickerLog* self, libqt_list of double of double, QLocale* locale, QChar* formatChar, int precision)
 ///
-void q_cpaxistickerlog_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list, void*, void*, int));
+void q_cpaxistickerlog_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list /* of double */, void*, void*, int));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20687,10 +20810,10 @@ void q_cpaxistickerlog_on_create_label_vector(void* self, const char** (*callbac
 ///
 /// @param self QCPAxisTickerLog*
 /// @param range QCPRange*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param keepOneOutlier bool
 ///
-void q_cpaxistickerlog_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier);
+void q_cpaxistickerlog_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20700,10 +20823,10 @@ void q_cpaxistickerlog_trim_ticks(void* self, void* range, libqt_list ticks, boo
 ///
 /// @param self QCPAxisTickerLog*
 /// @param range QCPRange*
-/// @param ticks libqt_list /* of double */
+/// @param ticks libqt_list of double
 /// @param keepOneOutlier bool
 ///
-void q_cpaxistickerlog_qbase_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier);
+void q_cpaxistickerlog_qbase_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20712,9 +20835,9 @@ void q_cpaxistickerlog_qbase_trim_ticks(void* self, void* range, libqt_list tick
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerLog*
-/// @param callback void func(QCPAxisTickerLog* self, QCPRange* range, libqt_list /* of double */ /* of double */, bool keepOneOutlier)
+/// @param callback void func(QCPAxisTickerLog* self, QCPRange* range, libqt_list of double of double, bool keepOneOutlier)
 ///
-void q_cpaxistickerlog_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list, bool));
+void q_cpaxistickerlog_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list /* of double */, bool));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20724,9 +20847,9 @@ void q_cpaxistickerlog_on_trim_ticks(void* self, void (*callback)(void*, void*, 
 ///
 /// @param self QCPAxisTickerLog*
 /// @param target double
-/// @param candidates libqt_list /* of double */
+/// @param candidates libqt_list of double
 ///
-double q_cpaxistickerlog_pick_closest(void* self, double target, libqt_list candidates);
+double q_cpaxistickerlog_pick_closest(void* self, double target, libqt_list /* of double */ candidates);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20736,9 +20859,9 @@ double q_cpaxistickerlog_pick_closest(void* self, double target, libqt_list cand
 ///
 /// @param self QCPAxisTickerLog*
 /// @param target double
-/// @param candidates libqt_list /* of double */
+/// @param candidates libqt_list of double
 ///
-double q_cpaxistickerlog_qbase_pick_closest(void* self, double target, libqt_list candidates);
+double q_cpaxistickerlog_qbase_pick_closest(void* self, double target, libqt_list /* of double */ candidates);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20747,9 +20870,9 @@ double q_cpaxistickerlog_qbase_pick_closest(void* self, double target, libqt_lis
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPAxisTickerLog*
-/// @param callback double func(QCPAxisTickerLog* self, double target, libqt_list /* of double */ /* of double */)
+/// @param callback double func(QCPAxisTickerLog* self, double target, libqt_list of double of double)
 ///
-void q_cpaxistickerlog_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list));
+void q_cpaxistickerlog_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list /* of double */));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -21284,7 +21407,9 @@ void q_cpgrid_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPGrid*
 ///
-libqt_list /* of QObject* */ q_cpgrid_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpgrid_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -22565,7 +22690,9 @@ int32_t q_cpaxis_number_precision(void* self);
 ///
 /// @param self QCPAxis*
 ///
-libqt_list /* of double */ q_cpaxis_tick_vector(void* self);
+/// @return libqt_list of double
+///
+libqt_list q_cpaxis_tick_vector(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
@@ -23146,19 +23273,25 @@ int32_t q_cpaxis_get_part_at(void* self, void* pos);
 ///
 /// @param self QCPAxis*
 ///
-libqt_list /* of QCPAbstractPlottable* */ q_cpaxis_plottables(void* self);
+/// @return libqt_list of QCPAbstractPlottable*
+///
+libqt_list q_cpaxis_plottables(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
 /// @param self QCPAxis*
 ///
-libqt_list /* of QCPGraph* */ q_cpaxis_graphs(void* self);
+/// @return libqt_list of QCPGraph*
+///
+libqt_list q_cpaxis_graphs(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
 /// @param self QCPAxis*
 ///
-libqt_list /* of QCPAbstractItem* */ q_cpaxis_items(void* self);
+/// @return libqt_list of QCPAbstractItem*
+///
+libqt_list q_cpaxis_items(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
@@ -23928,7 +24061,9 @@ void q_cpaxis_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPAxis*
 ///
-libqt_list /* of QObject* */ q_cpaxis_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpaxis_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -26088,7 +26223,9 @@ void q_cpabstractplottable_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPAbstractPlottable*
 ///
-libqt_list /* of QObject* */ q_cpabstractplottable_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpabstractplottable_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -27752,13 +27889,17 @@ double q_cpabstractitem_qbase_select_test(void* self, void* pos, bool onlySelect
 ///
 /// @param self QCPAbstractItem*
 ///
-libqt_list /* of QCPItemPosition* */ q_cpabstractitem_positions(void* self);
+/// @return libqt_list of QCPItemPosition*
+///
+libqt_list q_cpabstractitem_positions(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
 ///
 /// @param self QCPAbstractItem*
 ///
-libqt_list /* of QCPItemAnchor* */ q_cpabstractitem_anchors(void* self);
+/// @return libqt_list of QCPItemAnchor*
+///
+libqt_list q_cpabstractitem_anchors(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
 ///
@@ -28302,7 +28443,9 @@ void q_cpabstractitem_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPAbstractItem*
 ///
-libqt_list /* of QObject* */ q_cpabstractitem_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpabstractitem_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -29411,7 +29554,7 @@ int32_t q_customplot_plotting_hints(void* self);
 ///
 /// @return enum Qt__KeyboardModifier
 ///
-int64_t q_customplot_multi_select_modifier(void* self);
+int32_t q_customplot_multi_select_modifier(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
@@ -29565,7 +29708,7 @@ void q_customplot_set_plotting_hint(void* self, int32_t hint);
 /// @param self QCustomPlot*
 /// @param modifier enum Qt__KeyboardModifier
 ///
-void q_customplot_set_multi_select_modifier(void* self, int64_t modifier);
+void q_customplot_set_multi_select_modifier(void* self, int32_t modifier);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
@@ -29631,7 +29774,9 @@ int32_t q_customplot_plottable_count(void* self);
 ///
 /// @param self QCustomPlot*
 ///
-libqt_list /* of QCPAbstractPlottable* */ q_customplot_selected_plottables(void* self);
+/// @return libqt_list of QCPAbstractPlottable*
+///
+libqt_list q_customplot_selected_plottables(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
@@ -29696,7 +29841,9 @@ int32_t q_customplot_graph_count(void* self);
 ///
 /// @param self QCustomPlot*
 ///
-libqt_list /* of QCPGraph* */ q_customplot_selected_graphs(void* self);
+/// @return libqt_list of QCPGraph*
+///
+libqt_list q_customplot_selected_graphs(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
@@ -29741,7 +29888,9 @@ int32_t q_customplot_item_count(void* self);
 ///
 /// @param self QCustomPlot*
 ///
-libqt_list /* of QCPAbstractItem* */ q_customplot_selected_items(void* self);
+/// @return libqt_list of QCPAbstractItem*
+///
+libqt_list q_customplot_selected_items(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
@@ -29835,7 +29984,9 @@ QCPAxisRect* q_customplot_axis_rect(void* self);
 ///
 /// @param self QCustomPlot*
 ///
-libqt_list /* of QCPAxisRect* */ q_customplot_axis_rects(void* self);
+/// @return libqt_list of QCPAxisRect*
+///
+libqt_list q_customplot_axis_rects(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
@@ -29861,13 +30012,17 @@ void q_customplot_rescale_axes(void* self);
 ///
 /// @param self QCustomPlot*
 ///
-libqt_list /* of QCPAxis* */ q_customplot_selected_axes(void* self);
+/// @return libqt_list of QCPAxis*
+///
+libqt_list q_customplot_selected_axes(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
 /// @param self QCustomPlot*
 ///
-libqt_list /* of QCPLegend* */ q_customplot_selected_legends(void* self);
+/// @return libqt_list of QCPLegend*
+///
+libqt_list q_customplot_selected_legends(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
@@ -30781,7 +30936,9 @@ QCPLayerable* q_customplot_qbase_layerable_at(void* self, void* pos, bool onlySe
 /// @param pos QPointF*
 /// @param onlySelectable bool
 ///
-libqt_list /* of QCPLayerable* */ q_customplot_layerable_list_at(void* self, void* pos, bool onlySelectable);
+/// @return libqt_list of QCPLayerable*
+///
+libqt_list q_customplot_layerable_list_at(void* self, void* pos, bool onlySelectable);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
@@ -30800,7 +30957,9 @@ void q_customplot_on_layerable_list_at(void* self, QCPLayerable** (*callback)(vo
 /// @param pos QPointF*
 /// @param onlySelectable bool
 ///
-libqt_list /* of QCPLayerable* */ q_customplot_qbase_layerable_list_at(void* self, void* pos, bool onlySelectable);
+/// @return libqt_list of QCPLayerable*
+///
+libqt_list q_customplot_qbase_layerable_list_at(void* self, void* pos, bool onlySelectable);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
@@ -31444,9 +31603,11 @@ QCPLayerable* q_customplot_qbase_layerable_at3(void* self, void* pos, bool onlyS
 /// @param self QCustomPlot*
 /// @param pos QPointF*
 /// @param onlySelectable bool
-/// @param selectionDetails libqt_list /* of QVariant* */
+/// @param selectionDetails libqt_list of QVariant*
 ///
-libqt_list /* of QCPLayerable* */ q_customplot_layerable_list_at3(void* self, void* pos, bool onlySelectable, libqt_list selectionDetails);
+/// @return libqt_list of QCPLayerable*
+///
+libqt_list q_customplot_layerable_list_at3(void* self, void* pos, bool onlySelectable, libqt_list /* of QVariant* */ selectionDetails);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
@@ -31464,9 +31625,11 @@ void q_customplot_on_layerable_list_at3(void* self, QCPLayerable** (*callback)(v
 /// @param self QCustomPlot*
 /// @param pos QPointF*
 /// @param onlySelectable bool
-/// @param selectionDetails libqt_list /* of QVariant* */
+/// @param selectionDetails libqt_list of QVariant*
 ///
-libqt_list /* of QCPLayerable* */ q_customplot_qbase_layerable_list_at3(void* self, void* pos, bool onlySelectable, libqt_list selectionDetails);
+/// @return libqt_list of QCPLayerable*
+///
+libqt_list q_customplot_qbase_layerable_list_at3(void* self, void* pos, bool onlySelectable, libqt_list /* of QVariant* */ selectionDetails);
 
 /// Inherited from QWidget
 ///
@@ -32296,7 +32459,7 @@ void q_customplot_set_graphics_effect(void* self, void* effect);
 /// @param self QCustomPlot*
 /// @param type enum Qt__GestureType
 ///
-void q_customplot_grab_gesture(void* self, int64_t type);
+void q_customplot_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -32305,7 +32468,7 @@ void q_customplot_grab_gesture(void* self, int64_t type);
 /// @param self QCustomPlot*
 /// @param type enum Qt__GestureType
 ///
-void q_customplot_ungrab_gesture(void* self, int64_t type);
+void q_customplot_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -33294,7 +33457,7 @@ void q_customplot_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void q_customplot_set_parent2(void* self, void* parent, int64_t f);
+void q_customplot_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -33372,9 +33535,9 @@ void q_customplot_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self QCustomPlot*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_customplot_add_actions(void* self, libqt_list actions);
+void q_customplot_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -33382,9 +33545,9 @@ void q_customplot_add_actions(void* self, libqt_list actions);
 ///
 /// @param self QCustomPlot*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_customplot_insert_actions(void* self, void* before, libqt_list actions);
+void q_customplot_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -33411,7 +33574,9 @@ void q_customplot_remove_action(void* self, void* action);
 ///
 /// @param self QCustomPlot*
 ///
-libqt_list /* of QAction* */ q_customplot_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list q_customplot_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -33468,7 +33633,7 @@ QWidget* q_customplot_parent_widget(void* self);
 /// @param self QCustomPlot*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_customplot_set_window_flags(void* self, int64_t type);
+void q_customplot_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -33478,7 +33643,7 @@ void q_customplot_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t q_customplot_window_flags(void* self);
+int32_t q_customplot_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -33487,7 +33652,7 @@ int64_t q_customplot_window_flags(void* self);
 /// @param self QCustomPlot*
 /// @param param1 enum Qt__WindowType
 ///
-void q_customplot_set_window_flag(void* self, int64_t param1);
+void q_customplot_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -33496,7 +33661,7 @@ void q_customplot_set_window_flag(void* self, int64_t param1);
 /// @param self QCustomPlot*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_customplot_override_window_flags(void* self, int64_t type);
+void q_customplot_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -33506,7 +33671,7 @@ void q_customplot_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t q_customplot_window_type(void* self);
+int32_t q_customplot_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -33717,7 +33882,7 @@ void q_customplot_on_custom_context_menu_requested(void* self, void (*callback)(
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t q_customplot_input_method_hints(void* self);
+int32_t q_customplot_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -33726,7 +33891,7 @@ int64_t q_customplot_input_method_hints(void* self);
 /// @param self QCustomPlot*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void q_customplot_set_input_method_hints(void* self, int64_t hints);
+void q_customplot_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -33811,7 +33976,7 @@ QPixmap* q_customplot_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void q_customplot_grab_gesture2(void* self, int64_t type, int32_t flags);
+void q_customplot_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -33851,7 +34016,7 @@ void q_customplot_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void q_customplot_set_window_flag2(void* self, int64_t param1, bool on);
+void q_customplot_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -33880,7 +34045,7 @@ QWidget* q_customplot_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* q_customplot_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* q_customplot_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -33992,7 +34157,9 @@ void q_customplot_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCustomPlot*
 ///
-libqt_list /* of QObject* */ q_customplot_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_customplot_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -35316,7 +35483,7 @@ void q_customplot_on_input_method_event(void* self, void (*callback)(void*, void
 /// @param self QCustomPlot*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_customplot_input_method_query(void* self, int64_t param1);
+QVariant* q_customplot_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -35327,7 +35494,7 @@ QVariant* q_customplot_input_method_query(void* self, int64_t param1);
 /// @param self QCustomPlot*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_customplot_qbase_input_method_query(void* self, int64_t param1);
+QVariant* q_customplot_qbase_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -35338,7 +35505,7 @@ QVariant* q_customplot_qbase_input_method_query(void* self, int64_t param1);
 /// @param self QCustomPlot*
 /// @param callback QVariant* func(QCustomPlot* self, enum Qt__InputMethodQuery param1)
 ///
-void q_customplot_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void q_customplot_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -36044,7 +36211,8 @@ int32_t q_cpcolorgradient_level_count(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of double to QColor*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QColor*)map.values)[i]);
 /// }
@@ -36054,7 +36222,9 @@ int32_t q_cpcolorgradient_level_count(void* self);
 ///
 /// @param self QCPColorGradient*
 ///
-libqt_map /* of double to QColor* */ q_cpcolorgradient_color_stops(void* self);
+/// @return libqt_map of double to QColor*
+///
+libqt_map q_cpcolorgradient_color_stops(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorGradient.html)
 ///
@@ -36094,9 +36264,9 @@ void q_cpcolorgradient_set_level_count(void* self, int n);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorGradient.html)
 ///
 /// @param self QCPColorGradient*
-/// @param colorStops libqt_map /* of double to QColor* */
+/// @param colorStops libqt_map of double to QColor*
 ///
-void q_cpcolorgradient_set_color_stops(void* self, libqt_map /* of double to QColor* */ colorStops);
+void q_cpcolorgradient_set_color_stops(void* self, libqt_map colorStops);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorGradient.html)
 ///
@@ -36757,14 +36927,18 @@ QCPAxis* q_cpaxisrect_range_zoom_axis(void* self, int32_t orientation);
 /// @param self QCPAxisRect*
 /// @param orientation enum Qt__Orientation
 ///
-libqt_list /* of QCPAxis* */ q_cpaxisrect_range_drag_axes(void* self, int32_t orientation);
+/// @return libqt_list of QCPAxis*
+///
+libqt_list q_cpaxisrect_range_drag_axes(void* self, int32_t orientation);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
 /// @param self QCPAxisRect*
 /// @param orientation enum Qt__Orientation
 ///
-libqt_list /* of QCPAxis* */ q_cpaxisrect_range_zoom_axes(void* self, int32_t orientation);
+/// @return libqt_list of QCPAxis*
+///
+libqt_list q_cpaxisrect_range_zoom_axes(void* self, int32_t orientation);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
@@ -36834,17 +37008,17 @@ void q_cpaxisrect_set_range_drag_axes(void* self, void* horizontal, void* vertic
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
 /// @param self QCPAxisRect*
-/// @param axes libqt_list /* of QCPAxis* */
+/// @param axes libqt_list of QCPAxis*
 ///
-void q_cpaxisrect_set_range_drag_axes2(void* self, libqt_list axes);
+void q_cpaxisrect_set_range_drag_axes2(void* self, libqt_list /* of QCPAxis* */ axes);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
 /// @param self QCPAxisRect*
-/// @param horizontal libqt_list /* of QCPAxis* */
-/// @param vertical libqt_list /* of QCPAxis* */
+/// @param horizontal libqt_list of QCPAxis*
+/// @param vertical libqt_list of QCPAxis*
 ///
-void q_cpaxisrect_set_range_drag_axes3(void* self, libqt_list horizontal, libqt_list vertical);
+void q_cpaxisrect_set_range_drag_axes3(void* self, libqt_list /* of QCPAxis* */ horizontal, libqt_list /* of QCPAxis* */ vertical);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
@@ -36857,17 +37031,17 @@ void q_cpaxisrect_set_range_zoom_axes(void* self, void* horizontal, void* vertic
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
 /// @param self QCPAxisRect*
-/// @param axes libqt_list /* of QCPAxis* */
+/// @param axes libqt_list of QCPAxis*
 ///
-void q_cpaxisrect_set_range_zoom_axes2(void* self, libqt_list axes);
+void q_cpaxisrect_set_range_zoom_axes2(void* self, libqt_list /* of QCPAxis* */ axes);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
 /// @param self QCPAxisRect*
-/// @param horizontal libqt_list /* of QCPAxis* */
-/// @param vertical libqt_list /* of QCPAxis* */
+/// @param horizontal libqt_list of QCPAxis*
+/// @param vertical libqt_list of QCPAxis*
 ///
-void q_cpaxisrect_set_range_zoom_axes3(void* self, libqt_list horizontal, libqt_list vertical);
+void q_cpaxisrect_set_range_zoom_axes3(void* self, libqt_list /* of QCPAxis* */ horizontal, libqt_list /* of QCPAxis* */ vertical);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
@@ -36903,13 +37077,17 @@ QCPAxis* q_cpaxisrect_axis(void* self, int32_t type);
 /// @param self QCPAxisRect*
 /// @param types flag of enum QCPAxis__AxisType
 ///
-libqt_list /* of QCPAxis* */ q_cpaxisrect_axes(void* self, int32_t types);
+/// @return libqt_list of QCPAxis*
+///
+libqt_list q_cpaxisrect_axes(void* self, int32_t types);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
 /// @param self QCPAxisRect*
 ///
-libqt_list /* of QCPAxis* */ q_cpaxisrect_axes2(void* self);
+/// @return libqt_list of QCPAxis*
+///
+libqt_list q_cpaxisrect_axes2(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
@@ -36923,7 +37101,9 @@ QCPAxis* q_cpaxisrect_add_axis(void* self, int32_t type);
 /// @param self QCPAxisRect*
 /// @param types flag of enum QCPAxis__AxisType
 ///
-libqt_list /* of QCPAxis* */ q_cpaxisrect_add_axes(void* self, int32_t types);
+/// @return libqt_list of QCPAxis*
+///
+libqt_list q_cpaxisrect_add_axes(void* self, int32_t types);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
@@ -36949,9 +37129,9 @@ void q_cpaxisrect_zoom(void* self, void* pixelRect);
 ///
 /// @param self QCPAxisRect*
 /// @param pixelRect QRectF*
-/// @param affectedAxes libqt_list /* of QCPAxis* */
+/// @param affectedAxes libqt_list of QCPAxis*
 ///
-void q_cpaxisrect_zoom2(void* self, void* pixelRect, libqt_list affectedAxes);
+void q_cpaxisrect_zoom2(void* self, void* pixelRect, libqt_list /* of QCPAxis* */ affectedAxes);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
@@ -36963,19 +37143,25 @@ void q_cpaxisrect_setup_full_axes_box(void* self);
 ///
 /// @param self QCPAxisRect*
 ///
-libqt_list /* of QCPAbstractPlottable* */ q_cpaxisrect_plottables(void* self);
+/// @return libqt_list of QCPAbstractPlottable*
+///
+libqt_list q_cpaxisrect_plottables(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
 /// @param self QCPAxisRect*
 ///
-libqt_list /* of QCPGraph* */ q_cpaxisrect_graphs(void* self);
+/// @return libqt_list of QCPGraph*
+///
+libqt_list q_cpaxisrect_graphs(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
 /// @param self QCPAxisRect*
 ///
-libqt_list /* of QCPAbstractItem* */ q_cpaxisrect_items(void* self);
+/// @return libqt_list of QCPAbstractItem*
+///
+libqt_list q_cpaxisrect_items(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
@@ -37079,7 +37265,9 @@ void q_cpaxisrect_qbase_update(void* self, int32_t phase);
 /// @param self QCPAxisRect*
 /// @param recursive bool
 ///
-libqt_list /* of QCPLayoutElement* */ q_cpaxisrect_elements(void* self, bool recursive);
+/// @return libqt_list of QCPLayoutElement*
+///
+libqt_list q_cpaxisrect_elements(void* self, bool recursive);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
@@ -37097,7 +37285,9 @@ void q_cpaxisrect_on_elements(void* self, QCPLayoutElement** (*callback)(void*, 
 /// @param self QCPAxisRect*
 /// @param recursive bool
 ///
-libqt_list /* of QCPLayoutElement* */ q_cpaxisrect_qbase_elements(void* self, bool recursive);
+/// @return libqt_list of QCPLayoutElement*
+///
+libqt_list q_cpaxisrect_qbase_elements(void* self, bool recursive);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
@@ -37495,7 +37685,8 @@ QCPMarginGroup* q_cpaxisrect_margin_group(void* self, int32_t side);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of enum QCP__MarginSide to QCPMarginGroup*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QCPMarginGroup*)map.values)[i]);
 /// }
@@ -37505,7 +37696,9 @@ QCPMarginGroup* q_cpaxisrect_margin_group(void* self, int32_t side);
 ///
 /// @param self QCPAxisRect*
 ///
-libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cpaxisrect_margin_groups(void* self);
+/// @return libqt_map of enum QCP__MarginSide to QCPMarginGroup*
+///
+libqt_map q_cpaxisrect_margin_groups(void* self);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -37812,7 +38005,9 @@ void q_cpaxisrect_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPAxisRect*
 ///
-libqt_list /* of QObject* */ q_cpaxisrect_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpaxisrect_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -39327,7 +39522,8 @@ QCPMarginGroup* q_cpabstractlegenditem_margin_group(void* self, int32_t side);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of enum QCP__MarginSide to QCPMarginGroup*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QCPMarginGroup*)map.values)[i]);
 /// }
@@ -39337,7 +39533,9 @@ QCPMarginGroup* q_cpabstractlegenditem_margin_group(void* self, int32_t side);
 ///
 /// @param self QCPAbstractLegendItem*
 ///
-libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cpabstractlegenditem_margin_groups(void* self);
+/// @return libqt_map of enum QCP__MarginSide to QCPMarginGroup*
+///
+libqt_map q_cpabstractlegenditem_margin_groups(void* self);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -39644,7 +39842,9 @@ void q_cpabstractlegenditem_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPAbstractLegendItem*
 ///
-libqt_list /* of QObject* */ q_cpabstractlegenditem_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpabstractlegenditem_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -39983,7 +40183,9 @@ void q_cpabstractlegenditem_on_maximum_outer_size_hint(void* self, QSize* (*call
 /// @param self QCPAbstractLegendItem*
 /// @param recursive bool
 ///
-libqt_list /* of QCPLayoutElement* */ q_cpabstractlegenditem_elements(void* self, bool recursive);
+/// @return libqt_list of QCPLayoutElement*
+///
+libqt_list q_cpabstractlegenditem_elements(void* self, bool recursive);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -39994,7 +40196,9 @@ libqt_list /* of QCPLayoutElement* */ q_cpabstractlegenditem_elements(void* self
 /// @param self QCPAbstractLegendItem*
 /// @param recursive bool
 ///
-libqt_list /* of QCPLayoutElement* */ q_cpabstractlegenditem_qbase_elements(void* self, bool recursive);
+/// @return libqt_list of QCPLayoutElement*
+///
+libqt_list q_cpabstractlegenditem_qbase_elements(void* self, bool recursive);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -41225,7 +41429,8 @@ QCPMarginGroup* q_cpplottablelegenditem_margin_group(void* self, int32_t side);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of enum QCP__MarginSide to QCPMarginGroup*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QCPMarginGroup*)map.values)[i]);
 /// }
@@ -41235,7 +41440,9 @@ QCPMarginGroup* q_cpplottablelegenditem_margin_group(void* self, int32_t side);
 ///
 /// @param self QCPPlottableLegendItem*
 ///
-libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cpplottablelegenditem_margin_groups(void* self);
+/// @return libqt_map of enum QCP__MarginSide to QCPMarginGroup*
+///
+libqt_map q_cpplottablelegenditem_margin_groups(void* self);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -41542,7 +41749,9 @@ void q_cpplottablelegenditem_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPPlottableLegendItem*
 ///
-libqt_list /* of QObject* */ q_cpplottablelegenditem_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpplottablelegenditem_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -42058,7 +42267,9 @@ void q_cpplottablelegenditem_on_maximum_outer_size_hint(void* self, QSize* (*cal
 /// @param self QCPPlottableLegendItem*
 /// @param recursive bool
 ///
-libqt_list /* of QCPLayoutElement* */ q_cpplottablelegenditem_elements(void* self, bool recursive);
+/// @return libqt_list of QCPLayoutElement*
+///
+libqt_list q_cpplottablelegenditem_elements(void* self, bool recursive);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -42069,7 +42280,9 @@ libqt_list /* of QCPLayoutElement* */ q_cpplottablelegenditem_elements(void* sel
 /// @param self QCPPlottableLegendItem*
 /// @param recursive bool
 ///
-libqt_list /* of QCPLayoutElement* */ q_cpplottablelegenditem_qbase_elements(void* self, bool recursive);
+/// @return libqt_list of QCPLayoutElement*
+///
+libqt_list q_cpplottablelegenditem_qbase_elements(void* self, bool recursive);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -43206,7 +43419,9 @@ void q_cplegend_clear_items(void* self);
 ///
 /// @param self QCPLegend*
 ///
-libqt_list /* of QCPAbstractLegendItem* */ q_cplegend_selected_items(void* self);
+/// @return libqt_list of QCPAbstractLegendItem*
+///
+libqt_list q_cplegend_selected_items(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLegend.html)
 ///
@@ -43481,7 +43696,9 @@ int32_t q_cplegend_column_count(void* self);
 ///
 /// @param self QCPLegend*
 ///
-libqt_list /* of double */ q_cplegend_column_stretch_factors(void* self);
+/// @return libqt_list of double
+///
+libqt_list q_cplegend_column_stretch_factors(void* self);
 
 /// Inherited from QCPLayoutGrid
 ///
@@ -43489,7 +43706,9 @@ libqt_list /* of double */ q_cplegend_column_stretch_factors(void* self);
 ///
 /// @param self QCPLegend*
 ///
-libqt_list /* of double */ q_cplegend_row_stretch_factors(void* self);
+/// @return libqt_list of double
+///
+libqt_list q_cplegend_row_stretch_factors(void* self);
 
 /// Inherited from QCPLayoutGrid
 ///
@@ -43540,9 +43759,9 @@ void q_cplegend_set_column_stretch_factor(void* self, int column, double factor)
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
 /// @param self QCPLegend*
-/// @param factors libqt_list /* of double */
+/// @param factors libqt_list of double
 ///
-void q_cplegend_set_column_stretch_factors(void* self, libqt_list factors);
+void q_cplegend_set_column_stretch_factors(void* self, libqt_list /* of double */ factors);
 
 /// Inherited from QCPLayoutGrid
 ///
@@ -43559,9 +43778,9 @@ void q_cplegend_set_row_stretch_factor(void* self, int row, double factor);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
 /// @param self QCPLegend*
-/// @param factors libqt_list /* of double */
+/// @param factors libqt_list of double
 ///
-void q_cplegend_set_row_stretch_factors(void* self, libqt_list factors);
+void q_cplegend_set_row_stretch_factors(void* self, libqt_list /* of double */ factors);
 
 /// Inherited from QCPLayoutGrid
 ///
@@ -43815,7 +44034,8 @@ QCPMarginGroup* q_cplegend_margin_group(void* self, int32_t side);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of enum QCP__MarginSide to QCPMarginGroup*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QCPMarginGroup*)map.values)[i]);
 /// }
@@ -43825,7 +44045,9 @@ QCPMarginGroup* q_cplegend_margin_group(void* self, int32_t side);
 ///
 /// @param self QCPLegend*
 ///
-libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cplegend_margin_groups(void* self);
+/// @return libqt_map of enum QCP__MarginSide to QCPMarginGroup*
+///
+libqt_map q_cplegend_margin_groups(void* self);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -44132,7 +44354,9 @@ void q_cplegend_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPLegend*
 ///
-libqt_list /* of QObject* */ q_cplegend_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cplegend_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -44537,7 +44761,9 @@ void q_cplegend_on_take(void* self, bool (*callback)(void*, void*));
 /// @param self QCPLegend*
 /// @param recursive bool
 ///
-libqt_list /* of QCPLayoutElement* */ q_cplegend_elements(void* self, bool recursive);
+/// @return libqt_list of QCPLayoutElement*
+///
+libqt_list q_cplegend_elements(void* self, bool recursive);
 
 /// Inherited from QCPLayoutGrid
 ///
@@ -44548,7 +44774,9 @@ libqt_list /* of QCPLayoutElement* */ q_cplegend_elements(void* self, bool recur
 /// @param self QCPLegend*
 /// @param recursive bool
 ///
-libqt_list /* of QCPLayoutElement* */ q_cplegend_qbase_elements(void* self, bool recursive);
+/// @return libqt_list of QCPLayoutElement*
+///
+libqt_list q_cplegend_qbase_elements(void* self, bool recursive);
 
 /// Inherited from QCPLayoutGrid
 ///
@@ -45195,10 +45423,10 @@ void q_cplegend_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QCPLegend*
-/// @param minColWidths libqt_list /* of int */
-/// @param minRowHeights libqt_list /* of int */
+/// @param minColWidths libqt_list of int
+/// @param minRowHeights libqt_list of int
 ///
-void q_cplegend_get_minimum_row_col_sizes(void* self, libqt_list minColWidths, libqt_list minRowHeights);
+void q_cplegend_get_minimum_row_col_sizes(void* self, libqt_list /* of int */ minColWidths, libqt_list /* of int */ minRowHeights);
 
 /// Inherited from QCPLayoutGrid
 ///
@@ -45207,10 +45435,10 @@ void q_cplegend_get_minimum_row_col_sizes(void* self, libqt_list minColWidths, l
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QCPLegend*
-/// @param minColWidths libqt_list /* of int */
-/// @param minRowHeights libqt_list /* of int */
+/// @param minColWidths libqt_list of int
+/// @param minRowHeights libqt_list of int
 ///
-void q_cplegend_qbase_get_minimum_row_col_sizes(void* self, libqt_list minColWidths, libqt_list minRowHeights);
+void q_cplegend_qbase_get_minimum_row_col_sizes(void* self, libqt_list /* of int */ minColWidths, libqt_list /* of int */ minRowHeights);
 
 /// Inherited from QCPLayoutGrid
 ///
@@ -45219,9 +45447,9 @@ void q_cplegend_qbase_get_minimum_row_col_sizes(void* self, libqt_list minColWid
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPLegend*
-/// @param callback void func(QCPLegend* self, int* /* of int */, int* /* of int */)
+/// @param callback void func(QCPLegend* self, int* , int* )
 ///
-void q_cplegend_on_get_minimum_row_col_sizes(void* self, void (*callback)(void*, int*, int*));
+void q_cplegend_on_get_minimum_row_col_sizes(void* self, void (*callback)(void*, libqt_list /* of int */, libqt_list /* of int */));
 
 /// Inherited from QCPLayoutGrid
 ///
@@ -45230,10 +45458,10 @@ void q_cplegend_on_get_minimum_row_col_sizes(void* self, void (*callback)(void*,
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QCPLegend*
-/// @param maxColWidths libqt_list /* of int */
-/// @param maxRowHeights libqt_list /* of int */
+/// @param maxColWidths libqt_list of int
+/// @param maxRowHeights libqt_list of int
 ///
-void q_cplegend_get_maximum_row_col_sizes(void* self, libqt_list maxColWidths, libqt_list maxRowHeights);
+void q_cplegend_get_maximum_row_col_sizes(void* self, libqt_list /* of int */ maxColWidths, libqt_list /* of int */ maxRowHeights);
 
 /// Inherited from QCPLayoutGrid
 ///
@@ -45242,10 +45470,10 @@ void q_cplegend_get_maximum_row_col_sizes(void* self, libqt_list maxColWidths, l
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QCPLegend*
-/// @param maxColWidths libqt_list /* of int */
-/// @param maxRowHeights libqt_list /* of int */
+/// @param maxColWidths libqt_list of int
+/// @param maxRowHeights libqt_list of int
 ///
-void q_cplegend_qbase_get_maximum_row_col_sizes(void* self, libqt_list maxColWidths, libqt_list maxRowHeights);
+void q_cplegend_qbase_get_maximum_row_col_sizes(void* self, libqt_list /* of int */ maxColWidths, libqt_list /* of int */ maxRowHeights);
 
 /// Inherited from QCPLayoutGrid
 ///
@@ -45254,9 +45482,9 @@ void q_cplegend_qbase_get_maximum_row_col_sizes(void* self, libqt_list maxColWid
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPLegend*
-/// @param callback void func(QCPLegend* self, int* /* of int */, int* /* of int */)
+/// @param callback void func(QCPLegend* self, int* , int* )
 ///
-void q_cplegend_on_get_maximum_row_col_sizes(void* self, void (*callback)(void*, int*, int*));
+void q_cplegend_on_get_maximum_row_col_sizes(void* self, void (*callback)(void*, libqt_list /* of int */, libqt_list /* of int */));
 
 /// Inherited from QCPLayout
 ///
@@ -45362,12 +45590,14 @@ void q_cplegend_on_release_element(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QCPLegend*
-/// @param maxSizes libqt_list /* of int */
-/// @param minSizes libqt_list /* of int */
-/// @param stretchFactors libqt_list /* of double */
+/// @param maxSizes libqt_list of int
+/// @param minSizes libqt_list of int
+/// @param stretchFactors libqt_list of double
 /// @param totalSize int
 ///
-libqt_list /* of int */ q_cplegend_get_section_sizes(void* self, libqt_list maxSizes, libqt_list minSizes, libqt_list stretchFactors, int totalSize);
+/// @return libqt_list of int
+///
+libqt_list q_cplegend_get_section_sizes(void* self, libqt_list /* of int */ maxSizes, libqt_list /* of int */ minSizes, libqt_list /* of double */ stretchFactors, int totalSize);
 
 /// Inherited from QCPLayout
 ///
@@ -45376,12 +45606,14 @@ libqt_list /* of int */ q_cplegend_get_section_sizes(void* self, libqt_list maxS
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QCPLegend*
-/// @param maxSizes libqt_list /* of int */
-/// @param minSizes libqt_list /* of int */
-/// @param stretchFactors libqt_list /* of double */
+/// @param maxSizes libqt_list of int
+/// @param minSizes libqt_list of int
+/// @param stretchFactors libqt_list of double
 /// @param totalSize int
 ///
-libqt_list /* of int */ q_cplegend_qbase_get_section_sizes(void* self, libqt_list maxSizes, libqt_list minSizes, libqt_list stretchFactors, int totalSize);
+/// @return libqt_list of int
+///
+libqt_list q_cplegend_qbase_get_section_sizes(void* self, libqt_list /* of int */ maxSizes, libqt_list /* of int */ minSizes, libqt_list /* of double */ stretchFactors, int totalSize);
 
 /// Inherited from QCPLayout
 ///
@@ -45390,9 +45622,9 @@ libqt_list /* of int */ q_cplegend_qbase_get_section_sizes(void* self, libqt_lis
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCPLegend*
-/// @param callback int* func(QCPLegend* self, int* /* of int */, int* /* of int */, libqt_list /* of double */ /* of double */, int totalSize)
+/// @param callback int* func(QCPLegend* self, int* , int* , libqt_list of double of double, int totalSize)
 ///
-void q_cplegend_on_get_section_sizes(void* self, int* (*callback)(void*, int*, int*, libqt_list, int));
+void q_cplegend_on_get_section_sizes(void* self, int* (*callback)(void*, libqt_list /* of int */, libqt_list /* of int */, libqt_list /* of double */, int));
 
 /// Inherited from QCPLayerable
 ///
@@ -46349,7 +46581,8 @@ QCPMarginGroup* q_cptextelement_margin_group(void* self, int32_t side);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of enum QCP__MarginSide to QCPMarginGroup*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QCPMarginGroup*)map.values)[i]);
 /// }
@@ -46359,7 +46592,9 @@ QCPMarginGroup* q_cptextelement_margin_group(void* self, int32_t side);
 ///
 /// @param self QCPTextElement*
 ///
-libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cptextelement_margin_groups(void* self);
+/// @return libqt_map of enum QCP__MarginSide to QCPMarginGroup*
+///
+libqt_map q_cptextelement_margin_groups(void* self);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -46666,7 +46901,9 @@ void q_cptextelement_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPTextElement*
 ///
-libqt_list /* of QObject* */ q_cptextelement_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cptextelement_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -46943,7 +47180,9 @@ void q_cptextelement_on_update(void* self, void (*callback)(void*, int32_t));
 /// @param self QCPTextElement*
 /// @param recursive bool
 ///
-libqt_list /* of QCPLayoutElement* */ q_cptextelement_elements(void* self, bool recursive);
+/// @return libqt_list of QCPLayoutElement*
+///
+libqt_list q_cptextelement_elements(void* self, bool recursive);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -46954,7 +47193,9 @@ libqt_list /* of QCPLayoutElement* */ q_cptextelement_elements(void* self, bool 
 /// @param self QCPTextElement*
 /// @param recursive bool
 ///
-libqt_list /* of QCPLayoutElement* */ q_cptextelement_qbase_elements(void* self, bool recursive);
+/// @return libqt_list of QCPLayoutElement*
+///
+libqt_list q_cptextelement_qbase_elements(void* self, bool recursive);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -47886,7 +48127,9 @@ void q_cpcolorscale_set_range_zoom(void* self, bool enabled);
 ///
 /// @param self QCPColorScale*
 ///
-libqt_list /* of QCPColorMap* */ q_cpcolorscale_color_maps(void* self);
+/// @return libqt_list of QCPColorMap*
+///
+libqt_list q_cpcolorscale_color_maps(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorScale.html)
 ///
@@ -48203,7 +48446,8 @@ QCPMarginGroup* q_cpcolorscale_margin_group(void* self, int32_t side);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of enum QCP__MarginSide to QCPMarginGroup*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QCPMarginGroup*)map.values)[i]);
 /// }
@@ -48213,7 +48457,9 @@ QCPMarginGroup* q_cpcolorscale_margin_group(void* self, int32_t side);
 ///
 /// @param self QCPColorScale*
 ///
-libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cpcolorscale_margin_groups(void* self);
+/// @return libqt_map of enum QCP__MarginSide to QCPMarginGroup*
+///
+libqt_map q_cpcolorscale_margin_groups(void* self);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -48520,7 +48766,9 @@ void q_cpcolorscale_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPColorScale*
 ///
-libqt_list /* of QObject* */ q_cpcolorscale_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpcolorscale_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -48826,7 +49074,9 @@ void q_cpcolorscale_on_maximum_outer_size_hint(void* self, QSize* (*callback)())
 /// @param self QCPColorScale*
 /// @param recursive bool
 ///
-libqt_list /* of QCPLayoutElement* */ q_cpcolorscale_elements(void* self, bool recursive);
+/// @return libqt_list of QCPLayoutElement*
+///
+libqt_list q_cpcolorscale_elements(void* self, bool recursive);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -48837,7 +49087,9 @@ libqt_list /* of QCPLayoutElement* */ q_cpcolorscale_elements(void* self, bool r
 /// @param self QCPColorScale*
 /// @param recursive bool
 ///
-libqt_list /* of QCPLayoutElement* */ q_cpcolorscale_qbase_elements(void* self, bool recursive);
+/// @return libqt_list of QCPLayoutElement*
+///
+libqt_list q_cpcolorscale_qbase_elements(void* self, bool recursive);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -49915,10 +50167,10 @@ bool q_cpgraph_adaptive_sampling(void* self);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// @param self QCPGraph*
-/// @param keys libqt_list /* of double */
-/// @param values libqt_list /* of double */
+/// @param keys libqt_list of double
+/// @param values libqt_list of double
 ///
-void q_cpgraph_set_data2(void* self, libqt_list keys, libqt_list values);
+void q_cpgraph_set_data2(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -49958,10 +50210,10 @@ void q_cpgraph_set_adaptive_sampling(void* self, bool enabled);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// @param self QCPGraph*
-/// @param keys libqt_list /* of double */
-/// @param values libqt_list /* of double */
+/// @param keys libqt_list of double
+/// @param values libqt_list of double
 ///
-void q_cpgraph_add_data(void* self, libqt_list keys, libqt_list values);
+void q_cpgraph_add_data(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -50112,9 +50364,9 @@ void q_cpgraph_qbase_draw_legend_icon(void* self, void* painter, void* rect);
 ///
 /// @param self QCPGraph*
 /// @param painter QCPPainter*
-/// @param lines libqt_list /* of QPointF* */
+/// @param lines libqt_list of QPointF*
 ///
-void q_cpgraph_draw_fill(void* self, void* painter, libqt_list lines);
+void q_cpgraph_draw_fill(void* self, void* painter, libqt_list /* of QPointF* */ lines);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -50131,18 +50383,18 @@ void q_cpgraph_on_draw_fill(void* self, void (*callback)(void*, void*, QPointF**
 ///
 /// @param self QCPGraph*
 /// @param painter QCPPainter*
-/// @param lines libqt_list /* of QPointF* */
+/// @param lines libqt_list of QPointF*
 ///
-void q_cpgraph_qbase_draw_fill(void* self, void* painter, libqt_list lines);
+void q_cpgraph_qbase_draw_fill(void* self, void* painter, libqt_list /* of QPointF* */ lines);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// @param self QCPGraph*
 /// @param painter QCPPainter*
-/// @param scatters libqt_list /* of QPointF* */
+/// @param scatters libqt_list of QPointF*
 /// @param style QCPScatterStyle*
 ///
-void q_cpgraph_draw_scatter_plot(void* self, void* painter, libqt_list scatters, void* style);
+void q_cpgraph_draw_scatter_plot(void* self, void* painter, libqt_list /* of QPointF* */ scatters, void* style);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -50159,18 +50411,18 @@ void q_cpgraph_on_draw_scatter_plot(void* self, void (*callback)(void*, void*, Q
 ///
 /// @param self QCPGraph*
 /// @param painter QCPPainter*
-/// @param scatters libqt_list /* of QPointF* */
+/// @param scatters libqt_list of QPointF*
 /// @param style QCPScatterStyle*
 ///
-void q_cpgraph_qbase_draw_scatter_plot(void* self, void* painter, libqt_list scatters, void* style);
+void q_cpgraph_qbase_draw_scatter_plot(void* self, void* painter, libqt_list /* of QPointF* */ scatters, void* style);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// @param self QCPGraph*
 /// @param painter QCPPainter*
-/// @param lines libqt_list /* of QPointF* */
+/// @param lines libqt_list of QPointF*
 ///
-void q_cpgraph_draw_line_plot(void* self, void* painter, libqt_list lines);
+void q_cpgraph_draw_line_plot(void* self, void* painter, libqt_list /* of QPointF* */ lines);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -50187,17 +50439,17 @@ void q_cpgraph_on_draw_line_plot(void* self, void (*callback)(void*, void*, QPoi
 ///
 /// @param self QCPGraph*
 /// @param painter QCPPainter*
-/// @param lines libqt_list /* of QPointF* */
+/// @param lines libqt_list of QPointF*
 ///
-void q_cpgraph_qbase_draw_line_plot(void* self, void* painter, libqt_list lines);
+void q_cpgraph_qbase_draw_line_plot(void* self, void* painter, libqt_list /* of QPointF* */ lines);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// @param self QCPGraph*
 /// @param painter QCPPainter*
-/// @param lines libqt_list /* of QPointF* */
+/// @param lines libqt_list of QPointF*
 ///
-void q_cpgraph_draw_impulse_plot(void* self, void* painter, libqt_list lines);
+void q_cpgraph_draw_impulse_plot(void* self, void* painter, libqt_list /* of QPointF* */ lines);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -50214,17 +50466,17 @@ void q_cpgraph_on_draw_impulse_plot(void* self, void (*callback)(void*, void*, Q
 ///
 /// @param self QCPGraph*
 /// @param painter QCPPainter*
-/// @param lines libqt_list /* of QPointF* */
+/// @param lines libqt_list of QPointF*
 ///
-void q_cpgraph_qbase_draw_impulse_plot(void* self, void* painter, libqt_list lines);
+void q_cpgraph_qbase_draw_impulse_plot(void* self, void* painter, libqt_list /* of QPointF* */ lines);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// @param self QCPGraph*
-/// @param lines libqt_list /* of QPointF* */
+/// @param lines libqt_list of QPointF*
 /// @param dataRange QCPDataRange*
 ///
-void q_cpgraph_get_lines(void* self, libqt_list lines, void* dataRange);
+void q_cpgraph_get_lines(void* self, libqt_list /* of QPointF* */ lines, void* dataRange);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -50240,18 +50492,18 @@ void q_cpgraph_on_get_lines(void* self, void (*callback)(void*, QPointF**, void*
 /// Base class method implementation
 ///
 /// @param self QCPGraph*
-/// @param lines libqt_list /* of QPointF* */
+/// @param lines libqt_list of QPointF*
 /// @param dataRange QCPDataRange*
 ///
-void q_cpgraph_qbase_get_lines(void* self, libqt_list lines, void* dataRange);
+void q_cpgraph_qbase_get_lines(void* self, libqt_list /* of QPointF* */ lines, void* dataRange);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// @param self QCPGraph*
-/// @param scatters libqt_list /* of QPointF* */
+/// @param scatters libqt_list of QPointF*
 /// @param dataRange QCPDataRange*
 ///
-void q_cpgraph_get_scatters(void* self, libqt_list scatters, void* dataRange);
+void q_cpgraph_get_scatters(void* self, libqt_list /* of QPointF* */ scatters, void* dataRange);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -50267,17 +50519,19 @@ void q_cpgraph_on_get_scatters(void* self, void (*callback)(void*, QPointF**, vo
 /// Base class method implementation
 ///
 /// @param self QCPGraph*
-/// @param scatters libqt_list /* of QPointF* */
+/// @param scatters libqt_list of QPointF*
 /// @param dataRange QCPDataRange*
 ///
-void q_cpgraph_qbase_get_scatters(void* self, libqt_list scatters, void* dataRange);
+void q_cpgraph_qbase_get_scatters(void* self, libqt_list /* of QPointF* */ scatters, void* dataRange);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// @param self QCPGraph*
-/// @param data libqt_list /* of QCPGraphData* */
+/// @param data libqt_list of QCPGraphData*
 ///
-libqt_list /* of QPointF* */ q_cpgraph_data_to_lines(void* self, libqt_list data);
+/// @return libqt_list of QPointF*
+///
+libqt_list q_cpgraph_data_to_lines(void* self, libqt_list /* of QCPGraphData* */ data);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -50293,16 +50547,20 @@ void q_cpgraph_on_data_to_lines(void* self, QPointF** (*callback)(void*, QCPGrap
 /// Base class method implementation
 ///
 /// @param self QCPGraph*
-/// @param data libqt_list /* of QCPGraphData* */
+/// @param data libqt_list of QCPGraphData*
 ///
-libqt_list /* of QPointF* */ q_cpgraph_qbase_data_to_lines(void* self, libqt_list data);
+/// @return libqt_list of QPointF*
+///
+libqt_list q_cpgraph_qbase_data_to_lines(void* self, libqt_list /* of QCPGraphData* */ data);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// @param self QCPGraph*
-/// @param data libqt_list /* of QCPGraphData* */
+/// @param data libqt_list of QCPGraphData*
 ///
-libqt_list /* of QPointF* */ q_cpgraph_data_to_step_left_lines(void* self, libqt_list data);
+/// @return libqt_list of QPointF*
+///
+libqt_list q_cpgraph_data_to_step_left_lines(void* self, libqt_list /* of QCPGraphData* */ data);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -50318,16 +50576,20 @@ void q_cpgraph_on_data_to_step_left_lines(void* self, QPointF** (*callback)(void
 /// Base class method implementation
 ///
 /// @param self QCPGraph*
-/// @param data libqt_list /* of QCPGraphData* */
+/// @param data libqt_list of QCPGraphData*
 ///
-libqt_list /* of QPointF* */ q_cpgraph_qbase_data_to_step_left_lines(void* self, libqt_list data);
+/// @return libqt_list of QPointF*
+///
+libqt_list q_cpgraph_qbase_data_to_step_left_lines(void* self, libqt_list /* of QCPGraphData* */ data);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// @param self QCPGraph*
-/// @param data libqt_list /* of QCPGraphData* */
+/// @param data libqt_list of QCPGraphData*
 ///
-libqt_list /* of QPointF* */ q_cpgraph_data_to_step_right_lines(void* self, libqt_list data);
+/// @return libqt_list of QPointF*
+///
+libqt_list q_cpgraph_data_to_step_right_lines(void* self, libqt_list /* of QCPGraphData* */ data);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -50343,16 +50605,20 @@ void q_cpgraph_on_data_to_step_right_lines(void* self, QPointF** (*callback)(voi
 /// Base class method implementation
 ///
 /// @param self QCPGraph*
-/// @param data libqt_list /* of QCPGraphData* */
+/// @param data libqt_list of QCPGraphData*
 ///
-libqt_list /* of QPointF* */ q_cpgraph_qbase_data_to_step_right_lines(void* self, libqt_list data);
+/// @return libqt_list of QPointF*
+///
+libqt_list q_cpgraph_qbase_data_to_step_right_lines(void* self, libqt_list /* of QCPGraphData* */ data);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// @param self QCPGraph*
-/// @param data libqt_list /* of QCPGraphData* */
+/// @param data libqt_list of QCPGraphData*
 ///
-libqt_list /* of QPointF* */ q_cpgraph_data_to_step_center_lines(void* self, libqt_list data);
+/// @return libqt_list of QPointF*
+///
+libqt_list q_cpgraph_data_to_step_center_lines(void* self, libqt_list /* of QCPGraphData* */ data);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -50368,16 +50634,20 @@ void q_cpgraph_on_data_to_step_center_lines(void* self, QPointF** (*callback)(vo
 /// Base class method implementation
 ///
 /// @param self QCPGraph*
-/// @param data libqt_list /* of QCPGraphData* */
+/// @param data libqt_list of QCPGraphData*
 ///
-libqt_list /* of QPointF* */ q_cpgraph_qbase_data_to_step_center_lines(void* self, libqt_list data);
+/// @return libqt_list of QPointF*
+///
+libqt_list q_cpgraph_qbase_data_to_step_center_lines(void* self, libqt_list /* of QCPGraphData* */ data);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// @param self QCPGraph*
-/// @param data libqt_list /* of QCPGraphData* */
+/// @param data libqt_list of QCPGraphData*
 ///
-libqt_list /* of QPointF* */ q_cpgraph_data_to_impulse_lines(void* self, libqt_list data);
+/// @return libqt_list of QPointF*
+///
+libqt_list q_cpgraph_data_to_impulse_lines(void* self, libqt_list /* of QCPGraphData* */ data);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -50393,17 +50663,21 @@ void q_cpgraph_on_data_to_impulse_lines(void* self, QPointF** (*callback)(void*,
 /// Base class method implementation
 ///
 /// @param self QCPGraph*
-/// @param data libqt_list /* of QCPGraphData* */
+/// @param data libqt_list of QCPGraphData*
 ///
-libqt_list /* of QPointF* */ q_cpgraph_qbase_data_to_impulse_lines(void* self, libqt_list data);
+/// @return libqt_list of QPointF*
+///
+libqt_list q_cpgraph_qbase_data_to_impulse_lines(void* self, libqt_list /* of QCPGraphData* */ data);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// @param self QCPGraph*
-/// @param lineData libqt_list /* of QPointF* */
+/// @param lineData libqt_list of QPointF*
 /// @param keyOrientation enum Qt__Orientation
 ///
-libqt_list /* of QCPDataRange* */ q_cpgraph_get_non_nan_segments(void* self, libqt_list lineData, int32_t keyOrientation);
+/// @return libqt_list of QCPDataRange*
+///
+libqt_list q_cpgraph_get_non_nan_segments(void* self, libqt_list /* of QPointF* */ lineData, int32_t keyOrientation);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -50419,20 +50693,24 @@ void q_cpgraph_on_get_non_nan_segments(void* self, QCPDataRange** (*callback)(vo
 /// Base class method implementation
 ///
 /// @param self QCPGraph*
-/// @param lineData libqt_list /* of QPointF* */
+/// @param lineData libqt_list of QPointF*
 /// @param keyOrientation enum Qt__Orientation
 ///
-libqt_list /* of QCPDataRange* */ q_cpgraph_qbase_get_non_nan_segments(void* self, libqt_list lineData, int32_t keyOrientation);
+/// @return libqt_list of QCPDataRange*
+///
+libqt_list q_cpgraph_qbase_get_non_nan_segments(void* self, libqt_list /* of QPointF* */ lineData, int32_t keyOrientation);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// @param self QCPGraph*
-/// @param thisSegments libqt_list /* of QCPDataRange* */
-/// @param thisData libqt_list /* of QPointF* */
-/// @param otherSegments libqt_list /* of QCPDataRange* */
-/// @param otherData libqt_list /* of QPointF* */
+/// @param thisSegments libqt_list of QCPDataRange*
+/// @param thisData libqt_list of QPointF*
+/// @param otherSegments libqt_list of QCPDataRange*
+/// @param otherData libqt_list of QPointF*
 ///
-libqt_list /* of libqt_pair tuple of QCPDataRange* and QCPDataRange* */ q_cpgraph_get_overlapping_segments(void* self, libqt_list thisSegments, libqt_list thisData, libqt_list otherSegments, libqt_list otherData);
+/// @return libqt_list of libqt_pair tuple of QCPDataRange* and QCPDataRange*
+///
+libqt_list q_cpgraph_get_overlapping_segments(void* self, libqt_list /* of QCPDataRange* */ thisSegments, libqt_list /* of QPointF* */ thisData, libqt_list /* of QCPDataRange* */ otherSegments, libqt_list /* of QPointF* */ otherData);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -50441,19 +50719,21 @@ libqt_list /* of libqt_pair tuple of QCPDataRange* and QCPDataRange* */ q_cpgrap
 /// @param self QCPGraph*
 /// @param callback libqt_list /* of libqt_pair tuple of QCPDataRange* and QCPDataRange* */ func(QCPGraph* self, QCPDataRange** thisSegments, QPointF** thisData, QCPDataRange** otherSegments, QPointF** otherData)
 ///
-void q_cpgraph_on_get_overlapping_segments(void* self, libqt_list /* of libqt_pair tuple of QCPDataRange* and QCPDataRange* */ (*callback)(void*, QCPDataRange**, QPointF**, QCPDataRange**, QPointF**));
+void q_cpgraph_on_get_overlapping_segments(void* self, libqt_list (*callback)(void*, QCPDataRange**, QPointF**, QCPDataRange**, QPointF**));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// Base class method implementation
 ///
 /// @param self QCPGraph*
-/// @param thisSegments libqt_list /* of QCPDataRange* */
-/// @param thisData libqt_list /* of QPointF* */
-/// @param otherSegments libqt_list /* of QCPDataRange* */
-/// @param otherData libqt_list /* of QPointF* */
+/// @param thisSegments libqt_list of QCPDataRange*
+/// @param thisData libqt_list of QPointF*
+/// @param otherSegments libqt_list of QCPDataRange*
+/// @param otherData libqt_list of QPointF*
 ///
-libqt_list /* of libqt_pair tuple of QCPDataRange* and QCPDataRange* */ q_cpgraph_qbase_get_overlapping_segments(void* self, libqt_list thisSegments, libqt_list thisData, libqt_list otherSegments, libqt_list otherData);
+/// @return libqt_list of libqt_pair tuple of QCPDataRange* and QCPDataRange*
+///
+libqt_list q_cpgraph_qbase_get_overlapping_segments(void* self, libqt_list /* of QCPDataRange* */ thisSegments, libqt_list /* of QPointF* */ thisData, libqt_list /* of QCPDataRange* */ otherSegments, libqt_list /* of QPointF* */ otherData);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -50516,10 +50796,10 @@ QPointF* q_cpgraph_qbase_get_fill_base_point(void* self, void* matchingDataPoint
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// @param self QCPGraph*
-/// @param data libqt_list /* of QPointF* */
+/// @param data libqt_list of QPointF*
 /// @param x double
 ///
-int32_t q_cpgraph_find_index_below_x(void* self, libqt_list data, double x);
+int32_t q_cpgraph_find_index_below_x(void* self, libqt_list /* of QPointF* */ data, double x);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -50535,18 +50815,18 @@ void q_cpgraph_on_find_index_below_x(void* self, int32_t (*callback)(void*, QPoi
 /// Base class method implementation
 ///
 /// @param self QCPGraph*
-/// @param data libqt_list /* of QPointF* */
+/// @param data libqt_list of QPointF*
 /// @param x double
 ///
-int32_t q_cpgraph_qbase_find_index_below_x(void* self, libqt_list data, double x);
+int32_t q_cpgraph_qbase_find_index_below_x(void* self, libqt_list /* of QPointF* */ data, double x);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// @param self QCPGraph*
-/// @param data libqt_list /* of QPointF* */
+/// @param data libqt_list of QPointF*
 /// @param x double
 ///
-int32_t q_cpgraph_find_index_above_x(void* self, libqt_list data, double x);
+int32_t q_cpgraph_find_index_above_x(void* self, libqt_list /* of QPointF* */ data, double x);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -50562,18 +50842,18 @@ void q_cpgraph_on_find_index_above_x(void* self, int32_t (*callback)(void*, QPoi
 /// Base class method implementation
 ///
 /// @param self QCPGraph*
-/// @param data libqt_list /* of QPointF* */
+/// @param data libqt_list of QPointF*
 /// @param x double
 ///
-int32_t q_cpgraph_qbase_find_index_above_x(void* self, libqt_list data, double x);
+int32_t q_cpgraph_qbase_find_index_above_x(void* self, libqt_list /* of QPointF* */ data, double x);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// @param self QCPGraph*
-/// @param data libqt_list /* of QPointF* */
+/// @param data libqt_list of QPointF*
 /// @param y double
 ///
-int32_t q_cpgraph_find_index_below_y(void* self, libqt_list data, double y);
+int32_t q_cpgraph_find_index_below_y(void* self, libqt_list /* of QPointF* */ data, double y);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -50589,18 +50869,18 @@ void q_cpgraph_on_find_index_below_y(void* self, int32_t (*callback)(void*, QPoi
 /// Base class method implementation
 ///
 /// @param self QCPGraph*
-/// @param data libqt_list /* of QPointF* */
+/// @param data libqt_list of QPointF*
 /// @param y double
 ///
-int32_t q_cpgraph_qbase_find_index_below_y(void* self, libqt_list data, double y);
+int32_t q_cpgraph_qbase_find_index_below_y(void* self, libqt_list /* of QPointF* */ data, double y);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// @param self QCPGraph*
-/// @param data libqt_list /* of QPointF* */
+/// @param data libqt_list of QPointF*
 /// @param y double
 ///
-int32_t q_cpgraph_find_index_above_y(void* self, libqt_list data, double y);
+int32_t q_cpgraph_find_index_above_y(void* self, libqt_list /* of QPointF* */ data, double y);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -50616,10 +50896,10 @@ void q_cpgraph_on_find_index_above_y(void* self, int32_t (*callback)(void*, QPoi
 /// Base class method implementation
 ///
 /// @param self QCPGraph*
-/// @param data libqt_list /* of QPointF* */
+/// @param data libqt_list of QPointF*
 /// @param y double
 ///
-int32_t q_cpgraph_qbase_find_index_above_y(void* self, libqt_list data, double y);
+int32_t q_cpgraph_qbase_find_index_above_y(void* self, libqt_list /* of QPointF* */ data, double y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -50643,20 +50923,20 @@ const char* q_cpgraph_tr3(const char* s, const char* c, int n);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// @param self QCPGraph*
-/// @param keys libqt_list /* of double */
-/// @param values libqt_list /* of double */
+/// @param keys libqt_list of double
+/// @param values libqt_list of double
 /// @param alreadySorted bool
 ///
-void q_cpgraph_set_data3(void* self, libqt_list keys, libqt_list values, bool alreadySorted);
+void q_cpgraph_set_data3(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values, bool alreadySorted);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
 /// @param self QCPGraph*
-/// @param keys libqt_list /* of double */
-/// @param values libqt_list /* of double */
+/// @param keys libqt_list of double
+/// @param values libqt_list of double
 /// @param alreadySorted bool
 ///
-void q_cpgraph_add_data3(void* self, libqt_list keys, libqt_list values, bool alreadySorted);
+void q_cpgraph_add_data3(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values, bool alreadySorted);
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -51228,7 +51508,9 @@ void q_cpgraph_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPGraph*
 ///
-libqt_list /* of QObject* */ q_cpgraph_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpgraph_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -52996,19 +53278,19 @@ int32_t q_cpcurve_line_style(void* self);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
 /// @param self QCPCurve*
-/// @param t libqt_list /* of double */
-/// @param keys libqt_list /* of double */
-/// @param values libqt_list /* of double */
+/// @param t libqt_list of double
+/// @param keys libqt_list of double
+/// @param values libqt_list of double
 ///
-void q_cpcurve_set_data2(void* self, libqt_list t, libqt_list keys, libqt_list values);
+void q_cpcurve_set_data2(void* self, libqt_list /* of double */ t, libqt_list /* of double */ keys, libqt_list /* of double */ values);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
 /// @param self QCPCurve*
-/// @param keys libqt_list /* of double */
-/// @param values libqt_list /* of double */
+/// @param keys libqt_list of double
+/// @param values libqt_list of double
 ///
-void q_cpcurve_set_data3(void* self, libqt_list keys, libqt_list values);
+void q_cpcurve_set_data3(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
@@ -53034,19 +53316,19 @@ void q_cpcurve_set_line_style(void* self, int32_t style);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
 /// @param self QCPCurve*
-/// @param t libqt_list /* of double */
-/// @param keys libqt_list /* of double */
-/// @param values libqt_list /* of double */
+/// @param t libqt_list of double
+/// @param keys libqt_list of double
+/// @param values libqt_list of double
 ///
-void q_cpcurve_add_data(void* self, libqt_list t, libqt_list keys, libqt_list values);
+void q_cpcurve_add_data(void* self, libqt_list /* of double */ t, libqt_list /* of double */ keys, libqt_list /* of double */ values);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
 /// @param self QCPCurve*
-/// @param keys libqt_list /* of double */
-/// @param values libqt_list /* of double */
+/// @param keys libqt_list of double
+/// @param values libqt_list of double
 ///
-void q_cpcurve_add_data2(void* self, libqt_list keys, libqt_list values);
+void q_cpcurve_add_data2(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
@@ -53206,9 +53488,9 @@ void q_cpcurve_qbase_draw_legend_icon(void* self, void* painter, void* rect);
 ///
 /// @param self QCPCurve*
 /// @param painter QCPPainter*
-/// @param lines libqt_list /* of QPointF* */
+/// @param lines libqt_list of QPointF*
 ///
-void q_cpcurve_draw_curve_line(void* self, void* painter, libqt_list lines);
+void q_cpcurve_draw_curve_line(void* self, void* painter, libqt_list /* of QPointF* */ lines);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
@@ -53225,18 +53507,18 @@ void q_cpcurve_on_draw_curve_line(void* self, void (*callback)(void*, void*, QPo
 ///
 /// @param self QCPCurve*
 /// @param painter QCPPainter*
-/// @param lines libqt_list /* of QPointF* */
+/// @param lines libqt_list of QPointF*
 ///
-void q_cpcurve_qbase_draw_curve_line(void* self, void* painter, libqt_list lines);
+void q_cpcurve_qbase_draw_curve_line(void* self, void* painter, libqt_list /* of QPointF* */ lines);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
 /// @param self QCPCurve*
 /// @param painter QCPPainter*
-/// @param points libqt_list /* of QPointF* */
+/// @param points libqt_list of QPointF*
 /// @param style QCPScatterStyle*
 ///
-void q_cpcurve_draw_scatter_plot(void* self, void* painter, libqt_list points, void* style);
+void q_cpcurve_draw_scatter_plot(void* self, void* painter, libqt_list /* of QPointF* */ points, void* style);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
@@ -53253,19 +53535,19 @@ void q_cpcurve_on_draw_scatter_plot(void* self, void (*callback)(void*, void*, Q
 ///
 /// @param self QCPCurve*
 /// @param painter QCPPainter*
-/// @param points libqt_list /* of QPointF* */
+/// @param points libqt_list of QPointF*
 /// @param style QCPScatterStyle*
 ///
-void q_cpcurve_qbase_draw_scatter_plot(void* self, void* painter, libqt_list points, void* style);
+void q_cpcurve_qbase_draw_scatter_plot(void* self, void* painter, libqt_list /* of QPointF* */ points, void* style);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
 /// @param self QCPCurve*
-/// @param lines libqt_list /* of QPointF* */
+/// @param lines libqt_list of QPointF*
 /// @param dataRange QCPDataRange*
 /// @param penWidth double
 ///
-void q_cpcurve_get_curve_lines(void* self, libqt_list lines, void* dataRange, double penWidth);
+void q_cpcurve_get_curve_lines(void* self, libqt_list /* of QPointF* */ lines, void* dataRange, double penWidth);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
@@ -53281,20 +53563,20 @@ void q_cpcurve_on_get_curve_lines(void* self, void (*callback)(void*, QPointF**,
 /// Base class method implementation
 ///
 /// @param self QCPCurve*
-/// @param lines libqt_list /* of QPointF* */
+/// @param lines libqt_list of QPointF*
 /// @param dataRange QCPDataRange*
 /// @param penWidth double
 ///
-void q_cpcurve_qbase_get_curve_lines(void* self, libqt_list lines, void* dataRange, double penWidth);
+void q_cpcurve_qbase_get_curve_lines(void* self, libqt_list /* of QPointF* */ lines, void* dataRange, double penWidth);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
 /// @param self QCPCurve*
-/// @param scatters libqt_list /* of QPointF* */
+/// @param scatters libqt_list of QPointF*
 /// @param dataRange QCPDataRange*
 /// @param scatterWidth double
 ///
-void q_cpcurve_get_scatters(void* self, libqt_list scatters, void* dataRange, double scatterWidth);
+void q_cpcurve_get_scatters(void* self, libqt_list /* of QPointF* */ scatters, void* dataRange, double scatterWidth);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
@@ -53310,11 +53592,11 @@ void q_cpcurve_on_get_scatters(void* self, void (*callback)(void*, QPointF**, vo
 /// Base class method implementation
 ///
 /// @param self QCPCurve*
-/// @param scatters libqt_list /* of QPointF* */
+/// @param scatters libqt_list of QPointF*
 /// @param dataRange QCPDataRange*
 /// @param scatterWidth double
 ///
-void q_cpcurve_qbase_get_scatters(void* self, libqt_list scatters, void* dataRange, double scatterWidth);
+void q_cpcurve_qbase_get_scatters(void* self, libqt_list /* of QPointF* */ scatters, void* dataRange, double scatterWidth);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
@@ -53406,7 +53688,9 @@ QPointF* q_cpcurve_qbase_get_optimized_point(void* self, int otherRegion, double
 /// @param keyMax double
 /// @param valueMin double
 ///
-libqt_list /* of QPointF* */ q_cpcurve_get_optimized_corner_points(void* self, int prevRegion, int currentRegion, double prevKey, double prevValue, double key, double value, double keyMin, double valueMax, double keyMax, double valueMin);
+/// @return libqt_list of QPointF*
+///
+libqt_list q_cpcurve_get_optimized_corner_points(void* self, int prevRegion, int currentRegion, double prevKey, double prevValue, double key, double value, double keyMin, double valueMax, double keyMax, double valueMin);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
@@ -53433,7 +53717,9 @@ void q_cpcurve_on_get_optimized_corner_points(void* self, QPointF** (*callback)(
 /// @param keyMax double
 /// @param valueMin double
 ///
-libqt_list /* of QPointF* */ q_cpcurve_qbase_get_optimized_corner_points(void* self, int prevRegion, int currentRegion, double prevKey, double prevValue, double key, double value, double keyMin, double valueMax, double keyMax, double valueMin);
+/// @return libqt_list of QPointF*
+///
+libqt_list q_cpcurve_qbase_get_optimized_corner_points(void* self, int prevRegion, int currentRegion, double prevKey, double prevValue, double key, double value, double keyMin, double valueMax, double keyMax, double valueMin);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
@@ -53514,10 +53800,10 @@ bool q_cpcurve_qbase_get_traverse(void* self, double prevKey, double prevValue, 
 /// @param valueMax double
 /// @param keyMax double
 /// @param valueMin double
-/// @param beforeTraverse libqt_list /* of QPointF* */
-/// @param afterTraverse libqt_list /* of QPointF* */
+/// @param beforeTraverse libqt_list of QPointF*
+/// @param afterTraverse libqt_list of QPointF*
 ///
-void q_cpcurve_get_traverse_corner_points(void* self, int prevRegion, int currentRegion, double keyMin, double valueMax, double keyMax, double valueMin, libqt_list beforeTraverse, libqt_list afterTraverse);
+void q_cpcurve_get_traverse_corner_points(void* self, int prevRegion, int currentRegion, double keyMin, double valueMax, double keyMax, double valueMin, libqt_list /* of QPointF* */ beforeTraverse, libqt_list /* of QPointF* */ afterTraverse);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
@@ -53539,10 +53825,10 @@ void q_cpcurve_on_get_traverse_corner_points(void* self, void (*callback)(void*,
 /// @param valueMax double
 /// @param keyMax double
 /// @param valueMin double
-/// @param beforeTraverse libqt_list /* of QPointF* */
-/// @param afterTraverse libqt_list /* of QPointF* */
+/// @param beforeTraverse libqt_list of QPointF*
+/// @param afterTraverse libqt_list of QPointF*
 ///
-void q_cpcurve_qbase_get_traverse_corner_points(void* self, int prevRegion, int currentRegion, double keyMin, double valueMax, double keyMax, double valueMin, libqt_list beforeTraverse, libqt_list afterTraverse);
+void q_cpcurve_qbase_get_traverse_corner_points(void* self, int prevRegion, int currentRegion, double keyMin, double valueMax, double keyMax, double valueMin, libqt_list /* of QPointF* */ beforeTraverse, libqt_list /* of QPointF* */ afterTraverse);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -53566,22 +53852,22 @@ const char* q_cpcurve_tr3(const char* s, const char* c, int n);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
 /// @param self QCPCurve*
-/// @param t libqt_list /* of double */
-/// @param keys libqt_list /* of double */
-/// @param values libqt_list /* of double */
+/// @param t libqt_list of double
+/// @param keys libqt_list of double
+/// @param values libqt_list of double
 /// @param alreadySorted bool
 ///
-void q_cpcurve_set_data4(void* self, libqt_list t, libqt_list keys, libqt_list values, bool alreadySorted);
+void q_cpcurve_set_data4(void* self, libqt_list /* of double */ t, libqt_list /* of double */ keys, libqt_list /* of double */ values, bool alreadySorted);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
 /// @param self QCPCurve*
-/// @param t libqt_list /* of double */
-/// @param keys libqt_list /* of double */
-/// @param values libqt_list /* of double */
+/// @param t libqt_list of double
+/// @param keys libqt_list of double
+/// @param values libqt_list of double
 /// @param alreadySorted bool
 ///
-void q_cpcurve_add_data42(void* self, libqt_list t, libqt_list keys, libqt_list values, bool alreadySorted);
+void q_cpcurve_add_data42(void* self, libqt_list /* of double */ t, libqt_list /* of double */ keys, libqt_list /* of double */ values, bool alreadySorted);
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -54153,7 +54439,9 @@ void q_cpcurve_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPCurve*
 ///
-libqt_list /* of QObject* */ q_cpcurve_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpcurve_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -55794,7 +56082,9 @@ void q_cpbarsgroup_set_spacing(void* self, double spacing);
 ///
 /// @param self QCPBarsGroup*
 ///
-libqt_list /* of QCPBars* */ q_cpbarsgroup_bars(void* self);
+/// @return libqt_list of QCPBars*
+///
+libqt_list q_cpbarsgroup_bars(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBarsGroup.html)
 ///
@@ -56083,7 +56373,9 @@ void q_cpbarsgroup_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPBarsGroup*
 ///
-libqt_list /* of QObject* */ q_cpbarsgroup_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpbarsgroup_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -56917,10 +57209,10 @@ QCPBars* q_cpbars_bar_above(void* self);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBars.html)
 ///
 /// @param self QCPBars*
-/// @param keys libqt_list /* of double */
-/// @param values libqt_list /* of double */
+/// @param keys libqt_list of double
+/// @param values libqt_list of double
 ///
-void q_cpbars_set_data2(void* self, libqt_list keys, libqt_list values);
+void q_cpbars_set_data2(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBars.html)
 ///
@@ -56960,10 +57252,10 @@ void q_cpbars_set_stacking_gap(void* self, double pixels);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBars.html)
 ///
 /// @param self QCPBars*
-/// @param keys libqt_list /* of double */
-/// @param values libqt_list /* of double */
+/// @param keys libqt_list of double
+/// @param values libqt_list of double
 ///
-void q_cpbars_add_data(void* self, libqt_list keys, libqt_list values);
+void q_cpbars_add_data(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBars.html)
 ///
@@ -57308,20 +57600,20 @@ const char* q_cpbars_tr3(const char* s, const char* c, int n);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBars.html)
 ///
 /// @param self QCPBars*
-/// @param keys libqt_list /* of double */
-/// @param values libqt_list /* of double */
+/// @param keys libqt_list of double
+/// @param values libqt_list of double
 /// @param alreadySorted bool
 ///
-void q_cpbars_set_data3(void* self, libqt_list keys, libqt_list values, bool alreadySorted);
+void q_cpbars_set_data3(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values, bool alreadySorted);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBars.html)
 ///
 /// @param self QCPBars*
-/// @param keys libqt_list /* of double */
-/// @param values libqt_list /* of double */
+/// @param keys libqt_list of double
+/// @param values libqt_list of double
 /// @param alreadySorted bool
 ///
-void q_cpbars_add_data3(void* self, libqt_list keys, libqt_list values, bool alreadySorted);
+void q_cpbars_add_data3(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values, bool alreadySorted);
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -57893,7 +58185,9 @@ void q_cpbars_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPBars*
 ///
-libqt_list /* of QObject* */ q_cpbars_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpbars_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -59421,9 +59715,9 @@ QCPStatisticalBoxData* q_cpstatisticalboxdata_new3(void* param1);
 /// @param median double
 /// @param upperQuartile double
 /// @param maximum double
-/// @param outliers libqt_list /* of double */
+/// @param outliers libqt_list of double
 ///
-QCPStatisticalBoxData* q_cpstatisticalboxdata_new4(double key, double minimum, double lowerQuartile, double median, double upperQuartile, double maximum, libqt_list outliers);
+QCPStatisticalBoxData* q_cpstatisticalboxdata_new4(double key, double minimum, double lowerQuartile, double median, double upperQuartile, double maximum, libqt_list /* of double */ outliers);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPStatisticalBoxData.html)
 ///
@@ -59541,14 +59835,16 @@ void q_cpstatisticalboxdata_set_maximum(void* self, double maximum);
 ///
 /// @param self QCPStatisticalBoxData*
 ///
-libqt_list /* of double */ q_cpstatisticalboxdata_outliers(void* self);
+/// @return libqt_list of double
+///
+libqt_list q_cpstatisticalboxdata_outliers(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPStatisticalBoxData.html)
 ///
 /// @param self QCPStatisticalBoxData*
-/// @param outliers libqt_list /* of double */
+/// @param outliers libqt_list of double
 ///
-void q_cpstatisticalboxdata_set_outliers(void* self, libqt_list outliers);
+void q_cpstatisticalboxdata_set_outliers(void* self, libqt_list /* of double */ outliers);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPStatisticalBoxData.html)
 ///
@@ -59654,14 +59950,14 @@ QCPScatterStyle* q_cpstatisticalbox_outlier_style(void* self);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPStatisticalBox.html)
 ///
 /// @param self QCPStatisticalBox*
-/// @param keys libqt_list /* of double */
-/// @param minimum libqt_list /* of double */
-/// @param lowerQuartile libqt_list /* of double */
-/// @param median libqt_list /* of double */
-/// @param upperQuartile libqt_list /* of double */
-/// @param maximum libqt_list /* of double */
+/// @param keys libqt_list of double
+/// @param minimum libqt_list of double
+/// @param lowerQuartile libqt_list of double
+/// @param median libqt_list of double
+/// @param upperQuartile libqt_list of double
+/// @param maximum libqt_list of double
 ///
-void q_cpstatisticalbox_set_data2(void* self, libqt_list keys, libqt_list minimum, libqt_list lowerQuartile, libqt_list median, libqt_list upperQuartile, libqt_list maximum);
+void q_cpstatisticalbox_set_data2(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ minimum, libqt_list /* of double */ lowerQuartile, libqt_list /* of double */ median, libqt_list /* of double */ upperQuartile, libqt_list /* of double */ maximum);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPStatisticalBox.html)
 ///
@@ -59715,14 +60011,14 @@ void q_cpstatisticalbox_set_outlier_style(void* self, void* style);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPStatisticalBox.html)
 ///
 /// @param self QCPStatisticalBox*
-/// @param keys libqt_list /* of double */
-/// @param minimum libqt_list /* of double */
-/// @param lowerQuartile libqt_list /* of double */
-/// @param median libqt_list /* of double */
-/// @param upperQuartile libqt_list /* of double */
-/// @param maximum libqt_list /* of double */
+/// @param keys libqt_list of double
+/// @param minimum libqt_list of double
+/// @param lowerQuartile libqt_list of double
+/// @param median libqt_list of double
+/// @param upperQuartile libqt_list of double
+/// @param maximum libqt_list of double
 ///
-void q_cpstatisticalbox_add_data(void* self, libqt_list keys, libqt_list minimum, libqt_list lowerQuartile, libqt_list median, libqt_list upperQuartile, libqt_list maximum);
+void q_cpstatisticalbox_add_data(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ minimum, libqt_list /* of double */ lowerQuartile, libqt_list /* of double */ median, libqt_list /* of double */ upperQuartile, libqt_list /* of double */ maximum);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPStatisticalBox.html)
 ///
@@ -59922,28 +60218,28 @@ const char* q_cpstatisticalbox_tr3(const char* s, const char* c, int n);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPStatisticalBox.html)
 ///
 /// @param self QCPStatisticalBox*
-/// @param keys libqt_list /* of double */
-/// @param minimum libqt_list /* of double */
-/// @param lowerQuartile libqt_list /* of double */
-/// @param median libqt_list /* of double */
-/// @param upperQuartile libqt_list /* of double */
-/// @param maximum libqt_list /* of double */
+/// @param keys libqt_list of double
+/// @param minimum libqt_list of double
+/// @param lowerQuartile libqt_list of double
+/// @param median libqt_list of double
+/// @param upperQuartile libqt_list of double
+/// @param maximum libqt_list of double
 /// @param alreadySorted bool
 ///
-void q_cpstatisticalbox_set_data7(void* self, libqt_list keys, libqt_list minimum, libqt_list lowerQuartile, libqt_list median, libqt_list upperQuartile, libqt_list maximum, bool alreadySorted);
+void q_cpstatisticalbox_set_data7(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ minimum, libqt_list /* of double */ lowerQuartile, libqt_list /* of double */ median, libqt_list /* of double */ upperQuartile, libqt_list /* of double */ maximum, bool alreadySorted);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPStatisticalBox.html)
 ///
 /// @param self QCPStatisticalBox*
-/// @param keys libqt_list /* of double */
-/// @param minimum libqt_list /* of double */
-/// @param lowerQuartile libqt_list /* of double */
-/// @param median libqt_list /* of double */
-/// @param upperQuartile libqt_list /* of double */
-/// @param maximum libqt_list /* of double */
+/// @param keys libqt_list of double
+/// @param minimum libqt_list of double
+/// @param lowerQuartile libqt_list of double
+/// @param median libqt_list of double
+/// @param upperQuartile libqt_list of double
+/// @param maximum libqt_list of double
 /// @param alreadySorted bool
 ///
-void q_cpstatisticalbox_add_data7(void* self, libqt_list keys, libqt_list minimum, libqt_list lowerQuartile, libqt_list median, libqt_list upperQuartile, libqt_list maximum, bool alreadySorted);
+void q_cpstatisticalbox_add_data7(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ minimum, libqt_list /* of double */ lowerQuartile, libqt_list /* of double */ median, libqt_list /* of double */ upperQuartile, libqt_list /* of double */ maximum, bool alreadySorted);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPStatisticalBox.html)
 ///
@@ -59954,9 +60250,9 @@ void q_cpstatisticalbox_add_data7(void* self, libqt_list keys, libqt_list minimu
 /// @param median double
 /// @param upperQuartile double
 /// @param maximum double
-/// @param outliers libqt_list /* of double */
+/// @param outliers libqt_list of double
 ///
-void q_cpstatisticalbox_add_data72(void* self, double key, double minimum, double lowerQuartile, double median, double upperQuartile, double maximum, libqt_list outliers);
+void q_cpstatisticalbox_add_data72(void* self, double key, double minimum, double lowerQuartile, double median, double upperQuartile, double maximum, libqt_list /* of double */ outliers);
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -60528,7 +60824,9 @@ void q_cpstatisticalbox_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPStatisticalBox*
 ///
-libqt_list /* of QObject* */ q_cpstatisticalbox_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpstatisticalbox_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -63237,7 +63535,9 @@ void q_cpcolormap_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPColorMap*
 ///
-libqt_list /* of QObject* */ q_cpcolormap_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpcolormap_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -64733,13 +65033,13 @@ QPen* q_cpfinancial_pen_negative(void* self);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPFinancial.html)
 ///
 /// @param self QCPFinancial*
-/// @param keys libqt_list /* of double */
-/// @param open libqt_list /* of double */
-/// @param high libqt_list /* of double */
-/// @param low libqt_list /* of double */
-/// @param close libqt_list /* of double */
+/// @param keys libqt_list of double
+/// @param open libqt_list of double
+/// @param high libqt_list of double
+/// @param low libqt_list of double
+/// @param close libqt_list of double
 ///
-void q_cpfinancial_set_data2(void* self, libqt_list keys, libqt_list open, libqt_list high, libqt_list low, libqt_list close);
+void q_cpfinancial_set_data2(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ open, libqt_list /* of double */ high, libqt_list /* of double */ low, libqt_list /* of double */ close);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPFinancial.html)
 ///
@@ -64800,13 +65100,13 @@ void q_cpfinancial_set_pen_negative(void* self, void* pen);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPFinancial.html)
 ///
 /// @param self QCPFinancial*
-/// @param keys libqt_list /* of double */
-/// @param open libqt_list /* of double */
-/// @param high libqt_list /* of double */
-/// @param low libqt_list /* of double */
-/// @param close libqt_list /* of double */
+/// @param keys libqt_list of double
+/// @param open libqt_list of double
+/// @param high libqt_list of double
+/// @param low libqt_list of double
+/// @param close libqt_list of double
 ///
-void q_cpfinancial_add_data(void* self, libqt_list keys, libqt_list open, libqt_list high, libqt_list low, libqt_list close);
+void q_cpfinancial_add_data(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ open, libqt_list /* of double */ high, libqt_list /* of double */ low, libqt_list /* of double */ close);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPFinancial.html)
 ///
@@ -65032,26 +65332,26 @@ const char* q_cpfinancial_tr3(const char* s, const char* c, int n);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPFinancial.html)
 ///
 /// @param self QCPFinancial*
-/// @param keys libqt_list /* of double */
-/// @param open libqt_list /* of double */
-/// @param high libqt_list /* of double */
-/// @param low libqt_list /* of double */
-/// @param close libqt_list /* of double */
+/// @param keys libqt_list of double
+/// @param open libqt_list of double
+/// @param high libqt_list of double
+/// @param low libqt_list of double
+/// @param close libqt_list of double
 /// @param alreadySorted bool
 ///
-void q_cpfinancial_set_data6(void* self, libqt_list keys, libqt_list open, libqt_list high, libqt_list low, libqt_list close, bool alreadySorted);
+void q_cpfinancial_set_data6(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ open, libqt_list /* of double */ high, libqt_list /* of double */ low, libqt_list /* of double */ close, bool alreadySorted);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPFinancial.html)
 ///
 /// @param self QCPFinancial*
-/// @param keys libqt_list /* of double */
-/// @param open libqt_list /* of double */
-/// @param high libqt_list /* of double */
-/// @param low libqt_list /* of double */
-/// @param close libqt_list /* of double */
+/// @param keys libqt_list of double
+/// @param open libqt_list of double
+/// @param high libqt_list of double
+/// @param low libqt_list of double
+/// @param close libqt_list of double
 /// @param alreadySorted bool
 ///
-void q_cpfinancial_add_data6(void* self, libqt_list keys, libqt_list open, libqt_list high, libqt_list low, libqt_list close, bool alreadySorted);
+void q_cpfinancial_add_data6(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ open, libqt_list /* of double */ high, libqt_list /* of double */ low, libqt_list /* of double */ close, bool alreadySorted);
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -65623,7 +65923,9 @@ void q_cpfinancial_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPFinancial*
 ///
-libqt_list /* of QObject* */ q_cpfinancial_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpfinancial_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -67322,17 +67624,17 @@ double q_cperrorbars_symbol_gap(void* self);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
 /// @param self QCPErrorBars*
-/// @param error libqt_list /* of double */
+/// @param error libqt_list of double
 ///
-void q_cperrorbars_set_data2(void* self, libqt_list error);
+void q_cperrorbars_set_data2(void* self, libqt_list /* of double */ error);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
 /// @param self QCPErrorBars*
-/// @param errorMinus libqt_list /* of double */
-/// @param errorPlus libqt_list /* of double */
+/// @param errorMinus libqt_list of double
+/// @param errorPlus libqt_list of double
 ///
-void q_cperrorbars_set_data3(void* self, libqt_list errorMinus, libqt_list errorPlus);
+void q_cperrorbars_set_data3(void* self, libqt_list /* of double */ errorMinus, libqt_list /* of double */ errorPlus);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -67365,17 +67667,17 @@ void q_cperrorbars_set_symbol_gap(void* self, double pixels);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
 /// @param self QCPErrorBars*
-/// @param error libqt_list /* of double */
+/// @param error libqt_list of double
 ///
-void q_cperrorbars_add_data(void* self, libqt_list error);
+void q_cperrorbars_add_data(void* self, libqt_list /* of double */ error);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
 /// @param self QCPErrorBars*
-/// @param errorMinus libqt_list /* of double */
-/// @param errorPlus libqt_list /* of double */
+/// @param errorMinus libqt_list of double
+/// @param errorPlus libqt_list of double
 ///
-void q_cperrorbars_add_data2(void* self, libqt_list errorMinus, libqt_list errorPlus);
+void q_cperrorbars_add_data2(void* self, libqt_list /* of double */ errorMinus, libqt_list /* of double */ errorPlus);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -67807,10 +68109,10 @@ QCPRange* q_cperrorbars_qbase_get_value_range(void* self, bool* foundRange, int3
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
 /// @param self QCPErrorBars*
-/// @param selectedSegments libqt_list /* of QCPDataRange* */
-/// @param unselectedSegments libqt_list /* of QCPDataRange* */
+/// @param selectedSegments libqt_list of QCPDataRange*
+/// @param unselectedSegments libqt_list of QCPDataRange*
 ///
-void q_cperrorbars_get_data_segments(void* self, libqt_list selectedSegments, libqt_list unselectedSegments);
+void q_cperrorbars_get_data_segments(void* self, libqt_list /* of QCPDataRange* */ selectedSegments, libqt_list /* of QCPDataRange* */ unselectedSegments);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -67826,10 +68128,10 @@ void q_cperrorbars_on_get_data_segments(void* self, void (*callback)(void*, QCPD
 /// Base class method implementation
 ///
 /// @param self QCPErrorBars*
-/// @param selectedSegments libqt_list /* of QCPDataRange* */
-/// @param unselectedSegments libqt_list /* of QCPDataRange* */
+/// @param selectedSegments libqt_list of QCPDataRange*
+/// @param unselectedSegments libqt_list of QCPDataRange*
 ///
-void q_cperrorbars_qbase_get_data_segments(void* self, libqt_list selectedSegments, libqt_list unselectedSegments);
+void q_cperrorbars_qbase_get_data_segments(void* self, libqt_list /* of QCPDataRange* */ selectedSegments, libqt_list /* of QCPDataRange* */ unselectedSegments);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -68463,7 +68765,9 @@ void q_cperrorbars_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPErrorBars*
 ///
-libqt_list /* of QObject* */ q_cperrorbars_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cperrorbars_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -69955,7 +70259,9 @@ void q_cpitemstraightline_set_selected(void* self, bool selected);
 ///
 /// @param self QCPItemStraightLine*
 ///
-libqt_list /* of QCPItemPosition* */ q_cpitemstraightline_positions(void* self);
+/// @return libqt_list of QCPItemPosition*
+///
+libqt_list q_cpitemstraightline_positions(void* self);
 
 /// Inherited from QCPAbstractItem
 ///
@@ -69963,7 +70269,9 @@ libqt_list /* of QCPItemPosition* */ q_cpitemstraightline_positions(void* self);
 ///
 /// @param self QCPItemStraightLine*
 ///
-libqt_list /* of QCPItemAnchor* */ q_cpitemstraightline_anchors(void* self);
+/// @return libqt_list of QCPItemAnchor*
+///
+libqt_list q_cpitemstraightline_anchors(void* self);
 
 /// Inherited from QCPAbstractItem
 ///
@@ -70240,7 +70548,9 @@ void q_cpitemstraightline_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPItemStraightLine*
 ///
-libqt_list /* of QObject* */ q_cpitemstraightline_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpitemstraightline_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -71821,7 +72131,9 @@ void q_cpitemline_set_selected(void* self, bool selected);
 ///
 /// @param self QCPItemLine*
 ///
-libqt_list /* of QCPItemPosition* */ q_cpitemline_positions(void* self);
+/// @return libqt_list of QCPItemPosition*
+///
+libqt_list q_cpitemline_positions(void* self);
 
 /// Inherited from QCPAbstractItem
 ///
@@ -71829,7 +72141,9 @@ libqt_list /* of QCPItemPosition* */ q_cpitemline_positions(void* self);
 ///
 /// @param self QCPItemLine*
 ///
-libqt_list /* of QCPItemAnchor* */ q_cpitemline_anchors(void* self);
+/// @return libqt_list of QCPItemAnchor*
+///
+libqt_list q_cpitemline_anchors(void* self);
 
 /// Inherited from QCPAbstractItem
 ///
@@ -72106,7 +72420,9 @@ void q_cpitemline_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPItemLine*
 ///
-libqt_list /* of QObject* */ q_cpitemline_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpitemline_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -73670,7 +73986,9 @@ void q_cpitemcurve_set_selected(void* self, bool selected);
 ///
 /// @param self QCPItemCurve*
 ///
-libqt_list /* of QCPItemPosition* */ q_cpitemcurve_positions(void* self);
+/// @return libqt_list of QCPItemPosition*
+///
+libqt_list q_cpitemcurve_positions(void* self);
 
 /// Inherited from QCPAbstractItem
 ///
@@ -73678,7 +73996,9 @@ libqt_list /* of QCPItemPosition* */ q_cpitemcurve_positions(void* self);
 ///
 /// @param self QCPItemCurve*
 ///
-libqt_list /* of QCPItemAnchor* */ q_cpitemcurve_anchors(void* self);
+/// @return libqt_list of QCPItemAnchor*
+///
+libqt_list q_cpitemcurve_anchors(void* self);
 
 /// Inherited from QCPAbstractItem
 ///
@@ -73955,7 +74275,9 @@ void q_cpitemcurve_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPItemCurve*
 ///
-libqt_list /* of QObject* */ q_cpitemcurve_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpitemcurve_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -75591,7 +75913,9 @@ void q_cpitemrect_set_selected(void* self, bool selected);
 ///
 /// @param self QCPItemRect*
 ///
-libqt_list /* of QCPItemPosition* */ q_cpitemrect_positions(void* self);
+/// @return libqt_list of QCPItemPosition*
+///
+libqt_list q_cpitemrect_positions(void* self);
 
 /// Inherited from QCPAbstractItem
 ///
@@ -75599,7 +75923,9 @@ libqt_list /* of QCPItemPosition* */ q_cpitemrect_positions(void* self);
 ///
 /// @param self QCPItemRect*
 ///
-libqt_list /* of QCPItemAnchor* */ q_cpitemrect_anchors(void* self);
+/// @return libqt_list of QCPItemAnchor*
+///
+libqt_list q_cpitemrect_anchors(void* self);
 
 /// Inherited from QCPAbstractItem
 ///
@@ -75876,7 +76202,9 @@ void q_cpitemrect_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPItemRect*
 ///
-libqt_list /* of QObject* */ q_cpitemrect_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpitemrect_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -77683,7 +78011,9 @@ void q_cpitemtext_set_selected(void* self, bool selected);
 ///
 /// @param self QCPItemText*
 ///
-libqt_list /* of QCPItemPosition* */ q_cpitemtext_positions(void* self);
+/// @return libqt_list of QCPItemPosition*
+///
+libqt_list q_cpitemtext_positions(void* self);
 
 /// Inherited from QCPAbstractItem
 ///
@@ -77691,7 +78021,9 @@ libqt_list /* of QCPItemPosition* */ q_cpitemtext_positions(void* self);
 ///
 /// @param self QCPItemText*
 ///
-libqt_list /* of QCPItemAnchor* */ q_cpitemtext_anchors(void* self);
+/// @return libqt_list of QCPItemAnchor*
+///
+libqt_list q_cpitemtext_anchors(void* self);
 
 /// Inherited from QCPAbstractItem
 ///
@@ -77959,7 +78291,9 @@ void q_cpitemtext_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPItemText*
 ///
-libqt_list /* of QObject* */ q_cpitemtext_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpitemtext_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -79580,7 +79914,9 @@ void q_cpitemellipse_set_selected(void* self, bool selected);
 ///
 /// @param self QCPItemEllipse*
 ///
-libqt_list /* of QCPItemPosition* */ q_cpitemellipse_positions(void* self);
+/// @return libqt_list of QCPItemPosition*
+///
+libqt_list q_cpitemellipse_positions(void* self);
 
 /// Inherited from QCPAbstractItem
 ///
@@ -79588,7 +79924,9 @@ libqt_list /* of QCPItemPosition* */ q_cpitemellipse_positions(void* self);
 ///
 /// @param self QCPItemEllipse*
 ///
-libqt_list /* of QCPItemAnchor* */ q_cpitemellipse_anchors(void* self);
+/// @return libqt_list of QCPItemAnchor*
+///
+libqt_list q_cpitemellipse_anchors(void* self);
 
 /// Inherited from QCPAbstractItem
 ///
@@ -79865,7 +80203,9 @@ void q_cpitemellipse_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPItemEllipse*
 ///
-libqt_list /* of QObject* */ q_cpitemellipse_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpitemellipse_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -81657,7 +81997,9 @@ void q_cpitempixmap_set_selected(void* self, bool selected);
 ///
 /// @param self QCPItemPixmap*
 ///
-libqt_list /* of QCPItemPosition* */ q_cpitempixmap_positions(void* self);
+/// @return libqt_list of QCPItemPosition*
+///
+libqt_list q_cpitempixmap_positions(void* self);
 
 /// Inherited from QCPAbstractItem
 ///
@@ -81665,7 +82007,9 @@ libqt_list /* of QCPItemPosition* */ q_cpitempixmap_positions(void* self);
 ///
 /// @param self QCPItemPixmap*
 ///
-libqt_list /* of QCPItemAnchor* */ q_cpitempixmap_anchors(void* self);
+/// @return libqt_list of QCPItemAnchor*
+///
+libqt_list q_cpitempixmap_anchors(void* self);
 
 /// Inherited from QCPAbstractItem
 ///
@@ -81942,7 +82286,9 @@ void q_cpitempixmap_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPItemPixmap*
 ///
-libqt_list /* of QObject* */ q_cpitempixmap_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpitempixmap_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -83551,7 +83897,9 @@ void q_cpitemtracer_set_selected(void* self, bool selected);
 ///
 /// @param self QCPItemTracer*
 ///
-libqt_list /* of QCPItemPosition* */ q_cpitemtracer_positions(void* self);
+/// @return libqt_list of QCPItemPosition*
+///
+libqt_list q_cpitemtracer_positions(void* self);
 
 /// Inherited from QCPAbstractItem
 ///
@@ -83559,7 +83907,9 @@ libqt_list /* of QCPItemPosition* */ q_cpitemtracer_positions(void* self);
 ///
 /// @param self QCPItemTracer*
 ///
-libqt_list /* of QCPItemAnchor* */ q_cpitemtracer_anchors(void* self);
+/// @return libqt_list of QCPItemAnchor*
+///
+libqt_list q_cpitemtracer_anchors(void* self);
 
 /// Inherited from QCPAbstractItem
 ///
@@ -83827,7 +84177,9 @@ void q_cpitemtracer_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPItemTracer*
 ///
-libqt_list /* of QObject* */ q_cpitemtracer_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpitemtracer_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -85412,7 +85764,9 @@ void q_cpitembracket_set_selected(void* self, bool selected);
 ///
 /// @param self QCPItemBracket*
 ///
-libqt_list /* of QCPItemPosition* */ q_cpitembracket_positions(void* self);
+/// @return libqt_list of QCPItemPosition*
+///
+libqt_list q_cpitembracket_positions(void* self);
 
 /// Inherited from QCPAbstractItem
 ///
@@ -85420,7 +85774,9 @@ libqt_list /* of QCPItemPosition* */ q_cpitembracket_positions(void* self);
 ///
 /// @param self QCPItemBracket*
 ///
-libqt_list /* of QCPItemAnchor* */ q_cpitembracket_anchors(void* self);
+/// @return libqt_list of QCPItemAnchor*
+///
+libqt_list q_cpitembracket_anchors(void* self);
 
 /// Inherited from QCPAbstractItem
 ///
@@ -85697,7 +86053,9 @@ void q_cpitembracket_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPItemBracket*
 ///
-libqt_list /* of QObject* */ q_cpitembracket_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cpitembracket_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -87102,13 +87460,17 @@ int32_t q_cppolaraxisradial_number_precision(void* self);
 ///
 /// @param self QCPPolarAxisRadial*
 ///
-libqt_list /* of double */ q_cppolaraxisradial_tick_vector(void* self);
+/// @return libqt_list of double
+///
+libqt_list q_cppolaraxisradial_tick_vector(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
 /// @param self QCPPolarAxisRadial*
 ///
-libqt_list /* of double */ q_cppolaraxisradial_sub_tick_vector(void* self);
+/// @return libqt_list of double
+///
+libqt_list q_cppolaraxisradial_sub_tick_vector(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
@@ -88398,7 +88760,9 @@ void q_cppolaraxisradial_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPPolarAxisRadial*
 ///
-libqt_list /* of QObject* */ q_cppolaraxisradial_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cppolaraxisradial_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -89424,7 +89788,9 @@ int32_t q_cppolaraxisangular_number_precision(void* self);
 ///
 /// @param self QCPPolarAxisAngular*
 ///
-libqt_list /* of double */ q_cppolaraxisangular_tick_vector(void* self);
+/// @return libqt_list of double
+///
+libqt_list q_cppolaraxisangular_tick_vector(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
@@ -89964,7 +90330,9 @@ void q_cppolaraxisangular_qbase_update(void* self, int32_t phase);
 /// @param self QCPPolarAxisAngular*
 /// @param recursive bool
 ///
-libqt_list /* of QCPLayoutElement* */ q_cppolaraxisangular_elements(void* self, bool recursive);
+/// @return libqt_list of QCPLayoutElement*
+///
+libqt_list q_cppolaraxisangular_elements(void* self, bool recursive);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
@@ -89982,7 +90350,9 @@ void q_cppolaraxisangular_on_elements(void* self, QCPLayoutElement** (*callback)
 /// @param self QCPPolarAxisAngular*
 /// @param recursive bool
 ///
-libqt_list /* of QCPLayoutElement* */ q_cppolaraxisangular_qbase_elements(void* self, bool recursive);
+/// @return libqt_list of QCPLayoutElement*
+///
+libqt_list q_cppolaraxisangular_qbase_elements(void* self, bool recursive);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
@@ -90007,7 +90377,9 @@ QCPPolarAxisRadial* q_cppolaraxisangular_radial_axis(void* self);
 ///
 /// @param self QCPPolarAxisAngular*
 ///
-libqt_list /* of QCPPolarAxisRadial* */ q_cppolaraxisangular_radial_axes(void* self);
+/// @return libqt_list of QCPPolarAxisRadial*
+///
+libqt_list q_cppolaraxisangular_radial_axes(void* self);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
@@ -90786,7 +91158,8 @@ QCPMarginGroup* q_cppolaraxisangular_margin_group(void* self, int32_t side);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of enum QCP__MarginSide to QCPMarginGroup*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QCPMarginGroup*)map.values)[i]);
 /// }
@@ -90796,7 +91169,9 @@ QCPMarginGroup* q_cppolaraxisangular_margin_group(void* self, int32_t side);
 ///
 /// @param self QCPPolarAxisAngular*
 ///
-libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cppolaraxisangular_margin_groups(void* self);
+/// @return libqt_map of enum QCP__MarginSide to QCPMarginGroup*
+///
+libqt_map q_cppolaraxisangular_margin_groups(void* self);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -91103,7 +91478,9 @@ void q_cppolaraxisangular_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPPolarAxisAngular*
 ///
-libqt_list /* of QObject* */ q_cppolaraxisangular_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cppolaraxisangular_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -92392,19 +92769,19 @@ void q_cppolargrid_qbase_draw(void* self, void* painter);
 /// @param self QCPPolarGrid*
 /// @param painter QCPPainter*
 /// @param center QPointF*
-/// @param coords libqt_list /* of double */
+/// @param coords libqt_list of double
 /// @param pen QPen*
 ///
-void q_cppolargrid_draw_radial_grid(void* self, void* painter, void* center, libqt_list coords, void* pen);
+void q_cppolargrid_draw_radial_grid(void* self, void* painter, void* center, libqt_list /* of double */ coords, void* pen);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGrid.html)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QCPPolarGrid*
-/// @param callback void func(QCPPolarGrid* self, QCPPainter* painter, QPointF* center, libqt_list /* of double */ /* of double */, QPen* pen)
+/// @param callback void func(QCPPolarGrid* self, QCPPainter* painter, QPointF* center, libqt_list of double of double, QPen* pen)
 ///
-void q_cppolargrid_on_draw_radial_grid(void* self, void (*callback)(void*, void*, void*, libqt_list, void*));
+void q_cppolargrid_on_draw_radial_grid(void* self, void (*callback)(void*, void*, void*, libqt_list /* of double */, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGrid.html)
 ///
@@ -92413,10 +92790,10 @@ void q_cppolargrid_on_draw_radial_grid(void* self, void (*callback)(void*, void*
 /// @param self QCPPolarGrid*
 /// @param painter QCPPainter*
 /// @param center QPointF*
-/// @param coords libqt_list /* of double */
+/// @param coords libqt_list of double
 /// @param pen QPen*
 ///
-void q_cppolargrid_qbase_draw_radial_grid(void* self, void* painter, void* center, libqt_list coords, void* pen);
+void q_cppolargrid_qbase_draw_radial_grid(void* self, void* painter, void* center, libqt_list /* of double */ coords, void* pen);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGrid.html)
 ///
@@ -92424,10 +92801,10 @@ void q_cppolargrid_qbase_draw_radial_grid(void* self, void* painter, void* cente
 /// @param painter QCPPainter*
 /// @param center QPointF*
 /// @param radius double
-/// @param ticksCosSin libqt_list /* of QPointF* */
+/// @param ticksCosSin libqt_list of QPointF*
 /// @param pen QPen*
 ///
-void q_cppolargrid_draw_angular_grid(void* self, void* painter, void* center, double radius, libqt_list ticksCosSin, void* pen);
+void q_cppolargrid_draw_angular_grid(void* self, void* painter, void* center, double radius, libqt_list /* of QPointF* */ ticksCosSin, void* pen);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGrid.html)
 ///
@@ -92446,10 +92823,10 @@ void q_cppolargrid_on_draw_angular_grid(void* self, void (*callback)(void*, void
 /// @param painter QCPPainter*
 /// @param center QPointF*
 /// @param radius double
-/// @param ticksCosSin libqt_list /* of QPointF* */
+/// @param ticksCosSin libqt_list of QPointF*
 /// @param pen QPen*
 ///
-void q_cppolargrid_qbase_draw_angular_grid(void* self, void* painter, void* center, double radius, libqt_list ticksCosSin, void* pen);
+void q_cppolargrid_qbase_draw_angular_grid(void* self, void* painter, void* center, double radius, libqt_list /* of QPointF* */ ticksCosSin, void* pen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -92475,20 +92852,20 @@ const char* q_cppolargrid_tr3(const char* s, const char* c, int n);
 /// @param self QCPPolarGrid*
 /// @param painter QCPPainter*
 /// @param center QPointF*
-/// @param coords libqt_list /* of double */
+/// @param coords libqt_list of double
 /// @param pen QPen*
 /// @param zeroPen QPen*
 ///
-void q_cppolargrid_draw_radial_grid5(void* self, void* painter, void* center, libqt_list coords, void* pen, void* zeroPen);
+void q_cppolargrid_draw_radial_grid5(void* self, void* painter, void* center, libqt_list /* of double */ coords, void* pen, void* zeroPen);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGrid.html)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QCPPolarGrid*
-/// @param callback void func(QCPPolarGrid* self, QCPPainter* painter, QPointF* center, libqt_list /* of double */ /* of double */, QPen* pen, QPen* zeroPen)
+/// @param callback void func(QCPPolarGrid* self, QCPPainter* painter, QPointF* center, libqt_list of double of double, QPen* pen, QPen* zeroPen)
 ///
-void q_cppolargrid_on_draw_radial_grid5(void* self, void (*callback)(void*, void*, void*, libqt_list, void*, void*));
+void q_cppolargrid_on_draw_radial_grid5(void* self, void (*callback)(void*, void*, void*, libqt_list /* of double */, void*, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGrid.html)
 ///
@@ -92497,11 +92874,11 @@ void q_cppolargrid_on_draw_radial_grid5(void* self, void (*callback)(void*, void
 /// @param self QCPPolarGrid*
 /// @param painter QCPPainter*
 /// @param center QPointF*
-/// @param coords libqt_list /* of double */
+/// @param coords libqt_list of double
 /// @param pen QPen*
 /// @param zeroPen QPen*
 ///
-void q_cppolargrid_qbase_draw_radial_grid5(void* self, void* painter, void* center, libqt_list coords, void* pen, void* zeroPen);
+void q_cppolargrid_qbase_draw_radial_grid5(void* self, void* painter, void* center, libqt_list /* of double */ coords, void* pen, void* zeroPen);
 
 /// Inherited from QCPLayerable
 ///
@@ -92715,7 +93092,9 @@ void q_cppolargrid_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPPolarGrid*
 ///
-libqt_list /* of QObject* */ q_cppolargrid_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cppolargrid_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -94279,7 +94658,8 @@ QCPMarginGroup* q_cppolarlegenditem_margin_group(void* self, int32_t side);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of enum QCP__MarginSide to QCPMarginGroup*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QCPMarginGroup*)map.values)[i]);
 /// }
@@ -94289,7 +94669,9 @@ QCPMarginGroup* q_cppolarlegenditem_margin_group(void* self, int32_t side);
 ///
 /// @param self QCPPolarLegendItem*
 ///
-libqt_map /* of enum QCP__MarginSide to QCPMarginGroup* */ q_cppolarlegenditem_margin_groups(void* self);
+/// @return libqt_map of enum QCP__MarginSide to QCPMarginGroup*
+///
+libqt_map q_cppolarlegenditem_margin_groups(void* self);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -94596,7 +94978,9 @@ void q_cppolarlegenditem_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPPolarLegendItem*
 ///
-libqt_list /* of QObject* */ q_cppolarlegenditem_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cppolarlegenditem_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -95112,7 +95496,9 @@ void q_cppolarlegenditem_on_maximum_outer_size_hint(void* self, QSize* (*callbac
 /// @param self QCPPolarLegendItem*
 /// @param recursive bool
 ///
-libqt_list /* of QCPLayoutElement* */ q_cppolarlegenditem_elements(void* self, bool recursive);
+/// @return libqt_list of QCPLayoutElement*
+///
+libqt_list q_cppolarlegenditem_elements(void* self, bool recursive);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -95123,7 +95509,9 @@ libqt_list /* of QCPLayoutElement* */ q_cppolarlegenditem_elements(void* self, b
 /// @param self QCPPolarLegendItem*
 /// @param recursive bool
 ///
-libqt_list /* of QCPLayoutElement* */ q_cppolarlegenditem_qbase_elements(void* self, bool recursive);
+/// @return libqt_list of QCPLayoutElement*
+///
+libqt_list q_cppolarlegenditem_qbase_elements(void* self, bool recursive);
 
 /// Inherited from QCPLayoutElement
 ///
@@ -96132,10 +96520,10 @@ void q_cppolargraph_set_selection(void* self, void* selection);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
 /// @param self QCPPolarGraph*
-/// @param keys libqt_list /* of double */
-/// @param values libqt_list /* of double */
+/// @param keys libqt_list of double
+/// @param values libqt_list of double
 ///
-void q_cppolargraph_set_data2(void* self, libqt_list keys, libqt_list values);
+void q_cppolargraph_set_data2(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -96154,10 +96542,10 @@ void q_cppolargraph_set_scatter_style(void* self, void* style);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
 /// @param self QCPPolarGraph*
-/// @param keys libqt_list /* of double */
-/// @param values libqt_list /* of double */
+/// @param keys libqt_list of double
+/// @param values libqt_list of double
 ///
-void q_cppolargraph_add_data(void* self, libqt_list keys, libqt_list values);
+void q_cppolargraph_add_data(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -96537,9 +96925,9 @@ void q_cppolargraph_qbase_deselect_event(void* self, bool* selectionStateChanged
 ///
 /// @param self QCPPolarGraph*
 /// @param painter QCPPainter*
-/// @param lines libqt_list /* of QPointF* */
+/// @param lines libqt_list of QPointF*
 ///
-void q_cppolargraph_draw_line_plot(void* self, void* painter, libqt_list lines);
+void q_cppolargraph_draw_line_plot(void* self, void* painter, libqt_list /* of QPointF* */ lines);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -96556,17 +96944,17 @@ void q_cppolargraph_on_draw_line_plot(void* self, void (*callback)(void*, void*,
 ///
 /// @param self QCPPolarGraph*
 /// @param painter QCPPainter*
-/// @param lines libqt_list /* of QPointF* */
+/// @param lines libqt_list of QPointF*
 ///
-void q_cppolargraph_qbase_draw_line_plot(void* self, void* painter, libqt_list lines);
+void q_cppolargraph_qbase_draw_line_plot(void* self, void* painter, libqt_list /* of QPointF* */ lines);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
 /// @param self QCPPolarGraph*
 /// @param painter QCPPainter*
-/// @param lines libqt_list /* of QPointF* */
+/// @param lines libqt_list of QPointF*
 ///
-void q_cppolargraph_draw_fill(void* self, void* painter, libqt_list lines);
+void q_cppolargraph_draw_fill(void* self, void* painter, libqt_list /* of QPointF* */ lines);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -96583,18 +96971,18 @@ void q_cppolargraph_on_draw_fill(void* self, void (*callback)(void*, void*, QPoi
 ///
 /// @param self QCPPolarGraph*
 /// @param painter QCPPainter*
-/// @param lines libqt_list /* of QPointF* */
+/// @param lines libqt_list of QPointF*
 ///
-void q_cppolargraph_qbase_draw_fill(void* self, void* painter, libqt_list lines);
+void q_cppolargraph_qbase_draw_fill(void* self, void* painter, libqt_list /* of QPointF* */ lines);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
 /// @param self QCPPolarGraph*
 /// @param painter QCPPainter*
-/// @param scatters libqt_list /* of QPointF* */
+/// @param scatters libqt_list of QPointF*
 /// @param style QCPScatterStyle*
 ///
-void q_cppolargraph_draw_scatter_plot(void* self, void* painter, libqt_list scatters, void* style);
+void q_cppolargraph_draw_scatter_plot(void* self, void* painter, libqt_list /* of QPointF* */ scatters, void* style);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -96611,10 +96999,10 @@ void q_cppolargraph_on_draw_scatter_plot(void* self, void (*callback)(void*, voi
 ///
 /// @param self QCPPolarGraph*
 /// @param painter QCPPainter*
-/// @param scatters libqt_list /* of QPointF* */
+/// @param scatters libqt_list of QPointF*
 /// @param style QCPScatterStyle*
 ///
-void q_cppolargraph_qbase_draw_scatter_plot(void* self, void* painter, libqt_list scatters, void* style);
+void q_cppolargraph_qbase_draw_scatter_plot(void* self, void* painter, libqt_list /* of QPointF* */ scatters, void* style);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -96719,10 +97107,10 @@ int32_t q_cppolargraph_qbase_data_count(void* self);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
 /// @param self QCPPolarGraph*
-/// @param selectedSegments libqt_list /* of QCPDataRange* */
-/// @param unselectedSegments libqt_list /* of QCPDataRange* */
+/// @param selectedSegments libqt_list of QCPDataRange*
+/// @param unselectedSegments libqt_list of QCPDataRange*
 ///
-void q_cppolargraph_get_data_segments(void* self, libqt_list selectedSegments, libqt_list unselectedSegments);
+void q_cppolargraph_get_data_segments(void* self, libqt_list /* of QCPDataRange* */ selectedSegments, libqt_list /* of QCPDataRange* */ unselectedSegments);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -96738,18 +97126,18 @@ void q_cppolargraph_on_get_data_segments(void* self, void (*callback)(void*, QCP
 /// Base class method implementation
 ///
 /// @param self QCPPolarGraph*
-/// @param selectedSegments libqt_list /* of QCPDataRange* */
-/// @param unselectedSegments libqt_list /* of QCPDataRange* */
+/// @param selectedSegments libqt_list of QCPDataRange*
+/// @param unselectedSegments libqt_list of QCPDataRange*
 ///
-void q_cppolargraph_qbase_get_data_segments(void* self, libqt_list selectedSegments, libqt_list unselectedSegments);
+void q_cppolargraph_qbase_get_data_segments(void* self, libqt_list /* of QCPDataRange* */ selectedSegments, libqt_list /* of QCPDataRange* */ unselectedSegments);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
 /// @param self QCPPolarGraph*
 /// @param painter QCPPainter*
-/// @param lineData libqt_list /* of QPointF* */
+/// @param lineData libqt_list of QPointF*
 ///
-void q_cppolargraph_draw_polyline(void* self, void* painter, libqt_list lineData);
+void q_cppolargraph_draw_polyline(void* self, void* painter, libqt_list /* of QPointF* */ lineData);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -96766,17 +97154,17 @@ void q_cppolargraph_on_draw_polyline(void* self, void (*callback)(void*, void*, 
 ///
 /// @param self QCPPolarGraph*
 /// @param painter QCPPainter*
-/// @param lineData libqt_list /* of QPointF* */
+/// @param lineData libqt_list of QPointF*
 ///
-void q_cppolargraph_qbase_draw_polyline(void* self, void* painter, libqt_list lineData);
+void q_cppolargraph_qbase_draw_polyline(void* self, void* painter, libqt_list /* of QPointF* */ lineData);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
 /// @param self QCPPolarGraph*
-/// @param lines libqt_list /* of QPointF* */
+/// @param lines libqt_list of QPointF*
 /// @param dataRange QCPDataRange*
 ///
-void q_cppolargraph_get_lines(void* self, libqt_list lines, void* dataRange);
+void q_cppolargraph_get_lines(void* self, libqt_list /* of QPointF* */ lines, void* dataRange);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -96792,18 +97180,18 @@ void q_cppolargraph_on_get_lines(void* self, void (*callback)(void*, QPointF**, 
 /// Base class method implementation
 ///
 /// @param self QCPPolarGraph*
-/// @param lines libqt_list /* of QPointF* */
+/// @param lines libqt_list of QPointF*
 /// @param dataRange QCPDataRange*
 ///
-void q_cppolargraph_qbase_get_lines(void* self, libqt_list lines, void* dataRange);
+void q_cppolargraph_qbase_get_lines(void* self, libqt_list /* of QPointF* */ lines, void* dataRange);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
 /// @param self QCPPolarGraph*
-/// @param scatters libqt_list /* of QPointF* */
+/// @param scatters libqt_list of QPointF*
 /// @param dataRange QCPDataRange*
 ///
-void q_cppolargraph_get_scatters(void* self, libqt_list scatters, void* dataRange);
+void q_cppolargraph_get_scatters(void* self, libqt_list /* of QPointF* */ scatters, void* dataRange);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -96819,17 +97207,19 @@ void q_cppolargraph_on_get_scatters(void* self, void (*callback)(void*, QPointF*
 /// Base class method implementation
 ///
 /// @param self QCPPolarGraph*
-/// @param scatters libqt_list /* of QPointF* */
+/// @param scatters libqt_list of QPointF*
 /// @param dataRange QCPDataRange*
 ///
-void q_cppolargraph_qbase_get_scatters(void* self, libqt_list scatters, void* dataRange);
+void q_cppolargraph_qbase_get_scatters(void* self, libqt_list /* of QPointF* */ scatters, void* dataRange);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
 /// @param self QCPPolarGraph*
-/// @param data libqt_list /* of QCPGraphData* */
+/// @param data libqt_list of QCPGraphData*
 ///
-libqt_list /* of QPointF* */ q_cppolargraph_data_to_lines(void* self, libqt_list data);
+/// @return libqt_list of QPointF*
+///
+libqt_list q_cppolargraph_data_to_lines(void* self, libqt_list /* of QCPGraphData* */ data);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -96845,9 +97235,11 @@ void q_cppolargraph_on_data_to_lines(void* self, QPointF** (*callback)(void*, QC
 /// Base class method implementation
 ///
 /// @param self QCPPolarGraph*
-/// @param data libqt_list /* of QCPGraphData* */
+/// @param data libqt_list of QCPGraphData*
 ///
-libqt_list /* of QPointF* */ q_cppolargraph_qbase_data_to_lines(void* self, libqt_list data);
+/// @return libqt_list of QPointF*
+///
+libqt_list q_cppolargraph_qbase_data_to_lines(void* self, libqt_list /* of QCPGraphData* */ data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -96871,20 +97263,20 @@ const char* q_cppolargraph_tr3(const char* s, const char* c, int n);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
 /// @param self QCPPolarGraph*
-/// @param keys libqt_list /* of double */
-/// @param values libqt_list /* of double */
+/// @param keys libqt_list of double
+/// @param values libqt_list of double
 /// @param alreadySorted bool
 ///
-void q_cppolargraph_set_data3(void* self, libqt_list keys, libqt_list values, bool alreadySorted);
+void q_cppolargraph_set_data3(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values, bool alreadySorted);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
 /// @param self QCPPolarGraph*
-/// @param keys libqt_list /* of double */
-/// @param values libqt_list /* of double */
+/// @param keys libqt_list of double
+/// @param values libqt_list of double
 /// @param alreadySorted bool
 ///
-void q_cppolargraph_add_data3(void* self, libqt_list keys, libqt_list values, bool alreadySorted);
+void q_cppolargraph_add_data3(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values, bool alreadySorted);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -97127,7 +97519,9 @@ void q_cppolargraph_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCPPolarGraph*
 ///
-libqt_list /* of QObject* */ q_cppolargraph_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_cppolargraph_children(void* self);
 
 /// Inherited from QObject
 ///

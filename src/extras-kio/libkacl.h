@@ -153,7 +153,9 @@ bool k_acl_set_named_user_permissions(void* self, const char* name, unsigned sho
 ///
 /// @param self KACL*
 ///
-libqt_list /* of libqt_pair tuple of const char* and unsigned short */ k_acl_all_user_permissions(void* self);
+/// @return libqt_list of libqt_pair tuple of const char* and unsigned short
+///
+libqt_list k_acl_all_user_permissions(void* self);
 
 /// [Upstream resources](https://api.kde.org/kacl.html#namedGroupPermissions)
 ///
@@ -175,7 +177,9 @@ bool k_acl_set_named_group_permissions(void* self, const char* name, unsigned sh
 ///
 /// @param self KACL*
 ///
-libqt_list /* of libqt_pair tuple of const char* and unsigned short */ k_acl_all_group_permissions(void* self);
+/// @return libqt_list of libqt_pair tuple of const char* and unsigned short
+///
+libqt_list k_acl_all_group_permissions(void* self);
 
 /// [Upstream resources](https://api.kde.org/kacl.html#setACL)
 ///

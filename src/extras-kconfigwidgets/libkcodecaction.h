@@ -274,7 +274,9 @@ const char* k_codecaction_current_text(void* self);
 ///
 /// @param self KCodecAction*
 ///
-libqt_list /* of QAction* */ k_codecaction_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_codecaction_actions(void* self);
 
 /// Inherited from KSelectAction
 ///
@@ -569,7 +571,9 @@ void k_codecaction_release_widget(void* self, void* widget);
 ///
 /// @param self KCodecAction*
 ///
-libqt_list /* of QObject* */ k_codecaction_associated_objects(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_codecaction_associated_objects(void* self);
 
 /// Inherited from QAction
 ///
@@ -758,9 +762,9 @@ QKeySequence* k_codecaction_shortcut(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
 ///
 /// @param self KCodecAction*
-/// @param shortcuts libqt_list /* of QKeySequence* */
+/// @param shortcuts libqt_list of QKeySequence*
 ///
-void k_codecaction_set_shortcuts(void* self, libqt_list shortcuts);
+void k_codecaction_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts);
 
 /// Inherited from QAction
 ///
@@ -777,7 +781,9 @@ void k_codecaction_set_shortcuts2(void* self, int32_t shortcuts);
 ///
 /// @param self KCodecAction*
 ///
-libqt_list /* of QKeySequence* */ k_codecaction_shortcuts(void* self);
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_codecaction_shortcuts(void* self);
 
 /// Inherited from QAction
 ///
@@ -1287,7 +1293,9 @@ void k_codecaction_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KCodecAction*
 ///
-libqt_list /* of QObject* */ k_codecaction_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_codecaction_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1930,7 +1938,9 @@ void k_codecaction_on_slot_toggled(void* self, void (*callback)(void*, bool));
 ///
 /// @param self KCodecAction*
 ///
-libqt_list /* of QWidget* */ k_codecaction_created_widgets(void* self);
+/// @return libqt_list of QWidget*
+///
+libqt_list k_codecaction_created_widgets(void* self);
 
 /// Inherited from QWidgetAction
 ///
@@ -1940,7 +1950,9 @@ libqt_list /* of QWidget* */ k_codecaction_created_widgets(void* self);
 ///
 /// @param self KCodecAction*
 ///
-libqt_list /* of QWidget* */ k_codecaction_qbase_created_widgets(void* self);
+/// @return libqt_list of QWidget*
+///
+libqt_list k_codecaction_qbase_created_widgets(void* self);
 
 /// Inherited from QWidgetAction
 ///

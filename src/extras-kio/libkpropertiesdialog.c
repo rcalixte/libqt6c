@@ -31,7 +31,7 @@ KPropertiesDialog* k_propertiesdialog_new3(void* url) {
     return KPropertiesDialog_new3((QUrl*)url);
 }
 
-KPropertiesDialog* k_propertiesdialog_new4(libqt_list urls) {
+KPropertiesDialog* k_propertiesdialog_new4(libqt_list /* of QUrl* */ urls) {
     return KPropertiesDialog_new4(urls);
 }
 
@@ -55,7 +55,7 @@ KPropertiesDialog* k_propertiesdialog_new9(void* url, void* parent) {
     return KPropertiesDialog_new9((QUrl*)url, (QWidget*)parent);
 }
 
-KPropertiesDialog* k_propertiesdialog_new10(libqt_list urls, void* parent) {
+KPropertiesDialog* k_propertiesdialog_new10(libqt_list /* of QUrl* */ urls, void* parent) {
     return KPropertiesDialog_new10(urls, (QWidget*)parent);
 }
 
@@ -110,7 +110,7 @@ bool k_propertiesdialog_show_dialog3(void* _items) {
     return KPropertiesDialog_ShowDialog3((KFileItemList*)_items);
 }
 
-bool k_propertiesdialog_show_dialog4(libqt_list urls) {
+bool k_propertiesdialog_show_dialog4(libqt_list /* of QUrl* */ urls) {
     return KPropertiesDialog_ShowDialog4(urls);
 }
 
@@ -255,11 +255,11 @@ bool k_propertiesdialog_show_dialog34(void* _items, void* parent, bool modal) {
     return KPropertiesDialog_ShowDialog34((KFileItemList*)_items, (QWidget*)parent, modal);
 }
 
-bool k_propertiesdialog_show_dialog25(libqt_list urls, void* parent) {
+bool k_propertiesdialog_show_dialog25(libqt_list /* of QUrl* */ urls, void* parent) {
     return KPropertiesDialog_ShowDialog25(urls, (QWidget*)parent);
 }
 
-bool k_propertiesdialog_show_dialog35(libqt_list urls, void* parent, bool modal) {
+bool k_propertiesdialog_show_dialog35(libqt_list /* of QUrl* */ urls, void* parent, bool modal) {
     return KPropertiesDialog_ShowDialog35(urls, (QWidget*)parent, modal);
 }
 
@@ -755,11 +755,11 @@ void k_propertiesdialog_set_graphics_effect(void* self, void* effect) {
     QWidget_SetGraphicsEffect((QWidget*)self, (QGraphicsEffect*)effect);
 }
 
-void k_propertiesdialog_grab_gesture(void* self, int64_t type) {
+void k_propertiesdialog_grab_gesture(void* self, int32_t type) {
     QWidget_GrabGesture((QWidget*)self, type);
 }
 
-void k_propertiesdialog_ungrab_gesture(void* self, int64_t type) {
+void k_propertiesdialog_ungrab_gesture(void* self, int32_t type) {
     QWidget_UngrabGesture((QWidget*)self, type);
 }
 
@@ -1240,7 +1240,7 @@ void k_propertiesdialog_set_parent(void* self, void* parent) {
     QWidget_SetParent((QWidget*)self, (QWidget*)parent);
 }
 
-void k_propertiesdialog_set_parent2(void* self, void* parent, int64_t f) {
+void k_propertiesdialog_set_parent2(void* self, void* parent, int32_t f) {
     QWidget_SetParent2((QWidget*)self, (QWidget*)parent, f);
 }
 
@@ -1276,11 +1276,11 @@ void k_propertiesdialog_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void k_propertiesdialog_add_actions(void* self, libqt_list actions) {
+void k_propertiesdialog_add_actions(void* self, libqt_list /* of QAction* */ actions) {
     QWidget_AddActions((QWidget*)self, actions);
 }
 
-void k_propertiesdialog_insert_actions(void* self, void* before, libqt_list actions) {
+void k_propertiesdialog_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions) {
     QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
@@ -1317,23 +1317,23 @@ QWidget* k_propertiesdialog_parent_widget(void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
-void k_propertiesdialog_set_window_flags(void* self, int64_t type) {
+void k_propertiesdialog_set_window_flags(void* self, int32_t type) {
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int64_t k_propertiesdialog_window_flags(void* self) {
+int32_t k_propertiesdialog_window_flags(void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
-void k_propertiesdialog_set_window_flag(void* self, int64_t param1) {
+void k_propertiesdialog_set_window_flag(void* self, int32_t param1) {
     QWidget_SetWindowFlag((QWidget*)self, param1);
 }
 
-void k_propertiesdialog_override_window_flags(void* self, int64_t type) {
+void k_propertiesdialog_override_window_flags(void* self, int32_t type) {
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int64_t k_propertiesdialog_window_type(void* self) {
+int32_t k_propertiesdialog_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
@@ -1429,11 +1429,11 @@ void k_propertiesdialog_on_custom_context_menu_requested(void* self, void (*call
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-int64_t k_propertiesdialog_input_method_hints(void* self) {
+int32_t k_propertiesdialog_input_method_hints(void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
-void k_propertiesdialog_set_input_method_hints(void* self, int64_t hints) {
+void k_propertiesdialog_set_input_method_hints(void* self, int32_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
@@ -1465,7 +1465,7 @@ QPixmap* k_propertiesdialog_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_propertiesdialog_grab_gesture2(void* self, int64_t type, int32_t flags) {
+void k_propertiesdialog_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
@@ -1481,7 +1481,7 @@ void k_propertiesdialog_set_shortcut_auto_repeat2(void* self, int id, bool enabl
     QWidget_SetShortcutAutoRepeat2((QWidget*)self, id, enable);
 }
 
-void k_propertiesdialog_set_window_flag2(void* self, int64_t param1, bool on) {
+void k_propertiesdialog_set_window_flag2(void* self, int32_t param1, bool on) {
     QWidget_SetWindowFlag2((QWidget*)self, param1, on);
 }
 
@@ -1493,7 +1493,7 @@ QWidget* k_propertiesdialog_create_window_container2(void* window, void* parent)
     return QWidget_CreateWindowContainer2((QWindow*)window, (QWidget*)parent);
 }
 
-QWidget* k_propertiesdialog_create_window_container3(void* window, void* parent, int64_t flags) {
+QWidget* k_propertiesdialog_create_window_container3(void* window, void* parent, int32_t flags) {
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
@@ -1598,7 +1598,7 @@ const char** k_propertiesdialog_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_propertiesdialog_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_propertiesdialog_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2232,15 +2232,15 @@ void k_propertiesdialog_on_input_method_event(void* self, void (*callback)(void*
     KPropertiesDialog_OnInputMethodEvent((KPropertiesDialog*)self, (intptr_t)callback);
 }
 
-QVariant* k_propertiesdialog_input_method_query(void* self, int64_t param1) {
+QVariant* k_propertiesdialog_input_method_query(void* self, int32_t param1) {
     return KPropertiesDialog_InputMethodQuery((KPropertiesDialog*)self, param1);
 }
 
-QVariant* k_propertiesdialog_qbase_input_method_query(void* self, int64_t param1) {
+QVariant* k_propertiesdialog_qbase_input_method_query(void* self, int32_t param1) {
     return KPropertiesDialog_QBaseInputMethodQuery((KPropertiesDialog*)self, param1);
 }
 
-void k_propertiesdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void k_propertiesdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     KPropertiesDialog_OnInputMethodQuery((KPropertiesDialog*)self, (intptr_t)callback);
 }
 

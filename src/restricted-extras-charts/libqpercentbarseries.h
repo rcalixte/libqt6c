@@ -162,9 +162,9 @@ bool q_percentbarseries_take(void* self, void* set);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#append)
 ///
 /// @param self QPercentBarSeries*
-/// @param sets libqt_list /* of QBarSet* */
+/// @param sets libqt_list of QBarSet*
 ///
-bool q_percentbarseries_append2(void* self, libqt_list sets);
+bool q_percentbarseries_append2(void* self, libqt_list /* of QBarSet* */ sets);
 
 /// Inherited from QAbstractBarSeries
 ///
@@ -190,7 +190,9 @@ int32_t q_percentbarseries_count(void* self);
 ///
 /// @param self QPercentBarSeries*
 ///
-libqt_list /* of QBarSet* */ q_percentbarseries_bar_sets(void* self);
+/// @return libqt_list of QBarSet*
+///
+libqt_list q_percentbarseries_bar_sets(void* self);
 
 /// Inherited from QAbstractBarSeries
 ///
@@ -495,9 +497,9 @@ void q_percentbarseries_on_labels_precision_changed(void* self, void (*callback)
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#barsetsAdded)
 ///
 /// @param self QPercentBarSeries*
-/// @param sets libqt_list /* of QBarSet* */
+/// @param sets libqt_list of QBarSet*
 ///
-void q_percentbarseries_barsets_added(void* self, libqt_list sets);
+void q_percentbarseries_barsets_added(void* self, libqt_list /* of QBarSet* */ sets);
 
 /// Inherited from QAbstractBarSeries
 ///
@@ -513,9 +515,9 @@ void q_percentbarseries_on_barsets_added(void* self, void (*callback)(void*, QBa
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#barsetsRemoved)
 ///
 /// @param self QPercentBarSeries*
-/// @param sets libqt_list /* of QBarSet* */
+/// @param sets libqt_list of QBarSet*
 ///
-void q_percentbarseries_barsets_removed(void* self, libqt_list sets);
+void q_percentbarseries_barsets_removed(void* self, libqt_list /* of QBarSet* */ sets);
 
 /// Inherited from QAbstractBarSeries
 ///
@@ -635,7 +637,9 @@ bool q_percentbarseries_detach_axis(void* self, void* axis);
 ///
 /// @param self QPercentBarSeries*
 ///
-libqt_list /* of QAbstractAxis* */ q_percentbarseries_attached_axes(void* self);
+/// @return libqt_list of QAbstractAxis*
+///
+libqt_list q_percentbarseries_attached_axes(void* self);
 
 /// Inherited from QAbstractSeries
 ///
@@ -849,7 +853,9 @@ void q_percentbarseries_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QPercentBarSeries*
 ///
-libqt_list /* of QObject* */ q_percentbarseries_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_percentbarseries_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -52,9 +52,9 @@ void q_webenginehttprequest_operator_assign(void* self, void* other);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#postRequest)
 ///
 /// @param url QUrl*
-/// @param postData libqt_map /* of const char* to const char* */
+/// @param postData libqt_map of const char* to const char*
 ///
-QWebEngineHttpRequest* q_webenginehttprequest_post_request(void* url, libqt_map /* of const char* to const char* */ postData);
+QWebEngineHttpRequest* q_webenginehttprequest_post_request(void* url, libqt_map postData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#swap)
 ///

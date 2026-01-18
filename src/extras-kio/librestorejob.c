@@ -70,7 +70,7 @@ const char** k_io__restorejob_detailed_error_strings(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__restorejob_detailed_error_strings");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__restorejob_detailed_error_strings\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -184,7 +184,7 @@ const char** k_io__restorejob_detailed_error_strings1(void* self, void* reqUrl) 
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__restorejob_detailed_error_strings1");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__restorejob_detailed_error_strings1\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -203,7 +203,7 @@ const char** k_io__restorejob_detailed_error_strings2(void* self, void* reqUrl, 
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__restorejob_detailed_error_strings2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__restorejob_detailed_error_strings2\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -457,7 +457,7 @@ const char** k_io__restorejob_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__restorejob_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__restorejob_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -559,6 +559,6 @@ void k_io__restorejob_delete(void* self) {
     KIO__RestoreJob_Delete((KIO__RestoreJob*)(self));
 }
 
-KIO__RestoreJob* k_io_restore_from_trash(libqt_list param1, int32_t param2) {
+KIO__RestoreJob* k_io_restore_from_trash(libqt_list /* of QUrl* */ param1, int32_t param2) {
     return KIO_RestoreFromTrash(param1, param2);
 }

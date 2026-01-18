@@ -503,7 +503,9 @@ void q_opengltexture_set_mip_level_range(void* self, int baseLevel, int maxLevel
 ///
 /// @param self QOpenGLTexture*
 ///
-libqt_pair /* tuple of int and int */ q_opengltexture_mip_level_range(void* self);
+/// @return libqt_pair tuple of int and int
+///
+libqt_pair q_opengltexture_mip_level_range(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setAutoMipMapGenerationEnabled)
 ///
@@ -645,7 +647,9 @@ void q_opengltexture_set_min_mag_filters(void* self, int32_t minificationFilter,
 ///
 /// @param self QOpenGLTexture*
 ///
-libqt_pair /* tuple of enum QOpenGLTexture__Filter and enum QOpenGLTexture__Filter */ q_opengltexture_min_mag_filters(void* self);
+/// @return libqt_pair tuple of enum QOpenGLTexture__Filter and enum QOpenGLTexture__Filter
+///
+libqt_pair q_opengltexture_min_mag_filters(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setMaximumAnisotropy)
 ///
@@ -786,7 +790,9 @@ void q_opengltexture_set_level_of_detail_range(void* self, float min, float max)
 ///
 /// @param self QOpenGLTexture*
 ///
-libqt_pair /* tuple of float and float */ q_opengltexture_level_of_detail_range(void* self);
+/// @return libqt_pair tuple of float and float
+///
+libqt_pair q_opengltexture_level_of_detail_range(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setLevelofDetailBias)
 ///

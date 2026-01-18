@@ -66,9 +66,9 @@ const char* k_nswidgets__action_tr(const char* s);
 /// [Upstream resources](https://api.kde.org/knswidgets-action.html#dialogFinished)
 ///
 /// @param self KNSWidgets__Action*
-/// @param changedEntries libqt_list /* of KNSCore__Entry* */
+/// @param changedEntries libqt_list of KNSCore__Entry*
 ///
-void k_nswidgets__action_dialog_finished(void* self, libqt_list changedEntries);
+void k_nswidgets__action_dialog_finished(void* self, libqt_list /* of KNSCore__Entry* */ changedEntries);
 
 /// [Upstream resources](https://api.kde.org/knswidgets-action.html#dialogFinished)
 ///
@@ -102,7 +102,9 @@ const char* k_nswidgets__action_tr3(const char* s, const char* c, int n);
 ///
 /// @param self KNSWidgets__Action*
 ///
-libqt_list /* of QObject* */ k_nswidgets__action_associated_objects(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_nswidgets__action_associated_objects(void* self);
 
 /// Inherited from QAction
 ///
@@ -291,9 +293,9 @@ QKeySequence* k_nswidgets__action_shortcut(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
 ///
 /// @param self KNSWidgets__Action*
-/// @param shortcuts libqt_list /* of QKeySequence* */
+/// @param shortcuts libqt_list of QKeySequence*
 ///
-void k_nswidgets__action_set_shortcuts(void* self, libqt_list shortcuts);
+void k_nswidgets__action_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts);
 
 /// Inherited from QAction
 ///
@@ -310,7 +312,9 @@ void k_nswidgets__action_set_shortcuts2(void* self, int32_t shortcuts);
 ///
 /// @param self KNSWidgets__Action*
 ///
-libqt_list /* of QKeySequence* */ k_nswidgets__action_shortcuts(void* self);
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_nswidgets__action_shortcuts(void* self);
 
 /// Inherited from QAction
 ///
@@ -820,7 +824,9 @@ void k_nswidgets__action_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KNSWidgets__Action*
 ///
-libqt_list /* of QObject* */ k_nswidgets__action_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_nswidgets__action_children(void* self);
 
 /// Inherited from QObject
 ///

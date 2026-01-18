@@ -205,7 +205,9 @@ void k_nscore__questionmanager_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KNSCore__QuestionManager*
 ///
-libqt_list /* of QObject* */ k_nscore__questionmanager_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_nscore__questionmanager_children(void* self);
 
 /// Inherited from QObject
 ///

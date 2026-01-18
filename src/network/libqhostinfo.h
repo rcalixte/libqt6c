@@ -66,14 +66,16 @@ void q_hostinfo_set_host_name(void* self, const char* name);
 ///
 /// @param self QHostInfo*
 ///
-libqt_list /* of QHostAddress* */ q_hostinfo_addresses(void* self);
+/// @return libqt_list of QHostAddress*
+///
+libqt_list q_hostinfo_addresses(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostinfo.html#setAddresses)
 ///
 /// @param self QHostInfo*
-/// @param addresses libqt_list /* of QHostAddress* */
+/// @param addresses libqt_list of QHostAddress*
 ///
-void q_hostinfo_set_addresses(void* self, libqt_list addresses);
+void q_hostinfo_set_addresses(void* self, libqt_list /* of QHostAddress* */ addresses);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostinfo.html#error)
 ///

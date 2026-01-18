@@ -246,7 +246,9 @@ void k_notificationaction_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KNotificationAction*
 ///
-libqt_list /* of QObject* */ k_notificationaction_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_notificationaction_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1069,14 +1071,16 @@ void k_notification_set_component_name(void* self, const char* componentName);
 ///
 /// @param self KNotification*
 ///
-libqt_list /* of QUrl* */ k_notification_urls(void* self);
+/// @return libqt_list of QUrl*
+///
+libqt_list k_notification_urls(void* self);
 
 /// [Upstream resources](https://api.kde.org/knotification.html#setUrls)
 ///
 /// @param self KNotification*
-/// @param urls libqt_list /* of QUrl* */
+/// @param urls libqt_list of QUrl*
 ///
-void k_notification_set_urls(void* self, libqt_list urls);
+void k_notification_set_urls(void* self, libqt_list /* of QUrl* */ urls);
 
 /// [Upstream resources](https://api.kde.org/knotification.html#urgency)
 ///
@@ -1354,7 +1358,8 @@ void k_notification_set_hint(void* self, const char* hint, void* value);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     free(((QVariant*)map.values)[i]);
@@ -1365,14 +1370,16 @@ void k_notification_set_hint(void* self, const char* hint, void* value);
 ///
 /// @param self KNotification*
 ///
-libqt_map /* of const char* to QVariant* */ k_notification_hints(void* self);
+/// @return libqt_map of const char* to QVariant*
+///
+libqt_map k_notification_hints(void* self);
 
 /// [Upstream resources](https://api.kde.org/knotification.html#setHints)
 ///
 /// @param self KNotification*
-/// @param hints libqt_map /* of const char* to QVariant* */
+/// @param hints libqt_map of const char* to QVariant*
 ///
-void k_notification_set_hints(void* self, libqt_map /* of const char* to QVariant* */ hints);
+void k_notification_set_hints(void* self, libqt_map hints);
 
 /// [Upstream resources](https://api.kde.org/knotification.html#event)
 ///
@@ -1706,7 +1713,9 @@ void k_notification_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KNotification*
 ///
-libqt_list /* of QObject* */ k_notification_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_notification_children(void* self);
 
 /// Inherited from QObject
 ///

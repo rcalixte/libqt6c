@@ -60,11 +60,11 @@ KIO__FileUndoManager__UiInterface* k_io__fileundomanager_ui_interface(void* self
 ///
 /// @param self KIO__FileUndoManager*
 /// @param op enum KIO__FileUndoManager__CommandType
-/// @param src libqt_list /* of QUrl* */
+/// @param src libqt_list of QUrl*
 /// @param dst QUrl*
 /// @param job KIO__Job*
 ///
-void k_io__fileundomanager_record_job(void* self, int32_t op, libqt_list src, void* dst, void* job);
+void k_io__fileundomanager_record_job(void* self, int32_t op, libqt_list /* of QUrl* */ src, void* dst, void* job);
 
 /// [Upstream resources](https://api.kde.org/kio-fileundomanager.html#recordCopyJob)
 ///
@@ -322,7 +322,9 @@ void k_io__fileundomanager_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KIO__FileUndoManager*
 ///
-libqt_list /* of QObject* */ k_io__fileundomanager_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_io__fileundomanager_children(void* self);
 
 /// Inherited from QObject
 ///

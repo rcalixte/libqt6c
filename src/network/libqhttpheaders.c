@@ -94,7 +94,7 @@ const char** q_httpheaders_values(void* self, char* name) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_httpheaders_values");
+        fprintf(stderr, "Failed to allocate memory for string list in q_httpheaders_values\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -113,7 +113,7 @@ const char** q_httpheaders_values2(void* self, int32_t name) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_httpheaders_values2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_httpheaders_values2\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -201,7 +201,7 @@ QHttpHeaders* q_httpheaders_from_multi_map(libqt_map /* of char* to char** */ he
             }
             free(headers_ret.keys);
             free(headers_ret.values);
-            fprintf(stderr, "Failed to allocate memory for map string key in q_httpheaders_from_multi_map");
+            fprintf(stderr, "Failed to allocate memory for map string key in q_httpheaders_from_multi_map\n");
             abort();
         }
         for (size_t j = 0; j < headers_value_count; j++) {
@@ -249,7 +249,7 @@ QHttpHeaders* q_httpheaders_from_multi_hash(libqt_map /* of char* to char** */ h
             }
             free(headers_ret.keys);
             free(headers_ret.values);
-            fprintf(stderr, "Failed to allocate memory for map string key in q_httpheaders_from_multi_hash");
+            fprintf(stderr, "Failed to allocate memory for map string key in q_httpheaders_from_multi_hash\n");
             abort();
         }
         for (size_t j = 0; j < headers_value_count; j++) {
@@ -280,7 +280,7 @@ libqt_map /* of char* to char** */ q_httpheaders_to_multi_map(void* self) {
     libqt_string* _out_keys = (libqt_string*)_out.keys;
     char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string keys in q_httpheaders_to_multi_map");
+        fprintf(stderr, "Failed to allocate memory for map string keys in q_httpheaders_to_multi_map\n");
         abort();
     }
     libqt_list* _out_values = (libqt_list*)_out.values;
@@ -289,7 +289,7 @@ libqt_map /* of char* to char** */ q_httpheaders_to_multi_map(void* self) {
         free(_ret_keys);
         free(_out.keys);
         free(_out.values);
-        fprintf(stderr, "Failed to allocate memory for map value containers in q_httpheaders_to_multi_map");
+        fprintf(stderr, "Failed to allocate memory for map value containers in q_httpheaders_to_multi_map\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
@@ -304,7 +304,7 @@ libqt_map /* of char* to char** */ q_httpheaders_to_multi_map(void* self) {
             }
             free(_ret_keys);
             free(_ret_values);
-            fprintf(stderr, "Failed to allocate memory for map keys in q_httpheaders_to_multi_map");
+            fprintf(stderr, "Failed to allocate memory for map keys in q_httpheaders_to_multi_map\n");
             abort();
         }
         memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
@@ -323,7 +323,7 @@ libqt_map /* of char* to char** */ q_httpheaders_to_multi_map(void* self) {
             free(_out.keys);
             free(_ret_values);
             free(_out.values);
-            fprintf(stderr, "Failed to allocate memory for map values in q_httpheaders_to_multi_map");
+            fprintf(stderr, "Failed to allocate memory for map values in q_httpheaders_to_multi_map\n");
             abort();
         }
         libqt_string* _value_str = (libqt_string*)_value_list.data.ptr;
@@ -343,7 +343,7 @@ libqt_map /* of char* to char** */ q_httpheaders_to_multi_map(void* self) {
                 }
                 free(_ret_keys);
                 free(_ret_values);
-                fprintf(stderr, "Failed to allocate memory for map value keys in q_httpheaders_to_multi_map");
+                fprintf(stderr, "Failed to allocate memory for map value keys in q_httpheaders_to_multi_map\n");
                 abort();
             }
             memcpy(_ret_values[i][j], _value_str[j].data, _value_str[j].len);
@@ -374,7 +374,7 @@ libqt_map /* of char* to char** */ q_httpheaders_to_multi_hash(void* self) {
     libqt_string* _out_keys = (libqt_string*)_out.keys;
     char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string keys in q_httpheaders_to_multi_hash");
+        fprintf(stderr, "Failed to allocate memory for map string keys in q_httpheaders_to_multi_hash\n");
         abort();
     }
     libqt_list* _out_values = (libqt_list*)_out.values;
@@ -383,7 +383,7 @@ libqt_map /* of char* to char** */ q_httpheaders_to_multi_hash(void* self) {
         free(_ret_keys);
         free(_out.keys);
         free(_out.values);
-        fprintf(stderr, "Failed to allocate memory for map value containers in q_httpheaders_to_multi_hash");
+        fprintf(stderr, "Failed to allocate memory for map value containers in q_httpheaders_to_multi_hash\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
@@ -398,7 +398,7 @@ libqt_map /* of char* to char** */ q_httpheaders_to_multi_hash(void* self) {
             }
             free(_ret_keys);
             free(_ret_values);
-            fprintf(stderr, "Failed to allocate memory for map keys in q_httpheaders_to_multi_hash");
+            fprintf(stderr, "Failed to allocate memory for map keys in q_httpheaders_to_multi_hash\n");
             abort();
         }
         memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
@@ -417,7 +417,7 @@ libqt_map /* of char* to char** */ q_httpheaders_to_multi_hash(void* self) {
             free(_out.keys);
             free(_ret_values);
             free(_out.values);
-            fprintf(stderr, "Failed to allocate memory for map values in q_httpheaders_to_multi_hash");
+            fprintf(stderr, "Failed to allocate memory for map values in q_httpheaders_to_multi_hash\n");
             abort();
         }
         libqt_string* _value_str = (libqt_string*)_value_list.data.ptr;
@@ -437,7 +437,7 @@ libqt_map /* of char* to char** */ q_httpheaders_to_multi_hash(void* self) {
                 }
                 free(_ret_keys);
                 free(_ret_values);
-                fprintf(stderr, "Failed to allocate memory for map value keys in q_httpheaders_to_multi_hash");
+                fprintf(stderr, "Failed to allocate memory for map value keys in q_httpheaders_to_multi_hash\n");
                 abort();
             }
             memcpy(_ret_values[i][j], _value_str[j].data, _value_str[j].len);

@@ -169,16 +169,16 @@ int32_t q_geoareamonitorsource_qbase_error(void* self);
 ///
 /// @return flag of enum QGeoAreaMonitorSource__AreaMonitorFeature
 ///
-int64_t q_geoareamonitorsource_supported_area_monitor_features(void* self);
+int32_t q_geoareamonitorsource_supported_area_monitor_features(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorsource.html#supportedAreaMonitorFeatures)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QGeoAreaMonitorSource*
-/// @param callback int64_t func()
+/// @param callback int32_t func()
 ///
-void q_geoareamonitorsource_on_supported_area_monitor_features(void* self, int64_t (*callback)());
+void q_geoareamonitorsource_on_supported_area_monitor_features(void* self, int32_t (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorsource.html#supportedAreaMonitorFeatures)
 ///
@@ -188,7 +188,7 @@ void q_geoareamonitorsource_on_supported_area_monitor_features(void* self, int64
 ///
 /// @return flag of enum QGeoAreaMonitorSource__AreaMonitorFeature
 ///
-int64_t q_geoareamonitorsource_qbase_supported_area_monitor_features(void* self);
+int32_t q_geoareamonitorsource_qbase_supported_area_monitor_features(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorsource.html#startMonitoring)
 ///
@@ -271,7 +271,9 @@ bool q_geoareamonitorsource_qbase_request_update(void* self, void* monitor, cons
 ///
 /// @param self QGeoAreaMonitorSource*
 ///
-libqt_list /* of QGeoAreaMonitorInfo* */ q_geoareamonitorsource_active_monitors(void* self);
+/// @return libqt_list of QGeoAreaMonitorInfo*
+///
+libqt_list q_geoareamonitorsource_active_monitors(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorsource.html#activeMonitors)
 ///
@@ -288,14 +290,18 @@ void q_geoareamonitorsource_on_active_monitors(void* self, QGeoAreaMonitorInfo**
 ///
 /// @param self QGeoAreaMonitorSource*
 ///
-libqt_list /* of QGeoAreaMonitorInfo* */ q_geoareamonitorsource_qbase_active_monitors(void* self);
+/// @return libqt_list of QGeoAreaMonitorInfo*
+///
+libqt_list q_geoareamonitorsource_qbase_active_monitors(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorsource.html#activeMonitors)
 ///
 /// @param self QGeoAreaMonitorSource*
 /// @param lookupArea QGeoShape*
 ///
-libqt_list /* of QGeoAreaMonitorInfo* */ q_geoareamonitorsource_active_monitors2(void* self, void* lookupArea);
+/// @return libqt_list of QGeoAreaMonitorInfo*
+///
+libqt_list q_geoareamonitorsource_active_monitors2(void* self, void* lookupArea);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorsource.html#activeMonitors)
 ///
@@ -313,7 +319,9 @@ void q_geoareamonitorsource_on_active_monitors2(void* self, QGeoAreaMonitorInfo*
 /// @param self QGeoAreaMonitorSource*
 /// @param lookupArea QGeoShape*
 ///
-libqt_list /* of QGeoAreaMonitorInfo* */ q_geoareamonitorsource_qbase_active_monitors2(void* self, void* lookupArea);
+/// @return libqt_list of QGeoAreaMonitorInfo*
+///
+libqt_list q_geoareamonitorsource_qbase_active_monitors2(void* self, void* lookupArea);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorsource.html#setBackendProperty)
 ///
@@ -554,7 +562,9 @@ void q_geoareamonitorsource_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QGeoAreaMonitorSource*
 ///
-libqt_list /* of QObject* */ q_geoareamonitorsource_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_geoareamonitorsource_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1182,7 +1192,7 @@ typedef enum {
 
 typedef enum {
     QGEOAREAMONITORSOURCE_AREAMONITORFEATURE_PERSISTENTAREAMONITORFEATURE = 1,
-    QGEOAREAMONITORSOURCE_AREAMONITORFEATURE_ANYAREAMONITORFEATURE = 4294967295
+    QGEOAREAMONITORSOURCE_AREAMONITORFEATURE_ANYAREAMONITORFEATURE = -1
 } QGeoAreaMonitorSource__AreaMonitorFeature;
 
 #endif

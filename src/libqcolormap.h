@@ -76,7 +76,9 @@ const QColor* q_colormap_color_at(void* self, uint32_t pixel);
 ///
 /// @param self QColormap*
 ///
-libqt_list /* of QColor* */ q_colormap_colormap(void* self);
+/// @return libqt_list of QColor*
+///
+libqt_list q_colormap_colormap(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolormap.html#instance)
 ///

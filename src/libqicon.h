@@ -191,7 +191,9 @@ void q_icon_add_file(void* self, const char* fileName);
 ///
 /// @param self QIcon*
 ///
-libqt_list /* of QSize* */ q_icon_available_sizes(void* self);
+/// @return libqt_list of QSize*
+///
+libqt_list q_icon_available_sizes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#setIsMask)
 ///
@@ -537,7 +539,9 @@ void q_icon_add_file4(void* self, const char* fileName, void* size, int32_t mode
 /// @param self QIcon*
 /// @param mode enum QIcon__Mode
 ///
-libqt_list /* of QSize* */ q_icon_available_sizes1(void* self, int32_t mode);
+/// @return libqt_list of QSize*
+///
+libqt_list q_icon_available_sizes1(void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#availableSizes)
 ///
@@ -545,7 +549,9 @@ libqt_list /* of QSize* */ q_icon_available_sizes1(void* self, int32_t mode);
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-libqt_list /* of QSize* */ q_icon_available_sizes2(void* self, int32_t mode, int32_t state);
+/// @return libqt_list of QSize*
+///
+libqt_list q_icon_available_sizes2(void* self, int32_t mode, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#dtor.QIcon)
 ///

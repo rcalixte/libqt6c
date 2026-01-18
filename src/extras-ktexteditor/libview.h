@@ -209,9 +209,9 @@ bool k_texteditor__view_set_cursor_position(void* self, void* position);
 /// [Upstream resources](https://api.kde.org/ktexteditor-view.html#setCursorPositions)
 ///
 /// @param self KTextEditor__View*
-/// @param positions libqt_list /* of KTextEditor__Cursor* */
+/// @param positions libqt_list of KTextEditor__Cursor*
 ///
-void k_texteditor__view_set_cursor_positions(void* self, libqt_list positions);
+void k_texteditor__view_set_cursor_positions(void* self, libqt_list /* of KTextEditor__Cursor* */ positions);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-view.html#cursorPosition)
 ///
@@ -223,7 +223,9 @@ KTextEditor__Cursor* k_texteditor__view_cursor_position(void* self);
 ///
 /// @param self KTextEditor__View*
 ///
-libqt_list /* of KTextEditor__Cursor* */ k_texteditor__view_cursor_positions(void* self);
+/// @return libqt_list of KTextEditor__Cursor*
+///
+libqt_list k_texteditor__view_cursor_positions(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-view.html#cursorPositionVirtual)
 ///
@@ -333,9 +335,9 @@ bool k_texteditor__view_set_selection(void* self, void* range);
 /// [Upstream resources](https://api.kde.org/ktexteditor-view.html#setSelections)
 ///
 /// @param self KTextEditor__View*
-/// @param ranges libqt_list /* of KTextEditor__Range* */
+/// @param ranges libqt_list of KTextEditor__Range*
 ///
-void k_texteditor__view_set_selections(void* self, libqt_list ranges);
+void k_texteditor__view_set_selections(void* self, libqt_list /* of KTextEditor__Range* */ ranges);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-view.html#selection)
 ///
@@ -353,7 +355,9 @@ KTextEditor__Range* k_texteditor__view_selection_range(void* self);
 ///
 /// @param self KTextEditor__View*
 ///
-libqt_list /* of KTextEditor__Range* */ k_texteditor__view_selection_ranges(void* self);
+/// @return libqt_list of KTextEditor__Range*
+///
+libqt_list k_texteditor__view_selection_ranges(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-view.html#selectionText)
 ///
@@ -527,7 +531,7 @@ void k_texteditor__view_on_status_bar_enabled_changed(void* self, void (*callbac
 /// @param config KConfigGroup*
 /// @param flags libqt_list /* set of const char* */ flags
 ///
-void k_texteditor__view_read_session_config(void* self, void* config, libqt_list /* set of const char* */ flags);
+void k_texteditor__view_read_session_config(void* self, void* config, libqt_list flags);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-view.html#writeSessionConfig)
 ///
@@ -535,14 +539,16 @@ void k_texteditor__view_read_session_config(void* self, void* config, libqt_list
 /// @param config KConfigGroup*
 /// @param flags libqt_list /* set of const char* */ flags
 ///
-void k_texteditor__view_write_session_config(void* self, void* config, libqt_list /* set of const char* */ flags);
+void k_texteditor__view_write_session_config(void* self, void* config, libqt_list flags);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-view.html#lineAttributes)
 ///
 /// @param self KTextEditor__View*
 /// @param line int
 ///
-libqt_list /* of KTextEditor__AttributeBlock* */ k_texteditor__view_line_attributes(void* self, int line);
+/// @return libqt_list of KTextEditor__AttributeBlock*
+///
+libqt_list k_texteditor__view_line_attributes(void* self, int line);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-view.html#configChanged)
 ///
@@ -777,16 +783,18 @@ void k_texteditor__view_set_automatic_invocation_enabled(void* self, bool enable
 ///
 /// @param self KTextEditor__View*
 /// @param word KTextEditor__Range*
-/// @param models libqt_list /* of KTextEditor__CodeCompletionModel* */
+/// @param models libqt_list of KTextEditor__CodeCompletionModel*
 /// @param invocationType enum KTextEditor__CodeCompletionModel__InvocationType
 ///
-void k_texteditor__view_start_completion2(void* self, void* word, libqt_list models, int32_t invocationType);
+void k_texteditor__view_start_completion2(void* self, void* word, libqt_list /* of KTextEditor__CodeCompletionModel* */ models, int32_t invocationType);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-view.html#codeCompletionModels)
 ///
 /// @param self KTextEditor__View*
 ///
-libqt_list /* of KTextEditor__CodeCompletionModel* */ k_texteditor__view_code_completion_models(void* self);
+/// @return libqt_list of KTextEditor__CodeCompletionModel*
+///
+libqt_list k_texteditor__view_code_completion_models(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-view.html#theme)
 ///
@@ -1672,7 +1680,7 @@ void k_texteditor__view_set_graphics_effect(void* self, void* effect);
 /// @param self KTextEditor__View*
 /// @param type enum Qt__GestureType
 ///
-void k_texteditor__view_grab_gesture(void* self, int64_t type);
+void k_texteditor__view_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -1681,7 +1689,7 @@ void k_texteditor__view_grab_gesture(void* self, int64_t type);
 /// @param self KTextEditor__View*
 /// @param type enum Qt__GestureType
 ///
-void k_texteditor__view_ungrab_gesture(void* self, int64_t type);
+void k_texteditor__view_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2712,7 +2720,7 @@ void k_texteditor__view_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void k_texteditor__view_set_parent2(void* self, void* parent, int64_t f);
+void k_texteditor__view_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -2790,9 +2798,9 @@ void k_texteditor__view_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self KTextEditor__View*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_texteditor__view_add_actions(void* self, libqt_list actions);
+void k_texteditor__view_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2800,9 +2808,9 @@ void k_texteditor__view_add_actions(void* self, libqt_list actions);
 ///
 /// @param self KTextEditor__View*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_texteditor__view_insert_actions(void* self, void* before, libqt_list actions);
+void k_texteditor__view_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2829,7 +2837,9 @@ void k_texteditor__view_remove_action(void* self, void* action);
 ///
 /// @param self KTextEditor__View*
 ///
-libqt_list /* of QAction* */ k_texteditor__view_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_texteditor__view_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2886,7 +2896,7 @@ QWidget* k_texteditor__view_parent_widget(void* self);
 /// @param self KTextEditor__View*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_texteditor__view_set_window_flags(void* self, int64_t type);
+void k_texteditor__view_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2896,7 +2906,7 @@ void k_texteditor__view_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t k_texteditor__view_window_flags(void* self);
+int32_t k_texteditor__view_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2905,7 +2915,7 @@ int64_t k_texteditor__view_window_flags(void* self);
 /// @param self KTextEditor__View*
 /// @param param1 enum Qt__WindowType
 ///
-void k_texteditor__view_set_window_flag(void* self, int64_t param1);
+void k_texteditor__view_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2914,7 +2924,7 @@ void k_texteditor__view_set_window_flag(void* self, int64_t param1);
 /// @param self KTextEditor__View*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_texteditor__view_override_window_flags(void* self, int64_t type);
+void k_texteditor__view_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2924,7 +2934,7 @@ void k_texteditor__view_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t k_texteditor__view_window_type(void* self);
+int32_t k_texteditor__view_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3142,7 +3152,7 @@ void k_texteditor__view_on_custom_context_menu_requested(void* self, void (*call
 /// @param self KTextEditor__View*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_texteditor__view_input_method_query(void* self, int64_t param1);
+QVariant* k_texteditor__view_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3152,7 +3162,7 @@ QVariant* k_texteditor__view_input_method_query(void* self, int64_t param1);
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t k_texteditor__view_input_method_hints(void* self);
+int32_t k_texteditor__view_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3161,7 +3171,7 @@ int64_t k_texteditor__view_input_method_hints(void* self);
 /// @param self KTextEditor__View*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void k_texteditor__view_set_input_method_hints(void* self, int64_t hints);
+void k_texteditor__view_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -3246,7 +3256,7 @@ QPixmap* k_texteditor__view_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void k_texteditor__view_grab_gesture2(void* self, int64_t type, int32_t flags);
+void k_texteditor__view_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -3286,7 +3296,7 @@ void k_texteditor__view_set_shortcut_auto_repeat2(void* self, int id, bool enabl
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void k_texteditor__view_set_window_flag2(void* self, int64_t param1, bool on);
+void k_texteditor__view_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -3315,7 +3325,7 @@ QWidget* k_texteditor__view_create_window_container2(void* window, void* parent)
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* k_texteditor__view_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* k_texteditor__view_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -3437,7 +3447,9 @@ void k_texteditor__view_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KTextEditor__View*
 ///
-libqt_list /* of QObject* */ k_texteditor__view_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_texteditor__view_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -3896,7 +3908,9 @@ void k_texteditor__view_remove_child_client(void* self, void* child);
 ///
 /// @param self KTextEditor__View*
 ///
-libqt_list /* of KXMLGUIClient* */ k_texteditor__view_child_clients(void* self);
+/// @return libqt_list of KXMLGUIClient*
+///
+libqt_list k_texteditor__view_child_clients(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -3929,9 +3943,9 @@ void k_texteditor__view_reload_x_m_l(void* self);
 ///
 /// @param self KTextEditor__View*
 /// @param name const char*
-/// @param actionList libqt_list /* of QAction* */
+/// @param actionList libqt_list of QAction*
 ///
-void k_texteditor__view_plug_action_list(void* self, const char* name, libqt_list actionList);
+void k_texteditor__view_plug_action_list(void* self, const char* name, libqt_list /* of QAction* */ actionList);
 
 /// Inherited from KXMLGUIClient
 ///

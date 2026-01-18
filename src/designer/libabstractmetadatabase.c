@@ -55,7 +55,7 @@ libqt_list /* of QWidget* */ q_designermetadatabaseiteminterface_qbase_tab_order
     return _arr;
 }
 
-void q_designermetadatabaseiteminterface_set_tab_order(void* self, libqt_list tabOrder) {
+void q_designermetadatabaseiteminterface_set_tab_order(void* self, libqt_list /* of QWidget* */ tabOrder) {
     QDesignerMetaDataBaseItemInterface_SetTabOrder((QDesignerMetaDataBaseItemInterface*)self, tabOrder);
 }
 
@@ -63,7 +63,7 @@ void q_designermetadatabaseiteminterface_on_set_tab_order(void* self, void (*cal
     QDesignerMetaDataBaseItemInterface_OnSetTabOrder((QDesignerMetaDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
-void q_designermetadatabaseiteminterface_qbase_set_tab_order(void* self, libqt_list tabOrder) {
+void q_designermetadatabaseiteminterface_qbase_set_tab_order(void* self, libqt_list /* of QWidget* */ tabOrder) {
     QDesignerMetaDataBaseItemInterface_QBaseSetTabOrder((QDesignerMetaDataBaseItemInterface*)self, tabOrder);
 }
 
@@ -319,7 +319,7 @@ const char** q_designermetadatabaseinterface_dynamic_property_names(void* self) 
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_designermetadatabaseinterface_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_designermetadatabaseinterface_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

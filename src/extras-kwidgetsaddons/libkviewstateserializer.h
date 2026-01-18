@@ -121,7 +121,9 @@ const char* k_viewstateserializer_current_index_key(void* self);
 ///
 /// @param self KViewStateSerializer*
 ///
-libqt_pair /* tuple of int and int */ k_viewstateserializer_scroll_state(void* self);
+/// @return libqt_pair tuple of int and int
+///
+libqt_pair k_viewstateserializer_scroll_state(void* self);
 
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#restoreSelection)
 ///
@@ -358,7 +360,9 @@ void k_viewstateserializer_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KViewStateSerializer*
 ///
-libqt_list /* of QObject* */ k_viewstateserializer_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_viewstateserializer_children(void* self);
 
 /// Inherited from QObject
 ///

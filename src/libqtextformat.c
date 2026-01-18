@@ -163,7 +163,7 @@ libqt_list /* of QTextLength* */ q_textformat_length_vector_property(void* self,
     return _arr;
 }
 
-void q_textformat_set_property2(void* self, int propertyId, libqt_list lengths) {
+void q_textformat_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths) {
     QTextFormat_SetProperty2((QTextFormat*)self, propertyId, lengths);
 }
 
@@ -328,7 +328,7 @@ void q_textcharformat_set_font_families(void* self, const char* families[static 
     size_t families_len = libqt_strv_length(families);
     libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
     if (families_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_textcharformat_set_font_families");
+        fprintf(stderr, "Failed to allocate memory for string list in q_textcharformat_set_font_families\n");
         abort();
     }
     for (size_t i = 0; i < families_len; ++i) {
@@ -569,7 +569,7 @@ void q_textcharformat_set_anchor_names(void* self, const char* names[static 1]) 
     size_t names_len = libqt_strv_length(names);
     libqt_string* names_qstr = (libqt_string*)malloc(names_len * sizeof(libqt_string));
     if (names_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_textcharformat_set_anchor_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_textcharformat_set_anchor_names\n");
         abort();
     }
     for (size_t i = 0; i < names_len; ++i) {
@@ -585,7 +585,7 @@ const char** q_textcharformat_anchor_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_textcharformat_anchor_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_textcharformat_anchor_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -707,7 +707,7 @@ libqt_list /* of QTextLength* */ q_textcharformat_length_vector_property(void* s
     return _arr;
 }
 
-void q_textcharformat_set_property2(void* self, int propertyId, libqt_list lengths) {
+void q_textcharformat_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths) {
     QTextFormat_SetProperty2((QTextFormat*)self, propertyId, lengths);
 }
 
@@ -945,7 +945,7 @@ int32_t q_textblockformat_page_break_policy(void* self) {
     return QTextBlockFormat_PageBreakPolicy((QTextBlockFormat*)self);
 }
 
-void q_textblockformat_set_tab_positions(void* self, libqt_list tabs) {
+void q_textblockformat_set_tab_positions(void* self, libqt_list /* of QTextOption__Tab* */ tabs) {
     QTextBlockFormat_SetTabPositions((QTextBlockFormat*)self, tabs);
 }
 
@@ -1046,7 +1046,7 @@ libqt_list /* of QTextLength* */ q_textblockformat_length_vector_property(void* 
     return _arr;
 }
 
-void q_textblockformat_set_property2(void* self, int propertyId, libqt_list lengths) {
+void q_textblockformat_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths) {
     QTextFormat_SetProperty2((QTextFormat*)self, propertyId, lengths);
 }
 
@@ -1318,7 +1318,7 @@ libqt_list /* of QTextLength* */ q_textlistformat_length_vector_property(void* s
     return _arr;
 }
 
-void q_textlistformat_set_property2(void* self, int propertyId, libqt_list lengths) {
+void q_textlistformat_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths) {
     QTextFormat_SetProperty2((QTextFormat*)self, propertyId, lengths);
 }
 
@@ -1530,7 +1530,7 @@ void q_textimageformat_set_font_families(void* self, const char* families[static
     size_t families_len = libqt_strv_length(families);
     libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
     if (families_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_textimageformat_set_font_families");
+        fprintf(stderr, "Failed to allocate memory for string list in q_textimageformat_set_font_families\n");
         abort();
     }
     for (size_t i = 0; i < families_len; ++i) {
@@ -1771,7 +1771,7 @@ void q_textimageformat_set_anchor_names(void* self, const char* names[static 1])
     size_t names_len = libqt_strv_length(names);
     libqt_string* names_qstr = (libqt_string*)malloc(names_len * sizeof(libqt_string));
     if (names_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_textimageformat_set_anchor_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_textimageformat_set_anchor_names\n");
         abort();
     }
     for (size_t i = 0; i < names_len; ++i) {
@@ -1787,7 +1787,7 @@ const char** q_textimageformat_anchor_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_textimageformat_anchor_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_textimageformat_anchor_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1909,7 +1909,7 @@ libqt_list /* of QTextLength* */ q_textimageformat_length_vector_property(void* 
     return _arr;
 }
 
-void q_textimageformat_set_property2(void* self, int propertyId, libqt_list lengths) {
+void q_textimageformat_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths) {
     QTextFormat_SetProperty2((QTextFormat*)self, propertyId, lengths);
 }
 
@@ -2247,7 +2247,7 @@ libqt_list /* of QTextLength* */ q_textframeformat_length_vector_property(void* 
     return _arr;
 }
 
-void q_textframeformat_set_property2(void* self, int propertyId, libqt_list lengths) {
+void q_textframeformat_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths) {
     QTextFormat_SetProperty2((QTextFormat*)self, propertyId, lengths);
 }
 
@@ -2397,7 +2397,7 @@ void q_texttableformat_set_columns(void* self, int columns) {
     QTextTableFormat_SetColumns((QTextTableFormat*)self, columns);
 }
 
-void q_texttableformat_set_column_width_constraints(void* self, libqt_list constraints) {
+void q_texttableformat_set_column_width_constraints(void* self, libqt_list /* of QTextLength* */ constraints) {
     QTextTableFormat_SetColumnWidthConstraints((QTextTableFormat*)self, constraints);
 }
 
@@ -2646,7 +2646,7 @@ libqt_list /* of QTextLength* */ q_texttableformat_length_vector_property(void* 
     return _arr;
 }
 
-void q_texttableformat_set_property2(void* self, int propertyId, libqt_list lengths) {
+void q_texttableformat_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths) {
     QTextFormat_SetProperty2((QTextFormat*)self, propertyId, lengths);
 }
 
@@ -2955,7 +2955,7 @@ void q_texttablecellformat_set_font_families(void* self, const char* families[st
     size_t families_len = libqt_strv_length(families);
     libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
     if (families_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_texttablecellformat_set_font_families");
+        fprintf(stderr, "Failed to allocate memory for string list in q_texttablecellformat_set_font_families\n");
         abort();
     }
     for (size_t i = 0; i < families_len; ++i) {
@@ -3196,7 +3196,7 @@ void q_texttablecellformat_set_anchor_names(void* self, const char* names[static
     size_t names_len = libqt_strv_length(names);
     libqt_string* names_qstr = (libqt_string*)malloc(names_len * sizeof(libqt_string));
     if (names_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_texttablecellformat_set_anchor_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_texttablecellformat_set_anchor_names\n");
         abort();
     }
     for (size_t i = 0; i < names_len; ++i) {
@@ -3212,7 +3212,7 @@ const char** q_texttablecellformat_anchor_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_texttablecellformat_anchor_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_texttablecellformat_anchor_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -3334,7 +3334,7 @@ libqt_list /* of QTextLength* */ q_texttablecellformat_length_vector_property(vo
     return _arr;
 }
 
-void q_texttablecellformat_set_property2(void* self, int propertyId, libqt_list lengths) {
+void q_texttablecellformat_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths) {
     QTextFormat_SetProperty2((QTextFormat*)self, propertyId, lengths);
 }
 

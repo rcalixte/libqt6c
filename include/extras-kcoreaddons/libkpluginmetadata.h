@@ -134,19 +134,25 @@ const char* k_pluginmetadata_description(void* self);
 ///
 /// @param self KPluginMetaData*
 ///
-libqt_list /* of KAboutPerson* */ k_pluginmetadata_authors(void* self);
+/// @return libqt_list of KAboutPerson*
+///
+libqt_list k_pluginmetadata_authors(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#translators)
 ///
 /// @param self KPluginMetaData*
 ///
-libqt_list /* of KAboutPerson* */ k_pluginmetadata_translators(void* self);
+/// @return libqt_list of KAboutPerson*
+///
+libqt_list k_pluginmetadata_translators(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#otherContributors)
 ///
 /// @param self KPluginMetaData*
 ///
-libqt_list /* of KAboutPerson* */ k_pluginmetadata_other_contributors(void* self);
+/// @return libqt_list of KAboutPerson*
+///
+libqt_list k_pluginmetadata_other_contributors(void* self);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#category)
 ///

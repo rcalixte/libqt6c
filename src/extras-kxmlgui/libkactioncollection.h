@@ -72,7 +72,9 @@ const char* k_actioncollection_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#allCollections)
 ///
-libqt_list /* of KActionCollection* */ k_actioncollection_all_collections();
+/// @return libqt_list of KActionCollection*
+///
+libqt_list k_actioncollection_all_collections();
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#clear)
 ///
@@ -105,7 +107,9 @@ void k_actioncollection_remove_associated_widget(void* self, void* widget);
 ///
 /// @param self KActionCollection*
 ///
-libqt_list /* of QWidget* */ k_actioncollection_associated_widgets(void* self);
+/// @return libqt_list of QWidget*
+///
+libqt_list k_actioncollection_associated_widgets(void* self);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#clearAssociatedWidgets)
 ///
@@ -197,19 +201,25 @@ QAction* k_actioncollection_action2(void* self, const char* name);
 ///
 /// @param self KActionCollection*
 ///
-libqt_list /* of QAction* */ k_actioncollection_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_actioncollection_actions(void* self);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#actionsWithoutGroup)
 ///
 /// @param self KActionCollection*
 ///
-libqt_list /* of QAction* */ k_actioncollection_actions_without_group(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_actioncollection_actions_without_group(void* self);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#actionGroups)
 ///
 /// @param self KActionCollection*
 ///
-libqt_list /* of QActionGroup* */ k_actioncollection_action_groups(void* self);
+/// @return libqt_list of QActionGroup*
+///
+libqt_list k_actioncollection_action_groups(void* self);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#setComponentName)
 ///
@@ -361,9 +371,9 @@ QAction* k_actioncollection_add_action(void* self, const char* name, void* actio
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#addActions)
 ///
 /// @param self KActionCollection*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_actioncollection_add_actions(void* self, libqt_list actions);
+void k_actioncollection_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#removeAction)
 ///
@@ -396,7 +406,9 @@ QKeySequence* k_actioncollection_default_shortcut(void* action);
 ///
 /// @param action QAction*
 ///
-libqt_list /* of QKeySequence* */ k_actioncollection_default_shortcuts(void* action);
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_actioncollection_default_shortcuts(void* action);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#setDefaultShortcut)
 ///
@@ -408,9 +420,9 @@ void k_actioncollection_set_default_shortcut(void* action, void* shortcut);
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#setDefaultShortcuts)
 ///
 /// @param action QAction*
-/// @param shortcuts libqt_list /* of QKeySequence* */
+/// @param shortcuts libqt_list of QKeySequence*
 ///
-void k_actioncollection_set_default_shortcuts(void* action, libqt_list shortcuts);
+void k_actioncollection_set_default_shortcuts(void* action, libqt_list /* of QKeySequence* */ shortcuts);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#isShortcutsConfigurable)
 ///
@@ -593,7 +605,9 @@ void k_actioncollection_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KActionCollection*
 ///
-libqt_list /* of QObject* */ k_actioncollection_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_actioncollection_children(void* self);
 
 /// Inherited from QObject
 ///

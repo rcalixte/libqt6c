@@ -21,9 +21,9 @@ QGeoPath* q_geopath_new();
 
 /// q_geopath_new2 constructs a new QGeoPath object.
 ///
-/// @param path libqt_list /* of QGeoCoordinate* */
+/// @param path libqt_list of QGeoCoordinate*
 ///
-QGeoPath* q_geopath_new2(libqt_list path);
+QGeoPath* q_geopath_new2(libqt_list /* of QGeoCoordinate* */ path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html)
 
@@ -45,10 +45,10 @@ QGeoPath* q_geopath_new4(void* other);
 
 /// q_geopath_new5 constructs a new QGeoPath object.
 ///
-/// @param path libqt_list /* of QGeoCoordinate* */
+/// @param path libqt_list of QGeoCoordinate*
 /// @param width double*
 ///
-QGeoPath* q_geopath_new5(libqt_list path, double* width);
+QGeoPath* q_geopath_new5(libqt_list /* of QGeoCoordinate* */ path, double* width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#operator-eq)
 ///
@@ -60,15 +60,17 @@ void q_geopath_operator_assign(void* self, void* other);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#setPath)
 ///
 /// @param self QGeoPath*
-/// @param path libqt_list /* of QGeoCoordinate* */
+/// @param path libqt_list of QGeoCoordinate*
 ///
-void q_geopath_set_path(void* self, libqt_list path);
+void q_geopath_set_path(void* self, libqt_list /* of QGeoCoordinate* */ path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#path)
 ///
 /// @param self QGeoPath*
 ///
-libqt_list /* of QGeoCoordinate* */ q_geopath_path(void* self);
+/// @return libqt_list of QGeoCoordinate*
+///
+libqt_list q_geopath_path(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#clearPath)
 ///
@@ -79,15 +81,17 @@ void q_geopath_clear_path(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#setVariantPath)
 ///
 /// @param self QGeoPath*
-/// @param path libqt_list /* of QVariant* */
+/// @param path libqt_list of QVariant*
 ///
-void q_geopath_set_variant_path(void* self, libqt_list path);
+void q_geopath_set_variant_path(void* self, libqt_list /* of QVariant* */ path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#variantPath)
 ///
 /// @param self QGeoPath*
 ///
-libqt_list /* of QVariant* */ q_geopath_variant_path(void* self);
+/// @return libqt_list of QVariant*
+///
+libqt_list q_geopath_variant_path(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#setWidth)
 ///

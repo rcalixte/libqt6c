@@ -76,9 +76,9 @@ bool q_abstractbarseries_take(void* self, void* set);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries-qtcharts.html#append)
 ///
 /// @param self QAbstractBarSeries*
-/// @param sets libqt_list /* of QBarSet* */
+/// @param sets libqt_list of QBarSet*
 ///
-bool q_abstractbarseries_append2(void* self, libqt_list sets);
+bool q_abstractbarseries_append2(void* self, libqt_list /* of QBarSet* */ sets);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries-qtcharts.html#insert)
 ///
@@ -98,7 +98,9 @@ int32_t q_abstractbarseries_count(void* self);
 ///
 /// @param self QAbstractBarSeries*
 ///
-libqt_list /* of QBarSet* */ q_abstractbarseries_bar_sets(void* self);
+/// @return libqt_list of QBarSet*
+///
+libqt_list q_abstractbarseries_bar_sets(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries-qtcharts.html#clear)
 ///
@@ -335,9 +337,9 @@ void q_abstractbarseries_on_labels_precision_changed(void* self, void (*callback
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries-qtcharts.html#barsetsAdded)
 ///
 /// @param self QAbstractBarSeries*
-/// @param sets libqt_list /* of QBarSet* */
+/// @param sets libqt_list of QBarSet*
 ///
-void q_abstractbarseries_barsets_added(void* self, libqt_list sets);
+void q_abstractbarseries_barsets_added(void* self, libqt_list /* of QBarSet* */ sets);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries-qtcharts.html#barsetsAdded)
 ///
@@ -349,9 +351,9 @@ void q_abstractbarseries_on_barsets_added(void* self, void (*callback)(void*, QB
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries-qtcharts.html#barsetsRemoved)
 ///
 /// @param self QAbstractBarSeries*
-/// @param sets libqt_list /* of QBarSet* */
+/// @param sets libqt_list of QBarSet*
 ///
-void q_abstractbarseries_barsets_removed(void* self, libqt_list sets);
+void q_abstractbarseries_barsets_removed(void* self, libqt_list /* of QBarSet* */ sets);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries-qtcharts.html#barsetsRemoved)
 ///
@@ -496,7 +498,9 @@ bool q_abstractbarseries_detach_axis(void* self, void* axis);
 ///
 /// @param self QAbstractBarSeries*
 ///
-libqt_list /* of QAbstractAxis* */ q_abstractbarseries_attached_axes(void* self);
+/// @return libqt_list of QAbstractAxis*
+///
+libqt_list q_abstractbarseries_attached_axes(void* self);
 
 /// Inherited from QAbstractSeries
 ///
@@ -729,7 +733,9 @@ void q_abstractbarseries_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QAbstractBarSeries*
 ///
-libqt_list /* of QObject* */ q_abstractbarseries_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_abstractbarseries_children(void* self);
 
 /// Inherited from QObject
 ///

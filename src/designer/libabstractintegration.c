@@ -193,7 +193,7 @@ void q_designerintegrationinterface_emit_navigate_to_slot(void* self, const char
     size_t parameterNames_len = libqt_strv_length(parameterNames);
     libqt_string* parameterNames_qstr = (libqt_string*)malloc(parameterNames_len * sizeof(libqt_string));
     if (parameterNames_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_designerintegrationinterface_emit_navigate_to_slot");
+        fprintf(stderr, "Failed to allocate memory for string list in q_designerintegrationinterface_emit_navigate_to_slot\n");
         abort();
     }
     for (size_t i = 0; i < parameterNames_len; ++i) {
@@ -228,7 +228,7 @@ void q_designerintegrationinterface_navigate_to_slot(void* self, const char* obj
     size_t parameterNames_len = libqt_strv_length(parameterNames);
     libqt_string* parameterNames_qstr = (libqt_string*)malloc(parameterNames_len * sizeof(libqt_string));
     if (parameterNames_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_designerintegrationinterface_navigate_to_slot");
+        fprintf(stderr, "Failed to allocate memory for string list in q_designerintegrationinterface_navigate_to_slot\n");
         abort();
     }
     for (size_t i = 0; i < parameterNames_len; ++i) {
@@ -482,7 +482,7 @@ const char** q_designerintegrationinterface_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_designerintegrationinterface_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_designerintegrationinterface_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1005,7 +1005,7 @@ void q_designerintegration_emit_navigate_to_slot(void* self, const char* objectN
     size_t parameterNames_len = libqt_strv_length(parameterNames);
     libqt_string* parameterNames_qstr = (libqt_string*)malloc(parameterNames_len * sizeof(libqt_string));
     if (parameterNames_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_designerintegration_emit_navigate_to_slot");
+        fprintf(stderr, "Failed to allocate memory for string list in q_designerintegration_emit_navigate_to_slot\n");
         abort();
     }
     for (size_t i = 0; i < parameterNames_len; ++i) {
@@ -1040,7 +1040,7 @@ void q_designerintegration_navigate_to_slot(void* self, const char* objectName, 
     size_t parameterNames_len = libqt_strv_length(parameterNames);
     libqt_string* parameterNames_qstr = (libqt_string*)malloc(parameterNames_len * sizeof(libqt_string));
     if (parameterNames_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_designerintegration_navigate_to_slot");
+        fprintf(stderr, "Failed to allocate memory for string list in q_designerintegration_navigate_to_slot\n");
         abort();
     }
     for (size_t i = 0; i < parameterNames_len; ++i) {
@@ -1160,7 +1160,7 @@ const char** q_designerintegration_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_designerintegration_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_designerintegration_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

@@ -185,15 +185,17 @@ bool q_networkaccessmanager_is_strict_transport_security_store_enabled(void* sel
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#addStrictTransportSecurityHosts)
 ///
 /// @param self QNetworkAccessManager*
-/// @param knownHosts libqt_list /* of QHstsPolicy* */
+/// @param knownHosts libqt_list of QHstsPolicy*
 ///
-void q_networkaccessmanager_add_strict_transport_security_hosts(void* self, libqt_list knownHosts);
+void q_networkaccessmanager_add_strict_transport_security_hosts(void* self, libqt_list /* of QHstsPolicy* */ knownHosts);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#strictTransportSecurityHosts)
 ///
 /// @param self QNetworkAccessManager*
 ///
-libqt_list /* of QHstsPolicy* */ q_networkaccessmanager_strict_transport_security_hosts(void* self);
+/// @return libqt_list of QHstsPolicy*
+///
+libqt_list q_networkaccessmanager_strict_transport_security_hosts(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#head)
 ///
@@ -439,9 +441,9 @@ void q_networkaccessmanager_on_encrypted(void* self, void (*callback)(void*, voi
 ///
 /// @param self QNetworkAccessManager*
 /// @param reply QNetworkReply*
-/// @param errors libqt_list /* of QSslError* */
+/// @param errors libqt_list of QSslError*
 ///
-void q_networkaccessmanager_ssl_errors(void* self, void* reply, libqt_list errors);
+void q_networkaccessmanager_ssl_errors(void* self, void* reply, libqt_list /* of QSslError* */ errors);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#sslErrors)
 ///
@@ -690,7 +692,9 @@ void q_networkaccessmanager_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QNetworkAccessManager*
 ///
-libqt_list /* of QObject* */ q_networkaccessmanager_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_networkaccessmanager_children(void* self);
 
 /// Inherited from QObject
 ///

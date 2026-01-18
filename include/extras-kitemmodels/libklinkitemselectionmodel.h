@@ -252,7 +252,9 @@ bool k_linkitemselectionmodel_has_selection(void* self);
 ///
 /// @param self KLinkItemSelectionModel*
 ///
-libqt_list /* of QModelIndex* */ k_linkitemselectionmodel_selected_indexes(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_linkitemselectionmodel_selected_indexes(void* self);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -260,7 +262,9 @@ libqt_list /* of QModelIndex* */ k_linkitemselectionmodel_selected_indexes(void*
 ///
 /// @param self KLinkItemSelectionModel*
 ///
-libqt_list /* of QModelIndex* */ k_linkitemselectionmodel_selected_rows(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_linkitemselectionmodel_selected_rows(void* self);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -268,7 +272,9 @@ libqt_list /* of QModelIndex* */ k_linkitemselectionmodel_selected_rows(void* se
 ///
 /// @param self KLinkItemSelectionModel*
 ///
-libqt_list /* of QModelIndex* */ k_linkitemselectionmodel_selected_columns(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_linkitemselectionmodel_selected_columns(void* self);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -452,7 +458,9 @@ bool k_linkitemselectionmodel_column_intersects_selection2(void* self, int colum
 /// @param self KLinkItemSelectionModel*
 /// @param column int
 ///
-libqt_list /* of QModelIndex* */ k_linkitemselectionmodel_selected_rows1(void* self, int column);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_linkitemselectionmodel_selected_rows1(void* self, int column);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -461,7 +469,9 @@ libqt_list /* of QModelIndex* */ k_linkitemselectionmodel_selected_rows1(void* s
 /// @param self KLinkItemSelectionModel*
 /// @param row int
 ///
-libqt_list /* of QModelIndex* */ k_linkitemselectionmodel_selected_columns1(void* self, int row);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_linkitemselectionmodel_selected_columns1(void* self, int row);
 
 /// Inherited from QObject
 ///
@@ -573,7 +583,9 @@ void k_linkitemselectionmodel_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KLinkItemSelectionModel*
 ///
-libqt_list /* of QObject* */ k_linkitemselectionmodel_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_linkitemselectionmodel_children(void* self);
 
 /// Inherited from QObject
 ///

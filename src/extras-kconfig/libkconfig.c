@@ -102,7 +102,7 @@ void k_config_add_config_sources(void* self, const char* sources[static 1]) {
     size_t sources_len = libqt_strv_length(sources);
     libqt_string* sources_qstr = (libqt_string*)malloc(sources_len * sizeof(libqt_string));
     if (sources_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_config_add_config_sources");
+        fprintf(stderr, "Failed to allocate memory for string list in k_config_add_config_sources\n");
         abort();
     }
     for (size_t i = 0; i < sources_len; ++i) {
@@ -118,7 +118,7 @@ const char** k_config_additional_config_sources(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_config_additional_config_sources");
+        fprintf(stderr, "Failed to allocate memory for string list in k_config_additional_config_sources\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -168,7 +168,7 @@ const char** k_config_group_list(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_config_group_list");
+        fprintf(stderr, "Failed to allocate memory for string list in k_config_group_list\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -191,7 +191,7 @@ const char** k_config_qbase_group_list(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_config_group_list");
+        fprintf(stderr, "Failed to allocate memory for string list in k_config_group_list\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -213,13 +213,13 @@ libqt_map /* of const char* to const char* */ k_config_entry_map(void* self) {
     libqt_string* _out_keys = (libqt_string*)_out.keys;
     char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string keys in k_config_entry_map");
+        fprintf(stderr, "Failed to allocate memory for map string keys in k_config_entry_map\n");
         abort();
     }
     libqt_string* _out_values = (libqt_string*)_out.values;
-    const char** _ret_values = (const char**)malloc(_ret.len * sizeof(const char*));
+    char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string values in k_config_entry_map");
+        fprintf(stderr, "Failed to allocate memory for map string values in k_config_entry_map\n");
         free(_out.keys);
         abort();
     }
@@ -230,12 +230,12 @@ libqt_map /* of const char* to const char* */ k_config_entry_map(void* self) {
                 libqt_free(_ret_keys[j]);
             }
             free(_ret_keys);
-            fprintf(stderr, "Failed to allocate memory for map keys in k_config_entry_map");
+            fprintf(stderr, "Failed to allocate memory for map keys in k_config_entry_map\n");
             abort();
         }
         memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
         _ret_keys[i][_out_keys[i].len] = '\0';
-        _ret_values[i] = (const char*)malloc(_out_values[i].len + 1);
+        _ret_values[i] = (char*)malloc(_out_values[i].len + 1);
         if (_ret_values[i] == NULL) {
             for (size_t j = 0; j < i; j++) {
                 libqt_free(_ret_keys[j]);
@@ -243,9 +243,11 @@ libqt_map /* of const char* to const char* */ k_config_entry_map(void* self) {
             }
             free(_ret_keys);
             free(_ret_values);
-            fprintf(stderr, "Failed to allocate memory for map string values in k_config_entry_map");
+            fprintf(stderr, "Failed to allocate memory for map string values in k_config_entry_map\n");
             abort();
         }
+        memcpy(_ret_values[i], _out_values[i].data, _out_values[i].len);
+        _ret_values[i][_out_values[i].len] = '\0';
     }
     _ret.keys = (void*)_ret_keys;
     _ret.values = (void*)_ret_values;
@@ -353,13 +355,13 @@ libqt_map /* of const char* to const char* */ k_config_entry_map1(void* self, co
     libqt_string* _out_keys = (libqt_string*)_out.keys;
     char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string keys in k_config_entry_map1");
+        fprintf(stderr, "Failed to allocate memory for map string keys in k_config_entry_map1\n");
         abort();
     }
     libqt_string* _out_values = (libqt_string*)_out.values;
-    const char** _ret_values = (const char**)malloc(_ret.len * sizeof(const char*));
+    char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string values in k_config_entry_map1");
+        fprintf(stderr, "Failed to allocate memory for map string values in k_config_entry_map1\n");
         free(_out.keys);
         abort();
     }
@@ -370,12 +372,12 @@ libqt_map /* of const char* to const char* */ k_config_entry_map1(void* self, co
                 libqt_free(_ret_keys[j]);
             }
             free(_ret_keys);
-            fprintf(stderr, "Failed to allocate memory for map keys in k_config_entry_map1");
+            fprintf(stderr, "Failed to allocate memory for map keys in k_config_entry_map1\n");
             abort();
         }
         memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
         _ret_keys[i][_out_keys[i].len] = '\0';
-        _ret_values[i] = (const char*)malloc(_out_values[i].len + 1);
+        _ret_values[i] = (char*)malloc(_out_values[i].len + 1);
         if (_ret_values[i] == NULL) {
             for (size_t j = 0; j < i; j++) {
                 libqt_free(_ret_keys[j]);
@@ -383,9 +385,11 @@ libqt_map /* of const char* to const char* */ k_config_entry_map1(void* self, co
             }
             free(_ret_keys);
             free(_ret_values);
-            fprintf(stderr, "Failed to allocate memory for map string values in k_config_entry_map1");
+            fprintf(stderr, "Failed to allocate memory for map string values in k_config_entry_map1\n");
             abort();
         }
+        memcpy(_ret_values[i], _out_values[i].data, _out_values[i].len);
+        _ret_values[i][_out_values[i].len] = '\0';
     }
     _ret.keys = (void*)_ret_keys;
     _ret.values = (void*)_ret_values;

@@ -405,7 +405,9 @@ int32_t q_texttable_last_position(void* self);
 ///
 /// @param self QTextTable*
 ///
-libqt_list /* of QTextFrame* */ q_texttable_child_frames(void* self);
+/// @return libqt_list of QTextFrame*
+///
+libqt_list q_texttable_child_frames(void* self);
 
 /// Inherited from QTextFrame
 ///
@@ -565,7 +567,9 @@ void q_texttable_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QTextTable*
 ///
-libqt_list /* of QObject* */ q_texttable_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_texttable_children(void* self);
 
 /// Inherited from QObject
 ///

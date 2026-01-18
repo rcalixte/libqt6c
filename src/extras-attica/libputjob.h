@@ -237,7 +237,9 @@ void k_attica__putjob_kill_timer2(void* self, int32_t id);
 ///
 /// @param self Attica__PutJob*
 ///
-libqt_list /* of QObject* */ k_attica__putjob_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_attica__putjob_children(void* self);
 
 /// Inherited from QObject
 ///

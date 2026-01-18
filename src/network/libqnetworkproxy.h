@@ -500,7 +500,9 @@ QNetworkProxyFactory* q_networkproxyfactory_new();
 /// @param self QNetworkProxyFactory*
 /// @param query QNetworkProxyQuery*
 ///
-libqt_list /* of QNetworkProxy* */ q_networkproxyfactory_query_proxy(void* self, void* query);
+/// @return libqt_list of QNetworkProxy*
+///
+libqt_list q_networkproxyfactory_query_proxy(void* self, void* query);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyfactory.html#queryProxy)
 ///
@@ -518,7 +520,9 @@ void q_networkproxyfactory_on_query_proxy(void* self, QNetworkProxy** (*callback
 /// @param self QNetworkProxyFactory*
 /// @param query QNetworkProxyQuery*
 ///
-libqt_list /* of QNetworkProxy* */ q_networkproxyfactory_qbase_query_proxy(void* self, void* query);
+/// @return libqt_list of QNetworkProxy*
+///
+libqt_list q_networkproxyfactory_qbase_query_proxy(void* self, void* query);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyfactory.html#usesSystemConfiguration)
 ///
@@ -540,11 +544,15 @@ void q_networkproxyfactory_set_application_proxy_factory(void* factory);
 ///
 /// @param query QNetworkProxyQuery*
 ///
-libqt_list /* of QNetworkProxy* */ q_networkproxyfactory_proxy_for_query(void* query);
+/// @return libqt_list of QNetworkProxy*
+///
+libqt_list q_networkproxyfactory_proxy_for_query(void* query);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyfactory.html#systemProxyForQuery)
 ///
-libqt_list /* of QNetworkProxy* */ q_networkproxyfactory_system_proxy_for_query();
+/// @return libqt_list of QNetworkProxy*
+///
+libqt_list q_networkproxyfactory_system_proxy_for_query();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyfactory.html#operator-eq)
 ///
@@ -557,7 +565,9 @@ void q_networkproxyfactory_operator_assign(void* self, void* param1);
 ///
 /// @param query QNetworkProxyQuery*
 ///
-libqt_list /* of QNetworkProxy* */ q_networkproxyfactory_system_proxy_for_query1(void* query);
+/// @return libqt_list of QNetworkProxy*
+///
+libqt_list q_networkproxyfactory_system_proxy_for_query1(void* query);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyfactory.html#dtor.QNetworkProxyFactory)
 ///

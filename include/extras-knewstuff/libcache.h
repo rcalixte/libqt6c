@@ -50,13 +50,17 @@ void k_nscore__cache_read_registry(void* self);
 /// @param self KNSCore__Cache*
 /// @param providerId const char*
 ///
-libqt_list /* of KNSCore__Entry* */ k_nscore__cache_registry_for_provider(void* self, const char* providerId);
+/// @return libqt_list of KNSCore__Entry*
+///
+libqt_list k_nscore__cache_registry_for_provider(void* self, const char* providerId);
 
 /// [Upstream resources](https://api.kde.org/knscore-cache.html#registry)
 ///
 /// @param self KNSCore__Cache*
 ///
-libqt_list /* of KNSCore__Entry* */ k_nscore__cache_registry(void* self);
+/// @return libqt_list of KNSCore__Entry*
+///
+libqt_list k_nscore__cache_registry(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-cache.html#writeRegistry)
 ///
@@ -68,16 +72,18 @@ void k_nscore__cache_write_registry(void* self);
 ///
 /// @param self KNSCore__Cache*
 /// @param param1 KNSCore__Provider__SearchRequest*
-/// @param entries libqt_list /* of KNSCore__Entry* */
+/// @param entries libqt_list of KNSCore__Entry*
 ///
-void k_nscore__cache_insert_request(void* self, void* param1, libqt_list entries);
+void k_nscore__cache_insert_request(void* self, void* param1, libqt_list /* of KNSCore__Entry* */ entries);
 
 /// [Upstream resources](https://api.kde.org/knscore-cache.html#requestFromCache)
 ///
 /// @param self KNSCore__Cache*
 /// @param param1 KNSCore__Provider__SearchRequest*
 ///
-libqt_list /* of KNSCore__Entry* */ k_nscore__cache_request_from_cache(void* self, void* param1);
+/// @return libqt_list of KNSCore__Entry*
+///
+libqt_list k_nscore__cache_request_from_cache(void* self, void* param1);
 
 /// [Upstream resources](https://api.kde.org/knscore-cache.html#removeDeletedEntries)
 ///
@@ -254,7 +260,9 @@ void k_nscore__cache_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KNSCore__Cache*
 ///
-libqt_list /* of QObject* */ k_nscore__cache_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_nscore__cache_children(void* self);
 
 /// Inherited from QObject
 ///

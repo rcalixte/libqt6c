@@ -18,7 +18,7 @@
 /// @param argc int*
 /// @param argv char**
 ///
-QApplication* q_application_new(int* argc, char* argv[]);
+QApplication* q_application_new(int* argc, char** argv);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html)
 
@@ -28,7 +28,7 @@ QApplication* q_application_new(int* argc, char* argv[]);
 /// @param argv char**
 /// @param param3 int
 ///
-QApplication* q_application_new2(int* argc, char* argv[], int param3);
+QApplication* q_application_new2(int* argc, char** argv, int param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -134,11 +134,15 @@ QFontMetrics* q_application_font_metrics();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#allWidgets)
 ///
-libqt_list /* of QWidget* */ q_application_all_widgets();
+/// @return libqt_list of QWidget*
+///
+libqt_list q_application_all_widgets();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#topLevelWidgets)
 ///
-libqt_list /* of QWidget* */ q_application_top_level_widgets();
+/// @return libqt_list of QWidget*
+///
+libqt_list q_application_top_level_widgets();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qapplication.html#activePopupWidget)
 ///
@@ -496,13 +500,17 @@ const char* q_application_desktop_file_name();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#allWindows)
 ///
-libqt_list /* of QWindow* */ q_application_all_windows();
+/// @return libqt_list of QWindow*
+///
+libqt_list q_application_all_windows();
 
 /// Inherited from QGuiApplication
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#topLevelWindows)
 ///
-libqt_list /* of QWindow* */ q_application_top_level_windows();
+/// @return libqt_list of QWindow*
+///
+libqt_list q_application_top_level_windows();
 
 /// Inherited from QGuiApplication
 ///
@@ -554,7 +562,9 @@ QScreen* q_application_primary_screen();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#screens)
 ///
-libqt_list /* of QScreen* */ q_application_screens();
+/// @return libqt_list of QScreen*
+///
+libqt_list q_application_screens();
 
 /// Inherited from QGuiApplication
 ///
@@ -612,7 +622,7 @@ QClipboard* q_application_clipboard();
 ///
 /// @return flag of enum Qt__KeyboardModifier
 ///
-int64_t q_application_keyboard_modifiers();
+int32_t q_application_keyboard_modifiers();
 
 /// Inherited from QGuiApplication
 ///
@@ -620,7 +630,7 @@ int64_t q_application_keyboard_modifiers();
 ///
 /// @return flag of enum Qt__KeyboardModifier
 ///
-int64_t q_application_query_keyboard_modifiers();
+int32_t q_application_query_keyboard_modifiers();
 
 /// Inherited from QGuiApplication
 ///
@@ -628,7 +638,7 @@ int64_t q_application_query_keyboard_modifiers();
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int64_t q_application_mouse_buttons();
+int32_t q_application_mouse_buttons();
 
 /// Inherited from QGuiApplication
 ///
@@ -1621,7 +1631,9 @@ void q_application_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QApplication*
 ///
-libqt_list /* of QObject* */ q_application_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_application_children(void* self);
 
 /// Inherited from QObject
 ///

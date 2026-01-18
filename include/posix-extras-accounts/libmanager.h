@@ -112,13 +112,17 @@ Accounts__Account* q_accounts__manager_account(void* self, uint32_t* id);
 ///
 /// @param self Accounts__Manager*
 ///
-libqt_list /* of uint32_t */ q_accounts__manager_account_list(void* self);
+/// @return libqt_list of uint32_t
+///
+libqt_list q_accounts__manager_account_list(void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Manager.html)
 ///
 /// @param self Accounts__Manager*
 ///
-libqt_list /* of uint32_t */ q_accounts__manager_account_list_enabled(void* self);
+/// @return libqt_list of uint32_t
+///
+libqt_list q_accounts__manager_account_list_enabled(void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Manager.html)
 ///
@@ -138,14 +142,18 @@ Accounts__Service* q_accounts__manager_service(void* self, const char* serviceNa
 ///
 /// @param self Accounts__Manager*
 ///
-libqt_list /* of Accounts__Service* */ q_accounts__manager_service_list(void* self);
+/// @return libqt_list of Accounts__Service*
+///
+libqt_list q_accounts__manager_service_list(void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Manager.html)
 ///
 /// @param self Accounts__Manager*
 /// @param application Accounts__Application*
 ///
-libqt_list /* of Accounts__Service* */ q_accounts__manager_service_list2(void* self, void* application);
+/// @return libqt_list of Accounts__Service*
+///
+libqt_list q_accounts__manager_service_list2(void* self, void* application);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Manager.html)
 ///
@@ -158,7 +166,9 @@ Accounts__Provider* q_accounts__manager_provider(void* self, const char* provide
 ///
 /// @param self Accounts__Manager*
 ///
-libqt_list /* of Accounts__Provider* */ q_accounts__manager_provider_list(void* self);
+/// @return libqt_list of Accounts__Provider*
+///
+libqt_list q_accounts__manager_provider_list(void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Manager.html)
 ///
@@ -179,7 +189,9 @@ Accounts__Application* q_accounts__manager_application(void* self, const char* a
 /// @param self Accounts__Manager*
 /// @param service Accounts__Service*
 ///
-libqt_list /* of Accounts__Application* */ q_accounts__manager_application_list(void* self, void* service);
+/// @return libqt_list of Accounts__Application*
+///
+libqt_list q_accounts__manager_application_list(void* self, void* service);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Manager.html)
 ///
@@ -309,21 +321,27 @@ const char* q_accounts__manager_tr3(const char* s, const char* c, int n);
 /// @param self Accounts__Manager*
 /// @param serviceType const char*
 ///
-libqt_list /* of uint32_t */ q_accounts__manager_account_list1(void* self, const char* serviceType);
+/// @return libqt_list of uint32_t
+///
+libqt_list q_accounts__manager_account_list1(void* self, const char* serviceType);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Manager.html)
 ///
 /// @param self Accounts__Manager*
 /// @param serviceType const char*
 ///
-libqt_list /* of uint32_t */ q_accounts__manager_account_list_enabled1(void* self, const char* serviceType);
+/// @return libqt_list of uint32_t
+///
+libqt_list q_accounts__manager_account_list_enabled1(void* self, const char* serviceType);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Manager.html)
 ///
 /// @param self Accounts__Manager*
 /// @param serviceType const char*
 ///
-libqt_list /* of Accounts__Service* */ q_accounts__manager_service_list1(void* self, const char* serviceType);
+/// @return libqt_list of Accounts__Service*
+///
+libqt_list q_accounts__manager_service_list1(void* self, const char* serviceType);
 
 /// Inherited from QObject
 ///
@@ -435,7 +453,9 @@ void q_accounts__manager_kill_timer2(void* self, int32_t id);
 ///
 /// @param self Accounts__Manager*
 ///
-libqt_list /* of QObject* */ q_accounts__manager_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_accounts__manager_children(void* self);
 
 /// Inherited from QObject
 ///

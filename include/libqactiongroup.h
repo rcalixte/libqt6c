@@ -94,7 +94,9 @@ void q_actiongroup_remove_action(void* self, void* a);
 ///
 /// @param self QActionGroup*
 ///
-libqt_list /* of QAction* */ q_actiongroup_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list q_actiongroup_actions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qactiongroup.html#checkedAction)
 ///
@@ -320,7 +322,9 @@ void q_actiongroup_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QActionGroup*
 ///
-libqt_list /* of QObject* */ q_actiongroup_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_actiongroup_children(void* self);
 
 /// Inherited from QObject
 ///

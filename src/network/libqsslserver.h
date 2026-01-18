@@ -97,9 +97,9 @@ int32_t q_sslserver_handshake_timeout(void* self);
 ///
 /// @param self QSslServer*
 /// @param socket QSslSocket*
-/// @param errors libqt_list /* of QSslError* */
+/// @param errors libqt_list of QSslError*
 ///
-void q_sslserver_ssl_errors(void* self, void* socket, libqt_list errors);
+void q_sslserver_ssl_errors(void* self, void* socket, libqt_list /* of QSslError* */ errors);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslserver.html#sslErrors)
 ///
@@ -595,7 +595,9 @@ void q_sslserver_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QSslServer*
 ///
-libqt_list /* of QObject* */ q_sslserver_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_sslserver_children(void* self);
 
 /// Inherited from QObject
 ///

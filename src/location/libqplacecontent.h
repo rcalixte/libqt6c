@@ -81,7 +81,7 @@ int32_t q_placecontent_type(void* self);
 ///
 /// @return libqt_list of enum QPlaceContent__DataTag
 ///
-libqt_list /* of enum QPlaceContent__DataTag */ q_placecontent_data_tags(void* self);
+libqt_list q_placecontent_data_tags(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontent.html#value)
 ///

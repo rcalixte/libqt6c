@@ -300,7 +300,9 @@ void q_sessionmanager_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QSessionManager*
 ///
-libqt_list /* of QObject* */ q_sessionmanager_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_sessionmanager_children(void* self);
 
 /// Inherited from QObject
 ///

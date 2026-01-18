@@ -68,7 +68,7 @@ void k_svg__imageset_set_selectors(void* self, const char* selectors[static 1]) 
     size_t selectors_len = libqt_strv_length(selectors);
     libqt_string* selectors_qstr = (libqt_string*)malloc(selectors_len * sizeof(libqt_string));
     if (selectors_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_svg__imageset_set_selectors");
+        fprintf(stderr, "Failed to allocate memory for string list in k_svg__imageset_set_selectors\n");
         abort();
     }
     for (size_t i = 0; i < selectors_len; ++i) {
@@ -84,7 +84,7 @@ const char** k_svg__imageset_selectors(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_svg__imageset_selectors");
+        fprintf(stderr, "Failed to allocate memory for string list in k_svg__imageset_selectors\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -278,7 +278,7 @@ const char** k_svg__imageset_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_svg__imageset_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_svg__imageset_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

@@ -122,7 +122,9 @@ void q_designercustomwidgetinterface_delete(void* self);
 ///
 /// @param self QDesignerCustomWidgetCollectionInterface*
 ///
-libqt_list /* of QDesignerCustomWidgetInterface* */ q_designercustomwidgetcollectioninterface_custom_widgets(void* self);
+/// @return libqt_list of QDesignerCustomWidgetInterface*
+///
+libqt_list q_designercustomwidgetcollectioninterface_custom_widgets(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetcollectioninterface.html#operator-eq)
 ///

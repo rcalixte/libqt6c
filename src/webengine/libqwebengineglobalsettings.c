@@ -14,7 +14,7 @@ const char** q_webengineglobalsettings__dnsmode_server_templates(void* self) {
     const libqt_string* serverTemplates_qstr = (libqt_string*)serverTemplates_arr.data.ptr;
     const char** serverTemplates_ret = (const char**)malloc((serverTemplates_arr.len + 1) * sizeof(const char*));
     if (serverTemplates_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_webengineglobalsettings__dnsmode_server_templates");
+        fprintf(stderr, "Failed to allocate memory for string list in q_webengineglobalsettings__dnsmode_server_templates\n");
         abort();
     }
     for (size_t i = 0; i < serverTemplates_arr.len; ++i) {
@@ -32,7 +32,7 @@ void q_webengineglobalsettings__dnsmode_set_server_templates(void* self, const c
     size_t serverTemplates_len = libqt_strv_length(serverTemplates);
     libqt_string* serverTemplates_qstr = (libqt_string*)malloc(serverTemplates_len * sizeof(libqt_string));
     if (serverTemplates_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_webengineglobalsettings__dnsmode_set_server_templates");
+        fprintf(stderr, "Failed to allocate memory for string list in q_webengineglobalsettings__dnsmode_set_server_templates\n");
         abort();
     }
     for (size_t i = 0; i < serverTemplates_len; ++i) {

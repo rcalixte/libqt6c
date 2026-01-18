@@ -206,7 +206,7 @@ void k_nscore__entry_set_installed_files(void* self, const char* files[static 1]
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__entry_set_installed_files");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__entry_set_installed_files\n");
         abort();
     }
     for (size_t i = 0; i < files_len; ++i) {
@@ -222,7 +222,7 @@ const char** k_nscore__entry_installed_files(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__entry_installed_files");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__entry_installed_files\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -241,7 +241,7 @@ const char** k_nscore__entry_uninstalled_files(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__entry_uninstalled_files");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__entry_uninstalled_files\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -339,7 +339,7 @@ const char** k_nscore__entry_tags(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__entry_tags");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__entry_tags\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -357,7 +357,7 @@ void k_nscore__entry_set_tags(void* self, const char* tags[static 1]) {
     size_t tags_len = libqt_strv_length(tags);
     libqt_string* tags_qstr = (libqt_string*)malloc(tags_len * sizeof(libqt_string));
     if (tags_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__entry_set_tags");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__entry_set_tags\n");
         abort();
     }
     for (size_t i = 0; i < tags_len; ++i) {
@@ -511,7 +511,7 @@ const char** k_nscore__entry__downloadlinkinformation_tags(void* self) {
     const libqt_string* tags_qstr = (libqt_string*)tags_arr.data.ptr;
     const char** tags_ret = (const char**)malloc((tags_arr.len + 1) * sizeof(const char*));
     if (tags_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__entry__downloadlinkinformation_tags");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__entry__downloadlinkinformation_tags\n");
         abort();
     }
     for (size_t i = 0; i < tags_arr.len; ++i) {
@@ -529,7 +529,7 @@ void k_nscore__entry__downloadlinkinformation_set_tags(void* self, const char* t
     size_t tags_len = libqt_strv_length(tags);
     libqt_string* tags_qstr = (libqt_string*)malloc(tags_len * sizeof(libqt_string));
     if (tags_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__entry__downloadlinkinformation_set_tags");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__entry__downloadlinkinformation_set_tags\n");
         abort();
     }
     for (size_t i = 0; i < tags_len; ++i) {

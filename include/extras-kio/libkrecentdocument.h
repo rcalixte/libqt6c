@@ -43,7 +43,9 @@ void k_recentdocument_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/krecentdocument.html#recentUrls)
 ///
-libqt_list /* of QUrl* */ k_recentdocument_recent_urls();
+/// @return libqt_list of QUrl*
+///
+libqt_list k_recentdocument_recent_urls();
 
 /// [Upstream resources](https://api.kde.org/krecentdocument.html#add)
 ///
@@ -54,9 +56,9 @@ void k_recentdocument_add(void* url);
 /// [Upstream resources](https://api.kde.org/krecentdocument.html#add)
 ///
 /// @param url QUrl*
-/// @param groups libqt_list /* of enum KRecentDocument__RecentDocumentGroup */
+/// @param groups libqt_list of enum KRecentDocument__RecentDocumentGroup
 ///
-void k_recentdocument_add2(void* url, libqt_list groups);
+void k_recentdocument_add2(void* url, libqt_list /* of enum KRecentDocument__RecentDocumentGroup */ groups);
 
 /// [Upstream resources](https://api.kde.org/krecentdocument.html#add)
 ///
@@ -69,9 +71,9 @@ void k_recentdocument_add3(void* url, const char* desktopEntryName);
 ///
 /// @param url QUrl*
 /// @param desktopEntryName const char*
-/// @param groups libqt_list /* of enum KRecentDocument__RecentDocumentGroup */
+/// @param groups libqt_list of enum KRecentDocument__RecentDocumentGroup
 ///
-void k_recentdocument_add4(void* url, const char* desktopEntryName, libqt_list groups);
+void k_recentdocument_add4(void* url, const char* desktopEntryName, libqt_list /* of enum KRecentDocument__RecentDocumentGroup */ groups);
 
 /// [Upstream resources](https://api.kde.org/krecentdocument.html#removeFile)
 ///

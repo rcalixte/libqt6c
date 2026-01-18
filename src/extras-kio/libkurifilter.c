@@ -48,7 +48,7 @@ const char** k_urifiltersearchprovider_keys(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_urifiltersearchprovider_keys");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urifiltersearchprovider_keys\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -101,7 +101,7 @@ void k_urifiltersearchprovider_set_keys(void* self, const char* keys[static 1]) 
     size_t keys_len = libqt_strv_length(keys);
     libqt_string* keys_qstr = (libqt_string*)malloc(keys_len * sizeof(libqt_string));
     if (keys_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_urifiltersearchprovider_set_keys");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urifiltersearchprovider_set_keys\n");
         abort();
     }
     for (size_t i = 0; i < keys_len; ++i) {
@@ -120,7 +120,7 @@ void k_urifiltersearchprovider_qbase_set_keys(void* self, const char* keys[stati
     size_t keys_len = libqt_strv_length(keys);
     libqt_string* keys_qstr = (libqt_string*)malloc(keys_len * sizeof(libqt_string));
     if (keys_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_urifiltersearchprovider_set_keys");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urifiltersearchprovider_set_keys\n");
         abort();
     }
     for (size_t i = 0; i < keys_len; ++i) {
@@ -233,7 +233,7 @@ const char** k_urifilterdata_preferred_search_providers(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_urifilterdata_preferred_search_providers");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urifilterdata_preferred_search_providers\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -263,7 +263,7 @@ const char** k_urifilterdata_all_queries_for_search_provider(void* self, const c
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_urifilterdata_all_queries_for_search_provider");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urifilterdata_all_queries_for_search_provider\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -289,7 +289,7 @@ const char** k_urifilterdata_alternate_search_providers(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_urifilterdata_alternate_search_providers");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urifilterdata_alternate_search_providers\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -348,7 +348,7 @@ void k_urifilterdata_set_alternate_search_providers(void* self, const char* prov
     size_t providers_len = libqt_strv_length(providers);
     libqt_string* providers_qstr = (libqt_string*)malloc(providers_len * sizeof(libqt_string));
     if (providers_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_urifilterdata_set_alternate_search_providers");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urifilterdata_set_alternate_search_providers\n");
         abort();
     }
     for (size_t i = 0; i < providers_len; ++i) {
@@ -419,7 +419,7 @@ const char** k_urifilter_plugin_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_urifilter_plugin_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urifilter_plugin_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -437,7 +437,7 @@ bool k_urifilter_filter_uri22(void* self, void* data, const char* filters[static
     size_t filters_len = libqt_strv_length(filters);
     libqt_string* filters_qstr = (libqt_string*)malloc(filters_len * sizeof(libqt_string));
     if (filters_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_urifilter_filter_uri22");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urifilter_filter_uri22\n");
         abort();
     }
     for (size_t i = 0; i < filters_len; ++i) {
@@ -453,7 +453,7 @@ bool k_urifilter_filter_uri23(void* self, void* uri, const char* filters[static 
     size_t filters_len = libqt_strv_length(filters);
     libqt_string* filters_qstr = (libqt_string*)malloc(filters_len * sizeof(libqt_string));
     if (filters_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_urifilter_filter_uri23");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urifilter_filter_uri23\n");
         abort();
     }
     for (size_t i = 0; i < filters_len; ++i) {
@@ -469,7 +469,7 @@ bool k_urifilter_filter_uri24(void* self, const char* uri, const char* filters[s
     size_t filters_len = libqt_strv_length(filters);
     libqt_string* filters_qstr = (libqt_string*)malloc(filters_len * sizeof(libqt_string));
     if (filters_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_urifilter_filter_uri24");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urifilter_filter_uri24\n");
         abort();
     }
     for (size_t i = 0; i < filters_len; ++i) {
@@ -485,7 +485,7 @@ QUrl* k_urifilter_filtered_uri22(void* self, void* uri, const char* filters[stat
     size_t filters_len = libqt_strv_length(filters);
     libqt_string* filters_qstr = (libqt_string*)malloc(filters_len * sizeof(libqt_string));
     if (filters_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_urifilter_filtered_uri22");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urifilter_filtered_uri22\n");
         abort();
     }
     for (size_t i = 0; i < filters_len; ++i) {
@@ -501,7 +501,7 @@ const char* k_urifilter_filtered_uri23(void* self, const char* uri, const char* 
     size_t filters_len = libqt_strv_length(filters);
     libqt_string* filters_qstr = (libqt_string*)malloc(filters_len * sizeof(libqt_string));
     if (filters_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_urifilter_filtered_uri23");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urifilter_filtered_uri23\n");
         abort();
     }
     for (size_t i = 0; i < filters_len; ++i) {

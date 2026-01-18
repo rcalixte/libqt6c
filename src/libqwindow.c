@@ -136,19 +136,19 @@ QSurfaceFormat* q_window_requested_format(void* self) {
     return QWindow_RequestedFormat((QWindow*)self);
 }
 
-void q_window_set_flags(void* self, int64_t flags) {
+void q_window_set_flags(void* self, int32_t flags) {
     QWindow_SetFlags((QWindow*)self, flags);
 }
 
-int64_t q_window_flags(void* self) {
+int32_t q_window_flags(void* self) {
     return QWindow_Flags((QWindow*)self);
 }
 
-void q_window_set_flag(void* self, int64_t param1) {
+void q_window_set_flag(void* self, int32_t param1) {
     QWindow_SetFlag((QWindow*)self, param1);
 }
 
-int64_t q_window_type(void* self) {
+int32_t q_window_type(void* self) {
     return QWindow_Type((QWindow*)self);
 }
 
@@ -960,7 +960,7 @@ QWindow* q_window_parent1(void* self, int32_t mode) {
     return QWindow_Parent1((QWindow*)self, mode);
 }
 
-void q_window_set_flag2(void* self, int64_t param1, bool on) {
+void q_window_set_flag2(void* self, int32_t param1, bool on) {
     QWindow_SetFlag2((QWindow*)self, param1, on);
 }
 
@@ -1069,7 +1069,7 @@ const char** q_window_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_window_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_window_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

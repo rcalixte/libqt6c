@@ -44,7 +44,9 @@ void q_openglversionprofile_operator_assign(void* self, void* rhs);
 ///
 /// @param self QOpenGLVersionProfile*
 ///
-libqt_pair /* tuple of int and int */ q_openglversionprofile_version(void* self);
+/// @return libqt_pair tuple of int and int
+///
+libqt_pair q_openglversionprofile_version(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionprofile.html#setVersion)
 ///

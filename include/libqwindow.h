@@ -223,7 +223,7 @@ QSurfaceFormat* q_window_requested_format(void* self);
 /// @param self QWindow*
 /// @param flags flag of enum Qt__WindowType
 ///
-void q_window_set_flags(void* self, int64_t flags);
+void q_window_set_flags(void* self, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#flags)
 ///
@@ -231,14 +231,14 @@ void q_window_set_flags(void* self, int64_t flags);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t q_window_flags(void* self);
+int32_t q_window_flags(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#setFlag)
 ///
 /// @param self QWindow*
 /// @param param1 enum Qt__WindowType
 ///
-void q_window_set_flag(void* self, int64_t param1);
+void q_window_set_flag(void* self, int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#type)
 ///
@@ -246,7 +246,7 @@ void q_window_set_flag(void* self, int64_t param1);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t q_window_type(void* self);
+int32_t q_window_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#title)
 ///
@@ -1716,7 +1716,7 @@ QWindow* q_window_parent1(void* self, int32_t mode);
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void q_window_set_flag2(void* self, int64_t param1, bool on);
+void q_window_set_flag2(void* self, int32_t param1, bool on);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#isAncestorOf)
 ///
@@ -1836,7 +1836,9 @@ void q_window_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QWindow*
 ///
-libqt_list /* of QObject* */ q_window_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_window_children(void* self);
 
 /// Inherited from QObject
 ///

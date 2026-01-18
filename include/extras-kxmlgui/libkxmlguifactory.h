@@ -118,9 +118,9 @@ void k_xmlguifactory_remove_client(void* self, void* client);
 /// @param self KXMLGUIFactory*
 /// @param client KXMLGUIClient*
 /// @param name const char*
-/// @param actionList libqt_list /* of QAction* */
+/// @param actionList libqt_list of QAction*
 ///
-void k_xmlguifactory_plug_action_list(void* self, void* client, const char* name, libqt_list actionList);
+void k_xmlguifactory_plug_action_list(void* self, void* client, const char* name, libqt_list /* of QAction* */ actionList);
 
 /// [Upstream resources](https://api.kde.org/kxmlguifactory.html#unplugActionList)
 ///
@@ -134,7 +134,9 @@ void k_xmlguifactory_unplug_action_list(void* self, void* client, const char* na
 ///
 /// @param self KXMLGUIFactory*
 ///
-libqt_list /* of KXMLGUIClient* */ k_xmlguifactory_clients(void* self);
+/// @return libqt_list of KXMLGUIClient*
+///
+libqt_list k_xmlguifactory_clients(void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguifactory.html#container)
 ///
@@ -149,7 +151,9 @@ QWidget* k_xmlguifactory_container(void* self, const char* containerName, void* 
 /// @param self KXMLGUIFactory*
 /// @param tagName const char*
 ///
-libqt_list /* of QWidget* */ k_xmlguifactory_containers(void* self, const char* tagName);
+/// @return libqt_list of QWidget*
+///
+libqt_list k_xmlguifactory_containers(void* self, const char* tagName);
 
 /// [Upstream resources](https://api.kde.org/kxmlguifactory.html#reset)
 ///
@@ -401,7 +405,9 @@ void k_xmlguifactory_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KXMLGUIFactory*
 ///
-libqt_list /* of QObject* */ k_xmlguifactory_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_xmlguifactory_children(void* self);
 
 /// Inherited from QObject
 ///

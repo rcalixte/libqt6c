@@ -190,7 +190,8 @@ const char* k_parts__navigationextension_action_text(void* self, const char* nam
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map* of char* to char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     libqt_free(map.values[i]);
@@ -199,7 +200,9 @@ const char* k_parts__navigationextension_action_text(void* self, const char* nam
 /// free(map.values);
 /// ```
 ///
-libqt_map* /* of char* to char* */ k_parts__navigationextension_action_slot_map();
+/// @return libqt_map* of char* to char*
+///
+libqt_map* k_parts__navigationextension_action_slot_map();
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#childObject)
 ///
@@ -420,9 +423,9 @@ void k_parts__navigationextension_popup_menu4(void* self, void* global, void* it
 /// @param items KFileItemList*
 /// @param arguments KParts__OpenUrlArguments*
 /// @param flags flag of enum KParts__NavigationExtension__PopupFlag
-/// @param actionGroups libqt_map /* of const char* to QAction* */
+/// @param actionGroups libqt_map of const char* to QAction*
 ///
-void k_parts__navigationextension_popup_menu5(void* self, void* global, void* items, void* arguments, int32_t flags, libqt_map /* of const char* to QAction** */ actionGroups);
+void k_parts__navigationextension_popup_menu5(void* self, void* global, void* items, void* arguments, int32_t flags, libqt_map actionGroups);
 
 /// [Upstream resources](https://api.kde.org/kparts-navigationextension.html#popupMenu)
 ///
@@ -462,9 +465,9 @@ void k_parts__navigationextension_popup_menu52(void* self, void* global, void* u
 /// @param mode mode_t
 /// @param arguments KParts__OpenUrlArguments*
 /// @param flags flag of enum KParts__NavigationExtension__PopupFlag
-/// @param actionGroups libqt_map /* of const char* to QAction* */
+/// @param actionGroups libqt_map of const char* to QAction*
 ///
-void k_parts__navigationextension_popup_menu6(void* self, void* global, void* url, mode_t mode, void* arguments, int32_t flags, libqt_map /* of const char* to QAction** */ actionGroups);
+void k_parts__navigationextension_popup_menu6(void* self, void* global, void* url, mode_t mode, void* arguments, int32_t flags, libqt_map actionGroups);
 
 /// Inherited from QObject
 ///
@@ -576,7 +579,9 @@ void k_parts__navigationextension_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KParts__NavigationExtension*
 ///
-libqt_list /* of QObject* */ k_parts__navigationextension_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_parts__navigationextension_children(void* self);
 
 /// Inherited from QObject
 ///

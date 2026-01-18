@@ -672,7 +672,9 @@ void q_scilexervhdl_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QsciLexerVHDL*
 ///
-libqt_list /* of QObject* */ q_scilexervhdl_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_scilexervhdl_children(void* self);
 
 /// Inherited from QObject
 ///

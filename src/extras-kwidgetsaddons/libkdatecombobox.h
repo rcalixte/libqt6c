@@ -117,7 +117,8 @@ QDate* k_datecombobox_maximum_date(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of QDate* to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QDate*)map.keys)[i]);
 ///     libqt_free(map.values[i]);
@@ -128,7 +129,9 @@ QDate* k_datecombobox_maximum_date(void* self);
 ///
 /// @param self KDateComboBox*
 ///
-libqt_map /* of QDate* to const char* */ k_datecombobox_date_map(void* self);
+/// @return libqt_map of QDate* to const char*
+///
+libqt_map k_datecombobox_date_map(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdatecombobox.html#dateEntered)
 ///
@@ -236,9 +239,9 @@ void k_datecombobox_reset_maximum_date(void* self);
 /// [Upstream resources](https://api.kde.org/kdatecombobox.html#setDateMap)
 ///
 /// @param self KDateComboBox*
-/// @param dateMap libqt_map /* of QDate* to const char* */
+/// @param dateMap libqt_map of QDate* to const char*
 ///
-void k_datecombobox_set_date_map(void* self, libqt_map /* of QDate* to const char* */ dateMap);
+void k_datecombobox_set_date_map(void* self, libqt_map dateMap);
 
 /// [Upstream resources](https://api.kde.org/kdatecombobox.html#eventFilter)
 ///
@@ -1041,7 +1044,7 @@ void k_datecombobox_set_view(void* self, void* itemView);
 /// @param query enum Qt__InputMethodQuery
 /// @param argument QVariant*
 ///
-QVariant* k_datecombobox_input_method_query2(void* self, int64_t query, void* argument);
+QVariant* k_datecombobox_input_method_query2(void* self, int32_t query, void* argument);
 
 /// Inherited from QComboBox
 ///
@@ -2145,7 +2148,7 @@ void k_datecombobox_set_graphics_effect(void* self, void* effect);
 /// @param self KDateComboBox*
 /// @param type enum Qt__GestureType
 ///
-void k_datecombobox_grab_gesture(void* self, int64_t type);
+void k_datecombobox_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2154,7 +2157,7 @@ void k_datecombobox_grab_gesture(void* self, int64_t type);
 /// @param self KDateComboBox*
 /// @param type enum Qt__GestureType
 ///
-void k_datecombobox_ungrab_gesture(void* self, int64_t type);
+void k_datecombobox_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3143,7 +3146,7 @@ void k_datecombobox_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void k_datecombobox_set_parent2(void* self, void* parent, int64_t f);
+void k_datecombobox_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -3221,9 +3224,9 @@ void k_datecombobox_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self KDateComboBox*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_datecombobox_add_actions(void* self, libqt_list actions);
+void k_datecombobox_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -3231,9 +3234,9 @@ void k_datecombobox_add_actions(void* self, libqt_list actions);
 ///
 /// @param self KDateComboBox*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_datecombobox_insert_actions(void* self, void* before, libqt_list actions);
+void k_datecombobox_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -3260,7 +3263,9 @@ void k_datecombobox_remove_action(void* self, void* action);
 ///
 /// @param self KDateComboBox*
 ///
-libqt_list /* of QAction* */ k_datecombobox_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_datecombobox_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3317,7 +3322,7 @@ QWidget* k_datecombobox_parent_widget(void* self);
 /// @param self KDateComboBox*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_datecombobox_set_window_flags(void* self, int64_t type);
+void k_datecombobox_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3327,7 +3332,7 @@ void k_datecombobox_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t k_datecombobox_window_flags(void* self);
+int32_t k_datecombobox_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3336,7 +3341,7 @@ int64_t k_datecombobox_window_flags(void* self);
 /// @param self KDateComboBox*
 /// @param param1 enum Qt__WindowType
 ///
-void k_datecombobox_set_window_flag(void* self, int64_t param1);
+void k_datecombobox_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3345,7 +3350,7 @@ void k_datecombobox_set_window_flag(void* self, int64_t param1);
 /// @param self KDateComboBox*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_datecombobox_override_window_flags(void* self, int64_t type);
+void k_datecombobox_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3355,7 +3360,7 @@ void k_datecombobox_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t k_datecombobox_window_type(void* self);
+int32_t k_datecombobox_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3566,7 +3571,7 @@ void k_datecombobox_on_custom_context_menu_requested(void* self, void (*callback
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t k_datecombobox_input_method_hints(void* self);
+int32_t k_datecombobox_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3575,7 +3580,7 @@ int64_t k_datecombobox_input_method_hints(void* self);
 /// @param self KDateComboBox*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void k_datecombobox_set_input_method_hints(void* self, int64_t hints);
+void k_datecombobox_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -3660,7 +3665,7 @@ QPixmap* k_datecombobox_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void k_datecombobox_grab_gesture2(void* self, int64_t type, int32_t flags);
+void k_datecombobox_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -3700,7 +3705,7 @@ void k_datecombobox_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void k_datecombobox_set_window_flag2(void* self, int64_t param1, bool on);
+void k_datecombobox_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -3729,7 +3734,7 @@ QWidget* k_datecombobox_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* k_datecombobox_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* k_datecombobox_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -3841,7 +3846,9 @@ void k_datecombobox_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KDateComboBox*
 ///
-libqt_list /* of QObject* */ k_datecombobox_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_datecombobox_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4307,7 +4314,7 @@ void k_datecombobox_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self KDateComboBox*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_datecombobox_input_method_query(void* self, int64_t param1);
+QVariant* k_datecombobox_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QComboBox
 ///
@@ -4318,7 +4325,7 @@ QVariant* k_datecombobox_input_method_query(void* self, int64_t param1);
 /// @param self KDateComboBox*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_datecombobox_qbase_input_method_query(void* self, int64_t param1);
+QVariant* k_datecombobox_qbase_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QComboBox
 ///
@@ -4329,7 +4336,7 @@ QVariant* k_datecombobox_qbase_input_method_query(void* self, int64_t param1);
 /// @param self KDateComboBox*
 /// @param callback QVariant* func(KDateComboBox* self, enum Qt__InputMethodQuery param1)
 ///
-void k_datecombobox_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void k_datecombobox_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QComboBox
 ///

@@ -139,7 +139,7 @@ bool k_modifierkeyinfoprovider_qbase_set_key_locked(void* self, int32_t key, boo
 /// @param self KModifierKeyInfoProvider*
 /// @param button enum Qt__MouseButton
 ///
-bool k_modifierkeyinfoprovider_is_button_pressed(void* self, int64_t button);
+bool k_modifierkeyinfoprovider_is_button_pressed(void* self, int32_t button);
 
 /// [Upstream resources](https://api.kde.org/kmodifierkeyinfoprovider.html#knowsKey)
 ///
@@ -154,7 +154,7 @@ bool k_modifierkeyinfoprovider_knows_key(void* self, int32_t key);
 ///
 /// @return libqt_list of enum Qt__Key
 ///
-libqt_list /* of enum Qt__Key */ k_modifierkeyinfoprovider_known_keys(void* self);
+libqt_list k_modifierkeyinfoprovider_known_keys(void* self);
 
 /// [Upstream resources](https://api.kde.org/kmodifierkeyinfoprovider.html#keyLatched)
 ///
@@ -207,14 +207,14 @@ void k_modifierkeyinfoprovider_on_key_pressed(void* self, void (*callback)(void*
 /// @param button enum Qt__MouseButton
 /// @param state bool
 ///
-void k_modifierkeyinfoprovider_button_pressed(void* self, int64_t button, bool state);
+void k_modifierkeyinfoprovider_button_pressed(void* self, int32_t button, bool state);
 
 /// [Upstream resources](https://api.kde.org/kmodifierkeyinfoprovider.html#buttonPressed)
 ///
 /// @param self KModifierKeyInfoProvider*
 /// @param callback void func(KModifierKeyInfoProvider* self, enum Qt__MouseButton button, bool state)
 ///
-void k_modifierkeyinfoprovider_on_button_pressed(void* self, void (*callback)(void*, int64_t, bool));
+void k_modifierkeyinfoprovider_on_button_pressed(void* self, void (*callback)(void*, int32_t, bool));
 
 /// [Upstream resources](https://api.kde.org/kmodifierkeyinfoprovider.html#keyAdded)
 ///
@@ -400,7 +400,9 @@ void k_modifierkeyinfoprovider_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KModifierKeyInfoProvider*
 ///
-libqt_list /* of QObject* */ k_modifierkeyinfoprovider_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_modifierkeyinfoprovider_children(void* self);
 
 /// Inherited from QObject
 ///

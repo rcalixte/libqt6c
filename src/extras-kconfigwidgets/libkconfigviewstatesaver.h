@@ -170,7 +170,9 @@ const char* k_configviewstatesaver_current_index_key(void* self);
 ///
 /// @param self KConfigViewStateSaver*
 ///
-libqt_pair /* tuple of int and int */ k_configviewstatesaver_scroll_state(void* self);
+/// @return libqt_pair tuple of int and int
+///
+libqt_pair k_configviewstatesaver_scroll_state(void* self);
 
 /// Inherited from KViewStateSerializer
 ///
@@ -319,7 +321,9 @@ void k_configviewstatesaver_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KConfigViewStateSaver*
 ///
-libqt_list /* of QObject* */ k_configviewstatesaver_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_configviewstatesaver_children(void* self);
 
 /// Inherited from QObject
 ///

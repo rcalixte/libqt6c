@@ -25,7 +25,9 @@ void q_webengineclientcertificatestore_add(void* self, void* certificate, void* 
 ///
 /// @param self QWebEngineClientCertificateStore*
 ///
-libqt_list /* of QSslCertificate* */ q_webengineclientcertificatestore_certificates(void* self);
+/// @return libqt_list of QSslCertificate*
+///
+libqt_list q_webengineclientcertificatestore_certificates(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineclientcertificatestore.html#remove)
 ///

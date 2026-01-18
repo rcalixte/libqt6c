@@ -240,15 +240,17 @@ void q_region_set_rects(void* self, void* rect, int num);
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#setRects)
 ///
 /// @param self QRegion*
-/// @param r libqt_list /* of QRect* */
+/// @param r libqt_list of QRect*
 ///
-void q_region_set_rects2(void* self, libqt_list r);
+void q_region_set_rects2(void* self, libqt_list /* of QRect* */ r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#rects)
 ///
 /// @param self QRegion*
 ///
-libqt_list /* of QRect* */ q_region_rects(void* self);
+/// @return libqt_list of QRect*
+///
+libqt_list q_region_rects(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#rectCount)
 ///

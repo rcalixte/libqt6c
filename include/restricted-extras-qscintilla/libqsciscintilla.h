@@ -302,7 +302,9 @@ QColor* q_sciscintilla_color(void* self);
 ///
 /// @param self QsciScintilla*
 ///
-libqt_list /* of int */ q_sciscintilla_contracted_folds(void* self);
+/// @return libqt_list of int
+///
+libqt_list q_sciscintilla_contracted_folds(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -1026,9 +1028,9 @@ void q_sciscintilla_set_call_tips_visible(void* self, int nr);
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// @param self QsciScintilla*
-/// @param folds libqt_list /* of int */
+/// @param folds libqt_list of int
 ///
-void q_sciscintilla_set_contracted_folds(void* self, libqt_list folds);
+void q_sciscintilla_set_contracted_folds(void* self, libqt_list /* of int */ folds);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3453,14 +3455,14 @@ void q_sciscintilla_on_copy_available(void* self, void (*callback)(void*, bool))
 /// @param index int
 /// @param state flag of enum Qt__KeyboardModifier
 ///
-void q_sciscintilla_indicator_clicked(void* self, int line, int index, int64_t state);
+void q_sciscintilla_indicator_clicked(void* self, int line, int index, int32_t state);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// @param self QsciScintilla*
 /// @param callback void func(QsciScintilla* self, int line, int index, flag of enum Qt__KeyboardModifier state)
 ///
-void q_sciscintilla_on_indicator_clicked(void* self, void (*callback)(void*, int, int, int64_t));
+void q_sciscintilla_on_indicator_clicked(void* self, void (*callback)(void*, int, int, int32_t));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3469,14 +3471,14 @@ void q_sciscintilla_on_indicator_clicked(void* self, void (*callback)(void*, int
 /// @param index int
 /// @param state flag of enum Qt__KeyboardModifier
 ///
-void q_sciscintilla_indicator_released(void* self, int line, int index, int64_t state);
+void q_sciscintilla_indicator_released(void* self, int line, int index, int32_t state);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// @param self QsciScintilla*
 /// @param callback void func(QsciScintilla* self, int line, int index, flag of enum Qt__KeyboardModifier state)
 ///
-void q_sciscintilla_on_indicator_released(void* self, void (*callback)(void*, int, int, int64_t));
+void q_sciscintilla_on_indicator_released(void* self, void (*callback)(void*, int, int, int32_t));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3498,14 +3500,14 @@ void q_sciscintilla_on_lines_changed(void* self, void (*callback)(void*));
 /// @param line int
 /// @param state flag of enum Qt__KeyboardModifier
 ///
-void q_sciscintilla_margin_clicked(void* self, int margin, int line, int64_t state);
+void q_sciscintilla_margin_clicked(void* self, int margin, int line, int32_t state);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// @param self QsciScintilla*
 /// @param callback void func(QsciScintilla* self, int margin, int line, flag of enum Qt__KeyboardModifier state)
 ///
-void q_sciscintilla_on_margin_clicked(void* self, void (*callback)(void*, int, int, int64_t));
+void q_sciscintilla_on_margin_clicked(void* self, void (*callback)(void*, int, int, int32_t));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -3514,14 +3516,14 @@ void q_sciscintilla_on_margin_clicked(void* self, void (*callback)(void*, int, i
 /// @param line int
 /// @param state flag of enum Qt__KeyboardModifier
 ///
-void q_sciscintilla_margin_right_clicked(void* self, int margin, int line, int64_t state);
+void q_sciscintilla_margin_right_clicked(void* self, int margin, int line, int32_t state);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// @param self QsciScintilla*
 /// @param callback void func(QsciScintilla* self, int margin, int line, flag of enum Qt__KeyboardModifier state)
 ///
-void q_sciscintilla_on_margin_right_clicked(void* self, void (*callback)(void*, int, int, int64_t));
+void q_sciscintilla_on_margin_right_clicked(void* self, void (*callback)(void*, int, int, int32_t));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -4520,7 +4522,9 @@ void q_sciscintilla_add_scroll_bar_widget(void* self, void* widget, int32_t alig
 /// @param self QsciScintilla*
 /// @param alignment flag of enum Qt__AlignmentFlag
 ///
-libqt_list /* of QWidget* */ q_sciscintilla_scroll_bar_widgets(void* self, int32_t alignment);
+/// @return libqt_list of QWidget*
+///
+libqt_list q_sciscintilla_scroll_bar_widgets(void* self, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5499,7 +5503,7 @@ void q_sciscintilla_set_graphics_effect(void* self, void* effect);
 /// @param self QsciScintilla*
 /// @param type enum Qt__GestureType
 ///
-void q_sciscintilla_grab_gesture(void* self, int64_t type);
+void q_sciscintilla_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -5508,7 +5512,7 @@ void q_sciscintilla_grab_gesture(void* self, int64_t type);
 /// @param self QsciScintilla*
 /// @param type enum Qt__GestureType
 ///
-void q_sciscintilla_ungrab_gesture(void* self, int64_t type);
+void q_sciscintilla_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -6497,7 +6501,7 @@ void q_sciscintilla_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void q_sciscintilla_set_parent2(void* self, void* parent, int64_t f);
+void q_sciscintilla_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -6575,9 +6579,9 @@ void q_sciscintilla_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self QsciScintilla*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_sciscintilla_add_actions(void* self, libqt_list actions);
+void q_sciscintilla_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -6585,9 +6589,9 @@ void q_sciscintilla_add_actions(void* self, libqt_list actions);
 ///
 /// @param self QsciScintilla*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_sciscintilla_insert_actions(void* self, void* before, libqt_list actions);
+void q_sciscintilla_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -6614,7 +6618,9 @@ void q_sciscintilla_remove_action(void* self, void* action);
 ///
 /// @param self QsciScintilla*
 ///
-libqt_list /* of QAction* */ q_sciscintilla_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list q_sciscintilla_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6671,7 +6677,7 @@ QWidget* q_sciscintilla_parent_widget(void* self);
 /// @param self QsciScintilla*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_sciscintilla_set_window_flags(void* self, int64_t type);
+void q_sciscintilla_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -6681,7 +6687,7 @@ void q_sciscintilla_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t q_sciscintilla_window_flags(void* self);
+int32_t q_sciscintilla_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6690,7 +6696,7 @@ int64_t q_sciscintilla_window_flags(void* self);
 /// @param self QsciScintilla*
 /// @param param1 enum Qt__WindowType
 ///
-void q_sciscintilla_set_window_flag(void* self, int64_t param1);
+void q_sciscintilla_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -6699,7 +6705,7 @@ void q_sciscintilla_set_window_flag(void* self, int64_t param1);
 /// @param self QsciScintilla*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_sciscintilla_override_window_flags(void* self, int64_t type);
+void q_sciscintilla_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -6709,7 +6715,7 @@ void q_sciscintilla_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t q_sciscintilla_window_type(void* self);
+int32_t q_sciscintilla_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6920,7 +6926,7 @@ void q_sciscintilla_on_custom_context_menu_requested(void* self, void (*callback
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t q_sciscintilla_input_method_hints(void* self);
+int32_t q_sciscintilla_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6929,7 +6935,7 @@ int64_t q_sciscintilla_input_method_hints(void* self);
 /// @param self QsciScintilla*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void q_sciscintilla_set_input_method_hints(void* self, int64_t hints);
+void q_sciscintilla_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -7014,7 +7020,7 @@ QPixmap* q_sciscintilla_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void q_sciscintilla_grab_gesture2(void* self, int64_t type, int32_t flags);
+void q_sciscintilla_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -7054,7 +7060,7 @@ void q_sciscintilla_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void q_sciscintilla_set_window_flag2(void* self, int64_t param1, bool on);
+void q_sciscintilla_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -7083,7 +7089,7 @@ QWidget* q_sciscintilla_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* q_sciscintilla_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* q_sciscintilla_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -7195,7 +7201,9 @@ void q_sciscintilla_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QsciScintilla*
 ///
-libqt_list /* of QObject* */ q_sciscintilla_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_sciscintilla_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -7937,7 +7945,7 @@ void q_sciscintilla_on_input_method_event(void* self, void (*callback)(void*, vo
 /// @param self QsciScintilla*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_sciscintilla_input_method_query(void* self, int64_t query);
+QVariant* q_sciscintilla_input_method_query(void* self, int32_t query);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -7948,7 +7956,7 @@ QVariant* q_sciscintilla_input_method_query(void* self, int64_t query);
 /// @param self QsciScintilla*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_sciscintilla_qbase_input_method_query(void* self, int64_t query);
+QVariant* q_sciscintilla_qbase_input_method_query(void* self, int32_t query);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -7959,7 +7967,7 @@ QVariant* q_sciscintilla_qbase_input_method_query(void* self, int64_t query);
 /// @param self QsciScintilla*
 /// @param callback QVariant* func(QsciScintilla* self, enum Qt__InputMethodQuery query)
 ///
-void q_sciscintilla_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void q_sciscintilla_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QsciScintillaBase
 ///

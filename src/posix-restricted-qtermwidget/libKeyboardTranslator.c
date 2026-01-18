@@ -32,7 +32,7 @@ void k_onsole__keyboardtranslator_set_description(void* self, const char* descri
     Konsole__KeyboardTranslator_SetDescription((Konsole__KeyboardTranslator*)self, qstring(description));
 }
 
-Konsole__KeyboardTranslator__Entry* k_onsole__keyboardtranslator_find_entry(void* self, int keyCode, int64_t modifiers) {
+Konsole__KeyboardTranslator__Entry* k_onsole__keyboardtranslator_find_entry(void* self, int keyCode, int32_t modifiers) {
     return Konsole__KeyboardTranslator_FindEntry((Konsole__KeyboardTranslator*)self, keyCode, modifiers);
 }
 
@@ -53,7 +53,7 @@ libqt_list /* of Konsole__KeyboardTranslator__Entry* */ k_onsole__keyboardtransl
     return _arr;
 }
 
-Konsole__KeyboardTranslator__Entry* k_onsole__keyboardtranslator_find_entry3(void* self, int keyCode, int64_t modifiers, int32_t state) {
+Konsole__KeyboardTranslator__Entry* k_onsole__keyboardtranslator_find_entry3(void* self, int keyCode, int32_t modifiers, int32_t state) {
     return Konsole__KeyboardTranslator_FindEntry3((Konsole__KeyboardTranslator*)self, keyCode, modifiers, state);
 }
 
@@ -133,7 +133,7 @@ const char** k_onsole__keyboardtranslatormanager_all_translators(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_onsole__keyboardtranslatormanager_all_translators");
+        fprintf(stderr, "Failed to allocate memory for string list in k_onsole__keyboardtranslatormanager_all_translators\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -205,19 +205,19 @@ void k_onsole__keyboardtranslator__entry_set_key_code(void* self, int keyCode) {
     Konsole__KeyboardTranslator__Entry_SetKeyCode((Konsole__KeyboardTranslator__Entry*)self, keyCode);
 }
 
-int64_t k_onsole__keyboardtranslator__entry_modifiers(void* self) {
+int32_t k_onsole__keyboardtranslator__entry_modifiers(void* self) {
     return Konsole__KeyboardTranslator__Entry_Modifiers((Konsole__KeyboardTranslator__Entry*)self);
 }
 
-int64_t k_onsole__keyboardtranslator__entry_modifier_mask(void* self) {
+int32_t k_onsole__keyboardtranslator__entry_modifier_mask(void* self) {
     return Konsole__KeyboardTranslator__Entry_ModifierMask((Konsole__KeyboardTranslator__Entry*)self);
 }
 
-void k_onsole__keyboardtranslator__entry_set_modifiers(void* self, int64_t modifiers) {
+void k_onsole__keyboardtranslator__entry_set_modifiers(void* self, int32_t modifiers) {
     Konsole__KeyboardTranslator__Entry_SetModifiers((Konsole__KeyboardTranslator__Entry*)self, modifiers);
 }
 
-void k_onsole__keyboardtranslator__entry_set_modifier_mask(void* self, int64_t modifiers) {
+void k_onsole__keyboardtranslator__entry_set_modifier_mask(void* self, int32_t modifiers) {
     Konsole__KeyboardTranslator__Entry_SetModifierMask((Konsole__KeyboardTranslator__Entry*)self, modifiers);
 }
 
@@ -251,7 +251,7 @@ const char* k_onsole__keyboardtranslator__entry_result_to_string(void* self) {
     return _ret;
 }
 
-bool k_onsole__keyboardtranslator__entry_matches(void* self, int keyCode, int64_t modifiers, int32_t flags) {
+bool k_onsole__keyboardtranslator__entry_matches(void* self, int keyCode, int32_t modifiers, int32_t flags) {
     return Konsole__KeyboardTranslator__Entry_Matches((Konsole__KeyboardTranslator__Entry*)self, keyCode, modifiers, flags);
 }
 
@@ -266,7 +266,7 @@ char* k_onsole__keyboardtranslator__entry_text1(void* self, bool expandWildCards
     return _ret;
 }
 
-char* k_onsole__keyboardtranslator__entry_text2(void* self, bool expandWildCards, int64_t modifiers) {
+char* k_onsole__keyboardtranslator__entry_text2(void* self, bool expandWildCards, int32_t modifiers) {
     libqt_string _str = Konsole__KeyboardTranslator__Entry_Text2((Konsole__KeyboardTranslator__Entry*)self, expandWildCards, modifiers);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -280,7 +280,7 @@ char* k_onsole__keyboardtranslator__entry_escaped_text1(void* self, bool expandW
     return _ret;
 }
 
-char* k_onsole__keyboardtranslator__entry_escaped_text2(void* self, bool expandWildCards, int64_t modifiers) {
+char* k_onsole__keyboardtranslator__entry_escaped_text2(void* self, bool expandWildCards, int32_t modifiers) {
     libqt_string _str = Konsole__KeyboardTranslator__Entry_EscapedText2((Konsole__KeyboardTranslator__Entry*)self, expandWildCards, modifiers);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -294,7 +294,7 @@ const char* k_onsole__keyboardtranslator__entry_result_to_string1(void* self, bo
     return _ret;
 }
 
-const char* k_onsole__keyboardtranslator__entry_result_to_string2(void* self, bool expandWildCards, int64_t modifiers) {
+const char* k_onsole__keyboardtranslator__entry_result_to_string2(void* self, bool expandWildCards, int32_t modifiers) {
     libqt_string _str = Konsole__KeyboardTranslator__Entry_ResultToString2((Konsole__KeyboardTranslator__Entry*)self, expandWildCards, modifiers);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

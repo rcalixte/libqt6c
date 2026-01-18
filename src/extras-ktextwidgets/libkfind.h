@@ -556,7 +556,9 @@ void k_find_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KFind*
 ///
-libqt_list /* of QObject* */ k_find_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_find_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -465,7 +465,9 @@ void q_scilexerbatch_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QsciLexerBatch*
 ///
-libqt_list /* of QObject* */ q_scilexerbatch_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_scilexerbatch_children(void* self);
 
 /// Inherited from QObject
 ///

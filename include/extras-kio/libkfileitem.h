@@ -535,9 +535,9 @@ KFileItemList* k_fileitemlist_new();
 
 /// k_fileitemlist_new2 constructs a new KFileItemList object.
 ///
-/// @param items libqt_list /* of KFileItem* */
+/// @param items libqt_list of KFileItem*
 ///
-KFileItemList* k_fileitemlist_new2(libqt_list items);
+KFileItemList* k_fileitemlist_new2(libqt_list /* of KFileItem* */ items);
 
 /// [Upstream resources](https://api.kde.org/kfileitemlist.html#findByName)
 ///
@@ -557,13 +557,17 @@ KFileItem* k_fileitemlist_find_by_url(void* self, void* url);
 ///
 /// @param self KFileItemList*
 ///
-libqt_list /* of QUrl* */ k_fileitemlist_url_list(void* self);
+/// @return libqt_list of QUrl*
+///
+libqt_list k_fileitemlist_url_list(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemlist.html#targetUrlList)
 ///
 /// @param self KFileItemList*
 ///
-libqt_list /* of QUrl* */ k_fileitemlist_target_url_list(void* self);
+/// @return libqt_list of QUrl*
+///
+libqt_list k_fileitemlist_target_url_list(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemlist.html#dtor.KFileItemList)
 ///
@@ -623,7 +627,7 @@ void k_fileitem__mostlocalurlresult_delete(void* self);
 /// [Upstream resources](https://api.kde.org/kfileitem.html#public-types)
 
 typedef enum {
-    KFILEITEM__UNKNOWN = 4294967295
+    KFILEITEM__UNKNOWN = -1
 } KFileItem__;
 
 /// [Upstream resources](https://api.kde.org/kfileitem.html#public-types)

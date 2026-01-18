@@ -588,7 +588,9 @@ bool q_areaseries_detach_axis(void* self, void* axis);
 ///
 /// @param self QAreaSeries*
 ///
-libqt_list /* of QAbstractAxis* */ q_areaseries_attached_axes(void* self);
+/// @return libqt_list of QAbstractAxis*
+///
+libqt_list q_areaseries_attached_axes(void* self);
 
 /// Inherited from QAbstractSeries
 ///
@@ -802,7 +804,9 @@ void q_areaseries_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QAreaSeries*
 ///
-libqt_list /* of QObject* */ q_areaseries_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_areaseries_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -107,7 +107,9 @@ const char* q_action_tr(const char* s);
 ///
 /// @param self QAction*
 ///
-libqt_list /* of QObject* */ q_action_associated_objects(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_action_associated_objects(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setActionGroup)
 ///
@@ -254,9 +256,9 @@ QKeySequence* q_action_shortcut(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
 ///
 /// @param self QAction*
-/// @param shortcuts libqt_list /* of QKeySequence* */
+/// @param shortcuts libqt_list of QKeySequence*
 ///
-void q_action_set_shortcuts(void* self, libqt_list shortcuts);
+void q_action_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
 ///
@@ -269,7 +271,9 @@ void q_action_set_shortcuts2(void* self, int32_t shortcuts);
 ///
 /// @param self QAction*
 ///
-libqt_list /* of QKeySequence* */ q_action_shortcuts(void* self);
+/// @return libqt_list of QKeySequence*
+///
+libqt_list q_action_shortcuts(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcutContext)
 ///
@@ -731,7 +735,9 @@ void q_action_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QAction*
 ///
-libqt_list /* of QObject* */ q_action_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_action_children(void* self);
 
 /// Inherited from QObject
 ///

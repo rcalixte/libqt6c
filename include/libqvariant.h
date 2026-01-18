@@ -141,9 +141,9 @@ QVariant* q_variant_new16(void* datetime);
 
 /// q_variant_new17 constructs a new QVariant object.
 ///
-/// @param hash libqt_map /* of const char* to QVariant* */
+/// @param hash libqt_map of const char* to QVariant*
 ///
-QVariant* q_variant_new17(libqt_map /* of const char* to QVariant* */ hash);
+QVariant* q_variant_new17(libqt_map hash);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
 
@@ -165,9 +165,9 @@ QVariant* q_variant_new19(void* jsonObject);
 
 /// q_variant_new20 constructs a new QVariant object.
 ///
-/// @param list libqt_list /* of QVariant* */
+/// @param list libqt_list of QVariant*
 ///
-QVariant* q_variant_new20(libqt_list list);
+QVariant* q_variant_new20(libqt_list /* of QVariant* */ list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
 
@@ -181,9 +181,9 @@ QVariant* q_variant_new21(void* locale);
 
 /// q_variant_new22 constructs a new QVariant object.
 ///
-/// @param mapVal libqt_map /* of const char* to QVariant* */
+/// @param mapVal libqt_map of const char* to QVariant*
 ///
-QVariant* q_variant_new22(libqt_map /* of const char* to QVariant* */ mapVal);
+QVariant* q_variant_new22(libqt_map mapVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
 
@@ -343,7 +343,7 @@ QVariant* q_variant_new41(const char* str);
 ///
 /// @param type enum QVariant__Type
 ///
-QVariant* q_variant_new42(int64_t type);
+QVariant* q_variant_new42(int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
 
@@ -565,13 +565,16 @@ QDateTime* q_variant_to_date_time(void* self);
 ///
 /// @param self QVariant*
 ///
-libqt_list /* of QVariant* */ q_variant_to_list(void* self);
+/// @return libqt_list of QVariant*
+///
+libqt_list q_variant_to_list(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html#toMap)
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     free(((QVariant*)map.values)[i]);
@@ -582,13 +585,16 @@ libqt_list /* of QVariant* */ q_variant_to_list(void* self);
 ///
 /// @param self QVariant*
 ///
-libqt_map /* of const char* to QVariant* */ q_variant_to_map(void* self);
+/// @return libqt_map of const char* to QVariant*
+///
+libqt_map q_variant_to_map(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html#toHash)
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     free(((QVariant*)map.values)[i]);
@@ -599,7 +605,9 @@ libqt_map /* of const char* to QVariant* */ q_variant_to_map(void* self);
 ///
 /// @param self QVariant*
 ///
-libqt_map /* of const char* to QVariant* */ q_variant_to_hash(void* self);
+/// @return libqt_map of const char* to QVariant*
+///
+libqt_map q_variant_to_hash(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html#toPoint)
 ///
@@ -735,7 +743,7 @@ void q_variant_save(void* self, void* ds);
 ///
 /// @return enum QVariant__Type
 ///
-int64_t q_variant_type(void* self);
+int32_t q_variant_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html#typeToName)
 ///
@@ -751,7 +759,7 @@ const char* q_variant_type_to_name(int typeId);
 ///
 /// @return enum QVariant__Type
 ///
-int64_t q_variant_name_to_type(const char* name);
+int32_t q_variant_name_to_type(const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html#data)
 ///
@@ -960,7 +968,7 @@ typedef enum {
     QVARIANT_TYPE_LASTGUITYPE = 4119,
     QVARIANT_TYPE_SIZEPOLICY = 8192,
     QVARIANT_TYPE_USERTYPE = 65536,
-    QVARIANT_TYPE_LASTTYPE = 4294967295
+    QVARIANT_TYPE_LASTTYPE = -1
 } QVariant__Type;
 
 #endif

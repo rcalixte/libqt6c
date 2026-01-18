@@ -676,7 +676,9 @@ void q_mediarecorder_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QMediaRecorder*
 ///
-libqt_list /* of QObject* */ q_mediarecorder_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_mediarecorder_children(void* self);
 
 /// Inherited from QObject
 ///

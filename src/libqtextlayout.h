@@ -252,15 +252,17 @@ const char* q_textlayout_preedit_area_text(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlayout.html#setFormats)
 ///
 /// @param self QTextLayout*
-/// @param overrides libqt_list /* of QTextLayout__FormatRange* */
+/// @param overrides libqt_list of QTextLayout__FormatRange*
 ///
-void q_textlayout_set_formats(void* self, libqt_list overrides);
+void q_textlayout_set_formats(void* self, libqt_list /* of QTextLayout__FormatRange* */ overrides);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlayout.html#formats)
 ///
 /// @param self QTextLayout*
 ///
-libqt_list /* of QTextLayout__FormatRange* */ q_textlayout_formats(void* self);
+/// @return libqt_list of QTextLayout__FormatRange*
+///
+libqt_list q_textlayout_formats(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlayout.html#clearFormats)
 ///
@@ -440,13 +442,17 @@ double q_textlayout_maximum_width(void* self);
 /// @param length int
 /// @param flags flag of enum QTextLayout__GlyphRunRetrievalFlag
 ///
-libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs(void* self, int from, int length, uint16_t flags);
+/// @return libqt_list of QGlyphRun*
+///
+libqt_list q_textlayout_glyph_runs(void* self, int from, int length, uint16_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlayout.html#glyphRuns)
 ///
 /// @param self QTextLayout*
 ///
-libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs2(void* self);
+/// @return libqt_list of QGlyphRun*
+///
+libqt_list q_textlayout_glyph_runs2(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlayout.html#setFlags)
 ///
@@ -476,26 +482,28 @@ int32_t q_textlayout_previous_cursor_position2(void* self, int oldPos, int32_t m
 /// @param self QTextLayout*
 /// @param p QPainter*
 /// @param pos QPointF*
-/// @param selections libqt_list /* of QTextLayout__FormatRange* */
+/// @param selections libqt_list of QTextLayout__FormatRange*
 ///
-void q_textlayout_draw3(void* self, void* p, void* pos, libqt_list selections);
+void q_textlayout_draw3(void* self, void* p, void* pos, libqt_list /* of QTextLayout__FormatRange* */ selections);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlayout.html#draw)
 ///
 /// @param self QTextLayout*
 /// @param p QPainter*
 /// @param pos QPointF*
-/// @param selections libqt_list /* of QTextLayout__FormatRange* */
+/// @param selections libqt_list of QTextLayout__FormatRange*
 /// @param clip QRectF*
 ///
-void q_textlayout_draw4(void* self, void* p, void* pos, libqt_list selections, void* clip);
+void q_textlayout_draw4(void* self, void* p, void* pos, libqt_list /* of QTextLayout__FormatRange* */ selections, void* clip);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlayout.html#glyphRuns)
 ///
 /// @param self QTextLayout*
 /// @param from int
 ///
-libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs1(void* self, int from);
+/// @return libqt_list of QGlyphRun*
+///
+libqt_list q_textlayout_glyph_runs1(void* self, int from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlayout.html#glyphRuns)
 ///
@@ -503,7 +511,9 @@ libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs1(void* self, int from);
 /// @param from int
 /// @param length int
 ///
-libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs22(void* self, int from, int length);
+/// @return libqt_list of QGlyphRun*
+///
+libqt_list q_textlayout_glyph_runs22(void* self, int from, int length);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlayout.html#dtor.QTextLayout)
 ///
@@ -723,13 +733,17 @@ void q_textline_draw(void* self, void* painter, void* position);
 /// @param length int
 /// @param flags flag of enum QTextLayout__GlyphRunRetrievalFlag
 ///
-libqt_list /* of QGlyphRun* */ q_textline_glyph_runs(void* self, int from, int length, uint16_t flags);
+/// @return libqt_list of QGlyphRun*
+///
+libqt_list q_textline_glyph_runs(void* self, int from, int length, uint16_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextline.html#glyphRuns)
 ///
 /// @param self QTextLine*
 ///
-libqt_list /* of QGlyphRun* */ q_textline_glyph_runs2(void* self);
+/// @return libqt_list of QGlyphRun*
+///
+libqt_list q_textline_glyph_runs2(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextline.html#cursorToX)
 ///
@@ -760,7 +774,9 @@ int32_t q_textline_x_to_cursor2(void* self, double x, int32_t param2);
 /// @param self QTextLine*
 /// @param from int
 ///
-libqt_list /* of QGlyphRun* */ q_textline_glyph_runs1(void* self, int from);
+/// @return libqt_list of QGlyphRun*
+///
+libqt_list q_textline_glyph_runs1(void* self, int from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextline.html#glyphRuns)
 ///
@@ -768,7 +784,9 @@ libqt_list /* of QGlyphRun* */ q_textline_glyph_runs1(void* self, int from);
 /// @param from int
 /// @param length int
 ///
-libqt_list /* of QGlyphRun* */ q_textline_glyph_runs22(void* self, int from, int length);
+/// @return libqt_list of QGlyphRun*
+///
+libqt_list q_textline_glyph_runs22(void* self, int from, int length);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextline.html#dtor.QTextLine)
 ///

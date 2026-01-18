@@ -200,7 +200,7 @@ QCborArray* q_cborarray_from_string_list(const char* list[static 1]) {
     size_t list_len = libqt_strv_length(list);
     libqt_string* list_qstr = (libqt_string*)malloc(list_len * sizeof(libqt_string));
     if (list_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cborarray_from_string_list");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cborarray_from_string_list\n");
         abort();
     }
     for (size_t i = 0; i < list_len; ++i) {
@@ -212,7 +212,7 @@ QCborArray* q_cborarray_from_string_list(const char* list[static 1]) {
     return _out;
 }
 
-QCborArray* q_cborarray_from_variant_list(libqt_list list) {
+QCborArray* q_cborarray_from_variant_list(libqt_list /* of QVariant* */ list) {
     return QCborArray_FromVariantList(list);
 }
 

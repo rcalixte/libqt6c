@@ -72,7 +72,9 @@ const char* q_networkcookiejar_tr(const char* s);
 /// @param self QNetworkCookieJar*
 /// @param url QUrl*
 ///
-libqt_list /* of QNetworkCookie* */ q_networkcookiejar_cookies_for_url(void* self, void* url);
+/// @return libqt_list of QNetworkCookie*
+///
+libqt_list q_networkcookiejar_cookies_for_url(void* self, void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#cookiesForUrl)
 ///
@@ -90,15 +92,17 @@ void q_networkcookiejar_on_cookies_for_url(void* self, QNetworkCookie** (*callba
 /// @param self QNetworkCookieJar*
 /// @param url QUrl*
 ///
-libqt_list /* of QNetworkCookie* */ q_networkcookiejar_qbase_cookies_for_url(void* self, void* url);
+/// @return libqt_list of QNetworkCookie*
+///
+libqt_list q_networkcookiejar_qbase_cookies_for_url(void* self, void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#setCookiesFromUrl)
 ///
 /// @param self QNetworkCookieJar*
-/// @param cookieList libqt_list /* of QNetworkCookie* */
+/// @param cookieList libqt_list of QNetworkCookie*
 /// @param url QUrl*
 ///
-bool q_networkcookiejar_set_cookies_from_url(void* self, libqt_list cookieList, void* url);
+bool q_networkcookiejar_set_cookies_from_url(void* self, libqt_list /* of QNetworkCookie* */ cookieList, void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#setCookiesFromUrl)
 ///
@@ -114,10 +118,10 @@ void q_networkcookiejar_on_set_cookies_from_url(void* self, bool (*callback)(voi
 /// Base class method implementation
 ///
 /// @param self QNetworkCookieJar*
-/// @param cookieList libqt_list /* of QNetworkCookie* */
+/// @param cookieList libqt_list of QNetworkCookie*
 /// @param url QUrl*
 ///
-bool q_networkcookiejar_qbase_set_cookies_from_url(void* self, libqt_list cookieList, void* url);
+bool q_networkcookiejar_qbase_set_cookies_from_url(void* self, libqt_list /* of QNetworkCookie* */ cookieList, void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#insertCookie)
 ///
@@ -198,7 +202,9 @@ bool q_networkcookiejar_qbase_delete_cookie(void* self, void* cookie);
 ///
 /// @param self QNetworkCookieJar*
 ///
-libqt_list /* of QNetworkCookie* */ q_networkcookiejar_all_cookies(void* self);
+/// @return libqt_list of QNetworkCookie*
+///
+libqt_list q_networkcookiejar_all_cookies(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#allCookies)
 ///
@@ -215,14 +221,16 @@ void q_networkcookiejar_on_all_cookies(void* self, QNetworkCookie** (*callback)(
 ///
 /// @param self QNetworkCookieJar*
 ///
-libqt_list /* of QNetworkCookie* */ q_networkcookiejar_qbase_all_cookies(void* self);
+/// @return libqt_list of QNetworkCookie*
+///
+libqt_list q_networkcookiejar_qbase_all_cookies(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#setAllCookies)
 ///
 /// @param self QNetworkCookieJar*
-/// @param cookieList libqt_list /* of QNetworkCookie* */
+/// @param cookieList libqt_list of QNetworkCookie*
 ///
-void q_networkcookiejar_set_all_cookies(void* self, libqt_list cookieList);
+void q_networkcookiejar_set_all_cookies(void* self, libqt_list /* of QNetworkCookie* */ cookieList);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#setAllCookies)
 ///
@@ -238,9 +246,9 @@ void q_networkcookiejar_on_set_all_cookies(void* self, void (*callback)(void*, Q
 /// Base class method implementation
 ///
 /// @param self QNetworkCookieJar*
-/// @param cookieList libqt_list /* of QNetworkCookie* */
+/// @param cookieList libqt_list of QNetworkCookie*
 ///
-void q_networkcookiejar_qbase_set_all_cookies(void* self, libqt_list cookieList);
+void q_networkcookiejar_qbase_set_all_cookies(void* self, libqt_list /* of QNetworkCookie* */ cookieList);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#validateCookie)
 ///
@@ -398,7 +406,9 @@ void q_networkcookiejar_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QNetworkCookieJar*
 ///
-libqt_list /* of QObject* */ q_networkcookiejar_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_networkcookiejar_children(void* self);
 
 /// Inherited from QObject
 ///

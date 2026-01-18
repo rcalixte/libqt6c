@@ -161,13 +161,17 @@ int32_t q_cameradevice_position(void* self);
 ///
 /// @param self QCameraDevice*
 ///
-libqt_list /* of QSize* */ q_cameradevice_photo_resolutions(void* self);
+/// @return libqt_list of QSize*
+///
+libqt_list q_cameradevice_photo_resolutions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcameradevice.html#videoFormats)
 ///
 /// @param self QCameraDevice*
 ///
-libqt_list /* of QCameraFormat* */ q_cameradevice_video_formats(void* self);
+/// @return libqt_list of QCameraFormat*
+///
+libqt_list q_cameradevice_video_formats(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcameradevice.html#correctionAngle)
 ///

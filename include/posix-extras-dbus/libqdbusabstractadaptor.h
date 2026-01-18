@@ -187,7 +187,9 @@ void q_dbusabstractadaptor_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QDBusAbstractAdaptor*
 ///
-libqt_list /* of QObject* */ q_dbusabstractadaptor_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_dbusabstractadaptor_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -126,9 +126,9 @@ void k_io__workerbase_stat_entry(void* self, void* _entry);
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#listEntries)
 ///
 /// @param self KIO__WorkerBase*
-/// @param _entry libqt_list /* of KIO__UDSEntry* */
+/// @param _entry libqt_list of KIO__UDSEntry*
 ///
-void k_io__workerbase_list_entries(void* self, libqt_list _entry);
+void k_io__workerbase_list_entries(void* self, libqt_list /* of KIO__UDSEntry* */ _entry);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#canResume)
 ///
@@ -238,9 +238,9 @@ int32_t k_io__workerbase_message_box2(void* self, const char* text, int32_t type
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#sslError)
 ///
 /// @param self KIO__WorkerBase*
-/// @param sslData libqt_map /* of const char* to QVariant* */
+/// @param sslData libqt_map of const char* to QVariant*
 ///
-int32_t k_io__workerbase_ssl_error(void* self, libqt_map /* of const char* to QVariant* */ sslData);
+int32_t k_io__workerbase_ssl_error(void* self, libqt_map sslData);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#setMetaData)
 ///
@@ -276,7 +276,8 @@ KIO__MetaData* k_io__workerbase_all_meta_data(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     free(((QVariant*)map.values)[i]);
@@ -287,7 +288,9 @@ KIO__MetaData* k_io__workerbase_all_meta_data(void* self);
 ///
 /// @param self KIO__WorkerBase*
 ///
-libqt_map /* of const char* to QVariant* */ k_io__workerbase_map_config(void* self);
+/// @return libqt_map of const char* to QVariant*
+///
+libqt_map k_io__workerbase_map_config(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#configValue)
 ///

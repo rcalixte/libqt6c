@@ -558,7 +558,7 @@ QSurfaceFormat* q_openglwindow_requested_format(void* self);
 /// @param self QOpenGLWindow*
 /// @param flags flag of enum Qt__WindowType
 ///
-void q_openglwindow_set_flags(void* self, int64_t flags);
+void q_openglwindow_set_flags(void* self, int32_t flags);
 
 /// Inherited from QWindow
 ///
@@ -568,7 +568,7 @@ void q_openglwindow_set_flags(void* self, int64_t flags);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t q_openglwindow_flags(void* self);
+int32_t q_openglwindow_flags(void* self);
 
 /// Inherited from QWindow
 ///
@@ -577,7 +577,7 @@ int64_t q_openglwindow_flags(void* self);
 /// @param self QOpenGLWindow*
 /// @param param1 enum Qt__WindowType
 ///
-void q_openglwindow_set_flag(void* self, int64_t param1);
+void q_openglwindow_set_flag(void* self, int32_t param1);
 
 /// Inherited from QWindow
 ///
@@ -587,7 +587,7 @@ void q_openglwindow_set_flag(void* self, int64_t param1);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t q_openglwindow_type(void* self);
+int32_t q_openglwindow_type(void* self);
 
 /// Inherited from QWindow
 ///
@@ -1690,7 +1690,7 @@ QWindow* q_openglwindow_parent1(void* self, int32_t mode);
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void q_openglwindow_set_flag2(void* self, int64_t param1, bool on);
+void q_openglwindow_set_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWindow
 ///
@@ -1812,7 +1812,9 @@ void q_openglwindow_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QOpenGLWindow*
 ///
-libqt_list /* of QObject* */ q_openglwindow_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_openglwindow_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -88,7 +88,7 @@ const char** q_sslcertificate_issuer_info(void* self, int32_t info) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_sslcertificate_issuer_info");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sslcertificate_issuer_info\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -107,7 +107,7 @@ const char** q_sslcertificate_issuer_info2(void* self, const char* attribute) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_sslcertificate_issuer_info2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sslcertificate_issuer_info2\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -126,7 +126,7 @@ const char** q_sslcertificate_subject_info(void* self, int32_t info) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_sslcertificate_subject_info");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sslcertificate_subject_info\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -145,7 +145,7 @@ const char** q_sslcertificate_subject_info2(void* self, const char* attribute) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_sslcertificate_subject_info2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sslcertificate_subject_info2\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -178,7 +178,7 @@ const char** q_sslcertificate_subject_info_attributes(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_sslcertificate_subject_info_attributes");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sslcertificate_subject_info_attributes\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -197,7 +197,7 @@ const char** q_sslcertificate_issuer_info_attributes(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_sslcertificate_issuer_info_attributes");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sslcertificate_issuer_info_attributes\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -221,7 +221,7 @@ libqt_map /* of enum QSsl__AlternativeNameEntryType to const char** */ q_sslcert
     if (_ret_values == NULL) {
         free(_out.keys);
         free(_out.values);
-        fprintf(stderr, "Failed to allocate memory for map value containers in q_sslcertificate_subject_alternative_names");
+        fprintf(stderr, "Failed to allocate memory for map value containers in q_sslcertificate_subject_alternative_names\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
@@ -237,7 +237,7 @@ libqt_map /* of enum QSsl__AlternativeNameEntryType to const char** */ q_sslcert
             free(_out.keys);
             free(_ret_values);
             free(_out.values);
-            fprintf(stderr, "Failed to allocate memory for map values in q_sslcertificate_subject_alternative_names");
+            fprintf(stderr, "Failed to allocate memory for map values in q_sslcertificate_subject_alternative_names\n");
             abort();
         }
         libqt_string* _value_str = (libqt_string*)_value_list.data.ptr;
@@ -255,7 +255,7 @@ libqt_map /* of enum QSsl__AlternativeNameEntryType to const char** */ q_sslcert
                     free(_ret_values[k]);
                 }
                 free(_ret_values);
-                fprintf(stderr, "Failed to allocate memory for map value keys in q_sslcertificate_subject_alternative_names");
+                fprintf(stderr, "Failed to allocate memory for map value keys in q_sslcertificate_subject_alternative_names\n");
                 abort();
             }
             memcpy(_ret_values[i][j], _value_str[j].data, _value_str[j].len);
@@ -329,7 +329,7 @@ libqt_list /* of QSslCertificate* */ q_sslcertificate_from_data(const char* data
     return _arr;
 }
 
-libqt_list /* of QSslError* */ q_sslcertificate_verify(libqt_list certificateChain) {
+libqt_list /* of QSslError* */ q_sslcertificate_verify(libqt_list /* of QSslCertificate* */ certificateChain) {
     libqt_list _arr = QSslCertificate_Verify(certificateChain);
     return _arr;
 }
@@ -369,16 +369,16 @@ libqt_list /* of QSslCertificate* */ q_sslcertificate_from_data2(const char* dat
     return _arr;
 }
 
-libqt_list /* of QSslError* */ q_sslcertificate_verify2(libqt_list certificateChain, const char* hostName) {
+libqt_list /* of QSslError* */ q_sslcertificate_verify2(libqt_list /* of QSslCertificate* */ certificateChain, const char* hostName) {
     libqt_list _arr = QSslCertificate_Verify2(certificateChain, qstring(hostName));
     return _arr;
 }
 
-bool q_sslcertificate_import_pkcs124(void* device, void* key, void* cert, libqt_list caCertificates) {
+bool q_sslcertificate_import_pkcs124(void* device, void* key, void* cert, libqt_list /* of QSslCertificate* */ caCertificates) {
     return QSslCertificate_ImportPkcs124((QIODevice*)device, (QSslKey*)key, (QSslCertificate*)cert, caCertificates);
 }
 
-bool q_sslcertificate_import_pkcs125(void* device, void* key, void* cert, libqt_list caCertificates, const char* passPhrase) {
+bool q_sslcertificate_import_pkcs125(void* device, void* key, void* cert, libqt_list /* of QSslCertificate* */ caCertificates, const char* passPhrase) {
     return QSslCertificate_ImportPkcs125((QIODevice*)device, (QSslKey*)key, (QSslCertificate*)cert, caCertificates, qstring(passPhrase));
 }
 

@@ -138,9 +138,9 @@ void q_signon__authservice_on_mechanisms_available(void* self, void (*callback)(
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1AuthService.html)
 ///
 /// @param self SignOn__AuthService*
-/// @param identityList libqt_list /* of SignOn__IdentityInfo* */
+/// @param identityList libqt_list of SignOn__IdentityInfo*
 ///
-void q_signon__authservice_identities(void* self, libqt_list identityList);
+void q_signon__authservice_identities(void* self, libqt_list /* of SignOn__IdentityInfo* */ identityList);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1AuthService.html)
 ///
@@ -291,7 +291,9 @@ void q_signon__authservice_kill_timer2(void* self, int32_t id);
 ///
 /// @param self SignOn__AuthService*
 ///
-libqt_list /* of QObject* */ q_signon__authservice_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_signon__authservice_children(void* self);
 
 /// Inherited from QObject
 ///

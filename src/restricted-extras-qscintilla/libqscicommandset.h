@@ -31,7 +31,9 @@ bool q_scicommandset_write_settings(void* self, void* qs);
 ///
 /// @param self QsciCommandSet*
 ///
-libqt_list /* of QsciCommand* */ q_scicommandset_commands(void* self);
+/// @return libqt_list of QsciCommand*
+///
+libqt_list q_scicommandset_commands(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommandSet.html)
 ///

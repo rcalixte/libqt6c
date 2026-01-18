@@ -15,18 +15,18 @@
 
 /// q_placemanagerengine_new constructs a new QPlaceManagerEngine object.
 ///
-/// @param parameters libqt_map /* of const char* to QVariant* */
+/// @param parameters libqt_map of const char* to QVariant*
 ///
-QPlaceManagerEngine* q_placemanagerengine_new(libqt_map /* of const char* to QVariant* */ parameters);
+QPlaceManagerEngine* q_placemanagerengine_new(libqt_map parameters);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html)
 
 /// q_placemanagerengine_new2 constructs a new QPlaceManagerEngine object.
 ///
-/// @param parameters libqt_map /* of const char* to QVariant* */
+/// @param parameters libqt_map of const char* to QVariant*
 /// @param parent QObject*
 ///
-QPlaceManagerEngine* q_placemanagerengine_new2(libqt_map /* of const char* to QVariant* */ parameters, void* parent);
+QPlaceManagerEngine* q_placemanagerengine_new2(libqt_map parameters, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -393,7 +393,9 @@ QPlaceCategory* q_placemanagerengine_qbase_category(void* self, const char* cate
 /// @param self QPlaceManagerEngine*
 /// @param parentId const char*
 ///
-libqt_list /* of QPlaceCategory* */ q_placemanagerengine_child_categories(void* self, const char* parentId);
+/// @return libqt_list of QPlaceCategory*
+///
+libqt_list q_placemanagerengine_child_categories(void* self, const char* parentId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#childCategories)
 ///
@@ -411,13 +413,17 @@ void q_placemanagerengine_on_child_categories(void* self, QPlaceCategory** (*cal
 /// @param self QPlaceManagerEngine*
 /// @param parentId const char*
 ///
-libqt_list /* of QPlaceCategory* */ q_placemanagerengine_qbase_child_categories(void* self, const char* parentId);
+/// @return libqt_list of QPlaceCategory*
+///
+libqt_list q_placemanagerengine_qbase_child_categories(void* self, const char* parentId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#locales)
 ///
 /// @param self QPlaceManagerEngine*
 ///
-libqt_list /* of QLocale* */ q_placemanagerengine_locales(void* self);
+/// @return libqt_list of QLocale*
+///
+libqt_list q_placemanagerengine_locales(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#locales)
 ///
@@ -434,14 +440,16 @@ void q_placemanagerengine_on_locales(void* self, QLocale** (*callback)());
 ///
 /// @param self QPlaceManagerEngine*
 ///
-libqt_list /* of QLocale* */ q_placemanagerengine_qbase_locales(void* self);
+/// @return libqt_list of QLocale*
+///
+libqt_list q_placemanagerengine_qbase_locales(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#setLocales)
 ///
 /// @param self QPlaceManagerEngine*
-/// @param locales libqt_list /* of QLocale* */
+/// @param locales libqt_list of QLocale*
 ///
-void q_placemanagerengine_set_locales(void* self, libqt_list locales);
+void q_placemanagerengine_set_locales(void* self, libqt_list /* of QLocale* */ locales);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#setLocales)
 ///
@@ -457,9 +465,9 @@ void q_placemanagerengine_on_set_locales(void* self, void (*callback)(void*, QLo
 /// Base class method implementation
 ///
 /// @param self QPlaceManagerEngine*
-/// @param locales libqt_list /* of QLocale* */
+/// @param locales libqt_list of QLocale*
 ///
-void q_placemanagerengine_qbase_set_locales(void* self, libqt_list locales);
+void q_placemanagerengine_qbase_set_locales(void* self, libqt_list /* of QLocale* */ locales);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#constructIconUrl)
 ///
@@ -835,7 +843,9 @@ void q_placemanagerengine_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QPlaceManagerEngine*
 ///
-libqt_list /* of QObject* */ q_placemanagerengine_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_placemanagerengine_children(void* self);
 
 /// Inherited from QObject
 ///

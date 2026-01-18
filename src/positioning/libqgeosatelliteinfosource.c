@@ -109,7 +109,7 @@ const char** q_geosatelliteinfosource_available_sources() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_geosatelliteinfosource_available_sources");
+        fprintf(stderr, "Failed to allocate memory for string list in q_geosatelliteinfosource_available_sources\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -230,7 +230,7 @@ void q_geosatelliteinfosource_qbase_request_update(void* self, int timeout) {
     QGeoSatelliteInfoSource_QBaseRequestUpdate((QGeoSatelliteInfoSource*)self, timeout);
 }
 
-void q_geosatelliteinfosource_satellites_in_view_updated(void* self, libqt_list satellites) {
+void q_geosatelliteinfosource_satellites_in_view_updated(void* self, libqt_list /* of QGeoSatelliteInfo* */ satellites) {
     QGeoSatelliteInfoSource_SatellitesInViewUpdated((QGeoSatelliteInfoSource*)self, satellites);
 }
 
@@ -238,7 +238,7 @@ void q_geosatelliteinfosource_on_satellites_in_view_updated(void* self, void (*c
     QGeoSatelliteInfoSource_Connect_SatellitesInViewUpdated((QGeoSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-void q_geosatelliteinfosource_satellites_in_use_updated(void* self, libqt_list satellites) {
+void q_geosatelliteinfosource_satellites_in_use_updated(void* self, libqt_list /* of QGeoSatelliteInfo* */ satellites) {
     QGeoSatelliteInfoSource_SatellitesInUseUpdated((QGeoSatelliteInfoSource*)self, satellites);
 }
 
@@ -373,7 +373,7 @@ const char** q_geosatelliteinfosource_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_geosatelliteinfosource_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_geosatelliteinfosource_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

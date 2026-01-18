@@ -302,7 +302,7 @@ QDesignerFormWindowInterface* q_designerformwindowmanagerinterface_qbase_form_wi
 /// @param parentWidget QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QDesignerFormWindowInterface* q_designerformwindowmanagerinterface_create_form_window(void* self, void* parentWidget, int64_t flags);
+QDesignerFormWindowInterface* q_designerformwindowmanagerinterface_create_form_window(void* self, void* parentWidget, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowmanagerinterface.html#createFormWindow)
 ///
@@ -311,7 +311,7 @@ QDesignerFormWindowInterface* q_designerformwindowmanagerinterface_create_form_w
 /// @param self QDesignerFormWindowManagerInterface*
 /// @param callback QDesignerFormWindowInterface* func(QDesignerFormWindowManagerInterface* self, QWidget* parentWidget, flag of enum Qt__WindowType flags)
 ///
-void q_designerformwindowmanagerinterface_on_create_form_window(void* self, QDesignerFormWindowInterface* (*callback)(void*, void*, int64_t));
+void q_designerformwindowmanagerinterface_on_create_form_window(void* self, QDesignerFormWindowInterface* (*callback)(void*, void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowmanagerinterface.html#createFormWindow)
 ///
@@ -321,7 +321,7 @@ void q_designerformwindowmanagerinterface_on_create_form_window(void* self, QDes
 /// @param parentWidget QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QDesignerFormWindowInterface* q_designerformwindowmanagerinterface_qbase_create_form_window(void* self, void* parentWidget, int64_t flags);
+QDesignerFormWindowInterface* q_designerformwindowmanagerinterface_qbase_create_form_window(void* self, void* parentWidget, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowmanagerinterface.html#core)
 ///
@@ -349,9 +349,9 @@ QDesignerFormEditorInterface* q_designerformwindowmanagerinterface_qbase_core(vo
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowmanagerinterface.html#dragItems)
 ///
 /// @param self QDesignerFormWindowManagerInterface*
-/// @param item_list libqt_list /* of QDesignerDnDItemInterface* */
+/// @param item_list libqt_list of QDesignerDnDItemInterface*
 ///
-void q_designerformwindowmanagerinterface_drag_items(void* self, libqt_list item_list);
+void q_designerformwindowmanagerinterface_drag_items(void* self, libqt_list /* of QDesignerDnDItemInterface* */ item_list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowmanagerinterface.html#dragItems)
 ///
@@ -367,9 +367,9 @@ void q_designerformwindowmanagerinterface_on_drag_items(void* self, void (*callb
 /// Base class method implementation
 ///
 /// @param self QDesignerFormWindowManagerInterface*
-/// @param item_list libqt_list /* of QDesignerDnDItemInterface* */
+/// @param item_list libqt_list of QDesignerDnDItemInterface*
 ///
-void q_designerformwindowmanagerinterface_qbase_drag_items(void* self, libqt_list item_list);
+void q_designerformwindowmanagerinterface_qbase_drag_items(void* self, libqt_list /* of QDesignerDnDItemInterface* */ item_list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowmanagerinterface.html#createPreviewPixmap)
 ///
@@ -723,7 +723,9 @@ void q_designerformwindowmanagerinterface_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QDesignerFormWindowManagerInterface*
 ///
-libqt_list /* of QObject* */ q_designerformwindowmanagerinterface_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_designerformwindowmanagerinterface_children(void* self);
 
 /// Inherited from QObject
 ///

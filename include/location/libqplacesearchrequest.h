@@ -58,7 +58,9 @@ void q_placesearchrequest_set_search_term(void* self, const char* term);
 ///
 /// @param self QPlaceSearchRequest*
 ///
-libqt_list /* of QPlaceCategory* */ q_placesearchrequest_categories(void* self);
+/// @return libqt_list of QPlaceCategory*
+///
+libqt_list q_placesearchrequest_categories(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchrequest.html#setCategory)
 ///
@@ -70,9 +72,9 @@ void q_placesearchrequest_set_category(void* self, void* category);
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchrequest.html#setCategories)
 ///
 /// @param self QPlaceSearchRequest*
-/// @param categories libqt_list /* of QPlaceCategory* */
+/// @param categories libqt_list of QPlaceCategory*
 ///
-void q_placesearchrequest_set_categories(void* self, libqt_list categories);
+void q_placesearchrequest_set_categories(void* self, libqt_list /* of QPlaceCategory* */ categories);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchrequest.html#searchArea)
 ///

@@ -153,31 +153,31 @@ void q_nmeasatelliteinfosource_qbase_request_update(void* self, int timeout) {
     QNmeaSatelliteInfoSource_QBaseRequestUpdate((QNmeaSatelliteInfoSource*)self, timeout);
 }
 
-int32_t q_nmeasatelliteinfosource_parse_satellites_in_use_from_nmea(void* self, const char* data, int size, libqt_list pnrsInUse) {
+int32_t q_nmeasatelliteinfosource_parse_satellites_in_use_from_nmea(void* self, const char* data, int size, libqt_list /* of int */ pnrsInUse) {
     return QNmeaSatelliteInfoSource_ParseSatellitesInUseFromNmea((QNmeaSatelliteInfoSource*)self, data, size, pnrsInUse);
 }
 
-void q_nmeasatelliteinfosource_on_parse_satellites_in_use_from_nmea(void* self, int32_t (*callback)(void*, const char*, int, int*)) {
+void q_nmeasatelliteinfosource_on_parse_satellites_in_use_from_nmea(void* self, int32_t (*callback)(void*, const char*, int, libqt_list /* of int */)) {
     QNmeaSatelliteInfoSource_OnParseSatellitesInUseFromNmea((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-int32_t q_nmeasatelliteinfosource_qbase_parse_satellites_in_use_from_nmea(void* self, const char* data, int size, libqt_list pnrsInUse) {
+int32_t q_nmeasatelliteinfosource_qbase_parse_satellites_in_use_from_nmea(void* self, const char* data, int size, libqt_list /* of int */ pnrsInUse) {
     return QNmeaSatelliteInfoSource_QBaseParseSatellitesInUseFromNmea((QNmeaSatelliteInfoSource*)self, data, size, pnrsInUse);
 }
 
-int32_t q_nmeasatelliteinfosource_parse_satellites_in_use_from_nmea2(void* self, const char* data, libqt_list pnrsInUse) {
+int32_t q_nmeasatelliteinfosource_parse_satellites_in_use_from_nmea2(void* self, const char* data, libqt_list /* of int */ pnrsInUse) {
     return QNmeaSatelliteInfoSource_ParseSatellitesInUseFromNmea2((QNmeaSatelliteInfoSource*)self, qstring(data), pnrsInUse);
 }
 
-void q_nmeasatelliteinfosource_on_parse_satellites_in_use_from_nmea2(void* self, int32_t (*callback)(void*, const char*, int*)) {
+void q_nmeasatelliteinfosource_on_parse_satellites_in_use_from_nmea2(void* self, int32_t (*callback)(void*, const char*, libqt_list /* of int */)) {
     QNmeaSatelliteInfoSource_OnParseSatellitesInUseFromNmea2((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-int32_t q_nmeasatelliteinfosource_qbase_parse_satellites_in_use_from_nmea2(void* self, const char* data, libqt_list pnrsInUse) {
+int32_t q_nmeasatelliteinfosource_qbase_parse_satellites_in_use_from_nmea2(void* self, const char* data, libqt_list /* of int */ pnrsInUse) {
     return QNmeaSatelliteInfoSource_QBaseParseSatellitesInUseFromNmea2((QNmeaSatelliteInfoSource*)self, qstring(data), pnrsInUse);
 }
 
-int32_t q_nmeasatelliteinfosource_parse_satellite_info_from_nmea(void* self, const char* data, int size, libqt_list infos, int32_t* system) {
+int32_t q_nmeasatelliteinfosource_parse_satellite_info_from_nmea(void* self, const char* data, int size, libqt_list /* of QGeoSatelliteInfo* */ infos, int32_t* system) {
     return QNmeaSatelliteInfoSource_ParseSatelliteInfoFromNmea((QNmeaSatelliteInfoSource*)self, data, size, infos, system);
 }
 
@@ -185,11 +185,11 @@ void q_nmeasatelliteinfosource_on_parse_satellite_info_from_nmea(void* self, int
     QNmeaSatelliteInfoSource_OnParseSatelliteInfoFromNmea((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-int32_t q_nmeasatelliteinfosource_qbase_parse_satellite_info_from_nmea(void* self, const char* data, int size, libqt_list infos, int32_t* system) {
+int32_t q_nmeasatelliteinfosource_qbase_parse_satellite_info_from_nmea(void* self, const char* data, int size, libqt_list /* of QGeoSatelliteInfo* */ infos, int32_t* system) {
     return QNmeaSatelliteInfoSource_QBaseParseSatelliteInfoFromNmea((QNmeaSatelliteInfoSource*)self, data, size, infos, system);
 }
 
-int32_t q_nmeasatelliteinfosource_parse_satellite_info_from_nmea2(void* self, const char* data, libqt_list infos, int32_t* system) {
+int32_t q_nmeasatelliteinfosource_parse_satellite_info_from_nmea2(void* self, const char* data, libqt_list /* of QGeoSatelliteInfo* */ infos, int32_t* system) {
     return QNmeaSatelliteInfoSource_ParseSatelliteInfoFromNmea2((QNmeaSatelliteInfoSource*)self, qstring(data), infos, system);
 }
 
@@ -197,7 +197,7 @@ void q_nmeasatelliteinfosource_on_parse_satellite_info_from_nmea2(void* self, in
     QNmeaSatelliteInfoSource_OnParseSatelliteInfoFromNmea2((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-int32_t q_nmeasatelliteinfosource_qbase_parse_satellite_info_from_nmea2(void* self, const char* data, libqt_list infos, int32_t* system) {
+int32_t q_nmeasatelliteinfosource_qbase_parse_satellite_info_from_nmea2(void* self, const char* data, libqt_list /* of QGeoSatelliteInfo* */ infos, int32_t* system) {
     return QNmeaSatelliteInfoSource_QBaseParseSatelliteInfoFromNmea2((QNmeaSatelliteInfoSource*)self, qstring(data), infos, system);
 }
 
@@ -298,7 +298,7 @@ const char** q_nmeasatelliteinfosource_available_sources() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_nmeasatelliteinfosource_available_sources");
+        fprintf(stderr, "Failed to allocate memory for string list in q_nmeasatelliteinfosource_available_sources\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -323,7 +323,7 @@ int32_t q_nmeasatelliteinfosource_update_interval(void* self) {
     return QGeoSatelliteInfoSource_UpdateInterval((QGeoSatelliteInfoSource*)self);
 }
 
-void q_nmeasatelliteinfosource_satellites_in_view_updated(void* self, libqt_list satellites) {
+void q_nmeasatelliteinfosource_satellites_in_view_updated(void* self, libqt_list /* of QGeoSatelliteInfo* */ satellites) {
     QGeoSatelliteInfoSource_SatellitesInViewUpdated((QGeoSatelliteInfoSource*)self, satellites);
 }
 
@@ -331,7 +331,7 @@ void q_nmeasatelliteinfosource_on_satellites_in_view_updated(void* self, void (*
     QGeoSatelliteInfoSource_Connect_SatellitesInViewUpdated((QGeoSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-void q_nmeasatelliteinfosource_satellites_in_use_updated(void* self, libqt_list satellites) {
+void q_nmeasatelliteinfosource_satellites_in_use_updated(void* self, libqt_list /* of QGeoSatelliteInfo* */ satellites) {
     QGeoSatelliteInfoSource_SatellitesInUseUpdated((QGeoSatelliteInfoSource*)self, satellites);
 }
 
@@ -452,7 +452,7 @@ const char** q_nmeasatelliteinfosource_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_nmeasatelliteinfosource_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_nmeasatelliteinfosource_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

@@ -67,7 +67,7 @@ void k_parts__partbase_reload_x_m_l(void* self) {
     KXMLGUIClient_ReloadXML((KXMLGUIClient*)self);
 }
 
-void k_parts__partbase_plug_action_list(void* self, const char* name, libqt_list actionList) {
+void k_parts__partbase_plug_action_list(void* self, const char* name, libqt_list /* of QAction* */ actionList) {
     KXMLGUIClient_PlugActionList((KXMLGUIClient*)self, qstring(name), actionList);
 }
 
@@ -79,7 +79,7 @@ const char* k_parts__partbase_find_most_recent_x_m_l_file(const char* files[stat
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_parts__partbase_find_most_recent_x_m_l_file");
+        fprintf(stderr, "Failed to allocate memory for string list in k_parts__partbase_find_most_recent_x_m_l_file\n");
         abort();
     }
     for (size_t i = 0; i < files_len; ++i) {

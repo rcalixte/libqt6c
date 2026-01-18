@@ -100,45 +100,45 @@ char* q_messageauthenticationcode_hash(const char* message, const char* key, int
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param buffer libqt_list /* of char */
+/// @param buffer libqt_list of char
 /// @param message const char*
 /// @param key const char*
 /// @param method enum QCryptographicHash__Algorithm
 ///
-const char* q_messageauthenticationcode_hash_into(libqt_list buffer, const char* message, const char* key, int32_t method);
+const char* q_messageauthenticationcode_hash_into(libqt_list /* of char */ buffer, const char* message, const char* key, int32_t method);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessageauthenticationcode.html#hashInto)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param buffer libqt_list /* of unsigned char */
+/// @param buffer libqt_list of unsigned char
 /// @param message const char*
 /// @param key const char*
 /// @param method enum QCryptographicHash__Algorithm
 ///
-const char* q_messageauthenticationcode_hash_into2(libqt_list buffer, const char* message, const char* key, int32_t method);
+const char* q_messageauthenticationcode_hash_into2(libqt_list /* of unsigned char */ buffer, const char* message, const char* key, int32_t method);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessageauthenticationcode.html#hashInto)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param buffer libqt_list /* of char */
-/// @param messageParts libqt_list /* of const char* */
+/// @param buffer libqt_list of char
+/// @param messageParts libqt_list of const char*
 /// @param key const char*
 /// @param method enum QCryptographicHash__Algorithm
 ///
-const char* q_messageauthenticationcode_hash_into4(libqt_list buffer, libqt_list messageParts, const char* key, int32_t method);
+const char* q_messageauthenticationcode_hash_into4(libqt_list /* of char */ buffer, libqt_list /* of const char* */ messageParts, const char* key, int32_t method);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessageauthenticationcode.html#hashInto)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param buffer libqt_list /* of unsigned char */
-/// @param messageParts libqt_list /* of const char* */
+/// @param buffer libqt_list of unsigned char
+/// @param messageParts libqt_list of const char*
 /// @param key const char*
 /// @param method enum QCryptographicHash__Algorithm
 ///
-const char* q_messageauthenticationcode_hash_into5(libqt_list buffer, libqt_list messageParts, const char* key, int32_t method);
+const char* q_messageauthenticationcode_hash_into5(libqt_list /* of unsigned char */ buffer, libqt_list /* of const char* */ messageParts, const char* key, int32_t method);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessageauthenticationcode.html#dtor.QMessageAuthenticationCode)
 ///

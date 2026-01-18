@@ -84,13 +84,17 @@ KCountrySubdivision* k_countrysubdivision_parent(void* self);
 ///
 /// @param self KCountrySubdivision*
 ///
-libqt_list /* of const char* */ k_countrysubdivision_time_zone_ids(void* self);
+/// @return libqt_list of const char*
+///
+libqt_list k_countrysubdivision_time_zone_ids(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountrysubdivision.html#subdivisions)
 ///
 /// @param self KCountrySubdivision*
 ///
-libqt_list /* of KCountrySubdivision* */ k_countrysubdivision_subdivisions(void* self);
+/// @return libqt_list of KCountrySubdivision*
+///
+libqt_list k_countrysubdivision_subdivisions(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountrysubdivision.html#fromCode)
 ///

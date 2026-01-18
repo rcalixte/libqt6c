@@ -279,21 +279,24 @@ QTextLength* q_textformat_length_property(void* self, int propertyId);
 /// @param self QTextFormat*
 /// @param propertyId int
 ///
-libqt_list /* of QTextLength* */ q_textformat_length_vector_property(void* self, int propertyId);
+/// @return libqt_list of QTextLength*
+///
+libqt_list q_textformat_length_vector_property(void* self, int propertyId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#setProperty)
 ///
 /// @param self QTextFormat*
 /// @param propertyId int
-/// @param lengths libqt_list /* of QTextLength* */
+/// @param lengths libqt_list of QTextLength*
 ///
-void q_textformat_set_property2(void* self, int propertyId, libqt_list lengths);
+void q_textformat_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#properties)
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -303,7 +306,9 @@ void q_textformat_set_property2(void* self, int propertyId, libqt_list lengths);
 ///
 /// @param self QTextFormat*
 ///
-libqt_map /* of int to QVariant* */ q_textformat_properties(void* self);
+/// @return libqt_map of int to QVariant*
+///
+libqt_map q_textformat_properties(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#propertyCount)
 ///
@@ -1154,7 +1159,9 @@ QTextLength* q_textcharformat_length_property(void* self, int propertyId);
 /// @param self QTextCharFormat*
 /// @param propertyId int
 ///
-libqt_list /* of QTextLength* */ q_textcharformat_length_vector_property(void* self, int propertyId);
+/// @return libqt_list of QTextLength*
+///
+libqt_list q_textcharformat_length_vector_property(void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -1162,9 +1169,9 @@ libqt_list /* of QTextLength* */ q_textcharformat_length_vector_property(void* s
 ///
 /// @param self QTextCharFormat*
 /// @param propertyId int
-/// @param lengths libqt_list /* of QTextLength* */
+/// @param lengths libqt_list of QTextLength*
 ///
-void q_textcharformat_set_property2(void* self, int propertyId, libqt_list lengths);
+void q_textcharformat_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths);
 
 /// Inherited from QTextFormat
 ///
@@ -1172,7 +1179,8 @@ void q_textcharformat_set_property2(void* self, int propertyId, libqt_list lengt
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -1182,7 +1190,9 @@ void q_textcharformat_set_property2(void* self, int propertyId, libqt_list lengt
 ///
 /// @param self QTextCharFormat*
 ///
-libqt_map /* of int to QVariant* */ q_textcharformat_properties(void* self);
+/// @return libqt_map of int to QVariant*
+///
+libqt_map q_textcharformat_properties(void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -1609,15 +1619,17 @@ int32_t q_textblockformat_page_break_policy(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#setTabPositions)
 ///
 /// @param self QTextBlockFormat*
-/// @param tabs libqt_list /* of QTextOption__Tab* */
+/// @param tabs libqt_list of QTextOption__Tab*
 ///
-void q_textblockformat_set_tab_positions(void* self, libqt_list tabs);
+void q_textblockformat_set_tab_positions(void* self, libqt_list /* of QTextOption__Tab* */ tabs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#tabPositions)
 ///
 /// @param self QTextBlockFormat*
 ///
-libqt_list /* of QTextOption__Tab* */ q_textblockformat_tab_positions(void* self);
+/// @return libqt_list of QTextOption__Tab*
+///
+libqt_list q_textblockformat_tab_positions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#setMarker)
 ///
@@ -1812,7 +1824,9 @@ QTextLength* q_textblockformat_length_property(void* self, int propertyId);
 /// @param self QTextBlockFormat*
 /// @param propertyId int
 ///
-libqt_list /* of QTextLength* */ q_textblockformat_length_vector_property(void* self, int propertyId);
+/// @return libqt_list of QTextLength*
+///
+libqt_list q_textblockformat_length_vector_property(void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -1820,9 +1834,9 @@ libqt_list /* of QTextLength* */ q_textblockformat_length_vector_property(void* 
 ///
 /// @param self QTextBlockFormat*
 /// @param propertyId int
-/// @param lengths libqt_list /* of QTextLength* */
+/// @param lengths libqt_list of QTextLength*
 ///
-void q_textblockformat_set_property2(void* self, int propertyId, libqt_list lengths);
+void q_textblockformat_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths);
 
 /// Inherited from QTextFormat
 ///
@@ -1830,7 +1844,8 @@ void q_textblockformat_set_property2(void* self, int propertyId, libqt_list leng
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -1840,7 +1855,9 @@ void q_textblockformat_set_property2(void* self, int propertyId, libqt_list leng
 ///
 /// @param self QTextBlockFormat*
 ///
-libqt_map /* of int to QVariant* */ q_textblockformat_properties(void* self);
+/// @return libqt_map of int to QVariant*
+///
+libqt_map q_textblockformat_properties(void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -2351,7 +2368,9 @@ QTextLength* q_textlistformat_length_property(void* self, int propertyId);
 /// @param self QTextListFormat*
 /// @param propertyId int
 ///
-libqt_list /* of QTextLength* */ q_textlistformat_length_vector_property(void* self, int propertyId);
+/// @return libqt_list of QTextLength*
+///
+libqt_list q_textlistformat_length_vector_property(void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -2359,9 +2378,9 @@ libqt_list /* of QTextLength* */ q_textlistformat_length_vector_property(void* s
 ///
 /// @param self QTextListFormat*
 /// @param propertyId int
-/// @param lengths libqt_list /* of QTextLength* */
+/// @param lengths libqt_list of QTextLength*
 ///
-void q_textlistformat_set_property2(void* self, int propertyId, libqt_list lengths);
+void q_textlistformat_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths);
 
 /// Inherited from QTextFormat
 ///
@@ -2369,7 +2388,8 @@ void q_textlistformat_set_property2(void* self, int propertyId, libqt_list lengt
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -2379,7 +2399,9 @@ void q_textlistformat_set_property2(void* self, int propertyId, libqt_list lengt
 ///
 /// @param self QTextListFormat*
 ///
-libqt_map /* of int to QVariant* */ q_textlistformat_properties(void* self);
+/// @return libqt_map of int to QVariant*
+///
+libqt_map q_textlistformat_properties(void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -3495,7 +3517,9 @@ QTextLength* q_textimageformat_length_property(void* self, int propertyId);
 /// @param self QTextImageFormat*
 /// @param propertyId int
 ///
-libqt_list /* of QTextLength* */ q_textimageformat_length_vector_property(void* self, int propertyId);
+/// @return libqt_list of QTextLength*
+///
+libqt_list q_textimageformat_length_vector_property(void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -3503,9 +3527,9 @@ libqt_list /* of QTextLength* */ q_textimageformat_length_vector_property(void* 
 ///
 /// @param self QTextImageFormat*
 /// @param propertyId int
-/// @param lengths libqt_list /* of QTextLength* */
+/// @param lengths libqt_list of QTextLength*
 ///
-void q_textimageformat_set_property2(void* self, int propertyId, libqt_list lengths);
+void q_textimageformat_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths);
 
 /// Inherited from QTextFormat
 ///
@@ -3513,7 +3537,8 @@ void q_textimageformat_set_property2(void* self, int propertyId, libqt_list leng
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -3523,7 +3548,9 @@ void q_textimageformat_set_property2(void* self, int propertyId, libqt_list leng
 ///
 /// @param self QTextImageFormat*
 ///
-libqt_map /* of int to QVariant* */ q_textimageformat_properties(void* self);
+/// @return libqt_map of int to QVariant*
+///
+libqt_map q_textimageformat_properties(void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -4152,7 +4179,9 @@ QTextLength* q_textframeformat_length_property(void* self, int propertyId);
 /// @param self QTextFrameFormat*
 /// @param propertyId int
 ///
-libqt_list /* of QTextLength* */ q_textframeformat_length_vector_property(void* self, int propertyId);
+/// @return libqt_list of QTextLength*
+///
+libqt_list q_textframeformat_length_vector_property(void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -4160,9 +4189,9 @@ libqt_list /* of QTextLength* */ q_textframeformat_length_vector_property(void* 
 ///
 /// @param self QTextFrameFormat*
 /// @param propertyId int
-/// @param lengths libqt_list /* of QTextLength* */
+/// @param lengths libqt_list of QTextLength*
 ///
-void q_textframeformat_set_property2(void* self, int propertyId, libqt_list lengths);
+void q_textframeformat_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths);
 
 /// Inherited from QTextFormat
 ///
@@ -4170,7 +4199,8 @@ void q_textframeformat_set_property2(void* self, int propertyId, libqt_list leng
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -4180,7 +4210,9 @@ void q_textframeformat_set_property2(void* self, int propertyId, libqt_list leng
 ///
 /// @param self QTextFrameFormat*
 ///
-libqt_map /* of int to QVariant* */ q_textframeformat_properties(void* self);
+/// @return libqt_map of int to QVariant*
+///
+libqt_map q_textframeformat_properties(void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -4458,15 +4490,17 @@ void q_texttableformat_set_columns(void* self, int columns);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttableformat.html#setColumnWidthConstraints)
 ///
 /// @param self QTextTableFormat*
-/// @param constraints libqt_list /* of QTextLength* */
+/// @param constraints libqt_list of QTextLength*
 ///
-void q_texttableformat_set_column_width_constraints(void* self, libqt_list constraints);
+void q_texttableformat_set_column_width_constraints(void* self, libqt_list /* of QTextLength* */ constraints);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttableformat.html#columnWidthConstraints)
 ///
 /// @param self QTextTableFormat*
 ///
-libqt_list /* of QTextLength* */ q_texttableformat_column_width_constraints(void* self);
+/// @return libqt_list of QTextLength*
+///
+libqt_list q_texttableformat_column_width_constraints(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttableformat.html#clearColumnWidthConstraints)
 ///
@@ -4964,7 +4998,9 @@ QTextLength* q_texttableformat_length_property(void* self, int propertyId);
 /// @param self QTextTableFormat*
 /// @param propertyId int
 ///
-libqt_list /* of QTextLength* */ q_texttableformat_length_vector_property(void* self, int propertyId);
+/// @return libqt_list of QTextLength*
+///
+libqt_list q_texttableformat_length_vector_property(void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -4972,9 +5008,9 @@ libqt_list /* of QTextLength* */ q_texttableformat_length_vector_property(void* 
 ///
 /// @param self QTextTableFormat*
 /// @param propertyId int
-/// @param lengths libqt_list /* of QTextLength* */
+/// @param lengths libqt_list of QTextLength*
 ///
-void q_texttableformat_set_property2(void* self, int propertyId, libqt_list lengths);
+void q_texttableformat_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths);
 
 /// Inherited from QTextFormat
 ///
@@ -4982,7 +5018,8 @@ void q_texttableformat_set_property2(void* self, int propertyId, libqt_list leng
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -4992,7 +5029,9 @@ void q_texttableformat_set_property2(void* self, int propertyId, libqt_list leng
 ///
 /// @param self QTextTableFormat*
 ///
-libqt_map /* of int to QVariant* */ q_texttableformat_properties(void* self);
+/// @return libqt_map of int to QVariant*
+///
+libqt_map q_texttableformat_properties(void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -6279,7 +6318,9 @@ QTextLength* q_texttablecellformat_length_property(void* self, int propertyId);
 /// @param self QTextTableCellFormat*
 /// @param propertyId int
 ///
-libqt_list /* of QTextLength* */ q_texttablecellformat_length_vector_property(void* self, int propertyId);
+/// @return libqt_list of QTextLength*
+///
+libqt_list q_texttablecellformat_length_vector_property(void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -6287,9 +6328,9 @@ libqt_list /* of QTextLength* */ q_texttablecellformat_length_vector_property(vo
 ///
 /// @param self QTextTableCellFormat*
 /// @param propertyId int
-/// @param lengths libqt_list /* of QTextLength* */
+/// @param lengths libqt_list of QTextLength*
 ///
-void q_texttablecellformat_set_property2(void* self, int propertyId, libqt_list lengths);
+void q_texttablecellformat_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths);
 
 /// Inherited from QTextFormat
 ///
@@ -6297,7 +6338,8 @@ void q_texttablecellformat_set_property2(void* self, int propertyId, libqt_list 
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -6307,7 +6349,9 @@ void q_texttablecellformat_set_property2(void* self, int propertyId, libqt_list 
 ///
 /// @param self QTextTableCellFormat*
 ///
-libqt_map /* of int to QVariant* */ q_texttablecellformat_properties(void* self);
+/// @return libqt_map of int to QVariant*
+///
+libqt_map q_texttablecellformat_properties(void* self);
 
 /// Inherited from QTextFormat
 ///

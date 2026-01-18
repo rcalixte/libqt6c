@@ -435,7 +435,9 @@ void q_scilexermarkdown_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QsciLexerMarkdown*
 ///
-libqt_list /* of QObject* */ q_scilexermarkdown_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_scilexermarkdown_children(void* self);
 
 /// Inherited from QObject
 ///

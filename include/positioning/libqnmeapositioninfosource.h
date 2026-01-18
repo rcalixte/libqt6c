@@ -160,16 +160,16 @@ QGeoPositionInfo* q_nmeapositioninfosource_qbase_last_known_position(void* self,
 ///
 /// @return flag of enum QGeoPositionInfoSource__PositioningMethod
 ///
-int64_t q_nmeapositioninfosource_supported_positioning_methods(void* self);
+int32_t q_nmeapositioninfosource_supported_positioning_methods(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeapositioninfosource.html#supportedPositioningMethods)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QNmeaPositionInfoSource*
-/// @param callback int64_t func()
+/// @param callback int32_t func()
 ///
-void q_nmeapositioninfosource_on_supported_positioning_methods(void* self, int64_t (*callback)());
+void q_nmeapositioninfosource_on_supported_positioning_methods(void* self, int32_t (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeapositioninfosource.html#supportedPositioningMethods)
 ///
@@ -179,7 +179,7 @@ void q_nmeapositioninfosource_on_supported_positioning_methods(void* self, int64
 ///
 /// @return flag of enum QGeoPositionInfoSource__PositioningMethod
 ///
-int64_t q_nmeapositioninfosource_qbase_supported_positioning_methods(void* self);
+int32_t q_nmeapositioninfosource_qbase_supported_positioning_methods(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeapositioninfosource.html#minimumUpdateInterval)
 ///
@@ -422,7 +422,7 @@ int32_t q_nmeapositioninfosource_update_interval(void* self);
 ///
 /// @return flag of enum QGeoPositionInfoSource__PositioningMethod
 ///
-int64_t q_nmeapositioninfosource_preferred_positioning_methods(void* self);
+int32_t q_nmeapositioninfosource_preferred_positioning_methods(void* self);
 
 /// Inherited from QGeoPositionInfoSource
 ///
@@ -446,10 +446,10 @@ QGeoPositionInfoSource* q_nmeapositioninfosource_create_default_source(void* par
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#createDefaultSource)
 ///
-/// @param parameters libqt_map /* of const char* to QVariant* */
+/// @param parameters libqt_map of const char* to QVariant*
 /// @param parent QObject*
 ///
-QGeoPositionInfoSource* q_nmeapositioninfosource_create_default_source2(libqt_map /* of const char* to QVariant* */ parameters, void* parent);
+QGeoPositionInfoSource* q_nmeapositioninfosource_create_default_source2(libqt_map parameters, void* parent);
 
 /// Inherited from QGeoPositionInfoSource
 ///
@@ -465,10 +465,10 @@ QGeoPositionInfoSource* q_nmeapositioninfosource_create_source(const char* sourc
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#createSource)
 ///
 /// @param sourceName const char*
-/// @param parameters libqt_map /* of const char* to QVariant* */
+/// @param parameters libqt_map of const char* to QVariant*
 /// @param parent QObject*
 ///
-QGeoPositionInfoSource* q_nmeapositioninfosource_create_source2(const char* sourceName, libqt_map /* of const char* to QVariant* */ parameters, void* parent);
+QGeoPositionInfoSource* q_nmeapositioninfosource_create_source2(const char* sourceName, libqt_map parameters, void* parent);
 
 /// Inherited from QGeoPositionInfoSource
 ///
@@ -641,7 +641,9 @@ void q_nmeapositioninfosource_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QNmeaPositionInfoSource*
 ///
-libqt_list /* of QObject* */ q_nmeapositioninfosource_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_nmeapositioninfosource_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -885,7 +887,7 @@ void q_nmeapositioninfosource_on_destroyed1(void* self, void (*callback)(void*, 
 /// @param self QNmeaPositionInfoSource*
 /// @param methods flag of enum QGeoPositionInfoSource__PositioningMethod
 ///
-void q_nmeapositioninfosource_set_preferred_positioning_methods(void* self, int64_t methods);
+void q_nmeapositioninfosource_set_preferred_positioning_methods(void* self, int32_t methods);
 
 /// Inherited from QGeoPositionInfoSource
 ///
@@ -896,7 +898,7 @@ void q_nmeapositioninfosource_set_preferred_positioning_methods(void* self, int6
 /// @param self QNmeaPositionInfoSource*
 /// @param methods flag of enum QGeoPositionInfoSource__PositioningMethod
 ///
-void q_nmeapositioninfosource_qbase_set_preferred_positioning_methods(void* self, int64_t methods);
+void q_nmeapositioninfosource_qbase_set_preferred_positioning_methods(void* self, int32_t methods);
 
 /// Inherited from QGeoPositionInfoSource
 ///
@@ -907,7 +909,7 @@ void q_nmeapositioninfosource_qbase_set_preferred_positioning_methods(void* self
 /// @param self QNmeaPositionInfoSource*
 /// @param callback void func(QNmeaPositionInfoSource* self, flag of enum QGeoPositionInfoSource__PositioningMethod methods)
 ///
-void q_nmeapositioninfosource_on_set_preferred_positioning_methods(void* self, void (*callback)(void*, int64_t));
+void q_nmeapositioninfosource_on_set_preferred_positioning_methods(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QGeoPositionInfoSource
 ///

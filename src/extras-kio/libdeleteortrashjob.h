@@ -15,12 +15,12 @@
 
 /// k_io__deleteortrashjob_new constructs a new KIO::DeleteOrTrashJob object.
 ///
-/// @param urls libqt_list /* of QUrl* */
+/// @param urls libqt_list of QUrl*
 /// @param deletionType enum KIO__AskUserActionInterface__DeletionType
 /// @param confirm enum KIO__AskUserActionInterface__ConfirmationType
 /// @param parent QObject*
 ///
-KIO__DeleteOrTrashJob* k_io__deleteortrashjob_new(libqt_list urls, int32_t deletionType, int32_t confirm, void* parent);
+KIO__DeleteOrTrashJob* k_io__deleteortrashjob_new(libqt_list /* of QUrl* */ urls, int32_t deletionType, int32_t confirm, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -502,7 +502,9 @@ void k_io__deleteortrashjob_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KIO__DeleteOrTrashJob*
 ///
-libqt_list /* of QObject* */ k_io__deleteortrashjob_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_io__deleteortrashjob_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1238,7 +1240,9 @@ void k_io__deleteortrashjob_on_has_subjobs(void* self, bool (*callback)());
 ///
 /// @param self KIO__DeleteOrTrashJob*
 ///
-libqt_list /* of KJob* */ k_io__deleteortrashjob_subjobs(void* self);
+/// @return libqt_list of KJob*
+///
+libqt_list k_io__deleteortrashjob_subjobs(void* self);
 
 /// Inherited from KCompositeJob
 ///
@@ -1248,7 +1252,9 @@ libqt_list /* of KJob* */ k_io__deleteortrashjob_subjobs(void* self);
 ///
 /// @param self KIO__DeleteOrTrashJob*
 ///
-libqt_list /* of KJob* */ k_io__deleteortrashjob_qbase_subjobs(void* self);
+/// @return libqt_list of KJob*
+///
+libqt_list k_io__deleteortrashjob_qbase_subjobs(void* self);
 
 /// Inherited from KCompositeJob
 ///

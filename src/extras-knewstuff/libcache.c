@@ -43,7 +43,7 @@ void k_nscore__cache_write_registry(void* self) {
     KNSCore__Cache_WriteRegistry((KNSCore__Cache*)self);
 }
 
-void k_nscore__cache_insert_request(void* self, void* param1, libqt_list entries) {
+void k_nscore__cache_insert_request(void* self, void* param1, libqt_list /* of KNSCore__Entry* */ entries) {
     KNSCore__Cache_InsertRequest((KNSCore__Cache*)self, (KNSCore__Provider__SearchRequest*)param1, entries);
 }
 
@@ -195,7 +195,7 @@ const char** k_nscore__cache_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__cache_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__cache_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
