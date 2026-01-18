@@ -49,7 +49,9 @@ void k_attica__platformdependentv2_operator_assign(void* self, void* param1);
 ///
 /// @param self Attica__PlatformDependentV2*
 ///
-libqt_list /* of QUrl* */ k_attica__platformdependentv2_get_default_provider_files(void* self);
+/// @return libqt_list of QUrl*
+///
+libqt_list k_attica__platformdependentv2_get_default_provider_files(void* self);
 
 /// Inherited from Attica::PlatformDependent
 ///

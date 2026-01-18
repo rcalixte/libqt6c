@@ -15,18 +15,18 @@
 
 /// q_georoutingmanagerengine_new constructs a new QGeoRoutingManagerEngine object.
 ///
-/// @param parameters libqt_map /* of const char* to QVariant* */
+/// @param parameters libqt_map of const char* to QVariant*
 ///
-QGeoRoutingManagerEngine* q_georoutingmanagerengine_new(libqt_map /* of const char* to QVariant* */ parameters);
+QGeoRoutingManagerEngine* q_georoutingmanagerengine_new(libqt_map parameters);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutingmanagerengine.html)
 
 /// q_georoutingmanagerengine_new2 constructs a new QGeoRoutingManagerEngine object.
 ///
-/// @param parameters libqt_map /* of const char* to QVariant* */
+/// @param parameters libqt_map of const char* to QVariant*
 /// @param parent QObject*
 ///
-QGeoRoutingManagerEngine* q_georoutingmanagerengine_new2(libqt_map /* of const char* to QVariant* */ parameters, void* parent);
+QGeoRoutingManagerEngine* q_georoutingmanagerengine_new2(libqt_map parameters, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -536,7 +536,9 @@ void q_georoutingmanagerengine_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QGeoRoutingManagerEngine*
 ///
-libqt_list /* of QObject* */ q_georoutingmanagerengine_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_georoutingmanagerengine_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -228,7 +228,9 @@ void k_xmlguiclient_remove_child_client(void* self, void* child);
 ///
 /// @param self KXMLGUIClient*
 ///
-libqt_list /* of KXMLGUIClient* */ k_xmlguiclient_child_clients(void* self);
+/// @return libqt_list of KXMLGUIClient*
+///
+libqt_list k_xmlguiclient_child_clients(void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setClientBuilder)
 ///
@@ -253,9 +255,9 @@ void k_xmlguiclient_reload_x_m_l(void* self);
 ///
 /// @param self KXMLGUIClient*
 /// @param name const char*
-/// @param actionList libqt_list /* of QAction* */
+/// @param actionList libqt_list of QAction*
 ///
-void k_xmlguiclient_plug_action_list(void* self, const char* name, libqt_list actionList);
+void k_xmlguiclient_plug_action_list(void* self, const char* name, libqt_list /* of QAction* */ actionList);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#unplugActionList)
 ///

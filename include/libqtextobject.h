@@ -211,7 +211,9 @@ void q_textobject_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QTextObject*
 ///
-libqt_list /* of QObject* */ q_textobject_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_textobject_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -665,7 +667,9 @@ void q_textblockgroup_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QTextBlockGroup*
 ///
-libqt_list /* of QObject* */ q_textblockgroup_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_textblockgroup_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1002,7 +1006,9 @@ int32_t q_textframe_last_position(void* self);
 ///
 /// @param self QTextFrame*
 ///
-libqt_list /* of QTextFrame* */ q_textframe_child_frames(void* self);
+/// @return libqt_list of QTextFrame*
+///
+libqt_list q_textframe_child_frames(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframe.html#parentFrame)
 ///
@@ -1183,7 +1189,9 @@ void q_textframe_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QTextFrame*
 ///
-libqt_list /* of QObject* */ q_textframe_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_textframe_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1971,7 +1979,9 @@ const char* q_textblock_text(void* self);
 ///
 /// @param self QTextBlock*
 ///
-libqt_list /* of QTextLayout__FormatRange* */ q_textblock_text_formats(void* self);
+/// @return libqt_list of QTextLayout__FormatRange*
+///
+libqt_list q_textblock_text_formats(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblock.html#document)
 ///
@@ -2191,14 +2201,18 @@ const char* q_textfragment_text(void* self);
 ///
 /// @param self QTextFragment*
 ///
-libqt_list /* of QGlyphRun* */ q_textfragment_glyph_runs(void* self);
+/// @return libqt_list of QGlyphRun*
+///
+libqt_list q_textfragment_glyph_runs(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextfragment.html#glyphRuns)
 ///
 /// @param self QTextFragment*
 /// @param from int
 ///
-libqt_list /* of QGlyphRun* */ q_textfragment_glyph_runs1(void* self, int from);
+/// @return libqt_list of QGlyphRun*
+///
+libqt_list q_textfragment_glyph_runs1(void* self, int from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextfragment.html#glyphRuns)
 ///
@@ -2206,7 +2220,9 @@ libqt_list /* of QGlyphRun* */ q_textfragment_glyph_runs1(void* self, int from);
 /// @param from int
 /// @param length int
 ///
-libqt_list /* of QGlyphRun* */ q_textfragment_glyph_runs2(void* self, int from, int length);
+/// @return libqt_list of QGlyphRun*
+///
+libqt_list q_textfragment_glyph_runs2(void* self, int from, int length);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextfragment.html#dtor.QTextFragment)
 ///

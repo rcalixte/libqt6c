@@ -203,7 +203,8 @@ const char* k_attica__project_extended_attribute(void* self, const char* key);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     libqt_free(map.values[i]);
@@ -214,7 +215,9 @@ const char* k_attica__project_extended_attribute(void* self, const char* key);
 ///
 /// @param self Attica__Project*
 ///
-libqt_map /* of const char* to const char* */ k_attica__project_extended_attributes(void* self);
+/// @return libqt_map of const char* to const char*
+///
+libqt_map k_attica__project_extended_attributes(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#isValid)
 ///

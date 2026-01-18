@@ -133,7 +133,7 @@ const char* k_twofingertap_tr3(const char* s, const char* c, int n);
 ///
 /// @return enum Qt__GestureType
 ///
-int64_t k_twofingertap_gesture_type(void* self);
+int32_t k_twofingertap_gesture_type(void* self);
 
 /// Inherited from QGesture
 ///
@@ -307,7 +307,9 @@ void k_twofingertap_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KTwoFingerTap*
 ///
-libqt_list /* of QObject* */ k_twofingertap_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_twofingertap_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1007,7 +1009,7 @@ void k_twofingertaprecognizer_set_tap_radius(void* self, int i);
 ///
 /// @return enum Qt__GestureType
 ///
-int64_t k_twofingertaprecognizer_register_recognizer(void* recognizer);
+int32_t k_twofingertaprecognizer_register_recognizer(void* recognizer);
 
 /// Inherited from QGestureRecognizer
 ///
@@ -1015,7 +1017,7 @@ int64_t k_twofingertaprecognizer_register_recognizer(void* recognizer);
 ///
 /// @param type enum Qt__GestureType
 ///
-void k_twofingertaprecognizer_unregister_recognizer(int64_t type);
+void k_twofingertaprecognizer_unregister_recognizer(int32_t type);
 
 /// Inherited from QGestureRecognizer
 ///

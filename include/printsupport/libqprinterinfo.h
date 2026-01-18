@@ -102,7 +102,9 @@ int32_t q_printerinfo_state(void* self);
 ///
 /// @param self QPrinterInfo*
 ///
-libqt_list /* of QPageSize* */ q_printerinfo_supported_page_sizes(void* self);
+/// @return libqt_list of QPageSize*
+///
+libqt_list q_printerinfo_supported_page_sizes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#defaultPageSize)
 ///
@@ -132,7 +134,9 @@ QPageSize* q_printerinfo_maximum_physical_page_size(void* self);
 ///
 /// @param self QPrinterInfo*
 ///
-libqt_list /* of int */ q_printerinfo_supported_resolutions(void* self);
+/// @return libqt_list of int
+///
+libqt_list q_printerinfo_supported_resolutions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#defaultDuplexMode)
 ///
@@ -148,7 +152,7 @@ int32_t q_printerinfo_default_duplex_mode(void* self);
 ///
 /// @return libqt_list of enum QPrinter__DuplexMode
 ///
-libqt_list /* of enum QPrinter__DuplexMode */ q_printerinfo_supported_duplex_modes(void* self);
+libqt_list q_printerinfo_supported_duplex_modes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#defaultColorMode)
 ///
@@ -164,7 +168,7 @@ int32_t q_printerinfo_default_color_mode(void* self);
 ///
 /// @return libqt_list of enum QPrinter__ColorMode
 ///
-libqt_list /* of enum QPrinter__ColorMode */ q_printerinfo_supported_color_modes(void* self);
+libqt_list q_printerinfo_supported_color_modes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#availablePrinterNames)
 ///
@@ -174,7 +178,9 @@ const char** q_printerinfo_available_printer_names();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#availablePrinters)
 ///
-libqt_list /* of QPrinterInfo* */ q_printerinfo_available_printers();
+/// @return libqt_list of QPrinterInfo*
+///
+libqt_list q_printerinfo_available_printers();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#defaultPrinterName)
 ///

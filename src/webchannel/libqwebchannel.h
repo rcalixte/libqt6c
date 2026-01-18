@@ -70,15 +70,16 @@ const char* q_webchannel_tr(const char* s);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebchannel.html#registerObjects)
 ///
 /// @param self QWebChannel*
-/// @param objects libqt_map /* of const char* to QObject* */
+/// @param objects libqt_map of const char* to QObject*
 ///
-void q_webchannel_register_objects(void* self, libqt_map /* of const char* to QObject* */ objects);
+void q_webchannel_register_objects(void* self, libqt_map objects);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebchannel.html#registeredObjects)
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to QObject*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     free(((QObject*)map.values)[i]);
@@ -89,7 +90,9 @@ void q_webchannel_register_objects(void* self, libqt_map /* of const char* to QO
 ///
 /// @param self QWebChannel*
 ///
-libqt_map /* of const char* to QObject* */ q_webchannel_registered_objects(void* self);
+/// @return libqt_map of const char* to QObject*
+///
+libqt_map q_webchannel_registered_objects(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebchannel.html#registerObject)
 ///
@@ -289,7 +292,9 @@ void q_webchannel_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QWebChannel*
 ///
-libqt_list /* of QObject* */ q_webchannel_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_webchannel_children(void* self);
 
 /// Inherited from QObject
 ///

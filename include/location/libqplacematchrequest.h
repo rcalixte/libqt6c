@@ -43,27 +43,30 @@ void q_placematchrequest_swap(void* self, void* other);
 ///
 /// @param self QPlaceMatchRequest*
 ///
-libqt_list /* of QPlace* */ q_placematchrequest_places(void* self);
+/// @return libqt_list of QPlace*
+///
+libqt_list q_placematchrequest_places(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacematchrequest.html#setPlaces)
 ///
 /// @param self QPlaceMatchRequest*
-/// @param places libqt_list /* of QPlace* */
+/// @param places libqt_list of QPlace*
 ///
-void q_placematchrequest_set_places(void* self, libqt_list places);
+void q_placematchrequest_set_places(void* self, libqt_list /* of QPlace* */ places);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacematchrequest.html#setResults)
 ///
 /// @param self QPlaceMatchRequest*
-/// @param results libqt_list /* of QPlaceSearchResult* */
+/// @param results libqt_list of QPlaceSearchResult*
 ///
-void q_placematchrequest_set_results(void* self, libqt_list results);
+void q_placematchrequest_set_results(void* self, libqt_list /* of QPlaceSearchResult* */ results);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacematchrequest.html#parameters)
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     free(((QVariant*)map.values)[i]);
@@ -74,14 +77,16 @@ void q_placematchrequest_set_results(void* self, libqt_list results);
 ///
 /// @param self QPlaceMatchRequest*
 ///
-libqt_map /* of const char* to QVariant* */ q_placematchrequest_parameters(void* self);
+/// @return libqt_map of const char* to QVariant*
+///
+libqt_map q_placematchrequest_parameters(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacematchrequest.html#setParameters)
 ///
 /// @param self QPlaceMatchRequest*
-/// @param parameters libqt_map /* of const char* to QVariant* */
+/// @param parameters libqt_map of const char* to QVariant*
 ///
-void q_placematchrequest_set_parameters(void* self, libqt_map /* of const char* to QVariant* */ parameters);
+void q_placematchrequest_set_parameters(void* self, libqt_map parameters);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacematchrequest.html#clear)
 ///

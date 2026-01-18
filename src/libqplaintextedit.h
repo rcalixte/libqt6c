@@ -422,15 +422,17 @@ void q_plaintextedit_set_cursor_width(void* self, int width);
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#setExtraSelections)
 ///
 /// @param self QPlainTextEdit*
-/// @param selections libqt_list /* of QTextEdit__ExtraSelection* */
+/// @param selections libqt_list of QTextEdit__ExtraSelection*
 ///
-void q_plaintextedit_set_extra_selections(void* self, libqt_list selections);
+void q_plaintextedit_set_extra_selections(void* self, libqt_list /* of QTextEdit__ExtraSelection* */ selections);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#extraSelections)
 ///
 /// @param self QPlainTextEdit*
 ///
-libqt_list /* of QTextEdit__ExtraSelection* */ q_plaintextedit_extra_selections(void* self);
+/// @return libqt_list of QTextEdit__ExtraSelection*
+///
+libqt_list q_plaintextedit_extra_selections(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#moveCursor)
 ///
@@ -463,7 +465,7 @@ int32_t q_plaintextedit_block_count(void* self);
 /// @param self QPlainTextEdit*
 /// @param property enum Qt__InputMethodQuery
 ///
-QVariant* q_plaintextedit_input_method_query(void* self, int64_t property);
+QVariant* q_plaintextedit_input_method_query(void* self, int32_t property);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#inputMethodQuery)
 ///
@@ -472,7 +474,7 @@ QVariant* q_plaintextedit_input_method_query(void* self, int64_t property);
 /// @param self QPlainTextEdit*
 /// @param callback QVariant* func(QPlainTextEdit* self, enum Qt__InputMethodQuery property)
 ///
-void q_plaintextedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void q_plaintextedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#inputMethodQuery)
 ///
@@ -481,7 +483,7 @@ void q_plaintextedit_on_input_method_query(void* self, QVariant* (*callback)(voi
 /// @param self QPlainTextEdit*
 /// @param property enum Qt__InputMethodQuery
 ///
-QVariant* q_plaintextedit_qbase_input_method_query(void* self, int64_t property);
+QVariant* q_plaintextedit_qbase_input_method_query(void* self, int32_t property);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#inputMethodQuery)
 ///
@@ -489,7 +491,7 @@ QVariant* q_plaintextedit_qbase_input_method_query(void* self, int64_t property)
 /// @param query enum Qt__InputMethodQuery
 /// @param argument QVariant*
 ///
-QVariant* q_plaintextedit_input_method_query2(void* self, int64_t query, void* argument);
+QVariant* q_plaintextedit_input_method_query2(void* self, int32_t query, void* argument);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#setPlainText)
 ///
@@ -1685,7 +1687,9 @@ void q_plaintextedit_add_scroll_bar_widget(void* self, void* widget, int32_t ali
 /// @param self QPlainTextEdit*
 /// @param alignment flag of enum Qt__AlignmentFlag
 ///
-libqt_list /* of QWidget* */ q_plaintextedit_scroll_bar_widgets(void* self, int32_t alignment);
+/// @return libqt_list of QWidget*
+///
+libqt_list q_plaintextedit_scroll_bar_widgets(void* self, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2673,7 +2677,7 @@ void q_plaintextedit_set_graphics_effect(void* self, void* effect);
 /// @param self QPlainTextEdit*
 /// @param type enum Qt__GestureType
 ///
-void q_plaintextedit_grab_gesture(void* self, int64_t type);
+void q_plaintextedit_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2682,7 +2686,7 @@ void q_plaintextedit_grab_gesture(void* self, int64_t type);
 /// @param self QPlainTextEdit*
 /// @param type enum Qt__GestureType
 ///
-void q_plaintextedit_ungrab_gesture(void* self, int64_t type);
+void q_plaintextedit_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3671,7 +3675,7 @@ void q_plaintextedit_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void q_plaintextedit_set_parent2(void* self, void* parent, int64_t f);
+void q_plaintextedit_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -3749,9 +3753,9 @@ void q_plaintextedit_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self QPlainTextEdit*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_plaintextedit_add_actions(void* self, libqt_list actions);
+void q_plaintextedit_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -3759,9 +3763,9 @@ void q_plaintextedit_add_actions(void* self, libqt_list actions);
 ///
 /// @param self QPlainTextEdit*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_plaintextedit_insert_actions(void* self, void* before, libqt_list actions);
+void q_plaintextedit_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -3788,7 +3792,9 @@ void q_plaintextedit_remove_action(void* self, void* action);
 ///
 /// @param self QPlainTextEdit*
 ///
-libqt_list /* of QAction* */ q_plaintextedit_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list q_plaintextedit_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3845,7 +3851,7 @@ QWidget* q_plaintextedit_parent_widget(void* self);
 /// @param self QPlainTextEdit*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_plaintextedit_set_window_flags(void* self, int64_t type);
+void q_plaintextedit_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3855,7 +3861,7 @@ void q_plaintextedit_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t q_plaintextedit_window_flags(void* self);
+int32_t q_plaintextedit_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3864,7 +3870,7 @@ int64_t q_plaintextedit_window_flags(void* self);
 /// @param self QPlainTextEdit*
 /// @param param1 enum Qt__WindowType
 ///
-void q_plaintextedit_set_window_flag(void* self, int64_t param1);
+void q_plaintextedit_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3873,7 +3879,7 @@ void q_plaintextedit_set_window_flag(void* self, int64_t param1);
 /// @param self QPlainTextEdit*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_plaintextedit_override_window_flags(void* self, int64_t type);
+void q_plaintextedit_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3883,7 +3889,7 @@ void q_plaintextedit_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t q_plaintextedit_window_type(void* self);
+int32_t q_plaintextedit_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4086,7 +4092,7 @@ void q_plaintextedit_on_custom_context_menu_requested(void* self, void (*callbac
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t q_plaintextedit_input_method_hints(void* self);
+int32_t q_plaintextedit_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4095,7 +4101,7 @@ int64_t q_plaintextedit_input_method_hints(void* self);
 /// @param self QPlainTextEdit*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void q_plaintextedit_set_input_method_hints(void* self, int64_t hints);
+void q_plaintextedit_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -4180,7 +4186,7 @@ QPixmap* q_plaintextedit_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void q_plaintextedit_grab_gesture2(void* self, int64_t type, int32_t flags);
+void q_plaintextedit_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -4220,7 +4226,7 @@ void q_plaintextedit_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void q_plaintextedit_set_window_flag2(void* self, int64_t param1, bool on);
+void q_plaintextedit_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -4249,7 +4255,7 @@ QWidget* q_plaintextedit_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* q_plaintextedit_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* q_plaintextedit_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -4361,7 +4367,9 @@ void q_plaintextedit_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QPlainTextEdit*
 ///
-libqt_list /* of QObject* */ q_plaintextedit_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_plaintextedit_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -6622,7 +6630,9 @@ void q_plaintextdocumentlayout_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QPlainTextDocumentLayout*
 ///
-libqt_list /* of QObject* */ q_plaintextdocumentlayout_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_plaintextdocumentlayout_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -649,7 +649,9 @@ void q_undostack_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QUndoStack*
 ///
-libqt_list /* of QObject* */ q_undostack_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_undostack_children(void* self);
 
 /// Inherited from QObject
 ///

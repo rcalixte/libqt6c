@@ -284,7 +284,7 @@ const char** q_url_idn_whitelist() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_url_idn_whitelist");
+        fprintf(stderr, "Failed to allocate memory for string list in q_url_idn_whitelist\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -298,12 +298,12 @@ const char** q_url_idn_whitelist() {
     return _ret;
 }
 
-const char** q_url_to_string_list(libqt_list uris) {
+const char** q_url_to_string_list(libqt_list /* of QUrl* */ uris) {
     libqt_list _arr = QUrl_ToStringList(uris);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_url_to_string_list");
+        fprintf(stderr, "Failed to allocate memory for string list in q_url_to_string_list\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -321,7 +321,7 @@ libqt_list /* of QUrl* */ q_url_from_string_list(const char* uris[static 1]) {
     size_t uris_len = libqt_strv_length(uris);
     libqt_string* uris_qstr = (libqt_string*)malloc(uris_len * sizeof(libqt_string));
     if (uris_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_url_from_string_list");
+        fprintf(stderr, "Failed to allocate memory for string list in q_url_from_string_list\n");
         abort();
     }
     for (size_t i = 0; i < uris_len; ++i) {
@@ -337,7 +337,7 @@ void q_url_set_idn_whitelist(const char* idnWhitelist[static 1]) {
     size_t idnWhitelist_len = libqt_strv_length(idnWhitelist);
     libqt_string* idnWhitelist_qstr = (libqt_string*)malloc(idnWhitelist_len * sizeof(libqt_string));
     if (idnWhitelist_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_url_set_idn_whitelist");
+        fprintf(stderr, "Failed to allocate memory for string list in q_url_set_idn_whitelist\n");
         abort();
     }
     for (size_t i = 0; i < idnWhitelist_len; ++i) {
@@ -495,7 +495,7 @@ libqt_list /* of QUrl* */ q_url_from_string_list2(const char* uris[static 1], in
     size_t uris_len = libqt_strv_length(uris);
     libqt_string* uris_qstr = (libqt_string*)malloc(uris_len * sizeof(libqt_string));
     if (uris_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_url_from_string_list2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_url_from_string_list2\n");
         abort();
     }
     for (size_t i = 0; i < uris_len; ++i) {

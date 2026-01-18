@@ -39,7 +39,7 @@ void q_placesearchrequest_set_category(void* self, void* category) {
     QPlaceSearchRequest_SetCategory((QPlaceSearchRequest*)self, (QPlaceCategory*)category);
 }
 
-void q_placesearchrequest_set_categories(void* self, libqt_list categories) {
+void q_placesearchrequest_set_categories(void* self, libqt_list /* of QPlaceCategory* */ categories) {
     QPlaceSearchRequest_SetCategories((QPlaceSearchRequest*)self, categories);
 }
 

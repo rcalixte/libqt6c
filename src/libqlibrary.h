@@ -329,7 +329,9 @@ void q_library_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QLibrary*
 ///
-libqt_list /* of QObject* */ q_library_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_library_children(void* self);
 
 /// Inherited from QObject
 ///

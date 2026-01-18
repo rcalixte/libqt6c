@@ -43,7 +43,9 @@ const char* q_openglcontextgroup_tr(const char* s);
 ///
 /// @param self QOpenGLContextGroup*
 ///
-libqt_list /* of QOpenGLContext* */ q_openglcontextgroup_shares(void* self);
+/// @return libqt_list of QOpenGLContext*
+///
+libqt_list q_openglcontextgroup_shares(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontextgroup.html#currentContextGroup)
 ///
@@ -197,7 +199,9 @@ void q_openglcontextgroup_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QOpenGLContextGroup*
 ///
-libqt_list /* of QObject* */ q_openglcontextgroup_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_openglcontextgroup_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -623,7 +627,9 @@ QOpenGLExtraFunctions* q_openglcontext_extra_functions(void* self);
 ///
 /// @param self QOpenGLContext*
 ///
-libqt_list /* set of char* */ q_openglcontext_extensions(void* self);
+/// @return libqt_list set of char*
+///
+libqt_list q_openglcontext_extensions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#hasExtension)
 ///
@@ -821,7 +827,9 @@ void q_openglcontext_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QOpenGLContext*
 ///
-libqt_list /* of QObject* */ q_openglcontext_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_openglcontext_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -192,7 +192,8 @@ const char** k_sharedconfig_group_list(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     libqt_free(map.values[i]);
@@ -203,7 +204,9 @@ const char** k_sharedconfig_group_list(void* self);
 ///
 /// @param self KSharedConfig*
 ///
-libqt_map /* of const char* to const char* */ k_sharedconfig_entry_map(void* self);
+/// @return libqt_map of const char* to const char*
+///
+libqt_map k_sharedconfig_entry_map(void* self);
 
 /// Inherited from KConfig
 ///
@@ -237,7 +240,8 @@ KConfig* k_sharedconfig_copy_to2(void* self, const char* file, void* config);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     libqt_free(map.values[i]);
@@ -249,7 +253,9 @@ KConfig* k_sharedconfig_copy_to2(void* self, const char* file, void* config);
 /// @param self KSharedConfig*
 /// @param aGroup const char*
 ///
-libqt_map /* of const char* to const char* */ k_sharedconfig_entry_map1(void* self, const char* aGroup);
+/// @return libqt_map of const char* to const char*
+///
+libqt_map k_sharedconfig_entry_map1(void* self, const char* aGroup);
 
 /// Inherited from KConfigBase
 ///

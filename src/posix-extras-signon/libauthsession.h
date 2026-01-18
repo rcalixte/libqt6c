@@ -331,7 +331,9 @@ void q_signon__authsession_kill_timer2(void* self, int32_t id);
 ///
 /// @param self SignOn__AuthSession*
 ///
-libqt_list /* of QObject* */ q_signon__authsession_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_signon__authsession_children(void* self);
 
 /// Inherited from QObject
 ///

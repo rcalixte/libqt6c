@@ -352,7 +352,9 @@ void q_vpiemodelmapper_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QVPieModelMapper*
 ///
-libqt_list /* of QObject* */ q_vpiemodelmapper_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_vpiemodelmapper_children(void* self);
 
 /// Inherited from QObject
 ///

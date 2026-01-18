@@ -256,7 +256,9 @@ void q_opengltimerquery_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QOpenGLTimerQuery*
 ///
-libqt_list /* of QObject* */ q_opengltimerquery_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_opengltimerquery_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -962,7 +964,9 @@ bool q_opengltimemonitor_is_created(void* self);
 ///
 /// @param self QOpenGLTimeMonitor*
 ///
-libqt_list /* of uint32_t */ q_opengltimemonitor_object_ids(void* self);
+/// @return libqt_list of uint32_t
+///
+libqt_list q_opengltimemonitor_object_ids(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltimemonitor.html#recordSample)
 ///
@@ -980,13 +984,17 @@ bool q_opengltimemonitor_is_result_available(void* self);
 ///
 /// @param self QOpenGLTimeMonitor*
 ///
-libqt_list /* of uint64_t */ q_opengltimemonitor_wait_for_samples(void* self);
+/// @return libqt_list of uint64_t
+///
+libqt_list q_opengltimemonitor_wait_for_samples(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltimemonitor.html#waitForIntervals)
 ///
 /// @param self QOpenGLTimeMonitor*
 ///
-libqt_list /* of uint64_t */ q_opengltimemonitor_wait_for_intervals(void* self);
+/// @return libqt_list of uint64_t
+///
+libqt_list q_opengltimemonitor_wait_for_intervals(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltimemonitor.html#reset)
 ///
@@ -1123,7 +1131,9 @@ void q_opengltimemonitor_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QOpenGLTimeMonitor*
 ///
-libqt_list /* of QObject* */ q_opengltimemonitor_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_opengltimemonitor_children(void* self);
 
 /// Inherited from QObject
 ///

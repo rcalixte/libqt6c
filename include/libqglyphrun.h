@@ -65,27 +65,31 @@ void q_glyphrun_set_raw_data(void* self, uint32_t* glyphIndexArray, void* glyphP
 ///
 /// @param self QGlyphRun*
 ///
-libqt_list /* of uint32_t */ q_glyphrun_glyph_indexes(void* self);
+/// @return libqt_list of uint32_t
+///
+libqt_list q_glyphrun_glyph_indexes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qglyphrun.html#setGlyphIndexes)
 ///
 /// @param self QGlyphRun*
-/// @param glyphIndexes libqt_list /* of uint32_t */
+/// @param glyphIndexes libqt_list of uint32_t
 ///
-void q_glyphrun_set_glyph_indexes(void* self, libqt_list glyphIndexes);
+void q_glyphrun_set_glyph_indexes(void* self, libqt_list /* of uint32_t */ glyphIndexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qglyphrun.html#positions)
 ///
 /// @param self QGlyphRun*
 ///
-libqt_list /* of QPointF* */ q_glyphrun_positions(void* self);
+/// @return libqt_list of QPointF*
+///
+libqt_list q_glyphrun_positions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qglyphrun.html#setPositions)
 ///
 /// @param self QGlyphRun*
-/// @param positions libqt_list /* of QPointF* */
+/// @param positions libqt_list of QPointF*
 ///
-void q_glyphrun_set_positions(void* self, libqt_list positions);
+void q_glyphrun_set_positions(void* self, libqt_list /* of QPointF* */ positions);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qglyphrun.html#clear)
 ///
@@ -198,14 +202,16 @@ QRectF* q_glyphrun_bounding_rect(void* self);
 ///
 /// @param self QGlyphRun*
 ///
-libqt_list /* of int64_t */ q_glyphrun_string_indexes(void* self);
+/// @return libqt_list of int64_t
+///
+libqt_list q_glyphrun_string_indexes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qglyphrun.html#setStringIndexes)
 ///
 /// @param self QGlyphRun*
-/// @param stringIndexes libqt_list /* of int64_t */
+/// @param stringIndexes libqt_list of int64_t
 ///
-void q_glyphrun_set_string_indexes(void* self, libqt_list stringIndexes);
+void q_glyphrun_set_string_indexes(void* self, libqt_list /* of int64_t */ stringIndexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qglyphrun.html#setSourceString)
 ///

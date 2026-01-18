@@ -679,49 +679,65 @@ void q_dnslookup_set_nameserver3(void* self, void* nameserver, unsigned short po
 ///
 /// @param self QDnsLookup*
 ///
-libqt_list /* of QDnsDomainNameRecord* */ q_dnslookup_canonical_name_records(void* self);
+/// @return libqt_list of QDnsDomainNameRecord*
+///
+libqt_list q_dnslookup_canonical_name_records(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#hostAddressRecords)
 ///
 /// @param self QDnsLookup*
 ///
-libqt_list /* of QDnsHostAddressRecord* */ q_dnslookup_host_address_records(void* self);
+/// @return libqt_list of QDnsHostAddressRecord*
+///
+libqt_list q_dnslookup_host_address_records(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#mailExchangeRecords)
 ///
 /// @param self QDnsLookup*
 ///
-libqt_list /* of QDnsMailExchangeRecord* */ q_dnslookup_mail_exchange_records(void* self);
+/// @return libqt_list of QDnsMailExchangeRecord*
+///
+libqt_list q_dnslookup_mail_exchange_records(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#nameServerRecords)
 ///
 /// @param self QDnsLookup*
 ///
-libqt_list /* of QDnsDomainNameRecord* */ q_dnslookup_name_server_records(void* self);
+/// @return libqt_list of QDnsDomainNameRecord*
+///
+libqt_list q_dnslookup_name_server_records(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#pointerRecords)
 ///
 /// @param self QDnsLookup*
 ///
-libqt_list /* of QDnsDomainNameRecord* */ q_dnslookup_pointer_records(void* self);
+/// @return libqt_list of QDnsDomainNameRecord*
+///
+libqt_list q_dnslookup_pointer_records(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#serviceRecords)
 ///
 /// @param self QDnsLookup*
 ///
-libqt_list /* of QDnsServiceRecord* */ q_dnslookup_service_records(void* self);
+/// @return libqt_list of QDnsServiceRecord*
+///
+libqt_list q_dnslookup_service_records(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#textRecords)
 ///
 /// @param self QDnsLookup*
 ///
-libqt_list /* of QDnsTextRecord* */ q_dnslookup_text_records(void* self);
+/// @return libqt_list of QDnsTextRecord*
+///
+libqt_list q_dnslookup_text_records(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#tlsAssociationRecords)
 ///
 /// @param self QDnsLookup*
 ///
-libqt_list /* of QDnsTlsAssociationRecord* */ q_dnslookup_tls_association_records(void* self);
+/// @return libqt_list of QDnsTlsAssociationRecord*
+///
+libqt_list q_dnslookup_tls_association_records(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#setSslConfiguration)
 ///
@@ -981,7 +997,9 @@ void q_dnslookup_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QDnsLookup*
 ///
-libqt_list /* of QObject* */ q_dnslookup_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_dnslookup_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -31,9 +31,9 @@ SignOn__IdentityInfo* q_signon__identityinfo_new2(void* other);
 ///
 /// @param caption const char*
 /// @param userName const char*
-/// @param methods libqt_map /* of const char* to SignOn__MechanismsList */
+/// @param methods libqt_map of const char* to SignOn__MechanismsList
 ///
-SignOn__IdentityInfo* q_signon__identityinfo_new3(const char* caption, const char* userName, libqt_map /* of const char* to SignOn__MechanismsList */ methods);
+SignOn__IdentityInfo* q_signon__identityinfo_new3(const char* caption, const char* userName, libqt_map methods);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1IdentityInfo.html)
 ///
@@ -153,9 +153,9 @@ void q_signon__identityinfo_set_access_control_list(void* self, const char* acce
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1IdentityInfo.html)
 ///
 /// @param self SignOn__IdentityInfo*
-/// @param accessControlList libqt_list /* of SignOn__SecurityContext* */
+/// @param accessControlList libqt_list of SignOn__SecurityContext*
 ///
-void q_signon__identityinfo_set_access_control_list2(void* self, libqt_list accessControlList);
+void q_signon__identityinfo_set_access_control_list2(void* self, libqt_list /* of SignOn__SecurityContext* */ accessControlList);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1IdentityInfo.html)
 ///
@@ -169,7 +169,9 @@ const char** q_signon__identityinfo_access_control_list(void* self);
 ///
 /// @param self SignOn__IdentityInfo*
 ///
-libqt_list /* of SignOn__SecurityContext* */ q_signon__identityinfo_access_control_list_full(void* self);
+/// @return libqt_list of SignOn__SecurityContext*
+///
+libqt_list q_signon__identityinfo_access_control_list_full(void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1IdentityInfo.html)
 ///

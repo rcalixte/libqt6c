@@ -566,7 +566,9 @@ void q_styleditemdelegate_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QStyledItemDelegate*
 ///
-libqt_list /* of QObject* */ q_styleditemdelegate_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_styleditemdelegate_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -883,7 +885,9 @@ void q_styleditemdelegate_on_help_event(void* self, bool (*callback)(void*, void
 ///
 /// @param self QStyledItemDelegate*
 ///
-libqt_list /* of int */ q_styleditemdelegate_painting_roles(void* self);
+/// @return libqt_list of int
+///
+libqt_list q_styleditemdelegate_painting_roles(void* self);
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -893,7 +897,9 @@ libqt_list /* of int */ q_styleditemdelegate_painting_roles(void* self);
 ///
 /// @param self QStyledItemDelegate*
 ///
-libqt_list /* of int */ q_styleditemdelegate_qbase_painting_roles(void* self);
+/// @return libqt_list of int
+///
+libqt_list q_styleditemdelegate_qbase_painting_roles(void* self);
 
 /// Inherited from QAbstractItemDelegate
 ///

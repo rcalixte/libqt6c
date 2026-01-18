@@ -15,7 +15,7 @@ QGeoRectangle* q_georectangle_new3(void* topLeft, void* bottomRight) {
     return QGeoRectangle_new3((QGeoCoordinate*)topLeft, (QGeoCoordinate*)bottomRight);
 }
 
-QGeoRectangle* q_georectangle_new4(libqt_list coordinates) {
+QGeoRectangle* q_georectangle_new4(libqt_list /* of QGeoCoordinate* */ coordinates) {
     return QGeoRectangle_new4(coordinates);
 }
 

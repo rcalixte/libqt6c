@@ -130,15 +130,16 @@ QGeoCoordinate* q_geomaneuver_waypoint(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeomaneuver.html#setExtendedAttributes)
 ///
 /// @param self QGeoManeuver*
-/// @param extendedAttributes libqt_map /* of const char* to QVariant* */
+/// @param extendedAttributes libqt_map of const char* to QVariant*
 ///
-void q_geomaneuver_set_extended_attributes(void* self, libqt_map /* of const char* to QVariant* */ extendedAttributes);
+void q_geomaneuver_set_extended_attributes(void* self, libqt_map extendedAttributes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeomaneuver.html#extendedAttributes)
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     free(((QVariant*)map.values)[i]);
@@ -149,7 +150,9 @@ void q_geomaneuver_set_extended_attributes(void* self, libqt_map /* of const cha
 ///
 /// @param self QGeoManeuver*
 ///
-libqt_map /* of const char* to QVariant* */ q_geomaneuver_extended_attributes(void* self);
+/// @return libqt_map of const char* to QVariant*
+///
+libqt_map q_geomaneuver_extended_attributes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeomaneuver.html#dtor.QGeoManeuver)
 ///

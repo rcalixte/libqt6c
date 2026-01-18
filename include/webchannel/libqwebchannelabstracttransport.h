@@ -236,7 +236,9 @@ void q_webchannelabstracttransport_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QWebChannelAbstractTransport*
 ///
-libqt_list /* of QObject* */ q_webchannelabstracttransport_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_webchannelabstracttransport_children(void* self);
 
 /// Inherited from QObject
 ///

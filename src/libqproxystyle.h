@@ -127,7 +127,7 @@ void q_proxystyle_qbase_draw_primitive(void* self, int32_t element, void* option
 /// @param painter QPainter*
 /// @param widget QWidget*
 ///
-void q_proxystyle_draw_control(void* self, int64_t element, void* option, void* painter, void* widget);
+void q_proxystyle_draw_control(void* self, int32_t element, void* option, void* painter, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawControl)
 ///
@@ -136,7 +136,7 @@ void q_proxystyle_draw_control(void* self, int64_t element, void* option, void* 
 /// @param self QProxyStyle*
 /// @param callback void func(QProxyStyle* self, enum QStyle__ControlElement element, QStyleOption* option, QPainter* painter, QWidget* widget)
 ///
-void q_proxystyle_on_draw_control(void* self, void (*callback)(void*, int64_t, void*, void*, void*));
+void q_proxystyle_on_draw_control(void* self, void (*callback)(void*, int32_t, void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawControl)
 ///
@@ -148,7 +148,7 @@ void q_proxystyle_on_draw_control(void* self, void (*callback)(void*, int64_t, v
 /// @param painter QPainter*
 /// @param widget QWidget*
 ///
-void q_proxystyle_qbase_draw_control(void* self, int64_t element, void* option, void* painter, void* widget);
+void q_proxystyle_qbase_draw_control(void* self, int32_t element, void* option, void* painter, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawComplexControl)
 ///
@@ -158,7 +158,7 @@ void q_proxystyle_qbase_draw_control(void* self, int64_t element, void* option, 
 /// @param painter QPainter*
 /// @param widget QWidget*
 ///
-void q_proxystyle_draw_complex_control(void* self, int64_t control, void* option, void* painter, void* widget);
+void q_proxystyle_draw_complex_control(void* self, int32_t control, void* option, void* painter, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawComplexControl)
 ///
@@ -167,7 +167,7 @@ void q_proxystyle_draw_complex_control(void* self, int64_t control, void* option
 /// @param self QProxyStyle*
 /// @param callback void func(QProxyStyle* self, enum QStyle__ComplexControl control, QStyleOptionComplex* option, QPainter* painter, QWidget* widget)
 ///
-void q_proxystyle_on_draw_complex_control(void* self, void (*callback)(void*, int64_t, void*, void*, void*));
+void q_proxystyle_on_draw_complex_control(void* self, void (*callback)(void*, int32_t, void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawComplexControl)
 ///
@@ -179,7 +179,7 @@ void q_proxystyle_on_draw_complex_control(void* self, void (*callback)(void*, in
 /// @param painter QPainter*
 /// @param widget QWidget*
 ///
-void q_proxystyle_qbase_draw_complex_control(void* self, int64_t control, void* option, void* painter, void* widget);
+void q_proxystyle_qbase_draw_complex_control(void* self, int32_t control, void* option, void* painter, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawItemText)
 ///
@@ -257,7 +257,7 @@ void q_proxystyle_qbase_draw_item_pixmap(void* self, void* painter, void* rect, 
 /// @param size QSize*
 /// @param widget QWidget*
 ///
-QSize* q_proxystyle_size_from_contents(void* self, int64_t type, void* option, void* size, void* widget);
+QSize* q_proxystyle_size_from_contents(void* self, int32_t type, void* option, void* size, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#sizeFromContents)
 ///
@@ -266,7 +266,7 @@ QSize* q_proxystyle_size_from_contents(void* self, int64_t type, void* option, v
 /// @param self QProxyStyle*
 /// @param callback QSize* func(QProxyStyle* self, enum QStyle__ContentsType type, QStyleOption* option, QSize* size, QWidget* widget)
 ///
-void q_proxystyle_on_size_from_contents(void* self, QSize* (*callback)(void*, int64_t, void*, void*, void*));
+void q_proxystyle_on_size_from_contents(void* self, QSize* (*callback)(void*, int32_t, void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#sizeFromContents)
 ///
@@ -278,7 +278,7 @@ void q_proxystyle_on_size_from_contents(void* self, QSize* (*callback)(void*, in
 /// @param size QSize*
 /// @param widget QWidget*
 ///
-QSize* q_proxystyle_qbase_size_from_contents(void* self, int64_t type, void* option, void* size, void* widget);
+QSize* q_proxystyle_qbase_size_from_contents(void* self, int32_t type, void* option, void* size, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#subElementRect)
 ///
@@ -287,7 +287,7 @@ QSize* q_proxystyle_qbase_size_from_contents(void* self, int64_t type, void* opt
 /// @param option QStyleOption*
 /// @param widget QWidget*
 ///
-QRect* q_proxystyle_sub_element_rect(void* self, int64_t element, void* option, void* widget);
+QRect* q_proxystyle_sub_element_rect(void* self, int32_t element, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#subElementRect)
 ///
@@ -296,7 +296,7 @@ QRect* q_proxystyle_sub_element_rect(void* self, int64_t element, void* option, 
 /// @param self QProxyStyle*
 /// @param callback QRect* func(QProxyStyle* self, enum QStyle__SubElement element, QStyleOption* option, QWidget* widget)
 ///
-void q_proxystyle_on_sub_element_rect(void* self, QRect* (*callback)(void*, int64_t, void*, void*));
+void q_proxystyle_on_sub_element_rect(void* self, QRect* (*callback)(void*, int32_t, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#subElementRect)
 ///
@@ -307,7 +307,7 @@ void q_proxystyle_on_sub_element_rect(void* self, QRect* (*callback)(void*, int6
 /// @param option QStyleOption*
 /// @param widget QWidget*
 ///
-QRect* q_proxystyle_qbase_sub_element_rect(void* self, int64_t element, void* option, void* widget);
+QRect* q_proxystyle_qbase_sub_element_rect(void* self, int32_t element, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#subControlRect)
 ///
@@ -317,7 +317,7 @@ QRect* q_proxystyle_qbase_sub_element_rect(void* self, int64_t element, void* op
 /// @param sc enum QStyle__SubControl
 /// @param widget QWidget*
 ///
-QRect* q_proxystyle_sub_control_rect(void* self, int64_t cc, void* opt, int64_t sc, void* widget);
+QRect* q_proxystyle_sub_control_rect(void* self, int32_t cc, void* opt, int32_t sc, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#subControlRect)
 ///
@@ -326,7 +326,7 @@ QRect* q_proxystyle_sub_control_rect(void* self, int64_t cc, void* opt, int64_t 
 /// @param self QProxyStyle*
 /// @param callback QRect* func(QProxyStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, enum QStyle__SubControl sc, QWidget* widget)
 ///
-void q_proxystyle_on_sub_control_rect(void* self, QRect* (*callback)(void*, int64_t, void*, int64_t, void*));
+void q_proxystyle_on_sub_control_rect(void* self, QRect* (*callback)(void*, int32_t, void*, int32_t, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#subControlRect)
 ///
@@ -338,7 +338,7 @@ void q_proxystyle_on_sub_control_rect(void* self, QRect* (*callback)(void*, int6
 /// @param sc enum QStyle__SubControl
 /// @param widget QWidget*
 ///
-QRect* q_proxystyle_qbase_sub_control_rect(void* self, int64_t cc, void* opt, int64_t sc, void* widget);
+QRect* q_proxystyle_qbase_sub_control_rect(void* self, int32_t cc, void* opt, int32_t sc, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#itemTextRect)
 ///
@@ -412,16 +412,16 @@ QRect* q_proxystyle_qbase_item_pixmap_rect(void* self, void* r, int flags, void*
 ///
 /// @return enum QStyle__SubControl
 ///
-int64_t q_proxystyle_hit_test_complex_control(void* self, int64_t control, void* option, void* pos, void* widget);
+int32_t q_proxystyle_hit_test_complex_control(void* self, int32_t control, void* option, void* pos, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#hitTestComplexControl)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback int64_t func(QProxyStyle* self, enum QStyle__ComplexControl control, QStyleOptionComplex* option, QPoint* pos, QWidget* widget)
+/// @param callback int32_t func(QProxyStyle* self, enum QStyle__ComplexControl control, QStyleOptionComplex* option, QPoint* pos, QWidget* widget)
 ///
-void q_proxystyle_on_hit_test_complex_control(void* self, int64_t (*callback)(void*, int64_t, void*, void*, void*));
+void q_proxystyle_on_hit_test_complex_control(void* self, int32_t (*callback)(void*, int32_t, void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#hitTestComplexControl)
 ///
@@ -435,7 +435,7 @@ void q_proxystyle_on_hit_test_complex_control(void* self, int64_t (*callback)(vo
 ///
 /// @return enum QStyle__SubControl
 ///
-int64_t q_proxystyle_qbase_hit_test_complex_control(void* self, int64_t control, void* option, void* pos, void* widget);
+int32_t q_proxystyle_qbase_hit_test_complex_control(void* self, int32_t control, void* option, void* pos, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#styleHint)
 ///
@@ -445,7 +445,7 @@ int64_t q_proxystyle_qbase_hit_test_complex_control(void* self, int64_t control,
 /// @param widget QWidget*
 /// @param returnData QStyleHintReturn*
 ///
-int32_t q_proxystyle_style_hint(void* self, int64_t hint, void* option, void* widget, void* returnData);
+int32_t q_proxystyle_style_hint(void* self, int32_t hint, void* option, void* widget, void* returnData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#styleHint)
 ///
@@ -454,7 +454,7 @@ int32_t q_proxystyle_style_hint(void* self, int64_t hint, void* option, void* wi
 /// @param self QProxyStyle*
 /// @param callback int32_t func(QProxyStyle* self, enum QStyle__StyleHint hint, QStyleOption* option, QWidget* widget, QStyleHintReturn* returnData)
 ///
-void q_proxystyle_on_style_hint(void* self, int32_t (*callback)(void*, int64_t, void*, void*, void*));
+void q_proxystyle_on_style_hint(void* self, int32_t (*callback)(void*, int32_t, void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#styleHint)
 ///
@@ -466,7 +466,7 @@ void q_proxystyle_on_style_hint(void* self, int32_t (*callback)(void*, int64_t, 
 /// @param widget QWidget*
 /// @param returnData QStyleHintReturn*
 ///
-int32_t q_proxystyle_qbase_style_hint(void* self, int64_t hint, void* option, void* widget, void* returnData);
+int32_t q_proxystyle_qbase_style_hint(void* self, int32_t hint, void* option, void* widget, void* returnData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#pixelMetric)
 ///
@@ -475,7 +475,7 @@ int32_t q_proxystyle_qbase_style_hint(void* self, int64_t hint, void* option, vo
 /// @param option QStyleOption*
 /// @param widget QWidget*
 ///
-int32_t q_proxystyle_pixel_metric(void* self, int64_t metric, void* option, void* widget);
+int32_t q_proxystyle_pixel_metric(void* self, int32_t metric, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#pixelMetric)
 ///
@@ -484,7 +484,7 @@ int32_t q_proxystyle_pixel_metric(void* self, int64_t metric, void* option, void
 /// @param self QProxyStyle*
 /// @param callback int32_t func(QProxyStyle* self, enum QStyle__PixelMetric metric, QStyleOption* option, QWidget* widget)
 ///
-void q_proxystyle_on_pixel_metric(void* self, int32_t (*callback)(void*, int64_t, void*, void*));
+void q_proxystyle_on_pixel_metric(void* self, int32_t (*callback)(void*, int32_t, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#pixelMetric)
 ///
@@ -495,7 +495,7 @@ void q_proxystyle_on_pixel_metric(void* self, int32_t (*callback)(void*, int64_t
 /// @param option QStyleOption*
 /// @param widget QWidget*
 ///
-int32_t q_proxystyle_qbase_pixel_metric(void* self, int64_t metric, void* option, void* widget);
+int32_t q_proxystyle_qbase_pixel_metric(void* self, int32_t metric, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#layoutSpacing)
 ///
@@ -537,7 +537,7 @@ int32_t q_proxystyle_qbase_layout_spacing(void* self, int32_t control1, int32_t 
 /// @param option QStyleOption*
 /// @param widget QWidget*
 ///
-QIcon* q_proxystyle_standard_icon(void* self, int64_t standardIcon, void* option, void* widget);
+QIcon* q_proxystyle_standard_icon(void* self, int32_t standardIcon, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#standardIcon)
 ///
@@ -546,7 +546,7 @@ QIcon* q_proxystyle_standard_icon(void* self, int64_t standardIcon, void* option
 /// @param self QProxyStyle*
 /// @param callback QIcon* func(QProxyStyle* self, enum QStyle__StandardPixmap standardIcon, QStyleOption* option, QWidget* widget)
 ///
-void q_proxystyle_on_standard_icon(void* self, QIcon* (*callback)(void*, int64_t, void*, void*));
+void q_proxystyle_on_standard_icon(void* self, QIcon* (*callback)(void*, int32_t, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#standardIcon)
 ///
@@ -557,7 +557,7 @@ void q_proxystyle_on_standard_icon(void* self, QIcon* (*callback)(void*, int64_t
 /// @param option QStyleOption*
 /// @param widget QWidget*
 ///
-QIcon* q_proxystyle_qbase_standard_icon(void* self, int64_t standardIcon, void* option, void* widget);
+QIcon* q_proxystyle_qbase_standard_icon(void* self, int32_t standardIcon, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#standardPixmap)
 ///
@@ -566,7 +566,7 @@ QIcon* q_proxystyle_qbase_standard_icon(void* self, int64_t standardIcon, void* 
 /// @param opt QStyleOption*
 /// @param widget QWidget*
 ///
-QPixmap* q_proxystyle_standard_pixmap(void* self, int64_t standardPixmap, void* opt, void* widget);
+QPixmap* q_proxystyle_standard_pixmap(void* self, int32_t standardPixmap, void* opt, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#standardPixmap)
 ///
@@ -575,7 +575,7 @@ QPixmap* q_proxystyle_standard_pixmap(void* self, int64_t standardPixmap, void* 
 /// @param self QProxyStyle*
 /// @param callback QPixmap* func(QProxyStyle* self, enum QStyle__StandardPixmap standardPixmap, QStyleOption* opt, QWidget* widget)
 ///
-void q_proxystyle_on_standard_pixmap(void* self, QPixmap* (*callback)(void*, int64_t, void*, void*));
+void q_proxystyle_on_standard_pixmap(void* self, QPixmap* (*callback)(void*, int32_t, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#standardPixmap)
 ///
@@ -586,7 +586,7 @@ void q_proxystyle_on_standard_pixmap(void* self, QPixmap* (*callback)(void*, int
 /// @param opt QStyleOption*
 /// @param widget QWidget*
 ///
-QPixmap* q_proxystyle_qbase_standard_pixmap(void* self, int64_t standardPixmap, void* opt, void* widget);
+QPixmap* q_proxystyle_qbase_standard_pixmap(void* self, int32_t standardPixmap, void* opt, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#generatedIconPixmap)
 ///
@@ -1061,7 +1061,9 @@ void q_proxystyle_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QProxyStyle*
 ///
-libqt_list /* of QObject* */ q_proxystyle_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_proxystyle_children(void* self);
 
 /// Inherited from QObject
 ///

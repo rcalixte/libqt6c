@@ -120,7 +120,7 @@ void q_imagecapture_set_file_format(void* self, int32_t format);
 ///
 /// @return libqt_list of enum QImageCapture__FileFormat
 ///
-libqt_list /* of enum QImageCapture__FileFormat */ q_imagecapture_supported_formats();
+libqt_list q_imagecapture_supported_formats();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagecapture.html#fileFormatName)
 ///
@@ -511,7 +511,9 @@ void q_imagecapture_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QImageCapture*
 ///
-libqt_list /* of QObject* */ q_imagecapture_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_imagecapture_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -85,7 +85,9 @@ void q_undogroup_remove_stack(void* self, void* stack);
 ///
 /// @param self QUndoGroup*
 ///
-libqt_list /* of QUndoStack* */ q_undogroup_stacks(void* self);
+/// @return libqt_list of QUndoStack*
+///
+libqt_list q_undogroup_stacks(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundogroup.html#activeStack)
 ///
@@ -403,7 +405,9 @@ void q_undogroup_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QUndoGroup*
 ///
-libqt_list /* of QObject* */ q_undogroup_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_undogroup_children(void* self);
 
 /// Inherited from QObject
 ///

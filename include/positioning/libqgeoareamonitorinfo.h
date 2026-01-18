@@ -119,7 +119,8 @@ void q_geoareamonitorinfo_set_persistent(void* self, bool isPersistent);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     free(((QVariant*)map.values)[i]);
@@ -130,14 +131,16 @@ void q_geoareamonitorinfo_set_persistent(void* self, bool isPersistent);
 ///
 /// @param self QGeoAreaMonitorInfo*
 ///
-libqt_map /* of const char* to QVariant* */ q_geoareamonitorinfo_notification_parameters(void* self);
+/// @return libqt_map of const char* to QVariant*
+///
+libqt_map q_geoareamonitorinfo_notification_parameters(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorinfo.html#setNotificationParameters)
 ///
 /// @param self QGeoAreaMonitorInfo*
-/// @param parameters libqt_map /* of const char* to QVariant* */
+/// @param parameters libqt_map of const char* to QVariant*
 ///
-void q_geoareamonitorinfo_set_notification_parameters(void* self, libqt_map /* of const char* to QVariant* */ parameters);
+void q_geoareamonitorinfo_set_notification_parameters(void* self, libqt_map parameters);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorinfo.html#detach)
 ///

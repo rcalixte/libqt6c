@@ -587,7 +587,9 @@ void q_scilexerbash_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QsciLexerBash*
 ///
-libqt_list /* of QObject* */ q_scilexerbash_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_scilexerbash_children(void* self);
 
 /// Inherited from QObject
 ///

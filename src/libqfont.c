@@ -15,7 +15,7 @@ QFont* q_font_new3(const char* families[static 1]) {
     size_t families_len = libqt_strv_length(families);
     libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
     if (families_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_font_new3");
+        fprintf(stderr, "Failed to allocate memory for string list in q_font_new3\n");
         abort();
     }
     for (size_t i = 0; i < families_len; ++i) {
@@ -52,7 +52,7 @@ QFont* q_font_new9(const char* families[static 1], int pointSize) {
     size_t families_len = libqt_strv_length(families);
     libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
     if (families_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_font_new9");
+        fprintf(stderr, "Failed to allocate memory for string list in q_font_new9\n");
         abort();
     }
     for (size_t i = 0; i < families_len; ++i) {
@@ -69,7 +69,7 @@ QFont* q_font_new10(const char* families[static 1], int pointSize, int weight) {
     size_t families_len = libqt_strv_length(families);
     libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
     if (families_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_font_new10");
+        fprintf(stderr, "Failed to allocate memory for string list in q_font_new10\n");
         abort();
     }
     for (size_t i = 0; i < families_len; ++i) {
@@ -86,7 +86,7 @@ QFont* q_font_new11(const char* families[static 1], int pointSize, int weight, b
     size_t families_len = libqt_strv_length(families);
     libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
     if (families_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_font_new11");
+        fprintf(stderr, "Failed to allocate memory for string list in q_font_new11\n");
         abort();
     }
     for (size_t i = 0; i < families_len; ++i) {
@@ -119,7 +119,7 @@ const char** q_font_families(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_font_families");
+        fprintf(stderr, "Failed to allocate memory for string list in q_font_families\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -137,7 +137,7 @@ void q_font_set_families(void* self, const char* families[static 1]) {
     size_t families_len = libqt_strv_length(families);
     libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
     if (families_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_font_set_families");
+        fprintf(stderr, "Failed to allocate memory for string list in q_font_set_families\n");
         abort();
     }
     for (size_t i = 0; i < families_len; ++i) {
@@ -423,7 +423,7 @@ const char** q_font_substitutes(const char* param1) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_font_substitutes");
+        fprintf(stderr, "Failed to allocate memory for string list in q_font_substitutes\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -442,7 +442,7 @@ const char** q_font_substitutions() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_font_substitutions");
+        fprintf(stderr, "Failed to allocate memory for string list in q_font_substitutions\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -464,7 +464,7 @@ void q_font_insert_substitutions(const char* param1, const char* param2[static 1
     size_t param2_len = libqt_strv_length(param2);
     libqt_string* param2_qstr = (libqt_string*)malloc(param2_len * sizeof(libqt_string));
     if (param2_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_font_insert_substitutions");
+        fprintf(stderr, "Failed to allocate memory for string list in q_font_insert_substitutions\n");
         abort();
     }
     for (size_t i = 0; i < param2_len; ++i) {

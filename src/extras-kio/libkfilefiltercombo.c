@@ -57,7 +57,7 @@ const char* k_filefiltercombo_tr(const char* s) {
     return _ret;
 }
 
-void k_filefiltercombo_set_filters(void* self, libqt_list filters) {
+void k_filefiltercombo_set_filters(void* self, libqt_list /* of KFileFilter* */ filters) {
     KFileFilterCombo_SetFilters((KFileFilterCombo*)self, filters);
 }
 
@@ -120,7 +120,7 @@ const char* k_filefiltercombo_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void k_filefiltercombo_set_filters2(void* self, libqt_list filters, void* defaultFilter) {
+void k_filefiltercombo_set_filters2(void* self, libqt_list /* of KFileFilter* */ filters, void* defaultFilter) {
     KFileFilterCombo_SetFilters2((KFileFilterCombo*)self, filters, (KFileFilter*)defaultFilter);
 }
 
@@ -437,7 +437,7 @@ void k_filefiltercombo_add_items(void* self, const char* texts[static 1]) {
     size_t texts_len = libqt_strv_length(texts);
     libqt_string* texts_qstr = (libqt_string*)malloc(texts_len * sizeof(libqt_string));
     if (texts_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_filefiltercombo_add_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_filefiltercombo_add_items\n");
         abort();
     }
     for (size_t i = 0; i < texts_len; ++i) {
@@ -460,7 +460,7 @@ void k_filefiltercombo_insert_items(void* self, int index, const char* texts[sta
     size_t texts_len = libqt_strv_length(texts);
     libqt_string* texts_qstr = (libqt_string*)malloc(texts_len * sizeof(libqt_string));
     if (texts_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_filefiltercombo_insert_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_filefiltercombo_insert_items\n");
         abort();
     }
     for (size_t i = 0; i < texts_len; ++i) {
@@ -499,7 +499,7 @@ void k_filefiltercombo_set_view(void* self, void* itemView) {
     QComboBox_SetView((QComboBox*)self, (QAbstractItemView*)itemView);
 }
 
-QVariant* k_filefiltercombo_input_method_query2(void* self, int64_t query, void* argument) {
+QVariant* k_filefiltercombo_input_method_query2(void* self, int32_t query, void* argument) {
     return QComboBox_InputMethodQuery2((QComboBox*)self, query, (QVariant*)argument);
 }
 
@@ -999,11 +999,11 @@ void k_filefiltercombo_set_graphics_effect(void* self, void* effect) {
     QWidget_SetGraphicsEffect((QWidget*)self, (QGraphicsEffect*)effect);
 }
 
-void k_filefiltercombo_grab_gesture(void* self, int64_t type) {
+void k_filefiltercombo_grab_gesture(void* self, int32_t type) {
     QWidget_GrabGesture((QWidget*)self, type);
 }
 
-void k_filefiltercombo_ungrab_gesture(void* self, int64_t type) {
+void k_filefiltercombo_ungrab_gesture(void* self, int32_t type) {
     QWidget_UngrabGesture((QWidget*)self, type);
 }
 
@@ -1484,7 +1484,7 @@ void k_filefiltercombo_set_parent(void* self, void* parent) {
     QWidget_SetParent((QWidget*)self, (QWidget*)parent);
 }
 
-void k_filefiltercombo_set_parent2(void* self, void* parent, int64_t f) {
+void k_filefiltercombo_set_parent2(void* self, void* parent, int32_t f) {
     QWidget_SetParent2((QWidget*)self, (QWidget*)parent, f);
 }
 
@@ -1520,11 +1520,11 @@ void k_filefiltercombo_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void k_filefiltercombo_add_actions(void* self, libqt_list actions) {
+void k_filefiltercombo_add_actions(void* self, libqt_list /* of QAction* */ actions) {
     QWidget_AddActions((QWidget*)self, actions);
 }
 
-void k_filefiltercombo_insert_actions(void* self, void* before, libqt_list actions) {
+void k_filefiltercombo_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions) {
     QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
@@ -1561,23 +1561,23 @@ QWidget* k_filefiltercombo_parent_widget(void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
-void k_filefiltercombo_set_window_flags(void* self, int64_t type) {
+void k_filefiltercombo_set_window_flags(void* self, int32_t type) {
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int64_t k_filefiltercombo_window_flags(void* self) {
+int32_t k_filefiltercombo_window_flags(void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
-void k_filefiltercombo_set_window_flag(void* self, int64_t param1) {
+void k_filefiltercombo_set_window_flag(void* self, int32_t param1) {
     QWidget_SetWindowFlag((QWidget*)self, param1);
 }
 
-void k_filefiltercombo_override_window_flags(void* self, int64_t type) {
+void k_filefiltercombo_override_window_flags(void* self, int32_t type) {
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int64_t k_filefiltercombo_window_type(void* self) {
+int32_t k_filefiltercombo_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
@@ -1673,11 +1673,11 @@ void k_filefiltercombo_on_custom_context_menu_requested(void* self, void (*callb
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-int64_t k_filefiltercombo_input_method_hints(void* self) {
+int32_t k_filefiltercombo_input_method_hints(void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
-void k_filefiltercombo_set_input_method_hints(void* self, int64_t hints) {
+void k_filefiltercombo_set_input_method_hints(void* self, int32_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
@@ -1709,7 +1709,7 @@ QPixmap* k_filefiltercombo_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_filefiltercombo_grab_gesture2(void* self, int64_t type, int32_t flags) {
+void k_filefiltercombo_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
@@ -1725,7 +1725,7 @@ void k_filefiltercombo_set_shortcut_auto_repeat2(void* self, int id, bool enable
     QWidget_SetShortcutAutoRepeat2((QWidget*)self, id, enable);
 }
 
-void k_filefiltercombo_set_window_flag2(void* self, int64_t param1, bool on) {
+void k_filefiltercombo_set_window_flag2(void* self, int32_t param1, bool on) {
     QWidget_SetWindowFlag2((QWidget*)self, param1, on);
 }
 
@@ -1737,7 +1737,7 @@ QWidget* k_filefiltercombo_create_window_container2(void* window, void* parent) 
     return QWidget_CreateWindowContainer2((QWindow*)window, (QWidget*)parent);
 }
 
-QWidget* k_filefiltercombo_create_window_container3(void* window, void* parent, int64_t flags) {
+QWidget* k_filefiltercombo_create_window_container3(void* window, void* parent, int32_t flags) {
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
@@ -1842,7 +1842,7 @@ const char** k_filefiltercombo_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_filefiltercombo_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_filefiltercombo_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1992,7 +1992,7 @@ int32_t k_filefiltercombo_completion_mode(void* self) {
     return KCompletionBase_CompletionMode((KCompletionBase*)self);
 }
 
-bool k_filefiltercombo_set_key_binding(void* self, int32_t item, libqt_list key) {
+bool k_filefiltercombo_set_key_binding(void* self, int32_t item, libqt_list /* of QKeySequence* */ key) {
     return KCompletionBase_SetKeyBinding((KCompletionBase*)self, item, key);
 }
 
@@ -2065,7 +2065,7 @@ void k_filefiltercombo_set_completed_items(void* self, const char* items[static 
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_filefiltercombo_set_completed_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_filefiltercombo_set_completed_items\n");
         abort();
     }
     for (size_t i = 0; i < items_len; ++i) {
@@ -2080,7 +2080,7 @@ void k_filefiltercombo_qbase_set_completed_items(void* self, const char* items[s
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_filefiltercombo_set_completed_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_filefiltercombo_set_completed_items\n");
         abort();
     }
     for (size_t i = 0; i < items_len; ++i) {
@@ -2167,15 +2167,15 @@ void k_filefiltercombo_on_event(void* self, bool (*callback)(void*, void*)) {
     KFileFilterCombo_OnEvent((KFileFilterCombo*)self, (intptr_t)callback);
 }
 
-QVariant* k_filefiltercombo_input_method_query(void* self, int64_t param1) {
+QVariant* k_filefiltercombo_input_method_query(void* self, int32_t param1) {
     return KFileFilterCombo_InputMethodQuery((KFileFilterCombo*)self, param1);
 }
 
-QVariant* k_filefiltercombo_qbase_input_method_query(void* self, int64_t param1) {
+QVariant* k_filefiltercombo_qbase_input_method_query(void* self, int32_t param1) {
     return KFileFilterCombo_QBaseInputMethodQuery((KFileFilterCombo*)self, param1);
 }
 
-void k_filefiltercombo_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void k_filefiltercombo_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     KFileFilterCombo_OnInputMethodQuery((KFileFilterCombo*)self, (intptr_t)callback);
 }
 
@@ -2873,7 +2873,7 @@ libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequen
     if (_ret_values == NULL) {
         free(_out.keys);
         free(_out.values);
-        fprintf(stderr, "Failed to allocate memory for map value containers in k_filefiltercombo_key_binding_map");
+        fprintf(stderr, "Failed to allocate memory for map value containers in k_filefiltercombo_key_binding_map\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
@@ -2886,7 +2886,7 @@ libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequen
             free(_out.keys);
             free(_ret_values);
             free(_out.values);
-            fprintf(stderr, "Failed to allocate memory for map values in k_filefiltercombo_key_binding_map");
+            fprintf(stderr, "Failed to allocate memory for map values in k_filefiltercombo_key_binding_map\n");
             abort();
         }
         memcpy(_ret_arr, _value_list.data.ptr, _value_list.len * sizeof(QKeySequence*));
@@ -2912,7 +2912,7 @@ libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequen
     if (_ret_values == NULL) {
         free(_out.keys);
         free(_out.values);
-        fprintf(stderr, "Failed to allocate memory for map value containers in k_filefiltercombo_key_binding_map");
+        fprintf(stderr, "Failed to allocate memory for map value containers in k_filefiltercombo_key_binding_map\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
@@ -2925,7 +2925,7 @@ libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequen
             free(_out.keys);
             free(_ret_values);
             free(_out.values);
-            fprintf(stderr, "Failed to allocate memory for map values in k_filefiltercombo_key_binding_map");
+            fprintf(stderr, "Failed to allocate memory for map values in k_filefiltercombo_key_binding_map\n");
             abort();
         }
         memcpy(_ret_arr, _value_list.data.ptr, _value_list.len * sizeof(QKeySequence*));

@@ -56,7 +56,7 @@ bool q_boxplotseries_take(void* self, void* box) {
     return QBoxPlotSeries_Take((QBoxPlotSeries*)self, (QBoxSet*)box);
 }
 
-bool q_boxplotseries_append2(void* self, libqt_list boxes) {
+bool q_boxplotseries_append2(void* self, libqt_list /* of QBoxSet* */ boxes) {
     return QBoxPlotSeries_Append2((QBoxPlotSeries*)self, boxes);
 }
 
@@ -201,7 +201,7 @@ void q_boxplotseries_on_box_width_changed(void* self, void (*callback)(void*)) {
     QBoxPlotSeries_Connect_BoxWidthChanged((QBoxPlotSeries*)self, (intptr_t)callback);
 }
 
-void q_boxplotseries_boxsets_added(void* self, libqt_list sets) {
+void q_boxplotseries_boxsets_added(void* self, libqt_list /* of QBoxSet* */ sets) {
     QBoxPlotSeries_BoxsetsAdded((QBoxPlotSeries*)self, sets);
 }
 
@@ -209,7 +209,7 @@ void q_boxplotseries_on_boxsets_added(void* self, void (*callback)(void*, QBoxSe
     QBoxPlotSeries_Connect_BoxsetsAdded((QBoxPlotSeries*)self, (intptr_t)callback);
 }
 
-void q_boxplotseries_boxsets_removed(void* self, libqt_list sets) {
+void q_boxplotseries_boxsets_removed(void* self, libqt_list /* of QBoxSet* */ sets) {
     QBoxPlotSeries_BoxsetsRemoved((QBoxPlotSeries*)self, sets);
 }
 
@@ -436,7 +436,7 @@ const char** q_boxplotseries_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_boxplotseries_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_boxplotseries_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

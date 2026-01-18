@@ -244,7 +244,9 @@ void q_graphicstransform_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QGraphicsTransform*
 ///
-libqt_list /* of QObject* */ q_graphicstransform_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_graphicstransform_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1186,7 +1188,9 @@ void q_graphicsscale_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QGraphicsScale*
 ///
-libqt_list /* of QObject* */ q_graphicsscale_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_graphicsscale_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2127,7 +2131,9 @@ void q_graphicsrotation_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QGraphicsRotation*
 ///
-libqt_list /* of QObject* */ q_graphicsrotation_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_graphicsrotation_children(void* self);
 
 /// Inherited from QObject
 ///

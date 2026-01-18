@@ -37,7 +37,7 @@ libqt_list /* of uint32_t */ q_glyphrun_glyph_indexes(void* self) {
     return _arr;
 }
 
-void q_glyphrun_set_glyph_indexes(void* self, libqt_list glyphIndexes) {
+void q_glyphrun_set_glyph_indexes(void* self, libqt_list /* of uint32_t */ glyphIndexes) {
     QGlyphRun_SetGlyphIndexes((QGlyphRun*)self, glyphIndexes);
 }
 
@@ -46,7 +46,7 @@ libqt_list /* of QPointF* */ q_glyphrun_positions(void* self) {
     return _arr;
 }
 
-void q_glyphrun_set_positions(void* self, libqt_list positions) {
+void q_glyphrun_set_positions(void* self, libqt_list /* of QPointF* */ positions) {
     QGlyphRun_SetPositions((QGlyphRun*)self, positions);
 }
 
@@ -119,7 +119,7 @@ libqt_list /* of int64_t */ q_glyphrun_string_indexes(void* self) {
     return _arr;
 }
 
-void q_glyphrun_set_string_indexes(void* self, libqt_list stringIndexes) {
+void q_glyphrun_set_string_indexes(void* self, libqt_list /* of int64_t */ stringIndexes) {
     QGlyphRun_SetStringIndexes((QGlyphRun*)self, stringIndexes);
 }
 

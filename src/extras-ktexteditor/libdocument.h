@@ -85,7 +85,9 @@ KTextEditor__View* k_texteditor__document_create_view(void* self, void* parent, 
 ///
 /// @param self KTextEditor__Document*
 ///
-libqt_list /* of KTextEditor__View* */ k_texteditor__document_views(void* self);
+/// @return libqt_list of KTextEditor__View*
+///
+libqt_list k_texteditor__document_views(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#viewCreated)
 ///
@@ -523,7 +525,9 @@ bool k_texteditor__document_remove_line(void* self, int line);
 /// @param range KTextEditor__Range*
 /// @param pattern const char*
 ///
-libqt_list /* of KTextEditor__Range* */ k_texteditor__document_search_text(void* self, void* range, const char* pattern);
+/// @return libqt_list of KTextEditor__Range*
+///
+libqt_list k_texteditor__document_search_text(void* self, void* range, const char* pattern);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#cursorToOffset)
 ///
@@ -786,7 +790,7 @@ bool k_texteditor__document_post_message(void* self, void* message);
 /// @param config KConfigGroup*
 /// @param flags libqt_list /* set of const char* */ flags
 ///
-void k_texteditor__document_read_session_config(void* self, void* config, libqt_list /* set of const char* */ flags);
+void k_texteditor__document_read_session_config(void* self, void* config, libqt_list flags);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#writeSessionConfig)
 ///
@@ -794,7 +798,7 @@ void k_texteditor__document_read_session_config(void* self, void* config, libqt_
 /// @param config KConfigGroup*
 /// @param flags libqt_list /* set of const char* */ flags
 ///
-void k_texteditor__document_write_session_config(void* self, void* config, libqt_list /* set of const char* */ flags);
+void k_texteditor__document_write_session_config(void* self, void* config, libqt_list flags);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#isDataRecoveryAvailable)
 ///
@@ -1026,7 +1030,8 @@ void k_texteditor__document_remove_mark(void* self, int line, uint32_t markType)
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to KTextEditor__Mark*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((KTextEditor::Mark*)map.values)[i]);
 /// }
@@ -1036,7 +1041,9 @@ void k_texteditor__document_remove_mark(void* self, int line, uint32_t markType)
 ///
 /// @param self KTextEditor__Document*
 ///
-libqt_map /* of int to KTextEditor__Mark* */ k_texteditor__document_marks(void* self);
+/// @return libqt_map of int to KTextEditor__Mark*
+///
+libqt_map k_texteditor__document_marks(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#clearMarks)
 ///
@@ -1054,7 +1061,7 @@ int32_t k_texteditor__document_reserved_markers_count();
 /// @param mark enum KTextEditor__Document__MarkTypes
 /// @param text const char*
 ///
-void k_texteditor__document_set_mark_description(void* self, int64_t mark, const char* text);
+void k_texteditor__document_set_mark_description(void* self, int32_t mark, const char* text);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#markDescription)
 ///
@@ -1063,7 +1070,7 @@ void k_texteditor__document_set_mark_description(void* self, int64_t mark, const
 /// @param self KTextEditor__Document*
 /// @param mark enum KTextEditor__Document__MarkTypes
 ///
-const char* k_texteditor__document_mark_description(void* self, int64_t mark);
+const char* k_texteditor__document_mark_description(void* self, int32_t mark);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#setEditableMarks)
 ///
@@ -1084,14 +1091,14 @@ uint32_t k_texteditor__document_editable_marks(void* self);
 /// @param markType enum KTextEditor__Document__MarkTypes
 /// @param icon QIcon*
 ///
-void k_texteditor__document_set_mark_icon(void* self, int64_t markType, void* icon);
+void k_texteditor__document_set_mark_icon(void* self, int32_t markType, void* icon);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#markIcon)
 ///
 /// @param self KTextEditor__Document*
 /// @param markType enum KTextEditor__Document__MarkTypes
 ///
-QIcon* k_texteditor__document_mark_icon(void* self, int64_t markType);
+QIcon* k_texteditor__document_mark_icon(void* self, int32_t markType);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#marksChanged)
 ///
@@ -1212,7 +1219,9 @@ const char* k_texteditor__document_tr3(const char* s, const char* c, int n);
 /// @param pattern const char*
 /// @param options flag of enum KTextEditor__SearchOption
 ///
-libqt_list /* of KTextEditor__Range* */ k_texteditor__document_search_text3(void* self, void* range, const char* pattern, const int64_t options);
+/// @return libqt_list of KTextEditor__Range*
+///
+libqt_list k_texteditor__document_search_text3(void* self, void* range, const char* pattern, const int32_t options);
 
 /// Inherited from KParts::ReadWritePart
 ///
@@ -1725,7 +1734,9 @@ void k_texteditor__document_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KTextEditor__Document*
 ///
-libqt_list /* of QObject* */ k_texteditor__document_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_texteditor__document_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2107,7 +2118,9 @@ void k_texteditor__document_remove_child_client(void* self, void* child);
 ///
 /// @param self KTextEditor__Document*
 ///
-libqt_list /* of KXMLGUIClient* */ k_texteditor__document_child_clients(void* self);
+/// @return libqt_list of KXMLGUIClient*
+///
+libqt_list k_texteditor__document_child_clients(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -2140,9 +2153,9 @@ void k_texteditor__document_reload_x_m_l(void* self);
 ///
 /// @param self KTextEditor__Document*
 /// @param name const char*
-/// @param actionList libqt_list /* of QAction* */
+/// @param actionList libqt_list of QAction*
 ///
-void k_texteditor__document_plug_action_list(void* self, const char* name, libqt_list actionList);
+void k_texteditor__document_plug_action_list(void* self, const char* name, libqt_list /* of QAction* */ actionList);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -2348,7 +2361,7 @@ typedef enum {
     KTEXTEDITOR_DOCUMENT_MARKTYPES_MARKTYPE29 = 268435456,
     KTEXTEDITOR_DOCUMENT_MARKTYPES_MARKTYPE30 = 536870912,
     KTEXTEDITOR_DOCUMENT_MARKTYPES_MARKTYPE31 = 1073741824,
-    KTEXTEDITOR_DOCUMENT_MARKTYPES_MARKTYPE32 = 2147483648,
+    KTEXTEDITOR_DOCUMENT_MARKTYPES_MARKTYPE32 = -2147483648,
     KTEXTEDITOR_DOCUMENT_MARKTYPES_BOOKMARK = 1,
     KTEXTEDITOR_DOCUMENT_MARKTYPES_BREAKPOINTACTIVE = 2,
     KTEXTEDITOR_DOCUMENT_MARKTYPES_BREAKPOINTREACHED = 4,
@@ -2356,7 +2369,7 @@ typedef enum {
     KTEXTEDITOR_DOCUMENT_MARKTYPES_EXECUTION = 16,
     KTEXTEDITOR_DOCUMENT_MARKTYPES_WARNING = 32,
     KTEXTEDITOR_DOCUMENT_MARKTYPES_ERROR = 64,
-    KTEXTEDITOR_DOCUMENT_MARKTYPES_SEARCHMATCH = 2147483648
+    KTEXTEDITOR_DOCUMENT_MARKTYPES_SEARCHMATCH = -2147483648
 } KTextEditor__Document__MarkTypes;
 
 /// [Upstream resources](https://api.kde.org/document.html#public-types)

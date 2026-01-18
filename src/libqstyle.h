@@ -384,7 +384,7 @@ void q_style_qbase_draw_primitive(void* self, int32_t pe, void* opt, void* p, vo
 /// @param p QPainter*
 /// @param w QWidget*
 ///
-void q_style_draw_control(void* self, int64_t element, void* opt, void* p, void* w);
+void q_style_draw_control(void* self, int32_t element, void* opt, void* p, void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawControl)
 ///
@@ -393,7 +393,7 @@ void q_style_draw_control(void* self, int64_t element, void* opt, void* p, void*
 /// @param self QStyle*
 /// @param callback void func(QStyle* self, enum QStyle__ControlElement element, QStyleOption* opt, QPainter* p, QWidget* w)
 ///
-void q_style_on_draw_control(void* self, void (*callback)(void*, int64_t, void*, void*, void*));
+void q_style_on_draw_control(void* self, void (*callback)(void*, int32_t, void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawControl)
 ///
@@ -405,7 +405,7 @@ void q_style_on_draw_control(void* self, void (*callback)(void*, int64_t, void*,
 /// @param p QPainter*
 /// @param w QWidget*
 ///
-void q_style_qbase_draw_control(void* self, int64_t element, void* opt, void* p, void* w);
+void q_style_qbase_draw_control(void* self, int32_t element, void* opt, void* p, void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#subElementRect)
 ///
@@ -414,7 +414,7 @@ void q_style_qbase_draw_control(void* self, int64_t element, void* opt, void* p,
 /// @param option QStyleOption*
 /// @param widget QWidget*
 ///
-QRect* q_style_sub_element_rect(void* self, int64_t subElement, void* option, void* widget);
+QRect* q_style_sub_element_rect(void* self, int32_t subElement, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#subElementRect)
 ///
@@ -423,7 +423,7 @@ QRect* q_style_sub_element_rect(void* self, int64_t subElement, void* option, vo
 /// @param self QStyle*
 /// @param callback QRect* func(QStyle* self, enum QStyle__SubElement subElement, QStyleOption* option, QWidget* widget)
 ///
-void q_style_on_sub_element_rect(void* self, QRect* (*callback)(void*, int64_t, void*, void*));
+void q_style_on_sub_element_rect(void* self, QRect* (*callback)(void*, int32_t, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#subElementRect)
 ///
@@ -434,7 +434,7 @@ void q_style_on_sub_element_rect(void* self, QRect* (*callback)(void*, int64_t, 
 /// @param option QStyleOption*
 /// @param widget QWidget*
 ///
-QRect* q_style_qbase_sub_element_rect(void* self, int64_t subElement, void* option, void* widget);
+QRect* q_style_qbase_sub_element_rect(void* self, int32_t subElement, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawComplexControl)
 ///
@@ -444,7 +444,7 @@ QRect* q_style_qbase_sub_element_rect(void* self, int64_t subElement, void* opti
 /// @param p QPainter*
 /// @param widget QWidget*
 ///
-void q_style_draw_complex_control(void* self, int64_t cc, void* opt, void* p, void* widget);
+void q_style_draw_complex_control(void* self, int32_t cc, void* opt, void* p, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawComplexControl)
 ///
@@ -453,7 +453,7 @@ void q_style_draw_complex_control(void* self, int64_t cc, void* opt, void* p, vo
 /// @param self QStyle*
 /// @param callback void func(QStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, QPainter* p, QWidget* widget)
 ///
-void q_style_on_draw_complex_control(void* self, void (*callback)(void*, int64_t, void*, void*, void*));
+void q_style_on_draw_complex_control(void* self, void (*callback)(void*, int32_t, void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawComplexControl)
 ///
@@ -465,7 +465,7 @@ void q_style_on_draw_complex_control(void* self, void (*callback)(void*, int64_t
 /// @param p QPainter*
 /// @param widget QWidget*
 ///
-void q_style_qbase_draw_complex_control(void* self, int64_t cc, void* opt, void* p, void* widget);
+void q_style_qbase_draw_complex_control(void* self, int32_t cc, void* opt, void* p, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#hitTestComplexControl)
 ///
@@ -477,16 +477,16 @@ void q_style_qbase_draw_complex_control(void* self, int64_t cc, void* opt, void*
 ///
 /// @return enum QStyle__SubControl
 ///
-int64_t q_style_hit_test_complex_control(void* self, int64_t cc, void* opt, void* pt, void* widget);
+int32_t q_style_hit_test_complex_control(void* self, int32_t cc, void* opt, void* pt, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#hitTestComplexControl)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QStyle*
-/// @param callback int64_t func(QStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, QPoint* pt, QWidget* widget)
+/// @param callback int32_t func(QStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, QPoint* pt, QWidget* widget)
 ///
-void q_style_on_hit_test_complex_control(void* self, int64_t (*callback)(void*, int64_t, void*, void*, void*));
+void q_style_on_hit_test_complex_control(void* self, int32_t (*callback)(void*, int32_t, void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#hitTestComplexControl)
 ///
@@ -500,7 +500,7 @@ void q_style_on_hit_test_complex_control(void* self, int64_t (*callback)(void*, 
 ///
 /// @return enum QStyle__SubControl
 ///
-int64_t q_style_qbase_hit_test_complex_control(void* self, int64_t cc, void* opt, void* pt, void* widget);
+int32_t q_style_qbase_hit_test_complex_control(void* self, int32_t cc, void* opt, void* pt, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#subControlRect)
 ///
@@ -510,7 +510,7 @@ int64_t q_style_qbase_hit_test_complex_control(void* self, int64_t cc, void* opt
 /// @param sc enum QStyle__SubControl
 /// @param widget QWidget*
 ///
-QRect* q_style_sub_control_rect(void* self, int64_t cc, void* opt, int64_t sc, void* widget);
+QRect* q_style_sub_control_rect(void* self, int32_t cc, void* opt, int32_t sc, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#subControlRect)
 ///
@@ -519,7 +519,7 @@ QRect* q_style_sub_control_rect(void* self, int64_t cc, void* opt, int64_t sc, v
 /// @param self QStyle*
 /// @param callback QRect* func(QStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, enum QStyle__SubControl sc, QWidget* widget)
 ///
-void q_style_on_sub_control_rect(void* self, QRect* (*callback)(void*, int64_t, void*, int64_t, void*));
+void q_style_on_sub_control_rect(void* self, QRect* (*callback)(void*, int32_t, void*, int32_t, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#subControlRect)
 ///
@@ -531,7 +531,7 @@ void q_style_on_sub_control_rect(void* self, QRect* (*callback)(void*, int64_t, 
 /// @param sc enum QStyle__SubControl
 /// @param widget QWidget*
 ///
-QRect* q_style_qbase_sub_control_rect(void* self, int64_t cc, void* opt, int64_t sc, void* widget);
+QRect* q_style_qbase_sub_control_rect(void* self, int32_t cc, void* opt, int32_t sc, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#pixelMetric)
 ///
@@ -540,7 +540,7 @@ QRect* q_style_qbase_sub_control_rect(void* self, int64_t cc, void* opt, int64_t
 /// @param option QStyleOption*
 /// @param widget QWidget*
 ///
-int32_t q_style_pixel_metric(void* self, int64_t metric, void* option, void* widget);
+int32_t q_style_pixel_metric(void* self, int32_t metric, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#pixelMetric)
 ///
@@ -549,7 +549,7 @@ int32_t q_style_pixel_metric(void* self, int64_t metric, void* option, void* wid
 /// @param self QStyle*
 /// @param callback int32_t func(QStyle* self, enum QStyle__PixelMetric metric, QStyleOption* option, QWidget* widget)
 ///
-void q_style_on_pixel_metric(void* self, int32_t (*callback)(void*, int64_t, void*, void*));
+void q_style_on_pixel_metric(void* self, int32_t (*callback)(void*, int32_t, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#pixelMetric)
 ///
@@ -560,7 +560,7 @@ void q_style_on_pixel_metric(void* self, int32_t (*callback)(void*, int64_t, voi
 /// @param option QStyleOption*
 /// @param widget QWidget*
 ///
-int32_t q_style_qbase_pixel_metric(void* self, int64_t metric, void* option, void* widget);
+int32_t q_style_qbase_pixel_metric(void* self, int32_t metric, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#sizeFromContents)
 ///
@@ -570,7 +570,7 @@ int32_t q_style_qbase_pixel_metric(void* self, int64_t metric, void* option, voi
 /// @param contentsSize QSize*
 /// @param w QWidget*
 ///
-QSize* q_style_size_from_contents(void* self, int64_t ct, void* opt, void* contentsSize, void* w);
+QSize* q_style_size_from_contents(void* self, int32_t ct, void* opt, void* contentsSize, void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#sizeFromContents)
 ///
@@ -579,7 +579,7 @@ QSize* q_style_size_from_contents(void* self, int64_t ct, void* opt, void* conte
 /// @param self QStyle*
 /// @param callback QSize* func(QStyle* self, enum QStyle__ContentsType ct, QStyleOption* opt, QSize* contentsSize, QWidget* w)
 ///
-void q_style_on_size_from_contents(void* self, QSize* (*callback)(void*, int64_t, void*, void*, void*));
+void q_style_on_size_from_contents(void* self, QSize* (*callback)(void*, int32_t, void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#sizeFromContents)
 ///
@@ -591,7 +591,7 @@ void q_style_on_size_from_contents(void* self, QSize* (*callback)(void*, int64_t
 /// @param contentsSize QSize*
 /// @param w QWidget*
 ///
-QSize* q_style_qbase_size_from_contents(void* self, int64_t ct, void* opt, void* contentsSize, void* w);
+QSize* q_style_qbase_size_from_contents(void* self, int32_t ct, void* opt, void* contentsSize, void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#styleHint)
 ///
@@ -601,7 +601,7 @@ QSize* q_style_qbase_size_from_contents(void* self, int64_t ct, void* opt, void*
 /// @param widget QWidget*
 /// @param returnData QStyleHintReturn*
 ///
-int32_t q_style_style_hint(void* self, int64_t stylehint, void* opt, void* widget, void* returnData);
+int32_t q_style_style_hint(void* self, int32_t stylehint, void* opt, void* widget, void* returnData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#styleHint)
 ///
@@ -610,7 +610,7 @@ int32_t q_style_style_hint(void* self, int64_t stylehint, void* opt, void* widge
 /// @param self QStyle*
 /// @param callback int32_t func(QStyle* self, enum QStyle__StyleHint stylehint, QStyleOption* opt, QWidget* widget, QStyleHintReturn* returnData)
 ///
-void q_style_on_style_hint(void* self, int32_t (*callback)(void*, int64_t, void*, void*, void*));
+void q_style_on_style_hint(void* self, int32_t (*callback)(void*, int32_t, void*, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#styleHint)
 ///
@@ -622,7 +622,7 @@ void q_style_on_style_hint(void* self, int32_t (*callback)(void*, int64_t, void*
 /// @param widget QWidget*
 /// @param returnData QStyleHintReturn*
 ///
-int32_t q_style_qbase_style_hint(void* self, int64_t stylehint, void* opt, void* widget, void* returnData);
+int32_t q_style_qbase_style_hint(void* self, int32_t stylehint, void* opt, void* widget, void* returnData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#standardPixmap)
 ///
@@ -631,7 +631,7 @@ int32_t q_style_qbase_style_hint(void* self, int64_t stylehint, void* opt, void*
 /// @param opt QStyleOption*
 /// @param widget QWidget*
 ///
-QPixmap* q_style_standard_pixmap(void* self, int64_t standardPixmap, void* opt, void* widget);
+QPixmap* q_style_standard_pixmap(void* self, int32_t standardPixmap, void* opt, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#standardPixmap)
 ///
@@ -640,7 +640,7 @@ QPixmap* q_style_standard_pixmap(void* self, int64_t standardPixmap, void* opt, 
 /// @param self QStyle*
 /// @param callback QPixmap* func(QStyle* self, enum QStyle__StandardPixmap standardPixmap, QStyleOption* opt, QWidget* widget)
 ///
-void q_style_on_standard_pixmap(void* self, QPixmap* (*callback)(void*, int64_t, void*, void*));
+void q_style_on_standard_pixmap(void* self, QPixmap* (*callback)(void*, int32_t, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#standardPixmap)
 ///
@@ -651,7 +651,7 @@ void q_style_on_standard_pixmap(void* self, QPixmap* (*callback)(void*, int64_t,
 /// @param opt QStyleOption*
 /// @param widget QWidget*
 ///
-QPixmap* q_style_qbase_standard_pixmap(void* self, int64_t standardPixmap, void* opt, void* widget);
+QPixmap* q_style_qbase_standard_pixmap(void* self, int32_t standardPixmap, void* opt, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#standardIcon)
 ///
@@ -660,7 +660,7 @@ QPixmap* q_style_qbase_standard_pixmap(void* self, int64_t standardPixmap, void*
 /// @param option QStyleOption*
 /// @param widget QWidget*
 ///
-QIcon* q_style_standard_icon(void* self, int64_t standardIcon, void* option, void* widget);
+QIcon* q_style_standard_icon(void* self, int32_t standardIcon, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#standardIcon)
 ///
@@ -669,7 +669,7 @@ QIcon* q_style_standard_icon(void* self, int64_t standardIcon, void* option, voi
 /// @param self QStyle*
 /// @param callback QIcon* func(QStyle* self, enum QStyle__StandardPixmap standardIcon, QStyleOption* option, QWidget* widget)
 ///
-void q_style_on_standard_icon(void* self, QIcon* (*callback)(void*, int64_t, void*, void*));
+void q_style_on_standard_icon(void* self, QIcon* (*callback)(void*, int32_t, void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#standardIcon)
 ///
@@ -680,7 +680,7 @@ void q_style_on_standard_icon(void* self, QIcon* (*callback)(void*, int64_t, voi
 /// @param option QStyleOption*
 /// @param widget QWidget*
 ///
-QIcon* q_style_qbase_standard_icon(void* self, int64_t standardIcon, void* option, void* widget);
+QIcon* q_style_qbase_standard_icon(void* self, int32_t standardIcon, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#generatedIconPixmap)
 ///
@@ -981,7 +981,9 @@ void q_style_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QStyle*
 ///
-libqt_list /* of QObject* */ q_style_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_style_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1736,7 +1738,7 @@ typedef enum {
     QSTYLE_CONTROLELEMENT_CE_COLUMNVIEWGRIP = 44,
     QSTYLE_CONTROLELEMENT_CE_ITEMVIEWITEM = 45,
     QSTYLE_CONTROLELEMENT_CE_SHAPEDFRAME = 46,
-    QSTYLE_CONTROLELEMENT_CE_CUSTOMBASE = 4026531840
+    QSTYLE_CONTROLELEMENT_CE_CUSTOMBASE = -268435456
 } QStyle__ControlElement;
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#public-types)
@@ -1800,7 +1802,7 @@ typedef enum {
     QSTYLE_SUBELEMENT_SE_TABBARSCROLLRIGHTBUTTON = 54,
     QSTYLE_SUBELEMENT_SE_TABBARTEARINDICATORRIGHT = 55,
     QSTYLE_SUBELEMENT_SE_PUSHBUTTONBEVEL = 56,
-    QSTYLE_SUBELEMENT_SE_CUSTOMBASE = 4026531840
+    QSTYLE_SUBELEMENT_SE_CUSTOMBASE = -268435456
 } QStyle__SubElement;
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#public-types)
@@ -1815,7 +1817,7 @@ typedef enum {
     QSTYLE_COMPLEXCONTROL_CC_DIAL = 6,
     QSTYLE_COMPLEXCONTROL_CC_GROUPBOX = 7,
     QSTYLE_COMPLEXCONTROL_CC_MDICONTROLS = 8,
-    QSTYLE_COMPLEXCONTROL_CC_CUSTOMBASE = 4026531840
+    QSTYLE_COMPLEXCONTROL_CC_CUSTOMBASE = -268435456
 } QStyle__ComplexControl;
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#public-types)
@@ -1862,8 +1864,8 @@ typedef enum {
     QSTYLE_SUBCONTROL_SC_MDIMINBUTTON = 1,
     QSTYLE_SUBCONTROL_SC_MDINORMALBUTTON = 2,
     QSTYLE_SUBCONTROL_SC_MDICLOSEBUTTON = 4,
-    QSTYLE_SUBCONTROL_SC_CUSTOMBASE = 4026531840,
-    QSTYLE_SUBCONTROL_SC_ALL = 4294967295
+    QSTYLE_SUBCONTROL_SC_CUSTOMBASE = -268435456,
+    QSTYLE_SUBCONTROL_SC_ALL = -1
 } QStyle__SubControl;
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#public-types)
@@ -1961,7 +1963,7 @@ typedef enum {
     QSTYLE_PIXELMETRIC_PM_TITLEBARBUTTONSIZE = 92,
     QSTYLE_PIXELMETRIC_PM_LINEEDITICONSIZE = 93,
     QSTYLE_PIXELMETRIC_PM_LINEEDITICONMARGIN = 94,
-    QSTYLE_PIXELMETRIC_PM_CUSTOMBASE = 4026531840
+    QSTYLE_PIXELMETRIC_PM_CUSTOMBASE = -268435456
 } QStyle__PixelMetric;
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#public-types)
@@ -1990,7 +1992,7 @@ typedef enum {
     QSTYLE_CONTENTSTYPE_CT_GROUPBOX = 20,
     QSTYLE_CONTENTSTYPE_CT_MDICONTROLS = 21,
     QSTYLE_CONTENTSTYPE_CT_ITEMVIEWITEM = 22,
-    QSTYLE_CONTENTSTYPE_CT_CUSTOMBASE = 4026531840
+    QSTYLE_CONTENTSTYPE_CT_CUSTOMBASE = -268435456
 } QStyle__ContentsType;
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#public-types)
@@ -2123,7 +2125,7 @@ typedef enum {
     QSTYLE_STYLEHINT_SH_TABBAR_ALLOWWHEELSCROLLING = 117,
     QSTYLE_STYLEHINT_SH_TABLE_ALWAYSDRAWLEFTTOPGRIDLINES = 118,
     QSTYLE_STYLEHINT_SH_SPINBOX_SELECTONSTEP = 119,
-    QSTYLE_STYLEHINT_SH_CUSTOMBASE = 4026531840
+    QSTYLE_STYLEHINT_SH_CUSTOMBASE = -268435456
 } QStyle__StyleHint;
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#public-types)
@@ -2209,7 +2211,7 @@ typedef enum {
     QSTYLE_STANDARDPIXMAP_SP_RESTOREDEFAULTSBUTTON = 77,
     QSTYLE_STANDARDPIXMAP_SP_TABCLOSEBUTTON = 78,
     QSTYLE_STANDARDPIXMAP_NSTANDARDPIXMAP = 79,
-    QSTYLE_STANDARDPIXMAP_SP_CUSTOMBASE = 4026531840
+    QSTYLE_STANDARDPIXMAP_SP_CUSTOMBASE = -268435456
 } QStyle__StandardPixmap;
 
 #endif

@@ -187,7 +187,9 @@ void q_barmodelmapper_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QBarModelMapper*
 ///
-libqt_list /* of QObject* */ q_barmodelmapper_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_barmodelmapper_children(void* self);
 
 /// Inherited from QObject
 ///

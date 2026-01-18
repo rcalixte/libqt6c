@@ -63,14 +63,16 @@ const char* q_mimedata_tr(const char* s);
 ///
 /// @param self QMimeData*
 ///
-libqt_list /* of QUrl* */ q_mimedata_urls(void* self);
+/// @return libqt_list of QUrl*
+///
+libqt_list q_mimedata_urls(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#setUrls)
 ///
 /// @param self QMimeData*
-/// @param urls libqt_list /* of QUrl* */
+/// @param urls libqt_list of QUrl*
 ///
-void q_mimedata_set_urls(void* self, libqt_list urls);
+void q_mimedata_set_urls(void* self, libqt_list /* of QUrl* */ urls);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#hasUrls)
 ///
@@ -394,7 +396,9 @@ void q_mimedata_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QMimeData*
 ///
-libqt_list /* of QObject* */ q_mimedata_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_mimedata_children(void* self);
 
 /// Inherited from QObject
 ///

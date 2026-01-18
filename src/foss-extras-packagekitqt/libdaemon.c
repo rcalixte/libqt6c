@@ -76,7 +76,7 @@ const char** q_packagekit__daemon_mime_types() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_mime_types\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -117,7 +117,7 @@ void q_packagekit__daemon_set_hints(const char* hints[static 1]) {
     size_t hints_len = libqt_strv_length(hints);
     libqt_string* hints_qstr = (libqt_string*)malloc(hints_len * sizeof(libqt_string));
     if (hints_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_set_hints");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_set_hints\n");
         abort();
     }
     for (size_t i = 0; i < hints_len; ++i) {
@@ -137,7 +137,7 @@ const char** q_packagekit__daemon_hints() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_hints");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_hints\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -202,7 +202,7 @@ PackageKit__Transaction* q_packagekit__daemon_download_packages(const char* pack
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_download_packages");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_download_packages\n");
         abort();
     }
     for (size_t i = 0; i < packageIDs_len; ++i) {
@@ -226,7 +226,7 @@ PackageKit__Transaction* q_packagekit__daemon_depends_on(const char* packageIDs[
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_depends_on");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_depends_on\n");
         abort();
     }
     for (size_t i = 0; i < packageIDs_len; ++i) {
@@ -246,7 +246,7 @@ PackageKit__Transaction* q_packagekit__daemon_get_details(const char* packageIDs
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_get_details");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_get_details\n");
         abort();
     }
     for (size_t i = 0; i < packageIDs_len; ++i) {
@@ -266,7 +266,7 @@ PackageKit__Transaction* q_packagekit__daemon_get_details_local(const char* file
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_get_details_local");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_get_details_local\n");
         abort();
     }
     for (size_t i = 0; i < files_len; ++i) {
@@ -286,7 +286,7 @@ PackageKit__Transaction* q_packagekit__daemon_get_files(const char* packageIDs[s
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_get_files");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_get_files\n");
         abort();
     }
     for (size_t i = 0; i < packageIDs_len; ++i) {
@@ -306,7 +306,7 @@ PackageKit__Transaction* q_packagekit__daemon_get_files_local(const char* files[
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_get_files_local");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_get_files_local\n");
         abort();
     }
     for (size_t i = 0; i < files_len; ++i) {
@@ -338,7 +338,7 @@ PackageKit__Transaction* q_packagekit__daemon_required_by(const char* packageIDs
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_required_by");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_required_by\n");
         abort();
     }
     for (size_t i = 0; i < packageIDs_len; ++i) {
@@ -358,7 +358,7 @@ PackageKit__Transaction* q_packagekit__daemon_get_updates_details(const char* pa
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_get_updates_details");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_get_updates_details\n");
         abort();
     }
     for (size_t i = 0; i < packageIDs_len; ++i) {
@@ -390,7 +390,7 @@ PackageKit__Transaction* q_packagekit__daemon_install_files(const char* files[st
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_install_files");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_install_files\n");
         abort();
     }
     for (size_t i = 0; i < files_len; ++i) {
@@ -410,7 +410,7 @@ PackageKit__Transaction* q_packagekit__daemon_install_packages(const char* packa
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_install_packages");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_install_packages\n");
         abort();
     }
     for (size_t i = 0; i < packageIDs_len; ++i) {
@@ -438,7 +438,7 @@ PackageKit__Transaction* q_packagekit__daemon_remove_packages(const char* packag
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_remove_packages");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_remove_packages\n");
         abort();
     }
     for (size_t i = 0; i < packageIDs_len; ++i) {
@@ -474,7 +474,7 @@ PackageKit__Transaction* q_packagekit__daemon_resolve(const char* packageNames[s
     size_t packageNames_len = libqt_strv_length(packageNames);
     libqt_string* packageNames_qstr = (libqt_string*)malloc(packageNames_len * sizeof(libqt_string));
     if (packageNames_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_resolve");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_resolve\n");
         abort();
     }
     for (size_t i = 0; i < packageNames_len; ++i) {
@@ -494,7 +494,7 @@ PackageKit__Transaction* q_packagekit__daemon_search_files(const char* search[st
     size_t search_len = libqt_strv_length(search);
     libqt_string* search_qstr = (libqt_string*)malloc(search_len * sizeof(libqt_string));
     if (search_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_search_files");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_search_files\n");
         abort();
     }
     for (size_t i = 0; i < search_len; ++i) {
@@ -514,7 +514,7 @@ PackageKit__Transaction* q_packagekit__daemon_search_details(const char* search[
     size_t search_len = libqt_strv_length(search);
     libqt_string* search_qstr = (libqt_string*)malloc(search_len * sizeof(libqt_string));
     if (search_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_search_details");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_search_details\n");
         abort();
     }
     for (size_t i = 0; i < search_len; ++i) {
@@ -534,7 +534,7 @@ PackageKit__Transaction* q_packagekit__daemon_search_groups(const char* groups[s
     size_t groups_len = libqt_strv_length(groups);
     libqt_string* groups_qstr = (libqt_string*)malloc(groups_len * sizeof(libqt_string));
     if (groups_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_search_groups");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_search_groups\n");
         abort();
     }
     for (size_t i = 0; i < groups_len; ++i) {
@@ -562,7 +562,7 @@ PackageKit__Transaction* q_packagekit__daemon_search_names(const char* search[st
     size_t search_len = libqt_strv_length(search);
     libqt_string* search_qstr = (libqt_string*)malloc(search_len * sizeof(libqt_string));
     if (search_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_search_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_search_names\n");
         abort();
     }
     for (size_t i = 0; i < search_len; ++i) {
@@ -582,7 +582,7 @@ PackageKit__Transaction* q_packagekit__daemon_update_packages(const char* packag
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_update_packages");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_update_packages\n");
         abort();
     }
     for (size_t i = 0; i < packageIDs_len; ++i) {
@@ -602,7 +602,7 @@ PackageKit__Transaction* q_packagekit__daemon_what_provides(const char* search[s
     size_t search_len = libqt_strv_length(search);
     libqt_string* search_qstr = (libqt_string*)malloc(search_len * sizeof(libqt_string));
     if (search_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_what_provides");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_what_provides\n");
         abort();
     }
     for (size_t i = 0; i < search_len; ++i) {
@@ -662,7 +662,7 @@ void q_packagekit__daemon_transaction_list_changed(void* self, const char* tids[
     size_t tids_len = libqt_strv_length(tids);
     libqt_string* tids_qstr = (libqt_string*)malloc(tids_len * sizeof(libqt_string));
     if (tids_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_transaction_list_changed");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_transaction_list_changed\n");
         abort();
     }
     for (size_t i = 0; i < tids_len; ++i) {
@@ -711,7 +711,7 @@ PackageKit__Transaction* q_packagekit__daemon_download_packages2(const char* pac
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_download_packages2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_download_packages2\n");
         abort();
     }
     for (size_t i = 0; i < packageIDs_len; ++i) {
@@ -731,7 +731,7 @@ PackageKit__Transaction* q_packagekit__daemon_depends_on22(const char* packageID
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_depends_on22");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_depends_on22\n");
         abort();
     }
     for (size_t i = 0; i < packageIDs_len; ++i) {
@@ -747,7 +747,7 @@ PackageKit__Transaction* q_packagekit__daemon_depends_on3(const char* packageIDs
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_depends_on3");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_depends_on3\n");
         abort();
     }
     for (size_t i = 0; i < packageIDs_len; ++i) {
@@ -779,7 +779,7 @@ PackageKit__Transaction* q_packagekit__daemon_required_by22(const char* packageI
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_required_by22");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_required_by22\n");
         abort();
     }
     for (size_t i = 0; i < packageIDs_len; ++i) {
@@ -795,7 +795,7 @@ PackageKit__Transaction* q_packagekit__daemon_required_by3(const char* packageID
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_required_by3");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_required_by3\n");
         abort();
     }
     for (size_t i = 0; i < packageIDs_len; ++i) {
@@ -827,7 +827,7 @@ PackageKit__Transaction* q_packagekit__daemon_install_files2(const char* files[s
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_install_files2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_install_files2\n");
         abort();
     }
     for (size_t i = 0; i < files_len; ++i) {
@@ -847,7 +847,7 @@ PackageKit__Transaction* q_packagekit__daemon_install_packages2(const char* pack
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_install_packages2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_install_packages2\n");
         abort();
     }
     for (size_t i = 0; i < packageIDs_len; ++i) {
@@ -867,7 +867,7 @@ PackageKit__Transaction* q_packagekit__daemon_remove_packages2(const char* packa
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_remove_packages2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_remove_packages2\n");
         abort();
     }
     for (size_t i = 0; i < packageIDs_len; ++i) {
@@ -883,7 +883,7 @@ PackageKit__Transaction* q_packagekit__daemon_remove_packages3(const char* packa
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_remove_packages3");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_remove_packages3\n");
         abort();
     }
     for (size_t i = 0; i < packageIDs_len; ++i) {
@@ -899,7 +899,7 @@ PackageKit__Transaction* q_packagekit__daemon_remove_packages4(const char* packa
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_remove_packages4");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_remove_packages4\n");
         abort();
     }
     for (size_t i = 0; i < packageIDs_len; ++i) {
@@ -939,7 +939,7 @@ PackageKit__Transaction* q_packagekit__daemon_resolve22(const char* packageNames
     size_t packageNames_len = libqt_strv_length(packageNames);
     libqt_string* packageNames_qstr = (libqt_string*)malloc(packageNames_len * sizeof(libqt_string));
     if (packageNames_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_resolve22");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_resolve22\n");
         abort();
     }
     for (size_t i = 0; i < packageNames_len; ++i) {
@@ -959,7 +959,7 @@ PackageKit__Transaction* q_packagekit__daemon_search_files22(const char* search[
     size_t search_len = libqt_strv_length(search);
     libqt_string* search_qstr = (libqt_string*)malloc(search_len * sizeof(libqt_string));
     if (search_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_search_files22");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_search_files22\n");
         abort();
     }
     for (size_t i = 0; i < search_len; ++i) {
@@ -979,7 +979,7 @@ PackageKit__Transaction* q_packagekit__daemon_search_details22(const char* searc
     size_t search_len = libqt_strv_length(search);
     libqt_string* search_qstr = (libqt_string*)malloc(search_len * sizeof(libqt_string));
     if (search_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_search_details22");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_search_details22\n");
         abort();
     }
     for (size_t i = 0; i < search_len; ++i) {
@@ -999,7 +999,7 @@ PackageKit__Transaction* q_packagekit__daemon_search_groups22(const char* groups
     size_t groups_len = libqt_strv_length(groups);
     libqt_string* groups_qstr = (libqt_string*)malloc(groups_len * sizeof(libqt_string));
     if (groups_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_search_groups22");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_search_groups22\n");
         abort();
     }
     for (size_t i = 0; i < groups_len; ++i) {
@@ -1027,7 +1027,7 @@ PackageKit__Transaction* q_packagekit__daemon_search_names22(const char* search[
     size_t search_len = libqt_strv_length(search);
     libqt_string* search_qstr = (libqt_string*)malloc(search_len * sizeof(libqt_string));
     if (search_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_search_names22");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_search_names22\n");
         abort();
     }
     for (size_t i = 0; i < search_len; ++i) {
@@ -1047,7 +1047,7 @@ PackageKit__Transaction* q_packagekit__daemon_update_packages2(const char* packa
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_update_packages2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_update_packages2\n");
         abort();
     }
     for (size_t i = 0; i < packageIDs_len; ++i) {
@@ -1067,7 +1067,7 @@ PackageKit__Transaction* q_packagekit__daemon_what_provides22(const char* search
     size_t search_len = libqt_strv_length(search);
     libqt_string* search_qstr = (libqt_string*)malloc(search_len * sizeof(libqt_string));
     if (search_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_what_provides22");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_what_provides22\n");
         abort();
     }
     for (size_t i = 0; i < search_len; ++i) {
@@ -1196,7 +1196,7 @@ const char** q_packagekit__daemon_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_packagekit__daemon_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

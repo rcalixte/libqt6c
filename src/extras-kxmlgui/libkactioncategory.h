@@ -89,7 +89,9 @@ QAction* k_actioncategory_add_action2(void* self, int32_t actionType);
 ///
 /// @param self KActionCategory*
 ///
-libqt_list /* of QAction* */ k_actioncategory_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_actioncategory_actions(void* self);
 
 /// [Upstream resources](https://api.kde.org/kactioncategory.html#collection)
 ///
@@ -241,7 +243,9 @@ void k_actioncategory_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KActionCategory*
 ///
-libqt_list /* of QObject* */ k_actioncategory_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_actioncategory_children(void* self);
 
 /// Inherited from QObject
 ///

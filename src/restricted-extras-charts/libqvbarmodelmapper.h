@@ -352,7 +352,9 @@ void q_vbarmodelmapper_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QVBarModelMapper*
 ///
-libqt_list /* of QObject* */ q_vbarmodelmapper_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_vbarmodelmapper_children(void* self);
 
 /// Inherited from QObject
 ///

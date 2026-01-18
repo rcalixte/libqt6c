@@ -239,7 +239,7 @@ const char* q_graphicssvgitem_tr3(const char* s, const char* c, int n);
 /// @param self QGraphicsSvgItem*
 /// @param type enum Qt__GestureType
 ///
-void q_graphicssvgitem_grab_gesture(void* self, int64_t type);
+void q_graphicssvgitem_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QGraphicsObject
 ///
@@ -248,7 +248,7 @@ void q_graphicssvgitem_grab_gesture(void* self, int64_t type);
 /// @param self QGraphicsSvgItem*
 /// @param type enum Qt__GestureType
 ///
-void q_graphicssvgitem_ungrab_gesture(void* self, int64_t type);
+void q_graphicssvgitem_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QGraphicsObject
 ///
@@ -462,7 +462,7 @@ void q_graphicssvgitem_on_height_changed(void* self, void (*callback)(void*));
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void q_graphicssvgitem_grab_gesture2(void* self, int64_t type, int32_t flags);
+void q_graphicssvgitem_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -574,7 +574,9 @@ void q_graphicssvgitem_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QGraphicsSvgItem*
 ///
-libqt_list /* of QObject* */ q_graphicssvgitem_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_graphicssvgitem_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -888,7 +890,9 @@ void q_graphicssvgitem_set_parent_item(void* self, void* parent);
 ///
 /// @param self QGraphicsSvgItem*
 ///
-libqt_list /* of QGraphicsItem* */ q_graphicssvgitem_child_items(void* self);
+/// @return libqt_list of QGraphicsItem*
+///
+libqt_list q_graphicssvgitem_child_items(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -1216,7 +1220,7 @@ void q_graphicssvgitem_set_graphics_effect(void* self, void* effect);
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int64_t q_graphicssvgitem_accepted_mouse_buttons(void* self);
+int32_t q_graphicssvgitem_accepted_mouse_buttons(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -1225,7 +1229,7 @@ int64_t q_graphicssvgitem_accepted_mouse_buttons(void* self);
 /// @param self QGraphicsSvgItem*
 /// @param buttons flag of enum Qt__MouseButton
 ///
-void q_graphicssvgitem_set_accepted_mouse_buttons(void* self, int64_t buttons);
+void q_graphicssvgitem_set_accepted_mouse_buttons(void* self, int32_t buttons);
 
 /// Inherited from QGraphicsItem
 ///
@@ -1591,16 +1595,18 @@ double q_graphicssvgitem_scale(void* self);
 ///
 /// @param self QGraphicsSvgItem*
 ///
-libqt_list /* of QGraphicsTransform* */ q_graphicssvgitem_transformations(void* self);
+/// @return libqt_list of QGraphicsTransform*
+///
+libqt_list q_graphicssvgitem_transformations(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setTransformations)
 ///
 /// @param self QGraphicsSvgItem*
-/// @param transformations libqt_list /* of QGraphicsTransform* */
+/// @param transformations libqt_list of QGraphicsTransform*
 ///
-void q_graphicssvgitem_set_transformations(void* self, libqt_list transformations);
+void q_graphicssvgitem_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations);
 
 /// Inherited from QGraphicsItem
 ///
@@ -1693,7 +1699,9 @@ QPainterPath* q_graphicssvgitem_clip_path(void* self);
 ///
 /// @param self QGraphicsSvgItem*
 ///
-libqt_list /* of QGraphicsItem* */ q_graphicssvgitem_colliding_items(void* self);
+/// @return libqt_list of QGraphicsItem*
+///
+libqt_list q_graphicssvgitem_colliding_items(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2128,7 +2136,7 @@ void q_graphicssvgitem_set_data(void* self, int key, void* value);
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t q_graphicssvgitem_input_method_hints(void* self);
+int32_t q_graphicssvgitem_input_method_hints(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2137,7 +2145,7 @@ int64_t q_graphicssvgitem_input_method_hints(void* self);
 /// @param self QGraphicsSvgItem*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void q_graphicssvgitem_set_input_method_hints(void* self, int64_t hints);
+void q_graphicssvgitem_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2270,7 +2278,9 @@ void q_graphicssvgitem_set_transform2(void* self, void* matrix, bool combine);
 /// @param self QGraphicsSvgItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-libqt_list /* of QGraphicsItem* */ q_graphicssvgitem_colliding_items1(void* self, int32_t mode);
+/// @return libqt_list of QGraphicsItem*
+///
+libqt_list q_graphicssvgitem_colliding_items1(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3436,7 +3446,7 @@ void q_graphicssvgitem_on_input_method_event(void* self, void (*callback)(void*,
 /// @param self QGraphicsSvgItem*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicssvgitem_input_method_query(void* self, int64_t query);
+QVariant* q_graphicssvgitem_input_method_query(void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3447,7 +3457,7 @@ QVariant* q_graphicssvgitem_input_method_query(void* self, int64_t query);
 /// @param self QGraphicsSvgItem*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicssvgitem_qbase_input_method_query(void* self, int64_t query);
+QVariant* q_graphicssvgitem_qbase_input_method_query(void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3458,7 +3468,7 @@ QVariant* q_graphicssvgitem_qbase_input_method_query(void* self, int64_t query);
 /// @param self QGraphicsSvgItem*
 /// @param callback QVariant* func(QGraphicsSvgItem* self, enum Qt__InputMethodQuery query)
 ///
-void q_graphicssvgitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void q_graphicssvgitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -3504,7 +3514,7 @@ void q_graphicssvgitem_on_item_change(void* self, QVariant* (*callback)(void*, i
 /// @param self QGraphicsSvgItem*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicssvgitem_supports_extension(void* self, int64_t extension);
+bool q_graphicssvgitem_supports_extension(void* self, int32_t extension);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3515,7 +3525,7 @@ bool q_graphicssvgitem_supports_extension(void* self, int64_t extension);
 /// @param self QGraphicsSvgItem*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_graphicssvgitem_qbase_supports_extension(void* self, int64_t extension);
+bool q_graphicssvgitem_qbase_supports_extension(void* self, int32_t extension);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3526,7 +3536,7 @@ bool q_graphicssvgitem_qbase_supports_extension(void* self, int64_t extension);
 /// @param self QGraphicsSvgItem*
 /// @param callback bool func(QGraphicsSvgItem* self, enum QGraphicsItem__Extension extension)
 ///
-void q_graphicssvgitem_on_supports_extension(void* self, bool (*callback)(void*, int64_t));
+void q_graphicssvgitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -3538,7 +3548,7 @@ void q_graphicssvgitem_on_supports_extension(void* self, bool (*callback)(void*,
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicssvgitem_set_extension(void* self, int64_t extension, void* variant);
+void q_graphicssvgitem_set_extension(void* self, int32_t extension, void* variant);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3550,7 +3560,7 @@ void q_graphicssvgitem_set_extension(void* self, int64_t extension, void* varian
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_graphicssvgitem_qbase_set_extension(void* self, int64_t extension, void* variant);
+void q_graphicssvgitem_qbase_set_extension(void* self, int32_t extension, void* variant);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3561,7 +3571,7 @@ void q_graphicssvgitem_qbase_set_extension(void* self, int64_t extension, void* 
 /// @param self QGraphicsSvgItem*
 /// @param callback void func(QGraphicsSvgItem* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 ///
-void q_graphicssvgitem_on_set_extension(void* self, void (*callback)(void*, int64_t, void*));
+void q_graphicssvgitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*));
 
 /// Inherited from QGraphicsItem
 ///

@@ -129,7 +129,7 @@ void q_region_set_rects(void* self, void* rect, int num) {
     QRegion_SetRects((QRegion*)self, (QRect*)rect, num);
 }
 
-void q_region_set_rects2(void* self, libqt_list r) {
+void q_region_set_rects2(void* self, libqt_list /* of QRect* */ r) {
     QRegion_SetRects2((QRegion*)self, r);
 }
 

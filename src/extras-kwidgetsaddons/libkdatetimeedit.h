@@ -103,7 +103,9 @@ QTimeZone* k_datetimeedit_time_zone(void* self);
 ///
 /// @param self KDateTimeEdit*
 ///
-libqt_list /* of QLocale* */ k_datetimeedit_calendar_locales_list(void* self);
+/// @return libqt_list of QLocale*
+///
+libqt_list k_datetimeedit_calendar_locales_list(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#minimumDateTime)
 ///
@@ -129,7 +131,8 @@ int32_t k_datetimeedit_date_display_format(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of QDate* to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QDate*)map.keys)[i]);
 ///     libqt_free(map.values[i]);
@@ -140,7 +143,9 @@ int32_t k_datetimeedit_date_display_format(void* self);
 ///
 /// @param self KDateTimeEdit*
 ///
-libqt_map /* of QDate* to const char* */ k_datetimeedit_date_map(void* self);
+/// @return libqt_map of QDate* to const char*
+///
+libqt_map k_datetimeedit_date_map(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#timeDisplayFormat)
 ///
@@ -160,13 +165,17 @@ int32_t k_datetimeedit_time_list_interval(void* self);
 ///
 /// @param self KDateTimeEdit*
 ///
-libqt_list /* of QTime* */ k_datetimeedit_time_list(void* self);
+/// @return libqt_list of QTime*
+///
+libqt_list k_datetimeedit_time_list(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#timeZones)
 ///
 /// @param self KDateTimeEdit*
 ///
-libqt_list /* of QTimeZone* */ k_datetimeedit_time_zones(void* self);
+/// @return libqt_list of QTimeZone*
+///
+libqt_list k_datetimeedit_time_zones(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#isValid)
 ///
@@ -471,16 +480,16 @@ void k_datetimeedit_set_date_display_format(void* self, int32_t format);
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#setCalendarLocalesList)
 ///
 /// @param self KDateTimeEdit*
-/// @param calendarLocales libqt_list /* of QLocale* */
+/// @param calendarLocales libqt_list of QLocale*
 ///
-void k_datetimeedit_set_calendar_locales_list(void* self, libqt_list calendarLocales);
+void k_datetimeedit_set_calendar_locales_list(void* self, libqt_list /* of QLocale* */ calendarLocales);
 
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#setDateMap)
 ///
 /// @param self KDateTimeEdit*
-/// @param dateMap libqt_map /* of QDate* to const char* */
+/// @param dateMap libqt_map of QDate* to const char*
 ///
-void k_datetimeedit_set_date_map(void* self, libqt_map /* of QDate* to const char* */ dateMap);
+void k_datetimeedit_set_date_map(void* self, libqt_map dateMap);
 
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#setTimeDisplayFormat)
 ///
@@ -499,16 +508,16 @@ void k_datetimeedit_set_time_list_interval(void* self, int minutes);
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#setTimeList)
 ///
 /// @param self KDateTimeEdit*
-/// @param timeList libqt_list /* of QTime* */
+/// @param timeList libqt_list of QTime*
 ///
-void k_datetimeedit_set_time_list(void* self, libqt_list timeList);
+void k_datetimeedit_set_time_list(void* self, libqt_list /* of QTime* */ timeList);
 
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#setTimeZones)
 ///
 /// @param self KDateTimeEdit*
-/// @param zones libqt_list /* of QTimeZone* */
+/// @param zones libqt_list of QTimeZone*
 ///
-void k_datetimeedit_set_time_zones(void* self, libqt_list zones);
+void k_datetimeedit_set_time_zones(void* self, libqt_list /* of QTimeZone* */ zones);
 
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#eventFilter)
 ///
@@ -769,19 +778,19 @@ void k_datetimeedit_set_maximum_date_time2(void* self, void* maxDateTime, const 
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#setTimeList)
 ///
 /// @param self KDateTimeEdit*
-/// @param timeList libqt_list /* of QTime* */
+/// @param timeList libqt_list of QTime*
 /// @param minWarnMsg const char*
 ///
-void k_datetimeedit_set_time_list2(void* self, libqt_list timeList, const char* minWarnMsg);
+void k_datetimeedit_set_time_list2(void* self, libqt_list /* of QTime* */ timeList, const char* minWarnMsg);
 
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#setTimeList)
 ///
 /// @param self KDateTimeEdit*
-/// @param timeList libqt_list /* of QTime* */
+/// @param timeList libqt_list of QTime*
 /// @param minWarnMsg const char*
 /// @param maxWarnMsg const char*
 ///
-void k_datetimeedit_set_time_list3(void* self, libqt_list timeList, const char* minWarnMsg, const char* maxWarnMsg);
+void k_datetimeedit_set_time_list3(void* self, libqt_list /* of QTime* */ timeList, const char* minWarnMsg, const char* maxWarnMsg);
 
 /// Inherited from QWidget
 ///
@@ -1611,7 +1620,7 @@ void k_datetimeedit_set_graphics_effect(void* self, void* effect);
 /// @param self KDateTimeEdit*
 /// @param type enum Qt__GestureType
 ///
-void k_datetimeedit_grab_gesture(void* self, int64_t type);
+void k_datetimeedit_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -1620,7 +1629,7 @@ void k_datetimeedit_grab_gesture(void* self, int64_t type);
 /// @param self KDateTimeEdit*
 /// @param type enum Qt__GestureType
 ///
-void k_datetimeedit_ungrab_gesture(void* self, int64_t type);
+void k_datetimeedit_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2609,7 +2618,7 @@ void k_datetimeedit_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void k_datetimeedit_set_parent2(void* self, void* parent, int64_t f);
+void k_datetimeedit_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -2687,9 +2696,9 @@ void k_datetimeedit_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self KDateTimeEdit*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_datetimeedit_add_actions(void* self, libqt_list actions);
+void k_datetimeedit_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2697,9 +2706,9 @@ void k_datetimeedit_add_actions(void* self, libqt_list actions);
 ///
 /// @param self KDateTimeEdit*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_datetimeedit_insert_actions(void* self, void* before, libqt_list actions);
+void k_datetimeedit_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2726,7 +2735,9 @@ void k_datetimeedit_remove_action(void* self, void* action);
 ///
 /// @param self KDateTimeEdit*
 ///
-libqt_list /* of QAction* */ k_datetimeedit_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_datetimeedit_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2783,7 +2794,7 @@ QWidget* k_datetimeedit_parent_widget(void* self);
 /// @param self KDateTimeEdit*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_datetimeedit_set_window_flags(void* self, int64_t type);
+void k_datetimeedit_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2793,7 +2804,7 @@ void k_datetimeedit_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t k_datetimeedit_window_flags(void* self);
+int32_t k_datetimeedit_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2802,7 +2813,7 @@ int64_t k_datetimeedit_window_flags(void* self);
 /// @param self KDateTimeEdit*
 /// @param param1 enum Qt__WindowType
 ///
-void k_datetimeedit_set_window_flag(void* self, int64_t param1);
+void k_datetimeedit_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2811,7 +2822,7 @@ void k_datetimeedit_set_window_flag(void* self, int64_t param1);
 /// @param self KDateTimeEdit*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_datetimeedit_override_window_flags(void* self, int64_t type);
+void k_datetimeedit_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2821,7 +2832,7 @@ void k_datetimeedit_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t k_datetimeedit_window_type(void* self);
+int32_t k_datetimeedit_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3032,7 +3043,7 @@ void k_datetimeedit_on_custom_context_menu_requested(void* self, void (*callback
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t k_datetimeedit_input_method_hints(void* self);
+int32_t k_datetimeedit_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3041,7 +3052,7 @@ int64_t k_datetimeedit_input_method_hints(void* self);
 /// @param self KDateTimeEdit*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void k_datetimeedit_set_input_method_hints(void* self, int64_t hints);
+void k_datetimeedit_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -3126,7 +3137,7 @@ QPixmap* k_datetimeedit_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void k_datetimeedit_grab_gesture2(void* self, int64_t type, int32_t flags);
+void k_datetimeedit_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -3166,7 +3177,7 @@ void k_datetimeedit_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void k_datetimeedit_set_window_flag2(void* self, int64_t param1, bool on);
+void k_datetimeedit_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -3195,7 +3206,7 @@ QWidget* k_datetimeedit_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* k_datetimeedit_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* k_datetimeedit_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -3307,7 +3318,9 @@ void k_datetimeedit_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KDateTimeEdit*
 ///
-libqt_list /* of QObject* */ k_datetimeedit_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_datetimeedit_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4825,7 +4838,7 @@ void k_datetimeedit_on_input_method_event(void* self, void (*callback)(void*, vo
 /// @param self KDateTimeEdit*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_datetimeedit_input_method_query(void* self, int64_t param1);
+QVariant* k_datetimeedit_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4836,7 +4849,7 @@ QVariant* k_datetimeedit_input_method_query(void* self, int64_t param1);
 /// @param self KDateTimeEdit*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_datetimeedit_qbase_input_method_query(void* self, int64_t param1);
+QVariant* k_datetimeedit_qbase_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4847,7 +4860,7 @@ QVariant* k_datetimeedit_qbase_input_method_query(void* self, int64_t param1);
 /// @param self KDateTimeEdit*
 /// @param callback QVariant* func(KDateTimeEdit* self, enum Qt__InputMethodQuery param1)
 ///
-void k_datetimeedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void k_datetimeedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///

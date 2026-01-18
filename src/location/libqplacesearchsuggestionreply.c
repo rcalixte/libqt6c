@@ -46,7 +46,7 @@ const char** q_placesearchsuggestionreply_suggestions(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_placesearchsuggestionreply_suggestions");
+        fprintf(stderr, "Failed to allocate memory for string list in q_placesearchsuggestionreply_suggestions\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -76,7 +76,7 @@ void q_placesearchsuggestionreply_set_suggestions(void* self, const char* sugges
     size_t suggestions_len = libqt_strv_length(suggestions);
     libqt_string* suggestions_qstr = (libqt_string*)malloc(suggestions_len * sizeof(libqt_string));
     if (suggestions_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_placesearchsuggestionreply_set_suggestions");
+        fprintf(stderr, "Failed to allocate memory for string list in q_placesearchsuggestionreply_set_suggestions\n");
         abort();
     }
     for (size_t i = 0; i < suggestions_len; ++i) {
@@ -95,7 +95,7 @@ void q_placesearchsuggestionreply_qbase_set_suggestions(void* self, const char* 
     size_t suggestions_len = libqt_strv_length(suggestions);
     libqt_string* suggestions_qstr = (libqt_string*)malloc(suggestions_len * sizeof(libqt_string));
     if (suggestions_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_placesearchsuggestionreply_set_suggestions");
+        fprintf(stderr, "Failed to allocate memory for string list in q_placesearchsuggestionreply_set_suggestions\n");
         abort();
     }
     for (size_t i = 0; i < suggestions_len; ++i) {
@@ -279,7 +279,7 @@ const char** q_placesearchsuggestionreply_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_placesearchsuggestionreply_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_placesearchsuggestionreply_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

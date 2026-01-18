@@ -1035,7 +1035,7 @@ void k_historycombobox_set_view(void* self, void* itemView);
 /// @param query enum Qt__InputMethodQuery
 /// @param argument QVariant*
 ///
-QVariant* k_historycombobox_input_method_query2(void* self, int64_t query, void* argument);
+QVariant* k_historycombobox_input_method_query2(void* self, int32_t query, void* argument);
 
 /// Inherited from QComboBox
 ///
@@ -2139,7 +2139,7 @@ void k_historycombobox_set_graphics_effect(void* self, void* effect);
 /// @param self KHistoryComboBox*
 /// @param type enum Qt__GestureType
 ///
-void k_historycombobox_grab_gesture(void* self, int64_t type);
+void k_historycombobox_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2148,7 +2148,7 @@ void k_historycombobox_grab_gesture(void* self, int64_t type);
 /// @param self KHistoryComboBox*
 /// @param type enum Qt__GestureType
 ///
-void k_historycombobox_ungrab_gesture(void* self, int64_t type);
+void k_historycombobox_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3137,7 +3137,7 @@ void k_historycombobox_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void k_historycombobox_set_parent2(void* self, void* parent, int64_t f);
+void k_historycombobox_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -3215,9 +3215,9 @@ void k_historycombobox_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self KHistoryComboBox*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_historycombobox_add_actions(void* self, libqt_list actions);
+void k_historycombobox_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -3225,9 +3225,9 @@ void k_historycombobox_add_actions(void* self, libqt_list actions);
 ///
 /// @param self KHistoryComboBox*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_historycombobox_insert_actions(void* self, void* before, libqt_list actions);
+void k_historycombobox_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -3254,7 +3254,9 @@ void k_historycombobox_remove_action(void* self, void* action);
 ///
 /// @param self KHistoryComboBox*
 ///
-libqt_list /* of QAction* */ k_historycombobox_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_historycombobox_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3311,7 +3313,7 @@ QWidget* k_historycombobox_parent_widget(void* self);
 /// @param self KHistoryComboBox*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_historycombobox_set_window_flags(void* self, int64_t type);
+void k_historycombobox_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3321,7 +3323,7 @@ void k_historycombobox_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t k_historycombobox_window_flags(void* self);
+int32_t k_historycombobox_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3330,7 +3332,7 @@ int64_t k_historycombobox_window_flags(void* self);
 /// @param self KHistoryComboBox*
 /// @param param1 enum Qt__WindowType
 ///
-void k_historycombobox_set_window_flag(void* self, int64_t param1);
+void k_historycombobox_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3339,7 +3341,7 @@ void k_historycombobox_set_window_flag(void* self, int64_t param1);
 /// @param self KHistoryComboBox*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_historycombobox_override_window_flags(void* self, int64_t type);
+void k_historycombobox_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3349,7 +3351,7 @@ void k_historycombobox_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t k_historycombobox_window_type(void* self);
+int32_t k_historycombobox_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3560,7 +3562,7 @@ void k_historycombobox_on_custom_context_menu_requested(void* self, void (*callb
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t k_historycombobox_input_method_hints(void* self);
+int32_t k_historycombobox_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3569,7 +3571,7 @@ int64_t k_historycombobox_input_method_hints(void* self);
 /// @param self KHistoryComboBox*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void k_historycombobox_set_input_method_hints(void* self, int64_t hints);
+void k_historycombobox_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -3654,7 +3656,7 @@ QPixmap* k_historycombobox_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void k_historycombobox_grab_gesture2(void* self, int64_t type, int32_t flags);
+void k_historycombobox_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -3694,7 +3696,7 @@ void k_historycombobox_set_shortcut_auto_repeat2(void* self, int id, bool enable
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void k_historycombobox_set_window_flag2(void* self, int64_t param1, bool on);
+void k_historycombobox_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -3723,7 +3725,7 @@ QWidget* k_historycombobox_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* k_historycombobox_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* k_historycombobox_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -3835,7 +3837,9 @@ void k_historycombobox_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KHistoryComboBox*
 ///
-libqt_list /* of QObject* */ k_historycombobox_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_historycombobox_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4239,9 +4243,9 @@ int32_t k_historycombobox_completion_mode(void* self);
 ///
 /// @param self KHistoryComboBox*
 /// @param item enum KCompletionBase__KeyBindingType
-/// @param key libqt_list /* of QKeySequence* */
+/// @param key libqt_list of QKeySequence*
 ///
-bool k_historycombobox_set_key_binding(void* self, int32_t item, libqt_list key);
+bool k_historycombobox_set_key_binding(void* self, int32_t item, libqt_list /* of QKeySequence* */ key);
 
 /// Inherited from KCompletionBase
 ///
@@ -4250,7 +4254,9 @@ bool k_historycombobox_set_key_binding(void* self, int32_t item, libqt_list key)
 /// @param self KHistoryComboBox*
 /// @param item enum KCompletionBase__KeyBindingType
 ///
-libqt_list /* of QKeySequence* */ k_historycombobox_key_binding(void* self, int32_t item);
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_historycombobox_key_binding(void* self, int32_t item);
 
 /// Inherited from KCompletionBase
 ///
@@ -4643,7 +4649,7 @@ void k_historycombobox_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self KHistoryComboBox*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_historycombobox_input_method_query(void* self, int64_t param1);
+QVariant* k_historycombobox_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QComboBox
 ///
@@ -4654,7 +4660,7 @@ QVariant* k_historycombobox_input_method_query(void* self, int64_t param1);
 /// @param self KHistoryComboBox*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_historycombobox_qbase_input_method_query(void* self, int64_t param1);
+QVariant* k_historycombobox_qbase_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QComboBox
 ///
@@ -4665,7 +4671,7 @@ QVariant* k_historycombobox_qbase_input_method_query(void* self, int64_t param1)
 /// @param self KHistoryComboBox*
 /// @param callback QVariant* func(KHistoryComboBox* self, enum Qt__InputMethodQuery param1)
 ///
-void k_historycombobox_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void k_historycombobox_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QComboBox
 ///
@@ -6511,7 +6517,8 @@ void k_historycombobox_on_get_decoded_metric_f(void* self, double (*callback)(vo
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     for (size_t j = 0; ((QKeySequence**)map.values)[i][j] != NULL; j++) {
 ///         free(((QKeySequence**)map.values)[i][j]);
@@ -6526,7 +6533,9 @@ void k_historycombobox_on_get_decoded_metric_f(void* self, double (*callback)(vo
 ///
 /// @param self KHistoryComboBox*
 ///
-libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* */ k_historycombobox_key_binding_map(void* self);
+/// @return libqt_map of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence*
+///
+libqt_map k_historycombobox_key_binding_map(void* self);
 
 /// Inherited from KCompletionBase
 ///
@@ -6534,7 +6543,8 @@ libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequen
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     for (size_t j = 0; ((QKeySequence**)map.values)[i][j] != NULL; j++) {
 ///         free(((QKeySequence**)map.values)[i][j]);
@@ -6549,7 +6559,9 @@ libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequen
 ///
 /// @param self KHistoryComboBox*
 ///
-libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* */ k_historycombobox_qbase_key_binding_map(void* self);
+/// @return libqt_map of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence*
+///
+libqt_map k_historycombobox_qbase_key_binding_map(void* self);
 
 /// Inherited from KCompletionBase
 ///
@@ -6558,9 +6570,9 @@ libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequen
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KHistoryComboBox*
-/// @param callback libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* */ func()
+/// @param callback libqt_map of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* func()
 ///
-void k_historycombobox_on_key_binding_map(void* self, libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* */ (*callback)());
+void k_historycombobox_on_key_binding_map(void* self, libqt_map (*callback)());
 
 /// Inherited from KCompletionBase
 ///
@@ -6569,9 +6581,9 @@ void k_historycombobox_on_key_binding_map(void* self, libqt_map /* of enum KComp
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KHistoryComboBox*
-/// @param keyBindingMap libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence* */
+/// @param keyBindingMap libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence*
 ///
-void k_historycombobox_set_key_binding_map(void* self, libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence** */ keyBindingMap);
+void k_historycombobox_set_key_binding_map(void* self, libqt_map keyBindingMap);
 
 /// Inherited from KCompletionBase
 ///
@@ -6580,9 +6592,9 @@ void k_historycombobox_set_key_binding_map(void* self, libqt_map /* of enum KCom
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KHistoryComboBox*
-/// @param keyBindingMap libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence* */
+/// @param keyBindingMap libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence*
 ///
-void k_historycombobox_qbase_set_key_binding_map(void* self, libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence** */ keyBindingMap);
+void k_historycombobox_qbase_set_key_binding_map(void* self, libqt_map keyBindingMap);
 
 /// Inherited from KCompletionBase
 ///
@@ -6591,9 +6603,9 @@ void k_historycombobox_qbase_set_key_binding_map(void* self, libqt_map /* of enu
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KHistoryComboBox*
-/// @param callback void func(KHistoryComboBox* self, libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence* */ /* of enum KCompletionBase__KeyBindingType to QKeySequence* */)
+/// @param callback void func(KHistoryComboBox* self, libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence*)
 ///
-void k_historycombobox_on_set_key_binding_map(void* self, void (*callback)(void*, libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence** */));
+void k_historycombobox_on_set_key_binding_map(void* self, void (*callback)(void*, libqt_map));
 
 /// Inherited from KCompletionBase
 ///

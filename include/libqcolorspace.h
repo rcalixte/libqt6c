@@ -39,9 +39,9 @@ QColorSpace* q_colorspace_new3(void* whitePoint, int32_t transferFunction);
 /// q_colorspace_new4 constructs a new QColorSpace object.
 ///
 /// @param whitePoint QPointF*
-/// @param transferFunctionTable libqt_list /* of uint16_t */
+/// @param transferFunctionTable libqt_list of uint16_t
 ///
-QColorSpace* q_colorspace_new4(void* whitePoint, libqt_list transferFunctionTable);
+QColorSpace* q_colorspace_new4(void* whitePoint, libqt_list /* of uint16_t */ transferFunctionTable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolorspace.html)
 
@@ -66,9 +66,9 @@ QColorSpace* q_colorspace_new6(int32_t primaries, float gamma);
 /// q_colorspace_new7 constructs a new QColorSpace object.
 ///
 /// @param primaries enum QColorSpace__Primaries
-/// @param transferFunctionTable libqt_list /* of uint16_t */
+/// @param transferFunctionTable libqt_list of uint16_t
 ///
-QColorSpace* q_colorspace_new7(int32_t primaries, libqt_list transferFunctionTable);
+QColorSpace* q_colorspace_new7(int32_t primaries, libqt_list /* of uint16_t */ transferFunctionTable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolorspace.html)
 
@@ -90,9 +90,9 @@ QColorSpace* q_colorspace_new8(void* whitePoint, void* redPoint, void* greenPoin
 /// @param redPoint QPointF*
 /// @param greenPoint QPointF*
 /// @param bluePoint QPointF*
-/// @param transferFunctionTable libqt_list /* of uint16_t */
+/// @param transferFunctionTable libqt_list of uint16_t
 ///
-QColorSpace* q_colorspace_new9(void* whitePoint, void* redPoint, void* greenPoint, void* bluePoint, libqt_list transferFunctionTable);
+QColorSpace* q_colorspace_new9(void* whitePoint, void* redPoint, void* greenPoint, void* bluePoint, libqt_list /* of uint16_t */ transferFunctionTable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolorspace.html)
 
@@ -102,11 +102,11 @@ QColorSpace* q_colorspace_new9(void* whitePoint, void* redPoint, void* greenPoin
 /// @param redPoint QPointF*
 /// @param greenPoint QPointF*
 /// @param bluePoint QPointF*
-/// @param redTransferFunctionTable libqt_list /* of uint16_t */
-/// @param greenTransferFunctionTable libqt_list /* of uint16_t */
-/// @param blueTransferFunctionTable libqt_list /* of uint16_t */
+/// @param redTransferFunctionTable libqt_list of uint16_t
+/// @param greenTransferFunctionTable libqt_list of uint16_t
+/// @param blueTransferFunctionTable libqt_list of uint16_t
 ///
-QColorSpace* q_colorspace_new10(void* whitePoint, void* redPoint, void* greenPoint, void* bluePoint, libqt_list redTransferFunctionTable, libqt_list greenTransferFunctionTable, libqt_list blueTransferFunctionTable);
+QColorSpace* q_colorspace_new10(void* whitePoint, void* redPoint, void* greenPoint, void* bluePoint, libqt_list /* of uint16_t */ redTransferFunctionTable, libqt_list /* of uint16_t */ greenTransferFunctionTable, libqt_list /* of uint16_t */ blueTransferFunctionTable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolorspace.html)
 
@@ -210,18 +210,18 @@ void q_colorspace_set_transfer_function(void* self, int32_t transferFunction);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolorspace.html#setTransferFunction)
 ///
 /// @param self QColorSpace*
-/// @param transferFunctionTable libqt_list /* of uint16_t */
+/// @param transferFunctionTable libqt_list of uint16_t
 ///
-void q_colorspace_set_transfer_function2(void* self, libqt_list transferFunctionTable);
+void q_colorspace_set_transfer_function2(void* self, libqt_list /* of uint16_t */ transferFunctionTable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolorspace.html#setTransferFunctions)
 ///
 /// @param self QColorSpace*
-/// @param redTransferFunctionTable libqt_list /* of uint16_t */
-/// @param greenTransferFunctionTable libqt_list /* of uint16_t */
-/// @param blueTransferFunctionTable libqt_list /* of uint16_t */
+/// @param redTransferFunctionTable libqt_list of uint16_t
+/// @param greenTransferFunctionTable libqt_list of uint16_t
+/// @param blueTransferFunctionTable libqt_list of uint16_t
 ///
-void q_colorspace_set_transfer_functions(void* self, libqt_list redTransferFunctionTable, libqt_list greenTransferFunctionTable, libqt_list blueTransferFunctionTable);
+void q_colorspace_set_transfer_functions(void* self, libqt_list /* of uint16_t */ redTransferFunctionTable, libqt_list /* of uint16_t */ greenTransferFunctionTable, libqt_list /* of uint16_t */ blueTransferFunctionTable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolorspace.html#withTransferFunction)
 ///
@@ -233,18 +233,18 @@ QColorSpace* q_colorspace_with_transfer_function(void* self, int32_t transferFun
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolorspace.html#withTransferFunction)
 ///
 /// @param self QColorSpace*
-/// @param transferFunctionTable libqt_list /* of uint16_t */
+/// @param transferFunctionTable libqt_list of uint16_t
 ///
-QColorSpace* q_colorspace_with_transfer_function2(void* self, libqt_list transferFunctionTable);
+QColorSpace* q_colorspace_with_transfer_function2(void* self, libqt_list /* of uint16_t */ transferFunctionTable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolorspace.html#withTransferFunctions)
 ///
 /// @param self QColorSpace*
-/// @param redTransferFunctionTable libqt_list /* of uint16_t */
-/// @param greenTransferFunctionTable libqt_list /* of uint16_t */
-/// @param blueTransferFunctionTable libqt_list /* of uint16_t */
+/// @param redTransferFunctionTable libqt_list of uint16_t
+/// @param greenTransferFunctionTable libqt_list of uint16_t
+/// @param blueTransferFunctionTable libqt_list of uint16_t
 ///
-QColorSpace* q_colorspace_with_transfer_functions(void* self, libqt_list redTransferFunctionTable, libqt_list greenTransferFunctionTable, libqt_list blueTransferFunctionTable);
+QColorSpace* q_colorspace_with_transfer_functions(void* self, libqt_list /* of uint16_t */ redTransferFunctionTable, libqt_list /* of uint16_t */ greenTransferFunctionTable, libqt_list /* of uint16_t */ blueTransferFunctionTable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolorspace.html#setPrimaries)
 ///

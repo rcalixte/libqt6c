@@ -326,7 +326,9 @@ void k_pixmapsequenceoverlaypainter_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KPixmapSequenceOverlayPainter*
 ///
-libqt_list /* of QObject* */ k_pixmapsequenceoverlaypainter_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_pixmapsequenceoverlaypainter_children(void* self);
 
 /// Inherited from QObject
 ///

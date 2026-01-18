@@ -144,9 +144,9 @@ QKeySequence* k_keysequencewidget_key_sequence(void* self);
 /// [Upstream resources](https://api.kde.org/kkeysequencewidget.html#setCheckActionCollections)
 ///
 /// @param self KKeySequenceWidget*
-/// @param actionCollections libqt_list /* of KActionCollection* */
+/// @param actionCollections libqt_list of KActionCollection*
 ///
-void k_keysequencewidget_set_check_action_collections(void* self, libqt_list actionCollections);
+void k_keysequencewidget_set_check_action_collections(void* self, libqt_list /* of KActionCollection* */ actionCollections);
 
 /// [Upstream resources](https://api.kde.org/kkeysequencewidget.html#setComponentName)
 ///
@@ -1098,7 +1098,7 @@ void k_keysequencewidget_set_graphics_effect(void* self, void* effect);
 /// @param self KKeySequenceWidget*
 /// @param type enum Qt__GestureType
 ///
-void k_keysequencewidget_grab_gesture(void* self, int64_t type);
+void k_keysequencewidget_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -1107,7 +1107,7 @@ void k_keysequencewidget_grab_gesture(void* self, int64_t type);
 /// @param self KKeySequenceWidget*
 /// @param type enum Qt__GestureType
 ///
-void k_keysequencewidget_ungrab_gesture(void* self, int64_t type);
+void k_keysequencewidget_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2096,7 +2096,7 @@ void k_keysequencewidget_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void k_keysequencewidget_set_parent2(void* self, void* parent, int64_t f);
+void k_keysequencewidget_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -2174,9 +2174,9 @@ void k_keysequencewidget_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self KKeySequenceWidget*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_keysequencewidget_add_actions(void* self, libqt_list actions);
+void k_keysequencewidget_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2184,9 +2184,9 @@ void k_keysequencewidget_add_actions(void* self, libqt_list actions);
 ///
 /// @param self KKeySequenceWidget*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_keysequencewidget_insert_actions(void* self, void* before, libqt_list actions);
+void k_keysequencewidget_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2213,7 +2213,9 @@ void k_keysequencewidget_remove_action(void* self, void* action);
 ///
 /// @param self KKeySequenceWidget*
 ///
-libqt_list /* of QAction* */ k_keysequencewidget_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_keysequencewidget_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2270,7 +2272,7 @@ QWidget* k_keysequencewidget_parent_widget(void* self);
 /// @param self KKeySequenceWidget*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_keysequencewidget_set_window_flags(void* self, int64_t type);
+void k_keysequencewidget_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2280,7 +2282,7 @@ void k_keysequencewidget_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t k_keysequencewidget_window_flags(void* self);
+int32_t k_keysequencewidget_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2289,7 +2291,7 @@ int64_t k_keysequencewidget_window_flags(void* self);
 /// @param self KKeySequenceWidget*
 /// @param param1 enum Qt__WindowType
 ///
-void k_keysequencewidget_set_window_flag(void* self, int64_t param1);
+void k_keysequencewidget_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2298,7 +2300,7 @@ void k_keysequencewidget_set_window_flag(void* self, int64_t param1);
 /// @param self KKeySequenceWidget*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_keysequencewidget_override_window_flags(void* self, int64_t type);
+void k_keysequencewidget_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2308,7 +2310,7 @@ void k_keysequencewidget_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t k_keysequencewidget_window_type(void* self);
+int32_t k_keysequencewidget_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2519,7 +2521,7 @@ void k_keysequencewidget_on_custom_context_menu_requested(void* self, void (*cal
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t k_keysequencewidget_input_method_hints(void* self);
+int32_t k_keysequencewidget_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2528,7 +2530,7 @@ int64_t k_keysequencewidget_input_method_hints(void* self);
 /// @param self KKeySequenceWidget*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void k_keysequencewidget_set_input_method_hints(void* self, int64_t hints);
+void k_keysequencewidget_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -2613,7 +2615,7 @@ QPixmap* k_keysequencewidget_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void k_keysequencewidget_grab_gesture2(void* self, int64_t type, int32_t flags);
+void k_keysequencewidget_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -2653,7 +2655,7 @@ void k_keysequencewidget_set_shortcut_auto_repeat2(void* self, int id, bool enab
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void k_keysequencewidget_set_window_flag2(void* self, int64_t param1, bool on);
+void k_keysequencewidget_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -2682,7 +2684,7 @@ QWidget* k_keysequencewidget_create_window_container2(void* window, void* parent
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* k_keysequencewidget_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* k_keysequencewidget_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -2794,7 +2796,9 @@ void k_keysequencewidget_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KKeySequenceWidget*
 ///
-libqt_list /* of QObject* */ k_keysequencewidget_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_keysequencewidget_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4378,7 +4382,7 @@ void k_keysequencewidget_on_input_method_event(void* self, void (*callback)(void
 /// @param self KKeySequenceWidget*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_keysequencewidget_input_method_query(void* self, int64_t param1);
+QVariant* k_keysequencewidget_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4389,7 +4393,7 @@ QVariant* k_keysequencewidget_input_method_query(void* self, int64_t param1);
 /// @param self KKeySequenceWidget*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_keysequencewidget_qbase_input_method_query(void* self, int64_t param1);
+QVariant* k_keysequencewidget_qbase_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4400,7 +4404,7 @@ QVariant* k_keysequencewidget_qbase_input_method_query(void* self, int64_t param
 /// @param self KKeySequenceWidget*
 /// @param callback QVariant* func(KKeySequenceWidget* self, enum Qt__InputMethodQuery param1)
 ///
-void k_keysequencewidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void k_keysequencewidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///

@@ -85,7 +85,9 @@ KSambaShareData* k_sambashare_get_share_by_name(void* self, const char* name);
 /// @param self KSambaShare*
 /// @param path const char*
 ///
-libqt_list /* of KSambaShareData* */ k_sambashare_get_shares_by_path(void* self, const char* path);
+/// @return libqt_list of KSambaShareData*
+///
+libqt_list k_sambashare_get_shares_by_path(void* self, const char* path);
 
 /// [Upstream resources](https://api.kde.org/ksambashare.html#lastSystemErrorString)
 ///
@@ -262,7 +264,9 @@ void k_sambashare_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KSambaShare*
 ///
-libqt_list /* of QObject* */ k_sambashare_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_sambashare_children(void* self);
 
 /// Inherited from QObject
 ///

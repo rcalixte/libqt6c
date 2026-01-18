@@ -69,7 +69,9 @@ int32_t k_solid__opticaldrive_write_speed(void* self);
 ///
 /// @param self Solid__OpticalDrive*
 ///
-libqt_list /* of int */ k_solid__opticaldrive_write_speeds(void* self);
+/// @return libqt_list of int
+///
+libqt_list k_solid__opticaldrive_write_speeds(void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-opticaldrive.html#eject)
 ///
@@ -375,7 +377,9 @@ void k_solid__opticaldrive_kill_timer2(void* self, int32_t id);
 ///
 /// @param self Solid__OpticalDrive*
 ///
-libqt_list /* of QObject* */ k_solid__opticaldrive_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_solid__opticaldrive_children(void* self);
 
 /// Inherited from QObject
 ///

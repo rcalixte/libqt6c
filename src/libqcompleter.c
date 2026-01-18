@@ -21,7 +21,7 @@ QCompleter* q_completer_new3(const char* completions[static 1]) {
     size_t completions_len = libqt_strv_length(completions);
     libqt_string* completions_qstr = (libqt_string*)malloc(completions_len * sizeof(libqt_string));
     if (completions_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_completer_new3");
+        fprintf(stderr, "Failed to allocate memory for string list in q_completer_new3\n");
         abort();
     }
     for (size_t i = 0; i < completions_len; ++i) {
@@ -46,7 +46,7 @@ QCompleter* q_completer_new6(const char* completions[static 1], void* parent) {
     size_t completions_len = libqt_strv_length(completions);
     libqt_string* completions_qstr = (libqt_string*)malloc(completions_len * sizeof(libqt_string));
     if (completions_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_completer_new6");
+        fprintf(stderr, "Failed to allocate memory for string list in q_completer_new6\n");
         abort();
     }
     for (size_t i = 0; i < completions_len; ++i) {
@@ -239,7 +239,7 @@ const char** q_completer_split_path(void* self, const char* path) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_completer_split_path");
+        fprintf(stderr, "Failed to allocate memory for string list in q_completer_split_path\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -262,7 +262,7 @@ const char** q_completer_qbase_split_path(void* self, const char* path) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_completer_split_path");
+        fprintf(stderr, "Failed to allocate memory for string list in q_completer_split_path\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -439,7 +439,7 @@ const char** q_completer_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_completer_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_completer_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

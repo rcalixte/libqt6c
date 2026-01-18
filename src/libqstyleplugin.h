@@ -221,7 +221,9 @@ void q_styleplugin_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QStylePlugin*
 ///
-libqt_list /* of QObject* */ q_styleplugin_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_styleplugin_children(void* self);
 
 /// Inherited from QObject
 ///

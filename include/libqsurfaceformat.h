@@ -212,7 +212,9 @@ int32_t q_surfaceformat_minor_version(void* self);
 ///
 /// @param self QSurfaceFormat*
 ///
-libqt_pair /* tuple of int and int */ q_surfaceformat_version(void* self);
+/// @return libqt_pair tuple of int and int
+///
+libqt_pair q_surfaceformat_version(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurfaceformat.html#setVersion)
 ///

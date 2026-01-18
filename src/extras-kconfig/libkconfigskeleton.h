@@ -395,9 +395,9 @@ KCoreConfigSkeleton__ItemStringList* k_configskeleton_add_item_string_list(void*
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
-/// @param reference libqt_list /* of int */
+/// @param reference libqt_list of int
 ///
-KCoreConfigSkeleton__ItemIntList* k_configskeleton_add_item_int_list(void* self, const char* name, libqt_list reference);
+KCoreConfigSkeleton__ItemIntList* k_configskeleton_add_item_int_list(void* self, const char* name, libqt_list /* of int */ reference);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -421,7 +421,9 @@ const KConfig* k_configskeleton_config2(void* self);
 ///
 /// @param self KConfigSkeleton*
 ///
-libqt_list /* of KConfigSkeletonItem* */ k_configskeleton_items(void* self);
+/// @return libqt_list of KConfigSkeletonItem*
+///
+libqt_list k_configskeleton_items(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -913,10 +915,10 @@ KCoreConfigSkeleton__ItemStringList* k_configskeleton_add_item_string_list4(void
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
-/// @param reference libqt_list /* of int */
-/// @param defaultValue libqt_list /* of int */
+/// @param reference libqt_list of int
+/// @param defaultValue libqt_list of int
 ///
-KCoreConfigSkeleton__ItemIntList* k_configskeleton_add_item_int_list3(void* self, const char* name, libqt_list reference, libqt_list defaultValue);
+KCoreConfigSkeleton__ItemIntList* k_configskeleton_add_item_int_list3(void* self, const char* name, libqt_list /* of int */ reference, libqt_list /* of int */ defaultValue);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -924,11 +926,11 @@ KCoreConfigSkeleton__ItemIntList* k_configskeleton_add_item_int_list3(void* self
 ///
 /// @param self KConfigSkeleton*
 /// @param name const char*
-/// @param reference libqt_list /* of int */
-/// @param defaultValue libqt_list /* of int */
+/// @param reference libqt_list of int
+/// @param defaultValue libqt_list of int
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemIntList* k_configskeleton_add_item_int_list4(void* self, const char* name, libqt_list reference, libqt_list defaultValue, const char* key);
+KCoreConfigSkeleton__ItemIntList* k_configskeleton_add_item_int_list4(void* self, const char* name, libqt_list /* of int */ reference, libqt_list /* of int */ defaultValue, const char* key);
 
 /// Inherited from QObject
 ///
@@ -1040,7 +1042,9 @@ void k_configskeleton_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KConfigSkeleton*
 ///
-libqt_list /* of QObject* */ k_configskeleton_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_configskeleton_children(void* self);
 
 /// Inherited from QObject
 ///

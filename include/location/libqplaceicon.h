@@ -62,7 +62,8 @@ void q_placeicon_set_manager(void* self, void* manager);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     free(((QVariant*)map.values)[i]);
@@ -73,14 +74,16 @@ void q_placeicon_set_manager(void* self, void* manager);
 ///
 /// @param self QPlaceIcon*
 ///
-libqt_map /* of const char* to QVariant* */ q_placeicon_parameters(void* self);
+/// @return libqt_map of const char* to QVariant*
+///
+libqt_map q_placeicon_parameters(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceicon.html#setParameters)
 ///
 /// @param self QPlaceIcon*
-/// @param parameters libqt_map /* of const char* to QVariant* */
+/// @param parameters libqt_map of const char* to QVariant*
 ///
-void q_placeicon_set_parameters(void* self, libqt_map /* of const char* to QVariant* */ parameters);
+void q_placeicon_set_parameters(void* self, libqt_map parameters);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceicon.html#isEmpty)
 ///

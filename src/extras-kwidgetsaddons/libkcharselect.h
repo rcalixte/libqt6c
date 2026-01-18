@@ -147,13 +147,17 @@ QFont* k_charselect_current_font(void* self);
 ///
 /// @param self KCharSelect*
 ///
-libqt_list /* of QChar* */ k_charselect_displayed_chars(void* self);
+/// @return libqt_list of QChar*
+///
+libqt_list k_charselect_displayed_chars(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#displayedCodePoints)
 ///
 /// @param self KCharSelect*
 ///
-libqt_list /* of uint32_t */ k_charselect_displayed_code_points(void* self);
+/// @return libqt_list of uint32_t
+///
+libqt_list k_charselect_displayed_code_points(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcharselect.html#setCurrentChar)
 ///
@@ -1106,7 +1110,7 @@ void k_charselect_set_graphics_effect(void* self, void* effect);
 /// @param self KCharSelect*
 /// @param type enum Qt__GestureType
 ///
-void k_charselect_grab_gesture(void* self, int64_t type);
+void k_charselect_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -1115,7 +1119,7 @@ void k_charselect_grab_gesture(void* self, int64_t type);
 /// @param self KCharSelect*
 /// @param type enum Qt__GestureType
 ///
-void k_charselect_ungrab_gesture(void* self, int64_t type);
+void k_charselect_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2104,7 +2108,7 @@ void k_charselect_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void k_charselect_set_parent2(void* self, void* parent, int64_t f);
+void k_charselect_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -2182,9 +2186,9 @@ void k_charselect_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self KCharSelect*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_charselect_add_actions(void* self, libqt_list actions);
+void k_charselect_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2192,9 +2196,9 @@ void k_charselect_add_actions(void* self, libqt_list actions);
 ///
 /// @param self KCharSelect*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_charselect_insert_actions(void* self, void* before, libqt_list actions);
+void k_charselect_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2221,7 +2225,9 @@ void k_charselect_remove_action(void* self, void* action);
 ///
 /// @param self KCharSelect*
 ///
-libqt_list /* of QAction* */ k_charselect_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_charselect_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2278,7 +2284,7 @@ QWidget* k_charselect_parent_widget(void* self);
 /// @param self KCharSelect*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_charselect_set_window_flags(void* self, int64_t type);
+void k_charselect_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2288,7 +2294,7 @@ void k_charselect_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t k_charselect_window_flags(void* self);
+int32_t k_charselect_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2297,7 +2303,7 @@ int64_t k_charselect_window_flags(void* self);
 /// @param self KCharSelect*
 /// @param param1 enum Qt__WindowType
 ///
-void k_charselect_set_window_flag(void* self, int64_t param1);
+void k_charselect_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2306,7 +2312,7 @@ void k_charselect_set_window_flag(void* self, int64_t param1);
 /// @param self KCharSelect*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_charselect_override_window_flags(void* self, int64_t type);
+void k_charselect_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2316,7 +2322,7 @@ void k_charselect_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t k_charselect_window_type(void* self);
+int32_t k_charselect_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2527,7 +2533,7 @@ void k_charselect_on_custom_context_menu_requested(void* self, void (*callback)(
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t k_charselect_input_method_hints(void* self);
+int32_t k_charselect_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2536,7 +2542,7 @@ int64_t k_charselect_input_method_hints(void* self);
 /// @param self KCharSelect*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void k_charselect_set_input_method_hints(void* self, int64_t hints);
+void k_charselect_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -2621,7 +2627,7 @@ QPixmap* k_charselect_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void k_charselect_grab_gesture2(void* self, int64_t type, int32_t flags);
+void k_charselect_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -2661,7 +2667,7 @@ void k_charselect_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void k_charselect_set_window_flag2(void* self, int64_t param1, bool on);
+void k_charselect_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -2690,7 +2696,7 @@ QWidget* k_charselect_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* k_charselect_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* k_charselect_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -2802,7 +2808,9 @@ void k_charselect_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KCharSelect*
 ///
-libqt_list /* of QObject* */ k_charselect_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_charselect_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4388,7 +4396,7 @@ void k_charselect_on_input_method_event(void* self, void (*callback)(void*, void
 /// @param self KCharSelect*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_charselect_input_method_query(void* self, int64_t param1);
+QVariant* k_charselect_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4399,7 +4407,7 @@ QVariant* k_charselect_input_method_query(void* self, int64_t param1);
 /// @param self KCharSelect*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_charselect_qbase_input_method_query(void* self, int64_t param1);
+QVariant* k_charselect_qbase_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4410,7 +4418,7 @@ QVariant* k_charselect_qbase_input_method_query(void* self, int64_t param1);
 /// @param self KCharSelect*
 /// @param callback QVariant* func(KCharSelect* self, enum Qt__InputMethodQuery param1)
 ///
-void k_charselect_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void k_charselect_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///

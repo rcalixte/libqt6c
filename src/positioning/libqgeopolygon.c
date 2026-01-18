@@ -8,7 +8,7 @@ QGeoPolygon* q_geopolygon_new() {
     return QGeoPolygon_new();
 }
 
-QGeoPolygon* q_geopolygon_new2(libqt_list path) {
+QGeoPolygon* q_geopolygon_new2(libqt_list /* of QGeoCoordinate* */ path) {
     return QGeoPolygon_new2(path);
 }
 
@@ -24,7 +24,7 @@ void q_geopolygon_operator_assign(void* self, void* other) {
     QGeoPolygon_OperatorAssign((QGeoPolygon*)self, (QGeoPolygon*)other);
 }
 
-void q_geopolygon_set_perimeter(void* self, libqt_list path) {
+void q_geopolygon_set_perimeter(void* self, libqt_list /* of QGeoCoordinate* */ path) {
     QGeoPolygon_SetPerimeter((QGeoPolygon*)self, path);
 }
 
@@ -37,7 +37,7 @@ void q_geopolygon_add_hole(void* self, void* holePath) {
     QGeoPolygon_AddHole((QGeoPolygon*)self, (QVariant*)holePath);
 }
 
-void q_geopolygon_add_hole2(void* self, libqt_list holePath) {
+void q_geopolygon_add_hole2(void* self, libqt_list /* of QGeoCoordinate* */ holePath) {
     QGeoPolygon_AddHole2((QGeoPolygon*)self, holePath);
 }
 

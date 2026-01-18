@@ -156,7 +156,7 @@ void q_geocodereply_qbase_add_location(void* self, void* location) {
     QGeoCodeReply_QBaseAddLocation((QGeoCodeReply*)self, (QGeoLocation*)location);
 }
 
-void q_geocodereply_set_locations(void* self, libqt_list locations) {
+void q_geocodereply_set_locations(void* self, libqt_list /* of QGeoLocation* */ locations) {
     QGeoCodeReply_SetLocations((QGeoCodeReply*)self, locations);
 }
 
@@ -164,7 +164,7 @@ void q_geocodereply_on_set_locations(void* self, void (*callback)(void*, QGeoLoc
     QGeoCodeReply_OnSetLocations((QGeoCodeReply*)self, (intptr_t)callback);
 }
 
-void q_geocodereply_qbase_set_locations(void* self, libqt_list locations) {
+void q_geocodereply_qbase_set_locations(void* self, libqt_list /* of QGeoLocation* */ locations) {
     QGeoCodeReply_QBaseSetLocations((QGeoCodeReply*)self, locations);
 }
 
@@ -319,7 +319,7 @@ const char** q_geocodereply_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_geocodereply_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_geocodereply_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

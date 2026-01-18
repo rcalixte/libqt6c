@@ -23,7 +23,7 @@ void q_webenginescriptcollection_insert(void* self, void* param1) {
     QWebEngineScriptCollection_Insert((QWebEngineScriptCollection*)self, (QWebEngineScript*)param1);
 }
 
-void q_webenginescriptcollection_insert2(void* self, libqt_list list) {
+void q_webenginescriptcollection_insert2(void* self, libqt_list /* of QWebEngineScript* */ list) {
     QWebEngineScriptCollection_Insert2((QWebEngineScriptCollection*)self, list);
 }
 

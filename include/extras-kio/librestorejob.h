@@ -43,7 +43,9 @@ const char* k_io__restorejob_tr(const char* s);
 ///
 /// @param self KIO__RestoreJob*
 ///
-libqt_list /* of QUrl* */ k_io__restorejob_trash_urls(void* self);
+/// @return libqt_list of QUrl*
+///
+libqt_list k_io__restorejob_trash_urls(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -150,18 +152,18 @@ void k_io__restorejob_add_meta_data(void* self, const char* key, const char* val
 /// [Upstream resources](https://api.kde.org/kio-job.html#addMetaData)
 ///
 /// @param self KIO__RestoreJob*
-/// @param values libqt_map /* of const char* to const char* */
+/// @param values libqt_map of const char* to const char*
 ///
-void k_io__restorejob_add_meta_data2(void* self, libqt_map /* of const char* to const char* */ values);
+void k_io__restorejob_add_meta_data2(void* self, libqt_map values);
 
 /// Inherited from KIO::Job
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#mergeMetaData)
 ///
 /// @param self KIO__RestoreJob*
-/// @param values libqt_map /* of const char* to const char* */
+/// @param values libqt_map of const char* to const char*
 ///
-void k_io__restorejob_merge_meta_data(void* self, libqt_map /* of const char* to const char* */ values);
+void k_io__restorejob_merge_meta_data(void* self, libqt_map values);
 
 /// Inherited from KIO::Job
 ///
@@ -633,7 +635,9 @@ void k_io__restorejob_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KIO__RestoreJob*
 ///
-libqt_list /* of QObject* */ k_io__restorejob_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_io__restorejob_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -966,8 +970,8 @@ void k_io__restorejob_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio.html#restoreFromTrash)
 ///
-/// @param param1 libqt_list /* of QUrl* */
+/// @param param1 libqt_list of QUrl*
 /// @param param2 flag of enum KIO__JobFlag
 ///
-KIO__RestoreJob* k_io_restore_from_trash(libqt_list param1, int32_t param2);
+KIO__RestoreJob* k_io_restore_from_trash(libqt_list /* of QUrl* */ param1, int32_t param2);
 #endif

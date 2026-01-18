@@ -319,15 +319,15 @@ void q_standarditem_set_child2(void* self, int row, void* item) {
     QStandardItem_SetChild2((QStandardItem*)self, row, (QStandardItem*)item);
 }
 
-void q_standarditem_insert_row(void* self, int row, libqt_list items) {
+void q_standarditem_insert_row(void* self, int row, libqt_list /* of QStandardItem* */ items) {
     QStandardItem_InsertRow((QStandardItem*)self, row, items);
 }
 
-void q_standarditem_insert_column(void* self, int column, libqt_list items) {
+void q_standarditem_insert_column(void* self, int column, libqt_list /* of QStandardItem* */ items) {
     QStandardItem_InsertColumn((QStandardItem*)self, column, items);
 }
 
-void q_standarditem_insert_rows(void* self, int row, libqt_list items) {
+void q_standarditem_insert_rows(void* self, int row, libqt_list /* of QStandardItem* */ items) {
     QStandardItem_InsertRows((QStandardItem*)self, row, items);
 }
 
@@ -355,15 +355,15 @@ void q_standarditem_remove_columns(void* self, int column, int count) {
     QStandardItem_RemoveColumns((QStandardItem*)self, column, count);
 }
 
-void q_standarditem_append_row(void* self, libqt_list items) {
+void q_standarditem_append_row(void* self, libqt_list /* of QStandardItem* */ items) {
     QStandardItem_AppendRow((QStandardItem*)self, items);
 }
 
-void q_standarditem_append_rows(void* self, libqt_list items) {
+void q_standarditem_append_rows(void* self, libqt_list /* of QStandardItem* */ items) {
     QStandardItem_AppendRows((QStandardItem*)self, items);
 }
 
-void q_standarditem_append_column(void* self, libqt_list items) {
+void q_standarditem_append_column(void* self, libqt_list /* of QStandardItem* */ items) {
     QStandardItem_AppendColumn((QStandardItem*)self, items);
 }
 
@@ -572,7 +572,7 @@ libqt_map /* of int to char* */ q_standarditemmodel_role_names(void* self) {
     libqt_string* _out_values = (libqt_string*)_out.values;
     char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string values in q_standarditemmodel_role_names");
+        fprintf(stderr, "Failed to allocate memory for map string values in q_standarditemmodel_role_names\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
@@ -582,9 +582,11 @@ libqt_map /* of int to char* */ q_standarditemmodel_role_names(void* self) {
                 libqt_free(_ret_values[j]);
             }
             free(_ret_values);
-            fprintf(stderr, "Failed to allocate memory for map string values in q_standarditemmodel_role_names");
+            fprintf(stderr, "Failed to allocate memory for map string values in q_standarditemmodel_role_names\n");
             abort();
         }
+        memcpy(_ret_values[i], _out_values[i].data, _out_values[i].len);
+        _ret_values[i][_out_values[i].len] = '\0';
     }
     _ret.keys = _out.keys;
     _ret.values = (void*)_ret_values;
@@ -607,7 +609,7 @@ libqt_map /* of int to char* */ q_standarditemmodel_qbase_role_names(void* self)
     libqt_string* _out_values = (libqt_string*)_out.values;
     char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string values in q_standarditemmodel_role_names");
+        fprintf(stderr, "Failed to allocate memory for map string values in q_standarditemmodel_role_names\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
@@ -617,9 +619,11 @@ libqt_map /* of int to char* */ q_standarditemmodel_qbase_role_names(void* self)
                 libqt_free(_ret_values[j]);
             }
             free(_ret_values);
-            fprintf(stderr, "Failed to allocate memory for map string values in q_standarditemmodel_role_names");
+            fprintf(stderr, "Failed to allocate memory for map string values in q_standarditemmodel_role_names\n");
             abort();
         }
+        memcpy(_ret_values[i], _out_values[i].data, _out_values[i].len);
+        _ret_values[i][_out_values[i].len] = '\0';
     }
     _ret.keys = _out.keys;
     _ret.values = (void*)_ret_values;
@@ -977,7 +981,7 @@ void q_standarditemmodel_set_horizontal_header_labels(void* self, const char* la
     size_t labels_len = libqt_strv_length(labels);
     libqt_string* labels_qstr = (libqt_string*)malloc(labels_len * sizeof(libqt_string));
     if (labels_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_standarditemmodel_set_horizontal_header_labels");
+        fprintf(stderr, "Failed to allocate memory for string list in q_standarditemmodel_set_horizontal_header_labels\n");
         abort();
     }
     for (size_t i = 0; i < labels_len; ++i) {
@@ -992,7 +996,7 @@ void q_standarditemmodel_set_vertical_header_labels(void* self, const char* labe
     size_t labels_len = libqt_strv_length(labels);
     libqt_string* labels_qstr = (libqt_string*)malloc(labels_len * sizeof(libqt_string));
     if (labels_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_standarditemmodel_set_vertical_header_labels");
+        fprintf(stderr, "Failed to allocate memory for string list in q_standarditemmodel_set_vertical_header_labels\n");
         abort();
     }
     for (size_t i = 0; i < labels_len; ++i) {
@@ -1011,11 +1015,11 @@ void q_standarditemmodel_set_column_count(void* self, int columns) {
     QStandardItemModel_SetColumnCount((QStandardItemModel*)self, columns);
 }
 
-void q_standarditemmodel_append_row(void* self, libqt_list items) {
+void q_standarditemmodel_append_row(void* self, libqt_list /* of QStandardItem* */ items) {
     QStandardItemModel_AppendRow((QStandardItemModel*)self, items);
 }
 
-void q_standarditemmodel_append_column(void* self, libqt_list items) {
+void q_standarditemmodel_append_column(void* self, libqt_list /* of QStandardItem* */ items) {
     QStandardItemModel_AppendColumn((QStandardItemModel*)self, items);
 }
 
@@ -1023,11 +1027,11 @@ void q_standarditemmodel_append_row2(void* self, void* item) {
     QStandardItemModel_AppendRow2((QStandardItemModel*)self, (QStandardItem*)item);
 }
 
-void q_standarditemmodel_insert_row(void* self, int row, libqt_list items) {
+void q_standarditemmodel_insert_row(void* self, int row, libqt_list /* of QStandardItem* */ items) {
     QStandardItemModel_InsertRow((QStandardItemModel*)self, row, items);
 }
 
-void q_standarditemmodel_insert_column(void* self, int column, libqt_list items) {
+void q_standarditemmodel_insert_column(void* self, int column, libqt_list /* of QStandardItem* */ items) {
     QStandardItemModel_InsertColumn((QStandardItemModel*)self, column, items);
 }
 
@@ -1091,7 +1095,7 @@ const char** q_standarditemmodel_mime_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_standarditemmodel_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in q_standarditemmodel_mime_types\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1114,7 +1118,7 @@ const char** q_standarditemmodel_qbase_mime_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_standarditemmodel_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in q_standarditemmodel_mime_types\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1128,7 +1132,7 @@ const char** q_standarditemmodel_qbase_mime_types(void* self) {
     return _ret;
 }
 
-QMimeData* q_standarditemmodel_mime_data(void* self, libqt_list indexes) {
+QMimeData* q_standarditemmodel_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
     return QStandardItemModel_MimeData((QStandardItemModel*)self, indexes);
 }
 
@@ -1136,7 +1140,7 @@ void q_standarditemmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, 
     QStandardItemModel_OnMimeData((QStandardItemModel*)self, (intptr_t)callback);
 }
 
-QMimeData* q_standarditemmodel_qbase_mime_data(void* self, libqt_list indexes) {
+QMimeData* q_standarditemmodel_qbase_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
     return QStandardItemModel_QBaseMimeData((QStandardItemModel*)self, indexes);
 }
 
@@ -1272,15 +1276,15 @@ bool q_standarditemmodel_check_index2(void* self, void* index, int32_t options) 
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
-void q_standarditemmodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles) {
+void q_standarditemmodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles) {
     QAbstractItemModel_DataChanged3((QAbstractItemModel*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_standarditemmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*)) {
+void q_standarditemmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */)) {
     QAbstractItemModel_Connect_DataChanged3((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_standarditemmodel_layout_changed1(void* self, libqt_list parents) {
+void q_standarditemmodel_layout_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents) {
     QAbstractItemModel_LayoutChanged1((QAbstractItemModel*)self, parents);
 }
 
@@ -1288,7 +1292,7 @@ void q_standarditemmodel_on_layout_changed1(void* self, void (*callback)(void*, 
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_standarditemmodel_layout_changed2(void* self, libqt_list parents, int32_t hint) {
+void q_standarditemmodel_layout_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint) {
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
@@ -1296,7 +1300,7 @@ void q_standarditemmodel_on_layout_changed2(void* self, void (*callback)(void*, 
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_standarditemmodel_layout_about_to_be_changed1(void* self, libqt_list parents) {
+void q_standarditemmodel_layout_about_to_be_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents) {
     QAbstractItemModel_LayoutAboutToBeChanged1((QAbstractItemModel*)self, parents);
 }
 
@@ -1304,7 +1308,7 @@ void q_standarditemmodel_on_layout_about_to_be_changed1(void* self, void (*callb
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_standarditemmodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint) {
+void q_standarditemmodel_layout_about_to_be_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint) {
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
@@ -1417,7 +1421,7 @@ const char** q_standarditemmodel_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_standarditemmodel_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_standarditemmodel_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1733,11 +1737,11 @@ void q_standarditemmodel_on_create_index(void* self, QModelIndex* (*callback)(vo
     QStandardItemModel_OnCreateIndex((QStandardItemModel*)self, (intptr_t)callback);
 }
 
-void q_standarditemmodel_encode_data(void* self, libqt_list indexes, void* stream) {
+void q_standarditemmodel_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
     QStandardItemModel_EncodeData((QStandardItemModel*)self, indexes, (QDataStream*)stream);
 }
 
-void q_standarditemmodel_qbase_encode_data(void* self, libqt_list indexes, void* stream) {
+void q_standarditemmodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
     QStandardItemModel_QBaseEncodeData((QStandardItemModel*)self, indexes, (QDataStream*)stream);
 }
 
@@ -1937,11 +1941,11 @@ void q_standarditemmodel_on_change_persistent_index(void* self, void (*callback)
     QStandardItemModel_OnChangePersistentIndex((QStandardItemModel*)self, (intptr_t)callback);
 }
 
-void q_standarditemmodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to) {
+void q_standarditemmodel_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
     QStandardItemModel_ChangePersistentIndexList((QStandardItemModel*)self, from, to);
 }
 
-void q_standarditemmodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to) {
+void q_standarditemmodel_qbase_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
     QStandardItemModel_QBaseChangePersistentIndexList((QStandardItemModel*)self, from, to);
 }
 

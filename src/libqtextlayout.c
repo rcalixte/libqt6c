@@ -153,7 +153,7 @@ const char* q_textlayout_preedit_area_text(void* self) {
     return _ret;
 }
 
-void q_textlayout_set_formats(void* self, libqt_list overrides) {
+void q_textlayout_set_formats(void* self, libqt_list /* of QTextLayout__FormatRange* */ overrides) {
     QTextLayout_SetFormats((QTextLayout*)self, overrides);
 }
 
@@ -284,11 +284,11 @@ int32_t q_textlayout_previous_cursor_position2(void* self, int oldPos, int32_t m
     return QTextLayout_PreviousCursorPosition2((QTextLayout*)self, oldPos, mode);
 }
 
-void q_textlayout_draw3(void* self, void* p, void* pos, libqt_list selections) {
+void q_textlayout_draw3(void* self, void* p, void* pos, libqt_list /* of QTextLayout__FormatRange* */ selections) {
     QTextLayout_Draw3((QTextLayout*)self, (QPainter*)p, (QPointF*)pos, selections);
 }
 
-void q_textlayout_draw4(void* self, void* p, void* pos, libqt_list selections, void* clip) {
+void q_textlayout_draw4(void* self, void* p, void* pos, libqt_list /* of QTextLayout__FormatRange* */ selections, void* clip) {
     QTextLayout_Draw4((QTextLayout*)self, (QPainter*)p, (QPointF*)pos, selections, (QRectF*)clip);
 }
 

@@ -100,7 +100,9 @@ bool k_io__udsentry_contains(void* self, uint32_t field);
 ///
 /// @param self KIO__UDSEntry*
 ///
-libqt_list /* of uint32_t */ k_io__udsentry_fields(void* self);
+/// @return libqt_list of uint32_t
+///
+libqt_list k_io__udsentry_fields(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-udsentry.html#clear)
 ///

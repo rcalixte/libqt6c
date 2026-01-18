@@ -89,7 +89,7 @@ int32_t k_attica__comment_score(void* self) {
     return Attica__Comment_Score((Attica__Comment*)self);
 }
 
-void k_attica__comment_set_children(void* self, libqt_list comments) {
+void k_attica__comment_set_children(void* self, libqt_list /* of Attica__Comment* */ comments) {
     Attica__Comment_SetChildren((Attica__Comment*)self, comments);
 }
 

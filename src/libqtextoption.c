@@ -42,11 +42,11 @@ int32_t q_textoption_wrap_mode(void* self) {
     return QTextOption_WrapMode((QTextOption*)self);
 }
 
-void q_textoption_set_flags(void* self, int64_t flags) {
+void q_textoption_set_flags(void* self, int32_t flags) {
     QTextOption_SetFlags((QTextOption*)self, flags);
 }
 
-int64_t q_textoption_flags(void* self) {
+int32_t q_textoption_flags(void* self) {
     return QTextOption_Flags((QTextOption*)self);
 }
 
@@ -58,7 +58,7 @@ double q_textoption_tab_stop_distance(void* self) {
     return QTextOption_TabStopDistance((QTextOption*)self);
 }
 
-void q_textoption_set_tab_array(void* self, libqt_list tabStops) {
+void q_textoption_set_tab_array(void* self, libqt_list /* of double */ tabStops) {
     QTextOption_SetTabArray((QTextOption*)self, tabStops);
 }
 
@@ -67,7 +67,7 @@ libqt_list /* of double */ q_textoption_tab_array(void* self) {
     return _arr;
 }
 
-void q_textoption_set_tabs(void* self, libqt_list tabStops) {
+void q_textoption_set_tabs(void* self, libqt_list /* of QTextOption__Tab* */ tabStops) {
     QTextOption_SetTabs((QTextOption*)self, tabStops);
 }
 

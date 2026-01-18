@@ -45,7 +45,7 @@ void q_opengldebugmessage_swap(void* self, void* other);
 ///
 /// @return enum QOpenGLDebugMessage__Source
 ///
-int64_t q_opengldebugmessage_source(void* self);
+int32_t q_opengldebugmessage_source(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebugmessage.html#type)
 ///
@@ -53,7 +53,7 @@ int64_t q_opengldebugmessage_source(void* self);
 ///
 /// @return enum QOpenGLDebugMessage__Type
 ///
-int64_t q_opengldebugmessage_type(void* self);
+int32_t q_opengldebugmessage_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebugmessage.html#severity)
 ///
@@ -61,7 +61,7 @@ int64_t q_opengldebugmessage_type(void* self);
 ///
 /// @return enum QOpenGLDebugMessage__Severity
 ///
-int64_t q_opengldebugmessage_severity(void* self);
+int32_t q_opengldebugmessage_severity(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebugmessage.html#id)
 ///
@@ -116,7 +116,7 @@ QOpenGLDebugMessage* q_opengldebugmessage_create_application_message2(const char
 /// @param id uint32_t
 /// @param severity enum QOpenGLDebugMessage__Severity
 ///
-QOpenGLDebugMessage* q_opengldebugmessage_create_application_message3(const char* text, uint32_t id, int64_t severity);
+QOpenGLDebugMessage* q_opengldebugmessage_create_application_message3(const char* text, uint32_t id, int32_t severity);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebugmessage.html#createApplicationMessage)
 ///
@@ -125,7 +125,7 @@ QOpenGLDebugMessage* q_opengldebugmessage_create_application_message3(const char
 /// @param severity enum QOpenGLDebugMessage__Severity
 /// @param type enum QOpenGLDebugMessage__Type
 ///
-QOpenGLDebugMessage* q_opengldebugmessage_create_application_message4(const char* text, uint32_t id, int64_t severity, int64_t type);
+QOpenGLDebugMessage* q_opengldebugmessage_create_application_message4(const char* text, uint32_t id, int32_t severity, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebugmessage.html#createThirdPartyMessage)
 ///
@@ -140,7 +140,7 @@ QOpenGLDebugMessage* q_opengldebugmessage_create_third_party_message2(const char
 /// @param id uint32_t
 /// @param severity enum QOpenGLDebugMessage__Severity
 ///
-QOpenGLDebugMessage* q_opengldebugmessage_create_third_party_message3(const char* text, uint32_t id, int64_t severity);
+QOpenGLDebugMessage* q_opengldebugmessage_create_third_party_message3(const char* text, uint32_t id, int32_t severity);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebugmessage.html#createThirdPartyMessage)
 ///
@@ -149,7 +149,7 @@ QOpenGLDebugMessage* q_opengldebugmessage_create_third_party_message3(const char
 /// @param severity enum QOpenGLDebugMessage__Severity
 /// @param type enum QOpenGLDebugMessage__Type
 ///
-QOpenGLDebugMessage* q_opengldebugmessage_create_third_party_message4(const char* text, uint32_t id, int64_t severity, int64_t type);
+QOpenGLDebugMessage* q_opengldebugmessage_create_third_party_message4(const char* text, uint32_t id, int32_t severity, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebugmessage.html#dtor.QOpenGLDebugMessage)
 ///
@@ -263,9 +263,9 @@ void q_opengldebuglogger_enable_messages(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#enableMessages)
 ///
 /// @param self QOpenGLDebugLogger*
-/// @param ids libqt_list /* of uint32_t */
+/// @param ids libqt_list of uint32_t
 ///
-void q_opengldebuglogger_enable_messages2(void* self, libqt_list ids);
+void q_opengldebuglogger_enable_messages2(void* self, libqt_list /* of uint32_t */ ids);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#disableMessages)
 ///
@@ -276,15 +276,17 @@ void q_opengldebuglogger_disable_messages(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#disableMessages)
 ///
 /// @param self QOpenGLDebugLogger*
-/// @param ids libqt_list /* of uint32_t */
+/// @param ids libqt_list of uint32_t
 ///
-void q_opengldebuglogger_disable_messages2(void* self, libqt_list ids);
+void q_opengldebuglogger_disable_messages2(void* self, libqt_list /* of uint32_t */ ids);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#loggedMessages)
 ///
 /// @param self QOpenGLDebugLogger*
 ///
-libqt_list /* of QOpenGLDebugMessage* */ q_opengldebuglogger_logged_messages(void* self);
+/// @return libqt_list of QOpenGLDebugMessage*
+///
+libqt_list q_opengldebuglogger_logged_messages(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#logMessage)
 ///
@@ -353,14 +355,14 @@ void q_opengldebuglogger_push_group2(void* self, const char* name, uint32_t id);
 /// @param id uint32_t
 /// @param source enum QOpenGLDebugMessage__Source
 ///
-void q_opengldebuglogger_push_group3(void* self, const char* name, uint32_t id, int64_t source);
+void q_opengldebuglogger_push_group3(void* self, const char* name, uint32_t id, int32_t source);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#enableMessages)
 ///
 /// @param self QOpenGLDebugLogger*
 /// @param sources flag of enum QOpenGLDebugMessage__Source
 ///
-void q_opengldebuglogger_enable_messages1(void* self, int64_t sources);
+void q_opengldebuglogger_enable_messages1(void* self, int32_t sources);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#enableMessages)
 ///
@@ -368,7 +370,7 @@ void q_opengldebuglogger_enable_messages1(void* self, int64_t sources);
 /// @param sources flag of enum QOpenGLDebugMessage__Source
 /// @param types flag of enum QOpenGLDebugMessage__Type
 ///
-void q_opengldebuglogger_enable_messages22(void* self, int64_t sources, int64_t types);
+void q_opengldebuglogger_enable_messages22(void* self, int32_t sources, int32_t types);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#enableMessages)
 ///
@@ -377,31 +379,31 @@ void q_opengldebuglogger_enable_messages22(void* self, int64_t sources, int64_t 
 /// @param types flag of enum QOpenGLDebugMessage__Type
 /// @param severities flag of enum QOpenGLDebugMessage__Severity
 ///
-void q_opengldebuglogger_enable_messages3(void* self, int64_t sources, int64_t types, int64_t severities);
+void q_opengldebuglogger_enable_messages3(void* self, int32_t sources, int32_t types, int32_t severities);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#enableMessages)
 ///
 /// @param self QOpenGLDebugLogger*
-/// @param ids libqt_list /* of uint32_t */
+/// @param ids libqt_list of uint32_t
 /// @param sources flag of enum QOpenGLDebugMessage__Source
 ///
-void q_opengldebuglogger_enable_messages23(void* self, libqt_list ids, int64_t sources);
+void q_opengldebuglogger_enable_messages23(void* self, libqt_list /* of uint32_t */ ids, int32_t sources);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#enableMessages)
 ///
 /// @param self QOpenGLDebugLogger*
-/// @param ids libqt_list /* of uint32_t */
+/// @param ids libqt_list of uint32_t
 /// @param sources flag of enum QOpenGLDebugMessage__Source
 /// @param types flag of enum QOpenGLDebugMessage__Type
 ///
-void q_opengldebuglogger_enable_messages32(void* self, libqt_list ids, int64_t sources, int64_t types);
+void q_opengldebuglogger_enable_messages32(void* self, libqt_list /* of uint32_t */ ids, int32_t sources, int32_t types);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#disableMessages)
 ///
 /// @param self QOpenGLDebugLogger*
 /// @param sources flag of enum QOpenGLDebugMessage__Source
 ///
-void q_opengldebuglogger_disable_messages1(void* self, int64_t sources);
+void q_opengldebuglogger_disable_messages1(void* self, int32_t sources);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#disableMessages)
 ///
@@ -409,7 +411,7 @@ void q_opengldebuglogger_disable_messages1(void* self, int64_t sources);
 /// @param sources flag of enum QOpenGLDebugMessage__Source
 /// @param types flag of enum QOpenGLDebugMessage__Type
 ///
-void q_opengldebuglogger_disable_messages22(void* self, int64_t sources, int64_t types);
+void q_opengldebuglogger_disable_messages22(void* self, int32_t sources, int32_t types);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#disableMessages)
 ///
@@ -418,24 +420,24 @@ void q_opengldebuglogger_disable_messages22(void* self, int64_t sources, int64_t
 /// @param types flag of enum QOpenGLDebugMessage__Type
 /// @param severities flag of enum QOpenGLDebugMessage__Severity
 ///
-void q_opengldebuglogger_disable_messages3(void* self, int64_t sources, int64_t types, int64_t severities);
+void q_opengldebuglogger_disable_messages3(void* self, int32_t sources, int32_t types, int32_t severities);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#disableMessages)
 ///
 /// @param self QOpenGLDebugLogger*
-/// @param ids libqt_list /* of uint32_t */
+/// @param ids libqt_list of uint32_t
 /// @param sources flag of enum QOpenGLDebugMessage__Source
 ///
-void q_opengldebuglogger_disable_messages23(void* self, libqt_list ids, int64_t sources);
+void q_opengldebuglogger_disable_messages23(void* self, libqt_list /* of uint32_t */ ids, int32_t sources);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#disableMessages)
 ///
 /// @param self QOpenGLDebugLogger*
-/// @param ids libqt_list /* of uint32_t */
+/// @param ids libqt_list of uint32_t
 /// @param sources flag of enum QOpenGLDebugMessage__Source
 /// @param types flag of enum QOpenGLDebugMessage__Type
 ///
-void q_opengldebuglogger_disable_messages32(void* self, libqt_list ids, int64_t sources, int64_t types);
+void q_opengldebuglogger_disable_messages32(void* self, libqt_list /* of uint32_t */ ids, int32_t sources, int32_t types);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#startLogging)
 ///
@@ -554,7 +556,9 @@ void q_opengldebuglogger_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QOpenGLDebugLogger*
 ///
-libqt_list /* of QObject* */ q_opengldebuglogger_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_opengldebuglogger_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1180,7 +1184,7 @@ typedef enum {
     QOPENGLDEBUGMESSAGE_SOURCE_APPLICATIONSOURCE = 16,
     QOPENGLDEBUGMESSAGE_SOURCE_OTHERSOURCE = 32,
     QOPENGLDEBUGMESSAGE_SOURCE_LASTSOURCE = 32,
-    QOPENGLDEBUGMESSAGE_SOURCE_ANYSOURCE = 4294967295
+    QOPENGLDEBUGMESSAGE_SOURCE_ANYSOURCE = -1
 } QOpenGLDebugMessage__Source;
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebug.html#public-types)
@@ -1197,7 +1201,7 @@ typedef enum {
     QOPENGLDEBUGMESSAGE_TYPE_GROUPPUSHTYPE = 128,
     QOPENGLDEBUGMESSAGE_TYPE_GROUPPOPTYPE = 256,
     QOPENGLDEBUGMESSAGE_TYPE_LASTTYPE = 256,
-    QOPENGLDEBUGMESSAGE_TYPE_ANYTYPE = 4294967295
+    QOPENGLDEBUGMESSAGE_TYPE_ANYTYPE = -1
 } QOpenGLDebugMessage__Type;
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebug.html#public-types)
@@ -1209,7 +1213,7 @@ typedef enum {
     QOPENGLDEBUGMESSAGE_SEVERITY_LOWSEVERITY = 4,
     QOPENGLDEBUGMESSAGE_SEVERITY_NOTIFICATIONSEVERITY = 8,
     QOPENGLDEBUGMESSAGE_SEVERITY_LASTSEVERITY = 8,
-    QOPENGLDEBUGMESSAGE_SEVERITY_ANYSEVERITY = 4294967295
+    QOPENGLDEBUGMESSAGE_SEVERITY_ANYSEVERITY = -1
 } QOpenGLDebugMessage__Severity;
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebug.html#public-types)

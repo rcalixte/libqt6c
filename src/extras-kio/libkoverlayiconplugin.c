@@ -46,7 +46,7 @@ const char** k_overlayiconplugin_get_overlays(void* self, void* item) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_overlayiconplugin_get_overlays");
+        fprintf(stderr, "Failed to allocate memory for string list in k_overlayiconplugin_get_overlays\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -69,7 +69,7 @@ const char** k_overlayiconplugin_qbase_get_overlays(void* self, void* item) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_overlayiconplugin_get_overlays");
+        fprintf(stderr, "Failed to allocate memory for string list in k_overlayiconplugin_get_overlays\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -87,7 +87,7 @@ void k_overlayiconplugin_overlays_changed(void* self, void* url, const char* ove
     size_t overlays_len = libqt_strv_length(overlays);
     libqt_string* overlays_qstr = (libqt_string*)malloc(overlays_len * sizeof(libqt_string));
     if (overlays_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_overlayiconplugin_overlays_changed");
+        fprintf(stderr, "Failed to allocate memory for string list in k_overlayiconplugin_overlays_changed\n");
         abort();
     }
     for (size_t i = 0; i < overlays_len; ++i) {
@@ -221,7 +221,7 @@ const char** k_overlayiconplugin_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_overlayiconplugin_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_overlayiconplugin_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

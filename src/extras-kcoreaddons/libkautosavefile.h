@@ -149,11 +149,15 @@ bool k_autosavefile_qbase_open(void* self, int32_t openmode);
 ///
 /// @param url QUrl*
 ///
-libqt_list /* of KAutoSaveFile* */ k_autosavefile_stale_files(void* url);
+/// @return libqt_list of KAutoSaveFile*
+///
+libqt_list k_autosavefile_stale_files(void* url);
 
 /// [Upstream resources](https://api.kde.org/kautosavefile.html#allStaleFiles)
 ///
-libqt_list /* of KAutoSaveFile* */ k_autosavefile_all_stale_files();
+/// @return libqt_list of KAutoSaveFile*
+///
+libqt_list k_autosavefile_all_stale_files();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -179,13 +183,17 @@ const char* k_autosavefile_tr3(const char* s, const char* c, int n);
 /// @param url QUrl*
 /// @param applicationName const char*
 ///
-libqt_list /* of KAutoSaveFile* */ k_autosavefile_stale_files2(void* url, const char* applicationName);
+/// @return libqt_list of KAutoSaveFile*
+///
+libqt_list k_autosavefile_stale_files2(void* url, const char* applicationName);
 
 /// [Upstream resources](https://api.kde.org/kautosavefile.html#allStaleFiles)
 ///
 /// @param applicationName const char*
 ///
-libqt_list /* of KAutoSaveFile* */ k_autosavefile_all_stale_files1(const char* applicationName);
+/// @return libqt_list of KAutoSaveFile*
+///
+libqt_list k_autosavefile_all_stale_files1(const char* applicationName);
 
 /// Inherited from QFile
 ///
@@ -996,7 +1004,9 @@ void k_autosavefile_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KAutoSaveFile*
 ///
-libqt_list /* of QObject* */ k_autosavefile_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_autosavefile_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -2260,19 +2260,19 @@ QStyleOptionComplex* q_styleoptioncomplex_new4(int version, int type) {
     return QStyleOptionComplex_new4(version, type);
 }
 
-int64_t q_styleoptioncomplex_sub_controls(void* self) {
+int32_t q_styleoptioncomplex_sub_controls(void* self) {
     return QStyleOptionComplex_SubControls((QStyleOptionComplex*)self);
 }
 
-void q_styleoptioncomplex_set_sub_controls(void* self, int64_t subControls) {
+void q_styleoptioncomplex_set_sub_controls(void* self, int32_t subControls) {
     QStyleOptionComplex_SetSubControls((QStyleOptionComplex*)self, subControls);
 }
 
-int64_t q_styleoptioncomplex_active_sub_controls(void* self) {
+int32_t q_styleoptioncomplex_active_sub_controls(void* self) {
     return QStyleOptionComplex_ActiveSubControls((QStyleOptionComplex*)self);
 }
 
-void q_styleoptioncomplex_set_active_sub_controls(void* self, int64_t activeSubControls) {
+void q_styleoptioncomplex_set_active_sub_controls(void* self, int32_t activeSubControls) {
     QStyleOptionComplex_SetActiveSubControls((QStyleOptionComplex*)self, activeSubControls);
 }
 
@@ -2456,11 +2456,11 @@ void q_styleoptionslider_set_dial_wrapping(void* self, bool dialWrapping) {
     QStyleOptionSlider_SetDialWrapping((QStyleOptionSlider*)self, dialWrapping);
 }
 
-int64_t q_styleoptionslider_keyboard_modifiers(void* self) {
+int32_t q_styleoptionslider_keyboard_modifiers(void* self) {
     return QStyleOptionSlider_KeyboardModifiers((QStyleOptionSlider*)self);
 }
 
-void q_styleoptionslider_set_keyboard_modifiers(void* self, int64_t keyboardModifiers) {
+void q_styleoptionslider_set_keyboard_modifiers(void* self, int32_t keyboardModifiers) {
     QStyleOptionSlider_SetKeyboardModifiers((QStyleOptionSlider*)self, keyboardModifiers);
 }
 
@@ -2468,19 +2468,19 @@ void q_styleoptionslider_operator_assign(void* self, void* param1) {
     QStyleOptionSlider_OperatorAssign((QStyleOptionSlider*)self, (QStyleOptionSlider*)param1);
 }
 
-int64_t q_styleoptionslider_sub_controls(void* self) {
+int32_t q_styleoptionslider_sub_controls(void* self) {
     return QStyleOptionComplex_SubControls((QStyleOptionComplex*)self);
 }
 
-void q_styleoptionslider_set_sub_controls(void* self, int64_t subControls) {
+void q_styleoptionslider_set_sub_controls(void* self, int32_t subControls) {
     QStyleOptionComplex_SetSubControls((QStyleOptionComplex*)self, subControls);
 }
 
-int64_t q_styleoptionslider_active_sub_controls(void* self) {
+int32_t q_styleoptionslider_active_sub_controls(void* self) {
     return QStyleOptionComplex_ActiveSubControls((QStyleOptionComplex*)self);
 }
 
-void q_styleoptionslider_set_active_sub_controls(void* self, int64_t activeSubControls) {
+void q_styleoptionslider_set_active_sub_controls(void* self, int32_t activeSubControls) {
     QStyleOptionComplex_SetActiveSubControls((QStyleOptionComplex*)self, activeSubControls);
 }
 
@@ -2592,19 +2592,19 @@ void q_styleoptionspinbox_operator_assign(void* self, void* param1) {
     QStyleOptionSpinBox_OperatorAssign((QStyleOptionSpinBox*)self, (QStyleOptionSpinBox*)param1);
 }
 
-int64_t q_styleoptionspinbox_sub_controls(void* self) {
+int32_t q_styleoptionspinbox_sub_controls(void* self) {
     return QStyleOptionComplex_SubControls((QStyleOptionComplex*)self);
 }
 
-void q_styleoptionspinbox_set_sub_controls(void* self, int64_t subControls) {
+void q_styleoptionspinbox_set_sub_controls(void* self, int32_t subControls) {
     QStyleOptionComplex_SetSubControls((QStyleOptionComplex*)self, subControls);
 }
 
-int64_t q_styleoptionspinbox_active_sub_controls(void* self) {
+int32_t q_styleoptionspinbox_active_sub_controls(void* self) {
     return QStyleOptionComplex_ActiveSubControls((QStyleOptionComplex*)self);
 }
 
-void q_styleoptionspinbox_set_active_sub_controls(void* self, int64_t activeSubControls) {
+void q_styleoptionspinbox_set_active_sub_controls(void* self, int32_t activeSubControls) {
     QStyleOptionComplex_SetActiveSubControls((QStyleOptionComplex*)self, activeSubControls);
 }
 
@@ -2759,19 +2759,19 @@ void q_styleoptiontoolbutton_operator_assign(void* self, void* param1) {
     QStyleOptionToolButton_OperatorAssign((QStyleOptionToolButton*)self, (QStyleOptionToolButton*)param1);
 }
 
-int64_t q_styleoptiontoolbutton_sub_controls(void* self) {
+int32_t q_styleoptiontoolbutton_sub_controls(void* self) {
     return QStyleOptionComplex_SubControls((QStyleOptionComplex*)self);
 }
 
-void q_styleoptiontoolbutton_set_sub_controls(void* self, int64_t subControls) {
+void q_styleoptiontoolbutton_set_sub_controls(void* self, int32_t subControls) {
     QStyleOptionComplex_SetSubControls((QStyleOptionComplex*)self, subControls);
 }
 
-int64_t q_styleoptiontoolbutton_active_sub_controls(void* self) {
+int32_t q_styleoptiontoolbutton_active_sub_controls(void* self) {
     return QStyleOptionComplex_ActiveSubControls((QStyleOptionComplex*)self);
 }
 
-void q_styleoptiontoolbutton_set_active_sub_controls(void* self, int64_t activeSubControls) {
+void q_styleoptiontoolbutton_set_active_sub_controls(void* self, int32_t activeSubControls) {
     QStyleOptionComplex_SetActiveSubControls((QStyleOptionComplex*)self, activeSubControls);
 }
 
@@ -2918,19 +2918,19 @@ void q_styleoptioncombobox_operator_assign(void* self, void* param1) {
     QStyleOptionComboBox_OperatorAssign((QStyleOptionComboBox*)self, (QStyleOptionComboBox*)param1);
 }
 
-int64_t q_styleoptioncombobox_sub_controls(void* self) {
+int32_t q_styleoptioncombobox_sub_controls(void* self) {
     return QStyleOptionComplex_SubControls((QStyleOptionComplex*)self);
 }
 
-void q_styleoptioncombobox_set_sub_controls(void* self, int64_t subControls) {
+void q_styleoptioncombobox_set_sub_controls(void* self, int32_t subControls) {
     QStyleOptionComplex_SetSubControls((QStyleOptionComplex*)self, subControls);
 }
 
-int64_t q_styleoptioncombobox_active_sub_controls(void* self) {
+int32_t q_styleoptioncombobox_active_sub_controls(void* self) {
     return QStyleOptionComplex_ActiveSubControls((QStyleOptionComplex*)self);
 }
 
-void q_styleoptioncombobox_set_active_sub_controls(void* self, int64_t activeSubControls) {
+void q_styleoptioncombobox_set_active_sub_controls(void* self, int32_t activeSubControls) {
     QStyleOptionComplex_SetActiveSubControls((QStyleOptionComplex*)self, activeSubControls);
 }
 
@@ -3041,11 +3041,11 @@ void q_styleoptiontitlebar_set_title_bar_state(void* self, int titleBarState) {
     QStyleOptionTitleBar_SetTitleBarState((QStyleOptionTitleBar*)self, titleBarState);
 }
 
-int64_t q_styleoptiontitlebar_title_bar_flags(void* self) {
+int32_t q_styleoptiontitlebar_title_bar_flags(void* self) {
     return QStyleOptionTitleBar_TitleBarFlags((QStyleOptionTitleBar*)self);
 }
 
-void q_styleoptiontitlebar_set_title_bar_flags(void* self, int64_t titleBarFlags) {
+void q_styleoptiontitlebar_set_title_bar_flags(void* self, int32_t titleBarFlags) {
     QStyleOptionTitleBar_SetTitleBarFlags((QStyleOptionTitleBar*)self, titleBarFlags);
 }
 
@@ -3053,19 +3053,19 @@ void q_styleoptiontitlebar_operator_assign(void* self, void* param1) {
     QStyleOptionTitleBar_OperatorAssign((QStyleOptionTitleBar*)self, (QStyleOptionTitleBar*)param1);
 }
 
-int64_t q_styleoptiontitlebar_sub_controls(void* self) {
+int32_t q_styleoptiontitlebar_sub_controls(void* self) {
     return QStyleOptionComplex_SubControls((QStyleOptionComplex*)self);
 }
 
-void q_styleoptiontitlebar_set_sub_controls(void* self, int64_t subControls) {
+void q_styleoptiontitlebar_set_sub_controls(void* self, int32_t subControls) {
     QStyleOptionComplex_SetSubControls((QStyleOptionComplex*)self, subControls);
 }
 
-int64_t q_styleoptiontitlebar_active_sub_controls(void* self) {
+int32_t q_styleoptiontitlebar_active_sub_controls(void* self) {
     return QStyleOptionComplex_ActiveSubControls((QStyleOptionComplex*)self);
 }
 
-void q_styleoptiontitlebar_set_active_sub_controls(void* self, int64_t activeSubControls) {
+void q_styleoptiontitlebar_set_active_sub_controls(void* self, int32_t activeSubControls) {
     QStyleOptionComplex_SetActiveSubControls((QStyleOptionComplex*)self, activeSubControls);
 }
 
@@ -3204,19 +3204,19 @@ void q_styleoptiongroupbox_operator_assign(void* self, void* param1) {
     QStyleOptionGroupBox_OperatorAssign((QStyleOptionGroupBox*)self, (QStyleOptionGroupBox*)param1);
 }
 
-int64_t q_styleoptiongroupbox_sub_controls(void* self) {
+int32_t q_styleoptiongroupbox_sub_controls(void* self) {
     return QStyleOptionComplex_SubControls((QStyleOptionComplex*)self);
 }
 
-void q_styleoptiongroupbox_set_sub_controls(void* self, int64_t subControls) {
+void q_styleoptiongroupbox_set_sub_controls(void* self, int32_t subControls) {
     QStyleOptionComplex_SetSubControls((QStyleOptionComplex*)self, subControls);
 }
 
-int64_t q_styleoptiongroupbox_active_sub_controls(void* self) {
+int32_t q_styleoptiongroupbox_active_sub_controls(void* self) {
     return QStyleOptionComplex_ActiveSubControls((QStyleOptionComplex*)self);
 }
 
-void q_styleoptiongroupbox_set_active_sub_controls(void* self, int64_t activeSubControls) {
+void q_styleoptiongroupbox_set_active_sub_controls(void* self, int32_t activeSubControls) {
     QStyleOptionComplex_SetActiveSubControls((QStyleOptionComplex*)self, activeSubControls);
 }
 
@@ -3312,19 +3312,19 @@ void q_styleoptionsizegrip_operator_assign(void* self, void* param1) {
     QStyleOptionSizeGrip_OperatorAssign((QStyleOptionSizeGrip*)self, (QStyleOptionSizeGrip*)param1);
 }
 
-int64_t q_styleoptionsizegrip_sub_controls(void* self) {
+int32_t q_styleoptionsizegrip_sub_controls(void* self) {
     return QStyleOptionComplex_SubControls((QStyleOptionComplex*)self);
 }
 
-void q_styleoptionsizegrip_set_sub_controls(void* self, int64_t subControls) {
+void q_styleoptionsizegrip_set_sub_controls(void* self, int32_t subControls) {
     QStyleOptionComplex_SetSubControls((QStyleOptionComplex*)self, subControls);
 }
 
-int64_t q_styleoptionsizegrip_active_sub_controls(void* self) {
+int32_t q_styleoptionsizegrip_active_sub_controls(void* self) {
     return QStyleOptionComplex_ActiveSubControls((QStyleOptionComplex*)self);
 }
 
-void q_styleoptionsizegrip_set_active_sub_controls(void* self, int64_t activeSubControls) {
+void q_styleoptionsizegrip_set_active_sub_controls(void* self, int32_t activeSubControls) {
     QStyleOptionComplex_SetActiveSubControls((QStyleOptionComplex*)self, activeSubControls);
 }
 

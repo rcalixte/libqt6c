@@ -93,15 +93,15 @@ bool k_bookmarkowner_qbase_enable_option(void* self, int32_t option) {
     return KBookmarkOwner_QBaseEnableOption((KBookmarkOwner*)self, option);
 }
 
-void k_bookmarkowner_open_bookmark(void* self, void* bm, int64_t mb, int64_t km) {
+void k_bookmarkowner_open_bookmark(void* self, void* bm, int32_t mb, int32_t km) {
     KBookmarkOwner_OpenBookmark((KBookmarkOwner*)self, (KBookmark*)bm, mb, km);
 }
 
-void k_bookmarkowner_on_open_bookmark(void* self, void (*callback)(void*, void*, int64_t, int64_t)) {
+void k_bookmarkowner_on_open_bookmark(void* self, void (*callback)(void*, void*, int32_t, int32_t)) {
     KBookmarkOwner_OnOpenBookmark((KBookmarkOwner*)self, (intptr_t)callback);
 }
 
-void k_bookmarkowner_qbase_open_bookmark(void* self, void* bm, int64_t mb, int64_t km) {
+void k_bookmarkowner_qbase_open_bookmark(void* self, void* bm, int32_t mb, int32_t km) {
     KBookmarkOwner_QBaseOpenBookmark((KBookmarkOwner*)self, (KBookmark*)bm, mb, km);
 }
 

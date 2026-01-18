@@ -114,7 +114,9 @@ void q_accessible_cleanup();
 /// @param cursor QTextCursor*
 /// @param boundaryType enum QAccessible__TextBoundaryType
 ///
-libqt_pair /* tuple of int and int */ q_accessible_q_accessible_text_boundary_helper(void* cursor, int32_t boundaryType);
+/// @return libqt_pair tuple of int and int
+///
+libqt_pair q_accessible_q_accessible_text_boundary_helper(void* cursor, int32_t boundaryType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible.html#dtor.QAccessible)
 ///
@@ -851,7 +853,7 @@ typedef enum {
     QACCESSIBLE_RELATIONFLAG_DESCRIBED = 32,
     QACCESSIBLE_RELATIONFLAG_FLOWSFROM = 64,
     QACCESSIBLE_RELATIONFLAG_FLOWSTO = 128,
-    QACCESSIBLE_RELATIONFLAG_ALLRELATIONS = 4294967295
+    QACCESSIBLE_RELATIONFLAG_ALLRELATIONS = -1
 } QAccessible__RelationFlag;
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-base.html#public-types)

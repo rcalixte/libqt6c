@@ -261,7 +261,9 @@ void q_filesystemwatcher_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QFileSystemWatcher*
 ///
-libqt_list /* of QObject* */ q_filesystemwatcher_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_filesystemwatcher_children(void* self);
 
 /// Inherited from QObject
 ///

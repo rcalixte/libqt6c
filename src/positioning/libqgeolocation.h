@@ -82,7 +82,8 @@ void q_geolocation_set_bounding_shape(void* self, void* shape);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     free(((QVariant*)map.values)[i]);
@@ -93,14 +94,16 @@ void q_geolocation_set_bounding_shape(void* self, void* shape);
 ///
 /// @param self QGeoLocation*
 ///
-libqt_map /* of const char* to QVariant* */ q_geolocation_extended_attributes(void* self);
+/// @return libqt_map of const char* to QVariant*
+///
+libqt_map q_geolocation_extended_attributes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeolocation.html#setExtendedAttributes)
 ///
 /// @param self QGeoLocation*
-/// @param data libqt_map /* of const char* to QVariant* */
+/// @param data libqt_map of const char* to QVariant*
 ///
-void q_geolocation_set_extended_attributes(void* self, libqt_map /* of const char* to QVariant* */ data);
+void q_geolocation_set_extended_attributes(void* self, libqt_map data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeolocation.html#isEmpty)
 ///

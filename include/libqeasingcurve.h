@@ -109,7 +109,9 @@ void q_easingcurve_add_t_c_b_segment(void* self, void* nextPoint, double t, doub
 ///
 /// @param self QEasingCurve*
 ///
-libqt_list /* of QPointF* */ q_easingcurve_to_cubic_spline(void* self);
+/// @return libqt_list of QPointF*
+///
+libqt_list q_easingcurve_to_cubic_spline(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qeasingcurve.html#type)
 ///

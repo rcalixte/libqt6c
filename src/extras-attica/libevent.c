@@ -140,13 +140,13 @@ libqt_map /* of const char* to const char* */ k_attica__event_extended_attribute
     libqt_string* _out_keys = (libqt_string*)_out.keys;
     char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string keys in k_attica__event_extended_attributes");
+        fprintf(stderr, "Failed to allocate memory for map string keys in k_attica__event_extended_attributes\n");
         abort();
     }
     libqt_string* _out_values = (libqt_string*)_out.values;
-    const char** _ret_values = (const char**)malloc(_ret.len * sizeof(const char*));
+    char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string values in k_attica__event_extended_attributes");
+        fprintf(stderr, "Failed to allocate memory for map string values in k_attica__event_extended_attributes\n");
         free(_out.keys);
         abort();
     }
@@ -157,12 +157,12 @@ libqt_map /* of const char* to const char* */ k_attica__event_extended_attribute
                 libqt_free(_ret_keys[j]);
             }
             free(_ret_keys);
-            fprintf(stderr, "Failed to allocate memory for map keys in k_attica__event_extended_attributes");
+            fprintf(stderr, "Failed to allocate memory for map keys in k_attica__event_extended_attributes\n");
             abort();
         }
         memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
         _ret_keys[i][_out_keys[i].len] = '\0';
-        _ret_values[i] = (const char*)malloc(_out_values[i].len + 1);
+        _ret_values[i] = (char*)malloc(_out_values[i].len + 1);
         if (_ret_values[i] == NULL) {
             for (size_t j = 0; j < i; j++) {
                 libqt_free(_ret_keys[j]);
@@ -170,9 +170,11 @@ libqt_map /* of const char* to const char* */ k_attica__event_extended_attribute
             }
             free(_ret_keys);
             free(_ret_values);
-            fprintf(stderr, "Failed to allocate memory for map string values in k_attica__event_extended_attributes");
+            fprintf(stderr, "Failed to allocate memory for map string values in k_attica__event_extended_attributes\n");
             abort();
         }
+        memcpy(_ret_values[i], _out_values[i].data, _out_values[i].len);
+        _ret_values[i][_out_values[i].len] = '\0';
     }
     _ret.keys = (void*)_ret_keys;
     _ret.values = (void*)_ret_values;

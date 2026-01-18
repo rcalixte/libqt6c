@@ -384,7 +384,9 @@ void q_pdfpagenavigator_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QPdfPageNavigator*
 ///
-libqt_list /* of QObject* */ q_pdfpagenavigator_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_pdfpagenavigator_children(void* self);
 
 /// Inherited from QObject
 ///

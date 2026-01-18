@@ -38,11 +38,11 @@ const QScroller* q_scroller_scroller2(void* target) {
     return QScroller_Scroller2((QObject*)target);
 }
 
-int64_t q_scroller_grab_gesture(void* target) {
+int32_t q_scroller_grab_gesture(void* target) {
     return QScroller_GrabGesture((QObject*)target);
 }
 
-int64_t q_scroller_grabbed_gesture(void* target) {
+int32_t q_scroller_grabbed_gesture(void* target) {
     return QScroller_GrabbedGesture((QObject*)target);
 }
 
@@ -87,7 +87,7 @@ QScrollerProperties* q_scroller_scroller_properties(void* self) {
     return QScroller_ScrollerProperties((QScroller*)self);
 }
 
-void q_scroller_set_snap_positions_x(void* self, libqt_list positions) {
+void q_scroller_set_snap_positions_x(void* self, libqt_list /* of double */ positions) {
     QScroller_SetSnapPositionsX((QScroller*)self, positions);
 }
 
@@ -95,7 +95,7 @@ void q_scroller_set_snap_positions_x2(void* self, double first, double interval)
     QScroller_SetSnapPositionsX2((QScroller*)self, first, interval);
 }
 
-void q_scroller_set_snap_positions_y(void* self, libqt_list positions) {
+void q_scroller_set_snap_positions_y(void* self, libqt_list /* of double */ positions) {
     QScroller_SetSnapPositionsY((QScroller*)self, positions);
 }
 
@@ -157,7 +157,7 @@ const char* q_scroller_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-int64_t q_scroller_grab_gesture2(void* target, int32_t gestureType) {
+int32_t q_scroller_grab_gesture2(void* target, int32_t gestureType) {
     return QScroller_GrabGesture2((QObject*)target, gestureType);
 }
 
@@ -278,7 +278,7 @@ const char** q_scroller_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_scroller_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_scroller_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

@@ -140,7 +140,9 @@ const char** k_io__previewjob_available_plugins();
 
 /// [Upstream resources](https://api.kde.org/kio-previewjob.html#availableThumbnailerPlugins)
 ///
-libqt_list /* of KPluginMetaData* */ k_io__previewjob_available_thumbnailer_plugins();
+/// @return libqt_list of KPluginMetaData*
+///
+libqt_list k_io__previewjob_available_thumbnailer_plugins();
 
 /// [Upstream resources](https://api.kde.org/kio-previewjob.html#defaultPlugins)
 ///
@@ -308,18 +310,18 @@ void k_io__previewjob_add_meta_data(void* self, const char* key, const char* val
 /// [Upstream resources](https://api.kde.org/kio-job.html#addMetaData)
 ///
 /// @param self KIO__PreviewJob*
-/// @param values libqt_map /* of const char* to const char* */
+/// @param values libqt_map of const char* to const char*
 ///
-void k_io__previewjob_add_meta_data2(void* self, libqt_map /* of const char* to const char* */ values);
+void k_io__previewjob_add_meta_data2(void* self, libqt_map values);
 
 /// Inherited from KIO::Job
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#mergeMetaData)
 ///
 /// @param self KIO__PreviewJob*
-/// @param values libqt_map /* of const char* to const char* */
+/// @param values libqt_map of const char* to const char*
 ///
-void k_io__previewjob_merge_meta_data(void* self, libqt_map /* of const char* to const char* */ values);
+void k_io__previewjob_merge_meta_data(void* self, libqt_map values);
 
 /// Inherited from KIO::Job
 ///
@@ -772,7 +774,9 @@ void k_io__previewjob_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KIO__PreviewJob*
 ///
-libqt_list /* of QObject* */ k_io__previewjob_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_io__previewjob_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1539,7 +1543,9 @@ void k_io__previewjob_on_has_subjobs(void* self, bool (*callback)());
 ///
 /// @param self KIO__PreviewJob*
 ///
-libqt_list /* of KJob* */ k_io__previewjob_subjobs(void* self);
+/// @return libqt_list of KJob*
+///
+libqt_list k_io__previewjob_subjobs(void* self);
 
 /// Inherited from KCompositeJob
 ///
@@ -1549,7 +1555,9 @@ libqt_list /* of KJob* */ k_io__previewjob_subjobs(void* self);
 ///
 /// @param self KIO__PreviewJob*
 ///
-libqt_list /* of KJob* */ k_io__previewjob_qbase_subjobs(void* self);
+/// @return libqt_list of KJob*
+///
+libqt_list k_io__previewjob_qbase_subjobs(void* self);
 
 /// Inherited from KCompositeJob
 ///

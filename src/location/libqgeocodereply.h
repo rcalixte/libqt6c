@@ -104,7 +104,9 @@ QGeoShape* q_geocodereply_viewport(void* self);
 ///
 /// @param self QGeoCodeReply*
 ///
-libqt_list /* of QGeoLocation* */ q_geocodereply_locations(void* self);
+/// @return libqt_list of QGeoLocation*
+///
+libqt_list q_geocodereply_locations(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#limit)
 ///
@@ -286,9 +288,9 @@ void q_geocodereply_qbase_add_location(void* self, void* location);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setLocations)
 ///
 /// @param self QGeoCodeReply*
-/// @param locations libqt_list /* of QGeoLocation* */
+/// @param locations libqt_list of QGeoLocation*
 ///
-void q_geocodereply_set_locations(void* self, libqt_list locations);
+void q_geocodereply_set_locations(void* self, libqt_list /* of QGeoLocation* */ locations);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setLocations)
 ///
@@ -304,9 +306,9 @@ void q_geocodereply_on_set_locations(void* self, void (*callback)(void*, QGeoLoc
 /// Base class method implementation
 ///
 /// @param self QGeoCodeReply*
-/// @param locations libqt_list /* of QGeoLocation* */
+/// @param locations libqt_list of QGeoLocation*
 ///
-void q_geocodereply_qbase_set_locations(void* self, libqt_list locations);
+void q_geocodereply_qbase_set_locations(void* self, libqt_list /* of QGeoLocation* */ locations);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setLimit)
 ///
@@ -502,7 +504,9 @@ void q_geocodereply_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QGeoCodeReply*
 ///
-libqt_list /* of QObject* */ q_geocodereply_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_geocodereply_children(void* self);
 
 /// Inherited from QObject
 ///

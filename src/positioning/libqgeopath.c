@@ -8,7 +8,7 @@ QGeoPath* q_geopath_new() {
     return QGeoPath_new();
 }
 
-QGeoPath* q_geopath_new2(libqt_list path) {
+QGeoPath* q_geopath_new2(libqt_list /* of QGeoCoordinate* */ path) {
     return QGeoPath_new2(path);
 }
 
@@ -20,7 +20,7 @@ QGeoPath* q_geopath_new4(void* other) {
     return QGeoPath_new4((QGeoShape*)other);
 }
 
-QGeoPath* q_geopath_new5(libqt_list path, double* width) {
+QGeoPath* q_geopath_new5(libqt_list /* of QGeoCoordinate* */ path, double* width) {
     return QGeoPath_new5(path, width);
 }
 
@@ -28,7 +28,7 @@ void q_geopath_operator_assign(void* self, void* other) {
     QGeoPath_OperatorAssign((QGeoPath*)self, (QGeoPath*)other);
 }
 
-void q_geopath_set_path(void* self, libqt_list path) {
+void q_geopath_set_path(void* self, libqt_list /* of QGeoCoordinate* */ path) {
     QGeoPath_SetPath((QGeoPath*)self, path);
 }
 
@@ -41,7 +41,7 @@ void q_geopath_clear_path(void* self) {
     QGeoPath_ClearPath((QGeoPath*)self);
 }
 
-void q_geopath_set_variant_path(void* self, libqt_list path) {
+void q_geopath_set_variant_path(void* self, libqt_list /* of QVariant* */ path) {
     QGeoPath_SetVariantPath((QGeoPath*)self, path);
 }
 

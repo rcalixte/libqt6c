@@ -58,7 +58,9 @@ void q_pageranges_add_range(void* self, int from, int to);
 ///
 /// @param self QPageRanges*
 ///
-libqt_list /* of QPageRanges__Range* */ q_pageranges_to_range_list(void* self);
+/// @return libqt_list of QPageRanges__Range*
+///
+libqt_list q_pageranges_to_range_list(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpageranges.html#clear)
 ///

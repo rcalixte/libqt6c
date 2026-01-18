@@ -38,9 +38,9 @@ QGeoRouteRequest* q_georouterequest_new3(void* other);
 
 /// q_georouterequest_new4 constructs a new QGeoRouteRequest object.
 ///
-/// @param waypoints libqt_list /* of QGeoCoordinate* */
+/// @param waypoints libqt_list of QGeoCoordinate*
 ///
-QGeoRouteRequest* q_georouterequest_new4(libqt_list waypoints);
+QGeoRouteRequest* q_georouterequest_new4(libqt_list /* of QGeoCoordinate* */ waypoints);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#operator-eq)
 ///
@@ -59,28 +59,32 @@ void q_georouterequest_swap(void* self, void* other);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#setWaypoints)
 ///
 /// @param self QGeoRouteRequest*
-/// @param waypoints libqt_list /* of QGeoCoordinate* */
+/// @param waypoints libqt_list of QGeoCoordinate*
 ///
-void q_georouterequest_set_waypoints(void* self, libqt_list waypoints);
+void q_georouterequest_set_waypoints(void* self, libqt_list /* of QGeoCoordinate* */ waypoints);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#waypoints)
 ///
 /// @param self QGeoRouteRequest*
 ///
-libqt_list /* of QGeoCoordinate* */ q_georouterequest_waypoints(void* self);
+/// @return libqt_list of QGeoCoordinate*
+///
+libqt_list q_georouterequest_waypoints(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#setExcludeAreas)
 ///
 /// @param self QGeoRouteRequest*
-/// @param areas libqt_list /* of QGeoRectangle* */
+/// @param areas libqt_list of QGeoRectangle*
 ///
-void q_georouterequest_set_exclude_areas(void* self, libqt_list areas);
+void q_georouterequest_set_exclude_areas(void* self, libqt_list /* of QGeoRectangle* */ areas);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#excludeAreas)
 ///
 /// @param self QGeoRouteRequest*
 ///
-libqt_list /* of QGeoRectangle* */ q_georouterequest_exclude_areas(void* self);
+/// @return libqt_list of QGeoRectangle*
+///
+libqt_list q_georouterequest_exclude_areas(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#setNumberAlternativeRoutes)
 ///
@@ -133,7 +137,7 @@ int32_t q_georouterequest_feature_weight(void* self, int32_t featureType);
 ///
 /// @return libqt_list of enum QGeoRouteRequest__FeatureType
 ///
-libqt_list /* of enum QGeoRouteRequest__FeatureType */ q_georouterequest_feature_types(void* self);
+libqt_list q_georouterequest_feature_types(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#setRouteOptimization)
 ///

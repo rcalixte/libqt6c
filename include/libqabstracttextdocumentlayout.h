@@ -660,7 +660,9 @@ void q_abstracttextdocumentlayout_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QAbstractTextDocumentLayout*
 ///
-libqt_list /* of QObject* */ q_abstracttextdocumentlayout_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_abstracttextdocumentlayout_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1422,14 +1424,16 @@ void q_abstracttextdocumentlayout__paintcontext_set_clip(void* self, void* clip)
 ///
 /// @param self QAbstractTextDocumentLayout__PaintContext*
 ///
-libqt_list /* of QAbstractTextDocumentLayout__Selection* */ q_abstracttextdocumentlayout__paintcontext_selections(void* self);
+/// @return libqt_list of QAbstractTextDocumentLayout__Selection*
+///
+libqt_list q_abstracttextdocumentlayout__paintcontext_selections(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout-paintcontext.html#selections-var)
 ///
 /// @param self QAbstractTextDocumentLayout__PaintContext*
-/// @param selections libqt_list /* of QAbstractTextDocumentLayout__Selection* */
+/// @param selections libqt_list of QAbstractTextDocumentLayout__Selection*
 ///
-void q_abstracttextdocumentlayout__paintcontext_set_selections(void* self, libqt_list selections);
+void q_abstracttextdocumentlayout__paintcontext_set_selections(void* self, libqt_list /* of QAbstractTextDocumentLayout__Selection* */ selections);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout-paintcontext.html#operator-eq)
 ///

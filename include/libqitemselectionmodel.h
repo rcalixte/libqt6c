@@ -155,7 +155,9 @@ bool q_itemselectionrange_is_empty(void* self);
 ///
 /// @param self QItemSelectionRange*
 ///
-libqt_list /* of QModelIndex* */ q_itemselectionrange_indexes(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list q_itemselectionrange_indexes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionrange.html#dtor.QItemSelectionRange)
 ///
@@ -281,19 +283,25 @@ bool q_itemselectionmodel_has_selection(void* self);
 ///
 /// @param self QItemSelectionModel*
 ///
-libqt_list /* of QModelIndex* */ q_itemselectionmodel_selected_indexes(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list q_itemselectionmodel_selected_indexes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#selectedRows)
 ///
 /// @param self QItemSelectionModel*
 ///
-libqt_list /* of QModelIndex* */ q_itemselectionmodel_selected_rows(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list q_itemselectionmodel_selected_rows(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#selectedColumns)
 ///
 /// @param self QItemSelectionModel*
 ///
-libqt_list /* of QModelIndex* */ q_itemselectionmodel_selected_columns(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list q_itemselectionmodel_selected_columns(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#selection)
 ///
@@ -633,14 +641,18 @@ bool q_itemselectionmodel_column_intersects_selection2(void* self, int column, v
 /// @param self QItemSelectionModel*
 /// @param column int
 ///
-libqt_list /* of QModelIndex* */ q_itemselectionmodel_selected_rows1(void* self, int column);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list q_itemselectionmodel_selected_rows1(void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#selectedColumns)
 ///
 /// @param self QItemSelectionModel*
 /// @param row int
 ///
-libqt_list /* of QModelIndex* */ q_itemselectionmodel_selected_columns1(void* self, int row);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list q_itemselectionmodel_selected_columns1(void* self, int row);
 
 /// Inherited from QObject
 ///
@@ -752,7 +764,9 @@ void q_itemselectionmodel_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QItemSelectionModel*
 ///
-libqt_list /* of QObject* */ q_itemselectionmodel_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_itemselectionmodel_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1409,7 +1423,9 @@ bool q_itemselection_contains(void* self, void* index);
 ///
 /// @param self QItemSelection*
 ///
-libqt_list /* of QModelIndex* */ q_itemselection_indexes(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list q_itemselection_indexes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselection.html#merge)
 ///

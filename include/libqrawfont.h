@@ -132,22 +132,28 @@ int32_t q_rawfont_weight(void* self);
 /// @param self QRawFont*
 /// @param text const char*
 ///
-libqt_list /* of uint32_t */ q_rawfont_glyph_indexes_for_string(void* self, const char* text);
+/// @return libqt_list of uint32_t
+///
+libqt_list q_rawfont_glyph_indexes_for_string(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#advancesForGlyphIndexes)
 ///
 /// @param self QRawFont*
-/// @param glyphIndexes libqt_list /* of uint32_t */
+/// @param glyphIndexes libqt_list of uint32_t
 ///
-libqt_list /* of QPointF* */ q_rawfont_advances_for_glyph_indexes(void* self, libqt_list glyphIndexes);
+/// @return libqt_list of QPointF*
+///
+libqt_list q_rawfont_advances_for_glyph_indexes(void* self, libqt_list /* of uint32_t */ glyphIndexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#advancesForGlyphIndexes)
 ///
 /// @param self QRawFont*
-/// @param glyphIndexes libqt_list /* of uint32_t */
+/// @param glyphIndexes libqt_list of uint32_t
 /// @param layoutFlags flag of enum QRawFont__LayoutFlag
 ///
-libqt_list /* of QPointF* */ q_rawfont_advances_for_glyph_indexes2(void* self, libqt_list glyphIndexes, int32_t layoutFlags);
+/// @return libqt_list of QPointF*
+///
+libqt_list q_rawfont_advances_for_glyph_indexes2(void* self, libqt_list /* of uint32_t */ glyphIndexes, int32_t layoutFlags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#glyphIndexesForChars)
 ///
@@ -318,7 +324,7 @@ bool q_rawfont_supports_character2(void* self, void* character);
 ///
 /// @return libqt_list of enum QFontDatabase__WritingSystem
 ///
-libqt_list /* of enum QFontDatabase__WritingSystem */ q_rawfont_supported_writing_systems(void* self);
+libqt_list q_rawfont_supported_writing_systems(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#fontTable)
 ///

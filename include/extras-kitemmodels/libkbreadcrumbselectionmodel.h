@@ -255,7 +255,9 @@ bool k_breadcrumbselectionmodel_has_selection(void* self);
 ///
 /// @param self KBreadcrumbSelectionModel*
 ///
-libqt_list /* of QModelIndex* */ k_breadcrumbselectionmodel_selected_indexes(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_breadcrumbselectionmodel_selected_indexes(void* self);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -263,7 +265,9 @@ libqt_list /* of QModelIndex* */ k_breadcrumbselectionmodel_selected_indexes(voi
 ///
 /// @param self KBreadcrumbSelectionModel*
 ///
-libqt_list /* of QModelIndex* */ k_breadcrumbselectionmodel_selected_rows(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_breadcrumbselectionmodel_selected_rows(void* self);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -271,7 +275,9 @@ libqt_list /* of QModelIndex* */ k_breadcrumbselectionmodel_selected_rows(void* 
 ///
 /// @param self KBreadcrumbSelectionModel*
 ///
-libqt_list /* of QModelIndex* */ k_breadcrumbselectionmodel_selected_columns(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_breadcrumbselectionmodel_selected_columns(void* self);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -455,7 +461,9 @@ bool k_breadcrumbselectionmodel_column_intersects_selection2(void* self, int col
 /// @param self KBreadcrumbSelectionModel*
 /// @param column int
 ///
-libqt_list /* of QModelIndex* */ k_breadcrumbselectionmodel_selected_rows1(void* self, int column);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_breadcrumbselectionmodel_selected_rows1(void* self, int column);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -464,7 +472,9 @@ libqt_list /* of QModelIndex* */ k_breadcrumbselectionmodel_selected_rows1(void*
 /// @param self KBreadcrumbSelectionModel*
 /// @param row int
 ///
-libqt_list /* of QModelIndex* */ k_breadcrumbselectionmodel_selected_columns1(void* self, int row);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_breadcrumbselectionmodel_selected_columns1(void* self, int row);
 
 /// Inherited from QObject
 ///
@@ -576,7 +586,9 @@ void k_breadcrumbselectionmodel_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KBreadcrumbSelectionModel*
 ///
-libqt_list /* of QObject* */ k_breadcrumbselectionmodel_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_breadcrumbselectionmodel_children(void* self);
 
 /// Inherited from QObject
 ///

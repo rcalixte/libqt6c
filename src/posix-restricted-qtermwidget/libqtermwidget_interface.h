@@ -302,7 +302,9 @@ void q_termwidgetinterface_set_silence_timeout(void* self, int seconds);
 /// @param self QTermWidgetInterface*
 /// @param position QPoint*
 ///
-libqt_list /* of QAction* */ q_termwidgetinterface_filter_actions(void* self, void* position);
+/// @return libqt_list of QAction*
+///
+libqt_list q_termwidgetinterface_filter_actions(void* self, void* position);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///

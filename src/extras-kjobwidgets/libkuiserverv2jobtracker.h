@@ -213,7 +213,9 @@ void k_uiserverv2jobtracker_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KUiServerV2JobTracker*
 ///
-libqt_list /* of QObject* */ k_uiserverv2jobtracker_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_uiserverv2jobtracker_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -228,13 +228,17 @@ bool k_localizedstring_is_application_translated_into(const char* language);
 
 /// [Upstream resources](https://api.kde.org/klocalizedstring.html#availableApplicationTranslations)
 ///
-libqt_list /* set of const char* */ k_localizedstring_available_application_translations();
+/// @return libqt_list set of const char*
+///
+libqt_list k_localizedstring_available_application_translations();
 
 /// [Upstream resources](https://api.kde.org/klocalizedstring.html#availableDomainTranslations)
 ///
 /// @param domain const char*
 ///
-libqt_list /* set of const char* */ k_localizedstring_available_domain_translations(const char* domain);
+/// @return libqt_list set of const char*
+///
+libqt_list k_localizedstring_available_domain_translations(const char* domain);
 
 /// [Upstream resources](https://api.kde.org/klocalizedstring.html#addDomainLocaleDir)
 ///

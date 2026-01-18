@@ -49,13 +49,15 @@ void q_fontdatabase_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#standardSizes)
 ///
-libqt_list /* of int */ q_fontdatabase_standard_sizes();
+/// @return libqt_list of int
+///
+libqt_list q_fontdatabase_standard_sizes();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#writingSystems)
 ///
 /// @return libqt_list of enum QFontDatabase__WritingSystem
 ///
-libqt_list /* of enum QFontDatabase__WritingSystem */ q_fontdatabase_writing_systems();
+libqt_list q_fontdatabase_writing_systems();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#writingSystems)
 ///
@@ -63,7 +65,7 @@ libqt_list /* of enum QFontDatabase__WritingSystem */ q_fontdatabase_writing_sys
 ///
 /// @return libqt_list of enum QFontDatabase__WritingSystem
 ///
-libqt_list /* of enum QFontDatabase__WritingSystem */ q_fontdatabase_writing_systems2(const char* family);
+libqt_list q_fontdatabase_writing_systems2(const char* family);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#families)
 ///
@@ -83,14 +85,18 @@ const char** q_fontdatabase_styles(const char* family);
 ///
 /// @param family const char*
 ///
-libqt_list /* of int */ q_fontdatabase_point_sizes(const char* family);
+/// @return libqt_list of int
+///
+libqt_list q_fontdatabase_point_sizes(const char* family);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#smoothSizes)
 ///
 /// @param family const char*
 /// @param style const char*
 ///
-libqt_list /* of int */ q_fontdatabase_smooth_sizes(const char* family, const char* style);
+/// @return libqt_list of int
+///
+libqt_list q_fontdatabase_smooth_sizes(const char* family, const char* style);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#styleString)
 ///
@@ -267,7 +273,9 @@ const char** q_fontdatabase_families1(int32_t writingSystem);
 /// @param family const char*
 /// @param style const char*
 ///
-libqt_list /* of int */ q_fontdatabase_point_sizes2(const char* family, const char* style);
+/// @return libqt_list of int
+///
+libqt_list q_fontdatabase_point_sizes2(const char* family, const char* style);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#isBitmapScalable)
 ///

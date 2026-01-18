@@ -187,7 +187,7 @@ void q_scatterseries_append2(void* self, void* point) {
     QXYSeries_Append2((QXYSeries*)self, (QPointF*)point);
 }
 
-void q_scatterseries_append3(void* self, libqt_list points) {
+void q_scatterseries_append3(void* self, libqt_list /* of QPointF* */ points) {
     QXYSeries_Append3((QXYSeries*)self, points);
 }
 
@@ -253,7 +253,7 @@ QXYSeries* q_scatterseries_operator_shift_left(void* self, void* point) {
     return QXYSeries_OperatorShiftLeft((QXYSeries*)self, (QPointF*)point);
 }
 
-QXYSeries* q_scatterseries_operator_shift_left2(void* self, libqt_list points) {
+QXYSeries* q_scatterseries_operator_shift_left2(void* self, libqt_list /* of QPointF* */ points) {
     return QXYSeries_OperatorShiftLeft2((QXYSeries*)self, points);
 }
 
@@ -320,7 +320,7 @@ bool q_scatterseries_point_labels_clipping(void* self) {
     return QXYSeries_PointLabelsClipping((QXYSeries*)self);
 }
 
-void q_scatterseries_replace5(void* self, libqt_list points) {
+void q_scatterseries_replace5(void* self, libqt_list /* of QPointF* */ points) {
     QXYSeries_Replace5((QXYSeries*)self, points);
 }
 
@@ -348,15 +348,15 @@ void q_scatterseries_deselect_all_points(void* self) {
     QXYSeries_DeselectAllPoints((QXYSeries*)self);
 }
 
-void q_scatterseries_select_points(void* self, libqt_list indexes) {
+void q_scatterseries_select_points(void* self, libqt_list /* of int */ indexes) {
     QXYSeries_SelectPoints((QXYSeries*)self, indexes);
 }
 
-void q_scatterseries_deselect_points(void* self, libqt_list indexes) {
+void q_scatterseries_deselect_points(void* self, libqt_list /* of int */ indexes) {
     QXYSeries_DeselectPoints((QXYSeries*)self, indexes);
 }
 
-void q_scatterseries_toggle_selection(void* self, libqt_list indexes) {
+void q_scatterseries_toggle_selection(void* self, libqt_list /* of int */ indexes) {
     QXYSeries_ToggleSelection((QXYSeries*)self, indexes);
 }
 
@@ -505,11 +505,11 @@ libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVaria
     return _ret;
 }
 
-void q_scatterseries_size_by(void* self, libqt_list sourceData, double minSize, double maxSize) {
+void q_scatterseries_size_by(void* self, libqt_list /* of double */ sourceData, double minSize, double maxSize) {
     QXYSeries_SizeBy((QXYSeries*)self, sourceData, minSize, maxSize);
 }
 
-void q_scatterseries_color_by(void* self, libqt_list sourceData) {
+void q_scatterseries_color_by(void* self, libqt_list /* of double */ sourceData) {
     QXYSeries_ColorBy((QXYSeries*)self, sourceData);
 }
 
@@ -745,7 +745,7 @@ void q_scatterseries_set_best_fit_line_visible1(void* self, bool visible) {
     QXYSeries_SetBestFitLineVisible1((QXYSeries*)self, visible);
 }
 
-void q_scatterseries_color_by2(void* self, libqt_list sourceData, void* gradient) {
+void q_scatterseries_color_by2(void* self, libqt_list /* of double */ sourceData, void* gradient) {
     QXYSeries_ColorBy2((QXYSeries*)self, sourceData, (QLinearGradient*)gradient);
 }
 
@@ -954,7 +954,7 @@ const char** q_scatterseries_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_scatterseries_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_scatterseries_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

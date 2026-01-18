@@ -216,7 +216,9 @@ void q_networkcookie_normalize(void* self, void* url);
 ///
 /// @param cookieString const char*
 ///
-libqt_list /* of QNetworkCookie* */ q_networkcookie_parse_cookies(const char* cookieString);
+/// @return libqt_list of QNetworkCookie*
+///
+libqt_list q_networkcookie_parse_cookies(const char* cookieString);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html#toRawForm)
 ///

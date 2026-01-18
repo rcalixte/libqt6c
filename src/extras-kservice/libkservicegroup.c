@@ -92,7 +92,7 @@ const char** k_servicegroup_suppress_generic_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_servicegroup_suppress_generic_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_servicegroup_suppress_generic_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -110,7 +110,7 @@ void k_servicegroup_set_layout_info(void* self, const char* layout[static 1]) {
     size_t layout_len = libqt_strv_length(layout);
     libqt_string* layout_qstr = (libqt_string*)malloc(layout_len * sizeof(libqt_string));
     if (layout_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_servicegroup_set_layout_info");
+        fprintf(stderr, "Failed to allocate memory for string list in k_servicegroup_set_layout_info\n");
         abort();
     }
     for (size_t i = 0; i < layout_len; ++i) {
@@ -126,7 +126,7 @@ const char** k_servicegroup_layout_info(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_servicegroup_layout_info");
+        fprintf(stderr, "Failed to allocate memory for string list in k_servicegroup_layout_info\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

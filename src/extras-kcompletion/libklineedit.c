@@ -263,7 +263,7 @@ void k_lineedit_set_completed_items(void* self, const char* items[static 1], boo
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_lineedit_set_completed_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_lineedit_set_completed_items\n");
         abort();
     }
     for (size_t i = 0; i < items_len; ++i) {
@@ -282,7 +282,7 @@ void k_lineedit_qbase_set_completed_items(void* self, const char* items[static 1
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_lineedit_set_completed_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_lineedit_set_completed_items\n");
         abort();
     }
     for (size_t i = 0; i < items_len; ++i) {
@@ -805,7 +805,7 @@ void k_lineedit_on_input_rejected(void* self, void (*callback)(void*)) {
     QLineEdit_Connect_InputRejected((QLineEdit*)self, (intptr_t)callback);
 }
 
-QVariant* k_lineedit_input_method_query2(void* self, int64_t property, void* argument) {
+QVariant* k_lineedit_input_method_query2(void* self, int32_t property, void* argument) {
     return QLineEdit_InputMethodQuery2((QLineEdit*)self, property, (QVariant*)argument);
 }
 
@@ -1197,11 +1197,11 @@ void k_lineedit_set_graphics_effect(void* self, void* effect) {
     QWidget_SetGraphicsEffect((QWidget*)self, (QGraphicsEffect*)effect);
 }
 
-void k_lineedit_grab_gesture(void* self, int64_t type) {
+void k_lineedit_grab_gesture(void* self, int32_t type) {
     QWidget_GrabGesture((QWidget*)self, type);
 }
 
-void k_lineedit_ungrab_gesture(void* self, int64_t type) {
+void k_lineedit_ungrab_gesture(void* self, int32_t type) {
     QWidget_UngrabGesture((QWidget*)self, type);
 }
 
@@ -1682,7 +1682,7 @@ void k_lineedit_set_parent(void* self, void* parent) {
     QWidget_SetParent((QWidget*)self, (QWidget*)parent);
 }
 
-void k_lineedit_set_parent2(void* self, void* parent, int64_t f) {
+void k_lineedit_set_parent2(void* self, void* parent, int32_t f) {
     QWidget_SetParent2((QWidget*)self, (QWidget*)parent, f);
 }
 
@@ -1714,11 +1714,11 @@ void k_lineedit_set_accept_drops(void* self, bool on) {
     QWidget_SetAcceptDrops((QWidget*)self, on);
 }
 
-void k_lineedit_add_actions(void* self, libqt_list actions) {
+void k_lineedit_add_actions(void* self, libqt_list /* of QAction* */ actions) {
     QWidget_AddActions((QWidget*)self, actions);
 }
 
-void k_lineedit_insert_actions(void* self, void* before, libqt_list actions) {
+void k_lineedit_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions) {
     QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
@@ -1751,23 +1751,23 @@ QWidget* k_lineedit_parent_widget(void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
-void k_lineedit_set_window_flags(void* self, int64_t type) {
+void k_lineedit_set_window_flags(void* self, int32_t type) {
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int64_t k_lineedit_window_flags(void* self) {
+int32_t k_lineedit_window_flags(void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
-void k_lineedit_set_window_flag(void* self, int64_t param1) {
+void k_lineedit_set_window_flag(void* self, int32_t param1) {
     QWidget_SetWindowFlag((QWidget*)self, param1);
 }
 
-void k_lineedit_override_window_flags(void* self, int64_t type) {
+void k_lineedit_override_window_flags(void* self, int32_t type) {
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int64_t k_lineedit_window_type(void* self) {
+int32_t k_lineedit_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
@@ -1863,11 +1863,11 @@ void k_lineedit_on_custom_context_menu_requested(void* self, void (*callback)(vo
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-int64_t k_lineedit_input_method_hints(void* self) {
+int32_t k_lineedit_input_method_hints(void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
-void k_lineedit_set_input_method_hints(void* self, int64_t hints) {
+void k_lineedit_set_input_method_hints(void* self, int32_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
@@ -1899,7 +1899,7 @@ QPixmap* k_lineedit_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_lineedit_grab_gesture2(void* self, int64_t type, int32_t flags) {
+void k_lineedit_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
@@ -1915,7 +1915,7 @@ void k_lineedit_set_shortcut_auto_repeat2(void* self, int id, bool enable) {
     QWidget_SetShortcutAutoRepeat2((QWidget*)self, id, enable);
 }
 
-void k_lineedit_set_window_flag2(void* self, int64_t param1, bool on) {
+void k_lineedit_set_window_flag2(void* self, int32_t param1, bool on) {
     QWidget_SetWindowFlag2((QWidget*)self, param1, on);
 }
 
@@ -1927,7 +1927,7 @@ QWidget* k_lineedit_create_window_container2(void* window, void* parent) {
     return QWidget_CreateWindowContainer2((QWindow*)window, (QWidget*)parent);
 }
 
-QWidget* k_lineedit_create_window_container3(void* window, void* parent, int64_t flags) {
+QWidget* k_lineedit_create_window_container3(void* window, void* parent, int32_t flags) {
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
@@ -2032,7 +2032,7 @@ const char** k_lineedit_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_lineedit_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_lineedit_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2182,7 +2182,7 @@ int32_t k_lineedit_completion_mode(void* self) {
     return KCompletionBase_CompletionMode((KCompletionBase*)self);
 }
 
-bool k_lineedit_set_key_binding(void* self, int32_t item, libqt_list key) {
+bool k_lineedit_set_key_binding(void* self, int32_t item, libqt_list /* of QKeySequence* */ key) {
     return KCompletionBase_SetKeyBinding((KCompletionBase*)self, item, key);
 }
 
@@ -2359,15 +2359,15 @@ void k_lineedit_on_init_style_option(void* self, void (*callback)(void*, void*))
     KLineEdit_OnInitStyleOption((KLineEdit*)self, (intptr_t)callback);
 }
 
-QVariant* k_lineedit_input_method_query(void* self, int64_t param1) {
+QVariant* k_lineedit_input_method_query(void* self, int32_t param1) {
     return KLineEdit_InputMethodQuery((KLineEdit*)self, param1);
 }
 
-QVariant* k_lineedit_qbase_input_method_query(void* self, int64_t param1) {
+QVariant* k_lineedit_qbase_input_method_query(void* self, int32_t param1) {
     return KLineEdit_QBaseInputMethodQuery((KLineEdit*)self, param1);
 }
 
-void k_lineedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void k_lineedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     KLineEdit_OnInputMethodQuery((KLineEdit*)self, (intptr_t)callback);
 }
 
@@ -2849,7 +2849,7 @@ libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequen
     if (_ret_values == NULL) {
         free(_out.keys);
         free(_out.values);
-        fprintf(stderr, "Failed to allocate memory for map value containers in k_lineedit_key_binding_map");
+        fprintf(stderr, "Failed to allocate memory for map value containers in k_lineedit_key_binding_map\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
@@ -2862,7 +2862,7 @@ libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequen
             free(_out.keys);
             free(_ret_values);
             free(_out.values);
-            fprintf(stderr, "Failed to allocate memory for map values in k_lineedit_key_binding_map");
+            fprintf(stderr, "Failed to allocate memory for map values in k_lineedit_key_binding_map\n");
             abort();
         }
         memcpy(_ret_arr, _value_list.data.ptr, _value_list.len * sizeof(QKeySequence*));
@@ -2888,7 +2888,7 @@ libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequen
     if (_ret_values == NULL) {
         free(_out.keys);
         free(_out.values);
-        fprintf(stderr, "Failed to allocate memory for map value containers in k_lineedit_key_binding_map");
+        fprintf(stderr, "Failed to allocate memory for map value containers in k_lineedit_key_binding_map\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
@@ -2901,7 +2901,7 @@ libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequen
             free(_out.keys);
             free(_ret_values);
             free(_out.values);
-            fprintf(stderr, "Failed to allocate memory for map values in k_lineedit_key_binding_map");
+            fprintf(stderr, "Failed to allocate memory for map values in k_lineedit_key_binding_map\n");
             abort();
         }
         memcpy(_ret_arr, _value_list.data.ptr, _value_list.len * sizeof(QKeySequence*));

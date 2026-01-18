@@ -74,7 +74,7 @@ libqt_list /* of QWidget* */ k_widgetitemdelegate_qbase_create_item_widgets(void
     return _arr;
 }
 
-void k_widgetitemdelegate_update_item_widgets(void* self, libqt_list widgets, void* option, void* index) {
+void k_widgetitemdelegate_update_item_widgets(void* self, libqt_list /* of QWidget* */ widgets, void* option, void* index) {
     KWidgetItemDelegate_UpdateItemWidgets((KWidgetItemDelegate*)self, widgets, (QStyleOptionViewItem*)option, (QPersistentModelIndex*)index);
 }
 
@@ -82,19 +82,19 @@ void k_widgetitemdelegate_on_update_item_widgets(void* self, void (*callback)(vo
     KWidgetItemDelegate_OnUpdateItemWidgets((KWidgetItemDelegate*)self, (intptr_t)callback);
 }
 
-void k_widgetitemdelegate_qbase_update_item_widgets(void* self, libqt_list widgets, void* option, void* index) {
+void k_widgetitemdelegate_qbase_update_item_widgets(void* self, libqt_list /* of QWidget* */ widgets, void* option, void* index) {
     KWidgetItemDelegate_QBaseUpdateItemWidgets((KWidgetItemDelegate*)self, widgets, (QStyleOptionViewItem*)option, (QPersistentModelIndex*)index);
 }
 
-void k_widgetitemdelegate_set_blocked_event_types(void* self, void* widget, libqt_list types) {
+void k_widgetitemdelegate_set_blocked_event_types(void* self, void* widget, libqt_list /* of enum QEvent__Type */ types) {
     KWidgetItemDelegate_SetBlockedEventTypes((KWidgetItemDelegate*)self, (QWidget*)widget, types);
 }
 
-void k_widgetitemdelegate_on_set_blocked_event_types(void* self, void (*callback)(void*, void*, libqt_list)) {
+void k_widgetitemdelegate_on_set_blocked_event_types(void* self, void (*callback)(void*, void*, libqt_list /* of enum QEvent__Type */)) {
     KWidgetItemDelegate_OnSetBlockedEventTypes((KWidgetItemDelegate*)self, (intptr_t)callback);
 }
 
-void k_widgetitemdelegate_qbase_set_blocked_event_types(void* self, void* widget, libqt_list types) {
+void k_widgetitemdelegate_qbase_set_blocked_event_types(void* self, void* widget, libqt_list /* of enum QEvent__Type */ types) {
     KWidgetItemDelegate_QBaseSetBlockedEventTypes((KWidgetItemDelegate*)self, (QWidget*)widget, types);
 }
 
@@ -263,7 +263,7 @@ const char** k_widgetitemdelegate_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_widgetitemdelegate_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_widgetitemdelegate_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

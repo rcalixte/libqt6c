@@ -156,15 +156,17 @@ QKeySequence* q_keysequence_from_string(const char* str);
 ///
 /// @param str const char*
 ///
-libqt_list /* of QKeySequence* */ q_keysequence_list_from_string(const char* str);
+/// @return libqt_list of QKeySequence*
+///
+libqt_list q_keysequence_list_from_string(const char* str);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#listToString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param list libqt_list /* of QKeySequence* */
+/// @param list libqt_list of QKeySequence*
 ///
-const char* q_keysequence_list_to_string(libqt_list list);
+const char* q_keysequence_list_to_string(libqt_list /* of QKeySequence* */ list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#matches)
 ///
@@ -185,7 +187,9 @@ QKeySequence* q_keysequence_mnemonic(const char* text);
 ///
 /// @param key enum QKeySequence__StandardKey
 ///
-libqt_list /* of QKeySequence* */ q_keysequence_key_bindings(int32_t key);
+/// @return libqt_list of QKeySequence*
+///
+libqt_list q_keysequence_key_bindings(int32_t key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#operator)
 ///
@@ -283,16 +287,18 @@ QKeySequence* q_keysequence_from_string2(const char* str, int32_t format);
 /// @param str const char*
 /// @param format enum QKeySequence__SequenceFormat
 ///
-libqt_list /* of QKeySequence* */ q_keysequence_list_from_string2(const char* str, int32_t format);
+/// @return libqt_list of QKeySequence*
+///
+libqt_list q_keysequence_list_from_string2(const char* str, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#listToString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param list libqt_list /* of QKeySequence* */
+/// @param list libqt_list of QKeySequence*
 /// @param format enum QKeySequence__SequenceFormat
 ///
-const char* q_keysequence_list_to_string2(libqt_list list, int32_t format);
+const char* q_keysequence_list_to_string2(libqt_list /* of QKeySequence* */ list, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#dtor.QKeySequence)
 ///

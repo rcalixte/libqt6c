@@ -954,7 +954,9 @@ QTextLength* k_texteditor__attribute_length_property(void* self, int propertyId)
 /// @param self KTextEditor__Attribute*
 /// @param propertyId int
 ///
-libqt_list /* of QTextLength* */ k_texteditor__attribute_length_vector_property(void* self, int propertyId);
+/// @return libqt_list of QTextLength*
+///
+libqt_list k_texteditor__attribute_length_vector_property(void* self, int propertyId);
 
 /// Inherited from QTextFormat
 ///
@@ -962,9 +964,9 @@ libqt_list /* of QTextLength* */ k_texteditor__attribute_length_vector_property(
 ///
 /// @param self KTextEditor__Attribute*
 /// @param propertyId int
-/// @param lengths libqt_list /* of QTextLength* */
+/// @param lengths libqt_list of QTextLength*
 ///
-void k_texteditor__attribute_set_property2(void* self, int propertyId, libqt_list lengths);
+void k_texteditor__attribute_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths);
 
 /// Inherited from QTextFormat
 ///
@@ -972,7 +974,8 @@ void k_texteditor__attribute_set_property2(void* self, int propertyId, libqt_lis
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -982,7 +985,9 @@ void k_texteditor__attribute_set_property2(void* self, int propertyId, libqt_lis
 ///
 /// @param self KTextEditor__Attribute*
 ///
-libqt_map /* of int to QVariant* */ k_texteditor__attribute_properties(void* self);
+/// @return libqt_map of int to QVariant*
+///
+libqt_map k_texteditor__attribute_properties(void* self);
 
 /// Inherited from QTextFormat
 ///

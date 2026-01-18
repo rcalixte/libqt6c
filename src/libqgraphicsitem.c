@@ -230,11 +230,11 @@ void q_graphicsitem_set_graphics_effect(void* self, void* effect) {
     QGraphicsItem_SetGraphicsEffect((QGraphicsItem*)self, (QGraphicsEffect*)effect);
 }
 
-int64_t q_graphicsitem_accepted_mouse_buttons(void* self) {
+int32_t q_graphicsitem_accepted_mouse_buttons(void* self) {
     return QGraphicsItem_AcceptedMouseButtons((QGraphicsItem*)self);
 }
 
-void q_graphicsitem_set_accepted_mouse_buttons(void* self, int64_t buttons) {
+void q_graphicsitem_set_accepted_mouse_buttons(void* self, int32_t buttons) {
     QGraphicsItem_SetAcceptedMouseButtons((QGraphicsItem*)self, buttons);
 }
 
@@ -411,7 +411,7 @@ libqt_list /* of QGraphicsTransform* */ q_graphicsitem_transformations(void* sel
     return _arr;
 }
 
-void q_graphicsitem_set_transformations(void* self, libqt_list transformations) {
+void q_graphicsitem_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations) {
     QGraphicsItem_SetTransformations((QGraphicsItem*)self, transformations);
 }
 
@@ -740,11 +740,11 @@ void q_graphicsitem_set_data(void* self, int key, void* value) {
     QGraphicsItem_SetData((QGraphicsItem*)self, key, (QVariant*)value);
 }
 
-int64_t q_graphicsitem_input_method_hints(void* self) {
+int32_t q_graphicsitem_input_method_hints(void* self) {
     return QGraphicsItem_InputMethodHints((QGraphicsItem*)self);
 }
 
-void q_graphicsitem_set_input_method_hints(void* self, int64_t hints) {
+void q_graphicsitem_set_input_method_hints(void* self, int32_t hints) {
     QGraphicsItem_SetInputMethodHints((QGraphicsItem*)self, hints);
 }
 
@@ -1020,15 +1020,15 @@ void q_graphicsitem_qbase_input_method_event(void* self, void* event) {
     QGraphicsItem_QBaseInputMethodEvent((QGraphicsItem*)self, (QInputMethodEvent*)event);
 }
 
-QVariant* q_graphicsitem_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicsitem_input_method_query(void* self, int32_t query) {
     return QGraphicsItem_InputMethodQuery((QGraphicsItem*)self, query);
 }
 
-void q_graphicsitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void q_graphicsitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     QGraphicsItem_OnInputMethodQuery((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicsitem_qbase_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicsitem_qbase_input_method_query(void* self, int32_t query) {
     return QGraphicsItem_QBaseInputMethodQuery((QGraphicsItem*)self, query);
 }
 
@@ -1044,27 +1044,27 @@ QVariant* q_graphicsitem_qbase_item_change(void* self, int32_t change, void* val
     return QGraphicsItem_QBaseItemChange((QGraphicsItem*)self, change, (QVariant*)value);
 }
 
-bool q_graphicsitem_supports_extension(void* self, int64_t extension) {
+bool q_graphicsitem_supports_extension(void* self, int32_t extension) {
     return QGraphicsItem_SupportsExtension((QGraphicsItem*)self, extension);
 }
 
-void q_graphicsitem_on_supports_extension(void* self, bool (*callback)(void*, int64_t)) {
+void q_graphicsitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t)) {
     QGraphicsItem_OnSupportsExtension((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicsitem_qbase_supports_extension(void* self, int64_t extension) {
+bool q_graphicsitem_qbase_supports_extension(void* self, int32_t extension) {
     return QGraphicsItem_QBaseSupportsExtension((QGraphicsItem*)self, extension);
 }
 
-void q_graphicsitem_set_extension(void* self, int64_t extension, void* variant) {
+void q_graphicsitem_set_extension(void* self, int32_t extension, void* variant) {
     QGraphicsItem_SetExtension((QGraphicsItem*)self, extension, (QVariant*)variant);
 }
 
-void q_graphicsitem_on_set_extension(void* self, void (*callback)(void*, int64_t, void*)) {
+void q_graphicsitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*)) {
     QGraphicsItem_OnSetExtension((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_set_extension(void* self, int64_t extension, void* variant) {
+void q_graphicsitem_qbase_set_extension(void* self, int32_t extension, void* variant) {
     QGraphicsItem_QBaseSetExtension((QGraphicsItem*)self, extension, (QVariant*)variant);
 }
 
@@ -1212,11 +1212,11 @@ const char* q_graphicsobject_tr(const char* s) {
     return _ret;
 }
 
-void q_graphicsobject_grab_gesture(void* self, int64_t type) {
+void q_graphicsobject_grab_gesture(void* self, int32_t type) {
     QGraphicsObject_GrabGesture((QGraphicsObject*)self, type);
 }
 
-void q_graphicsobject_ungrab_gesture(void* self, int64_t type) {
+void q_graphicsobject_ungrab_gesture(void* self, int32_t type) {
     QGraphicsObject_UngrabGesture((QGraphicsObject*)self, type);
 }
 
@@ -1354,7 +1354,7 @@ const char* q_graphicsobject_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_graphicsobject_grab_gesture2(void* self, int64_t type, int32_t flags) {
+void q_graphicsobject_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QGraphicsObject_GrabGesture2((QGraphicsObject*)self, type, flags);
 }
 
@@ -1463,7 +1463,7 @@ const char** q_graphicsobject_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_graphicsobject_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_graphicsobject_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1721,11 +1721,11 @@ void q_graphicsobject_set_graphics_effect(void* self, void* effect) {
     QGraphicsItem_SetGraphicsEffect((QGraphicsItem*)self, (QGraphicsEffect*)effect);
 }
 
-int64_t q_graphicsobject_accepted_mouse_buttons(void* self) {
+int32_t q_graphicsobject_accepted_mouse_buttons(void* self) {
     return QGraphicsItem_AcceptedMouseButtons((QGraphicsItem*)self);
 }
 
-void q_graphicsobject_set_accepted_mouse_buttons(void* self, int64_t buttons) {
+void q_graphicsobject_set_accepted_mouse_buttons(void* self, int32_t buttons) {
     QGraphicsItem_SetAcceptedMouseButtons((QGraphicsItem*)self, buttons);
 }
 
@@ -1902,7 +1902,7 @@ libqt_list /* of QGraphicsTransform* */ q_graphicsobject_transformations(void* s
     return _arr;
 }
 
-void q_graphicsobject_set_transformations(void* self, libqt_list transformations) {
+void q_graphicsobject_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations) {
     QGraphicsItem_SetTransformations((QGraphicsItem*)self, transformations);
 }
 
@@ -2123,11 +2123,11 @@ void q_graphicsobject_set_data(void* self, int key, void* value) {
     QGraphicsItem_SetData((QGraphicsItem*)self, key, (QVariant*)value);
 }
 
-int64_t q_graphicsobject_input_method_hints(void* self) {
+int32_t q_graphicsobject_input_method_hints(void* self) {
     return QGraphicsItem_InputMethodHints((QGraphicsItem*)self);
 }
 
-void q_graphicsobject_set_input_method_hints(void* self, int64_t hints) {
+void q_graphicsobject_set_input_method_hints(void* self, int32_t hints) {
     QGraphicsItem_SetInputMethodHints((QGraphicsItem*)self, hints);
 }
 
@@ -2628,15 +2628,15 @@ void q_graphicsobject_on_input_method_event(void* self, void (*callback)(void*, 
     QGraphicsObject_OnInputMethodEvent((QGraphicsObject*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicsobject_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicsobject_input_method_query(void* self, int32_t query) {
     return QGraphicsObject_InputMethodQuery((QGraphicsObject*)self, query);
 }
 
-QVariant* q_graphicsobject_qbase_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicsobject_qbase_input_method_query(void* self, int32_t query) {
     return QGraphicsObject_QBaseInputMethodQuery((QGraphicsObject*)self, query);
 }
 
-void q_graphicsobject_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void q_graphicsobject_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     QGraphicsObject_OnInputMethodQuery((QGraphicsObject*)self, (intptr_t)callback);
 }
 
@@ -2652,27 +2652,27 @@ void q_graphicsobject_on_item_change(void* self, QVariant* (*callback)(void*, in
     QGraphicsObject_OnItemChange((QGraphicsObject*)self, (intptr_t)callback);
 }
 
-bool q_graphicsobject_supports_extension(void* self, int64_t extension) {
+bool q_graphicsobject_supports_extension(void* self, int32_t extension) {
     return QGraphicsObject_SupportsExtension((QGraphicsObject*)self, extension);
 }
 
-bool q_graphicsobject_qbase_supports_extension(void* self, int64_t extension) {
+bool q_graphicsobject_qbase_supports_extension(void* self, int32_t extension) {
     return QGraphicsObject_QBaseSupportsExtension((QGraphicsObject*)self, extension);
 }
 
-void q_graphicsobject_on_supports_extension(void* self, bool (*callback)(void*, int64_t)) {
+void q_graphicsobject_on_supports_extension(void* self, bool (*callback)(void*, int32_t)) {
     QGraphicsObject_OnSupportsExtension((QGraphicsObject*)self, (intptr_t)callback);
 }
 
-void q_graphicsobject_set_extension(void* self, int64_t extension, void* variant) {
+void q_graphicsobject_set_extension(void* self, int32_t extension, void* variant) {
     QGraphicsObject_SetExtension((QGraphicsObject*)self, extension, (QVariant*)variant);
 }
 
-void q_graphicsobject_qbase_set_extension(void* self, int64_t extension, void* variant) {
+void q_graphicsobject_qbase_set_extension(void* self, int32_t extension, void* variant) {
     QGraphicsObject_QBaseSetExtension((QGraphicsObject*)self, extension, (QVariant*)variant);
 }
 
-void q_graphicsobject_on_set_extension(void* self, void (*callback)(void*, int64_t, void*)) {
+void q_graphicsobject_on_set_extension(void* self, void (*callback)(void*, int32_t, void*)) {
     QGraphicsObject_OnSetExtension((QGraphicsObject*)self, (intptr_t)callback);
 }
 
@@ -3020,11 +3020,11 @@ void q_abstractgraphicsshapeitem_set_graphics_effect(void* self, void* effect) {
     QGraphicsItem_SetGraphicsEffect((QGraphicsItem*)self, (QGraphicsEffect*)effect);
 }
 
-int64_t q_abstractgraphicsshapeitem_accepted_mouse_buttons(void* self) {
+int32_t q_abstractgraphicsshapeitem_accepted_mouse_buttons(void* self) {
     return QGraphicsItem_AcceptedMouseButtons((QGraphicsItem*)self);
 }
 
-void q_abstractgraphicsshapeitem_set_accepted_mouse_buttons(void* self, int64_t buttons) {
+void q_abstractgraphicsshapeitem_set_accepted_mouse_buttons(void* self, int32_t buttons) {
     QGraphicsItem_SetAcceptedMouseButtons((QGraphicsItem*)self, buttons);
 }
 
@@ -3201,7 +3201,7 @@ libqt_list /* of QGraphicsTransform* */ q_abstractgraphicsshapeitem_transformati
     return _arr;
 }
 
-void q_abstractgraphicsshapeitem_set_transformations(void* self, libqt_list transformations) {
+void q_abstractgraphicsshapeitem_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations) {
     QGraphicsItem_SetTransformations((QGraphicsItem*)self, transformations);
 }
 
@@ -3422,11 +3422,11 @@ void q_abstractgraphicsshapeitem_set_data(void* self, int key, void* value) {
     QGraphicsItem_SetData((QGraphicsItem*)self, key, (QVariant*)value);
 }
 
-int64_t q_abstractgraphicsshapeitem_input_method_hints(void* self) {
+int32_t q_abstractgraphicsshapeitem_input_method_hints(void* self) {
     return QGraphicsItem_InputMethodHints((QGraphicsItem*)self);
 }
 
-void q_abstractgraphicsshapeitem_set_input_method_hints(void* self, int64_t hints) {
+void q_abstractgraphicsshapeitem_set_input_method_hints(void* self, int32_t hints) {
     QGraphicsItem_SetInputMethodHints((QGraphicsItem*)self, hints);
 }
 
@@ -3831,15 +3831,15 @@ void q_abstractgraphicsshapeitem_on_input_method_event(void* self, void (*callba
     QAbstractGraphicsShapeItem_OnInputMethodEvent((QAbstractGraphicsShapeItem*)self, (intptr_t)callback);
 }
 
-QVariant* q_abstractgraphicsshapeitem_input_method_query(void* self, int64_t query) {
+QVariant* q_abstractgraphicsshapeitem_input_method_query(void* self, int32_t query) {
     return QAbstractGraphicsShapeItem_InputMethodQuery((QAbstractGraphicsShapeItem*)self, query);
 }
 
-QVariant* q_abstractgraphicsshapeitem_qbase_input_method_query(void* self, int64_t query) {
+QVariant* q_abstractgraphicsshapeitem_qbase_input_method_query(void* self, int32_t query) {
     return QAbstractGraphicsShapeItem_QBaseInputMethodQuery((QAbstractGraphicsShapeItem*)self, query);
 }
 
-void q_abstractgraphicsshapeitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void q_abstractgraphicsshapeitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     QAbstractGraphicsShapeItem_OnInputMethodQuery((QAbstractGraphicsShapeItem*)self, (intptr_t)callback);
 }
 
@@ -3855,27 +3855,27 @@ void q_abstractgraphicsshapeitem_on_item_change(void* self, QVariant* (*callback
     QAbstractGraphicsShapeItem_OnItemChange((QAbstractGraphicsShapeItem*)self, (intptr_t)callback);
 }
 
-bool q_abstractgraphicsshapeitem_supports_extension(void* self, int64_t extension) {
+bool q_abstractgraphicsshapeitem_supports_extension(void* self, int32_t extension) {
     return QAbstractGraphicsShapeItem_SupportsExtension((QAbstractGraphicsShapeItem*)self, extension);
 }
 
-bool q_abstractgraphicsshapeitem_qbase_supports_extension(void* self, int64_t extension) {
+bool q_abstractgraphicsshapeitem_qbase_supports_extension(void* self, int32_t extension) {
     return QAbstractGraphicsShapeItem_QBaseSupportsExtension((QAbstractGraphicsShapeItem*)self, extension);
 }
 
-void q_abstractgraphicsshapeitem_on_supports_extension(void* self, bool (*callback)(void*, int64_t)) {
+void q_abstractgraphicsshapeitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t)) {
     QAbstractGraphicsShapeItem_OnSupportsExtension((QAbstractGraphicsShapeItem*)self, (intptr_t)callback);
 }
 
-void q_abstractgraphicsshapeitem_set_extension(void* self, int64_t extension, void* variant) {
+void q_abstractgraphicsshapeitem_set_extension(void* self, int32_t extension, void* variant) {
     QAbstractGraphicsShapeItem_SetExtension((QAbstractGraphicsShapeItem*)self, extension, (QVariant*)variant);
 }
 
-void q_abstractgraphicsshapeitem_qbase_set_extension(void* self, int64_t extension, void* variant) {
+void q_abstractgraphicsshapeitem_qbase_set_extension(void* self, int32_t extension, void* variant) {
     QAbstractGraphicsShapeItem_QBaseSetExtension((QAbstractGraphicsShapeItem*)self, extension, (QVariant*)variant);
 }
 
-void q_abstractgraphicsshapeitem_on_set_extension(void* self, void (*callback)(void*, int64_t, void*)) {
+void q_abstractgraphicsshapeitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*)) {
     QAbstractGraphicsShapeItem_OnSetExtension((QAbstractGraphicsShapeItem*)self, (intptr_t)callback);
 }
 
@@ -4051,27 +4051,27 @@ int32_t q_graphicspathitem_qbase_type(void* self) {
     return QGraphicsPathItem_QBaseType((QGraphicsPathItem*)self);
 }
 
-bool q_graphicspathitem_supports_extension(void* self, int64_t extension) {
+bool q_graphicspathitem_supports_extension(void* self, int32_t extension) {
     return QGraphicsPathItem_SupportsExtension((QGraphicsPathItem*)self, extension);
 }
 
-void q_graphicspathitem_on_supports_extension(void* self, bool (*callback)(void*, int64_t)) {
+void q_graphicspathitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t)) {
     QGraphicsPathItem_OnSupportsExtension((QGraphicsPathItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicspathitem_qbase_supports_extension(void* self, int64_t extension) {
+bool q_graphicspathitem_qbase_supports_extension(void* self, int32_t extension) {
     return QGraphicsPathItem_QBaseSupportsExtension((QGraphicsPathItem*)self, extension);
 }
 
-void q_graphicspathitem_set_extension(void* self, int64_t extension, void* variant) {
+void q_graphicspathitem_set_extension(void* self, int32_t extension, void* variant) {
     QGraphicsPathItem_SetExtension((QGraphicsPathItem*)self, extension, (QVariant*)variant);
 }
 
-void q_graphicspathitem_on_set_extension(void* self, void (*callback)(void*, int64_t, void*)) {
+void q_graphicspathitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*)) {
     QGraphicsPathItem_OnSetExtension((QGraphicsPathItem*)self, (intptr_t)callback);
 }
 
-void q_graphicspathitem_qbase_set_extension(void* self, int64_t extension, void* variant) {
+void q_graphicspathitem_qbase_set_extension(void* self, int32_t extension, void* variant) {
     QGraphicsPathItem_QBaseSetExtension((QGraphicsPathItem*)self, extension, (QVariant*)variant);
 }
 
@@ -4295,11 +4295,11 @@ void q_graphicspathitem_set_graphics_effect(void* self, void* effect) {
     QGraphicsItem_SetGraphicsEffect((QGraphicsItem*)self, (QGraphicsEffect*)effect);
 }
 
-int64_t q_graphicspathitem_accepted_mouse_buttons(void* self) {
+int32_t q_graphicspathitem_accepted_mouse_buttons(void* self) {
     return QGraphicsItem_AcceptedMouseButtons((QGraphicsItem*)self);
 }
 
-void q_graphicspathitem_set_accepted_mouse_buttons(void* self, int64_t buttons) {
+void q_graphicspathitem_set_accepted_mouse_buttons(void* self, int32_t buttons) {
     QGraphicsItem_SetAcceptedMouseButtons((QGraphicsItem*)self, buttons);
 }
 
@@ -4476,7 +4476,7 @@ libqt_list /* of QGraphicsTransform* */ q_graphicspathitem_transformations(void*
     return _arr;
 }
 
-void q_graphicspathitem_set_transformations(void* self, libqt_list transformations) {
+void q_graphicspathitem_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations) {
     QGraphicsItem_SetTransformations((QGraphicsItem*)self, transformations);
 }
 
@@ -4697,11 +4697,11 @@ void q_graphicspathitem_set_data(void* self, int key, void* value) {
     QGraphicsItem_SetData((QGraphicsItem*)self, key, (QVariant*)value);
 }
 
-int64_t q_graphicspathitem_input_method_hints(void* self) {
+int32_t q_graphicspathitem_input_method_hints(void* self) {
     return QGraphicsItem_InputMethodHints((QGraphicsItem*)self);
 }
 
-void q_graphicspathitem_set_input_method_hints(void* self, int64_t hints) {
+void q_graphicspathitem_set_input_method_hints(void* self, int32_t hints) {
     QGraphicsItem_SetInputMethodHints((QGraphicsItem*)self, hints);
 }
 
@@ -5046,15 +5046,15 @@ void q_graphicspathitem_on_input_method_event(void* self, void (*callback)(void*
     QGraphicsPathItem_OnInputMethodEvent((QGraphicsPathItem*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicspathitem_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicspathitem_input_method_query(void* self, int32_t query) {
     return QGraphicsPathItem_InputMethodQuery((QGraphicsPathItem*)self, query);
 }
 
-QVariant* q_graphicspathitem_qbase_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicspathitem_qbase_input_method_query(void* self, int32_t query) {
     return QGraphicsPathItem_QBaseInputMethodQuery((QGraphicsPathItem*)self, query);
 }
 
-void q_graphicspathitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void q_graphicspathitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     QGraphicsPathItem_OnInputMethodQuery((QGraphicsPathItem*)self, (intptr_t)callback);
 }
 
@@ -5242,27 +5242,27 @@ int32_t q_graphicsrectitem_qbase_type(void* self) {
     return QGraphicsRectItem_QBaseType((QGraphicsRectItem*)self);
 }
 
-bool q_graphicsrectitem_supports_extension(void* self, int64_t extension) {
+bool q_graphicsrectitem_supports_extension(void* self, int32_t extension) {
     return QGraphicsRectItem_SupportsExtension((QGraphicsRectItem*)self, extension);
 }
 
-void q_graphicsrectitem_on_supports_extension(void* self, bool (*callback)(void*, int64_t)) {
+void q_graphicsrectitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t)) {
     QGraphicsRectItem_OnSupportsExtension((QGraphicsRectItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicsrectitem_qbase_supports_extension(void* self, int64_t extension) {
+bool q_graphicsrectitem_qbase_supports_extension(void* self, int32_t extension) {
     return QGraphicsRectItem_QBaseSupportsExtension((QGraphicsRectItem*)self, extension);
 }
 
-void q_graphicsrectitem_set_extension(void* self, int64_t extension, void* variant) {
+void q_graphicsrectitem_set_extension(void* self, int32_t extension, void* variant) {
     QGraphicsRectItem_SetExtension((QGraphicsRectItem*)self, extension, (QVariant*)variant);
 }
 
-void q_graphicsrectitem_on_set_extension(void* self, void (*callback)(void*, int64_t, void*)) {
+void q_graphicsrectitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*)) {
     QGraphicsRectItem_OnSetExtension((QGraphicsRectItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsrectitem_qbase_set_extension(void* self, int64_t extension, void* variant) {
+void q_graphicsrectitem_qbase_set_extension(void* self, int32_t extension, void* variant) {
     QGraphicsRectItem_QBaseSetExtension((QGraphicsRectItem*)self, extension, (QVariant*)variant);
 }
 
@@ -5486,11 +5486,11 @@ void q_graphicsrectitem_set_graphics_effect(void* self, void* effect) {
     QGraphicsItem_SetGraphicsEffect((QGraphicsItem*)self, (QGraphicsEffect*)effect);
 }
 
-int64_t q_graphicsrectitem_accepted_mouse_buttons(void* self) {
+int32_t q_graphicsrectitem_accepted_mouse_buttons(void* self) {
     return QGraphicsItem_AcceptedMouseButtons((QGraphicsItem*)self);
 }
 
-void q_graphicsrectitem_set_accepted_mouse_buttons(void* self, int64_t buttons) {
+void q_graphicsrectitem_set_accepted_mouse_buttons(void* self, int32_t buttons) {
     QGraphicsItem_SetAcceptedMouseButtons((QGraphicsItem*)self, buttons);
 }
 
@@ -5667,7 +5667,7 @@ libqt_list /* of QGraphicsTransform* */ q_graphicsrectitem_transformations(void*
     return _arr;
 }
 
-void q_graphicsrectitem_set_transformations(void* self, libqt_list transformations) {
+void q_graphicsrectitem_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations) {
     QGraphicsItem_SetTransformations((QGraphicsItem*)self, transformations);
 }
 
@@ -5888,11 +5888,11 @@ void q_graphicsrectitem_set_data(void* self, int key, void* value) {
     QGraphicsItem_SetData((QGraphicsItem*)self, key, (QVariant*)value);
 }
 
-int64_t q_graphicsrectitem_input_method_hints(void* self) {
+int32_t q_graphicsrectitem_input_method_hints(void* self) {
     return QGraphicsItem_InputMethodHints((QGraphicsItem*)self);
 }
 
-void q_graphicsrectitem_set_input_method_hints(void* self, int64_t hints) {
+void q_graphicsrectitem_set_input_method_hints(void* self, int32_t hints) {
     QGraphicsItem_SetInputMethodHints((QGraphicsItem*)self, hints);
 }
 
@@ -6237,15 +6237,15 @@ void q_graphicsrectitem_on_input_method_event(void* self, void (*callback)(void*
     QGraphicsRectItem_OnInputMethodEvent((QGraphicsRectItem*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicsrectitem_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicsrectitem_input_method_query(void* self, int32_t query) {
     return QGraphicsRectItem_InputMethodQuery((QGraphicsRectItem*)self, query);
 }
 
-QVariant* q_graphicsrectitem_qbase_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicsrectitem_qbase_input_method_query(void* self, int32_t query) {
     return QGraphicsRectItem_QBaseInputMethodQuery((QGraphicsRectItem*)self, query);
 }
 
-void q_graphicsrectitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void q_graphicsrectitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     QGraphicsRectItem_OnInputMethodQuery((QGraphicsRectItem*)self, (intptr_t)callback);
 }
 
@@ -6449,27 +6449,27 @@ int32_t q_graphicsellipseitem_qbase_type(void* self) {
     return QGraphicsEllipseItem_QBaseType((QGraphicsEllipseItem*)self);
 }
 
-bool q_graphicsellipseitem_supports_extension(void* self, int64_t extension) {
+bool q_graphicsellipseitem_supports_extension(void* self, int32_t extension) {
     return QGraphicsEllipseItem_SupportsExtension((QGraphicsEllipseItem*)self, extension);
 }
 
-void q_graphicsellipseitem_on_supports_extension(void* self, bool (*callback)(void*, int64_t)) {
+void q_graphicsellipseitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t)) {
     QGraphicsEllipseItem_OnSupportsExtension((QGraphicsEllipseItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicsellipseitem_qbase_supports_extension(void* self, int64_t extension) {
+bool q_graphicsellipseitem_qbase_supports_extension(void* self, int32_t extension) {
     return QGraphicsEllipseItem_QBaseSupportsExtension((QGraphicsEllipseItem*)self, extension);
 }
 
-void q_graphicsellipseitem_set_extension(void* self, int64_t extension, void* variant) {
+void q_graphicsellipseitem_set_extension(void* self, int32_t extension, void* variant) {
     QGraphicsEllipseItem_SetExtension((QGraphicsEllipseItem*)self, extension, (QVariant*)variant);
 }
 
-void q_graphicsellipseitem_on_set_extension(void* self, void (*callback)(void*, int64_t, void*)) {
+void q_graphicsellipseitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*)) {
     QGraphicsEllipseItem_OnSetExtension((QGraphicsEllipseItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsellipseitem_qbase_set_extension(void* self, int64_t extension, void* variant) {
+void q_graphicsellipseitem_qbase_set_extension(void* self, int32_t extension, void* variant) {
     QGraphicsEllipseItem_QBaseSetExtension((QGraphicsEllipseItem*)self, extension, (QVariant*)variant);
 }
 
@@ -6693,11 +6693,11 @@ void q_graphicsellipseitem_set_graphics_effect(void* self, void* effect) {
     QGraphicsItem_SetGraphicsEffect((QGraphicsItem*)self, (QGraphicsEffect*)effect);
 }
 
-int64_t q_graphicsellipseitem_accepted_mouse_buttons(void* self) {
+int32_t q_graphicsellipseitem_accepted_mouse_buttons(void* self) {
     return QGraphicsItem_AcceptedMouseButtons((QGraphicsItem*)self);
 }
 
-void q_graphicsellipseitem_set_accepted_mouse_buttons(void* self, int64_t buttons) {
+void q_graphicsellipseitem_set_accepted_mouse_buttons(void* self, int32_t buttons) {
     QGraphicsItem_SetAcceptedMouseButtons((QGraphicsItem*)self, buttons);
 }
 
@@ -6874,7 +6874,7 @@ libqt_list /* of QGraphicsTransform* */ q_graphicsellipseitem_transformations(vo
     return _arr;
 }
 
-void q_graphicsellipseitem_set_transformations(void* self, libqt_list transformations) {
+void q_graphicsellipseitem_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations) {
     QGraphicsItem_SetTransformations((QGraphicsItem*)self, transformations);
 }
 
@@ -7095,11 +7095,11 @@ void q_graphicsellipseitem_set_data(void* self, int key, void* value) {
     QGraphicsItem_SetData((QGraphicsItem*)self, key, (QVariant*)value);
 }
 
-int64_t q_graphicsellipseitem_input_method_hints(void* self) {
+int32_t q_graphicsellipseitem_input_method_hints(void* self) {
     return QGraphicsItem_InputMethodHints((QGraphicsItem*)self);
 }
 
-void q_graphicsellipseitem_set_input_method_hints(void* self, int64_t hints) {
+void q_graphicsellipseitem_set_input_method_hints(void* self, int32_t hints) {
     QGraphicsItem_SetInputMethodHints((QGraphicsItem*)self, hints);
 }
 
@@ -7444,15 +7444,15 @@ void q_graphicsellipseitem_on_input_method_event(void* self, void (*callback)(vo
     QGraphicsEllipseItem_OnInputMethodEvent((QGraphicsEllipseItem*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicsellipseitem_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicsellipseitem_input_method_query(void* self, int32_t query) {
     return QGraphicsEllipseItem_InputMethodQuery((QGraphicsEllipseItem*)self, query);
 }
 
-QVariant* q_graphicsellipseitem_qbase_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicsellipseitem_qbase_input_method_query(void* self, int32_t query) {
     return QGraphicsEllipseItem_QBaseInputMethodQuery((QGraphicsEllipseItem*)self, query);
 }
 
-void q_graphicsellipseitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void q_graphicsellipseitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     QGraphicsEllipseItem_OnInputMethodQuery((QGraphicsEllipseItem*)self, (intptr_t)callback);
 }
 
@@ -7620,27 +7620,27 @@ int32_t q_graphicspolygonitem_qbase_type(void* self) {
     return QGraphicsPolygonItem_QBaseType((QGraphicsPolygonItem*)self);
 }
 
-bool q_graphicspolygonitem_supports_extension(void* self, int64_t extension) {
+bool q_graphicspolygonitem_supports_extension(void* self, int32_t extension) {
     return QGraphicsPolygonItem_SupportsExtension((QGraphicsPolygonItem*)self, extension);
 }
 
-void q_graphicspolygonitem_on_supports_extension(void* self, bool (*callback)(void*, int64_t)) {
+void q_graphicspolygonitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t)) {
     QGraphicsPolygonItem_OnSupportsExtension((QGraphicsPolygonItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicspolygonitem_qbase_supports_extension(void* self, int64_t extension) {
+bool q_graphicspolygonitem_qbase_supports_extension(void* self, int32_t extension) {
     return QGraphicsPolygonItem_QBaseSupportsExtension((QGraphicsPolygonItem*)self, extension);
 }
 
-void q_graphicspolygonitem_set_extension(void* self, int64_t extension, void* variant) {
+void q_graphicspolygonitem_set_extension(void* self, int32_t extension, void* variant) {
     QGraphicsPolygonItem_SetExtension((QGraphicsPolygonItem*)self, extension, (QVariant*)variant);
 }
 
-void q_graphicspolygonitem_on_set_extension(void* self, void (*callback)(void*, int64_t, void*)) {
+void q_graphicspolygonitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*)) {
     QGraphicsPolygonItem_OnSetExtension((QGraphicsPolygonItem*)self, (intptr_t)callback);
 }
 
-void q_graphicspolygonitem_qbase_set_extension(void* self, int64_t extension, void* variant) {
+void q_graphicspolygonitem_qbase_set_extension(void* self, int32_t extension, void* variant) {
     QGraphicsPolygonItem_QBaseSetExtension((QGraphicsPolygonItem*)self, extension, (QVariant*)variant);
 }
 
@@ -7864,11 +7864,11 @@ void q_graphicspolygonitem_set_graphics_effect(void* self, void* effect) {
     QGraphicsItem_SetGraphicsEffect((QGraphicsItem*)self, (QGraphicsEffect*)effect);
 }
 
-int64_t q_graphicspolygonitem_accepted_mouse_buttons(void* self) {
+int32_t q_graphicspolygonitem_accepted_mouse_buttons(void* self) {
     return QGraphicsItem_AcceptedMouseButtons((QGraphicsItem*)self);
 }
 
-void q_graphicspolygonitem_set_accepted_mouse_buttons(void* self, int64_t buttons) {
+void q_graphicspolygonitem_set_accepted_mouse_buttons(void* self, int32_t buttons) {
     QGraphicsItem_SetAcceptedMouseButtons((QGraphicsItem*)self, buttons);
 }
 
@@ -8045,7 +8045,7 @@ libqt_list /* of QGraphicsTransform* */ q_graphicspolygonitem_transformations(vo
     return _arr;
 }
 
-void q_graphicspolygonitem_set_transformations(void* self, libqt_list transformations) {
+void q_graphicspolygonitem_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations) {
     QGraphicsItem_SetTransformations((QGraphicsItem*)self, transformations);
 }
 
@@ -8266,11 +8266,11 @@ void q_graphicspolygonitem_set_data(void* self, int key, void* value) {
     QGraphicsItem_SetData((QGraphicsItem*)self, key, (QVariant*)value);
 }
 
-int64_t q_graphicspolygonitem_input_method_hints(void* self) {
+int32_t q_graphicspolygonitem_input_method_hints(void* self) {
     return QGraphicsItem_InputMethodHints((QGraphicsItem*)self);
 }
 
-void q_graphicspolygonitem_set_input_method_hints(void* self, int64_t hints) {
+void q_graphicspolygonitem_set_input_method_hints(void* self, int32_t hints) {
     QGraphicsItem_SetInputMethodHints((QGraphicsItem*)self, hints);
 }
 
@@ -8615,15 +8615,15 @@ void q_graphicspolygonitem_on_input_method_event(void* self, void (*callback)(vo
     QGraphicsPolygonItem_OnInputMethodEvent((QGraphicsPolygonItem*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicspolygonitem_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicspolygonitem_input_method_query(void* self, int32_t query) {
     return QGraphicsPolygonItem_InputMethodQuery((QGraphicsPolygonItem*)self, query);
 }
 
-QVariant* q_graphicspolygonitem_qbase_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicspolygonitem_qbase_input_method_query(void* self, int32_t query) {
     return QGraphicsPolygonItem_QBaseInputMethodQuery((QGraphicsPolygonItem*)self, query);
 }
 
-void q_graphicspolygonitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void q_graphicspolygonitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     QGraphicsPolygonItem_OnInputMethodQuery((QGraphicsPolygonItem*)self, (intptr_t)callback);
 }
 
@@ -8819,27 +8819,27 @@ int32_t q_graphicslineitem_qbase_type(void* self) {
     return QGraphicsLineItem_QBaseType((QGraphicsLineItem*)self);
 }
 
-bool q_graphicslineitem_supports_extension(void* self, int64_t extension) {
+bool q_graphicslineitem_supports_extension(void* self, int32_t extension) {
     return QGraphicsLineItem_SupportsExtension((QGraphicsLineItem*)self, extension);
 }
 
-void q_graphicslineitem_on_supports_extension(void* self, bool (*callback)(void*, int64_t)) {
+void q_graphicslineitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t)) {
     QGraphicsLineItem_OnSupportsExtension((QGraphicsLineItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicslineitem_qbase_supports_extension(void* self, int64_t extension) {
+bool q_graphicslineitem_qbase_supports_extension(void* self, int32_t extension) {
     return QGraphicsLineItem_QBaseSupportsExtension((QGraphicsLineItem*)self, extension);
 }
 
-void q_graphicslineitem_set_extension(void* self, int64_t extension, void* variant) {
+void q_graphicslineitem_set_extension(void* self, int32_t extension, void* variant) {
     QGraphicsLineItem_SetExtension((QGraphicsLineItem*)self, extension, (QVariant*)variant);
 }
 
-void q_graphicslineitem_on_set_extension(void* self, void (*callback)(void*, int64_t, void*)) {
+void q_graphicslineitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*)) {
     QGraphicsLineItem_OnSetExtension((QGraphicsLineItem*)self, (intptr_t)callback);
 }
 
-void q_graphicslineitem_qbase_set_extension(void* self, int64_t extension, void* variant) {
+void q_graphicslineitem_qbase_set_extension(void* self, int32_t extension, void* variant) {
     QGraphicsLineItem_QBaseSetExtension((QGraphicsLineItem*)self, extension, (QVariant*)variant);
 }
 
@@ -9047,11 +9047,11 @@ void q_graphicslineitem_set_graphics_effect(void* self, void* effect) {
     QGraphicsItem_SetGraphicsEffect((QGraphicsItem*)self, (QGraphicsEffect*)effect);
 }
 
-int64_t q_graphicslineitem_accepted_mouse_buttons(void* self) {
+int32_t q_graphicslineitem_accepted_mouse_buttons(void* self) {
     return QGraphicsItem_AcceptedMouseButtons((QGraphicsItem*)self);
 }
 
-void q_graphicslineitem_set_accepted_mouse_buttons(void* self, int64_t buttons) {
+void q_graphicslineitem_set_accepted_mouse_buttons(void* self, int32_t buttons) {
     QGraphicsItem_SetAcceptedMouseButtons((QGraphicsItem*)self, buttons);
 }
 
@@ -9228,7 +9228,7 @@ libqt_list /* of QGraphicsTransform* */ q_graphicslineitem_transformations(void*
     return _arr;
 }
 
-void q_graphicslineitem_set_transformations(void* self, libqt_list transformations) {
+void q_graphicslineitem_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations) {
     QGraphicsItem_SetTransformations((QGraphicsItem*)self, transformations);
 }
 
@@ -9449,11 +9449,11 @@ void q_graphicslineitem_set_data(void* self, int key, void* value) {
     QGraphicsItem_SetData((QGraphicsItem*)self, key, (QVariant*)value);
 }
 
-int64_t q_graphicslineitem_input_method_hints(void* self) {
+int32_t q_graphicslineitem_input_method_hints(void* self) {
     return QGraphicsItem_InputMethodHints((QGraphicsItem*)self);
 }
 
-void q_graphicslineitem_set_input_method_hints(void* self, int64_t hints) {
+void q_graphicslineitem_set_input_method_hints(void* self, int32_t hints) {
     QGraphicsItem_SetInputMethodHints((QGraphicsItem*)self, hints);
 }
 
@@ -9798,15 +9798,15 @@ void q_graphicslineitem_on_input_method_event(void* self, void (*callback)(void*
     QGraphicsLineItem_OnInputMethodEvent((QGraphicsLineItem*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicslineitem_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicslineitem_input_method_query(void* self, int32_t query) {
     return QGraphicsLineItem_InputMethodQuery((QGraphicsLineItem*)self, query);
 }
 
-QVariant* q_graphicslineitem_qbase_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicslineitem_qbase_input_method_query(void* self, int32_t query) {
     return QGraphicsLineItem_QBaseInputMethodQuery((QGraphicsLineItem*)self, query);
 }
 
-void q_graphicslineitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void q_graphicslineitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     QGraphicsLineItem_OnInputMethodQuery((QGraphicsLineItem*)self, (intptr_t)callback);
 }
 
@@ -10010,27 +10010,27 @@ void q_graphicspixmapitem_set_shape_mode(void* self, int32_t mode) {
     QGraphicsPixmapItem_SetShapeMode((QGraphicsPixmapItem*)self, mode);
 }
 
-bool q_graphicspixmapitem_supports_extension(void* self, int64_t extension) {
+bool q_graphicspixmapitem_supports_extension(void* self, int32_t extension) {
     return QGraphicsPixmapItem_SupportsExtension((QGraphicsPixmapItem*)self, extension);
 }
 
-void q_graphicspixmapitem_on_supports_extension(void* self, bool (*callback)(void*, int64_t)) {
+void q_graphicspixmapitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t)) {
     QGraphicsPixmapItem_OnSupportsExtension((QGraphicsPixmapItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicspixmapitem_qbase_supports_extension(void* self, int64_t extension) {
+bool q_graphicspixmapitem_qbase_supports_extension(void* self, int32_t extension) {
     return QGraphicsPixmapItem_QBaseSupportsExtension((QGraphicsPixmapItem*)self, extension);
 }
 
-void q_graphicspixmapitem_set_extension(void* self, int64_t extension, void* variant) {
+void q_graphicspixmapitem_set_extension(void* self, int32_t extension, void* variant) {
     QGraphicsPixmapItem_SetExtension((QGraphicsPixmapItem*)self, extension, (QVariant*)variant);
 }
 
-void q_graphicspixmapitem_on_set_extension(void* self, void (*callback)(void*, int64_t, void*)) {
+void q_graphicspixmapitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*)) {
     QGraphicsPixmapItem_OnSetExtension((QGraphicsPixmapItem*)self, (intptr_t)callback);
 }
 
-void q_graphicspixmapitem_qbase_set_extension(void* self, int64_t extension, void* variant) {
+void q_graphicspixmapitem_qbase_set_extension(void* self, int32_t extension, void* variant) {
     QGraphicsPixmapItem_QBaseSetExtension((QGraphicsPixmapItem*)self, extension, (QVariant*)variant);
 }
 
@@ -10238,11 +10238,11 @@ void q_graphicspixmapitem_set_graphics_effect(void* self, void* effect) {
     QGraphicsItem_SetGraphicsEffect((QGraphicsItem*)self, (QGraphicsEffect*)effect);
 }
 
-int64_t q_graphicspixmapitem_accepted_mouse_buttons(void* self) {
+int32_t q_graphicspixmapitem_accepted_mouse_buttons(void* self) {
     return QGraphicsItem_AcceptedMouseButtons((QGraphicsItem*)self);
 }
 
-void q_graphicspixmapitem_set_accepted_mouse_buttons(void* self, int64_t buttons) {
+void q_graphicspixmapitem_set_accepted_mouse_buttons(void* self, int32_t buttons) {
     QGraphicsItem_SetAcceptedMouseButtons((QGraphicsItem*)self, buttons);
 }
 
@@ -10419,7 +10419,7 @@ libqt_list /* of QGraphicsTransform* */ q_graphicspixmapitem_transformations(voi
     return _arr;
 }
 
-void q_graphicspixmapitem_set_transformations(void* self, libqt_list transformations) {
+void q_graphicspixmapitem_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations) {
     QGraphicsItem_SetTransformations((QGraphicsItem*)self, transformations);
 }
 
@@ -10640,11 +10640,11 @@ void q_graphicspixmapitem_set_data(void* self, int key, void* value) {
     QGraphicsItem_SetData((QGraphicsItem*)self, key, (QVariant*)value);
 }
 
-int64_t q_graphicspixmapitem_input_method_hints(void* self) {
+int32_t q_graphicspixmapitem_input_method_hints(void* self) {
     return QGraphicsItem_InputMethodHints((QGraphicsItem*)self);
 }
 
-void q_graphicspixmapitem_set_input_method_hints(void* self, int64_t hints) {
+void q_graphicspixmapitem_set_input_method_hints(void* self, int32_t hints) {
     QGraphicsItem_SetInputMethodHints((QGraphicsItem*)self, hints);
 }
 
@@ -10989,15 +10989,15 @@ void q_graphicspixmapitem_on_input_method_event(void* self, void (*callback)(voi
     QGraphicsPixmapItem_OnInputMethodEvent((QGraphicsPixmapItem*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicspixmapitem_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicspixmapitem_input_method_query(void* self, int32_t query) {
     return QGraphicsPixmapItem_InputMethodQuery((QGraphicsPixmapItem*)self, query);
 }
 
-QVariant* q_graphicspixmapitem_qbase_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicspixmapitem_qbase_input_method_query(void* self, int32_t query) {
     return QGraphicsPixmapItem_QBaseInputMethodQuery((QGraphicsPixmapItem*)self, query);
 }
 
-void q_graphicspixmapitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void q_graphicspixmapitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     QGraphicsPixmapItem_OnInputMethodQuery((QGraphicsPixmapItem*)self, (intptr_t)callback);
 }
 
@@ -11514,39 +11514,39 @@ void q_graphicstextitem_qbase_hover_leave_event(void* self, void* event) {
     QGraphicsTextItem_QBaseHoverLeaveEvent((QGraphicsTextItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-QVariant* q_graphicstextitem_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicstextitem_input_method_query(void* self, int32_t query) {
     return QGraphicsTextItem_InputMethodQuery((QGraphicsTextItem*)self, query);
 }
 
-void q_graphicstextitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void q_graphicstextitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     QGraphicsTextItem_OnInputMethodQuery((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicstextitem_qbase_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicstextitem_qbase_input_method_query(void* self, int32_t query) {
     return QGraphicsTextItem_QBaseInputMethodQuery((QGraphicsTextItem*)self, query);
 }
 
-bool q_graphicstextitem_supports_extension(void* self, int64_t extension) {
+bool q_graphicstextitem_supports_extension(void* self, int32_t extension) {
     return QGraphicsTextItem_SupportsExtension((QGraphicsTextItem*)self, extension);
 }
 
-void q_graphicstextitem_on_supports_extension(void* self, bool (*callback)(void*, int64_t)) {
+void q_graphicstextitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t)) {
     QGraphicsTextItem_OnSupportsExtension((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicstextitem_qbase_supports_extension(void* self, int64_t extension) {
+bool q_graphicstextitem_qbase_supports_extension(void* self, int32_t extension) {
     return QGraphicsTextItem_QBaseSupportsExtension((QGraphicsTextItem*)self, extension);
 }
 
-void q_graphicstextitem_set_extension(void* self, int64_t extension, void* variant) {
+void q_graphicstextitem_set_extension(void* self, int32_t extension, void* variant) {
     QGraphicsTextItem_SetExtension((QGraphicsTextItem*)self, extension, (QVariant*)variant);
 }
 
-void q_graphicstextitem_on_set_extension(void* self, void (*callback)(void*, int64_t, void*)) {
+void q_graphicstextitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*)) {
     QGraphicsTextItem_OnSetExtension((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-void q_graphicstextitem_qbase_set_extension(void* self, int64_t extension, void* variant) {
+void q_graphicstextitem_qbase_set_extension(void* self, int32_t extension, void* variant) {
     QGraphicsTextItem_QBaseSetExtension((QGraphicsTextItem*)self, extension, (QVariant*)variant);
 }
 
@@ -11576,11 +11576,11 @@ const char* q_graphicstextitem_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_graphicstextitem_grab_gesture(void* self, int64_t type) {
+void q_graphicstextitem_grab_gesture(void* self, int32_t type) {
     QGraphicsObject_GrabGesture((QGraphicsObject*)self, type);
 }
 
-void q_graphicstextitem_ungrab_gesture(void* self, int64_t type) {
+void q_graphicstextitem_ungrab_gesture(void* self, int32_t type) {
     QGraphicsObject_UngrabGesture((QGraphicsObject*)self, type);
 }
 
@@ -11680,7 +11680,7 @@ void q_graphicstextitem_on_height_changed(void* self, void (*callback)(void*)) {
     QGraphicsObject_Connect_HeightChanged((QGraphicsObject*)self, (intptr_t)callback);
 }
 
-void q_graphicstextitem_grab_gesture2(void* self, int64_t type, int32_t flags) {
+void q_graphicstextitem_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QGraphicsObject_GrabGesture2((QGraphicsObject*)self, type, flags);
 }
 
@@ -11789,7 +11789,7 @@ const char** q_graphicstextitem_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_graphicstextitem_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_graphicstextitem_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -12047,11 +12047,11 @@ void q_graphicstextitem_set_graphics_effect(void* self, void* effect) {
     QGraphicsItem_SetGraphicsEffect((QGraphicsItem*)self, (QGraphicsEffect*)effect);
 }
 
-int64_t q_graphicstextitem_accepted_mouse_buttons(void* self) {
+int32_t q_graphicstextitem_accepted_mouse_buttons(void* self) {
     return QGraphicsItem_AcceptedMouseButtons((QGraphicsItem*)self);
 }
 
-void q_graphicstextitem_set_accepted_mouse_buttons(void* self, int64_t buttons) {
+void q_graphicstextitem_set_accepted_mouse_buttons(void* self, int32_t buttons) {
     QGraphicsItem_SetAcceptedMouseButtons((QGraphicsItem*)self, buttons);
 }
 
@@ -12228,7 +12228,7 @@ libqt_list /* of QGraphicsTransform* */ q_graphicstextitem_transformations(void*
     return _arr;
 }
 
-void q_graphicstextitem_set_transformations(void* self, libqt_list transformations) {
+void q_graphicstextitem_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations) {
     QGraphicsItem_SetTransformations((QGraphicsItem*)self, transformations);
 }
 
@@ -12449,11 +12449,11 @@ void q_graphicstextitem_set_data(void* self, int key, void* value) {
     QGraphicsItem_SetData((QGraphicsItem*)self, key, (QVariant*)value);
 }
 
-int64_t q_graphicstextitem_input_method_hints(void* self) {
+int32_t q_graphicstextitem_input_method_hints(void* self) {
     return QGraphicsItem_InputMethodHints((QGraphicsItem*)self);
 }
 
-void q_graphicstextitem_set_input_method_hints(void* self, int64_t hints) {
+void q_graphicstextitem_set_input_method_hints(void* self, int32_t hints) {
     QGraphicsItem_SetInputMethodHints((QGraphicsItem*)self, hints);
 }
 
@@ -12901,27 +12901,27 @@ int32_t q_graphicssimpletextitem_qbase_type(void* self) {
     return QGraphicsSimpleTextItem_QBaseType((QGraphicsSimpleTextItem*)self);
 }
 
-bool q_graphicssimpletextitem_supports_extension(void* self, int64_t extension) {
+bool q_graphicssimpletextitem_supports_extension(void* self, int32_t extension) {
     return QGraphicsSimpleTextItem_SupportsExtension((QGraphicsSimpleTextItem*)self, extension);
 }
 
-void q_graphicssimpletextitem_on_supports_extension(void* self, bool (*callback)(void*, int64_t)) {
+void q_graphicssimpletextitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t)) {
     QGraphicsSimpleTextItem_OnSupportsExtension((QGraphicsSimpleTextItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicssimpletextitem_qbase_supports_extension(void* self, int64_t extension) {
+bool q_graphicssimpletextitem_qbase_supports_extension(void* self, int32_t extension) {
     return QGraphicsSimpleTextItem_QBaseSupportsExtension((QGraphicsSimpleTextItem*)self, extension);
 }
 
-void q_graphicssimpletextitem_set_extension(void* self, int64_t extension, void* variant) {
+void q_graphicssimpletextitem_set_extension(void* self, int32_t extension, void* variant) {
     QGraphicsSimpleTextItem_SetExtension((QGraphicsSimpleTextItem*)self, extension, (QVariant*)variant);
 }
 
-void q_graphicssimpletextitem_on_set_extension(void* self, void (*callback)(void*, int64_t, void*)) {
+void q_graphicssimpletextitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*)) {
     QGraphicsSimpleTextItem_OnSetExtension((QGraphicsSimpleTextItem*)self, (intptr_t)callback);
 }
 
-void q_graphicssimpletextitem_qbase_set_extension(void* self, int64_t extension, void* variant) {
+void q_graphicssimpletextitem_qbase_set_extension(void* self, int32_t extension, void* variant) {
     QGraphicsSimpleTextItem_QBaseSetExtension((QGraphicsSimpleTextItem*)self, extension, (QVariant*)variant);
 }
 
@@ -13145,11 +13145,11 @@ void q_graphicssimpletextitem_set_graphics_effect(void* self, void* effect) {
     QGraphicsItem_SetGraphicsEffect((QGraphicsItem*)self, (QGraphicsEffect*)effect);
 }
 
-int64_t q_graphicssimpletextitem_accepted_mouse_buttons(void* self) {
+int32_t q_graphicssimpletextitem_accepted_mouse_buttons(void* self) {
     return QGraphicsItem_AcceptedMouseButtons((QGraphicsItem*)self);
 }
 
-void q_graphicssimpletextitem_set_accepted_mouse_buttons(void* self, int64_t buttons) {
+void q_graphicssimpletextitem_set_accepted_mouse_buttons(void* self, int32_t buttons) {
     QGraphicsItem_SetAcceptedMouseButtons((QGraphicsItem*)self, buttons);
 }
 
@@ -13326,7 +13326,7 @@ libqt_list /* of QGraphicsTransform* */ q_graphicssimpletextitem_transformations
     return _arr;
 }
 
-void q_graphicssimpletextitem_set_transformations(void* self, libqt_list transformations) {
+void q_graphicssimpletextitem_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations) {
     QGraphicsItem_SetTransformations((QGraphicsItem*)self, transformations);
 }
 
@@ -13547,11 +13547,11 @@ void q_graphicssimpletextitem_set_data(void* self, int key, void* value) {
     QGraphicsItem_SetData((QGraphicsItem*)self, key, (QVariant*)value);
 }
 
-int64_t q_graphicssimpletextitem_input_method_hints(void* self) {
+int32_t q_graphicssimpletextitem_input_method_hints(void* self) {
     return QGraphicsItem_InputMethodHints((QGraphicsItem*)self);
 }
 
-void q_graphicssimpletextitem_set_input_method_hints(void* self, int64_t hints) {
+void q_graphicssimpletextitem_set_input_method_hints(void* self, int32_t hints) {
     QGraphicsItem_SetInputMethodHints((QGraphicsItem*)self, hints);
 }
 
@@ -13896,15 +13896,15 @@ void q_graphicssimpletextitem_on_input_method_event(void* self, void (*callback)
     QGraphicsSimpleTextItem_OnInputMethodEvent((QGraphicsSimpleTextItem*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicssimpletextitem_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicssimpletextitem_input_method_query(void* self, int32_t query) {
     return QGraphicsSimpleTextItem_InputMethodQuery((QGraphicsSimpleTextItem*)self, query);
 }
 
-QVariant* q_graphicssimpletextitem_qbase_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicssimpletextitem_qbase_input_method_query(void* self, int32_t query) {
     return QGraphicsSimpleTextItem_QBaseInputMethodQuery((QGraphicsSimpleTextItem*)self, query);
 }
 
-void q_graphicssimpletextitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void q_graphicssimpletextitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     QGraphicsSimpleTextItem_OnInputMethodQuery((QGraphicsSimpleTextItem*)self, (intptr_t)callback);
 }
 
@@ -14240,11 +14240,11 @@ void q_graphicsitemgroup_set_graphics_effect(void* self, void* effect) {
     QGraphicsItem_SetGraphicsEffect((QGraphicsItem*)self, (QGraphicsEffect*)effect);
 }
 
-int64_t q_graphicsitemgroup_accepted_mouse_buttons(void* self) {
+int32_t q_graphicsitemgroup_accepted_mouse_buttons(void* self) {
     return QGraphicsItem_AcceptedMouseButtons((QGraphicsItem*)self);
 }
 
-void q_graphicsitemgroup_set_accepted_mouse_buttons(void* self, int64_t buttons) {
+void q_graphicsitemgroup_set_accepted_mouse_buttons(void* self, int32_t buttons) {
     QGraphicsItem_SetAcceptedMouseButtons((QGraphicsItem*)self, buttons);
 }
 
@@ -14421,7 +14421,7 @@ libqt_list /* of QGraphicsTransform* */ q_graphicsitemgroup_transformations(void
     return _arr;
 }
 
-void q_graphicsitemgroup_set_transformations(void* self, libqt_list transformations) {
+void q_graphicsitemgroup_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations) {
     QGraphicsItem_SetTransformations((QGraphicsItem*)self, transformations);
 }
 
@@ -14642,11 +14642,11 @@ void q_graphicsitemgroup_set_data(void* self, int key, void* value) {
     QGraphicsItem_SetData((QGraphicsItem*)self, key, (QVariant*)value);
 }
 
-int64_t q_graphicsitemgroup_input_method_hints(void* self) {
+int32_t q_graphicsitemgroup_input_method_hints(void* self) {
     return QGraphicsItem_InputMethodHints((QGraphicsItem*)self);
 }
 
-void q_graphicsitemgroup_set_input_method_hints(void* self, int64_t hints) {
+void q_graphicsitemgroup_set_input_method_hints(void* self, int32_t hints) {
     QGraphicsItem_SetInputMethodHints((QGraphicsItem*)self, hints);
 }
 
@@ -15015,15 +15015,15 @@ void q_graphicsitemgroup_on_input_method_event(void* self, void (*callback)(void
     QGraphicsItemGroup_OnInputMethodEvent((QGraphicsItemGroup*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicsitemgroup_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicsitemgroup_input_method_query(void* self, int32_t query) {
     return QGraphicsItemGroup_InputMethodQuery((QGraphicsItemGroup*)self, query);
 }
 
-QVariant* q_graphicsitemgroup_qbase_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicsitemgroup_qbase_input_method_query(void* self, int32_t query) {
     return QGraphicsItemGroup_QBaseInputMethodQuery((QGraphicsItemGroup*)self, query);
 }
 
-void q_graphicsitemgroup_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void q_graphicsitemgroup_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     QGraphicsItemGroup_OnInputMethodQuery((QGraphicsItemGroup*)self, (intptr_t)callback);
 }
 
@@ -15039,27 +15039,27 @@ void q_graphicsitemgroup_on_item_change(void* self, QVariant* (*callback)(void*,
     QGraphicsItemGroup_OnItemChange((QGraphicsItemGroup*)self, (intptr_t)callback);
 }
 
-bool q_graphicsitemgroup_supports_extension(void* self, int64_t extension) {
+bool q_graphicsitemgroup_supports_extension(void* self, int32_t extension) {
     return QGraphicsItemGroup_SupportsExtension((QGraphicsItemGroup*)self, extension);
 }
 
-bool q_graphicsitemgroup_qbase_supports_extension(void* self, int64_t extension) {
+bool q_graphicsitemgroup_qbase_supports_extension(void* self, int32_t extension) {
     return QGraphicsItemGroup_QBaseSupportsExtension((QGraphicsItemGroup*)self, extension);
 }
 
-void q_graphicsitemgroup_on_supports_extension(void* self, bool (*callback)(void*, int64_t)) {
+void q_graphicsitemgroup_on_supports_extension(void* self, bool (*callback)(void*, int32_t)) {
     QGraphicsItemGroup_OnSupportsExtension((QGraphicsItemGroup*)self, (intptr_t)callback);
 }
 
-void q_graphicsitemgroup_set_extension(void* self, int64_t extension, void* variant) {
+void q_graphicsitemgroup_set_extension(void* self, int32_t extension, void* variant) {
     QGraphicsItemGroup_SetExtension((QGraphicsItemGroup*)self, extension, (QVariant*)variant);
 }
 
-void q_graphicsitemgroup_qbase_set_extension(void* self, int64_t extension, void* variant) {
+void q_graphicsitemgroup_qbase_set_extension(void* self, int32_t extension, void* variant) {
     QGraphicsItemGroup_QBaseSetExtension((QGraphicsItemGroup*)self, extension, (QVariant*)variant);
 }
 
-void q_graphicsitemgroup_on_set_extension(void* self, void (*callback)(void*, int64_t, void*)) {
+void q_graphicsitemgroup_on_set_extension(void* self, void (*callback)(void*, int32_t, void*)) {
     QGraphicsItemGroup_OnSetExtension((QGraphicsItemGroup*)self, (intptr_t)callback);
 }
 

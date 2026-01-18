@@ -43,7 +43,9 @@ QMimeType* q_mimedatabase_mime_type_for_file2(void* self, void* fileInfo);
 /// @param self QMimeDatabase*
 /// @param fileName const char*
 ///
-libqt_list /* of QMimeType* */ q_mimedatabase_mime_types_for_file_name(void* self, const char* fileName);
+/// @return libqt_list of QMimeType*
+///
+libqt_list q_mimedatabase_mime_types_for_file_name(void* self, const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedatabase.html#mimeTypeForData)
 ///
@@ -95,7 +97,9 @@ const char* q_mimedatabase_suffix_for_file_name(void* self, const char* fileName
 ///
 /// @param self QMimeDatabase*
 ///
-libqt_list /* of QMimeType* */ q_mimedatabase_all_mime_types(void* self);
+/// @return libqt_list of QMimeType*
+///
+libqt_list q_mimedatabase_all_mime_types(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedatabase.html#mimeTypeForFile)
 ///

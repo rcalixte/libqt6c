@@ -127,7 +127,7 @@ int32_t q_inputmethod_input_direction(void* self);
 /// @param query enum Qt__InputMethodQuery
 /// @param argument QVariant*
 ///
-QVariant* q_inputmethod_query_focus_object(int64_t query, void* argument);
+QVariant* q_inputmethod_query_focus_object(int32_t query, void* argument);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputmethod.html#show)
 ///
@@ -146,7 +146,7 @@ void q_inputmethod_hide(void* self);
 /// @param self QInputMethod*
 /// @param queries flag of enum Qt__InputMethodQuery
 ///
-void q_inputmethod_update(void* self, int64_t queries);
+void q_inputmethod_update(void* self, int32_t queries);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputmethod.html#reset)
 ///
@@ -421,7 +421,9 @@ void q_inputmethod_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QInputMethod*
 ///
-libqt_list /* of QObject* */ q_inputmethod_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_inputmethod_children(void* self);
 
 /// Inherited from QObject
 ///

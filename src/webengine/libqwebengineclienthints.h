@@ -97,7 +97,8 @@ const char* q_webengineclienthints_bitness(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     free(((QVariant*)map.values)[i]);
@@ -108,7 +109,9 @@ const char* q_webengineclienthints_bitness(void* self);
 ///
 /// @param self QWebEngineClientHints*
 ///
-libqt_map /* of const char* to QVariant* */ q_webengineclienthints_full_version_list(void* self);
+/// @return libqt_map of const char* to QVariant*
+///
+libqt_map q_webengineclienthints_full_version_list(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineclienthints.html#isWow64)
 ///
@@ -168,9 +171,9 @@ void q_webengineclienthints_set_bitness(void* self, const char* bitness);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineclienthints.html#setFullVersionList)
 ///
 /// @param self QWebEngineClientHints*
-/// @param fullVersionList libqt_map /* of const char* to QVariant* */
+/// @param fullVersionList libqt_map of const char* to QVariant*
 ///
-void q_webengineclienthints_set_full_version_list(void* self, libqt_map /* of const char* to QVariant* */ fullVersionList);
+void q_webengineclienthints_set_full_version_list(void* self, libqt_map fullVersionList);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineclienthints.html#setIsWow64)
 ///
@@ -346,7 +349,9 @@ void q_webengineclienthints_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QWebEngineClientHints*
 ///
-libqt_list /* of QObject* */ q_webengineclienthints_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_webengineclienthints_children(void* self);
 
 /// Inherited from QObject
 ///

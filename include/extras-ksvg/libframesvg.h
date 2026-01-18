@@ -966,7 +966,9 @@ void k_svg__framesvg_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KSvg__FrameSvg*
 ///
-libqt_list /* of QObject* */ k_svg__framesvg_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_svg__framesvg_children(void* self);
 
 /// Inherited from QObject
 ///

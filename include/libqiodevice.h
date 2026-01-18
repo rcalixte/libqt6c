@@ -967,7 +967,9 @@ void q_iodevice_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QIODevice*
 ///
-libqt_list /* of QObject* */ q_iodevice_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_iodevice_children(void* self);
 
 /// Inherited from QObject
 ///

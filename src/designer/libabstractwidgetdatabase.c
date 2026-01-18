@@ -342,7 +342,7 @@ void q_designerwidgetdatabaseiteminterface_qbase_set_extends(void* self, const c
     QDesignerWidgetDataBaseItemInterface_QBaseSetExtends((QDesignerWidgetDataBaseItemInterface*)self, qstring(s));
 }
 
-void q_designerwidgetdatabaseiteminterface_set_default_property_values(void* self, libqt_list list) {
+void q_designerwidgetdatabaseiteminterface_set_default_property_values(void* self, libqt_list /* of QVariant* */ list) {
     QDesignerWidgetDataBaseItemInterface_SetDefaultPropertyValues((QDesignerWidgetDataBaseItemInterface*)self, list);
 }
 
@@ -350,7 +350,7 @@ void q_designerwidgetdatabaseiteminterface_on_set_default_property_values(void* 
     QDesignerWidgetDataBaseItemInterface_OnSetDefaultPropertyValues((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
-void q_designerwidgetdatabaseiteminterface_qbase_set_default_property_values(void* self, libqt_list list) {
+void q_designerwidgetdatabaseiteminterface_qbase_set_default_property_values(void* self, libqt_list /* of QVariant* */ list) {
     QDesignerWidgetDataBaseItemInterface_QBaseSetDefaultPropertyValues((QDesignerWidgetDataBaseItemInterface*)self, list);
 }
 
@@ -646,7 +646,7 @@ const char** q_designerwidgetdatabaseinterface_dynamic_property_names(void* self
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_designerwidgetdatabaseinterface_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_designerwidgetdatabaseinterface_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

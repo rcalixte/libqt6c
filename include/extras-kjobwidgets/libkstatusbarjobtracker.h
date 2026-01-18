@@ -93,10 +93,10 @@ void k_statusbarjobtracker_set_status_bar_mode(void* self, int32_t statusBarMode
 /// @param self KStatusBarJobTracker*
 /// @param job KJob*
 /// @param title const char*
-/// @param field1 libqt_pair /* tuple of const char* and const char* */
-/// @param field2 libqt_pair /* tuple of const char* and const char* */
+/// @param field1 libqt_pair tuple of const char* and const char*
+/// @param field2 libqt_pair tuple of const char* and const char*
 ///
-void k_statusbarjobtracker_description(void* self, void* job, const char* title, libqt_pair /* tuple of const char* and const char* */ field1, libqt_pair /* tuple of const char* and const char* */ field2);
+void k_statusbarjobtracker_description(void* self, void* job, const char* title, libqt_pair field1, libqt_pair field2);
 
 /// [Upstream resources](https://api.kde.org/kstatusbarjobtracker.html#totalAmount)
 ///
@@ -370,7 +370,9 @@ void k_statusbarjobtracker_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KStatusBarJobTracker*
 ///
-libqt_list /* of QObject* */ k_statusbarjobtracker_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_statusbarjobtracker_children(void* self);
 
 /// Inherited from QObject
 ///

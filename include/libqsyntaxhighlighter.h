@@ -503,7 +503,9 @@ void q_syntaxhighlighter_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QSyntaxHighlighter*
 ///
-libqt_list /* of QObject* */ q_syntaxhighlighter_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_syntaxhighlighter_children(void* self);
 
 /// Inherited from QObject
 ///

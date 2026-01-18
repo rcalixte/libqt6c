@@ -71,19 +71,25 @@ const char* q_mediaplayer_tr(const char* s);
 ///
 /// @param self QMediaPlayer*
 ///
-libqt_list /* of QMediaMetaData* */ q_mediaplayer_audio_tracks(void* self);
+/// @return libqt_list of QMediaMetaData*
+///
+libqt_list q_mediaplayer_audio_tracks(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#videoTracks)
 ///
 /// @param self QMediaPlayer*
 ///
-libqt_list /* of QMediaMetaData* */ q_mediaplayer_video_tracks(void* self);
+/// @return libqt_list of QMediaMetaData*
+///
+libqt_list q_mediaplayer_video_tracks(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#subtitleTracks)
 ///
 /// @param self QMediaPlayer*
 ///
-libqt_list /* of QMediaMetaData* */ q_mediaplayer_subtitle_tracks(void* self);
+/// @return libqt_list of QMediaMetaData*
+///
+libqt_list q_mediaplayer_subtitle_tracks(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#activeAudioTrack)
 ///
@@ -755,7 +761,9 @@ void q_mediaplayer_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QMediaPlayer*
 ///
-libqt_list /* of QObject* */ q_mediaplayer_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_mediaplayer_children(void* self);
 
 /// Inherited from QObject
 ///

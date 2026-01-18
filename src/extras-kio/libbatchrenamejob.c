@@ -74,7 +74,7 @@ const char** k_io__batchrenamejob_detailed_error_strings(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__batchrenamejob_detailed_error_strings");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__batchrenamejob_detailed_error_strings\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -188,7 +188,7 @@ const char** k_io__batchrenamejob_detailed_error_strings1(void* self, void* reqU
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__batchrenamejob_detailed_error_strings1");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__batchrenamejob_detailed_error_strings1\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -207,7 +207,7 @@ const char** k_io__batchrenamejob_detailed_error_strings2(void* self, void* reqU
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__batchrenamejob_detailed_error_strings2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__batchrenamejob_detailed_error_strings2\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -461,7 +461,7 @@ const char** k_io__batchrenamejob_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__batchrenamejob_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__batchrenamejob_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -563,6 +563,6 @@ void k_io__batchrenamejob_delete(void* self) {
     KIO__BatchRenameJob_Delete((KIO__BatchRenameJob*)(self));
 }
 
-KIO__BatchRenameJob* k_io_batch_rename(libqt_list param1, const char* param2, int param3, void* param4, int32_t param5) {
+KIO__BatchRenameJob* k_io_batch_rename(libqt_list /* of QUrl* */ param1, const char* param2, int param3, void* param4, int32_t param5) {
     return KIO_BatchRename(param1, qstring(param2), param3, (QChar*)param4, param5);
 }

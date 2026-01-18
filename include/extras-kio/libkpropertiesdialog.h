@@ -39,9 +39,9 @@ KPropertiesDialog* k_propertiesdialog_new3(void* url);
 
 /// k_propertiesdialog_new4 constructs a new KPropertiesDialog object.
 ///
-/// @param urls libqt_list /* of QUrl* */
+/// @param urls libqt_list of QUrl*
 ///
-KPropertiesDialog* k_propertiesdialog_new4(libqt_list urls);
+KPropertiesDialog* k_propertiesdialog_new4(libqt_list /* of QUrl* */ urls);
 
 /// [Upstream resources](https://api.kde.org/kpropertiesdialog.html)
 
@@ -92,10 +92,10 @@ KPropertiesDialog* k_propertiesdialog_new9(void* url, void* parent);
 
 /// k_propertiesdialog_new10 constructs a new KPropertiesDialog object.
 ///
-/// @param urls libqt_list /* of QUrl* */
+/// @param urls libqt_list of QUrl*
 /// @param parent QWidget*
 ///
-KPropertiesDialog* k_propertiesdialog_new10(libqt_list urls, void* parent);
+KPropertiesDialog* k_propertiesdialog_new10(libqt_list /* of QUrl* */ urls, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kpropertiesdialog.html)
 
@@ -185,9 +185,9 @@ bool k_propertiesdialog_show_dialog3(void* _items);
 
 /// [Upstream resources](https://api.kde.org/kpropertiesdialog.html#showDialog)
 ///
-/// @param urls libqt_list /* of QUrl* */
+/// @param urls libqt_list of QUrl*
 ///
-bool k_propertiesdialog_show_dialog4(libqt_list urls);
+bool k_propertiesdialog_show_dialog4(libqt_list /* of QUrl* */ urls);
 
 /// [Upstream resources](https://api.kde.org/kpropertiesdialog.html#url)
 ///
@@ -427,18 +427,18 @@ bool k_propertiesdialog_show_dialog34(void* _items, void* parent, bool modal);
 
 /// [Upstream resources](https://api.kde.org/kpropertiesdialog.html#showDialog)
 ///
-/// @param urls libqt_list /* of QUrl* */
+/// @param urls libqt_list of QUrl*
 /// @param parent QWidget*
 ///
-bool k_propertiesdialog_show_dialog25(libqt_list urls, void* parent);
+bool k_propertiesdialog_show_dialog25(libqt_list /* of QUrl* */ urls, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kpropertiesdialog.html#showDialog)
 ///
-/// @param urls libqt_list /* of QUrl* */
+/// @param urls libqt_list of QUrl*
 /// @param parent QWidget*
 /// @param modal bool
 ///
-bool k_propertiesdialog_show_dialog35(libqt_list urls, void* parent, bool modal);
+bool k_propertiesdialog_show_dialog35(libqt_list /* of QUrl* */ urls, void* parent, bool modal);
 
 /// Inherited from KPageDialog
 ///
@@ -1523,7 +1523,7 @@ void k_propertiesdialog_set_graphics_effect(void* self, void* effect);
 /// @param self KPropertiesDialog*
 /// @param type enum Qt__GestureType
 ///
-void k_propertiesdialog_grab_gesture(void* self, int64_t type);
+void k_propertiesdialog_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -1532,7 +1532,7 @@ void k_propertiesdialog_grab_gesture(void* self, int64_t type);
 /// @param self KPropertiesDialog*
 /// @param type enum Qt__GestureType
 ///
-void k_propertiesdialog_ungrab_gesture(void* self, int64_t type);
+void k_propertiesdialog_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2521,7 +2521,7 @@ void k_propertiesdialog_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void k_propertiesdialog_set_parent2(void* self, void* parent, int64_t f);
+void k_propertiesdialog_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -2599,9 +2599,9 @@ void k_propertiesdialog_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self KPropertiesDialog*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_propertiesdialog_add_actions(void* self, libqt_list actions);
+void k_propertiesdialog_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2609,9 +2609,9 @@ void k_propertiesdialog_add_actions(void* self, libqt_list actions);
 ///
 /// @param self KPropertiesDialog*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_propertiesdialog_insert_actions(void* self, void* before, libqt_list actions);
+void k_propertiesdialog_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2638,7 +2638,9 @@ void k_propertiesdialog_remove_action(void* self, void* action);
 ///
 /// @param self KPropertiesDialog*
 ///
-libqt_list /* of QAction* */ k_propertiesdialog_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_propertiesdialog_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2695,7 +2697,7 @@ QWidget* k_propertiesdialog_parent_widget(void* self);
 /// @param self KPropertiesDialog*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_propertiesdialog_set_window_flags(void* self, int64_t type);
+void k_propertiesdialog_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2705,7 +2707,7 @@ void k_propertiesdialog_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t k_propertiesdialog_window_flags(void* self);
+int32_t k_propertiesdialog_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2714,7 +2716,7 @@ int64_t k_propertiesdialog_window_flags(void* self);
 /// @param self KPropertiesDialog*
 /// @param param1 enum Qt__WindowType
 ///
-void k_propertiesdialog_set_window_flag(void* self, int64_t param1);
+void k_propertiesdialog_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2723,7 +2725,7 @@ void k_propertiesdialog_set_window_flag(void* self, int64_t param1);
 /// @param self KPropertiesDialog*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_propertiesdialog_override_window_flags(void* self, int64_t type);
+void k_propertiesdialog_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2733,7 +2735,7 @@ void k_propertiesdialog_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t k_propertiesdialog_window_type(void* self);
+int32_t k_propertiesdialog_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2944,7 +2946,7 @@ void k_propertiesdialog_on_custom_context_menu_requested(void* self, void (*call
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t k_propertiesdialog_input_method_hints(void* self);
+int32_t k_propertiesdialog_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2953,7 +2955,7 @@ int64_t k_propertiesdialog_input_method_hints(void* self);
 /// @param self KPropertiesDialog*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void k_propertiesdialog_set_input_method_hints(void* self, int64_t hints);
+void k_propertiesdialog_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -3038,7 +3040,7 @@ QPixmap* k_propertiesdialog_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void k_propertiesdialog_grab_gesture2(void* self, int64_t type, int32_t flags);
+void k_propertiesdialog_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -3078,7 +3080,7 @@ void k_propertiesdialog_set_shortcut_auto_repeat2(void* self, int id, bool enabl
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void k_propertiesdialog_set_window_flag2(void* self, int64_t param1, bool on);
+void k_propertiesdialog_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -3107,7 +3109,7 @@ QWidget* k_propertiesdialog_create_window_container2(void* window, void* parent)
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* k_propertiesdialog_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* k_propertiesdialog_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -3219,7 +3221,9 @@ void k_propertiesdialog_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KPropertiesDialog*
 ///
-libqt_list /* of QObject* */ k_propertiesdialog_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_propertiesdialog_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4966,7 +4970,7 @@ void k_propertiesdialog_on_input_method_event(void* self, void (*callback)(void*
 /// @param self KPropertiesDialog*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_propertiesdialog_input_method_query(void* self, int64_t param1);
+QVariant* k_propertiesdialog_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4977,7 +4981,7 @@ QVariant* k_propertiesdialog_input_method_query(void* self, int64_t param1);
 /// @param self KPropertiesDialog*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_propertiesdialog_qbase_input_method_query(void* self, int64_t param1);
+QVariant* k_propertiesdialog_qbase_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4988,7 +4992,7 @@ QVariant* k_propertiesdialog_qbase_input_method_query(void* self, int64_t param1
 /// @param self KPropertiesDialog*
 /// @param callback QVariant* func(KPropertiesDialog* self, enum Qt__InputMethodQuery param1)
 ///
-void k_propertiesdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void k_propertiesdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///

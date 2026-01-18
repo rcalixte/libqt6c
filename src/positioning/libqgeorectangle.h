@@ -40,9 +40,9 @@ QGeoRectangle* q_georectangle_new3(void* topLeft, void* bottomRight);
 
 /// q_georectangle_new4 constructs a new QGeoRectangle object.
 ///
-/// @param coordinates libqt_list /* of QGeoCoordinate* */
+/// @param coordinates libqt_list of QGeoCoordinate*
 ///
-QGeoRectangle* q_georectangle_new4(libqt_list coordinates);
+QGeoRectangle* q_georectangle_new4(libqt_list /* of QGeoCoordinate* */ coordinates);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html)
 

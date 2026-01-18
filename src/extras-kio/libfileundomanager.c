@@ -40,7 +40,7 @@ KIO__FileUndoManager__UiInterface* k_io__fileundomanager_ui_interface(void* self
     return KIO__FileUndoManager_UiInterface((KIO__FileUndoManager*)self);
 }
 
-void k_io__fileundomanager_record_job(void* self, int32_t op, libqt_list src, void* dst, void* job) {
+void k_io__fileundomanager_record_job(void* self, int32_t op, libqt_list /* of QUrl* */ src, void* dst, void* job) {
     KIO__FileUndoManager_RecordJob((KIO__FileUndoManager*)self, op, src, (QUrl*)dst, (KIO__Job*)job);
 }
 
@@ -238,7 +238,7 @@ const char** k_io__fileundomanager_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__fileundomanager_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__fileundomanager_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

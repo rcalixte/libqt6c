@@ -298,7 +298,9 @@ int32_t q_printer_duplex(void* self);
 ///
 /// @param self QPrinter*
 ///
-libqt_list /* of int */ q_printer_supported_resolutions(void* self);
+/// @return libqt_list of int
+///
+libqt_list q_printer_supported_resolutions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinter.html#setFontEmbeddingEnabled)
 ///

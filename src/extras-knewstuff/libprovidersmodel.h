@@ -71,7 +71,8 @@ const char* k_nscore__providersmodel_tr(const char* s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -81,16 +82,18 @@ const char* k_nscore__providersmodel_tr(const char* s);
 ///
 /// @param self KNSCore__ProvidersModel*
 ///
-libqt_map /* of int to char* */ k_nscore__providersmodel_role_names(void* self);
+/// @return libqt_map of int to char*
+///
+libqt_map k_nscore__providersmodel_role_names(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-providersmodel.html#roleNames)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KNSCore__ProvidersModel*
-/// @param callback libqt_map /* of int to char* */ func()
+/// @param callback libqt_map of int to char* func()
 ///
-void k_nscore__providersmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
+void k_nscore__providersmodel_on_role_names(void* self, libqt_map (*callback)());
 
 /// [Upstream resources](https://api.kde.org/knscore-providersmodel.html#roleNames)
 ///
@@ -98,7 +101,9 @@ void k_nscore__providersmodel_on_role_names(void* self, libqt_map /* of int to c
 ///
 /// @param self KNSCore__ProvidersModel*
 ///
-libqt_map /* of int to char* */ k_nscore__providersmodel_qbase_role_names(void* self);
+/// @return libqt_map of int to char*
+///
+libqt_map k_nscore__providersmodel_qbase_role_names(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-providersmodel.html#data)
 ///
@@ -503,27 +508,27 @@ bool k_nscore__providersmodel_check_index2(void* self, void* index, int32_t opti
 /// @param self KNSCore__ProvidersModel*
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
-/// @param roles libqt_list /* of int */
+/// @param roles libqt_list of int
 ///
-void k_nscore__providersmodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void k_nscore__providersmodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KNSCore__ProvidersModel*
-/// @param callback void func(KNSCore__ProvidersModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
+/// @param callback void func(KNSCore__ProvidersModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
 ///
-void k_nscore__providersmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
+void k_nscore__providersmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KNSCore__ProvidersModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 ///
-void k_nscore__providersmodel_layout_changed1(void* self, libqt_list parents);
+void k_nscore__providersmodel_layout_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -539,10 +544,10 @@ void k_nscore__providersmodel_on_layout_changed1(void* self, void (*callback)(vo
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KNSCore__ProvidersModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
 ///
-void k_nscore__providersmodel_layout_changed2(void* self, libqt_list parents, int32_t hint);
+void k_nscore__providersmodel_layout_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -558,9 +563,9 @@ void k_nscore__providersmodel_on_layout_changed2(void* self, void (*callback)(vo
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KNSCore__ProvidersModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 ///
-void k_nscore__providersmodel_layout_about_to_be_changed1(void* self, libqt_list parents);
+void k_nscore__providersmodel_layout_about_to_be_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -576,10 +581,10 @@ void k_nscore__providersmodel_on_layout_about_to_be_changed1(void* self, void (*
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KNSCore__ProvidersModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
 ///
-void k_nscore__providersmodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint);
+void k_nscore__providersmodel_layout_about_to_be_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -700,7 +705,9 @@ void k_nscore__providersmodel_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KNSCore__ProvidersModel*
 ///
-libqt_list /* of QObject* */ k_nscore__providersmodel_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_nscore__providersmodel_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1198,7 +1205,8 @@ void k_nscore__providersmodel_on_set_header_data(void* self, bool (*callback)(vo
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -1211,7 +1219,9 @@ void k_nscore__providersmodel_on_set_header_data(void* self, bool (*callback)(vo
 /// @param self KNSCore__ProvidersModel*
 /// @param index QModelIndex*
 ///
-libqt_map /* of int to QVariant* */ k_nscore__providersmodel_item_data(void* self, void* index);
+/// @return libqt_map of int to QVariant*
+///
+libqt_map k_nscore__providersmodel_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1219,7 +1229,8 @@ libqt_map /* of int to QVariant* */ k_nscore__providersmodel_item_data(void* sel
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -1232,7 +1243,9 @@ libqt_map /* of int to QVariant* */ k_nscore__providersmodel_item_data(void* sel
 /// @param self KNSCore__ProvidersModel*
 /// @param index QModelIndex*
 ///
-libqt_map /* of int to QVariant* */ k_nscore__providersmodel_qbase_item_data(void* self, void* index);
+/// @return libqt_map of int to QVariant*
+///
+libqt_map k_nscore__providersmodel_qbase_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1241,9 +1254,9 @@ libqt_map /* of int to QVariant* */ k_nscore__providersmodel_qbase_item_data(voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KNSCore__ProvidersModel*
-/// @param callback libqt_map /* of int to QVariant* */ func(KNSCore__ProvidersModel* self, QModelIndex* index)
+/// @param callback libqt_map of int to QVariant* func(KNSCore__ProvidersModel* self, QModelIndex* index)
 ///
-void k_nscore__providersmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
+void k_nscore__providersmodel_on_item_data(void* self, libqt_map (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1253,9 +1266,9 @@ void k_nscore__providersmodel_on_item_data(void* self, libqt_map /* of int to QV
 ///
 /// @param self KNSCore__ProvidersModel*
 /// @param index QModelIndex*
-/// @param roles libqt_map /* of int to QVariant* */
+/// @param roles libqt_map of int to QVariant*
 ///
-bool k_nscore__providersmodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
+bool k_nscore__providersmodel_set_item_data(void* self, void* index, libqt_map roles);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1265,9 +1278,9 @@ bool k_nscore__providersmodel_set_item_data(void* self, void* index, libqt_map /
 ///
 /// @param self KNSCore__ProvidersModel*
 /// @param index QModelIndex*
-/// @param roles libqt_map /* of int to QVariant* */
+/// @param roles libqt_map of int to QVariant*
 ///
-bool k_nscore__providersmodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
+bool k_nscore__providersmodel_qbase_set_item_data(void* self, void* index, libqt_map roles);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1276,9 +1289,9 @@ bool k_nscore__providersmodel_qbase_set_item_data(void* self, void* index, libqt
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KNSCore__ProvidersModel*
-/// @param callback bool func(KNSCore__ProvidersModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ /* of int to QVariant* */)
+/// @param callback bool func(KNSCore__ProvidersModel* self, QModelIndex* index, libqt_map of int to QVariant*)
 ///
-void k_nscore__providersmodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
+void k_nscore__providersmodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1355,9 +1368,9 @@ void k_nscore__providersmodel_on_mime_types(void* self, const char** (*callback)
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KNSCore__ProvidersModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* k_nscore__providersmodel_mime_data(void* self, libqt_list indexes);
+QMimeData* k_nscore__providersmodel_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1366,9 +1379,9 @@ QMimeData* k_nscore__providersmodel_mime_data(void* self, libqt_list indexes);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KNSCore__ProvidersModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* k_nscore__providersmodel_qbase_mime_data(void* self, libqt_list indexes);
+QMimeData* k_nscore__providersmodel_qbase_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1869,7 +1882,9 @@ void k_nscore__providersmodel_on_buddy(void* self, QModelIndex* (*callback)(void
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
 ///
-libqt_list /* of QModelIndex* */ k_nscore__providersmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_nscore__providersmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1884,7 +1899,9 @@ libqt_list /* of QModelIndex* */ k_nscore__providersmodel_match(void* self, void
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
 ///
-libqt_list /* of QModelIndex* */ k_nscore__providersmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_nscore__providersmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2333,10 +2350,10 @@ void k_nscore__providersmodel_on_create_index(void* self, QModelIndex* (*callbac
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KNSCore__ProvidersModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void k_nscore__providersmodel_encode_data(void* self, libqt_list indexes, void* stream);
+void k_nscore__providersmodel_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2345,10 +2362,10 @@ void k_nscore__providersmodel_encode_data(void* self, libqt_list indexes, void* 
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KNSCore__ProvidersModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void k_nscore__providersmodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
+void k_nscore__providersmodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2920,10 +2937,10 @@ void k_nscore__providersmodel_on_change_persistent_index(void* self, void (*call
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KNSCore__ProvidersModel*
-/// @param from libqt_list /* of QModelIndex* */
-/// @param to libqt_list /* of QModelIndex* */
+/// @param from libqt_list of QModelIndex*
+/// @param to libqt_list of QModelIndex*
 ///
-void k_nscore__providersmodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
+void k_nscore__providersmodel_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2932,10 +2949,10 @@ void k_nscore__providersmodel_change_persistent_index_list(void* self, libqt_lis
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KNSCore__ProvidersModel*
-/// @param from libqt_list /* of QModelIndex* */
-/// @param to libqt_list /* of QModelIndex* */
+/// @param from libqt_list of QModelIndex*
+/// @param to libqt_list of QModelIndex*
 ///
-void k_nscore__providersmodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
+void k_nscore__providersmodel_qbase_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2956,7 +2973,9 @@ void k_nscore__providersmodel_on_change_persistent_index_list(void* self, void (
 ///
 /// @param self KNSCore__ProvidersModel*
 ///
-libqt_list /* of QModelIndex* */ k_nscore__providersmodel_persistent_index_list(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_nscore__providersmodel_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2966,7 +2985,9 @@ libqt_list /* of QModelIndex* */ k_nscore__providersmodel_persistent_index_list(
 ///
 /// @param self KNSCore__ProvidersModel*
 ///
-libqt_list /* of QModelIndex* */ k_nscore__providersmodel_qbase_persistent_index_list(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_nscore__providersmodel_qbase_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
 ///

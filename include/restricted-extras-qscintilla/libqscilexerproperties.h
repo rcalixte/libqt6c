@@ -554,7 +554,9 @@ void q_scilexerproperties_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QsciLexerProperties*
 ///
-libqt_list /* of QObject* */ q_scilexerproperties_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_scilexerproperties_children(void* self);
 
 /// Inherited from QObject
 ///

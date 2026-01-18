@@ -88,7 +88,9 @@ bool k_keyserver_key_qt_to_sym_x(int param1, int* param2);
 ///
 /// @param param1 int
 ///
-libqt_list /* of int */ k_keyserver_key_qt_to_sym_xs(int param1);
+/// @return libqt_list of int
+///
+libqt_list k_keyserver_key_qt_to_sym_xs(int param1);
 
 /// [Upstream resources](https://api.kde.org/kkeyserver.html#keyQtToCodeX)
 ///
@@ -101,7 +103,9 @@ bool k_keyserver_key_qt_to_code_x(int param1, int* param2);
 ///
 /// @param param1 int
 ///
-libqt_list /* of int */ k_keyserver_key_qt_to_code_xs(int param1);
+/// @return libqt_list of int
+///
+libqt_list k_keyserver_key_qt_to_code_xs(int param1);
 
 /// [Upstream resources](https://api.kde.org/kkeyserver.html#keyQtToModX)
 ///

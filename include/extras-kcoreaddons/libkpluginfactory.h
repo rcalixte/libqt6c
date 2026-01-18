@@ -78,9 +78,9 @@ void k_pluginfactory_set_meta_data(void* self, void* metaData);
 /// @param iface const char*
 /// @param parentWidget QWidget*
 /// @param parent QObject*
-/// @param args libqt_list /* of QVariant* */
+/// @param args libqt_list of QVariant*
 ///
-QObject* k_pluginfactory_create(void* self, const char* iface, void* parentWidget, void* parent, libqt_list args);
+QObject* k_pluginfactory_create(void* self, const char* iface, void* parentWidget, void* parent, libqt_list /* of QVariant* */ args);
 
 /// [Upstream resources](https://api.kde.org/kpluginfactory.html#create)
 ///
@@ -99,9 +99,9 @@ void k_pluginfactory_on_create(void* self, QObject* (*callback)(void*, const cha
 /// @param iface const char*
 /// @param parentWidget QWidget*
 /// @param parent QObject*
-/// @param args libqt_list /* of QVariant* */
+/// @param args libqt_list of QVariant*
 ///
-QObject* k_pluginfactory_qbase_create(void* self, const char* iface, void* parentWidget, void* parent, libqt_list args);
+QObject* k_pluginfactory_qbase_create(void* self, const char* iface, void* parentWidget, void* parent, libqt_list /* of QVariant* */ args);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -232,7 +232,9 @@ void k_pluginfactory_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KPluginFactory*
 ///
-libqt_list /* of QObject* */ k_pluginfactory_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_pluginfactory_children(void* self);
 
 /// Inherited from QObject
 ///

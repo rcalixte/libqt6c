@@ -99,7 +99,9 @@ void k_processlist__kprocessinfo_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kprocesslist.html#processInfoList)
 ///
-libqt_list /* of KProcessList__KProcessInfo* */ k_processlist_process_info_list();
+/// @return libqt_list of KProcessList__KProcessInfo*
+///
+libqt_list k_processlist_process_info_list();
 
 /// [Upstream resources](https://api.kde.org/kprocesslist.html#processInfo)
 ///

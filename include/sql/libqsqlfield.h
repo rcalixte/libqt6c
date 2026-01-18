@@ -32,7 +32,7 @@ QSqlField* q_sqlfield_new2(void* other);
 /// @param fieldName const char*
 /// @param type enum QVariant__Type
 ///
-QSqlField* q_sqlfield_new3(const char* fieldName, int64_t type);
+QSqlField* q_sqlfield_new3(const char* fieldName, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html)
 
@@ -69,7 +69,7 @@ QSqlField* q_sqlfield_new6(const char* fieldName, void* type, const char* tableN
 /// @param type enum QVariant__Type
 /// @param tableName const char*
 ///
-QSqlField* q_sqlfield_new7(const char* fieldName, int64_t type, const char* tableName);
+QSqlField* q_sqlfield_new7(const char* fieldName, int32_t type, const char* tableName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#operator-eq)
 ///
@@ -192,14 +192,14 @@ void q_sqlfield_set_meta_type(void* self, void* type);
 ///
 /// @return enum QVariant__Type
 ///
-int64_t q_sqlfield_type(void* self);
+int32_t q_sqlfield_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#setType)
 ///
 /// @param self QSqlField*
 /// @param type enum QVariant__Type
 ///
-void q_sqlfield_set_type(void* self, int64_t type);
+void q_sqlfield_set_type(void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#setRequiredStatus)
 ///

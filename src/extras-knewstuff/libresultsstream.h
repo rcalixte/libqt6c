@@ -54,9 +54,9 @@ void k_nscore__resultsstream_fetch_more(void* self);
 /// [Upstream resources](https://api.kde.org/knscore-resultsstream.html#entriesFound)
 ///
 /// @param self KNSCore__ResultsStream*
-/// @param entries libqt_list /* of KNSCore__Entry* */
+/// @param entries libqt_list of KNSCore__Entry*
 ///
-void k_nscore__resultsstream_entries_found(void* self, libqt_list entries);
+void k_nscore__resultsstream_entries_found(void* self, libqt_list /* of KNSCore__Entry* */ entries);
 
 /// [Upstream resources](https://api.kde.org/knscore-resultsstream.html#entriesFound)
 ///
@@ -226,7 +226,9 @@ void k_nscore__resultsstream_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KNSCore__ResultsStream*
 ///
-libqt_list /* of QObject* */ k_nscore__resultsstream_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_nscore__resultsstream_children(void* self);
 
 /// Inherited from QObject
 ///

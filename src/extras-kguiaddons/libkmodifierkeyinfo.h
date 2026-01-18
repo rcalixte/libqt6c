@@ -80,7 +80,7 @@ bool k_modifierkeyinfo_knows_key(void* self, int32_t key);
 ///
 /// @return libqt_list of enum Qt__Key
 ///
-libqt_list /* of enum Qt__Key */ k_modifierkeyinfo_known_keys(void* self);
+libqt_list k_modifierkeyinfo_known_keys(void* self);
 
 /// [Upstream resources](https://api.kde.org/kmodifierkeyinfo.html#isKeyPressed)
 ///
@@ -124,7 +124,7 @@ bool k_modifierkeyinfo_set_key_locked(void* self, int32_t key, bool locked);
 /// @param self KModifierKeyInfo*
 /// @param button enum Qt__MouseButton
 ///
-bool k_modifierkeyinfo_is_button_pressed(void* self, int64_t button);
+bool k_modifierkeyinfo_is_button_pressed(void* self, int32_t button);
 
 /// [Upstream resources](https://api.kde.org/kmodifierkeyinfo.html#keyPressed)
 ///
@@ -177,14 +177,14 @@ void k_modifierkeyinfo_on_key_locked(void* self, void (*callback)(void*, int32_t
 /// @param button enum Qt__MouseButton
 /// @param pressed bool
 ///
-void k_modifierkeyinfo_button_pressed(void* self, int64_t button, bool pressed);
+void k_modifierkeyinfo_button_pressed(void* self, int32_t button, bool pressed);
 
 /// [Upstream resources](https://api.kde.org/kmodifierkeyinfo.html#buttonPressed)
 ///
 /// @param self KModifierKeyInfo*
 /// @param callback void func(KModifierKeyInfo* self, enum Qt__MouseButton button, bool pressed)
 ///
-void k_modifierkeyinfo_on_button_pressed(void* self, void (*callback)(void*, int64_t, bool));
+void k_modifierkeyinfo_on_button_pressed(void* self, void (*callback)(void*, int32_t, bool));
 
 /// [Upstream resources](https://api.kde.org/kmodifierkeyinfo.html#keyAdded)
 ///
@@ -343,7 +343,9 @@ void k_modifierkeyinfo_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KModifierKeyInfo*
 ///
-libqt_list /* of QObject* */ k_modifierkeyinfo_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_modifierkeyinfo_children(void* self);
 
 /// Inherited from QObject
 ///

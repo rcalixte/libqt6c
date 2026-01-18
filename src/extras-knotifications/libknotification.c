@@ -195,7 +195,7 @@ const char** k_notificationaction_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_notificationaction_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_notificationaction_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -536,7 +536,7 @@ libqt_list /* of QUrl* */ k_notification_urls(void* self) {
     return _arr;
 }
 
-void k_notification_set_urls(void* self, libqt_list urls) {
+void k_notification_set_urls(void* self, libqt_list /* of QUrl* */ urls) {
     KNotification_SetUrls((KNotification*)self, urls);
 }
 
@@ -718,7 +718,7 @@ libqt_map /* of const char* to QVariant* */ k_notification_hints(void* self) {
     libqt_string* _out_keys = (libqt_string*)_out.keys;
     char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string keys in k_notification_hints");
+        fprintf(stderr, "Failed to allocate memory for map string keys in k_notification_hints\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
@@ -728,7 +728,7 @@ libqt_map /* of const char* to QVariant* */ k_notification_hints(void* self) {
                 libqt_free(_ret_keys[j]);
             }
             free(_ret_keys);
-            fprintf(stderr, "Failed to allocate memory for map keys in k_notification_hints");
+            fprintf(stderr, "Failed to allocate memory for map keys in k_notification_hints\n");
             abort();
         }
         memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
@@ -986,7 +986,7 @@ const char** k_notification_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_notification_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_notification_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

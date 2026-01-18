@@ -73,7 +73,7 @@ const char* q_gesture_tr(const char* s);
 ///
 /// @return enum Qt__GestureType
 ///
-int64_t q_gesture_gesture_type(void* self);
+int32_t q_gesture_gesture_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#state)
 ///
@@ -252,7 +252,9 @@ void q_gesture_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QGesture*
 ///
-libqt_list /* of QObject* */ q_gesture_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_gesture_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -995,7 +997,7 @@ const char* q_pangesture_tr3(const char* s, const char* c, int n);
 ///
 /// @return enum Qt__GestureType
 ///
-int64_t q_pangesture_gesture_type(void* self);
+int32_t q_pangesture_gesture_type(void* self);
 
 /// Inherited from QGesture
 ///
@@ -1169,7 +1171,9 @@ void q_pangesture_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QPanGesture*
 ///
-libqt_list /* of QObject* */ q_pangesture_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_pangesture_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2014,7 +2018,7 @@ const char* q_pinchgesture_tr3(const char* s, const char* c, int n);
 ///
 /// @return enum Qt__GestureType
 ///
-int64_t q_pinchgesture_gesture_type(void* self);
+int32_t q_pinchgesture_gesture_type(void* self);
 
 /// Inherited from QGesture
 ///
@@ -2188,7 +2192,9 @@ void q_pinchgesture_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QPinchGesture*
 ///
-libqt_list /* of QObject* */ q_pinchgesture_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_pinchgesture_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2915,7 +2921,7 @@ const char* q_swipegesture_tr3(const char* s, const char* c, int n);
 ///
 /// @return enum Qt__GestureType
 ///
-int64_t q_swipegesture_gesture_type(void* self);
+int32_t q_swipegesture_gesture_type(void* self);
 
 /// Inherited from QGesture
 ///
@@ -3089,7 +3095,9 @@ void q_swipegesture_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QSwipeGesture*
 ///
-libqt_list /* of QObject* */ q_swipegesture_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_swipegesture_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -3800,7 +3808,7 @@ const char* q_tapgesture_tr3(const char* s, const char* c, int n);
 ///
 /// @return enum Qt__GestureType
 ///
-int64_t q_tapgesture_gesture_type(void* self);
+int32_t q_tapgesture_gesture_type(void* self);
 
 /// Inherited from QGesture
 ///
@@ -3974,7 +3982,9 @@ void q_tapgesture_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QTapGesture*
 ///
-libqt_list /* of QObject* */ q_tapgesture_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_tapgesture_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4695,7 +4705,7 @@ const char* q_tapandholdgesture_tr3(const char* s, const char* c, int n);
 ///
 /// @return enum Qt__GestureType
 ///
-int64_t q_tapandholdgesture_gesture_type(void* self);
+int32_t q_tapandholdgesture_gesture_type(void* self);
 
 /// Inherited from QGesture
 ///
@@ -4869,7 +4879,9 @@ void q_tapandholdgesture_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QTapAndHoldGesture*
 ///
-libqt_list /* of QObject* */ q_tapandholdgesture_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_tapandholdgesture_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -5488,9 +5500,9 @@ void q_tapandholdgesture_delete(void* self);
 
 /// q_gestureevent_new constructs a new QGestureEvent object.
 ///
-/// @param gestures libqt_list /* of QGesture* */
+/// @param gestures libqt_list of QGesture*
 ///
-QGestureEvent* q_gestureevent_new(libqt_list gestures);
+QGestureEvent* q_gestureevent_new(libqt_list /* of QGesture* */ gestures);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgestureevent.html)
 
@@ -5504,26 +5516,32 @@ QGestureEvent* q_gestureevent_new2(void* param1);
 ///
 /// @param self QGestureEvent*
 ///
-libqt_list /* of QGesture* */ q_gestureevent_gestures(void* self);
+/// @return libqt_list of QGesture*
+///
+libqt_list q_gestureevent_gestures(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgestureevent.html#gesture)
 ///
 /// @param self QGestureEvent*
 /// @param type enum Qt__GestureType
 ///
-QGesture* q_gestureevent_gesture(void* self, int64_t type);
+QGesture* q_gestureevent_gesture(void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgestureevent.html#activeGestures)
 ///
 /// @param self QGestureEvent*
 ///
-libqt_list /* of QGesture* */ q_gestureevent_active_gestures(void* self);
+/// @return libqt_list of QGesture*
+///
+libqt_list q_gestureevent_active_gestures(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgestureevent.html#canceledGestures)
 ///
 /// @param self QGestureEvent*
 ///
-libqt_list /* of QGesture* */ q_gestureevent_canceled_gestures(void* self);
+/// @return libqt_list of QGesture*
+///
+libqt_list q_gestureevent_canceled_gestures(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgestureevent.html#setAccepted)
 ///
@@ -5560,28 +5578,28 @@ bool q_gestureevent_is_accepted(void* self, void* param1);
 /// @param param1 enum Qt__GestureType
 /// @param param2 bool
 ///
-void q_gestureevent_set_accepted2(void* self, int64_t param1, bool param2);
+void q_gestureevent_set_accepted2(void* self, int32_t param1, bool param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgestureevent.html#accept)
 ///
 /// @param self QGestureEvent*
 /// @param param1 enum Qt__GestureType
 ///
-void q_gestureevent_accept2(void* self, int64_t param1);
+void q_gestureevent_accept2(void* self, int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgestureevent.html#ignore)
 ///
 /// @param self QGestureEvent*
 /// @param param1 enum Qt__GestureType
 ///
-void q_gestureevent_ignore2(void* self, int64_t param1);
+void q_gestureevent_ignore2(void* self, int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgestureevent.html#isAccepted)
 ///
 /// @param self QGestureEvent*
 /// @param param1 enum Qt__GestureType
 ///
-bool q_gestureevent_is_accepted2(void* self, int64_t param1);
+bool q_gestureevent_is_accepted2(void* self, int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgestureevent.html#setWidget)
 ///

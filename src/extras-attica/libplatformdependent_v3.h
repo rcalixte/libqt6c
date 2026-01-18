@@ -206,7 +206,9 @@ void k_attica__platformdependentv3_kill_timer2(void* self, int32_t id);
 ///
 /// @param self Attica__PlatformDependentV3*
 ///
-libqt_list /* of QObject* */ k_attica__platformdependentv3_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_attica__platformdependentv3_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -485,7 +487,9 @@ void k_attica__platformdependentv3_operator_assign(void* self, void* param1);
 ///
 /// @param self Attica__PlatformDependentV3*
 ///
-libqt_list /* of QUrl* */ k_attica__platformdependentv3_get_default_provider_files(void* self);
+/// @return libqt_list of QUrl*
+///
+libqt_list k_attica__platformdependentv3_get_default_provider_files(void* self);
 
 /// Inherited from Attica::PlatformDependent
 ///

@@ -68,12 +68,12 @@ void k_io__askuseractioninterface_ask_user_skip(void* self, void* job, int32_t o
 /// [Upstream resources](https://api.kde.org/kio-askuseractioninterface.html#askUserDelete)
 ///
 /// @param self KIO__AskUserActionInterface*
-/// @param urls libqt_list /* of QUrl* */
+/// @param urls libqt_list of QUrl*
 /// @param deletionType enum KIO__AskUserActionInterface__DeletionType
 /// @param confirmationType enum KIO__AskUserActionInterface__ConfirmationType
 /// @param parent QWidget*
 ///
-void k_io__askuseractioninterface_ask_user_delete(void* self, libqt_list urls, int32_t deletionType, int32_t confirmationType, void* parent);
+void k_io__askuseractioninterface_ask_user_delete(void* self, libqt_list /* of QUrl* */ urls, int32_t deletionType, int32_t confirmationType, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kio-askuseractioninterface.html#requestUserMessageBox)
 ///
@@ -94,10 +94,10 @@ void k_io__askuseractioninterface_request_user_message_box(void* self, int32_t t
 /// [Upstream resources](https://api.kde.org/kio-askuseractioninterface.html#askIgnoreSslErrors)
 ///
 /// @param self KIO__AskUserActionInterface*
-/// @param sslErrorData libqt_map /* of const char* to QVariant* */
+/// @param sslErrorData libqt_map of const char* to QVariant*
 /// @param parent QWidget*
 ///
-void k_io__askuseractioninterface_ask_ignore_ssl_errors(void* self, libqt_map /* of const char* to QVariant* */ sslErrorData, void* parent);
+void k_io__askuseractioninterface_ask_ignore_ssl_errors(void* self, libqt_map sslErrorData, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kio-askuseractioninterface.html#askUserRenameResult)
 ///
@@ -134,11 +134,11 @@ void k_io__askuseractioninterface_on_ask_user_skip_result(void* self, void (*cal
 ///
 /// @param self KIO__AskUserActionInterface*
 /// @param allowDelete bool
-/// @param urls libqt_list /* of QUrl* */
+/// @param urls libqt_list of QUrl*
 /// @param deletionType enum KIO__AskUserActionInterface__DeletionType
 /// @param parent QWidget*
 ///
-void k_io__askuseractioninterface_ask_user_delete_result(void* self, bool allowDelete, libqt_list urls, int32_t deletionType, void* parent);
+void k_io__askuseractioninterface_ask_user_delete_result(void* self, bool allowDelete, libqt_list /* of QUrl* */ urls, int32_t deletionType, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kio-askuseractioninterface.html#askUserDeleteResult)
 ///
@@ -323,7 +323,9 @@ void k_io__askuseractioninterface_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KIO__AskUserActionInterface*
 ///
-libqt_list /* of QObject* */ k_io__askuseractioninterface_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_io__askuseractioninterface_children(void* self);
 
 /// Inherited from QObject
 ///

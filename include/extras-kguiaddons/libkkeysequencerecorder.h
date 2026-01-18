@@ -402,7 +402,9 @@ void k_keysequencerecorder_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KKeySequenceRecorder*
 ///
-libqt_list /* of QObject* */ k_keysequencerecorder_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_keysequencerecorder_children(void* self);
 
 /// Inherited from QObject
 ///

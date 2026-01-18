@@ -160,7 +160,7 @@ const char** k_pluginmetadata_mime_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_pluginmetadata_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in k_pluginmetadata_mime_types\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -183,7 +183,7 @@ const char** k_pluginmetadata_form_factors(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_pluginmetadata_form_factors");
+        fprintf(stderr, "Failed to allocate memory for string list in k_pluginmetadata_form_factors\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -220,7 +220,7 @@ const char** k_pluginmetadata_value8(void* self, const char* key, const char* de
     size_t defaultValue_len = libqt_strv_length(defaultValue);
     libqt_string* defaultValue_qstr = (libqt_string*)malloc(defaultValue_len * sizeof(libqt_string));
     if (defaultValue_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_pluginmetadata_value8");
+        fprintf(stderr, "Failed to allocate memory for string list in k_pluginmetadata_value8\n");
         abort();
     }
     for (size_t i = 0; i < defaultValue_len; ++i) {
@@ -232,7 +232,7 @@ const char** k_pluginmetadata_value8(void* self, const char* key, const char* de
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_pluginmetadata_value8");
+        fprintf(stderr, "Failed to allocate memory for string list in k_pluginmetadata_value8\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

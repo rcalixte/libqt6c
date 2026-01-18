@@ -153,7 +153,9 @@ QRect* q_screen_available_geometry(void* self);
 ///
 /// @param self QScreen*
 ///
-libqt_list /* of QScreen* */ q_screen_virtual_siblings(void* self);
+/// @return libqt_list of QScreen*
+///
+libqt_list q_screen_virtual_siblings(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#virtualSiblingAt)
 ///
@@ -581,7 +583,9 @@ void q_screen_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QScreen*
 ///
-libqt_list /* of QObject* */ q_screen_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_screen_children(void* self);
 
 /// Inherited from QObject
 ///

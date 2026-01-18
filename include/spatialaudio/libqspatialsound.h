@@ -580,7 +580,9 @@ void q_spatialsound_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QSpatialSound*
 ///
-libqt_list /* of QObject* */ q_spatialsound_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_spatialsound_children(void* self);
 
 /// Inherited from QObject
 ///

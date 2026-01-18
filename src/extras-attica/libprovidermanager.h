@@ -77,7 +77,9 @@ void k_attica__providermanager_load_default_providers(void* self);
 ///
 /// @param self Attica__ProviderManager*
 ///
-libqt_list /* of QUrl* */ k_attica__providermanager_default_provider_files(void* self);
+/// @return libqt_list of QUrl*
+///
+libqt_list k_attica__providermanager_default_provider_files(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-providermanager.html#addProviderFileToDefaultProviders)
 ///
@@ -124,13 +126,17 @@ void k_attica__providermanager_add_provider_file(void* self, void* file);
 ///
 /// @param self Attica__ProviderManager*
 ///
-libqt_list /* of QUrl* */ k_attica__providermanager_provider_files(void* self);
+/// @return libqt_list of QUrl*
+///
+libqt_list k_attica__providermanager_provider_files(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-providermanager.html#providers)
 ///
 /// @param self Attica__ProviderManager*
 ///
-libqt_list /* of Attica__Provider* */ k_attica__providermanager_providers(void* self);
+/// @return libqt_list of Attica__Provider*
+///
+libqt_list k_attica__providermanager_providers(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-providermanager.html#contains)
 ///
@@ -338,7 +344,9 @@ void k_attica__providermanager_kill_timer2(void* self, int32_t id);
 ///
 /// @param self Attica__ProviderManager*
 ///
-libqt_list /* of QObject* */ k_attica__providermanager_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_attica__providermanager_children(void* self);
 
 /// Inherited from QObject
 ///

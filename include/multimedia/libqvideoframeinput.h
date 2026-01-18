@@ -245,7 +245,9 @@ void q_videoframeinput_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QVideoFrameInput*
 ///
-libqt_list /* of QObject* */ q_videoframeinput_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_videoframeinput_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -98,7 +98,9 @@ int32_t q_placesearchreply_qbase_type(void* self);
 ///
 /// @param self QPlaceSearchReply*
 ///
-libqt_list /* of QPlaceSearchResult* */ q_placesearchreply_results(void* self);
+/// @return libqt_list of QPlaceSearchResult*
+///
+libqt_list q_placesearchreply_results(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchreply.html#request)
 ///
@@ -121,9 +123,9 @@ QPlaceSearchRequest* q_placesearchreply_next_page_request(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchreply.html#setResults)
 ///
 /// @param self QPlaceSearchReply*
-/// @param results libqt_list /* of QPlaceSearchResult* */
+/// @param results libqt_list of QPlaceSearchResult*
 ///
-void q_placesearchreply_set_results(void* self, libqt_list results);
+void q_placesearchreply_set_results(void* self, libqt_list /* of QPlaceSearchResult* */ results);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchreply.html#setResults)
 ///
@@ -139,9 +141,9 @@ void q_placesearchreply_on_set_results(void* self, void (*callback)(void*, QPlac
 /// Base class method implementation
 ///
 /// @param self QPlaceSearchReply*
-/// @param results libqt_list /* of QPlaceSearchResult* */
+/// @param results libqt_list of QPlaceSearchResult*
 ///
-void q_placesearchreply_qbase_set_results(void* self, libqt_list results);
+void q_placesearchreply_qbase_set_results(void* self, libqt_list /* of QPlaceSearchResult* */ results);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchreply.html#setRequest)
 ///
@@ -463,7 +465,9 @@ void q_placesearchreply_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QPlaceSearchReply*
 ///
-libqt_list /* of QObject* */ q_placesearchreply_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_placesearchreply_children(void* self);
 
 /// Inherited from QObject
 ///

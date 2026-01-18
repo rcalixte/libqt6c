@@ -530,7 +530,9 @@ void q_scilexertcl_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QsciLexerTCL*
 ///
-libqt_list /* of QObject* */ q_scilexertcl_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_scilexertcl_children(void* self);
 
 /// Inherited from QObject
 ///

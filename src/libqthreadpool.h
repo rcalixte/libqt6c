@@ -341,7 +341,9 @@ void q_threadpool_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QThreadPool*
 ///
-libqt_list /* of QObject* */ q_threadpool_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_threadpool_children(void* self);
 
 /// Inherited from QObject
 ///

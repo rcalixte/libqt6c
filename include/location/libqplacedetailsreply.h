@@ -370,7 +370,9 @@ void q_placedetailsreply_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QPlaceDetailsReply*
 ///
-libqt_list /* of QObject* */ q_placedetailsreply_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_placedetailsreply_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -56,7 +56,7 @@ libqt_list /* of QNetworkCookie* */ q_networkcookiejar_qbase_cookies_for_url(voi
     return _arr;
 }
 
-bool q_networkcookiejar_set_cookies_from_url(void* self, libqt_list cookieList, void* url) {
+bool q_networkcookiejar_set_cookies_from_url(void* self, libqt_list /* of QNetworkCookie* */ cookieList, void* url) {
     return QNetworkCookieJar_SetCookiesFromUrl((QNetworkCookieJar*)self, cookieList, (QUrl*)url);
 }
 
@@ -64,7 +64,7 @@ void q_networkcookiejar_on_set_cookies_from_url(void* self, bool (*callback)(voi
     QNetworkCookieJar_OnSetCookiesFromUrl((QNetworkCookieJar*)self, (intptr_t)callback);
 }
 
-bool q_networkcookiejar_qbase_set_cookies_from_url(void* self, libqt_list cookieList, void* url) {
+bool q_networkcookiejar_qbase_set_cookies_from_url(void* self, libqt_list /* of QNetworkCookie* */ cookieList, void* url) {
     return QNetworkCookieJar_QBaseSetCookiesFromUrl((QNetworkCookieJar*)self, cookieList, (QUrl*)url);
 }
 
@@ -118,7 +118,7 @@ libqt_list /* of QNetworkCookie* */ q_networkcookiejar_qbase_all_cookies(void* s
     return _arr;
 }
 
-void q_networkcookiejar_set_all_cookies(void* self, libqt_list cookieList) {
+void q_networkcookiejar_set_all_cookies(void* self, libqt_list /* of QNetworkCookie* */ cookieList) {
     QNetworkCookieJar_SetAllCookies((QNetworkCookieJar*)self, cookieList);
 }
 
@@ -126,7 +126,7 @@ void q_networkcookiejar_on_set_all_cookies(void* self, void (*callback)(void*, Q
     QNetworkCookieJar_OnSetAllCookies((QNetworkCookieJar*)self, (intptr_t)callback);
 }
 
-void q_networkcookiejar_qbase_set_all_cookies(void* self, libqt_list cookieList) {
+void q_networkcookiejar_qbase_set_all_cookies(void* self, libqt_list /* of QNetworkCookie* */ cookieList) {
     QNetworkCookieJar_QBaseSetAllCookies((QNetworkCookieJar*)self, cookieList);
 }
 
@@ -261,7 +261,7 @@ const char** q_networkcookiejar_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_networkcookiejar_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_networkcookiejar_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

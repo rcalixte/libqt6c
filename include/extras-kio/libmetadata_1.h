@@ -21,17 +21,17 @@ KIO__MetaData* k_io__metadata_new();
 
 /// k_io__metadata_new2 constructs a new KIO::MetaData object.
 ///
-/// @param metaData libqt_map /* of const char* to const char* */
+/// @param metaData libqt_map of const char* to const char*
 ///
-KIO__MetaData* k_io__metadata_new2(libqt_map /* of const char* to const char* */ metaData);
+KIO__MetaData* k_io__metadata_new2(libqt_map metaData);
 
 /// [Upstream resources](https://api.kde.org/kio-metadata.html)
 
 /// k_io__metadata_new3 constructs a new KIO::MetaData object.
 ///
-/// @param param1 libqt_map /* of const char* to QVariant* */
+/// @param param1 libqt_map of const char* to QVariant*
 ///
-KIO__MetaData* k_io__metadata_new3(libqt_map /* of const char* to QVariant* */ param1);
+KIO__MetaData* k_io__metadata_new3(libqt_map param1);
 
 /// [Upstream resources](https://api.kde.org/kio-metadata.html)
 
@@ -44,23 +44,23 @@ KIO__MetaData* k_io__metadata_new4(void* param1);
 /// [Upstream resources](https://api.kde.org/kio-metadata.html#operator-2b-eq)
 ///
 /// @param self KIO__MetaData*
-/// @param metaData libqt_map /* of const char* to const char* */
+/// @param metaData libqt_map of const char* to const char*
 ///
-KIO__MetaData* k_io__metadata_operator_plus_assign(void* self, libqt_map /* of const char* to const char* */ metaData);
+KIO__MetaData* k_io__metadata_operator_plus_assign(void* self, libqt_map metaData);
 
 /// [Upstream resources](https://api.kde.org/kio-metadata.html#operator-2b-eq)
 ///
 /// @param self KIO__MetaData*
-/// @param metaData libqt_map /* of const char* to QVariant* */
+/// @param metaData libqt_map of const char* to QVariant*
 ///
-KIO__MetaData* k_io__metadata_operator_plus_assign2(void* self, libqt_map /* of const char* to QVariant* */ metaData);
+KIO__MetaData* k_io__metadata_operator_plus_assign2(void* self, libqt_map metaData);
 
 /// [Upstream resources](https://api.kde.org/kio-metadata.html#operator-eq)
 ///
 /// @param self KIO__MetaData*
-/// @param metaData libqt_map /* of const char* to QVariant* */
+/// @param metaData libqt_map of const char* to QVariant*
 ///
-void k_io__metadata_operator_assign(void* self, libqt_map /* of const char* to QVariant* */ metaData);
+void k_io__metadata_operator_assign(void* self, libqt_map metaData);
 
 /// [Upstream resources](https://api.kde.org/kio-metadata.html#toVariant)
 ///

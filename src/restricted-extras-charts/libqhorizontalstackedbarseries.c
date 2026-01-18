@@ -88,7 +88,7 @@ bool q_horizontalstackedbarseries_take(void* self, void* set) {
     return QAbstractBarSeries_Take((QAbstractBarSeries*)self, (QBarSet*)set);
 }
 
-bool q_horizontalstackedbarseries_append2(void* self, libqt_list sets) {
+bool q_horizontalstackedbarseries_append2(void* self, libqt_list /* of QBarSet* */ sets) {
     return QAbstractBarSeries_Append2((QAbstractBarSeries*)self, sets);
 }
 
@@ -240,7 +240,7 @@ void q_horizontalstackedbarseries_on_labels_precision_changed(void* self, void (
     QAbstractBarSeries_Connect_LabelsPrecisionChanged((QAbstractBarSeries*)self, (intptr_t)callback);
 }
 
-void q_horizontalstackedbarseries_barsets_added(void* self, libqt_list sets) {
+void q_horizontalstackedbarseries_barsets_added(void* self, libqt_list /* of QBarSet* */ sets) {
     QAbstractBarSeries_BarsetsAdded((QAbstractBarSeries*)self, sets);
 }
 
@@ -248,7 +248,7 @@ void q_horizontalstackedbarseries_on_barsets_added(void* self, void (*callback)(
     QAbstractBarSeries_Connect_BarsetsAdded((QAbstractBarSeries*)self, (intptr_t)callback);
 }
 
-void q_horizontalstackedbarseries_barsets_removed(void* self, libqt_list sets) {
+void q_horizontalstackedbarseries_barsets_removed(void* self, libqt_list /* of QBarSet* */ sets) {
     QAbstractBarSeries_BarsetsRemoved((QAbstractBarSeries*)self, sets);
 }
 
@@ -465,7 +465,7 @@ const char** q_horizontalstackedbarseries_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_horizontalstackedbarseries_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_horizontalstackedbarseries_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

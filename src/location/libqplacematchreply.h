@@ -98,7 +98,9 @@ int32_t q_placematchreply_qbase_type(void* self);
 ///
 /// @param self QPlaceMatchReply*
 ///
-libqt_list /* of QPlace* */ q_placematchreply_places(void* self);
+/// @return libqt_list of QPlace*
+///
+libqt_list q_placematchreply_places(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacematchreply.html#request)
 ///
@@ -109,9 +111,9 @@ QPlaceMatchRequest* q_placematchreply_request(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacematchreply.html#setPlaces)
 ///
 /// @param self QPlaceMatchReply*
-/// @param results libqt_list /* of QPlace* */
+/// @param results libqt_list of QPlace*
 ///
-void q_placematchreply_set_places(void* self, libqt_list results);
+void q_placematchreply_set_places(void* self, libqt_list /* of QPlace* */ results);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacematchreply.html#setPlaces)
 ///
@@ -127,9 +129,9 @@ void q_placematchreply_on_set_places(void* self, void (*callback)(void*, QPlace*
 /// Base class method implementation
 ///
 /// @param self QPlaceMatchReply*
-/// @param results libqt_list /* of QPlace* */
+/// @param results libqt_list of QPlace*
 ///
-void q_placematchreply_qbase_set_places(void* self, libqt_list results);
+void q_placematchreply_qbase_set_places(void* self, libqt_list /* of QPlace* */ results);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacematchreply.html#setRequest)
 ///
@@ -401,7 +403,9 @@ void q_placematchreply_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QPlaceMatchReply*
 ///
-libqt_list /* of QObject* */ q_placematchreply_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_placematchreply_children(void* self);
 
 /// Inherited from QObject
 ///

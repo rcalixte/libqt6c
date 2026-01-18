@@ -43,7 +43,9 @@ const char* k_protocolinfo_exec(const char* protocol);
 ///
 /// @param url QUrl*
 ///
-libqt_list /* of KProtocolInfo__ExtraField* */ k_protocolinfo_extra_fields(void* url);
+/// @return libqt_list of KProtocolInfo__ExtraField*
+///
+libqt_list k_protocolinfo_extra_fields(void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolinfo.html#isHelperProtocol)
 ///

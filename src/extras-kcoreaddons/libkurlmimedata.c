@@ -3,7 +3,7 @@
 #include "libkurlmimedata.hpp"
 #include "libkurlmimedata.h"
 
-void k_urlmimedata_set_urls(libqt_list param1, libqt_list param2, void* param3) {
+void k_urlmimedata_set_urls(libqt_list /* of QUrl* */ param1, libqt_list /* of QUrl* */ param2, void* param3) {
     KUrlMimeData_SetUrls(param1, param2, (QMimeData*)param3);
 }
 
@@ -44,7 +44,7 @@ const char** k_urlmimedata_mime_data_types() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_urlmimedata_mime_data_types");
+        fprintf(stderr, "Failed to allocate memory for string list in k_urlmimedata_mime_data_types\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

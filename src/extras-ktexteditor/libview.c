@@ -141,7 +141,7 @@ bool k_texteditor__view_set_cursor_position(void* self, void* position) {
     return KTextEditor__View_SetCursorPosition((KTextEditor__View*)self, (KTextEditor__Cursor*)position);
 }
 
-void k_texteditor__view_set_cursor_positions(void* self, libqt_list positions) {
+void k_texteditor__view_set_cursor_positions(void* self, libqt_list /* of KTextEditor__Cursor* */ positions) {
     KTextEditor__View_SetCursorPositions((KTextEditor__View*)self, positions);
 }
 
@@ -214,7 +214,7 @@ bool k_texteditor__view_set_selection(void* self, void* range) {
     return KTextEditor__View_SetSelection((KTextEditor__View*)self, (KTextEditor__Range*)range);
 }
 
-void k_texteditor__view_set_selections(void* self, libqt_list ranges) {
+void k_texteditor__view_set_selections(void* self, libqt_list /* of KTextEditor__Range* */ ranges) {
     KTextEditor__View_SetSelections((KTextEditor__View*)self, ranges);
 }
 
@@ -360,7 +360,7 @@ const char** k_texteditor__view_config_keys(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__view_config_keys");
+        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__view_config_keys\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -494,7 +494,7 @@ void k_texteditor__view_set_automatic_invocation_enabled(void* self, bool enable
     KTextEditor__View_SetAutomaticInvocationEnabled((KTextEditor__View*)self, enabled);
 }
 
-void k_texteditor__view_start_completion2(void* self, void* word, libqt_list models, int32_t invocationType) {
+void k_texteditor__view_start_completion2(void* self, void* word, libqt_list /* of KTextEditor__CodeCompletionModel* */ models, int32_t invocationType) {
     KTextEditor__View_StartCompletion2((KTextEditor__View*)self, (KTextEditor__Range*)word, models, invocationType);
 }
 
@@ -917,11 +917,11 @@ void k_texteditor__view_set_graphics_effect(void* self, void* effect) {
     QWidget_SetGraphicsEffect((QWidget*)self, (QGraphicsEffect*)effect);
 }
 
-void k_texteditor__view_grab_gesture(void* self, int64_t type) {
+void k_texteditor__view_grab_gesture(void* self, int32_t type) {
     QWidget_GrabGesture((QWidget*)self, type);
 }
 
-void k_texteditor__view_ungrab_gesture(void* self, int64_t type) {
+void k_texteditor__view_ungrab_gesture(void* self, int32_t type) {
     QWidget_UngrabGesture((QWidget*)self, type);
 }
 
@@ -1422,7 +1422,7 @@ void k_texteditor__view_set_parent(void* self, void* parent) {
     QWidget_SetParent((QWidget*)self, (QWidget*)parent);
 }
 
-void k_texteditor__view_set_parent2(void* self, void* parent, int64_t f) {
+void k_texteditor__view_set_parent2(void* self, void* parent, int32_t f) {
     QWidget_SetParent2((QWidget*)self, (QWidget*)parent, f);
 }
 
@@ -1458,11 +1458,11 @@ void k_texteditor__view_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void k_texteditor__view_add_actions(void* self, libqt_list actions) {
+void k_texteditor__view_add_actions(void* self, libqt_list /* of QAction* */ actions) {
     QWidget_AddActions((QWidget*)self, actions);
 }
 
-void k_texteditor__view_insert_actions(void* self, void* before, libqt_list actions) {
+void k_texteditor__view_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions) {
     QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
@@ -1499,23 +1499,23 @@ QWidget* k_texteditor__view_parent_widget(void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
-void k_texteditor__view_set_window_flags(void* self, int64_t type) {
+void k_texteditor__view_set_window_flags(void* self, int32_t type) {
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int64_t k_texteditor__view_window_flags(void* self) {
+int32_t k_texteditor__view_window_flags(void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
-void k_texteditor__view_set_window_flag(void* self, int64_t param1) {
+void k_texteditor__view_set_window_flag(void* self, int32_t param1) {
     QWidget_SetWindowFlag((QWidget*)self, param1);
 }
 
-void k_texteditor__view_override_window_flags(void* self, int64_t type) {
+void k_texteditor__view_override_window_flags(void* self, int32_t type) {
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int64_t k_texteditor__view_window_type(void* self) {
+int32_t k_texteditor__view_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
@@ -1615,15 +1615,15 @@ void k_texteditor__view_on_custom_context_menu_requested(void* self, void (*call
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-QVariant* k_texteditor__view_input_method_query(void* self, int64_t param1) {
+QVariant* k_texteditor__view_input_method_query(void* self, int32_t param1) {
     return QWidget_InputMethodQuery((QWidget*)self, param1);
 }
 
-int64_t k_texteditor__view_input_method_hints(void* self) {
+int32_t k_texteditor__view_input_method_hints(void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
-void k_texteditor__view_set_input_method_hints(void* self, int64_t hints) {
+void k_texteditor__view_set_input_method_hints(void* self, int32_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
@@ -1655,7 +1655,7 @@ QPixmap* k_texteditor__view_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_texteditor__view_grab_gesture2(void* self, int64_t type, int32_t flags) {
+void k_texteditor__view_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
@@ -1671,7 +1671,7 @@ void k_texteditor__view_set_shortcut_auto_repeat2(void* self, int id, bool enabl
     QWidget_SetShortcutAutoRepeat2((QWidget*)self, id, enable);
 }
 
-void k_texteditor__view_set_window_flag2(void* self, int64_t param1, bool on) {
+void k_texteditor__view_set_window_flag2(void* self, int32_t param1, bool on) {
     QWidget_SetWindowFlag2((QWidget*)self, param1, on);
 }
 
@@ -1683,7 +1683,7 @@ QWidget* k_texteditor__view_create_window_container2(void* window, void* parent)
     return QWidget_CreateWindowContainer2((QWindow*)window, (QWidget*)parent);
 }
 
-QWidget* k_texteditor__view_create_window_container3(void* window, void* parent, int64_t flags) {
+QWidget* k_texteditor__view_create_window_container3(void* window, void* parent, int32_t flags) {
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
@@ -1792,7 +1792,7 @@ const char** k_texteditor__view_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__view_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__view_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1992,7 +1992,7 @@ void k_texteditor__view_reload_x_m_l(void* self) {
     KXMLGUIClient_ReloadXML((KXMLGUIClient*)self);
 }
 
-void k_texteditor__view_plug_action_list(void* self, const char* name, libqt_list actionList) {
+void k_texteditor__view_plug_action_list(void* self, const char* name, libqt_list /* of QAction* */ actionList) {
     KXMLGUIClient_PlugActionList((KXMLGUIClient*)self, qstring(name), actionList);
 }
 
@@ -2004,7 +2004,7 @@ const char* k_texteditor__view_find_most_recent_x_m_l_file(const char* files[sta
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__view_find_most_recent_x_m_l_file");
+        fprintf(stderr, "Failed to allocate memory for string list in k_texteditor__view_find_most_recent_x_m_l_file\n");
         abort();
     }
     for (size_t i = 0; i < files_len; ++i) {

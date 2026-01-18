@@ -89,15 +89,17 @@ bool k_colorcombo_is_custom_color(void* self);
 /// [Upstream resources](https://api.kde.org/kcolorcombo.html#setColors)
 ///
 /// @param self KColorCombo*
-/// @param colors libqt_list /* of QColor* */
+/// @param colors libqt_list of QColor*
 ///
-void k_colorcombo_set_colors(void* self, libqt_list colors);
+void k_colorcombo_set_colors(void* self, libqt_list /* of QColor* */ colors);
 
 /// [Upstream resources](https://api.kde.org/kcolorcombo.html#colors)
 ///
 /// @param self KColorCombo*
 ///
-libqt_list /* of QColor* */ k_colorcombo_colors(void* self);
+/// @return libqt_list of QColor*
+///
+libqt_list k_colorcombo_colors(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolorcombo.html#showEmptyList)
 ///
@@ -676,7 +678,7 @@ void k_colorcombo_set_view(void* self, void* itemView);
 /// @param query enum Qt__InputMethodQuery
 /// @param argument QVariant*
 ///
-QVariant* k_colorcombo_input_method_query2(void* self, int64_t query, void* argument);
+QVariant* k_colorcombo_input_method_query2(void* self, int32_t query, void* argument);
 
 /// Inherited from QComboBox
 ///
@@ -1744,7 +1746,7 @@ void k_colorcombo_set_graphics_effect(void* self, void* effect);
 /// @param self KColorCombo*
 /// @param type enum Qt__GestureType
 ///
-void k_colorcombo_grab_gesture(void* self, int64_t type);
+void k_colorcombo_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -1753,7 +1755,7 @@ void k_colorcombo_grab_gesture(void* self, int64_t type);
 /// @param self KColorCombo*
 /// @param type enum Qt__GestureType
 ///
-void k_colorcombo_ungrab_gesture(void* self, int64_t type);
+void k_colorcombo_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2742,7 +2744,7 @@ void k_colorcombo_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void k_colorcombo_set_parent2(void* self, void* parent, int64_t f);
+void k_colorcombo_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -2820,9 +2822,9 @@ void k_colorcombo_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self KColorCombo*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_colorcombo_add_actions(void* self, libqt_list actions);
+void k_colorcombo_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2830,9 +2832,9 @@ void k_colorcombo_add_actions(void* self, libqt_list actions);
 ///
 /// @param self KColorCombo*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_colorcombo_insert_actions(void* self, void* before, libqt_list actions);
+void k_colorcombo_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2859,7 +2861,9 @@ void k_colorcombo_remove_action(void* self, void* action);
 ///
 /// @param self KColorCombo*
 ///
-libqt_list /* of QAction* */ k_colorcombo_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_colorcombo_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2916,7 +2920,7 @@ QWidget* k_colorcombo_parent_widget(void* self);
 /// @param self KColorCombo*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_colorcombo_set_window_flags(void* self, int64_t type);
+void k_colorcombo_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2926,7 +2930,7 @@ void k_colorcombo_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t k_colorcombo_window_flags(void* self);
+int32_t k_colorcombo_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2935,7 +2939,7 @@ int64_t k_colorcombo_window_flags(void* self);
 /// @param self KColorCombo*
 /// @param param1 enum Qt__WindowType
 ///
-void k_colorcombo_set_window_flag(void* self, int64_t param1);
+void k_colorcombo_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2944,7 +2948,7 @@ void k_colorcombo_set_window_flag(void* self, int64_t param1);
 /// @param self KColorCombo*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_colorcombo_override_window_flags(void* self, int64_t type);
+void k_colorcombo_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2954,7 +2958,7 @@ void k_colorcombo_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t k_colorcombo_window_type(void* self);
+int32_t k_colorcombo_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3165,7 +3169,7 @@ void k_colorcombo_on_custom_context_menu_requested(void* self, void (*callback)(
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t k_colorcombo_input_method_hints(void* self);
+int32_t k_colorcombo_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3174,7 +3178,7 @@ int64_t k_colorcombo_input_method_hints(void* self);
 /// @param self KColorCombo*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void k_colorcombo_set_input_method_hints(void* self, int64_t hints);
+void k_colorcombo_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -3259,7 +3263,7 @@ QPixmap* k_colorcombo_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void k_colorcombo_grab_gesture2(void* self, int64_t type, int32_t flags);
+void k_colorcombo_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -3299,7 +3303,7 @@ void k_colorcombo_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void k_colorcombo_set_window_flag2(void* self, int64_t param1, bool on);
+void k_colorcombo_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -3328,7 +3332,7 @@ QWidget* k_colorcombo_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* k_colorcombo_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* k_colorcombo_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -3440,7 +3444,9 @@ void k_colorcombo_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KColorCombo*
 ///
-libqt_list /* of QObject* */ k_colorcombo_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_colorcombo_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -3968,7 +3974,7 @@ void k_colorcombo_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self KColorCombo*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_colorcombo_input_method_query(void* self, int64_t param1);
+QVariant* k_colorcombo_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QComboBox
 ///
@@ -3979,7 +3985,7 @@ QVariant* k_colorcombo_input_method_query(void* self, int64_t param1);
 /// @param self KColorCombo*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_colorcombo_qbase_input_method_query(void* self, int64_t param1);
+QVariant* k_colorcombo_qbase_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QComboBox
 ///
@@ -3990,7 +3996,7 @@ QVariant* k_colorcombo_qbase_input_method_query(void* self, int64_t param1);
 /// @param self KColorCombo*
 /// @param callback QVariant* func(KColorCombo* self, enum Qt__InputMethodQuery param1)
 ///
-void k_colorcombo_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void k_colorcombo_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QComboBox
 ///

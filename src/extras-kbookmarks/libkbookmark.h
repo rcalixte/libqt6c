@@ -399,7 +399,9 @@ QDomElement* k_bookmarkgroup_find_toolbar(void* self);
 ///
 /// @param self KBookmarkGroup*
 ///
-libqt_list /* of QUrl* */ k_bookmarkgroup_group_url_list(void* self);
+/// @return libqt_list of QUrl*
+///
+libqt_list k_bookmarkgroup_group_url_list(void* self);
 
 /// Inherited from KBookmark
 ///

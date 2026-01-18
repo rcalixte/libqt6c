@@ -236,7 +236,9 @@ void k_systemclipboard_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KSystemClipboard*
 ///
-libqt_list /* of QObject* */ k_systemclipboard_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_systemclipboard_children(void* self);
 
 /// Inherited from QObject
 ///

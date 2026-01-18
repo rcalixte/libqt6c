@@ -196,7 +196,9 @@ uint32_t q_openglframebufferobject_texture(void* self);
 ///
 /// @param self QOpenGLFramebufferObject*
 ///
-libqt_list /* of uint32_t */ q_openglframebufferobject_textures(void* self);
+/// @return libqt_list of uint32_t
+///
+libqt_list q_openglframebufferobject_textures(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#takeTexture)
 ///
@@ -221,7 +223,9 @@ QSize* q_openglframebufferobject_size(void* self);
 ///
 /// @param self QOpenGLFramebufferObject*
 ///
-libqt_list /* of QSize* */ q_openglframebufferobject_sizes(void* self);
+/// @return libqt_list of QSize*
+///
+libqt_list q_openglframebufferobject_sizes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglframebufferobject.html#toImage)
 ///

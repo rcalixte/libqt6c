@@ -81,7 +81,7 @@ const char** k_filewidget_selected_files(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_filewidget_selected_files");
+        fprintf(stderr, "Failed to allocate memory for string list in k_filewidget_selected_files\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -103,7 +103,7 @@ void k_filewidget_set_selected_url(void* self, void* url) {
     KFileWidget_SetSelectedUrl((KFileWidget*)self, (QUrl*)url);
 }
 
-void k_filewidget_set_selected_urls(void* self, libqt_list urls) {
+void k_filewidget_set_selected_urls(void* self, libqt_list /* of QUrl* */ urls) {
     KFileWidget_SetSelectedUrls((KFileWidget*)self, urls);
 }
 
@@ -123,7 +123,7 @@ bool k_filewidget_keeps_location(void* self) {
     return KFileWidget_KeepsLocation((KFileWidget*)self);
 }
 
-void k_filewidget_set_filters(void* self, libqt_list filters) {
+void k_filewidget_set_filters(void* self, libqt_list /* of KFileFilter* */ filters) {
     KFileWidget_SetFilters((KFileWidget*)self, filters);
 }
 
@@ -219,7 +219,7 @@ void k_filewidget_set_supported_schemes(void* self, const char* schemes[static 1
     size_t schemes_len = libqt_strv_length(schemes);
     libqt_string* schemes_qstr = (libqt_string*)malloc(schemes_len * sizeof(libqt_string));
     if (schemes_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_filewidget_set_supported_schemes");
+        fprintf(stderr, "Failed to allocate memory for string list in k_filewidget_set_supported_schemes\n");
         abort();
     }
     for (size_t i = 0; i < schemes_len; ++i) {
@@ -235,7 +235,7 @@ const char** k_filewidget_supported_schemes(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_filewidget_supported_schemes");
+        fprintf(stderr, "Failed to allocate memory for string list in k_filewidget_supported_schemes\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -363,7 +363,7 @@ void k_filewidget_set_url2(void* self, void* url, bool clearforward) {
     KFileWidget_SetUrl2((KFileWidget*)self, (QUrl*)url, clearforward);
 }
 
-void k_filewidget_set_filters2(void* self, libqt_list filters, void* activeFilter) {
+void k_filewidget_set_filters2(void* self, libqt_list /* of KFileFilter* */ filters, void* activeFilter) {
     KFileWidget_SetFilters2((KFileWidget*)self, filters, (KFileFilter*)activeFilter);
 }
 
@@ -747,11 +747,11 @@ void k_filewidget_set_graphics_effect(void* self, void* effect) {
     QWidget_SetGraphicsEffect((QWidget*)self, (QGraphicsEffect*)effect);
 }
 
-void k_filewidget_grab_gesture(void* self, int64_t type) {
+void k_filewidget_grab_gesture(void* self, int32_t type) {
     QWidget_GrabGesture((QWidget*)self, type);
 }
 
-void k_filewidget_ungrab_gesture(void* self, int64_t type) {
+void k_filewidget_ungrab_gesture(void* self, int32_t type) {
     QWidget_UngrabGesture((QWidget*)self, type);
 }
 
@@ -1232,7 +1232,7 @@ void k_filewidget_set_parent(void* self, void* parent) {
     QWidget_SetParent((QWidget*)self, (QWidget*)parent);
 }
 
-void k_filewidget_set_parent2(void* self, void* parent, int64_t f) {
+void k_filewidget_set_parent2(void* self, void* parent, int32_t f) {
     QWidget_SetParent2((QWidget*)self, (QWidget*)parent, f);
 }
 
@@ -1268,11 +1268,11 @@ void k_filewidget_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void k_filewidget_add_actions(void* self, libqt_list actions) {
+void k_filewidget_add_actions(void* self, libqt_list /* of QAction* */ actions) {
     QWidget_AddActions((QWidget*)self, actions);
 }
 
-void k_filewidget_insert_actions(void* self, void* before, libqt_list actions) {
+void k_filewidget_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions) {
     QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
@@ -1309,23 +1309,23 @@ QWidget* k_filewidget_parent_widget(void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
-void k_filewidget_set_window_flags(void* self, int64_t type) {
+void k_filewidget_set_window_flags(void* self, int32_t type) {
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int64_t k_filewidget_window_flags(void* self) {
+int32_t k_filewidget_window_flags(void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
-void k_filewidget_set_window_flag(void* self, int64_t param1) {
+void k_filewidget_set_window_flag(void* self, int32_t param1) {
     QWidget_SetWindowFlag((QWidget*)self, param1);
 }
 
-void k_filewidget_override_window_flags(void* self, int64_t type) {
+void k_filewidget_override_window_flags(void* self, int32_t type) {
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int64_t k_filewidget_window_type(void* self) {
+int32_t k_filewidget_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
@@ -1421,11 +1421,11 @@ void k_filewidget_on_custom_context_menu_requested(void* self, void (*callback)(
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-int64_t k_filewidget_input_method_hints(void* self) {
+int32_t k_filewidget_input_method_hints(void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
-void k_filewidget_set_input_method_hints(void* self, int64_t hints) {
+void k_filewidget_set_input_method_hints(void* self, int32_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
@@ -1457,7 +1457,7 @@ QPixmap* k_filewidget_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_filewidget_grab_gesture2(void* self, int64_t type, int32_t flags) {
+void k_filewidget_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
@@ -1473,7 +1473,7 @@ void k_filewidget_set_shortcut_auto_repeat2(void* self, int id, bool enable) {
     QWidget_SetShortcutAutoRepeat2((QWidget*)self, id, enable);
 }
 
-void k_filewidget_set_window_flag2(void* self, int64_t param1, bool on) {
+void k_filewidget_set_window_flag2(void* self, int32_t param1, bool on) {
     QWidget_SetWindowFlag2((QWidget*)self, param1, on);
 }
 
@@ -1485,7 +1485,7 @@ QWidget* k_filewidget_create_window_container2(void* window, void* parent) {
     return QWidget_CreateWindowContainer2((QWindow*)window, (QWidget*)parent);
 }
 
-QWidget* k_filewidget_create_window_container3(void* window, void* parent, int64_t flags) {
+QWidget* k_filewidget_create_window_container3(void* window, void* parent, int32_t flags) {
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
@@ -1590,7 +1590,7 @@ const char** k_filewidget_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_filewidget_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_filewidget_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2140,15 +2140,15 @@ void k_filewidget_on_input_method_event(void* self, void (*callback)(void*, void
     KFileWidget_OnInputMethodEvent((KFileWidget*)self, (intptr_t)callback);
 }
 
-QVariant* k_filewidget_input_method_query(void* self, int64_t param1) {
+QVariant* k_filewidget_input_method_query(void* self, int32_t param1) {
     return KFileWidget_InputMethodQuery((KFileWidget*)self, param1);
 }
 
-QVariant* k_filewidget_qbase_input_method_query(void* self, int64_t param1) {
+QVariant* k_filewidget_qbase_input_method_query(void* self, int32_t param1) {
     return KFileWidget_QBaseInputMethodQuery((KFileWidget*)self, param1);
 }
 
-void k_filewidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void k_filewidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     KFileWidget_OnInputMethodQuery((KFileWidget*)self, (intptr_t)callback);
 }
 

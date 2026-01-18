@@ -69,7 +69,9 @@ const char* q_windowcapture_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindowcapture.html#capturableWindows)
 ///
-libqt_list /* of QCapturableWindow* */ q_windowcapture_capturable_windows();
+/// @return libqt_list of QCapturableWindow*
+///
+libqt_list q_windowcapture_capturable_windows();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindowcapture.html#captureSession)
 ///
@@ -316,7 +318,9 @@ void q_windowcapture_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QWindowCapture*
 ///
-libqt_list /* of QObject* */ q_windowcapture_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_windowcapture_children(void* self);
 
 /// Inherited from QObject
 ///

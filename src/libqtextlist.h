@@ -277,7 +277,9 @@ void q_textlist_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QTextList*
 ///
-libqt_list /* of QObject* */ q_textlist_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_textlist_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -852,7 +854,9 @@ void q_textlist_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 ///
 /// @param self QTextList*
 ///
-libqt_list /* of QTextBlock* */ q_textlist_block_list(void* self);
+/// @return libqt_list of QTextBlock*
+///
+libqt_list q_textlist_block_list(void* self);
 
 /// Inherited from QTextBlockGroup
 ///
@@ -862,7 +866,9 @@ libqt_list /* of QTextBlock* */ q_textlist_block_list(void* self);
 ///
 /// @param self QTextList*
 ///
-libqt_list /* of QTextBlock* */ q_textlist_qbase_block_list(void* self);
+/// @return libqt_list of QTextBlock*
+///
+libqt_list q_textlist_qbase_block_list(void* self);
 
 /// Inherited from QTextBlockGroup
 ///

@@ -110,7 +110,9 @@ const char* k_globalshortcutinfo_component_unique_name(void* self);
 ///
 /// @param self KGlobalShortcutInfo*
 ///
-libqt_list /* of QKeySequence* */ k_globalshortcutinfo_default_keys(void* self);
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_globalshortcutinfo_default_keys(void* self);
 
 /// [Upstream resources](https://api.kde.org/kglobalshortcutinfo.html#friendlyName)
 ///
@@ -124,7 +126,9 @@ const char* k_globalshortcutinfo_friendly_name(void* self);
 ///
 /// @param self KGlobalShortcutInfo*
 ///
-libqt_list /* of QKeySequence* */ k_globalshortcutinfo_keys(void* self);
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_globalshortcutinfo_keys(void* self);
 
 /// [Upstream resources](https://api.kde.org/kglobalshortcutinfo.html#uniqueName)
 ///
@@ -263,7 +267,9 @@ void k_globalshortcutinfo_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KGlobalShortcutInfo*
 ///
-libqt_list /* of QObject* */ k_globalshortcutinfo_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_globalshortcutinfo_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -836,27 +836,27 @@ bool k_dirsortfilterproxymodel_check_index2(void* self, void* index, int32_t opt
 /// @param self KDirSortFilterProxyModel*
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
-/// @param roles libqt_list /* of int */
+/// @param roles libqt_list of int
 ///
-void k_dirsortfilterproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void k_dirsortfilterproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
-/// @param callback void func(KDirSortFilterProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
+/// @param callback void func(KDirSortFilterProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
 ///
-void k_dirsortfilterproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
+void k_dirsortfilterproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 ///
-void k_dirsortfilterproxymodel_layout_changed1(void* self, libqt_list parents);
+void k_dirsortfilterproxymodel_layout_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -872,10 +872,10 @@ void k_dirsortfilterproxymodel_on_layout_changed1(void* self, void (*callback)(v
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
 ///
-void k_dirsortfilterproxymodel_layout_changed2(void* self, libqt_list parents, int32_t hint);
+void k_dirsortfilterproxymodel_layout_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -891,9 +891,9 @@ void k_dirsortfilterproxymodel_on_layout_changed2(void* self, void (*callback)(v
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 ///
-void k_dirsortfilterproxymodel_layout_about_to_be_changed1(void* self, libqt_list parents);
+void k_dirsortfilterproxymodel_layout_about_to_be_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -909,10 +909,10 @@ void k_dirsortfilterproxymodel_on_layout_about_to_be_changed1(void* self, void (
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KDirSortFilterProxyModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
 ///
-void k_dirsortfilterproxymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint);
+void k_dirsortfilterproxymodel_layout_about_to_be_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1033,7 +1033,9 @@ void k_dirsortfilterproxymodel_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KDirSortFilterProxyModel*
 ///
-libqt_list /* of QObject* */ k_dirsortfilterproxymodel_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_dirsortfilterproxymodel_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1928,9 +1930,9 @@ void k_dirsortfilterproxymodel_on_set_header_data(void* self, bool (*callback)(v
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KDirSortFilterProxyModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* k_dirsortfilterproxymodel_mime_data(void* self, libqt_list indexes);
+QMimeData* k_dirsortfilterproxymodel_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1939,9 +1941,9 @@ QMimeData* k_dirsortfilterproxymodel_mime_data(void* self, libqt_list indexes);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KDirSortFilterProxyModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* k_dirsortfilterproxymodel_qbase_mime_data(void* self, libqt_list indexes);
+QMimeData* k_dirsortfilterproxymodel_qbase_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2259,7 +2261,9 @@ void k_dirsortfilterproxymodel_on_buddy(void* self, QModelIndex* (*callback)(voi
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
 ///
-libqt_list /* of QModelIndex* */ k_dirsortfilterproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_dirsortfilterproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2274,7 +2278,9 @@ libqt_list /* of QModelIndex* */ k_dirsortfilterproxymodel_match(void* self, voi
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
 ///
-libqt_list /* of QModelIndex* */ k_dirsortfilterproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_dirsortfilterproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2458,7 +2464,8 @@ void k_dirsortfilterproxymodel_on_revert(void* self, void (*callback)());
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -2471,7 +2478,9 @@ void k_dirsortfilterproxymodel_on_revert(void* self, void (*callback)());
 /// @param self KDirSortFilterProxyModel*
 /// @param index QModelIndex*
 ///
-libqt_map /* of int to QVariant* */ k_dirsortfilterproxymodel_item_data(void* self, void* index);
+/// @return libqt_map of int to QVariant*
+///
+libqt_map k_dirsortfilterproxymodel_item_data(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2479,7 +2488,8 @@ libqt_map /* of int to QVariant* */ k_dirsortfilterproxymodel_item_data(void* se
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -2492,7 +2502,9 @@ libqt_map /* of int to QVariant* */ k_dirsortfilterproxymodel_item_data(void* se
 /// @param self KDirSortFilterProxyModel*
 /// @param index QModelIndex*
 ///
-libqt_map /* of int to QVariant* */ k_dirsortfilterproxymodel_qbase_item_data(void* self, void* index);
+/// @return libqt_map of int to QVariant*
+///
+libqt_map k_dirsortfilterproxymodel_qbase_item_data(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2501,9 +2513,9 @@ libqt_map /* of int to QVariant* */ k_dirsortfilterproxymodel_qbase_item_data(vo
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDirSortFilterProxyModel*
-/// @param callback libqt_map /* of int to QVariant* */ func(KDirSortFilterProxyModel* self, QModelIndex* index)
+/// @param callback libqt_map of int to QVariant* func(KDirSortFilterProxyModel* self, QModelIndex* index)
 ///
-void k_dirsortfilterproxymodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
+void k_dirsortfilterproxymodel_on_item_data(void* self, libqt_map (*callback)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2513,9 +2525,9 @@ void k_dirsortfilterproxymodel_on_item_data(void* self, libqt_map /* of int to Q
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param index QModelIndex*
-/// @param roles libqt_map /* of int to QVariant* */
+/// @param roles libqt_map of int to QVariant*
 ///
-bool k_dirsortfilterproxymodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
+bool k_dirsortfilterproxymodel_set_item_data(void* self, void* index, libqt_map roles);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2525,9 +2537,9 @@ bool k_dirsortfilterproxymodel_set_item_data(void* self, void* index, libqt_map 
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param index QModelIndex*
-/// @param roles libqt_map /* of int to QVariant* */
+/// @param roles libqt_map of int to QVariant*
 ///
-bool k_dirsortfilterproxymodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
+bool k_dirsortfilterproxymodel_qbase_set_item_data(void* self, void* index, libqt_map roles);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2536,9 +2548,9 @@ bool k_dirsortfilterproxymodel_qbase_set_item_data(void* self, void* index, libq
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDirSortFilterProxyModel*
-/// @param callback bool func(KDirSortFilterProxyModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ /* of int to QVariant* */)
+/// @param callback bool func(KDirSortFilterProxyModel* self, QModelIndex* index, libqt_map of int to QVariant*)
 ///
-void k_dirsortfilterproxymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
+void k_dirsortfilterproxymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2655,7 +2667,8 @@ void k_dirsortfilterproxymodel_on_supported_drag_actions(void* self, int32_t (*c
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -2667,7 +2680,9 @@ void k_dirsortfilterproxymodel_on_supported_drag_actions(void* self, int32_t (*c
 ///
 /// @param self KDirSortFilterProxyModel*
 ///
-libqt_map /* of int to char* */ k_dirsortfilterproxymodel_role_names(void* self);
+/// @return libqt_map of int to char*
+///
+libqt_map k_dirsortfilterproxymodel_role_names(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2675,7 +2690,8 @@ libqt_map /* of int to char* */ k_dirsortfilterproxymodel_role_names(void* self)
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -2687,7 +2703,9 @@ libqt_map /* of int to char* */ k_dirsortfilterproxymodel_role_names(void* self)
 ///
 /// @param self KDirSortFilterProxyModel*
 ///
-libqt_map /* of int to char* */ k_dirsortfilterproxymodel_qbase_role_names(void* self);
+/// @return libqt_map of int to char*
+///
+libqt_map k_dirsortfilterproxymodel_qbase_role_names(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2696,9 +2714,9 @@ libqt_map /* of int to char* */ k_dirsortfilterproxymodel_qbase_role_names(void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDirSortFilterProxyModel*
-/// @param callback libqt_map /* of int to char* */ func()
+/// @param callback libqt_map of int to char* func()
 ///
-void k_dirsortfilterproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
+void k_dirsortfilterproxymodel_on_role_names(void* self, libqt_map (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3253,10 +3271,10 @@ void k_dirsortfilterproxymodel_on_create_index(void* self, QModelIndex* (*callba
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KDirSortFilterProxyModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void k_dirsortfilterproxymodel_encode_data(void* self, libqt_list indexes, void* stream);
+void k_dirsortfilterproxymodel_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3265,10 +3283,10 @@ void k_dirsortfilterproxymodel_encode_data(void* self, libqt_list indexes, void*
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KDirSortFilterProxyModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void k_dirsortfilterproxymodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
+void k_dirsortfilterproxymodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3840,10 +3858,10 @@ void k_dirsortfilterproxymodel_on_change_persistent_index(void* self, void (*cal
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KDirSortFilterProxyModel*
-/// @param from libqt_list /* of QModelIndex* */
-/// @param to libqt_list /* of QModelIndex* */
+/// @param from libqt_list of QModelIndex*
+/// @param to libqt_list of QModelIndex*
 ///
-void k_dirsortfilterproxymodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
+void k_dirsortfilterproxymodel_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3852,10 +3870,10 @@ void k_dirsortfilterproxymodel_change_persistent_index_list(void* self, libqt_li
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KDirSortFilterProxyModel*
-/// @param from libqt_list /* of QModelIndex* */
-/// @param to libqt_list /* of QModelIndex* */
+/// @param from libqt_list of QModelIndex*
+/// @param to libqt_list of QModelIndex*
 ///
-void k_dirsortfilterproxymodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
+void k_dirsortfilterproxymodel_qbase_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3876,7 +3894,9 @@ void k_dirsortfilterproxymodel_on_change_persistent_index_list(void* self, void 
 ///
 /// @param self KDirSortFilterProxyModel*
 ///
-libqt_list /* of QModelIndex* */ k_dirsortfilterproxymodel_persistent_index_list(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_dirsortfilterproxymodel_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3886,7 +3906,9 @@ libqt_list /* of QModelIndex* */ k_dirsortfilterproxymodel_persistent_index_list
 ///
 /// @param self KDirSortFilterProxyModel*
 ///
-libqt_list /* of QModelIndex* */ k_dirsortfilterproxymodel_qbase_persistent_index_list(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_dirsortfilterproxymodel_qbase_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
 ///

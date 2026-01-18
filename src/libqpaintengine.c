@@ -51,7 +51,7 @@ double q_textitem_width(void* self) {
     return QTextItem_Width((QTextItem*)self);
 }
 
-int64_t q_textitem_render_flags(void* self) {
+int32_t q_textitem_render_flags(void* self) {
     return QTextItem_RenderFlags((QTextItem*)self);
 }
 
@@ -74,7 +74,7 @@ QPaintEngine* q_paintengine_new() {
     return QPaintEngine_new();
 }
 
-QPaintEngine* q_paintengine_new2(int64_t features) {
+QPaintEngine* q_paintengine_new2(int32_t features) {
     return QPaintEngine_new2(features);
 }
 
@@ -366,7 +366,7 @@ void q_paintengine_clear_dirty(void* self, int32_t df) {
     QPaintEngine_ClearDirty((QPaintEngine*)self, df);
 }
 
-bool q_paintengine_has_feature(void* self, int64_t feature) {
+bool q_paintengine_has_feature(void* self, int32_t feature) {
     return QPaintEngine_HasFeature((QPaintEngine*)self, feature);
 }
 

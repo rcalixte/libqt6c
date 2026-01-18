@@ -49,7 +49,9 @@ void q_webengineclientcertificateselection_select_none(void* self);
 ///
 /// @param self QWebEngineClientCertificateSelection*
 ///
-libqt_list /* of QSslCertificate* */ q_webengineclientcertificateselection_certificates(void* self);
+/// @return libqt_list of QSslCertificate*
+///
+libqt_list q_webengineclientcertificateselection_certificates(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineclientcertificateselection.html#dtor.QWebEngineClientCertificateSelection)
 ///

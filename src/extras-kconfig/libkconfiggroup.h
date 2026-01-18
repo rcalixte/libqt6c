@@ -172,10 +172,10 @@ void k_configgroup_reparent(void* self, void* parent);
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#moveValuesTo)
 ///
 /// @param self KConfigGroup*
-/// @param keys libqt_list /* of const char* */
+/// @param keys libqt_list of const char*
 /// @param other KConfigGroup*
 ///
-void k_configgroup_move_values_to(void* self, libqt_list /* of const char* */ keys, void* other);
+void k_configgroup_move_values_to(void* self, libqt_list keys, void* other);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#moveValuesTo)
 ///
@@ -287,17 +287,21 @@ const char* k_configgroup_read_entry6(void* self, const char* key);
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
-/// @param aDefault libqt_list /* of QVariant* */
+/// @param aDefault libqt_list of QVariant*
 ///
-libqt_list /* of QVariant* */ k_configgroup_read_entry7(void* self, const char* key, libqt_list aDefault);
+/// @return libqt_list of QVariant*
+///
+libqt_list k_configgroup_read_entry7(void* self, const char* key, libqt_list /* of QVariant* */ aDefault);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
-/// @param aDefault libqt_list /* of QVariant* */
+/// @param aDefault libqt_list of QVariant*
 ///
-libqt_list /* of QVariant* */ k_configgroup_read_entry8(void* self, const char* key, libqt_list aDefault);
+/// @return libqt_list of QVariant*
+///
+libqt_list k_configgroup_read_entry8(void* self, const char* key, libqt_list /* of QVariant* */ aDefault);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
@@ -479,17 +483,17 @@ void k_configgroup_write_entry10(void* self, const char* key, const char* value[
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
-/// @param value libqt_list /* of QVariant* */
+/// @param value libqt_list of QVariant*
 ///
-void k_configgroup_write_entry11(void* self, const char* key, libqt_list value);
+void k_configgroup_write_entry11(void* self, const char* key, libqt_list /* of QVariant* */ value);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
-/// @param value libqt_list /* of QVariant* */
+/// @param value libqt_list of QVariant*
 ///
-void k_configgroup_write_entry12(void* self, const char* key, libqt_list value);
+void k_configgroup_write_entry12(void* self, const char* key, libqt_list /* of QVariant* */ value);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeXdgListEntry)
 ///
@@ -636,7 +640,8 @@ bool k_configgroup_has_default2(void* self, const char* key);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     libqt_free(map.values[i]);
@@ -647,7 +652,9 @@ bool k_configgroup_has_default2(void* self, const char* key);
 ///
 /// @param self KConfigGroup*
 ///
-libqt_map /* of const char* to const char* */ k_configgroup_entry_map(void* self);
+/// @return libqt_map of const char* to const char*
+///
+libqt_map k_configgroup_entry_map(void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#hasGroupImpl)
 ///
@@ -795,11 +802,11 @@ void k_configgroup_reparent2(void* self, void* parent, int32_t pFlags);
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#moveValuesTo)
 ///
 /// @param self KConfigGroup*
-/// @param keys libqt_list /* of const char* */
+/// @param keys libqt_list of const char*
 /// @param other KConfigGroup*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 ///
-void k_configgroup_move_values_to3(void* self, libqt_list /* of const char* */ keys, void* other, int32_t pFlags);
+void k_configgroup_move_values_to3(void* self, libqt_list keys, void* other, int32_t pFlags);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#moveValuesTo)
 ///
@@ -970,19 +977,19 @@ void k_configgroup_write_entry311(void* self, const char* key, const char* value
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
-/// @param value libqt_list /* of QVariant* */
+/// @param value libqt_list of QVariant*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 ///
-void k_configgroup_write_entry312(void* self, const char* key, libqt_list value, int32_t pFlags);
+void k_configgroup_write_entry312(void* self, const char* key, libqt_list /* of QVariant* */ value, int32_t pFlags);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
-/// @param value libqt_list /* of QVariant* */
+/// @param value libqt_list of QVariant*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 ///
-void k_configgroup_write_entry313(void* self, const char* key, libqt_list value, int32_t pFlags);
+void k_configgroup_write_entry313(void* self, const char* key, libqt_list /* of QVariant* */ value, int32_t pFlags);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeXdgListEntry)
 ///

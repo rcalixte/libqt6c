@@ -44,11 +44,11 @@ void q_gesturerecognizer_qbase_reset(void* self, void* state) {
     QGestureRecognizer_QBaseReset((QGestureRecognizer*)self, (QGesture*)state);
 }
 
-int64_t q_gesturerecognizer_register_recognizer(void* recognizer) {
+int32_t q_gesturerecognizer_register_recognizer(void* recognizer) {
     return QGestureRecognizer_RegisterRecognizer((QGestureRecognizer*)recognizer);
 }
 
-void q_gesturerecognizer_unregister_recognizer(int64_t type) {
+void q_gesturerecognizer_unregister_recognizer(int32_t type) {
     QGestureRecognizer_UnregisterRecognizer(type);
 }
 

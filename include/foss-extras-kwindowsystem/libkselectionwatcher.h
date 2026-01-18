@@ -338,7 +338,9 @@ void k_selectionwatcher_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KSelectionWatcher*
 ///
-libqt_list /* of QObject* */ k_selectionwatcher_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_selectionwatcher_children(void* self);
 
 /// Inherited from QObject
 ///

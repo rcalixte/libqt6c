@@ -97,7 +97,7 @@ void q_signon__identityinfo_set_realms(void* self, const char* realms[static 1])
     size_t realms_len = libqt_strv_length(realms);
     libqt_string* realms_qstr = (libqt_string*)malloc(realms_len * sizeof(libqt_string));
     if (realms_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_signon__identityinfo_set_realms");
+        fprintf(stderr, "Failed to allocate memory for string list in q_signon__identityinfo_set_realms\n");
         abort();
     }
     for (size_t i = 0; i < realms_len; ++i) {
@@ -113,7 +113,7 @@ const char** q_signon__identityinfo_realms(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_signon__identityinfo_realms");
+        fprintf(stderr, "Failed to allocate memory for string list in q_signon__identityinfo_realms\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -142,7 +142,7 @@ void q_signon__identityinfo_set_access_control_list(void* self, const char* acce
     size_t accessControlList_len = libqt_strv_length(accessControlList);
     libqt_string* accessControlList_qstr = (libqt_string*)malloc(accessControlList_len * sizeof(libqt_string));
     if (accessControlList_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_signon__identityinfo_set_access_control_list");
+        fprintf(stderr, "Failed to allocate memory for string list in q_signon__identityinfo_set_access_control_list\n");
         abort();
     }
     for (size_t i = 0; i < accessControlList_len; ++i) {
@@ -153,7 +153,7 @@ void q_signon__identityinfo_set_access_control_list(void* self, const char* acce
     free(accessControlList_qstr);
 }
 
-void q_signon__identityinfo_set_access_control_list2(void* self, libqt_list accessControlList) {
+void q_signon__identityinfo_set_access_control_list2(void* self, libqt_list /* of SignOn__SecurityContext* */ accessControlList) {
     SignOn__IdentityInfo_SetAccessControlList2((SignOn__IdentityInfo*)self, accessControlList);
 }
 
@@ -162,7 +162,7 @@ const char** q_signon__identityinfo_access_control_list(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_signon__identityinfo_access_control_list");
+        fprintf(stderr, "Failed to allocate memory for string list in q_signon__identityinfo_access_control_list\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -185,7 +185,7 @@ void q_signon__identityinfo_set_method(void* self, const char* method, const cha
     size_t mechanismsList_len = libqt_strv_length(mechanismsList);
     libqt_string* mechanismsList_qstr = (libqt_string*)malloc(mechanismsList_len * sizeof(libqt_string));
     if (mechanismsList_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_signon__identityinfo_set_method");
+        fprintf(stderr, "Failed to allocate memory for string list in q_signon__identityinfo_set_method\n");
         abort();
     }
     for (size_t i = 0; i < mechanismsList_len; ++i) {
@@ -213,7 +213,7 @@ const char** q_signon__identityinfo_methods(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_signon__identityinfo_methods");
+        fprintf(stderr, "Failed to allocate memory for string list in q_signon__identityinfo_methods\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -232,7 +232,7 @@ const char** q_signon__identityinfo_mechanisms(void* self, const char* method) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_signon__identityinfo_mechanisms");
+        fprintf(stderr, "Failed to allocate memory for string list in q_signon__identityinfo_mechanisms\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

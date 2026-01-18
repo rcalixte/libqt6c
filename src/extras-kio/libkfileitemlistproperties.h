@@ -81,7 +81,9 @@ bool k_fileitemlistproperties_is_local(void* self);
 ///
 /// @param self KFileItemListProperties*
 ///
-libqt_list /* of QUrl* */ k_fileitemlistproperties_url_list(void* self);
+/// @return libqt_list of QUrl*
+///
+libqt_list k_fileitemlistproperties_url_list(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#isDirectory)
 ///

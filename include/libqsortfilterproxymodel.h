@@ -794,9 +794,9 @@ bool q_sortfilterproxymodel_qbase_set_header_data(void* self, int section, int32
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeData)
 ///
 /// @param self QSortFilterProxyModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* q_sortfilterproxymodel_mime_data(void* self, libqt_list indexes);
+QMimeData* q_sortfilterproxymodel_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeData)
 ///
@@ -812,9 +812,9 @@ void q_sortfilterproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void
 /// Base class method implementation
 ///
 /// @param self QSortFilterProxyModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* q_sortfilterproxymodel_qbase_mime_data(void* self, libqt_list indexes);
+QMimeData* q_sortfilterproxymodel_qbase_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dropMimeData)
 ///
@@ -1078,7 +1078,9 @@ QModelIndex* q_sortfilterproxymodel_qbase_buddy(void* self, void* index);
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
 ///
-libqt_list /* of QModelIndex* */ q_sortfilterproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list q_sortfilterproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#match)
 ///
@@ -1100,7 +1102,9 @@ void q_sortfilterproxymodel_on_match(void* self, QModelIndex** (*callback)(void*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
 ///
-libqt_list /* of QModelIndex* */ q_sortfilterproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list q_sortfilterproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#span)
 ///
@@ -1565,27 +1569,27 @@ bool q_sortfilterproxymodel_check_index2(void* self, void* index, int32_t option
 /// @param self QSortFilterProxyModel*
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
-/// @param roles libqt_list /* of int */
+/// @param roles libqt_list of int
 ///
-void q_sortfilterproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void q_sortfilterproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QSortFilterProxyModel*
-/// @param callback void func(QSortFilterProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
+/// @param callback void func(QSortFilterProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
 ///
-void q_sortfilterproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
+void q_sortfilterproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QSortFilterProxyModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 ///
-void q_sortfilterproxymodel_layout_changed1(void* self, libqt_list parents);
+void q_sortfilterproxymodel_layout_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1601,10 +1605,10 @@ void q_sortfilterproxymodel_on_layout_changed1(void* self, void (*callback)(void
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QSortFilterProxyModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
 ///
-void q_sortfilterproxymodel_layout_changed2(void* self, libqt_list parents, int32_t hint);
+void q_sortfilterproxymodel_layout_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1620,9 +1624,9 @@ void q_sortfilterproxymodel_on_layout_changed2(void* self, void (*callback)(void
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QSortFilterProxyModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 ///
-void q_sortfilterproxymodel_layout_about_to_be_changed1(void* self, libqt_list parents);
+void q_sortfilterproxymodel_layout_about_to_be_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1638,10 +1642,10 @@ void q_sortfilterproxymodel_on_layout_about_to_be_changed1(void* self, void (*ca
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QSortFilterProxyModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
 ///
-void q_sortfilterproxymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint);
+void q_sortfilterproxymodel_layout_about_to_be_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1762,7 +1766,9 @@ void q_sortfilterproxymodel_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QSortFilterProxyModel*
 ///
-libqt_list /* of QObject* */ q_sortfilterproxymodel_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_sortfilterproxymodel_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2057,7 +2063,8 @@ void q_sortfilterproxymodel_on_revert(void* self, void (*callback)());
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -2070,7 +2077,9 @@ void q_sortfilterproxymodel_on_revert(void* self, void (*callback)());
 /// @param self QSortFilterProxyModel*
 /// @param index QModelIndex*
 ///
-libqt_map /* of int to QVariant* */ q_sortfilterproxymodel_item_data(void* self, void* index);
+/// @return libqt_map of int to QVariant*
+///
+libqt_map q_sortfilterproxymodel_item_data(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2078,7 +2087,8 @@ libqt_map /* of int to QVariant* */ q_sortfilterproxymodel_item_data(void* self,
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -2091,7 +2101,9 @@ libqt_map /* of int to QVariant* */ q_sortfilterproxymodel_item_data(void* self,
 /// @param self QSortFilterProxyModel*
 /// @param index QModelIndex*
 ///
-libqt_map /* of int to QVariant* */ q_sortfilterproxymodel_qbase_item_data(void* self, void* index);
+/// @return libqt_map of int to QVariant*
+///
+libqt_map q_sortfilterproxymodel_qbase_item_data(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2100,9 +2112,9 @@ libqt_map /* of int to QVariant* */ q_sortfilterproxymodel_qbase_item_data(void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSortFilterProxyModel*
-/// @param callback libqt_map /* of int to QVariant* */ func(QSortFilterProxyModel* self, QModelIndex* index)
+/// @param callback libqt_map of int to QVariant* func(QSortFilterProxyModel* self, QModelIndex* index)
 ///
-void q_sortfilterproxymodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
+void q_sortfilterproxymodel_on_item_data(void* self, libqt_map (*callback)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2112,9 +2124,9 @@ void q_sortfilterproxymodel_on_item_data(void* self, libqt_map /* of int to QVar
 ///
 /// @param self QSortFilterProxyModel*
 /// @param index QModelIndex*
-/// @param roles libqt_map /* of int to QVariant* */
+/// @param roles libqt_map of int to QVariant*
 ///
-bool q_sortfilterproxymodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
+bool q_sortfilterproxymodel_set_item_data(void* self, void* index, libqt_map roles);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2124,9 +2136,9 @@ bool q_sortfilterproxymodel_set_item_data(void* self, void* index, libqt_map /* 
 ///
 /// @param self QSortFilterProxyModel*
 /// @param index QModelIndex*
-/// @param roles libqt_map /* of int to QVariant* */
+/// @param roles libqt_map of int to QVariant*
 ///
-bool q_sortfilterproxymodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
+bool q_sortfilterproxymodel_qbase_set_item_data(void* self, void* index, libqt_map roles);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2135,9 +2147,9 @@ bool q_sortfilterproxymodel_qbase_set_item_data(void* self, void* index, libqt_m
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSortFilterProxyModel*
-/// @param callback bool func(QSortFilterProxyModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ /* of int to QVariant* */)
+/// @param callback bool func(QSortFilterProxyModel* self, QModelIndex* index, libqt_map of int to QVariant*)
 ///
-void q_sortfilterproxymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
+void q_sortfilterproxymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2254,7 +2266,8 @@ void q_sortfilterproxymodel_on_supported_drag_actions(void* self, int32_t (*call
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -2266,7 +2279,9 @@ void q_sortfilterproxymodel_on_supported_drag_actions(void* self, int32_t (*call
 ///
 /// @param self QSortFilterProxyModel*
 ///
-libqt_map /* of int to char* */ q_sortfilterproxymodel_role_names(void* self);
+/// @return libqt_map of int to char*
+///
+libqt_map q_sortfilterproxymodel_role_names(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2274,7 +2289,8 @@ libqt_map /* of int to char* */ q_sortfilterproxymodel_role_names(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -2286,7 +2302,9 @@ libqt_map /* of int to char* */ q_sortfilterproxymodel_role_names(void* self);
 ///
 /// @param self QSortFilterProxyModel*
 ///
-libqt_map /* of int to char* */ q_sortfilterproxymodel_qbase_role_names(void* self);
+/// @return libqt_map of int to char*
+///
+libqt_map q_sortfilterproxymodel_qbase_role_names(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2295,9 +2313,9 @@ libqt_map /* of int to char* */ q_sortfilterproxymodel_qbase_role_names(void* se
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSortFilterProxyModel*
-/// @param callback libqt_map /* of int to char* */ func()
+/// @param callback libqt_map of int to char* func()
 ///
-void q_sortfilterproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
+void q_sortfilterproxymodel_on_role_names(void* self, libqt_map (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2759,10 +2777,10 @@ void q_sortfilterproxymodel_on_create_index(void* self, QModelIndex* (*callback)
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSortFilterProxyModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void q_sortfilterproxymodel_encode_data(void* self, libqt_list indexes, void* stream);
+void q_sortfilterproxymodel_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2771,10 +2789,10 @@ void q_sortfilterproxymodel_encode_data(void* self, libqt_list indexes, void* st
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSortFilterProxyModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void q_sortfilterproxymodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
+void q_sortfilterproxymodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3346,10 +3364,10 @@ void q_sortfilterproxymodel_on_change_persistent_index(void* self, void (*callba
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSortFilterProxyModel*
-/// @param from libqt_list /* of QModelIndex* */
-/// @param to libqt_list /* of QModelIndex* */
+/// @param from libqt_list of QModelIndex*
+/// @param to libqt_list of QModelIndex*
 ///
-void q_sortfilterproxymodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
+void q_sortfilterproxymodel_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3358,10 +3376,10 @@ void q_sortfilterproxymodel_change_persistent_index_list(void* self, libqt_list 
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSortFilterProxyModel*
-/// @param from libqt_list /* of QModelIndex* */
-/// @param to libqt_list /* of QModelIndex* */
+/// @param from libqt_list of QModelIndex*
+/// @param to libqt_list of QModelIndex*
 ///
-void q_sortfilterproxymodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
+void q_sortfilterproxymodel_qbase_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3382,7 +3400,9 @@ void q_sortfilterproxymodel_on_change_persistent_index_list(void* self, void (*c
 ///
 /// @param self QSortFilterProxyModel*
 ///
-libqt_list /* of QModelIndex* */ q_sortfilterproxymodel_persistent_index_list(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list q_sortfilterproxymodel_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3392,7 +3412,9 @@ libqt_list /* of QModelIndex* */ q_sortfilterproxymodel_persistent_index_list(vo
 ///
 /// @param self QSortFilterProxyModel*
 ///
-libqt_list /* of QModelIndex* */ q_sortfilterproxymodel_qbase_persistent_index_list(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list q_sortfilterproxymodel_qbase_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
 ///

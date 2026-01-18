@@ -194,7 +194,9 @@ void k_plotobject_set_bar_brush(void* self, void* b);
 ///
 /// @param self KPlotObject*
 ///
-libqt_list /* of KPlotPoint* */ k_plotobject_points(void* self);
+/// @return libqt_list of KPlotPoint*
+///
+libqt_list k_plotobject_points(void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotobject.html#addPoint)
 ///

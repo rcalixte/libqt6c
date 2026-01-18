@@ -255,7 +255,7 @@ void q_graphicsscenemouseevent_set_screen_pos(void* self, void* pos);
 /// @param self QGraphicsSceneMouseEvent*
 /// @param button enum Qt__MouseButton
 ///
-QPointF* q_graphicsscenemouseevent_button_down_pos(void* self, int64_t button);
+QPointF* q_graphicsscenemouseevent_button_down_pos(void* self, int32_t button);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#setButtonDownPos)
 ///
@@ -263,14 +263,14 @@ QPointF* q_graphicsscenemouseevent_button_down_pos(void* self, int64_t button);
 /// @param button enum Qt__MouseButton
 /// @param pos QPointF*
 ///
-void q_graphicsscenemouseevent_set_button_down_pos(void* self, int64_t button, void* pos);
+void q_graphicsscenemouseevent_set_button_down_pos(void* self, int32_t button, void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#buttonDownScenePos)
 ///
 /// @param self QGraphicsSceneMouseEvent*
 /// @param button enum Qt__MouseButton
 ///
-QPointF* q_graphicsscenemouseevent_button_down_scene_pos(void* self, int64_t button);
+QPointF* q_graphicsscenemouseevent_button_down_scene_pos(void* self, int32_t button);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#setButtonDownScenePos)
 ///
@@ -278,14 +278,14 @@ QPointF* q_graphicsscenemouseevent_button_down_scene_pos(void* self, int64_t but
 /// @param button enum Qt__MouseButton
 /// @param pos QPointF*
 ///
-void q_graphicsscenemouseevent_set_button_down_scene_pos(void* self, int64_t button, void* pos);
+void q_graphicsscenemouseevent_set_button_down_scene_pos(void* self, int32_t button, void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#buttonDownScreenPos)
 ///
 /// @param self QGraphicsSceneMouseEvent*
 /// @param button enum Qt__MouseButton
 ///
-QPoint* q_graphicsscenemouseevent_button_down_screen_pos(void* self, int64_t button);
+QPoint* q_graphicsscenemouseevent_button_down_screen_pos(void* self, int32_t button);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#setButtonDownScreenPos)
 ///
@@ -293,7 +293,7 @@ QPoint* q_graphicsscenemouseevent_button_down_screen_pos(void* self, int64_t but
 /// @param button enum Qt__MouseButton
 /// @param pos QPoint*
 ///
-void q_graphicsscenemouseevent_set_button_down_screen_pos(void* self, int64_t button, void* pos);
+void q_graphicsscenemouseevent_set_button_down_screen_pos(void* self, int32_t button, void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#lastPos)
 ///
@@ -340,14 +340,14 @@ void q_graphicsscenemouseevent_set_last_screen_pos(void* self, void* pos);
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int64_t q_graphicsscenemouseevent_buttons(void* self);
+int32_t q_graphicsscenemouseevent_buttons(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#setButtons)
 ///
 /// @param self QGraphicsSceneMouseEvent*
 /// @param buttons flag of enum Qt__MouseButton
 ///
-void q_graphicsscenemouseevent_set_buttons(void* self, int64_t buttons);
+void q_graphicsscenemouseevent_set_buttons(void* self, int32_t buttons);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#button)
 ///
@@ -355,14 +355,14 @@ void q_graphicsscenemouseevent_set_buttons(void* self, int64_t buttons);
 ///
 /// @return enum Qt__MouseButton
 ///
-int64_t q_graphicsscenemouseevent_button(void* self);
+int32_t q_graphicsscenemouseevent_button(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#setButton)
 ///
 /// @param self QGraphicsSceneMouseEvent*
 /// @param button enum Qt__MouseButton
 ///
-void q_graphicsscenemouseevent_set_button(void* self, int64_t button);
+void q_graphicsscenemouseevent_set_button(void* self, int32_t button);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#modifiers)
 ///
@@ -370,14 +370,14 @@ void q_graphicsscenemouseevent_set_button(void* self, int64_t button);
 ///
 /// @return flag of enum Qt__KeyboardModifier
 ///
-int64_t q_graphicsscenemouseevent_modifiers(void* self);
+int32_t q_graphicsscenemouseevent_modifiers(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#setModifiers)
 ///
 /// @param self QGraphicsSceneMouseEvent*
 /// @param modifiers flag of enum Qt__KeyboardModifier
 ///
-void q_graphicsscenemouseevent_set_modifiers(void* self, int64_t modifiers);
+void q_graphicsscenemouseevent_set_modifiers(void* self, int32_t modifiers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#source)
 ///
@@ -654,14 +654,14 @@ void q_graphicsscenewheelevent_set_screen_pos(void* self, void* pos);
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int64_t q_graphicsscenewheelevent_buttons(void* self);
+int32_t q_graphicsscenewheelevent_buttons(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#setButtons)
 ///
 /// @param self QGraphicsSceneWheelEvent*
 /// @param buttons flag of enum Qt__MouseButton
 ///
-void q_graphicsscenewheelevent_set_buttons(void* self, int64_t buttons);
+void q_graphicsscenewheelevent_set_buttons(void* self, int32_t buttons);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#modifiers)
 ///
@@ -669,14 +669,14 @@ void q_graphicsscenewheelevent_set_buttons(void* self, int64_t buttons);
 ///
 /// @return flag of enum Qt__KeyboardModifier
 ///
-int64_t q_graphicsscenewheelevent_modifiers(void* self);
+int32_t q_graphicsscenewheelevent_modifiers(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#setModifiers)
 ///
 /// @param self QGraphicsSceneWheelEvent*
 /// @param modifiers flag of enum Qt__KeyboardModifier
 ///
-void q_graphicsscenewheelevent_set_modifiers(void* self, int64_t modifiers);
+void q_graphicsscenewheelevent_set_modifiers(void* self, int32_t modifiers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#delta)
 ///
@@ -992,14 +992,14 @@ void q_graphicsscenecontextmenuevent_set_screen_pos(void* self, void* pos);
 ///
 /// @return flag of enum Qt__KeyboardModifier
 ///
-int64_t q_graphicsscenecontextmenuevent_modifiers(void* self);
+int32_t q_graphicsscenecontextmenuevent_modifiers(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenecontextmenuevent.html#setModifiers)
 ///
 /// @param self QGraphicsSceneContextMenuEvent*
 /// @param modifiers flag of enum Qt__KeyboardModifier
 ///
-void q_graphicsscenecontextmenuevent_set_modifiers(void* self, int64_t modifiers);
+void q_graphicsscenecontextmenuevent_set_modifiers(void* self, int32_t modifiers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenecontextmenuevent.html#reason)
 ///
@@ -1300,14 +1300,14 @@ void q_graphicsscenehoverevent_set_last_screen_pos(void* self, void* pos);
 ///
 /// @return flag of enum Qt__KeyboardModifier
 ///
-int64_t q_graphicsscenehoverevent_modifiers(void* self);
+int32_t q_graphicsscenehoverevent_modifiers(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenehoverevent.html#setModifiers)
 ///
 /// @param self QGraphicsSceneHoverEvent*
 /// @param modifiers flag of enum Qt__KeyboardModifier
 ///
-void q_graphicsscenehoverevent_set_modifiers(void* self, int64_t modifiers);
+void q_graphicsscenehoverevent_set_modifiers(void* self, int32_t modifiers);
 
 /// Inherited from QGraphicsSceneEvent
 ///
@@ -1780,14 +1780,14 @@ void q_graphicsscenedragdropevent_set_screen_pos(void* self, void* pos);
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int64_t q_graphicsscenedragdropevent_buttons(void* self);
+int32_t q_graphicsscenedragdropevent_buttons(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#setButtons)
 ///
 /// @param self QGraphicsSceneDragDropEvent*
 /// @param buttons flag of enum Qt__MouseButton
 ///
-void q_graphicsscenedragdropevent_set_buttons(void* self, int64_t buttons);
+void q_graphicsscenedragdropevent_set_buttons(void* self, int32_t buttons);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#modifiers)
 ///
@@ -1795,14 +1795,14 @@ void q_graphicsscenedragdropevent_set_buttons(void* self, int64_t buttons);
 ///
 /// @return flag of enum Qt__KeyboardModifier
 ///
-int64_t q_graphicsscenedragdropevent_modifiers(void* self);
+int32_t q_graphicsscenedragdropevent_modifiers(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#setModifiers)
 ///
 /// @param self QGraphicsSceneDragDropEvent*
 /// @param modifiers flag of enum Qt__KeyboardModifier
 ///
-void q_graphicsscenedragdropevent_set_modifiers(void* self, int64_t modifiers);
+void q_graphicsscenedragdropevent_set_modifiers(void* self, int32_t modifiers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#possibleActions)
 ///

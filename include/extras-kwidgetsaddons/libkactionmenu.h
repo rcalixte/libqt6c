@@ -215,7 +215,9 @@ void k_actionmenu_release_widget(void* self, void* widget);
 ///
 /// @param self KActionMenu*
 ///
-libqt_list /* of QObject* */ k_actionmenu_associated_objects(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_actionmenu_associated_objects(void* self);
 
 /// Inherited from QAction
 ///
@@ -404,9 +406,9 @@ QKeySequence* k_actionmenu_shortcut(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
 ///
 /// @param self KActionMenu*
-/// @param shortcuts libqt_list /* of QKeySequence* */
+/// @param shortcuts libqt_list of QKeySequence*
 ///
-void k_actionmenu_set_shortcuts(void* self, libqt_list shortcuts);
+void k_actionmenu_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts);
 
 /// Inherited from QAction
 ///
@@ -423,7 +425,9 @@ void k_actionmenu_set_shortcuts2(void* self, int32_t shortcuts);
 ///
 /// @param self KActionMenu*
 ///
-libqt_list /* of QKeySequence* */ k_actionmenu_shortcuts(void* self);
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_actionmenu_shortcuts(void* self);
 
 /// Inherited from QAction
 ///
@@ -933,7 +937,9 @@ void k_actionmenu_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KActionMenu*
 ///
-libqt_list /* of QObject* */ k_actionmenu_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_actionmenu_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1442,7 +1448,9 @@ void k_actionmenu_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 /// @param self KActionMenu*
 ///
-libqt_list /* of QWidget* */ k_actionmenu_created_widgets(void* self);
+/// @return libqt_list of QWidget*
+///
+libqt_list k_actionmenu_created_widgets(void* self);
 
 /// Inherited from QWidgetAction
 ///
@@ -1452,7 +1460,9 @@ libqt_list /* of QWidget* */ k_actionmenu_created_widgets(void* self);
 ///
 /// @param self KActionMenu*
 ///
-libqt_list /* of QWidget* */ k_actionmenu_qbase_created_widgets(void* self);
+/// @return libqt_list of QWidget*
+///
+libqt_list k_actionmenu_qbase_created_widgets(void* self);
 
 /// Inherited from QWidgetAction
 ///

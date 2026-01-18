@@ -124,7 +124,9 @@ int32_t k_icontheme_default_size(void* self, int32_t group);
 /// @param self KIconTheme*
 /// @param group enum KIconLoader__Group
 ///
-libqt_list /* of int */ k_icontheme_query_sizes(void* self, int32_t group);
+/// @return libqt_list of int
+///
+libqt_list k_icontheme_query_sizes(void* self, int32_t group);
 
 /// [Upstream resources](https://api.kde.org/kicontheme.html#queryIcons)
 ///

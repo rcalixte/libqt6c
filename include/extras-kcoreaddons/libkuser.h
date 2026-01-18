@@ -126,7 +126,9 @@ const char* k_user_shell(void* self);
 ///
 /// @param self KUser*
 ///
-libqt_list /* of KUserGroup* */ k_user_groups(void* self);
+/// @return libqt_list of KUserGroup*
+///
+libqt_list k_user_groups(void* self);
 
 /// [Upstream resources](https://api.kde.org/kuser.html#groupNames)
 ///
@@ -145,7 +147,9 @@ QVariant* k_user_property(void* self, int32_t which);
 
 /// [Upstream resources](https://api.kde.org/kuser.html#allUsers)
 ///
-libqt_list /* of KUser* */ k_user_all_users();
+/// @return libqt_list of KUser*
+///
+libqt_list k_user_all_users();
 
 /// [Upstream resources](https://api.kde.org/kuser.html#allUserNames)
 ///
@@ -158,7 +162,9 @@ const char** k_user_all_user_names();
 /// @param self KUser*
 /// @param maxCount uint32_t
 ///
-libqt_list /* of KUserGroup* */ k_user_groups1(void* self, uint32_t maxCount);
+/// @return libqt_list of KUserGroup*
+///
+libqt_list k_user_groups1(void* self, uint32_t maxCount);
 
 /// [Upstream resources](https://api.kde.org/kuser.html#groupNames)
 ///
@@ -173,7 +179,9 @@ const char** k_user_group_names1(void* self, uint32_t maxCount);
 ///
 /// @param maxCount uint32_t
 ///
-libqt_list /* of KUser* */ k_user_all_users1(uint32_t maxCount);
+/// @return libqt_list of KUser*
+///
+libqt_list k_user_all_users1(uint32_t maxCount);
 
 /// [Upstream resources](https://api.kde.org/kuser.html#allUserNames)
 ///
@@ -276,7 +284,9 @@ const char* k_usergroup_name(void* self);
 ///
 /// @param self KUserGroup*
 ///
-libqt_list /* of KUser* */ k_usergroup_users(void* self);
+/// @return libqt_list of KUser*
+///
+libqt_list k_usergroup_users(void* self);
 
 /// [Upstream resources](https://api.kde.org/kusergroup.html#userNames)
 ///
@@ -288,7 +298,9 @@ const char** k_usergroup_user_names(void* self);
 
 /// [Upstream resources](https://api.kde.org/kusergroup.html#allGroups)
 ///
-libqt_list /* of KUserGroup* */ k_usergroup_all_groups();
+/// @return libqt_list of KUserGroup*
+///
+libqt_list k_usergroup_all_groups();
 
 /// [Upstream resources](https://api.kde.org/kusergroup.html#allGroupNames)
 ///
@@ -301,7 +313,9 @@ const char** k_usergroup_all_group_names();
 /// @param self KUserGroup*
 /// @param maxCount uint32_t
 ///
-libqt_list /* of KUser* */ k_usergroup_users1(void* self, uint32_t maxCount);
+/// @return libqt_list of KUser*
+///
+libqt_list k_usergroup_users1(void* self, uint32_t maxCount);
 
 /// [Upstream resources](https://api.kde.org/kusergroup.html#userNames)
 ///
@@ -316,7 +330,9 @@ const char** k_usergroup_user_names1(void* self, uint32_t maxCount);
 ///
 /// @param maxCount uint32_t
 ///
-libqt_list /* of KUserGroup* */ k_usergroup_all_groups1(uint32_t maxCount);
+/// @return libqt_list of KUserGroup*
+///
+libqt_list k_usergroup_all_groups1(uint32_t maxCount);
 
 /// [Upstream resources](https://api.kde.org/kusergroup.html#allGroupNames)
 ///

@@ -137,9 +137,9 @@ void q_lineseries_append2(void* self, void* point);
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#append)
 ///
 /// @param self QLineSeries*
-/// @param points libqt_list /* of QPointF* */
+/// @param points libqt_list of QPointF*
 ///
-void q_lineseries_append3(void* self, libqt_list points);
+void q_lineseries_append3(void* self, libqt_list /* of QPointF* */ points);
 
 /// Inherited from QXYSeries
 ///
@@ -254,7 +254,9 @@ int32_t q_lineseries_count(void* self);
 ///
 /// @param self QLineSeries*
 ///
-libqt_list /* of QPointF* */ q_lineseries_points(void* self);
+/// @return libqt_list of QPointF*
+///
+libqt_list q_lineseries_points(void* self);
 
 /// Inherited from QXYSeries
 ///
@@ -262,7 +264,9 @@ libqt_list /* of QPointF* */ q_lineseries_points(void* self);
 ///
 /// @param self QLineSeries*
 ///
-libqt_list /* of QPointF* */ q_lineseries_points_vector(void* self);
+/// @return libqt_list of QPointF*
+///
+libqt_list q_lineseries_points_vector(void* self);
 
 /// Inherited from QXYSeries
 ///
@@ -287,9 +291,9 @@ QXYSeries* q_lineseries_operator_shift_left(void* self, void* point);
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#operator-lt-lt)
 ///
 /// @param self QLineSeries*
-/// @param points libqt_list /* of QPointF* */
+/// @param points libqt_list of QPointF*
 ///
-QXYSeries* q_lineseries_operator_shift_left2(void* self, libqt_list points);
+QXYSeries* q_lineseries_operator_shift_left2(void* self, libqt_list /* of QPointF* */ points);
 
 /// Inherited from QXYSeries
 ///
@@ -430,9 +434,9 @@ bool q_lineseries_point_labels_clipping(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#replace)
 ///
 /// @param self QLineSeries*
-/// @param points libqt_list /* of QPointF* */
+/// @param points libqt_list of QPointF*
 ///
-void q_lineseries_replace5(void* self, libqt_list points);
+void q_lineseries_replace5(void* self, libqt_list /* of QPointF* */ points);
 
 /// Inherited from QXYSeries
 ///
@@ -492,27 +496,27 @@ void q_lineseries_deselect_all_points(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#selectPoints)
 ///
 /// @param self QLineSeries*
-/// @param indexes libqt_list /* of int */
+/// @param indexes libqt_list of int
 ///
-void q_lineseries_select_points(void* self, libqt_list indexes);
+void q_lineseries_select_points(void* self, libqt_list /* of int */ indexes);
 
 /// Inherited from QXYSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#deselectPoints)
 ///
 /// @param self QLineSeries*
-/// @param indexes libqt_list /* of int */
+/// @param indexes libqt_list of int
 ///
-void q_lineseries_deselect_points(void* self, libqt_list indexes);
+void q_lineseries_deselect_points(void* self, libqt_list /* of int */ indexes);
 
 /// Inherited from QXYSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#toggleSelection)
 ///
 /// @param self QLineSeries*
-/// @param indexes libqt_list /* of int */
+/// @param indexes libqt_list of int
 ///
-void q_lineseries_toggle_selection(void* self, libqt_list indexes);
+void q_lineseries_toggle_selection(void* self, libqt_list /* of int */ indexes);
 
 /// Inherited from QXYSeries
 ///
@@ -520,7 +524,9 @@ void q_lineseries_toggle_selection(void* self, libqt_list indexes);
 ///
 /// @param self QLineSeries*
 ///
-libqt_list /* of int */ q_lineseries_selected_points(void* self);
+/// @return libqt_list of int
+///
+libqt_list q_lineseries_selected_points(void* self);
 
 /// Inherited from QXYSeries
 ///
@@ -596,7 +602,9 @@ bool q_lineseries_best_fit_line_visible(void* self);
 /// @param self QLineSeries*
 /// @param ok bool*
 ///
-libqt_pair /* tuple of double and double */ q_lineseries_best_fit_line_equation(void* self, bool* ok);
+/// @return libqt_pair tuple of double and double
+///
+libqt_pair q_lineseries_best_fit_line_equation(void* self, bool* ok);
 
 /// Inherited from QXYSeries
 ///
@@ -674,9 +682,9 @@ void q_lineseries_clear_points_configuration2(void* self, int32_t key);
 ///
 /// @param self QLineSeries*
 /// @param index int
-/// @param configuration libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */
+/// @param configuration libqt_map of enum QXYSeries__PointConfiguration to QVariant*
 ///
-void q_lineseries_set_point_configuration(void* self, int index, libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */ configuration);
+void q_lineseries_set_point_configuration(void* self, int index, libqt_map configuration);
 
 /// Inherited from QXYSeries
 ///
@@ -694,9 +702,9 @@ void q_lineseries_set_point_configuration2(void* self, int index, int32_t key, v
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#setPointsConfiguration)
 ///
 /// @param self QLineSeries*
-/// @param pointsConfiguration libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */
+/// @param pointsConfiguration libqt_map of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant*
 ///
-void q_lineseries_set_points_configuration(void* self, libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */ pointsConfiguration);
+void q_lineseries_set_points_configuration(void* self, libqt_map pointsConfiguration);
 
 /// Inherited from QXYSeries
 ///
@@ -704,7 +712,8 @@ void q_lineseries_set_points_configuration(void* self, libqt_map /* of int to li
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of enum QXYSeries__PointConfiguration to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -715,7 +724,9 @@ void q_lineseries_set_points_configuration(void* self, libqt_map /* of int to li
 /// @param self QLineSeries*
 /// @param index int
 ///
-libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */ q_lineseries_point_configuration(void* self, int index);
+/// @return libqt_map of enum QXYSeries__PointConfiguration to QVariant*
+///
+libqt_map q_lineseries_point_configuration(void* self, int index);
 
 /// Inherited from QXYSeries
 ///
@@ -723,7 +734,8 @@ libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */ q_lineseries_
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((libqt_map*)map.values)[i].keys);
 ///     free(((libqt_map*)map.values)[i].values);
@@ -734,27 +746,29 @@ libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */ q_lineseries_
 ///
 /// @param self QLineSeries*
 ///
-libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */ q_lineseries_points_configuration(void* self);
+/// @return libqt_map of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant*
+///
+libqt_map q_lineseries_points_configuration(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#sizeBy)
 ///
 /// @param self QLineSeries*
-/// @param sourceData libqt_list /* of double */
+/// @param sourceData libqt_list of double
 /// @param minSize double
 /// @param maxSize double
 ///
-void q_lineseries_size_by(void* self, libqt_list sourceData, double minSize, double maxSize);
+void q_lineseries_size_by(void* self, libqt_list /* of double */ sourceData, double minSize, double maxSize);
 
 /// Inherited from QXYSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#colorBy)
 ///
 /// @param self QLineSeries*
-/// @param sourceData libqt_list /* of double */
+/// @param sourceData libqt_list of double
 ///
-void q_lineseries_color_by(void* self, libqt_list sourceData);
+void q_lineseries_color_by(void* self, libqt_list /* of double */ sourceData);
 
 /// Inherited from QXYSeries
 ///
@@ -1193,18 +1207,18 @@ void q_lineseries_on_best_fit_line_color_changed(void* self, void (*callback)(vo
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#pointsConfigurationChanged)
 ///
 /// @param self QLineSeries*
-/// @param configuration libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */
+/// @param configuration libqt_map of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant*
 ///
-void q_lineseries_points_configuration_changed(void* self, libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */ configuration);
+void q_lineseries_points_configuration_changed(void* self, libqt_map configuration);
 
 /// Inherited from QXYSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#pointsConfigurationChanged)
 ///
 /// @param self QLineSeries*
-/// @param callback void func(QLineSeries* self, libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */ /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */)
+/// @param callback void func(QLineSeries* self, libqt_map of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant*)
 ///
-void q_lineseries_on_points_configuration_changed(void* self, void (*callback)(void*, libqt_map /* of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* */));
+void q_lineseries_on_points_configuration_changed(void* self, void (*callback)(void*, libqt_map));
 
 /// Inherited from QXYSeries
 ///
@@ -1265,10 +1279,10 @@ void q_lineseries_set_best_fit_line_visible1(void* self, bool visible);
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#colorBy)
 ///
 /// @param self QLineSeries*
-/// @param sourceData libqt_list /* of double */
+/// @param sourceData libqt_list of double
 /// @param gradient QLinearGradient*
 ///
-void q_lineseries_color_by2(void* self, libqt_list sourceData, void* gradient);
+void q_lineseries_color_by2(void* self, libqt_list /* of double */ sourceData, void* gradient);
 
 /// Inherited from QAbstractSeries
 ///
@@ -1370,7 +1384,9 @@ bool q_lineseries_detach_axis(void* self, void* axis);
 ///
 /// @param self QLineSeries*
 ///
-libqt_list /* of QAbstractAxis* */ q_lineseries_attached_axes(void* self);
+/// @return libqt_list of QAbstractAxis*
+///
+libqt_list q_lineseries_attached_axes(void* self);
 
 /// Inherited from QAbstractSeries
 ///
@@ -1584,7 +1600,9 @@ void q_lineseries_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QLineSeries*
 ///
-libqt_list /* of QObject* */ q_lineseries_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_lineseries_children(void* self);
 
 /// Inherited from QObject
 ///

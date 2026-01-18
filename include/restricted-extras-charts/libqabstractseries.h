@@ -123,7 +123,9 @@ bool q_abstractseries_detach_axis(void* self, void* axis);
 ///
 /// @param self QAbstractSeries*
 ///
-libqt_list /* of QAbstractAxis* */ q_abstractseries_attached_axes(void* self);
+/// @return libqt_list of QAbstractAxis*
+///
+libqt_list q_abstractseries_attached_axes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#show)
 ///
@@ -351,7 +353,9 @@ void q_abstractseries_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QAbstractSeries*
 ///
-libqt_list /* of QObject* */ q_abstractseries_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_abstractseries_children(void* self);
 
 /// Inherited from QObject
 ///

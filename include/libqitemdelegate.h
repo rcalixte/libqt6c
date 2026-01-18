@@ -850,7 +850,9 @@ void q_itemdelegate_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QItemDelegate*
 ///
-libqt_list /* of QObject* */ q_itemdelegate_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_itemdelegate_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1167,7 +1169,9 @@ void q_itemdelegate_on_help_event(void* self, bool (*callback)(void*, void*, voi
 ///
 /// @param self QItemDelegate*
 ///
-libqt_list /* of int */ q_itemdelegate_painting_roles(void* self);
+/// @return libqt_list of int
+///
+libqt_list q_itemdelegate_painting_roles(void* self);
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -1177,7 +1181,9 @@ libqt_list /* of int */ q_itemdelegate_painting_roles(void* self);
 ///
 /// @param self QItemDelegate*
 ///
-libqt_list /* of int */ q_itemdelegate_qbase_painting_roles(void* self);
+/// @return libqt_list of int
+///
+libqt_list q_itemdelegate_qbase_painting_roles(void* self);
 
 /// Inherited from QAbstractItemDelegate
 ///

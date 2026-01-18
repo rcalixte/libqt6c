@@ -32,7 +32,7 @@ void k_nscore__resultsstream_fetch_more(void* self) {
     KNSCore__ResultsStream_FetchMore((KNSCore__ResultsStream*)self);
 }
 
-void k_nscore__resultsstream_entries_found(void* self, libqt_list entries) {
+void k_nscore__resultsstream_entries_found(void* self, libqt_list /* of KNSCore__Entry* */ entries) {
     KNSCore__ResultsStream_EntriesFound((KNSCore__ResultsStream*)self, entries);
 }
 
@@ -175,7 +175,7 @@ const char** k_nscore__resultsstream_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__resultsstream_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__resultsstream_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

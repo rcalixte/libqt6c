@@ -319,7 +319,9 @@ void k_coreurlnavigator_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KCoreUrlNavigator*
 ///
-libqt_list /* of QObject* */ k_coreurlnavigator_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_coreurlnavigator_children(void* self);
 
 /// Inherited from QObject
 ///

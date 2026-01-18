@@ -62,7 +62,7 @@ void k_shellcompletion_post_process_matches(void* self, const char* matches[stat
     size_t matches_len = libqt_strv_length(matches);
     libqt_string* matches_qstr = (libqt_string*)malloc(matches_len * sizeof(libqt_string));
     if (matches_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_post_process_matches");
+        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_post_process_matches\n");
         abort();
     }
     for (size_t i = 0; i < matches_len; ++i) {
@@ -81,7 +81,7 @@ void k_shellcompletion_qbase_post_process_matches(void* self, const char* matche
     size_t matches_len = libqt_strv_length(matches);
     libqt_string* matches_qstr = (libqt_string*)malloc(matches_len * sizeof(libqt_string));
     if (matches_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_post_process_matches");
+        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_post_process_matches\n");
         abort();
     }
     for (size_t i = 0; i < matches_len; ++i) {
@@ -135,7 +135,7 @@ void k_shellcompletion_set_mime_type_filters(void* self, const char* mimeTypes[s
     size_t mimeTypes_len = libqt_strv_length(mimeTypes);
     libqt_string* mimeTypes_qstr = (libqt_string*)malloc(mimeTypes_len * sizeof(libqt_string));
     if (mimeTypes_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_set_mime_type_filters");
+        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_set_mime_type_filters\n");
         abort();
     }
     for (size_t i = 0; i < mimeTypes_len; ++i) {
@@ -151,7 +151,7 @@ const char** k_shellcompletion_mime_type_filters(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_mime_type_filters");
+        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_mime_type_filters\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -177,7 +177,7 @@ const char** k_shellcompletion_substring_completion(void* self, const char* stri
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_substring_completion");
+        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_substring_completion\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -196,7 +196,7 @@ const char** k_shellcompletion_items(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_items\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -235,7 +235,7 @@ const char** k_shellcompletion_all_matches(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_all_matches");
+        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_all_matches\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -254,7 +254,7 @@ const char** k_shellcompletion_all_matches2(void* self, const char* stringVal) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_all_matches2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_all_matches2\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -302,7 +302,7 @@ void k_shellcompletion_insert_items(void* self, const char* items[static 1]) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_insert_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_insert_items\n");
         abort();
     }
     for (size_t i = 0; i < items_len; ++i) {
@@ -337,7 +337,7 @@ void k_shellcompletion_matches(void* self, const char* matchlist[static 1]) {
     size_t matchlist_len = libqt_strv_length(matchlist);
     libqt_string* matchlist_qstr = (libqt_string*)malloc(matchlist_len * sizeof(libqt_string));
     if (matchlist_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_matches");
+        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_matches\n");
         abort();
     }
     for (size_t i = 0; i < matchlist_len; ++i) {
@@ -465,7 +465,7 @@ const char** k_shellcompletion_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -721,7 +721,7 @@ void k_shellcompletion_set_items(void* self, const char* itemList[static 1]) {
     size_t itemList_len = libqt_strv_length(itemList);
     libqt_string* itemList_qstr = (libqt_string*)malloc(itemList_len * sizeof(libqt_string));
     if (itemList_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_set_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_set_items\n");
         abort();
     }
     for (size_t i = 0; i < itemList_len; ++i) {
@@ -736,7 +736,7 @@ void k_shellcompletion_qbase_set_items(void* self, const char* itemList[static 1
     size_t itemList_len = libqt_strv_length(itemList);
     libqt_string* itemList_qstr = (libqt_string*)malloc(itemList_len * sizeof(libqt_string));
     if (itemList_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_set_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_shellcompletion_set_items\n");
         abort();
     }
     for (size_t i = 0; i < itemList_len; ++i) {

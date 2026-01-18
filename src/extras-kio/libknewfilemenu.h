@@ -414,7 +414,9 @@ void k_newfilemenu_release_widget(void* self, void* widget);
 ///
 /// @param self KNewFileMenu*
 ///
-libqt_list /* of QObject* */ k_newfilemenu_associated_objects(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_newfilemenu_associated_objects(void* self);
 
 /// Inherited from QAction
 ///
@@ -603,9 +605,9 @@ QKeySequence* k_newfilemenu_shortcut(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
 ///
 /// @param self KNewFileMenu*
-/// @param shortcuts libqt_list /* of QKeySequence* */
+/// @param shortcuts libqt_list of QKeySequence*
 ///
-void k_newfilemenu_set_shortcuts(void* self, libqt_list shortcuts);
+void k_newfilemenu_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts);
 
 /// Inherited from QAction
 ///
@@ -622,7 +624,9 @@ void k_newfilemenu_set_shortcuts2(void* self, int32_t shortcuts);
 ///
 /// @param self KNewFileMenu*
 ///
-libqt_list /* of QKeySequence* */ k_newfilemenu_shortcuts(void* self);
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_newfilemenu_shortcuts(void* self);
 
 /// Inherited from QAction
 ///
@@ -1132,7 +1136,9 @@ void k_newfilemenu_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KNewFileMenu*
 ///
-libqt_list /* of QObject* */ k_newfilemenu_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_newfilemenu_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1674,7 +1680,9 @@ void k_newfilemenu_on_disconnect_notify(void* self, void (*callback)(void*, void
 ///
 /// @param self KNewFileMenu*
 ///
-libqt_list /* of QWidget* */ k_newfilemenu_created_widgets(void* self);
+/// @return libqt_list of QWidget*
+///
+libqt_list k_newfilemenu_created_widgets(void* self);
 
 /// Inherited from QWidgetAction
 ///
@@ -1684,7 +1692,9 @@ libqt_list /* of QWidget* */ k_newfilemenu_created_widgets(void* self);
 ///
 /// @param self KNewFileMenu*
 ///
-libqt_list /* of QWidget* */ k_newfilemenu_qbase_created_widgets(void* self);
+/// @return libqt_list of QWidget*
+///
+libqt_list k_newfilemenu_qbase_created_widgets(void* self);
 
 /// Inherited from QWidgetAction
 ///

@@ -104,7 +104,9 @@ uint16_t k_country_country(void* self);
 ///
 /// @param self KCountry*
 ///
-libqt_list /* of const char* */ k_country_time_zone_ids(void* self);
+/// @return libqt_list of const char*
+///
+libqt_list k_country_time_zone_ids(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountry.html#currencyCode)
 ///
@@ -118,7 +120,9 @@ const char* k_country_currency_code(void* self);
 ///
 /// @param self KCountry*
 ///
-libqt_list /* of KCountrySubdivision* */ k_country_subdivisions(void* self);
+/// @return libqt_list of KCountrySubdivision*
+///
+libqt_list k_country_subdivisions(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcountry.html#fromAlpha2)
 ///
@@ -147,7 +151,9 @@ KCountry* k_country_from_q_locale(uint16_t country);
 
 /// [Upstream resources](https://api.kde.org/kcountry.html#allCountries)
 ///
-libqt_list /* of KCountry* */ k_country_all_countries();
+/// @return libqt_list of KCountry*
+///
+libqt_list k_country_all_countries();
 
 /// [Upstream resources](https://api.kde.org/kcountry.html#dtor.KCountry)
 ///

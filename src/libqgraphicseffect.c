@@ -333,7 +333,7 @@ const char** q_graphicseffect_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_graphicseffect_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_graphicseffect_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -761,7 +761,7 @@ const char** q_graphicscolorizeeffect_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_graphicscolorizeeffect_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_graphicscolorizeeffect_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1285,7 +1285,7 @@ const char** q_graphicsblureffect_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_graphicsblureffect_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_graphicsblureffect_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -1837,7 +1837,7 @@ const char** q_graphicsdropshadoweffect_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_graphicsdropshadoweffect_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_graphicsdropshadoweffect_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2337,7 +2337,7 @@ const char** q_graphicsopacityeffect_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_graphicsopacityeffect_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_graphicsopacityeffect_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

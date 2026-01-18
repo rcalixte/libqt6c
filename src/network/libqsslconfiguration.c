@@ -64,7 +64,7 @@ libqt_list /* of QSslCertificate* */ q_sslconfiguration_local_certificate_chain(
     return _arr;
 }
 
-void q_sslconfiguration_set_local_certificate_chain(void* self, libqt_list localChain) {
+void q_sslconfiguration_set_local_certificate_chain(void* self, libqt_list /* of QSslCertificate* */ localChain) {
     QSslConfiguration_SetLocalCertificateChain((QSslConfiguration*)self, localChain);
 }
 
@@ -106,7 +106,7 @@ libqt_list /* of QSslCipher* */ q_sslconfiguration_ciphers(void* self) {
     return _arr;
 }
 
-void q_sslconfiguration_set_ciphers(void* self, libqt_list ciphers) {
+void q_sslconfiguration_set_ciphers(void* self, libqt_list /* of QSslCipher* */ ciphers) {
     QSslConfiguration_SetCiphers((QSslConfiguration*)self, ciphers);
 }
 
@@ -124,7 +124,7 @@ libqt_list /* of QSslCertificate* */ q_sslconfiguration_ca_certificates(void* se
     return _arr;
 }
 
-void q_sslconfiguration_set_ca_certificates(void* self, libqt_list certificates) {
+void q_sslconfiguration_set_ca_certificates(void* self, libqt_list /* of QSslCertificate* */ certificates) {
     QSslConfiguration_SetCaCertificates((QSslConfiguration*)self, certificates);
 }
 
@@ -136,7 +136,7 @@ void q_sslconfiguration_add_ca_certificate(void* self, void* certificate) {
     QSslConfiguration_AddCaCertificate((QSslConfiguration*)self, (QSslCertificate*)certificate);
 }
 
-void q_sslconfiguration_add_ca_certificates2(void* self, libqt_list certificates) {
+void q_sslconfiguration_add_ca_certificates2(void* self, libqt_list /* of QSslCertificate* */ certificates) {
     QSslConfiguration_AddCaCertificates2((QSslConfiguration*)self, certificates);
 }
 
@@ -177,7 +177,7 @@ libqt_list /* of QSslEllipticCurve* */ q_sslconfiguration_elliptic_curves(void* 
     return _arr;
 }
 
-void q_sslconfiguration_set_elliptic_curves(void* self, libqt_list curves) {
+void q_sslconfiguration_set_elliptic_curves(void* self, libqt_list /* of QSslEllipticCurve* */ curves) {
     QSslConfiguration_SetEllipticCurves((QSslConfiguration*)self, curves);
 }
 
@@ -213,7 +213,7 @@ libqt_map /* of char* to QVariant* */ q_sslconfiguration_backend_configuration(v
     libqt_string* _out_keys = (libqt_string*)_out.keys;
     char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string keys in q_sslconfiguration_backend_configuration");
+        fprintf(stderr, "Failed to allocate memory for map string keys in q_sslconfiguration_backend_configuration\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
@@ -223,7 +223,7 @@ libqt_map /* of char* to QVariant* */ q_sslconfiguration_backend_configuration(v
                 libqt_free(_ret_keys[j]);
             }
             free(_ret_keys);
-            fprintf(stderr, "Failed to allocate memory for map keys in q_sslconfiguration_backend_configuration");
+            fprintf(stderr, "Failed to allocate memory for map keys in q_sslconfiguration_backend_configuration\n");
             abort();
         }
         memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
@@ -298,7 +298,7 @@ void q_sslconfiguration_set_allowed_next_protocols(void* self, const char* proto
     size_t protocols_len = libqt_strv_length(protocols);
     libqt_string* protocols_qstr = (libqt_string*)malloc(protocols_len * sizeof(libqt_string));
     if (protocols_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_sslconfiguration_set_allowed_next_protocols");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sslconfiguration_set_allowed_next_protocols\n");
         abort();
     }
     for (size_t i = 0; i < protocols_len; ++i) {
@@ -314,7 +314,7 @@ const char** q_sslconfiguration_allowed_next_protocols(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_sslconfiguration_allowed_next_protocols");
+        fprintf(stderr, "Failed to allocate memory for string list in q_sslconfiguration_allowed_next_protocols\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

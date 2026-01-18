@@ -125,9 +125,9 @@ void q_boxset_append(void* self, double value);
 /// [Upstream resources](https://doc.qt.io/qt-6/qboxset-qtcharts.html#append)
 ///
 /// @param self QBoxSet*
-/// @param values libqt_list /* of double */
+/// @param values libqt_list of double
 ///
-void q_boxset_append2(void* self, libqt_list values);
+void q_boxset_append2(void* self, libqt_list /* of double */ values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qboxset-qtcharts.html#clear)
 ///
@@ -472,7 +472,9 @@ void q_boxset_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QBoxSet*
 ///
-libqt_list /* of QObject* */ q_boxset_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_boxset_children(void* self);
 
 /// Inherited from QObject
 ///

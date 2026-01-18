@@ -93,15 +93,17 @@ double q_georoutesegment_distance(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutesegment.html#setPath)
 ///
 /// @param self QGeoRouteSegment*
-/// @param path libqt_list /* of QGeoCoordinate* */
+/// @param path libqt_list of QGeoCoordinate*
 ///
-void q_georoutesegment_set_path(void* self, libqt_list path);
+void q_georoutesegment_set_path(void* self, libqt_list /* of QGeoCoordinate* */ path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutesegment.html#path)
 ///
 /// @param self QGeoRouteSegment*
 ///
-libqt_list /* of QGeoCoordinate* */ q_georoutesegment_path(void* self);
+/// @return libqt_list of QGeoCoordinate*
+///
+libqt_list q_georoutesegment_path(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutesegment.html#setManeuver)
 ///

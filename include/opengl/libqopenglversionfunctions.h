@@ -55,14 +55,16 @@ QOpenGLVersionStatus* q_openglversionstatus_new5(void* param1);
 ///
 /// @param self QOpenGLVersionStatus*
 ///
-libqt_pair /* tuple of int and int */ q_openglversionstatus_version(void* self);
+/// @return libqt_pair tuple of int and int
+///
+libqt_pair q_openglversionstatus_version(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionstatus.html#version-var)
 ///
 /// @param self QOpenGLVersionStatus*
-/// @param version libqt_pair /* tuple of int and int */
+/// @param version libqt_pair tuple of int and int
 ///
-void q_openglversionstatus_set_version(void* self, libqt_pair /* tuple of int and int */ version);
+void q_openglversionstatus_set_version(void* self, libqt_pair version);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionstatus.html#status-var)
 ///

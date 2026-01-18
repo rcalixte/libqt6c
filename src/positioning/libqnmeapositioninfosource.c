@@ -89,15 +89,15 @@ QGeoPositionInfo* q_nmeapositioninfosource_qbase_last_known_position(void* self,
     return QNmeaPositionInfoSource_QBaseLastKnownPosition((QNmeaPositionInfoSource*)self, fromSatellitePositioningMethodsOnly);
 }
 
-int64_t q_nmeapositioninfosource_supported_positioning_methods(void* self) {
+int32_t q_nmeapositioninfosource_supported_positioning_methods(void* self) {
     return QNmeaPositionInfoSource_SupportedPositioningMethods((QNmeaPositionInfoSource*)self);
 }
 
-void q_nmeapositioninfosource_on_supported_positioning_methods(void* self, int64_t (*callback)()) {
+void q_nmeapositioninfosource_on_supported_positioning_methods(void* self, int32_t (*callback)()) {
     QNmeaPositionInfoSource_OnSupportedPositioningMethods((QNmeaPositionInfoSource*)self, (intptr_t)callback);
 }
 
-int64_t q_nmeapositioninfosource_qbase_supported_positioning_methods(void* self) {
+int32_t q_nmeapositioninfosource_qbase_supported_positioning_methods(void* self) {
     return QNmeaPositionInfoSource_QBaseSupportedPositioningMethods((QNmeaPositionInfoSource*)self);
 }
 
@@ -215,7 +215,7 @@ int32_t q_nmeapositioninfosource_update_interval(void* self) {
     return QGeoPositionInfoSource_UpdateInterval((QGeoPositionInfoSource*)self);
 }
 
-int64_t q_nmeapositioninfosource_preferred_positioning_methods(void* self) {
+int32_t q_nmeapositioninfosource_preferred_positioning_methods(void* self) {
     return QGeoPositionInfoSource_PreferredPositioningMethods((QGeoPositionInfoSource*)self);
 }
 
@@ -297,7 +297,7 @@ const char** q_nmeapositioninfosource_available_sources() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_nmeapositioninfosource_available_sources");
+        fprintf(stderr, "Failed to allocate memory for string list in q_nmeapositioninfosource_available_sources\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -440,7 +440,7 @@ const char** q_nmeapositioninfosource_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_nmeapositioninfosource_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_nmeapositioninfosource_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -506,15 +506,15 @@ void q_nmeapositioninfosource_on_destroyed1(void* self, void (*callback)(void*, 
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_nmeapositioninfosource_set_preferred_positioning_methods(void* self, int64_t methods) {
+void q_nmeapositioninfosource_set_preferred_positioning_methods(void* self, int32_t methods) {
     QNmeaPositionInfoSource_SetPreferredPositioningMethods((QNmeaPositionInfoSource*)self, methods);
 }
 
-void q_nmeapositioninfosource_qbase_set_preferred_positioning_methods(void* self, int64_t methods) {
+void q_nmeapositioninfosource_qbase_set_preferred_positioning_methods(void* self, int32_t methods) {
     QNmeaPositionInfoSource_QBaseSetPreferredPositioningMethods((QNmeaPositionInfoSource*)self, methods);
 }
 
-void q_nmeapositioninfosource_on_set_preferred_positioning_methods(void* self, void (*callback)(void*, int64_t)) {
+void q_nmeapositioninfosource_on_set_preferred_positioning_methods(void* self, void (*callback)(void*, int32_t)) {
     QNmeaPositionInfoSource_OnSetPreferredPositioningMethods((QNmeaPositionInfoSource*)self, (intptr_t)callback);
 }
 

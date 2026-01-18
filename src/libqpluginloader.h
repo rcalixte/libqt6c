@@ -98,11 +98,15 @@ QJsonObject* q_pluginloader_meta_data(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpluginloader.html#staticInstances)
 ///
-libqt_list /* of QObject* */ q_pluginloader_static_instances();
+/// @return libqt_list of QObject*
+///
+libqt_list q_pluginloader_static_instances();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpluginloader.html#staticPlugins)
 ///
-libqt_list /* of QStaticPlugin* */ q_pluginloader_static_plugins();
+/// @return libqt_list of QStaticPlugin*
+///
+libqt_list q_pluginloader_static_plugins();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpluginloader.html#load)
 ///
@@ -289,7 +293,9 @@ void q_pluginloader_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QPluginLoader*
 ///
-libqt_list /* of QObject* */ q_pluginloader_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_pluginloader_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -95,9 +95,9 @@ void q_barset_append(void* self, double value);
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarset-qtcharts.html#append)
 ///
 /// @param self QBarSet*
-/// @param values libqt_list /* of double */
+/// @param values libqt_list of double
 ///
-void q_barset_append2(void* self, libqt_list values);
+void q_barset_append2(void* self, libqt_list /* of double */ values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarset-qtcharts.html#operator-lt-lt)
 ///
@@ -303,29 +303,31 @@ void q_barset_deselect_all_bars(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarset-qtcharts.html#selectBars)
 ///
 /// @param self QBarSet*
-/// @param indexes libqt_list /* of int */
+/// @param indexes libqt_list of int
 ///
-void q_barset_select_bars(void* self, libqt_list indexes);
+void q_barset_select_bars(void* self, libqt_list /* of int */ indexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarset-qtcharts.html#deselectBars)
 ///
 /// @param self QBarSet*
-/// @param indexes libqt_list /* of int */
+/// @param indexes libqt_list of int
 ///
-void q_barset_deselect_bars(void* self, libqt_list indexes);
+void q_barset_deselect_bars(void* self, libqt_list /* of int */ indexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarset-qtcharts.html#toggleSelection)
 ///
 /// @param self QBarSet*
-/// @param indexes libqt_list /* of int */
+/// @param indexes libqt_list of int
 ///
-void q_barset_toggle_selection(void* self, libqt_list indexes);
+void q_barset_toggle_selection(void* self, libqt_list /* of int */ indexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarset-qtcharts.html#selectedBars)
 ///
 /// @param self QBarSet*
 ///
-libqt_list /* of int */ q_barset_selected_bars(void* self);
+/// @return libqt_list of int
+///
+libqt_list q_barset_selected_bars(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarset-qtcharts.html#clicked)
 ///
@@ -566,16 +568,16 @@ void q_barset_on_value_changed(void* self, void (*callback)(void*, int));
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarset-qtcharts.html#selectedBarsChanged)
 ///
 /// @param self QBarSet*
-/// @param indexes libqt_list /* of int */
+/// @param indexes libqt_list of int
 ///
-void q_barset_selected_bars_changed(void* self, libqt_list indexes);
+void q_barset_selected_bars_changed(void* self, libqt_list /* of int */ indexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarset-qtcharts.html#selectedBarsChanged)
 ///
 /// @param self QBarSet*
-/// @param callback void func(QBarSet* self, int* /* of int */)
+/// @param callback void func(QBarSet* self, int* )
 ///
-void q_barset_on_selected_bars_changed(void* self, void (*callback)(void*, int*));
+void q_barset_on_selected_bars_changed(void* self, void (*callback)(void*, libqt_list /* of int */));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -714,7 +716,9 @@ void q_barset_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QBarSet*
 ///
-libqt_list /* of QObject* */ q_barset_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_barset_children(void* self);
 
 /// Inherited from QObject
 ///

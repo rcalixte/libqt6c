@@ -55,11 +55,11 @@ void k_io__jobuidelegate_unregister_window(void* window);
 /// [Upstream resources](https://api.kde.org/kio-jobuidelegate.html#askDeleteConfirmation)
 ///
 /// @param self KIO__JobUiDelegate*
-/// @param urls libqt_list /* of QUrl* */
+/// @param urls libqt_list of QUrl*
 /// @param deletionType enum KIO__JobUiDelegateExtension__DeletionType
 /// @param confirmationType enum KIO__JobUiDelegateExtension__ConfirmationType
 ///
-bool k_io__jobuidelegate_ask_delete_confirmation(void* self, libqt_list urls, int32_t deletionType, int32_t confirmationType);
+bool k_io__jobuidelegate_ask_delete_confirmation(void* self, libqt_list /* of QUrl* */ urls, int32_t deletionType, int32_t confirmationType);
 
 /// [Upstream resources](https://api.kde.org/kio-jobuidelegate.html#updateUrlInClipboard)
 ///
@@ -293,7 +293,9 @@ void k_io__jobuidelegate_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KIO__JobUiDelegate*
 ///
-libqt_list /* of QObject* */ k_io__jobuidelegate_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_io__jobuidelegate_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -376,7 +376,9 @@ const char** q_pointingdevice_seat_names();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdevice.html#devices)
 ///
-libqt_list /* of QInputDevice* */ q_pointingdevice_devices();
+/// @return libqt_list of QInputDevice*
+///
+libqt_list q_pointingdevice_devices();
 
 /// Inherited from QInputDevice
 ///
@@ -520,7 +522,9 @@ void q_pointingdevice_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QPointingDevice*
 ///
-libqt_list /* of QObject* */ q_pointingdevice_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_pointingdevice_children(void* self);
 
 /// Inherited from QObject
 ///

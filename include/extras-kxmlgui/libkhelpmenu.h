@@ -309,7 +309,9 @@ void k_helpmenu_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KHelpMenu*
 ///
-libqt_list /* of QObject* */ k_helpmenu_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_helpmenu_children(void* self);
 
 /// Inherited from QObject
 ///

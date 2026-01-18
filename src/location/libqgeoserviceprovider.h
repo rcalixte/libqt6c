@@ -24,19 +24,19 @@ QGeoServiceProvider* q_geoserviceprovider_new(const char* providerName);
 /// q_geoserviceprovider_new2 constructs a new QGeoServiceProvider object.
 ///
 /// @param providerName const char*
-/// @param parameters libqt_map /* of const char* to QVariant* */
+/// @param parameters libqt_map of const char* to QVariant*
 ///
-QGeoServiceProvider* q_geoserviceprovider_new2(const char* providerName, libqt_map /* of const char* to QVariant* */ parameters);
+QGeoServiceProvider* q_geoserviceprovider_new2(const char* providerName, libqt_map parameters);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoserviceprovider.html)
 
 /// q_geoserviceprovider_new3 constructs a new QGeoServiceProvider object.
 ///
 /// @param providerName const char*
-/// @param parameters libqt_map /* of const char* to QVariant* */
+/// @param parameters libqt_map of const char* to QVariant*
 /// @param allowExperimental bool
 ///
-QGeoServiceProvider* q_geoserviceprovider_new3(const char* providerName, libqt_map /* of const char* to QVariant* */ parameters, bool allowExperimental);
+QGeoServiceProvider* q_geoserviceprovider_new3(const char* providerName, libqt_map parameters, bool allowExperimental);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -243,9 +243,9 @@ const char* q_geoserviceprovider_navigation_error_string(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoserviceprovider.html#setParameters)
 ///
 /// @param self QGeoServiceProvider*
-/// @param parameters libqt_map /* of const char* to QVariant* */
+/// @param parameters libqt_map of const char* to QVariant*
 ///
-void q_geoserviceprovider_set_parameters(void* self, libqt_map /* of const char* to QVariant* */ parameters);
+void q_geoserviceprovider_set_parameters(void* self, libqt_map parameters);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoserviceprovider.html#setLocale)
 ///
@@ -390,7 +390,9 @@ void q_geoserviceprovider_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QGeoServiceProvider*
 ///
-libqt_list /* of QObject* */ q_geoserviceprovider_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_geoserviceprovider_children(void* self);
 
 /// Inherited from QObject
 ///

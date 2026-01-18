@@ -166,11 +166,11 @@ const char* q_graphicsvideoitem_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_graphicsvideoitem_grab_gesture(void* self, int64_t type) {
+void q_graphicsvideoitem_grab_gesture(void* self, int32_t type) {
     QGraphicsObject_GrabGesture((QGraphicsObject*)self, type);
 }
 
-void q_graphicsvideoitem_ungrab_gesture(void* self, int64_t type) {
+void q_graphicsvideoitem_ungrab_gesture(void* self, int32_t type) {
     QGraphicsObject_UngrabGesture((QGraphicsObject*)self, type);
 }
 
@@ -270,7 +270,7 @@ void q_graphicsvideoitem_on_height_changed(void* self, void (*callback)(void*)) 
     QGraphicsObject_Connect_HeightChanged((QGraphicsObject*)self, (intptr_t)callback);
 }
 
-void q_graphicsvideoitem_grab_gesture2(void* self, int64_t type, int32_t flags) {
+void q_graphicsvideoitem_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QGraphicsObject_GrabGesture2((QGraphicsObject*)self, type, flags);
 }
 
@@ -379,7 +379,7 @@ const char** q_graphicsvideoitem_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_graphicsvideoitem_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_graphicsvideoitem_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -637,11 +637,11 @@ void q_graphicsvideoitem_set_graphics_effect(void* self, void* effect) {
     QGraphicsItem_SetGraphicsEffect((QGraphicsItem*)self, (QGraphicsEffect*)effect);
 }
 
-int64_t q_graphicsvideoitem_accepted_mouse_buttons(void* self) {
+int32_t q_graphicsvideoitem_accepted_mouse_buttons(void* self) {
     return QGraphicsItem_AcceptedMouseButtons((QGraphicsItem*)self);
 }
 
-void q_graphicsvideoitem_set_accepted_mouse_buttons(void* self, int64_t buttons) {
+void q_graphicsvideoitem_set_accepted_mouse_buttons(void* self, int32_t buttons) {
     QGraphicsItem_SetAcceptedMouseButtons((QGraphicsItem*)self, buttons);
 }
 
@@ -818,7 +818,7 @@ libqt_list /* of QGraphicsTransform* */ q_graphicsvideoitem_transformations(void
     return _arr;
 }
 
-void q_graphicsvideoitem_set_transformations(void* self, libqt_list transformations) {
+void q_graphicsvideoitem_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations) {
     QGraphicsItem_SetTransformations((QGraphicsItem*)self, transformations);
 }
 
@@ -1039,11 +1039,11 @@ void q_graphicsvideoitem_set_data(void* self, int key, void* value) {
     QGraphicsItem_SetData((QGraphicsItem*)self, key, (QVariant*)value);
 }
 
-int64_t q_graphicsvideoitem_input_method_hints(void* self) {
+int32_t q_graphicsvideoitem_input_method_hints(void* self) {
     return QGraphicsItem_InputMethodHints((QGraphicsItem*)self);
 }
 
-void q_graphicsvideoitem_set_input_method_hints(void* self, int64_t hints) {
+void q_graphicsvideoitem_set_input_method_hints(void* self, int32_t hints) {
     QGraphicsItem_SetInputMethodHints((QGraphicsItem*)self, hints);
 }
 
@@ -1508,39 +1508,39 @@ void q_graphicsvideoitem_on_input_method_event(void* self, void (*callback)(void
     QGraphicsVideoItem_OnInputMethodEvent((QGraphicsVideoItem*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicsvideoitem_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicsvideoitem_input_method_query(void* self, int32_t query) {
     return QGraphicsVideoItem_InputMethodQuery((QGraphicsVideoItem*)self, query);
 }
 
-QVariant* q_graphicsvideoitem_qbase_input_method_query(void* self, int64_t query) {
+QVariant* q_graphicsvideoitem_qbase_input_method_query(void* self, int32_t query) {
     return QGraphicsVideoItem_QBaseInputMethodQuery((QGraphicsVideoItem*)self, query);
 }
 
-void q_graphicsvideoitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void q_graphicsvideoitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     QGraphicsVideoItem_OnInputMethodQuery((QGraphicsVideoItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicsvideoitem_supports_extension(void* self, int64_t extension) {
+bool q_graphicsvideoitem_supports_extension(void* self, int32_t extension) {
     return QGraphicsVideoItem_SupportsExtension((QGraphicsVideoItem*)self, extension);
 }
 
-bool q_graphicsvideoitem_qbase_supports_extension(void* self, int64_t extension) {
+bool q_graphicsvideoitem_qbase_supports_extension(void* self, int32_t extension) {
     return QGraphicsVideoItem_QBaseSupportsExtension((QGraphicsVideoItem*)self, extension);
 }
 
-void q_graphicsvideoitem_on_supports_extension(void* self, bool (*callback)(void*, int64_t)) {
+void q_graphicsvideoitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t)) {
     QGraphicsVideoItem_OnSupportsExtension((QGraphicsVideoItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsvideoitem_set_extension(void* self, int64_t extension, void* variant) {
+void q_graphicsvideoitem_set_extension(void* self, int32_t extension, void* variant) {
     QGraphicsVideoItem_SetExtension((QGraphicsVideoItem*)self, extension, (QVariant*)variant);
 }
 
-void q_graphicsvideoitem_qbase_set_extension(void* self, int64_t extension, void* variant) {
+void q_graphicsvideoitem_qbase_set_extension(void* self, int32_t extension, void* variant) {
     QGraphicsVideoItem_QBaseSetExtension((QGraphicsVideoItem*)self, extension, (QVariant*)variant);
 }
 
-void q_graphicsvideoitem_on_set_extension(void* self, void (*callback)(void*, int64_t, void*)) {
+void q_graphicsvideoitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*)) {
     QGraphicsVideoItem_OnSetExtension((QGraphicsVideoItem*)self, (intptr_t)callback);
 }
 

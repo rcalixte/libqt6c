@@ -28,7 +28,7 @@ void k_recentdocument_add(void* url) {
     KRecentDocument_Add((QUrl*)url);
 }
 
-void k_recentdocument_add2(void* url, libqt_list groups) {
+void k_recentdocument_add2(void* url, libqt_list /* of enum KRecentDocument__RecentDocumentGroup */ groups) {
     KRecentDocument_Add2((QUrl*)url, groups);
 }
 
@@ -36,7 +36,7 @@ void k_recentdocument_add3(void* url, const char* desktopEntryName) {
     KRecentDocument_Add3((QUrl*)url, qstring(desktopEntryName));
 }
 
-void k_recentdocument_add4(void* url, const char* desktopEntryName, libqt_list groups) {
+void k_recentdocument_add4(void* url, const char* desktopEntryName, libqt_list /* of enum KRecentDocument__RecentDocumentGroup */ groups) {
     KRecentDocument_Add4((QUrl*)url, qstring(desktopEntryName), groups);
 }
 

@@ -200,9 +200,9 @@ void k_passworddialog_set_password(void* self, const char* password);
 /// [Upstream resources](https://api.kde.org/kpassworddialog.html#setKnownLogins)
 ///
 /// @param self KPasswordDialog*
-/// @param knownLogins libqt_map /* of const char* to const char* */
+/// @param knownLogins libqt_map of const char* to const char*
 ///
-void k_passworddialog_set_known_logins(void* self, libqt_map /* of const char* to const char* */ knownLogins);
+void k_passworddialog_set_known_logins(void* self, libqt_map knownLogins);
 
 /// [Upstream resources](https://api.kde.org/kpassworddialog.html#accept)
 ///
@@ -1272,7 +1272,7 @@ void k_passworddialog_set_graphics_effect(void* self, void* effect);
 /// @param self KPasswordDialog*
 /// @param type enum Qt__GestureType
 ///
-void k_passworddialog_grab_gesture(void* self, int64_t type);
+void k_passworddialog_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -1281,7 +1281,7 @@ void k_passworddialog_grab_gesture(void* self, int64_t type);
 /// @param self KPasswordDialog*
 /// @param type enum Qt__GestureType
 ///
-void k_passworddialog_ungrab_gesture(void* self, int64_t type);
+void k_passworddialog_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2270,7 +2270,7 @@ void k_passworddialog_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void k_passworddialog_set_parent2(void* self, void* parent, int64_t f);
+void k_passworddialog_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -2348,9 +2348,9 @@ void k_passworddialog_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self KPasswordDialog*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_passworddialog_add_actions(void* self, libqt_list actions);
+void k_passworddialog_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2358,9 +2358,9 @@ void k_passworddialog_add_actions(void* self, libqt_list actions);
 ///
 /// @param self KPasswordDialog*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_passworddialog_insert_actions(void* self, void* before, libqt_list actions);
+void k_passworddialog_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2387,7 +2387,9 @@ void k_passworddialog_remove_action(void* self, void* action);
 ///
 /// @param self KPasswordDialog*
 ///
-libqt_list /* of QAction* */ k_passworddialog_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_passworddialog_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2444,7 +2446,7 @@ QWidget* k_passworddialog_parent_widget(void* self);
 /// @param self KPasswordDialog*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_passworddialog_set_window_flags(void* self, int64_t type);
+void k_passworddialog_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2454,7 +2456,7 @@ void k_passworddialog_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t k_passworddialog_window_flags(void* self);
+int32_t k_passworddialog_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2463,7 +2465,7 @@ int64_t k_passworddialog_window_flags(void* self);
 /// @param self KPasswordDialog*
 /// @param param1 enum Qt__WindowType
 ///
-void k_passworddialog_set_window_flag(void* self, int64_t param1);
+void k_passworddialog_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2472,7 +2474,7 @@ void k_passworddialog_set_window_flag(void* self, int64_t param1);
 /// @param self KPasswordDialog*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_passworddialog_override_window_flags(void* self, int64_t type);
+void k_passworddialog_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2482,7 +2484,7 @@ void k_passworddialog_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t k_passworddialog_window_type(void* self);
+int32_t k_passworddialog_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2693,7 +2695,7 @@ void k_passworddialog_on_custom_context_menu_requested(void* self, void (*callba
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t k_passworddialog_input_method_hints(void* self);
+int32_t k_passworddialog_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2702,7 +2704,7 @@ int64_t k_passworddialog_input_method_hints(void* self);
 /// @param self KPasswordDialog*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void k_passworddialog_set_input_method_hints(void* self, int64_t hints);
+void k_passworddialog_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -2787,7 +2789,7 @@ QPixmap* k_passworddialog_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void k_passworddialog_grab_gesture2(void* self, int64_t type, int32_t flags);
+void k_passworddialog_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -2827,7 +2829,7 @@ void k_passworddialog_set_shortcut_auto_repeat2(void* self, int id, bool enable)
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void k_passworddialog_set_window_flag2(void* self, int64_t param1, bool on);
+void k_passworddialog_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -2856,7 +2858,7 @@ QWidget* k_passworddialog_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* k_passworddialog_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* k_passworddialog_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -2968,7 +2970,9 @@ void k_passworddialog_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KPasswordDialog*
 ///
-libqt_list /* of QObject* */ k_passworddialog_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_passworddialog_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4746,7 +4750,7 @@ void k_passworddialog_on_input_method_event(void* self, void (*callback)(void*, 
 /// @param self KPasswordDialog*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_passworddialog_input_method_query(void* self, int64_t param1);
+QVariant* k_passworddialog_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4757,7 +4761,7 @@ QVariant* k_passworddialog_input_method_query(void* self, int64_t param1);
 /// @param self KPasswordDialog*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_passworddialog_qbase_input_method_query(void* self, int64_t param1);
+QVariant* k_passworddialog_qbase_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4768,7 +4772,7 @@ QVariant* k_passworddialog_qbase_input_method_query(void* self, int64_t param1);
 /// @param self KPasswordDialog*
 /// @param callback QVariant* func(KPasswordDialog* self, enum Qt__InputMethodQuery param1)
 ///
-void k_passworddialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void k_passworddialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///

@@ -43,7 +43,9 @@ void q_place_swap(void* self, void* other);
 ///
 /// @param self QPlace*
 ///
-libqt_list /* of QPlaceCategory* */ q_place_categories(void* self);
+/// @return libqt_list of QPlaceCategory*
+///
+libqt_list q_place_categories(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#setCategory)
 ///
@@ -55,9 +57,9 @@ void q_place_set_category(void* self, void* category);
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#setCategories)
 ///
 /// @param self QPlace*
-/// @param categories libqt_list /* of QPlaceCategory* */
+/// @param categories libqt_list of QPlaceCategory*
 ///
-void q_place_set_categories(void* self, libqt_list categories);
+void q_place_set_categories(void* self, libqt_list /* of QPlaceCategory* */ categories);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#location)
 ///
@@ -130,7 +132,8 @@ void q_place_set_icon(void* self, void* icon);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QPlaceContent*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QPlaceContent*)map.values)[i]);
 /// }
@@ -141,23 +144,25 @@ void q_place_set_icon(void* self, void* icon);
 /// @param self QPlace*
 /// @param type enum QPlaceContent__Type
 ///
-libqt_map /* of int to QPlaceContent* */ q_place_content(void* self, int32_t type);
+/// @return libqt_map of int to QPlaceContent*
+///
+libqt_map q_place_content(void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#setContent)
 ///
 /// @param self QPlace*
 /// @param type enum QPlaceContent__Type
-/// @param content libqt_map /* of int to QPlaceContent* */
+/// @param content libqt_map of int to QPlaceContent*
 ///
-void q_place_set_content(void* self, int32_t type, libqt_map /* of int to QPlaceContent* */ content);
+void q_place_set_content(void* self, int32_t type, libqt_map content);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#insertContent)
 ///
 /// @param self QPlace*
 /// @param type enum QPlaceContent__Type
-/// @param content libqt_map /* of int to QPlaceContent* */
+/// @param content libqt_map of int to QPlaceContent*
 ///
-void q_place_insert_content(void* self, int32_t type, libqt_map /* of int to QPlaceContent* */ content);
+void q_place_insert_content(void* self, int32_t type, libqt_map content);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#totalContentCount)
 ///
@@ -290,15 +295,17 @@ const char** q_place_contact_types(void* self);
 /// @param self QPlace*
 /// @param contactType const char*
 ///
-libqt_list /* of QPlaceContactDetail* */ q_place_contact_details(void* self, const char* contactType);
+/// @return libqt_list of QPlaceContactDetail*
+///
+libqt_list q_place_contact_details(void* self, const char* contactType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#setContactDetails)
 ///
 /// @param self QPlace*
 /// @param contactType const char*
-/// @param details libqt_list /* of QPlaceContactDetail* */
+/// @param details libqt_list of QPlaceContactDetail*
 ///
-void q_place_set_contact_details(void* self, const char* contactType, libqt_list details);
+void q_place_set_contact_details(void* self, const char* contactType, libqt_list /* of QPlaceContactDetail* */ details);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#appendContactDetail)
 ///

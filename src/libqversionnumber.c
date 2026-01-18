@@ -6,7 +6,7 @@ QVersionNumber* q_versionnumber_new() {
     return QVersionNumber_new();
 }
 
-QVersionNumber* q_versionnumber_new2(libqt_list args) {
+QVersionNumber* q_versionnumber_new2(libqt_list /* of int */ args) {
     return QVersionNumber_new2(args);
 }
 

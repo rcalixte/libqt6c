@@ -279,7 +279,9 @@ void k_windowshadow_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KWindowShadow*
 ///
-libqt_list /* of QObject* */ k_windowshadow_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_windowshadow_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -17,25 +17,25 @@
 ///
 /// @param self QGeoPositionInfoSourceFactory*
 /// @param parent QObject*
-/// @param parameters libqt_map /* of const char* to QVariant* */
+/// @param parameters libqt_map of const char* to QVariant*
 ///
-QGeoPositionInfoSource* q_geopositioninfosourcefactory_position_info_source(void* self, void* parent, libqt_map /* of const char* to QVariant* */ parameters);
+QGeoPositionInfoSource* q_geopositioninfosourcefactory_position_info_source(void* self, void* parent, libqt_map parameters);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosourcefactory.html#satelliteInfoSource)
 ///
 /// @param self QGeoPositionInfoSourceFactory*
 /// @param parent QObject*
-/// @param parameters libqt_map /* of const char* to QVariant* */
+/// @param parameters libqt_map of const char* to QVariant*
 ///
-QGeoSatelliteInfoSource* q_geopositioninfosourcefactory_satellite_info_source(void* self, void* parent, libqt_map /* of const char* to QVariant* */ parameters);
+QGeoSatelliteInfoSource* q_geopositioninfosourcefactory_satellite_info_source(void* self, void* parent, libqt_map parameters);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosourcefactory.html#areaMonitor)
 ///
 /// @param self QGeoPositionInfoSourceFactory*
 /// @param parent QObject*
-/// @param parameters libqt_map /* of const char* to QVariant* */
+/// @param parameters libqt_map of const char* to QVariant*
 ///
-QGeoAreaMonitorSource* q_geopositioninfosourcefactory_area_monitor(void* self, void* parent, libqt_map /* of const char* to QVariant* */ parameters);
+QGeoAreaMonitorSource* q_geopositioninfosourcefactory_area_monitor(void* self, void* parent, libqt_map parameters);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosourcefactory.html#operator-eq)
 ///

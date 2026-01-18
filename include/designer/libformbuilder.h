@@ -49,7 +49,9 @@ void q_formbuilder_set_plugin_path(void* self, const char* pluginPaths[static 1]
 ///
 /// @param self QFormBuilder*
 ///
-libqt_list /* of QDesignerCustomWidgetInterface* */ q_formbuilder_custom_widgets(void* self);
+/// @return libqt_list of QDesignerCustomWidgetInterface*
+///
+libqt_list q_formbuilder_custom_widgets(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qformbuilder.html#createWidget)
 ///

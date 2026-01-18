@@ -672,7 +672,9 @@ void k_completionbox_remove_item_widget(void* self, void* item);
 ///
 /// @param self KCompletionBox*
 ///
-libqt_list /* of QListWidgetItem* */ k_completionbox_selected_items(void* self);
+/// @return libqt_list of QListWidgetItem*
+///
+libqt_list k_completionbox_selected_items(void* self);
 
 /// Inherited from QListWidget
 ///
@@ -682,7 +684,9 @@ libqt_list /* of QListWidgetItem* */ k_completionbox_selected_items(void* self);
 /// @param text const char*
 /// @param flags flag of enum Qt__MatchFlag
 ///
-libqt_list /* of QListWidgetItem* */ k_completionbox_find_items(void* self, const char* text, int32_t flags);
+/// @return libqt_list of QListWidgetItem*
+///
+libqt_list k_completionbox_find_items(void* self, const char* text, int32_t flags);
 
 /// Inherited from QListWidget
 ///
@@ -1200,9 +1204,9 @@ int32_t k_completionbox_item_alignment(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#indexesMoved)
 ///
 /// @param self KCompletionBox*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 ///
-void k_completionbox_indexes_moved(void* self, libqt_list indexes);
+void k_completionbox_indexes_moved(void* self, libqt_list /* of QModelIndex* */ indexes);
 
 /// Inherited from QListView
 ///
@@ -1954,7 +1958,9 @@ void k_completionbox_add_scroll_bar_widget(void* self, void* widget, int32_t ali
 /// @param self KCompletionBox*
 /// @param alignment flag of enum Qt__AlignmentFlag
 ///
-libqt_list /* of QWidget* */ k_completionbox_scroll_bar_widgets(void* self, int32_t alignment);
+/// @return libqt_list of QWidget*
+///
+libqt_list k_completionbox_scroll_bar_widgets(void* self, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2942,7 +2948,7 @@ void k_completionbox_set_graphics_effect(void* self, void* effect);
 /// @param self KCompletionBox*
 /// @param type enum Qt__GestureType
 ///
-void k_completionbox_grab_gesture(void* self, int64_t type);
+void k_completionbox_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2951,7 +2957,7 @@ void k_completionbox_grab_gesture(void* self, int64_t type);
 /// @param self KCompletionBox*
 /// @param type enum Qt__GestureType
 ///
-void k_completionbox_ungrab_gesture(void* self, int64_t type);
+void k_completionbox_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3932,7 +3938,7 @@ void k_completionbox_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void k_completionbox_set_parent2(void* self, void* parent, int64_t f);
+void k_completionbox_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -4010,9 +4016,9 @@ void k_completionbox_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self KCompletionBox*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_completionbox_add_actions(void* self, libqt_list actions);
+void k_completionbox_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -4020,9 +4026,9 @@ void k_completionbox_add_actions(void* self, libqt_list actions);
 ///
 /// @param self KCompletionBox*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_completionbox_insert_actions(void* self, void* before, libqt_list actions);
+void k_completionbox_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -4049,7 +4055,9 @@ void k_completionbox_remove_action(void* self, void* action);
 ///
 /// @param self KCompletionBox*
 ///
-libqt_list /* of QAction* */ k_completionbox_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_completionbox_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4106,7 +4114,7 @@ QWidget* k_completionbox_parent_widget(void* self);
 /// @param self KCompletionBox*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_completionbox_set_window_flags(void* self, int64_t type);
+void k_completionbox_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -4116,7 +4124,7 @@ void k_completionbox_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t k_completionbox_window_flags(void* self);
+int32_t k_completionbox_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4125,7 +4133,7 @@ int64_t k_completionbox_window_flags(void* self);
 /// @param self KCompletionBox*
 /// @param param1 enum Qt__WindowType
 ///
-void k_completionbox_set_window_flag(void* self, int64_t param1);
+void k_completionbox_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4134,7 +4142,7 @@ void k_completionbox_set_window_flag(void* self, int64_t param1);
 /// @param self KCompletionBox*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_completionbox_override_window_flags(void* self, int64_t type);
+void k_completionbox_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -4144,7 +4152,7 @@ void k_completionbox_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t k_completionbox_window_type(void* self);
+int32_t k_completionbox_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4355,7 +4363,7 @@ void k_completionbox_on_custom_context_menu_requested(void* self, void (*callbac
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t k_completionbox_input_method_hints(void* self);
+int32_t k_completionbox_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4364,7 +4372,7 @@ int64_t k_completionbox_input_method_hints(void* self);
 /// @param self KCompletionBox*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void k_completionbox_set_input_method_hints(void* self, int64_t hints);
+void k_completionbox_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -4449,7 +4457,7 @@ QPixmap* k_completionbox_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void k_completionbox_grab_gesture2(void* self, int64_t type, int32_t flags);
+void k_completionbox_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -4489,7 +4497,7 @@ void k_completionbox_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void k_completionbox_set_window_flag2(void* self, int64_t param1, bool on);
+void k_completionbox_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -4518,7 +4526,7 @@ QWidget* k_completionbox_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* k_completionbox_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* k_completionbox_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -4630,7 +4638,9 @@ void k_completionbox_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KCompletionBox*
 ///
-libqt_list /* of QObject* */ k_completionbox_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_completionbox_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -5100,9 +5110,9 @@ void k_completionbox_on_mime_types(void* self, const char** (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KCompletionBox*
-/// @param items libqt_list /* of QListWidgetItem* */
+/// @param items libqt_list of QListWidgetItem*
 ///
-QMimeData* k_completionbox_mime_data(void* self, libqt_list items);
+QMimeData* k_completionbox_mime_data(void* self, libqt_list /* of QListWidgetItem* */ items);
 
 /// Inherited from QListWidget
 ///
@@ -5111,9 +5121,9 @@ QMimeData* k_completionbox_mime_data(void* self, libqt_list items);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KCompletionBox*
-/// @param items libqt_list /* of QListWidgetItem* */
+/// @param items libqt_list of QListWidgetItem*
 ///
-QMimeData* k_completionbox_qbase_mime_data(void* self, libqt_list items);
+QMimeData* k_completionbox_qbase_mime_data(void* self, libqt_list /* of QListWidgetItem* */ items);
 
 /// Inherited from QListWidget
 ///
@@ -5438,9 +5448,9 @@ void k_completionbox_on_scroll_contents_by(void* self, void (*callback)(void*, i
 /// @param self KCompletionBox*
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
-/// @param roles libqt_list /* of int */
+/// @param roles libqt_list of int
 ///
-void k_completionbox_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void k_completionbox_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
 
 /// Inherited from QListView
 ///
@@ -5451,9 +5461,9 @@ void k_completionbox_data_changed(void* self, void* topLeft, void* bottomRight, 
 /// @param self KCompletionBox*
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
-/// @param roles libqt_list /* of int */
+/// @param roles libqt_list of int
 ///
-void k_completionbox_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void k_completionbox_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
 
 /// Inherited from QListView
 ///
@@ -5462,9 +5472,9 @@ void k_completionbox_qbase_data_changed(void* self, void* topLeft, void* bottomR
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompletionBox*
-/// @param callback void func(KCompletionBox* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
+/// @param callback void func(KCompletionBox* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
 ///
-void k_completionbox_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*));
+void k_completionbox_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
 
 /// Inherited from QListView
 ///
@@ -5942,7 +5952,7 @@ void k_completionbox_on_vertical_offset(void* self, int32_t (*callback)());
 /// @param cursorAction enum QAbstractItemView__CursorAction
 /// @param modifiers flag of enum Qt__KeyboardModifier
 ///
-QModelIndex* k_completionbox_move_cursor(void* self, int32_t cursorAction, int64_t modifiers);
+QModelIndex* k_completionbox_move_cursor(void* self, int32_t cursorAction, int32_t modifiers);
 
 /// Inherited from QListView
 ///
@@ -5954,7 +5964,7 @@ QModelIndex* k_completionbox_move_cursor(void* self, int32_t cursorAction, int64
 /// @param cursorAction enum QAbstractItemView__CursorAction
 /// @param modifiers flag of enum Qt__KeyboardModifier
 ///
-QModelIndex* k_completionbox_qbase_move_cursor(void* self, int32_t cursorAction, int64_t modifiers);
+QModelIndex* k_completionbox_qbase_move_cursor(void* self, int32_t cursorAction, int32_t modifiers);
 
 /// Inherited from QListView
 ///
@@ -5965,7 +5975,7 @@ QModelIndex* k_completionbox_qbase_move_cursor(void* self, int32_t cursorAction,
 /// @param self KCompletionBox*
 /// @param callback QModelIndex* func(KCompletionBox* self, enum QAbstractItemView__CursorAction cursorAction, flag of enum Qt__KeyboardModifier modifiers)
 ///
-void k_completionbox_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int64_t));
+void k_completionbox_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QListView
 ///
@@ -6043,7 +6053,9 @@ void k_completionbox_on_visual_region_for_selection(void* self, QRegion* (*callb
 ///
 /// @param self KCompletionBox*
 ///
-libqt_list /* of QModelIndex* */ k_completionbox_selected_indexes(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_completionbox_selected_indexes(void* self);
 
 /// Inherited from QListView
 ///
@@ -6053,7 +6065,9 @@ libqt_list /* of QModelIndex* */ k_completionbox_selected_indexes(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-libqt_list /* of QModelIndex* */ k_completionbox_qbase_selected_indexes(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list k_completionbox_qbase_selected_indexes(void* self);
 
 /// Inherited from QListView
 ///
@@ -6372,7 +6386,7 @@ void k_completionbox_on_item_delegate_for_index(void* self, QAbstractItemDelegat
 /// @param self KCompletionBox*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* k_completionbox_input_method_query(void* self, int64_t query);
+QVariant* k_completionbox_input_method_query(void* self, int32_t query);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6383,7 +6397,7 @@ QVariant* k_completionbox_input_method_query(void* self, int64_t query);
 /// @param self KCompletionBox*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* k_completionbox_qbase_input_method_query(void* self, int64_t query);
+QVariant* k_completionbox_qbase_input_method_query(void* self, int32_t query);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6394,7 +6408,7 @@ QVariant* k_completionbox_qbase_input_method_query(void* self, int64_t query);
 /// @param self KCompletionBox*
 /// @param callback QVariant* func(KCompletionBox* self, enum Qt__InputMethodQuery query)
 ///
-void k_completionbox_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void k_completionbox_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractItemView
 ///

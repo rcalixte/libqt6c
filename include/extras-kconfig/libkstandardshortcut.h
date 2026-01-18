@@ -17,7 +17,9 @@
 ///
 /// @param param1 enum KStandardShortcut__StandardShortcut
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_shortcut(int32_t param1);
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_shortcut(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#name)
 ///
@@ -63,14 +65,16 @@ int32_t k_standardshortcut_find_by_name(const char* param1);
 ///
 /// @param param1 enum KStandardShortcut__StandardShortcut
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_hardcoded_default_shortcut(int32_t param1);
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_hardcoded_default_shortcut(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#saveShortcut)
 ///
 /// @param param1 enum KStandardShortcut__StandardShortcut
-/// @param param2 libqt_list /* of QKeySequence* */
+/// @param param2 libqt_list of QKeySequence*
 ///
-void k_standardshortcut_save_shortcut(int32_t param1, libqt_list param2);
+void k_standardshortcut_save_shortcut(int32_t param1, libqt_list /* of QKeySequence* */ param2);
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#category)
 ///
@@ -82,227 +86,339 @@ int32_t k_standardshortcut_category(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#open)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_open();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_open();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#openNew)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_open_new();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_open_new();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#close)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_close();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_close();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#save)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_save();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_save();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#print)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_print();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_print();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#quit)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_quit();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_quit();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#undo)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_undo();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_undo();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#redo)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_redo();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_redo();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#cut)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_cut();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_cut();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#copy)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_copy();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_copy();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#paste)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_paste();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_paste();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#pasteSelection)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_paste_selection();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_paste_selection();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#selectAll)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_select_all();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_select_all();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#deleteWordBack)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_delete_word_back();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_delete_word_back();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#deleteWordForward)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_delete_word_forward();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_delete_word_forward();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#find)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_find2();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_find2();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#findNext)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_find_next();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_find_next();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#findPrev)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_find_prev();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_find_prev();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#replace)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_replace();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_replace();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#zoomIn)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_zoom_in();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_zoom_in();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#zoomOut)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_zoom_out();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_zoom_out();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#home)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_home();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_home();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#begin)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_begin();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_begin();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#end)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_end();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_end();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#beginningOfLine)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_beginning_of_line();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_beginning_of_line();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#endOfLine)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_end_of_line();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_end_of_line();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#prior)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_prior();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_prior();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#next)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_next();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_next();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#gotoLine)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_goto_line();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_goto_line();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#addBookmark)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_add_bookmark();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_add_bookmark();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#tabNext)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_tab_next();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_tab_next();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#tabPrev)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_tab_prev();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_tab_prev();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#fullScreen)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_full_screen();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_full_screen();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#help)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_help();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_help();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#completion)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_completion();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_completion();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#prevCompletion)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_prev_completion();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_prev_completion();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#nextCompletion)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_next_completion();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_next_completion();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#substringCompletion)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_substring_completion();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_substring_completion();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#rotateUp)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_rotate_up();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_rotate_up();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#rotateDown)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_rotate_down();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_rotate_down();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#whatsThis)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_whats_this2();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_whats_this2();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#reload)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_reload();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_reload();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#up)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_up();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_up();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#back)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_back();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_back();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#forward)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_forward();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_forward();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#backwardWord)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_backward_word();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_backward_word();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#forwardWord)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_forward_word();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_forward_word();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#showMenubar)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_show_menubar();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_show_menubar();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#deleteFile)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_delete_file();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_delete_file();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#renameFile)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_rename_file();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_rename_file();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#createFolder)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_create_folder();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_create_folder();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#moveToTrash)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_move_to_trash();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_move_to_trash();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#preferences)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_preferences();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_preferences();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#showHideHiddenFiles)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_show_hide_hidden_files();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_show_hide_hidden_files();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#openMainMenu)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_open_main_menu();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_open_main_menu();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#openContextMenu)
 ///
-libqt_list /* of QKeySequence* */ k_standardshortcut_open_context_menu();
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_standardshortcut_open_context_menu();
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#public-types)
 

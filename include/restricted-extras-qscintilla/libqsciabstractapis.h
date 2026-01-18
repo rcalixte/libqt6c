@@ -127,18 +127,18 @@ void q_sciabstractapis_qbase_auto_completion_selected(void* self, const char* se
 /// @param context const char**
 /// @param commas int
 /// @param style enum QsciScintilla__CallTipsStyle
-/// @param shifts libqt_list /* of int */
+/// @param shifts libqt_list of int
 ///
-const char** q_sciabstractapis_call_tips(void* self, const char* context[static 1], int commas, int32_t style, libqt_list shifts);
+const char** q_sciabstractapis_call_tips(void* self, const char* context[static 1], int commas, int32_t style, libqt_list /* of int */ shifts);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAbstractAPIs.html)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QsciAbstractAPIs*
-/// @param callback const char** func(QsciAbstractAPIs* self, const char** context, int commas, enum QsciScintilla__CallTipsStyle style, int* /* of int */)
+/// @param callback const char** func(QsciAbstractAPIs* self, const char** context, int commas, enum QsciScintilla__CallTipsStyle style, int* )
 ///
-void q_sciabstractapis_on_call_tips(void* self, const char** (*callback)(void*, const char**, int, int32_t, int*));
+void q_sciabstractapis_on_call_tips(void* self, const char** (*callback)(void*, const char**, int, int32_t, libqt_list /* of int */));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAbstractAPIs.html)
 ///
@@ -148,9 +148,9 @@ void q_sciabstractapis_on_call_tips(void* self, const char** (*callback)(void*, 
 /// @param context const char**
 /// @param commas int
 /// @param style enum QsciScintilla__CallTipsStyle
-/// @param shifts libqt_list /* of int */
+/// @param shifts libqt_list of int
 ///
-const char** q_sciabstractapis_qbase_call_tips(void* self, const char* context[static 1], int commas, int32_t style, libqt_list shifts);
+const char** q_sciabstractapis_qbase_call_tips(void* self, const char* context[static 1], int commas, int32_t style, libqt_list /* of int */ shifts);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -281,7 +281,9 @@ void q_sciabstractapis_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QsciAbstractAPIs*
 ///
-libqt_list /* of QObject* */ q_sciabstractapis_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_sciabstractapis_children(void* self);
 
 /// Inherited from QObject
 ///

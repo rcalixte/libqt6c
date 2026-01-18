@@ -67,7 +67,9 @@ void q_cbormap_clear(void* self);
 ///
 /// @param self QCborMap*
 ///
-libqt_list /* of QCborValue* */ q_cbormap_keys(void* self);
+/// @return libqt_list of QCborValue*
+///
+libqt_list q_cbormap_keys(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#value)
 ///
@@ -374,21 +376,21 @@ QCborMap__Iterator* q_cbormap_insert4(void* self, void* key, void* value_);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#insert)
 ///
 /// @param self QCborMap*
-/// @param v libqt_pair /* tuple of QCborValue* and QCborValue* */
+/// @param v libqt_pair tuple of QCborValue* and QCborValue*
 ///
-QCborMap__Iterator* q_cbormap_insert5(void* self, libqt_pair /* tuple of QCborValue* and QCborValue* */ v);
+QCborMap__Iterator* q_cbormap_insert5(void* self, libqt_pair v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#fromVariantMap)
 ///
-/// @param mapVal libqt_map /* of const char* to QVariant* */
+/// @param mapVal libqt_map of const char* to QVariant*
 ///
-QCborMap* q_cbormap_from_variant_map(libqt_map /* of const char* to QVariant* */ mapVal);
+QCborMap* q_cbormap_from_variant_map(libqt_map mapVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#fromVariantHash)
 ///
-/// @param hash libqt_map /* of const char* to QVariant* */
+/// @param hash libqt_map of const char* to QVariant*
 ///
-QCborMap* q_cbormap_from_variant_hash(libqt_map /* of const char* to QVariant* */ hash);
+QCborMap* q_cbormap_from_variant_hash(libqt_map hash);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#fromJsonObject)
 ///
@@ -400,7 +402,8 @@ QCborMap* q_cbormap_from_json_object(void* o);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     free(((QVariant*)map.values)[i]);
@@ -411,13 +414,16 @@ QCborMap* q_cbormap_from_json_object(void* o);
 ///
 /// @param self QCborMap*
 ///
-libqt_map /* of const char* to QVariant* */ q_cbormap_to_variant_map(void* self);
+/// @return libqt_map of const char* to QVariant*
+///
+libqt_map q_cbormap_to_variant_map(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#toVariantHash)
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     free(((QVariant*)map.values)[i]);
@@ -428,7 +434,9 @@ libqt_map /* of const char* to QVariant* */ q_cbormap_to_variant_map(void* self)
 ///
 /// @param self QCborMap*
 ///
-libqt_map /* of const char* to QVariant* */ q_cbormap_to_variant_hash(void* self);
+/// @return libqt_map of const char* to QVariant*
+///
+libqt_map q_cbormap_to_variant_hash(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#toJsonObject)
 ///
@@ -477,14 +485,18 @@ void q_cbormap__iterator_operator_assign(void* self, void* other);
 ///
 /// @param self QCborMap__Iterator*
 ///
-libqt_pair /* tuple of QCborValue* and QCborValue* */ q_cbormap__iterator_operator_multiply(void* self);
+/// @return libqt_pair tuple of QCborValue* and QCborValue*
+///
+libqt_pair q_cbormap__iterator_operator_multiply(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap-iterator.html#operator-5b-5d)
 ///
 /// @param self QCborMap__Iterator*
 /// @param j int64_t
 ///
-libqt_pair /* tuple of QCborValue* and QCborValue* */ q_cbormap__iterator_operator_subscript(void* self, int64_t j);
+/// @return libqt_pair tuple of QCborValue* and QCborValue*
+///
+libqt_pair q_cbormap__iterator_operator_subscript(void* self, int64_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap-iterator.html#operator--gt)
 ///
@@ -610,14 +622,18 @@ void q_cbormap__constiterator_operator_assign(void* self, void* other);
 ///
 /// @param self QCborMap__ConstIterator*
 ///
-libqt_pair /* tuple of QCborValue* and QCborValue* */ q_cbormap__constiterator_operator_multiply(void* self);
+/// @return libqt_pair tuple of QCborValue* and QCborValue*
+///
+libqt_pair q_cbormap__constiterator_operator_multiply(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap-constiterator.html#operator-5b-5d)
 ///
 /// @param self QCborMap__ConstIterator*
 /// @param j int64_t
 ///
-libqt_pair /* tuple of QCborValue* and QCborValue* */ q_cbormap__constiterator_operator_subscript(void* self, int64_t j);
+/// @return libqt_pair tuple of QCborValue* and QCborValue*
+///
+libqt_pair q_cbormap__constiterator_operator_subscript(void* self, int64_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap-constiterator.html#operator--gt)
 ///

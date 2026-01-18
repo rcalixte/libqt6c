@@ -11,7 +11,7 @@ QSqlField* q_sqlfield_new2(void* other) {
     return QSqlField_new2((QSqlField*)other);
 }
 
-QSqlField* q_sqlfield_new3(const char* fieldName, int64_t type) {
+QSqlField* q_sqlfield_new3(const char* fieldName, int32_t type) {
     return QSqlField_new3(qstring(fieldName), type);
 }
 
@@ -27,7 +27,7 @@ QSqlField* q_sqlfield_new6(const char* fieldName, void* type, const char* tableN
     return QSqlField_new6(qstring(fieldName), (QMetaType*)type, qstring(tableName));
 }
 
-QSqlField* q_sqlfield_new7(const char* fieldName, int64_t type, const char* tableName) {
+QSqlField* q_sqlfield_new7(const char* fieldName, int32_t type, const char* tableName) {
     return QSqlField_new7(qstring(fieldName), type, qstring(tableName));
 }
 
@@ -105,11 +105,11 @@ void q_sqlfield_set_meta_type(void* self, void* type) {
     QSqlField_SetMetaType((QSqlField*)self, (QMetaType*)type);
 }
 
-int64_t q_sqlfield_type(void* self) {
+int32_t q_sqlfield_type(void* self) {
     return QSqlField_Type((QSqlField*)self);
 }
 
-void q_sqlfield_set_type(void* self, int64_t type) {
+void q_sqlfield_set_type(void* self, int32_t type) {
     QSqlField_SetType((QSqlField*)self, type);
 }
 

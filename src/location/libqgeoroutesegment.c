@@ -50,7 +50,7 @@ double q_georoutesegment_distance(void* self) {
     return QGeoRouteSegment_Distance((QGeoRouteSegment*)self);
 }
 
-void q_georoutesegment_set_path(void* self, libqt_list path) {
+void q_georoutesegment_set_path(void* self, libqt_list /* of QGeoCoordinate* */ path) {
     QGeoRouteSegment_SetPath((QGeoRouteSegment*)self, path);
 }
 

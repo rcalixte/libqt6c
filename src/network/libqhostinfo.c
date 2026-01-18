@@ -38,7 +38,7 @@ libqt_list /* of QHostAddress* */ q_hostinfo_addresses(void* self) {
     return _arr;
 }
 
-void q_hostinfo_set_addresses(void* self, libqt_list addresses) {
+void q_hostinfo_set_addresses(void* self, libqt_list /* of QHostAddress* */ addresses) {
     QHostInfo_SetAddresses((QHostInfo*)self, addresses);
 }
 

@@ -17,7 +17,9 @@
 ///
 /// @param self Attica__PlatformDependent*
 ///
-libqt_list /* of QUrl* */ k_attica__platformdependent_get_default_provider_files(void* self);
+/// @return libqt_list of QUrl*
+///
+libqt_list k_attica__platformdependent_get_default_provider_files(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-platformdependent.html#addDefaultProviderFile)
 ///

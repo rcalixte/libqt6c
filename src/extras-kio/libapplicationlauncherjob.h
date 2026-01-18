@@ -62,9 +62,9 @@ KIO__ApplicationLauncherJob* k_io__applicationlauncherjob_new6(void* parent);
 /// [Upstream resources](https://api.kde.org/kio-applicationlauncherjob.html#setUrls)
 ///
 /// @param self KIO__ApplicationLauncherJob*
-/// @param urls libqt_list /* of QUrl* */
+/// @param urls libqt_list of QUrl*
 ///
-void k_io__applicationlauncherjob_set_urls(void* self, libqt_list urls);
+void k_io__applicationlauncherjob_set_urls(void* self, libqt_list /* of QUrl* */ urls);
 
 /// [Upstream resources](https://api.kde.org/kio-applicationlauncherjob.html#setRunFlags)
 ///
@@ -120,7 +120,9 @@ long long k_io__applicationlauncherjob_pid(void* self);
 ///
 /// @param self KIO__ApplicationLauncherJob*
 ///
-libqt_list /* of long long */ k_io__applicationlauncherjob_pids(void* self);
+/// @return libqt_list of long long
+///
+libqt_list k_io__applicationlauncherjob_pids(void* self);
 
 /// Inherited from KJob
 ///
@@ -553,7 +555,9 @@ void k_io__applicationlauncherjob_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KIO__ApplicationLauncherJob*
 ///
-libqt_list /* of QObject* */ k_io__applicationlauncherjob_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_io__applicationlauncherjob_children(void* self);
 
 /// Inherited from QObject
 ///

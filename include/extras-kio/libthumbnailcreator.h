@@ -137,9 +137,9 @@ void k_io__thumbnailresult_delete(void* self);
 /// k_io__thumbnailcreator_new constructs a new KIO::ThumbnailCreator object.
 ///
 /// @param parent QObject*
-/// @param args libqt_list /* of QVariant* */
+/// @param args libqt_list of QVariant*
 ///
-KIO__ThumbnailCreator* k_io__thumbnailcreator_new(void* parent, libqt_list args);
+KIO__ThumbnailCreator* k_io__thumbnailcreator_new(void* parent, libqt_list /* of QVariant* */ args);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -337,7 +337,9 @@ void k_io__thumbnailcreator_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KIO__ThumbnailCreator*
 ///
-libqt_list /* of QObject* */ k_io__thumbnailcreator_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_io__thumbnailcreator_children(void* self);
 
 /// Inherited from QObject
 ///

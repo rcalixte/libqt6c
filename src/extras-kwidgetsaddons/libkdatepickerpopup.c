@@ -79,21 +79,23 @@ libqt_map /* of QDate* to const char* */ k_datepickerpopup_date_map(void* self) 
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_values = (libqt_string*)_out.values;
-    const char** _ret_values = (const char**)malloc(_ret.len * sizeof(const char*));
+    char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string values in k_datepickerpopup_date_map");
+        fprintf(stderr, "Failed to allocate memory for map string values in k_datepickerpopup_date_map\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_values[i] = (const char*)malloc(_out_values[i].len + 1);
+        _ret_values[i] = (char*)malloc(_out_values[i].len + 1);
         if (_ret_values[i] == NULL) {
             for (size_t j = 0; j < i; j++) {
                 libqt_free(_ret_values[j]);
             }
             free(_ret_values);
-            fprintf(stderr, "Failed to allocate memory for map string values in k_datepickerpopup_date_map");
+            fprintf(stderr, "Failed to allocate memory for map string values in k_datepickerpopup_date_map\n");
             abort();
         }
+        memcpy(_ret_values[i], _out_values[i].data, _out_values[i].len);
+        _ret_values[i][_out_values[i].len] = '\0';
     }
     _ret.keys = _out.keys;
     _ret.values = (void*)_ret_values;
@@ -262,7 +264,7 @@ QAction* k_datepickerpopup_exec2(void* self, void* pos) {
     return QMenu_Exec2((QMenu*)self, (QPoint*)pos);
 }
 
-QAction* k_datepickerpopup_exec3(libqt_list actions, void* pos) {
+QAction* k_datepickerpopup_exec3(libqt_list /* of QAction* */ actions, void* pos) {
     return QMenu_Exec3(actions, (QPoint*)pos);
 }
 
@@ -361,11 +363,11 @@ QAction* k_datepickerpopup_exec22(void* self, void* pos, void* at) {
     return QMenu_Exec22((QMenu*)self, (QPoint*)pos, (QAction*)at);
 }
 
-QAction* k_datepickerpopup_exec32(libqt_list actions, void* pos, void* at) {
+QAction* k_datepickerpopup_exec32(libqt_list /* of QAction* */ actions, void* pos, void* at) {
     return QMenu_Exec32(actions, (QPoint*)pos, (QAction*)at);
 }
 
-QAction* k_datepickerpopup_exec4(libqt_list actions, void* pos, void* at, void* parent) {
+QAction* k_datepickerpopup_exec4(libqt_list /* of QAction* */ actions, void* pos, void* at, void* parent) {
     return QMenu_Exec4(actions, (QPoint*)pos, (QAction*)at, (QWidget*)parent);
 }
 
@@ -749,11 +751,11 @@ void k_datepickerpopup_set_graphics_effect(void* self, void* effect) {
     QWidget_SetGraphicsEffect((QWidget*)self, (QGraphicsEffect*)effect);
 }
 
-void k_datepickerpopup_grab_gesture(void* self, int64_t type) {
+void k_datepickerpopup_grab_gesture(void* self, int32_t type) {
     QWidget_GrabGesture((QWidget*)self, type);
 }
 
-void k_datepickerpopup_ungrab_gesture(void* self, int64_t type) {
+void k_datepickerpopup_ungrab_gesture(void* self, int32_t type) {
     QWidget_UngrabGesture((QWidget*)self, type);
 }
 
@@ -1234,7 +1236,7 @@ void k_datepickerpopup_set_parent(void* self, void* parent) {
     QWidget_SetParent((QWidget*)self, (QWidget*)parent);
 }
 
-void k_datepickerpopup_set_parent2(void* self, void* parent, int64_t f) {
+void k_datepickerpopup_set_parent2(void* self, void* parent, int32_t f) {
     QWidget_SetParent2((QWidget*)self, (QWidget*)parent, f);
 }
 
@@ -1270,11 +1272,11 @@ void k_datepickerpopup_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void k_datepickerpopup_add_actions(void* self, libqt_list actions) {
+void k_datepickerpopup_add_actions(void* self, libqt_list /* of QAction* */ actions) {
     QWidget_AddActions((QWidget*)self, actions);
 }
 
-void k_datepickerpopup_insert_actions(void* self, void* before, libqt_list actions) {
+void k_datepickerpopup_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions) {
     QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
@@ -1311,23 +1313,23 @@ QWidget* k_datepickerpopup_parent_widget(void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
-void k_datepickerpopup_set_window_flags(void* self, int64_t type) {
+void k_datepickerpopup_set_window_flags(void* self, int32_t type) {
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int64_t k_datepickerpopup_window_flags(void* self) {
+int32_t k_datepickerpopup_window_flags(void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
-void k_datepickerpopup_set_window_flag(void* self, int64_t param1) {
+void k_datepickerpopup_set_window_flag(void* self, int32_t param1) {
     QWidget_SetWindowFlag((QWidget*)self, param1);
 }
 
-void k_datepickerpopup_override_window_flags(void* self, int64_t type) {
+void k_datepickerpopup_override_window_flags(void* self, int32_t type) {
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int64_t k_datepickerpopup_window_type(void* self) {
+int32_t k_datepickerpopup_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
@@ -1423,11 +1425,11 @@ void k_datepickerpopup_on_custom_context_menu_requested(void* self, void (*callb
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-int64_t k_datepickerpopup_input_method_hints(void* self) {
+int32_t k_datepickerpopup_input_method_hints(void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
-void k_datepickerpopup_set_input_method_hints(void* self, int64_t hints) {
+void k_datepickerpopup_set_input_method_hints(void* self, int32_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
@@ -1459,7 +1461,7 @@ QPixmap* k_datepickerpopup_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_datepickerpopup_grab_gesture2(void* self, int64_t type, int32_t flags) {
+void k_datepickerpopup_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
@@ -1475,7 +1477,7 @@ void k_datepickerpopup_set_shortcut_auto_repeat2(void* self, int id, bool enable
     QWidget_SetShortcutAutoRepeat2((QWidget*)self, id, enable);
 }
 
-void k_datepickerpopup_set_window_flag2(void* self, int64_t param1, bool on) {
+void k_datepickerpopup_set_window_flag2(void* self, int32_t param1, bool on) {
     QWidget_SetWindowFlag2((QWidget*)self, param1, on);
 }
 
@@ -1487,7 +1489,7 @@ QWidget* k_datepickerpopup_create_window_container2(void* window, void* parent) 
     return QWidget_CreateWindowContainer2((QWindow*)window, (QWidget*)parent);
 }
 
-QWidget* k_datepickerpopup_create_window_container3(void* window, void* parent, int64_t flags) {
+QWidget* k_datepickerpopup_create_window_container3(void* window, void* parent, int32_t flags) {
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
@@ -1592,7 +1594,7 @@ const char** k_datepickerpopup_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_datepickerpopup_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_datepickerpopup_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2214,15 +2216,15 @@ void k_datepickerpopup_on_input_method_event(void* self, void (*callback)(void*,
     KDatePickerPopup_OnInputMethodEvent((KDatePickerPopup*)self, (intptr_t)callback);
 }
 
-QVariant* k_datepickerpopup_input_method_query(void* self, int64_t param1) {
+QVariant* k_datepickerpopup_input_method_query(void* self, int32_t param1) {
     return KDatePickerPopup_InputMethodQuery((KDatePickerPopup*)self, param1);
 }
 
-QVariant* k_datepickerpopup_qbase_input_method_query(void* self, int64_t param1) {
+QVariant* k_datepickerpopup_qbase_input_method_query(void* self, int32_t param1) {
     return KDatePickerPopup_QBaseInputMethodQuery((KDatePickerPopup*)self, param1);
 }
 
-void k_datepickerpopup_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void k_datepickerpopup_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     KDatePickerPopup_OnInputMethodQuery((KDatePickerPopup*)self, (intptr_t)callback);
 }
 

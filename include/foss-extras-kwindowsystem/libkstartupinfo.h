@@ -435,7 +435,9 @@ void k_startupinfo_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KStartupInfo*
 ///
-libqt_list /* of QObject* */ k_startupinfo_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_startupinfo_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1251,7 +1253,9 @@ void k_startupinfodata_add_pid(void* self, pid_t pid);
 ///
 /// @param self KStartupInfoData*
 ///
-libqt_list /* of pid_t */ k_startupinfodata_pids(void* self);
+/// @return libqt_list of pid_t
+///
+libqt_list k_startupinfodata_pids(void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#is_pid)
 ///

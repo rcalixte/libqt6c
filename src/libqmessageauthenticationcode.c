@@ -56,28 +56,28 @@ char* q_messageauthenticationcode_hash(const char* message, const char* key, int
     return _ret;
 }
 
-const char* q_messageauthenticationcode_hash_into(libqt_list buffer, const char* message, const char* key, int32_t method) {
+const char* q_messageauthenticationcode_hash_into(libqt_list /* of char */ buffer, const char* message, const char* key, int32_t method) {
     libqt_string _str = QMessageAuthenticationCode_HashInto(buffer, qstring(message), qstring(key), method);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_messageauthenticationcode_hash_into2(libqt_list buffer, const char* message, const char* key, int32_t method) {
+const char* q_messageauthenticationcode_hash_into2(libqt_list /* of unsigned char */ buffer, const char* message, const char* key, int32_t method) {
     libqt_string _str = QMessageAuthenticationCode_HashInto2(buffer, qstring(message), qstring(key), method);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_messageauthenticationcode_hash_into4(libqt_list buffer, libqt_list messageParts, const char* key, int32_t method) {
+const char* q_messageauthenticationcode_hash_into4(libqt_list /* of char */ buffer, libqt_list /* of const char* */ messageParts, const char* key, int32_t method) {
     libqt_string _str = QMessageAuthenticationCode_HashInto4(buffer, messageParts, qstring(key), method);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_messageauthenticationcode_hash_into5(libqt_list buffer, libqt_list messageParts, const char* key, int32_t method) {
+const char* q_messageauthenticationcode_hash_into5(libqt_list /* of unsigned char */ buffer, libqt_list /* of const char* */ messageParts, const char* key, int32_t method) {
     libqt_string _str = QMessageAuthenticationCode_HashInto5(buffer, messageParts, qstring(key), method);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

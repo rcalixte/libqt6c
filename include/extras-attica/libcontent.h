@@ -184,7 +184,9 @@ Attica__DownloadDescription* k_attica__content_download_url_description(void* se
 ///
 /// @param self Attica__Content*
 ///
-libqt_list /* of Attica__DownloadDescription* */ k_attica__content_download_url_descriptions(void* self);
+/// @return libqt_list of Attica__DownloadDescription*
+///
+libqt_list k_attica__content_download_url_descriptions(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#homePageEntry)
 ///
@@ -197,7 +199,9 @@ Attica__HomePageEntry* k_attica__content_home_page_entry(void* self, int number)
 ///
 /// @param self Attica__Content*
 ///
-libqt_list /* of Attica__HomePageEntry* */ k_attica__content_home_page_entries(void* self);
+/// @return libqt_list of Attica__HomePageEntry*
+///
+libqt_list k_attica__content_home_page_entries(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#previewPicture)
 ///
@@ -243,33 +247,39 @@ const char* k_attica__content_author(void* self);
 ///
 /// @param self Attica__Content*
 ///
-libqt_list /* of Attica__Icon* */ k_attica__content_icons(void* self);
+/// @return libqt_list of Attica__Icon*
+///
+libqt_list k_attica__content_icons(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#icons)
 ///
 /// @param self Attica__Content*
 ///
-libqt_list /* of Attica__Icon* */ k_attica__content_icons2(void* self);
+/// @return libqt_list of Attica__Icon*
+///
+libqt_list k_attica__content_icons2(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#setIcons)
 ///
 /// @param self Attica__Content*
-/// @param icons libqt_list /* of Attica__Icon* */
+/// @param icons libqt_list of Attica__Icon*
 ///
-void k_attica__content_set_icons(void* self, libqt_list icons);
+void k_attica__content_set_icons(void* self, libqt_list /* of Attica__Icon* */ icons);
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#videos)
 ///
 /// @param self Attica__Content*
 ///
-libqt_list /* of QUrl* */ k_attica__content_videos(void* self);
+/// @return libqt_list of QUrl*
+///
+libqt_list k_attica__content_videos(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#setVideos)
 ///
 /// @param self Attica__Content*
-/// @param videos libqt_list /* of QUrl* */
+/// @param videos libqt_list of QUrl*
 ///
-void k_attica__content_set_videos(void* self, libqt_list videos);
+void k_attica__content_set_videos(void* self, libqt_list /* of QUrl* */ videos);
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#tags)
 ///
@@ -307,7 +317,8 @@ const char* k_attica__content_attribute(void* self, const char* key);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of const char* to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     libqt_free(map.values[i]);
@@ -318,7 +329,9 @@ const char* k_attica__content_attribute(void* self, const char* key);
 ///
 /// @param self Attica__Content*
 ///
-libqt_map /* of const char* to const char* */ k_attica__content_attributes(void* self);
+/// @return libqt_map of const char* to const char*
+///
+libqt_map k_attica__content_attributes(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#isValid)
 ///

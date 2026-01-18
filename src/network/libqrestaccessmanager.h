@@ -133,9 +133,9 @@ QNetworkReply* q_restaccessmanager_post(void* self, void* request, void* data);
 ///
 /// @param self QRestAccessManager*
 /// @param request QNetworkRequest*
-/// @param data libqt_map /* of const char* to QVariant* */
+/// @param data libqt_map of const char* to QVariant*
 ///
-QNetworkReply* q_restaccessmanager_post2(void* self, void* request, libqt_map /* of const char* to QVariant* */ data);
+QNetworkReply* q_restaccessmanager_post2(void* self, void* request, libqt_map data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrestaccessmanager.html#post)
 ///
@@ -173,9 +173,9 @@ QNetworkReply* q_restaccessmanager_put(void* self, void* request, void* data);
 ///
 /// @param self QRestAccessManager*
 /// @param request QNetworkRequest*
-/// @param data libqt_map /* of const char* to QVariant* */
+/// @param data libqt_map of const char* to QVariant*
 ///
-QNetworkReply* q_restaccessmanager_put2(void* self, void* request, libqt_map /* of const char* to QVariant* */ data);
+QNetworkReply* q_restaccessmanager_put2(void* self, void* request, libqt_map data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrestaccessmanager.html#put)
 ///
@@ -213,9 +213,9 @@ QNetworkReply* q_restaccessmanager_patch(void* self, void* request, void* data);
 ///
 /// @param self QRestAccessManager*
 /// @param request QNetworkRequest*
-/// @param data libqt_map /* of const char* to QVariant* */
+/// @param data libqt_map of const char* to QVariant*
 ///
-QNetworkReply* q_restaccessmanager_patch2(void* self, void* request, libqt_map /* of const char* to QVariant* */ data);
+QNetworkReply* q_restaccessmanager_patch2(void* self, void* request, libqt_map data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrestaccessmanager.html#patch)
 ///
@@ -389,7 +389,9 @@ void q_restaccessmanager_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QRestAccessManager*
 ///
-libqt_list /* of QObject* */ q_restaccessmanager_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_restaccessmanager_children(void* self);
 
 /// Inherited from QObject
 ///

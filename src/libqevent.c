@@ -24,7 +24,7 @@ QInputEvent* q_inputevent_new(int32_t type, void* m_dev) {
     return QInputEvent_new(type, (QInputDevice*)m_dev);
 }
 
-QInputEvent* q_inputevent_new2(int32_t type, void* m_dev, int64_t modifiers) {
+QInputEvent* q_inputevent_new2(int32_t type, void* m_dev, int32_t modifiers) {
     return QInputEvent_new2(type, (QInputDevice*)m_dev, modifiers);
 }
 
@@ -48,11 +48,11 @@ int32_t q_inputevent_device_type(void* self) {
     return QInputEvent_DeviceType((QInputEvent*)self);
 }
 
-int64_t q_inputevent_modifiers(void* self) {
+int32_t q_inputevent_modifiers(void* self) {
     return QInputEvent_Modifiers((QInputEvent*)self);
 }
 
-void q_inputevent_set_modifiers(void* self, int64_t modifiers) {
+void q_inputevent_set_modifiers(void* self, int32_t modifiers) {
     QInputEvent_SetModifiers((QInputEvent*)self, modifiers);
 }
 
@@ -132,11 +132,11 @@ QPointerEvent* q_pointerevent_new(int32_t type, void* dev) {
     return QPointerEvent_new(type, (QPointingDevice*)dev);
 }
 
-QPointerEvent* q_pointerevent_new2(int32_t type, void* dev, int64_t modifiers) {
+QPointerEvent* q_pointerevent_new2(int32_t type, void* dev, int32_t modifiers) {
     return QPointerEvent_new2(type, (QPointingDevice*)dev, modifiers);
 }
 
-QPointerEvent* q_pointerevent_new3(int32_t type, void* dev, int64_t modifiers, libqt_list points) {
+QPointerEvent* q_pointerevent_new3(int32_t type, void* dev, int32_t modifiers, libqt_list /* of QEventPoint* */ points) {
     return QPointerEvent_new3(type, (QPointingDevice*)dev, modifiers, points);
 }
 
@@ -273,11 +273,11 @@ int32_t q_pointerevent_device_type(void* self) {
     return QInputEvent_DeviceType((QInputEvent*)self);
 }
 
-int64_t q_pointerevent_modifiers(void* self) {
+int32_t q_pointerevent_modifiers(void* self) {
     return QInputEvent_Modifiers((QInputEvent*)self);
 }
 
-void q_pointerevent_set_modifiers(void* self, int64_t modifiers) {
+void q_pointerevent_set_modifiers(void* self, int32_t modifiers) {
     QInputEvent_SetModifiers((QInputEvent*)self, modifiers);
 }
 
@@ -333,11 +333,11 @@ QSinglePointEvent* q_singlepointevent_clone(void* self) {
     return QSinglePointEvent_Clone((QSinglePointEvent*)self);
 }
 
-int64_t q_singlepointevent_button(void* self) {
+int32_t q_singlepointevent_button(void* self) {
     return QSinglePointEvent_Button((QSinglePointEvent*)self);
 }
 
-int64_t q_singlepointevent_buttons(void* self) {
+int32_t q_singlepointevent_buttons(void* self) {
     return QSinglePointEvent_Buttons((QSinglePointEvent*)self);
 }
 
@@ -442,11 +442,11 @@ int32_t q_singlepointevent_device_type(void* self) {
     return QInputEvent_DeviceType((QInputEvent*)self);
 }
 
-int64_t q_singlepointevent_modifiers(void* self) {
+int32_t q_singlepointevent_modifiers(void* self) {
     return QInputEvent_Modifiers((QInputEvent*)self);
 }
 
-void q_singlepointevent_set_modifiers(void* self, int64_t modifiers) {
+void q_singlepointevent_set_modifiers(void* self, int32_t modifiers) {
     QInputEvent_SetModifiers((QInputEvent*)self, modifiers);
 }
 
@@ -554,11 +554,11 @@ QPointF* q_enterevent_screen_pos(void* self) {
     return QEnterEvent_ScreenPos((QEnterEvent*)self);
 }
 
-int64_t q_enterevent_button(void* self) {
+int32_t q_enterevent_button(void* self) {
     return QSinglePointEvent_Button((QSinglePointEvent*)self);
 }
 
-int64_t q_enterevent_buttons(void* self) {
+int32_t q_enterevent_buttons(void* self) {
     return QSinglePointEvent_Buttons((QSinglePointEvent*)self);
 }
 
@@ -643,11 +643,11 @@ int32_t q_enterevent_device_type(void* self) {
     return QInputEvent_DeviceType((QInputEvent*)self);
 }
 
-int64_t q_enterevent_modifiers(void* self) {
+int32_t q_enterevent_modifiers(void* self) {
     return QInputEvent_Modifiers((QInputEvent*)self);
 }
 
-void q_enterevent_set_modifiers(void* self, int64_t modifiers) {
+void q_enterevent_set_modifiers(void* self, int32_t modifiers) {
     QInputEvent_SetModifiers((QInputEvent*)self, modifiers);
 }
 
@@ -759,35 +759,35 @@ void q_enterevent_delete(void* self) {
     QEnterEvent_Delete((QEnterEvent*)(self));
 }
 
-QMouseEvent* q_mouseevent_new(int32_t type, void* localPos, int64_t button, int64_t buttons, int64_t modifiers) {
+QMouseEvent* q_mouseevent_new(int32_t type, void* localPos, int32_t button, int32_t buttons, int32_t modifiers) {
     return QMouseEvent_new(type, (QPointF*)localPos, button, buttons, modifiers);
 }
 
-QMouseEvent* q_mouseevent_new2(int32_t type, void* localPos, void* globalPos, int64_t button, int64_t buttons, int64_t modifiers) {
+QMouseEvent* q_mouseevent_new2(int32_t type, void* localPos, void* globalPos, int32_t button, int32_t buttons, int32_t modifiers) {
     return QMouseEvent_new2(type, (QPointF*)localPos, (QPointF*)globalPos, button, buttons, modifiers);
 }
 
-QMouseEvent* q_mouseevent_new3(int32_t type, void* localPos, void* scenePos, void* globalPos, int64_t button, int64_t buttons, int64_t modifiers) {
+QMouseEvent* q_mouseevent_new3(int32_t type, void* localPos, void* scenePos, void* globalPos, int32_t button, int32_t buttons, int32_t modifiers) {
     return QMouseEvent_new3(type, (QPointF*)localPos, (QPointF*)scenePos, (QPointF*)globalPos, button, buttons, modifiers);
 }
 
-QMouseEvent* q_mouseevent_new4(int32_t type, void* localPos, void* scenePos, void* globalPos, int64_t button, int64_t buttons, int64_t modifiers, int32_t source) {
+QMouseEvent* q_mouseevent_new4(int32_t type, void* localPos, void* scenePos, void* globalPos, int32_t button, int32_t buttons, int32_t modifiers, int32_t source) {
     return QMouseEvent_new4(type, (QPointF*)localPos, (QPointF*)scenePos, (QPointF*)globalPos, button, buttons, modifiers, source);
 }
 
-QMouseEvent* q_mouseevent_new5(int32_t type, void* localPos, int64_t button, int64_t buttons, int64_t modifiers, void* device) {
+QMouseEvent* q_mouseevent_new5(int32_t type, void* localPos, int32_t button, int32_t buttons, int32_t modifiers, void* device) {
     return QMouseEvent_new5(type, (QPointF*)localPos, button, buttons, modifiers, (QPointingDevice*)device);
 }
 
-QMouseEvent* q_mouseevent_new6(int32_t type, void* localPos, void* globalPos, int64_t button, int64_t buttons, int64_t modifiers, void* device) {
+QMouseEvent* q_mouseevent_new6(int32_t type, void* localPos, void* globalPos, int32_t button, int32_t buttons, int32_t modifiers, void* device) {
     return QMouseEvent_new6(type, (QPointF*)localPos, (QPointF*)globalPos, button, buttons, modifiers, (QPointingDevice*)device);
 }
 
-QMouseEvent* q_mouseevent_new7(int32_t type, void* localPos, void* scenePos, void* globalPos, int64_t button, int64_t buttons, int64_t modifiers, void* device) {
+QMouseEvent* q_mouseevent_new7(int32_t type, void* localPos, void* scenePos, void* globalPos, int32_t button, int32_t buttons, int32_t modifiers, void* device) {
     return QMouseEvent_new7(type, (QPointF*)localPos, (QPointF*)scenePos, (QPointF*)globalPos, button, buttons, modifiers, (QPointingDevice*)device);
 }
 
-QMouseEvent* q_mouseevent_new8(int32_t type, void* localPos, void* scenePos, void* globalPos, int64_t button, int64_t buttons, int64_t modifiers, int32_t source, void* device) {
+QMouseEvent* q_mouseevent_new8(int32_t type, void* localPos, void* scenePos, void* globalPos, int32_t button, int32_t buttons, int32_t modifiers, int32_t source, void* device) {
     return QMouseEvent_new8(type, (QPointF*)localPos, (QPointF*)scenePos, (QPointF*)globalPos, button, buttons, modifiers, source, (QPointingDevice*)device);
 }
 
@@ -847,11 +847,11 @@ int32_t q_mouseevent_flags(void* self) {
     return QMouseEvent_Flags((QMouseEvent*)self);
 }
 
-int64_t q_mouseevent_button(void* self) {
+int32_t q_mouseevent_button(void* self) {
     return QSinglePointEvent_Button((QSinglePointEvent*)self);
 }
 
-int64_t q_mouseevent_buttons(void* self) {
+int32_t q_mouseevent_buttons(void* self) {
     return QSinglePointEvent_Buttons((QSinglePointEvent*)self);
 }
 
@@ -936,11 +936,11 @@ int32_t q_mouseevent_device_type(void* self) {
     return QInputEvent_DeviceType((QInputEvent*)self);
 }
 
-int64_t q_mouseevent_modifiers(void* self) {
+int32_t q_mouseevent_modifiers(void* self) {
     return QInputEvent_Modifiers((QInputEvent*)self);
 }
 
-void q_mouseevent_set_modifiers(void* self, int64_t modifiers) {
+void q_mouseevent_set_modifiers(void* self, int32_t modifiers) {
     QInputEvent_SetModifiers((QInputEvent*)self, modifiers);
 }
 
@@ -1060,19 +1060,19 @@ QHoverEvent* q_hoverevent_new2(int32_t type, void* pos, void* oldPos) {
     return QHoverEvent_new2(type, (QPointF*)pos, (QPointF*)oldPos);
 }
 
-QHoverEvent* q_hoverevent_new3(int32_t type, void* scenePos, void* globalPos, void* oldPos, int64_t modifiers) {
+QHoverEvent* q_hoverevent_new3(int32_t type, void* scenePos, void* globalPos, void* oldPos, int32_t modifiers) {
     return QHoverEvent_new3(type, (QPointF*)scenePos, (QPointF*)globalPos, (QPointF*)oldPos, modifiers);
 }
 
-QHoverEvent* q_hoverevent_new4(int32_t type, void* scenePos, void* globalPos, void* oldPos, int64_t modifiers, void* device) {
+QHoverEvent* q_hoverevent_new4(int32_t type, void* scenePos, void* globalPos, void* oldPos, int32_t modifiers, void* device) {
     return QHoverEvent_new4(type, (QPointF*)scenePos, (QPointF*)globalPos, (QPointF*)oldPos, modifiers, (QPointingDevice*)device);
 }
 
-QHoverEvent* q_hoverevent_new5(int32_t type, void* pos, void* oldPos, int64_t modifiers) {
+QHoverEvent* q_hoverevent_new5(int32_t type, void* pos, void* oldPos, int32_t modifiers) {
     return QHoverEvent_new5(type, (QPointF*)pos, (QPointF*)oldPos, modifiers);
 }
 
-QHoverEvent* q_hoverevent_new6(int32_t type, void* pos, void* oldPos, int64_t modifiers, void* device) {
+QHoverEvent* q_hoverevent_new6(int32_t type, void* pos, void* oldPos, int32_t modifiers, void* device) {
     return QHoverEvent_new6(type, (QPointF*)pos, (QPointF*)oldPos, modifiers, (QPointingDevice*)device);
 }
 
@@ -1116,11 +1116,11 @@ QPointF* q_hoverevent_old_pos_f(void* self) {
     return QHoverEvent_OldPosF((QHoverEvent*)self);
 }
 
-int64_t q_hoverevent_button(void* self) {
+int32_t q_hoverevent_button(void* self) {
     return QSinglePointEvent_Button((QSinglePointEvent*)self);
 }
 
-int64_t q_hoverevent_buttons(void* self) {
+int32_t q_hoverevent_buttons(void* self) {
     return QSinglePointEvent_Buttons((QSinglePointEvent*)self);
 }
 
@@ -1205,11 +1205,11 @@ int32_t q_hoverevent_device_type(void* self) {
     return QInputEvent_DeviceType((QInputEvent*)self);
 }
 
-int64_t q_hoverevent_modifiers(void* self) {
+int32_t q_hoverevent_modifiers(void* self) {
     return QInputEvent_Modifiers((QInputEvent*)self);
 }
 
-void q_hoverevent_set_modifiers(void* self, int64_t modifiers) {
+void q_hoverevent_set_modifiers(void* self, int32_t modifiers) {
     QInputEvent_SetModifiers((QInputEvent*)self, modifiers);
 }
 
@@ -1309,15 +1309,15 @@ void q_hoverevent_delete(void* self) {
     QHoverEvent_Delete((QHoverEvent*)(self));
 }
 
-QWheelEvent* q_wheelevent_new(void* pos, void* globalPos, void* pixelDelta, void* angleDelta, int64_t buttons, int64_t modifiers, int32_t phase, bool inverted) {
+QWheelEvent* q_wheelevent_new(void* pos, void* globalPos, void* pixelDelta, void* angleDelta, int32_t buttons, int32_t modifiers, int32_t phase, bool inverted) {
     return QWheelEvent_new((QPointF*)pos, (QPointF*)globalPos, (QPoint*)pixelDelta, (QPoint*)angleDelta, buttons, modifiers, phase, inverted);
 }
 
-QWheelEvent* q_wheelevent_new2(void* pos, void* globalPos, void* pixelDelta, void* angleDelta, int64_t buttons, int64_t modifiers, int32_t phase, bool inverted, int32_t source) {
+QWheelEvent* q_wheelevent_new2(void* pos, void* globalPos, void* pixelDelta, void* angleDelta, int32_t buttons, int32_t modifiers, int32_t phase, bool inverted, int32_t source) {
     return QWheelEvent_new2((QPointF*)pos, (QPointF*)globalPos, (QPoint*)pixelDelta, (QPoint*)angleDelta, buttons, modifiers, phase, inverted, source);
 }
 
-QWheelEvent* q_wheelevent_new3(void* pos, void* globalPos, void* pixelDelta, void* angleDelta, int64_t buttons, int64_t modifiers, int32_t phase, bool inverted, int32_t source, void* device) {
+QWheelEvent* q_wheelevent_new3(void* pos, void* globalPos, void* pixelDelta, void* angleDelta, int32_t buttons, int32_t modifiers, int32_t phase, bool inverted, int32_t source, void* device) {
     return QWheelEvent_new3((QPointF*)pos, (QPointF*)globalPos, (QPoint*)pixelDelta, (QPoint*)angleDelta, buttons, modifiers, phase, inverted, source, (QPointingDevice*)device);
 }
 
@@ -1397,11 +1397,11 @@ int32_t q_wheelevent_source(void* self) {
     return QWheelEvent_Source((QWheelEvent*)self);
 }
 
-int64_t q_wheelevent_button(void* self) {
+int32_t q_wheelevent_button(void* self) {
     return QSinglePointEvent_Button((QSinglePointEvent*)self);
 }
 
-int64_t q_wheelevent_buttons(void* self) {
+int32_t q_wheelevent_buttons(void* self) {
     return QSinglePointEvent_Buttons((QSinglePointEvent*)self);
 }
 
@@ -1486,11 +1486,11 @@ int32_t q_wheelevent_device_type(void* self) {
     return QInputEvent_DeviceType((QInputEvent*)self);
 }
 
-int64_t q_wheelevent_modifiers(void* self) {
+int32_t q_wheelevent_modifiers(void* self) {
     return QInputEvent_Modifiers((QInputEvent*)self);
 }
 
-void q_wheelevent_set_modifiers(void* self, int64_t modifiers) {
+void q_wheelevent_set_modifiers(void* self, int32_t modifiers) {
     QInputEvent_SetModifiers((QInputEvent*)self, modifiers);
 }
 
@@ -1566,7 +1566,7 @@ void q_wheelevent_delete(void* self) {
     QWheelEvent_Delete((QWheelEvent*)(self));
 }
 
-QTabletEvent* q_tabletevent_new(int32_t t, void* device, void* pos, void* globalPos, double pressure, float xTilt, float yTilt, float tangentialPressure, double rotation, float z, int64_t keyState, int64_t button, int64_t buttons) {
+QTabletEvent* q_tabletevent_new(int32_t t, void* device, void* pos, void* globalPos, double pressure, float xTilt, float yTilt, float tangentialPressure, double rotation, float z, int32_t keyState, int32_t button, int32_t buttons) {
     return QTabletEvent_new(t, (QPointingDevice*)device, (QPointF*)pos, (QPointF*)globalPos, pressure, xTilt, yTilt, tangentialPressure, rotation, z, keyState, button, buttons);
 }
 
@@ -1650,11 +1650,11 @@ double q_tabletevent_y_tilt(void* self) {
     return QTabletEvent_YTilt((QTabletEvent*)self);
 }
 
-int64_t q_tabletevent_button(void* self) {
+int32_t q_tabletevent_button(void* self) {
     return QSinglePointEvent_Button((QSinglePointEvent*)self);
 }
 
-int64_t q_tabletevent_buttons(void* self) {
+int32_t q_tabletevent_buttons(void* self) {
     return QSinglePointEvent_Buttons((QSinglePointEvent*)self);
 }
 
@@ -1739,11 +1739,11 @@ int32_t q_tabletevent_device_type(void* self) {
     return QInputEvent_DeviceType((QInputEvent*)self);
 }
 
-int64_t q_tabletevent_modifiers(void* self) {
+int32_t q_tabletevent_modifiers(void* self) {
     return QInputEvent_Modifiers((QInputEvent*)self);
 }
 
-void q_tabletevent_set_modifiers(void* self, int64_t modifiers) {
+void q_tabletevent_set_modifiers(void* self, int32_t modifiers) {
     QInputEvent_SetModifiers((QInputEvent*)self, modifiers);
 }
 
@@ -1915,11 +1915,11 @@ QPointF* q_nativegestureevent_screen_pos(void* self) {
     return QNativeGestureEvent_ScreenPos((QNativeGestureEvent*)self);
 }
 
-int64_t q_nativegestureevent_button(void* self) {
+int32_t q_nativegestureevent_button(void* self) {
     return QSinglePointEvent_Button((QSinglePointEvent*)self);
 }
 
-int64_t q_nativegestureevent_buttons(void* self) {
+int32_t q_nativegestureevent_buttons(void* self) {
     return QSinglePointEvent_Buttons((QSinglePointEvent*)self);
 }
 
@@ -2004,11 +2004,11 @@ int32_t q_nativegestureevent_device_type(void* self) {
     return QInputEvent_DeviceType((QInputEvent*)self);
 }
 
-int64_t q_nativegestureevent_modifiers(void* self) {
+int32_t q_nativegestureevent_modifiers(void* self) {
     return QInputEvent_Modifiers((QInputEvent*)self);
 }
 
-void q_nativegestureevent_set_modifiers(void* self, int64_t modifiers) {
+void q_nativegestureevent_set_modifiers(void* self, int32_t modifiers) {
     QInputEvent_SetModifiers((QInputEvent*)self, modifiers);
 }
 
@@ -2120,39 +2120,39 @@ void q_nativegestureevent_delete(void* self) {
     QNativeGestureEvent_Delete((QNativeGestureEvent*)(self));
 }
 
-QKeyEvent* q_keyevent_new(int32_t type, int key, int64_t modifiers) {
+QKeyEvent* q_keyevent_new(int32_t type, int key, int32_t modifiers) {
     return QKeyEvent_new(type, key, modifiers);
 }
 
-QKeyEvent* q_keyevent_new2(int32_t type, int key, int64_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers) {
+QKeyEvent* q_keyevent_new2(int32_t type, int key, int32_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers) {
     return QKeyEvent_new2(type, key, modifiers, nativeScanCode, nativeVirtualKey, nativeModifiers);
 }
 
-QKeyEvent* q_keyevent_new3(int32_t type, int key, int64_t modifiers, const char* text) {
+QKeyEvent* q_keyevent_new3(int32_t type, int key, int32_t modifiers, const char* text) {
     return QKeyEvent_new3(type, key, modifiers, qstring(text));
 }
 
-QKeyEvent* q_keyevent_new4(int32_t type, int key, int64_t modifiers, const char* text, bool autorep) {
+QKeyEvent* q_keyevent_new4(int32_t type, int key, int32_t modifiers, const char* text, bool autorep) {
     return QKeyEvent_new4(type, key, modifiers, qstring(text), autorep);
 }
 
-QKeyEvent* q_keyevent_new5(int32_t type, int key, int64_t modifiers, const char* text, bool autorep, unsigned short count) {
+QKeyEvent* q_keyevent_new5(int32_t type, int key, int32_t modifiers, const char* text, bool autorep, unsigned short count) {
     return QKeyEvent_new5(type, key, modifiers, qstring(text), autorep, count);
 }
 
-QKeyEvent* q_keyevent_new6(int32_t type, int key, int64_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text) {
+QKeyEvent* q_keyevent_new6(int32_t type, int key, int32_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text) {
     return QKeyEvent_new6(type, key, modifiers, nativeScanCode, nativeVirtualKey, nativeModifiers, qstring(text));
 }
 
-QKeyEvent* q_keyevent_new7(int32_t type, int key, int64_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep) {
+QKeyEvent* q_keyevent_new7(int32_t type, int key, int32_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep) {
     return QKeyEvent_new7(type, key, modifiers, nativeScanCode, nativeVirtualKey, nativeModifiers, qstring(text), autorep);
 }
 
-QKeyEvent* q_keyevent_new8(int32_t type, int key, int64_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep, unsigned short count) {
+QKeyEvent* q_keyevent_new8(int32_t type, int key, int32_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep, unsigned short count) {
     return QKeyEvent_new8(type, key, modifiers, nativeScanCode, nativeVirtualKey, nativeModifiers, qstring(text), autorep, count);
 }
 
-QKeyEvent* q_keyevent_new9(int32_t type, int key, int64_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep, unsigned short count, void* device) {
+QKeyEvent* q_keyevent_new9(int32_t type, int key, int32_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep, unsigned short count, void* device) {
     return QKeyEvent_new9(type, key, modifiers, nativeScanCode, nativeVirtualKey, nativeModifiers, qstring(text), autorep, count, (QInputDevice*)device);
 }
 
@@ -2176,7 +2176,7 @@ bool q_keyevent_matches(void* self, int32_t key) {
     return QKeyEvent_Matches((QKeyEvent*)self, key);
 }
 
-int64_t q_keyevent_modifiers(void* self) {
+int32_t q_keyevent_modifiers(void* self) {
     return QKeyEvent_Modifiers((QKeyEvent*)self);
 }
 
@@ -2219,7 +2219,7 @@ int32_t q_keyevent_device_type(void* self) {
     return QInputEvent_DeviceType((QInputEvent*)self);
 }
 
-void q_keyevent_set_modifiers(void* self, int64_t modifiers) {
+void q_keyevent_set_modifiers(void* self, int32_t modifiers) {
     QInputEvent_SetModifiers((QInputEvent*)self, modifiers);
 }
 
@@ -3075,7 +3075,7 @@ QContextMenuEvent* q_contextmenuevent_new2(int32_t reason, void* pos) {
     return QContextMenuEvent_new2(reason, (QPoint*)pos);
 }
 
-QContextMenuEvent* q_contextmenuevent_new3(int32_t reason, void* pos, void* globalPos, int64_t modifiers) {
+QContextMenuEvent* q_contextmenuevent_new3(int32_t reason, void* pos, void* globalPos, int32_t modifiers) {
     return QContextMenuEvent_new3(reason, (QPoint*)pos, (QPoint*)globalPos, modifiers);
 }
 
@@ -3127,11 +3127,11 @@ int32_t q_contextmenuevent_device_type(void* self) {
     return QInputEvent_DeviceType((QInputEvent*)self);
 }
 
-int64_t q_contextmenuevent_modifiers(void* self) {
+int32_t q_contextmenuevent_modifiers(void* self) {
     return QInputEvent_Modifiers((QInputEvent*)self);
 }
 
-void q_contextmenuevent_set_modifiers(void* self, int64_t modifiers) {
+void q_contextmenuevent_set_modifiers(void* self, int32_t modifiers) {
     QInputEvent_SetModifiers((QInputEvent*)self, modifiers);
 }
 
@@ -3211,7 +3211,7 @@ QInputMethodEvent* q_inputmethodevent_new() {
     return QInputMethodEvent_new();
 }
 
-QInputMethodEvent* q_inputmethodevent_new2(const char* preeditText, libqt_list attributes) {
+QInputMethodEvent* q_inputmethodevent_new2(const char* preeditText, libqt_list /* of QInputMethodEvent__Attribute* */ attributes) {
     return QInputMethodEvent_new2(qstring(preeditText), attributes);
 }
 
@@ -3322,7 +3322,7 @@ void q_inputmethodevent_delete(void* self) {
     QInputMethodEvent_Delete((QInputMethodEvent*)(self));
 }
 
-QInputMethodQueryEvent* q_inputmethodqueryevent_new(int64_t queries) {
+QInputMethodQueryEvent* q_inputmethodqueryevent_new(int32_t queries) {
     return QInputMethodQueryEvent_new(queries);
 }
 
@@ -3338,15 +3338,15 @@ QInputMethodQueryEvent* q_inputmethodqueryevent_qbase_clone(void* self) {
     return QInputMethodQueryEvent_QBaseClone((QInputMethodQueryEvent*)self);
 }
 
-int64_t q_inputmethodqueryevent_queries(void* self) {
+int32_t q_inputmethodqueryevent_queries(void* self) {
     return QInputMethodQueryEvent_Queries((QInputMethodQueryEvent*)self);
 }
 
-void q_inputmethodqueryevent_set_value(void* self, int64_t query, void* value) {
+void q_inputmethodqueryevent_set_value(void* self, int32_t query, void* value) {
     QInputMethodQueryEvent_SetValue((QInputMethodQueryEvent*)self, query, (QVariant*)value);
 }
 
-QVariant* q_inputmethodqueryevent_value(void* self, int64_t query) {
+QVariant* q_inputmethodqueryevent_value(void* self, int32_t query) {
     return QInputMethodQueryEvent_Value((QInputMethodQueryEvent*)self, query);
 }
 
@@ -3406,11 +3406,11 @@ void q_inputmethodqueryevent_delete(void* self) {
     QInputMethodQueryEvent_Delete((QInputMethodQueryEvent*)(self));
 }
 
-QDropEvent* q_dropevent_new(void* pos, int32_t actions, void* data, int64_t buttons, int64_t modifiers) {
+QDropEvent* q_dropevent_new(void* pos, int32_t actions, void* data, int32_t buttons, int32_t modifiers) {
     return QDropEvent_new((QPointF*)pos, actions, (QMimeData*)data, buttons, modifiers);
 }
 
-QDropEvent* q_dropevent_new2(void* pos, int32_t actions, void* data, int64_t buttons, int64_t modifiers, int32_t type) {
+QDropEvent* q_dropevent_new2(void* pos, int32_t actions, void* data, int32_t buttons, int32_t modifiers, int32_t type) {
     return QDropEvent_new2((QPointF*)pos, actions, (QMimeData*)data, buttons, modifiers, type);
 }
 
@@ -3434,11 +3434,11 @@ QPointF* q_dropevent_pos_f(void* self) {
     return QDropEvent_PosF((QDropEvent*)self);
 }
 
-int64_t q_dropevent_mouse_buttons(void* self) {
+int32_t q_dropevent_mouse_buttons(void* self) {
     return QDropEvent_MouseButtons((QDropEvent*)self);
 }
 
-int64_t q_dropevent_keyboard_modifiers(void* self) {
+int32_t q_dropevent_keyboard_modifiers(void* self) {
     return QDropEvent_KeyboardModifiers((QDropEvent*)self);
 }
 
@@ -3446,11 +3446,11 @@ QPointF* q_dropevent_position(void* self) {
     return QDropEvent_Position((QDropEvent*)self);
 }
 
-int64_t q_dropevent_buttons(void* self) {
+int32_t q_dropevent_buttons(void* self) {
     return QDropEvent_Buttons((QDropEvent*)self);
 }
 
-int64_t q_dropevent_modifiers(void* self) {
+int32_t q_dropevent_modifiers(void* self) {
     return QDropEvent_Modifiers((QDropEvent*)self);
 }
 
@@ -3538,11 +3538,11 @@ void q_dropevent_delete(void* self) {
     QDropEvent_Delete((QDropEvent*)(self));
 }
 
-QDragMoveEvent* q_dragmoveevent_new(void* pos, int32_t actions, void* data, int64_t buttons, int64_t modifiers) {
+QDragMoveEvent* q_dragmoveevent_new(void* pos, int32_t actions, void* data, int32_t buttons, int32_t modifiers) {
     return QDragMoveEvent_new((QPoint*)pos, actions, (QMimeData*)data, buttons, modifiers);
 }
 
-QDragMoveEvent* q_dragmoveevent_new2(void* pos, int32_t actions, void* data, int64_t buttons, int64_t modifiers, int32_t type) {
+QDragMoveEvent* q_dragmoveevent_new2(void* pos, int32_t actions, void* data, int32_t buttons, int32_t modifiers, int32_t type) {
     return QDragMoveEvent_new2((QPoint*)pos, actions, (QMimeData*)data, buttons, modifiers, type);
 }
 
@@ -3586,11 +3586,11 @@ QPointF* q_dragmoveevent_pos_f(void* self) {
     return QDropEvent_PosF((QDropEvent*)self);
 }
 
-int64_t q_dragmoveevent_mouse_buttons(void* self) {
+int32_t q_dragmoveevent_mouse_buttons(void* self) {
     return QDropEvent_MouseButtons((QDropEvent*)self);
 }
 
-int64_t q_dragmoveevent_keyboard_modifiers(void* self) {
+int32_t q_dragmoveevent_keyboard_modifiers(void* self) {
     return QDropEvent_KeyboardModifiers((QDropEvent*)self);
 }
 
@@ -3598,11 +3598,11 @@ QPointF* q_dragmoveevent_position(void* self) {
     return QDropEvent_Position((QDropEvent*)self);
 }
 
-int64_t q_dragmoveevent_buttons(void* self) {
+int32_t q_dragmoveevent_buttons(void* self) {
     return QDropEvent_Buttons((QDropEvent*)self);
 }
 
-int64_t q_dragmoveevent_modifiers(void* self) {
+int32_t q_dragmoveevent_modifiers(void* self) {
     return QDropEvent_Modifiers((QDropEvent*)self);
 }
 
@@ -3682,7 +3682,7 @@ void q_dragmoveevent_delete(void* self) {
     QDragMoveEvent_Delete((QDragMoveEvent*)(self));
 }
 
-QDragEnterEvent* q_dragenterevent_new(void* pos, int32_t actions, void* data, int64_t buttons, int64_t modifiers) {
+QDragEnterEvent* q_dragenterevent_new(void* pos, int32_t actions, void* data, int32_t buttons, int32_t modifiers) {
     return QDragEnterEvent_new((QPoint*)pos, actions, (QMimeData*)data, buttons, modifiers);
 }
 
@@ -3726,11 +3726,11 @@ QPointF* q_dragenterevent_pos_f(void* self) {
     return QDropEvent_PosF((QDropEvent*)self);
 }
 
-int64_t q_dragenterevent_mouse_buttons(void* self) {
+int32_t q_dragenterevent_mouse_buttons(void* self) {
     return QDropEvent_MouseButtons((QDropEvent*)self);
 }
 
-int64_t q_dragenterevent_keyboard_modifiers(void* self) {
+int32_t q_dragenterevent_keyboard_modifiers(void* self) {
     return QDropEvent_KeyboardModifiers((QDropEvent*)self);
 }
 
@@ -3738,11 +3738,11 @@ QPointF* q_dragenterevent_position(void* self) {
     return QDropEvent_Position((QDropEvent*)self);
 }
 
-int64_t q_dragenterevent_buttons(void* self) {
+int32_t q_dragenterevent_buttons(void* self) {
     return QDropEvent_Buttons((QDropEvent*)self);
 }
 
-int64_t q_dragenterevent_modifiers(void* self) {
+int32_t q_dragenterevent_modifiers(void* self) {
     return QDropEvent_Modifiers((QDropEvent*)self);
 }
 
@@ -4587,7 +4587,7 @@ QTouchEvent* q_touchevent_new(int32_t eventType) {
     return QTouchEvent_new(eventType);
 }
 
-QTouchEvent* q_touchevent_new2(int32_t eventType, void* device, int64_t modifiers, uint8_t touchPointStates) {
+QTouchEvent* q_touchevent_new2(int32_t eventType, void* device, int32_t modifiers, uint8_t touchPointStates) {
     return QTouchEvent_new2(eventType, (QPointingDevice*)device, modifiers, touchPointStates);
 }
 
@@ -4595,15 +4595,15 @@ QTouchEvent* q_touchevent_new3(int32_t eventType, void* device) {
     return QTouchEvent_new3(eventType, (QPointingDevice*)device);
 }
 
-QTouchEvent* q_touchevent_new4(int32_t eventType, void* device, int64_t modifiers) {
+QTouchEvent* q_touchevent_new4(int32_t eventType, void* device, int32_t modifiers) {
     return QTouchEvent_new4(eventType, (QPointingDevice*)device, modifiers);
 }
 
-QTouchEvent* q_touchevent_new5(int32_t eventType, void* device, int64_t modifiers, libqt_list touchPoints) {
+QTouchEvent* q_touchevent_new5(int32_t eventType, void* device, int32_t modifiers, libqt_list /* of QEventPoint* */ touchPoints) {
     return QTouchEvent_new5(eventType, (QPointingDevice*)device, modifiers, touchPoints);
 }
 
-QTouchEvent* q_touchevent_new6(int32_t eventType, void* device, int64_t modifiers, uint8_t touchPointStates, libqt_list touchPoints) {
+QTouchEvent* q_touchevent_new6(int32_t eventType, void* device, int32_t modifiers, uint8_t touchPointStates, libqt_list /* of QEventPoint* */ touchPoints) {
     return QTouchEvent_new6(eventType, (QPointingDevice*)device, modifiers, touchPointStates, touchPoints);
 }
 
@@ -4729,11 +4729,11 @@ int32_t q_touchevent_device_type(void* self) {
     return QInputEvent_DeviceType((QInputEvent*)self);
 }
 
-int64_t q_touchevent_modifiers(void* self) {
+int32_t q_touchevent_modifiers(void* self) {
     return QInputEvent_Modifiers((QInputEvent*)self);
 }
 
-void q_touchevent_set_modifiers(void* self, int64_t modifiers) {
+void q_touchevent_set_modifiers(void* self, int32_t modifiers) {
     QInputEvent_SetModifiers((QInputEvent*)self, modifiers);
 }
 

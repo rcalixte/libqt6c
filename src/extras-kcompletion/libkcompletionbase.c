@@ -75,7 +75,7 @@ int32_t k_completionbase_completion_mode(void* self) {
     return KCompletionBase_CompletionMode((KCompletionBase*)self);
 }
 
-bool k_completionbase_set_key_binding(void* self, int32_t item, libqt_list key) {
+bool k_completionbase_set_key_binding(void* self, int32_t item, libqt_list /* of QKeySequence* */ key) {
     return KCompletionBase_SetKeyBinding((KCompletionBase*)self, item, key);
 }
 
@@ -104,7 +104,7 @@ void k_completionbase_set_completed_items(void* self, const char* items[static 1
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_completionbase_set_completed_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_completionbase_set_completed_items\n");
         abort();
     }
     for (size_t i = 0; i < items_len; ++i) {
@@ -123,7 +123,7 @@ void k_completionbase_qbase_set_completed_items(void* self, const char* items[st
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_completionbase_set_completed_items");
+        fprintf(stderr, "Failed to allocate memory for string list in k_completionbase_set_completed_items\n");
         abort();
     }
     for (size_t i = 0; i < items_len; ++i) {
@@ -147,7 +147,7 @@ libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequen
     if (_ret_values == NULL) {
         free(_out.keys);
         free(_out.values);
-        fprintf(stderr, "Failed to allocate memory for map value containers in k_completionbase_key_binding_map");
+        fprintf(stderr, "Failed to allocate memory for map value containers in k_completionbase_key_binding_map\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
@@ -160,7 +160,7 @@ libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequen
             free(_out.keys);
             free(_ret_values);
             free(_out.values);
-            fprintf(stderr, "Failed to allocate memory for map values in k_completionbase_key_binding_map");
+            fprintf(stderr, "Failed to allocate memory for map values in k_completionbase_key_binding_map\n");
             abort();
         }
         memcpy(_ret_arr, _value_list.data.ptr, _value_list.len * sizeof(QKeySequence*));
@@ -190,7 +190,7 @@ libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequen
     if (_ret_values == NULL) {
         free(_out.keys);
         free(_out.values);
-        fprintf(stderr, "Failed to allocate memory for map value containers in k_completionbase_key_binding_map");
+        fprintf(stderr, "Failed to allocate memory for map value containers in k_completionbase_key_binding_map\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
@@ -203,7 +203,7 @@ libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequen
             free(_out.keys);
             free(_ret_values);
             free(_out.values);
-            fprintf(stderr, "Failed to allocate memory for map values in k_completionbase_key_binding_map");
+            fprintf(stderr, "Failed to allocate memory for map values in k_completionbase_key_binding_map\n");
             abort();
         }
         memcpy(_ret_arr, _value_list.data.ptr, _value_list.len * sizeof(QKeySequence*));

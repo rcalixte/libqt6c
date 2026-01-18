@@ -592,7 +592,9 @@ void k_solid__battery_kill_timer2(void* self, int32_t id);
 ///
 /// @param self Solid__Battery*
 ///
-libqt_list /* of QObject* */ k_solid__battery_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_solid__battery_children(void* self);
 
 /// Inherited from QObject
 ///

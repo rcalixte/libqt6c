@@ -58,7 +58,7 @@ bool q_pieseries_append(void* self, void* slice) {
     return QPieSeries_Append((QPieSeries*)self, (QPieSlice*)slice);
 }
 
-bool q_pieseries_append2(void* self, libqt_list slices) {
+bool q_pieseries_append2(void* self, libqt_list /* of QPieSlice* */ slices) {
     return QPieSeries_Append2((QPieSeries*)self, slices);
 }
 
@@ -159,7 +159,7 @@ void q_pieseries_set_labels_position(void* self, int32_t position) {
     QPieSeries_SetLabelsPosition((QPieSeries*)self, position);
 }
 
-void q_pieseries_added(void* self, libqt_list slices) {
+void q_pieseries_added(void* self, libqt_list /* of QPieSlice* */ slices) {
     QPieSeries_Added((QPieSeries*)self, slices);
 }
 
@@ -167,7 +167,7 @@ void q_pieseries_on_added(void* self, void (*callback)(void*, QPieSlice**)) {
     QPieSeries_Connect_Added((QPieSeries*)self, (intptr_t)callback);
 }
 
-void q_pieseries_removed(void* self, libqt_list slices) {
+void q_pieseries_removed(void* self, libqt_list /* of QPieSlice* */ slices) {
     QPieSeries_Removed((QPieSeries*)self, slices);
 }
 
@@ -454,7 +454,7 @@ const char** q_pieseries_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_pieseries_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_pieseries_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

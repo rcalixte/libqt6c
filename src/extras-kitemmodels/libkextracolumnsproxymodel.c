@@ -80,7 +80,7 @@ bool k_extracolumnsproxymodel_qbase_set_extra_column_data(void* self, void* pare
     return KExtraColumnsProxyModel_QBaseSetExtraColumnData((KExtraColumnsProxyModel*)self, (QModelIndex*)parent, row, extraColumn, (QVariant*)data, role);
 }
 
-void k_extracolumnsproxymodel_extra_column_data_changed(void* self, void* parent, int row, int extraColumn, libqt_list roles) {
+void k_extracolumnsproxymodel_extra_column_data_changed(void* self, void* parent, int row, int extraColumn, libqt_list /* of int */ roles) {
     KExtraColumnsProxyModel_ExtraColumnDataChanged((KExtraColumnsProxyModel*)self, (QModelIndex*)parent, row, extraColumn, roles);
 }
 
@@ -366,15 +366,15 @@ bool k_extracolumnsproxymodel_check_index2(void* self, void* index, int32_t opti
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
-void k_extracolumnsproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles) {
+void k_extracolumnsproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles) {
     QAbstractItemModel_DataChanged3((QAbstractItemModel*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void k_extracolumnsproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*)) {
+void k_extracolumnsproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */)) {
     QAbstractItemModel_Connect_DataChanged3((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_extracolumnsproxymodel_layout_changed1(void* self, libqt_list parents) {
+void k_extracolumnsproxymodel_layout_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents) {
     QAbstractItemModel_LayoutChanged1((QAbstractItemModel*)self, parents);
 }
 
@@ -382,7 +382,7 @@ void k_extracolumnsproxymodel_on_layout_changed1(void* self, void (*callback)(vo
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_extracolumnsproxymodel_layout_changed2(void* self, libqt_list parents, int32_t hint) {
+void k_extracolumnsproxymodel_layout_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint) {
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
@@ -390,7 +390,7 @@ void k_extracolumnsproxymodel_on_layout_changed2(void* self, void (*callback)(vo
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_extracolumnsproxymodel_layout_about_to_be_changed1(void* self, libqt_list parents) {
+void k_extracolumnsproxymodel_layout_about_to_be_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents) {
     QAbstractItemModel_LayoutAboutToBeChanged1((QAbstractItemModel*)self, parents);
 }
 
@@ -398,7 +398,7 @@ void k_extracolumnsproxymodel_on_layout_about_to_be_changed1(void* self, void (*
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_extracolumnsproxymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint) {
+void k_extracolumnsproxymodel_layout_about_to_be_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint) {
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
@@ -511,7 +511,7 @@ const char** k_extracolumnsproxymodel_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_extracolumnsproxymodel_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_extracolumnsproxymodel_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -889,11 +889,11 @@ void k_extracolumnsproxymodel_on_span(void* self, QSize* (*callback)(void*, void
     KExtraColumnsProxyModel_OnSpan((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-QMimeData* k_extracolumnsproxymodel_mime_data(void* self, libqt_list indexes) {
+QMimeData* k_extracolumnsproxymodel_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
     return KExtraColumnsProxyModel_MimeData((KExtraColumnsProxyModel*)self, indexes);
 }
 
-QMimeData* k_extracolumnsproxymodel_qbase_mime_data(void* self, libqt_list indexes) {
+QMimeData* k_extracolumnsproxymodel_qbase_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
     return KExtraColumnsProxyModel_QBaseMimeData((KExtraColumnsProxyModel*)self, indexes);
 }
 
@@ -918,7 +918,7 @@ const char** k_extracolumnsproxymodel_mime_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_extracolumnsproxymodel_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in k_extracolumnsproxymodel_mime_types\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -937,7 +937,7 @@ const char** k_extracolumnsproxymodel_qbase_mime_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_extracolumnsproxymodel_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in k_extracolumnsproxymodel_mime_types\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -987,7 +987,7 @@ libqt_map /* of int to char* */ k_extracolumnsproxymodel_role_names(void* self) 
     libqt_string* _out_values = (libqt_string*)_out.values;
     char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string values in k_extracolumnsproxymodel_role_names");
+        fprintf(stderr, "Failed to allocate memory for map string values in k_extracolumnsproxymodel_role_names\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
@@ -997,9 +997,11 @@ libqt_map /* of int to char* */ k_extracolumnsproxymodel_role_names(void* self) 
                 libqt_free(_ret_values[j]);
             }
             free(_ret_values);
-            fprintf(stderr, "Failed to allocate memory for map string values in k_extracolumnsproxymodel_role_names");
+            fprintf(stderr, "Failed to allocate memory for map string values in k_extracolumnsproxymodel_role_names\n");
             abort();
         }
+        memcpy(_ret_values[i], _out_values[i].data, _out_values[i].len);
+        _ret_values[i][_out_values[i].len] = '\0';
     }
     _ret.keys = _out.keys;
     _ret.values = (void*)_ret_values;
@@ -1018,7 +1020,7 @@ libqt_map /* of int to char* */ k_extracolumnsproxymodel_qbase_role_names(void* 
     libqt_string* _out_values = (libqt_string*)_out.values;
     char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string values in k_extracolumnsproxymodel_role_names");
+        fprintf(stderr, "Failed to allocate memory for map string values in k_extracolumnsproxymodel_role_names\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
@@ -1028,9 +1030,11 @@ libqt_map /* of int to char* */ k_extracolumnsproxymodel_qbase_role_names(void* 
                 libqt_free(_ret_values[j]);
             }
             free(_ret_values);
-            fprintf(stderr, "Failed to allocate memory for map string values in k_extracolumnsproxymodel_role_names");
+            fprintf(stderr, "Failed to allocate memory for map string values in k_extracolumnsproxymodel_role_names\n");
             abort();
         }
+        memcpy(_ret_values[i], _out_values[i].data, _out_values[i].len);
+        _ret_values[i][_out_values[i].len] = '\0';
     }
     _ret.keys = _out.keys;
     _ret.values = (void*)_ret_values;
@@ -1201,11 +1205,11 @@ void k_extracolumnsproxymodel_on_create_index(void* self, QModelIndex* (*callbac
     KExtraColumnsProxyModel_OnCreateIndex((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-void k_extracolumnsproxymodel_encode_data(void* self, libqt_list indexes, void* stream) {
+void k_extracolumnsproxymodel_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
     KExtraColumnsProxyModel_EncodeData((KExtraColumnsProxyModel*)self, indexes, (QDataStream*)stream);
 }
 
-void k_extracolumnsproxymodel_qbase_encode_data(void* self, libqt_list indexes, void* stream) {
+void k_extracolumnsproxymodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
     KExtraColumnsProxyModel_QBaseEncodeData((KExtraColumnsProxyModel*)self, indexes, (QDataStream*)stream);
 }
 
@@ -1405,11 +1409,11 @@ void k_extracolumnsproxymodel_on_change_persistent_index(void* self, void (*call
     KExtraColumnsProxyModel_OnChangePersistentIndex((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-void k_extracolumnsproxymodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to) {
+void k_extracolumnsproxymodel_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
     KExtraColumnsProxyModel_ChangePersistentIndexList((KExtraColumnsProxyModel*)self, from, to);
 }
 
-void k_extracolumnsproxymodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to) {
+void k_extracolumnsproxymodel_qbase_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
     KExtraColumnsProxyModel_QBaseChangePersistentIndexList((KExtraColumnsProxyModel*)self, from, to);
 }
 

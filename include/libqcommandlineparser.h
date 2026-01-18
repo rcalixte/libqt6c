@@ -49,9 +49,9 @@ bool q_commandlineparser_add_option(void* self, void* commandLineOption);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineparser.html#addOptions)
 ///
 /// @param self QCommandLineParser*
-/// @param options libqt_list /* of QCommandLineOption* */
+/// @param options libqt_list of QCommandLineOption*
 ///
-bool q_commandlineparser_add_options(void* self, libqt_list options);
+bool q_commandlineparser_add_options(void* self, libqt_list /* of QCommandLineOption* */ options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcommandlineparser.html#addVersionOption)
 ///

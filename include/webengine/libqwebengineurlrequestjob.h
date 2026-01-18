@@ -63,7 +63,8 @@ QUrl* q_webengineurlrequestjob_initiator(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of char* to char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     libqt_free(map.values[i]);
@@ -74,7 +75,9 @@ QUrl* q_webengineurlrequestjob_initiator(void* self);
 ///
 /// @param self QWebEngineUrlRequestJob*
 ///
-libqt_map /* of char* to char* */ q_webengineurlrequestjob_request_headers(void* self);
+/// @return libqt_map of char* to char*
+///
+libqt_map q_webengineurlrequestjob_request_headers(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#requestBody)
 ///
@@ -107,9 +110,9 @@ void q_webengineurlrequestjob_redirect(void* self, void* url);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#setAdditionalResponseHeaders)
 ///
 /// @param self QWebEngineUrlRequestJob*
-/// @param additionalResponseHeaders libqt_map /* of char* to char** */
+/// @param additionalResponseHeaders libqt_map of char* to char**
 ///
-void q_webengineurlrequestjob_set_additional_response_headers(void* self, libqt_map /* of char* to char** */ additionalResponseHeaders);
+void q_webengineurlrequestjob_set_additional_response_headers(void* self, libqt_map additionalResponseHeaders);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -259,7 +262,9 @@ void q_webengineurlrequestjob_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QWebEngineUrlRequestJob*
 ///
-libqt_list /* of QObject* */ q_webengineurlrequestjob_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_webengineurlrequestjob_children(void* self);
 
 /// Inherited from QObject
 ///

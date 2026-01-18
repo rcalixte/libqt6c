@@ -35,25 +35,33 @@ Solid__Device* k_solid__device_new3(const char* udi);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#allDevices)
 ///
-libqt_list /* of Solid__Device* */ k_solid__device_all_devices();
+/// @return libqt_list of Solid__Device*
+///
+libqt_list k_solid__device_all_devices();
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#listFromType)
 ///
 /// @param type enum Solid__DeviceInterface__Type*
 ///
-libqt_list /* of Solid__Device* */ k_solid__device_list_from_type(int32_t* type);
+/// @return libqt_list of Solid__Device*
+///
+libqt_list k_solid__device_list_from_type(int32_t* type);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#listFromQuery)
 ///
 /// @param predicate Solid__Predicate*
 ///
-libqt_list /* of Solid__Device* */ k_solid__device_list_from_query(void* predicate);
+/// @return libqt_list of Solid__Device*
+///
+libqt_list k_solid__device_list_from_query(void* predicate);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#listFromQuery)
 ///
 /// @param predicate const char*
 ///
-libqt_list /* of Solid__Device* */ k_solid__device_list_from_query2(const char* predicate);
+/// @return libqt_list of Solid__Device*
+///
+libqt_list k_solid__device_list_from_query2(const char* predicate);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#storageAccessFromPath)
 ///
@@ -170,21 +178,27 @@ const Solid__DeviceInterface* k_solid__device_as_device_interface2(void* self, i
 /// @param type enum Solid__DeviceInterface__Type*
 /// @param parentUdi const char*
 ///
-libqt_list /* of Solid__Device* */ k_solid__device_list_from_type2(int32_t* type, const char* parentUdi);
+/// @return libqt_list of Solid__Device*
+///
+libqt_list k_solid__device_list_from_type2(int32_t* type, const char* parentUdi);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#listFromQuery)
 ///
 /// @param predicate Solid__Predicate*
 /// @param parentUdi const char*
 ///
-libqt_list /* of Solid__Device* */ k_solid__device_list_from_query22(void* predicate, const char* parentUdi);
+/// @return libqt_list of Solid__Device*
+///
+libqt_list k_solid__device_list_from_query22(void* predicate, const char* parentUdi);
 
 /// [Upstream resources](https://api.kde.org/solid-device.html#listFromQuery)
 ///
 /// @param predicate const char*
 /// @param parentUdi const char*
 ///
-libqt_list /* of Solid__Device* */ k_solid__device_list_from_query23(const char* predicate, const char* parentUdi);
+/// @return libqt_list of Solid__Device*
+///
+libqt_list k_solid__device_list_from_query23(const char* predicate, const char* parentUdi);
 
 /// Delete this object from C++ memory.
 ///

@@ -142,15 +142,17 @@ int32_t k_attica__comment_score(void* self);
 /// [Upstream resources](https://api.kde.org/attica-comment.html#setChildren)
 ///
 /// @param self Attica__Comment*
-/// @param comments libqt_list /* of Attica__Comment* */
+/// @param comments libqt_list of Attica__Comment*
 ///
-void k_attica__comment_set_children(void* self, libqt_list comments);
+void k_attica__comment_set_children(void* self, libqt_list /* of Attica__Comment* */ comments);
 
 /// [Upstream resources](https://api.kde.org/attica-comment.html#children)
 ///
 /// @param self Attica__Comment*
 ///
-libqt_list /* of Attica__Comment* */ k_attica__comment_children(void* self);
+/// @return libqt_list of Attica__Comment*
+///
+libqt_list k_attica__comment_children(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-comment.html#isValid)
 ///

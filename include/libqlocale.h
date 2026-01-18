@@ -605,7 +605,7 @@ int32_t q_locale_first_day_of_week(void* self);
 ///
 /// @return libqt_list of enum Qt__DayOfWeek
 ///
-libqt_list /* of enum Qt__DayOfWeek */ q_locale_weekdays(void* self);
+libqt_list q_locale_weekdays(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#amText)
 ///
@@ -844,7 +844,9 @@ QLocale* q_locale_system();
 /// @param script enum QLocale__Script
 /// @param territory enum QLocale__Country
 ///
-libqt_list /* of QLocale* */ q_locale_matching_locales(uint16_t language, uint16_t script, uint16_t territory);
+/// @return libqt_list of QLocale*
+///
+libqt_list q_locale_matching_locales(uint16_t language, uint16_t script, uint16_t territory);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#countriesForLanguage)
 ///
@@ -852,7 +854,7 @@ libqt_list /* of QLocale* */ q_locale_matching_locales(uint16_t language, uint16
 ///
 /// @return libqt_list of enum QLocale__Country
 ///
-libqt_list /* of enum QLocale__Country */ q_locale_countries_for_language(uint16_t lang);
+libqt_list q_locale_countries_for_language(uint16_t lang);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#setNumberOptions)
 ///

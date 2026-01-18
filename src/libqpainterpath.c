@@ -354,7 +354,7 @@ void q_painterpathstroker_set_dash_pattern(void* self, int32_t dashPattern) {
     QPainterPathStroker_SetDashPattern((QPainterPathStroker*)self, dashPattern);
 }
 
-void q_painterpathstroker_set_dash_pattern2(void* self, libqt_list dashPattern) {
+void q_painterpathstroker_set_dash_pattern2(void* self, libqt_list /* of double */ dashPattern) {
     QPainterPathStroker_SetDashPattern2((QPainterPathStroker*)self, dashPattern);
 }
 

@@ -159,18 +159,18 @@ void k_io__batchrenamejob_add_meta_data(void* self, const char* key, const char*
 /// [Upstream resources](https://api.kde.org/kio-job.html#addMetaData)
 ///
 /// @param self KIO__BatchRenameJob*
-/// @param values libqt_map /* of const char* to const char* */
+/// @param values libqt_map of const char* to const char*
 ///
-void k_io__batchrenamejob_add_meta_data2(void* self, libqt_map /* of const char* to const char* */ values);
+void k_io__batchrenamejob_add_meta_data2(void* self, libqt_map values);
 
 /// Inherited from KIO::Job
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#mergeMetaData)
 ///
 /// @param self KIO__BatchRenameJob*
-/// @param values libqt_map /* of const char* to const char* */
+/// @param values libqt_map of const char* to const char*
 ///
-void k_io__batchrenamejob_merge_meta_data(void* self, libqt_map /* of const char* to const char* */ values);
+void k_io__batchrenamejob_merge_meta_data(void* self, libqt_map values);
 
 /// Inherited from KIO::Job
 ///
@@ -642,7 +642,9 @@ void k_io__batchrenamejob_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KIO__BatchRenameJob*
 ///
-libqt_list /* of QObject* */ k_io__batchrenamejob_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_io__batchrenamejob_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -975,11 +977,11 @@ void k_io__batchrenamejob_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio.html#batchRename)
 ///
-/// @param param1 libqt_list /* of QUrl* */
+/// @param param1 libqt_list of QUrl*
 /// @param param2 const char*
 /// @param param3 int
 /// @param param4 QChar*
 /// @param param5 flag of enum KIO__JobFlag
 ///
-KIO__BatchRenameJob* k_io_batch_rename(libqt_list param1, const char* param2, int param3, void* param4, int32_t param5);
+KIO__BatchRenameJob* k_io_batch_rename(libqt_list /* of QUrl* */ param1, const char* param2, int param3, void* param4, int32_t param5);
 #endif

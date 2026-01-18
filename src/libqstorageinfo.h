@@ -166,7 +166,9 @@ void q_storageinfo_refresh(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#mountedVolumes)
 ///
-libqt_list /* of QStorageInfo* */ q_storageinfo_mounted_volumes();
+/// @return libqt_list of QStorageInfo*
+///
+libqt_list q_storageinfo_mounted_volumes();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#root)
 ///

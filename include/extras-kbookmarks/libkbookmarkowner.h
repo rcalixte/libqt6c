@@ -117,7 +117,9 @@ bool k_bookmarkowner_qbase_supports_tabs(void* self);
 ///
 /// @param self KBookmarkOwner*
 ///
-libqt_list /* of KBookmarkOwner__FutureBookmark* */ k_bookmarkowner_current_bookmark_list(void* self);
+/// @return libqt_list of KBookmarkOwner__FutureBookmark*
+///
+libqt_list k_bookmarkowner_current_bookmark_list(void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkowner.html#currentBookmarkList)
 ///
@@ -134,7 +136,9 @@ void k_bookmarkowner_on_current_bookmark_list(void* self, KBookmarkOwner__Future
 ///
 /// @param self KBookmarkOwner*
 ///
-libqt_list /* of KBookmarkOwner__FutureBookmark* */ k_bookmarkowner_qbase_current_bookmark_list(void* self);
+/// @return libqt_list of KBookmarkOwner__FutureBookmark*
+///
+libqt_list k_bookmarkowner_qbase_current_bookmark_list(void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkowner.html#enableOption)
 ///
@@ -168,7 +172,7 @@ bool k_bookmarkowner_qbase_enable_option(void* self, int32_t option);
 /// @param mb flag of enum Qt__MouseButton
 /// @param km flag of enum Qt__KeyboardModifier
 ///
-void k_bookmarkowner_open_bookmark(void* self, void* bm, int64_t mb, int64_t km);
+void k_bookmarkowner_open_bookmark(void* self, void* bm, int32_t mb, int32_t km);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkowner.html#openBookmark)
 ///
@@ -177,7 +181,7 @@ void k_bookmarkowner_open_bookmark(void* self, void* bm, int64_t mb, int64_t km)
 /// @param self KBookmarkOwner*
 /// @param callback void func(KBookmarkOwner* self, KBookmark* bm, flag of enum Qt__MouseButton mb, flag of enum Qt__KeyboardModifier km)
 ///
-void k_bookmarkowner_on_open_bookmark(void* self, void (*callback)(void*, void*, int64_t, int64_t));
+void k_bookmarkowner_on_open_bookmark(void* self, void (*callback)(void*, void*, int32_t, int32_t));
 
 /// [Upstream resources](https://api.kde.org/kbookmarkowner.html#openBookmark)
 ///
@@ -188,7 +192,7 @@ void k_bookmarkowner_on_open_bookmark(void* self, void (*callback)(void*, void*,
 /// @param mb flag of enum Qt__MouseButton
 /// @param km flag of enum Qt__KeyboardModifier
 ///
-void k_bookmarkowner_qbase_open_bookmark(void* self, void* bm, int64_t mb, int64_t km);
+void k_bookmarkowner_qbase_open_bookmark(void* self, void* bm, int32_t mb, int32_t km);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkowner.html#openFolderinTabs)
 ///

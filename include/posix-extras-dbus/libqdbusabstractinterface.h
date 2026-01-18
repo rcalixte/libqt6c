@@ -174,7 +174,9 @@ void q_dbusabstractinterfacebase_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QDBusAbstractInterfaceBase*
 ///
-libqt_list /* of QObject* */ q_dbusabstractinterfacebase_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_dbusabstractinterfacebase_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -567,9 +569,9 @@ QDBusMessage* q_dbusabstractinterface_call2(void* self, int32_t mode, const char
 /// @param self QDBusAbstractInterface*
 /// @param mode enum QDBus__CallMode
 /// @param method const char*
-/// @param args libqt_list /* of QVariant* */
+/// @param args libqt_list of QVariant*
 ///
-QDBusMessage* q_dbusabstractinterface_call_with_argument_list(void* self, int32_t mode, const char* method, libqt_list args);
+QDBusMessage* q_dbusabstractinterface_call_with_argument_list(void* self, int32_t mode, const char* method, libqt_list /* of QVariant* */ args);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#asyncCall)
 ///
@@ -582,9 +584,9 @@ QDBusPendingCall* q_dbusabstractinterface_async_call(void* self, const char* met
 ///
 /// @param self QDBusAbstractInterface*
 /// @param method const char*
-/// @param args libqt_list /* of QVariant* */
+/// @param args libqt_list of QVariant*
 ///
-QDBusPendingCall* q_dbusabstractinterface_async_call_with_argument_list(void* self, const char* method, libqt_list args);
+QDBusPendingCall* q_dbusabstractinterface_async_call_with_argument_list(void* self, const char* method, libqt_list /* of QVariant* */ args);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -734,7 +736,9 @@ void q_dbusabstractinterface_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QDBusAbstractInterface*
 ///
-libqt_list /* of QObject* */ q_dbusabstractinterface_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_dbusabstractinterface_children(void* self);
 
 /// Inherited from QObject
 ///

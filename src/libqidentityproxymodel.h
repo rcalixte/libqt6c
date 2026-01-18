@@ -371,7 +371,9 @@ QItemSelection* q_identityproxymodel_qbase_map_selection_to_source(void* self, v
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
 ///
-libqt_list /* of QModelIndex* */ q_identityproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list q_identityproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#match)
 ///
@@ -393,7 +395,9 @@ void q_identityproxymodel_on_match(void* self, QModelIndex** (*callback)(void*, 
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
 ///
-libqt_list /* of QModelIndex* */ q_identityproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list q_identityproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qidentityproxymodel.html#setSourceModel)
 ///
@@ -911,27 +915,27 @@ bool q_identityproxymodel_check_index2(void* self, void* index, int32_t options)
 /// @param self QIdentityProxyModel*
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
-/// @param roles libqt_list /* of int */
+/// @param roles libqt_list of int
 ///
-void q_identityproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void q_identityproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QIdentityProxyModel*
-/// @param callback void func(QIdentityProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
+/// @param callback void func(QIdentityProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
 ///
-void q_identityproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
+void q_identityproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QIdentityProxyModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 ///
-void q_identityproxymodel_layout_changed1(void* self, libqt_list parents);
+void q_identityproxymodel_layout_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -947,10 +951,10 @@ void q_identityproxymodel_on_layout_changed1(void* self, void (*callback)(void*,
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QIdentityProxyModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
 ///
-void q_identityproxymodel_layout_changed2(void* self, libqt_list parents, int32_t hint);
+void q_identityproxymodel_layout_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -966,9 +970,9 @@ void q_identityproxymodel_on_layout_changed2(void* self, void (*callback)(void*,
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QIdentityProxyModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 ///
-void q_identityproxymodel_layout_about_to_be_changed1(void* self, libqt_list parents);
+void q_identityproxymodel_layout_about_to_be_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -984,10 +988,10 @@ void q_identityproxymodel_on_layout_about_to_be_changed1(void* self, void (*call
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QIdentityProxyModel*
-/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param parents libqt_list of QPersistentModelIndex*
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
 ///
-void q_identityproxymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint);
+void q_identityproxymodel_layout_about_to_be_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1108,7 +1112,9 @@ void q_identityproxymodel_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QIdentityProxyModel*
 ///
-libqt_list /* of QObject* */ q_identityproxymodel_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_identityproxymodel_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1438,7 +1444,8 @@ void q_identityproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -1451,7 +1458,9 @@ void q_identityproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*
 /// @param self QIdentityProxyModel*
 /// @param index QModelIndex*
 ///
-libqt_map /* of int to QVariant* */ q_identityproxymodel_item_data(void* self, void* index);
+/// @return libqt_map of int to QVariant*
+///
+libqt_map q_identityproxymodel_item_data(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1459,7 +1468,8 @@ libqt_map /* of int to QVariant* */ q_identityproxymodel_item_data(void* self, v
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     free(((QVariant*)map.values)[i]);
 /// }
@@ -1472,7 +1482,9 @@ libqt_map /* of int to QVariant* */ q_identityproxymodel_item_data(void* self, v
 /// @param self QIdentityProxyModel*
 /// @param index QModelIndex*
 ///
-libqt_map /* of int to QVariant* */ q_identityproxymodel_qbase_item_data(void* self, void* index);
+/// @return libqt_map of int to QVariant*
+///
+libqt_map q_identityproxymodel_qbase_item_data(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1481,9 +1493,9 @@ libqt_map /* of int to QVariant* */ q_identityproxymodel_qbase_item_data(void* s
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QIdentityProxyModel*
-/// @param callback libqt_map /* of int to QVariant* */ func(QIdentityProxyModel* self, QModelIndex* index)
+/// @param callback libqt_map of int to QVariant* func(QIdentityProxyModel* self, QModelIndex* index)
 ///
-void q_identityproxymodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
+void q_identityproxymodel_on_item_data(void* self, libqt_map (*callback)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1567,9 +1579,9 @@ void q_identityproxymodel_on_set_data(void* self, bool (*callback)(void*, void*,
 ///
 /// @param self QIdentityProxyModel*
 /// @param index QModelIndex*
-/// @param roles libqt_map /* of int to QVariant* */
+/// @param roles libqt_map of int to QVariant*
 ///
-bool q_identityproxymodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
+bool q_identityproxymodel_set_item_data(void* self, void* index, libqt_map roles);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1579,9 +1591,9 @@ bool q_identityproxymodel_set_item_data(void* self, void* index, libqt_map /* of
 ///
 /// @param self QIdentityProxyModel*
 /// @param index QModelIndex*
-/// @param roles libqt_map /* of int to QVariant* */
+/// @param roles libqt_map of int to QVariant*
 ///
-bool q_identityproxymodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
+bool q_identityproxymodel_qbase_set_item_data(void* self, void* index, libqt_map roles);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1590,9 +1602,9 @@ bool q_identityproxymodel_qbase_set_item_data(void* self, void* index, libqt_map
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QIdentityProxyModel*
-/// @param callback bool func(QIdentityProxyModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ /* of int to QVariant* */)
+/// @param callback bool func(QIdentityProxyModel* self, QModelIndex* index, libqt_map of int to QVariant*)
 ///
-void q_identityproxymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
+void q_identityproxymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1873,9 +1885,9 @@ void q_identityproxymodel_on_has_children(void* self, bool (*callback)(void*, vo
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QIdentityProxyModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* q_identityproxymodel_mime_data(void* self, libqt_list indexes);
+QMimeData* q_identityproxymodel_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1884,9 +1896,9 @@ QMimeData* q_identityproxymodel_mime_data(void* self, libqt_list indexes);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QIdentityProxyModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* q_identityproxymodel_qbase_mime_data(void* self, libqt_list indexes);
+QMimeData* q_identityproxymodel_qbase_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2051,7 +2063,8 @@ void q_identityproxymodel_on_supported_drop_actions(void* self, int32_t (*callba
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -2063,7 +2076,9 @@ void q_identityproxymodel_on_supported_drop_actions(void* self, int32_t (*callba
 ///
 /// @param self QIdentityProxyModel*
 ///
-libqt_map /* of int to char* */ q_identityproxymodel_role_names(void* self);
+/// @return libqt_map of int to char*
+///
+libqt_map q_identityproxymodel_role_names(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2071,7 +2086,8 @@ libqt_map /* of int to char* */ q_identityproxymodel_role_names(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
-/// // Example for freeing the returned map
+/// // Example for freeing the returned map of type:
+/// // libqt_map of int to char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -2083,7 +2099,9 @@ libqt_map /* of int to char* */ q_identityproxymodel_role_names(void* self);
 ///
 /// @param self QIdentityProxyModel*
 ///
-libqt_map /* of int to char* */ q_identityproxymodel_qbase_role_names(void* self);
+/// @return libqt_map of int to char*
+///
+libqt_map q_identityproxymodel_qbase_role_names(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2092,9 +2110,9 @@ libqt_map /* of int to char* */ q_identityproxymodel_qbase_role_names(void* self
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QIdentityProxyModel*
-/// @param callback libqt_map /* of int to char* */ func()
+/// @param callback libqt_map of int to char* func()
 ///
-void q_identityproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
+void q_identityproxymodel_on_role_names(void* self, libqt_map (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2474,10 +2492,10 @@ void q_identityproxymodel_on_create_index(void* self, QModelIndex* (*callback)(v
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QIdentityProxyModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void q_identityproxymodel_encode_data(void* self, libqt_list indexes, void* stream);
+void q_identityproxymodel_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2486,10 +2504,10 @@ void q_identityproxymodel_encode_data(void* self, libqt_list indexes, void* stre
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QIdentityProxyModel*
-/// @param indexes libqt_list /* of QModelIndex* */
+/// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void q_identityproxymodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
+void q_identityproxymodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3061,10 +3079,10 @@ void q_identityproxymodel_on_change_persistent_index(void* self, void (*callback
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QIdentityProxyModel*
-/// @param from libqt_list /* of QModelIndex* */
-/// @param to libqt_list /* of QModelIndex* */
+/// @param from libqt_list of QModelIndex*
+/// @param to libqt_list of QModelIndex*
 ///
-void q_identityproxymodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
+void q_identityproxymodel_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3073,10 +3091,10 @@ void q_identityproxymodel_change_persistent_index_list(void* self, libqt_list fr
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QIdentityProxyModel*
-/// @param from libqt_list /* of QModelIndex* */
-/// @param to libqt_list /* of QModelIndex* */
+/// @param from libqt_list of QModelIndex*
+/// @param to libqt_list of QModelIndex*
 ///
-void q_identityproxymodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
+void q_identityproxymodel_qbase_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3097,7 +3115,9 @@ void q_identityproxymodel_on_change_persistent_index_list(void* self, void (*cal
 ///
 /// @param self QIdentityProxyModel*
 ///
-libqt_list /* of QModelIndex* */ q_identityproxymodel_persistent_index_list(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list q_identityproxymodel_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3107,7 +3127,9 @@ libqt_list /* of QModelIndex* */ q_identityproxymodel_persistent_index_list(void
 ///
 /// @param self QIdentityProxyModel*
 ///
-libqt_list /* of QModelIndex* */ q_identityproxymodel_qbase_persistent_index_list(void* self);
+/// @return libqt_list of QModelIndex*
+///
+libqt_list q_identityproxymodel_qbase_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
 ///

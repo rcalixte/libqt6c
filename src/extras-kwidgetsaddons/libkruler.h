@@ -59,7 +59,7 @@ KRuler* k_ruler_new5(int32_t orient, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-KRuler* k_ruler_new6(int32_t orient, void* parent, int64_t f);
+KRuler* k_ruler_new6(int32_t orient, void* parent, int32_t f);
 
 /// [Upstream resources](https://api.kde.org/kruler.html)
 
@@ -80,7 +80,7 @@ KRuler* k_ruler_new7(int32_t orient, int widgetWidth, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-KRuler* k_ruler_new8(int32_t orient, int widgetWidth, void* parent, int64_t f);
+KRuler* k_ruler_new8(int32_t orient, int widgetWidth, void* parent, int32_t f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1581,7 +1581,7 @@ void k_ruler_set_graphics_effect(void* self, void* effect);
 /// @param self KRuler*
 /// @param type enum Qt__GestureType
 ///
-void k_ruler_grab_gesture(void* self, int64_t type);
+void k_ruler_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -1590,7 +1590,7 @@ void k_ruler_grab_gesture(void* self, int64_t type);
 /// @param self KRuler*
 /// @param type enum Qt__GestureType
 ///
-void k_ruler_ungrab_gesture(void* self, int64_t type);
+void k_ruler_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2579,7 +2579,7 @@ void k_ruler_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void k_ruler_set_parent2(void* self, void* parent, int64_t f);
+void k_ruler_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -2657,9 +2657,9 @@ void k_ruler_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self KRuler*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_ruler_add_actions(void* self, libqt_list actions);
+void k_ruler_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2667,9 +2667,9 @@ void k_ruler_add_actions(void* self, libqt_list actions);
 ///
 /// @param self KRuler*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void k_ruler_insert_actions(void* self, void* before, libqt_list actions);
+void k_ruler_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2696,7 +2696,9 @@ void k_ruler_remove_action(void* self, void* action);
 ///
 /// @param self KRuler*
 ///
-libqt_list /* of QAction* */ k_ruler_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list k_ruler_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2753,7 +2755,7 @@ QWidget* k_ruler_parent_widget(void* self);
 /// @param self KRuler*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_ruler_set_window_flags(void* self, int64_t type);
+void k_ruler_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2763,7 +2765,7 @@ void k_ruler_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t k_ruler_window_flags(void* self);
+int32_t k_ruler_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2772,7 +2774,7 @@ int64_t k_ruler_window_flags(void* self);
 /// @param self KRuler*
 /// @param param1 enum Qt__WindowType
 ///
-void k_ruler_set_window_flag(void* self, int64_t param1);
+void k_ruler_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2781,7 +2783,7 @@ void k_ruler_set_window_flag(void* self, int64_t param1);
 /// @param self KRuler*
 /// @param type flag of enum Qt__WindowType
 ///
-void k_ruler_override_window_flags(void* self, int64_t type);
+void k_ruler_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2791,7 +2793,7 @@ void k_ruler_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t k_ruler_window_type(void* self);
+int32_t k_ruler_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3002,7 +3004,7 @@ void k_ruler_on_custom_context_menu_requested(void* self, void (*callback)(void*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t k_ruler_input_method_hints(void* self);
+int32_t k_ruler_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3011,7 +3013,7 @@ int64_t k_ruler_input_method_hints(void* self);
 /// @param self KRuler*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void k_ruler_set_input_method_hints(void* self, int64_t hints);
+void k_ruler_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -3096,7 +3098,7 @@ QPixmap* k_ruler_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void k_ruler_grab_gesture2(void* self, int64_t type, int32_t flags);
+void k_ruler_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -3136,7 +3138,7 @@ void k_ruler_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void k_ruler_set_window_flag2(void* self, int64_t param1, bool on);
+void k_ruler_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -3165,7 +3167,7 @@ QWidget* k_ruler_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* k_ruler_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* k_ruler_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -3277,7 +3279,9 @@ void k_ruler_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KRuler*
 ///
-libqt_list /* of QObject* */ k_ruler_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_ruler_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4927,7 +4931,7 @@ void k_ruler_on_input_method_event(void* self, void (*callback)(void*, void*));
 /// @param self KRuler*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_ruler_input_method_query(void* self, int64_t param1);
+QVariant* k_ruler_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4938,7 +4942,7 @@ QVariant* k_ruler_input_method_query(void* self, int64_t param1);
 /// @param self KRuler*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_ruler_qbase_input_method_query(void* self, int64_t param1);
+QVariant* k_ruler_qbase_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4949,7 +4953,7 @@ QVariant* k_ruler_qbase_input_method_query(void* self, int64_t param1);
 /// @param self KRuler*
 /// @param callback QVariant* func(KRuler* self, enum Qt__InputMethodQuery param1)
 ///
-void k_ruler_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void k_ruler_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///

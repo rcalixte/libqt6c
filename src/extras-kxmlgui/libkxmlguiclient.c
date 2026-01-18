@@ -154,7 +154,7 @@ void k_xmlguiclient_reload_x_m_l(void* self) {
     KXMLGUIClient_ReloadXML((KXMLGUIClient*)self);
 }
 
-void k_xmlguiclient_plug_action_list(void* self, const char* name, libqt_list actionList) {
+void k_xmlguiclient_plug_action_list(void* self, const char* name, libqt_list /* of QAction* */ actionList) {
     KXMLGUIClient_PlugActionList((KXMLGUIClient*)self, qstring(name), actionList);
 }
 
@@ -166,7 +166,7 @@ const char* k_xmlguiclient_find_most_recent_x_m_l_file(const char* files[static 
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_xmlguiclient_find_most_recent_x_m_l_file");
+        fprintf(stderr, "Failed to allocate memory for string list in k_xmlguiclient_find_most_recent_x_m_l_file\n");
         abort();
     }
     for (size_t i = 0; i < files_len; ++i) {
@@ -330,7 +330,7 @@ const char** k_xmlguiclient__statechange_actions_to_enable(void* self) {
     const libqt_string* actionsToEnable_qstr = (libqt_string*)actionsToEnable_arr.data.ptr;
     const char** actionsToEnable_ret = (const char**)malloc((actionsToEnable_arr.len + 1) * sizeof(const char*));
     if (actionsToEnable_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_xmlguiclient__statechange_actions_to_enable");
+        fprintf(stderr, "Failed to allocate memory for string list in k_xmlguiclient__statechange_actions_to_enable\n");
         abort();
     }
     for (size_t i = 0; i < actionsToEnable_arr.len; ++i) {
@@ -348,7 +348,7 @@ void k_xmlguiclient__statechange_set_actions_to_enable(void* self, const char* a
     size_t actionsToEnable_len = libqt_strv_length(actionsToEnable);
     libqt_string* actionsToEnable_qstr = (libqt_string*)malloc(actionsToEnable_len * sizeof(libqt_string));
     if (actionsToEnable_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_xmlguiclient__statechange_set_actions_to_enable");
+        fprintf(stderr, "Failed to allocate memory for string list in k_xmlguiclient__statechange_set_actions_to_enable\n");
         abort();
     }
     for (size_t i = 0; i < actionsToEnable_len; ++i) {
@@ -364,7 +364,7 @@ const char** k_xmlguiclient__statechange_actions_to_disable(void* self) {
     const libqt_string* actionsToDisable_qstr = (libqt_string*)actionsToDisable_arr.data.ptr;
     const char** actionsToDisable_ret = (const char**)malloc((actionsToDisable_arr.len + 1) * sizeof(const char*));
     if (actionsToDisable_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_xmlguiclient__statechange_actions_to_disable");
+        fprintf(stderr, "Failed to allocate memory for string list in k_xmlguiclient__statechange_actions_to_disable\n");
         abort();
     }
     for (size_t i = 0; i < actionsToDisable_arr.len; ++i) {
@@ -382,7 +382,7 @@ void k_xmlguiclient__statechange_set_actions_to_disable(void* self, const char* 
     size_t actionsToDisable_len = libqt_strv_length(actionsToDisable);
     libqt_string* actionsToDisable_qstr = (libqt_string*)malloc(actionsToDisable_len * sizeof(libqt_string));
     if (actionsToDisable_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_xmlguiclient__statechange_set_actions_to_disable");
+        fprintf(stderr, "Failed to allocate memory for string list in k_xmlguiclient__statechange_set_actions_to_disable\n");
         abort();
     }
     for (size_t i = 0; i < actionsToDisable_len; ++i) {

@@ -67,7 +67,9 @@ KTextEditor__Document* k_texteditor__editor_create_document(void* self, void* pa
 ///
 /// @param self KTextEditor__Editor*
 ///
-libqt_list /* of KTextEditor__Document* */ k_texteditor__editor_documents(void* self);
+/// @return libqt_list of KTextEditor__Document*
+///
+libqt_list k_texteditor__editor_documents(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-editor.html#documentCreated)
 ///
@@ -176,7 +178,9 @@ KTextEditor__Command* k_texteditor__editor_query_command(void* self, const char*
 ///
 /// @param self KTextEditor__Editor*
 ///
-libqt_list /* of KTextEditor__Command* */ k_texteditor__editor_commands(void* self);
+/// @return libqt_list of KTextEditor__Command*
+///
+libqt_list k_texteditor__editor_commands(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-editor.html#commandList)
 ///
@@ -215,9 +219,9 @@ const char* k_texteditor__editor_expand_text(void* self, const char* text, void*
 /// [Upstream resources](https://api.kde.org/ktexteditor-editor.html#addVariableExpansion)
 ///
 /// @param self KTextEditor__Editor*
-/// @param widgets libqt_list /* of QWidget* */
+/// @param widgets libqt_list of QWidget*
 ///
-void k_texteditor__editor_add_variable_expansion(void* self, libqt_list widgets);
+void k_texteditor__editor_add_variable_expansion(void* self, libqt_list /* of QWidget* */ widgets);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -241,10 +245,10 @@ const char* k_texteditor__editor_tr3(const char* s, const char* c, int n);
 /// [Upstream resources](https://api.kde.org/ktexteditor-editor.html#addVariableExpansion)
 ///
 /// @param self KTextEditor__Editor*
-/// @param widgets libqt_list /* of QWidget* */
+/// @param widgets libqt_list of QWidget*
 /// @param variables const char**
 ///
-void k_texteditor__editor_add_variable_expansion2(void* self, libqt_list widgets, const char* variables[static 1]);
+void k_texteditor__editor_add_variable_expansion2(void* self, libqt_list /* of QWidget* */ widgets, const char* variables[static 1]);
 
 /// Inherited from QObject
 ///
@@ -375,7 +379,9 @@ void k_texteditor__editor_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KTextEditor__Editor*
 ///
-libqt_list /* of QObject* */ k_texteditor__editor_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_texteditor__editor_children(void* self);
 
 /// Inherited from QObject
 ///

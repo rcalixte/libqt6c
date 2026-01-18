@@ -44,7 +44,7 @@ libqt_list /* of QUrl* */ q_mimedata_urls(void* self) {
     return _arr;
 }
 
-void q_mimedata_set_urls(void* self, libqt_list urls) {
+void q_mimedata_set_urls(void* self, libqt_list /* of QUrl* */ urls) {
     QMimeData_SetUrls((QMimeData*)self, urls);
 }
 
@@ -138,7 +138,7 @@ const char** q_mimedata_formats(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_mimedata_formats");
+        fprintf(stderr, "Failed to allocate memory for string list in q_mimedata_formats\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -161,7 +161,7 @@ const char** q_mimedata_qbase_formats(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_mimedata_formats");
+        fprintf(stderr, "Failed to allocate memory for string list in q_mimedata_formats\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -310,7 +310,7 @@ const char** q_mimedata_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_mimedata_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_mimedata_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

@@ -21,9 +21,9 @@ QGeoPolygon* q_geopolygon_new();
 
 /// q_geopolygon_new2 constructs a new QGeoPolygon object.
 ///
-/// @param path libqt_list /* of QGeoCoordinate* */
+/// @param path libqt_list of QGeoCoordinate*
 ///
-QGeoPolygon* q_geopolygon_new2(libqt_list path);
+QGeoPolygon* q_geopolygon_new2(libqt_list /* of QGeoCoordinate* */ path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopolygon.html)
 
@@ -51,15 +51,17 @@ void q_geopolygon_operator_assign(void* self, void* other);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopolygon.html#setPerimeter)
 ///
 /// @param self QGeoPolygon*
-/// @param path libqt_list /* of QGeoCoordinate* */
+/// @param path libqt_list of QGeoCoordinate*
 ///
-void q_geopolygon_set_perimeter(void* self, libqt_list path);
+void q_geopolygon_set_perimeter(void* self, libqt_list /* of QGeoCoordinate* */ path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopolygon.html#perimeter)
 ///
 /// @param self QGeoPolygon*
 ///
-libqt_list /* of QGeoCoordinate* */ q_geopolygon_perimeter(void* self);
+/// @return libqt_list of QGeoCoordinate*
+///
+libqt_list q_geopolygon_perimeter(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopolygon.html#addHole)
 ///
@@ -71,23 +73,27 @@ void q_geopolygon_add_hole(void* self, void* holePath);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopolygon.html#addHole)
 ///
 /// @param self QGeoPolygon*
-/// @param holePath libqt_list /* of QGeoCoordinate* */
+/// @param holePath libqt_list of QGeoCoordinate*
 ///
-void q_geopolygon_add_hole2(void* self, libqt_list holePath);
+void q_geopolygon_add_hole2(void* self, libqt_list /* of QGeoCoordinate* */ holePath);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopolygon.html#hole)
 ///
 /// @param self QGeoPolygon*
 /// @param index int64_t
 ///
-libqt_list /* of QVariant* */ q_geopolygon_hole(void* self, int64_t index);
+/// @return libqt_list of QVariant*
+///
+libqt_list q_geopolygon_hole(void* self, int64_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopolygon.html#holePath)
 ///
 /// @param self QGeoPolygon*
 /// @param index int64_t
 ///
-libqt_list /* of QGeoCoordinate* */ q_geopolygon_hole_path(void* self, int64_t index);
+/// @return libqt_list of QGeoCoordinate*
+///
+libqt_list q_geopolygon_hole_path(void* self, int64_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopolygon.html#removeHole)
 ///

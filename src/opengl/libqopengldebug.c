@@ -21,15 +21,15 @@ void q_opengldebugmessage_swap(void* self, void* other) {
     QOpenGLDebugMessage_Swap((QOpenGLDebugMessage*)self, (QOpenGLDebugMessage*)other);
 }
 
-int64_t q_opengldebugmessage_source(void* self) {
+int32_t q_opengldebugmessage_source(void* self) {
     return QOpenGLDebugMessage_Source((QOpenGLDebugMessage*)self);
 }
 
-int64_t q_opengldebugmessage_type(void* self) {
+int32_t q_opengldebugmessage_type(void* self) {
     return QOpenGLDebugMessage_Type((QOpenGLDebugMessage*)self);
 }
 
-int64_t q_opengldebugmessage_severity(void* self) {
+int32_t q_opengldebugmessage_severity(void* self) {
     return QOpenGLDebugMessage_Severity((QOpenGLDebugMessage*)self);
 }
 
@@ -64,11 +64,11 @@ QOpenGLDebugMessage* q_opengldebugmessage_create_application_message2(const char
     return QOpenGLDebugMessage_CreateApplicationMessage2(qstring(text), id);
 }
 
-QOpenGLDebugMessage* q_opengldebugmessage_create_application_message3(const char* text, uint32_t id, int64_t severity) {
+QOpenGLDebugMessage* q_opengldebugmessage_create_application_message3(const char* text, uint32_t id, int32_t severity) {
     return QOpenGLDebugMessage_CreateApplicationMessage3(qstring(text), id, severity);
 }
 
-QOpenGLDebugMessage* q_opengldebugmessage_create_application_message4(const char* text, uint32_t id, int64_t severity, int64_t type) {
+QOpenGLDebugMessage* q_opengldebugmessage_create_application_message4(const char* text, uint32_t id, int32_t severity, int32_t type) {
     return QOpenGLDebugMessage_CreateApplicationMessage4(qstring(text), id, severity, type);
 }
 
@@ -76,11 +76,11 @@ QOpenGLDebugMessage* q_opengldebugmessage_create_third_party_message2(const char
     return QOpenGLDebugMessage_CreateThirdPartyMessage2(qstring(text), id);
 }
 
-QOpenGLDebugMessage* q_opengldebugmessage_create_third_party_message3(const char* text, uint32_t id, int64_t severity) {
+QOpenGLDebugMessage* q_opengldebugmessage_create_third_party_message3(const char* text, uint32_t id, int32_t severity) {
     return QOpenGLDebugMessage_CreateThirdPartyMessage3(qstring(text), id, severity);
 }
 
-QOpenGLDebugMessage* q_opengldebugmessage_create_third_party_message4(const char* text, uint32_t id, int64_t severity, int64_t type) {
+QOpenGLDebugMessage* q_opengldebugmessage_create_third_party_message4(const char* text, uint32_t id, int32_t severity, int32_t type) {
     return QOpenGLDebugMessage_CreateThirdPartyMessage4(qstring(text), id, severity, type);
 }
 
@@ -151,7 +151,7 @@ void q_opengldebuglogger_enable_messages(void* self) {
     QOpenGLDebugLogger_EnableMessages((QOpenGLDebugLogger*)self);
 }
 
-void q_opengldebuglogger_enable_messages2(void* self, libqt_list ids) {
+void q_opengldebuglogger_enable_messages2(void* self, libqt_list /* of uint32_t */ ids) {
     QOpenGLDebugLogger_EnableMessages2((QOpenGLDebugLogger*)self, ids);
 }
 
@@ -159,7 +159,7 @@ void q_opengldebuglogger_disable_messages(void* self) {
     QOpenGLDebugLogger_DisableMessages((QOpenGLDebugLogger*)self);
 }
 
-void q_opengldebuglogger_disable_messages2(void* self, libqt_list ids) {
+void q_opengldebuglogger_disable_messages2(void* self, libqt_list /* of uint32_t */ ids) {
     QOpenGLDebugLogger_DisableMessages2((QOpenGLDebugLogger*)self, ids);
 }
 
@@ -206,47 +206,47 @@ void q_opengldebuglogger_push_group2(void* self, const char* name, uint32_t id) 
     QOpenGLDebugLogger_PushGroup2((QOpenGLDebugLogger*)self, qstring(name), id);
 }
 
-void q_opengldebuglogger_push_group3(void* self, const char* name, uint32_t id, int64_t source) {
+void q_opengldebuglogger_push_group3(void* self, const char* name, uint32_t id, int32_t source) {
     QOpenGLDebugLogger_PushGroup3((QOpenGLDebugLogger*)self, qstring(name), id, source);
 }
 
-void q_opengldebuglogger_enable_messages1(void* self, int64_t sources) {
+void q_opengldebuglogger_enable_messages1(void* self, int32_t sources) {
     QOpenGLDebugLogger_EnableMessages1((QOpenGLDebugLogger*)self, sources);
 }
 
-void q_opengldebuglogger_enable_messages22(void* self, int64_t sources, int64_t types) {
+void q_opengldebuglogger_enable_messages22(void* self, int32_t sources, int32_t types) {
     QOpenGLDebugLogger_EnableMessages22((QOpenGLDebugLogger*)self, sources, types);
 }
 
-void q_opengldebuglogger_enable_messages3(void* self, int64_t sources, int64_t types, int64_t severities) {
+void q_opengldebuglogger_enable_messages3(void* self, int32_t sources, int32_t types, int32_t severities) {
     QOpenGLDebugLogger_EnableMessages3((QOpenGLDebugLogger*)self, sources, types, severities);
 }
 
-void q_opengldebuglogger_enable_messages23(void* self, libqt_list ids, int64_t sources) {
+void q_opengldebuglogger_enable_messages23(void* self, libqt_list /* of uint32_t */ ids, int32_t sources) {
     QOpenGLDebugLogger_EnableMessages23((QOpenGLDebugLogger*)self, ids, sources);
 }
 
-void q_opengldebuglogger_enable_messages32(void* self, libqt_list ids, int64_t sources, int64_t types) {
+void q_opengldebuglogger_enable_messages32(void* self, libqt_list /* of uint32_t */ ids, int32_t sources, int32_t types) {
     QOpenGLDebugLogger_EnableMessages32((QOpenGLDebugLogger*)self, ids, sources, types);
 }
 
-void q_opengldebuglogger_disable_messages1(void* self, int64_t sources) {
+void q_opengldebuglogger_disable_messages1(void* self, int32_t sources) {
     QOpenGLDebugLogger_DisableMessages1((QOpenGLDebugLogger*)self, sources);
 }
 
-void q_opengldebuglogger_disable_messages22(void* self, int64_t sources, int64_t types) {
+void q_opengldebuglogger_disable_messages22(void* self, int32_t sources, int32_t types) {
     QOpenGLDebugLogger_DisableMessages22((QOpenGLDebugLogger*)self, sources, types);
 }
 
-void q_opengldebuglogger_disable_messages3(void* self, int64_t sources, int64_t types, int64_t severities) {
+void q_opengldebuglogger_disable_messages3(void* self, int32_t sources, int32_t types, int32_t severities) {
     QOpenGLDebugLogger_DisableMessages3((QOpenGLDebugLogger*)self, sources, types, severities);
 }
 
-void q_opengldebuglogger_disable_messages23(void* self, libqt_list ids, int64_t sources) {
+void q_opengldebuglogger_disable_messages23(void* self, libqt_list /* of uint32_t */ ids, int32_t sources) {
     QOpenGLDebugLogger_DisableMessages23((QOpenGLDebugLogger*)self, ids, sources);
 }
 
-void q_opengldebuglogger_disable_messages32(void* self, libqt_list ids, int64_t sources, int64_t types) {
+void q_opengldebuglogger_disable_messages32(void* self, libqt_list /* of uint32_t */ ids, int32_t sources, int32_t types) {
     QOpenGLDebugLogger_DisableMessages32((QOpenGLDebugLogger*)self, ids, sources, types);
 }
 
@@ -359,7 +359,7 @@ const char** q_opengldebuglogger_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_opengldebuglogger_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_opengldebuglogger_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

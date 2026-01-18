@@ -280,7 +280,9 @@ void k_abstractwidgetjobtracker_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KAbstractWidgetJobTracker*
 ///
-libqt_list /* of QObject* */ k_abstractwidgetjobtracker_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_abstractwidgetjobtracker_children(void* self);
 
 /// Inherited from QObject
 ///

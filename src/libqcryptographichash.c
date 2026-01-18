@@ -52,28 +52,28 @@ char* q_cryptographichash_hash(const char* data, int32_t method) {
     return _ret;
 }
 
-const char* q_cryptographichash_hash_into(libqt_list buffer, const char* data, int32_t method) {
+const char* q_cryptographichash_hash_into(libqt_list /* of char */ buffer, const char* data, int32_t method) {
     libqt_string _str = QCryptographicHash_HashInto(buffer, qstring(data), method);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_cryptographichash_hash_into2(libqt_list buffer, const char* data, int32_t method) {
+const char* q_cryptographichash_hash_into2(libqt_list /* of unsigned char */ buffer, const char* data, int32_t method) {
     libqt_string _str = QCryptographicHash_HashInto2(buffer, qstring(data), method);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_cryptographichash_hash_into4(libqt_list buffer, libqt_list data, int32_t method) {
+const char* q_cryptographichash_hash_into4(libqt_list /* of char */ buffer, libqt_list /* of const char* */ data, int32_t method) {
     libqt_string _str = QCryptographicHash_HashInto4(buffer, data, method);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_cryptographichash_hash_into5(libqt_list buffer, libqt_list data, int32_t method) {
+const char* q_cryptographichash_hash_into5(libqt_list /* of unsigned char */ buffer, libqt_list /* of const char* */ data, int32_t method) {
     libqt_string _str = QCryptographicHash_HashInto5(buffer, data, method);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

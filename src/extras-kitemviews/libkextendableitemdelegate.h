@@ -548,7 +548,9 @@ void k_extendableitemdelegate_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KExtendableItemDelegate*
 ///
-libqt_list /* of QObject* */ k_extendableitemdelegate_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_extendableitemdelegate_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1159,7 +1161,9 @@ void k_extendableitemdelegate_on_help_event(void* self, bool (*callback)(void*, 
 ///
 /// @param self KExtendableItemDelegate*
 ///
-libqt_list /* of int */ k_extendableitemdelegate_painting_roles(void* self);
+/// @return libqt_list of int
+///
+libqt_list k_extendableitemdelegate_painting_roles(void* self);
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -1169,7 +1173,9 @@ libqt_list /* of int */ k_extendableitemdelegate_painting_roles(void* self);
 ///
 /// @param self KExtendableItemDelegate*
 ///
-libqt_list /* of int */ k_extendableitemdelegate_qbase_painting_roles(void* self);
+/// @return libqt_list of int
+///
+libqt_list k_extendableitemdelegate_qbase_painting_roles(void* self);
 
 /// Inherited from QAbstractItemDelegate
 ///

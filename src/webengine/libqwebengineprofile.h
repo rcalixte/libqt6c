@@ -238,9 +238,9 @@ void q_webengineprofile_clear_all_visited_links(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#clearVisitedLinks)
 ///
 /// @param self QWebEngineProfile*
-/// @param urls libqt_list /* of QUrl* */
+/// @param urls libqt_list of QUrl*
 ///
-void q_webengineprofile_clear_visited_links(void* self, libqt_list urls);
+void q_webengineprofile_clear_visited_links(void* self, libqt_list /* of QUrl* */ urls);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#visitedLinksContainsUrl)
 ///
@@ -382,21 +382,27 @@ QWebEnginePermission* q_webengineprofile_query_permission(void* self, void* secu
 ///
 /// @param self QWebEngineProfile*
 ///
-libqt_list /* of QWebEnginePermission* */ q_webengineprofile_list_all_permissions(void* self);
+/// @return libqt_list of QWebEnginePermission*
+///
+libqt_list q_webengineprofile_list_all_permissions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#listPermissionsForOrigin)
 ///
 /// @param self QWebEngineProfile*
 /// @param securityOrigin QUrl*
 ///
-libqt_list /* of QWebEnginePermission* */ q_webengineprofile_list_permissions_for_origin(void* self, void* securityOrigin);
+/// @return libqt_list of QWebEnginePermission*
+///
+libqt_list q_webengineprofile_list_permissions_for_origin(void* self, void* securityOrigin);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#listPermissionsForPermissionType)
 ///
 /// @param self QWebEngineProfile*
 /// @param permissionType enum QWebEnginePermission__PermissionType
 ///
-libqt_list /* of QWebEnginePermission* */ q_webengineprofile_list_permissions_for_permission_type(void* self, uint8_t permissionType);
+/// @return libqt_list of QWebEnginePermission*
+///
+libqt_list q_webengineprofile_list_permissions_for_permission_type(void* self, uint8_t permissionType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#defaultProfile)
 ///
@@ -558,7 +564,9 @@ void q_webengineprofile_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QWebEngineProfile*
 ///
-libqt_list /* of QObject* */ q_webengineprofile_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_webengineprofile_children(void* self);
 
 /// Inherited from QObject
 ///

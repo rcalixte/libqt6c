@@ -88,7 +88,7 @@ int32_t q_georoute_travel_mode(void* self) {
     return QGeoRoute_TravelMode((QGeoRoute*)self);
 }
 
-void q_georoute_set_path(void* self, libqt_list path) {
+void q_georoute_set_path(void* self, libqt_list /* of QGeoCoordinate* */ path) {
     QGeoRoute_SetPath((QGeoRoute*)self, path);
 }
 
@@ -97,7 +97,7 @@ libqt_list /* of QGeoCoordinate* */ q_georoute_path(void* self) {
     return _arr;
 }
 
-void q_georoute_set_route_legs(void* self, libqt_list legs) {
+void q_georoute_set_route_legs(void* self, libqt_list /* of QGeoRoute* */ legs) {
     QGeoRoute_SetRouteLegs((QGeoRoute*)self, legs);
 }
 
@@ -142,7 +142,7 @@ libqt_map /* of const char* to QVariant* */ q_georoute_extended_attributes(void*
     libqt_string* _out_keys = (libqt_string*)_out.keys;
     char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string keys in q_georoute_extended_attributes");
+        fprintf(stderr, "Failed to allocate memory for map string keys in q_georoute_extended_attributes\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
@@ -152,7 +152,7 @@ libqt_map /* of const char* to QVariant* */ q_georoute_extended_attributes(void*
                 libqt_free(_ret_keys[j]);
             }
             free(_ret_keys);
-            fprintf(stderr, "Failed to allocate memory for map keys in q_georoute_extended_attributes");
+            fprintf(stderr, "Failed to allocate memory for map keys in q_georoute_extended_attributes\n");
             abort();
         }
         memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);

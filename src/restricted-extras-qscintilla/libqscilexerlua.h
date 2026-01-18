@@ -573,7 +573,9 @@ void q_scilexerlua_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QsciLexerLua*
 ///
-libqt_list /* of QObject* */ q_scilexerlua_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_scilexerlua_children(void* self);
 
 /// Inherited from QObject
 ///

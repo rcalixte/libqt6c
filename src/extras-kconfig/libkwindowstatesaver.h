@@ -233,7 +233,9 @@ void k_windowstatesaver_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KWindowStateSaver*
 ///
-libqt_list /* of QObject* */ k_windowstatesaver_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_windowstatesaver_children(void* self);
 
 /// Inherited from QObject
 ///

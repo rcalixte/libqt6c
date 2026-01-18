@@ -69,7 +69,7 @@ bool k_modifierkeyinfo_set_key_locked(void* self, int32_t key, bool locked) {
     return KModifierKeyInfo_SetKeyLocked((KModifierKeyInfo*)self, key, locked);
 }
 
-bool k_modifierkeyinfo_is_button_pressed(void* self, int64_t button) {
+bool k_modifierkeyinfo_is_button_pressed(void* self, int32_t button) {
     return KModifierKeyInfo_IsButtonPressed((KModifierKeyInfo*)self, button);
 }
 
@@ -97,11 +97,11 @@ void k_modifierkeyinfo_on_key_locked(void* self, void (*callback)(void*, int32_t
     KModifierKeyInfo_Connect_KeyLocked((KModifierKeyInfo*)self, (intptr_t)callback);
 }
 
-void k_modifierkeyinfo_button_pressed(void* self, int64_t button, bool pressed) {
+void k_modifierkeyinfo_button_pressed(void* self, int32_t button, bool pressed) {
     KModifierKeyInfo_ButtonPressed((KModifierKeyInfo*)self, button, pressed);
 }
 
-void k_modifierkeyinfo_on_button_pressed(void* self, void (*callback)(void*, int64_t, bool)) {
+void k_modifierkeyinfo_on_button_pressed(void* self, void (*callback)(void*, int32_t, bool)) {
     KModifierKeyInfo_Connect_ButtonPressed((KModifierKeyInfo*)self, (intptr_t)callback);
 }
 
@@ -240,7 +240,7 @@ const char** k_modifierkeyinfo_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_modifierkeyinfo_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_modifierkeyinfo_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

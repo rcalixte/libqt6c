@@ -37,7 +37,7 @@ QTreeWidgetItem* q_treewidgetitem_new2(const char* strings[static 1]) {
     size_t strings_len = libqt_strv_length(strings);
     libqt_string* strings_qstr = (libqt_string*)malloc(strings_len * sizeof(libqt_string));
     if (strings_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_treewidgetitem_new2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_treewidgetitem_new2\n");
         abort();
     }
     for (size_t i = 0; i < strings_len; ++i) {
@@ -58,7 +58,7 @@ QTreeWidgetItem* q_treewidgetitem_new4(void* treeview, const char* strings[stati
     size_t strings_len = libqt_strv_length(strings);
     libqt_string* strings_qstr = (libqt_string*)malloc(strings_len * sizeof(libqt_string));
     if (strings_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_treewidgetitem_new4");
+        fprintf(stderr, "Failed to allocate memory for string list in q_treewidgetitem_new4\n");
         abort();
     }
     for (size_t i = 0; i < strings_len; ++i) {
@@ -83,7 +83,7 @@ QTreeWidgetItem* q_treewidgetitem_new7(void* parent, const char* strings[static 
     size_t strings_len = libqt_strv_length(strings);
     libqt_string* strings_qstr = (libqt_string*)malloc(strings_len * sizeof(libqt_string));
     if (strings_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_treewidgetitem_new7");
+        fprintf(stderr, "Failed to allocate memory for string list in q_treewidgetitem_new7\n");
         abort();
     }
     for (size_t i = 0; i < strings_len; ++i) {
@@ -112,7 +112,7 @@ QTreeWidgetItem* q_treewidgetitem_new11(const char* strings[static 1], int type)
     size_t strings_len = libqt_strv_length(strings);
     libqt_string* strings_qstr = (libqt_string*)malloc(strings_len * sizeof(libqt_string));
     if (strings_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_treewidgetitem_new11");
+        fprintf(stderr, "Failed to allocate memory for string list in q_treewidgetitem_new11\n");
         abort();
     }
     for (size_t i = 0; i < strings_len; ++i) {
@@ -133,7 +133,7 @@ QTreeWidgetItem* q_treewidgetitem_new13(void* treeview, const char* strings[stat
     size_t strings_len = libqt_strv_length(strings);
     libqt_string* strings_qstr = (libqt_string*)malloc(strings_len * sizeof(libqt_string));
     if (strings_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_treewidgetitem_new13");
+        fprintf(stderr, "Failed to allocate memory for string list in q_treewidgetitem_new13\n");
         abort();
     }
     for (size_t i = 0; i < strings_len; ++i) {
@@ -158,7 +158,7 @@ QTreeWidgetItem* q_treewidgetitem_new16(void* parent, const char* strings[static
     size_t strings_len = libqt_strv_length(strings);
     libqt_string* strings_qstr = (libqt_string*)malloc(strings_len * sizeof(libqt_string));
     if (strings_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_treewidgetitem_new16");
+        fprintf(stderr, "Failed to allocate memory for string list in q_treewidgetitem_new16\n");
         abort();
     }
     for (size_t i = 0; i < strings_len; ++i) {
@@ -455,11 +455,11 @@ QTreeWidgetItem* q_treewidgetitem_take_child(void* self, int index) {
     return QTreeWidgetItem_TakeChild((QTreeWidgetItem*)self, index);
 }
 
-void q_treewidgetitem_add_children(void* self, libqt_list children) {
+void q_treewidgetitem_add_children(void* self, libqt_list /* of QTreeWidgetItem* */ children) {
     QTreeWidgetItem_AddChildren((QTreeWidgetItem*)self, children);
 }
 
-void q_treewidgetitem_insert_children(void* self, int index, libqt_list children) {
+void q_treewidgetitem_insert_children(void* self, int index, libqt_list /* of QTreeWidgetItem* */ children) {
     QTreeWidgetItem_InsertChildren((QTreeWidgetItem*)self, index, children);
 }
 
@@ -563,11 +563,11 @@ int32_t q_treewidget_index_of_top_level_item(void* self, void* item) {
     return QTreeWidget_IndexOfTopLevelItem((QTreeWidget*)self, (QTreeWidgetItem*)item);
 }
 
-void q_treewidget_insert_top_level_items(void* self, int index, libqt_list items) {
+void q_treewidget_insert_top_level_items(void* self, int index, libqt_list /* of QTreeWidgetItem* */ items) {
     QTreeWidget_InsertTopLevelItems((QTreeWidget*)self, index, items);
 }
 
-void q_treewidget_add_top_level_items(void* self, libqt_list items) {
+void q_treewidget_add_top_level_items(void* self, libqt_list /* of QTreeWidgetItem* */ items) {
     QTreeWidget_AddTopLevelItems((QTreeWidget*)self, items);
 }
 
@@ -583,7 +583,7 @@ void q_treewidget_set_header_labels(void* self, const char* labels[static 1]) {
     size_t labels_len = libqt_strv_length(labels);
     libqt_string* labels_qstr = (libqt_string*)malloc(labels_len * sizeof(libqt_string));
     if (labels_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_treewidget_set_header_labels");
+        fprintf(stderr, "Failed to allocate memory for string list in q_treewidget_set_header_labels\n");
         abort();
     }
     for (size_t i = 0; i < labels_len; ++i) {
@@ -817,7 +817,7 @@ const char** q_treewidget_mime_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_treewidget_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in q_treewidget_mime_types\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -840,7 +840,7 @@ const char** q_treewidget_qbase_mime_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_treewidget_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in q_treewidget_mime_types\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -854,7 +854,7 @@ const char** q_treewidget_qbase_mime_types(void* self) {
     return _ret;
 }
 
-QMimeData* q_treewidget_mime_data(void* self, libqt_list items) {
+QMimeData* q_treewidget_mime_data(void* self, libqt_list /* of QTreeWidgetItem* */ items) {
     return QTreeWidget_MimeData((QTreeWidget*)self, items);
 }
 
@@ -862,7 +862,7 @@ void q_treewidget_on_mime_data(void* self, QMimeData* (*callback)(void*, QTreeWi
     QTreeWidget_OnMimeData((QTreeWidget*)self, (intptr_t)callback);
 }
 
-QMimeData* q_treewidget_qbase_mime_data(void* self, libqt_list items) {
+QMimeData* q_treewidget_qbase_mime_data(void* self, libqt_list /* of QTreeWidgetItem* */ items) {
     return QTreeWidget_QBaseMimeData((QTreeWidget*)self, items);
 }
 
@@ -1954,11 +1954,11 @@ void q_treewidget_set_graphics_effect(void* self, void* effect) {
     QWidget_SetGraphicsEffect((QWidget*)self, (QGraphicsEffect*)effect);
 }
 
-void q_treewidget_grab_gesture(void* self, int64_t type) {
+void q_treewidget_grab_gesture(void* self, int32_t type) {
     QWidget_GrabGesture((QWidget*)self, type);
 }
 
-void q_treewidget_ungrab_gesture(void* self, int64_t type) {
+void q_treewidget_ungrab_gesture(void* self, int32_t type) {
     QWidget_UngrabGesture((QWidget*)self, type);
 }
 
@@ -2435,7 +2435,7 @@ void q_treewidget_set_parent(void* self, void* parent) {
     QWidget_SetParent((QWidget*)self, (QWidget*)parent);
 }
 
-void q_treewidget_set_parent2(void* self, void* parent, int64_t f) {
+void q_treewidget_set_parent2(void* self, void* parent, int32_t f) {
     QWidget_SetParent2((QWidget*)self, (QWidget*)parent, f);
 }
 
@@ -2471,11 +2471,11 @@ void q_treewidget_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_treewidget_add_actions(void* self, libqt_list actions) {
+void q_treewidget_add_actions(void* self, libqt_list /* of QAction* */ actions) {
     QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_treewidget_insert_actions(void* self, void* before, libqt_list actions) {
+void q_treewidget_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions) {
     QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
@@ -2512,23 +2512,23 @@ QWidget* q_treewidget_parent_widget(void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
-void q_treewidget_set_window_flags(void* self, int64_t type) {
+void q_treewidget_set_window_flags(void* self, int32_t type) {
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int64_t q_treewidget_window_flags(void* self) {
+int32_t q_treewidget_window_flags(void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
-void q_treewidget_set_window_flag(void* self, int64_t param1) {
+void q_treewidget_set_window_flag(void* self, int32_t param1) {
     QWidget_SetWindowFlag((QWidget*)self, param1);
 }
 
-void q_treewidget_override_window_flags(void* self, int64_t type) {
+void q_treewidget_override_window_flags(void* self, int32_t type) {
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int64_t q_treewidget_window_type(void* self) {
+int32_t q_treewidget_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
@@ -2624,11 +2624,11 @@ void q_treewidget_on_custom_context_menu_requested(void* self, void (*callback)(
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-int64_t q_treewidget_input_method_hints(void* self) {
+int32_t q_treewidget_input_method_hints(void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
-void q_treewidget_set_input_method_hints(void* self, int64_t hints) {
+void q_treewidget_set_input_method_hints(void* self, int32_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
@@ -2660,7 +2660,7 @@ QPixmap* q_treewidget_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void q_treewidget_grab_gesture2(void* self, int64_t type, int32_t flags) {
+void q_treewidget_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
@@ -2676,7 +2676,7 @@ void q_treewidget_set_shortcut_auto_repeat2(void* self, int id, bool enable) {
     QWidget_SetShortcutAutoRepeat2((QWidget*)self, id, enable);
 }
 
-void q_treewidget_set_window_flag2(void* self, int64_t param1, bool on) {
+void q_treewidget_set_window_flag2(void* self, int32_t param1, bool on) {
     QWidget_SetWindowFlag2((QWidget*)self, param1, on);
 }
 
@@ -2688,7 +2688,7 @@ QWidget* q_treewidget_create_window_container2(void* window, void* parent) {
     return QWidget_CreateWindowContainer2((QWindow*)window, (QWidget*)parent);
 }
 
-QWidget* q_treewidget_create_window_container3(void* window, void* parent, int64_t flags) {
+QWidget* q_treewidget_create_window_container3(void* window, void* parent, int32_t flags) {
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
@@ -2793,7 +2793,7 @@ const char** q_treewidget_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_treewidget_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_treewidget_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2995,15 +2995,15 @@ void q_treewidget_on_reset(void* self, void (*callback)()) {
     QTreeWidget_OnReset((QTreeWidget*)self, (intptr_t)callback);
 }
 
-void q_treewidget_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles) {
+void q_treewidget_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles) {
     QTreeWidget_DataChanged((QTreeWidget*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_treewidget_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles) {
+void q_treewidget_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles) {
     QTreeWidget_QBaseDataChanged((QTreeWidget*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_treewidget_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*)) {
+void q_treewidget_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */)) {
     QTreeWidget_OnDataChanged((QTreeWidget*)self, (intptr_t)callback);
 }
 
@@ -3067,15 +3067,15 @@ void q_treewidget_on_rows_about_to_be_removed(void* self, void (*callback)(void*
     QTreeWidget_OnRowsAboutToBeRemoved((QTreeWidget*)self, (intptr_t)callback);
 }
 
-QModelIndex* q_treewidget_move_cursor(void* self, int32_t cursorAction, int64_t modifiers) {
+QModelIndex* q_treewidget_move_cursor(void* self, int32_t cursorAction, int32_t modifiers) {
     return QTreeWidget_MoveCursor((QTreeWidget*)self, cursorAction, modifiers);
 }
 
-QModelIndex* q_treewidget_qbase_move_cursor(void* self, int32_t cursorAction, int64_t modifiers) {
+QModelIndex* q_treewidget_qbase_move_cursor(void* self, int32_t cursorAction, int32_t modifiers) {
     return QTreeWidget_QBaseMoveCursor((QTreeWidget*)self, cursorAction, modifiers);
 }
 
-void q_treewidget_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int64_t)) {
+void q_treewidget_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int32_t)) {
     QTreeWidget_OnMoveCursor((QTreeWidget*)self, (intptr_t)callback);
 }
 
@@ -3393,15 +3393,15 @@ void q_treewidget_on_item_delegate_for_index(void* self, QAbstractItemDelegate* 
     QTreeWidget_OnItemDelegateForIndex((QTreeWidget*)self, (intptr_t)callback);
 }
 
-QVariant* q_treewidget_input_method_query(void* self, int64_t query) {
+QVariant* q_treewidget_input_method_query(void* self, int32_t query) {
     return QTreeWidget_InputMethodQuery((QTreeWidget*)self, query);
 }
 
-QVariant* q_treewidget_qbase_input_method_query(void* self, int64_t query) {
+QVariant* q_treewidget_qbase_input_method_query(void* self, int32_t query) {
     return QTreeWidget_QBaseInputMethodQuery((QTreeWidget*)self, query);
 }
 
-void q_treewidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void q_treewidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     QTreeWidget_OnInputMethodQuery((QTreeWidget*)self, (intptr_t)callback);
 }
 

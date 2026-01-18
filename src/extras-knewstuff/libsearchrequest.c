@@ -42,7 +42,7 @@ KNSCore__SearchRequest* k_nscore__searchrequest_new6(int32_t sortMode_, int32_t 
     size_t categories__len = libqt_strv_length(categories_);
     libqt_string* categories__qstr = (libqt_string*)malloc(categories__len * sizeof(libqt_string));
     if (categories__qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__searchrequest_new6");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__searchrequest_new6\n");
         abort();
     }
     for (size_t i = 0; i < categories__len; ++i) {
@@ -59,7 +59,7 @@ KNSCore__SearchRequest* k_nscore__searchrequest_new7(int32_t sortMode_, int32_t 
     size_t categories__len = libqt_strv_length(categories_);
     libqt_string* categories__qstr = (libqt_string*)malloc(categories__len * sizeof(libqt_string));
     if (categories__qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__searchrequest_new7");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__searchrequest_new7\n");
         abort();
     }
     for (size_t i = 0; i < categories__len; ++i) {
@@ -76,7 +76,7 @@ KNSCore__SearchRequest* k_nscore__searchrequest_new8(int32_t sortMode_, int32_t 
     size_t categories__len = libqt_strv_length(categories_);
     libqt_string* categories__qstr = (libqt_string*)malloc(categories__len * sizeof(libqt_string));
     if (categories__qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__searchrequest_new8");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__searchrequest_new8\n");
         abort();
     }
     for (size_t i = 0; i < categories__len; ++i) {
@@ -109,7 +109,7 @@ const char** k_nscore__searchrequest_categories(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__searchrequest_categories");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__searchrequest_categories\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

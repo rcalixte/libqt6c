@@ -352,7 +352,9 @@ void q_hxymodelmapper_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QHXYModelMapper*
 ///
-libqt_list /* of QObject* */ q_hxymodelmapper_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_hxymodelmapper_children(void* self);
 
 /// Inherited from QObject
 ///

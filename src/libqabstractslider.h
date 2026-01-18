@@ -1415,7 +1415,7 @@ void q_abstractslider_set_graphics_effect(void* self, void* effect);
 /// @param self QAbstractSlider*
 /// @param type enum Qt__GestureType
 ///
-void q_abstractslider_grab_gesture(void* self, int64_t type);
+void q_abstractslider_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -1424,7 +1424,7 @@ void q_abstractslider_grab_gesture(void* self, int64_t type);
 /// @param self QAbstractSlider*
 /// @param type enum Qt__GestureType
 ///
-void q_abstractslider_ungrab_gesture(void* self, int64_t type);
+void q_abstractslider_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2413,7 +2413,7 @@ void q_abstractslider_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void q_abstractslider_set_parent2(void* self, void* parent, int64_t f);
+void q_abstractslider_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -2491,9 +2491,9 @@ void q_abstractslider_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self QAbstractSlider*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_abstractslider_add_actions(void* self, libqt_list actions);
+void q_abstractslider_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2501,9 +2501,9 @@ void q_abstractslider_add_actions(void* self, libqt_list actions);
 ///
 /// @param self QAbstractSlider*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_abstractslider_insert_actions(void* self, void* before, libqt_list actions);
+void q_abstractslider_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2530,7 +2530,9 @@ void q_abstractslider_remove_action(void* self, void* action);
 ///
 /// @param self QAbstractSlider*
 ///
-libqt_list /* of QAction* */ q_abstractslider_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list q_abstractslider_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2587,7 +2589,7 @@ QWidget* q_abstractslider_parent_widget(void* self);
 /// @param self QAbstractSlider*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_abstractslider_set_window_flags(void* self, int64_t type);
+void q_abstractslider_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2597,7 +2599,7 @@ void q_abstractslider_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t q_abstractslider_window_flags(void* self);
+int32_t q_abstractslider_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2606,7 +2608,7 @@ int64_t q_abstractslider_window_flags(void* self);
 /// @param self QAbstractSlider*
 /// @param param1 enum Qt__WindowType
 ///
-void q_abstractslider_set_window_flag(void* self, int64_t param1);
+void q_abstractslider_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2615,7 +2617,7 @@ void q_abstractslider_set_window_flag(void* self, int64_t param1);
 /// @param self QAbstractSlider*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_abstractslider_override_window_flags(void* self, int64_t type);
+void q_abstractslider_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2625,7 +2627,7 @@ void q_abstractslider_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t q_abstractslider_window_type(void* self);
+int32_t q_abstractslider_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2836,7 +2838,7 @@ void q_abstractslider_on_custom_context_menu_requested(void* self, void (*callba
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t q_abstractslider_input_method_hints(void* self);
+int32_t q_abstractslider_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2845,7 +2847,7 @@ int64_t q_abstractslider_input_method_hints(void* self);
 /// @param self QAbstractSlider*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void q_abstractslider_set_input_method_hints(void* self, int64_t hints);
+void q_abstractslider_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -2930,7 +2932,7 @@ QPixmap* q_abstractslider_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void q_abstractslider_grab_gesture2(void* self, int64_t type, int32_t flags);
+void q_abstractslider_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -2970,7 +2972,7 @@ void q_abstractslider_set_shortcut_auto_repeat2(void* self, int id, bool enable)
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void q_abstractslider_set_window_flag2(void* self, int64_t param1, bool on);
+void q_abstractslider_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -2999,7 +3001,7 @@ QWidget* q_abstractslider_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* q_abstractslider_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* q_abstractslider_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -3111,7 +3113,9 @@ void q_abstractslider_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QAbstractSlider*
 ///
-libqt_list /* of QObject* */ q_abstractslider_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_abstractslider_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4596,7 +4600,7 @@ void q_abstractslider_on_input_method_event(void* self, void (*callback)(void*, 
 /// @param self QAbstractSlider*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_abstractslider_input_method_query(void* self, int64_t param1);
+QVariant* q_abstractslider_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4607,7 +4611,7 @@ QVariant* q_abstractslider_input_method_query(void* self, int64_t param1);
 /// @param self QAbstractSlider*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_abstractslider_qbase_input_method_query(void* self, int64_t param1);
+QVariant* q_abstractslider_qbase_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4618,7 +4622,7 @@ QVariant* q_abstractslider_qbase_input_method_query(void* self, int64_t param1);
 /// @param self QAbstractSlider*
 /// @param callback QVariant* func(QAbstractSlider* self, enum Qt__InputMethodQuery param1)
 ///
-void q_abstractslider_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void q_abstractslider_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///

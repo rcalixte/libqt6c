@@ -82,7 +82,7 @@ bool k_nscore__provider_qbase_is_initialized(void* self) {
     return KNSCore__Provider_QBaseIsInitialized((KNSCore__Provider*)self);
 }
 
-void k_nscore__provider_set_cached_entries(void* self, libqt_list cachedEntries) {
+void k_nscore__provider_set_cached_entries(void* self, libqt_list /* of KNSCore__Entry* */ cachedEntries) {
     KNSCore__Provider_SetCachedEntries((KNSCore__Provider*)self, cachedEntries);
 }
 
@@ -90,7 +90,7 @@ void k_nscore__provider_on_set_cached_entries(void* self, void (*callback)(void*
     KNSCore__Provider_OnSetCachedEntries((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
-void k_nscore__provider_qbase_set_cached_entries(void* self, libqt_list cachedEntries) {
+void k_nscore__provider_qbase_set_cached_entries(void* self, libqt_list /* of KNSCore__Entry* */ cachedEntries) {
     KNSCore__Provider_QBaseSetCachedEntries((KNSCore__Provider*)self, cachedEntries);
 }
 
@@ -294,7 +294,7 @@ void k_nscore__provider_set_tag_filter(void* self, const char* tagFilter[static 
     size_t tagFilter_len = libqt_strv_length(tagFilter);
     libqt_string* tagFilter_qstr = (libqt_string*)malloc(tagFilter_len * sizeof(libqt_string));
     if (tagFilter_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__provider_set_tag_filter");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__provider_set_tag_filter\n");
         abort();
     }
     for (size_t i = 0; i < tagFilter_len; ++i) {
@@ -310,7 +310,7 @@ const char** k_nscore__provider_tag_filter(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__provider_tag_filter");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__provider_tag_filter\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -328,7 +328,7 @@ void k_nscore__provider_set_download_tag_filter(void* self, const char* download
     size_t downloadTagFilter_len = libqt_strv_length(downloadTagFilter);
     libqt_string* downloadTagFilter_qstr = (libqt_string*)malloc(downloadTagFilter_len * sizeof(libqt_string));
     if (downloadTagFilter_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__provider_set_download_tag_filter");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__provider_set_download_tag_filter\n");
         abort();
     }
     for (size_t i = 0; i < downloadTagFilter_len; ++i) {
@@ -344,7 +344,7 @@ const char** k_nscore__provider_download_tag_filter(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__provider_download_tag_filter");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__provider_download_tag_filter\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -366,7 +366,7 @@ void k_nscore__provider_on_provider_initialized(void* self, void (*callback)(voi
     KNSCore__Provider_Connect_ProviderInitialized((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
-void k_nscore__provider_loading_finished(void* self, void* param1, libqt_list param2) {
+void k_nscore__provider_loading_finished(void* self, void* param1, libqt_list /* of KNSCore__Entry* */ param2) {
     KNSCore__Provider_LoadingFinished((KNSCore__Provider*)self, (KNSCore__Provider__SearchRequest*)param1, param2);
 }
 
@@ -406,7 +406,7 @@ void k_nscore__provider_on_basics_loaded(void* self, void (*callback)(void*)) {
     KNSCore__Provider_Connect_BasicsLoaded((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
-void k_nscore__provider_search_presets_loaded(void* self, libqt_list presets) {
+void k_nscore__provider_search_presets_loaded(void* self, libqt_list /* of KNSCore__Provider__SearchPreset* */ presets) {
     KNSCore__Provider_SearchPresetsLoaded((KNSCore__Provider*)self, presets);
 }
 
@@ -438,7 +438,7 @@ void k_nscore__provider_on_signal_error_code(void* self, void (*callback)(void*,
     KNSCore__Provider_Connect_SignalErrorCode((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
-void k_nscore__provider_categories_metadata_loded(void* self, libqt_list categories) {
+void k_nscore__provider_categories_metadata_loded(void* self, libqt_list /* of KNSCore__Provider__CategoryMetadata* */ categories) {
     KNSCore__Provider_CategoriesMetadataLoded((KNSCore__Provider*)self, categories);
 }
 
@@ -605,7 +605,7 @@ const char** k_nscore__provider_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__provider_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__provider_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -835,7 +835,7 @@ KNSCore__Provider__SearchRequest* k_nscore__provider__searchrequest_new6(int32_t
     size_t categories__len = libqt_strv_length(categories_);
     libqt_string* categories__qstr = (libqt_string*)malloc(categories__len * sizeof(libqt_string));
     if (categories__qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__provider__searchrequest_new6");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__provider__searchrequest_new6\n");
         abort();
     }
     for (size_t i = 0; i < categories__len; ++i) {
@@ -852,7 +852,7 @@ KNSCore__Provider__SearchRequest* k_nscore__provider__searchrequest_new7(int32_t
     size_t categories__len = libqt_strv_length(categories_);
     libqt_string* categories__qstr = (libqt_string*)malloc(categories__len * sizeof(libqt_string));
     if (categories__qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__provider__searchrequest_new7");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__provider__searchrequest_new7\n");
         abort();
     }
     for (size_t i = 0; i < categories__len; ++i) {
@@ -869,7 +869,7 @@ KNSCore__Provider__SearchRequest* k_nscore__provider__searchrequest_new8(int32_t
     size_t categories__len = libqt_strv_length(categories_);
     libqt_string* categories__qstr = (libqt_string*)malloc(categories__len * sizeof(libqt_string));
     if (categories__qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__provider__searchrequest_new8");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__provider__searchrequest_new8\n");
         abort();
     }
     for (size_t i = 0; i < categories__len; ++i) {
@@ -914,7 +914,7 @@ const char** k_nscore__provider__searchrequest_categories(void* self) {
     const libqt_string* categories_qstr = (libqt_string*)categories_arr.data.ptr;
     const char** categories_ret = (const char**)malloc((categories_arr.len + 1) * sizeof(const char*));
     if (categories_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__provider__searchrequest_categories");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__provider__searchrequest_categories\n");
         abort();
     }
     for (size_t i = 0; i < categories_arr.len; ++i) {
@@ -932,7 +932,7 @@ void k_nscore__provider__searchrequest_set_categories(void* self, const char* ca
     size_t categories_len = libqt_strv_length(categories);
     libqt_string* categories_qstr = (libqt_string*)malloc(categories_len * sizeof(libqt_string));
     if (categories_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__provider__searchrequest_set_categories");
+        fprintf(stderr, "Failed to allocate memory for string list in k_nscore__provider__searchrequest_set_categories\n");
         abort();
     }
     for (size_t i = 0; i < categories_len; ++i) {

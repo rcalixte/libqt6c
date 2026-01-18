@@ -63,7 +63,7 @@ const QScroller* q_scroller_scroller2(void* target);
 ///
 /// @return enum Qt__GestureType
 ///
-int64_t q_scroller_grab_gesture(void* target);
+int32_t q_scroller_grab_gesture(void* target);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#grabbedGesture)
 ///
@@ -71,7 +71,7 @@ int64_t q_scroller_grab_gesture(void* target);
 ///
 /// @return enum Qt__GestureType
 ///
-int64_t q_scroller_grabbed_gesture(void* target);
+int32_t q_scroller_grabbed_gesture(void* target);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#ungrabGesture)
 ///
@@ -81,7 +81,9 @@ void q_scroller_ungrab_gesture(void* target);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#activeScrollers)
 ///
-libqt_list /* of QScroller* */ q_scroller_active_scrollers();
+/// @return libqt_list of QScroller*
+///
+libqt_list q_scroller_active_scrollers();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#target)
 ///
@@ -138,9 +140,9 @@ QScrollerProperties* q_scroller_scroller_properties(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#setSnapPositionsX)
 ///
 /// @param self QScroller*
-/// @param positions libqt_list /* of double */
+/// @param positions libqt_list of double
 ///
-void q_scroller_set_snap_positions_x(void* self, libqt_list positions);
+void q_scroller_set_snap_positions_x(void* self, libqt_list /* of double */ positions);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#setSnapPositionsX)
 ///
@@ -153,9 +155,9 @@ void q_scroller_set_snap_positions_x2(void* self, double first, double interval)
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#setSnapPositionsY)
 ///
 /// @param self QScroller*
-/// @param positions libqt_list /* of double */
+/// @param positions libqt_list of double
 ///
-void q_scroller_set_snap_positions_y(void* self, libqt_list positions);
+void q_scroller_set_snap_positions_y(void* self, libqt_list /* of double */ positions);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#setSnapPositionsY)
 ///
@@ -266,7 +268,7 @@ const char* q_scroller_tr3(const char* s, const char* c, int n);
 ///
 /// @return enum Qt__GestureType
 ///
-int64_t q_scroller_grab_gesture2(void* target, int32_t gestureType);
+int32_t q_scroller_grab_gesture2(void* target, int32_t gestureType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#handleInput)
 ///
@@ -406,7 +408,9 @@ void q_scroller_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QScroller*
 ///
-libqt_list /* of QObject* */ q_scroller_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_scroller_children(void* self);
 
 /// Inherited from QObject
 ///

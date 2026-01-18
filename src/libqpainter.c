@@ -333,7 +333,7 @@ void q_painter_draw_lines(void* self, void* lines, int lineCount) {
     QPainter_DrawLines((QPainter*)self, (QLineF*)lines, lineCount);
 }
 
-void q_painter_draw_lines2(void* self, libqt_list lines) {
+void q_painter_draw_lines2(void* self, libqt_list /* of QLineF* */ lines) {
     QPainter_DrawLines2((QPainter*)self, lines);
 }
 
@@ -341,7 +341,7 @@ void q_painter_draw_lines3(void* self, void* pointPairs, int lineCount) {
     QPainter_DrawLines3((QPainter*)self, (QPointF*)pointPairs, lineCount);
 }
 
-void q_painter_draw_lines4(void* self, libqt_list pointPairs) {
+void q_painter_draw_lines4(void* self, libqt_list /* of QPointF* */ pointPairs) {
     QPainter_DrawLines4((QPainter*)self, pointPairs);
 }
 
@@ -349,7 +349,7 @@ void q_painter_draw_lines5(void* self, void* lines, int lineCount) {
     QPainter_DrawLines5((QPainter*)self, (QLine*)lines, lineCount);
 }
 
-void q_painter_draw_lines6(void* self, libqt_list lines) {
+void q_painter_draw_lines6(void* self, libqt_list /* of QLine* */ lines) {
     QPainter_DrawLines6((QPainter*)self, lines);
 }
 
@@ -357,7 +357,7 @@ void q_painter_draw_lines7(void* self, void* pointPairs, int lineCount) {
     QPainter_DrawLines7((QPainter*)self, (QPoint*)pointPairs, lineCount);
 }
 
-void q_painter_draw_lines8(void* self, libqt_list pointPairs) {
+void q_painter_draw_lines8(void* self, libqt_list /* of QPoint* */ pointPairs) {
     QPainter_DrawLines8((QPainter*)self, pointPairs);
 }
 
@@ -377,7 +377,7 @@ void q_painter_draw_rects(void* self, void* rects, int rectCount) {
     QPainter_DrawRects((QPainter*)self, (QRectF*)rects, rectCount);
 }
 
-void q_painter_draw_rects2(void* self, libqt_list rectangles) {
+void q_painter_draw_rects2(void* self, libqt_list /* of QRectF* */ rectangles) {
     QPainter_DrawRects2((QPainter*)self, rectangles);
 }
 
@@ -385,7 +385,7 @@ void q_painter_draw_rects3(void* self, void* rects, int rectCount) {
     QPainter_DrawRects3((QPainter*)self, (QRect*)rects, rectCount);
 }
 
-void q_painter_draw_rects4(void* self, libqt_list rectangles) {
+void q_painter_draw_rects4(void* self, libqt_list /* of QRect* */ rectangles) {
     QPainter_DrawRects4((QPainter*)self, rectangles);
 }
 

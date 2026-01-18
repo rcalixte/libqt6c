@@ -180,7 +180,9 @@ void k_attica__publisher_add_field(void* self, void* param1);
 ///
 /// @param self Attica__Publisher*
 ///
-libqt_list /* of Attica__Field* */ k_attica__publisher_fields(void* self);
+/// @return libqt_list of Attica__Field*
+///
+libqt_list k_attica__publisher_fields(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-publisher.html#addTarget)
 ///
@@ -193,7 +195,9 @@ void k_attica__publisher_add_target(void* self, void* param1);
 ///
 /// @param self Attica__Publisher*
 ///
-libqt_list /* of Attica__Target* */ k_attica__publisher_targets(void* self);
+/// @return libqt_list of Attica__Target*
+///
+libqt_list k_attica__publisher_targets(void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-publisher.html#isValid)
 ///

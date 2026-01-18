@@ -414,7 +414,9 @@ void q_legendmarker_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QLegendMarker*
 ///
-libqt_list /* of QObject* */ q_legendmarker_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_legendmarker_children(void* self);
 
 /// Inherited from QObject
 ///

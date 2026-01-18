@@ -69,7 +69,7 @@ const char* k_bookmarkaction_tr(const char* s);
 /// @param mb flag of enum Qt__MouseButton
 /// @param km flag of enum Qt__KeyboardModifier
 ///
-void k_bookmarkaction_slot_selected(void* self, int64_t mb, int64_t km);
+void k_bookmarkaction_slot_selected(void* self, int32_t mb, int32_t km);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -96,7 +96,9 @@ const char* k_bookmarkaction_tr3(const char* s, const char* c, int n);
 ///
 /// @param self KBookmarkAction*
 ///
-libqt_list /* of QObject* */ k_bookmarkaction_associated_objects(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_bookmarkaction_associated_objects(void* self);
 
 /// Inherited from QAction
 ///
@@ -285,9 +287,9 @@ QKeySequence* k_bookmarkaction_shortcut(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
 ///
 /// @param self KBookmarkAction*
-/// @param shortcuts libqt_list /* of QKeySequence* */
+/// @param shortcuts libqt_list of QKeySequence*
 ///
-void k_bookmarkaction_set_shortcuts(void* self, libqt_list shortcuts);
+void k_bookmarkaction_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts);
 
 /// Inherited from QAction
 ///
@@ -304,7 +306,9 @@ void k_bookmarkaction_set_shortcuts2(void* self, int32_t shortcuts);
 ///
 /// @param self KBookmarkAction*
 ///
-libqt_list /* of QKeySequence* */ k_bookmarkaction_shortcuts(void* self);
+/// @return libqt_list of QKeySequence*
+///
+libqt_list k_bookmarkaction_shortcuts(void* self);
 
 /// Inherited from QAction
 ///
@@ -814,7 +818,9 @@ void k_bookmarkaction_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KBookmarkAction*
 ///
-libqt_list /* of QObject* */ k_bookmarkaction_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_bookmarkaction_children(void* self);
 
 /// Inherited from QObject
 ///

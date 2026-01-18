@@ -610,9 +610,9 @@ void q_designerwidgetdatabaseiteminterface_qbase_set_extends(void* self, const c
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#setDefaultPropertyValues)
 ///
 /// @param self QDesignerWidgetDataBaseItemInterface*
-/// @param list libqt_list /* of QVariant* */
+/// @param list libqt_list of QVariant*
 ///
-void q_designerwidgetdatabaseiteminterface_set_default_property_values(void* self, libqt_list list);
+void q_designerwidgetdatabaseiteminterface_set_default_property_values(void* self, libqt_list /* of QVariant* */ list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#setDefaultPropertyValues)
 ///
@@ -628,15 +628,17 @@ void q_designerwidgetdatabaseiteminterface_on_set_default_property_values(void* 
 /// Base class method implementation
 ///
 /// @param self QDesignerWidgetDataBaseItemInterface*
-/// @param list libqt_list /* of QVariant* */
+/// @param list libqt_list of QVariant*
 ///
-void q_designerwidgetdatabaseiteminterface_qbase_set_default_property_values(void* self, libqt_list list);
+void q_designerwidgetdatabaseiteminterface_qbase_set_default_property_values(void* self, libqt_list /* of QVariant* */ list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#defaultPropertyValues)
 ///
 /// @param self QDesignerWidgetDataBaseItemInterface*
 ///
-libqt_list /* of QVariant* */ q_designerwidgetdatabaseiteminterface_default_property_values(void* self);
+/// @return libqt_list of QVariant*
+///
+libqt_list q_designerwidgetdatabaseiteminterface_default_property_values(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#defaultPropertyValues)
 ///
@@ -653,7 +655,9 @@ void q_designerwidgetdatabaseiteminterface_on_default_property_values(void* self
 ///
 /// @param self QDesignerWidgetDataBaseItemInterface*
 ///
-libqt_list /* of QVariant* */ q_designerwidgetdatabaseiteminterface_qbase_default_property_values(void* self);
+/// @return libqt_list of QVariant*
+///
+libqt_list q_designerwidgetdatabaseiteminterface_qbase_default_property_values(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#dtor.QDesignerWidgetDataBaseItemInterface)
 ///
@@ -1093,7 +1097,9 @@ void q_designerwidgetdatabaseinterface_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QDesignerWidgetDataBaseInterface*
 ///
-libqt_list /* of QObject* */ q_designerwidgetdatabaseinterface_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_designerwidgetdatabaseinterface_children(void* self);
 
 /// Inherited from QObject
 ///

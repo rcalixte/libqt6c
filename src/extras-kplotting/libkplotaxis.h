@@ -111,13 +111,17 @@ void k_plotaxis_set_tick_marks(void* self, double x0, double length);
 ///
 /// @param self KPlotAxis*
 ///
-libqt_list /* of double */ k_plotaxis_major_tick_marks(void* self);
+/// @return libqt_list of double
+///
+libqt_list k_plotaxis_major_tick_marks(void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotaxis.html#minorTickMarks)
 ///
 /// @param self KPlotAxis*
 ///
-libqt_list /* of double */ k_plotaxis_minor_tick_marks(void* self);
+/// @return libqt_list of double
+///
+libqt_list k_plotaxis_minor_tick_marks(void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotaxis.html#setTickLabelFormat)
 ///

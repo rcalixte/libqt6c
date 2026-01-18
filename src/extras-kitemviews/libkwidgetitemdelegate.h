@@ -93,7 +93,9 @@ void k_widgetitemdelegate_reset_model(void* self);
 /// @param self KWidgetItemDelegate*
 /// @param index QModelIndex*
 ///
-libqt_list /* of QWidget* */ k_widgetitemdelegate_create_item_widgets(void* self, void* index);
+/// @return libqt_list of QWidget*
+///
+libqt_list k_widgetitemdelegate_create_item_widgets(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#createItemWidgets)
 ///
@@ -111,16 +113,18 @@ void k_widgetitemdelegate_on_create_item_widgets(void* self, QWidget** (*callbac
 /// @param self KWidgetItemDelegate*
 /// @param index QModelIndex*
 ///
-libqt_list /* of QWidget* */ k_widgetitemdelegate_qbase_create_item_widgets(void* self, void* index);
+/// @return libqt_list of QWidget*
+///
+libqt_list k_widgetitemdelegate_qbase_create_item_widgets(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#updateItemWidgets)
 ///
 /// @param self KWidgetItemDelegate*
-/// @param widgets libqt_list /* of QWidget* */
+/// @param widgets libqt_list of QWidget*
 /// @param option QStyleOptionViewItem*
 /// @param index QPersistentModelIndex*
 ///
-void k_widgetitemdelegate_update_item_widgets(void* self, libqt_list widgets, void* option, void* index);
+void k_widgetitemdelegate_update_item_widgets(void* self, libqt_list /* of QWidget* */ widgets, void* option, void* index);
 
 /// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#updateItemWidgets)
 ///
@@ -136,28 +140,28 @@ void k_widgetitemdelegate_on_update_item_widgets(void* self, void (*callback)(vo
 /// Base class method implementation
 ///
 /// @param self KWidgetItemDelegate*
-/// @param widgets libqt_list /* of QWidget* */
+/// @param widgets libqt_list of QWidget*
 /// @param option QStyleOptionViewItem*
 /// @param index QPersistentModelIndex*
 ///
-void k_widgetitemdelegate_qbase_update_item_widgets(void* self, libqt_list widgets, void* option, void* index);
+void k_widgetitemdelegate_qbase_update_item_widgets(void* self, libqt_list /* of QWidget* */ widgets, void* option, void* index);
 
 /// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#setBlockedEventTypes)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param widget QWidget*
-/// @param types libqt_list /* of enum QEvent__Type */
+/// @param types libqt_list of enum QEvent__Type
 ///
-void k_widgetitemdelegate_set_blocked_event_types(void* self, void* widget, libqt_list types);
+void k_widgetitemdelegate_set_blocked_event_types(void* self, void* widget, libqt_list /* of enum QEvent__Type */ types);
 
 /// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#setBlockedEventTypes)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KWidgetItemDelegate*
-/// @param callback void func(KWidgetItemDelegate* self, QWidget* widget, libqt_list /* of enum QEvent__Type */ /* of enum QEvent__Type */)
+/// @param callback void func(KWidgetItemDelegate* self, QWidget* widget, libqt_list of enum QEvent__Type of enum QEvent__Type)
 ///
-void k_widgetitemdelegate_on_set_blocked_event_types(void* self, void (*callback)(void*, void*, libqt_list));
+void k_widgetitemdelegate_on_set_blocked_event_types(void* self, void (*callback)(void*, void*, libqt_list /* of enum QEvent__Type */));
 
 /// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#setBlockedEventTypes)
 ///
@@ -165,9 +169,9 @@ void k_widgetitemdelegate_on_set_blocked_event_types(void* self, void (*callback
 ///
 /// @param self KWidgetItemDelegate*
 /// @param widget QWidget*
-/// @param types libqt_list /* of enum QEvent__Type */
+/// @param types libqt_list of enum QEvent__Type
 ///
-void k_widgetitemdelegate_qbase_set_blocked_event_types(void* self, void* widget, libqt_list types);
+void k_widgetitemdelegate_qbase_set_blocked_event_types(void* self, void* widget, libqt_list /* of enum QEvent__Type */ types);
 
 /// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#blockedEventTypes)
 ///
@@ -176,7 +180,7 @@ void k_widgetitemdelegate_qbase_set_blocked_event_types(void* self, void* widget
 ///
 /// @return libqt_list of enum QEvent__Type
 ///
-libqt_list /* of enum QEvent__Type */ k_widgetitemdelegate_blocked_event_types(void* self, void* widget);
+libqt_list k_widgetitemdelegate_blocked_event_types(void* self, void* widget);
 
 /// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#blockedEventTypes)
 ///
@@ -185,7 +189,7 @@ libqt_list /* of enum QEvent__Type */ k_widgetitemdelegate_blocked_event_types(v
 /// @param self KWidgetItemDelegate*
 /// @param callback libqt_list /* of enum QEvent__Type */ func(KWidgetItemDelegate* self, QWidget* widget)
 ///
-void k_widgetitemdelegate_on_blocked_event_types(void* self, libqt_list /* of enum QEvent__Type */ (*callback)(void*, void*));
+void k_widgetitemdelegate_on_blocked_event_types(void* self, libqt_list (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#blockedEventTypes)
 ///
@@ -196,7 +200,7 @@ void k_widgetitemdelegate_on_blocked_event_types(void* self, libqt_list /* of en
 ///
 /// @return libqt_list of enum QEvent__Type
 ///
-libqt_list /* of enum QEvent__Type */ k_widgetitemdelegate_qbase_blocked_event_types(void* self, void* widget);
+libqt_list k_widgetitemdelegate_qbase_blocked_event_types(void* self, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -400,7 +404,9 @@ void k_widgetitemdelegate_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KWidgetItemDelegate*
 ///
-libqt_list /* of QObject* */ k_widgetitemdelegate_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_widgetitemdelegate_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -974,7 +980,9 @@ void k_widgetitemdelegate_on_help_event(void* self, bool (*callback)(void*, void
 ///
 /// @param self KWidgetItemDelegate*
 ///
-libqt_list /* of int */ k_widgetitemdelegate_painting_roles(void* self);
+/// @return libqt_list of int
+///
+libqt_list k_widgetitemdelegate_painting_roles(void* self);
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -984,7 +992,9 @@ libqt_list /* of int */ k_widgetitemdelegate_painting_roles(void* self);
 ///
 /// @param self KWidgetItemDelegate*
 ///
-libqt_list /* of int */ k_widgetitemdelegate_qbase_painting_roles(void* self);
+/// @return libqt_list of int
+///
+libqt_list k_widgetitemdelegate_qbase_painting_roles(void* self);
 
 /// Inherited from QAbstractItemDelegate
 ///

@@ -351,7 +351,7 @@ const char** k_io__forwardingworkerbase_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__forwardingworkerbase_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__forwardingworkerbase_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -441,7 +441,7 @@ void k_io__forwardingworkerbase_stat_entry(void* self, void* _entry) {
     KIO__WorkerBase_StatEntry((KIO__WorkerBase*)self, (KIO__UDSEntry*)_entry);
 }
 
-void k_io__forwardingworkerbase_list_entries(void* self, libqt_list _entry) {
+void k_io__forwardingworkerbase_list_entries(void* self, libqt_list /* of KIO__UDSEntry* */ _entry) {
     KIO__WorkerBase_ListEntries((KIO__WorkerBase*)self, _entry);
 }
 
@@ -561,7 +561,7 @@ libqt_map /* of const char* to QVariant* */ k_io__forwardingworkerbase_map_confi
     libqt_string* _out_keys = (libqt_string*)_out.keys;
     char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string keys in k_io__forwardingworkerbase_map_config");
+        fprintf(stderr, "Failed to allocate memory for map string keys in k_io__forwardingworkerbase_map_config\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
@@ -571,7 +571,7 @@ libqt_map /* of const char* to QVariant* */ k_io__forwardingworkerbase_map_confi
                 libqt_free(_ret_keys[j]);
             }
             free(_ret_keys);
-            fprintf(stderr, "Failed to allocate memory for map keys in k_io__forwardingworkerbase_map_config");
+            fprintf(stderr, "Failed to allocate memory for map keys in k_io__forwardingworkerbase_map_config\n");
             abort();
         }
         memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);

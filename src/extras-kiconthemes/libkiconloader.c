@@ -24,7 +24,7 @@ KIconLoader* k_iconloader_new3(const char* appname, const char* extraSearchPaths
     size_t extraSearchPaths_len = libqt_strv_length(extraSearchPaths);
     libqt_string* extraSearchPaths_qstr = (libqt_string*)malloc(extraSearchPaths_len * sizeof(libqt_string));
     if (extraSearchPaths_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_new3");
+        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_new3\n");
         abort();
     }
     for (size_t i = 0; i < extraSearchPaths_len; ++i) {
@@ -41,7 +41,7 @@ KIconLoader* k_iconloader_new4(const char* appname, const char* extraSearchPaths
     size_t extraSearchPaths_len = libqt_strv_length(extraSearchPaths);
     libqt_string* extraSearchPaths_qstr = (libqt_string*)malloc(extraSearchPaths_len * sizeof(libqt_string));
     if (extraSearchPaths_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_new4");
+        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_new4\n");
         abort();
     }
     for (size_t i = 0; i < extraSearchPaths_len; ++i) {
@@ -127,7 +127,7 @@ const char** k_iconloader_load_animated(void* self, const char* name, int32_t gr
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_load_animated");
+        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_load_animated\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -146,7 +146,7 @@ const char** k_iconloader_query_icons(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_query_icons");
+        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_query_icons\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -165,7 +165,7 @@ const char** k_iconloader_query_icons2(void* self, int group_or_size) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_query_icons2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_query_icons2\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -184,7 +184,7 @@ const char** k_iconloader_query_icons_by_context(void* self, int group_or_size) 
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_query_icons_by_context");
+        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_query_icons_by_context\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -207,7 +207,7 @@ const char** k_iconloader_query_icons_by_dir(void* self, const char* iconsDir) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_query_icons_by_dir");
+        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_query_icons_by_dir\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -226,7 +226,7 @@ const char** k_iconloader_search_paths(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_search_paths");
+        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_search_paths\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -264,7 +264,7 @@ void k_iconloader_draw_overlays(void* self, const char* overlays[static 1], void
     size_t overlays_len = libqt_strv_length(overlays);
     libqt_string* overlays_qstr = (libqt_string*)malloc(overlays_len * sizeof(libqt_string));
     if (overlays_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_draw_overlays");
+        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_draw_overlays\n");
         abort();
     }
     for (size_t i = 0; i < overlays_len; ++i) {
@@ -349,7 +349,7 @@ QPixmap* k_iconloader_load_icon5(void* self, const char* name, int32_t group, in
     size_t overlays_len = libqt_strv_length(overlays);
     libqt_string* overlays_qstr = (libqt_string*)malloc(overlays_len * sizeof(libqt_string));
     if (overlays_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_load_icon5");
+        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_load_icon5\n");
         abort();
     }
     for (size_t i = 0; i < overlays_len; ++i) {
@@ -373,7 +373,7 @@ QPixmap* k_iconloader_load_mime_type_icon5(void* self, const char* iconName, int
     size_t overlays_len = libqt_strv_length(overlays);
     libqt_string* overlays_qstr = (libqt_string*)malloc(overlays_len * sizeof(libqt_string));
     if (overlays_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_load_mime_type_icon5");
+        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_load_mime_type_icon5\n");
         abort();
     }
     for (size_t i = 0; i < overlays_len; ++i) {
@@ -412,7 +412,7 @@ const char** k_iconloader_load_animated3(void* self, const char* name, int32_t g
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_load_animated3");
+        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_load_animated3\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -431,7 +431,7 @@ const char** k_iconloader_query_icons22(void* self, int group_or_size, int32_t c
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_query_icons22");
+        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_query_icons22\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -450,7 +450,7 @@ const char** k_iconloader_query_icons_by_context2(void* self, int group_or_size,
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_query_icons_by_context2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_query_icons_by_context2\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -468,7 +468,7 @@ void k_iconloader_reconfigure2(void* self, const char* appname, const char* extr
     size_t extraSearchPaths_len = libqt_strv_length(extraSearchPaths);
     libqt_string* extraSearchPaths_qstr = (libqt_string*)malloc(extraSearchPaths_len * sizeof(libqt_string));
     if (extraSearchPaths_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_reconfigure2");
+        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_reconfigure2\n");
         abort();
     }
     for (size_t i = 0; i < extraSearchPaths_len; ++i) {
@@ -483,7 +483,7 @@ void k_iconloader_draw_overlays4(void* self, const char* overlays[static 1], voi
     size_t overlays_len = libqt_strv_length(overlays);
     libqt_string* overlays_qstr = (libqt_string*)malloc(overlays_len * sizeof(libqt_string));
     if (overlays_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_draw_overlays4");
+        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_draw_overlays4\n");
         abort();
     }
     for (size_t i = 0; i < overlays_len; ++i) {
@@ -599,7 +599,7 @@ const char** k_iconloader_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_iconloader_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -817,7 +817,7 @@ QIcon* k_de_icon3(const char* param1, const char* param2[static 1], void* param3
     size_t param2_len = libqt_strv_length(param2);
     libqt_string* param2_qstr = (libqt_string*)malloc(param2_len * sizeof(libqt_string));
     if (param2_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_de_icon3");
+        fprintf(stderr, "Failed to allocate memory for string list in k_de_icon3\n");
         abort();
     }
     for (size_t i = 0; i < param2_len; ++i) {

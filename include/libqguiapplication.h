@@ -18,7 +18,7 @@
 /// @param argc int*
 /// @param argv char**
 ///
-QGuiApplication* q_guiapplication_new(int* argc, char* argv[]);
+QGuiApplication* q_guiapplication_new(int* argc, char** argv);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html)
 
@@ -28,7 +28,7 @@ QGuiApplication* q_guiapplication_new(int* argc, char* argv[]);
 /// @param argv char**
 /// @param param3 int
 ///
-QGuiApplication* q_guiapplication_new2(int* argc, char* argv[], int param3);
+QGuiApplication* q_guiapplication_new2(int* argc, char** argv, int param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -105,11 +105,15 @@ const char* q_guiapplication_desktop_file_name();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#allWindows)
 ///
-libqt_list /* of QWindow* */ q_guiapplication_all_windows();
+/// @return libqt_list of QWindow*
+///
+libqt_list q_guiapplication_all_windows();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#topLevelWindows)
 ///
-libqt_list /* of QWindow* */ q_guiapplication_top_level_windows();
+/// @return libqt_list of QWindow*
+///
+libqt_list q_guiapplication_top_level_windows();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#topLevelAt)
 ///
@@ -151,7 +155,9 @@ QScreen* q_guiapplication_primary_screen();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#screens)
 ///
-libqt_list /* of QScreen* */ q_guiapplication_screens();
+/// @return libqt_list of QScreen*
+///
+libqt_list q_guiapplication_screens();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#screenAt)
 ///
@@ -213,19 +219,19 @@ void q_guiapplication_set_palette(void* pal);
 ///
 /// @return flag of enum Qt__KeyboardModifier
 ///
-int64_t q_guiapplication_keyboard_modifiers();
+int32_t q_guiapplication_keyboard_modifiers();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#queryKeyboardModifiers)
 ///
 /// @return flag of enum Qt__KeyboardModifier
 ///
-int64_t q_guiapplication_query_keyboard_modifiers();
+int32_t q_guiapplication_query_keyboard_modifiers();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#mouseButtons)
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int64_t q_guiapplication_mouse_buttons();
+int32_t q_guiapplication_mouse_buttons();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#setLayoutDirection)
 ///
@@ -1228,7 +1234,9 @@ void q_guiapplication_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QGuiApplication*
 ///
-libqt_list /* of QObject* */ q_guiapplication_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_guiapplication_children(void* self);
 
 /// Inherited from QObject
 ///

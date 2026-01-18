@@ -81,7 +81,7 @@ const char* k_twofingertap_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-int64_t k_twofingertap_gesture_type(void* self) {
+int32_t k_twofingertap_gesture_type(void* self) {
     return QGesture_GestureType((QGesture*)self);
 }
 
@@ -218,7 +218,7 @@ const char** k_twofingertap_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_twofingertap_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_twofingertap_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -460,11 +460,11 @@ void k_twofingertaprecognizer_set_tap_radius(void* self, int i) {
     KTwoFingerTapRecognizer_SetTapRadius((KTwoFingerTapRecognizer*)self, i);
 }
 
-int64_t k_twofingertaprecognizer_register_recognizer(void* recognizer) {
+int32_t k_twofingertaprecognizer_register_recognizer(void* recognizer) {
     return QGestureRecognizer_RegisterRecognizer((QGestureRecognizer*)recognizer);
 }
 
-void k_twofingertaprecognizer_unregister_recognizer(int64_t type) {
+void k_twofingertaprecognizer_unregister_recognizer(int32_t type) {
     QGestureRecognizer_UnregisterRecognizer(type);
 }
 

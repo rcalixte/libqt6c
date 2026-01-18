@@ -106,9 +106,9 @@ void q_signon__identity_verify_user(void* self);
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Identity.html)
 ///
 /// @param self SignOn__Identity*
-/// @param params libqt_map /* of const char* to QVariant* */
+/// @param params libqt_map of const char* to QVariant*
 ///
-void q_signon__identity_verify_user2(void* self, libqt_map /* of const char* to QVariant* */ params);
+void q_signon__identity_verify_user2(void* self, libqt_map params);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Identity.html)
 ///
@@ -462,7 +462,9 @@ void q_signon__identity_kill_timer2(void* self, int32_t id);
 ///
 /// @param self SignOn__Identity*
 ///
-libqt_list /* of QObject* */ q_signon__identity_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_signon__identity_children(void* self);
 
 /// Inherited from QObject
 ///

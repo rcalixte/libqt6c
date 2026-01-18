@@ -619,7 +619,7 @@ void q_cppainter_draw_lines(void* self, void* lines, int lineCount) {
     QPainter_DrawLines((QPainter*)self, (QLineF*)lines, lineCount);
 }
 
-void q_cppainter_draw_lines2(void* self, libqt_list lines) {
+void q_cppainter_draw_lines2(void* self, libqt_list /* of QLineF* */ lines) {
     QPainter_DrawLines2((QPainter*)self, lines);
 }
 
@@ -627,7 +627,7 @@ void q_cppainter_draw_lines3(void* self, void* pointPairs, int lineCount) {
     QPainter_DrawLines3((QPainter*)self, (QPointF*)pointPairs, lineCount);
 }
 
-void q_cppainter_draw_lines4(void* self, libqt_list pointPairs) {
+void q_cppainter_draw_lines4(void* self, libqt_list /* of QPointF* */ pointPairs) {
     QPainter_DrawLines4((QPainter*)self, pointPairs);
 }
 
@@ -635,7 +635,7 @@ void q_cppainter_draw_lines5(void* self, void* lines, int lineCount) {
     QPainter_DrawLines5((QPainter*)self, (QLine*)lines, lineCount);
 }
 
-void q_cppainter_draw_lines6(void* self, libqt_list lines) {
+void q_cppainter_draw_lines6(void* self, libqt_list /* of QLine* */ lines) {
     QPainter_DrawLines6((QPainter*)self, lines);
 }
 
@@ -643,7 +643,7 @@ void q_cppainter_draw_lines7(void* self, void* pointPairs, int lineCount) {
     QPainter_DrawLines7((QPainter*)self, (QPoint*)pointPairs, lineCount);
 }
 
-void q_cppainter_draw_lines8(void* self, libqt_list pointPairs) {
+void q_cppainter_draw_lines8(void* self, libqt_list /* of QPoint* */ pointPairs) {
     QPainter_DrawLines8((QPainter*)self, pointPairs);
 }
 
@@ -663,7 +663,7 @@ void q_cppainter_draw_rects(void* self, void* rects, int rectCount) {
     QPainter_DrawRects((QPainter*)self, (QRectF*)rects, rectCount);
 }
 
-void q_cppainter_draw_rects2(void* self, libqt_list rectangles) {
+void q_cppainter_draw_rects2(void* self, libqt_list /* of QRectF* */ rectangles) {
     QPainter_DrawRects2((QPainter*)self, rectangles);
 }
 
@@ -671,7 +671,7 @@ void q_cppainter_draw_rects3(void* self, void* rects, int rectCount) {
     QPainter_DrawRects3((QPainter*)self, (QRect*)rects, rectCount);
 }
 
-void q_cppainter_draw_rects4(void* self, libqt_list rectangles) {
+void q_cppainter_draw_rects4(void* self, libqt_list /* of QRect* */ rectangles) {
     QPainter_DrawRects4((QPainter*)self, rectangles);
 }
 
@@ -1652,7 +1652,7 @@ const char** q_cplayer_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cplayer_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cplayer_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2268,7 +2268,7 @@ const char** q_cplayerable_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cplayerable_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cplayerable_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -3133,7 +3133,7 @@ const char** q_cpselectionrect_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpselectionrect_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpselectionrect_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -3718,7 +3718,7 @@ const char** q_cpmargingroup_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpmargingroup_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpmargingroup_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -4338,7 +4338,7 @@ const char** q_cplayoutelement_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cplayoutelement_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cplayoutelement_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -4877,16 +4877,16 @@ void q_cplayout_qbase_release_element(void* self, void* el) {
     QCPLayout_QBaseReleaseElement((QCPLayout*)self, (QCPLayoutElement*)el);
 }
 
-libqt_list /* of int */ q_cplayout_get_section_sizes(void* self, libqt_list maxSizes, libqt_list minSizes, libqt_list stretchFactors, int totalSize) {
+libqt_list /* of int */ q_cplayout_get_section_sizes(void* self, libqt_list /* of int */ maxSizes, libqt_list /* of int */ minSizes, libqt_list /* of double */ stretchFactors, int totalSize) {
     libqt_list _arr = QCPLayout_GetSectionSizes((QCPLayout*)self, maxSizes, minSizes, stretchFactors, totalSize);
     return _arr;
 }
 
-void q_cplayout_on_get_section_sizes(void* self, int* (*callback)(void*, int*, int*, libqt_list, int)) {
+void q_cplayout_on_get_section_sizes(void* self, int* (*callback)(void*, libqt_list /* of int */, libqt_list /* of int */, libqt_list /* of double */, int)) {
     QCPLayout_OnGetSectionSizes((QCPLayout*)self, (intptr_t)callback);
 }
 
-libqt_list /* of int */ q_cplayout_qbase_get_section_sizes(void* self, libqt_list maxSizes, libqt_list minSizes, libqt_list stretchFactors, int totalSize) {
+libqt_list /* of int */ q_cplayout_qbase_get_section_sizes(void* self, libqt_list /* of int */ maxSizes, libqt_list /* of int */ minSizes, libqt_list /* of double */ stretchFactors, int totalSize) {
     libqt_list _arr = QCPLayout_QBaseGetSectionSizes((QCPLayout*)self, maxSizes, minSizes, stretchFactors, totalSize);
     return _arr;
 }
@@ -5148,7 +5148,7 @@ const char** q_cplayout_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cplayout_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cplayout_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -5675,7 +5675,7 @@ void q_cplayoutgrid_set_column_stretch_factor(void* self, int column, double fac
     QCPLayoutGrid_SetColumnStretchFactor((QCPLayoutGrid*)self, column, factor);
 }
 
-void q_cplayoutgrid_set_column_stretch_factors(void* self, libqt_list factors) {
+void q_cplayoutgrid_set_column_stretch_factors(void* self, libqt_list /* of double */ factors) {
     QCPLayoutGrid_SetColumnStretchFactors((QCPLayoutGrid*)self, factors);
 }
 
@@ -5683,7 +5683,7 @@ void q_cplayoutgrid_set_row_stretch_factor(void* self, int row, double factor) {
     QCPLayoutGrid_SetRowStretchFactor((QCPLayoutGrid*)self, row, factor);
 }
 
-void q_cplayoutgrid_set_row_stretch_factors(void* self, libqt_list factors) {
+void q_cplayoutgrid_set_row_stretch_factors(void* self, libqt_list /* of double */ factors) {
     QCPLayoutGrid_SetRowStretchFactors((QCPLayoutGrid*)self, factors);
 }
 
@@ -5849,27 +5849,27 @@ void q_cplayoutgrid_index_to_row_col(void* self, int index, int* row, int* colum
     QCPLayoutGrid_IndexToRowCol((QCPLayoutGrid*)self, index, row, column);
 }
 
-void q_cplayoutgrid_get_minimum_row_col_sizes(void* self, libqt_list minColWidths, libqt_list minRowHeights) {
+void q_cplayoutgrid_get_minimum_row_col_sizes(void* self, libqt_list /* of int */ minColWidths, libqt_list /* of int */ minRowHeights) {
     QCPLayoutGrid_GetMinimumRowColSizes((QCPLayoutGrid*)self, minColWidths, minRowHeights);
 }
 
-void q_cplayoutgrid_on_get_minimum_row_col_sizes(void* self, void (*callback)(void*, int*, int*)) {
+void q_cplayoutgrid_on_get_minimum_row_col_sizes(void* self, void (*callback)(void*, libqt_list /* of int */, libqt_list /* of int */)) {
     QCPLayoutGrid_OnGetMinimumRowColSizes((QCPLayoutGrid*)self, (intptr_t)callback);
 }
 
-void q_cplayoutgrid_qbase_get_minimum_row_col_sizes(void* self, libqt_list minColWidths, libqt_list minRowHeights) {
+void q_cplayoutgrid_qbase_get_minimum_row_col_sizes(void* self, libqt_list /* of int */ minColWidths, libqt_list /* of int */ minRowHeights) {
     QCPLayoutGrid_QBaseGetMinimumRowColSizes((QCPLayoutGrid*)self, minColWidths, minRowHeights);
 }
 
-void q_cplayoutgrid_get_maximum_row_col_sizes(void* self, libqt_list maxColWidths, libqt_list maxRowHeights) {
+void q_cplayoutgrid_get_maximum_row_col_sizes(void* self, libqt_list /* of int */ maxColWidths, libqt_list /* of int */ maxRowHeights) {
     QCPLayoutGrid_GetMaximumRowColSizes((QCPLayoutGrid*)self, maxColWidths, maxRowHeights);
 }
 
-void q_cplayoutgrid_on_get_maximum_row_col_sizes(void* self, void (*callback)(void*, int*, int*)) {
+void q_cplayoutgrid_on_get_maximum_row_col_sizes(void* self, void (*callback)(void*, libqt_list /* of int */, libqt_list /* of int */)) {
     QCPLayoutGrid_OnGetMaximumRowColSizes((QCPLayoutGrid*)self, (intptr_t)callback);
 }
 
-void q_cplayoutgrid_qbase_get_maximum_row_col_sizes(void* self, libqt_list maxColWidths, libqt_list maxRowHeights) {
+void q_cplayoutgrid_qbase_get_maximum_row_col_sizes(void* self, libqt_list /* of int */ maxColWidths, libqt_list /* of int */ maxRowHeights) {
     QCPLayoutGrid_QBaseGetMaximumRowColSizes((QCPLayoutGrid*)self, maxColWidths, maxRowHeights);
 }
 
@@ -6146,7 +6146,7 @@ const char** q_cplayoutgrid_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cplayoutgrid_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cplayoutgrid_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -6524,17 +6524,17 @@ void q_cplayoutgrid_on_release_element(void* self, void (*callback)(void*, void*
     QCPLayoutGrid_OnReleaseElement((QCPLayoutGrid*)self, (intptr_t)callback);
 }
 
-libqt_list /* of int */ q_cplayoutgrid_get_section_sizes(void* self, libqt_list maxSizes, libqt_list minSizes, libqt_list stretchFactors, int totalSize) {
+libqt_list /* of int */ q_cplayoutgrid_get_section_sizes(void* self, libqt_list /* of int */ maxSizes, libqt_list /* of int */ minSizes, libqt_list /* of double */ stretchFactors, int totalSize) {
     libqt_list _arr = QCPLayoutGrid_GetSectionSizes((QCPLayoutGrid*)self, maxSizes, minSizes, stretchFactors, totalSize);
     return _arr;
 }
 
-libqt_list /* of int */ q_cplayoutgrid_qbase_get_section_sizes(void* self, libqt_list maxSizes, libqt_list minSizes, libqt_list stretchFactors, int totalSize) {
+libqt_list /* of int */ q_cplayoutgrid_qbase_get_section_sizes(void* self, libqt_list /* of int */ maxSizes, libqt_list /* of int */ minSizes, libqt_list /* of double */ stretchFactors, int totalSize) {
     libqt_list _arr = QCPLayoutGrid_QBaseGetSectionSizes((QCPLayoutGrid*)self, maxSizes, minSizes, stretchFactors, totalSize);
     return _arr;
 }
 
-void q_cplayoutgrid_on_get_section_sizes(void* self, int* (*callback)(void*, int*, int*, libqt_list, int)) {
+void q_cplayoutgrid_on_get_section_sizes(void* self, int* (*callback)(void*, libqt_list /* of int */, libqt_list /* of int */, libqt_list /* of double */, int)) {
     QCPLayoutGrid_OnGetSectionSizes((QCPLayoutGrid*)self, (intptr_t)callback);
 }
 
@@ -7058,7 +7058,7 @@ const char** q_cplayoutinset_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cplayoutinset_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cplayoutinset_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -7462,17 +7462,17 @@ void q_cplayoutinset_on_release_element(void* self, void (*callback)(void*, void
     QCPLayoutInset_OnReleaseElement((QCPLayoutInset*)self, (intptr_t)callback);
 }
 
-libqt_list /* of int */ q_cplayoutinset_get_section_sizes(void* self, libqt_list maxSizes, libqt_list minSizes, libqt_list stretchFactors, int totalSize) {
+libqt_list /* of int */ q_cplayoutinset_get_section_sizes(void* self, libqt_list /* of int */ maxSizes, libqt_list /* of int */ minSizes, libqt_list /* of double */ stretchFactors, int totalSize) {
     libqt_list _arr = QCPLayoutInset_GetSectionSizes((QCPLayoutInset*)self, maxSizes, minSizes, stretchFactors, totalSize);
     return _arr;
 }
 
-libqt_list /* of int */ q_cplayoutinset_qbase_get_section_sizes(void* self, libqt_list maxSizes, libqt_list minSizes, libqt_list stretchFactors, int totalSize) {
+libqt_list /* of int */ q_cplayoutinset_qbase_get_section_sizes(void* self, libqt_list /* of int */ maxSizes, libqt_list /* of int */ minSizes, libqt_list /* of double */ stretchFactors, int totalSize) {
     libqt_list _arr = QCPLayoutInset_QBaseGetSectionSizes((QCPLayoutInset*)self, maxSizes, minSizes, stretchFactors, totalSize);
     return _arr;
 }
 
-void q_cplayoutinset_on_get_section_sizes(void* self, int* (*callback)(void*, int*, int*, libqt_list, int)) {
+void q_cplayoutinset_on_get_section_sizes(void* self, int* (*callback)(void*, libqt_list /* of int */, libqt_list /* of int */, libqt_list /* of double */, int)) {
     QCPLayoutInset_OnGetSectionSizes((QCPLayoutInset*)self, (intptr_t)callback);
 }
 
@@ -7700,11 +7700,11 @@ void q_cpaxisticker_set_tick_origin(void* self, double origin) {
     QCPAxisTicker_SetTickOrigin((QCPAxisTicker*)self, origin);
 }
 
-void q_cpaxisticker_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
+void q_cpaxisticker_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxisticker_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxisticker_generate\n");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -7715,15 +7715,15 @@ void q_cpaxisticker_generate(void* self, void* range, void* locale, void* format
     free(tickLabels_qstr);
 }
 
-void q_cpaxisticker_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**)) {
+void q_cpaxisticker_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**)) {
     QCPAxisTicker_OnGenerate((QCPAxisTicker*)self, (intptr_t)callback);
 }
 
-void q_cpaxisticker_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
+void q_cpaxisticker_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxisticker_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxisticker_generate\n");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -7789,26 +7789,26 @@ libqt_list /* of double */ q_cpaxisticker_qbase_create_tick_vector(void* self, d
     return _arr;
 }
 
-libqt_list /* of double */ q_cpaxisticker_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks) {
+libqt_list /* of double */ q_cpaxisticker_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks) {
     libqt_list _arr = QCPAxisTicker_CreateSubTickVector((QCPAxisTicker*)self, subTickCount, ticks);
     return _arr;
 }
 
-void q_cpaxisticker_on_create_sub_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, int, libqt_list)) {
+void q_cpaxisticker_on_create_sub_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, int, libqt_list /* of double */)) {
     QCPAxisTicker_OnCreateSubTickVector((QCPAxisTicker*)self, (intptr_t)callback);
 }
 
-libqt_list /* of double */ q_cpaxisticker_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks) {
+libqt_list /* of double */ q_cpaxisticker_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks) {
     libqt_list _arr = QCPAxisTicker_QBaseCreateSubTickVector((QCPAxisTicker*)self, subTickCount, ticks);
     return _arr;
 }
 
-const char** q_cpaxisticker_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision) {
+const char** q_cpaxisticker_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision) {
     libqt_list _arr = QCPAxisTicker_CreateLabelVector((QCPAxisTicker*)self, ticks, (QLocale*)locale, (QChar*)formatChar, precision);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxisticker_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxisticker_create_label_vector\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -7822,16 +7822,16 @@ const char** q_cpaxisticker_create_label_vector(void* self, libqt_list ticks, vo
     return _ret;
 }
 
-void q_cpaxisticker_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list, void*, void*, int)) {
+void q_cpaxisticker_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list /* of double */, void*, void*, int)) {
     QCPAxisTicker_OnCreateLabelVector((QCPAxisTicker*)self, (intptr_t)callback);
 }
 
-const char** q_cpaxisticker_qbase_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision) {
+const char** q_cpaxisticker_qbase_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision) {
     libqt_list _arr = QCPAxisTicker_QBaseCreateLabelVector((QCPAxisTicker*)self, ticks, (QLocale*)locale, (QChar*)formatChar, precision);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxisticker_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxisticker_create_label_vector\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -7845,27 +7845,27 @@ const char** q_cpaxisticker_qbase_create_label_vector(void* self, libqt_list tic
     return _ret;
 }
 
-void q_cpaxisticker_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier) {
+void q_cpaxisticker_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier) {
     QCPAxisTicker_TrimTicks((QCPAxisTicker*)self, (QCPRange*)range, ticks, keepOneOutlier);
 }
 
-void q_cpaxisticker_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list, bool)) {
+void q_cpaxisticker_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list /* of double */, bool)) {
     QCPAxisTicker_OnTrimTicks((QCPAxisTicker*)self, (intptr_t)callback);
 }
 
-void q_cpaxisticker_qbase_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier) {
+void q_cpaxisticker_qbase_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier) {
     QCPAxisTicker_QBaseTrimTicks((QCPAxisTicker*)self, (QCPRange*)range, ticks, keepOneOutlier);
 }
 
-double q_cpaxisticker_pick_closest(void* self, double target, libqt_list candidates) {
+double q_cpaxisticker_pick_closest(void* self, double target, libqt_list /* of double */ candidates) {
     return QCPAxisTicker_PickClosest((QCPAxisTicker*)self, target, candidates);
 }
 
-void q_cpaxisticker_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list)) {
+void q_cpaxisticker_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list /* of double */)) {
     QCPAxisTicker_OnPickClosest((QCPAxisTicker*)self, (intptr_t)callback);
 }
 
-double q_cpaxisticker_qbase_pick_closest(void* self, double target, libqt_list candidates) {
+double q_cpaxisticker_qbase_pick_closest(void* self, double target, libqt_list /* of double */ candidates) {
     return QCPAxisTicker_QBasePickClosest((QCPAxisTicker*)self, target, candidates);
 }
 
@@ -8040,11 +8040,11 @@ void q_cpaxistickerdatetime_set_tick_count(void* self, int count) {
     QCPAxisTicker_SetTickCount((QCPAxisTicker*)self, count);
 }
 
-void q_cpaxistickerdatetime_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
+void q_cpaxistickerdatetime_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerdatetime_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerdatetime_generate\n");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -8055,11 +8055,11 @@ void q_cpaxistickerdatetime_generate(void* self, void* range, void* locale, void
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickerdatetime_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
+void q_cpaxistickerdatetime_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerdatetime_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerdatetime_generate\n");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -8070,30 +8070,30 @@ void q_cpaxistickerdatetime_qbase_generate(void* self, void* range, void* locale
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickerdatetime_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**)) {
+void q_cpaxistickerdatetime_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**)) {
     QCPAxisTickerDateTime_OnGenerate((QCPAxisTickerDateTime*)self, (intptr_t)callback);
 }
 
-libqt_list /* of double */ q_cpaxistickerdatetime_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks) {
+libqt_list /* of double */ q_cpaxistickerdatetime_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks) {
     libqt_list _arr = QCPAxisTickerDateTime_CreateSubTickVector((QCPAxisTickerDateTime*)self, subTickCount, ticks);
     return _arr;
 }
 
-libqt_list /* of double */ q_cpaxistickerdatetime_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks) {
+libqt_list /* of double */ q_cpaxistickerdatetime_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks) {
     libqt_list _arr = QCPAxisTickerDateTime_QBaseCreateSubTickVector((QCPAxisTickerDateTime*)self, subTickCount, ticks);
     return _arr;
 }
 
-void q_cpaxistickerdatetime_on_create_sub_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, int, libqt_list)) {
+void q_cpaxistickerdatetime_on_create_sub_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, int, libqt_list /* of double */)) {
     QCPAxisTickerDateTime_OnCreateSubTickVector((QCPAxisTickerDateTime*)self, (intptr_t)callback);
 }
 
-const char** q_cpaxistickerdatetime_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision) {
+const char** q_cpaxistickerdatetime_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision) {
     libqt_list _arr = QCPAxisTickerDateTime_CreateLabelVector((QCPAxisTickerDateTime*)self, ticks, (QLocale*)locale, (QChar*)formatChar, precision);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerdatetime_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerdatetime_create_label_vector\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -8107,12 +8107,12 @@ const char** q_cpaxistickerdatetime_create_label_vector(void* self, libqt_list t
     return _ret;
 }
 
-const char** q_cpaxistickerdatetime_qbase_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision) {
+const char** q_cpaxistickerdatetime_qbase_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision) {
     libqt_list _arr = QCPAxisTickerDateTime_QBaseCreateLabelVector((QCPAxisTickerDateTime*)self, ticks, (QLocale*)locale, (QChar*)formatChar, precision);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerdatetime_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerdatetime_create_label_vector\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -8126,31 +8126,31 @@ const char** q_cpaxistickerdatetime_qbase_create_label_vector(void* self, libqt_
     return _ret;
 }
 
-void q_cpaxistickerdatetime_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list, void*, void*, int)) {
+void q_cpaxistickerdatetime_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list /* of double */, void*, void*, int)) {
     QCPAxisTickerDateTime_OnCreateLabelVector((QCPAxisTickerDateTime*)self, (intptr_t)callback);
 }
 
-void q_cpaxistickerdatetime_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier) {
+void q_cpaxistickerdatetime_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier) {
     QCPAxisTickerDateTime_TrimTicks((QCPAxisTickerDateTime*)self, (QCPRange*)range, ticks, keepOneOutlier);
 }
 
-void q_cpaxistickerdatetime_qbase_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier) {
+void q_cpaxistickerdatetime_qbase_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier) {
     QCPAxisTickerDateTime_QBaseTrimTicks((QCPAxisTickerDateTime*)self, (QCPRange*)range, ticks, keepOneOutlier);
 }
 
-void q_cpaxistickerdatetime_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list, bool)) {
+void q_cpaxistickerdatetime_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list /* of double */, bool)) {
     QCPAxisTickerDateTime_OnTrimTicks((QCPAxisTickerDateTime*)self, (intptr_t)callback);
 }
 
-double q_cpaxistickerdatetime_pick_closest(void* self, double target, libqt_list candidates) {
+double q_cpaxistickerdatetime_pick_closest(void* self, double target, libqt_list /* of double */ candidates) {
     return QCPAxisTickerDateTime_PickClosest((QCPAxisTickerDateTime*)self, target, candidates);
 }
 
-double q_cpaxistickerdatetime_qbase_pick_closest(void* self, double target, libqt_list candidates) {
+double q_cpaxistickerdatetime_qbase_pick_closest(void* self, double target, libqt_list /* of double */ candidates) {
     return QCPAxisTickerDateTime_QBasePickClosest((QCPAxisTickerDateTime*)self, target, candidates);
 }
 
-void q_cpaxistickerdatetime_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list)) {
+void q_cpaxistickerdatetime_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list /* of double */)) {
     QCPAxisTickerDateTime_OnPickClosest((QCPAxisTickerDateTime*)self, (intptr_t)callback);
 }
 
@@ -8283,11 +8283,11 @@ void q_cpaxistickertime_set_tick_origin(void* self, double origin) {
     QCPAxisTicker_SetTickOrigin((QCPAxisTicker*)self, origin);
 }
 
-void q_cpaxistickertime_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
+void q_cpaxistickertime_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertime_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertime_generate\n");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -8298,11 +8298,11 @@ void q_cpaxistickertime_generate(void* self, void* range, void* locale, void* fo
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickertime_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
+void q_cpaxistickertime_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertime_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertime_generate\n");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -8313,7 +8313,7 @@ void q_cpaxistickertime_qbase_generate(void* self, void* range, void* locale, vo
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickertime_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**)) {
+void q_cpaxistickertime_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**)) {
     QCPAxisTickerTime_OnGenerate((QCPAxisTickerTime*)self, (intptr_t)callback);
 }
 
@@ -8331,26 +8331,26 @@ void q_cpaxistickertime_on_create_tick_vector(void* self, libqt_list /* of doubl
     QCPAxisTickerTime_OnCreateTickVector((QCPAxisTickerTime*)self, (intptr_t)callback);
 }
 
-libqt_list /* of double */ q_cpaxistickertime_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks) {
+libqt_list /* of double */ q_cpaxistickertime_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks) {
     libqt_list _arr = QCPAxisTickerTime_CreateSubTickVector((QCPAxisTickerTime*)self, subTickCount, ticks);
     return _arr;
 }
 
-libqt_list /* of double */ q_cpaxistickertime_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks) {
+libqt_list /* of double */ q_cpaxistickertime_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks) {
     libqt_list _arr = QCPAxisTickerTime_QBaseCreateSubTickVector((QCPAxisTickerTime*)self, subTickCount, ticks);
     return _arr;
 }
 
-void q_cpaxistickertime_on_create_sub_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, int, libqt_list)) {
+void q_cpaxistickertime_on_create_sub_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, int, libqt_list /* of double */)) {
     QCPAxisTickerTime_OnCreateSubTickVector((QCPAxisTickerTime*)self, (intptr_t)callback);
 }
 
-const char** q_cpaxistickertime_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision) {
+const char** q_cpaxistickertime_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision) {
     libqt_list _arr = QCPAxisTickerTime_CreateLabelVector((QCPAxisTickerTime*)self, ticks, (QLocale*)locale, (QChar*)formatChar, precision);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertime_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertime_create_label_vector\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -8364,12 +8364,12 @@ const char** q_cpaxistickertime_create_label_vector(void* self, libqt_list ticks
     return _ret;
 }
 
-const char** q_cpaxistickertime_qbase_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision) {
+const char** q_cpaxistickertime_qbase_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision) {
     libqt_list _arr = QCPAxisTickerTime_QBaseCreateLabelVector((QCPAxisTickerTime*)self, ticks, (QLocale*)locale, (QChar*)formatChar, precision);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertime_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertime_create_label_vector\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -8383,31 +8383,31 @@ const char** q_cpaxistickertime_qbase_create_label_vector(void* self, libqt_list
     return _ret;
 }
 
-void q_cpaxistickertime_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list, void*, void*, int)) {
+void q_cpaxistickertime_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list /* of double */, void*, void*, int)) {
     QCPAxisTickerTime_OnCreateLabelVector((QCPAxisTickerTime*)self, (intptr_t)callback);
 }
 
-void q_cpaxistickertime_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier) {
+void q_cpaxistickertime_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier) {
     QCPAxisTickerTime_TrimTicks((QCPAxisTickerTime*)self, (QCPRange*)range, ticks, keepOneOutlier);
 }
 
-void q_cpaxistickertime_qbase_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier) {
+void q_cpaxistickertime_qbase_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier) {
     QCPAxisTickerTime_QBaseTrimTicks((QCPAxisTickerTime*)self, (QCPRange*)range, ticks, keepOneOutlier);
 }
 
-void q_cpaxistickertime_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list, bool)) {
+void q_cpaxistickertime_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list /* of double */, bool)) {
     QCPAxisTickerTime_OnTrimTicks((QCPAxisTickerTime*)self, (intptr_t)callback);
 }
 
-double q_cpaxistickertime_pick_closest(void* self, double target, libqt_list candidates) {
+double q_cpaxistickertime_pick_closest(void* self, double target, libqt_list /* of double */ candidates) {
     return QCPAxisTickerTime_PickClosest((QCPAxisTickerTime*)self, target, candidates);
 }
 
-double q_cpaxistickertime_qbase_pick_closest(void* self, double target, libqt_list candidates) {
+double q_cpaxistickertime_qbase_pick_closest(void* self, double target, libqt_list /* of double */ candidates) {
     return QCPAxisTickerTime_QBasePickClosest((QCPAxisTickerTime*)self, target, candidates);
 }
 
-void q_cpaxistickertime_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list)) {
+void q_cpaxistickertime_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list /* of double */)) {
     QCPAxisTickerTime_OnPickClosest((QCPAxisTickerTime*)self, (intptr_t)callback);
 }
 
@@ -8495,11 +8495,11 @@ void q_cpaxistickerfixed_set_tick_origin(void* self, double origin) {
     QCPAxisTicker_SetTickOrigin((QCPAxisTicker*)self, origin);
 }
 
-void q_cpaxistickerfixed_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
+void q_cpaxistickerfixed_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerfixed_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerfixed_generate\n");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -8510,11 +8510,11 @@ void q_cpaxistickerfixed_generate(void* self, void* range, void* locale, void* f
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickerfixed_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
+void q_cpaxistickerfixed_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerfixed_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerfixed_generate\n");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -8525,7 +8525,7 @@ void q_cpaxistickerfixed_qbase_generate(void* self, void* range, void* locale, v
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickerfixed_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**)) {
+void q_cpaxistickerfixed_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**)) {
     QCPAxisTickerFixed_OnGenerate((QCPAxisTickerFixed*)self, (intptr_t)callback);
 }
 
@@ -8573,26 +8573,26 @@ void q_cpaxistickerfixed_on_create_tick_vector(void* self, libqt_list /* of doub
     QCPAxisTickerFixed_OnCreateTickVector((QCPAxisTickerFixed*)self, (intptr_t)callback);
 }
 
-libqt_list /* of double */ q_cpaxistickerfixed_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks) {
+libqt_list /* of double */ q_cpaxistickerfixed_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks) {
     libqt_list _arr = QCPAxisTickerFixed_CreateSubTickVector((QCPAxisTickerFixed*)self, subTickCount, ticks);
     return _arr;
 }
 
-libqt_list /* of double */ q_cpaxistickerfixed_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks) {
+libqt_list /* of double */ q_cpaxistickerfixed_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks) {
     libqt_list _arr = QCPAxisTickerFixed_QBaseCreateSubTickVector((QCPAxisTickerFixed*)self, subTickCount, ticks);
     return _arr;
 }
 
-void q_cpaxistickerfixed_on_create_sub_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, int, libqt_list)) {
+void q_cpaxistickerfixed_on_create_sub_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, int, libqt_list /* of double */)) {
     QCPAxisTickerFixed_OnCreateSubTickVector((QCPAxisTickerFixed*)self, (intptr_t)callback);
 }
 
-const char** q_cpaxistickerfixed_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision) {
+const char** q_cpaxistickerfixed_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision) {
     libqt_list _arr = QCPAxisTickerFixed_CreateLabelVector((QCPAxisTickerFixed*)self, ticks, (QLocale*)locale, (QChar*)formatChar, precision);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerfixed_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerfixed_create_label_vector\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -8606,12 +8606,12 @@ const char** q_cpaxistickerfixed_create_label_vector(void* self, libqt_list tick
     return _ret;
 }
 
-const char** q_cpaxistickerfixed_qbase_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision) {
+const char** q_cpaxistickerfixed_qbase_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision) {
     libqt_list _arr = QCPAxisTickerFixed_QBaseCreateLabelVector((QCPAxisTickerFixed*)self, ticks, (QLocale*)locale, (QChar*)formatChar, precision);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerfixed_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerfixed_create_label_vector\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -8625,31 +8625,31 @@ const char** q_cpaxistickerfixed_qbase_create_label_vector(void* self, libqt_lis
     return _ret;
 }
 
-void q_cpaxistickerfixed_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list, void*, void*, int)) {
+void q_cpaxistickerfixed_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list /* of double */, void*, void*, int)) {
     QCPAxisTickerFixed_OnCreateLabelVector((QCPAxisTickerFixed*)self, (intptr_t)callback);
 }
 
-void q_cpaxistickerfixed_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier) {
+void q_cpaxistickerfixed_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier) {
     QCPAxisTickerFixed_TrimTicks((QCPAxisTickerFixed*)self, (QCPRange*)range, ticks, keepOneOutlier);
 }
 
-void q_cpaxistickerfixed_qbase_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier) {
+void q_cpaxistickerfixed_qbase_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier) {
     QCPAxisTickerFixed_QBaseTrimTicks((QCPAxisTickerFixed*)self, (QCPRange*)range, ticks, keepOneOutlier);
 }
 
-void q_cpaxistickerfixed_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list, bool)) {
+void q_cpaxistickerfixed_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list /* of double */, bool)) {
     QCPAxisTickerFixed_OnTrimTicks((QCPAxisTickerFixed*)self, (intptr_t)callback);
 }
 
-double q_cpaxistickerfixed_pick_closest(void* self, double target, libqt_list candidates) {
+double q_cpaxistickerfixed_pick_closest(void* self, double target, libqt_list /* of double */ candidates) {
     return QCPAxisTickerFixed_PickClosest((QCPAxisTickerFixed*)self, target, candidates);
 }
 
-double q_cpaxistickerfixed_qbase_pick_closest(void* self, double target, libqt_list candidates) {
+double q_cpaxistickerfixed_qbase_pick_closest(void* self, double target, libqt_list /* of double */ candidates) {
     return QCPAxisTickerFixed_QBasePickClosest((QCPAxisTickerFixed*)self, target, candidates);
 }
 
-void q_cpaxistickerfixed_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list)) {
+void q_cpaxistickerfixed_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list /* of double */)) {
     QCPAxisTickerFixed_OnPickClosest((QCPAxisTickerFixed*)self, (intptr_t)callback);
 }
 
@@ -8691,21 +8691,23 @@ libqt_map /* of double to const char* */ q_cpaxistickertext_ticks(void* self) {
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_values = (libqt_string*)_out.values;
-    const char** _ret_values = (const char**)malloc(_ret.len * sizeof(const char*));
+    char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string values in q_cpaxistickertext_ticks");
+        fprintf(stderr, "Failed to allocate memory for map string values in q_cpaxistickertext_ticks\n");
         abort();
     }
     for (size_t i = 0; i < _ret.len; ++i) {
-        _ret_values[i] = (const char*)malloc(_out_values[i].len + 1);
+        _ret_values[i] = (char*)malloc(_out_values[i].len + 1);
         if (_ret_values[i] == NULL) {
             for (size_t j = 0; j < i; j++) {
                 libqt_free(_ret_values[j]);
             }
             free(_ret_values);
-            fprintf(stderr, "Failed to allocate memory for map string values in q_cpaxistickertext_ticks");
+            fprintf(stderr, "Failed to allocate memory for map string values in q_cpaxistickertext_ticks\n");
             abort();
         }
+        memcpy(_ret_values[i], _out_values[i].data, _out_values[i].len);
+        _ret_values[i][_out_values[i].len] = '\0';
     }
     _ret.keys = _out.keys;
     _ret.values = (void*)_ret_values;
@@ -8748,11 +8750,11 @@ void q_cpaxistickertext_set_ticks(void* self, libqt_map /* of double to const ch
     free(ticks_ret.values);
 }
 
-void q_cpaxistickertext_set_ticks2(void* self, libqt_list positions, const char* labels[static 1]) {
+void q_cpaxistickertext_set_ticks2(void* self, libqt_list /* of double */ positions, const char* labels[static 1]) {
     size_t labels_len = libqt_strv_length(labels);
     libqt_string* labels_qstr = (libqt_string*)malloc(labels_len * sizeof(libqt_string));
     if (labels_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertext_set_ticks2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertext_set_ticks2\n");
         abort();
     }
     for (size_t i = 0; i < labels_len; ++i) {
@@ -8803,11 +8805,11 @@ void q_cpaxistickertext_add_ticks(void* self, libqt_map /* of double to const ch
     free(ticks_ret.values);
 }
 
-void q_cpaxistickertext_add_ticks2(void* self, libqt_list positions, const char* labels[static 1]) {
+void q_cpaxistickertext_add_ticks2(void* self, libqt_list /* of double */ positions, const char* labels[static 1]) {
     size_t labels_len = libqt_strv_length(labels);
     libqt_string* labels_qstr = (libqt_string*)malloc(labels_len * sizeof(libqt_string));
     if (labels_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertext_add_ticks2");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertext_add_ticks2\n");
         abort();
     }
     for (size_t i = 0; i < labels_len; ++i) {
@@ -8898,11 +8900,11 @@ void q_cpaxistickertext_set_tick_origin(void* self, double origin) {
     QCPAxisTicker_SetTickOrigin((QCPAxisTicker*)self, origin);
 }
 
-void q_cpaxistickertext_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
+void q_cpaxistickertext_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertext_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertext_generate\n");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -8913,11 +8915,11 @@ void q_cpaxistickertext_generate(void* self, void* range, void* locale, void* fo
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickertext_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
+void q_cpaxistickertext_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertext_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertext_generate\n");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -8928,30 +8930,30 @@ void q_cpaxistickertext_qbase_generate(void* self, void* range, void* locale, vo
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickertext_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**)) {
+void q_cpaxistickertext_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**)) {
     QCPAxisTickerText_OnGenerate((QCPAxisTickerText*)self, (intptr_t)callback);
 }
 
-libqt_list /* of double */ q_cpaxistickertext_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks) {
+libqt_list /* of double */ q_cpaxistickertext_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks) {
     libqt_list _arr = QCPAxisTickerText_CreateSubTickVector((QCPAxisTickerText*)self, subTickCount, ticks);
     return _arr;
 }
 
-libqt_list /* of double */ q_cpaxistickertext_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks) {
+libqt_list /* of double */ q_cpaxistickertext_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks) {
     libqt_list _arr = QCPAxisTickerText_QBaseCreateSubTickVector((QCPAxisTickerText*)self, subTickCount, ticks);
     return _arr;
 }
 
-void q_cpaxistickertext_on_create_sub_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, int, libqt_list)) {
+void q_cpaxistickertext_on_create_sub_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, int, libqt_list /* of double */)) {
     QCPAxisTickerText_OnCreateSubTickVector((QCPAxisTickerText*)self, (intptr_t)callback);
 }
 
-const char** q_cpaxistickertext_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision) {
+const char** q_cpaxistickertext_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision) {
     libqt_list _arr = QCPAxisTickerText_CreateLabelVector((QCPAxisTickerText*)self, ticks, (QLocale*)locale, (QChar*)formatChar, precision);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertext_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertext_create_label_vector\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -8965,12 +8967,12 @@ const char** q_cpaxistickertext_create_label_vector(void* self, libqt_list ticks
     return _ret;
 }
 
-const char** q_cpaxistickertext_qbase_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision) {
+const char** q_cpaxistickertext_qbase_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision) {
     libqt_list _arr = QCPAxisTickerText_QBaseCreateLabelVector((QCPAxisTickerText*)self, ticks, (QLocale*)locale, (QChar*)formatChar, precision);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertext_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickertext_create_label_vector\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -8984,31 +8986,31 @@ const char** q_cpaxistickertext_qbase_create_label_vector(void* self, libqt_list
     return _ret;
 }
 
-void q_cpaxistickertext_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list, void*, void*, int)) {
+void q_cpaxistickertext_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list /* of double */, void*, void*, int)) {
     QCPAxisTickerText_OnCreateLabelVector((QCPAxisTickerText*)self, (intptr_t)callback);
 }
 
-void q_cpaxistickertext_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier) {
+void q_cpaxistickertext_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier) {
     QCPAxisTickerText_TrimTicks((QCPAxisTickerText*)self, (QCPRange*)range, ticks, keepOneOutlier);
 }
 
-void q_cpaxistickertext_qbase_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier) {
+void q_cpaxistickertext_qbase_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier) {
     QCPAxisTickerText_QBaseTrimTicks((QCPAxisTickerText*)self, (QCPRange*)range, ticks, keepOneOutlier);
 }
 
-void q_cpaxistickertext_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list, bool)) {
+void q_cpaxistickertext_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list /* of double */, bool)) {
     QCPAxisTickerText_OnTrimTicks((QCPAxisTickerText*)self, (intptr_t)callback);
 }
 
-double q_cpaxistickertext_pick_closest(void* self, double target, libqt_list candidates) {
+double q_cpaxistickertext_pick_closest(void* self, double target, libqt_list /* of double */ candidates) {
     return QCPAxisTickerText_PickClosest((QCPAxisTickerText*)self, target, candidates);
 }
 
-double q_cpaxistickertext_qbase_pick_closest(void* self, double target, libqt_list candidates) {
+double q_cpaxistickertext_qbase_pick_closest(void* self, double target, libqt_list /* of double */ candidates) {
     return QCPAxisTickerText_QBasePickClosest((QCPAxisTickerText*)self, target, candidates);
 }
 
-void q_cpaxistickertext_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list)) {
+void q_cpaxistickertext_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list /* of double */)) {
     QCPAxisTickerText_OnPickClosest((QCPAxisTickerText*)self, (intptr_t)callback);
 }
 
@@ -9229,11 +9231,11 @@ void q_cpaxistickerpi_set_tick_origin(void* self, double origin) {
     QCPAxisTicker_SetTickOrigin((QCPAxisTicker*)self, origin);
 }
 
-void q_cpaxistickerpi_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
+void q_cpaxistickerpi_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerpi_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerpi_generate\n");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -9244,11 +9246,11 @@ void q_cpaxistickerpi_generate(void* self, void* range, void* locale, void* form
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickerpi_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
+void q_cpaxistickerpi_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerpi_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerpi_generate\n");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -9259,7 +9261,7 @@ void q_cpaxistickerpi_qbase_generate(void* self, void* range, void* locale, void
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickerpi_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**)) {
+void q_cpaxistickerpi_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**)) {
     QCPAxisTickerPi_OnGenerate((QCPAxisTickerPi*)self, (intptr_t)callback);
 }
 
@@ -9277,26 +9279,26 @@ void q_cpaxistickerpi_on_create_tick_vector(void* self, libqt_list /* of double 
     QCPAxisTickerPi_OnCreateTickVector((QCPAxisTickerPi*)self, (intptr_t)callback);
 }
 
-libqt_list /* of double */ q_cpaxistickerpi_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks) {
+libqt_list /* of double */ q_cpaxistickerpi_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks) {
     libqt_list _arr = QCPAxisTickerPi_CreateSubTickVector((QCPAxisTickerPi*)self, subTickCount, ticks);
     return _arr;
 }
 
-libqt_list /* of double */ q_cpaxistickerpi_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks) {
+libqt_list /* of double */ q_cpaxistickerpi_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks) {
     libqt_list _arr = QCPAxisTickerPi_QBaseCreateSubTickVector((QCPAxisTickerPi*)self, subTickCount, ticks);
     return _arr;
 }
 
-void q_cpaxistickerpi_on_create_sub_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, int, libqt_list)) {
+void q_cpaxistickerpi_on_create_sub_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, int, libqt_list /* of double */)) {
     QCPAxisTickerPi_OnCreateSubTickVector((QCPAxisTickerPi*)self, (intptr_t)callback);
 }
 
-const char** q_cpaxistickerpi_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision) {
+const char** q_cpaxistickerpi_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision) {
     libqt_list _arr = QCPAxisTickerPi_CreateLabelVector((QCPAxisTickerPi*)self, ticks, (QLocale*)locale, (QChar*)formatChar, precision);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerpi_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerpi_create_label_vector\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -9310,12 +9312,12 @@ const char** q_cpaxistickerpi_create_label_vector(void* self, libqt_list ticks, 
     return _ret;
 }
 
-const char** q_cpaxistickerpi_qbase_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision) {
+const char** q_cpaxistickerpi_qbase_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision) {
     libqt_list _arr = QCPAxisTickerPi_QBaseCreateLabelVector((QCPAxisTickerPi*)self, ticks, (QLocale*)locale, (QChar*)formatChar, precision);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerpi_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerpi_create_label_vector\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -9329,31 +9331,31 @@ const char** q_cpaxistickerpi_qbase_create_label_vector(void* self, libqt_list t
     return _ret;
 }
 
-void q_cpaxistickerpi_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list, void*, void*, int)) {
+void q_cpaxistickerpi_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list /* of double */, void*, void*, int)) {
     QCPAxisTickerPi_OnCreateLabelVector((QCPAxisTickerPi*)self, (intptr_t)callback);
 }
 
-void q_cpaxistickerpi_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier) {
+void q_cpaxistickerpi_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier) {
     QCPAxisTickerPi_TrimTicks((QCPAxisTickerPi*)self, (QCPRange*)range, ticks, keepOneOutlier);
 }
 
-void q_cpaxistickerpi_qbase_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier) {
+void q_cpaxistickerpi_qbase_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier) {
     QCPAxisTickerPi_QBaseTrimTicks((QCPAxisTickerPi*)self, (QCPRange*)range, ticks, keepOneOutlier);
 }
 
-void q_cpaxistickerpi_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list, bool)) {
+void q_cpaxistickerpi_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list /* of double */, bool)) {
     QCPAxisTickerPi_OnTrimTicks((QCPAxisTickerPi*)self, (intptr_t)callback);
 }
 
-double q_cpaxistickerpi_pick_closest(void* self, double target, libqt_list candidates) {
+double q_cpaxistickerpi_pick_closest(void* self, double target, libqt_list /* of double */ candidates) {
     return QCPAxisTickerPi_PickClosest((QCPAxisTickerPi*)self, target, candidates);
 }
 
-double q_cpaxistickerpi_qbase_pick_closest(void* self, double target, libqt_list candidates) {
+double q_cpaxistickerpi_qbase_pick_closest(void* self, double target, libqt_list /* of double */ candidates) {
     return QCPAxisTickerPi_QBasePickClosest((QCPAxisTickerPi*)self, target, candidates);
 }
 
-void q_cpaxistickerpi_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list)) {
+void q_cpaxistickerpi_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list /* of double */)) {
     QCPAxisTickerPi_OnPickClosest((QCPAxisTickerPi*)self, (intptr_t)callback);
 }
 
@@ -9455,11 +9457,11 @@ void q_cpaxistickerlog_set_tick_origin(void* self, double origin) {
     QCPAxisTicker_SetTickOrigin((QCPAxisTicker*)self, origin);
 }
 
-void q_cpaxistickerlog_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
+void q_cpaxistickerlog_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerlog_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerlog_generate\n");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -9470,11 +9472,11 @@ void q_cpaxistickerlog_generate(void* self, void* range, void* locale, void* for
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickerlog_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
+void q_cpaxistickerlog_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list /* of double */ ticks, libqt_list /* of double */ subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerlog_generate");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerlog_generate\n");
         abort();
     }
     for (size_t i = 0; i < tickLabels_len; ++i) {
@@ -9485,7 +9487,7 @@ void q_cpaxistickerlog_qbase_generate(void* self, void* range, void* locale, voi
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickerlog_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**)) {
+void q_cpaxistickerlog_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**)) {
     QCPAxisTickerLog_OnGenerate((QCPAxisTickerLog*)self, (intptr_t)callback);
 }
 
@@ -9519,26 +9521,26 @@ void q_cpaxistickerlog_on_get_tick_label(void* self, const char* (*callback)(voi
     QCPAxisTickerLog_OnGetTickLabel((QCPAxisTickerLog*)self, (intptr_t)callback);
 }
 
-libqt_list /* of double */ q_cpaxistickerlog_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks) {
+libqt_list /* of double */ q_cpaxistickerlog_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks) {
     libqt_list _arr = QCPAxisTickerLog_CreateSubTickVector((QCPAxisTickerLog*)self, subTickCount, ticks);
     return _arr;
 }
 
-libqt_list /* of double */ q_cpaxistickerlog_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list ticks) {
+libqt_list /* of double */ q_cpaxistickerlog_qbase_create_sub_tick_vector(void* self, int subTickCount, libqt_list /* of double */ ticks) {
     libqt_list _arr = QCPAxisTickerLog_QBaseCreateSubTickVector((QCPAxisTickerLog*)self, subTickCount, ticks);
     return _arr;
 }
 
-void q_cpaxistickerlog_on_create_sub_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, int, libqt_list)) {
+void q_cpaxistickerlog_on_create_sub_tick_vector(void* self, libqt_list /* of double */ (*callback)(void*, int, libqt_list /* of double */)) {
     QCPAxisTickerLog_OnCreateSubTickVector((QCPAxisTickerLog*)self, (intptr_t)callback);
 }
 
-const char** q_cpaxistickerlog_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision) {
+const char** q_cpaxistickerlog_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision) {
     libqt_list _arr = QCPAxisTickerLog_CreateLabelVector((QCPAxisTickerLog*)self, ticks, (QLocale*)locale, (QChar*)formatChar, precision);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerlog_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerlog_create_label_vector\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -9552,12 +9554,12 @@ const char** q_cpaxistickerlog_create_label_vector(void* self, libqt_list ticks,
     return _ret;
 }
 
-const char** q_cpaxistickerlog_qbase_create_label_vector(void* self, libqt_list ticks, void* locale, void* formatChar, int precision) {
+const char** q_cpaxistickerlog_qbase_create_label_vector(void* self, libqt_list /* of double */ ticks, void* locale, void* formatChar, int precision) {
     libqt_list _arr = QCPAxisTickerLog_QBaseCreateLabelVector((QCPAxisTickerLog*)self, ticks, (QLocale*)locale, (QChar*)formatChar, precision);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerlog_create_label_vector");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxistickerlog_create_label_vector\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -9571,31 +9573,31 @@ const char** q_cpaxistickerlog_qbase_create_label_vector(void* self, libqt_list 
     return _ret;
 }
 
-void q_cpaxistickerlog_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list, void*, void*, int)) {
+void q_cpaxistickerlog_on_create_label_vector(void* self, const char** (*callback)(void*, libqt_list /* of double */, void*, void*, int)) {
     QCPAxisTickerLog_OnCreateLabelVector((QCPAxisTickerLog*)self, (intptr_t)callback);
 }
 
-void q_cpaxistickerlog_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier) {
+void q_cpaxistickerlog_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier) {
     QCPAxisTickerLog_TrimTicks((QCPAxisTickerLog*)self, (QCPRange*)range, ticks, keepOneOutlier);
 }
 
-void q_cpaxistickerlog_qbase_trim_ticks(void* self, void* range, libqt_list ticks, bool keepOneOutlier) {
+void q_cpaxistickerlog_qbase_trim_ticks(void* self, void* range, libqt_list /* of double */ ticks, bool keepOneOutlier) {
     QCPAxisTickerLog_QBaseTrimTicks((QCPAxisTickerLog*)self, (QCPRange*)range, ticks, keepOneOutlier);
 }
 
-void q_cpaxistickerlog_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list, bool)) {
+void q_cpaxistickerlog_on_trim_ticks(void* self, void (*callback)(void*, void*, libqt_list /* of double */, bool)) {
     QCPAxisTickerLog_OnTrimTicks((QCPAxisTickerLog*)self, (intptr_t)callback);
 }
 
-double q_cpaxistickerlog_pick_closest(void* self, double target, libqt_list candidates) {
+double q_cpaxistickerlog_pick_closest(void* self, double target, libqt_list /* of double */ candidates) {
     return QCPAxisTickerLog_PickClosest((QCPAxisTickerLog*)self, target, candidates);
 }
 
-double q_cpaxistickerlog_qbase_pick_closest(void* self, double target, libqt_list candidates) {
+double q_cpaxistickerlog_qbase_pick_closest(void* self, double target, libqt_list /* of double */ candidates) {
     return QCPAxisTickerLog_QBasePickClosest((QCPAxisTickerLog*)self, target, candidates);
 }
 
-void q_cpaxistickerlog_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list)) {
+void q_cpaxistickerlog_on_pick_closest(void* self, double (*callback)(void*, double, libqt_list /* of double */)) {
     QCPAxisTickerLog_OnPickClosest((QCPAxisTickerLog*)self, (intptr_t)callback);
 }
 
@@ -9921,7 +9923,7 @@ const char** q_cpgrid_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpgrid_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpgrid_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -10407,7 +10409,7 @@ const char** q_cpaxis_tick_vector_labels(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxis_tick_vector_labels");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxis_tick_vector_labels\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -11198,7 +11200,7 @@ const char** q_cpaxis_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxis_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxis_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -12217,7 +12219,7 @@ const char** q_cpabstractplottable_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpabstractplottable_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpabstractplottable_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -13225,7 +13227,7 @@ const char** q_cpabstractitem_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpabstractitem_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpabstractitem_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -13638,7 +13640,7 @@ int32_t q_customplot_plotting_hints(void* self) {
     return QCustomPlot_PlottingHints((QCustomPlot*)self);
 }
 
-int64_t q_customplot_multi_select_modifier(void* self) {
+int32_t q_customplot_multi_select_modifier(void* self) {
     return QCustomPlot_MultiSelectModifier((QCustomPlot*)self);
 }
 
@@ -13726,7 +13728,7 @@ void q_customplot_set_plotting_hint(void* self, int32_t hint) {
     QCustomPlot_SetPlottingHint((QCustomPlot*)self, hint);
 }
 
-void q_customplot_set_multi_select_modifier(void* self, int64_t modifier) {
+void q_customplot_set_multi_select_modifier(void* self, int32_t modifier) {
     QCustomPlot_SetMultiSelectModifier((QCustomPlot*)self, modifier);
 }
 
@@ -14692,7 +14694,7 @@ QCPLayerable* q_customplot_qbase_layerable_at3(void* self, void* pos, bool onlyS
     return QCustomPlot_QBaseLayerableAt3((QCustomPlot*)self, (QPointF*)pos, onlySelectable, (QVariant*)selectionDetails);
 }
 
-libqt_list /* of QCPLayerable* */ q_customplot_layerable_list_at3(void* self, void* pos, bool onlySelectable, libqt_list selectionDetails) {
+libqt_list /* of QCPLayerable* */ q_customplot_layerable_list_at3(void* self, void* pos, bool onlySelectable, libqt_list /* of QVariant* */ selectionDetails) {
     libqt_list _arr = QCustomPlot_LayerableListAt3((QCustomPlot*)self, (QPointF*)pos, onlySelectable, selectionDetails);
     return _arr;
 }
@@ -14701,7 +14703,7 @@ void q_customplot_on_layerable_list_at3(void* self, QCPLayerable** (*callback)(v
     QCustomPlot_OnLayerableListAt3((QCustomPlot*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QCPLayerable* */ q_customplot_qbase_layerable_list_at3(void* self, void* pos, bool onlySelectable, libqt_list selectionDetails) {
+libqt_list /* of QCPLayerable* */ q_customplot_qbase_layerable_list_at3(void* self, void* pos, bool onlySelectable, libqt_list /* of QVariant* */ selectionDetails) {
     libqt_list _arr = QCustomPlot_QBaseLayerableListAt3((QCustomPlot*)self, (QPointF*)pos, onlySelectable, selectionDetails);
     return _arr;
 }
@@ -15086,11 +15088,11 @@ void q_customplot_set_graphics_effect(void* self, void* effect) {
     QWidget_SetGraphicsEffect((QWidget*)self, (QGraphicsEffect*)effect);
 }
 
-void q_customplot_grab_gesture(void* self, int64_t type) {
+void q_customplot_grab_gesture(void* self, int32_t type) {
     QWidget_GrabGesture((QWidget*)self, type);
 }
 
-void q_customplot_ungrab_gesture(void* self, int64_t type) {
+void q_customplot_ungrab_gesture(void* self, int32_t type) {
     QWidget_UngrabGesture((QWidget*)self, type);
 }
 
@@ -15571,7 +15573,7 @@ void q_customplot_set_parent(void* self, void* parent) {
     QWidget_SetParent((QWidget*)self, (QWidget*)parent);
 }
 
-void q_customplot_set_parent2(void* self, void* parent, int64_t f) {
+void q_customplot_set_parent2(void* self, void* parent, int32_t f) {
     QWidget_SetParent2((QWidget*)self, (QWidget*)parent, f);
 }
 
@@ -15607,11 +15609,11 @@ void q_customplot_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_customplot_add_actions(void* self, libqt_list actions) {
+void q_customplot_add_actions(void* self, libqt_list /* of QAction* */ actions) {
     QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_customplot_insert_actions(void* self, void* before, libqt_list actions) {
+void q_customplot_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions) {
     QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
@@ -15648,23 +15650,23 @@ QWidget* q_customplot_parent_widget(void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
-void q_customplot_set_window_flags(void* self, int64_t type) {
+void q_customplot_set_window_flags(void* self, int32_t type) {
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int64_t q_customplot_window_flags(void* self) {
+int32_t q_customplot_window_flags(void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
-void q_customplot_set_window_flag(void* self, int64_t param1) {
+void q_customplot_set_window_flag(void* self, int32_t param1) {
     QWidget_SetWindowFlag((QWidget*)self, param1);
 }
 
-void q_customplot_override_window_flags(void* self, int64_t type) {
+void q_customplot_override_window_flags(void* self, int32_t type) {
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int64_t q_customplot_window_type(void* self) {
+int32_t q_customplot_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
@@ -15760,11 +15762,11 @@ void q_customplot_on_custom_context_menu_requested(void* self, void (*callback)(
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-int64_t q_customplot_input_method_hints(void* self) {
+int32_t q_customplot_input_method_hints(void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
-void q_customplot_set_input_method_hints(void* self, int64_t hints) {
+void q_customplot_set_input_method_hints(void* self, int32_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
@@ -15796,7 +15798,7 @@ QPixmap* q_customplot_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void q_customplot_grab_gesture2(void* self, int64_t type, int32_t flags) {
+void q_customplot_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
@@ -15812,7 +15814,7 @@ void q_customplot_set_shortcut_auto_repeat2(void* self, int id, bool enable) {
     QWidget_SetShortcutAutoRepeat2((QWidget*)self, id, enable);
 }
 
-void q_customplot_set_window_flag2(void* self, int64_t param1, bool on) {
+void q_customplot_set_window_flag2(void* self, int32_t param1, bool on) {
     QWidget_SetWindowFlag2((QWidget*)self, param1, on);
 }
 
@@ -15824,7 +15826,7 @@ QWidget* q_customplot_create_window_container2(void* window, void* parent) {
     return QWidget_CreateWindowContainer2((QWindow*)window, (QWidget*)parent);
 }
 
-QWidget* q_customplot_create_window_container3(void* window, void* parent, int64_t flags) {
+QWidget* q_customplot_create_window_container3(void* window, void* parent, int32_t flags) {
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
@@ -15929,7 +15931,7 @@ const char** q_customplot_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_customplot_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_customplot_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -16407,15 +16409,15 @@ void q_customplot_on_input_method_event(void* self, void (*callback)(void*, void
     QCustomPlot_OnInputMethodEvent((QCustomPlot*)self, (intptr_t)callback);
 }
 
-QVariant* q_customplot_input_method_query(void* self, int64_t param1) {
+QVariant* q_customplot_input_method_query(void* self, int32_t param1) {
     return QCustomPlot_InputMethodQuery((QCustomPlot*)self, param1);
 }
 
-QVariant* q_customplot_qbase_input_method_query(void* self, int64_t param1) {
+QVariant* q_customplot_qbase_input_method_query(void* self, int32_t param1) {
     return QCustomPlot_QBaseInputMethodQuery((QCustomPlot*)self, param1);
 }
 
-void q_customplot_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void q_customplot_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     QCustomPlot_OnInputMethodQuery((QCustomPlot*)self, (intptr_t)callback);
 }
 
@@ -17126,11 +17128,11 @@ void q_cpaxisrect_set_range_drag_axes(void* self, void* horizontal, void* vertic
     QCPAxisRect_SetRangeDragAxes((QCPAxisRect*)self, (QCPAxis*)horizontal, (QCPAxis*)vertical);
 }
 
-void q_cpaxisrect_set_range_drag_axes2(void* self, libqt_list axes) {
+void q_cpaxisrect_set_range_drag_axes2(void* self, libqt_list /* of QCPAxis* */ axes) {
     QCPAxisRect_SetRangeDragAxes2((QCPAxisRect*)self, axes);
 }
 
-void q_cpaxisrect_set_range_drag_axes3(void* self, libqt_list horizontal, libqt_list vertical) {
+void q_cpaxisrect_set_range_drag_axes3(void* self, libqt_list /* of QCPAxis* */ horizontal, libqt_list /* of QCPAxis* */ vertical) {
     QCPAxisRect_SetRangeDragAxes3((QCPAxisRect*)self, horizontal, vertical);
 }
 
@@ -17138,11 +17140,11 @@ void q_cpaxisrect_set_range_zoom_axes(void* self, void* horizontal, void* vertic
     QCPAxisRect_SetRangeZoomAxes((QCPAxisRect*)self, (QCPAxis*)horizontal, (QCPAxis*)vertical);
 }
 
-void q_cpaxisrect_set_range_zoom_axes2(void* self, libqt_list axes) {
+void q_cpaxisrect_set_range_zoom_axes2(void* self, libqt_list /* of QCPAxis* */ axes) {
     QCPAxisRect_SetRangeZoomAxes2((QCPAxisRect*)self, axes);
 }
 
-void q_cpaxisrect_set_range_zoom_axes3(void* self, libqt_list horizontal, libqt_list vertical) {
+void q_cpaxisrect_set_range_zoom_axes3(void* self, libqt_list /* of QCPAxis* */ horizontal, libqt_list /* of QCPAxis* */ vertical) {
     QCPAxisRect_SetRangeZoomAxes3((QCPAxisRect*)self, horizontal, vertical);
 }
 
@@ -17193,7 +17195,7 @@ void q_cpaxisrect_zoom(void* self, void* pixelRect) {
     QCPAxisRect_Zoom((QCPAxisRect*)self, (QRectF*)pixelRect);
 }
 
-void q_cpaxisrect_zoom2(void* self, void* pixelRect, libqt_list affectedAxes) {
+void q_cpaxisrect_zoom2(void* self, void* pixelRect, libqt_list /* of QCPAxis* */ affectedAxes) {
     QCPAxisRect_Zoom2((QCPAxisRect*)self, (QRectF*)pixelRect, affectedAxes);
 }
 
@@ -17683,7 +17685,7 @@ const char** q_cpaxisrect_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxisrect_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpaxisrect_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -18485,7 +18487,7 @@ const char** q_cpabstractlegenditem_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpabstractlegenditem_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpabstractlegenditem_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -19305,7 +19307,7 @@ const char** q_cpplottablelegenditem_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpplottablelegenditem_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpplottablelegenditem_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -20129,7 +20131,7 @@ void q_cplegend_set_column_stretch_factor(void* self, int column, double factor)
     QCPLayoutGrid_SetColumnStretchFactor((QCPLayoutGrid*)self, column, factor);
 }
 
-void q_cplegend_set_column_stretch_factors(void* self, libqt_list factors) {
+void q_cplegend_set_column_stretch_factors(void* self, libqt_list /* of double */ factors) {
     QCPLayoutGrid_SetColumnStretchFactors((QCPLayoutGrid*)self, factors);
 }
 
@@ -20137,7 +20139,7 @@ void q_cplegend_set_row_stretch_factor(void* self, int row, double factor) {
     QCPLayoutGrid_SetRowStretchFactor((QCPLayoutGrid*)self, row, factor);
 }
 
-void q_cplegend_set_row_stretch_factors(void* self, libqt_list factors) {
+void q_cplegend_set_row_stretch_factors(void* self, libqt_list /* of double */ factors) {
     QCPLayoutGrid_SetRowStretchFactors((QCPLayoutGrid*)self, factors);
 }
 
@@ -20452,7 +20454,7 @@ const char** q_cplegend_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cplegend_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cplegend_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -20820,27 +20822,27 @@ void q_cplegend_on_disconnect_notify(void* self, void (*callback)(void*, void*))
     QCPLegend_OnDisconnectNotify((QCPLegend*)self, (intptr_t)callback);
 }
 
-void q_cplegend_get_minimum_row_col_sizes(void* self, libqt_list minColWidths, libqt_list minRowHeights) {
+void q_cplegend_get_minimum_row_col_sizes(void* self, libqt_list /* of int */ minColWidths, libqt_list /* of int */ minRowHeights) {
     QCPLegend_GetMinimumRowColSizes((QCPLegend*)self, minColWidths, minRowHeights);
 }
 
-void q_cplegend_qbase_get_minimum_row_col_sizes(void* self, libqt_list minColWidths, libqt_list minRowHeights) {
+void q_cplegend_qbase_get_minimum_row_col_sizes(void* self, libqt_list /* of int */ minColWidths, libqt_list /* of int */ minRowHeights) {
     QCPLegend_QBaseGetMinimumRowColSizes((QCPLegend*)self, minColWidths, minRowHeights);
 }
 
-void q_cplegend_on_get_minimum_row_col_sizes(void* self, void (*callback)(void*, int*, int*)) {
+void q_cplegend_on_get_minimum_row_col_sizes(void* self, void (*callback)(void*, libqt_list /* of int */, libqt_list /* of int */)) {
     QCPLegend_OnGetMinimumRowColSizes((QCPLegend*)self, (intptr_t)callback);
 }
 
-void q_cplegend_get_maximum_row_col_sizes(void* self, libqt_list maxColWidths, libqt_list maxRowHeights) {
+void q_cplegend_get_maximum_row_col_sizes(void* self, libqt_list /* of int */ maxColWidths, libqt_list /* of int */ maxRowHeights) {
     QCPLegend_GetMaximumRowColSizes((QCPLegend*)self, maxColWidths, maxRowHeights);
 }
 
-void q_cplegend_qbase_get_maximum_row_col_sizes(void* self, libqt_list maxColWidths, libqt_list maxRowHeights) {
+void q_cplegend_qbase_get_maximum_row_col_sizes(void* self, libqt_list /* of int */ maxColWidths, libqt_list /* of int */ maxRowHeights) {
     QCPLegend_QBaseGetMaximumRowColSizes((QCPLegend*)self, maxColWidths, maxRowHeights);
 }
 
-void q_cplegend_on_get_maximum_row_col_sizes(void* self, void (*callback)(void*, int*, int*)) {
+void q_cplegend_on_get_maximum_row_col_sizes(void* self, void (*callback)(void*, libqt_list /* of int */, libqt_list /* of int */)) {
     QCPLegend_OnGetMaximumRowColSizes((QCPLegend*)self, (intptr_t)callback);
 }
 
@@ -20880,17 +20882,17 @@ void q_cplegend_on_release_element(void* self, void (*callback)(void*, void*)) {
     QCPLegend_OnReleaseElement((QCPLegend*)self, (intptr_t)callback);
 }
 
-libqt_list /* of int */ q_cplegend_get_section_sizes(void* self, libqt_list maxSizes, libqt_list minSizes, libqt_list stretchFactors, int totalSize) {
+libqt_list /* of int */ q_cplegend_get_section_sizes(void* self, libqt_list /* of int */ maxSizes, libqt_list /* of int */ minSizes, libqt_list /* of double */ stretchFactors, int totalSize) {
     libqt_list _arr = QCPLegend_GetSectionSizes((QCPLegend*)self, maxSizes, minSizes, stretchFactors, totalSize);
     return _arr;
 }
 
-libqt_list /* of int */ q_cplegend_qbase_get_section_sizes(void* self, libqt_list maxSizes, libqt_list minSizes, libqt_list stretchFactors, int totalSize) {
+libqt_list /* of int */ q_cplegend_qbase_get_section_sizes(void* self, libqt_list /* of int */ maxSizes, libqt_list /* of int */ minSizes, libqt_list /* of double */ stretchFactors, int totalSize) {
     libqt_list _arr = QCPLegend_QBaseGetSectionSizes((QCPLegend*)self, maxSizes, minSizes, stretchFactors, totalSize);
     return _arr;
 }
 
-void q_cplegend_on_get_section_sizes(void* self, int* (*callback)(void*, int*, int*, libqt_list, int)) {
+void q_cplegend_on_get_section_sizes(void* self, int* (*callback)(void*, libqt_list /* of int */, libqt_list /* of int */, libqt_list /* of double */, int)) {
     QCPLegend_OnGetSectionSizes((QCPLegend*)self, (intptr_t)callback);
 }
 
@@ -21545,7 +21547,7 @@ const char** q_cptextelement_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cptextelement_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cptextelement_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -22373,7 +22375,7 @@ const char** q_cpcolorscale_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpcolorscale_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpcolorscale_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -22908,7 +22910,7 @@ bool q_cpgraph_adaptive_sampling(void* self) {
     return QCPGraph_AdaptiveSampling((QCPGraph*)self);
 }
 
-void q_cpgraph_set_data2(void* self, libqt_list keys, libqt_list values) {
+void q_cpgraph_set_data2(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values) {
     QCPGraph_SetData2((QCPGraph*)self, keys, values);
 }
 
@@ -22932,7 +22934,7 @@ void q_cpgraph_set_adaptive_sampling(void* self, bool enabled) {
     QCPGraph_SetAdaptiveSampling((QCPGraph*)self, enabled);
 }
 
-void q_cpgraph_add_data(void* self, libqt_list keys, libqt_list values) {
+void q_cpgraph_add_data(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values) {
     QCPGraph_AddData((QCPGraph*)self, keys, values);
 }
 
@@ -23000,7 +23002,7 @@ void q_cpgraph_qbase_draw_legend_icon(void* self, void* painter, void* rect) {
     QCPGraph_QBaseDrawLegendIcon((QCPGraph*)self, (QCPPainter*)painter, (QRectF*)rect);
 }
 
-void q_cpgraph_draw_fill(void* self, void* painter, libqt_list lines) {
+void q_cpgraph_draw_fill(void* self, void* painter, libqt_list /* of QPointF* */ lines) {
     QCPGraph_DrawFill((QCPGraph*)self, (QCPPainter*)painter, lines);
 }
 
@@ -23008,11 +23010,11 @@ void q_cpgraph_on_draw_fill(void* self, void (*callback)(void*, void*, QPointF**
     QCPGraph_OnDrawFill((QCPGraph*)self, (intptr_t)callback);
 }
 
-void q_cpgraph_qbase_draw_fill(void* self, void* painter, libqt_list lines) {
+void q_cpgraph_qbase_draw_fill(void* self, void* painter, libqt_list /* of QPointF* */ lines) {
     QCPGraph_QBaseDrawFill((QCPGraph*)self, (QCPPainter*)painter, lines);
 }
 
-void q_cpgraph_draw_scatter_plot(void* self, void* painter, libqt_list scatters, void* style) {
+void q_cpgraph_draw_scatter_plot(void* self, void* painter, libqt_list /* of QPointF* */ scatters, void* style) {
     QCPGraph_DrawScatterPlot((QCPGraph*)self, (QCPPainter*)painter, scatters, (QCPScatterStyle*)style);
 }
 
@@ -23020,11 +23022,11 @@ void q_cpgraph_on_draw_scatter_plot(void* self, void (*callback)(void*, void*, Q
     QCPGraph_OnDrawScatterPlot((QCPGraph*)self, (intptr_t)callback);
 }
 
-void q_cpgraph_qbase_draw_scatter_plot(void* self, void* painter, libqt_list scatters, void* style) {
+void q_cpgraph_qbase_draw_scatter_plot(void* self, void* painter, libqt_list /* of QPointF* */ scatters, void* style) {
     QCPGraph_QBaseDrawScatterPlot((QCPGraph*)self, (QCPPainter*)painter, scatters, (QCPScatterStyle*)style);
 }
 
-void q_cpgraph_draw_line_plot(void* self, void* painter, libqt_list lines) {
+void q_cpgraph_draw_line_plot(void* self, void* painter, libqt_list /* of QPointF* */ lines) {
     QCPGraph_DrawLinePlot((QCPGraph*)self, (QCPPainter*)painter, lines);
 }
 
@@ -23032,11 +23034,11 @@ void q_cpgraph_on_draw_line_plot(void* self, void (*callback)(void*, void*, QPoi
     QCPGraph_OnDrawLinePlot((QCPGraph*)self, (intptr_t)callback);
 }
 
-void q_cpgraph_qbase_draw_line_plot(void* self, void* painter, libqt_list lines) {
+void q_cpgraph_qbase_draw_line_plot(void* self, void* painter, libqt_list /* of QPointF* */ lines) {
     QCPGraph_QBaseDrawLinePlot((QCPGraph*)self, (QCPPainter*)painter, lines);
 }
 
-void q_cpgraph_draw_impulse_plot(void* self, void* painter, libqt_list lines) {
+void q_cpgraph_draw_impulse_plot(void* self, void* painter, libqt_list /* of QPointF* */ lines) {
     QCPGraph_DrawImpulsePlot((QCPGraph*)self, (QCPPainter*)painter, lines);
 }
 
@@ -23044,11 +23046,11 @@ void q_cpgraph_on_draw_impulse_plot(void* self, void (*callback)(void*, void*, Q
     QCPGraph_OnDrawImpulsePlot((QCPGraph*)self, (intptr_t)callback);
 }
 
-void q_cpgraph_qbase_draw_impulse_plot(void* self, void* painter, libqt_list lines) {
+void q_cpgraph_qbase_draw_impulse_plot(void* self, void* painter, libqt_list /* of QPointF* */ lines) {
     QCPGraph_QBaseDrawImpulsePlot((QCPGraph*)self, (QCPPainter*)painter, lines);
 }
 
-void q_cpgraph_get_lines(void* self, libqt_list lines, void* dataRange) {
+void q_cpgraph_get_lines(void* self, libqt_list /* of QPointF* */ lines, void* dataRange) {
     QCPGraph_GetLines((QCPGraph*)self, lines, (QCPDataRange*)dataRange);
 }
 
@@ -23056,11 +23058,11 @@ void q_cpgraph_on_get_lines(void* self, void (*callback)(void*, QPointF**, void*
     QCPGraph_OnGetLines((QCPGraph*)self, (intptr_t)callback);
 }
 
-void q_cpgraph_qbase_get_lines(void* self, libqt_list lines, void* dataRange) {
+void q_cpgraph_qbase_get_lines(void* self, libqt_list /* of QPointF* */ lines, void* dataRange) {
     QCPGraph_QBaseGetLines((QCPGraph*)self, lines, (QCPDataRange*)dataRange);
 }
 
-void q_cpgraph_get_scatters(void* self, libqt_list scatters, void* dataRange) {
+void q_cpgraph_get_scatters(void* self, libqt_list /* of QPointF* */ scatters, void* dataRange) {
     QCPGraph_GetScatters((QCPGraph*)self, scatters, (QCPDataRange*)dataRange);
 }
 
@@ -23068,11 +23070,11 @@ void q_cpgraph_on_get_scatters(void* self, void (*callback)(void*, QPointF**, vo
     QCPGraph_OnGetScatters((QCPGraph*)self, (intptr_t)callback);
 }
 
-void q_cpgraph_qbase_get_scatters(void* self, libqt_list scatters, void* dataRange) {
+void q_cpgraph_qbase_get_scatters(void* self, libqt_list /* of QPointF* */ scatters, void* dataRange) {
     QCPGraph_QBaseGetScatters((QCPGraph*)self, scatters, (QCPDataRange*)dataRange);
 }
 
-libqt_list /* of QPointF* */ q_cpgraph_data_to_lines(void* self, libqt_list data) {
+libqt_list /* of QPointF* */ q_cpgraph_data_to_lines(void* self, libqt_list /* of QCPGraphData* */ data) {
     libqt_list _arr = QCPGraph_DataToLines((QCPGraph*)self, data);
     return _arr;
 }
@@ -23081,12 +23083,12 @@ void q_cpgraph_on_data_to_lines(void* self, QPointF** (*callback)(void*, QCPGrap
     QCPGraph_OnDataToLines((QCPGraph*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QPointF* */ q_cpgraph_qbase_data_to_lines(void* self, libqt_list data) {
+libqt_list /* of QPointF* */ q_cpgraph_qbase_data_to_lines(void* self, libqt_list /* of QCPGraphData* */ data) {
     libqt_list _arr = QCPGraph_QBaseDataToLines((QCPGraph*)self, data);
     return _arr;
 }
 
-libqt_list /* of QPointF* */ q_cpgraph_data_to_step_left_lines(void* self, libqt_list data) {
+libqt_list /* of QPointF* */ q_cpgraph_data_to_step_left_lines(void* self, libqt_list /* of QCPGraphData* */ data) {
     libqt_list _arr = QCPGraph_DataToStepLeftLines((QCPGraph*)self, data);
     return _arr;
 }
@@ -23095,12 +23097,12 @@ void q_cpgraph_on_data_to_step_left_lines(void* self, QPointF** (*callback)(void
     QCPGraph_OnDataToStepLeftLines((QCPGraph*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QPointF* */ q_cpgraph_qbase_data_to_step_left_lines(void* self, libqt_list data) {
+libqt_list /* of QPointF* */ q_cpgraph_qbase_data_to_step_left_lines(void* self, libqt_list /* of QCPGraphData* */ data) {
     libqt_list _arr = QCPGraph_QBaseDataToStepLeftLines((QCPGraph*)self, data);
     return _arr;
 }
 
-libqt_list /* of QPointF* */ q_cpgraph_data_to_step_right_lines(void* self, libqt_list data) {
+libqt_list /* of QPointF* */ q_cpgraph_data_to_step_right_lines(void* self, libqt_list /* of QCPGraphData* */ data) {
     libqt_list _arr = QCPGraph_DataToStepRightLines((QCPGraph*)self, data);
     return _arr;
 }
@@ -23109,12 +23111,12 @@ void q_cpgraph_on_data_to_step_right_lines(void* self, QPointF** (*callback)(voi
     QCPGraph_OnDataToStepRightLines((QCPGraph*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QPointF* */ q_cpgraph_qbase_data_to_step_right_lines(void* self, libqt_list data) {
+libqt_list /* of QPointF* */ q_cpgraph_qbase_data_to_step_right_lines(void* self, libqt_list /* of QCPGraphData* */ data) {
     libqt_list _arr = QCPGraph_QBaseDataToStepRightLines((QCPGraph*)self, data);
     return _arr;
 }
 
-libqt_list /* of QPointF* */ q_cpgraph_data_to_step_center_lines(void* self, libqt_list data) {
+libqt_list /* of QPointF* */ q_cpgraph_data_to_step_center_lines(void* self, libqt_list /* of QCPGraphData* */ data) {
     libqt_list _arr = QCPGraph_DataToStepCenterLines((QCPGraph*)self, data);
     return _arr;
 }
@@ -23123,12 +23125,12 @@ void q_cpgraph_on_data_to_step_center_lines(void* self, QPointF** (*callback)(vo
     QCPGraph_OnDataToStepCenterLines((QCPGraph*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QPointF* */ q_cpgraph_qbase_data_to_step_center_lines(void* self, libqt_list data) {
+libqt_list /* of QPointF* */ q_cpgraph_qbase_data_to_step_center_lines(void* self, libqt_list /* of QCPGraphData* */ data) {
     libqt_list _arr = QCPGraph_QBaseDataToStepCenterLines((QCPGraph*)self, data);
     return _arr;
 }
 
-libqt_list /* of QPointF* */ q_cpgraph_data_to_impulse_lines(void* self, libqt_list data) {
+libqt_list /* of QPointF* */ q_cpgraph_data_to_impulse_lines(void* self, libqt_list /* of QCPGraphData* */ data) {
     libqt_list _arr = QCPGraph_DataToImpulseLines((QCPGraph*)self, data);
     return _arr;
 }
@@ -23137,12 +23139,12 @@ void q_cpgraph_on_data_to_impulse_lines(void* self, QPointF** (*callback)(void*,
     QCPGraph_OnDataToImpulseLines((QCPGraph*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QPointF* */ q_cpgraph_qbase_data_to_impulse_lines(void* self, libqt_list data) {
+libqt_list /* of QPointF* */ q_cpgraph_qbase_data_to_impulse_lines(void* self, libqt_list /* of QCPGraphData* */ data) {
     libqt_list _arr = QCPGraph_QBaseDataToImpulseLines((QCPGraph*)self, data);
     return _arr;
 }
 
-libqt_list /* of QCPDataRange* */ q_cpgraph_get_non_nan_segments(void* self, libqt_list lineData, int32_t keyOrientation) {
+libqt_list /* of QCPDataRange* */ q_cpgraph_get_non_nan_segments(void* self, libqt_list /* of QPointF* */ lineData, int32_t keyOrientation) {
     libqt_list _arr = QCPGraph_GetNonNanSegments((QCPGraph*)self, lineData, keyOrientation);
     return _arr;
 }
@@ -23151,12 +23153,12 @@ void q_cpgraph_on_get_non_nan_segments(void* self, QCPDataRange** (*callback)(vo
     QCPGraph_OnGetNonNanSegments((QCPGraph*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QCPDataRange* */ q_cpgraph_qbase_get_non_nan_segments(void* self, libqt_list lineData, int32_t keyOrientation) {
+libqt_list /* of QCPDataRange* */ q_cpgraph_qbase_get_non_nan_segments(void* self, libqt_list /* of QPointF* */ lineData, int32_t keyOrientation) {
     libqt_list _arr = QCPGraph_QBaseGetNonNanSegments((QCPGraph*)self, lineData, keyOrientation);
     return _arr;
 }
 
-libqt_list /* of libqt_pair tuple of QCPDataRange* and QCPDataRange* */ q_cpgraph_get_overlapping_segments(void* self, libqt_list thisSegments, libqt_list thisData, libqt_list otherSegments, libqt_list otherData) {
+libqt_list /* of libqt_pair tuple of QCPDataRange* and QCPDataRange* */ q_cpgraph_get_overlapping_segments(void* self, libqt_list /* of QCPDataRange* */ thisSegments, libqt_list /* of QPointF* */ thisData, libqt_list /* of QCPDataRange* */ otherSegments, libqt_list /* of QPointF* */ otherData) {
     libqt_list _arr = QCPGraph_GetOverlappingSegments((QCPGraph*)self, thisSegments, thisData, otherSegments, otherData);
     return _arr;
 }
@@ -23165,7 +23167,7 @@ void q_cpgraph_on_get_overlapping_segments(void* self, libqt_list /* of libqt_pa
     QCPGraph_OnGetOverlappingSegments((QCPGraph*)self, (intptr_t)callback);
 }
 
-libqt_list /* of libqt_pair tuple of QCPDataRange* and QCPDataRange* */ q_cpgraph_qbase_get_overlapping_segments(void* self, libqt_list thisSegments, libqt_list thisData, libqt_list otherSegments, libqt_list otherData) {
+libqt_list /* of libqt_pair tuple of QCPDataRange* and QCPDataRange* */ q_cpgraph_qbase_get_overlapping_segments(void* self, libqt_list /* of QCPDataRange* */ thisSegments, libqt_list /* of QPointF* */ thisData, libqt_list /* of QCPDataRange* */ otherSegments, libqt_list /* of QPointF* */ otherData) {
     libqt_list _arr = QCPGraph_QBaseGetOverlappingSegments((QCPGraph*)self, thisSegments, thisData, otherSegments, otherData);
     return _arr;
 }
@@ -23194,7 +23196,7 @@ QPointF* q_cpgraph_qbase_get_fill_base_point(void* self, void* matchingDataPoint
     return QCPGraph_QBaseGetFillBasePoint((QCPGraph*)self, (QPointF*)matchingDataPoint);
 }
 
-int32_t q_cpgraph_find_index_below_x(void* self, libqt_list data, double x) {
+int32_t q_cpgraph_find_index_below_x(void* self, libqt_list /* of QPointF* */ data, double x) {
     return QCPGraph_FindIndexBelowX((QCPGraph*)self, data, x);
 }
 
@@ -23202,11 +23204,11 @@ void q_cpgraph_on_find_index_below_x(void* self, int32_t (*callback)(void*, QPoi
     QCPGraph_OnFindIndexBelowX((QCPGraph*)self, (intptr_t)callback);
 }
 
-int32_t q_cpgraph_qbase_find_index_below_x(void* self, libqt_list data, double x) {
+int32_t q_cpgraph_qbase_find_index_below_x(void* self, libqt_list /* of QPointF* */ data, double x) {
     return QCPGraph_QBaseFindIndexBelowX((QCPGraph*)self, data, x);
 }
 
-int32_t q_cpgraph_find_index_above_x(void* self, libqt_list data, double x) {
+int32_t q_cpgraph_find_index_above_x(void* self, libqt_list /* of QPointF* */ data, double x) {
     return QCPGraph_FindIndexAboveX((QCPGraph*)self, data, x);
 }
 
@@ -23214,11 +23216,11 @@ void q_cpgraph_on_find_index_above_x(void* self, int32_t (*callback)(void*, QPoi
     QCPGraph_OnFindIndexAboveX((QCPGraph*)self, (intptr_t)callback);
 }
 
-int32_t q_cpgraph_qbase_find_index_above_x(void* self, libqt_list data, double x) {
+int32_t q_cpgraph_qbase_find_index_above_x(void* self, libqt_list /* of QPointF* */ data, double x) {
     return QCPGraph_QBaseFindIndexAboveX((QCPGraph*)self, data, x);
 }
 
-int32_t q_cpgraph_find_index_below_y(void* self, libqt_list data, double y) {
+int32_t q_cpgraph_find_index_below_y(void* self, libqt_list /* of QPointF* */ data, double y) {
     return QCPGraph_FindIndexBelowY((QCPGraph*)self, data, y);
 }
 
@@ -23226,11 +23228,11 @@ void q_cpgraph_on_find_index_below_y(void* self, int32_t (*callback)(void*, QPoi
     QCPGraph_OnFindIndexBelowY((QCPGraph*)self, (intptr_t)callback);
 }
 
-int32_t q_cpgraph_qbase_find_index_below_y(void* self, libqt_list data, double y) {
+int32_t q_cpgraph_qbase_find_index_below_y(void* self, libqt_list /* of QPointF* */ data, double y) {
     return QCPGraph_QBaseFindIndexBelowY((QCPGraph*)self, data, y);
 }
 
-int32_t q_cpgraph_find_index_above_y(void* self, libqt_list data, double y) {
+int32_t q_cpgraph_find_index_above_y(void* self, libqt_list /* of QPointF* */ data, double y) {
     return QCPGraph_FindIndexAboveY((QCPGraph*)self, data, y);
 }
 
@@ -23238,7 +23240,7 @@ void q_cpgraph_on_find_index_above_y(void* self, int32_t (*callback)(void*, QPoi
     QCPGraph_OnFindIndexAboveY((QCPGraph*)self, (intptr_t)callback);
 }
 
-int32_t q_cpgraph_qbase_find_index_above_y(void* self, libqt_list data, double y) {
+int32_t q_cpgraph_qbase_find_index_above_y(void* self, libqt_list /* of QPointF* */ data, double y) {
     return QCPGraph_QBaseFindIndexAboveY((QCPGraph*)self, data, y);
 }
 
@@ -23256,11 +23258,11 @@ const char* q_cpgraph_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_cpgraph_set_data3(void* self, libqt_list keys, libqt_list values, bool alreadySorted) {
+void q_cpgraph_set_data3(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values, bool alreadySorted) {
     QCPGraph_SetData3((QCPGraph*)self, keys, values, alreadySorted);
 }
 
-void q_cpgraph_add_data3(void* self, libqt_list keys, libqt_list values, bool alreadySorted) {
+void q_cpgraph_add_data3(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values, bool alreadySorted) {
     QCPGraph_AddData3((QCPGraph*)self, keys, values, alreadySorted);
 }
 
@@ -23580,7 +23582,7 @@ const char** q_cpgraph_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpgraph_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpgraph_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -24245,11 +24247,11 @@ int32_t q_cpcurve_line_style(void* self) {
     return QCPCurve_LineStyle((QCPCurve*)self);
 }
 
-void q_cpcurve_set_data2(void* self, libqt_list t, libqt_list keys, libqt_list values) {
+void q_cpcurve_set_data2(void* self, libqt_list /* of double */ t, libqt_list /* of double */ keys, libqt_list /* of double */ values) {
     QCPCurve_SetData2((QCPCurve*)self, t, keys, values);
 }
 
-void q_cpcurve_set_data3(void* self, libqt_list keys, libqt_list values) {
+void q_cpcurve_set_data3(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values) {
     QCPCurve_SetData3((QCPCurve*)self, keys, values);
 }
 
@@ -24265,11 +24267,11 @@ void q_cpcurve_set_line_style(void* self, int32_t style) {
     QCPCurve_SetLineStyle((QCPCurve*)self, style);
 }
 
-void q_cpcurve_add_data(void* self, libqt_list t, libqt_list keys, libqt_list values) {
+void q_cpcurve_add_data(void* self, libqt_list /* of double */ t, libqt_list /* of double */ keys, libqt_list /* of double */ values) {
     QCPCurve_AddData((QCPCurve*)self, t, keys, values);
 }
 
-void q_cpcurve_add_data2(void* self, libqt_list keys, libqt_list values) {
+void q_cpcurve_add_data2(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values) {
     QCPCurve_AddData2((QCPCurve*)self, keys, values);
 }
 
@@ -24341,7 +24343,7 @@ void q_cpcurve_qbase_draw_legend_icon(void* self, void* painter, void* rect) {
     QCPCurve_QBaseDrawLegendIcon((QCPCurve*)self, (QCPPainter*)painter, (QRectF*)rect);
 }
 
-void q_cpcurve_draw_curve_line(void* self, void* painter, libqt_list lines) {
+void q_cpcurve_draw_curve_line(void* self, void* painter, libqt_list /* of QPointF* */ lines) {
     QCPCurve_DrawCurveLine((QCPCurve*)self, (QCPPainter*)painter, lines);
 }
 
@@ -24349,11 +24351,11 @@ void q_cpcurve_on_draw_curve_line(void* self, void (*callback)(void*, void*, QPo
     QCPCurve_OnDrawCurveLine((QCPCurve*)self, (intptr_t)callback);
 }
 
-void q_cpcurve_qbase_draw_curve_line(void* self, void* painter, libqt_list lines) {
+void q_cpcurve_qbase_draw_curve_line(void* self, void* painter, libqt_list /* of QPointF* */ lines) {
     QCPCurve_QBaseDrawCurveLine((QCPCurve*)self, (QCPPainter*)painter, lines);
 }
 
-void q_cpcurve_draw_scatter_plot(void* self, void* painter, libqt_list points, void* style) {
+void q_cpcurve_draw_scatter_plot(void* self, void* painter, libqt_list /* of QPointF* */ points, void* style) {
     QCPCurve_DrawScatterPlot((QCPCurve*)self, (QCPPainter*)painter, points, (QCPScatterStyle*)style);
 }
 
@@ -24361,11 +24363,11 @@ void q_cpcurve_on_draw_scatter_plot(void* self, void (*callback)(void*, void*, Q
     QCPCurve_OnDrawScatterPlot((QCPCurve*)self, (intptr_t)callback);
 }
 
-void q_cpcurve_qbase_draw_scatter_plot(void* self, void* painter, libqt_list points, void* style) {
+void q_cpcurve_qbase_draw_scatter_plot(void* self, void* painter, libqt_list /* of QPointF* */ points, void* style) {
     QCPCurve_QBaseDrawScatterPlot((QCPCurve*)self, (QCPPainter*)painter, points, (QCPScatterStyle*)style);
 }
 
-void q_cpcurve_get_curve_lines(void* self, libqt_list lines, void* dataRange, double penWidth) {
+void q_cpcurve_get_curve_lines(void* self, libqt_list /* of QPointF* */ lines, void* dataRange, double penWidth) {
     QCPCurve_GetCurveLines((QCPCurve*)self, lines, (QCPDataRange*)dataRange, penWidth);
 }
 
@@ -24373,11 +24375,11 @@ void q_cpcurve_on_get_curve_lines(void* self, void (*callback)(void*, QPointF**,
     QCPCurve_OnGetCurveLines((QCPCurve*)self, (intptr_t)callback);
 }
 
-void q_cpcurve_qbase_get_curve_lines(void* self, libqt_list lines, void* dataRange, double penWidth) {
+void q_cpcurve_qbase_get_curve_lines(void* self, libqt_list /* of QPointF* */ lines, void* dataRange, double penWidth) {
     QCPCurve_QBaseGetCurveLines((QCPCurve*)self, lines, (QCPDataRange*)dataRange, penWidth);
 }
 
-void q_cpcurve_get_scatters(void* self, libqt_list scatters, void* dataRange, double scatterWidth) {
+void q_cpcurve_get_scatters(void* self, libqt_list /* of QPointF* */ scatters, void* dataRange, double scatterWidth) {
     QCPCurve_GetScatters((QCPCurve*)self, scatters, (QCPDataRange*)dataRange, scatterWidth);
 }
 
@@ -24385,7 +24387,7 @@ void q_cpcurve_on_get_scatters(void* self, void (*callback)(void*, QPointF**, vo
     QCPCurve_OnGetScatters((QCPCurve*)self, (intptr_t)callback);
 }
 
-void q_cpcurve_qbase_get_scatters(void* self, libqt_list scatters, void* dataRange, double scatterWidth) {
+void q_cpcurve_qbase_get_scatters(void* self, libqt_list /* of QPointF* */ scatters, void* dataRange, double scatterWidth) {
     QCPCurve_QBaseGetScatters((QCPCurve*)self, scatters, (QCPDataRange*)dataRange, scatterWidth);
 }
 
@@ -24451,7 +24453,7 @@ bool q_cpcurve_qbase_get_traverse(void* self, double prevKey, double prevValue, 
     return QCPCurve_QBaseGetTraverse((QCPCurve*)self, prevKey, prevValue, key, value, keyMin, valueMax, keyMax, valueMin, (QPointF*)crossA, (QPointF*)crossB);
 }
 
-void q_cpcurve_get_traverse_corner_points(void* self, int prevRegion, int currentRegion, double keyMin, double valueMax, double keyMax, double valueMin, libqt_list beforeTraverse, libqt_list afterTraverse) {
+void q_cpcurve_get_traverse_corner_points(void* self, int prevRegion, int currentRegion, double keyMin, double valueMax, double keyMax, double valueMin, libqt_list /* of QPointF* */ beforeTraverse, libqt_list /* of QPointF* */ afterTraverse) {
     QCPCurve_GetTraverseCornerPoints((QCPCurve*)self, prevRegion, currentRegion, keyMin, valueMax, keyMax, valueMin, beforeTraverse, afterTraverse);
 }
 
@@ -24459,7 +24461,7 @@ void q_cpcurve_on_get_traverse_corner_points(void* self, void (*callback)(void*,
     QCPCurve_OnGetTraverseCornerPoints((QCPCurve*)self, (intptr_t)callback);
 }
 
-void q_cpcurve_qbase_get_traverse_corner_points(void* self, int prevRegion, int currentRegion, double keyMin, double valueMax, double keyMax, double valueMin, libqt_list beforeTraverse, libqt_list afterTraverse) {
+void q_cpcurve_qbase_get_traverse_corner_points(void* self, int prevRegion, int currentRegion, double keyMin, double valueMax, double keyMax, double valueMin, libqt_list /* of QPointF* */ beforeTraverse, libqt_list /* of QPointF* */ afterTraverse) {
     QCPCurve_QBaseGetTraverseCornerPoints((QCPCurve*)self, prevRegion, currentRegion, keyMin, valueMax, keyMax, valueMin, beforeTraverse, afterTraverse);
 }
 
@@ -24477,11 +24479,11 @@ const char* q_cpcurve_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_cpcurve_set_data4(void* self, libqt_list t, libqt_list keys, libqt_list values, bool alreadySorted) {
+void q_cpcurve_set_data4(void* self, libqt_list /* of double */ t, libqt_list /* of double */ keys, libqt_list /* of double */ values, bool alreadySorted) {
     QCPCurve_SetData4((QCPCurve*)self, t, keys, values, alreadySorted);
 }
 
-void q_cpcurve_add_data42(void* self, libqt_list t, libqt_list keys, libqt_list values, bool alreadySorted) {
+void q_cpcurve_add_data42(void* self, libqt_list /* of double */ t, libqt_list /* of double */ keys, libqt_list /* of double */ values, bool alreadySorted) {
     QCPCurve_AddData42((QCPCurve*)self, t, keys, values, alreadySorted);
 }
 
@@ -24801,7 +24803,7 @@ const char** q_cpcurve_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpcurve_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpcurve_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -25594,7 +25596,7 @@ const char** q_cpbarsgroup_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpbarsgroup_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpbarsgroup_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -25931,7 +25933,7 @@ QCPBars* q_cpbars_bar_above(void* self) {
     return QCPBars_BarAbove((QCPBars*)self);
 }
 
-void q_cpbars_set_data2(void* self, libqt_list keys, libqt_list values) {
+void q_cpbars_set_data2(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values) {
     QCPBars_SetData2((QCPBars*)self, keys, values);
 }
 
@@ -25955,7 +25957,7 @@ void q_cpbars_set_stacking_gap(void* self, double pixels) {
     QCPBars_SetStackingGap((QCPBars*)self, pixels);
 }
 
-void q_cpbars_add_data(void* self, libqt_list keys, libqt_list values) {
+void q_cpbars_add_data(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values) {
     QCPBars_AddData((QCPBars*)self, keys, values);
 }
 
@@ -26117,11 +26119,11 @@ const char* q_cpbars_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_cpbars_set_data3(void* self, libqt_list keys, libqt_list values, bool alreadySorted) {
+void q_cpbars_set_data3(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values, bool alreadySorted) {
     QCPBars_SetData3((QCPBars*)self, keys, values, alreadySorted);
 }
 
-void q_cpbars_add_data3(void* self, libqt_list keys, libqt_list values, bool alreadySorted) {
+void q_cpbars_add_data3(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values, bool alreadySorted) {
     QCPBars_AddData3((QCPBars*)self, keys, values, alreadySorted);
 }
 
@@ -26441,7 +26443,7 @@ const char** q_cpbars_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpbars_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpbars_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -26971,7 +26973,7 @@ QCPStatisticalBoxData* q_cpstatisticalboxdata_new3(void* param1) {
     return QCPStatisticalBoxData_new3((QCPStatisticalBoxData*)param1);
 }
 
-QCPStatisticalBoxData* q_cpstatisticalboxdata_new4(double key, double minimum, double lowerQuartile, double median, double upperQuartile, double maximum, libqt_list outliers) {
+QCPStatisticalBoxData* q_cpstatisticalboxdata_new4(double key, double minimum, double lowerQuartile, double median, double upperQuartile, double maximum, libqt_list /* of double */ outliers) {
     return QCPStatisticalBoxData_new4(key, minimum, lowerQuartile, median, upperQuartile, maximum, outliers);
 }
 
@@ -27052,7 +27054,7 @@ libqt_list /* of double */ q_cpstatisticalboxdata_outliers(void* self) {
     return outliers_arr;
 }
 
-void q_cpstatisticalboxdata_set_outliers(void* self, libqt_list outliers) {
+void q_cpstatisticalboxdata_set_outliers(void* self, libqt_list /* of double */ outliers) {
     QCPStatisticalBoxData_SetOutliers((QCPStatisticalBoxData*)self, outliers);
 }
 
@@ -27119,7 +27121,7 @@ QCPScatterStyle* q_cpstatisticalbox_outlier_style(void* self) {
     return QCPStatisticalBox_OutlierStyle((QCPStatisticalBox*)self);
 }
 
-void q_cpstatisticalbox_set_data2(void* self, libqt_list keys, libqt_list minimum, libqt_list lowerQuartile, libqt_list median, libqt_list upperQuartile, libqt_list maximum) {
+void q_cpstatisticalbox_set_data2(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ minimum, libqt_list /* of double */ lowerQuartile, libqt_list /* of double */ median, libqt_list /* of double */ upperQuartile, libqt_list /* of double */ maximum) {
     QCPStatisticalBox_SetData2((QCPStatisticalBox*)self, keys, minimum, lowerQuartile, median, upperQuartile, maximum);
 }
 
@@ -27151,7 +27153,7 @@ void q_cpstatisticalbox_set_outlier_style(void* self, void* style) {
     QCPStatisticalBox_SetOutlierStyle((QCPStatisticalBox*)self, (QCPScatterStyle*)style);
 }
 
-void q_cpstatisticalbox_add_data(void* self, libqt_list keys, libqt_list minimum, libqt_list lowerQuartile, libqt_list median, libqt_list upperQuartile, libqt_list maximum) {
+void q_cpstatisticalbox_add_data(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ minimum, libqt_list /* of double */ lowerQuartile, libqt_list /* of double */ median, libqt_list /* of double */ upperQuartile, libqt_list /* of double */ maximum) {
     QCPStatisticalBox_AddData((QCPStatisticalBox*)self, keys, minimum, lowerQuartile, median, upperQuartile, maximum);
 }
 
@@ -27245,15 +27247,15 @@ const char* q_cpstatisticalbox_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_cpstatisticalbox_set_data7(void* self, libqt_list keys, libqt_list minimum, libqt_list lowerQuartile, libqt_list median, libqt_list upperQuartile, libqt_list maximum, bool alreadySorted) {
+void q_cpstatisticalbox_set_data7(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ minimum, libqt_list /* of double */ lowerQuartile, libqt_list /* of double */ median, libqt_list /* of double */ upperQuartile, libqt_list /* of double */ maximum, bool alreadySorted) {
     QCPStatisticalBox_SetData7((QCPStatisticalBox*)self, keys, minimum, lowerQuartile, median, upperQuartile, maximum, alreadySorted);
 }
 
-void q_cpstatisticalbox_add_data7(void* self, libqt_list keys, libqt_list minimum, libqt_list lowerQuartile, libqt_list median, libqt_list upperQuartile, libqt_list maximum, bool alreadySorted) {
+void q_cpstatisticalbox_add_data7(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ minimum, libqt_list /* of double */ lowerQuartile, libqt_list /* of double */ median, libqt_list /* of double */ upperQuartile, libqt_list /* of double */ maximum, bool alreadySorted) {
     QCPStatisticalBox_AddData7((QCPStatisticalBox*)self, keys, minimum, lowerQuartile, median, upperQuartile, maximum, alreadySorted);
 }
 
-void q_cpstatisticalbox_add_data72(void* self, double key, double minimum, double lowerQuartile, double median, double upperQuartile, double maximum, libqt_list outliers) {
+void q_cpstatisticalbox_add_data72(void* self, double key, double minimum, double lowerQuartile, double median, double upperQuartile, double maximum, libqt_list /* of double */ outliers) {
     QCPStatisticalBox_AddData72((QCPStatisticalBox*)self, key, minimum, lowerQuartile, median, upperQuartile, maximum, outliers);
 }
 
@@ -27573,7 +27575,7 @@ const char** q_cpstatisticalbox_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpstatisticalbox_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpstatisticalbox_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -28752,7 +28754,7 @@ const char** q_cpcolormap_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpcolormap_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpcolormap_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -29333,7 +29335,7 @@ QPen* q_cpfinancial_pen_negative(void* self) {
     return QCPFinancial_PenNegative((QCPFinancial*)self);
 }
 
-void q_cpfinancial_set_data2(void* self, libqt_list keys, libqt_list open, libqt_list high, libqt_list low, libqt_list close) {
+void q_cpfinancial_set_data2(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ open, libqt_list /* of double */ high, libqt_list /* of double */ low, libqt_list /* of double */ close) {
     QCPFinancial_SetData2((QCPFinancial*)self, keys, open, high, low, close);
 }
 
@@ -29369,7 +29371,7 @@ void q_cpfinancial_set_pen_negative(void* self, void* pen) {
     QCPFinancial_SetPenNegative((QCPFinancial*)self, (QPen*)pen);
 }
 
-void q_cpfinancial_add_data(void* self, libqt_list keys, libqt_list open, libqt_list high, libqt_list low, libqt_list close) {
+void q_cpfinancial_add_data(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ open, libqt_list /* of double */ high, libqt_list /* of double */ low, libqt_list /* of double */ close) {
     QCPFinancial_AddData((QCPFinancial*)self, keys, open, high, low, close);
 }
 
@@ -29475,11 +29477,11 @@ const char* q_cpfinancial_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_cpfinancial_set_data6(void* self, libqt_list keys, libqt_list open, libqt_list high, libqt_list low, libqt_list close, bool alreadySorted) {
+void q_cpfinancial_set_data6(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ open, libqt_list /* of double */ high, libqt_list /* of double */ low, libqt_list /* of double */ close, bool alreadySorted) {
     QCPFinancial_SetData6((QCPFinancial*)self, keys, open, high, low, close, alreadySorted);
 }
 
-void q_cpfinancial_add_data6(void* self, libqt_list keys, libqt_list open, libqt_list high, libqt_list low, libqt_list close, bool alreadySorted) {
+void q_cpfinancial_add_data6(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ open, libqt_list /* of double */ high, libqt_list /* of double */ low, libqt_list /* of double */ close, bool alreadySorted) {
     QCPFinancial_AddData6((QCPFinancial*)self, keys, open, high, low, close, alreadySorted);
 }
 
@@ -29799,7 +29801,7 @@ const char** q_cpfinancial_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpfinancial_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpfinancial_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -30428,11 +30430,11 @@ double q_cperrorbars_symbol_gap(void* self) {
     return QCPErrorBars_SymbolGap((QCPErrorBars*)self);
 }
 
-void q_cperrorbars_set_data2(void* self, libqt_list error) {
+void q_cperrorbars_set_data2(void* self, libqt_list /* of double */ error) {
     QCPErrorBars_SetData2((QCPErrorBars*)self, error);
 }
 
-void q_cperrorbars_set_data3(void* self, libqt_list errorMinus, libqt_list errorPlus) {
+void q_cperrorbars_set_data3(void* self, libqt_list /* of double */ errorMinus, libqt_list /* of double */ errorPlus) {
     QCPErrorBars_SetData3((QCPErrorBars*)self, errorMinus, errorPlus);
 }
 
@@ -30452,11 +30454,11 @@ void q_cperrorbars_set_symbol_gap(void* self, double pixels) {
     QCPErrorBars_SetSymbolGap((QCPErrorBars*)self, pixels);
 }
 
-void q_cperrorbars_add_data(void* self, libqt_list error) {
+void q_cperrorbars_add_data(void* self, libqt_list /* of double */ error) {
     QCPErrorBars_AddData((QCPErrorBars*)self, error);
 }
 
-void q_cperrorbars_add_data2(void* self, libqt_list errorMinus, libqt_list errorPlus) {
+void q_cperrorbars_add_data2(void* self, libqt_list /* of double */ errorMinus, libqt_list /* of double */ errorPlus) {
     QCPErrorBars_AddData2((QCPErrorBars*)self, errorMinus, errorPlus);
 }
 
@@ -30660,7 +30662,7 @@ QCPRange* q_cperrorbars_qbase_get_value_range(void* self, bool* foundRange, int3
     return QCPErrorBars_QBaseGetValueRange((QCPErrorBars*)self, (bool*)foundRange, inSignDomain, (QCPRange*)inKeyRange);
 }
 
-void q_cperrorbars_get_data_segments(void* self, libqt_list selectedSegments, libqt_list unselectedSegments) {
+void q_cperrorbars_get_data_segments(void* self, libqt_list /* of QCPDataRange* */ selectedSegments, libqt_list /* of QCPDataRange* */ unselectedSegments) {
     QCPErrorBars_GetDataSegments((QCPErrorBars*)self, selectedSegments, unselectedSegments);
 }
 
@@ -30668,7 +30670,7 @@ void q_cperrorbars_on_get_data_segments(void* self, void (*callback)(void*, QCPD
     QCPErrorBars_OnGetDataSegments((QCPErrorBars*)self, (intptr_t)callback);
 }
 
-void q_cperrorbars_qbase_get_data_segments(void* self, libqt_list selectedSegments, libqt_list unselectedSegments) {
+void q_cperrorbars_qbase_get_data_segments(void* self, libqt_list /* of QCPDataRange* */ selectedSegments, libqt_list /* of QCPDataRange* */ unselectedSegments) {
     QCPErrorBars_QBaseGetDataSegments((QCPErrorBars*)self, selectedSegments, unselectedSegments);
 }
 
@@ -31022,7 +31024,7 @@ const char** q_cperrorbars_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cperrorbars_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cperrorbars_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -31776,7 +31778,7 @@ const char** q_cpitemstraightline_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpitemstraightline_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpitemstraightline_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -32566,7 +32568,7 @@ const char** q_cpitemline_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpitemline_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpitemline_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -33352,7 +33354,7 @@ const char** q_cpitemcurve_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpitemcurve_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpitemcurve_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -34178,7 +34180,7 @@ const char** q_cpitemrect_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpitemrect_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpitemrect_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -35103,7 +35105,7 @@ const char** q_cpitemtext_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpitemtext_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpitemtext_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -35929,7 +35931,7 @@ const char** q_cpitemellipse_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpitemellipse_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpitemellipse_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -36831,7 +36833,7 @@ const char** q_cpitempixmap_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpitempixmap_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpitempixmap_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -37645,7 +37647,7 @@ const char** q_cpitemtracer_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpitemtracer_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpitemtracer_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -38439,7 +38441,7 @@ const char** q_cpitembracket_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cpitembracket_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cpitembracket_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -38982,7 +38984,7 @@ const char** q_cppolaraxisradial_tick_vector_labels(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cppolaraxisradial_tick_vector_labels");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cppolaraxisradial_tick_vector_labels\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -39722,7 +39724,7 @@ const char** q_cppolaraxisradial_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cppolaraxisradial_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cppolaraxisradial_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -40132,7 +40134,7 @@ const char** q_cppolaraxisangular_tick_vector_labels(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cppolaraxisangular_tick_vector_labels");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cppolaraxisangular_tick_vector_labels\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -41085,7 +41087,7 @@ const char** q_cppolaraxisangular_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cppolaraxisangular_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cppolaraxisangular_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -41582,19 +41584,19 @@ void q_cppolargrid_qbase_draw(void* self, void* painter) {
     QCPPolarGrid_QBaseDraw((QCPPolarGrid*)self, (QCPPainter*)painter);
 }
 
-void q_cppolargrid_draw_radial_grid(void* self, void* painter, void* center, libqt_list coords, void* pen) {
+void q_cppolargrid_draw_radial_grid(void* self, void* painter, void* center, libqt_list /* of double */ coords, void* pen) {
     QCPPolarGrid_DrawRadialGrid((QCPPolarGrid*)self, (QCPPainter*)painter, (QPointF*)center, coords, (QPen*)pen);
 }
 
-void q_cppolargrid_on_draw_radial_grid(void* self, void (*callback)(void*, void*, void*, libqt_list, void*)) {
+void q_cppolargrid_on_draw_radial_grid(void* self, void (*callback)(void*, void*, void*, libqt_list /* of double */, void*)) {
     QCPPolarGrid_OnDrawRadialGrid((QCPPolarGrid*)self, (intptr_t)callback);
 }
 
-void q_cppolargrid_qbase_draw_radial_grid(void* self, void* painter, void* center, libqt_list coords, void* pen) {
+void q_cppolargrid_qbase_draw_radial_grid(void* self, void* painter, void* center, libqt_list /* of double */ coords, void* pen) {
     QCPPolarGrid_QBaseDrawRadialGrid((QCPPolarGrid*)self, (QCPPainter*)painter, (QPointF*)center, coords, (QPen*)pen);
 }
 
-void q_cppolargrid_draw_angular_grid(void* self, void* painter, void* center, double radius, libqt_list ticksCosSin, void* pen) {
+void q_cppolargrid_draw_angular_grid(void* self, void* painter, void* center, double radius, libqt_list /* of QPointF* */ ticksCosSin, void* pen) {
     QCPPolarGrid_DrawAngularGrid((QCPPolarGrid*)self, (QCPPainter*)painter, (QPointF*)center, radius, ticksCosSin, (QPen*)pen);
 }
 
@@ -41602,7 +41604,7 @@ void q_cppolargrid_on_draw_angular_grid(void* self, void (*callback)(void*, void
     QCPPolarGrid_OnDrawAngularGrid((QCPPolarGrid*)self, (intptr_t)callback);
 }
 
-void q_cppolargrid_qbase_draw_angular_grid(void* self, void* painter, void* center, double radius, libqt_list ticksCosSin, void* pen) {
+void q_cppolargrid_qbase_draw_angular_grid(void* self, void* painter, void* center, double radius, libqt_list /* of QPointF* */ ticksCosSin, void* pen) {
     QCPPolarGrid_QBaseDrawAngularGrid((QCPPolarGrid*)self, (QCPPainter*)painter, (QPointF*)center, radius, ticksCosSin, (QPen*)pen);
 }
 
@@ -41620,15 +41622,15 @@ const char* q_cppolargrid_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_cppolargrid_draw_radial_grid5(void* self, void* painter, void* center, libqt_list coords, void* pen, void* zeroPen) {
+void q_cppolargrid_draw_radial_grid5(void* self, void* painter, void* center, libqt_list /* of double */ coords, void* pen, void* zeroPen) {
     QCPPolarGrid_DrawRadialGrid5((QCPPolarGrid*)self, (QCPPainter*)painter, (QPointF*)center, coords, (QPen*)pen, (QPen*)zeroPen);
 }
 
-void q_cppolargrid_on_draw_radial_grid5(void* self, void (*callback)(void*, void*, void*, libqt_list, void*, void*)) {
+void q_cppolargrid_on_draw_radial_grid5(void* self, void (*callback)(void*, void*, void*, libqt_list /* of double */, void*, void*)) {
     QCPPolarGrid_OnDrawRadialGrid5((QCPPolarGrid*)self, (intptr_t)callback);
 }
 
-void q_cppolargrid_qbase_draw_radial_grid5(void* self, void* painter, void* center, libqt_list coords, void* pen, void* zeroPen) {
+void q_cppolargrid_qbase_draw_radial_grid5(void* self, void* painter, void* center, libqt_list /* of double */ coords, void* pen, void* zeroPen) {
     QCPPolarGrid_QBaseDrawRadialGrid5((QCPPolarGrid*)self, (QCPPainter*)painter, (QPointF*)center, coords, (QPen*)pen, (QPen*)zeroPen);
 }
 
@@ -41785,7 +41787,7 @@ const char** q_cppolargrid_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cppolargrid_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cppolargrid_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -42591,7 +42593,7 @@ const char** q_cppolarlegenditem_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cppolarlegenditem_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cppolarlegenditem_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -43177,7 +43179,7 @@ void q_cppolargraph_set_selection(void* self, void* selection) {
     QCPPolarGraph_SetSelection((QCPPolarGraph*)self, (QCPDataSelection*)selection);
 }
 
-void q_cppolargraph_set_data2(void* self, libqt_list keys, libqt_list values) {
+void q_cppolargraph_set_data2(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values) {
     QCPPolarGraph_SetData2((QCPPolarGraph*)self, keys, values);
 }
 
@@ -43189,7 +43191,7 @@ void q_cppolargraph_set_scatter_style(void* self, void* style) {
     QCPPolarGraph_SetScatterStyle((QCPPolarGraph*)self, (QCPScatterStyle*)style);
 }
 
-void q_cppolargraph_add_data(void* self, libqt_list keys, libqt_list values) {
+void q_cppolargraph_add_data(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values) {
     QCPPolarGraph_AddData((QCPPolarGraph*)self, keys, values);
 }
 
@@ -43373,7 +43375,7 @@ void q_cppolargraph_qbase_deselect_event(void* self, bool* selectionStateChanged
     QCPPolarGraph_QBaseDeselectEvent((QCPPolarGraph*)self, (bool*)selectionStateChanged);
 }
 
-void q_cppolargraph_draw_line_plot(void* self, void* painter, libqt_list lines) {
+void q_cppolargraph_draw_line_plot(void* self, void* painter, libqt_list /* of QPointF* */ lines) {
     QCPPolarGraph_DrawLinePlot((QCPPolarGraph*)self, (QCPPainter*)painter, lines);
 }
 
@@ -43381,11 +43383,11 @@ void q_cppolargraph_on_draw_line_plot(void* self, void (*callback)(void*, void*,
     QCPPolarGraph_OnDrawLinePlot((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
-void q_cppolargraph_qbase_draw_line_plot(void* self, void* painter, libqt_list lines) {
+void q_cppolargraph_qbase_draw_line_plot(void* self, void* painter, libqt_list /* of QPointF* */ lines) {
     QCPPolarGraph_QBaseDrawLinePlot((QCPPolarGraph*)self, (QCPPainter*)painter, lines);
 }
 
-void q_cppolargraph_draw_fill(void* self, void* painter, libqt_list lines) {
+void q_cppolargraph_draw_fill(void* self, void* painter, libqt_list /* of QPointF* */ lines) {
     QCPPolarGraph_DrawFill((QCPPolarGraph*)self, (QCPPainter*)painter, lines);
 }
 
@@ -43393,11 +43395,11 @@ void q_cppolargraph_on_draw_fill(void* self, void (*callback)(void*, void*, QPoi
     QCPPolarGraph_OnDrawFill((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
-void q_cppolargraph_qbase_draw_fill(void* self, void* painter, libqt_list lines) {
+void q_cppolargraph_qbase_draw_fill(void* self, void* painter, libqt_list /* of QPointF* */ lines) {
     QCPPolarGraph_QBaseDrawFill((QCPPolarGraph*)self, (QCPPainter*)painter, lines);
 }
 
-void q_cppolargraph_draw_scatter_plot(void* self, void* painter, libqt_list scatters, void* style) {
+void q_cppolargraph_draw_scatter_plot(void* self, void* painter, libqt_list /* of QPointF* */ scatters, void* style) {
     QCPPolarGraph_DrawScatterPlot((QCPPolarGraph*)self, (QCPPainter*)painter, scatters, (QCPScatterStyle*)style);
 }
 
@@ -43405,7 +43407,7 @@ void q_cppolargraph_on_draw_scatter_plot(void* self, void (*callback)(void*, voi
     QCPPolarGraph_OnDrawScatterPlot((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
-void q_cppolargraph_qbase_draw_scatter_plot(void* self, void* painter, libqt_list scatters, void* style) {
+void q_cppolargraph_qbase_draw_scatter_plot(void* self, void* painter, libqt_list /* of QPointF* */ scatters, void* style) {
     QCPPolarGraph_QBaseDrawScatterPlot((QCPPolarGraph*)self, (QCPPainter*)painter, scatters, (QCPScatterStyle*)style);
 }
 
@@ -43457,7 +43459,7 @@ int32_t q_cppolargraph_qbase_data_count(void* self) {
     return QCPPolarGraph_QBaseDataCount((QCPPolarGraph*)self);
 }
 
-void q_cppolargraph_get_data_segments(void* self, libqt_list selectedSegments, libqt_list unselectedSegments) {
+void q_cppolargraph_get_data_segments(void* self, libqt_list /* of QCPDataRange* */ selectedSegments, libqt_list /* of QCPDataRange* */ unselectedSegments) {
     QCPPolarGraph_GetDataSegments((QCPPolarGraph*)self, selectedSegments, unselectedSegments);
 }
 
@@ -43465,11 +43467,11 @@ void q_cppolargraph_on_get_data_segments(void* self, void (*callback)(void*, QCP
     QCPPolarGraph_OnGetDataSegments((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
-void q_cppolargraph_qbase_get_data_segments(void* self, libqt_list selectedSegments, libqt_list unselectedSegments) {
+void q_cppolargraph_qbase_get_data_segments(void* self, libqt_list /* of QCPDataRange* */ selectedSegments, libqt_list /* of QCPDataRange* */ unselectedSegments) {
     QCPPolarGraph_QBaseGetDataSegments((QCPPolarGraph*)self, selectedSegments, unselectedSegments);
 }
 
-void q_cppolargraph_draw_polyline(void* self, void* painter, libqt_list lineData) {
+void q_cppolargraph_draw_polyline(void* self, void* painter, libqt_list /* of QPointF* */ lineData) {
     QCPPolarGraph_DrawPolyline((QCPPolarGraph*)self, (QCPPainter*)painter, lineData);
 }
 
@@ -43477,11 +43479,11 @@ void q_cppolargraph_on_draw_polyline(void* self, void (*callback)(void*, void*, 
     QCPPolarGraph_OnDrawPolyline((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
-void q_cppolargraph_qbase_draw_polyline(void* self, void* painter, libqt_list lineData) {
+void q_cppolargraph_qbase_draw_polyline(void* self, void* painter, libqt_list /* of QPointF* */ lineData) {
     QCPPolarGraph_QBaseDrawPolyline((QCPPolarGraph*)self, (QCPPainter*)painter, lineData);
 }
 
-void q_cppolargraph_get_lines(void* self, libqt_list lines, void* dataRange) {
+void q_cppolargraph_get_lines(void* self, libqt_list /* of QPointF* */ lines, void* dataRange) {
     QCPPolarGraph_GetLines((QCPPolarGraph*)self, lines, (QCPDataRange*)dataRange);
 }
 
@@ -43489,11 +43491,11 @@ void q_cppolargraph_on_get_lines(void* self, void (*callback)(void*, QPointF**, 
     QCPPolarGraph_OnGetLines((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
-void q_cppolargraph_qbase_get_lines(void* self, libqt_list lines, void* dataRange) {
+void q_cppolargraph_qbase_get_lines(void* self, libqt_list /* of QPointF* */ lines, void* dataRange) {
     QCPPolarGraph_QBaseGetLines((QCPPolarGraph*)self, lines, (QCPDataRange*)dataRange);
 }
 
-void q_cppolargraph_get_scatters(void* self, libqt_list scatters, void* dataRange) {
+void q_cppolargraph_get_scatters(void* self, libqt_list /* of QPointF* */ scatters, void* dataRange) {
     QCPPolarGraph_GetScatters((QCPPolarGraph*)self, scatters, (QCPDataRange*)dataRange);
 }
 
@@ -43501,11 +43503,11 @@ void q_cppolargraph_on_get_scatters(void* self, void (*callback)(void*, QPointF*
     QCPPolarGraph_OnGetScatters((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
-void q_cppolargraph_qbase_get_scatters(void* self, libqt_list scatters, void* dataRange) {
+void q_cppolargraph_qbase_get_scatters(void* self, libqt_list /* of QPointF* */ scatters, void* dataRange) {
     QCPPolarGraph_QBaseGetScatters((QCPPolarGraph*)self, scatters, (QCPDataRange*)dataRange);
 }
 
-libqt_list /* of QPointF* */ q_cppolargraph_data_to_lines(void* self, libqt_list data) {
+libqt_list /* of QPointF* */ q_cppolargraph_data_to_lines(void* self, libqt_list /* of QCPGraphData* */ data) {
     libqt_list _arr = QCPPolarGraph_DataToLines((QCPPolarGraph*)self, data);
     return _arr;
 }
@@ -43514,7 +43516,7 @@ void q_cppolargraph_on_data_to_lines(void* self, QPointF** (*callback)(void*, QC
     QCPPolarGraph_OnDataToLines((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QPointF* */ q_cppolargraph_qbase_data_to_lines(void* self, libqt_list data) {
+libqt_list /* of QPointF* */ q_cppolargraph_qbase_data_to_lines(void* self, libqt_list /* of QCPGraphData* */ data) {
     libqt_list _arr = QCPPolarGraph_QBaseDataToLines((QCPPolarGraph*)self, data);
     return _arr;
 }
@@ -43533,11 +43535,11 @@ const char* q_cppolargraph_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_cppolargraph_set_data3(void* self, libqt_list keys, libqt_list values, bool alreadySorted) {
+void q_cppolargraph_set_data3(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values, bool alreadySorted) {
     QCPPolarGraph_SetData3((QCPPolarGraph*)self, keys, values, alreadySorted);
 }
 
-void q_cppolargraph_add_data3(void* self, libqt_list keys, libqt_list values, bool alreadySorted) {
+void q_cppolargraph_add_data3(void* self, libqt_list /* of double */ keys, libqt_list /* of double */ values, bool alreadySorted) {
     QCPPolarGraph_AddData3((QCPPolarGraph*)self, keys, values, alreadySorted);
 }
 
@@ -43710,7 +43712,7 @@ const char** q_cppolargraph_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_cppolargraph_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in q_cppolargraph_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

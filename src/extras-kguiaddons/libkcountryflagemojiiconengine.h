@@ -376,7 +376,9 @@ void k_countryflagemojiiconengine_on_write(void* self, bool (*callback)(void*, v
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-libqt_list /* of QSize* */ k_countryflagemojiiconengine_available_sizes(void* self, int32_t mode, int32_t state);
+/// @return libqt_list of QSize*
+///
+libqt_list k_countryflagemojiiconengine_available_sizes(void* self, int32_t mode, int32_t state);
 
 /// Inherited from QIconEngine
 ///
@@ -388,7 +390,9 @@ libqt_list /* of QSize* */ k_countryflagemojiiconengine_available_sizes(void* se
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 ///
-libqt_list /* of QSize* */ k_countryflagemojiiconengine_qbase_available_sizes(void* self, int32_t mode, int32_t state);
+/// @return libqt_list of QSize*
+///
+libqt_list k_countryflagemojiiconengine_qbase_available_sizes(void* self, int32_t mode, int32_t state);
 
 /// Inherited from QIconEngine
 ///

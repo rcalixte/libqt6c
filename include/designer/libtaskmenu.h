@@ -44,7 +44,9 @@ QAction* q_designertaskmenuextension_qbase_preferred_edit_action(void* self);
 ///
 /// @param self QDesignerTaskMenuExtension*
 ///
-libqt_list /* of QAction* */ q_designertaskmenuextension_task_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list q_designertaskmenuextension_task_actions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignertaskmenuextension.html#taskActions)
 ///
@@ -61,7 +63,9 @@ void q_designertaskmenuextension_on_task_actions(void* self, QAction** (*callbac
 ///
 /// @param self QDesignerTaskMenuExtension*
 ///
-libqt_list /* of QAction* */ q_designertaskmenuextension_qbase_task_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list q_designertaskmenuextension_qbase_task_actions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignertaskmenuextension.html#dtor.QDesignerTaskMenuExtension)
 ///

@@ -105,7 +105,9 @@ bool q_accounts__service_has_tag(void* self, const char* tag);
 ///
 /// @param self Accounts__Service*
 ///
-libqt_list /* set of const char* */ q_accounts__service_tags(void* self);
+/// @return libqt_list set of const char*
+///
+libqt_list q_accounts__service_tags(void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Service.html)
 ///

@@ -276,7 +276,9 @@ QTimeZone__OffsetData* q_timezone_previous_transition(void* self, void* beforeDa
 /// @param fromDateTime QDateTime*
 /// @param toDateTime QDateTime*
 ///
-libqt_list /* of QTimeZone__OffsetData* */ q_timezone_transitions(void* self, void* fromDateTime, void* toDateTime);
+/// @return libqt_list of QTimeZone__OffsetData*
+///
+libqt_list q_timezone_transitions(void* self, void* fromDateTime, void* toDateTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#systemTimeZoneId)
 ///

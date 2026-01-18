@@ -548,7 +548,9 @@ void q_scilexerfortran77_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QsciLexerFortran77*
 ///
-libqt_list /* of QObject* */ q_scilexerfortran77_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_scilexerfortran77_children(void* self);
 
 /// Inherited from QObject
 ///

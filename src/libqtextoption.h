@@ -90,7 +90,7 @@ int32_t q_textoption_wrap_mode(void* self);
 /// @param self QTextOption*
 /// @param flags flag of enum QTextOption__Flag
 ///
-void q_textoption_set_flags(void* self, int64_t flags);
+void q_textoption_set_flags(void* self, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#flags)
 ///
@@ -98,7 +98,7 @@ void q_textoption_set_flags(void* self, int64_t flags);
 ///
 /// @return flag of enum QTextOption__Flag
 ///
-int64_t q_textoption_flags(void* self);
+int32_t q_textoption_flags(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#setTabStopDistance)
 ///
@@ -116,28 +116,32 @@ double q_textoption_tab_stop_distance(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#setTabArray)
 ///
 /// @param self QTextOption*
-/// @param tabStops libqt_list /* of double */
+/// @param tabStops libqt_list of double
 ///
-void q_textoption_set_tab_array(void* self, libqt_list tabStops);
+void q_textoption_set_tab_array(void* self, libqt_list /* of double */ tabStops);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#tabArray)
 ///
 /// @param self QTextOption*
 ///
-libqt_list /* of double */ q_textoption_tab_array(void* self);
+/// @return libqt_list of double
+///
+libqt_list q_textoption_tab_array(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#setTabs)
 ///
 /// @param self QTextOption*
-/// @param tabStops libqt_list /* of QTextOption__Tab* */
+/// @param tabStops libqt_list of QTextOption__Tab*
 ///
-void q_textoption_set_tabs(void* self, libqt_list tabStops);
+void q_textoption_set_tabs(void* self, libqt_list /* of QTextOption__Tab* */ tabStops);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#tabs)
 ///
 /// @param self QTextOption*
 ///
-libqt_list /* of QTextOption__Tab* */ q_textoption_tabs(void* self);
+/// @return libqt_list of QTextOption__Tab*
+///
+libqt_list q_textoption_tabs(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#setUseDesignMetrics)
 ///
@@ -303,7 +307,7 @@ typedef enum {
     QTEXTOPTION_FLAG_ADDSPACEFORLINEANDPARAGRAPHSEPARATORS = 4,
     QTEXTOPTION_FLAG_SUPPRESSCOLORS = 8,
     QTEXTOPTION_FLAG_SHOWDOCUMENTTERMINATOR = 16,
-    QTEXTOPTION_FLAG_INCLUDETRAILINGSPACES = 2147483648
+    QTEXTOPTION_FLAG_INCLUDETRAILINGSPACES = -2147483648
 } QTextOption__Flag;
 
 #endif

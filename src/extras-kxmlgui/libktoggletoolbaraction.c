@@ -173,7 +173,7 @@ QKeySequence* k_toggletoolbaraction_shortcut(void* self) {
     return QAction_Shortcut((QAction*)self);
 }
 
-void k_toggletoolbaraction_set_shortcuts(void* self, libqt_list shortcuts) {
+void k_toggletoolbaraction_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts) {
     QAction_SetShortcuts((QAction*)self, shortcuts);
 }
 
@@ -475,7 +475,7 @@ const char** k_toggletoolbaraction_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_toggletoolbaraction_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_toggletoolbaraction_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

@@ -32,7 +32,7 @@ QWizard* q_wizard_new2();
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWizard* q_wizard_new3(void* parent, int64_t flags);
+QWizard* q_wizard_new3(void* parent, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -116,13 +116,17 @@ bool q_wizard_has_visited_page(void* self, int id);
 ///
 /// @param self QWizard*
 ///
-libqt_list /* of int */ q_wizard_visited_ids(void* self);
+/// @return libqt_list of int
+///
+libqt_list q_wizard_visited_ids(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#pageIds)
 ///
 /// @param self QWizard*
 ///
-libqt_list /* of int */ q_wizard_page_ids(void* self);
+/// @return libqt_list of int
+///
+libqt_list q_wizard_page_ids(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#setStartId)
 ///
@@ -274,9 +278,9 @@ const char* q_wizard_button_text(void* self, int32_t which);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#setButtonLayout)
 ///
 /// @param self QWizard*
-/// @param layout libqt_list /* of enum QWizard__WizardButton */
+/// @param layout libqt_list of enum QWizard__WizardButton
 ///
-void q_wizard_set_button_layout(void* self, libqt_list layout);
+void q_wizard_set_button_layout(void* self, libqt_list /* of enum QWizard__WizardButton */ layout);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#setButton)
 ///
@@ -1602,7 +1606,7 @@ void q_wizard_set_graphics_effect(void* self, void* effect);
 /// @param self QWizard*
 /// @param type enum Qt__GestureType
 ///
-void q_wizard_grab_gesture(void* self, int64_t type);
+void q_wizard_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -1611,7 +1615,7 @@ void q_wizard_grab_gesture(void* self, int64_t type);
 /// @param self QWizard*
 /// @param type enum Qt__GestureType
 ///
-void q_wizard_ungrab_gesture(void* self, int64_t type);
+void q_wizard_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2600,7 +2604,7 @@ void q_wizard_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void q_wizard_set_parent2(void* self, void* parent, int64_t f);
+void q_wizard_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -2678,9 +2682,9 @@ void q_wizard_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self QWizard*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_wizard_add_actions(void* self, libqt_list actions);
+void q_wizard_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2688,9 +2692,9 @@ void q_wizard_add_actions(void* self, libqt_list actions);
 ///
 /// @param self QWizard*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_wizard_insert_actions(void* self, void* before, libqt_list actions);
+void q_wizard_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -2717,7 +2721,9 @@ void q_wizard_remove_action(void* self, void* action);
 ///
 /// @param self QWizard*
 ///
-libqt_list /* of QAction* */ q_wizard_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list q_wizard_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2774,7 +2780,7 @@ QWidget* q_wizard_parent_widget(void* self);
 /// @param self QWizard*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_wizard_set_window_flags(void* self, int64_t type);
+void q_wizard_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2784,7 +2790,7 @@ void q_wizard_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t q_wizard_window_flags(void* self);
+int32_t q_wizard_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2793,7 +2799,7 @@ int64_t q_wizard_window_flags(void* self);
 /// @param self QWizard*
 /// @param param1 enum Qt__WindowType
 ///
-void q_wizard_set_window_flag(void* self, int64_t param1);
+void q_wizard_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2802,7 +2808,7 @@ void q_wizard_set_window_flag(void* self, int64_t param1);
 /// @param self QWizard*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_wizard_override_window_flags(void* self, int64_t type);
+void q_wizard_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2812,7 +2818,7 @@ void q_wizard_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t q_wizard_window_type(void* self);
+int32_t q_wizard_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3023,7 +3029,7 @@ void q_wizard_on_custom_context_menu_requested(void* self, void (*callback)(void
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t q_wizard_input_method_hints(void* self);
+int32_t q_wizard_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3032,7 +3038,7 @@ int64_t q_wizard_input_method_hints(void* self);
 /// @param self QWizard*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void q_wizard_set_input_method_hints(void* self, int64_t hints);
+void q_wizard_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -3117,7 +3123,7 @@ QPixmap* q_wizard_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void q_wizard_grab_gesture2(void* self, int64_t type, int32_t flags);
+void q_wizard_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -3157,7 +3163,7 @@ void q_wizard_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void q_wizard_set_window_flag2(void* self, int64_t param1, bool on);
+void q_wizard_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -3186,7 +3192,7 @@ QWidget* q_wizard_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* q_wizard_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* q_wizard_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -3298,7 +3304,9 @@ void q_wizard_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QWizard*
 ///
-libqt_list /* of QObject* */ q_wizard_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_wizard_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4911,7 +4919,7 @@ void q_wizard_on_input_method_event(void* self, void (*callback)(void*, void*));
 /// @param self QWizard*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_wizard_input_method_query(void* self, int64_t param1);
+QVariant* q_wizard_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4922,7 +4930,7 @@ QVariant* q_wizard_input_method_query(void* self, int64_t param1);
 /// @param self QWizard*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_wizard_qbase_input_method_query(void* self, int64_t param1);
+QVariant* q_wizard_qbase_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4933,7 +4941,7 @@ QVariant* q_wizard_qbase_input_method_query(void* self, int64_t param1);
 /// @param self QWizard*
 /// @param callback QVariant* func(QWizard* self, enum Qt__InputMethodQuery param1)
 ///
-void q_wizard_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void q_wizard_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -6784,7 +6792,7 @@ void q_wizardpage_set_graphics_effect(void* self, void* effect);
 /// @param self QWizardPage*
 /// @param type enum Qt__GestureType
 ///
-void q_wizardpage_grab_gesture(void* self, int64_t type);
+void q_wizardpage_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -6793,7 +6801,7 @@ void q_wizardpage_grab_gesture(void* self, int64_t type);
 /// @param self QWizardPage*
 /// @param type enum Qt__GestureType
 ///
-void q_wizardpage_ungrab_gesture(void* self, int64_t type);
+void q_wizardpage_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -7782,7 +7790,7 @@ void q_wizardpage_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void q_wizardpage_set_parent2(void* self, void* parent, int64_t f);
+void q_wizardpage_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -7860,9 +7868,9 @@ void q_wizardpage_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self QWizardPage*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_wizardpage_add_actions(void* self, libqt_list actions);
+void q_wizardpage_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -7870,9 +7878,9 @@ void q_wizardpage_add_actions(void* self, libqt_list actions);
 ///
 /// @param self QWizardPage*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_wizardpage_insert_actions(void* self, void* before, libqt_list actions);
+void q_wizardpage_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -7899,7 +7907,9 @@ void q_wizardpage_remove_action(void* self, void* action);
 ///
 /// @param self QWizardPage*
 ///
-libqt_list /* of QAction* */ q_wizardpage_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list q_wizardpage_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -7956,7 +7966,7 @@ QWidget* q_wizardpage_parent_widget(void* self);
 /// @param self QWizardPage*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_wizardpage_set_window_flags(void* self, int64_t type);
+void q_wizardpage_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -7966,7 +7976,7 @@ void q_wizardpage_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t q_wizardpage_window_flags(void* self);
+int32_t q_wizardpage_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -7975,7 +7985,7 @@ int64_t q_wizardpage_window_flags(void* self);
 /// @param self QWizardPage*
 /// @param param1 enum Qt__WindowType
 ///
-void q_wizardpage_set_window_flag(void* self, int64_t param1);
+void q_wizardpage_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -7984,7 +7994,7 @@ void q_wizardpage_set_window_flag(void* self, int64_t param1);
 /// @param self QWizardPage*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_wizardpage_override_window_flags(void* self, int64_t type);
+void q_wizardpage_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -7994,7 +8004,7 @@ void q_wizardpage_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t q_wizardpage_window_type(void* self);
+int32_t q_wizardpage_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -8205,7 +8215,7 @@ void q_wizardpage_on_custom_context_menu_requested(void* self, void (*callback)(
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t q_wizardpage_input_method_hints(void* self);
+int32_t q_wizardpage_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -8214,7 +8224,7 @@ int64_t q_wizardpage_input_method_hints(void* self);
 /// @param self QWizardPage*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void q_wizardpage_set_input_method_hints(void* self, int64_t hints);
+void q_wizardpage_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -8299,7 +8309,7 @@ QPixmap* q_wizardpage_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void q_wizardpage_grab_gesture2(void* self, int64_t type, int32_t flags);
+void q_wizardpage_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -8339,7 +8349,7 @@ void q_wizardpage_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void q_wizardpage_set_window_flag2(void* self, int64_t param1, bool on);
+void q_wizardpage_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -8368,7 +8378,7 @@ QWidget* q_wizardpage_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* q_wizardpage_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* q_wizardpage_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -8480,7 +8490,9 @@ void q_wizardpage_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QWizardPage*
 ///
-libqt_list /* of QObject* */ q_wizardpage_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_wizardpage_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -10097,7 +10109,7 @@ void q_wizardpage_on_input_method_event(void* self, void (*callback)(void*, void
 /// @param self QWizardPage*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_wizardpage_input_method_query(void* self, int64_t param1);
+QVariant* q_wizardpage_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -10108,7 +10120,7 @@ QVariant* q_wizardpage_input_method_query(void* self, int64_t param1);
 /// @param self QWizardPage*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_wizardpage_qbase_input_method_query(void* self, int64_t param1);
+QVariant* q_wizardpage_qbase_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -10119,7 +10131,7 @@ QVariant* q_wizardpage_qbase_input_method_query(void* self, int64_t param1);
 /// @param self QWizardPage*
 /// @param callback QVariant* func(QWizardPage* self, enum Qt__InputMethodQuery param1)
 ///
-void q_wizardpage_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void q_wizardpage_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///

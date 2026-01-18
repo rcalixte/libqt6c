@@ -85,7 +85,9 @@ long long q_mediatimerange_latest_time(void* self);
 ///
 /// @param self QMediaTimeRange*
 ///
-libqt_list /* of QMediaTimeRange__Interval* */ q_mediatimerange_intervals(void* self);
+/// @return libqt_list of QMediaTimeRange__Interval*
+///
+libqt_list q_mediatimerange_intervals(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html#isEmpty)
 ///

@@ -239,7 +239,9 @@ void k_filepreviewgenerator_kill_timer2(void* self, int32_t id);
 ///
 /// @param self KFilePreviewGenerator*
 ///
-libqt_list /* of QObject* */ k_filepreviewgenerator_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_filepreviewgenerator_children(void* self);
 
 /// Inherited from QObject
 ///

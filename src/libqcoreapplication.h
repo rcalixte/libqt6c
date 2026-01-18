@@ -18,7 +18,7 @@
 /// @param argc int*
 /// @param argv char**
 ///
-QCoreApplication* q_coreapplication_new(int* argc, char* argv[]);
+QCoreApplication* q_coreapplication_new(int* argc, char** argv);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html)
 
@@ -28,7 +28,7 @@ QCoreApplication* q_coreapplication_new(int* argc, char* argv[]);
 /// @param argv char**
 /// @param param3 int
 ///
-QCoreApplication* q_coreapplication_new2(int* argc, char* argv[], int param3);
+QCoreApplication* q_coreapplication_new2(int* argc, char** argv, int param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -660,7 +660,9 @@ void q_coreapplication_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QCoreApplication*
 ///
-libqt_list /* of QObject* */ q_coreapplication_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_coreapplication_children(void* self);
 
 /// Inherited from QObject
 ///

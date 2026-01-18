@@ -1492,7 +1492,9 @@ void q_logvalueaxis_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QLogValueAxis*
 ///
-libqt_list /* of QObject* */ q_logvalueaxis_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_logvalueaxis_children(void* self);
 
 /// Inherited from QObject
 ///

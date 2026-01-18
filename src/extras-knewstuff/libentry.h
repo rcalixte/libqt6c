@@ -412,7 +412,9 @@ int32_t k_nscore__entry_download_link_count(void* self);
 ///
 /// @param self KNSCore__Entry*
 ///
-libqt_list /* of KNSCore__Entry__DownloadLinkInformation* */ k_nscore__entry_download_link_information_list(void* self);
+/// @return libqt_list of KNSCore__Entry__DownloadLinkInformation*
+///
+libqt_list k_nscore__entry_download_link_information_list(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html#appendDownloadLinkInformation)
 ///

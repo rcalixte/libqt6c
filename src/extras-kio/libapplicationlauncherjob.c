@@ -32,7 +32,7 @@ KIO__ApplicationLauncherJob* k_io__applicationlauncherjob_new6(void* parent) {
     return KIO__ApplicationLauncherJob_new6((QObject*)parent);
 }
 
-void k_io__applicationlauncherjob_set_urls(void* self, libqt_list urls) {
+void k_io__applicationlauncherjob_set_urls(void* self, libqt_list /* of QUrl* */ urls) {
     KIO__ApplicationLauncherJob_SetUrls((KIO__ApplicationLauncherJob*)self, urls);
 }
 
@@ -330,7 +330,7 @@ const char** k_io__applicationlauncherjob_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_io__applicationlauncherjob_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_io__applicationlauncherjob_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

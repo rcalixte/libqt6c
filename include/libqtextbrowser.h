@@ -830,7 +830,7 @@ QTextCharFormat* q_textbrowser_current_char_format(void* self);
 ///
 /// @return flag of enum QTextEdit__AutoFormattingFlag
 ///
-int64_t q_textbrowser_auto_formatting(void* self);
+int32_t q_textbrowser_auto_formatting(void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -839,7 +839,7 @@ int64_t q_textbrowser_auto_formatting(void* self);
 /// @param self QTextBrowser*
 /// @param features flag of enum QTextEdit__AutoFormattingFlag
 ///
-void q_textbrowser_set_auto_formatting(void* self, int64_t features);
+void q_textbrowser_set_auto_formatting(void* self, int32_t features);
 
 /// Inherited from QTextEdit
 ///
@@ -1132,9 +1132,9 @@ void q_textbrowser_set_accept_rich_text(void* self, bool accept);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#setExtraSelections)
 ///
 /// @param self QTextBrowser*
-/// @param selections libqt_list /* of QTextEdit__ExtraSelection* */
+/// @param selections libqt_list of QTextEdit__ExtraSelection*
 ///
-void q_textbrowser_set_extra_selections(void* self, libqt_list selections);
+void q_textbrowser_set_extra_selections(void* self, libqt_list /* of QTextEdit__ExtraSelection* */ selections);
 
 /// Inherited from QTextEdit
 ///
@@ -1142,7 +1142,9 @@ void q_textbrowser_set_extra_selections(void* self, libqt_list selections);
 ///
 /// @param self QTextBrowser*
 ///
-libqt_list /* of QTextEdit__ExtraSelection* */ q_textbrowser_extra_selections(void* self);
+/// @return libqt_list of QTextEdit__ExtraSelection*
+///
+libqt_list q_textbrowser_extra_selections(void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -1178,7 +1180,7 @@ void q_textbrowser_print(void* self, void* printer);
 /// @param query enum Qt__InputMethodQuery
 /// @param argument QVariant*
 ///
-QVariant* q_textbrowser_input_method_query2(void* self, int64_t query, void* argument);
+QVariant* q_textbrowser_input_method_query2(void* self, int32_t query, void* argument);
 
 /// Inherited from QTextEdit
 ///
@@ -1693,7 +1695,9 @@ void q_textbrowser_add_scroll_bar_widget(void* self, void* widget, int32_t align
 /// @param self QTextBrowser*
 /// @param alignment flag of enum Qt__AlignmentFlag
 ///
-libqt_list /* of QWidget* */ q_textbrowser_scroll_bar_widgets(void* self, int32_t alignment);
+/// @return libqt_list of QWidget*
+///
+libqt_list q_textbrowser_scroll_bar_widgets(void* self, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2681,7 +2685,7 @@ void q_textbrowser_set_graphics_effect(void* self, void* effect);
 /// @param self QTextBrowser*
 /// @param type enum Qt__GestureType
 ///
-void q_textbrowser_grab_gesture(void* self, int64_t type);
+void q_textbrowser_grab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -2690,7 +2694,7 @@ void q_textbrowser_grab_gesture(void* self, int64_t type);
 /// @param self QTextBrowser*
 /// @param type enum Qt__GestureType
 ///
-void q_textbrowser_ungrab_gesture(void* self, int64_t type);
+void q_textbrowser_ungrab_gesture(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3679,7 +3683,7 @@ void q_textbrowser_set_parent(void* self, void* parent);
 /// @param parent QWidget*
 /// @param f flag of enum Qt__WindowType
 ///
-void q_textbrowser_set_parent2(void* self, void* parent, int64_t f);
+void q_textbrowser_set_parent2(void* self, void* parent, int32_t f);
 
 /// Inherited from QWidget
 ///
@@ -3757,9 +3761,9 @@ void q_textbrowser_add_action(void* self, void* action);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
 /// @param self QTextBrowser*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_textbrowser_add_actions(void* self, libqt_list actions);
+void q_textbrowser_add_actions(void* self, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -3767,9 +3771,9 @@ void q_textbrowser_add_actions(void* self, libqt_list actions);
 ///
 /// @param self QTextBrowser*
 /// @param before QAction*
-/// @param actions libqt_list /* of QAction* */
+/// @param actions libqt_list of QAction*
 ///
-void q_textbrowser_insert_actions(void* self, void* before, libqt_list actions);
+void q_textbrowser_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
 
 /// Inherited from QWidget
 ///
@@ -3796,7 +3800,9 @@ void q_textbrowser_remove_action(void* self, void* action);
 ///
 /// @param self QTextBrowser*
 ///
-libqt_list /* of QAction* */ q_textbrowser_actions(void* self);
+/// @return libqt_list of QAction*
+///
+libqt_list q_textbrowser_actions(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3853,7 +3859,7 @@ QWidget* q_textbrowser_parent_widget(void* self);
 /// @param self QTextBrowser*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_textbrowser_set_window_flags(void* self, int64_t type);
+void q_textbrowser_set_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3863,7 +3869,7 @@ void q_textbrowser_set_window_flags(void* self, int64_t type);
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int64_t q_textbrowser_window_flags(void* self);
+int32_t q_textbrowser_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3872,7 +3878,7 @@ int64_t q_textbrowser_window_flags(void* self);
 /// @param self QTextBrowser*
 /// @param param1 enum Qt__WindowType
 ///
-void q_textbrowser_set_window_flag(void* self, int64_t param1);
+void q_textbrowser_set_window_flag(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3881,7 +3887,7 @@ void q_textbrowser_set_window_flag(void* self, int64_t param1);
 /// @param self QTextBrowser*
 /// @param type flag of enum Qt__WindowType
 ///
-void q_textbrowser_override_window_flags(void* self, int64_t type);
+void q_textbrowser_override_window_flags(void* self, int32_t type);
 
 /// Inherited from QWidget
 ///
@@ -3891,7 +3897,7 @@ void q_textbrowser_override_window_flags(void* self, int64_t type);
 ///
 /// @return enum Qt__WindowType
 ///
-int64_t q_textbrowser_window_type(void* self);
+int32_t q_textbrowser_window_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4094,7 +4100,7 @@ void q_textbrowser_on_custom_context_menu_requested(void* self, void (*callback)
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int64_t q_textbrowser_input_method_hints(void* self);
+int32_t q_textbrowser_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4103,7 +4109,7 @@ int64_t q_textbrowser_input_method_hints(void* self);
 /// @param self QTextBrowser*
 /// @param hints flag of enum Qt__InputMethodHint
 ///
-void q_textbrowser_set_input_method_hints(void* self, int64_t hints);
+void q_textbrowser_set_input_method_hints(void* self, int32_t hints);
 
 /// Inherited from QWidget
 ///
@@ -4188,7 +4194,7 @@ QPixmap* q_textbrowser_grab1(void* self, void* rectangle);
 /// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
 ///
-void q_textbrowser_grab_gesture2(void* self, int64_t type, int32_t flags);
+void q_textbrowser_grab_gesture2(void* self, int32_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -4228,7 +4234,7 @@ void q_textbrowser_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 /// @param param1 enum Qt__WindowType
 /// @param on bool
 ///
-void q_textbrowser_set_window_flag2(void* self, int64_t param1, bool on);
+void q_textbrowser_set_window_flag2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -4257,7 +4263,7 @@ QWidget* q_textbrowser_create_window_container2(void* window, void* parent);
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
 ///
-QWidget* q_textbrowser_create_window_container3(void* window, void* parent, int64_t flags);
+QWidget* q_textbrowser_create_window_container3(void* window, void* parent, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -4369,7 +4375,9 @@ void q_textbrowser_kill_timer2(void* self, int32_t id);
 ///
 /// @param self QTextBrowser*
 ///
-libqt_list /* of QObject* */ q_textbrowser_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list q_textbrowser_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4707,7 +4715,7 @@ int32_t q_textbrowser_encode_metric_f(int32_t metric, double value);
 /// @param self QTextBrowser*
 /// @param property enum Qt__InputMethodQuery
 ///
-QVariant* q_textbrowser_input_method_query(void* self, int64_t property);
+QVariant* q_textbrowser_input_method_query(void* self, int32_t property);
 
 /// Inherited from QTextEdit
 ///
@@ -4718,7 +4726,7 @@ QVariant* q_textbrowser_input_method_query(void* self, int64_t property);
 /// @param self QTextBrowser*
 /// @param property enum Qt__InputMethodQuery
 ///
-QVariant* q_textbrowser_qbase_input_method_query(void* self, int64_t property);
+QVariant* q_textbrowser_qbase_input_method_query(void* self, int32_t property);
 
 /// Inherited from QTextEdit
 ///
@@ -4729,7 +4737,7 @@ QVariant* q_textbrowser_qbase_input_method_query(void* self, int64_t property);
 /// @param self QTextBrowser*
 /// @param callback QVariant* func(QTextBrowser* self, enum Qt__InputMethodQuery property)
 ///
-void q_textbrowser_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+void q_textbrowser_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QTextEdit
 ///

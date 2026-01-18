@@ -182,7 +182,7 @@ libqt_list /* of Attica__Icon* */ k_attica__content_icons2(void* self) {
     return _arr;
 }
 
-void k_attica__content_set_icons(void* self, libqt_list icons) {
+void k_attica__content_set_icons(void* self, libqt_list /* of Attica__Icon* */ icons) {
     Attica__Content_SetIcons((Attica__Content*)self, icons);
 }
 
@@ -191,7 +191,7 @@ libqt_list /* of QUrl* */ k_attica__content_videos(void* self) {
     return _arr;
 }
 
-void k_attica__content_set_videos(void* self, libqt_list videos) {
+void k_attica__content_set_videos(void* self, libqt_list /* of QUrl* */ videos) {
     Attica__Content_SetVideos((Attica__Content*)self, videos);
 }
 
@@ -200,7 +200,7 @@ const char** k_attica__content_tags(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_attica__content_tags");
+        fprintf(stderr, "Failed to allocate memory for string list in k_attica__content_tags\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -218,7 +218,7 @@ void k_attica__content_set_tags(void* self, const char* tags[static 1]) {
     size_t tags_len = libqt_strv_length(tags);
     libqt_string* tags_qstr = (libqt_string*)malloc(tags_len * sizeof(libqt_string));
     if (tags_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_attica__content_set_tags");
+        fprintf(stderr, "Failed to allocate memory for string list in k_attica__content_set_tags\n");
         abort();
     }
     for (size_t i = 0; i < tags_len; ++i) {
@@ -248,13 +248,13 @@ libqt_map /* of const char* to const char* */ k_attica__content_attributes(void*
     libqt_string* _out_keys = (libqt_string*)_out.keys;
     char** _ret_keys = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string keys in k_attica__content_attributes");
+        fprintf(stderr, "Failed to allocate memory for map string keys in k_attica__content_attributes\n");
         abort();
     }
     libqt_string* _out_values = (libqt_string*)_out.values;
-    const char** _ret_values = (const char**)malloc(_ret.len * sizeof(const char*));
+    char** _ret_values = (char**)malloc(_ret.len * sizeof(char*));
     if (_ret_values == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map string values in k_attica__content_attributes");
+        fprintf(stderr, "Failed to allocate memory for map string values in k_attica__content_attributes\n");
         free(_out.keys);
         abort();
     }
@@ -265,12 +265,12 @@ libqt_map /* of const char* to const char* */ k_attica__content_attributes(void*
                 libqt_free(_ret_keys[j]);
             }
             free(_ret_keys);
-            fprintf(stderr, "Failed to allocate memory for map keys in k_attica__content_attributes");
+            fprintf(stderr, "Failed to allocate memory for map keys in k_attica__content_attributes\n");
             abort();
         }
         memcpy(_ret_keys[i], _out_keys[i].data, _out_keys[i].len);
         _ret_keys[i][_out_keys[i].len] = '\0';
-        _ret_values[i] = (const char*)malloc(_out_values[i].len + 1);
+        _ret_values[i] = (char*)malloc(_out_values[i].len + 1);
         if (_ret_values[i] == NULL) {
             for (size_t j = 0; j < i; j++) {
                 libqt_free(_ret_keys[j]);
@@ -278,9 +278,11 @@ libqt_map /* of const char* to const char* */ k_attica__content_attributes(void*
             }
             free(_ret_keys);
             free(_ret_values);
-            fprintf(stderr, "Failed to allocate memory for map string values in k_attica__content_attributes");
+            fprintf(stderr, "Failed to allocate memory for map string values in k_attica__content_attributes\n");
             abort();
         }
+        memcpy(_ret_values[i], _out_values[i].data, _out_values[i].len);
+        _ret_values[i][_out_values[i].len] = '\0';
     }
     _ret.keys = (void*)_ret_keys;
     _ret.values = (void*)_ret_values;

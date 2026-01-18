@@ -100,7 +100,7 @@ void k_diroperator_set_mime_filter(void* self, const char* mimetypes[static 1]) 
     size_t mimetypes_len = libqt_strv_length(mimetypes);
     libqt_string* mimetypes_qstr = (libqt_string*)malloc(mimetypes_len * sizeof(libqt_string));
     if (mimetypes_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_diroperator_set_mime_filter");
+        fprintf(stderr, "Failed to allocate memory for string list in k_diroperator_set_mime_filter\n");
         abort();
     }
     for (size_t i = 0; i < mimetypes_len; ++i) {
@@ -116,7 +116,7 @@ const char** k_diroperator_mime_filter(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_diroperator_mime_filter");
+        fprintf(stderr, "Failed to allocate memory for string list in k_diroperator_mime_filter\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -134,7 +134,7 @@ void k_diroperator_set_new_file_menu_supported_mime_types(void* self, const char
     size_t mime_len = libqt_strv_length(mime);
     libqt_string* mime_qstr = (libqt_string*)malloc(mime_len * sizeof(libqt_string));
     if (mime_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_diroperator_set_new_file_menu_supported_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in k_diroperator_set_new_file_menu_supported_mime_types\n");
         abort();
     }
     for (size_t i = 0; i < mime_len; ++i) {
@@ -150,7 +150,7 @@ const char** k_diroperator_new_file_menu_supported_mime_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_diroperator_new_file_menu_supported_mime_types");
+        fprintf(stderr, "Failed to allocate memory for string list in k_diroperator_new_file_menu_supported_mime_types\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -196,7 +196,7 @@ void k_diroperator_set_current_item2(void* self, void* item) {
     KDirOperator_SetCurrentItem2((KDirOperator*)self, (KFileItem*)item);
 }
 
-void k_diroperator_set_current_items(void* self, libqt_list urls) {
+void k_diroperator_set_current_items(void* self, libqt_list /* of QUrl* */ urls) {
     KDirOperator_SetCurrentItems((KDirOperator*)self, urls);
 }
 
@@ -478,7 +478,7 @@ const char** k_diroperator_supported_schemes(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_diroperator_supported_schemes");
+        fprintf(stderr, "Failed to allocate memory for string list in k_diroperator_supported_schemes\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -774,7 +774,7 @@ void k_diroperator_set_supported_schemes(void* self, const char* schemes[static 
     size_t schemes_len = libqt_strv_length(schemes);
     libqt_string* schemes_qstr = (libqt_string*)malloc(schemes_len * sizeof(libqt_string));
     if (schemes_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_diroperator_set_supported_schemes");
+        fprintf(stderr, "Failed to allocate memory for string list in k_diroperator_set_supported_schemes\n");
         abort();
     }
     for (size_t i = 0; i < schemes_len; ++i) {
@@ -1005,7 +1005,7 @@ void k_diroperator_on_file_selected(void* self, void (*callback)(void*, void*)) 
     KDirOperator_Connect_FileSelected((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_dropped(void* self, void* item, void* event, libqt_list urls) {
+void k_diroperator_dropped(void* self, void* item, void* event, libqt_list /* of QUrl* */ urls) {
     KDirOperator_Dropped((KDirOperator*)self, (KFileItem*)item, (QDropEvent*)event, urls);
 }
 
@@ -1037,7 +1037,7 @@ void k_diroperator_on_key_enter_return_pressed(void* self, void (*callback)(void
     KDirOperator_Connect_KeyEnterReturnPressed((KDirOperator*)self, (intptr_t)callback);
 }
 
-void k_diroperator_renaming_finished(void* self, libqt_list urls) {
+void k_diroperator_renaming_finished(void* self, libqt_list /* of QUrl* */ urls) {
     KDirOperator_RenamingFinished((KDirOperator*)self, urls);
 }
 
@@ -1439,11 +1439,11 @@ void k_diroperator_set_graphics_effect(void* self, void* effect) {
     QWidget_SetGraphicsEffect((QWidget*)self, (QGraphicsEffect*)effect);
 }
 
-void k_diroperator_grab_gesture(void* self, int64_t type) {
+void k_diroperator_grab_gesture(void* self, int32_t type) {
     QWidget_GrabGesture((QWidget*)self, type);
 }
 
-void k_diroperator_ungrab_gesture(void* self, int64_t type) {
+void k_diroperator_ungrab_gesture(void* self, int32_t type) {
     QWidget_UngrabGesture((QWidget*)self, type);
 }
 
@@ -1920,7 +1920,7 @@ void k_diroperator_set_parent(void* self, void* parent) {
     QWidget_SetParent((QWidget*)self, (QWidget*)parent);
 }
 
-void k_diroperator_set_parent2(void* self, void* parent, int64_t f) {
+void k_diroperator_set_parent2(void* self, void* parent, int32_t f) {
     QWidget_SetParent2((QWidget*)self, (QWidget*)parent, f);
 }
 
@@ -1952,11 +1952,11 @@ void k_diroperator_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void k_diroperator_add_actions(void* self, libqt_list actions) {
+void k_diroperator_add_actions(void* self, libqt_list /* of QAction* */ actions) {
     QWidget_AddActions((QWidget*)self, actions);
 }
 
-void k_diroperator_insert_actions(void* self, void* before, libqt_list actions) {
+void k_diroperator_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions) {
     QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
@@ -1993,23 +1993,23 @@ QWidget* k_diroperator_parent_widget(void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
-void k_diroperator_set_window_flags(void* self, int64_t type) {
+void k_diroperator_set_window_flags(void* self, int32_t type) {
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int64_t k_diroperator_window_flags(void* self) {
+int32_t k_diroperator_window_flags(void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
-void k_diroperator_set_window_flag(void* self, int64_t param1) {
+void k_diroperator_set_window_flag(void* self, int32_t param1) {
     QWidget_SetWindowFlag((QWidget*)self, param1);
 }
 
-void k_diroperator_override_window_flags(void* self, int64_t type) {
+void k_diroperator_override_window_flags(void* self, int32_t type) {
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int64_t k_diroperator_window_type(void* self) {
+int32_t k_diroperator_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
@@ -2105,11 +2105,11 @@ void k_diroperator_on_custom_context_menu_requested(void* self, void (*callback)
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-int64_t k_diroperator_input_method_hints(void* self) {
+int32_t k_diroperator_input_method_hints(void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
-void k_diroperator_set_input_method_hints(void* self, int64_t hints) {
+void k_diroperator_set_input_method_hints(void* self, int32_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
@@ -2141,7 +2141,7 @@ QPixmap* k_diroperator_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_diroperator_grab_gesture2(void* self, int64_t type, int32_t flags) {
+void k_diroperator_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
@@ -2157,7 +2157,7 @@ void k_diroperator_set_shortcut_auto_repeat2(void* self, int id, bool enable) {
     QWidget_SetShortcutAutoRepeat2((QWidget*)self, id, enable);
 }
 
-void k_diroperator_set_window_flag2(void* self, int64_t param1, bool on) {
+void k_diroperator_set_window_flag2(void* self, int32_t param1, bool on) {
     QWidget_SetWindowFlag2((QWidget*)self, param1, on);
 }
 
@@ -2169,7 +2169,7 @@ QWidget* k_diroperator_create_window_container2(void* window, void* parent) {
     return QWidget_CreateWindowContainer2((QWindow*)window, (QWidget*)parent);
 }
 
-QWidget* k_diroperator_create_window_container3(void* window, void* parent, int64_t flags) {
+QWidget* k_diroperator_create_window_container3(void* window, void* parent, int32_t flags) {
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
@@ -2274,7 +2274,7 @@ const char** k_diroperator_dynamic_property_names(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_diroperator_dynamic_property_names");
+        fprintf(stderr, "Failed to allocate memory for string list in k_diroperator_dynamic_property_names\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -2836,15 +2836,15 @@ void k_diroperator_on_input_method_event(void* self, void (*callback)(void*, voi
     KDirOperator_OnInputMethodEvent((KDirOperator*)self, (intptr_t)callback);
 }
 
-QVariant* k_diroperator_input_method_query(void* self, int64_t param1) {
+QVariant* k_diroperator_input_method_query(void* self, int32_t param1) {
     return KDirOperator_InputMethodQuery((KDirOperator*)self, param1);
 }
 
-QVariant* k_diroperator_qbase_input_method_query(void* self, int64_t param1) {
+QVariant* k_diroperator_qbase_input_method_query(void* self, int32_t param1) {
     return KDirOperator_QBaseInputMethodQuery((KDirOperator*)self, param1);
 }
 
-void k_diroperator_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+void k_diroperator_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
     KDirOperator_OnInputMethodQuery((KDirOperator*)self, (intptr_t)callback);
 }
 

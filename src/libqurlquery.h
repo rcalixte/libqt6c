@@ -120,7 +120,9 @@ QChar* q_urlquery_query_pair_delimiter(void* self);
 ///
 /// @param self QUrlQuery*
 ///
-libqt_list /* of libqt_pair tuple of const char* and const char* */ q_urlquery_query_items(void* self);
+/// @return libqt_list of libqt_pair tuple of const char* and const char*
+///
+libqt_list q_urlquery_query_items(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#hasQueryItem)
 ///
@@ -192,7 +194,9 @@ const char* q_urlquery_to_string1(void* self, uint32_t encoding);
 /// @param self QUrlQuery*
 /// @param encoding flag of enum QUrl__ComponentFormattingOption
 ///
-libqt_list /* of libqt_pair tuple of const char* and const char* */ q_urlquery_query_items1(void* self, uint32_t encoding);
+/// @return libqt_list of libqt_pair tuple of const char* and const char*
+///
+libqt_list q_urlquery_query_items1(void* self, uint32_t encoding);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurlquery.html#queryItemValue)
 ///

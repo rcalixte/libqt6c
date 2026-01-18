@@ -34,7 +34,7 @@ void q_place_set_category(void* self, void* category) {
     QPlace_SetCategory((QPlace*)self, (QPlaceCategory*)category);
 }
 
-void q_place_set_categories(void* self, libqt_list categories) {
+void q_place_set_categories(void* self, libqt_list /* of QPlaceCategory* */ categories) {
     QPlace_SetCategories((QPlace*)self, categories);
 }
 
@@ -215,7 +215,7 @@ const char** q_place_extended_attribute_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_place_extended_attribute_types");
+        fprintf(stderr, "Failed to allocate memory for string list in q_place_extended_attribute_types\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -246,7 +246,7 @@ const char** q_place_contact_types(void* self) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in q_place_contact_types");
+        fprintf(stderr, "Failed to allocate memory for string list in q_place_contact_types\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -265,7 +265,7 @@ libqt_list /* of QPlaceContactDetail* */ q_place_contact_details(void* self, con
     return _arr;
 }
 
-void q_place_set_contact_details(void* self, const char* contactType, libqt_list details) {
+void q_place_set_contact_details(void* self, const char* contactType, libqt_list /* of QPlaceContactDetail* */ details) {
     QPlace_SetContactDetails((QPlace*)self, qstring(contactType), details);
 }
 

@@ -7,7 +7,7 @@ const char** k_protocolinfo_protocols() {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_protocolinfo_protocols");
+        fprintf(stderr, "Failed to allocate memory for string list in k_protocolinfo_protocols\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -113,7 +113,7 @@ const char** k_protocolinfo_capabilities(const char* protocol) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_protocolinfo_capabilities");
+        fprintf(stderr, "Failed to allocate memory for string list in k_protocolinfo_capabilities\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -132,7 +132,7 @@ const char** k_protocolinfo_archive_mimetypes(const char* protocol) {
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_protocolinfo_archive_mimetypes");
+        fprintf(stderr, "Failed to allocate memory for string list in k_protocolinfo_archive_mimetypes\n");
         abort();
     }
     for (size_t i = 0; i < _arr.len; ++i) {

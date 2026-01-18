@@ -40,15 +40,17 @@ QJsonArray* q_jsonarray_from_string_list(const char* list[static 1]);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#fromVariantList)
 ///
-/// @param list libqt_list /* of QVariant* */
+/// @param list libqt_list of QVariant*
 ///
-QJsonArray* q_jsonarray_from_variant_list(libqt_list list);
+QJsonArray* q_jsonarray_from_variant_list(libqt_list /* of QVariant* */ list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#toVariantList)
 ///
 /// @param self QJsonArray*
 ///
-libqt_list /* of QVariant* */ q_jsonarray_to_variant_list(void* self);
+/// @return libqt_list of QVariant*
+///
+libqt_list q_jsonarray_to_variant_list(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#size)
 ///

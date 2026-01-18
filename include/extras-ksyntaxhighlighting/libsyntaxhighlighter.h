@@ -385,7 +385,9 @@ void k_syntaxhighlighting__syntaxhighlighter_kill_timer2(void* self, int32_t id)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 ///
-libqt_list /* of QObject* */ k_syntaxhighlighting__syntaxhighlighter_children(void* self);
+/// @return libqt_list of QObject*
+///
+libqt_list k_syntaxhighlighting__syntaxhighlighter_children(void* self);
 
 /// Inherited from QObject
 ///

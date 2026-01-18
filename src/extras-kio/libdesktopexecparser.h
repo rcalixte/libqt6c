@@ -16,9 +16,9 @@
 /// k_io__desktopexecparser_new constructs a new KIO::DesktopExecParser object.
 ///
 /// @param service KService*
-/// @param urls libqt_list /* of QUrl* */
+/// @param urls libqt_list of QUrl*
 ///
-KIO__DesktopExecParser* k_io__desktopexecparser_new(void* service, libqt_list urls);
+KIO__DesktopExecParser* k_io__desktopexecparser_new(void* service, libqt_list /* of QUrl* */ urls);
 
 /// [Upstream resources](https://api.kde.org/kio-desktopexecparser.html#setUrlsAreTempFiles)
 ///
