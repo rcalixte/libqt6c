@@ -3,11 +3,20 @@ package main
 import (
 	"C"
 	"fmt"
+	"math"
 	"path/filepath"
 	"reflect"
+	"strconv"
 	"strings"
 	"unicode"
 )
+
+// cComment renders a string for usage in a C comment.
+func cComment(s string) string {
+	// Remove nested comments
+	uncomment := strings.NewReplacer("/*", "", "*/", "")
+	return strings.TrimSpace(strings.ReplaceAll(uncomment.Replace(s), "  ", " "))
+}
 
 // not language-reserved words, but binding-reserved words
 func reservedWordC(s string) bool {
@@ -188,13 +197,13 @@ func cSafeMethodName(name string) string {
 	return strings.TrimSuffix(string(result), "_")
 }
 
-func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bool) string {
+func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, includeContainerComment bool) string {
 	if (p.Pointer && p.ParameterType == "char") || p.ParameterType == "QByteArray" ||
 		p.ParameterType == "QAnyStringView" {
 		if p.Const {
 			return "const char" + strings.Repeat("*", max(p.PointerCount, 1))
 		}
-		return "char*"
+		return "char" + strings.Repeat("*", max(p.PointerCount, 1))
 	}
 
 	if p.ParameterType == "QString" || p.ParameterType == "QByteArrayView" ||
@@ -214,11 +223,11 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 				return t.RenderTypeCabi(false) + maybePointer
 			}
 		}
-		return "libqt_list" + cppComment("of "+strings.TrimSpace(t.RenderTypeC(cfs, isReturnType, true)))
+		return "libqt_list" + ifv(includeContainerComment, cppComment("of "+strings.TrimSpace(t.RenderTypeC(cfs, isReturnType, true, includeContainerComment))), "")
 	}
 
 	if k, ok := p.QSetOf(); ok {
-		return "libqt_list" + ifv(p.Pointer, "*", "") + cppComment("set of "+strings.TrimSpace(k.RenderTypeC(cfs, isReturnType, true)))
+		return "libqt_list" + ifv(p.Pointer, "*", "") + ifv(includeContainerComment, cppComment("set of "+strings.TrimSpace(k.RenderTypeC(cfs, isReturnType, true, includeContainerComment))), "")
 	}
 
 	if k, v, containerType, ok := p.QMapOf(); ok {
@@ -228,16 +237,16 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 				maybePointer = "*"
 			}
 		}
-		return "libqt_map" + ifv(p.Pointer, "*", "") + cppComment("of "+strings.TrimSpace(k.RenderTypeC(cfs, isReturnType, true))+" to "+strings.TrimSpace(v.RenderTypeC(cfs, isReturnType, true))+maybePointer)
+		return "libqt_map" + ifv(p.Pointer, "*", "") + ifv(includeContainerComment, cppComment("of "+strings.TrimSpace(k.RenderTypeC(cfs, isReturnType, true, includeContainerComment))+" to "+strings.TrimSpace(v.RenderTypeC(cfs, isReturnType, true, includeContainerComment))+maybePointer), "")
 	}
 
 	if t1, t2, ok := p.QPairOf(); ok {
 		// Design QPair using capital-named members, in case it gets passed
 		// across packages
-		f := strings.TrimSpace(t1.RenderTypeC(cfs, isReturnType, true))
-		s := strings.TrimSpace(t2.RenderTypeC(cfs, isReturnType, true))
+		f := strings.TrimSpace(t1.RenderTypeC(cfs, isReturnType, true, includeContainerComment))
+		s := strings.TrimSpace(t2.RenderTypeC(cfs, isReturnType, true, includeContainerComment))
 
-		return "libqt_pair" + cppComment("tuple of "+f+" and "+s)
+		return "libqt_pair" + ifv(includeContainerComment, cppComment("tuple of "+f+" and "+s), "")
 	}
 
 	if (p.ParameterType == "void" || p.ParameterType == "GLvoid") && p.Pointer {
@@ -251,12 +260,8 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 			if fullEnumName {
 				ret = "flag of enum " + cabiEnumClassName(p.ParameterType[7:len(p.ParameterType)-1])
 			} else {
-				e, ok := KnownEnums[p.ParameterType]
-				if ok {
-					ret = ifv(p.Const, "const ", "") + e.EnumTypeC + ifv(p.Pointer || p.ByRef, "*", "")
-				} else {
-					ret = ifv(p.Const, "const ", "") + "int64_t" + ifv(p.Pointer || p.ByRef, "*", "")
-				}
+				e, _ := KnownEnums[p.ParameterType]
+				ret = ifv(p.Const, "const ", "") + e.EnumTypeC + ifv(p.Pointer || p.ByRef, "*", "")
 			}
 		}
 
@@ -434,7 +439,7 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 	return ret // ignore const
 }
 
-func (p CppParameter) returnAllocComment(returnType string) string {
+func (p CppParameter) returnAllocComment(cfs *cFileState, returnType string) string {
 	if p.ParameterType == "QString" || p.ParameterType == "QByteArray" ||
 		strings.HasPrefix(returnType, "char*") || strings.HasPrefix(returnType, "const char*") {
 		freeMethod := ifv(returnType == "const char*", "libqt_", "") + "free()"
@@ -496,8 +501,11 @@ func (p CppParameter) returnAllocComment(returnType string) string {
 			freeLoop += "\n/// }"
 		}
 
+		uncomment := strings.NewReplacer("/*", "", "*/", "")
+
 		return "\n/// @warning Caller is responsible for freeing the returned memory using a similar sequence to:" +
-			"\n/// ```c\n/// // Example for freeing the returned map" +
+			"\n/// ```c\n/// // Example for freeing the returned map of type:" +
+			"\n/// // " + strings.TrimSpace(strings.ReplaceAll(uncomment.Replace(p.RenderTypeC(cfs, true, true, true)), "  ", " ")) +
 			freeLoop +
 			"\n/// free(map.keys);" +
 			"\n/// free(map.values);" +
@@ -507,8 +515,8 @@ func (p CppParameter) returnAllocComment(returnType string) string {
 	return ""
 }
 
-func (p CppParameter) renderReturnTypeC(cfs *cFileState, isSlot bool) string {
-	ret := p.RenderTypeC(cfs, true, false)
+func (p CppParameter) renderReturnTypeC(cfs *cFileState, isSlot, includeContainerComment bool) string {
+	ret := p.RenderTypeC(cfs, true, false, includeContainerComment)
 	if e, ok := KnownEnums[ret]; ok {
 		ret = e.EnumTypeC
 	}
@@ -541,14 +549,19 @@ func (p CppParameter) renderReturnTypeC(cfs *cFileState, isSlot bool) string {
 		if strings.HasPrefix(ret, "libqt_list") {
 			if strings.Contains(ret, "of libqt_string") {
 				ret = "const char**"
-			} else if strings.Contains(ret, "of int") {
-				ret = "int*"
+			} else if t, _, ok := p.QListOf(); ok {
+				if t.IntType() && t.ParameterType == "int" {
+					ret = "int*"
+				}
 			}
 			if t, _, ok := p.QListOf(); ok {
 				if IsKnownClass(t.ParameterType) {
-					ret = t.RenderTypeC(cfs, true, true) + "*"
+					ret = t.RenderTypeC(cfs, true, true, false) + "*"
 				}
 			}
+		} else if !cfs.isC {
+			uncomment := strings.NewReplacer("/*", "", "*/", "")
+			ret = strings.TrimSpace(strings.ReplaceAll(uncomment.Replace(ret), "  ", " "))
 		}
 	}
 	return maybeConst + ret
@@ -561,63 +574,59 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 
 	tmp := make([]string, 0, len(params))
 
-	for i := 0; i < len(params); i++ {
-		p := params[i]
-		if IsArgcArgv(params, i) {
-			tmp = append(tmp, "/// @param argc int*\n/// @param argv char**")
-			i++ // Skip the next parameter, already handled
-		} else {
-			// Ordinary parameter
-			pName := p.ParameterName
-			pType := p.RenderTypeC(cfs, false, true)
-			var pTypeSlot string
+	for _, p := range params {
+		pName := p.ParameterName
+		pType := p.RenderTypeC(cfs, false, true, true)
+		var pTypeSlot string
 
-			if t, _, ok := p.QListOf(); ok {
-				if isSlot && IsKnownClass(t.ParameterType) {
-					pType = t.RenderTypeC(cfs, false, true) + "*"
-				} else if IsKnownClass(t.ParameterType) || strings.Contains(t.ParameterType, "::") ||
-					t.IntType() || strings.Contains(pType, "libqt_") {
-					pName = cppComment("of " + strings.TrimSpace(t.RenderTypeC(cfs, false, true)))
-					pTypeSlot = pName
-					pType = "libqt_list"
-				} else if (strings.Contains(pType, "char*") && !strings.Contains(pType, "libqt_")) ||
-					!strings.HasPrefix(pType, "libqt_") {
-					pType += "*"
-					pTypeSlot = "[]"
-				}
-			}
-
-			if k, v, containerType, ok := p.QMapOf(); ok {
-				maybePointer := ifv(containerType == "QMultiHash" || containerType == "QMultiMap", "*", "")
-				pName = cppComment("of " + strings.TrimSpace(k.RenderTypeC(cfs, false, true)) + " to " + strings.TrimSpace(v.RenderTypeC(cfs, false, true)) + maybePointer)
+		if t, _, ok := p.QListOf(); ok {
+			if isSlot && IsKnownClass(t.ParameterType) {
+				pType = t.RenderTypeC(cfs, false, true, true) + "*"
+			} else if IsKnownClass(t.ParameterType) || strings.Contains(t.ParameterType, "::") ||
+				t.IntType() || strings.Contains(pType, "libqt_") {
+				pName = cComment("of " + strings.TrimSpace(t.RenderTypeC(cfs, false, true, true)))
 				pTypeSlot = pName
-				pType = "libqt_map" + ifv(p.Pointer, "*", "")
+				pType = "libqt_list"
+			} else if (strings.Contains(pType, "char*") && !strings.Contains(pType, "libqt_")) ||
+				!strings.HasPrefix(pType, "libqt_") {
+				pType += "*"
+				pTypeSlot = "[]"
 			}
+		}
 
-			if t1, t2, ok := p.QPairOf(); ok {
-				pName = cppComment("tuple of " + strings.TrimSpace(t1.RenderTypeC(cfs, false, true)) + " and " + strings.TrimSpace(t2.RenderTypeC(cfs, false, true)))
-				pTypeSlot = pName
-				pType = "libqt_pair"
-			}
+		if k, v, containerType, ok := p.QMapOf(); ok {
+			maybePointer := ifv(containerType == "QMultiHash" || containerType == "QMultiMap", "*", "")
+			pName = cComment("of " + strings.TrimSpace(k.RenderTypeC(cfs, false, true, true)) + " to " + strings.TrimSpace(v.RenderTypeC(cfs, false, true, true)) + maybePointer)
+			pTypeSlot = pName
+			pType = "libqt_map" + ifv(p.Pointer, "*", "")
+		}
 
-			if isSlot {
-				resParam := strings.ReplaceAll(pType+pTypeSlot, "**[]", "**")
-				if strings.HasPrefix(resParam, "libqt_list") {
-					if strings.Contains(resParam, "of libqt_string") {
-						resParam = "const char**"
-					} else if strings.Contains(resParam, "of int") {
-						resParam = "int*"
-					} else if IsKnownClass(strings.TrimSuffix(resParam, "*")) {
-						resParam = resParam + "*"
-					}
+		if t1, t2, ok := p.QPairOf(); ok {
+			pName = cComment("tuple of " + strings.TrimSpace(t1.RenderTypeC(cfs, false, true, true)) + " and " + strings.TrimSpace(t2.RenderTypeC(cfs, false, true, true)))
+			pTypeSlot = pName
+			pType = "libqt_pair"
+		}
+
+		if isSlot {
+			resParam := strings.ReplaceAll(pType+" "+pTypeSlot, "**[]", "**")
+			if strings.HasPrefix(resParam, "libqt_list") {
+				if strings.Contains(resParam, "of libqt_string") {
+					resParam = "const char**"
+				} else if strings.Contains(resParam, "of int") {
+					resParam = "int*"
+					pName = ""
+				} else if IsKnownClass(strings.TrimSuffix(resParam, "*")) {
+					resParam = resParam + "*"
 				}
-				tmp = append(tmp, resParam+" "+strings.TrimSpace(pName))
 			} else {
-				if strings.Contains(pType, "libqt") {
-					tmp = append(tmp, "/// @param "+p.ParameterName+" "+pType+" "+strings.TrimSpace(pName))
-				} else {
-					tmp = append(tmp, "/// @param "+pName+" "+pType)
-				}
+				resParam = pType
+			}
+			tmp = append(tmp, resParam+" "+strings.TrimSpace(pName))
+		} else {
+			if strings.Contains(pType, "libqt") {
+				tmp = append(tmp, "/// @param "+p.ParameterName+" "+pType+" "+strings.TrimSpace(pName))
+			} else {
+				tmp = append(tmp, "/// @param "+pName+" "+pType)
 			}
 		}
 	}
@@ -646,55 +655,48 @@ func (cfs *cFileState) emitParametersC(params []CppParameter, isSlot bool) strin
 
 	tmp := make([]string, 0, len(params))
 
-	for i := 0; i < len(params); i++ {
-		p := params[i]
-		if IsArgcArgv(params, i) {
-			tmp = append(tmp, "int *argc, char *argv[]")
-			i++ // Skip the next parameter, already handled
-		} else {
-			// Ordinary parameter
-			pName := p.ParameterName
-			pType := p.RenderTypeC(cfs, false, false)
-			if t, _, ok := p.QListOf(); ok {
-				if isSlot && IsKnownClass(t.ParameterType) {
-					pType = t.RenderTypeC(cfs, false, true) + "*"
-				} else if IsKnownClass(t.ParameterType) || strings.Contains(t.ParameterType, "::") ||
-					t.IntType() {
-					pName = p.ParameterName
-					pType = "libqt_list"
-				} else if (strings.Contains(pType, "char*") && !strings.Contains(pType, "libqt_")) ||
-					!strings.HasPrefix(pType, "libqt_") {
-					pName += "[static 1]"
-				}
-				if isSlot {
-					if pType == "libqt_list" {
-						pTypeCheck := t.RenderTypeC(cfs, false, true)
-						if pTypeCheck == "libqt_string" {
-							pType = "const char**"
-						} else if pTypeCheck == "int" {
-							pType = "int*"
-						} else if IsKnownClass(pTypeCheck) {
-							pType = pTypeCheck + "**"
-						}
+	for _, p := range params {
+		pName := p.ParameterName
+		pType := p.RenderTypeC(cfs, false, false, cfs.isC)
+		if t, _, ok := p.QListOf(); ok {
+			if isSlot && IsKnownClass(t.ParameterType) {
+				pType = t.RenderTypeC(cfs, false, true, false) + "*"
+			} else if IsKnownClass(t.ParameterType) || strings.Contains(t.ParameterType, "::") ||
+				t.IntType() {
+				pName = p.ParameterName
+				pType = "libqt_list" + cppComment("of "+strings.TrimSpace(t.RenderTypeC(cfs, false, true, true)))
+			} else if (strings.Contains(pType, "char*") && !strings.Contains(pType, "libqt_")) ||
+				!strings.HasPrefix(pType, "libqt_") {
+				pName += "[static 1]"
+			}
+			if isSlot {
+				if pType == "libqt_list" {
+					pTypeCheck := t.RenderTypeC(cfs, false, true, false)
+					if pTypeCheck == "libqt_string" {
+						pType = "const char**"
+					} else if pTypeCheck == "int" {
+						pType = "int*"
+					} else if IsKnownClass(pTypeCheck) {
+						pType = pTypeCheck + "**"
 					}
 				}
 			}
+		}
 
-			if reservedWordC(pName) {
-				pName = "_" + pName
+		if reservedWordC(pName) {
+			pName = "_" + pName
+		}
+		if IsKnownClass(p.ParameterType) && strings.HasSuffix(pType, "*") &&
+			!strings.Contains(pType, "char*") {
+			pType = "void*" + ifv(p.ByRef && p.Pointer, "*", "")
+		}
+		if isSlot {
+			if strings.HasSuffix(pName, "[static 1]") {
+				pType += "*"
 			}
-			if IsKnownClass(p.ParameterType) && strings.HasSuffix(pType, "*") &&
-				!strings.Contains(pType, "char*") {
-				pType = "void*" + ifv(p.ByRef && p.Pointer, "*", "")
-			}
-			if isSlot {
-				if strings.HasSuffix(pName, "[static 1]") {
-					pType += "*"
-				}
-				tmp = append(tmp, pType)
-			} else {
-				tmp = append(tmp, pType+" "+pName)
-			}
+			tmp = append(tmp, pType)
+		} else {
+			tmp = append(tmp, pType+" "+pName)
 		}
 	}
 	return strings.Join(tmp, ", ")
@@ -707,24 +709,35 @@ type cFileState struct {
 	currentMethodName  string
 	castType           string
 	allocCleanups      []string
+	isC                bool
 }
 
 func (cfs *cFileState) emitReturnComment(rt CppParameter) string {
 	var returnComment string
+	uncomment := strings.NewReplacer("/*", "", "*/", "")
 
 	if rt.IsKnownEnum() {
 		if strings.HasPrefix(rt.ParameterType, "QFlags<") {
-			returnComment = "/// @return flag of enum " + cabiEnumClassName(rt.ParameterType[7:len(rt.ParameterType)-1]) + "\n///\n"
+			returnComment = "/// @return flag of enum " + cabiEnumClassName(rt.ParameterType[7:len(rt.ParameterType)-1])
 		} else {
-			returnComment = "/// @return " + rt.RenderTypeC(cfs, false, true) + "\n///\n"
+			returnComment = "/// @return " + rt.RenderTypeC(cfs, true, true, true)
 		}
 	} else if t, _, ok := rt.QListOf(); ok {
 		if _, ok := KnownEnums[t.ParameterType]; ok {
-			returnComment = "/// @return libqt_list of enum " + cabiEnumClassName(t.ParameterType) + "\n///\n"
+			returnComment = "/// @return libqt_list of enum " + cabiEnumClassName(t.ParameterType)
+		} else {
+			ret := rt.RenderTypeC(cfs, true, true, true)
+			returnComment = ifv(ret == "const char**", "", "/// @return "+strings.TrimSpace(strings.ReplaceAll(uncomment.Replace(ret), "  ", " ")))
 		}
+	} else if _, _, _, ok := rt.QMapOf(); ok {
+		returnComment = "/// @return " + strings.TrimSpace(strings.ReplaceAll(uncomment.Replace(rt.RenderTypeC(cfs, true, true, true)), "  ", " "))
+	} else if _, _, ok := rt.QPairOf(); ok {
+		returnComment = "/// @return " + strings.TrimSpace(strings.ReplaceAll(uncomment.Replace(rt.RenderTypeC(cfs, true, true, true)), "  ", " "))
+	} else if _, ok := rt.QSetOf(); ok {
+		returnComment = "/// @return " + strings.TrimSpace(strings.ReplaceAll(uncomment.Replace(rt.RenderTypeC(cfs, true, true, true)), "  ", " "))
 	}
 
-	return returnComment
+	return ifv(returnComment == "", "", returnComment+"\n///\n")
 }
 
 func (cfs *cFileState) emitParametersC2CABIForwarding(m CppMethod) (preamble, forwarding string) {
@@ -734,25 +747,11 @@ func (cfs *cFileState) emitParametersC2CABIForwarding(m CppMethod) (preamble, fo
 		tmp = append(tmp, "("+cfs.castType+"*)self")
 	}
 
-	for i := 0; i < len(m.Parameters); i++ {
-		p := m.Parameters[i]
-		if IsArgcArgv(m.Parameters, i) {
-			// QApplication constructor. Convert 'args' into Qt's wanted types
-			// Qt has a warning in the docs saying these pointers must be valid
-			// for the entire lifetype of QApplication, so we pass by address
-			// and never free the memory
-			// This transformation only affects the C side. The C++ C ABI side is
-			// projected naturally.
+	for _, p := range m.Parameters {
+		addPreamble, rvalue := cfs.emitParameterC2CABIForwarding(p)
 
-			tmp = append(tmp, "argc, argv")
-			i++ // Skip the next parameter, already handled
-
-		} else {
-			addPreamble, rvalue := cfs.emitParameterC2CABIForwarding(p)
-
-			preamble += addPreamble
-			tmp = append(tmp, rvalue)
-		}
+		preamble += addPreamble
+		tmp = append(tmp, rvalue)
 	}
 	return preamble, strings.Join(tmp, ", ")
 }
@@ -785,7 +784,7 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 			preamble += "size_t " + nameprefix + "_len = libqt_strv_length(" + p.ParameterName + ");\n"
 			preamble += "libqt_string* " + nameprefix + "_qstr = (libqt_string*)malloc(" + nameprefix + "_len * sizeof(libqt_string));\n"
 			preamble += "if (" + nameprefix + "_qstr == NULL) {\n"
-			preamble += `    fprintf(stderr, "Failed to allocate memory for string list in ` + cfs.currentMethodName + `");` + "\n"
+			preamble += `    fprintf(stderr, "Failed to allocate memory for string list in ` + cfs.currentMethodName + `\n");` + "\n"
 			preamble += "    abort();\n"
 			preamble += "}\n"
 			preamble += "for (size_t i = 0; i < " + nameprefix + "_len; ++i) {\n"
@@ -807,8 +806,8 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 
 	} else if k, v, containerType, ok := p.QMapOf(); ok {
 		// QMap<K,V>
-		kType := k.RenderTypeC(cfs, false, true)
-		vType := v.RenderTypeC(cfs, false, true)
+		kType := k.RenderTypeC(cfs, false, true, true)
+		vType := v.RenderTypeC(cfs, false, true, true)
 		isQMulti := ifv(containerType == "QMultiHash" || containerType == "QMultiMap", true, false)
 		var isQList bool
 
@@ -905,7 +904,7 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 				valueIter += "    }\n"
 				valueIter += "    free(" + nameprefix + "_ret.keys);\n"
 				valueIter += "    free(" + nameprefix + "_ret.values);\n"
-				valueIter += `    fprintf(stderr, "Failed to allocate memory for map string key in ` + cfs.currentMethodName + `");` + "\n"
+				valueIter += `    fprintf(stderr, "Failed to allocate memory for map string key in ` + cfs.currentMethodName + `\n");` + "\n"
 				valueIter += "    abort();\n"
 				valueIter += "}\n"
 				valueIter += "for (size_t j = 0; j < " + nameprefix + "_value_count; j++) {\n"
@@ -957,7 +956,7 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 	} else if p.QtClassType() {
 		// The C++ type is a pointer to Qt class
 		// We want our functions to accept the C wrapper type, and forward as a pointer
-		rvalue = "(" + p.RenderTypeC(cfs, true, false) + ")" + p.ParameterName
+		rvalue = "(" + p.RenderTypeC(cfs, true, false, true) + ")" + p.ParameterName
 
 	} else if p.IntType() || p.IsFlagType() || p.IsKnownEnum() {
 		if p.ParameterType == "unsigned long long" && (p.Pointer || p.ByRef) {
@@ -968,7 +967,7 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 
 	} else if p.ParameterType == "bool" {
 		if p.Pointer || p.ByRef {
-			rvalue = "(" + p.RenderTypeC(cfs, true, false) + ")" + p.ParameterName // n.b. This may not work if the integer type conversion was wrong
+			rvalue = "(" + p.RenderTypeC(cfs, true, false, true) + ")" + p.ParameterName // n.b. This may not work if the integer type conversion was wrong
 		} else {
 			rvalue = p.ParameterName
 		}
@@ -1033,12 +1032,12 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 		return shouldReturn + " " + rvalue + ";\n"
 
 	} else if t, _, ok := rt.QListOf(); ok {
-		if t.ParameterType == "QString" || t.ParameterType == "QByteArray" || t.ParameterType == "SignOn::MethodName" {
+		if t.ParameterType == "QString" || t.ParameterType == "QByteArray" {
 			shouldReturn = "libqt_list " + namePrefix + "_arr = "
 			afterword += "const libqt_string* " + namePrefix + "_qstr = (libqt_string*)" + namePrefix + "_arr.data.ptr;\n"
 			afterword += "const char** " + namePrefix + "_ret = (const char**)malloc((" + namePrefix + "_arr.len + 1) * sizeof(const char*));\n"
 			afterword += "if (" + namePrefix + "_ret == NULL) {\n"
-			afterword += `    fprintf(stderr, "Failed to allocate memory for string list in ` + cfs.currentMethodName + `");` + "\n"
+			afterword += `    fprintf(stderr, "Failed to allocate memory for string list in ` + cfs.currentMethodName + `\n");` + "\n"
 			afterword += "    abort();\n"
 			afterword += "}\n"
 			afterword += "for (size_t i = 0; i < " + namePrefix + "_arr.len; ++i) {\n"
@@ -1069,20 +1068,26 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 
 	} else if k, v, containerType, ok := rt.QMapOf(); ok {
 		// QMap<K,V>
-		kType := k.RenderTypeC(cfs, false, true)
-		vType := v.RenderTypeC(cfs, false, true)
+		kType := k.RenderTypeC(cfs, false, true, true)
+		vType := v.RenderTypeC(cfs, false, true, true)
 		isQMulti := ifv(containerType == "QMultiHash" || containerType == "QMultiMap", true, false)
 
 		var keyAssign, keyFree, keyInnerFree, keyMallocFree, keyIter, valueAssign, valueFree, valueInnerFree, valueIter string
 		keyOut := kType
 		valueOut := vType
 
-		var maybePointer string
+		var maybeMalloc, maybeMallocCheck, maybeMallocFree, maybePointer string
 		maybeDeref := "."
 
 		if rt.Pointer {
 			maybeDeref = "->"
 			maybePointer = "*"
+			maybeMalloc = " = (libqt_map*)malloc(sizeof(libqt_map))"
+			maybeMallocCheck = "if (" + namePrefix + "_ret == NULL) {\n"
+			maybeMallocCheck += `    fprintf(stderr, "Failed to allocate memory for return map in ` + cfs.currentMethodName + `\n");` + "\n"
+			maybeMallocCheck += "    abort();\n"
+			maybeMallocCheck += "}\n"
+			maybeMallocFree = "free(" + namePrefix + "_ret);\n"
 		}
 
 		if k.ParameterType == "QString" || k.ParameterType == "QByteArray" || k.ParameterType == "SignOn::MethodName" {
@@ -1101,14 +1106,16 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 
 		preamble := "// Convert " + containerType + "<" + k.ParameterType + "," + v.ParameterType + "> to libqt_map\n"
 		preamble += "libqt_map" + maybePointer + " " + namePrefix + "_out = " + rvalue + ";\n"
-		preamble += "libqt_map" + maybePointer + " " + namePrefix + "_ret;\n"
+		preamble += "libqt_map" + maybePointer + " " + namePrefix + "_ret" + maybeMalloc + ";\n"
+		preamble += maybeMallocCheck
 		preamble += namePrefix + "_ret" + maybeDeref + "len = " + namePrefix + "_out" + maybeDeref + "len;\n"
 
 		if k.ParameterType == "QString" || k.ParameterType == "QByteArray" || k.ParameterType == "SignOn::MethodName" {
 			preamble += keyOut + "* " + namePrefix + "_out_keys = (" + keyOut + "*)" + namePrefix + "_out" + maybeDeref + "keys;\n"
 			preamble += "char** " + namePrefix + "_ret_keys = (char**)malloc(" + namePrefix + "_ret" + maybeDeref + "len * sizeof(char*));\n"
 			preamble += "if (" + namePrefix + "_ret_keys == NULL) {\n"
-			preamble += `    fprintf(stderr, "Failed to allocate memory for map string keys in ` + cfs.currentMethodName + `");` + "\n"
+			preamble += maybeMallocFree
+			preamble += `    fprintf(stderr, "Failed to allocate memory for map string keys in ` + cfs.currentMethodName + `\n");` + "\n"
 			preamble += "    abort();\n"
 			preamble += "}\n"
 
@@ -1125,7 +1132,8 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 			keyIter += "    }\n"
 			keyIter += "    free(" + namePrefix + "_ret_keys);\n"
 			keyIter += ifv(isQMulti, "free("+namePrefix+"_ret_values);\n", "")
-			keyIter += `    fprintf(stderr, "Failed to allocate memory for map keys in ` + cfs.currentMethodName + `");` + "\n"
+			keyIter += maybeMallocFree
+			keyIter += `    fprintf(stderr, "Failed to allocate memory for map keys in ` + cfs.currentMethodName + `\n");` + "\n"
 			keyIter += "    abort();\n"
 			keyIter += "}\n"
 			keyIter += "memcpy(" + namePrefix + "_ret_keys[i], " + namePrefix + "_out_keys[i].data, " + namePrefix + "_out_keys[i].len);\n"
@@ -1152,7 +1160,7 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 			preamble += "if (" + namePrefix + "_ret_values == NULL) {\n"
 			preamble += "    " + keyMallocFree
 			preamble += "    free(" + namePrefix + "_out" + maybeDeref + "values);\n"
-			preamble += `    fprintf(stderr, "Failed to allocate memory for map value containers in ` + cfs.currentMethodName + `");` + "\n"
+			preamble += `    fprintf(stderr, "Failed to allocate memory for map value containers in ` + cfs.currentMethodName + `\n");` + "\n"
 			preamble += "    abort();\n"
 			preamble += "}\n"
 
@@ -1178,7 +1186,7 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 			valueIter += "" + keyMallocFree
 			valueIter += "free(" + namePrefix + "_ret_values);\n"
 			valueIter += "free(" + namePrefix + "_out" + maybeDeref + "values);\n"
-			valueIter += `fprintf(stderr, "Failed to allocate memory for map values in ` + cfs.currentMethodName + `");` + "\n"
+			valueIter += `fprintf(stderr, "Failed to allocate memory for map values in ` + cfs.currentMethodName + `\n");` + "\n"
 			valueIter += "abort();\n"
 			valueIter += "}\n"
 
@@ -1200,7 +1208,7 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 				valueIter += "}\n"
 				valueIter += ifv(keyIter != "", "free("+namePrefix+"_ret_keys);\n", "")
 				valueIter += "    free(" + namePrefix + "_ret_values);\n"
-				valueIter += `    fprintf(stderr, "Failed to allocate memory for map value keys in ` + cfs.currentMethodName + `");` + "\n"
+				valueIter += `    fprintf(stderr, "Failed to allocate memory for map value keys in ` + cfs.currentMethodName + `\n");` + "\n"
 				valueIter += "    abort();\n"
 				valueIter += "}\n"
 				valueIter += "memcpy(" + namePrefix + "_ret_values[i][j], " + namePrefix + "_value_str[j].data, " + namePrefix + "_value_str[j].len);\n"
@@ -1230,14 +1238,15 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 
 		} else if vParamType == "QString" || vParamType == "QByteArray" {
 			preamble += valueOut + "* " + namePrefix + "_out_values = (" + valueOut + "*)" + namePrefix + "_out" + maybeDeref + "values;\n"
-			preamble += vType + "* " + namePrefix + "_ret_values = (" + vType + "*)malloc(" + namePrefix + "_ret" + maybeDeref + "len * sizeof(" + vType + "));\n"
+			preamble += "char** " + namePrefix + "_ret_values = (char**)malloc(" + namePrefix + "_ret" + maybeDeref + "len * sizeof(char*));\n"
 			preamble += "if (" + namePrefix + "_ret_values == NULL) {\n"
-			preamble += `    fprintf(stderr, "Failed to allocate memory for map string values in ` + cfs.currentMethodName + `");` + "\n"
+			preamble += `    fprintf(stderr, "Failed to allocate memory for map string values in ` + cfs.currentMethodName + `\n");` + "\n"
 			preamble += keyFree
+			preamble += maybeMallocFree
 			preamble += "    abort();\n"
 			preamble += "}\n"
 
-			valueIter = namePrefix + "_ret_values[i] = (" + vType + ")malloc(" + namePrefix + "_out_values[i].len + 1);\n"
+			valueIter = namePrefix + "_ret_values[i] = (char*)malloc(" + namePrefix + "_out_values[i].len + 1);\n"
 			valueIter += "if (" + namePrefix + "_ret_values[i] == NULL) {\n"
 			valueIter += "    for (size_t j = 0; j < i; j++) {\n"
 			valueIter += ifv(keyIter != "", "libqt_free("+namePrefix+"_ret_keys[j]);\n", "")
@@ -1245,9 +1254,12 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 			valueIter += "    }\n"
 			valueIter += ifv(keyIter != "", "free("+namePrefix+"_ret_keys);\n", "")
 			valueIter += "    free(" + namePrefix + "_ret_values);\n"
-			valueIter += `    fprintf(stderr, "Failed to allocate memory for map string values in ` + cfs.currentMethodName + `");` + "\n"
+			valueIter += maybeMallocFree
+			valueIter += `    fprintf(stderr, "Failed to allocate memory for map string values in ` + cfs.currentMethodName + `\n");` + "\n"
 			valueIter += "    abort();\n"
 			valueIter += "}\n"
+			valueIter += "memcpy(" + namePrefix + "_ret_values[i], " + namePrefix + "_out_values[i].data, " + namePrefix + "_out_values[i].len);\n"
+			valueIter += namePrefix + "_ret_values[i][" + namePrefix + `_out_values[i].len] = '\0';` + "\n"
 
 			valueAssign = namePrefix + "_ret" + maybeDeref + "values = (void*)" + namePrefix + "_ret_values;\n"
 			valueInnerFree = "    libqt_free(" + namePrefix + "_out_values[i].data);\n"
@@ -1294,7 +1306,7 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 		maybeAllocCleanup := cfs.checkAndClearAllocCleanups(false)
 
 		if maybeAllocCleanup != "" {
-			preamble := rt.renderReturnTypeC(cfs, false) + " " + namePrefix + "_out = " + rvalue + ";"
+			preamble := rt.renderReturnTypeC(cfs, false, true) + " " + namePrefix + "_out = " + rvalue + ";"
 			rvalue = namePrefix + "_out"
 			if rt.Pointer || rt.ByRef {
 				return preamble + maybeAllocCleanup + assignExpr + rvalue + ";"
@@ -1311,13 +1323,13 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 
 		if rt.Pointer || rt.ByRef {
 			// Cast
-			return shouldReturn + "(" + rt.RenderTypeC(cfs, true, false) + maybePointer + ")" + rvalue + ";"
+			return shouldReturn + "(" + rt.RenderTypeC(cfs, true, false, true) + maybePointer + ")" + rvalue + ";"
 		}
 
 		maybeAllocCleanup := cfs.checkAndClearAllocCleanups(false)
 
 		if maybeAllocCleanup != "" {
-			preamble := rt.renderReturnTypeC(cfs, false) + " " + namePrefix + "_out = " + rvalue + ";"
+			preamble := rt.renderReturnTypeC(cfs, false, true) + " " + namePrefix + "_out = " + rvalue + ";"
 			rvalue = namePrefix + "_out"
 			return preamble + maybeAllocCleanup + assignExpr + rvalue + ";"
 		} else {
@@ -1725,9 +1737,9 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 			cfs.castType = cmdStructName
 
-			returnTypeDecl := m.ReturnType.renderReturnTypeC(&cfs, false)
+			returnTypeDecl := m.ReturnType.renderReturnTypeC(&cfs, false, false)
 
-			allocComment := m.ReturnType.returnAllocComment(returnTypeDecl)
+			allocComment := m.ReturnType.returnAllocComment(&cfs, returnTypeDecl)
 			if allocComment != "" {
 				ret.WriteString(allocComment)
 			}
@@ -1814,9 +1826,9 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				onDocComment := "\n/// Allows for overriding the related default method\n///"
 
 				ret.WriteString(maybeMacro + inheritedFrom + docCommentUrl + onDocComment + "\n/// @param self " + cStructName +
-					"*\n/// @param callback " + m.ReturnType.renderReturnTypeC(&cfs, true) + " func(" + maybeCommentStruct +
+					"*\n/// @param callback " + m.ReturnType.renderReturnTypeC(&cfs, true, true) + " func(" + maybeCommentStruct +
 					cfs.emitCommentParametersC(m.Parameters, true) + ")\n///\n" +
-					"void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true) +
+					"void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true, false) +
 					"(*callback)(" + maybeVoid + maybeComma + cfs.emitParametersC(m.Parameters, true) + "));\n" + maybeEndMacro + "\n\n")
 
 				qbaseDocComment := "\n/// Base class method implementation\n///"
@@ -1901,11 +1913,11 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			// Add a package-private function to call the C++ base class method
 			// QWidget_PaintEvent
 			cfs.castType = cStructName
-			returnTypeDecl := m.ReturnType.renderReturnTypeC(&cfs, false)
+			returnTypeDecl := m.ReturnType.renderReturnTypeC(&cfs, false, false)
 			cfsParams := cfs.emitParametersC(m.Parameters, false)
 			returnComment := cfs.emitReturnComment(m.ReturnType)
 
-			allocComment := m.ReturnType.returnAllocComment(returnTypeDecl)
+			allocComment := m.ReturnType.returnAllocComment(&cfs, returnTypeDecl)
 			headerComment := "\n/// Wrapper to allow calling virtual or protected method\n ///\n"
 			maybeNewLine := ifv(len(m.Parameters) == 0 && returnComment != "", "\n///", "")
 			maybeFinalNewLine := ifv(len(m.Parameters) == 0 && returnComment == "", "///\n", "")
@@ -1941,9 +1953,9 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			headerComment = "\n/// Wrapper to allow overriding base class virtual or protected method\n ///\n"
 
 			ret.WriteString(inheritedFrom + documentationURL + headerComment + "/// @param self " + cStructName +
-				"*\n/// @param callback " + m.ReturnType.renderReturnTypeC(&cfs, true) + " func(" + maybeCommentStruct +
+				"*\n/// @param callback " + m.ReturnType.renderReturnTypeC(&cfs, true, true) + " func(" + maybeCommentStruct +
 				cfs.emitCommentParametersC(m.Parameters, true) + ")\n///\n" +
-				"void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true) +
+				"void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true, false) +
 				"(*callback)(" + maybeVoid + commaParams + cfs.emitParametersC(m.Parameters, true) + "));\n")
 		}
 
@@ -2047,7 +2059,18 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 					entryName = strings.ToUpper(cabiEnumClassName(ee.EntryName))
 				}
 				entryName = strings.ReplaceAll(entryName, "___", "_")
-				ret.WriteString("    " + enumPrefix + "_" + entryName + " = " + ee.EntryValue)
+				entry := ee.EntryValue
+				num, err := strconv.Atoi(ee.EntryValue)
+				if err == nil {
+					if float64(num) > math.MaxInt32 || float64(num) < math.MinInt32 {
+						// if needed, store wraparound value as opposed to overflow
+						enumType := e.UnderlyingType.RenderTypeC(&cfs, false, false, false)
+						if enumType[0] != 'u' {
+							entry = strconv.Itoa(int(int32(num)))
+						}
+					}
+				}
+				ret.WriteString("    " + enumPrefix + "_" + entryName + " = " + entry)
 				if i < len(e.Entries)-1 {
 					ret.WriteString(",\n")
 				} else {
@@ -2088,6 +2111,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		imports:            map[string]struct{}{},
 		currentPackageName: dirRoot,
 		currentHeaderName:  strings.TrimSuffix(headerName[3:], ".h"),
+		isC:                true,
 	}
 
 	// TODO Remove this suffix hack once we have a better way to automate it
@@ -2406,7 +2430,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			cfs.castType = cmdStructName
 			cfs.currentMethodName = cmdMethodName + safeMethodName
 			preamble, forwarding := cfs.emitParametersC2CABIForwarding(m)
-			returnTypeDecl := m.ReturnType.renderReturnTypeC(&cfs, false)
+			returnTypeDecl := m.ReturnType.renderReturnTypeC(&cfs, false, true)
 			rvalue := cmdStructName + "_" + mSafeMethodName + "(" + forwarding + ")"
 			returnFunc := cfs.emitCabiToC("return ", m.ReturnType, rvalue)
 			cfs.checkAndClearAllocCleanups(true)
@@ -2503,7 +2527,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 					maybeEndMacro = "#endif\n"
 				}
 
-				ret.WriteString(maybeMacro + "void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true) +
+				ret.WriteString(maybeMacro + "void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true, true) +
 					"(*callback)(" + maybeVoid + maybeComma + cfs.emitParametersC(m.Parameters, true) + ")) {\n" +
 					cmdStructName + "_On" + mSafeMethodName + "((" + cmdStructName + "*)self, (intptr_t)callback);\n}\n" + maybeEndMacro + "\n\n")
 
@@ -2576,7 +2600,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			cfs.currentMethodName = cmdMethodName + safeMethodName
 			preamble, forwarding := cfs.emitParametersC2CABIForwarding(m)
 			forwarding = strings.TrimPrefix(forwarding, "self")
-			returnTypeDecl := m.ReturnType.renderReturnTypeC(&cfs, false)
+			returnTypeDecl := m.ReturnType.renderReturnTypeC(&cfs, false, true)
 			cfsParams := cfs.emitParametersC(m.Parameters, false)
 			returnFunc := cfs.emitCabiToC("return ", m.ReturnType, cmdStructName+"_"+mSafeMethodName+"("+forwarding+")")
 			cfs.checkAndClearAllocCleanups(true)
@@ -2613,7 +2637,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				maybeVoid = "void*"
 			}
 
-			ret.WriteString(maybeMacro + "void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true) +
+			ret.WriteString(maybeMacro + "void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true, true) +
 				"(*callback)(" + maybeVoid + commaParams + cfs.emitParametersC(m.Parameters, true) + ")) {\n" +
 				cmdStructName + "_On" + mSafeMethodName + "((" + cmdStructName + "*)self, (intptr_t)callback);\n}\n" + maybeEndMacro + "\n\n")
 		}
