@@ -451,13 +451,6 @@ func renderProperties(properties []UiProperty, ret *strings.Builder, targetName,
 		} else if prop.SetVal != nil {
 			// QDialogButtonBox::StandardButton::*
 			// <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Save</set>
-
-			// block KRichTextWidget::setRichTextSupport due to poor implementation
-			if prop.Name == "richTextSupport" {
-				ret.WriteString("// UIC: Property `" + prop.Name + "` is not supported for type " + targetClass + "\n")
-				continue
-			}
-
 			parts := strings.Split(*prop.SetVal, "|")
 			for i, p := range parts {
 				parts[i] = normalizeEnumName(prop.Name, p)
@@ -467,7 +460,13 @@ func renderProperties(properties []UiProperty, ret *strings.Builder, targetName,
 			if len(parts) > 0 {
 				emit = strings.Join(parts, "|")
 			}
-			ret.WriteString(cMethodPrefix + setterFunc + "(ui->" + targetName + ", " + emit + ");\n")
+
+			if prop.Name == "richTextSupport" {
+				ret.WriteString("const int32_t " + targetName + "_" + prop.Name + " = " + emit + ";\n")
+				ret.WriteString(cMethodPrefix + setterFunc + "(ui->" + targetName + ", &" + targetName + "_" + prop.Name + ");\n")
+			} else {
+				ret.WriteString(cMethodPrefix + setterFunc + "(ui->" + targetName + ", " + emit + ");\n")
+			}
 
 		} else if prop.IconVal != nil {
 			iconName := renderIcon(prop.IconVal, ret)
