@@ -192,12 +192,13 @@ const char* k_parts__navigationextension_action_text(void* self, const char* nam
 /// ```c
 /// // Example for freeing the returned map of type:
 /// // libqt_map* of char* to char*
-/// for (size_t i = 0; i < map.len; ++i) {
-///     libqt_free(map.keys[i]);
-///     libqt_free(map.values[i]);
+/// for (size_t i = 0; i < map->len; ++i) {
+///     libqt_free(map->keys[i]);
+///     libqt_free(map->values[i]);
 /// }
-/// free(map.keys);
-/// free(map.values);
+/// free(map->keys);
+/// free(map->values);
+/// free(map);
 /// ```
 ///
 /// @return libqt_map* of char* to char*

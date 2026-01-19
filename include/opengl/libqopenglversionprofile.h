@@ -11,6 +11,18 @@
 
 #include "../qtlibc.h"
 
+struct pair_int_int;
+
+typedef struct pair_int_int pair_int_int;
+
+#ifndef PAIR_INT_INT
+#define PAIR_INT_INT
+struct pair_int_int {
+    int first;
+    int second;
+};
+#endif
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionprofile.html)
 
 /// q_openglversionprofile_new constructs a new QOpenGLVersionProfile object.
@@ -44,9 +56,9 @@ void q_openglversionprofile_operator_assign(void* self, void* rhs);
 ///
 /// @param self QOpenGLVersionProfile*
 ///
-/// @return libqt_pair tuple of int and int
+/// @return pair_int_int tuple of int and int
 ///
-libqt_pair q_openglversionprofile_version(void* self);
+pair_int_int q_openglversionprofile_version(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionprofile.html#setVersion)
 ///

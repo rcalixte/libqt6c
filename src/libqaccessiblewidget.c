@@ -69,18 +69,16 @@ int32_t q_accessiblewidget_qbase_index_of_child(void* self, void* child) {
     return QAccessibleWidget_QBaseIndexOfChild((QAccessibleWidget*)self, (QAccessibleInterface*)child);
 }
 
-libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ q_accessiblewidget_relations(void* self, int32_t match) {
-    libqt_list _arr = QAccessibleWidget_Relations((QAccessibleWidget*)self, match);
-    return _arr;
+libqt_list /* of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ q_accessiblewidget_relations(void* self, int32_t match) {
+    return QAccessibleWidget_Relations((QAccessibleWidget*)self, match);
 }
 
-void q_accessiblewidget_on_relations(void* self, libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ (*callback)(void*, int32_t)) {
+void q_accessiblewidget_on_relations(void* self, libqt_list /* of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ (*callback)(void*, int32_t)) {
     QAccessibleWidget_OnRelations((QAccessibleWidget*)self, (intptr_t)callback);
 }
 
-libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ q_accessiblewidget_qbase_relations(void* self, int32_t match) {
-    libqt_list _arr = QAccessibleWidget_QBaseRelations((QAccessibleWidget*)self, match);
-    return _arr;
+libqt_list /* of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ q_accessiblewidget_qbase_relations(void* self, int32_t match) {
+    return QAccessibleWidget_QBaseRelations((QAccessibleWidget*)self, match);
 }
 
 QAccessibleInterface* q_accessiblewidget_focus_child(void* self) {

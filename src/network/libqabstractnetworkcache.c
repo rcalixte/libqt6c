@@ -47,11 +47,43 @@ void q_networkcachemetadata_set_url(void* self, void* url) {
 
 libqt_list /* of libqt_pair tuple of char* and char* */ q_networkcachemetadata_raw_headers(void* self) {
     libqt_list _arr = QNetworkCacheMetaData_RawHeaders((QNetworkCacheMetaData*)self);
+    libqt_pair* _data = (libqt_pair*)_arr.data.ptr;
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string* _first_str = (libqt_string*)_data[i].first;
+        const char* _first_str_data = _first_str->data;
+        libqt_string* _second_str = (libqt_string*)_data[i].second;
+        const char* _second_str_data = _second_str->data;
+        free(_first_str);
+        free(_second_str);
+        _data[i].first = (void*)_first_str_data;
+        _data[i].second = (void*)_second_str_data;
+    }
     return _arr;
 }
 
 void q_networkcachemetadata_set_raw_headers(void* self, libqt_list /* of libqt_pair tuple of char* and char* */ headers) {
-    QNetworkCacheMetaData_SetRawHeaders((QNetworkCacheMetaData*)self, headers);
+    libqt_pair* headers_pairs = (libqt_pair*)malloc(headers.len * sizeof(libqt_pair));
+    if (headers_pairs == NULL) {
+        fprintf(stderr, "Failed to allocate memory for string pairs in q_networkcachemetadata_set_raw_headers\n");
+        abort();
+    }
+    libqt_string* headers_str = (libqt_string*)malloc(headers.len * 2 * sizeof(libqt_string));
+    if (headers_str == NULL) {
+        free(headers_pairs);
+        fprintf(stderr, "Failed to allocate memory for string pair values in q_networkcachemetadata_set_raw_headers\n");
+        abort();
+    }
+    libqt_pair* headers_data = (libqt_pair*)headers.data.ptr;
+    for (size_t i = 0; i < headers.len; ++i) {
+        headers_str[i * 2] = qstring((const char*)headers_data[i].first);
+        headers_str[i * 2 + 1] = qstring((const char*)headers_data[i].second);
+        headers_pairs[i].first = &headers_str[i * 2];
+        headers_pairs[i].second = &headers_str[i * 2 + 1];
+    }
+    libqt_list headers_list = qlist(headers_pairs, headers.len);
+    QNetworkCacheMetaData_SetRawHeaders((QNetworkCacheMetaData*)self, headers_list);
+    free(headers_str);
+    free(headers_pairs);
 }
 
 QHttpHeaders* q_networkcachemetadata_headers(void* self) {

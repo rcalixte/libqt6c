@@ -68,7 +68,33 @@ const char** k_charsets_descriptive_encoding_names(void* self) {
 
 libqt_list /* of const char** */ k_charsets_encodings_by_script(void* self) {
     libqt_list _arr = KCharsets_EncodingsByScript((KCharsets*)self);
-    return _arr;
+    libqt_list* _strlist = (libqt_list*)_arr.data.ptr;
+    const char*** _data = (const char***)malloc(sizeof(const char**) * _arr.len);
+    if (_data == NULL) {
+        fprintf(stderr, "Failed to allocate memory for string list in k_charsets_encodings_by_script\n");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_list _list = _strlist[i];
+        libqt_string* _str = (libqt_string*)_list.data.ptr;
+        const char** _strdata = (const char**)malloc(sizeof(const char*) * (_list.len + 1));
+        if (_strdata == NULL) {
+            free(_data);
+            fprintf(stderr, "Failed to allocate memory for string list items in k_charsets_encodings_by_script\n");
+            abort();
+        }
+        for (size_t j = 0; j < _list.len; ++j) {
+            _strdata[j] = _str[j].data;
+        }
+        _strdata[_list.len] = NULL;
+        _data[i] = _strdata;
+        free(_str);
+    }
+    free(_strlist);
+    libqt_list _out;
+    _out.len = _arr.len;
+    _out.data.ptr = (void*)_data;
+    return _out;
 }
 
 const char* k_charsets_encoding_for_name(void* self, const char* descriptiveName) {

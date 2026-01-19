@@ -11,6 +11,18 @@
 
 #include "../qtlibc.h"
 
+struct pair_qhostaddress_int;
+
+typedef struct pair_qhostaddress_int pair_qhostaddress_int;
+
+#ifndef PAIR_QHOSTADDRESS_INT
+#define PAIR_QHOSTADDRESS_INT
+struct pair_qhostaddress_int {
+    QHostAddress* first;
+    int second;
+};
+#endif
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qipv6address.html)
 
 /// q_ipv6address_new constructs a new QIPv6Address object.
@@ -307,9 +319,9 @@ bool q_hostaddress_is_private_use(void* self);
 ///
 /// @param subnet const char*
 ///
-/// @return libqt_pair tuple of QHostAddress* and int
+/// @return pair_qhostaddress_int tuple of QHostAddress* and int
 ///
-libqt_pair q_hostaddress_parse_subnet(const char* subnet);
+pair_qhostaddress_int q_hostaddress_parse_subnet(const char* subnet);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostaddress.html#toIPv4Address)
 ///

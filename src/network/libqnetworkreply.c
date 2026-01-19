@@ -115,6 +115,17 @@ char* q_networkreply_raw_header(void* self, char* headerName) {
 
 libqt_list /* of libqt_pair tuple of char* and char* */ q_networkreply_raw_header_pairs(void* self) {
     libqt_list _arr = QNetworkReply_RawHeaderPairs((QNetworkReply*)self);
+    libqt_pair* _data = (libqt_pair*)_arr.data.ptr;
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string* _first_str = (libqt_string*)_data[i].first;
+        const char* _first_str_data = _first_str->data;
+        libqt_string* _second_str = (libqt_string*)_data[i].second;
+        const char* _second_str_data = _second_str->data;
+        free(_first_str);
+        free(_second_str);
+        _data[i].first = (void*)_first_str_data;
+        _data[i].second = (void*)_second_str_data;
+    }
     return _arr;
 }
 

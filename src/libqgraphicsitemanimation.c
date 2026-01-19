@@ -64,9 +64,8 @@ QPointF* q_graphicsitemanimation_pos_at(void* self, double step) {
     return QGraphicsItemAnimation_PosAt((QGraphicsItemAnimation*)self, step);
 }
 
-libqt_list /* of libqt_pair tuple of double and QPointF* */ q_graphicsitemanimation_pos_list(void* self) {
-    libqt_list _arr = QGraphicsItemAnimation_PosList((QGraphicsItemAnimation*)self);
-    return _arr;
+libqt_list /* of pair_double_qpointf tuple of double and QPointF* */ q_graphicsitemanimation_pos_list(void* self) {
+    return QGraphicsItemAnimation_PosList((QGraphicsItemAnimation*)self);
 }
 
 void q_graphicsitemanimation_set_pos_at(void* self, double step, void* pos) {
@@ -81,9 +80,8 @@ double q_graphicsitemanimation_rotation_at(void* self, double step) {
     return QGraphicsItemAnimation_RotationAt((QGraphicsItemAnimation*)self, step);
 }
 
-libqt_list /* of libqt_pair tuple of double and double */ q_graphicsitemanimation_rotation_list(void* self) {
-    libqt_list _arr = QGraphicsItemAnimation_RotationList((QGraphicsItemAnimation*)self);
-    return _arr;
+libqt_list /* of pair_double_double tuple of double and double */ q_graphicsitemanimation_rotation_list(void* self) {
+    return QGraphicsItemAnimation_RotationList((QGraphicsItemAnimation*)self);
 }
 
 void q_graphicsitemanimation_set_rotation_at(void* self, double step, double angle) {
@@ -98,9 +96,8 @@ double q_graphicsitemanimation_y_translation_at(void* self, double step) {
     return QGraphicsItemAnimation_YTranslationAt((QGraphicsItemAnimation*)self, step);
 }
 
-libqt_list /* of libqt_pair tuple of double and QPointF* */ q_graphicsitemanimation_translation_list(void* self) {
-    libqt_list _arr = QGraphicsItemAnimation_TranslationList((QGraphicsItemAnimation*)self);
-    return _arr;
+libqt_list /* of pair_double_qpointf tuple of double and QPointF* */ q_graphicsitemanimation_translation_list(void* self) {
+    return QGraphicsItemAnimation_TranslationList((QGraphicsItemAnimation*)self);
 }
 
 void q_graphicsitemanimation_set_translation_at(void* self, double step, double dx, double dy) {
@@ -115,9 +112,8 @@ double q_graphicsitemanimation_horizontal_scale_at(void* self, double step) {
     return QGraphicsItemAnimation_HorizontalScaleAt((QGraphicsItemAnimation*)self, step);
 }
 
-libqt_list /* of libqt_pair tuple of double and QPointF* */ q_graphicsitemanimation_scale_list(void* self) {
-    libqt_list _arr = QGraphicsItemAnimation_ScaleList((QGraphicsItemAnimation*)self);
-    return _arr;
+libqt_list /* of pair_double_qpointf tuple of double and QPointF* */ q_graphicsitemanimation_scale_list(void* self) {
+    return QGraphicsItemAnimation_ScaleList((QGraphicsItemAnimation*)self);
 }
 
 void q_graphicsitemanimation_set_scale_at(void* self, double step, double sx, double sy) {
@@ -132,9 +128,8 @@ double q_graphicsitemanimation_horizontal_shear_at(void* self, double step) {
     return QGraphicsItemAnimation_HorizontalShearAt((QGraphicsItemAnimation*)self, step);
 }
 
-libqt_list /* of libqt_pair tuple of double and QPointF* */ q_graphicsitemanimation_shear_list(void* self) {
-    libqt_list _arr = QGraphicsItemAnimation_ShearList((QGraphicsItemAnimation*)self);
-    return _arr;
+libqt_list /* of pair_double_qpointf tuple of double and QPointF* */ q_graphicsitemanimation_shear_list(void* self) {
+    return QGraphicsItemAnimation_ShearList((QGraphicsItemAnimation*)self);
 }
 
 void q_graphicsitemanimation_set_shear_at(void* self, double step, double sh, double sv) {

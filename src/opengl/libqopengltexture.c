@@ -240,7 +240,7 @@ void q_opengltexture_set_mip_level_range(void* self, int baseLevel, int maxLevel
     QOpenGLTexture_SetMipLevelRange((QOpenGLTexture*)self, baseLevel, maxLevel);
 }
 
-libqt_pair /* tuple of int and int */ q_opengltexture_mip_level_range(void* self) {
+pair_int_int /* tuple of int and int */ q_opengltexture_mip_level_range(void* self) {
     return QOpenGLTexture_MipLevelRange((QOpenGLTexture*)self);
 }
 
@@ -316,7 +316,7 @@ void q_opengltexture_set_min_mag_filters(void* self, int32_t minificationFilter,
     QOpenGLTexture_SetMinMagFilters((QOpenGLTexture*)self, minificationFilter, magnificationFilter);
 }
 
-libqt_pair /* tuple of enum QOpenGLTexture__Filter and enum QOpenGLTexture__Filter */ q_opengltexture_min_mag_filters(void* self) {
+pair_int32_t_int32_t /* tuple of enum QOpenGLTexture__Filter and enum QOpenGLTexture__Filter */ q_opengltexture_min_mag_filters(void* self) {
     return QOpenGLTexture_MinMagFilters((QOpenGLTexture*)self);
 }
 
@@ -392,7 +392,7 @@ void q_opengltexture_set_level_of_detail_range(void* self, float min, float max)
     QOpenGLTexture_SetLevelOfDetailRange((QOpenGLTexture*)self, min, max);
 }
 
-libqt_pair /* tuple of float and float */ q_opengltexture_level_of_detail_range(void* self) {
+pair_float_float /* tuple of float and float */ q_opengltexture_level_of_detail_range(void* self) {
     return QOpenGLTexture_LevelOfDetailRange((QOpenGLTexture*)self);
 }
 

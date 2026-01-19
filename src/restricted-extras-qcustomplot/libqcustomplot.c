@@ -23158,18 +23158,16 @@ libqt_list /* of QCPDataRange* */ q_cpgraph_qbase_get_non_nan_segments(void* sel
     return _arr;
 }
 
-libqt_list /* of libqt_pair tuple of QCPDataRange* and QCPDataRange* */ q_cpgraph_get_overlapping_segments(void* self, libqt_list /* of QCPDataRange* */ thisSegments, libqt_list /* of QPointF* */ thisData, libqt_list /* of QCPDataRange* */ otherSegments, libqt_list /* of QPointF* */ otherData) {
-    libqt_list _arr = QCPGraph_GetOverlappingSegments((QCPGraph*)self, thisSegments, thisData, otherSegments, otherData);
-    return _arr;
+libqt_list /* of pair_qcpdatarange_qcpdatarange tuple of QCPDataRange* and QCPDataRange* */ q_cpgraph_get_overlapping_segments(void* self, libqt_list /* of QCPDataRange* */ thisSegments, libqt_list /* of QPointF* */ thisData, libqt_list /* of QCPDataRange* */ otherSegments, libqt_list /* of QPointF* */ otherData) {
+    return QCPGraph_GetOverlappingSegments((QCPGraph*)self, thisSegments, thisData, otherSegments, otherData);
 }
 
-void q_cpgraph_on_get_overlapping_segments(void* self, libqt_list /* of libqt_pair tuple of QCPDataRange* and QCPDataRange* */ (*callback)(void*, QCPDataRange**, QPointF**, QCPDataRange**, QPointF**)) {
+void q_cpgraph_on_get_overlapping_segments(void* self, libqt_list /* of pair_qcpdatarange_qcpdatarange tuple of QCPDataRange* and QCPDataRange* */ (*callback)(void*, QCPDataRange**, QPointF**, QCPDataRange**, QPointF**)) {
     QCPGraph_OnGetOverlappingSegments((QCPGraph*)self, (intptr_t)callback);
 }
 
-libqt_list /* of libqt_pair tuple of QCPDataRange* and QCPDataRange* */ q_cpgraph_qbase_get_overlapping_segments(void* self, libqt_list /* of QCPDataRange* */ thisSegments, libqt_list /* of QPointF* */ thisData, libqt_list /* of QCPDataRange* */ otherSegments, libqt_list /* of QPointF* */ otherData) {
-    libqt_list _arr = QCPGraph_QBaseGetOverlappingSegments((QCPGraph*)self, thisSegments, thisData, otherSegments, otherData);
-    return _arr;
+libqt_list /* of pair_qcpdatarange_qcpdatarange tuple of QCPDataRange* and QCPDataRange* */ q_cpgraph_qbase_get_overlapping_segments(void* self, libqt_list /* of QCPDataRange* */ thisSegments, libqt_list /* of QPointF* */ thisData, libqt_list /* of QCPDataRange* */ otherSegments, libqt_list /* of QPointF* */ otherData) {
+    return QCPGraph_QBaseGetOverlappingSegments((QCPGraph*)self, thisSegments, thisData, otherSegments, otherData);
 }
 
 bool q_cpgraph_segments_intersect(void* self, double aLower, double aUpper, double bLower, double bUpper, int* bPrecedence) {

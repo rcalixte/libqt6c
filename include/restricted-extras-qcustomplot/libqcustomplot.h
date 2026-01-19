@@ -11,6 +11,18 @@
 
 #include "../qtlibc.h"
 
+struct pair_qcpdatarange_qcpdatarange;
+
+typedef struct pair_qcpdatarange_qcpdatarange pair_qcpdatarange_qcpdatarange;
+
+#ifndef PAIR_QCPDATARANGE_QCPDATARANGE
+#define PAIR_QCPDATARANGE_QCPDATARANGE
+struct pair_qcpdatarange_qcpdatarange {
+    QCPDataRange* first;
+    QCPDataRange* second;
+};
+#endif
+
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
@@ -50708,7 +50720,7 @@ libqt_list q_cpgraph_qbase_get_non_nan_segments(void* self, libqt_list /* of QPo
 /// @param otherSegments libqt_list of QCPDataRange*
 /// @param otherData libqt_list of QPointF*
 ///
-/// @return libqt_list of libqt_pair tuple of QCPDataRange* and QCPDataRange*
+/// @return libqt_list of pair_qcpdatarange_qcpdatarange tuple of QCPDataRange* and QCPDataRange*
 ///
 libqt_list q_cpgraph_get_overlapping_segments(void* self, libqt_list /* of QCPDataRange* */ thisSegments, libqt_list /* of QPointF* */ thisData, libqt_list /* of QCPDataRange* */ otherSegments, libqt_list /* of QPointF* */ otherData);
 
@@ -50717,7 +50729,7 @@ libqt_list q_cpgraph_get_overlapping_segments(void* self, libqt_list /* of QCPDa
 /// Allows for overriding the related default method
 ///
 /// @param self QCPGraph*
-/// @param callback libqt_list /* of libqt_pair tuple of QCPDataRange* and QCPDataRange* */ func(QCPGraph* self, QCPDataRange** thisSegments, QPointF** thisData, QCPDataRange** otherSegments, QPointF** otherData)
+/// @param callback libqt_list /* of pair_qcpdatarange_qcpdatarange tuple of QCPDataRange* and QCPDataRange* */ func(QCPGraph* self, QCPDataRange** thisSegments, QPointF** thisData, QCPDataRange** otherSegments, QPointF** otherData)
 ///
 void q_cpgraph_on_get_overlapping_segments(void* self, libqt_list (*callback)(void*, QCPDataRange**, QPointF**, QCPDataRange**, QPointF**));
 
@@ -50731,7 +50743,7 @@ void q_cpgraph_on_get_overlapping_segments(void* self, libqt_list (*callback)(vo
 /// @param otherSegments libqt_list of QCPDataRange*
 /// @param otherData libqt_list of QPointF*
 ///
-/// @return libqt_list of libqt_pair tuple of QCPDataRange* and QCPDataRange*
+/// @return libqt_list of pair_qcpdatarange_qcpdatarange tuple of QCPDataRange* and QCPDataRange*
 ///
 libqt_list q_cpgraph_qbase_get_overlapping_segments(void* self, libqt_list /* of QCPDataRange* */ thisSegments, libqt_list /* of QPointF* */ thisData, libqt_list /* of QCPDataRange* */ otherSegments, libqt_list /* of QPointF* */ otherData);
 

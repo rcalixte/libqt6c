@@ -11,6 +11,18 @@
 
 #include "../qtlibc.h"
 
+struct pair_double_qcolor;
+
+typedef struct pair_double_qcolor pair_double_qcolor;
+
+#ifndef PAIR_DOUBLE_QCOLOR
+#define PAIR_DOUBLE_QCOLOR
+struct pair_double_qcolor {
+    double first;
+    QColor* second;
+};
+#endif
+
 /// [Upstream resources](https://api.kde.org/kselector.html)
 
 /// k_selector_new constructs a new KSelector object.
@@ -5372,7 +5384,7 @@ const char* k_gradientselector_tr(const char* s);
 /// [Upstream resources](https://api.kde.org/kgradientselector.html#setStops)
 ///
 /// @param self KGradientSelector*
-/// @param stops libqt_list of libqt_pair tuple of double and QColor*
+/// @param stops libqt_list of pair_double_qcolor tuple of double and QColor*
 ///
 void k_gradientselector_set_stops(void* self, libqt_list stops);
 
@@ -5380,7 +5392,7 @@ void k_gradientselector_set_stops(void* self, libqt_list stops);
 ///
 /// @param self KGradientSelector*
 ///
-/// @return libqt_list of libqt_pair tuple of double and QColor*
+/// @return libqt_list of pair_double_qcolor tuple of double and QColor*
 ///
 libqt_list k_gradientselector_stops(void* self);
 

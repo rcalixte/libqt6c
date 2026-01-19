@@ -270,11 +270,30 @@ int32_t k_syntaxhighlighting__definition_single_line_comment_position(void* self
 }
 
 libqt_pair /* tuple of const char* and const char* */ k_syntaxhighlighting__definition_multi_line_comment_marker(void* self) {
-    return KSyntaxHighlighting__Definition_MultiLineCommentMarker((KSyntaxHighlighting__Definition*)self);
+    libqt_pair _ret = KSyntaxHighlighting__Definition_MultiLineCommentMarker((KSyntaxHighlighting__Definition*)self);
+    libqt_string* _first = (libqt_string*)_ret.first;
+    libqt_string* _second = (libqt_string*)_ret.second;
+    libqt_pair _out;
+    _out.first = (void*)_first->data;
+    _out.second = (void*)_second->data;
+    free(_first);
+    free(_second);
+    return _out;
 }
 
 libqt_list /* of libqt_pair tuple of QChar* and const char* */ k_syntaxhighlighting__definition_character_encodings(void* self) {
     libqt_list _arr = KSyntaxHighlighting__Definition_CharacterEncodings((KSyntaxHighlighting__Definition*)self);
+    libqt_pair* _data = (libqt_pair*)_arr.data.ptr;
+    for (size_t i = 0; i < _arr.len; ++i) {
+        void** _first_ptr = (void**)_data[i].first;
+        void* _first_data = *_first_ptr;
+        libqt_string* _second_str = (libqt_string*)_data[i].second;
+        const char* _second_str_data = _second_str->data;
+        free(_first_ptr);
+        free(_second_str);
+        _data[i].first = _first_data;
+        _data[i].second = (void*)_second_str_data;
+    }
     return _arr;
 }
 

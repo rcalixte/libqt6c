@@ -126,7 +126,7 @@ const char* k_configviewstatesaver_current_index_key(void* self) {
     return _ret;
 }
 
-libqt_pair /* tuple of int and int */ k_configviewstatesaver_scroll_state(void* self) {
+pair_int_int /* tuple of int and int */ k_configviewstatesaver_scroll_state(void* self) {
     return KViewStateSerializer_ScrollState((KViewStateSerializer*)self);
 }
 

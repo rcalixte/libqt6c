@@ -84,27 +84,27 @@ int32_t q_designerlayoutdecorationextension_qbase_current_index(void* self) {
     return QDesignerLayoutDecorationExtension_QBaseCurrentIndex((QDesignerLayoutDecorationExtension*)self);
 }
 
-libqt_pair /* tuple of int and int */ q_designerlayoutdecorationextension_current_cell(void* self) {
+pair_int_int /* tuple of int and int */ q_designerlayoutdecorationextension_current_cell(void* self) {
     return QDesignerLayoutDecorationExtension_CurrentCell((QDesignerLayoutDecorationExtension*)self);
 }
 
-void q_designerlayoutdecorationextension_on_current_cell(void* self, libqt_pair /* tuple of int and int */ (*callback)()) {
+void q_designerlayoutdecorationextension_on_current_cell(void* self, pair_int_int /* tuple of int and int */ (*callback)()) {
     QDesignerLayoutDecorationExtension_OnCurrentCell((QDesignerLayoutDecorationExtension*)self, (intptr_t)callback);
 }
 
-libqt_pair /* tuple of int and int */ q_designerlayoutdecorationextension_qbase_current_cell(void* self) {
+pair_int_int /* tuple of int and int */ q_designerlayoutdecorationextension_qbase_current_cell(void* self) {
     return QDesignerLayoutDecorationExtension_QBaseCurrentCell((QDesignerLayoutDecorationExtension*)self);
 }
 
-void q_designerlayoutdecorationextension_insert_widget(void* self, void* widget, libqt_pair /* tuple of int and int */ cell) {
+void q_designerlayoutdecorationextension_insert_widget(void* self, void* widget, pair_int_int /* tuple of int and int */ cell) {
     QDesignerLayoutDecorationExtension_InsertWidget((QDesignerLayoutDecorationExtension*)self, (QWidget*)widget, cell);
 }
 
-void q_designerlayoutdecorationextension_on_insert_widget(void* self, void (*callback)(void*, void*, libqt_pair /* tuple of int and int */)) {
+void q_designerlayoutdecorationextension_on_insert_widget(void* self, void (*callback)(void*, void*, pair_int_int /* tuple of int and int */)) {
     QDesignerLayoutDecorationExtension_OnInsertWidget((QDesignerLayoutDecorationExtension*)self, (intptr_t)callback);
 }
 
-void q_designerlayoutdecorationextension_qbase_insert_widget(void* self, void* widget, libqt_pair /* tuple of int and int */ cell) {
+void q_designerlayoutdecorationextension_qbase_insert_widget(void* self, void* widget, pair_int_int /* tuple of int and int */ cell) {
     QDesignerLayoutDecorationExtension_QBaseInsertWidget((QDesignerLayoutDecorationExtension*)self, (QWidget*)widget, cell);
 }
 

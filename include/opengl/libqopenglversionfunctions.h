@@ -11,6 +11,18 @@
 
 #include "../qtlibc.h"
 
+struct pair_int_int;
+
+typedef struct pair_int_int pair_int_int;
+
+#ifndef PAIR_INT_INT
+#define PAIR_INT_INT
+struct pair_int_int {
+    int first;
+    int second;
+};
+#endif
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionstatus.html)
 
 /// q_openglversionstatus_new constructs a new QOpenGLVersionStatus object.
@@ -55,16 +67,16 @@ QOpenGLVersionStatus* q_openglversionstatus_new5(void* param1);
 ///
 /// @param self QOpenGLVersionStatus*
 ///
-/// @return libqt_pair tuple of int and int
+/// @return pair_int_int tuple of int and int
 ///
-libqt_pair q_openglversionstatus_version(void* self);
+pair_int_int q_openglversionstatus_version(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionstatus.html#version-var)
 ///
 /// @param self QOpenGLVersionStatus*
-/// @param version libqt_pair tuple of int and int
+/// @param version pair_int_int tuple of int and int
 ///
-void q_openglversionstatus_set_version(void* self, libqt_pair version);
+void q_openglversionstatus_set_version(void* self, pair_int_int version);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionstatus.html#status-var)
 ///

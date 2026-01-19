@@ -602,9 +602,9 @@ bool q_lineseries_best_fit_line_visible(void* self);
 /// @param self QLineSeries*
 /// @param ok bool*
 ///
-/// @return libqt_pair tuple of double and double
+/// @return pair_double_double tuple of double and double
 ///
-libqt_pair q_lineseries_best_fit_line_equation(void* self, bool* ok);
+pair_double_double q_lineseries_best_fit_line_equation(void* self, bool* ok);
 
 /// Inherited from QXYSeries
 ///

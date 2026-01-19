@@ -11,6 +11,18 @@
 
 #include "../qtlibc.h"
 
+struct pair_qcborvalue_qcborvalue;
+
+typedef struct pair_qcborvalue_qcborvalue pair_qcborvalue_qcborvalue;
+
+#ifndef PAIR_QCBORVALUE_QCBORVALUE
+#define PAIR_QCBORVALUE_QCBORVALUE
+struct pair_qcborvalue_qcborvalue {
+    QCborValue* first;
+    QCborValue* second;
+};
+#endif
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html)
 
 /// q_cbormap_new constructs a new QCborMap object.
@@ -376,9 +388,9 @@ QCborMap__Iterator* q_cbormap_insert4(void* self, void* key, void* value_);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#insert)
 ///
 /// @param self QCborMap*
-/// @param v libqt_pair tuple of QCborValue* and QCborValue*
+/// @param v pair_qcborvalue_qcborvalue tuple of QCborValue* and QCborValue*
 ///
-QCborMap__Iterator* q_cbormap_insert5(void* self, libqt_pair v);
+QCborMap__Iterator* q_cbormap_insert5(void* self, pair_qcborvalue_qcborvalue v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#fromVariantMap)
 ///
@@ -485,18 +497,18 @@ void q_cbormap__iterator_operator_assign(void* self, void* other);
 ///
 /// @param self QCborMap__Iterator*
 ///
-/// @return libqt_pair tuple of QCborValue* and QCborValue*
+/// @return pair_qcborvalue_qcborvalue tuple of QCborValue* and QCborValue*
 ///
-libqt_pair q_cbormap__iterator_operator_multiply(void* self);
+pair_qcborvalue_qcborvalue q_cbormap__iterator_operator_multiply(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap-iterator.html#operator-5b-5d)
 ///
 /// @param self QCborMap__Iterator*
 /// @param j int64_t
 ///
-/// @return libqt_pair tuple of QCborValue* and QCborValue*
+/// @return pair_qcborvalue_qcborvalue tuple of QCborValue* and QCborValue*
 ///
-libqt_pair q_cbormap__iterator_operator_subscript(void* self, int64_t j);
+pair_qcborvalue_qcborvalue q_cbormap__iterator_operator_subscript(void* self, int64_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap-iterator.html#operator--gt)
 ///
@@ -622,18 +634,18 @@ void q_cbormap__constiterator_operator_assign(void* self, void* other);
 ///
 /// @param self QCborMap__ConstIterator*
 ///
-/// @return libqt_pair tuple of QCborValue* and QCborValue*
+/// @return pair_qcborvalue_qcborvalue tuple of QCborValue* and QCborValue*
 ///
-libqt_pair q_cbormap__constiterator_operator_multiply(void* self);
+pair_qcborvalue_qcborvalue q_cbormap__constiterator_operator_multiply(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap-constiterator.html#operator-5b-5d)
 ///
 /// @param self QCborMap__ConstIterator*
 /// @param j int64_t
 ///
-/// @return libqt_pair tuple of QCborValue* and QCborValue*
+/// @return pair_qcborvalue_qcborvalue tuple of QCborValue* and QCborValue*
 ///
-libqt_pair q_cbormap__constiterator_operator_subscript(void* self, int64_t j);
+pair_qcborvalue_qcborvalue q_cbormap__constiterator_operator_subscript(void* self, int64_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap-constiterator.html#operator--gt)
 ///

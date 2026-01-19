@@ -11,6 +11,18 @@
 
 #include "../qtlibc.h"
 
+struct pair_int_int;
+
+typedef struct pair_int_int pair_int_int;
+
+#ifndef PAIR_INT_INT
+#define PAIR_INT_INT
+struct pair_int_int {
+    int first;
+    int second;
+};
+#endif
+
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html)
 
 /// k_viewstateserializer_new constructs a new KViewStateSerializer object.
@@ -121,9 +133,9 @@ const char* k_viewstateserializer_current_index_key(void* self);
 ///
 /// @param self KViewStateSerializer*
 ///
-/// @return libqt_pair tuple of int and int
+/// @return pair_int_int tuple of int and int
 ///
-libqt_pair k_viewstateserializer_scroll_state(void* self);
+pair_int_int k_viewstateserializer_scroll_state(void* self);
 
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#restoreSelection)
 ///

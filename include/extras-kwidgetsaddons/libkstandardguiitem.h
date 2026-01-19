@@ -11,6 +11,18 @@
 
 #include "../qtlibc.h"
 
+struct pair_kguiitem_kguiitem;
+
+typedef struct pair_kguiitem_kguiitem pair_kguiitem_kguiitem;
+
+#ifndef PAIR_KGUIITEM_KGUIITEM
+#define PAIR_KGUIITEM_KGUIITEM
+struct pair_kguiitem_kguiitem {
+    KGuiItem* first;
+    KGuiItem* second;
+};
+#endif
+
 /// [Upstream resources](https://api.kde.org/kstandardguiitem.html)
 
 /// [Upstream resources](https://api.kde.org/kstandardguiitem.html#guiItem)
@@ -133,9 +145,9 @@ KGuiItem* k_standardguiitem_configure();
 
 /// [Upstream resources](https://api.kde.org/kstandardguiitem.html#backAndForward)
 ///
-/// @return libqt_pair tuple of KGuiItem* and KGuiItem*
+/// @return pair_kguiitem_kguiitem tuple of KGuiItem* and KGuiItem*
 ///
-libqt_pair k_standardguiitem_back_and_forward();
+pair_kguiitem_kguiitem k_standardguiitem_back_and_forward();
 
 /// [Upstream resources](https://api.kde.org/kstandardguiitem.html#quit)
 ///

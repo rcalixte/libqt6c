@@ -11,6 +11,38 @@
 
 #include "../qtlibc.h"
 
+struct pair_float_float;
+struct pair_int32_t_int32_t;
+struct pair_int_int;
+
+typedef struct pair_float_float pair_float_float;
+typedef struct pair_int32_t_int32_t pair_int32_t_int32_t;
+typedef struct pair_int_int pair_int_int;
+
+#ifndef PAIR_FLOAT_FLOAT
+#define PAIR_FLOAT_FLOAT
+struct pair_float_float {
+    float first;
+    float second;
+};
+#endif
+
+#ifndef PAIR_INT32_T_INT32_T
+#define PAIR_INT32_T_INT32_T
+struct pair_int32_t_int32_t {
+    int32_t first;
+    int32_t second;
+};
+#endif
+
+#ifndef PAIR_INT_INT
+#define PAIR_INT_INT
+struct pair_int_int {
+    int first;
+    int second;
+};
+#endif
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html)
 
 /// q_opengltexture_new constructs a new QOpenGLTexture object.
@@ -503,9 +535,9 @@ void q_opengltexture_set_mip_level_range(void* self, int baseLevel, int maxLevel
 ///
 /// @param self QOpenGLTexture*
 ///
-/// @return libqt_pair tuple of int and int
+/// @return pair_int_int tuple of int and int
 ///
-libqt_pair q_opengltexture_mip_level_range(void* self);
+pair_int_int q_opengltexture_mip_level_range(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setAutoMipMapGenerationEnabled)
 ///
@@ -647,9 +679,9 @@ void q_opengltexture_set_min_mag_filters(void* self, int32_t minificationFilter,
 ///
 /// @param self QOpenGLTexture*
 ///
-/// @return libqt_pair tuple of enum QOpenGLTexture__Filter and enum QOpenGLTexture__Filter
+/// @return pair_int32_t_int32_t tuple of enum QOpenGLTexture__Filter and enum QOpenGLTexture__Filter
 ///
-libqt_pair q_opengltexture_min_mag_filters(void* self);
+pair_int32_t_int32_t q_opengltexture_min_mag_filters(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setMaximumAnisotropy)
 ///
@@ -790,9 +822,9 @@ void q_opengltexture_set_level_of_detail_range(void* self, float min, float max)
 ///
 /// @param self QOpenGLTexture*
 ///
-/// @return libqt_pair tuple of float and float
+/// @return pair_float_float tuple of float and float
 ///
-libqt_pair q_opengltexture_level_of_detail_range(void* self);
+pair_float_float q_opengltexture_level_of_detail_range(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltexture.html#setLevelofDetailBias)
 ///

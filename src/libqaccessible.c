@@ -21,9 +21,8 @@ QWindow* q_accessibleinterface_window(void* self) {
     return QAccessibleInterface_Window((QAccessibleInterface*)self);
 }
 
-libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ q_accessibleinterface_relations(void* self, int32_t match) {
-    libqt_list _arr = QAccessibleInterface_Relations((QAccessibleInterface*)self, match);
-    return _arr;
+libqt_list /* of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ q_accessibleinterface_relations(void* self, int32_t match) {
+    return QAccessibleInterface_Relations((QAccessibleInterface*)self, match);
 }
 
 QAccessibleInterface* q_accessibleinterface_focus_child(void* self) {

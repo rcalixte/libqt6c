@@ -11,6 +11,28 @@
 
 #include "qtlibc.h"
 
+struct pair_double_qpointf;
+struct pair_double_double;
+
+typedef struct pair_double_qpointf pair_double_qpointf;
+typedef struct pair_double_double pair_double_double;
+
+#ifndef PAIR_DOUBLE_QPOINTF
+#define PAIR_DOUBLE_QPOINTF
+struct pair_double_qpointf {
+    double first;
+    QPointF* second;
+};
+#endif
+
+#ifndef PAIR_DOUBLE_DOUBLE
+#define PAIR_DOUBLE_DOUBLE
+struct pair_double_double {
+    double first;
+    double second;
+};
+#endif
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitemanimation.html)
 
 /// q_graphicsitemanimation_new constructs a new QGraphicsItemAnimation object.
@@ -104,7 +126,7 @@ QPointF* q_graphicsitemanimation_pos_at(void* self, double step);
 ///
 /// @param self QGraphicsItemAnimation*
 ///
-/// @return libqt_list of libqt_pair tuple of double and QPointF*
+/// @return libqt_list of pair_double_qpointf tuple of double and QPointF*
 ///
 libqt_list q_graphicsitemanimation_pos_list(void* self);
 
@@ -134,7 +156,7 @@ double q_graphicsitemanimation_rotation_at(void* self, double step);
 ///
 /// @param self QGraphicsItemAnimation*
 ///
-/// @return libqt_list of libqt_pair tuple of double and double
+/// @return libqt_list of pair_double_double tuple of double and double
 ///
 libqt_list q_graphicsitemanimation_rotation_list(void* self);
 
@@ -164,7 +186,7 @@ double q_graphicsitemanimation_y_translation_at(void* self, double step);
 ///
 /// @param self QGraphicsItemAnimation*
 ///
-/// @return libqt_list of libqt_pair tuple of double and QPointF*
+/// @return libqt_list of pair_double_qpointf tuple of double and QPointF*
 ///
 libqt_list q_graphicsitemanimation_translation_list(void* self);
 
@@ -195,7 +217,7 @@ double q_graphicsitemanimation_horizontal_scale_at(void* self, double step);
 ///
 /// @param self QGraphicsItemAnimation*
 ///
-/// @return libqt_list of libqt_pair tuple of double and QPointF*
+/// @return libqt_list of pair_double_qpointf tuple of double and QPointF*
 ///
 libqt_list q_graphicsitemanimation_scale_list(void* self);
 
@@ -226,7 +248,7 @@ double q_graphicsitemanimation_horizontal_shear_at(void* self, double step);
 ///
 /// @param self QGraphicsItemAnimation*
 ///
-/// @return libqt_list of libqt_pair tuple of double and QPointF*
+/// @return libqt_list of pair_double_qpointf tuple of double and QPointF*
 ///
 libqt_list q_graphicsitemanimation_shear_list(void* self);
 
