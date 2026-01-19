@@ -42,8 +42,8 @@ bool q_webengineframe_is_main_frame(void* self) {
     return QWebEngineFrame_IsMainFrame((QWebEngineFrame*)self);
 }
 
-void q_webengineframe_run_java_script(void* self, const char* script) {
-    QWebEngineFrame_RunJavaScript((QWebEngineFrame*)self, qstring(script));
+void q_webengineframe_run_java_script3(void* self, const char* script) {
+    QWebEngineFrame_RunJavaScript3((QWebEngineFrame*)self, qstring(script));
 }
 
 void q_webengineframe_print_to_pdf(void* self, const char* filePath) {

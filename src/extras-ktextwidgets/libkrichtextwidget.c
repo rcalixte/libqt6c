@@ -78,6 +78,10 @@ libqt_list /* of QAction* */ k_richtextwidget_qbase_create_actions(void* self) {
     return _arr;
 }
 
+void k_richtextwidget_set_rich_text_support(void* self, const int32_t* support) {
+    KRichTextWidget_SetRichTextSupport((KRichTextWidget*)self, support);
+}
+
 int32_t k_richtextwidget_rich_text_support(void* self) {
     return KRichTextWidget_RichTextSupport((KRichTextWidget*)self);
 }

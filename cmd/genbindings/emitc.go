@@ -596,6 +596,11 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 
 		if k, v, containerType, ok := p.QMapOf(); ok {
 			maybePointer := ifv(containerType == "QMultiHash" || containerType == "QMultiMap", "*", "")
+			if maybePointer == "" {
+				if _, _, ok := v.QListOf(); ok {
+					maybePointer = "*"
+				}
+			}
 			pName = cComment("of " + strings.TrimSpace(k.RenderTypeC(cfs, false, true, true)) + " to " + strings.TrimSpace(v.RenderTypeC(cfs, false, true, true)) + maybePointer)
 			pTypeSlot = pName
 			pType = "libqt_map" + ifv(p.Pointer, "*", "")

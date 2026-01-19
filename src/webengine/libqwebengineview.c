@@ -160,6 +160,10 @@ void q_webengineview_set_zoom_factor(void* self, double factor) {
     QWebEngineView_SetZoomFactor((QWebEngineView*)self, factor);
 }
 
+void q_webengineview_find_text(void* self, const char* subString) {
+    QWebEngineView_FindText((QWebEngineView*)self, qstring(subString));
+}
+
 QSize* q_webengineview_size_hint(void* self) {
     return QWebEngineView_SizeHint((QWebEngineView*)self);
 }
@@ -462,8 +466,12 @@ void q_webengineview_trigger_page_action2(void* self, int32_t action, bool check
     QWebEngineView_TriggerPageAction2((QWebEngineView*)self, action, checked);
 }
 
-void q_webengineview_print_to_pdf2(void* self, const char* filePath, void* layout) {
-    QWebEngineView_PrintToPdf2((QWebEngineView*)self, qstring(filePath), (QPageLayout*)layout);
+void q_webengineview_find_text2(void* self, const char* subString, int32_t options) {
+    QWebEngineView_FindText2((QWebEngineView*)self, qstring(subString), options);
+}
+
+void q_webengineview_print_to_pdf22(void* self, const char* filePath, void* layout) {
+    QWebEngineView_PrintToPdf22((QWebEngineView*)self, qstring(filePath), (QPageLayout*)layout);
 }
 
 void q_webengineview_print_to_pdf3(void* self, const char* filePath, void* layout, void* ranges) {
