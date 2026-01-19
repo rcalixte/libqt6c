@@ -68,7 +68,7 @@ void q_accessible_cleanup() {
     QAccessible_Cleanup();
 }
 
-libqt_pair /* tuple of int and int */ q_accessible_q_accessible_text_boundary_helper(void* cursor, int32_t boundaryType) {
+pair_int_int /* tuple of int and int */ q_accessible_q_accessible_text_boundary_helper(void* cursor, int32_t boundaryType) {
     return QAccessible_QAccessibleTextBoundaryHelper((QTextCursor*)cursor, boundaryType);
 }
 

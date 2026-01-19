@@ -11,6 +11,18 @@
 
 #include "qtlibc.h"
 
+struct pair_qaccessibleinterface_int32_t;
+
+typedef struct pair_qaccessibleinterface_int32_t pair_qaccessibleinterface_int32_t;
+
+#ifndef PAIR_QACCESSIBLEINTERFACE_INT32_T
+#define PAIR_QACCESSIBLEINTERFACE_INT32_T
+struct pair_qaccessibleinterface_int32_t {
+    QAccessibleInterface* first;
+    int32_t second;
+};
+#endif
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleobject.html)
 
 /// q_accessibleobject_new constructs a new QAccessibleObject object.
@@ -262,7 +274,7 @@ void q_accessibleobject_on_window(void* self, QWindow* (*callback)());
 /// @param self QAccessibleObject*
 /// @param match flag of enum QAccessible__RelationFlag
 ///
-/// @return libqt_list of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag
+/// @return libqt_list of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag
 ///
 libqt_list q_accessibleobject_relations(void* self, int32_t match);
 
@@ -275,7 +287,7 @@ libqt_list q_accessibleobject_relations(void* self, int32_t match);
 /// @param self QAccessibleObject*
 /// @param match flag of enum QAccessible__RelationFlag
 ///
-/// @return libqt_list of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag
+/// @return libqt_list of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag
 ///
 libqt_list q_accessibleobject_qbase_relations(void* self, int32_t match);
 
@@ -286,7 +298,7 @@ libqt_list q_accessibleobject_qbase_relations(void* self, int32_t match);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessibleObject*
-/// @param callback libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ func(QAccessibleObject* self, flag of enum QAccessible__RelationFlag match)
+/// @param callback libqt_list /* of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ func(QAccessibleObject* self, flag of enum QAccessible__RelationFlag match)
 ///
 void q_accessibleobject_on_relations(void* self, libqt_list (*callback)(void*, int32_t));
 
@@ -1159,7 +1171,7 @@ void q_accessibleapplication_on_child_at(void* self, QAccessibleInterface* (*cal
 /// @param self QAccessibleApplication*
 /// @param match flag of enum QAccessible__RelationFlag
 ///
-/// @return libqt_list of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag
+/// @return libqt_list of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag
 ///
 libqt_list q_accessibleapplication_relations(void* self, int32_t match);
 
@@ -1172,7 +1184,7 @@ libqt_list q_accessibleapplication_relations(void* self, int32_t match);
 /// @param self QAccessibleApplication*
 /// @param match flag of enum QAccessible__RelationFlag
 ///
-/// @return libqt_list of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag
+/// @return libqt_list of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag
 ///
 libqt_list q_accessibleapplication_qbase_relations(void* self, int32_t match);
 
@@ -1183,7 +1195,7 @@ libqt_list q_accessibleapplication_qbase_relations(void* self, int32_t match);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessibleApplication*
-/// @param callback libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ func(QAccessibleApplication* self, flag of enum QAccessible__RelationFlag match)
+/// @param callback libqt_list /* of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ func(QAccessibleApplication* self, flag of enum QAccessible__RelationFlag match)
 ///
 void q_accessibleapplication_on_relations(void* self, libqt_list (*callback)(void*, int32_t));
 

@@ -22,11 +22,11 @@ QOpenGLVersionStatus* q_openglversionstatus_new5(void* param1) {
     return QOpenGLVersionStatus_new5((QOpenGLVersionStatus*)param1);
 }
 
-libqt_pair /* tuple of int and int */ q_openglversionstatus_version(void* self) {
+pair_int_int /* tuple of int and int */ q_openglversionstatus_version(void* self) {
     return QOpenGLVersionStatus_Version((QOpenGLVersionStatus*)self);
 }
 
-void q_openglversionstatus_set_version(void* self, libqt_pair /* tuple of int and int */ version) {
+void q_openglversionstatus_set_version(void* self, pair_int_int /* tuple of int and int */ version) {
     QOpenGLVersionStatus_SetVersion((QOpenGLVersionStatus*)self, version);
 }
 

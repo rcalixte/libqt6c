@@ -292,7 +292,7 @@ func gatherTypes(name string, dirs []string, allowHeader func(string) bool, clan
 
 var allHeaders = make(map[string]int)
 
-func generate(srcName string, srcDirs []string, allowHeaderFn func(string) bool, outDir string, headerList *[]string, qtstructdefs, qttypedefs map[string]struct{}) *FormatBatch {
+func generate(srcName string, srcDirs []string, allowHeaderFn func(string) bool, outDir string, headerList *[]string, qtstructdefs map[string]struct{}) *FormatBatch {
 
 	packageName := filepath.Join("src", srcName)
 	includePath := filepath.Join("include", srcName)
@@ -457,17 +457,13 @@ func generate(srcName string, srcDirs []string, allowHeaderFn func(string) bool,
 			panic(err)
 		}
 
-		bindingHSrc, structdefs, typedefs, err := emitBindingHeader(parsed, packageName)
+		bindingHSrc, structdefs, err := emitBindingHeader(parsed, packageName)
 		if err != nil {
 			panic(err)
 		}
 
 		for k := range structdefs {
 			qtstructdefs[k] = struct{}{}
-		}
-
-		for k := range typedefs {
-			qttypedefs[k] = struct{}{}
 		}
 
 		err = os.WriteFile(outputName+".hpp", []byte(bindingHSrc), 0644)

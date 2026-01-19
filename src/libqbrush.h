@@ -11,6 +11,18 @@
 
 #include "qtlibc.h"
 
+struct pair_double_qcolor;
+
+typedef struct pair_double_qcolor pair_double_qcolor;
+
+#ifndef PAIR_DOUBLE_QCOLOR
+#define PAIR_DOUBLE_QCOLOR
+struct pair_double_qcolor {
+    double first;
+    QColor* second;
+};
+#endif
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qbrush.html)
 
 /// q_brush_new constructs a new QBrush object.
@@ -299,7 +311,7 @@ void q_gradient_set_color_at(void* self, double pos, void* color);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgradient.html#setStops)
 ///
 /// @param self QGradient*
-/// @param stops libqt_list of libqt_pair tuple of double and QColor*
+/// @param stops libqt_list of pair_double_qcolor tuple of double and QColor*
 ///
 void q_gradient_set_stops(void* self, libqt_list stops);
 
@@ -307,7 +319,7 @@ void q_gradient_set_stops(void* self, libqt_list stops);
 ///
 /// @param self QGradient*
 ///
-/// @return libqt_list of libqt_pair tuple of double and QColor*
+/// @return libqt_list of pair_double_qcolor tuple of double and QColor*
 ///
 libqt_list q_gradient_stops(void* self);
 
@@ -483,7 +495,7 @@ void q_lineargradient_set_color_at(void* self, double pos, void* color);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgradient.html#setStops)
 ///
 /// @param self QLinearGradient*
-/// @param stops libqt_list of libqt_pair tuple of double and QColor*
+/// @param stops libqt_list of pair_double_qcolor tuple of double and QColor*
 ///
 void q_lineargradient_set_stops(void* self, libqt_list stops);
 
@@ -493,7 +505,7 @@ void q_lineargradient_set_stops(void* self, libqt_list stops);
 ///
 /// @param self QLinearGradient*
 ///
-/// @return libqt_list of libqt_pair tuple of double and QColor*
+/// @return libqt_list of pair_double_qcolor tuple of double and QColor*
 ///
 libqt_list q_lineargradient_stops(void* self);
 
@@ -765,7 +777,7 @@ void q_radialgradient_set_color_at(void* self, double pos, void* color);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgradient.html#setStops)
 ///
 /// @param self QRadialGradient*
-/// @param stops libqt_list of libqt_pair tuple of double and QColor*
+/// @param stops libqt_list of pair_double_qcolor tuple of double and QColor*
 ///
 void q_radialgradient_set_stops(void* self, libqt_list stops);
 
@@ -775,7 +787,7 @@ void q_radialgradient_set_stops(void* self, libqt_list stops);
 ///
 /// @param self QRadialGradient*
 ///
-/// @return libqt_list of libqt_pair tuple of double and QColor*
+/// @return libqt_list of pair_double_qcolor tuple of double and QColor*
 ///
 libqt_list q_radialgradient_stops(void* self);
 
@@ -954,7 +966,7 @@ void q_conicalgradient_set_color_at(void* self, double pos, void* color);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgradient.html#setStops)
 ///
 /// @param self QConicalGradient*
-/// @param stops libqt_list of libqt_pair tuple of double and QColor*
+/// @param stops libqt_list of pair_double_qcolor tuple of double and QColor*
 ///
 void q_conicalgradient_set_stops(void* self, libqt_list stops);
 
@@ -964,7 +976,7 @@ void q_conicalgradient_set_stops(void* self, libqt_list stops);
 ///
 /// @param self QConicalGradient*
 ///
-/// @return libqt_list of libqt_pair tuple of double and QColor*
+/// @return libqt_list of pair_double_qcolor tuple of double and QColor*
 ///
 libqt_list q_conicalgradient_stops(void* self);
 

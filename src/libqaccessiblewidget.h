@@ -11,6 +11,18 @@
 
 #include "qtlibc.h"
 
+struct pair_qaccessibleinterface_int32_t;
+
+typedef struct pair_qaccessibleinterface_int32_t pair_qaccessibleinterface_int32_t;
+
+#ifndef PAIR_QACCESSIBLEINTERFACE_INT32_T
+#define PAIR_QACCESSIBLEINTERFACE_INT32_T
+struct pair_qaccessibleinterface_int32_t {
+    QAccessibleInterface* first;
+    int32_t second;
+};
+#endif
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblewidget.html)
 
 /// q_accessiblewidget_new constructs a new QAccessibleWidget object.
@@ -137,7 +149,7 @@ int32_t q_accessiblewidget_qbase_index_of_child(void* self, void* child);
 /// @param self QAccessibleWidget*
 /// @param match flag of enum QAccessible__RelationFlag
 ///
-/// @return libqt_list of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag
+/// @return libqt_list of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag
 ///
 libqt_list q_accessiblewidget_relations(void* self, int32_t match);
 
@@ -146,7 +158,7 @@ libqt_list q_accessiblewidget_relations(void* self, int32_t match);
 /// Allows for overriding the related default method
 ///
 /// @param self QAccessibleWidget*
-/// @param callback libqt_list /* of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ func(QAccessibleWidget* self, flag of enum QAccessible__RelationFlag match)
+/// @param callback libqt_list /* of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ func(QAccessibleWidget* self, flag of enum QAccessible__RelationFlag match)
 ///
 void q_accessiblewidget_on_relations(void* self, libqt_list (*callback)(void*, int32_t));
 
@@ -157,7 +169,7 @@ void q_accessiblewidget_on_relations(void* self, libqt_list (*callback)(void*, i
 /// @param self QAccessibleWidget*
 /// @param match flag of enum QAccessible__RelationFlag
 ///
-/// @return libqt_list of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag
+/// @return libqt_list of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag
 ///
 libqt_list q_accessiblewidget_qbase_relations(void* self, int32_t match);
 

@@ -83,6 +83,17 @@ bool k_acl_set_named_user_permissions(void* self, const char* name, unsigned sho
 
 libqt_list /* of libqt_pair tuple of const char* and unsigned short */ k_acl_all_user_permissions(void* self) {
     libqt_list _arr = KACL_AllUserPermissions((KACL*)self);
+    libqt_pair* _data = (libqt_pair*)_arr.data.ptr;
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string* _first_str = (libqt_string*)_data[i].first;
+        const char* _first_str_data = _first_str->data;
+        uint16_t* _second_ptr = (uint16_t*)_data[i].second;
+        uint16_t _second_value = *_second_ptr;
+        free(_first_str);
+        free(_second_ptr);
+        _data[i].first = (void*)_first_str_data;
+        _data[i].second = (void*)(uintptr_t)_second_value;
+    }
     return _arr;
 }
 
@@ -96,6 +107,17 @@ bool k_acl_set_named_group_permissions(void* self, const char* name, unsigned sh
 
 libqt_list /* of libqt_pair tuple of const char* and unsigned short */ k_acl_all_group_permissions(void* self) {
     libqt_list _arr = KACL_AllGroupPermissions((KACL*)self);
+    libqt_pair* _data = (libqt_pair*)_arr.data.ptr;
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string* _first_str = (libqt_string*)_data[i].first;
+        const char* _first_str_data = _first_str->data;
+        uint16_t* _second_ptr = (uint16_t*)_data[i].second;
+        uint16_t _second_value = *_second_ptr;
+        free(_first_str);
+        free(_second_ptr);
+        _data[i].first = (void*)_first_str_data;
+        _data[i].second = (void*)(uintptr_t)_second_value;
+    }
     return _arr;
 }
 

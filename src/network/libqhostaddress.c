@@ -175,7 +175,7 @@ bool q_hostaddress_is_private_use(void* self) {
     return QHostAddress_IsPrivateUse((QHostAddress*)self);
 }
 
-libqt_pair /* tuple of QHostAddress* and int */ q_hostaddress_parse_subnet(const char* subnet) {
+pair_qhostaddress_int /* tuple of QHostAddress* and int */ q_hostaddress_parse_subnet(const char* subnet) {
     return QHostAddress_ParseSubnet(qstring(subnet));
 }
 

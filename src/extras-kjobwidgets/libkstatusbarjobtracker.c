@@ -56,7 +56,19 @@ void k_statusbarjobtracker_set_status_bar_mode(void* self, int32_t statusBarMode
 }
 
 void k_statusbarjobtracker_description(void* self, void* job, const char* title, libqt_pair /* tuple of const char* and const char* */ field1, libqt_pair /* tuple of const char* and const char* */ field2) {
-    KStatusBarJobTracker_Description((KStatusBarJobTracker*)self, (KJob*)job, qstring(title), field1, field2);
+    libqt_string field1_first_str = qstring(field1.first);
+    libqt_string field1_second_str = qstring(field1.second);
+    libqt_pair field1_pair = {
+        &field1_first_str,
+        &field1_second_str,
+    };
+    libqt_string field2_first_str = qstring(field2.first);
+    libqt_string field2_second_str = qstring(field2.second);
+    libqt_pair field2_pair = {
+        &field2_first_str,
+        &field2_second_str,
+    };
+    KStatusBarJobTracker_Description((KStatusBarJobTracker*)self, (KJob*)job, qstring(title), field1_pair, field2_pair);
 }
 
 void k_statusbarjobtracker_total_amount(void* self, void* job, int32_t unit, uint64_t amount) {

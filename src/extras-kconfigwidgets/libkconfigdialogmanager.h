@@ -113,12 +113,13 @@ bool k_configdialogmanager_is_default(void* self);
 /// ```c
 /// // Example for freeing the returned map of type:
 /// // libqt_map* of const char* to char*
-/// for (size_t i = 0; i < map.len; ++i) {
-///     libqt_free(map.keys[i]);
-///     libqt_free(map.values[i]);
+/// for (size_t i = 0; i < map->len; ++i) {
+///     libqt_free(map->keys[i]);
+///     libqt_free(map->values[i]);
 /// }
-/// free(map.keys);
-/// free(map.values);
+/// free(map->keys);
+/// free(map->values);
+/// free(map);
 /// ```
 ///
 /// @return libqt_map* of const char* to char*

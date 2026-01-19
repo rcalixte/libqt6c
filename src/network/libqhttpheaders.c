@@ -168,7 +168,26 @@ const char* q_httpheaders_well_known_header_name(int32_t name) {
 }
 
 QHttpHeaders* q_httpheaders_from_list_of_pairs(libqt_list /* of libqt_pair tuple of char* and char* */ headers) {
-    return QHttpHeaders_FromListOfPairs(headers);
+    libqt_pair* headers_pairs = (libqt_pair*)malloc(headers.len * sizeof(libqt_pair));
+    if (headers_pairs == NULL) {
+        fprintf(stderr, "Failed to allocate memory for string pairs in q_httpheaders_from_list_of_pairs\n");
+        abort();
+    }
+    libqt_string* headers_str = (libqt_string*)malloc(headers.len * 2 * sizeof(libqt_string));
+    if (headers_str == NULL) {
+        free(headers_pairs);
+        fprintf(stderr, "Failed to allocate memory for string pair values in q_httpheaders_from_list_of_pairs\n");
+        abort();
+    }
+    libqt_pair* headers_data = (libqt_pair*)headers.data.ptr;
+    for (size_t i = 0; i < headers.len; ++i) {
+        headers_str[i * 2] = qstring((const char*)headers_data[i].first);
+        headers_str[i * 2 + 1] = qstring((const char*)headers_data[i].second);
+        headers_pairs[i].first = &headers_str[i * 2];
+        headers_pairs[i].second = &headers_str[i * 2 + 1];
+    }
+    libqt_list headers_list = qlist(headers_pairs, headers.len);
+    return QHttpHeaders_FromListOfPairs(headers_list);
 }
 
 QHttpHeaders* q_httpheaders_from_multi_map(libqt_map /* of char* to char** */ headers) {
@@ -269,6 +288,17 @@ QHttpHeaders* q_httpheaders_from_multi_hash(libqt_map /* of char* to char** */ h
 
 libqt_list /* of libqt_pair tuple of char* and char* */ q_httpheaders_to_list_of_pairs(void* self) {
     libqt_list _arr = QHttpHeaders_ToListOfPairs((QHttpHeaders*)self);
+    libqt_pair* _data = (libqt_pair*)_arr.data.ptr;
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string* _first_str = (libqt_string*)_data[i].first;
+        const char* _first_str_data = _first_str->data;
+        libqt_string* _second_str = (libqt_string*)_data[i].second;
+        const char* _second_str_data = _second_str->data;
+        free(_first_str);
+        free(_second_str);
+        _data[i].first = (void*)_first_str_data;
+        _data[i].second = (void*)_second_str_data;
+    }
     return _arr;
 }
 

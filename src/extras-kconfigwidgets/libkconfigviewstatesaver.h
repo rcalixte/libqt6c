@@ -170,9 +170,9 @@ const char* k_configviewstatesaver_current_index_key(void* self);
 ///
 /// @param self KConfigViewStateSaver*
 ///
-/// @return libqt_pair tuple of int and int
+/// @return pair_int_int tuple of int and int
 ///
-libqt_pair k_configviewstatesaver_scroll_state(void* self);
+pair_int_int k_configviewstatesaver_scroll_state(void* self);
 
 /// Inherited from KViewStateSerializer
 ///

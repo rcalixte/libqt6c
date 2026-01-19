@@ -144,12 +144,11 @@ void q_propertyanimation_set_key_value_at(void* self, double step, void* value) 
     QVariantAnimation_SetKeyValueAt((QVariantAnimation*)self, step, (QVariant*)value);
 }
 
-libqt_list /* of libqt_pair tuple of double and QVariant* */ q_propertyanimation_key_values(void* self) {
-    libqt_list _arr = QVariantAnimation_KeyValues((QVariantAnimation*)self);
-    return _arr;
+libqt_list /* of pair_double_qvariant tuple of double and QVariant* */ q_propertyanimation_key_values(void* self) {
+    return QVariantAnimation_KeyValues((QVariantAnimation*)self);
 }
 
-void q_propertyanimation_set_key_values(void* self, libqt_list /* of libqt_pair tuple of double and QVariant* */ values) {
+void q_propertyanimation_set_key_values(void* self, libqt_list /* of pair_double_qvariant tuple of double and QVariant* */ values) {
     QVariantAnimation_SetKeyValues((QVariantAnimation*)self, values);
 }
 

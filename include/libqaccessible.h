@@ -11,6 +11,18 @@
 
 #include "qtlibc.h"
 
+struct pair_qaccessibleinterface_int32_t;
+
+typedef struct pair_qaccessibleinterface_int32_t pair_qaccessibleinterface_int32_t;
+
+#ifndef PAIR_QACCESSIBLEINTERFACE_INT32_T
+#define PAIR_QACCESSIBLEINTERFACE_INT32_T
+struct pair_qaccessibleinterface_int32_t {
+    QAccessibleInterface* first;
+    int32_t second;
+};
+#endif
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleinterface.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleinterface.html#isValid)
@@ -36,7 +48,7 @@ QWindow* q_accessibleinterface_window(void* self);
 /// @param self QAccessibleInterface*
 /// @param match flag of enum QAccessible__RelationFlag
 ///
-/// @return libqt_list of libqt_pair tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag
+/// @return libqt_list of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag
 ///
 libqt_list q_accessibleinterface_relations(void* self, int32_t match);
 

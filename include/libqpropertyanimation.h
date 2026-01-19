@@ -269,7 +269,7 @@ void q_propertyanimation_set_key_value_at(void* self, double step, void* value);
 ///
 /// @param self QPropertyAnimation*
 ///
-/// @return libqt_list of libqt_pair tuple of double and QVariant*
+/// @return libqt_list of pair_double_qvariant tuple of double and QVariant*
 ///
 libqt_list q_propertyanimation_key_values(void* self);
 
@@ -278,7 +278,7 @@ libqt_list q_propertyanimation_key_values(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariantanimation.html#setKeyValues)
 ///
 /// @param self QPropertyAnimation*
-/// @param values libqt_list of libqt_pair tuple of double and QVariant*
+/// @param values libqt_list of pair_double_qvariant tuple of double and QVariant*
 ///
 void q_propertyanimation_set_key_values(void* self, libqt_list values);
 

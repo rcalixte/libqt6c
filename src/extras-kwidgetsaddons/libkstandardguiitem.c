@@ -114,7 +114,7 @@ KGuiItem* k_standardguiitem_configure() {
     return KStandardGuiItem_Configure();
 }
 
-libqt_pair /* tuple of KGuiItem* and KGuiItem* */ k_standardguiitem_back_and_forward() {
+pair_kguiitem_kguiitem /* tuple of KGuiItem* and KGuiItem* */ k_standardguiitem_back_and_forward() {
     return KStandardGuiItem_BackAndForward();
 }
 

@@ -163,13 +163,12 @@ void q_gradient_set_color_at(void* self, double pos, void* color) {
     QGradient_SetColorAt((QGradient*)self, pos, (QColor*)color);
 }
 
-void q_gradient_set_stops(void* self, libqt_list /* of libqt_pair tuple of double and QColor* */ stops) {
+void q_gradient_set_stops(void* self, libqt_list /* of pair_double_qcolor tuple of double and QColor* */ stops) {
     QGradient_SetStops((QGradient*)self, stops);
 }
 
-libqt_list /* of libqt_pair tuple of double and QColor* */ q_gradient_stops(void* self) {
-    libqt_list _arr = QGradient_Stops((QGradient*)self);
-    return _arr;
+libqt_list /* of pair_double_qcolor tuple of double and QColor* */ q_gradient_stops(void* self) {
+    return QGradient_Stops((QGradient*)self);
 }
 
 int32_t q_gradient_coordinate_mode(void* self) {
@@ -256,13 +255,12 @@ void q_lineargradient_set_color_at(void* self, double pos, void* color) {
     QGradient_SetColorAt((QGradient*)self, pos, (QColor*)color);
 }
 
-void q_lineargradient_set_stops(void* self, libqt_list /* of libqt_pair tuple of double and QColor* */ stops) {
+void q_lineargradient_set_stops(void* self, libqt_list /* of pair_double_qcolor tuple of double and QColor* */ stops) {
     QGradient_SetStops((QGradient*)self, stops);
 }
 
-libqt_list /* of libqt_pair tuple of double and QColor* */ q_lineargradient_stops(void* self) {
-    libqt_list _arr = QGradient_Stops((QGradient*)self);
-    return _arr;
+libqt_list /* of pair_double_qcolor tuple of double and QColor* */ q_lineargradient_stops(void* self) {
+    return QGradient_Stops((QGradient*)self);
 }
 
 int32_t q_lineargradient_coordinate_mode(void* self) {
@@ -389,13 +387,12 @@ void q_radialgradient_set_color_at(void* self, double pos, void* color) {
     QGradient_SetColorAt((QGradient*)self, pos, (QColor*)color);
 }
 
-void q_radialgradient_set_stops(void* self, libqt_list /* of libqt_pair tuple of double and QColor* */ stops) {
+void q_radialgradient_set_stops(void* self, libqt_list /* of pair_double_qcolor tuple of double and QColor* */ stops) {
     QGradient_SetStops((QGradient*)self, stops);
 }
 
-libqt_list /* of libqt_pair tuple of double and QColor* */ q_radialgradient_stops(void* self) {
-    libqt_list _arr = QGradient_Stops((QGradient*)self);
-    return _arr;
+libqt_list /* of pair_double_qcolor tuple of double and QColor* */ q_radialgradient_stops(void* self) {
+    return QGradient_Stops((QGradient*)self);
 }
 
 int32_t q_radialgradient_coordinate_mode(void* self) {
@@ -478,13 +475,12 @@ void q_conicalgradient_set_color_at(void* self, double pos, void* color) {
     QGradient_SetColorAt((QGradient*)self, pos, (QColor*)color);
 }
 
-void q_conicalgradient_set_stops(void* self, libqt_list /* of libqt_pair tuple of double and QColor* */ stops) {
+void q_conicalgradient_set_stops(void* self, libqt_list /* of pair_double_qcolor tuple of double and QColor* */ stops) {
     QGradient_SetStops((QGradient*)self, stops);
 }
 
-libqt_list /* of libqt_pair tuple of double and QColor* */ q_conicalgradient_stops(void* self) {
-    libqt_list _arr = QGradient_Stops((QGradient*)self);
-    return _arr;
+libqt_list /* of pair_double_qcolor tuple of double and QColor* */ q_conicalgradient_stops(void* self) {
+    return QGradient_Stops((QGradient*)self);
 }
 
 int32_t q_conicalgradient_coordinate_mode(void* self) {

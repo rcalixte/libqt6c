@@ -18,7 +18,7 @@ void q_openglversionprofile_operator_assign(void* self, void* rhs) {
     QOpenGLVersionProfile_OperatorAssign((QOpenGLVersionProfile*)self, (QOpenGLVersionProfile*)rhs);
 }
 
-libqt_pair /* tuple of int and int */ q_openglversionprofile_version(void* self) {
+pair_int_int /* tuple of int and int */ q_openglversionprofile_version(void* self) {
     return QOpenGLVersionProfile_Version((QOpenGLVersionProfile*)self);
 }
 

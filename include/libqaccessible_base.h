@@ -11,6 +11,18 @@
 
 #include "qtlibc.h"
 
+struct pair_int_int;
+
+typedef struct pair_int_int pair_int_int;
+
+#ifndef PAIR_INT_INT
+#define PAIR_INT_INT
+struct pair_int_int {
+    int first;
+    int second;
+};
+#endif
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible.html)
 
 /// q_accessible_new constructs a new QAccessible object.
@@ -114,9 +126,9 @@ void q_accessible_cleanup();
 /// @param cursor QTextCursor*
 /// @param boundaryType enum QAccessible__TextBoundaryType
 ///
-/// @return libqt_pair tuple of int and int
+/// @return pair_int_int tuple of int and int
 ///
-libqt_pair q_accessible_q_accessible_text_boundary_helper(void* cursor, int32_t boundaryType);
+pair_int_int q_accessible_q_accessible_text_boundary_helper(void* cursor, int32_t boundaryType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible.html#dtor.QAccessible)
 ///

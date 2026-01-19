@@ -269,7 +269,7 @@ bool q_xyseries_best_fit_line_visible(void* self) {
     return QXYSeries_BestFitLineVisible((QXYSeries*)self);
 }
 
-libqt_pair /* tuple of double and double */ q_xyseries_best_fit_line_equation(void* self, bool* ok) {
+pair_double_double /* tuple of double and double */ q_xyseries_best_fit_line_equation(void* self, bool* ok) {
     return QXYSeries_BestFitLineEquation((QXYSeries*)self, (bool*)ok);
 }
 

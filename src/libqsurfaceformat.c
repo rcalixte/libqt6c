@@ -118,7 +118,7 @@ int32_t q_surfaceformat_minor_version(void* self) {
     return QSurfaceFormat_MinorVersion((QSurfaceFormat*)self);
 }
 
-libqt_pair /* tuple of int and int */ q_surfaceformat_version(void* self) {
+pair_int_int /* tuple of int and int */ q_surfaceformat_version(void* self) {
     return QSurfaceFormat_Version((QSurfaceFormat*)self);
 }
 

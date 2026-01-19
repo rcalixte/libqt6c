@@ -11,6 +11,18 @@
 
 #include "../qtlibc.h"
 
+struct pair_int_int;
+
+typedef struct pair_int_int pair_int_int;
+
+#ifndef PAIR_INT_INT
+#define PAIR_INT_INT
+struct pair_int_int {
+    int first;
+    int second;
+};
+#endif
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html)
 
 /// q_designerlayoutdecorationextension_new constructs a new QDesignerLayoutDecorationExtension object.
@@ -175,18 +187,18 @@ int32_t q_designerlayoutdecorationextension_qbase_current_index(void* self);
 ///
 /// @param self QDesignerLayoutDecorationExtension*
 ///
-/// @return libqt_pair tuple of int and int
+/// @return pair_int_int tuple of int and int
 ///
-libqt_pair q_designerlayoutdecorationextension_current_cell(void* self);
+pair_int_int q_designerlayoutdecorationextension_current_cell(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#currentCell)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QDesignerLayoutDecorationExtension*
-/// @param callback libqt_pair tuple of int and int func()
+/// @param callback pair_int_int tuple of int and int func()
 ///
-void q_designerlayoutdecorationextension_on_current_cell(void* self, libqt_pair (*callback)());
+void q_designerlayoutdecorationextension_on_current_cell(void* self, pair_int_int (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#currentCell)
 ///
@@ -194,26 +206,26 @@ void q_designerlayoutdecorationextension_on_current_cell(void* self, libqt_pair 
 ///
 /// @param self QDesignerLayoutDecorationExtension*
 ///
-/// @return libqt_pair tuple of int and int
+/// @return pair_int_int tuple of int and int
 ///
-libqt_pair q_designerlayoutdecorationextension_qbase_current_cell(void* self);
+pair_int_int q_designerlayoutdecorationextension_qbase_current_cell(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#insertWidget)
 ///
 /// @param self QDesignerLayoutDecorationExtension*
 /// @param widget QWidget*
-/// @param cell libqt_pair tuple of int and int
+/// @param cell pair_int_int tuple of int and int
 ///
-void q_designerlayoutdecorationextension_insert_widget(void* self, void* widget, libqt_pair cell);
+void q_designerlayoutdecorationextension_insert_widget(void* self, void* widget, pair_int_int cell);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#insertWidget)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QDesignerLayoutDecorationExtension*
-/// @param callback void func(QDesignerLayoutDecorationExtension* self, QWidget* widget, libqt_pair tuple of int and int)
+/// @param callback void func(QDesignerLayoutDecorationExtension* self, QWidget* widget, pair_int_int tuple of int and int)
 ///
-void q_designerlayoutdecorationextension_on_insert_widget(void* self, void (*callback)(void*, void*, libqt_pair));
+void q_designerlayoutdecorationextension_on_insert_widget(void* self, void (*callback)(void*, void*, pair_int_int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#insertWidget)
 ///
@@ -221,9 +233,9 @@ void q_designerlayoutdecorationextension_on_insert_widget(void* self, void (*cal
 ///
 /// @param self QDesignerLayoutDecorationExtension*
 /// @param widget QWidget*
-/// @param cell libqt_pair tuple of int and int
+/// @param cell pair_int_int tuple of int and int
 ///
-void q_designerlayoutdecorationextension_qbase_insert_widget(void* self, void* widget, libqt_pair cell);
+void q_designerlayoutdecorationextension_qbase_insert_widget(void* self, void* widget, pair_int_int cell);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#removeWidget)
 ///

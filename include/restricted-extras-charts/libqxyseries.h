@@ -11,6 +11,18 @@
 
 #include "../qtlibc.h"
 
+struct pair_double_double;
+
+typedef struct pair_double_double pair_double_double;
+
+#ifndef PAIR_DOUBLE_DOUBLE
+#define PAIR_DOUBLE_DOUBLE
+struct pair_double_double {
+    double first;
+    double second;
+};
+#endif
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
@@ -445,9 +457,9 @@ bool q_xyseries_best_fit_line_visible(void* self);
 /// @param self QXYSeries*
 /// @param ok bool*
 ///
-/// @return libqt_pair tuple of double and double
+/// @return pair_double_double tuple of double and double
 ///
-libqt_pair q_xyseries_best_fit_line_equation(void* self, bool* ok);
+pair_double_double q_xyseries_best_fit_line_equation(void* self, bool* ok);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setBestFitLinePen)
 ///

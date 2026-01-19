@@ -217,7 +217,7 @@ QCborMap__Iterator* q_cbormap_insert4(void* self, void* key, void* value_) {
     return QCborMap_Insert4((QCborMap*)self, (QCborValue*)key, (QCborValue*)value_);
 }
 
-QCborMap__Iterator* q_cbormap_insert5(void* self, libqt_pair /* tuple of QCborValue* and QCborValue* */ v) {
+QCborMap__Iterator* q_cbormap_insert5(void* self, pair_qcborvalue_qcborvalue /* tuple of QCborValue* and QCborValue* */ v) {
     return QCborMap_Insert5((QCborMap*)self, v);
 }
 
@@ -373,11 +373,11 @@ void q_cbormap__iterator_operator_assign(void* self, void* other) {
     QCborMap__Iterator_OperatorAssign((QCborMap__Iterator*)self, (QCborMap__Iterator*)other);
 }
 
-libqt_pair /* tuple of QCborValue* and QCborValue* */ q_cbormap__iterator_operator_multiply(void* self) {
+pair_qcborvalue_qcborvalue /* tuple of QCborValue* and QCborValue* */ q_cbormap__iterator_operator_multiply(void* self) {
     return QCborMap__Iterator_OperatorMultiply((QCborMap__Iterator*)self);
 }
 
-libqt_pair /* tuple of QCborValue* and QCborValue* */ q_cbormap__iterator_operator_subscript(void* self, int64_t j) {
+pair_qcborvalue_qcborvalue /* tuple of QCborValue* and QCborValue* */ q_cbormap__iterator_operator_subscript(void* self, int64_t j) {
     return QCborMap__Iterator_OperatorSubscript((QCborMap__Iterator*)self, j);
 }
 
@@ -453,11 +453,11 @@ void q_cbormap__constiterator_operator_assign(void* self, void* other) {
     QCborMap__ConstIterator_OperatorAssign((QCborMap__ConstIterator*)self, (QCborMap__ConstIterator*)other);
 }
 
-libqt_pair /* tuple of QCborValue* and QCborValue* */ q_cbormap__constiterator_operator_multiply(void* self) {
+pair_qcborvalue_qcborvalue /* tuple of QCborValue* and QCborValue* */ q_cbormap__constiterator_operator_multiply(void* self) {
     return QCborMap__ConstIterator_OperatorMultiply((QCborMap__ConstIterator*)self);
 }
 
-libqt_pair /* tuple of QCborValue* and QCborValue* */ q_cbormap__constiterator_operator_subscript(void* self, int64_t j) {
+pair_qcborvalue_qcborvalue /* tuple of QCborValue* and QCborValue* */ q_cbormap__constiterator_operator_subscript(void* self, int64_t j) {
     return QCborMap__ConstIterator_OperatorSubscript((QCborMap__ConstIterator*)self, j);
 }
 
