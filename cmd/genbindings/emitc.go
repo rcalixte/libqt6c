@@ -6,6 +6,7 @@ import (
 	"math"
 	"path/filepath"
 	"reflect"
+	"sort"
 	"strconv"
 	"strings"
 	"unicode"
@@ -243,10 +244,24 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, i
 	if t1, t2, ok := p.QPairOf(); ok {
 		// Design QPair using capital-named members, in case it gets passed
 		// across packages
+		returnType := "libqt_pair"
+		if (t1.IntType() || IsKnownClass(t1.ParameterType)) && (t2.IntType() || IsKnownClass(t2.ParameterType)) {
+			fParam := t1.ParameterType
+			sParam := t2.ParameterType
+
+			if e, ok := KnownEnums[t1.ParameterType]; ok {
+				fParam = e.EnumTypeC
+			}
+			if e, ok := KnownEnums[t2.ParameterType]; ok {
+				sParam = e.EnumTypeC
+			}
+			returnType = "pair_" + strings.ToLower(fParam) + "_" + strings.ToLower(sParam)
+		}
+
 		f := strings.TrimSpace(t1.RenderTypeC(cfs, isReturnType, true, includeContainerComment))
 		s := strings.TrimSpace(t2.RenderTypeC(cfs, isReturnType, true, includeContainerComment))
 
-		return "libqt_pair" + ifv(includeContainerComment, cppComment("tuple of "+f+" and "+s), "")
+		return returnType + ifv(includeContainerComment, cppComment("tuple of "+f+" and "+s), "")
 	}
 
 	if (p.ParameterType == "void" || p.ParameterType == "GLvoid") && p.Pointer {
@@ -446,27 +461,33 @@ func (p CppParameter) returnAllocComment(cfs *cFileState, returnType string) str
 		return "\n/// @warning Caller is responsible for freeing the returned memory using `" + freeMethod + "`\n///"
 
 	} else if keyType, valueType, containerType, ok := p.QMapOf(); ok {
-		var freeLoop, keyFree, valueFree, innerFree string
+		var freeLoop, keyFree, valueFree, innerFree, maybeMapFree string
+
+		deRef := "."
+		if p.Pointer {
+			deRef = "->"
+			maybeMapFree = "\n/// free(map);"
+		}
 
 		isQMulti := ifv(containerType == "QMultiHash" || containerType == "QMultiMap", true, false)
 		inner := valueType.ParameterType
 
 		if keyType.ParameterType == "QString" || keyType.ParameterType == "QByteArray" {
-			keyFree = "\n///     libqt_free(map.keys[i]);"
+			keyFree = "\n///     libqt_free(map" + deRef + "keys[i]);"
 		} else if IsKnownClass(keyType.ParameterType) {
-			keyFree = "\n///     free(((" + keyType.ParameterType + "*)map.keys)[i]);"
+			keyFree = "\n///     free(((" + keyType.ParameterType + "*)map" + deRef + "keys)[i]);"
 		}
 
 		if valueType.ParameterType == "QString" || valueType.ParameterType == "QByteArray" {
-			valueFree = "\n///     libqt_free(map.values[i]);"
+			valueFree = "\n///     libqt_free(map" + deRef + "values[i]);"
 		} else if IsKnownClass(valueType.ParameterType) {
-			valueFree = "\n///     free(((" + valueType.ParameterType + "*)map.values)[i]);"
+			valueFree = "\n///     free(((" + valueType.ParameterType + "*)map" + deRef + "values)[i]);"
 		} else if innerType, _, ok := valueType.QListOf(); ok {
-			valueFree = "\n///     free(((" + innerType.ParameterType + "*)map.values)[i]);"
+			valueFree = "\n///     free(((" + innerType.ParameterType + "*)map" + deRef + "values)[i]);"
 		} else if _, _, _, ok := valueType.QMapOf(); ok {
 			// every current instance of this is fortunately a map consisting of primitive types
-			valueFree = "\n///     free(((libqt_map*)map.values)[i].keys);"
-			valueFree += "\n///     free(((libqt_map*)map.values)[i].values);"
+			valueFree = "\n///     free(((libqt_map*)map" + deRef + "values)[i]" + deRef + "keys);"
+			valueFree += "\n///     free(((libqt_map*)map" + deRef + "values)[i]" + deRef + "values);"
 		}
 
 		if innerType, _, ok := valueType.QListOf(); ok {
@@ -482,19 +503,19 @@ func (p CppParameter) returnAllocComment(cfs *cFileState, returnType string) str
 					freeType = "libqt_"
 				}
 
-				innerFree = "\n///     for (size_t j = 0; ((" + maybeConst + "char**)map.values)[i][j] != NULL; j++) {"
-				innerFree += "\n///         " + freeType + "free((map.values)[i][j]);"
+				innerFree = "\n///     for (size_t j = 0; ((" + maybeConst + "char**)map" + deRef + "values)[i][j] != NULL; j++) {"
+				innerFree += "\n///         " + freeType + "free((map" + deRef + "values)[i][j]);"
 
 			} else if IsKnownClass(inner) {
-				innerFree = "\n///     for (size_t j = 0; ((" + inner + "**)map.values)[i][j] != NULL; j++) {"
-				innerFree += "\n///         free(((" + inner + "**)map.values)[i][j]);"
+				innerFree = "\n///     for (size_t j = 0; ((" + inner + "**)map" + deRef + "values)[i][j] != NULL; j++) {"
+				innerFree += "\n///         free(((" + inner + "**)map" + deRef + "values)[i][j]);"
 			}
 
 			innerFree += "\n///     }"
 		}
 
 		if innerFree != "" || keyFree != "" || valueFree != "" {
-			freeLoop = "\n/// for (size_t i = 0; i < map.len; ++i) {"
+			freeLoop = "\n/// for (size_t i = 0; i < map" + deRef + "len; ++i) {"
 			freeLoop += innerFree
 			freeLoop += keyFree
 			freeLoop += valueFree
@@ -507,8 +528,9 @@ func (p CppParameter) returnAllocComment(cfs *cFileState, returnType string) str
 			"\n/// ```c\n/// // Example for freeing the returned map of type:" +
 			"\n/// // " + strings.TrimSpace(strings.ReplaceAll(uncomment.Replace(p.RenderTypeC(cfs, true, true, true)), "  ", " ")) +
 			freeLoop +
-			"\n/// free(map.keys);" +
-			"\n/// free(map.values);" +
+			"\n/// free(map" + deRef + "keys);" +
+			"\n/// free(map" + deRef + "values);" +
+			maybeMapFree +
 			"\n/// ```\n///"
 	}
 
@@ -583,7 +605,7 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 			if isSlot && IsKnownClass(t.ParameterType) {
 				pType = t.RenderTypeC(cfs, false, true, true) + "*"
 			} else if IsKnownClass(t.ParameterType) || strings.Contains(t.ParameterType, "::") ||
-				t.IntType() || strings.Contains(pType, "libqt_") {
+				t.IntType() || strings.Contains(pType, "libqt_") || strings.HasPrefix(pType, "pair_") {
 				pName = cComment("of " + strings.TrimSpace(t.RenderTypeC(cfs, false, true, true)))
 				pTypeSlot = pName
 				pType = "libqt_list"
@@ -609,7 +631,21 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 		if t1, t2, ok := p.QPairOf(); ok {
 			pName = cComment("tuple of " + strings.TrimSpace(t1.RenderTypeC(cfs, false, true, true)) + " and " + strings.TrimSpace(t2.RenderTypeC(cfs, false, true, true)))
 			pTypeSlot = pName
-			pType = "libqt_pair"
+
+			if t1.IntType() || IsKnownClass(t1.ParameterType) && (t2.IntType() || IsKnownClass(t2.ParameterType)) {
+				fParam := t1.ParameterType
+				sParam := t2.ParameterType
+
+				if e, ok := KnownEnums[t1.ParameterType]; ok {
+					fParam = e.EnumTypeC
+				}
+				if e, ok := KnownEnums[t2.ParameterType]; ok {
+					sParam = e.EnumTypeC
+				}
+				pType = "pair_" + strings.ToLower(fParam) + "_" + strings.ToLower(sParam)
+			} else {
+				pType = "libqt_pair"
+			}
 		}
 
 		if isSlot {
@@ -628,7 +664,7 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 			}
 			tmp = append(tmp, resParam+" "+strings.TrimSpace(pName))
 		} else {
-			if strings.Contains(pType, "libqt") {
+			if strings.Contains(pType, "libqt") || strings.HasPrefix(pType, "pair_") {
 				tmp = append(tmp, "/// @param "+p.ParameterName+" "+pType+" "+strings.TrimSpace(pName))
 			} else {
 				tmp = append(tmp, "/// @param "+pName+" "+pType)
@@ -802,6 +838,35 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 
 			rvalue = nameprefix + "_list"
 
+		} else if f, s, ok := t.QPairOf(); ok {
+			if (f.ParameterType == "QString" || f.ParameterType == "QByteArray") && (s.ParameterType == "QString" || s.ParameterType == "QByteArray") {
+				preamble += "libqt_pair* " + nameprefix + "_pairs = (libqt_pair*)malloc(" + p.ParameterName + ".len * sizeof(libqt_pair));\n"
+				preamble += "if (" + nameprefix + "_pairs == NULL) {\n"
+				preamble += `    fprintf(stderr, "Failed to allocate memory for string pairs in ` + cfs.currentMethodName + `\n");` + "\n"
+				preamble += "    abort();\n"
+				preamble += "}\n"
+				preamble += "libqt_string* " + nameprefix + "_str = (libqt_string*)malloc(" + p.ParameterName + ".len * 2 * sizeof(libqt_string));\n"
+				preamble += "if (" + nameprefix + "_str == NULL) {\n"
+				preamble += "    free(" + nameprefix + "_pairs);\n"
+				preamble += `    fprintf(stderr, "Failed to allocate memory for string pair values in ` + cfs.currentMethodName + `\n");` + "\n"
+				preamble += "    abort();\n"
+				preamble += "}\n"
+				preamble += "libqt_pair* " + nameprefix + "_data = (libqt_pair*)" + p.ParameterName + ".data.ptr;\n"
+				preamble += "for (size_t i = 0; i < " + p.ParameterName + ".len; ++i) {\n"
+				preamble += "    " + nameprefix + "_str[i * 2] = qstring((const char*)" + nameprefix + "_data[i].first);\n"
+				preamble += "    " + nameprefix + "_str[i * 2 + 1] = qstring((const char*)" + nameprefix + "_data[i].second);\n"
+				preamble += "    " + nameprefix + "_pairs[i].first = &" + nameprefix + "_str[i * 2];\n"
+				preamble += "    " + nameprefix + "_pairs[i].second = &" + nameprefix + "_str[i * 2 + 1];\n"
+				preamble += "}\n"
+				preamble += "libqt_list " + nameprefix + "_list = qlist(" + nameprefix + "_pairs, " + p.ParameterName + ".len);\n"
+				allocCleanup := "free(" + nameprefix + "_str);\n"
+				allocCleanup += "free(" + nameprefix + "_pairs);\n"
+				cfs.allocCleanups = append(cfs.allocCleanups, allocCleanup)
+				rvalue = nameprefix + "_list"
+			} else {
+				rvalue = nameprefix
+			}
+
 		} else {
 			rvalue = nameprefix
 		}
@@ -950,12 +1015,47 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 
 		rvalue = maybeRef + nameprefix + "_ret"
 
-	} else if _, _, ok := p.QPairOf(); ok {
-		// QPair<K,V>
-		rvalue = nameprefix
+	} else if f, s, ok := p.QPairOf(); ok {
+		// QPair<F,S>
+		if (f.IntType() || IsKnownClass(f.ParameterType)) && (s.IntType() || IsKnownClass(s.ParameterType)) {
+			rvalue = nameprefix
+		} else {
+
+			fAddr := ""
+			fParam := ".first"
+
+			if f.ParameterType == "QString" || f.ParameterType == "QByteArray" {
+				fAddr = "&"
+				preamble += "libqt_string " + nameprefix + "_first_str = qstring(" + p.ParameterName + fParam + ");\n"
+				fParam = "_first_str"
+			} else if f.IntType() {
+				fAddr = "&"
+				preamble += f.ParameterType + " " + nameprefix + "_first = " + p.ParameterName + fParam + ";\n"
+				fParam = "_first"
+			}
+
+			sAddr := ""
+			sParam := ".second"
+			if s.ParameterType == "QString" || s.ParameterType == "QByteArray" {
+				sAddr = "&"
+				preamble += "libqt_string " + nameprefix + "_second_str = qstring(" + p.ParameterName + sParam + ");\n"
+				sParam = "_second_str"
+			} else if s.IntType() {
+				sAddr = "&"
+				preamble += s.ParameterType + " " + nameprefix + "_second = " + p.ParameterName + sParam + ";\n"
+				sParam = "_second"
+			}
+
+			preamble += "libqt_pair " + nameprefix + "_pair = {\n"
+			preamble += "    " + fAddr + nameprefix + fParam + ",\n"
+			preamble += "    " + sAddr + nameprefix + sParam + ",\n"
+			preamble += "};\n"
+
+			rvalue = nameprefix + "_pair"
+		}
 
 	} else if p.Pointer && p.ParameterType == "char" {
-		// Single char* argument
+		// Single char*(*) argument
 		rvalue = nameprefix
 
 	} else if p.QtClassType() {
@@ -976,6 +1076,7 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 		} else {
 			rvalue = p.ParameterName
 		}
+
 	} else {
 		// Default
 		rvalue = p.ParameterName
@@ -1059,6 +1160,112 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 			cfs.allocCleanups = append(cfs.allocCleanups, "libqt_free("+namePrefix+"_ret);\n")
 
 			return shouldReturn + rvalue + ";\n" + maybeAllocCleanup + afterword
+
+		} else if f, s, ok := t.QPairOf(); ok {
+			// QList<QPair<F,S>>
+			if (f.IntType() || IsKnownClass(f.ParameterType)) && (s.IntType() || IsKnownClass(s.ParameterType)) {
+				return shouldReturn + rvalue + ";\n" + afterword
+
+			} else {
+				shouldReturn = "libqt_list " + namePrefix + "_arr = "
+
+				var firstFree, secondFree, firstLoop, secondLoop, firstAssign, secondAssign string
+
+				if f.ParameterType == "QString" || f.ParameterType == "QByteArray" {
+					firstLoop = "    libqt_string* " + namePrefix + "_first_str = (libqt_string*)" + namePrefix + "_data[i].first;\n"
+					firstLoop += "    const char* " + namePrefix + "_first_str_data = " + namePrefix + "_first_str->data;\n"
+					firstFree = "    free(" + namePrefix + "_first_str);\n"
+					firstAssign = "    " + namePrefix + "_data[i].first = (void*)" + namePrefix + "_first_str_data;\n"
+				} else if IsKnownClass(f.ParameterType) {
+					firstLoop = "    void** " + namePrefix + "_first_ptr = (void**)" + namePrefix + "_data[i].first;\n"
+					firstLoop += "    void* " + namePrefix + "_first_data = *" + namePrefix + "_first_ptr;\n"
+					firstFree = "    free(" + namePrefix + "_first_ptr);\n"
+					firstAssign = "    " + namePrefix + "_data[i].first = " + namePrefix + "_first_data;\n"
+				} else if f.IntType() {
+					intType := f.RenderTypeCabi(false)
+					firstLoop = "    " + intType + "* " + namePrefix + "_first_ptr = (" + intType + "*)" + namePrefix + "_data[i].first;\n"
+					firstLoop += "    " + intType + " " + namePrefix + "_first_value = *" + namePrefix + "_first_ptr;\n"
+					firstFree = "    free(" + namePrefix + "_first_ptr);\n"
+					firstAssign = "    " + namePrefix + "_data[i].first = (void*)(uintptr_t)" + namePrefix + "_first_value;\n"
+				} else {
+					panic("UNHANDLED LIST OF FIRST PAIR TYPE: " + f.ParameterType + " with " + s.ParameterType)
+				}
+
+				if s.ParameterType == "QString" || s.ParameterType == "QByteArray" {
+					secondLoop = "    libqt_string* " + namePrefix + "_second_str = (libqt_string*)" + namePrefix + "_data[i].second;\n"
+					secondLoop += "    const char* " + namePrefix + "_second_str_data = " + namePrefix + "_second_str->data;\n"
+					secondFree = "    free(" + namePrefix + "_second_str);\n"
+					secondAssign = "    " + namePrefix + "_data[i].second = (void*)" + namePrefix + "_second_str_data;\n"
+				} else if IsKnownClass(s.ParameterType) {
+					secondLoop = "    void** " + namePrefix + "_second_ptr = (void**)" + namePrefix + "_data[i].second;\n"
+					secondLoop += "    " + namePrefix + "_second_data = *" + namePrefix + "_second_ptr;\n"
+					secondFree = "    free(" + namePrefix + "_second_ptr);\n"
+					secondAssign = "    " + namePrefix + "_data[i].second = " + namePrefix + "_second_data;\n"
+				} else if s.IntType() {
+					intType := s.RenderTypeCabi(false)
+					secondLoop = "    " + intType + "* " + namePrefix + "_second_ptr = (" + intType + "*)" + namePrefix + "_data[i].second;\n"
+					secondLoop += "    " + intType + " " + namePrefix + "_second_value = *" + namePrefix + "_second_ptr;\n"
+					secondFree = "    free(" + namePrefix + "_second_ptr);\n"
+					secondAssign = "    " + namePrefix + "_data[i].second = (void*)(uintptr_t)" + namePrefix + "_second_value;\n"
+				} else {
+					panic("UNHANDLED LIST OF SECOND PAIR TYPE: " + s.ParameterType + " with first " + f.ParameterType)
+				}
+
+				afterword += "libqt_pair* " + namePrefix + "_data = (libqt_pair*)" + namePrefix + "_arr.data.ptr;\n"
+				afterword += "for (size_t i = 0; i < " + namePrefix + "_arr.len; ++i) {\n"
+				afterword += firstLoop
+				afterword += secondLoop
+				afterword += firstFree
+				afterword += secondFree
+				afterword += firstAssign
+				afterword += secondAssign
+				afterword += "}\n"
+				afterword += assignExpr + " " + namePrefix + "_arr;\n"
+
+				return shouldReturn + rvalue + ";\n" + afterword
+			}
+
+		} else if p, _, ok := t.QListOf(); ok {
+			// QList<QList<QString>>
+			if p.ParameterType == "QString" || p.ParameterType == "QByteArray" {
+				shouldReturn = "libqt_list " + namePrefix + "_arr = "
+				afterword += "libqt_list* " + namePrefix + "_strlist = (libqt_list*)" + namePrefix + "_arr.data.ptr;\n"
+				afterword += "const char*** " + namePrefix + "_data = (const char***)malloc(sizeof(const char**) * " + namePrefix + "_arr.len);\n"
+				afterword += "if (" + namePrefix + "_data == NULL) {\n"
+				afterword += `    fprintf(stderr, "Failed to allocate memory for string list in ` + cfs.currentMethodName + `\n");` + "\n"
+				afterword += "    abort();\n"
+				afterword += "}\n"
+				afterword += "for (size_t i = 0; i < " + namePrefix + "_arr.len; ++i) {\n"
+				afterword += "    libqt_list " + namePrefix + "_list = " + namePrefix + "_strlist[i];\n"
+				afterword += "    libqt_string* " + namePrefix + "_str = (libqt_string*)" + namePrefix + "_list.data.ptr;\n"
+				afterword += "    const char** " + namePrefix + "_strdata = (const char**)malloc(sizeof(const char*) * (" + namePrefix + "_list.len + 1));\n"
+				afterword += "    if (" + namePrefix + "_strdata == NULL) {\n"
+				afterword += "        free(" + namePrefix + "_data);\n"
+				afterword += `        fprintf(stderr, "Failed to allocate memory for string list items in ` + cfs.currentMethodName + `\n");` + "\n"
+				afterword += "        abort();\n"
+				afterword += "    }\n"
+				afterword += "    for (size_t j = 0; j < " + namePrefix + "_list.len; ++j) {\n"
+				afterword += "        " + namePrefix + "_strdata[j] = " + namePrefix + "_str[j].data;\n"
+				afterword += "    }\n"
+				afterword += "    " + namePrefix + "_strdata[" + namePrefix + "_list.len] = NULL;\n"
+				afterword += "    " + namePrefix + "_data[i] = " + namePrefix + "_strdata;\n"
+				afterword += "    free(" + namePrefix + "_str);\n"
+				afterword += "}\n"
+				afterword += "free(" + namePrefix + "_strlist);\n"
+				afterword += "libqt_list " + namePrefix + "_out;\n"
+				afterword += namePrefix + "_out.len = " + namePrefix + "_arr.len;\n"
+				afterword += namePrefix + "_out.data.ptr = (void*)" + namePrefix + "_data;\n"
+				afterword += assignExpr + " " + namePrefix + "_out;\n"
+
+				return shouldReturn + rvalue + ";\n" + afterword
+
+			} else if IsKnownClass(p.ParameterType) {
+
+				return shouldReturn + rvalue + ";\n" + afterword
+
+			} else {
+				panic("*UNHANDLED INNER QLIST TYPE*\trt:" + rt.ParameterType + "\tt: " + t.ParameterType)
+			}
 
 		} else {
 			shouldReturn = "libqt_list " + namePrefix + "_arr = "
@@ -1296,8 +1503,29 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 
 		return preamble + shouldReturn + namePrefix + "_ret;\n" + afterword
 
-	} else if _, _, ok := rt.QPairOf(); ok {
-		return shouldReturn + " " + rvalue + ";\n"
+	} else if f, s, ok := rt.QPairOf(); ok {
+		// QPair is a struct containing two inner types
+		// e.g. QPair<QString, QString>
+		if (f.IntType() || IsKnownClass(f.ParameterType)) && (s.IntType() || IsKnownClass(s.ParameterType)) {
+			return shouldReturn + " " + rvalue + ";\n" + afterword
+
+		} else if (f.ParameterType == "QString" || f.ParameterType == "QByteArray") && (s.ParameterType == "QString" || s.ParameterType == "QByteArray") {
+			shouldReturn = "libqt_pair " + namePrefix + "_ret = "
+			afterword += "libqt_string* " + namePrefix + "_first = (libqt_string*)" + namePrefix + "_ret.first;\n"
+			afterword += "libqt_string* " + namePrefix + "_second = (libqt_string*)" + namePrefix + "_ret.second;\n"
+
+			afterword += "libqt_pair " + namePrefix + "_out;\n"
+			afterword += namePrefix + "_out.first = (void*)" + namePrefix + "_first->data;\n"
+			afterword += namePrefix + "_out.second = (void*)" + namePrefix + "_second->data;\n"
+			afterword += "free(" + namePrefix + "_first);\n"
+			afterword += "free(" + namePrefix + "_second);\n"
+			afterword += assignExpr + " " + namePrefix + "_out;\n"
+
+			return shouldReturn + " " + rvalue + ";\n" + afterword
+
+		} else {
+			panic("UNSUPPORTED QPAIR TYPE: " + f.ParameterType + "," + s.ParameterType)
+		}
 
 	} else if rt.QtClassType() {
 		// Construct our C type based on this inner C ABI type
@@ -1480,6 +1708,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 	includeGuard := strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(packageName, "/", "_"), "-", "_")) + "_QT6C_LIB" + strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(srcFilename, ".", "_"), "-", "_"))
 	bindingInclude := "qtlibc.h"
 	var maybeDots string
+	qtextradefs := make(map[string]struct{})
 
 	dirRoot := ifv(packageName == "src", "", strings.TrimPrefix(packageName, "src/"))
 
@@ -1506,6 +1735,40 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 
 #include "` + bindingInclude + `"` + "\n\n")
+
+	getReferencedTypes(src, qtextradefs)
+
+	sortedExtras := make([]string, 0, len(qtextradefs))
+	for k := range qtextradefs {
+		sortedExtras = append(sortedExtras, k)
+	}
+	sort.Strings(sortedExtras)
+	for _, k := range sortedExtras {
+		pairs := strings.Split(k, ":")
+		f := strings.ToLower(pairs[0])
+		s := strings.ToLower(pairs[1])
+		ret.WriteString("struct pair_" + f + "_" + s + ";\n")
+	}
+	ret.WriteString("\n")
+	for _, k := range sortedExtras {
+		pairs := strings.Split(k, ":")
+		f := strings.ToLower(pairs[0])
+		s := strings.ToLower(pairs[1])
+		ret.WriteString("typedef struct pair_" + f + "_" + s + " pair_" + f + "_" + s + ";\n")
+	}
+	ret.WriteString("\n")
+	for _, k := range sortedExtras {
+		pairs := strings.Split(k, ":")
+		f := strings.ToLower(pairs[0])
+		s := strings.ToLower(pairs[1])
+		ret.WriteString("#ifndef PAIR_" + strings.ToUpper(f+"_"+s) + "\n" +
+			"#define PAIR_" + strings.ToUpper(f+"_"+s) + "\n" +
+			"struct pair_" + f + "_" + s + " {\n" +
+			pairs[0] + ifv(IsKnownClass(pairs[0]), "*", "") + " first;\n" +
+			pairs[1] + ifv(IsKnownClass(pairs[1]), "*", "") + " second;\n" +
+			"};\n" +
+			"#endif\n\n")
+	}
 
 	for _, c := range src.Classes {
 		virtualMethods := c.VirtualMethods()
@@ -2125,7 +2388,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		seenRefs[strings.TrimSuffix(cfs.currentHeaderName, "_1")] = struct{}{}
 	}
 
-	for _, ref := range getReferencedTypes(src) {
+	for _, ref := range getReferencedTypes(src, map[string]struct{}{}) {
 		if cabiPreventStructDeclaration(ref) {
 			continue
 		}
