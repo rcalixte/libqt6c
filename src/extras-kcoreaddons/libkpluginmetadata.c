@@ -44,6 +44,11 @@ KPluginMetaData* k_pluginmetadata_find_plugin_by_id(const char* directory, const
     return KPluginMetaData_FindPluginById(qstring(directory), qstring(pluginId));
 }
 
+libqt_list /* of KPluginMetaData* */ k_pluginmetadata_find_plugins(const char* directory) {
+    libqt_list _arr = KPluginMetaData_FindPlugins(qstring(directory));
+    return _arr;
+}
+
 bool k_pluginmetadata_is_valid(void* self) {
     return KPluginMetaData_IsValid((KPluginMetaData*)self);
 }

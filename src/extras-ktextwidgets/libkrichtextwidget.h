@@ -105,6 +105,13 @@ void k_richtextwidget_on_create_actions(void* self, QAction** (*callback)());
 ///
 libqt_list k_richtextwidget_qbase_create_actions(void* self);
 
+/// [Upstream resources](https://api.kde.org/krichtextwidget.html#setRichTextSupport)
+///
+/// @param self KRichTextWidget*
+/// @param support flag of enum KRichTextWidget__RichTextSupportValues
+///
+void k_richtextwidget_set_rich_text_support(void* self, const int32_t* support);
+
 /// [Upstream resources](https://api.kde.org/krichtextwidget.html#richTextSupport)
 ///
 /// @param self KRichTextWidget*

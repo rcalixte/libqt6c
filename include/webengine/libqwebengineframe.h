@@ -72,7 +72,7 @@ bool q_webengineframe_is_main_frame(void* self);
 /// @param self QWebEngineFrame*
 /// @param script const char*
 ///
-void q_webengineframe_run_java_script(void* self, const char* script);
+void q_webengineframe_run_java_script3(void* self, const char* script);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#printToPdf)
 ///

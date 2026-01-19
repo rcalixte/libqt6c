@@ -6581,7 +6581,7 @@ void k_historycombobox_on_key_binding_map(void* self, libqt_map (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KHistoryComboBox*
-/// @param keyBindingMap libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence*
+/// @param keyBindingMap libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence**
 ///
 void k_historycombobox_set_key_binding_map(void* self, libqt_map keyBindingMap);
 
@@ -6592,7 +6592,7 @@ void k_historycombobox_set_key_binding_map(void* self, libqt_map keyBindingMap);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KHistoryComboBox*
-/// @param keyBindingMap libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence*
+/// @param keyBindingMap libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence**
 ///
 void k_historycombobox_qbase_set_key_binding_map(void* self, libqt_map keyBindingMap);
 
@@ -6603,7 +6603,7 @@ void k_historycombobox_qbase_set_key_binding_map(void* self, libqt_map keyBindin
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KHistoryComboBox*
-/// @param callback void func(KHistoryComboBox* self, libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence*)
+/// @param callback void func(KHistoryComboBox* self, libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence**)
 ///
 void k_historycombobox_on_set_key_binding_map(void* self, void (*callback)(void*, libqt_map));
 

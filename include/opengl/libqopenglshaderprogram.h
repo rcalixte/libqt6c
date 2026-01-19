@@ -1643,7 +1643,7 @@ void q_openglshaderprogram_set_uniform_value23(void* self, int location, void* v
 /// @param location int
 /// @param value QTransform*
 ///
-void q_openglshaderprogram_set_uniform_value24(void* self, int location, void* value);
+void q_openglshaderprogram_set_uniform_value27(void* self, int location, void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1651,7 +1651,7 @@ void q_openglshaderprogram_set_uniform_value24(void* self, int location, void* v
 /// @param name const char*
 /// @param value float
 ///
-void q_openglshaderprogram_set_uniform_value25(void* self, const char* name, float value);
+void q_openglshaderprogram_set_uniform_value28(void* self, const char* name, float value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1659,7 +1659,7 @@ void q_openglshaderprogram_set_uniform_value25(void* self, const char* name, flo
 /// @param name const char*
 /// @param value int32_t
 ///
-void q_openglshaderprogram_set_uniform_value26(void* self, const char* name, int32_t value);
+void q_openglshaderprogram_set_uniform_value29(void* self, const char* name, int32_t value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1667,7 +1667,7 @@ void q_openglshaderprogram_set_uniform_value26(void* self, const char* name, int
 /// @param name const char*
 /// @param value uint32_t
 ///
-void q_openglshaderprogram_set_uniform_value27(void* self, const char* name, uint32_t value);
+void q_openglshaderprogram_set_uniform_value30(void* self, const char* name, uint32_t value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1676,7 +1676,7 @@ void q_openglshaderprogram_set_uniform_value27(void* self, const char* name, uin
 /// @param x float
 /// @param y float
 ///
-void q_openglshaderprogram_set_uniform_value28(void* self, const char* name, float x, float y);
+void q_openglshaderprogram_set_uniform_value31(void* self, const char* name, float x, float y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1686,7 +1686,7 @@ void q_openglshaderprogram_set_uniform_value28(void* self, const char* name, flo
 /// @param y float
 /// @param z float
 ///
-void q_openglshaderprogram_set_uniform_value29(void* self, const char* name, float x, float y, float z);
+void q_openglshaderprogram_set_uniform_value32(void* self, const char* name, float x, float y, float z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1697,7 +1697,7 @@ void q_openglshaderprogram_set_uniform_value29(void* self, const char* name, flo
 /// @param z float
 /// @param w float
 ///
-void q_openglshaderprogram_set_uniform_value30(void* self, const char* name, float x, float y, float z, float w);
+void q_openglshaderprogram_set_uniform_value33(void* self, const char* name, float x, float y, float z, float w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1705,7 +1705,7 @@ void q_openglshaderprogram_set_uniform_value30(void* self, const char* name, flo
 /// @param name const char*
 /// @param value QVector2D*
 ///
-void q_openglshaderprogram_set_uniform_value31(void* self, const char* name, void* value);
+void q_openglshaderprogram_set_uniform_value34(void* self, const char* name, void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1713,7 +1713,7 @@ void q_openglshaderprogram_set_uniform_value31(void* self, const char* name, voi
 /// @param name const char*
 /// @param value QVector3D*
 ///
-void q_openglshaderprogram_set_uniform_value32(void* self, const char* name, void* value);
+void q_openglshaderprogram_set_uniform_value35(void* self, const char* name, void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1721,7 +1721,7 @@ void q_openglshaderprogram_set_uniform_value32(void* self, const char* name, voi
 /// @param name const char*
 /// @param value QVector4D*
 ///
-void q_openglshaderprogram_set_uniform_value33(void* self, const char* name, void* value);
+void q_openglshaderprogram_set_uniform_value36(void* self, const char* name, void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1729,7 +1729,7 @@ void q_openglshaderprogram_set_uniform_value33(void* self, const char* name, voi
 /// @param name const char*
 /// @param color QColor*
 ///
-void q_openglshaderprogram_set_uniform_value34(void* self, const char* name, void* color);
+void q_openglshaderprogram_set_uniform_value37(void* self, const char* name, void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1737,7 +1737,7 @@ void q_openglshaderprogram_set_uniform_value34(void* self, const char* name, voi
 /// @param name const char*
 /// @param point QPoint*
 ///
-void q_openglshaderprogram_set_uniform_value35(void* self, const char* name, void* point);
+void q_openglshaderprogram_set_uniform_value38(void* self, const char* name, void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1745,7 +1745,7 @@ void q_openglshaderprogram_set_uniform_value35(void* self, const char* name, voi
 /// @param name const char*
 /// @param point QPointF*
 ///
-void q_openglshaderprogram_set_uniform_value36(void* self, const char* name, void* point);
+void q_openglshaderprogram_set_uniform_value39(void* self, const char* name, void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1753,7 +1753,7 @@ void q_openglshaderprogram_set_uniform_value36(void* self, const char* name, voi
 /// @param name const char*
 /// @param size QSize*
 ///
-void q_openglshaderprogram_set_uniform_value37(void* self, const char* name, void* size);
+void q_openglshaderprogram_set_uniform_value40(void* self, const char* name, void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1761,7 +1761,7 @@ void q_openglshaderprogram_set_uniform_value37(void* self, const char* name, voi
 /// @param name const char*
 /// @param size QSizeF*
 ///
-void q_openglshaderprogram_set_uniform_value38(void* self, const char* name, void* size);
+void q_openglshaderprogram_set_uniform_value41(void* self, const char* name, void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1769,7 +1769,7 @@ void q_openglshaderprogram_set_uniform_value38(void* self, const char* name, voi
 /// @param name const char*
 /// @param value QMatrix4x4*
 ///
-void q_openglshaderprogram_set_uniform_value47(void* self, const char* name, void* value);
+void q_openglshaderprogram_set_uniform_value50(void* self, const char* name, void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1777,7 +1777,7 @@ void q_openglshaderprogram_set_uniform_value47(void* self, const char* name, voi
 /// @param name const char*
 /// @param value QTransform*
 ///
-void q_openglshaderprogram_set_uniform_value48(void* self, const char* name, void* value);
+void q_openglshaderprogram_set_uniform_value54(void* self, const char* name, void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValueArray)
 ///

@@ -139,6 +139,13 @@ void k_attica__metadata_set_resulting_id(void* self, const char* id);
 ///
 libqt_list k_attica__metadata_headers(void* self);
 
+/// [Upstream resources](https://api.kde.org/attica-metadata.html#setHeaders)
+///
+/// @param self Attica__Metadata*
+/// @param headers libqt_list of libqt_pair tuple of char* and char*
+///
+void k_attica__metadata_set_headers(void* self, libqt_list headers);
+
 /// Delete this object from C++ memory.
 ///
 /// @param self Attica__Metadata*

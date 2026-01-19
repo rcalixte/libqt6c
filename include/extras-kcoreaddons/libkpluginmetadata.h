@@ -88,6 +88,14 @@ KPluginMetaData* k_pluginmetadata_from_json_file(const char* jsonFile);
 ///
 KPluginMetaData* k_pluginmetadata_find_plugin_by_id(const char* directory, const char* pluginId);
 
+/// [Upstream resources](https://api.kde.org/kpluginmetadata.html#findPlugins)
+///
+/// @param directory const char*
+///
+/// @return libqt_list of KPluginMetaData*
+///
+libqt_list k_pluginmetadata_find_plugins(const char* directory);
+
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#isValid)
 ///
 /// @param self KPluginMetaData*

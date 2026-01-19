@@ -176,6 +176,13 @@ void q_webenginepage_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_webenginepage_qbase_event(void* self, void* param1);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#findText)
+///
+/// @param self QWebEnginePage*
+/// @param subString const char*
+///
+void q_webenginepage_find_text(void* self, const char* subString);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#isLoading)
 ///
 /// @param self QWebEnginePage*
@@ -280,6 +287,13 @@ QPointF* q_webenginepage_scroll_position(void* self);
 /// @param self QWebEnginePage*
 ///
 QSizeF* q_webenginepage_contents_size(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#runJavaScript)
+///
+/// @param self QWebEnginePage*
+/// @param scriptSource const char*
+///
+void q_webenginepage_run_java_script2(void* self, const char* scriptSource);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#scripts)
 ///
@@ -1227,6 +1241,14 @@ const char* q_webenginepage_tr2(const char* s, const char* c);
 ///
 const char* q_webenginepage_tr3(const char* s, const char* c, int n);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#findText)
+///
+/// @param self QWebEnginePage*
+/// @param subString const char*
+/// @param options flag of enum QWebEnginePage__FindFlag
+///
+void q_webenginepage_find_text2(void* self, const char* subString, int32_t options);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#download)
 ///
 /// @param self QWebEnginePage*
@@ -1260,6 +1282,14 @@ void q_webenginepage_set_content2(void* self, const char* data, const char* mime
 ///
 void q_webenginepage_set_content3(void* self, const char* data, const char* mimeType, void* baseUrl);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#runJavaScript)
+///
+/// @param self QWebEnginePage*
+/// @param scriptSource const char*
+/// @param worldId uint32_t
+///
+void q_webenginepage_run_java_script22(void* self, const char* scriptSource, uint32_t worldId);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#setWebChannel)
 ///
 /// @param self QWebEnginePage*
@@ -1282,7 +1312,7 @@ void q_webenginepage_save2(void* self, const char* filePath, int32_t format);
 /// @param filePath const char*
 /// @param layout QPageLayout*
 ///
-void q_webenginepage_print_to_pdf2(void* self, const char* filePath, void* layout);
+void q_webenginepage_print_to_pdf22(void* self, const char* filePath, void* layout);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#printToPdf)
 ///

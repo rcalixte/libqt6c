@@ -423,7 +423,7 @@ void k_parts__navigationextension_popup_menu4(void* self, void* global, void* it
 /// @param items KFileItemList*
 /// @param arguments KParts__OpenUrlArguments*
 /// @param flags flag of enum KParts__NavigationExtension__PopupFlag
-/// @param actionGroups libqt_map of const char* to QAction*
+/// @param actionGroups libqt_map of const char* to QAction**
 ///
 void k_parts__navigationextension_popup_menu5(void* self, void* global, void* items, void* arguments, int32_t flags, libqt_map actionGroups);
 
@@ -465,7 +465,7 @@ void k_parts__navigationextension_popup_menu52(void* self, void* global, void* u
 /// @param mode mode_t
 /// @param arguments KParts__OpenUrlArguments*
 /// @param flags flag of enum KParts__NavigationExtension__PopupFlag
-/// @param actionGroups libqt_map of const char* to QAction*
+/// @param actionGroups libqt_map of const char* to QAction**
 ///
 void k_parts__navigationextension_popup_menu6(void* self, void* global, void* url, mode_t mode, void* arguments, int32_t flags, libqt_map actionGroups);
 

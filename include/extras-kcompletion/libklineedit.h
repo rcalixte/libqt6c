@@ -6304,7 +6304,7 @@ void k_lineedit_on_key_binding_map(void* self, libqt_map (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KLineEdit*
-/// @param keyBindingMap libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence*
+/// @param keyBindingMap libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence**
 ///
 void k_lineedit_set_key_binding_map(void* self, libqt_map keyBindingMap);
 
@@ -6315,7 +6315,7 @@ void k_lineedit_set_key_binding_map(void* self, libqt_map keyBindingMap);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KLineEdit*
-/// @param keyBindingMap libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence*
+/// @param keyBindingMap libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence**
 ///
 void k_lineedit_qbase_set_key_binding_map(void* self, libqt_map keyBindingMap);
 
@@ -6326,7 +6326,7 @@ void k_lineedit_qbase_set_key_binding_map(void* self, libqt_map keyBindingMap);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLineEdit*
-/// @param callback void func(KLineEdit* self, libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence*)
+/// @param callback void func(KLineEdit* self, libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence**)
 ///
 void k_lineedit_on_set_key_binding_map(void* self, void (*callback)(void*, libqt_map));
 

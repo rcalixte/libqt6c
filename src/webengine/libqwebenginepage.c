@@ -130,6 +130,10 @@ bool q_webenginepage_qbase_event(void* self, void* param1) {
     return QWebEnginePage_QBaseEvent((QWebEnginePage*)self, (QEvent*)param1);
 }
 
+void q_webenginepage_find_text(void* self, const char* subString) {
+    QWebEnginePage_FindText((QWebEnginePage*)self, qstring(subString));
+}
+
 bool q_webenginepage_is_loading(void* self) {
     return QWebEnginePage_IsLoading((QWebEnginePage*)self);
 }
@@ -195,6 +199,10 @@ QPointF* q_webenginepage_scroll_position(void* self) {
 
 QSizeF* q_webenginepage_contents_size(void* self) {
     return QWebEnginePage_ContentsSize((QWebEnginePage*)self);
+}
+
+void q_webenginepage_run_java_script2(void* self, const char* scriptSource) {
+    QWebEnginePage_RunJavaScript2((QWebEnginePage*)self, qstring(scriptSource));
 }
 
 QWebEngineScriptCollection* q_webenginepage_scripts(void* self) {
@@ -794,6 +802,10 @@ const char* q_webenginepage_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
+void q_webenginepage_find_text2(void* self, const char* subString, int32_t options) {
+    QWebEnginePage_FindText2((QWebEnginePage*)self, qstring(subString), options);
+}
+
 void q_webenginepage_download2(void* self, void* url, const char* filename) {
     QWebEnginePage_Download2((QWebEnginePage*)self, (QUrl*)url, qstring(filename));
 }
@@ -810,6 +822,10 @@ void q_webenginepage_set_content3(void* self, const char* data, const char* mime
     QWebEnginePage_SetContent3((QWebEnginePage*)self, qstring(data), qstring(mimeType), (QUrl*)baseUrl);
 }
 
+void q_webenginepage_run_java_script22(void* self, const char* scriptSource, uint32_t worldId) {
+    QWebEnginePage_RunJavaScript22((QWebEnginePage*)self, qstring(scriptSource), worldId);
+}
+
 void q_webenginepage_set_web_channel2(void* self, void* param1, uint32_t worldId) {
     QWebEnginePage_SetWebChannel2((QWebEnginePage*)self, (QWebChannel*)param1, worldId);
 }
@@ -818,8 +834,8 @@ void q_webenginepage_save2(void* self, const char* filePath, int32_t format) {
     QWebEnginePage_Save2((QWebEnginePage*)self, qstring(filePath), format);
 }
 
-void q_webenginepage_print_to_pdf2(void* self, const char* filePath, void* layout) {
-    QWebEnginePage_PrintToPdf2((QWebEnginePage*)self, qstring(filePath), (QPageLayout*)layout);
+void q_webenginepage_print_to_pdf22(void* self, const char* filePath, void* layout) {
+    QWebEnginePage_PrintToPdf22((QWebEnginePage*)self, qstring(filePath), (QPageLayout*)layout);
 }
 
 void q_webenginepage_print_to_pdf3(void* self, const char* filePath, void* layout, void* ranges) {

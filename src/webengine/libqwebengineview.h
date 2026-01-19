@@ -228,6 +228,13 @@ double q_webengineview_zoom_factor(void* self);
 ///
 void q_webengineview_set_zoom_factor(void* self, double factor);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#findText)
+///
+/// @param self QWebEngineView*
+/// @param subString const char*
+///
+void q_webengineview_find_text(void* self, const char* subString);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#sizeHint)
 ///
 /// @param self QWebEngineView*
@@ -790,13 +797,21 @@ void q_webengineview_set_content3(void* self, const char* data, const char* mime
 ///
 void q_webengineview_trigger_page_action2(void* self, int32_t action, bool checked);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#findText)
+///
+/// @param self QWebEngineView*
+/// @param subString const char*
+/// @param options flag of enum QWebEnginePage__FindFlag
+///
+void q_webengineview_find_text2(void* self, const char* subString, int32_t options);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#printToPdf)
 ///
 /// @param self QWebEngineView*
 /// @param filePath const char*
 /// @param layout QPageLayout*
 ///
-void q_webengineview_print_to_pdf2(void* self, const char* filePath, void* layout);
+void q_webengineview_print_to_pdf22(void* self, const char* filePath, void* layout);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#printToPdf)
 ///

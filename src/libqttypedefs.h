@@ -924,7 +924,6 @@ typedef struct QDBusMetaType QDBusMetaType;
 typedef struct QDBusObjectPath QDBusObjectPath;
 typedef struct QDBusPendingCall QDBusPendingCall;
 typedef struct QDBusPendingCallWatcher QDBusPendingCallWatcher;
-typedef struct QDBusPendingReplyBase QDBusPendingReplyBase;
 typedef struct QDBusServer QDBusServer;
 typedef struct QDBusServiceWatcher QDBusServiceWatcher;
 typedef struct QDBusSignature QDBusSignature;
