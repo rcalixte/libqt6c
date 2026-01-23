@@ -153,6 +153,36 @@ void q_timer_start2(void* self);
 ///
 void q_timer_stop(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qtimer.html#setInterval)
+///
+/// @param self QTimer*
+/// @param value int64_t of milliseconds
+///
+void q_timer_set_interval2(void* self, int64_t value);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtimer.html#intervalAsDuration)
+///
+/// @param self QTimer*
+///
+/// @return int64_t of milliseconds
+///
+int64_t q_timer_interval_as_duration(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtimer.html#remainingTimeAsDuration)
+///
+/// @param self QTimer*
+///
+/// @return int64_t of milliseconds
+///
+int64_t q_timer_remaining_time_as_duration(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtimer.html#start)
+///
+/// @param self QTimer*
+/// @param value int64_t of milliseconds
+///
+void q_timer_start3(void* self, int64_t value);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimer.html#timerEvent)
 ///
 /// @param self QTimer*
@@ -282,6 +312,15 @@ bool q_timer_move_to_thread(void* self, void* thread);
 /// @param interval int
 ///
 int32_t q_timer_start_timer(void* self, int interval);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QTimer*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_timer_start_timer2(void* self, int64_t time);
 
 /// Inherited from QObject
 ///
@@ -501,6 +540,16 @@ bool q_timer_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_timer_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QTimer*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_timer_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///

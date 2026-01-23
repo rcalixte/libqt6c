@@ -78,6 +78,13 @@ void k_idletime_simulate_user_activity(void* self);
 ///
 int32_t k_idletime_add_idle_timeout(void* self, int msec);
 
+/// [Upstream resources](https://api.kde.org/kidletime.html#addIdleTimeout)
+///
+/// @param self KIdleTime*
+/// @param msec int64_t of milliseconds
+///
+int32_t k_idletime_add_idle_timeout2(void* self, int64_t msec);
+
 /// [Upstream resources](https://api.kde.org/kidletime.html#removeIdleTimeout)
 ///
 /// @param self KIdleTime*
@@ -254,6 +261,15 @@ bool k_idletime_move_to_thread(void* self, void* thread);
 /// @param interval int
 ///
 int32_t k_idletime_start_timer(void* self, int interval);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self KIdleTime*
+/// @param time int64_t of nanoseconds
+///
+int32_t k_idletime_start_timer2(void* self, int64_t time);
 
 /// Inherited from QObject
 ///
@@ -473,6 +489,16 @@ bool k_idletime_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t k_idletime_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self KIdleTime*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t k_idletime_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///

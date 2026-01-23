@@ -158,6 +158,10 @@ void q_thread_usleep(uint64_t param1) {
     QThread_Usleep(param1);
 }
 
+void q_thread_sleep2(int64_t nsec) {
+    QThread_Sleep2(nsec);
+}
+
 void q_thread_run(void* self) {
     QThread_Run((QThread*)self);
 }
@@ -249,6 +253,10 @@ bool q_thread_move_to_thread(void* self, void* thread) {
 
 int32_t q_thread_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
+}
+
+int32_t q_thread_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
 }
 
 void q_thread_kill_timer(void* self, int id) {
@@ -361,6 +369,10 @@ bool q_thread_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_thread_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_thread_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_thread_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {

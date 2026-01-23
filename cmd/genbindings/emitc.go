@@ -406,6 +406,10 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, i
 		}
 	}
 
+	if p.IsChronoSeconds() {
+		ret = "int64_t"
+	}
+
 	if p.ByRef || p.Pointer {
 		if isReturnType {
 			if !strings.HasSuffix(ret, "*") {
@@ -451,7 +455,13 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, i
 		ret = strings.ReplaceAll(ret, "Qt__", "")
 	}
 
-	return ret // ignore const
+	if ret == "" {
+		if ft, ok := p.QFlagsOf(); ok {
+			ret = ft.CABIType
+		}
+	}
+
+	return ret
 }
 
 func (p CppParameter) returnAllocComment(cfs *cFileState, returnType string) string {
@@ -648,6 +658,11 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 			}
 		}
 
+		if p.IsChronoSeconds() {
+			secType := strings.Split(p.ParameterType, "::")[2]
+			pType += " of " + secType
+		}
+
 		if isSlot {
 			resParam := strings.ReplaceAll(pType+" "+pTypeSlot, "**[]", "**")
 			if strings.HasPrefix(resParam, "libqt_list") {
@@ -745,11 +760,12 @@ func (cfs *cFileState) emitParametersC(params []CppParameter, isSlot bool) strin
 
 type cFileState struct {
 	imports            map[string]struct{}
-	currentPackageName string
+	currentClassName   string
 	currentHeaderName  string
 	currentMethodName  string
-	castType           string
+	currentPackageName string
 	allocCleanups      []string
+	castType           string
 	isC                bool
 }
 
@@ -763,6 +779,9 @@ func (cfs *cFileState) emitReturnComment(rt CppParameter) string {
 		} else {
 			returnComment = "/// @return " + rt.RenderTypeC(cfs, true, true, true)
 		}
+	} else if rt.IsChronoSeconds() {
+		secType := strings.Split(rt.ParameterType, "::")[2]
+		returnComment = "/// @return " + rt.renderReturnTypeC(cfs, false, true) + " of " + secType
 	} else if t, _, ok := rt.QListOf(); ok {
 		if _, ok := KnownEnums[t.ParameterType]; ok {
 			returnComment = "/// @return libqt_list of enum " + cabiEnumClassName(t.ParameterType)
@@ -1745,22 +1764,22 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 	sort.Strings(sortedExtras)
 	for _, k := range sortedExtras {
 		pairs := strings.Split(k, ":")
-		f := strings.ToLower(pairs[0])
-		s := strings.ToLower(pairs[1])
+		f := strings.ReplaceAll(strings.ToLower(pairs[0]), " ", "_")
+		s := strings.ReplaceAll(strings.ToLower(pairs[1]), " ", "_")
 		ret.WriteString("struct pair_" + f + "_" + s + ";\n")
 	}
 	ret.WriteString("\n")
 	for _, k := range sortedExtras {
 		pairs := strings.Split(k, ":")
-		f := strings.ToLower(pairs[0])
-		s := strings.ToLower(pairs[1])
+		f := strings.ReplaceAll(strings.ToLower(pairs[0]), " ", "_")
+		s := strings.ReplaceAll(strings.ToLower(pairs[1]), " ", "_")
 		ret.WriteString("typedef struct pair_" + f + "_" + s + " pair_" + f + "_" + s + ";\n")
 	}
 	ret.WriteString("\n")
 	for _, k := range sortedExtras {
 		pairs := strings.Split(k, ":")
-		f := strings.ToLower(pairs[0])
-		s := strings.ToLower(pairs[1])
+		f := strings.ReplaceAll(strings.ToLower(pairs[0]), " ", "_")
+		s := strings.ReplaceAll(strings.ToLower(pairs[1]), " ", "_")
 		ret.WriteString("#ifndef PAIR_" + strings.ToUpper(f+"_"+s) + "\n" +
 			"#define PAIR_" + strings.ToUpper(f+"_"+s) + "\n" +
 			"struct pair_" + f + "_" + s + " {\n" +
@@ -1773,6 +1792,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 	for _, c := range src.Classes {
 		virtualMethods := c.VirtualMethods()
 		cStructName := cabiClassName(c.ClassName)
+		cfs.currentClassName = strings.ReplaceAll(c.ClassName, "::", "__")
 		nameIndex := 0
 		cPrefix := "q_"
 		if cStructName[0] == 'Q' || cStructName[0] == 'K' || cStructName[0] == 'k' {
@@ -2506,6 +2526,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 	for _, c := range src.Classes {
 		virtualMethods := c.VirtualMethods()
 		cStructName := cabiClassName(c.ClassName)
+		cfs.currentClassName = strings.ReplaceAll(c.ClassName, "::", "__")
 		nameIndex := 0
 		cPrefix := "q_"
 		if cStructName[0] == 'Q' || cStructName[0] == 'K' || cStructName[0] == 'k' {

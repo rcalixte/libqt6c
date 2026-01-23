@@ -3540,6 +3540,15 @@ int32_t q_cplayer_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPLayer*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cplayer_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPLayer*
@@ -3746,6 +3755,16 @@ bool q_cplayer_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cplayer_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPLayer*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cplayer_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -4872,6 +4891,15 @@ int32_t q_cplayerable_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPLayerable*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cplayerable_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPLayerable*
@@ -5088,6 +5116,16 @@ bool q_cplayerable_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cplayerable_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPLayerable*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cplayerable_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -6592,6 +6630,15 @@ int32_t q_cpselectionrect_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPSelectionRect*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpselectionrect_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPSelectionRect*
@@ -6808,6 +6855,16 @@ bool q_cpselectionrect_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpselectionrect_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPSelectionRect*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpselectionrect_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -8007,6 +8064,15 @@ int32_t q_cpmargingroup_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPMarginGroup*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpmargingroup_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPMarginGroup*
@@ -8223,6 +8289,16 @@ bool q_cpmargingroup_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpmargingroup_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPMarginGroup*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpmargingroup_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -9320,6 +9396,15 @@ int32_t q_cplayoutelement_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPLayoutElement*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cplayoutelement_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPLayoutElement*
@@ -9536,6 +9621,16 @@ bool q_cplayoutelement_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cplayoutelement_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPLayoutElement*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cplayoutelement_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -11190,6 +11285,15 @@ int32_t q_cplayout_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPLayout*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cplayout_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPLayout*
@@ -11406,6 +11510,16 @@ bool q_cplayout_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cplayout_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPLayout*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cplayout_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -13486,6 +13600,15 @@ int32_t q_cplayoutgrid_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPLayoutGrid*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cplayoutgrid_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPLayoutGrid*
@@ -13702,6 +13825,16 @@ bool q_cplayoutgrid_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cplayoutgrid_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPLayoutGrid*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cplayoutgrid_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -15667,6 +15800,15 @@ int32_t q_cplayoutinset_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPLayoutInset*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cplayoutinset_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPLayoutInset*
@@ -15883,6 +16025,16 @@ bool q_cplayoutinset_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cplayoutinset_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPLayoutInset*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cplayoutinset_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -21397,6 +21549,15 @@ int32_t q_cpgrid_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPGrid*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpgrid_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPGrid*
@@ -21613,6 +21774,16 @@ bool q_cpgrid_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpgrid_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPGrid*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpgrid_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -24051,6 +24222,15 @@ int32_t q_cpaxis_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPAxis*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpaxis_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPAxis*
@@ -24267,6 +24447,16 @@ bool q_cpaxis_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpaxis_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPAxis*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpaxis_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -26213,6 +26403,15 @@ int32_t q_cpabstractplottable_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPAbstractPlottable*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpabstractplottable_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPAbstractPlottable*
@@ -26429,6 +26628,16 @@ bool q_cpabstractplottable_move_to_thread2(void* self, void* thread, void* param
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpabstractplottable_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPAbstractPlottable*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpabstractplottable_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -28433,6 +28642,15 @@ int32_t q_cpabstractitem_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPAbstractItem*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpabstractitem_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPAbstractItem*
@@ -28649,6 +28867,16 @@ bool q_cpabstractitem_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpabstractitem_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPAbstractItem*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpabstractitem_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -34147,6 +34375,15 @@ int32_t q_customplot_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCustomPlot*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_customplot_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCustomPlot*
@@ -34354,6 +34591,16 @@ bool q_customplot_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_customplot_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCustomPlot*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_customplot_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -37995,6 +38242,15 @@ int32_t q_cpaxisrect_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPAxisRect*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpaxisrect_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPAxisRect*
@@ -38211,6 +38467,16 @@ bool q_cpaxisrect_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpaxisrect_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPAxisRect*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpaxisrect_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -39832,6 +40098,15 @@ int32_t q_cpabstractlegenditem_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPAbstractLegendItem*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpabstractlegenditem_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPAbstractLegendItem*
@@ -40048,6 +40323,16 @@ bool q_cpabstractlegenditem_move_to_thread2(void* self, void* thread, void* para
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpabstractlegenditem_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPAbstractLegendItem*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpabstractlegenditem_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -41739,6 +42024,15 @@ int32_t q_cpplottablelegenditem_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPPlottableLegendItem*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpplottablelegenditem_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPPlottableLegendItem*
@@ -41955,6 +42249,16 @@ bool q_cpplottablelegenditem_move_to_thread2(void* self, void* thread, void* par
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpplottablelegenditem_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPPlottableLegendItem*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpplottablelegenditem_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -44344,6 +44648,15 @@ int32_t q_cplegend_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPLegend*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cplegend_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPLegend*
@@ -44560,6 +44873,16 @@ bool q_cplegend_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cplegend_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPLegend*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cplegend_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -46891,6 +47214,15 @@ int32_t q_cptextelement_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPTextElement*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cptextelement_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPTextElement*
@@ -47107,6 +47439,16 @@ bool q_cptextelement_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cptextelement_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPTextElement*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cptextelement_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -48756,6 +49098,15 @@ int32_t q_cpcolorscale_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPColorScale*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpcolorscale_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPColorScale*
@@ -48972,6 +49323,16 @@ bool q_cpcolorscale_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpcolorscale_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPColorScale*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpcolorscale_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -51498,6 +51859,15 @@ int32_t q_cpgraph_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPGraph*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpgraph_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPGraph*
@@ -51714,6 +52084,16 @@ bool q_cpgraph_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpgraph_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPGraph*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpgraph_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -54429,6 +54809,15 @@ int32_t q_cpcurve_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPCurve*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpcurve_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPCurve*
@@ -54645,6 +55034,16 @@ bool q_cpcurve_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpcurve_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPCurve*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpcurve_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -56363,6 +56762,15 @@ int32_t q_cpbarsgroup_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPBarsGroup*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpbarsgroup_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPBarsGroup*
@@ -56579,6 +56987,16 @@ bool q_cpbarsgroup_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpbarsgroup_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPBarsGroup*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpbarsgroup_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -58175,6 +58593,15 @@ int32_t q_cpbars_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPBars*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpbars_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPBars*
@@ -58391,6 +58818,16 @@ bool q_cpbars_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpbars_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPBars*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpbars_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -60814,6 +61251,15 @@ int32_t q_cpstatisticalbox_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPStatisticalBox*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpstatisticalbox_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPStatisticalBox*
@@ -61030,6 +61476,16 @@ bool q_cpstatisticalbox_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpstatisticalbox_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPStatisticalBox*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpstatisticalbox_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -63525,6 +63981,15 @@ int32_t q_cpcolormap_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPColorMap*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpcolormap_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPColorMap*
@@ -63741,6 +64206,16 @@ bool q_cpcolormap_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpcolormap_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPColorMap*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpcolormap_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -65913,6 +66388,15 @@ int32_t q_cpfinancial_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPFinancial*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpfinancial_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPFinancial*
@@ -66129,6 +66613,16 @@ bool q_cpfinancial_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpfinancial_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPFinancial*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpfinancial_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -68755,6 +69249,15 @@ int32_t q_cperrorbars_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPErrorBars*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cperrorbars_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPErrorBars*
@@ -68971,6 +69474,16 @@ bool q_cperrorbars_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cperrorbars_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPErrorBars*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cperrorbars_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -70538,6 +71051,15 @@ int32_t q_cpitemstraightline_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPItemStraightLine*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpitemstraightline_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPItemStraightLine*
@@ -70754,6 +71276,16 @@ bool q_cpitemstraightline_move_to_thread2(void* self, void* thread, void* param2
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpitemstraightline_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPItemStraightLine*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpitemstraightline_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -72410,6 +72942,15 @@ int32_t q_cpitemline_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPItemLine*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpitemline_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPItemLine*
@@ -72626,6 +73167,16 @@ bool q_cpitemline_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpitemline_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPItemLine*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpitemline_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -74265,6 +74816,15 @@ int32_t q_cpitemcurve_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPItemCurve*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpitemcurve_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPItemCurve*
@@ -74481,6 +75041,16 @@ bool q_cpitemcurve_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpitemcurve_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPItemCurve*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpitemcurve_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -76192,6 +76762,15 @@ int32_t q_cpitemrect_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPItemRect*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpitemrect_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPItemRect*
@@ -76408,6 +76987,16 @@ bool q_cpitemrect_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpitemrect_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPItemRect*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpitemrect_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -78281,6 +78870,15 @@ int32_t q_cpitemtext_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPItemText*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpitemtext_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPItemText*
@@ -78497,6 +79095,16 @@ bool q_cpitemtext_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpitemtext_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPItemText*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpitemtext_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -80193,6 +80801,15 @@ int32_t q_cpitemellipse_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPItemEllipse*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpitemellipse_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPItemEllipse*
@@ -80409,6 +81026,16 @@ bool q_cpitemellipse_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpitemellipse_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPItemEllipse*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpitemellipse_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -82276,6 +82903,15 @@ int32_t q_cpitempixmap_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPItemPixmap*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpitempixmap_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPItemPixmap*
@@ -82492,6 +83128,16 @@ bool q_cpitempixmap_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpitempixmap_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPItemPixmap*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpitempixmap_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -84167,6 +84813,15 @@ int32_t q_cpitemtracer_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPItemTracer*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpitemtracer_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPItemTracer*
@@ -84383,6 +85038,16 @@ bool q_cpitemtracer_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpitemtracer_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPItemTracer*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpitemtracer_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -86043,6 +86708,15 @@ int32_t q_cpitembracket_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPItemBracket*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cpitembracket_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPItemBracket*
@@ -86259,6 +86933,16 @@ bool q_cpitembracket_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cpitembracket_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPItemBracket*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cpitembracket_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -88750,6 +89434,15 @@ int32_t q_cppolaraxisradial_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPPolarAxisRadial*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cppolaraxisradial_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPPolarAxisRadial*
@@ -88966,6 +89659,16 @@ bool q_cppolaraxisradial_move_to_thread2(void* self, void* thread, void* param2)
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cppolaraxisradial_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPPolarAxisRadial*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cppolaraxisradial_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -91468,6 +92171,15 @@ int32_t q_cppolaraxisangular_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPPolarAxisAngular*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cppolaraxisangular_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPPolarAxisAngular*
@@ -91684,6 +92396,16 @@ bool q_cppolaraxisangular_move_to_thread2(void* self, void* thread, void* param2
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cppolaraxisangular_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPPolarAxisAngular*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cppolaraxisangular_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -93082,6 +93804,15 @@ int32_t q_cppolargrid_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPPolarGrid*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cppolargrid_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPPolarGrid*
@@ -93298,6 +94029,16 @@ bool q_cppolargrid_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cppolargrid_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPPolarGrid*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cppolargrid_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -94968,6 +95709,15 @@ int32_t q_cppolarlegenditem_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPPolarLegendItem*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cppolarlegenditem_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPPolarLegendItem*
@@ -95184,6 +95934,16 @@ bool q_cppolarlegenditem_move_to_thread2(void* self, void* thread, void* param2)
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cppolarlegenditem_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPPolarLegendItem*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cppolarlegenditem_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -97509,6 +98269,15 @@ int32_t q_cppolargraph_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPPolarGraph*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_cppolargraph_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QCPPolarGraph*
@@ -97725,6 +98494,16 @@ bool q_cppolargraph_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_cppolargraph_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QCPPolarGraph*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_cppolargraph_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///

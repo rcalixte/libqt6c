@@ -270,6 +270,14 @@ int32_t q_networkrequest_transfer_timeout(void* self);
 ///
 void q_networkrequest_set_transfer_timeout(void* self, int timeout);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequest.html#transferTimeoutAsDuration)
+///
+/// @param self QNetworkRequest*
+///
+/// @return int64_t of milliseconds
+///
+int64_t q_networkrequest_transfer_timeout_as_duration(void* self);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequest.html#setTransferTimeout)
 ///
 /// @param self QNetworkRequest*
@@ -283,6 +291,13 @@ void q_networkrequest_set_transfer_timeout2(void* self);
 /// @param defaultValue QVariant*
 ///
 QVariant* q_networkrequest_attribute2(void* self, int32_t code, void* defaultValue);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequest.html#setTransferTimeout)
+///
+/// @param self QNetworkRequest*
+/// @param duration int64_t of milliseconds
+///
+void q_networkrequest_set_transfer_timeout1(void* self, int64_t duration);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequest.html#dtor.QNetworkRequest)
 ///

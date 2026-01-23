@@ -188,7 +188,9 @@ func AllowClass(className string) bool {
 		return false
 	}
 
-	if strings.HasPrefix(className, "std::") && !strings.HasPrefix(className, "std::pair") {
+	if strings.HasPrefix(className, "std::") &&
+		!(strings.HasPrefix(className, "std::pair<") ||
+			(strings.HasPrefix(className, "std::chrono::") && strings.HasSuffix(className, "seconds"))) {
 		return false // Scintilla bindings find some of these
 	}
 
@@ -298,17 +300,9 @@ func AllowMethod(className string, mm CppMethod) error {
 			return ErrTooComplex // Skip private type
 		}
 
-		if p.ParameterType == "Duration" {
-			return ErrTooComplex // Skip std::chrono alias
-		}
-
 		if p.ParameterType == "..." {
 			return ErrTooComplex // Skip variadic parameter
 		}
-	}
-
-	if mm.ReturnType.ParameterType == "Duration" {
-		return ErrTooComplex // Skip std::chrono alias
 	}
 
 	if strings.HasSuffix(mm.ReturnType.ParameterType, "Private") {
@@ -598,11 +592,11 @@ func AllowType(p CppParameter, isReturnType bool) error {
 		return ErrTooComplex // e.g. Qt 6 qopenglcontext_platform.h
 	}
 
-	if strings.HasPrefix(p.ParameterType, "std::") && !strings.HasPrefix(p.ParameterType, "std::pair<") {
+	if strings.HasPrefix(p.ParameterType, "std::") &&
+		!(strings.HasPrefix(p.ParameterType, "std::pair<") || p.IsChronoSeconds()) {
 		// std::initializer           e.g. qcborarray.h
 		// std::string                QByteArray->toStdString(). There are QString overloads already
 		// std::nullptr_t             Qcborstreamwriter
-		// std::chrono::nanoseconds   QDeadlineTimer_RemainingTimeAsDuration
 		// std::seed_seq              QRandom
 		// std::exception             Scintilla
 		return ErrTooComplex

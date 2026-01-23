@@ -131,6 +131,10 @@ int32_t q_gesture_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_gesture_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_gesture_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -241,6 +245,10 @@ bool q_gesture_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_gesture_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_gesture_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_gesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -551,6 +559,10 @@ int32_t q_pangesture_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_pangesture_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_pangesture_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -661,6 +673,10 @@ bool q_pangesture_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_pangesture_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_pangesture_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_pangesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -1031,6 +1047,10 @@ int32_t q_pinchgesture_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_pinchgesture_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_pinchgesture_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -1141,6 +1161,10 @@ bool q_pinchgesture_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_pinchgesture_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_pinchgesture_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_pinchgesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -1439,6 +1463,10 @@ int32_t q_swipegesture_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_swipegesture_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_swipegesture_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -1549,6 +1577,10 @@ bool q_swipegesture_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_swipegesture_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_swipegesture_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_swipegesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -1839,6 +1871,10 @@ int32_t q_tapgesture_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_tapgesture_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_tapgesture_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -1949,6 +1985,10 @@ bool q_tapgesture_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_tapgesture_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_tapgesture_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_tapgesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -2247,6 +2287,10 @@ int32_t q_tapandholdgesture_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_tapandholdgesture_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_tapandholdgesture_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -2357,6 +2401,10 @@ bool q_tapandholdgesture_move_to_thread2(void* self, void* thread, void* param2)
 
 int32_t q_tapandholdgesture_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_tapandholdgesture_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_tapandholdgesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {

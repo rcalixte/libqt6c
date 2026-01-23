@@ -373,6 +373,14 @@ int32_t q_networkaccessmanager_transfer_timeout(void* self);
 ///
 void q_networkaccessmanager_set_transfer_timeout(void* self, int timeout);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#transferTimeoutAsDuration)
+///
+/// @param self QNetworkAccessManager*
+///
+/// @return int64_t of milliseconds
+///
+int64_t q_networkaccessmanager_transfer_timeout_as_duration(void* self);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#setTransferTimeout)
 ///
 /// @param self QNetworkAccessManager*
@@ -582,6 +590,13 @@ void q_networkaccessmanager_connect_to_host_encrypted3(void* self, const char* h
 ///
 void q_networkaccessmanager_connect_to_host2(void* self, const char* hostName, unsigned short port);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#setTransferTimeout)
+///
+/// @param self QNetworkAccessManager*
+/// @param duration int64_t of milliseconds
+///
+void q_networkaccessmanager_set_transfer_timeout1(void* self, int64_t duration);
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
@@ -667,6 +682,15 @@ bool q_networkaccessmanager_move_to_thread(void* self, void* thread);
 /// @param interval int
 ///
 int32_t q_networkaccessmanager_start_timer(void* self, int interval);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QNetworkAccessManager*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_networkaccessmanager_start_timer2(void* self, int64_t time);
 
 /// Inherited from QObject
 ///
@@ -886,6 +910,16 @@ bool q_networkaccessmanager_move_to_thread2(void* self, void* thread, void* para
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_networkaccessmanager_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QNetworkAccessManager*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_networkaccessmanager_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///

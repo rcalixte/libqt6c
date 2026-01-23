@@ -388,6 +388,10 @@ int32_t q_designerformwindowmanagerinterface_start_timer(void* self, int interva
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_designerformwindowmanagerinterface_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_designerformwindowmanagerinterface_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -498,6 +502,10 @@ bool q_designerformwindowmanagerinterface_move_to_thread2(void* self, void* thre
 
 int32_t q_designerformwindowmanagerinterface_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_designerformwindowmanagerinterface_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_designerformwindowmanagerinterface_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {

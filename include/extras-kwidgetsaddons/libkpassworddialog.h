@@ -2948,6 +2948,15 @@ int32_t k_passworddialog_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self KPasswordDialog*
+/// @param time int64_t of nanoseconds
+///
+int32_t k_passworddialog_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KPasswordDialog*
@@ -3155,6 +3164,16 @@ bool k_passworddialog_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t k_passworddialog_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self KPasswordDialog*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t k_passworddialog_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///

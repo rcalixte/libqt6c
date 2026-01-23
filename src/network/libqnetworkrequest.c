@@ -178,12 +178,20 @@ void q_networkrequest_set_transfer_timeout(void* self, int timeout) {
     QNetworkRequest_SetTransferTimeout((QNetworkRequest*)self, timeout);
 }
 
+int64_t q_networkrequest_transfer_timeout_as_duration(void* self) {
+    return QNetworkRequest_TransferTimeoutAsDuration((QNetworkRequest*)self);
+}
+
 void q_networkrequest_set_transfer_timeout2(void* self) {
     QNetworkRequest_SetTransferTimeout2((QNetworkRequest*)self);
 }
 
 QVariant* q_networkrequest_attribute2(void* self, int32_t code, void* defaultValue) {
     return QNetworkRequest_Attribute2((QNetworkRequest*)self, code, (QVariant*)defaultValue);
+}
+
+void q_networkrequest_set_transfer_timeout1(void* self, int64_t duration) {
+    QNetworkRequest_SetTransferTimeout1((QNetworkRequest*)self, duration);
 }
 
 void q_networkrequest_delete(void* self) {

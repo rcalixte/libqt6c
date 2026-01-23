@@ -244,6 +244,12 @@ void q_thread_msleep(uint64_t param1);
 ///
 void q_thread_usleep(uint64_t param1);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qthread.html#sleep)
+///
+/// @param nsec int64_t of nanoseconds
+///
+void q_thread_sleep2(int64_t nsec);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qthread.html#run)
 ///
 /// @param self QThread*
@@ -415,6 +421,15 @@ bool q_thread_move_to_thread(void* self, void* thread);
 /// @param interval int
 ///
 int32_t q_thread_start_timer(void* self, int interval);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QThread*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_thread_start_timer2(void* self, int64_t time);
 
 /// Inherited from QObject
 ///
@@ -634,6 +649,16 @@ bool q_thread_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_thread_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QThread*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_thread_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///

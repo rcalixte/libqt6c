@@ -183,6 +183,21 @@ void q_networkrequestfactory_set_password(void* self, const char* password);
 ///
 void q_networkrequestfactory_clear_password(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#setTransferTimeout)
+///
+/// @param self QNetworkRequestFactory*
+/// @param timeout int64_t of milliseconds
+///
+void q_networkrequestfactory_set_transfer_timeout(void* self, int64_t timeout);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#transferTimeout)
+///
+/// @param self QNetworkRequestFactory*
+///
+/// @return int64_t of milliseconds
+///
+int64_t q_networkrequestfactory_transfer_timeout(void* self);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#queryParameters)
 ///
 /// @param self QNetworkRequestFactory*

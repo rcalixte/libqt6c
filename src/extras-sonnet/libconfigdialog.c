@@ -1319,6 +1319,10 @@ int32_t k_sonnet__configdialog_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t k_sonnet__configdialog_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void k_sonnet__configdialog_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -1425,6 +1429,10 @@ bool k_sonnet__configdialog_move_to_thread2(void* self, void* thread, void* para
 
 int32_t k_sonnet__configdialog_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t k_sonnet__configdialog_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* k_sonnet__configdialog_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {

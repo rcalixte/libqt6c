@@ -1595,6 +1595,10 @@ int32_t q_cplayer_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cplayer_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cplayer_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -1700,6 +1704,10 @@ bool q_cplayer_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cplayer_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cplayer_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cplayer_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -2206,6 +2214,10 @@ int32_t q_cplayerable_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cplayerable_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cplayerable_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -2316,6 +2328,10 @@ bool q_cplayerable_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cplayerable_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cplayerable_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cplayerable_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -3071,6 +3087,10 @@ int32_t q_cpselectionrect_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpselectionrect_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpselectionrect_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -3181,6 +3201,10 @@ bool q_cpselectionrect_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cpselectionrect_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpselectionrect_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpselectionrect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -3656,6 +3680,10 @@ int32_t q_cpmargingroup_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpmargingroup_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpmargingroup_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -3766,6 +3794,10 @@ bool q_cpmargingroup_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cpmargingroup_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpmargingroup_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpmargingroup_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -4276,6 +4308,10 @@ int32_t q_cplayoutelement_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cplayoutelement_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cplayoutelement_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -4386,6 +4422,10 @@ bool q_cplayoutelement_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cplayoutelement_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cplayoutelement_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cplayoutelement_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -5086,6 +5126,10 @@ int32_t q_cplayout_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cplayout_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cplayout_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -5196,6 +5240,10 @@ bool q_cplayout_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cplayout_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cplayout_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cplayout_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -6084,6 +6132,10 @@ int32_t q_cplayoutgrid_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cplayoutgrid_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cplayoutgrid_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -6194,6 +6246,10 @@ bool q_cplayoutgrid_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cplayoutgrid_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cplayoutgrid_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cplayoutgrid_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -6996,6 +7052,10 @@ int32_t q_cplayoutinset_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cplayoutinset_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cplayoutinset_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -7106,6 +7166,10 @@ bool q_cplayoutinset_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cplayoutinset_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cplayoutinset_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cplayoutinset_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -9861,6 +9925,10 @@ int32_t q_cpgrid_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpgrid_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpgrid_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -9971,6 +10039,10 @@ bool q_cpgrid_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cpgrid_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpgrid_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpgrid_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -11138,6 +11210,10 @@ int32_t q_cpaxis_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpaxis_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpaxis_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -11248,6 +11324,10 @@ bool q_cpaxis_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cpaxis_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpaxis_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpaxis_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -12157,6 +12237,10 @@ int32_t q_cpabstractplottable_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpabstractplottable_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpabstractplottable_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -12267,6 +12351,10 @@ bool q_cpabstractplottable_move_to_thread2(void* self, void* thread, void* param
 
 int32_t q_cpabstractplottable_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpabstractplottable_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpabstractplottable_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -13165,6 +13253,10 @@ int32_t q_cpabstractitem_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpabstractitem_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpabstractitem_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -13275,6 +13367,10 @@ bool q_cpabstractitem_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cpabstractitem_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpabstractitem_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpabstractitem_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -15873,6 +15969,10 @@ int32_t q_customplot_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_customplot_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_customplot_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -15979,6 +16079,10 @@ bool q_customplot_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_customplot_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_customplot_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_customplot_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -17623,6 +17727,10 @@ int32_t q_cpaxisrect_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpaxisrect_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpaxisrect_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -17733,6 +17841,10 @@ bool q_cpaxisrect_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cpaxisrect_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpaxisrect_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpaxisrect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -18425,6 +18537,10 @@ int32_t q_cpabstractlegenditem_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpabstractlegenditem_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpabstractlegenditem_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -18535,6 +18651,10 @@ bool q_cpabstractlegenditem_move_to_thread2(void* self, void* thread, void* para
 
 int32_t q_cpabstractlegenditem_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpabstractlegenditem_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpabstractlegenditem_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -19245,6 +19365,10 @@ int32_t q_cpplottablelegenditem_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpplottablelegenditem_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpplottablelegenditem_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -19355,6 +19479,10 @@ bool q_cpplottablelegenditem_move_to_thread2(void* self, void* thread, void* par
 
 int32_t q_cpplottablelegenditem_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpplottablelegenditem_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpplottablelegenditem_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -20392,6 +20520,10 @@ int32_t q_cplegend_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cplegend_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cplegend_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -20502,6 +20634,10 @@ bool q_cplegend_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cplegend_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cplegend_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cplegend_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -21485,6 +21621,10 @@ int32_t q_cptextelement_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cptextelement_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cptextelement_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -21595,6 +21735,10 @@ bool q_cptextelement_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cptextelement_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cptextelement_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cptextelement_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -22313,6 +22457,10 @@ int32_t q_cpcolorscale_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpcolorscale_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpcolorscale_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -22423,6 +22571,10 @@ bool q_cpcolorscale_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cpcolorscale_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpcolorscale_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpcolorscale_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -23518,6 +23670,10 @@ int32_t q_cpgraph_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpgraph_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpgraph_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -23628,6 +23784,10 @@ bool q_cpgraph_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cpgraph_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpgraph_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpgraph_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -24739,6 +24899,10 @@ int32_t q_cpcurve_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpcurve_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpcurve_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -24849,6 +25013,10 @@ bool q_cpcurve_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cpcurve_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpcurve_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpcurve_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -25532,6 +25700,10 @@ int32_t q_cpbarsgroup_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpbarsgroup_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpbarsgroup_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -25642,6 +25814,10 @@ bool q_cpbarsgroup_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cpbarsgroup_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpbarsgroup_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpbarsgroup_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -26379,6 +26555,10 @@ int32_t q_cpbars_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpbars_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpbars_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -26489,6 +26669,10 @@ bool q_cpbars_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cpbars_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpbars_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpbars_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -27511,6 +27695,10 @@ int32_t q_cpstatisticalbox_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpstatisticalbox_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpstatisticalbox_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -27621,6 +27809,10 @@ bool q_cpstatisticalbox_move_to_thread2(void* self, void* thread, void* param2) 
 
 int32_t q_cpstatisticalbox_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpstatisticalbox_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpstatisticalbox_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -28690,6 +28882,10 @@ int32_t q_cpcolormap_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpcolormap_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpcolormap_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -28800,6 +28996,10 @@ bool q_cpcolormap_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cpcolormap_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpcolormap_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpcolormap_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -29737,6 +29937,10 @@ int32_t q_cpfinancial_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpfinancial_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpfinancial_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -29847,6 +30051,10 @@ bool q_cpfinancial_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cpfinancial_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpfinancial_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpfinancial_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -30960,6 +31168,10 @@ int32_t q_cperrorbars_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cperrorbars_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cperrorbars_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -31070,6 +31282,10 @@ bool q_cperrorbars_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cperrorbars_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cperrorbars_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cperrorbars_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -31714,6 +31930,10 @@ int32_t q_cpitemstraightline_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpitemstraightline_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpitemstraightline_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -31824,6 +32044,10 @@ bool q_cpitemstraightline_move_to_thread2(void* self, void* thread, void* param2
 
 int32_t q_cpitemstraightline_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpitemstraightline_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpitemstraightline_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -32504,6 +32728,10 @@ int32_t q_cpitemline_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpitemline_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpitemline_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -32614,6 +32842,10 @@ bool q_cpitemline_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cpitemline_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpitemline_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpitemline_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -33290,6 +33522,10 @@ int32_t q_cpitemcurve_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpitemcurve_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpitemcurve_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -33400,6 +33636,10 @@ bool q_cpitemcurve_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cpitemcurve_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpitemcurve_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpitemcurve_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -34116,6 +34356,10 @@ int32_t q_cpitemrect_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpitemrect_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpitemrect_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -34226,6 +34470,10 @@ bool q_cpitemrect_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cpitemrect_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpitemrect_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpitemrect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -35041,6 +35289,10 @@ int32_t q_cpitemtext_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpitemtext_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpitemtext_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -35151,6 +35403,10 @@ bool q_cpitemtext_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cpitemtext_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpitemtext_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpitemtext_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -35867,6 +36123,10 @@ int32_t q_cpitemellipse_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpitemellipse_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpitemellipse_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -35977,6 +36237,10 @@ bool q_cpitemellipse_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cpitemellipse_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpitemellipse_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpitemellipse_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -36769,6 +37033,10 @@ int32_t q_cpitempixmap_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpitempixmap_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpitempixmap_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -36879,6 +37147,10 @@ bool q_cpitempixmap_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cpitempixmap_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpitempixmap_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpitempixmap_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -37583,6 +37855,10 @@ int32_t q_cpitemtracer_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpitemtracer_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpitemtracer_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -37693,6 +37969,10 @@ bool q_cpitemtracer_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cpitemtracer_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpitemtracer_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpitemtracer_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -38377,6 +38657,10 @@ int32_t q_cpitembracket_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cpitembracket_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cpitembracket_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -38487,6 +38771,10 @@ bool q_cpitembracket_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cpitembracket_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cpitembracket_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cpitembracket_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -39660,6 +39948,10 @@ int32_t q_cppolaraxisradial_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cppolaraxisradial_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cppolaraxisradial_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -39770,6 +40062,10 @@ bool q_cppolaraxisradial_move_to_thread2(void* self, void* thread, void* param2)
 
 int32_t q_cppolaraxisradial_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cppolaraxisradial_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cppolaraxisradial_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -41023,6 +41319,10 @@ int32_t q_cppolaraxisangular_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cppolaraxisangular_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cppolaraxisangular_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -41133,6 +41433,10 @@ bool q_cppolaraxisangular_move_to_thread2(void* self, void* thread, void* param2
 
 int32_t q_cppolaraxisangular_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cppolaraxisangular_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cppolaraxisangular_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -41723,6 +42027,10 @@ int32_t q_cppolargrid_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cppolargrid_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cppolargrid_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -41833,6 +42141,10 @@ bool q_cppolargrid_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cppolargrid_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cppolargrid_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cppolargrid_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -42529,6 +42841,10 @@ int32_t q_cppolarlegenditem_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cppolarlegenditem_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cppolarlegenditem_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -42639,6 +42955,10 @@ bool q_cppolarlegenditem_move_to_thread2(void* self, void* thread, void* param2)
 
 int32_t q_cppolarlegenditem_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cppolarlegenditem_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cppolarlegenditem_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -43648,6 +43968,10 @@ int32_t q_cppolargraph_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_cppolargraph_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_cppolargraph_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -43758,6 +44082,10 @@ bool q_cppolargraph_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_cppolargraph_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_cppolargraph_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_cppolargraph_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {

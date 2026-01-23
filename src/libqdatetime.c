@@ -552,6 +552,10 @@ QDateTime* q_datetime_add_m_secs(void* self, long long msecs) {
     return QDateTime_AddMSecs((QDateTime*)self, msecs);
 }
 
+QDateTime* q_datetime_add_duration(void* self, int64_t msecs) {
+    return QDateTime_AddDuration((QDateTime*)self, msecs);
+}
+
 QDateTime* q_datetime_to_time_spec(void* self, int32_t spec) {
     return QDateTime_ToTimeSpec((QDateTime*)self, spec);
 }
@@ -642,6 +646,14 @@ long long q_datetime_current_m_secs_since_epoch() {
 
 long long q_datetime_current_secs_since_epoch() {
     return QDateTime_CurrentSecsSinceEpoch();
+}
+
+QDateTime* q_datetime_operator_plus_assign(void* self, int64_t duration) {
+    return QDateTime_OperatorPlusAssign((QDateTime*)self, duration);
+}
+
+QDateTime* q_datetime_operator_minus_assign(void* self, int64_t duration) {
+    return QDateTime_OperatorMinusAssign((QDateTime*)self, duration);
 }
 
 void q_datetime_set_date2(void* self, void* date, int32_t resolve) {

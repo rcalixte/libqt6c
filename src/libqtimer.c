@@ -92,6 +92,22 @@ void q_timer_stop(void* self) {
     QTimer_Stop((QTimer*)self);
 }
 
+void q_timer_set_interval2(void* self, int64_t value) {
+    QTimer_SetInterval2((QTimer*)self, value);
+}
+
+int64_t q_timer_interval_as_duration(void* self) {
+    return QTimer_IntervalAsDuration((QTimer*)self);
+}
+
+int64_t q_timer_remaining_time_as_duration(void* self) {
+    return QTimer_RemainingTimeAsDuration((QTimer*)self);
+}
+
+void q_timer_start3(void* self, int64_t value) {
+    QTimer_Start3((QTimer*)self, value);
+}
+
 void q_timer_timer_event(void* self, void* param1) {
     QTimer_TimerEvent((QTimer*)self, (QTimerEvent*)param1);
 }
@@ -159,6 +175,10 @@ bool q_timer_move_to_thread(void* self, void* thread) {
 
 int32_t q_timer_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
+}
+
+int32_t q_timer_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
 }
 
 void q_timer_kill_timer(void* self, int id) {
@@ -271,6 +291,10 @@ bool q_timer_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_timer_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_timer_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_timer_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {

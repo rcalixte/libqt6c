@@ -959,6 +959,13 @@ QDateTime* q_datetime_add_secs(void* self, long long secs);
 ///
 QDateTime* q_datetime_add_m_secs(void* self, long long msecs);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#addDuration)
+///
+/// @param self QDateTime*
+/// @param msecs int64_t of milliseconds
+///
+QDateTime* q_datetime_add_duration(void* self, int64_t msecs);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#toTimeSpec)
 ///
 /// @param self QDateTime*
@@ -1104,6 +1111,20 @@ long long q_datetime_current_m_secs_since_epoch();
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#currentSecsSinceEpoch)
 ///
 long long q_datetime_current_secs_since_epoch();
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#operator-2b-eq)
+///
+/// @param self QDateTime*
+/// @param duration int64_t of milliseconds
+///
+QDateTime* q_datetime_operator_plus_assign(void* self, int64_t duration);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#operator--eq)
+///
+/// @param self QDateTime*
+/// @param duration int64_t of milliseconds
+///
+QDateTime* q_datetime_operator_minus_assign(void* self, int64_t duration);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#setDate)
 ///
