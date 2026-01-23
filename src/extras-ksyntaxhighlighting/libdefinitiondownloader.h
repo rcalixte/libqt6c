@@ -210,6 +210,15 @@ int32_t k_syntaxhighlighting__definitiondownloader_start_timer(void* self, int i
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param time int64_t of nanoseconds
+///
+int32_t k_syntaxhighlighting__definitiondownloader_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self KSyntaxHighlighting__DefinitionDownloader*
@@ -426,6 +435,16 @@ bool k_syntaxhighlighting__definitiondownloader_move_to_thread2(void* self, void
 /// @param timerType enum Qt__TimerType
 ///
 int32_t k_syntaxhighlighting__definitiondownloader_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t k_syntaxhighlighting__definitiondownloader_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///

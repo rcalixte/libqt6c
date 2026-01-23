@@ -113,6 +113,10 @@ QDeadlineTimer* q_deadlinetimer_operator_minus_assign(void* self, long long msec
     return QDeadlineTimer_OperatorMinusAssign((QDeadlineTimer*)self, msecs);
 }
 
+int64_t q_deadlinetimer_remaining_time_as_duration(void* self) {
+    return QDeadlineTimer_RemainingTimeAsDuration((QDeadlineTimer*)self);
+}
+
 void q_deadlinetimer_set_remaining_time2(void* self, long long msecs, int32_t type) {
     QDeadlineTimer_SetRemainingTime2((QDeadlineTimer*)self, msecs, type);
 }

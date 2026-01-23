@@ -5,12 +5,20 @@
 #include "libqchronotimer.hpp"
 #include "libqchronotimer.h"
 
-QChronoTimer* q_chronotimer_new() {
-    return QChronoTimer_new();
+QChronoTimer* q_chronotimer_new(int64_t nsec) {
+    return QChronoTimer_new(nsec);
 }
 
-QChronoTimer* q_chronotimer_new2(void* parent) {
-    return QChronoTimer_new2((QObject*)parent);
+QChronoTimer* q_chronotimer_new2() {
+    return QChronoTimer_new2();
+}
+
+QChronoTimer* q_chronotimer_new3(int64_t nsec, void* parent) {
+    return QChronoTimer_new3(nsec, (QObject*)parent);
+}
+
+QChronoTimer* q_chronotimer_new4(void* parent) {
+    return QChronoTimer_new4((QObject*)parent);
 }
 
 const QMetaObject* q_chronotimer_meta_object(void* self) {
@@ -46,6 +54,18 @@ bool q_chronotimer_is_active(void* self) {
 
 int32_t q_chronotimer_id(void* self) {
     return QChronoTimer_Id((QChronoTimer*)self);
+}
+
+void q_chronotimer_set_interval(void* self, int64_t nsec) {
+    QChronoTimer_SetInterval((QChronoTimer*)self, nsec);
+}
+
+int64_t q_chronotimer_interval(void* self) {
+    return QChronoTimer_Interval((QChronoTimer*)self);
+}
+
+int64_t q_chronotimer_remaining_time(void* self) {
+    return QChronoTimer_RemainingTime((QChronoTimer*)self);
 }
 
 void q_chronotimer_set_timer_type(void* self, int32_t atype) {
@@ -139,6 +159,10 @@ bool q_chronotimer_move_to_thread(void* self, void* thread) {
 
 int32_t q_chronotimer_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
+}
+
+int32_t q_chronotimer_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
 }
 
 void q_chronotimer_kill_timer(void* self, int id) {
@@ -251,6 +275,10 @@ bool q_chronotimer_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_chronotimer_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_chronotimer_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_chronotimer_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {

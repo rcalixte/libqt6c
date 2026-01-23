@@ -30,6 +30,14 @@ void q_basictimer_start2(void* self, int msec, int32_t timerType, void* obj) {
     QBasicTimer_Start2((QBasicTimer*)self, msec, timerType, (QObject*)obj);
 }
 
+void q_basictimer_start3(void* self, int64_t duration, void* obj) {
+    QBasicTimer_Start3((QBasicTimer*)self, duration, (QObject*)obj);
+}
+
+void q_basictimer_start4(void* self, int64_t duration, int32_t timerType, void* obj) {
+    QBasicTimer_Start4((QBasicTimer*)self, duration, timerType, (QObject*)obj);
+}
+
 void q_basictimer_stop(void* self) {
     QBasicTimer_Stop((QBasicTimer*)self);
 }

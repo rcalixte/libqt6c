@@ -996,6 +996,15 @@ int32_t q_boxlayout_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QBoxLayout*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_boxlayout_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QBoxLayout*
@@ -1212,6 +1221,16 @@ bool q_boxlayout_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_boxlayout_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QBoxLayout*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_boxlayout_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -2741,6 +2760,15 @@ int32_t q_hboxlayout_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QHBoxLayout*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_hboxlayout_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QHBoxLayout*
@@ -2957,6 +2985,16 @@ bool q_hboxlayout_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_hboxlayout_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QHBoxLayout*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_hboxlayout_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -4969,6 +5007,15 @@ int32_t q_vboxlayout_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QVBoxLayout*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_vboxlayout_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QVBoxLayout*
@@ -5185,6 +5232,16 @@ bool q_vboxlayout_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_vboxlayout_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QVBoxLayout*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_vboxlayout_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///

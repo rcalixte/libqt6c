@@ -185,6 +185,13 @@ bool q_object_move_to_thread(void* self, void* thread);
 ///
 int32_t q_object_start_timer(void* self, int interval);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QObject*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_object_start_timer2(void* self, int64_t time);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QObject*
@@ -595,6 +602,14 @@ bool q_object_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_object_start_timer22(void* self, int interval, int32_t timerType);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QObject*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_object_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///

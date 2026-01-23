@@ -105,6 +105,12 @@ void q_timezone_swap(void* self, void* other);
 ///
 bool q_timezone_is_valid(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#fromDurationAheadOfUtc)
+///
+/// @param offset int64_t of seconds
+///
+QTimeZone* q_timezone_from_duration_ahead_of_utc(int64_t offset);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#fromSecondsAheadOfUtc)
 ///
 /// @param offset int

@@ -123,6 +123,10 @@ int32_t q_graphicstransform_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_graphicstransform_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_graphicstransform_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -233,6 +237,10 @@ bool q_graphicstransform_move_to_thread2(void* self, void* thread, void* param2)
 
 int32_t q_graphicstransform_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_graphicstransform_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_graphicstransform_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -567,6 +575,10 @@ int32_t q_graphicsscale_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_graphicsscale_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_graphicsscale_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -677,6 +689,10 @@ bool q_graphicsscale_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t q_graphicsscale_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_graphicsscale_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_graphicsscale_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
@@ -1003,6 +1019,10 @@ int32_t q_graphicsrotation_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
+int32_t q_graphicsrotation_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
+}
+
 void q_graphicsrotation_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
@@ -1113,6 +1133,10 @@ bool q_graphicsrotation_move_to_thread2(void* self, void* thread, void* param2) 
 
 int32_t q_graphicsrotation_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t q_graphicsrotation_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* q_graphicsrotation_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {

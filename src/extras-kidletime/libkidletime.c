@@ -49,6 +49,10 @@ int32_t k_idletime_add_idle_timeout(void* self, int msec) {
     return KIdleTime_AddIdleTimeout((KIdleTime*)self, msec);
 }
 
+int32_t k_idletime_add_idle_timeout2(void* self, int64_t msec) {
+    return KIdleTime_AddIdleTimeout2((KIdleTime*)self, msec);
+}
+
 void k_idletime_remove_idle_timeout(void* self, int identifier) {
     KIdleTime_RemoveIdleTimeout((KIdleTime*)self, identifier);
 }
@@ -144,6 +148,10 @@ bool k_idletime_move_to_thread(void* self, void* thread) {
 
 int32_t k_idletime_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
+}
+
+int32_t k_idletime_start_timer2(void* self, int64_t time) {
+    return QObject_StartTimer2((QObject*)self, time);
 }
 
 void k_idletime_kill_timer(void* self, int id) {
@@ -256,6 +264,10 @@ bool k_idletime_move_to_thread2(void* self, void* thread, void* param2) {
 
 int32_t k_idletime_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
+}
+
+int32_t k_idletime_start_timer23(void* self, int64_t time, int32_t timerType) {
+    return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
 QMetaObject__Connection* k_idletime_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {

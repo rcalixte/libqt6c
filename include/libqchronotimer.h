@@ -15,15 +15,32 @@
 
 /// q_chronotimer_new constructs a new QChronoTimer object.
 ///
-QChronoTimer* q_chronotimer_new();
+/// @param nsec int64_t of nanoseconds
+///
+QChronoTimer* q_chronotimer_new(int64_t nsec);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchronotimer.html)
 
 /// q_chronotimer_new2 constructs a new QChronoTimer object.
 ///
+QChronoTimer* q_chronotimer_new2();
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qchronotimer.html)
+
+/// q_chronotimer_new3 constructs a new QChronoTimer object.
+///
+/// @param nsec int64_t of nanoseconds
 /// @param parent QObject*
 ///
-QChronoTimer* q_chronotimer_new2(void* parent);
+QChronoTimer* q_chronotimer_new3(int64_t nsec, void* parent);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qchronotimer.html)
+
+/// q_chronotimer_new4 constructs a new QChronoTimer object.
+///
+/// @param parent QObject*
+///
+QChronoTimer* q_chronotimer_new4(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -80,6 +97,29 @@ bool q_chronotimer_is_active(void* self);
 /// @return enum Qt__TimerId
 ///
 int32_t q_chronotimer_id(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qchronotimer.html#setInterval)
+///
+/// @param self QChronoTimer*
+/// @param nsec int64_t of nanoseconds
+///
+void q_chronotimer_set_interval(void* self, int64_t nsec);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qchronotimer.html#interval)
+///
+/// @param self QChronoTimer*
+///
+/// @return int64_t of nanoseconds
+///
+int64_t q_chronotimer_interval(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qchronotimer.html#remainingTime)
+///
+/// @param self QChronoTimer*
+///
+/// @return int64_t of nanoseconds
+///
+int64_t q_chronotimer_remaining_time(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchronotimer.html#setTimerType)
 ///
@@ -250,6 +290,15 @@ bool q_chronotimer_move_to_thread(void* self, void* thread);
 /// @param interval int
 ///
 int32_t q_chronotimer_start_timer(void* self, int interval);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QChronoTimer*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_chronotimer_start_timer2(void* self, int64_t time);
 
 /// Inherited from QObject
 ///
@@ -469,6 +518,16 @@ bool q_chronotimer_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_chronotimer_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QChronoTimer*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_chronotimer_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///

@@ -65,6 +65,21 @@ int32_t q_lockfile_stale_lock_time(void* self);
 ///
 bool q_lockfile_try_lock2(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qlockfile.html#setStaleLockTime)
+///
+/// @param self QLockFile*
+/// @param value int64_t of milliseconds
+///
+void q_lockfile_set_stale_lock_time2(void* self, int64_t value);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlockfile.html#staleLockTimeAsDuration)
+///
+/// @param self QLockFile*
+///
+/// @return int64_t of milliseconds
+///
+int64_t q_lockfile_stale_lock_time_as_duration(void* self);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlockfile.html#isLocked)
 ///
 /// @param self QLockFile*
@@ -84,6 +99,13 @@ bool q_lockfile_remove_stale_lock_file(void* self);
 /// @return enum QLockFile__LockError
 ///
 int32_t q_lockfile_error(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlockfile.html#tryLock)
+///
+/// @param self QLockFile*
+/// @param timeout int64_t of milliseconds
+///
+bool q_lockfile_try_lock1(void* self, int64_t timeout);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlockfile.html#dtor.QLockFile)
 ///

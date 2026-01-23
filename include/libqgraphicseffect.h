@@ -511,6 +511,15 @@ int32_t q_graphicseffect_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QGraphicsEffect*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_graphicseffect_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QGraphicsEffect*
@@ -727,6 +736,16 @@ bool q_graphicseffect_move_to_thread2(void* self, void* thread, void* param2);
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_graphicseffect_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QGraphicsEffect*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_graphicseffect_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1443,6 +1462,15 @@ int32_t q_graphicscolorizeeffect_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QGraphicsColorizeEffect*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_graphicscolorizeeffect_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QGraphicsColorizeEffect*
@@ -1659,6 +1687,16 @@ bool q_graphicscolorizeeffect_move_to_thread2(void* self, void* thread, void* pa
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_graphicscolorizeeffect_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QGraphicsColorizeEffect*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_graphicscolorizeeffect_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -2625,6 +2663,15 @@ int32_t q_graphicsblureffect_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QGraphicsBlurEffect*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_graphicsblureffect_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QGraphicsBlurEffect*
@@ -2841,6 +2888,16 @@ bool q_graphicsblureffect_move_to_thread2(void* self, void* thread, void* param2
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_graphicsblureffect_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QGraphicsBlurEffect*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_graphicsblureffect_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -3840,6 +3897,15 @@ int32_t q_graphicsdropshadoweffect_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QGraphicsDropShadowEffect*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_graphicsdropshadoweffect_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QGraphicsDropShadowEffect*
@@ -4056,6 +4122,16 @@ bool q_graphicsdropshadoweffect_move_to_thread2(void* self, void* thread, void* 
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_graphicsdropshadoweffect_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QGraphicsDropShadowEffect*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_graphicsdropshadoweffect_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -4962,6 +5038,15 @@ int32_t q_graphicsopacityeffect_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QGraphicsOpacityEffect*
+/// @param time int64_t of nanoseconds
+///
+int32_t q_graphicsopacityeffect_start_timer2(void* self, int64_t time);
+
+/// Inherited from QObject
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// @param self QGraphicsOpacityEffect*
@@ -5178,6 +5263,16 @@ bool q_graphicsopacityeffect_move_to_thread2(void* self, void* thread, void* par
 /// @param timerType enum Qt__TimerType
 ///
 int32_t q_graphicsopacityeffect_start_timer22(void* self, int interval, int32_t timerType);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// @param self QGraphicsOpacityEffect*
+/// @param time int64_t of nanoseconds
+/// @param timerType enum Qt__TimerType
+///
+int32_t q_graphicsopacityeffect_start_timer23(void* self, int64_t time, int32_t timerType);
 
 /// Inherited from QObject
 ///

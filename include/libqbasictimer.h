@@ -61,6 +61,23 @@ void q_basictimer_start(void* self, int msec, void* obj);
 ///
 void q_basictimer_start2(void* self, int msec, int32_t timerType, void* obj);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qbasictimer.html#start)
+///
+/// @param self QBasicTimer*
+/// @param duration int64_t of milliseconds
+/// @param obj QObject*
+///
+void q_basictimer_start3(void* self, int64_t duration, void* obj);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbasictimer.html#start)
+///
+/// @param self QBasicTimer*
+/// @param duration int64_t of milliseconds
+/// @param timerType enum Qt__TimerType
+/// @param obj QObject*
+///
+void q_basictimer_start4(void* self, int64_t duration, int32_t timerType, void* obj);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qbasictimer.html#stop)
 ///
 /// @param self QBasicTimer*

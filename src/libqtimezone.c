@@ -48,6 +48,10 @@ bool q_timezone_is_valid(void* self) {
     return QTimeZone_IsValid((QTimeZone*)self);
 }
 
+QTimeZone* q_timezone_from_duration_ahead_of_utc(int64_t offset) {
+    return QTimeZone_FromDurationAheadOfUtc(offset);
+}
+
 QTimeZone* q_timezone_from_seconds_ahead_of_utc(int offset) {
     return QTimeZone_FromSecondsAheadOfUtc(offset);
 }

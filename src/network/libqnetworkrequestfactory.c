@@ -116,6 +116,14 @@ void q_networkrequestfactory_clear_password(void* self) {
     QNetworkRequestFactory_ClearPassword((QNetworkRequestFactory*)self);
 }
 
+void q_networkrequestfactory_set_transfer_timeout(void* self, int64_t timeout) {
+    QNetworkRequestFactory_SetTransferTimeout((QNetworkRequestFactory*)self, timeout);
+}
+
+int64_t q_networkrequestfactory_transfer_timeout(void* self) {
+    return QNetworkRequestFactory_TransferTimeout((QNetworkRequestFactory*)self);
+}
+
 QUrlQuery* q_networkrequestfactory_query_parameters(void* self) {
     return QNetworkRequestFactory_QueryParameters((QNetworkRequestFactory*)self);
 }
