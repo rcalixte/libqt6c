@@ -102,6 +102,9 @@ func (p CppParameter) RenderTypeCabi(isSlot bool) string {
 				vParam = e.EnumTypeC
 			}
 
+			kParam = strings.ReplaceAll(kParam, " ", "_")
+			vParam = strings.ReplaceAll(vParam, " ", "_")
+
 			returnType = "pair_" + strings.ToLower(kParam) + "_" + strings.ToLower(vParam)
 		}
 
@@ -162,6 +165,10 @@ func (p CppParameter) RenderTypeCabi(isSlot bool) string {
 		ret = "uintptr_t"
 	case "qsizetype", "qptrdiff", "QIntegerForSizeof<std::size_t>::Signed":
 		ret = "ptrdiff_t"
+	}
+
+	if p.IsChronoSeconds() {
+		ret = "int64_t"
 	}
 
 	if p.Const {
@@ -1072,7 +1079,7 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 		// Elide temporary and emit directly from the rvalue
 		return indent + assignExpression + "new " + p.ParameterType + "(" + rvalue + ");\n", cleanupType
 
-	} else if p.IsFlagType() || p.IsKnownEnum() || p.QtCppOriginalType != nil {
+	} else if p.IsFlagType() || p.IsKnownEnum() || p.IsChronoSeconds() || p.QtCppOriginalType != nil {
 
 		// Needs an explicit cast
 		shouldReturn = p.RenderTypeQtCpp() + " " + namePrefix + "_ret = "
@@ -1084,6 +1091,8 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 			afterCall += indent + assignExpression + "(" + p.RenderTypeCabi(false) + ")(" + namePrefix + "_ret);\n"
 		} else if p.ByRef {
 			afterCall += indent + assignExpression + "reinterpret_cast<" + p.RenderTypeCabi(false) + ">(&" + rvalue + ");\n"
+		} else if p.IsChronoSeconds() {
+			afterCall += indent + assignExpression + namePrefix + "_ret.count();\n"
 		} else {
 			afterCall += indent + assignExpression + "static_cast<" + p.RenderTypeCabi(false) + ">(" + rvalue + ");\n"
 			return indent + afterCall, cleanupType
@@ -1140,6 +1149,7 @@ func getReferencedTypes(src *CppParsedHeader, qtextradefs map[string]struct{}) [
 				if e, ok := KnownEnums[vType.ParameterType]; ok {
 					vParam = e.EnumTypeC
 				}
+
 				qtextradefs[kParam+":"+vParam] = struct{}{}
 			}
 		}
@@ -1708,22 +1718,22 @@ extern "C" {
 	sort.Strings(sortedExtras)
 	for _, k := range sortedExtras {
 		pairs := strings.Split(k, ":")
-		f := strings.ToLower(pairs[0])
-		s := strings.ToLower(pairs[1])
+		f := strings.ReplaceAll(strings.ToLower(pairs[0]), " ", "_")
+		s := strings.ReplaceAll(strings.ToLower(pairs[1]), " ", "_")
 		ret.WriteString("struct pair_" + f + "_" + s + ";\n")
 	}
 	ret.WriteString("\n")
 	for _, k := range sortedExtras {
 		pairs := strings.Split(k, ":")
-		f := strings.ToLower(pairs[0])
-		s := strings.ToLower(pairs[1])
+		f := strings.ReplaceAll(strings.ToLower(pairs[0]), " ", "_")
+		s := strings.ReplaceAll(strings.ToLower(pairs[1]), " ", "_")
 		ret.WriteString("typedef struct pair_" + f + "_" + s + " pair_" + f + "_" + s + ";\n")
 	}
 	ret.WriteString("\n")
 	for _, k := range sortedExtras {
 		pairs := strings.Split(k, ":")
-		f := strings.ToLower(pairs[0])
-		s := strings.ToLower(pairs[1])
+		f := strings.ReplaceAll(strings.ToLower(pairs[0]), " ", "_")
+		s := strings.ReplaceAll(strings.ToLower(pairs[1]), " ", "_")
 		ret.WriteString("#ifndef PAIR_" + strings.ToUpper(f+"_"+s) + "\n" +
 			"#define PAIR_" + strings.ToUpper(f+"_"+s) + "\n" +
 			"struct pair_" + f + "_" + s + " {\n" +
