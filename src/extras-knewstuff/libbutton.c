@@ -29,8 +29,24 @@ const QMetaObject* k_nswidgets__button_meta_object(void* self) {
     return KNSWidgets__Button_MetaObject((KNSWidgets__Button*)self);
 }
 
+void k_nswidgets__button_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KNSWidgets__Button_OnMetaObject((KNSWidgets__Button*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_nswidgets__button_qbase_meta_object(void* self) {
+    return KNSWidgets__Button_QBaseMetaObject((KNSWidgets__Button*)self);
+}
+
 void* k_nswidgets__button_metacast(void* self, const char* param1) {
     return KNSWidgets__Button_Metacast((KNSWidgets__Button*)self, param1);
+}
+
+void k_nswidgets__button_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KNSWidgets__Button_OnMetacast((KNSWidgets__Button*)self, (intptr_t)callback);
+}
+
+void* k_nswidgets__button_qbase_metacast(void* self, const char* param1) {
+    return KNSWidgets__Button_QBaseMetacast((KNSWidgets__Button*)self, param1);
 }
 
 int32_t k_nswidgets__button_metacall(void* self, int32_t param1, int param2, void* param3) {

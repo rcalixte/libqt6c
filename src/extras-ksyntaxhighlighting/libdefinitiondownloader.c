@@ -18,8 +18,24 @@ const QMetaObject* k_syntaxhighlighting__definitiondownloader_meta_object(void* 
     return KSyntaxHighlighting__DefinitionDownloader_MetaObject((KSyntaxHighlighting__DefinitionDownloader*)self);
 }
 
+void k_syntaxhighlighting__definitiondownloader_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KSyntaxHighlighting__DefinitionDownloader_OnMetaObject((KSyntaxHighlighting__DefinitionDownloader*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_syntaxhighlighting__definitiondownloader_qbase_meta_object(void* self) {
+    return KSyntaxHighlighting__DefinitionDownloader_QBaseMetaObject((KSyntaxHighlighting__DefinitionDownloader*)self);
+}
+
 void* k_syntaxhighlighting__definitiondownloader_metacast(void* self, const char* param1) {
     return KSyntaxHighlighting__DefinitionDownloader_Metacast((KSyntaxHighlighting__DefinitionDownloader*)self, param1);
+}
+
+void k_syntaxhighlighting__definitiondownloader_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KSyntaxHighlighting__DefinitionDownloader_OnMetacast((KSyntaxHighlighting__DefinitionDownloader*)self, (intptr_t)callback);
+}
+
+void* k_syntaxhighlighting__definitiondownloader_qbase_metacast(void* self, const char* param1) {
+    return KSyntaxHighlighting__DefinitionDownloader_QBaseMetacast((KSyntaxHighlighting__DefinitionDownloader*)self, param1);
 }
 
 int32_t k_syntaxhighlighting__definitiondownloader_metacall(void* self, int32_t param1, int param2, void* param3) {

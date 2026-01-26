@@ -18,8 +18,24 @@ const QMetaObject* k_sonnet__settings_meta_object(void* self) {
     return Sonnet__Settings_MetaObject((Sonnet__Settings*)self);
 }
 
+void k_sonnet__settings_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    Sonnet__Settings_OnMetaObject((Sonnet__Settings*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_sonnet__settings_qbase_meta_object(void* self) {
+    return Sonnet__Settings_QBaseMetaObject((Sonnet__Settings*)self);
+}
+
 void* k_sonnet__settings_metacast(void* self, const char* param1) {
     return Sonnet__Settings_Metacast((Sonnet__Settings*)self, param1);
+}
+
+void k_sonnet__settings_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    Sonnet__Settings_OnMetacast((Sonnet__Settings*)self, (intptr_t)callback);
+}
+
+void* k_sonnet__settings_qbase_metacast(void* self, const char* param1) {
+    return Sonnet__Settings_QBaseMetacast((Sonnet__Settings*)self, param1);
 }
 
 int32_t k_sonnet__settings_metacall(void* self, int32_t param1, int param2, void* param3) {

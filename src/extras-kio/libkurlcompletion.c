@@ -20,8 +20,24 @@ const QMetaObject* k_urlcompletion_meta_object(void* self) {
     return KUrlCompletion_MetaObject((KUrlCompletion*)self);
 }
 
+void k_urlcompletion_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KUrlCompletion_OnMetaObject((KUrlCompletion*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_urlcompletion_qbase_meta_object(void* self) {
+    return KUrlCompletion_QBaseMetaObject((KUrlCompletion*)self);
+}
+
 void* k_urlcompletion_metacast(void* self, const char* param1) {
     return KUrlCompletion_Metacast((KUrlCompletion*)self, param1);
+}
+
+void k_urlcompletion_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KUrlCompletion_OnMetacast((KUrlCompletion*)self, (intptr_t)callback);
+}
+
+void* k_urlcompletion_qbase_metacast(void* self, const char* param1) {
+    return KUrlCompletion_QBaseMetacast((KUrlCompletion*)self, param1);
 }
 
 int32_t k_urlcompletion_metacall(void* self, int32_t param1, int param2, void* param3) {

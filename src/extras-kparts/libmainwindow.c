@@ -43,8 +43,24 @@ const QMetaObject* k_parts__mainwindow_meta_object(void* self) {
     return KParts__MainWindow_MetaObject((KParts__MainWindow*)self);
 }
 
+void k_parts__mainwindow_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KParts__MainWindow_OnMetaObject((KParts__MainWindow*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_parts__mainwindow_qbase_meta_object(void* self) {
+    return KParts__MainWindow_QBaseMetaObject((KParts__MainWindow*)self);
+}
+
 void* k_parts__mainwindow_metacast(void* self, const char* param1) {
     return KParts__MainWindow_Metacast((KParts__MainWindow*)self, param1);
+}
+
+void k_parts__mainwindow_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KParts__MainWindow_OnMetacast((KParts__MainWindow*)self, (intptr_t)callback);
+}
+
+void* k_parts__mainwindow_qbase_metacast(void* self, const char* param1) {
+    return KParts__MainWindow_QBaseMetacast((KParts__MainWindow*)self, param1);
 }
 
 int32_t k_parts__mainwindow_metacall(void* self, int32_t param1, int param2, void* param3) {

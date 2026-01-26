@@ -19,8 +19,24 @@ const QMetaObject* q_gesture_meta_object(void* self) {
     return QGesture_MetaObject((QGesture*)self);
 }
 
+void q_gesture_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QGesture_OnMetaObject((QGesture*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_gesture_qbase_meta_object(void* self) {
+    return QGesture_QBaseMetaObject((QGesture*)self);
+}
+
 void* q_gesture_metacast(void* self, const char* param1) {
     return QGesture_Metacast((QGesture*)self, param1);
+}
+
+void q_gesture_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QGesture_OnMetacast((QGesture*)self, (intptr_t)callback);
+}
+
+void* q_gesture_qbase_metacast(void* self, const char* param1) {
+    return QGesture_QBaseMetacast((QGesture*)self, param1);
 }
 
 int32_t q_gesture_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -419,8 +435,24 @@ const QMetaObject* q_pangesture_meta_object(void* self) {
     return QPanGesture_MetaObject((QPanGesture*)self);
 }
 
+void q_pangesture_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QPanGesture_OnMetaObject((QPanGesture*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_pangesture_qbase_meta_object(void* self) {
+    return QPanGesture_QBaseMetaObject((QPanGesture*)self);
+}
+
 void* q_pangesture_metacast(void* self, const char* param1) {
     return QPanGesture_Metacast((QPanGesture*)self, param1);
+}
+
+void q_pangesture_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QPanGesture_OnMetacast((QPanGesture*)self, (intptr_t)callback);
+}
+
+void* q_pangesture_qbase_metacast(void* self, const char* param1) {
+    return QPanGesture_QBaseMetacast((QPanGesture*)self, param1);
 }
 
 int32_t q_pangesture_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -847,8 +879,24 @@ const QMetaObject* q_pinchgesture_meta_object(void* self) {
     return QPinchGesture_MetaObject((QPinchGesture*)self);
 }
 
+void q_pinchgesture_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QPinchGesture_OnMetaObject((QPinchGesture*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_pinchgesture_qbase_meta_object(void* self) {
+    return QPinchGesture_QBaseMetaObject((QPinchGesture*)self);
+}
+
 void* q_pinchgesture_metacast(void* self, const char* param1) {
     return QPinchGesture_Metacast((QPinchGesture*)self, param1);
+}
+
+void q_pinchgesture_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QPinchGesture_OnMetacast((QPinchGesture*)self, (intptr_t)callback);
+}
+
+void* q_pinchgesture_qbase_metacast(void* self, const char* param1) {
+    return QPinchGesture_QBaseMetacast((QPinchGesture*)self, param1);
 }
 
 int32_t q_pinchgesture_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -1335,8 +1383,24 @@ const QMetaObject* q_swipegesture_meta_object(void* self) {
     return QSwipeGesture_MetaObject((QSwipeGesture*)self);
 }
 
+void q_swipegesture_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QSwipeGesture_OnMetaObject((QSwipeGesture*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_swipegesture_qbase_meta_object(void* self) {
+    return QSwipeGesture_QBaseMetaObject((QSwipeGesture*)self);
+}
+
 void* q_swipegesture_metacast(void* self, const char* param1) {
     return QSwipeGesture_Metacast((QSwipeGesture*)self, param1);
+}
+
+void q_swipegesture_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QSwipeGesture_OnMetacast((QSwipeGesture*)self, (intptr_t)callback);
+}
+
+void* q_swipegesture_qbase_metacast(void* self, const char* param1) {
+    return QSwipeGesture_QBaseMetacast((QSwipeGesture*)self, param1);
 }
 
 int32_t q_swipegesture_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -1751,8 +1815,24 @@ const QMetaObject* q_tapgesture_meta_object(void* self) {
     return QTapGesture_MetaObject((QTapGesture*)self);
 }
 
+void q_tapgesture_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QTapGesture_OnMetaObject((QTapGesture*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_tapgesture_qbase_meta_object(void* self) {
+    return QTapGesture_QBaseMetaObject((QTapGesture*)self);
+}
+
 void* q_tapgesture_metacast(void* self, const char* param1) {
     return QTapGesture_Metacast((QTapGesture*)self, param1);
+}
+
+void q_tapgesture_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QTapGesture_OnMetacast((QTapGesture*)self, (intptr_t)callback);
+}
+
+void* q_tapgesture_qbase_metacast(void* self, const char* param1) {
+    return QTapGesture_QBaseMetacast((QTapGesture*)self, param1);
 }
 
 int32_t q_tapgesture_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -2159,8 +2239,24 @@ const QMetaObject* q_tapandholdgesture_meta_object(void* self) {
     return QTapAndHoldGesture_MetaObject((QTapAndHoldGesture*)self);
 }
 
+void q_tapandholdgesture_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QTapAndHoldGesture_OnMetaObject((QTapAndHoldGesture*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_tapandholdgesture_qbase_meta_object(void* self) {
+    return QTapAndHoldGesture_QBaseMetaObject((QTapAndHoldGesture*)self);
+}
+
 void* q_tapandholdgesture_metacast(void* self, const char* param1) {
     return QTapAndHoldGesture_Metacast((QTapAndHoldGesture*)self, param1);
+}
+
+void q_tapandholdgesture_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QTapAndHoldGesture_OnMetacast((QTapAndHoldGesture*)self, (intptr_t)callback);
+}
+
+void* q_tapandholdgesture_qbase_metacast(void* self, const char* param1) {
+    return QTapAndHoldGesture_QBaseMetacast((QTapAndHoldGesture*)self, param1);
 }
 
 int32_t q_tapandholdgesture_metacall(void* self, int32_t param1, int param2, void* param3) {

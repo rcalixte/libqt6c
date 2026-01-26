@@ -29,8 +29,24 @@ const QMetaObject* q_dbusinterface_meta_object(void* self) {
     return QDBusInterface_MetaObject((QDBusInterface*)self);
 }
 
+void q_dbusinterface_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDBusInterface_OnMetaObject((QDBusInterface*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_dbusinterface_qbase_meta_object(void* self) {
+    return QDBusInterface_QBaseMetaObject((QDBusInterface*)self);
+}
+
 void* q_dbusinterface_metacast(void* self, const char* param1) {
     return QDBusInterface_Metacast((QDBusInterface*)self, param1);
+}
+
+void q_dbusinterface_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDBusInterface_OnMetacast((QDBusInterface*)self, (intptr_t)callback);
+}
+
+void* q_dbusinterface_qbase_metacast(void* self, const char* param1) {
+    return QDBusInterface_QBaseMetacast((QDBusInterface*)self, param1);
 }
 
 int32_t q_dbusinterface_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -513,8 +513,24 @@ const QMetaObject* q_standarditemmodel_meta_object(void* self) {
     return QStandardItemModel_MetaObject((QStandardItemModel*)self);
 }
 
+void q_standarditemmodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QStandardItemModel_OnMetaObject((QStandardItemModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_standarditemmodel_qbase_meta_object(void* self) {
+    return QStandardItemModel_QBaseMetaObject((QStandardItemModel*)self);
+}
+
 void* q_standarditemmodel_metacast(void* self, const char* param1) {
     return QStandardItemModel_Metacast((QStandardItemModel*)self, param1);
+}
+
+void q_standarditemmodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QStandardItemModel_OnMetacast((QStandardItemModel*)self, (intptr_t)callback);
+}
+
+void* q_standarditemmodel_qbase_metacast(void* self, const char* param1) {
+    return QStandardItemModel_QBaseMetacast((QStandardItemModel*)self, param1);
 }
 
 int32_t q_standarditemmodel_metacall(void* self, int32_t param1, int param2, void* param3) {

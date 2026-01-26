@@ -15,8 +15,24 @@ const QMetaObject* q_actiongroup_meta_object(void* self) {
     return QActionGroup_MetaObject((QActionGroup*)self);
 }
 
+void q_actiongroup_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QActionGroup_OnMetaObject((QActionGroup*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_actiongroup_qbase_meta_object(void* self) {
+    return QActionGroup_QBaseMetaObject((QActionGroup*)self);
+}
+
 void* q_actiongroup_metacast(void* self, const char* param1) {
     return QActionGroup_Metacast((QActionGroup*)self, param1);
+}
+
+void q_actiongroup_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QActionGroup_OnMetacast((QActionGroup*)self, (intptr_t)callback);
+}
+
+void* q_actiongroup_qbase_metacast(void* self, const char* param1) {
+    return QActionGroup_QBaseMetacast((QActionGroup*)self, param1);
 }
 
 int32_t q_actiongroup_metacall(void* self, int32_t param1, int param2, void* param3) {

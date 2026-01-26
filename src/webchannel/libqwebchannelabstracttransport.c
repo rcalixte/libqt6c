@@ -18,8 +18,24 @@ const QMetaObject* q_webchannelabstracttransport_meta_object(void* self) {
     return QWebChannelAbstractTransport_MetaObject((QWebChannelAbstractTransport*)self);
 }
 
+void q_webchannelabstracttransport_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QWebChannelAbstractTransport_OnMetaObject((QWebChannelAbstractTransport*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_webchannelabstracttransport_qbase_meta_object(void* self) {
+    return QWebChannelAbstractTransport_QBaseMetaObject((QWebChannelAbstractTransport*)self);
+}
+
 void* q_webchannelabstracttransport_metacast(void* self, const char* param1) {
     return QWebChannelAbstractTransport_Metacast((QWebChannelAbstractTransport*)self, param1);
+}
+
+void q_webchannelabstracttransport_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QWebChannelAbstractTransport_OnMetacast((QWebChannelAbstractTransport*)self, (intptr_t)callback);
+}
+
+void* q_webchannelabstracttransport_qbase_metacast(void* self, const char* param1) {
+    return QWebChannelAbstractTransport_QBaseMetacast((QWebChannelAbstractTransport*)self, param1);
 }
 
 int32_t q_webchannelabstracttransport_metacall(void* self, int32_t param1, int param2, void* param3) {

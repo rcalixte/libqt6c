@@ -31,10 +31,41 @@ QsciScintillaBase* q_sciscintillabase_new2();
 ///
 const QMetaObject* q_sciscintillabase_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QsciScintillaBase*
+/// @param callback const QMetaObject* func()
+///
+void q_sciscintillabase_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QsciScintillaBase*
+///
+const QMetaObject* q_sciscintillabase_qbase_meta_object(void* self);
+
 /// @param self QsciScintillaBase*
 /// @param param1 const char*
 ///
 void* q_sciscintillabase_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QsciScintillaBase*
+/// @param callback void* func(QsciScintillaBase* self, const char* param1)
+///
+void q_sciscintillabase_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QsciScintillaBase*
+/// @param param1 const char*
+///
+void* q_sciscintillabase_qbase_metacast(void* self, const char* param1);
 
 /// @param self QsciScintillaBase*
 /// @param param1 enum QMetaObject__Call

@@ -44,8 +44,24 @@ const QMetaObject* k_urlrequester_meta_object(void* self) {
     return KUrlRequester_MetaObject((KUrlRequester*)self);
 }
 
+void k_urlrequester_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KUrlRequester_OnMetaObject((KUrlRequester*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_urlrequester_qbase_meta_object(void* self) {
+    return KUrlRequester_QBaseMetaObject((KUrlRequester*)self);
+}
+
 void* k_urlrequester_metacast(void* self, const char* param1) {
     return KUrlRequester_Metacast((KUrlRequester*)self, param1);
+}
+
+void k_urlrequester_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KUrlRequester_OnMetacast((KUrlRequester*)self, (intptr_t)callback);
+}
+
+void* k_urlrequester_qbase_metacast(void* self, const char* param1) {
+    return KUrlRequester_QBaseMetacast((KUrlRequester*)self, param1);
 }
 
 int32_t k_urlrequester_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -2344,8 +2360,24 @@ const QMetaObject* k_urlcomborequester_meta_object(void* self) {
     return KUrlComboRequester_MetaObject((KUrlComboRequester*)self);
 }
 
+void k_urlcomborequester_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KUrlComboRequester_OnMetaObject((KUrlComboRequester*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_urlcomborequester_qbase_meta_object(void* self) {
+    return KUrlComboRequester_QBaseMetaObject((KUrlComboRequester*)self);
+}
+
 void* k_urlcomborequester_metacast(void* self, const char* param1) {
     return KUrlComboRequester_Metacast((KUrlComboRequester*)self, param1);
+}
+
+void k_urlcomborequester_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KUrlComboRequester_OnMetacast((KUrlComboRequester*)self, (intptr_t)callback);
+}
+
+void* k_urlcomborequester_qbase_metacast(void* self, const char* param1) {
+    return KUrlComboRequester_QBaseMetacast((KUrlComboRequester*)self, param1);
 }
 
 int32_t k_urlcomborequester_metacall(void* self, int32_t param1, int param2, void* param3) {

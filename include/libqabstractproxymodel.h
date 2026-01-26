@@ -31,10 +31,41 @@ QAbstractProxyModel* q_abstractproxymodel_new2(void* parent);
 ///
 const QMetaObject* q_abstractproxymodel_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QAbstractProxyModel*
+/// @param callback const QMetaObject* func()
+///
+void q_abstractproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QAbstractProxyModel*
+///
+const QMetaObject* q_abstractproxymodel_qbase_meta_object(void* self);
+
 /// @param self QAbstractProxyModel*
 /// @param param1 const char*
 ///
 void* q_abstractproxymodel_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QAbstractProxyModel*
+/// @param callback void* func(QAbstractProxyModel* self, const char* param1)
+///
+void q_abstractproxymodel_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QAbstractProxyModel*
+/// @param param1 const char*
+///
+void* q_abstractproxymodel_qbase_metacast(void* self, const char* param1);
 
 /// @param self QAbstractProxyModel*
 /// @param param1 enum QMetaObject__Call

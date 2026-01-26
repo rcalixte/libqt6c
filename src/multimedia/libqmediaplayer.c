@@ -24,8 +24,24 @@ const QMetaObject* q_mediaplayer_meta_object(void* self) {
     return QMediaPlayer_MetaObject((QMediaPlayer*)self);
 }
 
+void q_mediaplayer_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QMediaPlayer_OnMetaObject((QMediaPlayer*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_mediaplayer_qbase_meta_object(void* self) {
+    return QMediaPlayer_QBaseMetaObject((QMediaPlayer*)self);
+}
+
 void* q_mediaplayer_metacast(void* self, const char* param1) {
     return QMediaPlayer_Metacast((QMediaPlayer*)self, param1);
+}
+
+void q_mediaplayer_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QMediaPlayer_OnMetacast((QMediaPlayer*)self, (intptr_t)callback);
+}
+
+void* q_mediaplayer_qbase_metacast(void* self, const char* param1) {
+    return QMediaPlayer_QBaseMetacast((QMediaPlayer*)self, param1);
 }
 
 int32_t q_mediaplayer_metacall(void* self, int32_t param1, int param2, void* param3) {

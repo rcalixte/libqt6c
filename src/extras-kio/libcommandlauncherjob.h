@@ -136,21 +136,6 @@ long long k_io__commandlauncherjob_pid(void* self);
 
 /// Inherited from KJob
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
-///
-/// @param self KIO__CommandLauncherJob*
-///
-const QMetaObject* k_io__commandlauncherjob_meta_object(void* self);
-
-/// Inherited from KJob
-///
-/// @param self KIO__CommandLauncherJob*
-/// @param param1 const char*
-///
-void* k_io__commandlauncherjob_metacast(void* self, const char* param1);
-
-/// Inherited from KJob
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
@@ -820,6 +805,70 @@ void k_io__commandlauncherjob_destroyed1(void* self, void* param1);
 /// @param callback void func(KIO__CommandLauncherJob* self, QObject* param1)
 ///
 void k_io__commandlauncherjob_on_destroyed1(void* self, void (*callback)(void*, void*));
+
+/// Inherited from KJob
+///
+/// [Upstream resources](https://api.kde.org/kjob.html#metaObject)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self KIO__CommandLauncherJob*
+///
+const QMetaObject* k_io__commandlauncherjob_meta_object(void* self);
+
+/// Inherited from KJob
+///
+/// [Upstream resources](https://api.kde.org/kjob.html#metaObject)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self KIO__CommandLauncherJob*
+///
+const QMetaObject* k_io__commandlauncherjob_qbase_meta_object(void* self);
+
+/// Inherited from KJob
+///
+/// [Upstream resources](https://api.kde.org/kjob.html#metaObject)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self KIO__CommandLauncherJob*
+/// @param callback const QMetaObject* func()
+///
+void k_io__commandlauncherjob_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// Inherited from KJob
+///
+/// [Upstream resources](https://api.kde.org/kjob.html#qt_metacast)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self KIO__CommandLauncherJob*
+/// @param param1 const char*
+///
+void* k_io__commandlauncherjob_metacast(void* self, const char* param1);
+
+/// Inherited from KJob
+///
+/// [Upstream resources](https://api.kde.org/kjob.html#qt_metacast)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self KIO__CommandLauncherJob*
+/// @param param1 const char*
+///
+void* k_io__commandlauncherjob_qbase_metacast(void* self, const char* param1);
+
+/// Inherited from KJob
+///
+/// [Upstream resources](https://api.kde.org/kjob.html#qt_metacast)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self KIO__CommandLauncherJob*
+/// @param callback void* func(KIO__CommandLauncherJob* self, const char* param1)
+///
+void k_io__commandlauncherjob_on_metacast(void* self, void* (*callback)(void*, const char*));
 
 /// Inherited from KJob
 ///

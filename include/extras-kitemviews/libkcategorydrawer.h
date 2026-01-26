@@ -25,10 +25,41 @@ KCategoryDrawer* k_categorydrawer_new(void* view);
 ///
 const QMetaObject* k_categorydrawer_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCategoryDrawer*
+/// @param callback const QMetaObject* func()
+///
+void k_categorydrawer_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KCategoryDrawer*
+///
+const QMetaObject* k_categorydrawer_qbase_meta_object(void* self);
+
 /// @param self KCategoryDrawer*
 /// @param param1 const char*
 ///
 void* k_categorydrawer_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KCategoryDrawer*
+/// @param callback void* func(KCategoryDrawer* self, const char* param1)
+///
+void k_categorydrawer_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KCategoryDrawer*
+/// @param param1 const char*
+///
+void* k_categorydrawer_qbase_metacast(void* self, const char* param1);
 
 /// @param self KCategoryDrawer*
 /// @param param1 enum QMetaObject__Call

@@ -50,8 +50,24 @@ const QMetaObject* k_ruler_meta_object(void* self) {
     return KRuler_MetaObject((KRuler*)self);
 }
 
+void k_ruler_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KRuler_OnMetaObject((KRuler*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_ruler_qbase_meta_object(void* self) {
+    return KRuler_QBaseMetaObject((KRuler*)self);
+}
+
 void* k_ruler_metacast(void* self, const char* param1) {
     return KRuler_Metacast((KRuler*)self, param1);
+}
+
+void k_ruler_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KRuler_OnMetacast((KRuler*)self, (intptr_t)callback);
+}
+
+void* k_ruler_qbase_metacast(void* self, const char* param1) {
+    return KRuler_QBaseMetacast((KRuler*)self, param1);
 }
 
 int32_t k_ruler_metacall(void* self, int32_t param1, int param2, void* param3) {

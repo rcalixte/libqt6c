@@ -18,8 +18,24 @@ const QMetaObject* q_webchannel_meta_object(void* self) {
     return QWebChannel_MetaObject((QWebChannel*)self);
 }
 
+void q_webchannel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QWebChannel_OnMetaObject((QWebChannel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_webchannel_qbase_meta_object(void* self) {
+    return QWebChannel_QBaseMetaObject((QWebChannel*)self);
+}
+
 void* q_webchannel_metacast(void* self, const char* param1) {
     return QWebChannel_Metacast((QWebChannel*)self, param1);
+}
+
+void q_webchannel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QWebChannel_OnMetacast((QWebChannel*)self, (intptr_t)callback);
+}
+
+void* q_webchannel_qbase_metacast(void* self, const char* param1) {
+    return QWebChannel_QBaseMetacast((QWebChannel*)self, param1);
 }
 
 int32_t q_webchannel_metacall(void* self, int32_t param1, int param2, void* param3) {

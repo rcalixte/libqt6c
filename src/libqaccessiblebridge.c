@@ -34,8 +34,24 @@ const QMetaObject* q_accessiblebridgeplugin_meta_object(void* self) {
     return QAccessibleBridgePlugin_MetaObject((QAccessibleBridgePlugin*)self);
 }
 
+void q_accessiblebridgeplugin_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QAccessibleBridgePlugin_OnMetaObject((QAccessibleBridgePlugin*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_accessiblebridgeplugin_qbase_meta_object(void* self) {
+    return QAccessibleBridgePlugin_QBaseMetaObject((QAccessibleBridgePlugin*)self);
+}
+
 void* q_accessiblebridgeplugin_metacast(void* self, const char* param1) {
     return QAccessibleBridgePlugin_Metacast((QAccessibleBridgePlugin*)self, param1);
+}
+
+void q_accessiblebridgeplugin_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QAccessibleBridgePlugin_OnMetacast((QAccessibleBridgePlugin*)self, (intptr_t)callback);
+}
+
+void* q_accessiblebridgeplugin_qbase_metacast(void* self, const char* param1) {
+    return QAccessibleBridgePlugin_QBaseMetacast((QAccessibleBridgePlugin*)self, param1);
 }
 
 int32_t q_accessiblebridgeplugin_metacall(void* self, int32_t param1, int param2, void* param3) {

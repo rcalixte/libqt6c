@@ -67,10 +67,41 @@ QOpenGLWindow* q_openglwindow_new6(void* shareContext, int32_t updateBehavior, v
 ///
 const QMetaObject* q_openglwindow_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QOpenGLWindow*
+/// @param callback const QMetaObject* func()
+///
+void q_openglwindow_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QOpenGLWindow*
+///
+const QMetaObject* q_openglwindow_qbase_meta_object(void* self);
+
 /// @param self QOpenGLWindow*
 /// @param param1 const char*
 ///
 void* q_openglwindow_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QOpenGLWindow*
+/// @param callback void* func(QOpenGLWindow* self, const char* param1)
+///
+void q_openglwindow_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QOpenGLWindow*
+/// @param param1 const char*
+///
+void* q_openglwindow_qbase_metacast(void* self, const char* param1);
 
 /// @param self QOpenGLWindow*
 /// @param param1 enum QMetaObject__Call

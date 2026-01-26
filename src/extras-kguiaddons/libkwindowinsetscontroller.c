@@ -18,8 +18,24 @@ const QMetaObject* k_windowinsetscontroller_meta_object(void* self) {
     return KWindowInsetsController_MetaObject((KWindowInsetsController*)self);
 }
 
+void k_windowinsetscontroller_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KWindowInsetsController_OnMetaObject((KWindowInsetsController*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_windowinsetscontroller_qbase_meta_object(void* self) {
+    return KWindowInsetsController_QBaseMetaObject((KWindowInsetsController*)self);
+}
+
 void* k_windowinsetscontroller_metacast(void* self, const char* param1) {
     return KWindowInsetsController_Metacast((KWindowInsetsController*)self, param1);
+}
+
+void k_windowinsetscontroller_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KWindowInsetsController_OnMetacast((KWindowInsetsController*)self, (intptr_t)callback);
+}
+
+void* k_windowinsetscontroller_qbase_metacast(void* self, const char* param1) {
+    return KWindowInsetsController_QBaseMetacast((KWindowInsetsController*)self, param1);
 }
 
 int32_t k_windowinsetscontroller_metacall(void* self, int32_t param1, int param2, void* param3) {

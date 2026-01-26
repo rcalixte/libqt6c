@@ -35,8 +35,24 @@ const QMetaObject* q_fontdialog_meta_object(void* self) {
     return QFontDialog_MetaObject((QFontDialog*)self);
 }
 
+void q_fontdialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QFontDialog_OnMetaObject((QFontDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_fontdialog_qbase_meta_object(void* self) {
+    return QFontDialog_QBaseMetaObject((QFontDialog*)self);
+}
+
 void* q_fontdialog_metacast(void* self, const char* param1) {
     return QFontDialog_Metacast((QFontDialog*)self, param1);
+}
+
+void q_fontdialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QFontDialog_OnMetacast((QFontDialog*)self, (intptr_t)callback);
+}
+
+void* q_fontdialog_qbase_metacast(void* self, const char* param1) {
+    return QFontDialog_QBaseMetacast((QFontDialog*)self, param1);
 }
 
 int32_t q_fontdialog_metacall(void* self, int32_t param1, int param2, void* param3) {

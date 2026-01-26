@@ -20,8 +20,24 @@ const QMetaObject* q_placesearchreply_meta_object(void* self) {
     return QPlaceSearchReply_MetaObject((QPlaceSearchReply*)self);
 }
 
+void q_placesearchreply_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QPlaceSearchReply_OnMetaObject((QPlaceSearchReply*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_placesearchreply_qbase_meta_object(void* self) {
+    return QPlaceSearchReply_QBaseMetaObject((QPlaceSearchReply*)self);
+}
+
 void* q_placesearchreply_metacast(void* self, const char* param1) {
     return QPlaceSearchReply_Metacast((QPlaceSearchReply*)self, param1);
+}
+
+void q_placesearchreply_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QPlaceSearchReply_OnMetacast((QPlaceSearchReply*)self, (intptr_t)callback);
+}
+
+void* q_placesearchreply_qbase_metacast(void* self, const char* param1) {
+    return QPlaceSearchReply_QBaseMetacast((QPlaceSearchReply*)self, param1);
 }
 
 int32_t q_placesearchreply_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -20,8 +20,24 @@ const QMetaObject* k_io__mimetypefinderjob_meta_object(void* self) {
     return KIO__MimeTypeFinderJob_MetaObject((KIO__MimeTypeFinderJob*)self);
 }
 
+void k_io__mimetypefinderjob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KIO__MimeTypeFinderJob_OnMetaObject((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_io__mimetypefinderjob_qbase_meta_object(void* self) {
+    return KIO__MimeTypeFinderJob_QBaseMetaObject((KIO__MimeTypeFinderJob*)self);
+}
+
 void* k_io__mimetypefinderjob_metacast(void* self, const char* param1) {
     return KIO__MimeTypeFinderJob_Metacast((KIO__MimeTypeFinderJob*)self, param1);
+}
+
+void k_io__mimetypefinderjob_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KIO__MimeTypeFinderJob_OnMetacast((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
+}
+
+void* k_io__mimetypefinderjob_qbase_metacast(void* self, const char* param1) {
+    return KIO__MimeTypeFinderJob_QBaseMetacast((KIO__MimeTypeFinderJob*)self, param1);
 }
 
 int32_t k_io__mimetypefinderjob_metacall(void* self, int32_t param1, int param2, void* param3) {

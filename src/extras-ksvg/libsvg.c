@@ -25,8 +25,24 @@ const QMetaObject* k_svg__svg_meta_object(void* self) {
     return KSvg__Svg_MetaObject((KSvg__Svg*)self);
 }
 
+void k_svg__svg_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KSvg__Svg_OnMetaObject((KSvg__Svg*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_svg__svg_qbase_meta_object(void* self) {
+    return KSvg__Svg_QBaseMetaObject((KSvg__Svg*)self);
+}
+
 void* k_svg__svg_metacast(void* self, const char* param1) {
     return KSvg__Svg_Metacast((KSvg__Svg*)self, param1);
+}
+
+void k_svg__svg_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KSvg__Svg_OnMetacast((KSvg__Svg*)self, (intptr_t)callback);
+}
+
+void* k_svg__svg_qbase_metacast(void* self, const char* param1) {
+    return KSvg__Svg_QBaseMetacast((KSvg__Svg*)self, param1);
 }
 
 int32_t k_svg__svg_metacall(void* self, int32_t param1, int param2, void* param3) {

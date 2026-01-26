@@ -22,8 +22,24 @@ const QMetaObject* q_scilexertex_meta_object(void* self) {
     return QsciLexerTeX_MetaObject((QsciLexerTeX*)self);
 }
 
+void q_scilexertex_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QsciLexerTeX_OnMetaObject((QsciLexerTeX*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_scilexertex_qbase_meta_object(void* self) {
+    return QsciLexerTeX_QBaseMetaObject((QsciLexerTeX*)self);
+}
+
 void* q_scilexertex_metacast(void* self, const char* param1) {
     return QsciLexerTeX_Metacast((QsciLexerTeX*)self, param1);
+}
+
+void q_scilexertex_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QsciLexerTeX_OnMetacast((QsciLexerTeX*)self, (intptr_t)callback);
+}
+
+void* q_scilexertex_qbase_metacast(void* self, const char* param1) {
+    return QsciLexerTeX_QBaseMetacast((QsciLexerTeX*)self, param1);
 }
 
 int32_t q_scilexertex_metacall(void* self, int32_t param1, int param2, void* param3) {

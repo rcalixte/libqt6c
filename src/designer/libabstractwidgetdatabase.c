@@ -384,8 +384,24 @@ const QMetaObject* q_designerwidgetdatabaseinterface_meta_object(void* self) {
     return QDesignerWidgetDataBaseInterface_MetaObject((QDesignerWidgetDataBaseInterface*)self);
 }
 
+void q_designerwidgetdatabaseinterface_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDesignerWidgetDataBaseInterface_OnMetaObject((QDesignerWidgetDataBaseInterface*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_designerwidgetdatabaseinterface_qbase_meta_object(void* self) {
+    return QDesignerWidgetDataBaseInterface_QBaseMetaObject((QDesignerWidgetDataBaseInterface*)self);
+}
+
 void* q_designerwidgetdatabaseinterface_metacast(void* self, const char* param1) {
     return QDesignerWidgetDataBaseInterface_Metacast((QDesignerWidgetDataBaseInterface*)self, param1);
+}
+
+void q_designerwidgetdatabaseinterface_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDesignerWidgetDataBaseInterface_OnMetacast((QDesignerWidgetDataBaseInterface*)self, (intptr_t)callback);
+}
+
+void* q_designerwidgetdatabaseinterface_qbase_metacast(void* self, const char* param1) {
+    return QDesignerWidgetDataBaseInterface_QBaseMetacast((QDesignerWidgetDataBaseInterface*)self, param1);
 }
 
 int32_t q_designerwidgetdatabaseinterface_metacall(void* self, int32_t param1, int param2, void* param3) {

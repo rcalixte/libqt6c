@@ -36,8 +36,24 @@ const QMetaObject* q_tableview_meta_object(void* self) {
     return QTableView_MetaObject((QTableView*)self);
 }
 
+void q_tableview_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QTableView_OnMetaObject((QTableView*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_tableview_qbase_meta_object(void* self) {
+    return QTableView_QBaseMetaObject((QTableView*)self);
+}
+
 void* q_tableview_metacast(void* self, const char* param1) {
     return QTableView_Metacast((QTableView*)self, param1);
+}
+
+void q_tableview_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QTableView_OnMetacast((QTableView*)self, (intptr_t)callback);
+}
+
+void* q_tableview_qbase_metacast(void* self, const char* param1) {
+    return QTableView_QBaseMetacast((QTableView*)self, param1);
 }
 
 int32_t q_tableview_metacall(void* self, int32_t param1, int param2, void* param3) {

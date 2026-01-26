@@ -16,8 +16,24 @@ const QMetaObject* k_pluginfactory_meta_object(void* self) {
     return KPluginFactory_MetaObject((KPluginFactory*)self);
 }
 
+void k_pluginfactory_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KPluginFactory_OnMetaObject((KPluginFactory*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_pluginfactory_qbase_meta_object(void* self) {
+    return KPluginFactory_QBaseMetaObject((KPluginFactory*)self);
+}
+
 void* k_pluginfactory_metacast(void* self, const char* param1) {
     return KPluginFactory_Metacast((KPluginFactory*)self, param1);
+}
+
+void k_pluginfactory_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KPluginFactory_OnMetacast((KPluginFactory*)self, (intptr_t)callback);
+}
+
+void* k_pluginfactory_qbase_metacast(void* self, const char* param1) {
+    return KPluginFactory_QBaseMetacast((KPluginFactory*)self, param1);
 }
 
 int32_t k_pluginfactory_metacall(void* self, int32_t param1, int param2, void* param3) {

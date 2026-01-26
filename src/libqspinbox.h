@@ -31,10 +31,41 @@ QSpinBox* q_spinbox_new2();
 ///
 const QMetaObject* q_spinbox_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QSpinBox*
+/// @param callback const QMetaObject* func()
+///
+void q_spinbox_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QSpinBox*
+///
+const QMetaObject* q_spinbox_qbase_meta_object(void* self);
+
 /// @param self QSpinBox*
 /// @param param1 const char*
 ///
 void* q_spinbox_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QSpinBox*
+/// @param callback void* func(QSpinBox* self, const char* param1)
+///
+void q_spinbox_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QSpinBox*
+/// @param param1 const char*
+///
+void* q_spinbox_qbase_metacast(void* self, const char* param1);
 
 /// @param self QSpinBox*
 /// @param param1 enum QMetaObject__Call
@@ -5559,10 +5590,41 @@ QDoubleSpinBox* q_doublespinbox_new2();
 ///
 const QMetaObject* q_doublespinbox_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QDoubleSpinBox*
+/// @param callback const QMetaObject* func()
+///
+void q_doublespinbox_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QDoubleSpinBox*
+///
+const QMetaObject* q_doublespinbox_qbase_meta_object(void* self);
+
 /// @param self QDoubleSpinBox*
 /// @param param1 const char*
 ///
 void* q_doublespinbox_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QDoubleSpinBox*
+/// @param callback void* func(QDoubleSpinBox* self, const char* param1)
+///
+void q_doublespinbox_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QDoubleSpinBox*
+/// @param param1 const char*
+///
+void* q_doublespinbox_qbase_metacast(void* self, const char* param1);
 
 /// @param self QDoubleSpinBox*
 /// @param param1 enum QMetaObject__Call

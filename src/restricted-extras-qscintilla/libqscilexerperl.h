@@ -31,10 +31,41 @@ QsciLexerPerl* q_scilexerperl_new2(void* parent);
 ///
 const QMetaObject* q_scilexerperl_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QsciLexerPerl*
+/// @param callback const QMetaObject* func()
+///
+void q_scilexerperl_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QsciLexerPerl*
+///
+const QMetaObject* q_scilexerperl_qbase_meta_object(void* self);
+
 /// @param self QsciLexerPerl*
 /// @param param1 const char*
 ///
 void* q_scilexerperl_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QsciLexerPerl*
+/// @param callback void* func(QsciLexerPerl* self, const char* param1)
+///
+void q_scilexerperl_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QsciLexerPerl*
+/// @param param1 const char*
+///
+void* q_scilexerperl_qbase_metacast(void* self, const char* param1);
 
 /// @param self QsciLexerPerl*
 /// @param param1 enum QMetaObject__Call

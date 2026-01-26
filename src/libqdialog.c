@@ -29,8 +29,24 @@ const QMetaObject* q_dialog_meta_object(void* self) {
     return QDialog_MetaObject((QDialog*)self);
 }
 
+void q_dialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDialog_OnMetaObject((QDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_dialog_qbase_meta_object(void* self) {
+    return QDialog_QBaseMetaObject((QDialog*)self);
+}
+
 void* q_dialog_metacast(void* self, const char* param1) {
     return QDialog_Metacast((QDialog*)self, param1);
+}
+
+void q_dialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDialog_OnMetacast((QDialog*)self, (intptr_t)callback);
+}
+
+void* q_dialog_qbase_metacast(void* self, const char* param1) {
+    return QDialog_QBaseMetacast((QDialog*)self, param1);
 }
 
 int32_t q_dialog_metacall(void* self, int32_t param1, int param2, void* param3) {

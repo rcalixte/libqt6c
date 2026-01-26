@@ -31,10 +31,41 @@ QsciLexer* q_scilexer_new2(void* parent);
 ///
 const QMetaObject* q_scilexer_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QsciLexer*
+/// @param callback const QMetaObject* func()
+///
+void q_scilexer_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QsciLexer*
+///
+const QMetaObject* q_scilexer_qbase_meta_object(void* self);
+
 /// @param self QsciLexer*
 /// @param param1 const char*
 ///
 void* q_scilexer_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QsciLexer*
+/// @param callback void* func(QsciLexer* self, const char* param1)
+///
+void q_scilexer_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QsciLexer*
+/// @param param1 const char*
+///
+void* q_scilexer_qbase_metacast(void* self, const char* param1);
 
 /// @param self QsciLexer*
 /// @param param1 enum QMetaObject__Call

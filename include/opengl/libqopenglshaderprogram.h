@@ -34,10 +34,41 @@ QOpenGLShader* q_openglshader_new2(int32_t type, void* parent);
 ///
 const QMetaObject* q_openglshader_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QOpenGLShader*
+/// @param callback const QMetaObject* func()
+///
+void q_openglshader_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QOpenGLShader*
+///
+const QMetaObject* q_openglshader_qbase_meta_object(void* self);
+
 /// @param self QOpenGLShader*
 /// @param param1 const char*
 ///
 void* q_openglshader_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QOpenGLShader*
+/// @param callback void* func(QOpenGLShader* self, const char* param1)
+///
+void q_openglshader_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QOpenGLShader*
+/// @param param1 const char*
+///
+void* q_openglshader_qbase_metacast(void* self, const char* param1);
 
 /// @param self QOpenGLShader*
 /// @param param1 enum QMetaObject__Call
@@ -932,10 +963,41 @@ QOpenGLShaderProgram* q_openglshaderprogram_new2(void* parent);
 ///
 const QMetaObject* q_openglshaderprogram_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QOpenGLShaderProgram*
+/// @param callback const QMetaObject* func()
+///
+void q_openglshaderprogram_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QOpenGLShaderProgram*
+///
+const QMetaObject* q_openglshaderprogram_qbase_meta_object(void* self);
+
 /// @param self QOpenGLShaderProgram*
 /// @param param1 const char*
 ///
 void* q_openglshaderprogram_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QOpenGLShaderProgram*
+/// @param callback void* func(QOpenGLShaderProgram* self, const char* param1)
+///
+void q_openglshaderprogram_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QOpenGLShaderProgram*
+/// @param param1 const char*
+///
+void* q_openglshaderprogram_qbase_metacast(void* self, const char* param1);
 
 /// @param self QOpenGLShaderProgram*
 /// @param param1 enum QMetaObject__Call

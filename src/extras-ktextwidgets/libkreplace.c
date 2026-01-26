@@ -24,8 +24,24 @@ const QMetaObject* k_replace_meta_object(void* self) {
     return KReplace_MetaObject((KReplace*)self);
 }
 
+void k_replace_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KReplace_OnMetaObject((KReplace*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_replace_qbase_meta_object(void* self) {
+    return KReplace_QBaseMetaObject((KReplace*)self);
+}
+
 void* k_replace_metacast(void* self, const char* param1) {
     return KReplace_Metacast((KReplace*)self, param1);
+}
+
+void k_replace_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KReplace_OnMetacast((KReplace*)self, (intptr_t)callback);
+}
+
+void* k_replace_qbase_metacast(void* self, const char* param1) {
+    return KReplace_QBaseMetacast((KReplace*)self, param1);
 }
 
 int32_t k_replace_metacall(void* self, int32_t param1, int param2, void* param3) {

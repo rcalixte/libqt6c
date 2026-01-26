@@ -31,10 +31,41 @@ QGraphicsEffect* q_graphicseffect_new2(void* parent);
 ///
 const QMetaObject* q_graphicseffect_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsEffect*
+/// @param callback const QMetaObject* func()
+///
+void q_graphicseffect_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QGraphicsEffect*
+///
+const QMetaObject* q_graphicseffect_qbase_meta_object(void* self);
+
 /// @param self QGraphicsEffect*
 /// @param param1 const char*
 ///
 void* q_graphicseffect_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsEffect*
+/// @param callback void* func(QGraphicsEffect* self, const char* param1)
+///
+void q_graphicseffect_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QGraphicsEffect*
+/// @param param1 const char*
+///
+void* q_graphicseffect_qbase_metacast(void* self, const char* param1);
 
 /// @param self QGraphicsEffect*
 /// @param param1 enum QMetaObject__Call
@@ -1189,10 +1220,41 @@ QGraphicsColorizeEffect* q_graphicscolorizeeffect_new2(void* parent);
 ///
 const QMetaObject* q_graphicscolorizeeffect_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsColorizeEffect*
+/// @param callback const QMetaObject* func()
+///
+void q_graphicscolorizeeffect_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QGraphicsColorizeEffect*
+///
+const QMetaObject* q_graphicscolorizeeffect_qbase_meta_object(void* self);
+
 /// @param self QGraphicsColorizeEffect*
 /// @param param1 const char*
 ///
 void* q_graphicscolorizeeffect_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsColorizeEffect*
+/// @param callback void* func(QGraphicsColorizeEffect* self, const char* param1)
+///
+void q_graphicscolorizeeffect_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QGraphicsColorizeEffect*
+/// @param param1 const char*
+///
+void* q_graphicscolorizeeffect_qbase_metacast(void* self, const char* param1);
 
 /// @param self QGraphicsColorizeEffect*
 /// @param param1 enum QMetaObject__Call
@@ -2363,10 +2425,41 @@ QGraphicsBlurEffect* q_graphicsblureffect_new2(void* parent);
 ///
 const QMetaObject* q_graphicsblureffect_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsBlurEffect*
+/// @param callback const QMetaObject* func()
+///
+void q_graphicsblureffect_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QGraphicsBlurEffect*
+///
+const QMetaObject* q_graphicsblureffect_qbase_meta_object(void* self);
+
 /// @param self QGraphicsBlurEffect*
 /// @param param1 const char*
 ///
 void* q_graphicsblureffect_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsBlurEffect*
+/// @param callback void* func(QGraphicsBlurEffect* self, const char* param1)
+///
+void q_graphicsblureffect_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QGraphicsBlurEffect*
+/// @param param1 const char*
+///
+void* q_graphicsblureffect_qbase_metacast(void* self, const char* param1);
 
 /// @param self QGraphicsBlurEffect*
 /// @param param1 enum QMetaObject__Call
@@ -3531,10 +3624,41 @@ QGraphicsDropShadowEffect* q_graphicsdropshadoweffect_new2(void* parent);
 ///
 const QMetaObject* q_graphicsdropshadoweffect_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsDropShadowEffect*
+/// @param callback const QMetaObject* func()
+///
+void q_graphicsdropshadoweffect_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QGraphicsDropShadowEffect*
+///
+const QMetaObject* q_graphicsdropshadoweffect_qbase_meta_object(void* self);
+
 /// @param self QGraphicsDropShadowEffect*
 /// @param param1 const char*
 ///
 void* q_graphicsdropshadoweffect_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsDropShadowEffect*
+/// @param callback void* func(QGraphicsDropShadowEffect* self, const char* param1)
+///
+void q_graphicsdropshadoweffect_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QGraphicsDropShadowEffect*
+/// @param param1 const char*
+///
+void* q_graphicsdropshadoweffect_qbase_metacast(void* self, const char* param1);
 
 /// @param self QGraphicsDropShadowEffect*
 /// @param param1 enum QMetaObject__Call
@@ -4765,10 +4889,41 @@ QGraphicsOpacityEffect* q_graphicsopacityeffect_new2(void* parent);
 ///
 const QMetaObject* q_graphicsopacityeffect_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsOpacityEffect*
+/// @param callback const QMetaObject* func()
+///
+void q_graphicsopacityeffect_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QGraphicsOpacityEffect*
+///
+const QMetaObject* q_graphicsopacityeffect_qbase_meta_object(void* self);
+
 /// @param self QGraphicsOpacityEffect*
 /// @param param1 const char*
 ///
 void* q_graphicsopacityeffect_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsOpacityEffect*
+/// @param callback void* func(QGraphicsOpacityEffect* self, const char* param1)
+///
+void q_graphicsopacityeffect_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QGraphicsOpacityEffect*
+/// @param param1 const char*
+///
+void* q_graphicsopacityeffect_qbase_metacast(void* self, const char* param1);
 
 /// @param self QGraphicsOpacityEffect*
 /// @param param1 enum QMetaObject__Call

@@ -4,6 +4,7 @@
 #include "../libqcoreevent.hpp"
 #include "../libqiodevice.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "../libqvariant.hpp"
 #include "../libqobject.hpp"
@@ -71,14 +72,6 @@ void k_configloader_on_usr_save(void* self, bool (*callback)()) {
 
 bool k_configloader_qbase_usr_save(void* self) {
     return KConfigLoader_QBaseUsrSave((KConfigLoader*)self);
-}
-
-const QMetaObject* k_configloader_meta_object(void* self) {
-    return KConfigSkeleton_MetaObject((KConfigSkeleton*)self);
-}
-
-void* k_configloader_metacast(void* self, const char* param1) {
-    return KConfigSkeleton_Metacast((KConfigSkeleton*)self, param1);
 }
 
 const char* k_configloader_tr(const char* s) {
@@ -657,6 +650,30 @@ void k_configloader_destroyed1(void* self, void* param1) {
 
 void k_configloader_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_configloader_meta_object(void* self) {
+    return KConfigLoader_MetaObject((KConfigLoader*)self);
+}
+
+const QMetaObject* k_configloader_qbase_meta_object(void* self) {
+    return KConfigLoader_QBaseMetaObject((KConfigLoader*)self);
+}
+
+void k_configloader_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KConfigLoader_OnMetaObject((KConfigLoader*)self, (intptr_t)callback);
+}
+
+void* k_configloader_metacast(void* self, const char* param1) {
+    return KConfigLoader_Metacast((KConfigLoader*)self, param1);
+}
+
+void* k_configloader_qbase_metacast(void* self, const char* param1) {
+    return KConfigLoader_QBaseMetacast((KConfigLoader*)self, param1);
+}
+
+void k_configloader_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KConfigLoader_OnMetacast((KConfigLoader*)self, (intptr_t)callback);
 }
 
 int32_t k_configloader_metacall(void* self, int32_t param1, int param2, void* param3) {

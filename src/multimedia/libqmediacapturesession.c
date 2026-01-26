@@ -27,8 +27,24 @@ const QMetaObject* q_mediacapturesession_meta_object(void* self) {
     return QMediaCaptureSession_MetaObject((QMediaCaptureSession*)self);
 }
 
+void q_mediacapturesession_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QMediaCaptureSession_OnMetaObject((QMediaCaptureSession*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_mediacapturesession_qbase_meta_object(void* self) {
+    return QMediaCaptureSession_QBaseMetaObject((QMediaCaptureSession*)self);
+}
+
 void* q_mediacapturesession_metacast(void* self, const char* param1) {
     return QMediaCaptureSession_Metacast((QMediaCaptureSession*)self, param1);
+}
+
+void q_mediacapturesession_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QMediaCaptureSession_OnMetacast((QMediaCaptureSession*)self, (intptr_t)callback);
+}
+
+void* q_mediacapturesession_qbase_metacast(void* self, const char* param1) {
+    return QMediaCaptureSession_QBaseMetacast((QMediaCaptureSession*)self, param1);
 }
 
 int32_t q_mediacapturesession_metacall(void* self, int32_t param1, int param2, void* param3) {

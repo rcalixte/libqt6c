@@ -36,10 +36,41 @@ KToolBarLabelAction* k_toolbarlabelaction_new2(void* buddy, const char* text, vo
 ///
 const QMetaObject* k_toolbarlabelaction_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KToolBarLabelAction*
+/// @param callback const QMetaObject* func()
+///
+void k_toolbarlabelaction_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KToolBarLabelAction*
+///
+const QMetaObject* k_toolbarlabelaction_qbase_meta_object(void* self);
+
 /// @param self KToolBarLabelAction*
 /// @param param1 const char*
 ///
 void* k_toolbarlabelaction_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KToolBarLabelAction*
+/// @param callback void* func(KToolBarLabelAction* self, const char* param1)
+///
+void k_toolbarlabelaction_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KToolBarLabelAction*
+/// @param param1 const char*
+///
+void* k_toolbarlabelaction_qbase_metacast(void* self, const char* param1);
 
 /// @param self KToolBarLabelAction*
 /// @param param1 enum QMetaObject__Call

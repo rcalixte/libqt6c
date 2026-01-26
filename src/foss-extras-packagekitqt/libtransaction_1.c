@@ -15,8 +15,24 @@ const QMetaObject* q_packagekit__transaction_meta_object(void* self) {
     return PackageKit__Transaction_MetaObject((PackageKit__Transaction*)self);
 }
 
+void q_packagekit__transaction_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    PackageKit__Transaction_OnMetaObject((PackageKit__Transaction*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_packagekit__transaction_qbase_meta_object(void* self) {
+    return PackageKit__Transaction_QBaseMetaObject((PackageKit__Transaction*)self);
+}
+
 void* q_packagekit__transaction_metacast(void* self, const char* param1) {
     return PackageKit__Transaction_Metacast((PackageKit__Transaction*)self, param1);
+}
+
+void q_packagekit__transaction_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    PackageKit__Transaction_OnMetacast((PackageKit__Transaction*)self, (intptr_t)callback);
+}
+
+void* q_packagekit__transaction_qbase_metacast(void* self, const char* param1) {
+    return PackageKit__Transaction_QBaseMetacast((PackageKit__Transaction*)self, param1);
 }
 
 int32_t q_packagekit__transaction_metacall(void* self, int32_t param1, int param2, void* param3) {

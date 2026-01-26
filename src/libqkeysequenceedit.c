@@ -35,8 +35,24 @@ const QMetaObject* q_keysequenceedit_meta_object(void* self) {
     return QKeySequenceEdit_MetaObject((QKeySequenceEdit*)self);
 }
 
+void q_keysequenceedit_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QKeySequenceEdit_OnMetaObject((QKeySequenceEdit*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_keysequenceedit_qbase_meta_object(void* self) {
+    return QKeySequenceEdit_QBaseMetaObject((QKeySequenceEdit*)self);
+}
+
 void* q_keysequenceedit_metacast(void* self, const char* param1) {
     return QKeySequenceEdit_Metacast((QKeySequenceEdit*)self, param1);
+}
+
+void q_keysequenceedit_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QKeySequenceEdit_OnMetacast((QKeySequenceEdit*)self, (intptr_t)callback);
+}
+
+void* q_keysequenceedit_qbase_metacast(void* self, const char* param1) {
+    return QKeySequenceEdit_QBaseMetacast((QKeySequenceEdit*)self, param1);
 }
 
 int32_t q_keysequenceedit_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -53,10 +53,41 @@ QSocketNotifier* q_socketnotifier_new4(intptr_t socket, int32_t param2, void* pa
 ///
 const QMetaObject* q_socketnotifier_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QSocketNotifier*
+/// @param callback const QMetaObject* func()
+///
+void q_socketnotifier_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QSocketNotifier*
+///
+const QMetaObject* q_socketnotifier_qbase_meta_object(void* self);
+
 /// @param self QSocketNotifier*
 /// @param param1 const char*
 ///
 void* q_socketnotifier_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QSocketNotifier*
+/// @param callback void* func(QSocketNotifier* self, const char* param1)
+///
+void q_socketnotifier_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QSocketNotifier*
+/// @param param1 const char*
+///
+void* q_socketnotifier_qbase_metacast(void* self, const char* param1);
 
 /// @param self QSocketNotifier*
 /// @param param1 enum QMetaObject__Call

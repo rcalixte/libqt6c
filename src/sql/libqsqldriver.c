@@ -23,8 +23,24 @@ const QMetaObject* q_sqldriver_meta_object(void* self) {
     return QSqlDriver_MetaObject((QSqlDriver*)self);
 }
 
+void q_sqldriver_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QSqlDriver_OnMetaObject((QSqlDriver*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_sqldriver_qbase_meta_object(void* self) {
+    return QSqlDriver_QBaseMetaObject((QSqlDriver*)self);
+}
+
 void* q_sqldriver_metacast(void* self, const char* param1) {
     return QSqlDriver_Metacast((QSqlDriver*)self, param1);
+}
+
+void q_sqldriver_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QSqlDriver_OnMetacast((QSqlDriver*)self, (intptr_t)callback);
+}
+
+void* q_sqldriver_qbase_metacast(void* self, const char* param1) {
+    return QSqlDriver_QBaseMetacast((QSqlDriver*)self, param1);
 }
 
 int32_t q_sqldriver_metacall(void* self, int32_t param1, int param2, void* param3) {

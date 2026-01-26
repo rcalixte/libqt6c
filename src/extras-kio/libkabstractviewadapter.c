@@ -1,6 +1,7 @@
 #include "../libqabstractitemmodel.hpp"
 #include "../libqcoreevent.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "../libqpalette.hpp"
 #include "../libqrect.hpp"
@@ -82,14 +83,6 @@ void k_abstractviewadapter_on_connect(void* self, void (*callback)(void*, int32_
 
 void k_abstractviewadapter_qbase_connect(void* self, int32_t signal, void* receiver, const char* slot) {
     KAbstractViewAdapter_QBaseConnect((KAbstractViewAdapter*)self, signal, (QObject*)receiver, slot);
-}
-
-const QMetaObject* k_abstractviewadapter_meta_object(void* self) {
-    return QObject_MetaObject((QObject*)self);
-}
-
-void* k_abstractviewadapter_metacast(void* self, const char* param1) {
-    return QObject_Metacast((QObject*)self, param1);
 }
 
 const char* k_abstractviewadapter_tr(const char* s) {
@@ -286,6 +279,30 @@ void k_abstractviewadapter_destroyed1(void* self, void* param1) {
 
 void k_abstractviewadapter_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_abstractviewadapter_meta_object(void* self) {
+    return KAbstractViewAdapter_MetaObject((KAbstractViewAdapter*)self);
+}
+
+const QMetaObject* k_abstractviewadapter_qbase_meta_object(void* self) {
+    return KAbstractViewAdapter_QBaseMetaObject((KAbstractViewAdapter*)self);
+}
+
+void k_abstractviewadapter_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KAbstractViewAdapter_OnMetaObject((KAbstractViewAdapter*)self, (intptr_t)callback);
+}
+
+void* k_abstractviewadapter_metacast(void* self, const char* param1) {
+    return KAbstractViewAdapter_Metacast((KAbstractViewAdapter*)self, param1);
+}
+
+void* k_abstractviewadapter_qbase_metacast(void* self, const char* param1) {
+    return KAbstractViewAdapter_QBaseMetacast((KAbstractViewAdapter*)self, param1);
+}
+
+void k_abstractviewadapter_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KAbstractViewAdapter_OnMetacast((KAbstractViewAdapter*)self, (intptr_t)callback);
 }
 
 int32_t k_abstractviewadapter_metacall(void* self, int32_t param1, int param2, void* param3) {

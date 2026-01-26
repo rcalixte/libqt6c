@@ -22,8 +22,24 @@ const QMetaObject* q_designerintegrationinterface_meta_object(void* self) {
     return QDesignerIntegrationInterface_MetaObject((QDesignerIntegrationInterface*)self);
 }
 
+void q_designerintegrationinterface_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDesignerIntegrationInterface_OnMetaObject((QDesignerIntegrationInterface*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_designerintegrationinterface_qbase_meta_object(void* self) {
+    return QDesignerIntegrationInterface_QBaseMetaObject((QDesignerIntegrationInterface*)self);
+}
+
 void* q_designerintegrationinterface_metacast(void* self, const char* param1) {
     return QDesignerIntegrationInterface_Metacast((QDesignerIntegrationInterface*)self, param1);
+}
+
+void q_designerintegrationinterface_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDesignerIntegrationInterface_OnMetacast((QDesignerIntegrationInterface*)self, (intptr_t)callback);
+}
+
+void* q_designerintegrationinterface_qbase_metacast(void* self, const char* param1) {
+    return QDesignerIntegrationInterface_QBaseMetacast((QDesignerIntegrationInterface*)self, param1);
 }
 
 int32_t q_designerintegrationinterface_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -704,8 +720,24 @@ const QMetaObject* q_designerintegration_meta_object(void* self) {
     return QDesignerIntegration_MetaObject((QDesignerIntegration*)self);
 }
 
+void q_designerintegration_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDesignerIntegration_OnMetaObject((QDesignerIntegration*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_designerintegration_qbase_meta_object(void* self) {
+    return QDesignerIntegration_QBaseMetaObject((QDesignerIntegration*)self);
+}
+
 void* q_designerintegration_metacast(void* self, const char* param1) {
     return QDesignerIntegration_Metacast((QDesignerIntegration*)self, param1);
+}
+
+void q_designerintegration_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDesignerIntegration_OnMetacast((QDesignerIntegration*)self, (intptr_t)callback);
+}
+
+void* q_designerintegration_qbase_metacast(void* self, const char* param1) {
+    return QDesignerIntegration_QBaseMetacast((QDesignerIntegration*)self, param1);
 }
 
 int32_t q_designerintegration_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -19,8 +19,24 @@ const QMetaObject* q_coloraxis_meta_object(void* self) {
     return QColorAxis_MetaObject((QColorAxis*)self);
 }
 
+void q_coloraxis_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QColorAxis_OnMetaObject((QColorAxis*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_coloraxis_qbase_meta_object(void* self) {
+    return QColorAxis_QBaseMetaObject((QColorAxis*)self);
+}
+
 void* q_coloraxis_metacast(void* self, const char* param1) {
     return QColorAxis_Metacast((QColorAxis*)self, param1);
+}
+
+void q_coloraxis_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QColorAxis_OnMetacast((QColorAxis*)self, (intptr_t)callback);
+}
+
+void* q_coloraxis_qbase_metacast(void* self, const char* param1) {
+    return QColorAxis_QBaseMetacast((QColorAxis*)self, param1);
 }
 
 int32_t q_coloraxis_metacall(void* self, int32_t param1, int param2, void* param3) {

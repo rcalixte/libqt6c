@@ -59,8 +59,24 @@ const QMetaObject* k_openwithdialog_meta_object(void* self) {
     return KOpenWithDialog_MetaObject((KOpenWithDialog*)self);
 }
 
+void k_openwithdialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KOpenWithDialog_OnMetaObject((KOpenWithDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_openwithdialog_qbase_meta_object(void* self) {
+    return KOpenWithDialog_QBaseMetaObject((KOpenWithDialog*)self);
+}
+
 void* k_openwithdialog_metacast(void* self, const char* param1) {
     return KOpenWithDialog_Metacast((KOpenWithDialog*)self, param1);
+}
+
+void k_openwithdialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KOpenWithDialog_OnMetacast((KOpenWithDialog*)self, (intptr_t)callback);
+}
+
+void* k_openwithdialog_qbase_metacast(void* self, const char* param1) {
+    return KOpenWithDialog_QBaseMetacast((KOpenWithDialog*)self, param1);
 }
 
 int32_t k_openwithdialog_metacall(void* self, int32_t param1, int param2, void* param3) {

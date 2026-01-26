@@ -35,8 +35,24 @@ const QMetaObject* q_listview_meta_object(void* self) {
     return QListView_MetaObject((QListView*)self);
 }
 
+void q_listview_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QListView_OnMetaObject((QListView*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_listview_qbase_meta_object(void* self) {
+    return QListView_QBaseMetaObject((QListView*)self);
+}
+
 void* q_listview_metacast(void* self, const char* param1) {
     return QListView_Metacast((QListView*)self, param1);
+}
+
+void q_listview_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QListView_OnMetacast((QListView*)self, (intptr_t)callback);
+}
+
+void* q_listview_qbase_metacast(void* self, const char* param1) {
+    return QListView_QBaseMetacast((QListView*)self, param1);
 }
 
 int32_t q_listview_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -31,10 +31,41 @@ KSvg__FrameSvg* k_svg__framesvg_new2(void* parent);
 ///
 const QMetaObject* k_svg__framesvg_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KSvg__FrameSvg*
+/// @param callback const QMetaObject* func()
+///
+void k_svg__framesvg_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KSvg__FrameSvg*
+///
+const QMetaObject* k_svg__framesvg_qbase_meta_object(void* self);
+
 /// @param self KSvg__FrameSvg*
 /// @param param1 const char*
 ///
 void* k_svg__framesvg_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KSvg__FrameSvg*
+/// @param callback void* func(KSvg__FrameSvg* self, const char* param1)
+///
+void k_svg__framesvg_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KSvg__FrameSvg*
+/// @param param1 const char*
+///
+void* k_svg__framesvg_qbase_metacast(void* self, const char* param1);
 
 /// @param self KSvg__FrameSvg*
 /// @param param1 enum QMetaObject__Call

@@ -48,10 +48,41 @@ KSqueezedTextLabel* k_squeezedtextlabel_new4(const char* text, void* parent);
 ///
 const QMetaObject* k_squeezedtextlabel_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KSqueezedTextLabel*
+/// @param callback const QMetaObject* func()
+///
+void k_squeezedtextlabel_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KSqueezedTextLabel*
+///
+const QMetaObject* k_squeezedtextlabel_qbase_meta_object(void* self);
+
 /// @param self KSqueezedTextLabel*
 /// @param param1 const char*
 ///
 void* k_squeezedtextlabel_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KSqueezedTextLabel*
+/// @param callback void* func(KSqueezedTextLabel* self, const char* param1)
+///
+void k_squeezedtextlabel_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KSqueezedTextLabel*
+/// @param param1 const char*
+///
+void* k_squeezedtextlabel_qbase_metacast(void* self, const char* param1);
 
 /// @param self KSqueezedTextLabel*
 /// @param param1 enum QMetaObject__Call

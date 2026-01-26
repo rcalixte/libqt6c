@@ -31,10 +31,41 @@ KColorSchemeModel* k_colorschememodel_new2(void* parent);
 ///
 const QMetaObject* k_colorschememodel_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KColorSchemeModel*
+/// @param callback const QMetaObject* func()
+///
+void k_colorschememodel_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KColorSchemeModel*
+///
+const QMetaObject* k_colorschememodel_qbase_meta_object(void* self);
+
 /// @param self KColorSchemeModel*
 /// @param param1 const char*
 ///
 void* k_colorschememodel_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KColorSchemeModel*
+/// @param callback void* func(KColorSchemeModel* self, const char* param1)
+///
+void k_colorschememodel_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KColorSchemeModel*
+/// @param param1 const char*
+///
+void* k_colorschememodel_qbase_metacast(void* self, const char* param1);
 
 /// @param self KColorSchemeModel*
 /// @param param1 enum QMetaObject__Call

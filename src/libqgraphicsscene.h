@@ -71,10 +71,41 @@ QGraphicsScene* q_graphicsscene_new6(double x, double y, double width, double he
 ///
 const QMetaObject* q_graphicsscene_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsScene*
+/// @param callback const QMetaObject* func()
+///
+void q_graphicsscene_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QGraphicsScene*
+///
+const QMetaObject* q_graphicsscene_qbase_meta_object(void* self);
+
 /// @param self QGraphicsScene*
 /// @param param1 const char*
 ///
 void* q_graphicsscene_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsScene*
+/// @param callback void* func(QGraphicsScene* self, const char* param1)
+///
+void q_graphicsscene_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QGraphicsScene*
+/// @param param1 const char*
+///
+void* q_graphicsscene_qbase_metacast(void* self, const char* param1);
 
 /// @param self QGraphicsScene*
 /// @param param1 enum QMetaObject__Call

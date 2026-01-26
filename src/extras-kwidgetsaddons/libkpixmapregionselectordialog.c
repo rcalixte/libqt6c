@@ -30,8 +30,24 @@ const QMetaObject* k_pixmapregionselectordialog_meta_object(void* self) {
     return KPixmapRegionSelectorDialog_MetaObject((KPixmapRegionSelectorDialog*)self);
 }
 
+void k_pixmapregionselectordialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KPixmapRegionSelectorDialog_OnMetaObject((KPixmapRegionSelectorDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_pixmapregionselectordialog_qbase_meta_object(void* self) {
+    return KPixmapRegionSelectorDialog_QBaseMetaObject((KPixmapRegionSelectorDialog*)self);
+}
+
 void* k_pixmapregionselectordialog_metacast(void* self, const char* param1) {
     return KPixmapRegionSelectorDialog_Metacast((KPixmapRegionSelectorDialog*)self, param1);
+}
+
+void k_pixmapregionselectordialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KPixmapRegionSelectorDialog_OnMetacast((KPixmapRegionSelectorDialog*)self, (intptr_t)callback);
+}
+
+void* k_pixmapregionselectordialog_qbase_metacast(void* self, const char* param1) {
+    return KPixmapRegionSelectorDialog_QBaseMetacast((KPixmapRegionSelectorDialog*)self, param1);
 }
 
 int32_t k_pixmapregionselectordialog_metacall(void* self, int32_t param1, int param2, void* param3) {

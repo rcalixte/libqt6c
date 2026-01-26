@@ -3,6 +3,7 @@
 #include "../extras-kservice/libkserviceaction.hpp"
 #include "../libqcoreevent.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "../libqurl.hpp"
 #include "libapplicationlauncherjob.hpp"
@@ -67,14 +68,6 @@ long long k_io__applicationlauncherjob_pid(void* self) {
 libqt_list /* of long long */ k_io__applicationlauncherjob_pids(void* self) {
     libqt_list _arr = KIO__ApplicationLauncherJob_Pids((KIO__ApplicationLauncherJob*)self);
     return _arr;
-}
-
-const QMetaObject* k_io__applicationlauncherjob_meta_object(void* self) {
-    return KJob_MetaObject((KJob*)self);
-}
-
-void* k_io__applicationlauncherjob_metacast(void* self, const char* param1) {
-    return KJob_Metacast((KJob*)self, param1);
 }
 
 const char* k_io__applicationlauncherjob_tr(const char* s) {
@@ -402,6 +395,30 @@ void k_io__applicationlauncherjob_destroyed1(void* self, void* param1) {
 
 void k_io__applicationlauncherjob_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_io__applicationlauncherjob_meta_object(void* self) {
+    return KIO__ApplicationLauncherJob_MetaObject((KIO__ApplicationLauncherJob*)self);
+}
+
+const QMetaObject* k_io__applicationlauncherjob_qbase_meta_object(void* self) {
+    return KIO__ApplicationLauncherJob_QBaseMetaObject((KIO__ApplicationLauncherJob*)self);
+}
+
+void k_io__applicationlauncherjob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KIO__ApplicationLauncherJob_OnMetaObject((KIO__ApplicationLauncherJob*)self, (intptr_t)callback);
+}
+
+void* k_io__applicationlauncherjob_metacast(void* self, const char* param1) {
+    return KIO__ApplicationLauncherJob_Metacast((KIO__ApplicationLauncherJob*)self, param1);
+}
+
+void* k_io__applicationlauncherjob_qbase_metacast(void* self, const char* param1) {
+    return KIO__ApplicationLauncherJob_QBaseMetacast((KIO__ApplicationLauncherJob*)self, param1);
+}
+
+void k_io__applicationlauncherjob_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KIO__ApplicationLauncherJob_OnMetacast((KIO__ApplicationLauncherJob*)self, (intptr_t)callback);
 }
 
 int32_t k_io__applicationlauncherjob_metacall(void* self, int32_t param1, int param2, void* param3) {

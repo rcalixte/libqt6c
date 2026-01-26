@@ -19,8 +19,24 @@ const QMetaObject* q_videosink_meta_object(void* self) {
     return QVideoSink_MetaObject((QVideoSink*)self);
 }
 
+void q_videosink_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QVideoSink_OnMetaObject((QVideoSink*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_videosink_qbase_meta_object(void* self) {
+    return QVideoSink_QBaseMetaObject((QVideoSink*)self);
+}
+
 void* q_videosink_metacast(void* self, const char* param1) {
     return QVideoSink_Metacast((QVideoSink*)self, param1);
+}
+
+void q_videosink_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QVideoSink_OnMetacast((QVideoSink*)self, (intptr_t)callback);
+}
+
+void* q_videosink_qbase_metacast(void* self, const char* param1) {
+    return QVideoSink_QBaseMetacast((QVideoSink*)self, param1);
 }
 
 int32_t q_videosink_metacall(void* self, int32_t param1, int param2, void* param3) {

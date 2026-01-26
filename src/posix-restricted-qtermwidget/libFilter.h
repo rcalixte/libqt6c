@@ -135,21 +135,6 @@ void k_onsole__filter_qbase_get_line_column(void* self, int position, int* start
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
-///
-/// @param self Konsole__Filter*
-///
-const QMetaObject* k_onsole__filter_meta_object(void* self);
-
-/// Inherited from QObject
-///
-/// @param self Konsole__Filter*
-/// @param param1 const char*
-///
-void* k_onsole__filter_metacast(void* self, const char* param1);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
@@ -546,6 +531,70 @@ void k_onsole__filter_destroyed1(void* self, void* param1);
 /// @param callback void func(Konsole__Filter* self, QObject* param1)
 ///
 void k_onsole__filter_on_destroyed1(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self Konsole__Filter*
+///
+const QMetaObject* k_onsole__filter_meta_object(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self Konsole__Filter*
+///
+const QMetaObject* k_onsole__filter_qbase_meta_object(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self Konsole__Filter*
+/// @param callback const QMetaObject* func()
+///
+void k_onsole__filter_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qt_metacast)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self Konsole__Filter*
+/// @param param1 const char*
+///
+void* k_onsole__filter_metacast(void* self, const char* param1);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qt_metacast)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self Konsole__Filter*
+/// @param param1 const char*
+///
+void* k_onsole__filter_qbase_metacast(void* self, const char* param1);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qt_metacast)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self Konsole__Filter*
+/// @param callback void* func(Konsole__Filter* self, const char* param1)
+///
+void k_onsole__filter_on_metacast(void* self, void* (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1055,21 +1104,6 @@ Konsole__Filter__HotSpot* k_onsole__regexpfilter_hot_spot_at(void* self, int lin
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
-///
-/// @param self Konsole__RegExpFilter*
-///
-const QMetaObject* k_onsole__regexpfilter_meta_object(void* self);
-
-/// Inherited from QObject
-///
-/// @param self Konsole__RegExpFilter*
-/// @param param1 const char*
-///
-void* k_onsole__regexpfilter_metacast(void* self, const char* param1);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
@@ -1466,6 +1500,70 @@ void k_onsole__regexpfilter_destroyed1(void* self, void* param1);
 /// @param callback void func(Konsole__RegExpFilter* self, QObject* param1)
 ///
 void k_onsole__regexpfilter_on_destroyed1(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self Konsole__RegExpFilter*
+///
+const QMetaObject* k_onsole__regexpfilter_meta_object(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self Konsole__RegExpFilter*
+///
+const QMetaObject* k_onsole__regexpfilter_qbase_meta_object(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self Konsole__RegExpFilter*
+/// @param callback const QMetaObject* func()
+///
+void k_onsole__regexpfilter_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qt_metacast)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self Konsole__RegExpFilter*
+/// @param param1 const char*
+///
+void* k_onsole__regexpfilter_metacast(void* self, const char* param1);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qt_metacast)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self Konsole__RegExpFilter*
+/// @param param1 const char*
+///
+void* k_onsole__regexpfilter_qbase_metacast(void* self, const char* param1);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qt_metacast)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self Konsole__RegExpFilter*
+/// @param callback void* func(Konsole__RegExpFilter* self, const char* param1)
+///
+void k_onsole__regexpfilter_on_metacast(void* self, void* (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1999,10 +2097,41 @@ Konsole__UrlFilter* k_onsole__urlfilter_new();
 ///
 const QMetaObject* k_onsole__urlfilter_meta_object(void* self);
 
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+///
+/// Allows for overriding the related default method
+///
+/// @param self Konsole__UrlFilter*
+/// @param callback const QMetaObject* func()
+///
+void k_onsole__urlfilter_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+///
+/// Base class method implementation
+///
+/// @param self Konsole__UrlFilter*
+///
+const QMetaObject* k_onsole__urlfilter_qbase_meta_object(void* self);
+
 /// @param self Konsole__UrlFilter*
 /// @param param1 const char*
 ///
 void* k_onsole__urlfilter_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self Konsole__UrlFilter*
+/// @param callback void* func(Konsole__UrlFilter* self, const char* param1)
+///
+void k_onsole__urlfilter_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self Konsole__UrlFilter*
+/// @param param1 const char*
+///
+void* k_onsole__urlfilter_qbase_metacast(void* self, const char* param1);
 
 /// @param self Konsole__UrlFilter*
 /// @param param1 enum QMetaObject__Call
@@ -3029,10 +3158,41 @@ Konsole__FilterObject* k_onsole__filterobject_new(void* filter);
 ///
 const QMetaObject* k_onsole__filterobject_meta_object(void* self);
 
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+///
+/// Allows for overriding the related default method
+///
+/// @param self Konsole__FilterObject*
+/// @param callback const QMetaObject* func()
+///
+void k_onsole__filterobject_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+///
+/// Base class method implementation
+///
+/// @param self Konsole__FilterObject*
+///
+const QMetaObject* k_onsole__filterobject_qbase_meta_object(void* self);
+
 /// @param self Konsole__FilterObject*
 /// @param param1 const char*
 ///
 void* k_onsole__filterobject_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self Konsole__FilterObject*
+/// @param callback void* func(Konsole__FilterObject* self, const char* param1)
+///
+void k_onsole__filterobject_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self Konsole__FilterObject*
+/// @param param1 const char*
+///
+void* k_onsole__filterobject_qbase_metacast(void* self, const char* param1);
 
 /// @param self Konsole__FilterObject*
 /// @param param1 enum QMetaObject__Call

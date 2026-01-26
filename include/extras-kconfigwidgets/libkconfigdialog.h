@@ -27,10 +27,41 @@ KConfigDialog* k_configdialog_new(void* parent, const char* name, void* config);
 ///
 const QMetaObject* k_configdialog_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KConfigDialog*
+/// @param callback const QMetaObject* func()
+///
+void k_configdialog_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KConfigDialog*
+///
+const QMetaObject* k_configdialog_qbase_meta_object(void* self);
+
 /// @param self KConfigDialog*
 /// @param param1 const char*
 ///
 void* k_configdialog_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KConfigDialog*
+/// @param callback void* func(KConfigDialog* self, const char* param1)
+///
+void k_configdialog_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KConfigDialog*
+/// @param param1 const char*
+///
+void* k_configdialog_qbase_metacast(void* self, const char* param1);
 
 /// @param self KConfigDialog*
 /// @param param1 enum QMetaObject__Call

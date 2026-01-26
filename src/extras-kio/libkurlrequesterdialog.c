@@ -32,8 +32,24 @@ const QMetaObject* k_urlrequesterdialog_meta_object(void* self) {
     return KUrlRequesterDialog_MetaObject((KUrlRequesterDialog*)self);
 }
 
+void k_urlrequesterdialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KUrlRequesterDialog_OnMetaObject((KUrlRequesterDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_urlrequesterdialog_qbase_meta_object(void* self) {
+    return KUrlRequesterDialog_QBaseMetaObject((KUrlRequesterDialog*)self);
+}
+
 void* k_urlrequesterdialog_metacast(void* self, const char* param1) {
     return KUrlRequesterDialog_Metacast((KUrlRequesterDialog*)self, param1);
+}
+
+void k_urlrequesterdialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KUrlRequesterDialog_OnMetacast((KUrlRequesterDialog*)self, (intptr_t)callback);
+}
+
+void* k_urlrequesterdialog_qbase_metacast(void* self, const char* param1) {
+    return KUrlRequesterDialog_QBaseMetacast((KUrlRequesterDialog*)self, param1);
 }
 
 int32_t k_urlrequesterdialog_metacall(void* self, int32_t param1, int param2, void* param3) {

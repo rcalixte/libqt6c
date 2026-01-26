@@ -31,10 +31,41 @@ QHBarModelMapper* q_hbarmodelmapper_new2(void* parent);
 ///
 const QMetaObject* q_hbarmodelmapper_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QHBarModelMapper*
+/// @param callback const QMetaObject* func()
+///
+void q_hbarmodelmapper_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QHBarModelMapper*
+///
+const QMetaObject* q_hbarmodelmapper_qbase_meta_object(void* self);
+
 /// @param self QHBarModelMapper*
 /// @param param1 const char*
 ///
 void* q_hbarmodelmapper_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QHBarModelMapper*
+/// @param callback void* func(QHBarModelMapper* self, const char* param1)
+///
+void q_hbarmodelmapper_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QHBarModelMapper*
+/// @param param1 const char*
+///
+void* q_hbarmodelmapper_qbase_metacast(void* self, const char* param1);
 
 /// @param self QHBarModelMapper*
 /// @param param1 enum QMetaObject__Call

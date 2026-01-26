@@ -50,8 +50,24 @@ const QMetaObject* q_plaintextedit_meta_object(void* self) {
     return QPlainTextEdit_MetaObject((QPlainTextEdit*)self);
 }
 
+void q_plaintextedit_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QPlainTextEdit_OnMetaObject((QPlainTextEdit*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_plaintextedit_qbase_meta_object(void* self) {
+    return QPlainTextEdit_QBaseMetaObject((QPlainTextEdit*)self);
+}
+
 void* q_plaintextedit_metacast(void* self, const char* param1) {
     return QPlainTextEdit_Metacast((QPlainTextEdit*)self, param1);
+}
+
+void q_plaintextedit_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QPlainTextEdit_OnMetacast((QPlainTextEdit*)self, (intptr_t)callback);
+}
+
+void* q_plaintextedit_qbase_metacast(void* self, const char* param1) {
+    return QPlainTextEdit_QBaseMetacast((QPlainTextEdit*)self, param1);
 }
 
 int32_t q_plaintextedit_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -2850,8 +2866,24 @@ const QMetaObject* q_plaintextdocumentlayout_meta_object(void* self) {
     return QPlainTextDocumentLayout_MetaObject((QPlainTextDocumentLayout*)self);
 }
 
+void q_plaintextdocumentlayout_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QPlainTextDocumentLayout_OnMetaObject((QPlainTextDocumentLayout*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_plaintextdocumentlayout_qbase_meta_object(void* self) {
+    return QPlainTextDocumentLayout_QBaseMetaObject((QPlainTextDocumentLayout*)self);
+}
+
 void* q_plaintextdocumentlayout_metacast(void* self, const char* param1) {
     return QPlainTextDocumentLayout_Metacast((QPlainTextDocumentLayout*)self, param1);
+}
+
+void q_plaintextdocumentlayout_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QPlainTextDocumentLayout_OnMetacast((QPlainTextDocumentLayout*)self, (intptr_t)callback);
+}
+
+void* q_plaintextdocumentlayout_qbase_metacast(void* self, const char* param1) {
+    return QPlainTextDocumentLayout_QBaseMetacast((QPlainTextDocumentLayout*)self, param1);
 }
 
 int32_t q_plaintextdocumentlayout_metacall(void* self, int32_t param1, int param2, void* param3) {

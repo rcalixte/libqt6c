@@ -1189,8 +1189,24 @@ const QMetaObject* q_graphicsobject_meta_object(void* self) {
     return QGraphicsObject_MetaObject((QGraphicsObject*)self);
 }
 
+void q_graphicsobject_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QGraphicsObject_OnMetaObject((QGraphicsObject*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_graphicsobject_qbase_meta_object(void* self) {
+    return QGraphicsObject_QBaseMetaObject((QGraphicsObject*)self);
+}
+
 void* q_graphicsobject_metacast(void* self, const char* param1) {
     return QGraphicsObject_Metacast((QGraphicsObject*)self, param1);
+}
+
+void q_graphicsobject_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QGraphicsObject_OnMetacast((QGraphicsObject*)self, (intptr_t)callback);
+}
+
+void* q_graphicsobject_qbase_metacast(void* self, const char* param1) {
+    return QGraphicsObject_QBaseMetacast((QGraphicsObject*)self, param1);
 }
 
 int32_t q_graphicsobject_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -11093,8 +11109,24 @@ const QMetaObject* q_graphicstextitem_meta_object(void* self) {
     return QGraphicsTextItem_MetaObject((QGraphicsTextItem*)self);
 }
 
+void q_graphicstextitem_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QGraphicsTextItem_OnMetaObject((QGraphicsTextItem*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_graphicstextitem_qbase_meta_object(void* self) {
+    return QGraphicsTextItem_QBaseMetaObject((QGraphicsTextItem*)self);
+}
+
 void* q_graphicstextitem_metacast(void* self, const char* param1) {
     return QGraphicsTextItem_Metacast((QGraphicsTextItem*)self, param1);
+}
+
+void q_graphicstextitem_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QGraphicsTextItem_OnMetacast((QGraphicsTextItem*)self, (intptr_t)callback);
+}
+
+void* q_graphicstextitem_qbase_metacast(void* self, const char* param1) {
+    return QGraphicsTextItem_QBaseMetacast((QGraphicsTextItem*)self, param1);
 }
 
 int32_t q_graphicstextitem_metacall(void* self, int32_t param1, int param2, void* param3) {

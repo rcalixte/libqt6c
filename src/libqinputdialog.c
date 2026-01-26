@@ -30,8 +30,24 @@ const QMetaObject* q_inputdialog_meta_object(void* self) {
     return QInputDialog_MetaObject((QInputDialog*)self);
 }
 
+void q_inputdialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QInputDialog_OnMetaObject((QInputDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_inputdialog_qbase_meta_object(void* self) {
+    return QInputDialog_QBaseMetaObject((QInputDialog*)self);
+}
+
 void* q_inputdialog_metacast(void* self, const char* param1) {
     return QInputDialog_Metacast((QInputDialog*)self, param1);
+}
+
+void q_inputdialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QInputDialog_OnMetacast((QInputDialog*)self, (intptr_t)callback);
+}
+
+void* q_inputdialog_qbase_metacast(void* self, const char* param1) {
+    return QInputDialog_QBaseMetacast((QInputDialog*)self, param1);
 }
 
 int32_t q_inputdialog_metacall(void* self, int32_t param1, int param2, void* param3) {

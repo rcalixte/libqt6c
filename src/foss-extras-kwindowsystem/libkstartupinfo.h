@@ -34,10 +34,41 @@ KStartupInfo* k_startupinfo_new2(int flags, void* parent);
 ///
 const QMetaObject* k_startupinfo_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KStartupInfo*
+/// @param callback const QMetaObject* func()
+///
+void k_startupinfo_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KStartupInfo*
+///
+const QMetaObject* k_startupinfo_qbase_meta_object(void* self);
+
 /// @param self KStartupInfo*
 /// @param param1 const char*
 ///
 void* k_startupinfo_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KStartupInfo*
+/// @param callback void* func(KStartupInfo* self, const char* param1)
+///
+void k_startupinfo_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KStartupInfo*
+/// @param param1 const char*
+///
+void* k_startupinfo_qbase_metacast(void* self, const char* param1);
 
 /// @param self KStartupInfo*
 /// @param param1 enum QMetaObject__Call

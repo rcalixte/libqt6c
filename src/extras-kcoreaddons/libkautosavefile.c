@@ -30,8 +30,24 @@ const QMetaObject* k_autosavefile_meta_object(void* self) {
     return KAutoSaveFile_MetaObject((KAutoSaveFile*)self);
 }
 
+void k_autosavefile_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KAutoSaveFile_OnMetaObject((KAutoSaveFile*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_autosavefile_qbase_meta_object(void* self) {
+    return KAutoSaveFile_QBaseMetaObject((KAutoSaveFile*)self);
+}
+
 void* k_autosavefile_metacast(void* self, const char* param1) {
     return KAutoSaveFile_Metacast((KAutoSaveFile*)self, param1);
+}
+
+void k_autosavefile_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KAutoSaveFile_OnMetacast((KAutoSaveFile*)self, (intptr_t)callback);
+}
+
+void* k_autosavefile_qbase_metacast(void* self, const char* param1) {
+    return KAutoSaveFile_QBaseMetacast((KAutoSaveFile*)self, param1);
 }
 
 int32_t k_autosavefile_metacall(void* self, int32_t param1, int param2, void* param3) {

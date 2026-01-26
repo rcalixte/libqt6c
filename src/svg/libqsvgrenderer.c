@@ -46,8 +46,24 @@ const QMetaObject* q_svgrenderer_meta_object(void* self) {
     return QSvgRenderer_MetaObject((QSvgRenderer*)self);
 }
 
+void q_svgrenderer_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QSvgRenderer_OnMetaObject((QSvgRenderer*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_svgrenderer_qbase_meta_object(void* self) {
+    return QSvgRenderer_QBaseMetaObject((QSvgRenderer*)self);
+}
+
 void* q_svgrenderer_metacast(void* self, const char* param1) {
     return QSvgRenderer_Metacast((QSvgRenderer*)self, param1);
+}
+
+void q_svgrenderer_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QSvgRenderer_OnMetacast((QSvgRenderer*)self, (intptr_t)callback);
+}
+
+void* q_svgrenderer_qbase_metacast(void* self, const char* param1) {
+    return QSvgRenderer_QBaseMetacast((QSvgRenderer*)self, param1);
 }
 
 int32_t q_svgrenderer_metacall(void* self, int32_t param1, int param2, void* param3) {

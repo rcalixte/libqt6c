@@ -47,8 +47,24 @@ const QMetaObject* q_movie_meta_object(void* self) {
     return QMovie_MetaObject((QMovie*)self);
 }
 
+void q_movie_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QMovie_OnMetaObject((QMovie*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_movie_qbase_meta_object(void* self) {
+    return QMovie_QBaseMetaObject((QMovie*)self);
+}
+
 void* q_movie_metacast(void* self, const char* param1) {
     return QMovie_Metacast((QMovie*)self, param1);
+}
+
+void q_movie_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QMovie_OnMetacast((QMovie*)self, (intptr_t)callback);
+}
+
+void* q_movie_qbase_metacast(void* self, const char* param1) {
+    return QMovie_QBaseMetacast((QMovie*)self, param1);
 }
 
 int32_t q_movie_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -20,8 +20,24 @@ const QMetaObject* k_texteditor__codecompletionmodel_meta_object(void* self) {
     return KTextEditor__CodeCompletionModel_MetaObject((KTextEditor__CodeCompletionModel*)self);
 }
 
+void k_texteditor__codecompletionmodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KTextEditor__CodeCompletionModel_OnMetaObject((KTextEditor__CodeCompletionModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_texteditor__codecompletionmodel_qbase_meta_object(void* self) {
+    return KTextEditor__CodeCompletionModel_QBaseMetaObject((KTextEditor__CodeCompletionModel*)self);
+}
+
 void* k_texteditor__codecompletionmodel_metacast(void* self, const char* param1) {
     return KTextEditor__CodeCompletionModel_Metacast((KTextEditor__CodeCompletionModel*)self, param1);
+}
+
+void k_texteditor__codecompletionmodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KTextEditor__CodeCompletionModel_OnMetacast((KTextEditor__CodeCompletionModel*)self, (intptr_t)callback);
+}
+
+void* k_texteditor__codecompletionmodel_qbase_metacast(void* self, const char* param1) {
+    return KTextEditor__CodeCompletionModel_QBaseMetacast((KTextEditor__CodeCompletionModel*)self, param1);
 }
 
 int32_t k_texteditor__codecompletionmodel_metacall(void* self, int32_t param1, int param2, void* param3) {

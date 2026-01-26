@@ -18,8 +18,24 @@ const QMetaObject* k_overlayiconplugin_meta_object(void* self) {
     return KOverlayIconPlugin_MetaObject((KOverlayIconPlugin*)self);
 }
 
+void k_overlayiconplugin_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KOverlayIconPlugin_OnMetaObject((KOverlayIconPlugin*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_overlayiconplugin_qbase_meta_object(void* self) {
+    return KOverlayIconPlugin_QBaseMetaObject((KOverlayIconPlugin*)self);
+}
+
 void* k_overlayiconplugin_metacast(void* self, const char* param1) {
     return KOverlayIconPlugin_Metacast((KOverlayIconPlugin*)self, param1);
+}
+
+void k_overlayiconplugin_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KOverlayIconPlugin_OnMetacast((KOverlayIconPlugin*)self, (intptr_t)callback);
+}
+
+void* k_overlayiconplugin_qbase_metacast(void* self, const char* param1) {
+    return KOverlayIconPlugin_QBaseMetacast((KOverlayIconPlugin*)self, param1);
 }
 
 int32_t k_overlayiconplugin_metacall(void* self, int32_t param1, int param2, void* param3) {

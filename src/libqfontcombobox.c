@@ -29,8 +29,24 @@ const QMetaObject* q_fontcombobox_meta_object(void* self) {
     return QFontComboBox_MetaObject((QFontComboBox*)self);
 }
 
+void q_fontcombobox_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QFontComboBox_OnMetaObject((QFontComboBox*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_fontcombobox_qbase_meta_object(void* self) {
+    return QFontComboBox_QBaseMetaObject((QFontComboBox*)self);
+}
+
 void* q_fontcombobox_metacast(void* self, const char* param1) {
     return QFontComboBox_Metacast((QFontComboBox*)self, param1);
+}
+
+void q_fontcombobox_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QFontComboBox_OnMetacast((QFontComboBox*)self, (intptr_t)callback);
+}
+
+void* q_fontcombobox_qbase_metacast(void* self, const char* param1) {
+    return QFontComboBox_QBaseMetacast((QFontComboBox*)self, param1);
 }
 
 int32_t q_fontcombobox_metacall(void* self, int32_t param1, int param2, void* param3) {

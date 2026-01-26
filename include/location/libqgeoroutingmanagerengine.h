@@ -34,10 +34,41 @@ QGeoRoutingManagerEngine* q_georoutingmanagerengine_new2(libqt_map parameters, v
 ///
 const QMetaObject* q_georoutingmanagerengine_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QGeoRoutingManagerEngine*
+/// @param callback const QMetaObject* func()
+///
+void q_georoutingmanagerengine_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QGeoRoutingManagerEngine*
+///
+const QMetaObject* q_georoutingmanagerengine_qbase_meta_object(void* self);
+
 /// @param self QGeoRoutingManagerEngine*
 /// @param param1 const char*
 ///
 void* q_georoutingmanagerengine_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QGeoRoutingManagerEngine*
+/// @param callback void* func(QGeoRoutingManagerEngine* self, const char* param1)
+///
+void q_georoutingmanagerengine_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QGeoRoutingManagerEngine*
+/// @param param1 const char*
+///
+void* q_georoutingmanagerengine_qbase_metacast(void* self, const char* param1);
 
 /// @param self QGeoRoutingManagerEngine*
 /// @param param1 enum QMetaObject__Call

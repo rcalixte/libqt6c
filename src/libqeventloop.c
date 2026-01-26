@@ -19,8 +19,24 @@ const QMetaObject* q_eventloop_meta_object(void* self) {
     return QEventLoop_MetaObject((QEventLoop*)self);
 }
 
+void q_eventloop_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QEventLoop_OnMetaObject((QEventLoop*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_eventloop_qbase_meta_object(void* self) {
+    return QEventLoop_QBaseMetaObject((QEventLoop*)self);
+}
+
 void* q_eventloop_metacast(void* self, const char* param1) {
     return QEventLoop_Metacast((QEventLoop*)self, param1);
+}
+
+void q_eventloop_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QEventLoop_OnMetacast((QEventLoop*)self, (intptr_t)callback);
+}
+
+void* q_eventloop_qbase_metacast(void* self, const char* param1) {
+    return QEventLoop_QBaseMetacast((QEventLoop*)self, param1);
 }
 
 int32_t q_eventloop_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -35,8 +35,24 @@ const QMetaObject* k_pagedialog_meta_object(void* self) {
     return KPageDialog_MetaObject((KPageDialog*)self);
 }
 
+void k_pagedialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KPageDialog_OnMetaObject((KPageDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_pagedialog_qbase_meta_object(void* self) {
+    return KPageDialog_QBaseMetaObject((KPageDialog*)self);
+}
+
 void* k_pagedialog_metacast(void* self, const char* param1) {
     return KPageDialog_Metacast((KPageDialog*)self, param1);
+}
+
+void k_pagedialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KPageDialog_OnMetacast((KPageDialog*)self, (intptr_t)callback);
+}
+
+void* k_pagedialog_qbase_metacast(void* self, const char* param1) {
+    return KPageDialog_QBaseMetacast((KPageDialog*)self, param1);
 }
 
 int32_t k_pagedialog_metacall(void* self, int32_t param1, int param2, void* param3) {

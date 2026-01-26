@@ -16,8 +16,24 @@ const QMetaObject* k_toggletoolbaraction_meta_object(void* self) {
     return KToggleToolBarAction_MetaObject((KToggleToolBarAction*)self);
 }
 
+void k_toggletoolbaraction_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KToggleToolBarAction_OnMetaObject((KToggleToolBarAction*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_toggletoolbaraction_qbase_meta_object(void* self) {
+    return KToggleToolBarAction_QBaseMetaObject((KToggleToolBarAction*)self);
+}
+
 void* k_toggletoolbaraction_metacast(void* self, const char* param1) {
     return KToggleToolBarAction_Metacast((KToggleToolBarAction*)self, param1);
+}
+
+void k_toggletoolbaraction_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KToggleToolBarAction_OnMetacast((KToggleToolBarAction*)self, (intptr_t)callback);
+}
+
+void* k_toggletoolbaraction_qbase_metacast(void* self, const char* param1) {
+    return KToggleToolBarAction_QBaseMetacast((KToggleToolBarAction*)self, param1);
 }
 
 int32_t k_toggletoolbaraction_metacall(void* self, int32_t param1, int param2, void* param3) {

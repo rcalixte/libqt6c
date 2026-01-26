@@ -31,10 +31,41 @@ QMenuBar* q_menubar_new2();
 ///
 const QMetaObject* q_menubar_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QMenuBar*
+/// @param callback const QMetaObject* func()
+///
+void q_menubar_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QMenuBar*
+///
+const QMetaObject* q_menubar_qbase_meta_object(void* self);
+
 /// @param self QMenuBar*
 /// @param param1 const char*
 ///
 void* q_menubar_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QMenuBar*
+/// @param callback void* func(QMenuBar* self, const char* param1)
+///
+void q_menubar_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QMenuBar*
+/// @param param1 const char*
+///
+void* q_menubar_qbase_metacast(void* self, const char* param1);
 
 /// @param self QMenuBar*
 /// @param param1 enum QMetaObject__Call

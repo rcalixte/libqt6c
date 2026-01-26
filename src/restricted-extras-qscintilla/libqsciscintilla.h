@@ -31,10 +31,41 @@ QsciScintilla* q_sciscintilla_new2();
 ///
 const QMetaObject* q_sciscintilla_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QsciScintilla*
+/// @param callback const QMetaObject* func()
+///
+void q_sciscintilla_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QsciScintilla*
+///
+const QMetaObject* q_sciscintilla_qbase_meta_object(void* self);
+
 /// @param self QsciScintilla*
 /// @param param1 const char*
 ///
 void* q_sciscintilla_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QsciScintilla*
+/// @param callback void* func(QsciScintilla* self, const char* param1)
+///
+void q_sciscintilla_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QsciScintilla*
+/// @param param1 const char*
+///
+void* q_sciscintilla_qbase_metacast(void* self, const char* param1);
 
 /// @param self QsciScintilla*
 /// @param param1 enum QMetaObject__Call

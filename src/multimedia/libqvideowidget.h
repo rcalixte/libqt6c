@@ -31,10 +31,41 @@ QVideoWidget* q_videowidget_new2();
 ///
 const QMetaObject* q_videowidget_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QVideoWidget*
+/// @param callback const QMetaObject* func()
+///
+void q_videowidget_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QVideoWidget*
+///
+const QMetaObject* q_videowidget_qbase_meta_object(void* self);
+
 /// @param self QVideoWidget*
 /// @param param1 const char*
 ///
 void* q_videowidget_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QVideoWidget*
+/// @param callback void* func(QVideoWidget* self, const char* param1)
+///
+void q_videowidget_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QVideoWidget*
+/// @param param1 const char*
+///
+void* q_videowidget_qbase_metacast(void* self, const char* param1);
 
 /// @param self QVideoWidget*
 /// @param param1 enum QMetaObject__Call

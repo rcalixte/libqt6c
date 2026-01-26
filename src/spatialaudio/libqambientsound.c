@@ -15,8 +15,24 @@ const QMetaObject* q_ambientsound_meta_object(void* self) {
     return QAmbientSound_MetaObject((QAmbientSound*)self);
 }
 
+void q_ambientsound_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QAmbientSound_OnMetaObject((QAmbientSound*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_ambientsound_qbase_meta_object(void* self) {
+    return QAmbientSound_QBaseMetaObject((QAmbientSound*)self);
+}
+
 void* q_ambientsound_metacast(void* self, const char* param1) {
     return QAmbientSound_Metacast((QAmbientSound*)self, param1);
+}
+
+void q_ambientsound_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QAmbientSound_OnMetacast((QAmbientSound*)self, (intptr_t)callback);
+}
+
+void* q_ambientsound_qbase_metacast(void* self, const char* param1) {
+    return QAmbientSound_QBaseMetacast((QAmbientSound*)self, param1);
 }
 
 int32_t q_ambientsound_metacall(void* self, int32_t param1, int param2, void* param3) {

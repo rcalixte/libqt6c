@@ -31,10 +31,41 @@ QNetworkDiskCache* q_networkdiskcache_new2(void* parent);
 ///
 const QMetaObject* q_networkdiskcache_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QNetworkDiskCache*
+/// @param callback const QMetaObject* func()
+///
+void q_networkdiskcache_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QNetworkDiskCache*
+///
+const QMetaObject* q_networkdiskcache_qbase_meta_object(void* self);
+
 /// @param self QNetworkDiskCache*
 /// @param param1 const char*
 ///
 void* q_networkdiskcache_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QNetworkDiskCache*
+/// @param callback void* func(QNetworkDiskCache* self, const char* param1)
+///
+void q_networkdiskcache_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QNetworkDiskCache*
+/// @param param1 const char*
+///
+void* q_networkdiskcache_qbase_metacast(void* self, const char* param1);
 
 /// @param self QNetworkDiskCache*
 /// @param param1 enum QMetaObject__Call

@@ -26,10 +26,41 @@ KIO__RenameFileDialog* k_io__renamefiledialog_new(void* items, void* parent);
 ///
 const QMetaObject* k_io__renamefiledialog_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KIO__RenameFileDialog*
+/// @param callback const QMetaObject* func()
+///
+void k_io__renamefiledialog_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KIO__RenameFileDialog*
+///
+const QMetaObject* k_io__renamefiledialog_qbase_meta_object(void* self);
+
 /// @param self KIO__RenameFileDialog*
 /// @param param1 const char*
 ///
 void* k_io__renamefiledialog_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KIO__RenameFileDialog*
+/// @param callback void* func(KIO__RenameFileDialog* self, const char* param1)
+///
+void k_io__renamefiledialog_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KIO__RenameFileDialog*
+/// @param param1 const char*
+///
+void* k_io__renamefiledialog_qbase_metacast(void* self, const char* param1);
 
 /// @param self KIO__RenameFileDialog*
 /// @param param1 enum QMetaObject__Call

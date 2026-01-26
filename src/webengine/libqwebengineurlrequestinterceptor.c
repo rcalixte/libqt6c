@@ -18,8 +18,24 @@ const QMetaObject* q_webengineurlrequestinterceptor_meta_object(void* self) {
     return QWebEngineUrlRequestInterceptor_MetaObject((QWebEngineUrlRequestInterceptor*)self);
 }
 
+void q_webengineurlrequestinterceptor_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QWebEngineUrlRequestInterceptor_OnMetaObject((QWebEngineUrlRequestInterceptor*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_webengineurlrequestinterceptor_qbase_meta_object(void* self) {
+    return QWebEngineUrlRequestInterceptor_QBaseMetaObject((QWebEngineUrlRequestInterceptor*)self);
+}
+
 void* q_webengineurlrequestinterceptor_metacast(void* self, const char* param1) {
     return QWebEngineUrlRequestInterceptor_Metacast((QWebEngineUrlRequestInterceptor*)self, param1);
+}
+
+void q_webengineurlrequestinterceptor_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QWebEngineUrlRequestInterceptor_OnMetacast((QWebEngineUrlRequestInterceptor*)self, (intptr_t)callback);
+}
+
+void* q_webengineurlrequestinterceptor_qbase_metacast(void* self, const char* param1) {
+    return QWebEngineUrlRequestInterceptor_QBaseMetacast((QWebEngineUrlRequestInterceptor*)self, param1);
 }
 
 int32_t q_webengineurlrequestinterceptor_metacall(void* self, int32_t param1, int param2, void* param3) {

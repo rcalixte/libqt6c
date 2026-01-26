@@ -19,8 +19,24 @@ const QMetaObject* k_dragwidgetdecoratorbase_meta_object(void* self) {
     return KDragWidgetDecoratorBase_MetaObject((KDragWidgetDecoratorBase*)self);
 }
 
+void k_dragwidgetdecoratorbase_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KDragWidgetDecoratorBase_OnMetaObject((KDragWidgetDecoratorBase*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_dragwidgetdecoratorbase_qbase_meta_object(void* self) {
+    return KDragWidgetDecoratorBase_QBaseMetaObject((KDragWidgetDecoratorBase*)self);
+}
+
 void* k_dragwidgetdecoratorbase_metacast(void* self, const char* param1) {
     return KDragWidgetDecoratorBase_Metacast((KDragWidgetDecoratorBase*)self, param1);
+}
+
+void k_dragwidgetdecoratorbase_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KDragWidgetDecoratorBase_OnMetacast((KDragWidgetDecoratorBase*)self, (intptr_t)callback);
+}
+
+void* k_dragwidgetdecoratorbase_qbase_metacast(void* self, const char* param1) {
+    return KDragWidgetDecoratorBase_QBaseMetacast((KDragWidgetDecoratorBase*)self, param1);
 }
 
 int32_t k_dragwidgetdecoratorbase_metacall(void* self, int32_t param1, int param2, void* param3) {

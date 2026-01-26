@@ -27,8 +27,24 @@ const QMetaObject* q_soundeffect_meta_object(void* self) {
     return QSoundEffect_MetaObject((QSoundEffect*)self);
 }
 
+void q_soundeffect_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QSoundEffect_OnMetaObject((QSoundEffect*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_soundeffect_qbase_meta_object(void* self) {
+    return QSoundEffect_QBaseMetaObject((QSoundEffect*)self);
+}
+
 void* q_soundeffect_metacast(void* self, const char* param1) {
     return QSoundEffect_Metacast((QSoundEffect*)self, param1);
+}
+
+void q_soundeffect_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QSoundEffect_OnMetacast((QSoundEffect*)self, (intptr_t)callback);
+}
+
+void* q_soundeffect_qbase_metacast(void* self, const char* param1) {
+    return QSoundEffect_QBaseMetacast((QSoundEffect*)self, param1);
 }
 
 int32_t q_soundeffect_metacall(void* self, int32_t param1, int param2, void* param3) {

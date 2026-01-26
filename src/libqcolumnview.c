@@ -35,8 +35,24 @@ const QMetaObject* q_columnview_meta_object(void* self) {
     return QColumnView_MetaObject((QColumnView*)self);
 }
 
+void q_columnview_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QColumnView_OnMetaObject((QColumnView*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_columnview_qbase_meta_object(void* self) {
+    return QColumnView_QBaseMetaObject((QColumnView*)self);
+}
+
 void* q_columnview_metacast(void* self, const char* param1) {
     return QColumnView_Metacast((QColumnView*)self, param1);
+}
+
+void q_columnview_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QColumnView_OnMetacast((QColumnView*)self, (intptr_t)callback);
+}
+
+void* q_columnview_qbase_metacast(void* self, const char* param1) {
+    return QColumnView_QBaseMetacast((QColumnView*)self, param1);
 }
 
 int32_t q_columnview_metacall(void* self, int32_t param1, int param2, void* param3) {

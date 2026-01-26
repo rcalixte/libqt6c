@@ -44,8 +44,24 @@ const QMetaObject* k_combobox_meta_object(void* self) {
     return KComboBox_MetaObject((KComboBox*)self);
 }
 
+void k_combobox_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KComboBox_OnMetaObject((KComboBox*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_combobox_qbase_meta_object(void* self) {
+    return KComboBox_QBaseMetaObject((KComboBox*)self);
+}
+
 void* k_combobox_metacast(void* self, const char* param1) {
     return KComboBox_Metacast((KComboBox*)self, param1);
+}
+
+void k_combobox_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KComboBox_OnMetacast((KComboBox*)self, (intptr_t)callback);
+}
+
+void* k_combobox_qbase_metacast(void* self, const char* param1) {
+    return KComboBox_QBaseMetacast((KComboBox*)self, param1);
 }
 
 int32_t k_combobox_metacall(void* self, int32_t param1, int param2, void* param3) {

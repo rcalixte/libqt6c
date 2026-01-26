@@ -31,10 +31,41 @@ Accounts__Watch* q_accounts__watch_new2(void* parent);
 ///
 const QMetaObject* q_accounts__watch_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self Accounts__Watch*
+/// @param callback const QMetaObject* func()
+///
+void q_accounts__watch_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self Accounts__Watch*
+///
+const QMetaObject* q_accounts__watch_qbase_meta_object(void* self);
+
 /// @param self Accounts__Watch*
 /// @param param1 const char*
 ///
 void* q_accounts__watch_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self Accounts__Watch*
+/// @param callback void* func(Accounts__Watch* self, const char* param1)
+///
+void q_accounts__watch_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self Accounts__Watch*
+/// @param param1 const char*
+///
+void* q_accounts__watch_qbase_metacast(void* self, const char* param1);
 
 /// @param self Accounts__Watch*
 /// @param param1 enum QMetaObject__Call
@@ -871,10 +902,41 @@ Accounts__Account* q_accounts__account_new2(void* manager, const char* provider,
 ///
 const QMetaObject* q_accounts__account_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self Accounts__Account*
+/// @param callback const QMetaObject* func()
+///
+void q_accounts__account_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self Accounts__Account*
+///
+const QMetaObject* q_accounts__account_qbase_meta_object(void* self);
+
 /// @param self Accounts__Account*
 /// @param param1 const char*
 ///
 void* q_accounts__account_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self Accounts__Account*
+/// @param callback void* func(Accounts__Account* self, const char* param1)
+///
+void q_accounts__account_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self Accounts__Account*
+/// @param param1 const char*
+///
+void* q_accounts__account_qbase_metacast(void* self, const char* param1);
 
 /// @param self Accounts__Account*
 /// @param param1 enum QMetaObject__Call

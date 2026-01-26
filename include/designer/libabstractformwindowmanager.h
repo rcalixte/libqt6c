@@ -31,10 +31,41 @@ QDesignerFormWindowManagerInterface* q_designerformwindowmanagerinterface_new2(v
 ///
 const QMetaObject* q_designerformwindowmanagerinterface_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QDesignerFormWindowManagerInterface*
+/// @param callback const QMetaObject* func()
+///
+void q_designerformwindowmanagerinterface_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QDesignerFormWindowManagerInterface*
+///
+const QMetaObject* q_designerformwindowmanagerinterface_qbase_meta_object(void* self);
+
 /// @param self QDesignerFormWindowManagerInterface*
 /// @param param1 const char*
 ///
 void* q_designerformwindowmanagerinterface_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QDesignerFormWindowManagerInterface*
+/// @param callback void* func(QDesignerFormWindowManagerInterface* self, const char* param1)
+///
+void q_designerformwindowmanagerinterface_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QDesignerFormWindowManagerInterface*
+/// @param param1 const char*
+///
+void* q_designerformwindowmanagerinterface_qbase_metacast(void* self, const char* param1);
 
 /// @param self QDesignerFormWindowManagerInterface*
 /// @param param1 enum QMetaObject__Call

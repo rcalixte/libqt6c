@@ -31,10 +31,41 @@ QSplineSeries* q_splineseries_new2(void* parent);
 ///
 const QMetaObject* q_splineseries_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QSplineSeries*
+/// @param callback const QMetaObject* func()
+///
+void q_splineseries_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QSplineSeries*
+///
+const QMetaObject* q_splineseries_qbase_meta_object(void* self);
+
 /// @param self QSplineSeries*
 /// @param param1 const char*
 ///
 void* q_splineseries_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QSplineSeries*
+/// @param callback void* func(QSplineSeries* self, const char* param1)
+///
+void q_splineseries_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QSplineSeries*
+/// @param param1 const char*
+///
+void* q_splineseries_qbase_metacast(void* self, const char* param1);
 
 /// @param self QSplineSeries*
 /// @param param1 enum QMetaObject__Call

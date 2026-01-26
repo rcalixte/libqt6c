@@ -29,8 +29,24 @@ const QMetaObject* q_temporaryfile_meta_object(void* self) {
     return QTemporaryFile_MetaObject((QTemporaryFile*)self);
 }
 
+void q_temporaryfile_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QTemporaryFile_OnMetaObject((QTemporaryFile*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_temporaryfile_qbase_meta_object(void* self) {
+    return QTemporaryFile_QBaseMetaObject((QTemporaryFile*)self);
+}
+
 void* q_temporaryfile_metacast(void* self, const char* param1) {
     return QTemporaryFile_Metacast((QTemporaryFile*)self, param1);
+}
+
+void q_temporaryfile_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QTemporaryFile_OnMetacast((QTemporaryFile*)self, (intptr_t)callback);
+}
+
+void* q_temporaryfile_qbase_metacast(void* self, const char* param1) {
+    return QTemporaryFile_QBaseMetacast((QTemporaryFile*)self, param1);
 }
 
 int32_t q_temporaryfile_metacall(void* self, int32_t param1, int param2, void* param3) {

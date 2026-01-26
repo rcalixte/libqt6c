@@ -36,8 +36,24 @@ const QMetaObject* k_datepicker_meta_object(void* self) {
     return KDatePicker_MetaObject((KDatePicker*)self);
 }
 
+void k_datepicker_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KDatePicker_OnMetaObject((KDatePicker*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_datepicker_qbase_meta_object(void* self) {
+    return KDatePicker_QBaseMetaObject((KDatePicker*)self);
+}
+
 void* k_datepicker_metacast(void* self, const char* param1) {
     return KDatePicker_Metacast((KDatePicker*)self, param1);
+}
+
+void k_datepicker_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KDatePicker_OnMetacast((KDatePicker*)self, (intptr_t)callback);
+}
+
+void* k_datepicker_qbase_metacast(void* self, const char* param1) {
+    return KDatePicker_QBaseMetacast((KDatePicker*)self, param1);
 }
 
 int32_t k_datepicker_metacall(void* self, int32_t param1, int param2, void* param3) {

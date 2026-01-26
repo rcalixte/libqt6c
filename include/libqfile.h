@@ -48,10 +48,41 @@ QFile* q_file_new4(const char* name, void* parent);
 ///
 const QMetaObject* q_file_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QFile*
+/// @param callback const QMetaObject* func()
+///
+void q_file_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QFile*
+///
+const QMetaObject* q_file_qbase_meta_object(void* self);
+
 /// @param self QFile*
 /// @param param1 const char*
 ///
 void* q_file_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QFile*
+/// @param callback void* func(QFile* self, const char* param1)
+///
+void q_file_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QFile*
+/// @param param1 const char*
+///
+void* q_file_qbase_metacast(void* self, const char* param1);
 
 /// @param self QFile*
 /// @param param1 enum QMetaObject__Call

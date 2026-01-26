@@ -31,10 +31,41 @@ QTransposeProxyModel* q_transposeproxymodel_new2(void* parent);
 ///
 const QMetaObject* q_transposeproxymodel_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QTransposeProxyModel*
+/// @param callback const QMetaObject* func()
+///
+void q_transposeproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QTransposeProxyModel*
+///
+const QMetaObject* q_transposeproxymodel_qbase_meta_object(void* self);
+
 /// @param self QTransposeProxyModel*
 /// @param param1 const char*
 ///
 void* q_transposeproxymodel_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QTransposeProxyModel*
+/// @param callback void* func(QTransposeProxyModel* self, const char* param1)
+///
+void q_transposeproxymodel_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QTransposeProxyModel*
+/// @param param1 const char*
+///
+void* q_transposeproxymodel_qbase_metacast(void* self, const char* param1);
 
 /// @param self QTransposeProxyModel*
 /// @param param1 enum QMetaObject__Call

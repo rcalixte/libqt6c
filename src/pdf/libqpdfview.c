@@ -32,8 +32,24 @@ const QMetaObject* q_pdfview_meta_object(void* self) {
     return QPdfView_MetaObject((QPdfView*)self);
 }
 
+void q_pdfview_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QPdfView_OnMetaObject((QPdfView*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_pdfview_qbase_meta_object(void* self) {
+    return QPdfView_QBaseMetaObject((QPdfView*)self);
+}
+
 void* q_pdfview_metacast(void* self, const char* param1) {
     return QPdfView_Metacast((QPdfView*)self, param1);
+}
+
+void q_pdfview_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QPdfView_OnMetacast((QPdfView*)self, (intptr_t)callback);
+}
+
+void* q_pdfview_qbase_metacast(void* self, const char* param1) {
+    return QPdfView_QBaseMetacast((QPdfView*)self, param1);
 }
 
 int32_t q_pdfview_metacall(void* self, int32_t param1, int param2, void* param3) {

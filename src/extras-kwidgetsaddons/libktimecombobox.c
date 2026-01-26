@@ -29,8 +29,24 @@ const QMetaObject* k_timecombobox_meta_object(void* self) {
     return KTimeComboBox_MetaObject((KTimeComboBox*)self);
 }
 
+void k_timecombobox_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KTimeComboBox_OnMetaObject((KTimeComboBox*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_timecombobox_qbase_meta_object(void* self) {
+    return KTimeComboBox_QBaseMetaObject((KTimeComboBox*)self);
+}
+
 void* k_timecombobox_metacast(void* self, const char* param1) {
     return KTimeComboBox_Metacast((KTimeComboBox*)self, param1);
+}
+
+void k_timecombobox_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KTimeComboBox_OnMetacast((KTimeComboBox*)self, (intptr_t)callback);
+}
+
+void* k_timecombobox_qbase_metacast(void* self, const char* param1) {
+    return KTimeComboBox_QBaseMetacast((KTimeComboBox*)self, param1);
 }
 
 int32_t k_timecombobox_metacall(void* self, int32_t param1, int param2, void* param3) {

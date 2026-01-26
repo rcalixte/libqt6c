@@ -28,8 +28,24 @@ const QMetaObject* q_propertyanimation_meta_object(void* self) {
     return QPropertyAnimation_MetaObject((QPropertyAnimation*)self);
 }
 
+void q_propertyanimation_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QPropertyAnimation_OnMetaObject((QPropertyAnimation*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_propertyanimation_qbase_meta_object(void* self) {
+    return QPropertyAnimation_QBaseMetaObject((QPropertyAnimation*)self);
+}
+
 void* q_propertyanimation_metacast(void* self, const char* param1) {
     return QPropertyAnimation_Metacast((QPropertyAnimation*)self, param1);
+}
+
+void q_propertyanimation_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QPropertyAnimation_OnMetacast((QPropertyAnimation*)self, (intptr_t)callback);
+}
+
+void* q_propertyanimation_qbase_metacast(void* self, const char* param1) {
+    return QPropertyAnimation_QBaseMetacast((QPropertyAnimation*)self, param1);
 }
 
 int32_t q_propertyanimation_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -25,8 +25,24 @@ const QMetaObject* k_collapsiblegroupbox_meta_object(void* self) {
     return KCollapsibleGroupBox_MetaObject((KCollapsibleGroupBox*)self);
 }
 
+void k_collapsiblegroupbox_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KCollapsibleGroupBox_OnMetaObject((KCollapsibleGroupBox*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_collapsiblegroupbox_qbase_meta_object(void* self) {
+    return KCollapsibleGroupBox_QBaseMetaObject((KCollapsibleGroupBox*)self);
+}
+
 void* k_collapsiblegroupbox_metacast(void* self, const char* param1) {
     return KCollapsibleGroupBox_Metacast((KCollapsibleGroupBox*)self, param1);
+}
+
+void k_collapsiblegroupbox_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KCollapsibleGroupBox_OnMetacast((KCollapsibleGroupBox*)self, (intptr_t)callback);
+}
+
+void* k_collapsiblegroupbox_qbase_metacast(void* self, const char* param1) {
+    return KCollapsibleGroupBox_QBaseMetacast((KCollapsibleGroupBox*)self, param1);
 }
 
 int32_t k_collapsiblegroupbox_metacall(void* self, int32_t param1, int param2, void* param3) {

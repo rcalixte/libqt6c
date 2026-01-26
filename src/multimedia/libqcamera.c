@@ -36,8 +36,24 @@ const QMetaObject* q_camera_meta_object(void* self) {
     return QCamera_MetaObject((QCamera*)self);
 }
 
+void q_camera_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCamera_OnMetaObject((QCamera*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_camera_qbase_meta_object(void* self) {
+    return QCamera_QBaseMetaObject((QCamera*)self);
+}
+
 void* q_camera_metacast(void* self, const char* param1) {
     return QCamera_Metacast((QCamera*)self, param1);
+}
+
+void q_camera_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCamera_OnMetacast((QCamera*)self, (intptr_t)callback);
+}
+
+void* q_camera_qbase_metacast(void* self, const char* param1) {
+    return QCamera_QBaseMetacast((QCamera*)self, param1);
 }
 
 int32_t q_camera_metacall(void* self, int32_t param1, int param2, void* param3) {

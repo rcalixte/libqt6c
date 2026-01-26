@@ -490,10 +490,41 @@ QAbstractItemModel* q_abstractitemmodel_new2(void* parent);
 ///
 const QMetaObject* q_abstractitemmodel_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QAbstractItemModel*
+/// @param callback const QMetaObject* func()
+///
+void q_abstractitemmodel_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QAbstractItemModel*
+///
+const QMetaObject* q_abstractitemmodel_qbase_meta_object(void* self);
+
 /// @param self QAbstractItemModel*
 /// @param param1 const char*
 ///
 void* q_abstractitemmodel_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QAbstractItemModel*
+/// @param callback void* func(QAbstractItemModel* self, const char* param1)
+///
+void q_abstractitemmodel_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QAbstractItemModel*
+/// @param param1 const char*
+///
+void* q_abstractitemmodel_qbase_metacast(void* self, const char* param1);
 
 /// @param self QAbstractItemModel*
 /// @param param1 enum QMetaObject__Call
@@ -3307,10 +3338,41 @@ QAbstractTableModel* q_abstracttablemodel_new2(void* parent);
 ///
 const QMetaObject* q_abstracttablemodel_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QAbstractTableModel*
+/// @param callback const QMetaObject* func()
+///
+void q_abstracttablemodel_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QAbstractTableModel*
+///
+const QMetaObject* q_abstracttablemodel_qbase_meta_object(void* self);
+
 /// @param self QAbstractTableModel*
 /// @param param1 const char*
 ///
 void* q_abstracttablemodel_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QAbstractTableModel*
+/// @param callback void* func(QAbstractTableModel* self, const char* param1)
+///
+void q_abstracttablemodel_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QAbstractTableModel*
+/// @param param1 const char*
+///
+void* q_abstracttablemodel_qbase_metacast(void* self, const char* param1);
 
 /// @param self QAbstractTableModel*
 /// @param param1 enum QMetaObject__Call
@@ -6602,10 +6664,41 @@ QAbstractListModel* q_abstractlistmodel_new2(void* parent);
 ///
 const QMetaObject* q_abstractlistmodel_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QAbstractListModel*
+/// @param callback const QMetaObject* func()
+///
+void q_abstractlistmodel_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QAbstractListModel*
+///
+const QMetaObject* q_abstractlistmodel_qbase_meta_object(void* self);
+
 /// @param self QAbstractListModel*
 /// @param param1 const char*
 ///
 void* q_abstractlistmodel_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QAbstractListModel*
+/// @param callback void* func(QAbstractListModel* self, const char* param1)
+///
+void q_abstractlistmodel_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QAbstractListModel*
+/// @param param1 const char*
+///
+void* q_abstractlistmodel_qbase_metacast(void* self, const char* param1);
 
 /// @param self QAbstractListModel*
 /// @param param1 enum QMetaObject__Call

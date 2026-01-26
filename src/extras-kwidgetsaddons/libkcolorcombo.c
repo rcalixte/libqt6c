@@ -29,8 +29,24 @@ const QMetaObject* k_colorcombo_meta_object(void* self) {
     return KColorCombo_MetaObject((KColorCombo*)self);
 }
 
+void k_colorcombo_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KColorCombo_OnMetaObject((KColorCombo*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_colorcombo_qbase_meta_object(void* self) {
+    return KColorCombo_QBaseMetaObject((KColorCombo*)self);
+}
+
 void* k_colorcombo_metacast(void* self, const char* param1) {
     return KColorCombo_Metacast((KColorCombo*)self, param1);
+}
+
+void k_colorcombo_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KColorCombo_OnMetacast((KColorCombo*)self, (intptr_t)callback);
+}
+
+void* k_colorcombo_qbase_metacast(void* self, const char* param1) {
+    return KColorCombo_QBaseMetacast((KColorCombo*)self, param1);
 }
 
 int32_t k_colorcombo_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -18,8 +18,24 @@ const QMetaObject* q_localserver_meta_object(void* self) {
     return QLocalServer_MetaObject((QLocalServer*)self);
 }
 
+void q_localserver_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QLocalServer_OnMetaObject((QLocalServer*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_localserver_qbase_meta_object(void* self) {
+    return QLocalServer_QBaseMetaObject((QLocalServer*)self);
+}
+
 void* q_localserver_metacast(void* self, const char* param1) {
     return QLocalServer_Metacast((QLocalServer*)self, param1);
+}
+
+void q_localserver_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QLocalServer_OnMetacast((QLocalServer*)self, (intptr_t)callback);
+}
+
+void* q_localserver_qbase_metacast(void* self, const char* param1) {
+    return QLocalServer_QBaseMetacast((QLocalServer*)self, param1);
 }
 
 int32_t q_localserver_metacall(void* self, int32_t param1, int param2, void* param3) {

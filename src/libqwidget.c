@@ -50,8 +50,24 @@ const QMetaObject* q_widget_meta_object(void* self) {
     return QWidget_MetaObject((QWidget*)self);
 }
 
+void q_widget_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QWidget_OnMetaObject((QWidget*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_widget_qbase_meta_object(void* self) {
+    return QWidget_QBaseMetaObject((QWidget*)self);
+}
+
 void* q_widget_metacast(void* self, const char* param1) {
     return QWidget_Metacast((QWidget*)self, param1);
+}
+
+void q_widget_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QWidget_OnMetacast((QWidget*)self, (intptr_t)callback);
+}
+
+void* q_widget_qbase_metacast(void* self, const char* param1) {
+    return QWidget_QBaseMetacast((QWidget*)self, param1);
 }
 
 int32_t q_widget_metacall(void* self, int32_t param1, int param2, void* param3) {

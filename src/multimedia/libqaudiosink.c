@@ -36,8 +36,24 @@ const QMetaObject* q_audiosink_meta_object(void* self) {
     return QAudioSink_MetaObject((QAudioSink*)self);
 }
 
+void q_audiosink_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QAudioSink_OnMetaObject((QAudioSink*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_audiosink_qbase_meta_object(void* self) {
+    return QAudioSink_QBaseMetaObject((QAudioSink*)self);
+}
+
 void* q_audiosink_metacast(void* self, const char* param1) {
     return QAudioSink_Metacast((QAudioSink*)self, param1);
+}
+
+void q_audiosink_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QAudioSink_OnMetacast((QAudioSink*)self, (intptr_t)callback);
+}
+
+void* q_audiosink_qbase_metacast(void* self, const char* param1) {
+    return QAudioSink_QBaseMetacast((QAudioSink*)self, param1);
 }
 
 int32_t q_audiosink_metacall(void* self, int32_t param1, int param2, void* param3) {

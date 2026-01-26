@@ -26,8 +26,24 @@ const QMetaObject* k_sslcertificatebox_meta_object(void* self) {
     return KSslCertificateBox_MetaObject((KSslCertificateBox*)self);
 }
 
+void k_sslcertificatebox_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KSslCertificateBox_OnMetaObject((KSslCertificateBox*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_sslcertificatebox_qbase_meta_object(void* self) {
+    return KSslCertificateBox_QBaseMetaObject((KSslCertificateBox*)self);
+}
+
 void* k_sslcertificatebox_metacast(void* self, const char* param1) {
     return KSslCertificateBox_Metacast((KSslCertificateBox*)self, param1);
+}
+
+void k_sslcertificatebox_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KSslCertificateBox_OnMetacast((KSslCertificateBox*)self, (intptr_t)callback);
+}
+
+void* k_sslcertificatebox_qbase_metacast(void* self, const char* param1) {
+    return KSslCertificateBox_QBaseMetacast((KSslCertificateBox*)self, param1);
 }
 
 int32_t k_sslcertificatebox_metacall(void* self, int32_t param1, int param2, void* param3) {

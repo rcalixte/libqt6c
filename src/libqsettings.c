@@ -71,8 +71,24 @@ const QMetaObject* q_settings_meta_object(void* self) {
     return QSettings_MetaObject((QSettings*)self);
 }
 
+void q_settings_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QSettings_OnMetaObject((QSettings*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_settings_qbase_meta_object(void* self) {
+    return QSettings_QBaseMetaObject((QSettings*)self);
+}
+
 void* q_settings_metacast(void* self, const char* param1) {
     return QSettings_Metacast((QSettings*)self, param1);
+}
+
+void q_settings_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QSettings_OnMetacast((QSettings*)self, (intptr_t)callback);
+}
+
+void* q_settings_qbase_metacast(void* self, const char* param1) {
+    return QSettings_QBaseMetacast((QSettings*)self, param1);
 }
 
 int32_t q_settings_metacall(void* self, int32_t param1, int param2, void* param3) {

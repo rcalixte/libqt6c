@@ -25,8 +25,24 @@ const QMetaObject* q_pdflinkmodel_meta_object(void* self) {
     return QPdfLinkModel_MetaObject((QPdfLinkModel*)self);
 }
 
+void q_pdflinkmodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QPdfLinkModel_OnMetaObject((QPdfLinkModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_pdflinkmodel_qbase_meta_object(void* self) {
+    return QPdfLinkModel_QBaseMetaObject((QPdfLinkModel*)self);
+}
+
 void* q_pdflinkmodel_metacast(void* self, const char* param1) {
     return QPdfLinkModel_Metacast((QPdfLinkModel*)self, param1);
+}
+
+void q_pdflinkmodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QPdfLinkModel_OnMetacast((QPdfLinkModel*)self, (intptr_t)callback);
+}
+
+void* q_pdflinkmodel_qbase_metacast(void* self, const char* param1) {
+    return QPdfLinkModel_QBaseMetacast((QPdfLinkModel*)self, param1);
 }
 
 int32_t q_pdflinkmodel_metacall(void* self, int32_t param1, int param2, void* param3) {

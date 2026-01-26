@@ -76,8 +76,24 @@ const QMetaObject* q_pointingdevice_meta_object(void* self) {
     return QPointingDevice_MetaObject((QPointingDevice*)self);
 }
 
+void q_pointingdevice_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QPointingDevice_OnMetaObject((QPointingDevice*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_pointingdevice_qbase_meta_object(void* self) {
+    return QPointingDevice_QBaseMetaObject((QPointingDevice*)self);
+}
+
 void* q_pointingdevice_metacast(void* self, const char* param1) {
     return QPointingDevice_Metacast((QPointingDevice*)self, param1);
+}
+
+void q_pointingdevice_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QPointingDevice_OnMetacast((QPointingDevice*)self, (intptr_t)callback);
+}
+
+void* q_pointingdevice_qbase_metacast(void* self, const char* param1) {
+    return QPointingDevice_QBaseMetacast((QPointingDevice*)self, param1);
 }
 
 int32_t q_pointingdevice_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -31,10 +31,41 @@ QPdfLinkModel* q_pdflinkmodel_new2(void* parent);
 ///
 const QMetaObject* q_pdflinkmodel_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QPdfLinkModel*
+/// @param callback const QMetaObject* func()
+///
+void q_pdflinkmodel_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QPdfLinkModel*
+///
+const QMetaObject* q_pdflinkmodel_qbase_meta_object(void* self);
+
 /// @param self QPdfLinkModel*
 /// @param param1 const char*
 ///
 void* q_pdflinkmodel_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QPdfLinkModel*
+/// @param callback void* func(QPdfLinkModel* self, const char* param1)
+///
+void q_pdflinkmodel_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QPdfLinkModel*
+/// @param param1 const char*
+///
+void* q_pdflinkmodel_qbase_metacast(void* self, const char* param1);
 
 /// @param self QPdfLinkModel*
 /// @param param1 enum QMetaObject__Call

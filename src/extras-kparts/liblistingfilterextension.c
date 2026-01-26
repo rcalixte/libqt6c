@@ -15,8 +15,24 @@ const QMetaObject* k_parts__listingfilterextension_meta_object(void* self) {
     return KParts__ListingFilterExtension_MetaObject((KParts__ListingFilterExtension*)self);
 }
 
+void k_parts__listingfilterextension_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KParts__ListingFilterExtension_OnMetaObject((KParts__ListingFilterExtension*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_parts__listingfilterextension_qbase_meta_object(void* self) {
+    return KParts__ListingFilterExtension_QBaseMetaObject((KParts__ListingFilterExtension*)self);
+}
+
 void* k_parts__listingfilterextension_metacast(void* self, const char* param1) {
     return KParts__ListingFilterExtension_Metacast((KParts__ListingFilterExtension*)self, param1);
+}
+
+void k_parts__listingfilterextension_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KParts__ListingFilterExtension_OnMetacast((KParts__ListingFilterExtension*)self, (intptr_t)callback);
+}
+
+void* k_parts__listingfilterextension_qbase_metacast(void* self, const char* param1) {
+    return KParts__ListingFilterExtension_QBaseMetacast((KParts__ListingFilterExtension*)self, param1);
 }
 
 int32_t k_parts__listingfilterextension_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -19,8 +19,24 @@ const QMetaObject* q_signon__authservice_meta_object(void* self) {
     return SignOn__AuthService_MetaObject((SignOn__AuthService*)self);
 }
 
+void q_signon__authservice_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    SignOn__AuthService_OnMetaObject((SignOn__AuthService*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_signon__authservice_qbase_meta_object(void* self) {
+    return SignOn__AuthService_QBaseMetaObject((SignOn__AuthService*)self);
+}
+
 void* q_signon__authservice_metacast(void* self, const char* param1) {
     return SignOn__AuthService_Metacast((SignOn__AuthService*)self, param1);
+}
+
+void q_signon__authservice_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    SignOn__AuthService_OnMetacast((SignOn__AuthService*)self, (intptr_t)callback);
+}
+
+void* q_signon__authservice_qbase_metacast(void* self, const char* param1) {
+    return SignOn__AuthService_QBaseMetacast((SignOn__AuthService*)self, param1);
 }
 
 int32_t q_signon__authservice_metacall(void* self, int32_t param1, int param2, void* param3) {

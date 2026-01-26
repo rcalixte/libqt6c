@@ -38,8 +38,24 @@ const QMetaObject* k_codecaction_meta_object(void* self) {
     return KCodecAction_MetaObject((KCodecAction*)self);
 }
 
+void k_codecaction_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KCodecAction_OnMetaObject((KCodecAction*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_codecaction_qbase_meta_object(void* self) {
+    return KCodecAction_QBaseMetaObject((KCodecAction*)self);
+}
+
 void* k_codecaction_metacast(void* self, const char* param1) {
     return KCodecAction_Metacast((KCodecAction*)self, param1);
+}
+
+void k_codecaction_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KCodecAction_OnMetacast((KCodecAction*)self, (intptr_t)callback);
+}
+
+void* k_codecaction_qbase_metacast(void* self, const char* param1) {
+    return KCodecAction_QBaseMetacast((KCodecAction*)self, param1);
 }
 
 int32_t k_codecaction_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -88,10 +88,41 @@ KRuler* k_ruler_new8(int32_t orient, int widgetWidth, void* parent, int32_t f);
 ///
 const QMetaObject* k_ruler_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KRuler*
+/// @param callback const QMetaObject* func()
+///
+void k_ruler_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KRuler*
+///
+const QMetaObject* k_ruler_qbase_meta_object(void* self);
+
 /// @param self KRuler*
 /// @param param1 const char*
 ///
 void* k_ruler_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KRuler*
+/// @param callback void* func(KRuler* self, const char* param1)
+///
+void k_ruler_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KRuler*
+/// @param param1 const char*
+///
+void* k_ruler_qbase_metacast(void* self, const char* param1);
 
 /// @param self KRuler*
 /// @param param1 enum QMetaObject__Call

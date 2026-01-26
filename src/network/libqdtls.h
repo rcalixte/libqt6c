@@ -31,10 +31,41 @@ QDtlsClientVerifier* q_dtlsclientverifier_new2(void* parent);
 ///
 const QMetaObject* q_dtlsclientverifier_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QDtlsClientVerifier*
+/// @param callback const QMetaObject* func()
+///
+void q_dtlsclientverifier_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QDtlsClientVerifier*
+///
+const QMetaObject* q_dtlsclientverifier_qbase_meta_object(void* self);
+
 /// @param self QDtlsClientVerifier*
 /// @param param1 const char*
 ///
 void* q_dtlsclientverifier_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QDtlsClientVerifier*
+/// @param callback void* func(QDtlsClientVerifier* self, const char* param1)
+///
+void q_dtlsclientverifier_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QDtlsClientVerifier*
+/// @param param1 const char*
+///
+void* q_dtlsclientverifier_qbase_metacast(void* self, const char* param1);
 
 /// @param self QDtlsClientVerifier*
 /// @param param1 enum QMetaObject__Call
@@ -902,10 +933,41 @@ QDtls* q_dtls_new2(int32_t mode, void* parent);
 ///
 const QMetaObject* q_dtls_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QDtls*
+/// @param callback const QMetaObject* func()
+///
+void q_dtls_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QDtls*
+///
+const QMetaObject* q_dtls_qbase_meta_object(void* self);
+
 /// @param self QDtls*
 /// @param param1 const char*
 ///
 void* q_dtls_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QDtls*
+/// @param callback void* func(QDtls* self, const char* param1)
+///
+void q_dtls_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QDtls*
+/// @param param1 const char*
+///
+void* q_dtls_qbase_metacast(void* self, const char* param1);
 
 /// @param self QDtls*
 /// @param param1 enum QMetaObject__Call

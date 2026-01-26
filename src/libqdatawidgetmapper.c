@@ -20,8 +20,24 @@ const QMetaObject* q_datawidgetmapper_meta_object(void* self) {
     return QDataWidgetMapper_MetaObject((QDataWidgetMapper*)self);
 }
 
+void q_datawidgetmapper_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDataWidgetMapper_OnMetaObject((QDataWidgetMapper*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_datawidgetmapper_qbase_meta_object(void* self) {
+    return QDataWidgetMapper_QBaseMetaObject((QDataWidgetMapper*)self);
+}
+
 void* q_datawidgetmapper_metacast(void* self, const char* param1) {
     return QDataWidgetMapper_Metacast((QDataWidgetMapper*)self, param1);
+}
+
+void q_datawidgetmapper_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDataWidgetMapper_OnMetacast((QDataWidgetMapper*)self, (intptr_t)callback);
+}
+
+void* q_datawidgetmapper_qbase_metacast(void* self, const char* param1) {
+    return QDataWidgetMapper_QBaseMetacast((QDataWidgetMapper*)self, param1);
 }
 
 int32_t q_datawidgetmapper_metacall(void* self, int32_t param1, int param2, void* param3) {

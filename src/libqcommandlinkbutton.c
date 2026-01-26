@@ -44,8 +44,24 @@ const QMetaObject* q_commandlinkbutton_meta_object(void* self) {
     return QCommandLinkButton_MetaObject((QCommandLinkButton*)self);
 }
 
+void q_commandlinkbutton_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCommandLinkButton_OnMetaObject((QCommandLinkButton*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_commandlinkbutton_qbase_meta_object(void* self) {
+    return QCommandLinkButton_QBaseMetaObject((QCommandLinkButton*)self);
+}
+
 void* q_commandlinkbutton_metacast(void* self, const char* param1) {
     return QCommandLinkButton_Metacast((QCommandLinkButton*)self, param1);
+}
+
+void q_commandlinkbutton_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCommandLinkButton_OnMetacast((QCommandLinkButton*)self, (intptr_t)callback);
+}
+
+void* q_commandlinkbutton_qbase_metacast(void* self, const char* param1) {
+    return QCommandLinkButton_QBaseMetacast((QCommandLinkButton*)self, param1);
 }
 
 int32_t q_commandlinkbutton_metacall(void* self, int32_t param1, int param2, void* param3) {

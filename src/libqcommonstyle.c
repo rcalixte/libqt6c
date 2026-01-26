@@ -25,8 +25,24 @@ const QMetaObject* q_commonstyle_meta_object(void* self) {
     return QCommonStyle_MetaObject((QCommonStyle*)self);
 }
 
+void q_commonstyle_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCommonStyle_OnMetaObject((QCommonStyle*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_commonstyle_qbase_meta_object(void* self) {
+    return QCommonStyle_QBaseMetaObject((QCommonStyle*)self);
+}
+
 void* q_commonstyle_metacast(void* self, const char* param1) {
     return QCommonStyle_Metacast((QCommonStyle*)self, param1);
+}
+
+void q_commonstyle_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCommonStyle_OnMetacast((QCommonStyle*)self, (intptr_t)callback);
+}
+
+void* q_commonstyle_qbase_metacast(void* self, const char* param1) {
+    return QCommonStyle_QBaseMetacast((QCommonStyle*)self, param1);
 }
 
 int32_t q_commonstyle_metacall(void* self, int32_t param1, int param2, void* param3) {

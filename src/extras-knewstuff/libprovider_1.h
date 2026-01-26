@@ -23,10 +23,41 @@ KNSCore__Provider* k_nscore__provider_new();
 ///
 const QMetaObject* k_nscore__provider_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KNSCore__Provider*
+/// @param callback const QMetaObject* func()
+///
+void k_nscore__provider_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KNSCore__Provider*
+///
+const QMetaObject* k_nscore__provider_qbase_meta_object(void* self);
+
 /// @param self KNSCore__Provider*
 /// @param param1 const char*
 ///
 void* k_nscore__provider_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KNSCore__Provider*
+/// @param callback void* func(KNSCore__Provider* self, const char* param1)
+///
+void k_nscore__provider_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KNSCore__Provider*
+/// @param param1 const char*
+///
+void* k_nscore__provider_qbase_metacast(void* self, const char* param1);
 
 /// @param self KNSCore__Provider*
 /// @param param1 enum QMetaObject__Call

@@ -24,8 +24,24 @@ const QMetaObject* k_io__faviconrequestjob_meta_object(void* self) {
     return KIO__FavIconRequestJob_MetaObject((KIO__FavIconRequestJob*)self);
 }
 
+void k_io__faviconrequestjob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KIO__FavIconRequestJob_OnMetaObject((KIO__FavIconRequestJob*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_io__faviconrequestjob_qbase_meta_object(void* self) {
+    return KIO__FavIconRequestJob_QBaseMetaObject((KIO__FavIconRequestJob*)self);
+}
+
 void* k_io__faviconrequestjob_metacast(void* self, const char* param1) {
     return KIO__FavIconRequestJob_Metacast((KIO__FavIconRequestJob*)self, param1);
+}
+
+void k_io__faviconrequestjob_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KIO__FavIconRequestJob_OnMetacast((KIO__FavIconRequestJob*)self, (intptr_t)callback);
+}
+
+void* k_io__faviconrequestjob_qbase_metacast(void* self, const char* param1) {
+    return KIO__FavIconRequestJob_QBaseMetacast((KIO__FavIconRequestJob*)self, param1);
 }
 
 int32_t k_io__faviconrequestjob_metacall(void* self, int32_t param1, int param2, void* param3) {

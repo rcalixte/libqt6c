@@ -19,8 +19,24 @@ const QMetaObject* q_thread_meta_object(void* self) {
     return QThread_MetaObject((QThread*)self);
 }
 
+void q_thread_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QThread_OnMetaObject((QThread*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_thread_qbase_meta_object(void* self) {
+    return QThread_QBaseMetaObject((QThread*)self);
+}
+
 void* q_thread_metacast(void* self, const char* param1) {
     return QThread_Metacast((QThread*)self, param1);
+}
+
+void q_thread_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QThread_OnMetacast((QThread*)self, (intptr_t)callback);
+}
+
+void* q_thread_qbase_metacast(void* self, const char* param1) {
+    return QThread_QBaseMetacast((QThread*)self, param1);
 }
 
 int32_t q_thread_metacall(void* self, int32_t param1, int param2, void* param3) {

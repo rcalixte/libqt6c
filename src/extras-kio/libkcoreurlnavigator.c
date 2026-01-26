@@ -23,8 +23,24 @@ const QMetaObject* k_coreurlnavigator_meta_object(void* self) {
     return KCoreUrlNavigator_MetaObject((KCoreUrlNavigator*)self);
 }
 
+void k_coreurlnavigator_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KCoreUrlNavigator_OnMetaObject((KCoreUrlNavigator*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_coreurlnavigator_qbase_meta_object(void* self) {
+    return KCoreUrlNavigator_QBaseMetaObject((KCoreUrlNavigator*)self);
+}
+
 void* k_coreurlnavigator_metacast(void* self, const char* param1) {
     return KCoreUrlNavigator_Metacast((KCoreUrlNavigator*)self, param1);
+}
+
+void k_coreurlnavigator_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KCoreUrlNavigator_OnMetacast((KCoreUrlNavigator*)self, (intptr_t)callback);
+}
+
+void* k_coreurlnavigator_qbase_metacast(void* self, const char* param1) {
+    return KCoreUrlNavigator_QBaseMetacast((KCoreUrlNavigator*)self, param1);
 }
 
 int32_t k_coreurlnavigator_metacall(void* self, int32_t param1, int param2, void* param3) {

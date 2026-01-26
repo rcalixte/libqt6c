@@ -31,10 +31,41 @@ QSequentialAnimationGroup* q_sequentialanimationgroup_new2(void* parent);
 ///
 const QMetaObject* q_sequentialanimationgroup_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QSequentialAnimationGroup*
+/// @param callback const QMetaObject* func()
+///
+void q_sequentialanimationgroup_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QSequentialAnimationGroup*
+///
+const QMetaObject* q_sequentialanimationgroup_qbase_meta_object(void* self);
+
 /// @param self QSequentialAnimationGroup*
 /// @param param1 const char*
 ///
 void* q_sequentialanimationgroup_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QSequentialAnimationGroup*
+/// @param callback void* func(QSequentialAnimationGroup* self, const char* param1)
+///
+void q_sequentialanimationgroup_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QSequentialAnimationGroup*
+/// @param param1 const char*
+///
+void* q_sequentialanimationgroup_qbase_metacast(void* self, const char* param1);
 
 /// @param self QSequentialAnimationGroup*
 /// @param param1 enum QMetaObject__Call

@@ -27,8 +27,24 @@ const QMetaObject* k_linkitemselectionmodel_meta_object(void* self) {
     return KLinkItemSelectionModel_MetaObject((KLinkItemSelectionModel*)self);
 }
 
+void k_linkitemselectionmodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KLinkItemSelectionModel_OnMetaObject((KLinkItemSelectionModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_linkitemselectionmodel_qbase_meta_object(void* self) {
+    return KLinkItemSelectionModel_QBaseMetaObject((KLinkItemSelectionModel*)self);
+}
+
 void* k_linkitemselectionmodel_metacast(void* self, const char* param1) {
     return KLinkItemSelectionModel_Metacast((KLinkItemSelectionModel*)self, param1);
+}
+
+void k_linkitemselectionmodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KLinkItemSelectionModel_OnMetacast((KLinkItemSelectionModel*)self, (intptr_t)callback);
+}
+
+void* k_linkitemselectionmodel_qbase_metacast(void* self, const char* param1) {
+    return KLinkItemSelectionModel_QBaseMetacast((KLinkItemSelectionModel*)self, param1);
 }
 
 int32_t k_linkitemselectionmodel_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -31,10 +31,41 @@ KColorCombo* k_colorcombo_new2();
 ///
 const QMetaObject* k_colorcombo_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KColorCombo*
+/// @param callback const QMetaObject* func()
+///
+void k_colorcombo_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KColorCombo*
+///
+const QMetaObject* k_colorcombo_qbase_meta_object(void* self);
+
 /// @param self KColorCombo*
 /// @param param1 const char*
 ///
 void* k_colorcombo_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KColorCombo*
+/// @param callback void* func(KColorCombo* self, const char* param1)
+///
+void k_colorcombo_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KColorCombo*
+/// @param param1 const char*
+///
+void* k_colorcombo_qbase_metacast(void* self, const char* param1);
 
 /// @param self KColorCombo*
 /// @param param1 enum QMetaObject__Call

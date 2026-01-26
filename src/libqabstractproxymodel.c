@@ -23,8 +23,24 @@ const QMetaObject* q_abstractproxymodel_meta_object(void* self) {
     return QAbstractProxyModel_MetaObject((QAbstractProxyModel*)self);
 }
 
+void q_abstractproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QAbstractProxyModel_OnMetaObject((QAbstractProxyModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_abstractproxymodel_qbase_meta_object(void* self) {
+    return QAbstractProxyModel_QBaseMetaObject((QAbstractProxyModel*)self);
+}
+
 void* q_abstractproxymodel_metacast(void* self, const char* param1) {
     return QAbstractProxyModel_Metacast((QAbstractProxyModel*)self, param1);
+}
+
+void q_abstractproxymodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QAbstractProxyModel_OnMetacast((QAbstractProxyModel*)self, (intptr_t)callback);
+}
+
+void* q_abstractproxymodel_qbase_metacast(void* self, const char* param1) {
+    return QAbstractProxyModel_QBaseMetacast((QAbstractProxyModel*)self, param1);
 }
 
 int32_t q_abstractproxymodel_metacall(void* self, int32_t param1, int param2, void* param3) {

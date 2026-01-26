@@ -25,8 +25,24 @@ const QMetaObject* k_sonnet__configview_meta_object(void* self) {
     return Sonnet__ConfigView_MetaObject((Sonnet__ConfigView*)self);
 }
 
+void k_sonnet__configview_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    Sonnet__ConfigView_OnMetaObject((Sonnet__ConfigView*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_sonnet__configview_qbase_meta_object(void* self) {
+    return Sonnet__ConfigView_QBaseMetaObject((Sonnet__ConfigView*)self);
+}
+
 void* k_sonnet__configview_metacast(void* self, const char* param1) {
     return Sonnet__ConfigView_Metacast((Sonnet__ConfigView*)self, param1);
+}
+
+void k_sonnet__configview_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    Sonnet__ConfigView_OnMetacast((Sonnet__ConfigView*)self, (intptr_t)callback);
+}
+
+void* k_sonnet__configview_qbase_metacast(void* self, const char* param1) {
+    return Sonnet__ConfigView_QBaseMetacast((Sonnet__ConfigView*)self, param1);
 }
 
 int32_t k_sonnet__configview_metacall(void* self, int32_t param1, int param2, void* param3) {

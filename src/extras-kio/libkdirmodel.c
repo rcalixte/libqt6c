@@ -25,8 +25,24 @@ const QMetaObject* k_dirmodel_meta_object(void* self) {
     return KDirModel_MetaObject((KDirModel*)self);
 }
 
+void k_dirmodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KDirModel_OnMetaObject((KDirModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_dirmodel_qbase_meta_object(void* self) {
+    return KDirModel_QBaseMetaObject((KDirModel*)self);
+}
+
 void* k_dirmodel_metacast(void* self, const char* param1) {
     return KDirModel_Metacast((KDirModel*)self, param1);
+}
+
+void k_dirmodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KDirModel_OnMetacast((KDirModel*)self, (intptr_t)callback);
+}
+
+void* k_dirmodel_qbase_metacast(void* self, const char* param1) {
+    return KDirModel_QBaseMetacast((KDirModel*)self, param1);
 }
 
 int32_t k_dirmodel_metacall(void* self, int32_t param1, int param2, void* param3) {

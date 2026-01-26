@@ -58,10 +58,41 @@ KUrlLabel* k_urllabel_new5(const char* url, const char* text, void* parent);
 ///
 const QMetaObject* k_urllabel_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KUrlLabel*
+/// @param callback const QMetaObject* func()
+///
+void k_urllabel_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KUrlLabel*
+///
+const QMetaObject* k_urllabel_qbase_meta_object(void* self);
+
 /// @param self KUrlLabel*
 /// @param param1 const char*
 ///
 void* k_urllabel_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KUrlLabel*
+/// @param callback void* func(KUrlLabel* self, const char* param1)
+///
+void k_urllabel_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KUrlLabel*
+/// @param param1 const char*
+///
+void* k_urllabel_qbase_metacast(void* self, const char* param1);
 
 /// @param self KUrlLabel*
 /// @param param1 enum QMetaObject__Call

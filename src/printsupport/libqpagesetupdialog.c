@@ -35,8 +35,24 @@ const QMetaObject* q_pagesetupdialog_meta_object(void* self) {
     return QPageSetupDialog_MetaObject((QPageSetupDialog*)self);
 }
 
+void q_pagesetupdialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QPageSetupDialog_OnMetaObject((QPageSetupDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_pagesetupdialog_qbase_meta_object(void* self) {
+    return QPageSetupDialog_QBaseMetaObject((QPageSetupDialog*)self);
+}
+
 void* q_pagesetupdialog_metacast(void* self, const char* param1) {
     return QPageSetupDialog_Metacast((QPageSetupDialog*)self, param1);
+}
+
+void q_pagesetupdialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QPageSetupDialog_OnMetacast((QPageSetupDialog*)self, (intptr_t)callback);
+}
+
+void* q_pagesetupdialog_qbase_metacast(void* self, const char* param1) {
+    return QPageSetupDialog_QBaseMetacast((QPageSetupDialog*)self, param1);
 }
 
 int32_t q_pagesetupdialog_metacall(void* self, int32_t param1, int param2, void* param3) {

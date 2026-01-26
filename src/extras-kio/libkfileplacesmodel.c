@@ -27,8 +27,24 @@ const QMetaObject* k_fileplacesmodel_meta_object(void* self) {
     return KFilePlacesModel_MetaObject((KFilePlacesModel*)self);
 }
 
+void k_fileplacesmodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KFilePlacesModel_OnMetaObject((KFilePlacesModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_fileplacesmodel_qbase_meta_object(void* self) {
+    return KFilePlacesModel_QBaseMetaObject((KFilePlacesModel*)self);
+}
+
 void* k_fileplacesmodel_metacast(void* self, const char* param1) {
     return KFilePlacesModel_Metacast((KFilePlacesModel*)self, param1);
+}
+
+void k_fileplacesmodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KFilePlacesModel_OnMetacast((KFilePlacesModel*)self, (intptr_t)callback);
+}
+
+void* k_fileplacesmodel_qbase_metacast(void* self, const char* param1) {
+    return KFilePlacesModel_QBaseMetacast((KFilePlacesModel*)self, param1);
 }
 
 int32_t k_fileplacesmodel_metacall(void* self, int32_t param1, int param2, void* param3) {

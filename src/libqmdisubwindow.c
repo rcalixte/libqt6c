@@ -31,8 +31,24 @@ const QMetaObject* q_mdisubwindow_meta_object(void* self) {
     return QMdiSubWindow_MetaObject((QMdiSubWindow*)self);
 }
 
+void q_mdisubwindow_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QMdiSubWindow_OnMetaObject((QMdiSubWindow*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_mdisubwindow_qbase_meta_object(void* self) {
+    return QMdiSubWindow_QBaseMetaObject((QMdiSubWindow*)self);
+}
+
 void* q_mdisubwindow_metacast(void* self, const char* param1) {
     return QMdiSubWindow_Metacast((QMdiSubWindow*)self, param1);
+}
+
+void q_mdisubwindow_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QMdiSubWindow_OnMetacast((QMdiSubWindow*)self, (intptr_t)callback);
+}
+
+void* q_mdisubwindow_qbase_metacast(void* self, const char* param1) {
+    return QMdiSubWindow_QBaseMetacast((QMdiSubWindow*)self, param1);
 }
 
 int32_t q_mdisubwindow_metacall(void* self, int32_t param1, int param2, void* param3) {

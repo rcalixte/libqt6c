@@ -30,8 +30,24 @@ const QMetaObject* k_fontaction_meta_object(void* self) {
     return KFontAction_MetaObject((KFontAction*)self);
 }
 
+void k_fontaction_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KFontAction_OnMetaObject((KFontAction*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_fontaction_qbase_meta_object(void* self) {
+    return KFontAction_QBaseMetaObject((KFontAction*)self);
+}
+
 void* k_fontaction_metacast(void* self, const char* param1) {
     return KFontAction_Metacast((KFontAction*)self, param1);
+}
+
+void k_fontaction_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KFontAction_OnMetacast((KFontAction*)self, (intptr_t)callback);
+}
+
+void* k_fontaction_qbase_metacast(void* self, const char* param1) {
+    return KFontAction_QBaseMetacast((KFontAction*)self, param1);
 }
 
 int32_t k_fontaction_metacall(void* self, int32_t param1, int param2, void* param3) {

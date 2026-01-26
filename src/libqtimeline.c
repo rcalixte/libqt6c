@@ -22,8 +22,24 @@ const QMetaObject* q_timeline_meta_object(void* self) {
     return QTimeLine_MetaObject((QTimeLine*)self);
 }
 
+void q_timeline_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QTimeLine_OnMetaObject((QTimeLine*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_timeline_qbase_meta_object(void* self) {
+    return QTimeLine_QBaseMetaObject((QTimeLine*)self);
+}
+
 void* q_timeline_metacast(void* self, const char* param1) {
     return QTimeLine_Metacast((QTimeLine*)self, param1);
+}
+
+void q_timeline_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QTimeLine_OnMetacast((QTimeLine*)self, (intptr_t)callback);
+}
+
+void* q_timeline_qbase_metacast(void* self, const char* param1) {
+    return QTimeLine_QBaseMetacast((QTimeLine*)self, param1);
 }
 
 int32_t q_timeline_metacall(void* self, int32_t param1, int param2, void* param3) {

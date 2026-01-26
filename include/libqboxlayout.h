@@ -34,10 +34,41 @@ QBoxLayout* q_boxlayout_new2(int32_t param1, void* parent);
 ///
 const QMetaObject* q_boxlayout_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QBoxLayout*
+/// @param callback const QMetaObject* func()
+///
+void q_boxlayout_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QBoxLayout*
+///
+const QMetaObject* q_boxlayout_qbase_meta_object(void* self);
+
 /// @param self QBoxLayout*
 /// @param param1 const char*
 ///
 void* q_boxlayout_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QBoxLayout*
+/// @param callback void* func(QBoxLayout* self, const char* param1)
+///
+void q_boxlayout_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QBoxLayout*
+/// @param param1 const char*
+///
+void* q_boxlayout_qbase_metacast(void* self, const char* param1);
 
 /// @param self QBoxLayout*
 /// @param param1 enum QMetaObject__Call
@@ -2109,10 +2140,41 @@ QHBoxLayout* q_hboxlayout_new2();
 ///
 const QMetaObject* q_hboxlayout_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QHBoxLayout*
+/// @param callback const QMetaObject* func()
+///
+void q_hboxlayout_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QHBoxLayout*
+///
+const QMetaObject* q_hboxlayout_qbase_meta_object(void* self);
+
 /// @param self QHBoxLayout*
 /// @param param1 const char*
 ///
 void* q_hboxlayout_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QHBoxLayout*
+/// @param callback void* func(QHBoxLayout* self, const char* param1)
+///
+void q_hboxlayout_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QHBoxLayout*
+/// @param param1 const char*
+///
+void* q_hboxlayout_qbase_metacast(void* self, const char* param1);
 
 /// @param self QHBoxLayout*
 /// @param param1 enum QMetaObject__Call
@@ -4356,10 +4418,41 @@ QVBoxLayout* q_vboxlayout_new2();
 ///
 const QMetaObject* q_vboxlayout_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QVBoxLayout*
+/// @param callback const QMetaObject* func()
+///
+void q_vboxlayout_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QVBoxLayout*
+///
+const QMetaObject* q_vboxlayout_qbase_meta_object(void* self);
+
 /// @param self QVBoxLayout*
 /// @param param1 const char*
 ///
 void* q_vboxlayout_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QVBoxLayout*
+/// @param callback void* func(QVBoxLayout* self, const char* param1)
+///
+void q_vboxlayout_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QVBoxLayout*
+/// @param param1 const char*
+///
+void* q_vboxlayout_qbase_metacast(void* self, const char* param1);
 
 /// @param self QVBoxLayout*
 /// @param param1 enum QMetaObject__Call

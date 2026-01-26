@@ -31,8 +31,24 @@ const QMetaObject* k_fontchooserdialog_meta_object(void* self) {
     return KFontChooserDialog_MetaObject((KFontChooserDialog*)self);
 }
 
+void k_fontchooserdialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KFontChooserDialog_OnMetaObject((KFontChooserDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_fontchooserdialog_qbase_meta_object(void* self) {
+    return KFontChooserDialog_QBaseMetaObject((KFontChooserDialog*)self);
+}
+
 void* k_fontchooserdialog_metacast(void* self, const char* param1) {
     return KFontChooserDialog_Metacast((KFontChooserDialog*)self, param1);
+}
+
+void k_fontchooserdialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KFontChooserDialog_OnMetacast((KFontChooserDialog*)self, (intptr_t)callback);
+}
+
+void* k_fontchooserdialog_qbase_metacast(void* self, const char* param1) {
+    return KFontChooserDialog_QBaseMetacast((KFontChooserDialog*)self, param1);
 }
 
 int32_t k_fontchooserdialog_metacall(void* self, int32_t param1, int param2, void* param3) {

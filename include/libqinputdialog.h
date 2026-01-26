@@ -40,10 +40,41 @@ QInputDialog* q_inputdialog_new3(void* parent, int32_t flags);
 ///
 const QMetaObject* q_inputdialog_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QInputDialog*
+/// @param callback const QMetaObject* func()
+///
+void q_inputdialog_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QInputDialog*
+///
+const QMetaObject* q_inputdialog_qbase_meta_object(void* self);
+
 /// @param self QInputDialog*
 /// @param param1 const char*
 ///
 void* q_inputdialog_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QInputDialog*
+/// @param callback void* func(QInputDialog* self, const char* param1)
+///
+void q_inputdialog_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QInputDialog*
+/// @param param1 const char*
+///
+void* q_inputdialog_qbase_metacast(void* self, const char* param1);
 
 /// @param self QInputDialog*
 /// @param param1 enum QMetaObject__Call

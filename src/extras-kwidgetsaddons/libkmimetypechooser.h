@@ -86,10 +86,41 @@ KMimeTypeChooser* k_mimetypechooser_new7(const char* text, const char* selectedM
 ///
 const QMetaObject* k_mimetypechooser_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KMimeTypeChooser*
+/// @param callback const QMetaObject* func()
+///
+void k_mimetypechooser_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KMimeTypeChooser*
+///
+const QMetaObject* k_mimetypechooser_qbase_meta_object(void* self);
+
 /// @param self KMimeTypeChooser*
 /// @param param1 const char*
 ///
 void* k_mimetypechooser_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KMimeTypeChooser*
+/// @param callback void* func(KMimeTypeChooser* self, const char* param1)
+///
+void k_mimetypechooser_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KMimeTypeChooser*
+/// @param param1 const char*
+///
+void* k_mimetypechooser_qbase_metacast(void* self, const char* param1);
 
 /// @param self KMimeTypeChooser*
 /// @param param1 enum QMetaObject__Call
@@ -5027,10 +5058,41 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new10(const char* title, const c
 ///
 const QMetaObject* k_mimetypechooserdialog_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KMimeTypeChooserDialog*
+/// @param callback const QMetaObject* func()
+///
+void k_mimetypechooserdialog_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KMimeTypeChooserDialog*
+///
+const QMetaObject* k_mimetypechooserdialog_qbase_meta_object(void* self);
+
 /// @param self KMimeTypeChooserDialog*
 /// @param param1 const char*
 ///
 void* k_mimetypechooserdialog_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KMimeTypeChooserDialog*
+/// @param callback void* func(KMimeTypeChooserDialog* self, const char* param1)
+///
+void k_mimetypechooserdialog_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KMimeTypeChooserDialog*
+/// @param param1 const char*
+///
+void* k_mimetypechooserdialog_qbase_metacast(void* self, const char* param1);
 
 /// @param self KMimeTypeChooserDialog*
 /// @param param1 enum QMetaObject__Call

@@ -19,8 +19,24 @@ const QMetaObject* q_categoryaxis_meta_object(void* self) {
     return QCategoryAxis_MetaObject((QCategoryAxis*)self);
 }
 
+void q_categoryaxis_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCategoryAxis_OnMetaObject((QCategoryAxis*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_categoryaxis_qbase_meta_object(void* self) {
+    return QCategoryAxis_QBaseMetaObject((QCategoryAxis*)self);
+}
+
 void* q_categoryaxis_metacast(void* self, const char* param1) {
     return QCategoryAxis_Metacast((QCategoryAxis*)self, param1);
+}
+
+void q_categoryaxis_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCategoryAxis_OnMetacast((QCategoryAxis*)self, (intptr_t)callback);
+}
+
+void* q_categoryaxis_qbase_metacast(void* self, const char* param1) {
+    return QCategoryAxis_QBaseMetacast((QCategoryAxis*)self, param1);
 }
 
 int32_t q_categoryaxis_metacall(void* self, int32_t param1, int param2, void* param3) {

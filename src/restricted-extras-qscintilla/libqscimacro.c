@@ -18,8 +18,24 @@ const QMetaObject* q_scimacro_meta_object(void* self) {
     return QsciMacro_MetaObject((QsciMacro*)self);
 }
 
+void q_scimacro_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QsciMacro_OnMetaObject((QsciMacro*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_scimacro_qbase_meta_object(void* self) {
+    return QsciMacro_QBaseMetaObject((QsciMacro*)self);
+}
+
 void* q_scimacro_metacast(void* self, const char* param1) {
     return QsciMacro_Metacast((QsciMacro*)self, param1);
+}
+
+void q_scimacro_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QsciMacro_OnMetacast((QsciMacro*)self, (intptr_t)callback);
+}
+
+void* q_scimacro_qbase_metacast(void* self, const char* param1) {
+    return QsciMacro_QBaseMetacast((QsciMacro*)self, param1);
 }
 
 int32_t q_scimacro_metacall(void* self, int32_t param1, int param2, void* param3) {

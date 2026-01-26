@@ -19,8 +19,24 @@ const QMetaObject* k_io__openfilemanagerwindowjob_meta_object(void* self) {
     return KIO__OpenFileManagerWindowJob_MetaObject((KIO__OpenFileManagerWindowJob*)self);
 }
 
+void k_io__openfilemanagerwindowjob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KIO__OpenFileManagerWindowJob_OnMetaObject((KIO__OpenFileManagerWindowJob*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_io__openfilemanagerwindowjob_qbase_meta_object(void* self) {
+    return KIO__OpenFileManagerWindowJob_QBaseMetaObject((KIO__OpenFileManagerWindowJob*)self);
+}
+
 void* k_io__openfilemanagerwindowjob_metacast(void* self, const char* param1) {
     return KIO__OpenFileManagerWindowJob_Metacast((KIO__OpenFileManagerWindowJob*)self, param1);
+}
+
+void k_io__openfilemanagerwindowjob_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KIO__OpenFileManagerWindowJob_OnMetacast((KIO__OpenFileManagerWindowJob*)self, (intptr_t)callback);
+}
+
+void* k_io__openfilemanagerwindowjob_qbase_metacast(void* self, const char* param1) {
+    return KIO__OpenFileManagerWindowJob_QBaseMetacast((KIO__OpenFileManagerWindowJob*)self, param1);
 }
 
 int32_t k_io__openfilemanagerwindowjob_metacall(void* self, int32_t param1, int param2, void* param3) {

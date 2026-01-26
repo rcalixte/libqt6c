@@ -35,8 +35,24 @@ const QMetaObject* k_fileplaceeditdialog_meta_object(void* self) {
     return KFilePlaceEditDialog_MetaObject((KFilePlaceEditDialog*)self);
 }
 
+void k_fileplaceeditdialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KFilePlaceEditDialog_OnMetaObject((KFilePlaceEditDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_fileplaceeditdialog_qbase_meta_object(void* self) {
+    return KFilePlaceEditDialog_QBaseMetaObject((KFilePlaceEditDialog*)self);
+}
+
 void* k_fileplaceeditdialog_metacast(void* self, const char* param1) {
     return KFilePlaceEditDialog_Metacast((KFilePlaceEditDialog*)self, param1);
+}
+
+void k_fileplaceeditdialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KFilePlaceEditDialog_OnMetacast((KFilePlaceEditDialog*)self, (intptr_t)callback);
+}
+
+void* k_fileplaceeditdialog_qbase_metacast(void* self, const char* param1) {
+    return KFilePlaceEditDialog_QBaseMetacast((KFilePlaceEditDialog*)self, param1);
 }
 
 int32_t k_fileplaceeditdialog_metacall(void* self, int32_t param1, int param2, void* param3) {

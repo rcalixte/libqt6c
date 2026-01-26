@@ -28,8 +28,24 @@ const QMetaObject* q_designeractioneditorinterface_meta_object(void* self) {
     return QDesignerActionEditorInterface_MetaObject((QDesignerActionEditorInterface*)self);
 }
 
+void q_designeractioneditorinterface_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDesignerActionEditorInterface_OnMetaObject((QDesignerActionEditorInterface*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_designeractioneditorinterface_qbase_meta_object(void* self) {
+    return QDesignerActionEditorInterface_QBaseMetaObject((QDesignerActionEditorInterface*)self);
+}
+
 void* q_designeractioneditorinterface_metacast(void* self, const char* param1) {
     return QDesignerActionEditorInterface_Metacast((QDesignerActionEditorInterface*)self, param1);
+}
+
+void q_designeractioneditorinterface_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDesignerActionEditorInterface_OnMetacast((QDesignerActionEditorInterface*)self, (intptr_t)callback);
+}
+
+void* q_designeractioneditorinterface_qbase_metacast(void* self, const char* param1) {
+    return QDesignerActionEditorInterface_QBaseMetacast((QDesignerActionEditorInterface*)self, param1);
 }
 
 int32_t q_designeractioneditorinterface_metacall(void* self, int32_t param1, int param2, void* param3) {

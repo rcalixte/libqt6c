@@ -31,10 +31,41 @@ QColorAxis* q_coloraxis_new2(void* parent);
 ///
 const QMetaObject* q_coloraxis_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QColorAxis*
+/// @param callback const QMetaObject* func()
+///
+void q_coloraxis_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QColorAxis*
+///
+const QMetaObject* q_coloraxis_qbase_meta_object(void* self);
+
 /// @param self QColorAxis*
 /// @param param1 const char*
 ///
 void* q_coloraxis_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QColorAxis*
+/// @param callback void* func(QColorAxis* self, const char* param1)
+///
+void q_coloraxis_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QColorAxis*
+/// @param param1 const char*
+///
+void* q_coloraxis_qbase_metacast(void* self, const char* param1);
 
 /// @param self QColorAxis*
 /// @param param1 enum QMetaObject__Call

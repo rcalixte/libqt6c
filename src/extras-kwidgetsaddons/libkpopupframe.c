@@ -27,8 +27,24 @@ const QMetaObject* k_popupframe_meta_object(void* self) {
     return KPopupFrame_MetaObject((KPopupFrame*)self);
 }
 
+void k_popupframe_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KPopupFrame_OnMetaObject((KPopupFrame*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_popupframe_qbase_meta_object(void* self) {
+    return KPopupFrame_QBaseMetaObject((KPopupFrame*)self);
+}
+
 void* k_popupframe_metacast(void* self, const char* param1) {
     return KPopupFrame_Metacast((KPopupFrame*)self, param1);
+}
+
+void k_popupframe_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KPopupFrame_OnMetacast((KPopupFrame*)self, (intptr_t)callback);
+}
+
+void* k_popupframe_qbase_metacast(void* self, const char* param1) {
+    return KPopupFrame_QBaseMetacast((KPopupFrame*)self, param1);
 }
 
 int32_t k_popupframe_metacall(void* self, int32_t param1, int param2, void* param3) {

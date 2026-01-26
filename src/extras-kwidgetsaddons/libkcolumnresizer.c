@@ -19,8 +19,24 @@ const QMetaObject* k_columnresizer_meta_object(void* self) {
     return KColumnResizer_MetaObject((KColumnResizer*)self);
 }
 
+void k_columnresizer_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KColumnResizer_OnMetaObject((KColumnResizer*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_columnresizer_qbase_meta_object(void* self) {
+    return KColumnResizer_QBaseMetaObject((KColumnResizer*)self);
+}
+
 void* k_columnresizer_metacast(void* self, const char* param1) {
     return KColumnResizer_Metacast((KColumnResizer*)self, param1);
+}
+
+void k_columnresizer_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KColumnResizer_OnMetacast((KColumnResizer*)self, (intptr_t)callback);
+}
+
+void* k_columnresizer_qbase_metacast(void* self, const char* param1) {
+    return KColumnResizer_QBaseMetacast((KColumnResizer*)self, param1);
 }
 
 int32_t k_columnresizer_metacall(void* self, int32_t param1, int param2, void* param3) {

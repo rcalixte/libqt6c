@@ -25,10 +25,41 @@ QAudioRoom* q_audioroom_new(void* engine);
 ///
 const QMetaObject* q_audioroom_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QAudioRoom*
+/// @param callback const QMetaObject* func()
+///
+void q_audioroom_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QAudioRoom*
+///
+const QMetaObject* q_audioroom_qbase_meta_object(void* self);
+
 /// @param self QAudioRoom*
 /// @param param1 const char*
 ///
 void* q_audioroom_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QAudioRoom*
+/// @param callback void* func(QAudioRoom* self, const char* param1)
+///
+void q_audioroom_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QAudioRoom*
+/// @param param1 const char*
+///
+void* q_audioroom_qbase_metacast(void* self, const char* param1);
 
 /// @param self QAudioRoom*
 /// @param param1 enum QMetaObject__Call

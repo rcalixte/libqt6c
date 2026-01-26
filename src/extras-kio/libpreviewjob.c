@@ -38,8 +38,24 @@ const QMetaObject* k_io__previewjob_meta_object(void* self) {
     return KIO__PreviewJob_MetaObject((KIO__PreviewJob*)self);
 }
 
+void k_io__previewjob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KIO__PreviewJob_OnMetaObject((KIO__PreviewJob*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_io__previewjob_qbase_meta_object(void* self) {
+    return KIO__PreviewJob_QBaseMetaObject((KIO__PreviewJob*)self);
+}
+
 void* k_io__previewjob_metacast(void* self, const char* param1) {
     return KIO__PreviewJob_Metacast((KIO__PreviewJob*)self, param1);
+}
+
+void k_io__previewjob_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KIO__PreviewJob_OnMetacast((KIO__PreviewJob*)self, (intptr_t)callback);
+}
+
+void* k_io__previewjob_qbase_metacast(void* self, const char* param1) {
+    return KIO__PreviewJob_QBaseMetacast((KIO__PreviewJob*)self, param1);
 }
 
 int32_t k_io__previewjob_metacall(void* self, int32_t param1, int param2, void* param3) {

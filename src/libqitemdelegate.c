@@ -30,8 +30,24 @@ const QMetaObject* q_itemdelegate_meta_object(void* self) {
     return QItemDelegate_MetaObject((QItemDelegate*)self);
 }
 
+void q_itemdelegate_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QItemDelegate_OnMetaObject((QItemDelegate*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_itemdelegate_qbase_meta_object(void* self) {
+    return QItemDelegate_QBaseMetaObject((QItemDelegate*)self);
+}
+
 void* q_itemdelegate_metacast(void* self, const char* param1) {
     return QItemDelegate_Metacast((QItemDelegate*)self, param1);
+}
+
+void q_itemdelegate_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QItemDelegate_OnMetacast((QItemDelegate*)self, (intptr_t)callback);
+}
+
+void* q_itemdelegate_qbase_metacast(void* self, const char* param1) {
+    return QItemDelegate_QBaseMetacast((QItemDelegate*)self, param1);
 }
 
 int32_t q_itemdelegate_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -20,8 +20,24 @@ const QMetaObject* k_viewstateserializer_meta_object(void* self) {
     return KViewStateSerializer_MetaObject((KViewStateSerializer*)self);
 }
 
+void k_viewstateserializer_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KViewStateSerializer_OnMetaObject((KViewStateSerializer*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_viewstateserializer_qbase_meta_object(void* self) {
+    return KViewStateSerializer_QBaseMetaObject((KViewStateSerializer*)self);
+}
+
 void* k_viewstateserializer_metacast(void* self, const char* param1) {
     return KViewStateSerializer_Metacast((KViewStateSerializer*)self, param1);
+}
+
+void k_viewstateserializer_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KViewStateSerializer_OnMetacast((KViewStateSerializer*)self, (intptr_t)callback);
+}
+
+void* k_viewstateserializer_qbase_metacast(void* self, const char* param1) {
+    return KViewStateSerializer_QBaseMetacast((KViewStateSerializer*)self, param1);
 }
 
 int32_t k_viewstateserializer_metacall(void* self, int32_t param1, int param2, void* param3) {

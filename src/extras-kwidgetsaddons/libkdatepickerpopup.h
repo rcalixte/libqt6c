@@ -50,10 +50,41 @@ KDatePickerPopup* k_datepickerpopup_new4(int32_t modes, void* date, void* parent
 ///
 const QMetaObject* k_datepickerpopup_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KDatePickerPopup*
+/// @param callback const QMetaObject* func()
+///
+void k_datepickerpopup_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KDatePickerPopup*
+///
+const QMetaObject* k_datepickerpopup_qbase_meta_object(void* self);
+
 /// @param self KDatePickerPopup*
 /// @param param1 const char*
 ///
 void* k_datepickerpopup_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KDatePickerPopup*
+/// @param callback void* func(KDatePickerPopup* self, const char* param1)
+///
+void k_datepickerpopup_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KDatePickerPopup*
+/// @param param1 const char*
+///
+void* k_datepickerpopup_qbase_metacast(void* self, const char* param1);
 
 /// @param self KDatePickerPopup*
 /// @param param1 enum QMetaObject__Call

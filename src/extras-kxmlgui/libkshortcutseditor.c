@@ -42,8 +42,24 @@ const QMetaObject* k_shortcutseditor_meta_object(void* self) {
     return KShortcutsEditor_MetaObject((KShortcutsEditor*)self);
 }
 
+void k_shortcutseditor_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KShortcutsEditor_OnMetaObject((KShortcutsEditor*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_shortcutseditor_qbase_meta_object(void* self) {
+    return KShortcutsEditor_QBaseMetaObject((KShortcutsEditor*)self);
+}
+
 void* k_shortcutseditor_metacast(void* self, const char* param1) {
     return KShortcutsEditor_Metacast((KShortcutsEditor*)self, param1);
+}
+
+void k_shortcutseditor_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KShortcutsEditor_OnMetacast((KShortcutsEditor*)self, (intptr_t)callback);
+}
+
+void* k_shortcutseditor_qbase_metacast(void* self, const char* param1) {
+    return KShortcutsEditor_QBaseMetacast((KShortcutsEditor*)self, param1);
 }
 
 int32_t k_shortcutseditor_metacall(void* self, int32_t param1, int param2, void* param3) {

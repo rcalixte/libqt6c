@@ -65,10 +65,41 @@ Accounts__Manager* q_accounts__manager_new6(int32_t options, void* parent);
 ///
 const QMetaObject* q_accounts__manager_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self Accounts__Manager*
+/// @param callback const QMetaObject* func()
+///
+void q_accounts__manager_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self Accounts__Manager*
+///
+const QMetaObject* q_accounts__manager_qbase_meta_object(void* self);
+
 /// @param self Accounts__Manager*
 /// @param param1 const char*
 ///
 void* q_accounts__manager_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self Accounts__Manager*
+/// @param callback void* func(Accounts__Manager* self, const char* param1)
+///
+void q_accounts__manager_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self Accounts__Manager*
+/// @param param1 const char*
+///
+void* q_accounts__manager_qbase_metacast(void* self, const char* param1);
 
 /// @param self Accounts__Manager*
 /// @param param1 enum QMetaObject__Call

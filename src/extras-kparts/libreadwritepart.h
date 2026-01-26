@@ -40,10 +40,41 @@ KParts__ReadWritePart* k_parts__readwritepart_new3(void* parent, void* data);
 ///
 const QMetaObject* k_parts__readwritepart_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KParts__ReadWritePart*
+/// @param callback const QMetaObject* func()
+///
+void k_parts__readwritepart_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KParts__ReadWritePart*
+///
+const QMetaObject* k_parts__readwritepart_qbase_meta_object(void* self);
+
 /// @param self KParts__ReadWritePart*
 /// @param param1 const char*
 ///
 void* k_parts__readwritepart_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KParts__ReadWritePart*
+/// @param callback void* func(KParts__ReadWritePart* self, const char* param1)
+///
+void k_parts__readwritepart_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KParts__ReadWritePart*
+/// @param param1 const char*
+///
+void* k_parts__readwritepart_qbase_metacast(void* self, const char* param1);
 
 /// @param self KParts__ReadWritePart*
 /// @param param1 enum QMetaObject__Call

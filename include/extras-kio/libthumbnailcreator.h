@@ -147,10 +147,41 @@ KIO__ThumbnailCreator* k_io__thumbnailcreator_new(void* parent, libqt_list /* of
 ///
 const QMetaObject* k_io__thumbnailcreator_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KIO__ThumbnailCreator*
+/// @param callback const QMetaObject* func()
+///
+void k_io__thumbnailcreator_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KIO__ThumbnailCreator*
+///
+const QMetaObject* k_io__thumbnailcreator_qbase_meta_object(void* self);
+
 /// @param self KIO__ThumbnailCreator*
 /// @param param1 const char*
 ///
 void* k_io__thumbnailcreator_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KIO__ThumbnailCreator*
+/// @param callback void* func(KIO__ThumbnailCreator* self, const char* param1)
+///
+void k_io__thumbnailcreator_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KIO__ThumbnailCreator*
+/// @param param1 const char*
+///
+void* k_io__thumbnailcreator_qbase_metacast(void* self, const char* param1);
 
 /// @param self KIO__ThumbnailCreator*
 /// @param param1 enum QMetaObject__Call

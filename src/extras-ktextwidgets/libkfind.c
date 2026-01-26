@@ -20,8 +20,24 @@ const QMetaObject* k_find_meta_object(void* self) {
     return KFind_MetaObject((KFind*)self);
 }
 
+void k_find_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KFind_OnMetaObject((KFind*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_find_qbase_meta_object(void* self) {
+    return KFind_QBaseMetaObject((KFind*)self);
+}
+
 void* k_find_metacast(void* self, const char* param1) {
     return KFind_Metacast((KFind*)self, param1);
+}
+
+void k_find_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KFind_OnMetacast((KFind*)self, (intptr_t)callback);
+}
+
+void* k_find_qbase_metacast(void* self, const char* param1) {
+    return KFind_QBaseMetacast((KFind*)self, param1);
 }
 
 int32_t k_find_metacall(void* self, int32_t param1, int param2, void* param3) {

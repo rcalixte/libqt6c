@@ -72,6 +72,10 @@ void KSelectionOwner_ReplyTargets(KSelectionOwner* self, xcb_atom_t property, xc
 #endif
 void KSelectionOwner_GetAtoms(KSelectionOwner* self);
 void KSelectionOwner_Claim2(KSelectionOwner* self, bool force, bool force_kill);
+void KSelectionOwner_OnMetaObject(const KSelectionOwner* self, intptr_t slot);
+QMetaObject* KSelectionOwner_QBaseMetaObject(const KSelectionOwner* self);
+void KSelectionOwner_OnMetacast(KSelectionOwner* self, intptr_t slot);
+void* KSelectionOwner_QBaseMetacast(KSelectionOwner* self, const char* param1);
 void KSelectionOwner_OnMetacall(KSelectionOwner* self, intptr_t slot);
 int KSelectionOwner_QBaseMetacall(KSelectionOwner* self, int param1, int param2, void** param3);
 void KSelectionOwner_OnTimerEvent(KSelectionOwner* self, intptr_t slot);

@@ -31,10 +31,41 @@ KDragWidgetDecoratorBase* k_dragwidgetdecoratorbase_new2();
 ///
 const QMetaObject* k_dragwidgetdecoratorbase_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KDragWidgetDecoratorBase*
+/// @param callback const QMetaObject* func()
+///
+void k_dragwidgetdecoratorbase_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KDragWidgetDecoratorBase*
+///
+const QMetaObject* k_dragwidgetdecoratorbase_qbase_meta_object(void* self);
+
 /// @param self KDragWidgetDecoratorBase*
 /// @param param1 const char*
 ///
 void* k_dragwidgetdecoratorbase_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KDragWidgetDecoratorBase*
+/// @param callback void* func(KDragWidgetDecoratorBase* self, const char* param1)
+///
+void k_dragwidgetdecoratorbase_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KDragWidgetDecoratorBase*
+/// @param param1 const char*
+///
+void* k_dragwidgetdecoratorbase_qbase_metacast(void* self, const char* param1);
 
 /// @param self KDragWidgetDecoratorBase*
 /// @param param1 enum QMetaObject__Call

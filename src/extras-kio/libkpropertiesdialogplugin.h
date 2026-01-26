@@ -25,10 +25,41 @@ KPropertiesDialogPlugin* k_propertiesdialogplugin_new(void* parent);
 ///
 const QMetaObject* k_propertiesdialogplugin_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KPropertiesDialogPlugin*
+/// @param callback const QMetaObject* func()
+///
+void k_propertiesdialogplugin_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KPropertiesDialogPlugin*
+///
+const QMetaObject* k_propertiesdialogplugin_qbase_meta_object(void* self);
+
 /// @param self KPropertiesDialogPlugin*
 /// @param param1 const char*
 ///
 void* k_propertiesdialogplugin_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KPropertiesDialogPlugin*
+/// @param callback void* func(KPropertiesDialogPlugin* self, const char* param1)
+///
+void k_propertiesdialogplugin_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KPropertiesDialogPlugin*
+/// @param param1 const char*
+///
+void* k_propertiesdialogplugin_qbase_metacast(void* self, const char* param1);
 
 /// @param self KPropertiesDialogPlugin*
 /// @param param1 enum QMetaObject__Call

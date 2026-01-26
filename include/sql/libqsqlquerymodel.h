@@ -31,10 +31,41 @@ QSqlQueryModel* q_sqlquerymodel_new2(void* parent);
 ///
 const QMetaObject* q_sqlquerymodel_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QSqlQueryModel*
+/// @param callback const QMetaObject* func()
+///
+void q_sqlquerymodel_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QSqlQueryModel*
+///
+const QMetaObject* q_sqlquerymodel_qbase_meta_object(void* self);
+
 /// @param self QSqlQueryModel*
 /// @param param1 const char*
 ///
 void* q_sqlquerymodel_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QSqlQueryModel*
+/// @param callback void* func(QSqlQueryModel* self, const char* param1)
+///
+void q_sqlquerymodel_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QSqlQueryModel*
+/// @param param1 const char*
+///
+void* q_sqlquerymodel_qbase_metacast(void* self, const char* param1);
 
 /// @param self QSqlQueryModel*
 /// @param param1 enum QMetaObject__Call

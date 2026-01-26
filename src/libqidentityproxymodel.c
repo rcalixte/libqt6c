@@ -24,8 +24,24 @@ const QMetaObject* q_identityproxymodel_meta_object(void* self) {
     return QIdentityProxyModel_MetaObject((QIdentityProxyModel*)self);
 }
 
+void q_identityproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QIdentityProxyModel_OnMetaObject((QIdentityProxyModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_identityproxymodel_qbase_meta_object(void* self) {
+    return QIdentityProxyModel_QBaseMetaObject((QIdentityProxyModel*)self);
+}
+
 void* q_identityproxymodel_metacast(void* self, const char* param1) {
     return QIdentityProxyModel_Metacast((QIdentityProxyModel*)self, param1);
+}
+
+void q_identityproxymodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QIdentityProxyModel_OnMetacast((QIdentityProxyModel*)self, (intptr_t)callback);
+}
+
+void* q_identityproxymodel_qbase_metacast(void* self, const char* param1) {
+    return QIdentityProxyModel_QBaseMetacast((QIdentityProxyModel*)self, param1);
 }
 
 int32_t q_identityproxymodel_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -67,10 +67,41 @@ KColorButton* k_colorbutton_new6(void* c, void* defaultColor, void* parent);
 ///
 const QMetaObject* k_colorbutton_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KColorButton*
+/// @param callback const QMetaObject* func()
+///
+void k_colorbutton_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KColorButton*
+///
+const QMetaObject* k_colorbutton_qbase_meta_object(void* self);
+
 /// @param self KColorButton*
 /// @param param1 const char*
 ///
 void* k_colorbutton_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KColorButton*
+/// @param callback void* func(KColorButton* self, const char* param1)
+///
+void k_colorbutton_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KColorButton*
+/// @param param1 const char*
+///
+void* k_colorbutton_qbase_metacast(void* self, const char* param1);
 
 /// @param self KColorButton*
 /// @param param1 enum QMetaObject__Call

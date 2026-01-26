@@ -19,8 +19,24 @@ const QMetaObject* q_buffer_meta_object(void* self) {
     return QBuffer_MetaObject((QBuffer*)self);
 }
 
+void q_buffer_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QBuffer_OnMetaObject((QBuffer*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_buffer_qbase_meta_object(void* self) {
+    return QBuffer_QBaseMetaObject((QBuffer*)self);
+}
+
 void* q_buffer_metacast(void* self, const char* param1) {
     return QBuffer_Metacast((QBuffer*)self, param1);
+}
+
+void q_buffer_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QBuffer_OnMetacast((QBuffer*)self, (intptr_t)callback);
+}
+
+void* q_buffer_qbase_metacast(void* self, const char* param1) {
+    return QBuffer_QBaseMetacast((QBuffer*)self, param1);
 }
 
 int32_t q_buffer_metacall(void* self, int32_t param1, int param2, void* param3) {

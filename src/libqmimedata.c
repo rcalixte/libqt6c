@@ -16,8 +16,24 @@ const QMetaObject* q_mimedata_meta_object(void* self) {
     return QMimeData_MetaObject((QMimeData*)self);
 }
 
+void q_mimedata_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QMimeData_OnMetaObject((QMimeData*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_mimedata_qbase_meta_object(void* self) {
+    return QMimeData_QBaseMetaObject((QMimeData*)self);
+}
+
 void* q_mimedata_metacast(void* self, const char* param1) {
     return QMimeData_Metacast((QMimeData*)self, param1);
+}
+
+void q_mimedata_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QMimeData_OnMetacast((QMimeData*)self, (intptr_t)callback);
+}
+
+void* q_mimedata_qbase_metacast(void* self, const char* param1) {
+    return QMimeData_QBaseMetacast((QMimeData*)self, param1);
 }
 
 int32_t q_mimedata_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -32,8 +32,24 @@ const QMetaObject* k_passworddialog_meta_object(void* self) {
     return KPasswordDialog_MetaObject((KPasswordDialog*)self);
 }
 
+void k_passworddialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KPasswordDialog_OnMetaObject((KPasswordDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_passworddialog_qbase_meta_object(void* self) {
+    return KPasswordDialog_QBaseMetaObject((KPasswordDialog*)self);
+}
+
 void* k_passworddialog_metacast(void* self, const char* param1) {
     return KPasswordDialog_Metacast((KPasswordDialog*)self, param1);
+}
+
+void k_passworddialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KPasswordDialog_OnMetacast((KPasswordDialog*)self, (intptr_t)callback);
+}
+
+void* k_passworddialog_qbase_metacast(void* self, const char* param1) {
+    return KPasswordDialog_QBaseMetacast((KPasswordDialog*)self, param1);
 }
 
 int32_t k_passworddialog_metacall(void* self, int32_t param1, int param2, void* param3) {

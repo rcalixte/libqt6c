@@ -71,10 +71,41 @@ KFilePlaceEditDialog* k_fileplaceeditdialog_new4(bool allowGlobal, void* url, co
 ///
 const QMetaObject* k_fileplaceeditdialog_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KFilePlaceEditDialog*
+/// @param callback const QMetaObject* func()
+///
+void k_fileplaceeditdialog_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KFilePlaceEditDialog*
+///
+const QMetaObject* k_fileplaceeditdialog_qbase_meta_object(void* self);
+
 /// @param self KFilePlaceEditDialog*
 /// @param param1 const char*
 ///
 void* k_fileplaceeditdialog_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KFilePlaceEditDialog*
+/// @param callback void* func(KFilePlaceEditDialog* self, const char* param1)
+///
+void k_fileplaceeditdialog_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KFilePlaceEditDialog*
+/// @param param1 const char*
+///
+void* k_fileplaceeditdialog_qbase_metacast(void* self, const char* param1);
 
 /// @param self KFilePlaceEditDialog*
 /// @param param1 enum QMetaObject__Call

@@ -27,8 +27,24 @@ const QMetaObject* q_designerobjectinspectorinterface_meta_object(void* self) {
     return QDesignerObjectInspectorInterface_MetaObject((QDesignerObjectInspectorInterface*)self);
 }
 
+void q_designerobjectinspectorinterface_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDesignerObjectInspectorInterface_OnMetaObject((QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_designerobjectinspectorinterface_qbase_meta_object(void* self) {
+    return QDesignerObjectInspectorInterface_QBaseMetaObject((QDesignerObjectInspectorInterface*)self);
+}
+
 void* q_designerobjectinspectorinterface_metacast(void* self, const char* param1) {
     return QDesignerObjectInspectorInterface_Metacast((QDesignerObjectInspectorInterface*)self, param1);
+}
+
+void q_designerobjectinspectorinterface_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDesignerObjectInspectorInterface_OnMetacast((QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
+}
+
+void* q_designerobjectinspectorinterface_qbase_metacast(void* self, const char* param1) {
+    return QDesignerObjectInspectorInterface_QBaseMetacast((QDesignerObjectInspectorInterface*)self, param1);
 }
 
 int32_t q_designerobjectinspectorinterface_metacall(void* self, int32_t param1, int param2, void* param3) {

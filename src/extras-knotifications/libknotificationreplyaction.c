@@ -13,8 +13,24 @@ const QMetaObject* k_notificationreplyaction_meta_object(void* self) {
     return KNotificationReplyAction_MetaObject((KNotificationReplyAction*)self);
 }
 
+void k_notificationreplyaction_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KNotificationReplyAction_OnMetaObject((KNotificationReplyAction*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_notificationreplyaction_qbase_meta_object(void* self) {
+    return KNotificationReplyAction_QBaseMetaObject((KNotificationReplyAction*)self);
+}
+
 void* k_notificationreplyaction_metacast(void* self, const char* param1) {
     return KNotificationReplyAction_Metacast((KNotificationReplyAction*)self, param1);
+}
+
+void k_notificationreplyaction_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KNotificationReplyAction_OnMetacast((KNotificationReplyAction*)self, (intptr_t)callback);
+}
+
+void* k_notificationreplyaction_qbase_metacast(void* self, const char* param1) {
+    return KNotificationReplyAction_QBaseMetacast((KNotificationReplyAction*)self, param1);
 }
 
 int32_t k_notificationreplyaction_metacall(void* self, int32_t param1, int param2, void* param3) {

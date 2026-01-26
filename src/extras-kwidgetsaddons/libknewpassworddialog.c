@@ -28,8 +28,24 @@ const QMetaObject* k_newpassworddialog_meta_object(void* self) {
     return KNewPasswordDialog_MetaObject((KNewPasswordDialog*)self);
 }
 
+void k_newpassworddialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KNewPasswordDialog_OnMetaObject((KNewPasswordDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_newpassworddialog_qbase_meta_object(void* self) {
+    return KNewPasswordDialog_QBaseMetaObject((KNewPasswordDialog*)self);
+}
+
 void* k_newpassworddialog_metacast(void* self, const char* param1) {
     return KNewPasswordDialog_Metacast((KNewPasswordDialog*)self, param1);
+}
+
+void k_newpassworddialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KNewPasswordDialog_OnMetacast((KNewPasswordDialog*)self, (intptr_t)callback);
+}
+
+void* k_newpassworddialog_qbase_metacast(void* self, const char* param1) {
+    return KNewPasswordDialog_QBaseMetacast((KNewPasswordDialog*)self, param1);
 }
 
 int32_t k_newpassworddialog_metacall(void* self, int32_t param1, int param2, void* param3) {

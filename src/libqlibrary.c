@@ -41,8 +41,24 @@ const QMetaObject* q_library_meta_object(void* self) {
     return QLibrary_MetaObject((QLibrary*)self);
 }
 
+void q_library_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QLibrary_OnMetaObject((QLibrary*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_library_qbase_meta_object(void* self) {
+    return QLibrary_QBaseMetaObject((QLibrary*)self);
+}
+
 void* q_library_metacast(void* self, const char* param1) {
     return QLibrary_Metacast((QLibrary*)self, param1);
+}
+
+void q_library_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QLibrary_OnMetacast((QLibrary*)self, (intptr_t)callback);
+}
+
+void* q_library_qbase_metacast(void* self, const char* param1) {
+    return QLibrary_QBaseMetacast((QLibrary*)self, param1);
 }
 
 int32_t q_library_metacall(void* self, int32_t param1, int param2, void* param3) {

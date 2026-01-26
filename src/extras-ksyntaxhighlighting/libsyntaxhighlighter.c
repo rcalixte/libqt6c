@@ -30,8 +30,24 @@ const QMetaObject* k_syntaxhighlighting__syntaxhighlighter_meta_object(void* sel
     return KSyntaxHighlighting__SyntaxHighlighter_MetaObject((KSyntaxHighlighting__SyntaxHighlighter*)self);
 }
 
+void k_syntaxhighlighting__syntaxhighlighter_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KSyntaxHighlighting__SyntaxHighlighter_OnMetaObject((KSyntaxHighlighting__SyntaxHighlighter*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_syntaxhighlighting__syntaxhighlighter_qbase_meta_object(void* self) {
+    return KSyntaxHighlighting__SyntaxHighlighter_QBaseMetaObject((KSyntaxHighlighting__SyntaxHighlighter*)self);
+}
+
 void* k_syntaxhighlighting__syntaxhighlighter_metacast(void* self, const char* param1) {
     return KSyntaxHighlighting__SyntaxHighlighter_Metacast((KSyntaxHighlighting__SyntaxHighlighter*)self, param1);
+}
+
+void k_syntaxhighlighting__syntaxhighlighter_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KSyntaxHighlighting__SyntaxHighlighter_OnMetacast((KSyntaxHighlighting__SyntaxHighlighter*)self, (intptr_t)callback);
+}
+
+void* k_syntaxhighlighting__syntaxhighlighter_qbase_metacast(void* self, const char* param1) {
+    return KSyntaxHighlighting__SyntaxHighlighter_QBaseMetacast((KSyntaxHighlighting__SyntaxHighlighter*)self, param1);
 }
 
 int32_t k_syntaxhighlighting__syntaxhighlighter_metacall(void* self, int32_t param1, int param2, void* param3) {

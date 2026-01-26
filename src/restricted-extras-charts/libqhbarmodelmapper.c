@@ -20,8 +20,24 @@ const QMetaObject* q_hbarmodelmapper_meta_object(void* self) {
     return QHBarModelMapper_MetaObject((QHBarModelMapper*)self);
 }
 
+void q_hbarmodelmapper_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QHBarModelMapper_OnMetaObject((QHBarModelMapper*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_hbarmodelmapper_qbase_meta_object(void* self) {
+    return QHBarModelMapper_QBaseMetaObject((QHBarModelMapper*)self);
+}
+
 void* q_hbarmodelmapper_metacast(void* self, const char* param1) {
     return QHBarModelMapper_Metacast((QHBarModelMapper*)self, param1);
+}
+
+void q_hbarmodelmapper_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QHBarModelMapper_OnMetacast((QHBarModelMapper*)self, (intptr_t)callback);
+}
+
+void* q_hbarmodelmapper_qbase_metacast(void* self, const char* param1) {
+    return QHBarModelMapper_QBaseMetacast((QHBarModelMapper*)self, param1);
 }
 
 int32_t q_hbarmodelmapper_metacall(void* self, int32_t param1, int param2, void* param3) {

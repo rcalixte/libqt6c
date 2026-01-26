@@ -37,8 +37,24 @@ const QMetaObject* k_categorizedview_meta_object(void* self) {
     return KCategorizedView_MetaObject((KCategorizedView*)self);
 }
 
+void k_categorizedview_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KCategorizedView_OnMetaObject((KCategorizedView*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_categorizedview_qbase_meta_object(void* self) {
+    return KCategorizedView_QBaseMetaObject((KCategorizedView*)self);
+}
+
 void* k_categorizedview_metacast(void* self, const char* param1) {
     return KCategorizedView_Metacast((KCategorizedView*)self, param1);
+}
+
+void k_categorizedview_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KCategorizedView_OnMetacast((KCategorizedView*)self, (intptr_t)callback);
+}
+
+void* k_categorizedview_qbase_metacast(void* self, const char* param1) {
+    return KCategorizedView_QBaseMetacast((KCategorizedView*)self, param1);
 }
 
 int32_t k_categorizedview_metacall(void* self, int32_t param1, int param2, void* param3) {

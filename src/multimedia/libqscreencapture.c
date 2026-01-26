@@ -19,8 +19,24 @@ const QMetaObject* q_screencapture_meta_object(void* self) {
     return QScreenCapture_MetaObject((QScreenCapture*)self);
 }
 
+void q_screencapture_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QScreenCapture_OnMetaObject((QScreenCapture*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_screencapture_qbase_meta_object(void* self) {
+    return QScreenCapture_QBaseMetaObject((QScreenCapture*)self);
+}
+
 void* q_screencapture_metacast(void* self, const char* param1) {
     return QScreenCapture_Metacast((QScreenCapture*)self, param1);
+}
+
+void q_screencapture_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QScreenCapture_OnMetacast((QScreenCapture*)self, (intptr_t)callback);
+}
+
+void* q_screencapture_qbase_metacast(void* self, const char* param1) {
+    return QScreenCapture_QBaseMetacast((QScreenCapture*)self, param1);
 }
 
 int32_t q_screencapture_metacall(void* self, int32_t param1, int param2, void* param3) {

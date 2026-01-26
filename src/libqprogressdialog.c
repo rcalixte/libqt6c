@@ -45,8 +45,24 @@ const QMetaObject* q_progressdialog_meta_object(void* self) {
     return QProgressDialog_MetaObject((QProgressDialog*)self);
 }
 
+void q_progressdialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QProgressDialog_OnMetaObject((QProgressDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_progressdialog_qbase_meta_object(void* self) {
+    return QProgressDialog_QBaseMetaObject((QProgressDialog*)self);
+}
+
 void* q_progressdialog_metacast(void* self, const char* param1) {
     return QProgressDialog_Metacast((QProgressDialog*)self, param1);
+}
+
+void q_progressdialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QProgressDialog_OnMetacast((QProgressDialog*)self, (intptr_t)callback);
+}
+
+void* q_progressdialog_qbase_metacast(void* self, const char* param1) {
+    return QProgressDialog_QBaseMetacast((QProgressDialog*)self, param1);
 }
 
 int32_t q_progressdialog_metacall(void* self, int32_t param1, int param2, void* param3) {

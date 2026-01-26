@@ -20,8 +20,24 @@ const QMetaObject* k_parts__navigationextension_meta_object(void* self) {
     return KParts__NavigationExtension_MetaObject((KParts__NavigationExtension*)self);
 }
 
+void k_parts__navigationextension_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KParts__NavigationExtension_OnMetaObject((KParts__NavigationExtension*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_parts__navigationextension_qbase_meta_object(void* self) {
+    return KParts__NavigationExtension_QBaseMetaObject((KParts__NavigationExtension*)self);
+}
+
 void* k_parts__navigationextension_metacast(void* self, const char* param1) {
     return KParts__NavigationExtension_Metacast((KParts__NavigationExtension*)self, param1);
+}
+
+void k_parts__navigationextension_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KParts__NavigationExtension_OnMetacast((KParts__NavigationExtension*)self, (intptr_t)callback);
+}
+
+void* k_parts__navigationextension_qbase_metacast(void* self, const char* param1) {
+    return KParts__NavigationExtension_QBaseMetacast((KParts__NavigationExtension*)self, param1);
 }
 
 int32_t k_parts__navigationextension_metacall(void* self, int32_t param1, int param2, void* param3) {

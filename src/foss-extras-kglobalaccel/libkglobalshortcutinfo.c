@@ -18,8 +18,24 @@ const QMetaObject* k_globalshortcutinfo_meta_object(void* self) {
     return KGlobalShortcutInfo_MetaObject((KGlobalShortcutInfo*)self);
 }
 
+void k_globalshortcutinfo_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KGlobalShortcutInfo_OnMetaObject((KGlobalShortcutInfo*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_globalshortcutinfo_qbase_meta_object(void* self) {
+    return KGlobalShortcutInfo_QBaseMetaObject((KGlobalShortcutInfo*)self);
+}
+
 void* k_globalshortcutinfo_metacast(void* self, const char* param1) {
     return KGlobalShortcutInfo_Metacast((KGlobalShortcutInfo*)self, param1);
+}
+
+void k_globalshortcutinfo_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KGlobalShortcutInfo_OnMetacast((KGlobalShortcutInfo*)self, (intptr_t)callback);
+}
+
+void* k_globalshortcutinfo_qbase_metacast(void* self, const char* param1) {
+    return KGlobalShortcutInfo_QBaseMetacast((KGlobalShortcutInfo*)self, param1);
 }
 
 int32_t k_globalshortcutinfo_metacall(void* self, int32_t param1, int param2, void* param3) {

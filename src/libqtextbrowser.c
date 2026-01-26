@@ -33,8 +33,24 @@ const QMetaObject* q_textbrowser_meta_object(void* self) {
     return QTextBrowser_MetaObject((QTextBrowser*)self);
 }
 
+void q_textbrowser_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QTextBrowser_OnMetaObject((QTextBrowser*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_textbrowser_qbase_meta_object(void* self) {
+    return QTextBrowser_QBaseMetaObject((QTextBrowser*)self);
+}
+
 void* q_textbrowser_metacast(void* self, const char* param1) {
     return QTextBrowser_Metacast((QTextBrowser*)self, param1);
+}
+
+void q_textbrowser_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QTextBrowser_OnMetacast((QTextBrowser*)self, (intptr_t)callback);
+}
+
+void* q_textbrowser_qbase_metacast(void* self, const char* param1) {
+    return QTextBrowser_QBaseMetacast((QTextBrowser*)self, param1);
 }
 
 int32_t q_textbrowser_metacall(void* self, int32_t param1, int param2, void* param3) {

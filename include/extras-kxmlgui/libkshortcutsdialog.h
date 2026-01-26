@@ -58,10 +58,41 @@ KShortcutsDialog* k_shortcutsdialog_new5(int32_t actionTypes, int32_t allowLette
 ///
 const QMetaObject* k_shortcutsdialog_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KShortcutsDialog*
+/// @param callback const QMetaObject* func()
+///
+void k_shortcutsdialog_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KShortcutsDialog*
+///
+const QMetaObject* k_shortcutsdialog_qbase_meta_object(void* self);
+
 /// @param self KShortcutsDialog*
 /// @param param1 const char*
 ///
 void* k_shortcutsdialog_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KShortcutsDialog*
+/// @param callback void* func(KShortcutsDialog* self, const char* param1)
+///
+void k_shortcutsdialog_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KShortcutsDialog*
+/// @param param1 const char*
+///
+void* k_shortcutsdialog_qbase_metacast(void* self, const char* param1);
 
 /// @param self KShortcutsDialog*
 /// @param param1 enum QMetaObject__Call

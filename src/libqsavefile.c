@@ -28,8 +28,24 @@ const QMetaObject* q_savefile_meta_object(void* self) {
     return QSaveFile_MetaObject((QSaveFile*)self);
 }
 
+void q_savefile_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QSaveFile_OnMetaObject((QSaveFile*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_savefile_qbase_meta_object(void* self) {
+    return QSaveFile_QBaseMetaObject((QSaveFile*)self);
+}
+
 void* q_savefile_metacast(void* self, const char* param1) {
     return QSaveFile_Metacast((QSaveFile*)self, param1);
+}
+
+void q_savefile_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QSaveFile_OnMetacast((QSaveFile*)self, (intptr_t)callback);
+}
+
+void* q_savefile_qbase_metacast(void* self, const char* param1) {
+    return QSaveFile_QBaseMetacast((QSaveFile*)self, param1);
 }
 
 int32_t q_savefile_metacall(void* self, int32_t param1, int param2, void* param3) {

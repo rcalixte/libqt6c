@@ -18,8 +18,24 @@ const QMetaObject* q_iconengineplugin_meta_object(void* self) {
     return QIconEnginePlugin_MetaObject((QIconEnginePlugin*)self);
 }
 
+void q_iconengineplugin_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QIconEnginePlugin_OnMetaObject((QIconEnginePlugin*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_iconengineplugin_qbase_meta_object(void* self) {
+    return QIconEnginePlugin_QBaseMetaObject((QIconEnginePlugin*)self);
+}
+
 void* q_iconengineplugin_metacast(void* self, const char* param1) {
     return QIconEnginePlugin_Metacast((QIconEnginePlugin*)self, param1);
+}
+
+void q_iconengineplugin_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QIconEnginePlugin_OnMetacast((QIconEnginePlugin*)self, (intptr_t)callback);
+}
+
+void* q_iconengineplugin_qbase_metacast(void* self, const char* param1) {
+    return QIconEnginePlugin_QBaseMetacast((QIconEnginePlugin*)self, param1);
 }
 
 int32_t q_iconengineplugin_metacall(void* self, int32_t param1, int param2, void* param3) {

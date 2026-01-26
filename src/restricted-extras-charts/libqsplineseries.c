@@ -23,8 +23,24 @@ const QMetaObject* q_splineseries_meta_object(void* self) {
     return QSplineSeries_MetaObject((QSplineSeries*)self);
 }
 
+void q_splineseries_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QSplineSeries_OnMetaObject((QSplineSeries*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_splineseries_qbase_meta_object(void* self) {
+    return QSplineSeries_QBaseMetaObject((QSplineSeries*)self);
+}
+
 void* q_splineseries_metacast(void* self, const char* param1) {
     return QSplineSeries_Metacast((QSplineSeries*)self, param1);
+}
+
+void q_splineseries_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QSplineSeries_OnMetacast((QSplineSeries*)self, (intptr_t)callback);
+}
+
+void* q_splineseries_qbase_metacast(void* self, const char* param1) {
+    return QSplineSeries_QBaseMetacast((QSplineSeries*)self, param1);
 }
 
 int32_t q_splineseries_metacall(void* self, int32_t param1, int param2, void* param3) {

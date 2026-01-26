@@ -25,10 +25,41 @@ KHamburgerMenu* k_hamburgermenu_new(void* parent);
 ///
 const QMetaObject* k_hamburgermenu_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KHamburgerMenu*
+/// @param callback const QMetaObject* func()
+///
+void k_hamburgermenu_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KHamburgerMenu*
+///
+const QMetaObject* k_hamburgermenu_qbase_meta_object(void* self);
+
 /// @param self KHamburgerMenu*
 /// @param param1 const char*
 ///
 void* k_hamburgermenu_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KHamburgerMenu*
+/// @param callback void* func(KHamburgerMenu* self, const char* param1)
+///
+void k_hamburgermenu_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KHamburgerMenu*
+/// @param param1 const char*
+///
+void* k_hamburgermenu_qbase_metacast(void* self, const char* param1);
 
 /// @param self KHamburgerMenu*
 /// @param param1 enum QMetaObject__Call

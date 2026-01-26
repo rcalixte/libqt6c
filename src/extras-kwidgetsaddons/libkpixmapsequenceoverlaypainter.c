@@ -29,8 +29,24 @@ const QMetaObject* k_pixmapsequenceoverlaypainter_meta_object(void* self) {
     return KPixmapSequenceOverlayPainter_MetaObject((KPixmapSequenceOverlayPainter*)self);
 }
 
+void k_pixmapsequenceoverlaypainter_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KPixmapSequenceOverlayPainter_OnMetaObject((KPixmapSequenceOverlayPainter*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_pixmapsequenceoverlaypainter_qbase_meta_object(void* self) {
+    return KPixmapSequenceOverlayPainter_QBaseMetaObject((KPixmapSequenceOverlayPainter*)self);
+}
+
 void* k_pixmapsequenceoverlaypainter_metacast(void* self, const char* param1) {
     return KPixmapSequenceOverlayPainter_Metacast((KPixmapSequenceOverlayPainter*)self, param1);
+}
+
+void k_pixmapsequenceoverlaypainter_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KPixmapSequenceOverlayPainter_OnMetacast((KPixmapSequenceOverlayPainter*)self, (intptr_t)callback);
+}
+
+void* k_pixmapsequenceoverlaypainter_qbase_metacast(void* self, const char* param1) {
+    return KPixmapSequenceOverlayPainter_QBaseMetacast((KPixmapSequenceOverlayPainter*)self, param1);
 }
 
 int32_t k_pixmapsequenceoverlaypainter_metacall(void* self, int32_t param1, int param2, void* param3) {

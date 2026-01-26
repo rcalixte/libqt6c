@@ -26,8 +26,24 @@ const QMetaObject* q_audioinput_meta_object(void* self) {
     return QAudioInput_MetaObject((QAudioInput*)self);
 }
 
+void q_audioinput_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QAudioInput_OnMetaObject((QAudioInput*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_audioinput_qbase_meta_object(void* self) {
+    return QAudioInput_QBaseMetaObject((QAudioInput*)self);
+}
+
 void* q_audioinput_metacast(void* self, const char* param1) {
     return QAudioInput_Metacast((QAudioInput*)self, param1);
+}
+
+void q_audioinput_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QAudioInput_OnMetacast((QAudioInput*)self, (intptr_t)callback);
+}
+
+void* q_audioinput_qbase_metacast(void* self, const char* param1) {
+    return QAudioInput_QBaseMetacast((QAudioInput*)self, param1);
 }
 
 int32_t q_audioinput_metacall(void* self, int32_t param1, int param2, void* param3) {

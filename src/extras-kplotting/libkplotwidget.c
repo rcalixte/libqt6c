@@ -32,8 +32,24 @@ const QMetaObject* k_plotwidget_meta_object(void* self) {
     return KPlotWidget_MetaObject((KPlotWidget*)self);
 }
 
+void k_plotwidget_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KPlotWidget_OnMetaObject((KPlotWidget*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_plotwidget_qbase_meta_object(void* self) {
+    return KPlotWidget_QBaseMetaObject((KPlotWidget*)self);
+}
+
 void* k_plotwidget_metacast(void* self, const char* param1) {
     return KPlotWidget_Metacast((KPlotWidget*)self, param1);
+}
+
+void k_plotwidget_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KPlotWidget_OnMetacast((KPlotWidget*)self, (intptr_t)callback);
+}
+
+void* k_plotwidget_qbase_metacast(void* self, const char* param1) {
+    return KPlotWidget_QBaseMetacast((KPlotWidget*)self, param1);
 }
 
 int32_t k_plotwidget_metacall(void* self, int32_t param1, int param2, void* param3) {

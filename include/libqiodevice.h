@@ -31,10 +31,41 @@ QIODevice* q_iodevice_new2(void* parent);
 ///
 const QMetaObject* q_iodevice_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QIODevice*
+/// @param callback const QMetaObject* func()
+///
+void q_iodevice_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QIODevice*
+///
+const QMetaObject* q_iodevice_qbase_meta_object(void* self);
+
 /// @param self QIODevice*
 /// @param param1 const char*
 ///
 void* q_iodevice_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QIODevice*
+/// @param callback void* func(QIODevice* self, const char* param1)
+///
+void q_iodevice_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QIODevice*
+/// @param param1 const char*
+///
+void* q_iodevice_qbase_metacast(void* self, const char* param1);
 
 /// @param self QIODevice*
 /// @param param1 enum QMetaObject__Call

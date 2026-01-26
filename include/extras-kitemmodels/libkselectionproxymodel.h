@@ -40,10 +40,41 @@ KSelectionProxyModel* k_selectionproxymodel_new3(void* selectionModel, void* par
 ///
 const QMetaObject* k_selectionproxymodel_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KSelectionProxyModel*
+/// @param callback const QMetaObject* func()
+///
+void k_selectionproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KSelectionProxyModel*
+///
+const QMetaObject* k_selectionproxymodel_qbase_meta_object(void* self);
+
 /// @param self KSelectionProxyModel*
 /// @param param1 const char*
 ///
 void* k_selectionproxymodel_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KSelectionProxyModel*
+/// @param callback void* func(KSelectionProxyModel* self, const char* param1)
+///
+void k_selectionproxymodel_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KSelectionProxyModel*
+/// @param param1 const char*
+///
+void* k_selectionproxymodel_qbase_metacast(void* self, const char* param1);
 
 /// @param self KSelectionProxyModel*
 /// @param param1 enum QMetaObject__Call

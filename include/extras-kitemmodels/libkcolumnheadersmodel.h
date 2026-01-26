@@ -31,10 +31,41 @@ KColumnHeadersModel* k_columnheadersmodel_new2(void* parent);
 ///
 const QMetaObject* k_columnheadersmodel_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KColumnHeadersModel*
+/// @param callback const QMetaObject* func()
+///
+void k_columnheadersmodel_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KColumnHeadersModel*
+///
+const QMetaObject* k_columnheadersmodel_qbase_meta_object(void* self);
+
 /// @param self KColumnHeadersModel*
 /// @param param1 const char*
 ///
 void* k_columnheadersmodel_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KColumnHeadersModel*
+/// @param callback void* func(KColumnHeadersModel* self, const char* param1)
+///
+void k_columnheadersmodel_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KColumnHeadersModel*
+/// @param param1 const char*
+///
+void* k_columnheadersmodel_qbase_metacast(void* self, const char* param1);
 
 /// @param self KColumnHeadersModel*
 /// @param param1 enum QMetaObject__Call

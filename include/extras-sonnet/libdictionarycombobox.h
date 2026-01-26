@@ -31,10 +31,41 @@ Sonnet__DictionaryComboBox* k_sonnet__dictionarycombobox_new2();
 ///
 const QMetaObject* k_sonnet__dictionarycombobox_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self Sonnet__DictionaryComboBox*
+/// @param callback const QMetaObject* func()
+///
+void k_sonnet__dictionarycombobox_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self Sonnet__DictionaryComboBox*
+///
+const QMetaObject* k_sonnet__dictionarycombobox_qbase_meta_object(void* self);
+
 /// @param self Sonnet__DictionaryComboBox*
 /// @param param1 const char*
 ///
 void* k_sonnet__dictionarycombobox_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self Sonnet__DictionaryComboBox*
+/// @param callback void* func(Sonnet__DictionaryComboBox* self, const char* param1)
+///
+void k_sonnet__dictionarycombobox_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self Sonnet__DictionaryComboBox*
+/// @param param1 const char*
+///
+void* k_sonnet__dictionarycombobox_qbase_metacast(void* self, const char* param1);
 
 /// @param self Sonnet__DictionaryComboBox*
 /// @param param1 enum QMetaObject__Call

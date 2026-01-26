@@ -27,8 +27,24 @@ const QMetaObject* q_dial_meta_object(void* self) {
     return QDial_MetaObject((QDial*)self);
 }
 
+void q_dial_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDial_OnMetaObject((QDial*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_dial_qbase_meta_object(void* self) {
+    return QDial_QBaseMetaObject((QDial*)self);
+}
+
 void* q_dial_metacast(void* self, const char* param1) {
     return QDial_Metacast((QDial*)self, param1);
+}
+
+void q_dial_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDial_OnMetacast((QDial*)self, (intptr_t)callback);
+}
+
+void* q_dial_qbase_metacast(void* self, const char* param1) {
+    return QDial_QBaseMetacast((QDial*)self, param1);
 }
 
 int32_t q_dial_metacall(void* self, int32_t param1, int param2, void* param3) {

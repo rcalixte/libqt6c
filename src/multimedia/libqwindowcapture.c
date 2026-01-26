@@ -19,8 +19,24 @@ const QMetaObject* q_windowcapture_meta_object(void* self) {
     return QWindowCapture_MetaObject((QWindowCapture*)self);
 }
 
+void q_windowcapture_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QWindowCapture_OnMetaObject((QWindowCapture*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_windowcapture_qbase_meta_object(void* self) {
+    return QWindowCapture_QBaseMetaObject((QWindowCapture*)self);
+}
+
 void* q_windowcapture_metacast(void* self, const char* param1) {
     return QWindowCapture_Metacast((QWindowCapture*)self, param1);
+}
+
+void q_windowcapture_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QWindowCapture_OnMetacast((QWindowCapture*)self, (intptr_t)callback);
+}
+
+void* q_windowcapture_qbase_metacast(void* self, const char* param1) {
+    return QWindowCapture_QBaseMetacast((QWindowCapture*)self, param1);
 }
 
 int32_t q_windowcapture_metacall(void* self, int32_t param1, int param2, void* param3) {

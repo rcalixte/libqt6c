@@ -14,8 +14,24 @@ const QMetaObject* k_completion_meta_object(void* self) {
     return KCompletion_MetaObject((KCompletion*)self);
 }
 
+void k_completion_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KCompletion_OnMetaObject((KCompletion*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_completion_qbase_meta_object(void* self) {
+    return KCompletion_QBaseMetaObject((KCompletion*)self);
+}
+
 void* k_completion_metacast(void* self, const char* param1) {
     return KCompletion_Metacast((KCompletion*)self, param1);
+}
+
+void k_completion_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KCompletion_OnMetacast((KCompletion*)self, (intptr_t)callback);
+}
+
+void* k_completion_qbase_metacast(void* self, const char* param1) {
+    return KCompletion_QBaseMetacast((KCompletion*)self, param1);
 }
 
 int32_t k_completion_metacall(void* self, int32_t param1, int param2, void* param3) {

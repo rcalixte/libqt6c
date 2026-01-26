@@ -34,10 +34,41 @@ QDesignerPropertyEditorInterface* q_designerpropertyeditorinterface_new2(void* p
 ///
 const QMetaObject* q_designerpropertyeditorinterface_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QDesignerPropertyEditorInterface*
+/// @param callback const QMetaObject* func()
+///
+void q_designerpropertyeditorinterface_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QDesignerPropertyEditorInterface*
+///
+const QMetaObject* q_designerpropertyeditorinterface_qbase_meta_object(void* self);
+
 /// @param self QDesignerPropertyEditorInterface*
 /// @param param1 const char*
 ///
 void* q_designerpropertyeditorinterface_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QDesignerPropertyEditorInterface*
+/// @param callback void* func(QDesignerPropertyEditorInterface* self, const char* param1)
+///
+void q_designerpropertyeditorinterface_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QDesignerPropertyEditorInterface*
+/// @param param1 const char*
+///
+void* q_designerpropertyeditorinterface_qbase_metacast(void* self, const char* param1);
 
 /// @param self QDesignerPropertyEditorInterface*
 /// @param param1 enum QMetaObject__Call

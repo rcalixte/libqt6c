@@ -22,8 +22,24 @@ const QMetaObject* q_gridlayout_meta_object(void* self) {
     return QGridLayout_MetaObject((QGridLayout*)self);
 }
 
+void q_gridlayout_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QGridLayout_OnMetaObject((QGridLayout*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_gridlayout_qbase_meta_object(void* self) {
+    return QGridLayout_QBaseMetaObject((QGridLayout*)self);
+}
+
 void* q_gridlayout_metacast(void* self, const char* param1) {
     return QGridLayout_Metacast((QGridLayout*)self, param1);
+}
+
+void q_gridlayout_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QGridLayout_OnMetacast((QGridLayout*)self, (intptr_t)callback);
+}
+
+void* q_gridlayout_qbase_metacast(void* self, const char* param1) {
+    return QGridLayout_QBaseMetacast((QGridLayout*)self, param1);
 }
 
 int32_t q_gridlayout_metacall(void* self, int32_t param1, int param2, void* param3) {

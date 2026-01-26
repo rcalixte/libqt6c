@@ -20,8 +20,24 @@ const QMetaObject* k_twofingertap_meta_object(void* self) {
     return KTwoFingerTap_MetaObject((KTwoFingerTap*)self);
 }
 
+void k_twofingertap_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KTwoFingerTap_OnMetaObject((KTwoFingerTap*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_twofingertap_qbase_meta_object(void* self) {
+    return KTwoFingerTap_QBaseMetaObject((KTwoFingerTap*)self);
+}
+
 void* k_twofingertap_metacast(void* self, const char* param1) {
     return KTwoFingerTap_Metacast((KTwoFingerTap*)self, param1);
+}
+
+void k_twofingertap_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KTwoFingerTap_OnMetacast((KTwoFingerTap*)self, (intptr_t)callback);
+}
+
+void* k_twofingertap_qbase_metacast(void* self, const char* param1) {
+    return KTwoFingerTap_QBaseMetacast((KTwoFingerTap*)self, param1);
 }
 
 int32_t k_twofingertap_metacall(void* self, int32_t param1, int param2, void* param3) {

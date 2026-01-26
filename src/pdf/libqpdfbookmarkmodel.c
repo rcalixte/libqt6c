@@ -23,8 +23,24 @@ const QMetaObject* q_pdfbookmarkmodel_meta_object(void* self) {
     return QPdfBookmarkModel_MetaObject((QPdfBookmarkModel*)self);
 }
 
+void q_pdfbookmarkmodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QPdfBookmarkModel_OnMetaObject((QPdfBookmarkModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_pdfbookmarkmodel_qbase_meta_object(void* self) {
+    return QPdfBookmarkModel_QBaseMetaObject((QPdfBookmarkModel*)self);
+}
+
 void* q_pdfbookmarkmodel_metacast(void* self, const char* param1) {
     return QPdfBookmarkModel_Metacast((QPdfBookmarkModel*)self, param1);
+}
+
+void q_pdfbookmarkmodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QPdfBookmarkModel_OnMetacast((QPdfBookmarkModel*)self, (intptr_t)callback);
+}
+
+void* q_pdfbookmarkmodel_qbase_metacast(void* self, const char* param1) {
+    return QPdfBookmarkModel_QBaseMetacast((QPdfBookmarkModel*)self, param1);
 }
 
 int32_t q_pdfbookmarkmodel_metacall(void* self, int32_t param1, int param2, void* param3) {

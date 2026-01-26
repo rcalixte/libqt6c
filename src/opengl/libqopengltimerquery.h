@@ -31,10 +31,41 @@ QOpenGLTimerQuery* q_opengltimerquery_new2(void* parent);
 ///
 const QMetaObject* q_opengltimerquery_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QOpenGLTimerQuery*
+/// @param callback const QMetaObject* func()
+///
+void q_opengltimerquery_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QOpenGLTimerQuery*
+///
+const QMetaObject* q_opengltimerquery_qbase_meta_object(void* self);
+
 /// @param self QOpenGLTimerQuery*
 /// @param param1 const char*
 ///
 void* q_opengltimerquery_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QOpenGLTimerQuery*
+/// @param callback void* func(QOpenGLTimerQuery* self, const char* param1)
+///
+void q_opengltimerquery_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QOpenGLTimerQuery*
+/// @param param1 const char*
+///
+void* q_opengltimerquery_qbase_metacast(void* self, const char* param1);
 
 /// @param self QOpenGLTimerQuery*
 /// @param param1 enum QMetaObject__Call
@@ -912,10 +943,41 @@ QOpenGLTimeMonitor* q_opengltimemonitor_new2(void* parent);
 ///
 const QMetaObject* q_opengltimemonitor_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QOpenGLTimeMonitor*
+/// @param callback const QMetaObject* func()
+///
+void q_opengltimemonitor_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QOpenGLTimeMonitor*
+///
+const QMetaObject* q_opengltimemonitor_qbase_meta_object(void* self);
+
 /// @param self QOpenGLTimeMonitor*
 /// @param param1 const char*
 ///
 void* q_opengltimemonitor_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QOpenGLTimeMonitor*
+/// @param callback void* func(QOpenGLTimeMonitor* self, const char* param1)
+///
+void q_opengltimemonitor_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QOpenGLTimeMonitor*
+/// @param param1 const char*
+///
+void* q_opengltimemonitor_qbase_metacast(void* self, const char* param1);
 
 /// @param self QOpenGLTimeMonitor*
 /// @param param1 enum QMetaObject__Call

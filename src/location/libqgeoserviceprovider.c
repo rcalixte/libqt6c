@@ -78,8 +78,24 @@ const QMetaObject* q_geoserviceprovider_meta_object(void* self) {
     return QGeoServiceProvider_MetaObject((QGeoServiceProvider*)self);
 }
 
+void q_geoserviceprovider_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QGeoServiceProvider_OnMetaObject((QGeoServiceProvider*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_geoserviceprovider_qbase_meta_object(void* self) {
+    return QGeoServiceProvider_QBaseMetaObject((QGeoServiceProvider*)self);
+}
+
 void* q_geoserviceprovider_metacast(void* self, const char* param1) {
     return QGeoServiceProvider_Metacast((QGeoServiceProvider*)self, param1);
+}
+
+void q_geoserviceprovider_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QGeoServiceProvider_OnMetacast((QGeoServiceProvider*)self, (intptr_t)callback);
+}
+
+void* q_geoserviceprovider_qbase_metacast(void* self, const char* param1) {
+    return QGeoServiceProvider_QBaseMetacast((QGeoServiceProvider*)self, param1);
 }
 
 int32_t q_geoserviceprovider_metacall(void* self, int32_t param1, int param2, void* param3) {

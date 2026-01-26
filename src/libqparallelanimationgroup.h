@@ -31,10 +31,41 @@ QParallelAnimationGroup* q_parallelanimationgroup_new2(void* parent);
 ///
 const QMetaObject* q_parallelanimationgroup_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QParallelAnimationGroup*
+/// @param callback const QMetaObject* func()
+///
+void q_parallelanimationgroup_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QParallelAnimationGroup*
+///
+const QMetaObject* q_parallelanimationgroup_qbase_meta_object(void* self);
+
 /// @param self QParallelAnimationGroup*
 /// @param param1 const char*
 ///
 void* q_parallelanimationgroup_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QParallelAnimationGroup*
+/// @param callback void* func(QParallelAnimationGroup* self, const char* param1)
+///
+void q_parallelanimationgroup_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QParallelAnimationGroup*
+/// @param param1 const char*
+///
+void* q_parallelanimationgroup_qbase_metacast(void* self, const char* param1);
 
 /// @param self QParallelAnimationGroup*
 /// @param param1 enum QMetaObject__Call

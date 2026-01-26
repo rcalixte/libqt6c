@@ -17,8 +17,24 @@ const QMetaObject* q_opengltimerquery_meta_object(void* self) {
     return QOpenGLTimerQuery_MetaObject((QOpenGLTimerQuery*)self);
 }
 
+void q_opengltimerquery_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QOpenGLTimerQuery_OnMetaObject((QOpenGLTimerQuery*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_opengltimerquery_qbase_meta_object(void* self) {
+    return QOpenGLTimerQuery_QBaseMetaObject((QOpenGLTimerQuery*)self);
+}
+
 void* q_opengltimerquery_metacast(void* self, const char* param1) {
     return QOpenGLTimerQuery_Metacast((QOpenGLTimerQuery*)self, param1);
+}
+
+void q_opengltimerquery_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QOpenGLTimerQuery_OnMetacast((QOpenGLTimerQuery*)self, (intptr_t)callback);
+}
+
+void* q_opengltimerquery_qbase_metacast(void* self, const char* param1) {
+    return QOpenGLTimerQuery_QBaseMetacast((QOpenGLTimerQuery*)self, param1);
 }
 
 int32_t q_opengltimerquery_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -425,8 +441,24 @@ const QMetaObject* q_opengltimemonitor_meta_object(void* self) {
     return QOpenGLTimeMonitor_MetaObject((QOpenGLTimeMonitor*)self);
 }
 
+void q_opengltimemonitor_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QOpenGLTimeMonitor_OnMetaObject((QOpenGLTimeMonitor*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_opengltimemonitor_qbase_meta_object(void* self) {
+    return QOpenGLTimeMonitor_QBaseMetaObject((QOpenGLTimeMonitor*)self);
+}
+
 void* q_opengltimemonitor_metacast(void* self, const char* param1) {
     return QOpenGLTimeMonitor_Metacast((QOpenGLTimeMonitor*)self, param1);
+}
+
+void q_opengltimemonitor_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QOpenGLTimeMonitor_OnMetacast((QOpenGLTimeMonitor*)self, (intptr_t)callback);
+}
+
+void* q_opengltimemonitor_qbase_metacast(void* self, const char* param1) {
+    return QOpenGLTimeMonitor_QBaseMetacast((QOpenGLTimeMonitor*)self, param1);
 }
 
 int32_t q_opengltimemonitor_metacall(void* self, int32_t param1, int param2, void* param3) {

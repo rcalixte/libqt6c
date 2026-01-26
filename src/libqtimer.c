@@ -17,8 +17,24 @@ const QMetaObject* q_timer_meta_object(void* self) {
     return QTimer_MetaObject((QTimer*)self);
 }
 
+void q_timer_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QTimer_OnMetaObject((QTimer*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_timer_qbase_meta_object(void* self) {
+    return QTimer_QBaseMetaObject((QTimer*)self);
+}
+
 void* q_timer_metacast(void* self, const char* param1) {
     return QTimer_Metacast((QTimer*)self, param1);
+}
+
+void q_timer_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QTimer_OnMetacast((QTimer*)self, (intptr_t)callback);
+}
+
+void* q_timer_qbase_metacast(void* self, const char* param1) {
+    return QTimer_QBaseMetacast((QTimer*)self, param1);
 }
 
 int32_t q_timer_metacall(void* self, int32_t param1, int param2, void* param3) {

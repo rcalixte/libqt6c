@@ -31,10 +31,41 @@ KShortcutWidget* k_shortcutwidget_new2();
 ///
 const QMetaObject* k_shortcutwidget_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KShortcutWidget*
+/// @param callback const QMetaObject* func()
+///
+void k_shortcutwidget_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KShortcutWidget*
+///
+const QMetaObject* k_shortcutwidget_qbase_meta_object(void* self);
+
 /// @param self KShortcutWidget*
 /// @param param1 const char*
 ///
 void* k_shortcutwidget_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KShortcutWidget*
+/// @param callback void* func(KShortcutWidget* self, const char* param1)
+///
+void k_shortcutwidget_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KShortcutWidget*
+/// @param param1 const char*
+///
+void* k_shortcutwidget_qbase_metacast(void* self, const char* param1);
 
 /// @param self KShortcutWidget*
 /// @param param1 enum QMetaObject__Call

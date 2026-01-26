@@ -31,10 +31,41 @@ QMediaRecorder* q_mediarecorder_new2(void* parent);
 ///
 const QMetaObject* q_mediarecorder_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QMediaRecorder*
+/// @param callback const QMetaObject* func()
+///
+void q_mediarecorder_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QMediaRecorder*
+///
+const QMetaObject* q_mediarecorder_qbase_meta_object(void* self);
+
 /// @param self QMediaRecorder*
 /// @param param1 const char*
 ///
 void* q_mediarecorder_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QMediaRecorder*
+/// @param callback void* func(QMediaRecorder* self, const char* param1)
+///
+void q_mediarecorder_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QMediaRecorder*
+/// @param param1 const char*
+///
+void* q_mediarecorder_qbase_metacast(void* self, const char* param1);
 
 /// @param self QMediaRecorder*
 /// @param param1 enum QMetaObject__Call

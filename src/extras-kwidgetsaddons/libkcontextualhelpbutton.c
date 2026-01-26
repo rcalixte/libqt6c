@@ -32,8 +32,24 @@ const QMetaObject* k_contextualhelpbutton_meta_object(void* self) {
     return KContextualHelpButton_MetaObject((KContextualHelpButton*)self);
 }
 
+void k_contextualhelpbutton_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KContextualHelpButton_OnMetaObject((KContextualHelpButton*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_contextualhelpbutton_qbase_meta_object(void* self) {
+    return KContextualHelpButton_QBaseMetaObject((KContextualHelpButton*)self);
+}
+
 void* k_contextualhelpbutton_metacast(void* self, const char* param1) {
     return KContextualHelpButton_Metacast((KContextualHelpButton*)self, param1);
+}
+
+void k_contextualhelpbutton_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KContextualHelpButton_OnMetacast((KContextualHelpButton*)self, (intptr_t)callback);
+}
+
+void* k_contextualhelpbutton_qbase_metacast(void* self, const char* param1) {
+    return KContextualHelpButton_QBaseMetacast((KContextualHelpButton*)self, param1);
 }
 
 int32_t k_contextualhelpbutton_metacall(void* self, int32_t param1, int param2, void* param3) {

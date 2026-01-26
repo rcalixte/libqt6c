@@ -40,10 +40,41 @@ QPolarChart* q_polarchart_new3(void* parent, int32_t wFlags);
 ///
 const QMetaObject* q_polarchart_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QPolarChart*
+/// @param callback const QMetaObject* func()
+///
+void q_polarchart_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QPolarChart*
+///
+const QMetaObject* q_polarchart_qbase_meta_object(void* self);
+
 /// @param self QPolarChart*
 /// @param param1 const char*
 ///
 void* q_polarchart_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QPolarChart*
+/// @param callback void* func(QPolarChart* self, const char* param1)
+///
+void q_polarchart_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QPolarChart*
+/// @param param1 const char*
+///
+void* q_polarchart_qbase_metacast(void* self, const char* param1);
 
 /// @param self QPolarChart*
 /// @param param1 enum QMetaObject__Call

@@ -23,8 +23,24 @@ const QMetaObject* k_actioncollection_meta_object(void* self) {
     return KActionCollection_MetaObject((KActionCollection*)self);
 }
 
+void k_actioncollection_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KActionCollection_OnMetaObject((KActionCollection*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_actioncollection_qbase_meta_object(void* self) {
+    return KActionCollection_QBaseMetaObject((KActionCollection*)self);
+}
+
 void* k_actioncollection_metacast(void* self, const char* param1) {
     return KActionCollection_Metacast((KActionCollection*)self, param1);
+}
+
+void k_actioncollection_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KActionCollection_OnMetacast((KActionCollection*)self, (intptr_t)callback);
+}
+
+void* k_actioncollection_qbase_metacast(void* self, const char* param1) {
+    return KActionCollection_QBaseMetacast((KActionCollection*)self, param1);
 }
 
 int32_t k_actioncollection_metacall(void* self, int32_t param1, int param2, void* param3) {

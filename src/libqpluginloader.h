@@ -48,10 +48,41 @@ QPluginLoader* q_pluginloader_new4(const char* fileName, void* parent);
 ///
 const QMetaObject* q_pluginloader_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QPluginLoader*
+/// @param callback const QMetaObject* func()
+///
+void q_pluginloader_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QPluginLoader*
+///
+const QMetaObject* q_pluginloader_qbase_meta_object(void* self);
+
 /// @param self QPluginLoader*
 /// @param param1 const char*
 ///
 void* q_pluginloader_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QPluginLoader*
+/// @param callback void* func(QPluginLoader* self, const char* param1)
+///
+void q_pluginloader_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QPluginLoader*
+/// @param param1 const char*
+///
+void* q_pluginloader_qbase_metacast(void* self, const char* param1);
 
 /// @param self QPluginLoader*
 /// @param param1 enum QMetaObject__Call

@@ -18,8 +18,24 @@ const QMetaObject* q_translator_meta_object(void* self) {
     return QTranslator_MetaObject((QTranslator*)self);
 }
 
+void q_translator_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QTranslator_OnMetaObject((QTranslator*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_translator_qbase_meta_object(void* self) {
+    return QTranslator_QBaseMetaObject((QTranslator*)self);
+}
+
 void* q_translator_metacast(void* self, const char* param1) {
     return QTranslator_Metacast((QTranslator*)self, param1);
+}
+
+void q_translator_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QTranslator_OnMetacast((QTranslator*)self, (intptr_t)callback);
+}
+
+void* q_translator_qbase_metacast(void* self, const char* param1) {
+    return QTranslator_QBaseMetacast((QTranslator*)self, param1);
 }
 
 int32_t q_translator_metacall(void* self, int32_t param1, int param2, void* param3) {

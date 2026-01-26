@@ -82,10 +82,41 @@ QDateTimeEdit* q_datetimeedit_new8(void* t, void* parent);
 ///
 const QMetaObject* q_datetimeedit_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QDateTimeEdit*
+/// @param callback const QMetaObject* func()
+///
+void q_datetimeedit_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QDateTimeEdit*
+///
+const QMetaObject* q_datetimeedit_qbase_meta_object(void* self);
+
 /// @param self QDateTimeEdit*
 /// @param param1 const char*
 ///
 void* q_datetimeedit_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QDateTimeEdit*
+/// @param callback void* func(QDateTimeEdit* self, const char* param1)
+///
+void q_datetimeedit_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QDateTimeEdit*
+/// @param param1 const char*
+///
+void* q_datetimeedit_qbase_metacast(void* self, const char* param1);
 
 /// @param self QDateTimeEdit*
 /// @param param1 enum QMetaObject__Call
@@ -5753,10 +5784,41 @@ QTimeEdit* q_timeedit_new4(void* time, void* parent);
 ///
 const QMetaObject* q_timeedit_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QTimeEdit*
+/// @param callback const QMetaObject* func()
+///
+void q_timeedit_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QTimeEdit*
+///
+const QMetaObject* q_timeedit_qbase_meta_object(void* self);
+
 /// @param self QTimeEdit*
 /// @param param1 const char*
 ///
 void* q_timeedit_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QTimeEdit*
+/// @param callback void* func(QTimeEdit* self, const char* param1)
+///
+void q_timeedit_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QTimeEdit*
+/// @param param1 const char*
+///
+void* q_timeedit_qbase_metacast(void* self, const char* param1);
 
 /// @param self QTimeEdit*
 /// @param param1 enum QMetaObject__Call
@@ -11676,10 +11738,41 @@ QDateEdit* q_dateedit_new4(void* date, void* parent);
 ///
 const QMetaObject* q_dateedit_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QDateEdit*
+/// @param callback const QMetaObject* func()
+///
+void q_dateedit_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QDateEdit*
+///
+const QMetaObject* q_dateedit_qbase_meta_object(void* self);
+
 /// @param self QDateEdit*
 /// @param param1 const char*
 ///
 void* q_dateedit_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QDateEdit*
+/// @param callback void* func(QDateEdit* self, const char* param1)
+///
+void q_dateedit_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QDateEdit*
+/// @param param1 const char*
+///
+void* q_dateedit_qbase_metacast(void* self, const char* param1);
 
 /// @param self QDateEdit*
 /// @param param1 enum QMetaObject__Call

@@ -44,8 +44,24 @@ const QMetaObject* q_splashscreen_meta_object(void* self) {
     return QSplashScreen_MetaObject((QSplashScreen*)self);
 }
 
+void q_splashscreen_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QSplashScreen_OnMetaObject((QSplashScreen*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_splashscreen_qbase_meta_object(void* self) {
+    return QSplashScreen_QBaseMetaObject((QSplashScreen*)self);
+}
+
 void* q_splashscreen_metacast(void* self, const char* param1) {
     return QSplashScreen_Metacast((QSplashScreen*)self, param1);
+}
+
+void q_splashscreen_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QSplashScreen_OnMetacast((QSplashScreen*)self, (intptr_t)callback);
+}
+
+void* q_splashscreen_qbase_metacast(void* self, const char* param1) {
+    return QSplashScreen_QBaseMetacast((QSplashScreen*)self, param1);
 }
 
 int32_t q_splashscreen_metacall(void* self, int32_t param1, int param2, void* param3) {

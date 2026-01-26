@@ -16,8 +16,24 @@ const QMetaObject* k_abstractfileitemactionplugin_meta_object(void* self) {
     return KAbstractFileItemActionPlugin_MetaObject((KAbstractFileItemActionPlugin*)self);
 }
 
+void k_abstractfileitemactionplugin_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KAbstractFileItemActionPlugin_OnMetaObject((KAbstractFileItemActionPlugin*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_abstractfileitemactionplugin_qbase_meta_object(void* self) {
+    return KAbstractFileItemActionPlugin_QBaseMetaObject((KAbstractFileItemActionPlugin*)self);
+}
+
 void* k_abstractfileitemactionplugin_metacast(void* self, const char* param1) {
     return KAbstractFileItemActionPlugin_Metacast((KAbstractFileItemActionPlugin*)self, param1);
+}
+
+void k_abstractfileitemactionplugin_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KAbstractFileItemActionPlugin_OnMetacast((KAbstractFileItemActionPlugin*)self, (intptr_t)callback);
+}
+
+void* k_abstractfileitemactionplugin_qbase_metacast(void* self, const char* param1) {
+    return KAbstractFileItemActionPlugin_QBaseMetacast((KAbstractFileItemActionPlugin*)self, param1);
 }
 
 int32_t k_abstractfileitemactionplugin_metacall(void* self, int32_t param1, int param2, void* param3) {

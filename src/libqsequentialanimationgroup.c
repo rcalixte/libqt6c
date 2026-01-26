@@ -20,8 +20,24 @@ const QMetaObject* q_sequentialanimationgroup_meta_object(void* self) {
     return QSequentialAnimationGroup_MetaObject((QSequentialAnimationGroup*)self);
 }
 
+void q_sequentialanimationgroup_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QSequentialAnimationGroup_OnMetaObject((QSequentialAnimationGroup*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_sequentialanimationgroup_qbase_meta_object(void* self) {
+    return QSequentialAnimationGroup_QBaseMetaObject((QSequentialAnimationGroup*)self);
+}
+
 void* q_sequentialanimationgroup_metacast(void* self, const char* param1) {
     return QSequentialAnimationGroup_Metacast((QSequentialAnimationGroup*)self, param1);
+}
+
+void q_sequentialanimationgroup_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QSequentialAnimationGroup_OnMetacast((QSequentialAnimationGroup*)self, (intptr_t)callback);
+}
+
+void* q_sequentialanimationgroup_qbase_metacast(void* self, const char* param1) {
+    return QSequentialAnimationGroup_QBaseMetacast((QSequentialAnimationGroup*)self, param1);
 }
 
 int32_t q_sequentialanimationgroup_metacall(void* self, int32_t param1, int param2, void* param3) {

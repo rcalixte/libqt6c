@@ -76,10 +76,41 @@ QProgressDialog* q_progressdialog_new6(const char* labelText, const char* cancel
 ///
 const QMetaObject* q_progressdialog_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QProgressDialog*
+/// @param callback const QMetaObject* func()
+///
+void q_progressdialog_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QProgressDialog*
+///
+const QMetaObject* q_progressdialog_qbase_meta_object(void* self);
+
 /// @param self QProgressDialog*
 /// @param param1 const char*
 ///
 void* q_progressdialog_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QProgressDialog*
+/// @param callback void* func(QProgressDialog* self, const char* param1)
+///
+void q_progressdialog_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QProgressDialog*
+/// @param param1 const char*
+///
+void* q_progressdialog_qbase_metacast(void* self, const char* param1);
 
 /// @param self QProgressDialog*
 /// @param param1 enum QMetaObject__Call

@@ -22,8 +22,24 @@ const QMetaObject* k_numbermodel_meta_object(void* self) {
     return KNumberModel_MetaObject((KNumberModel*)self);
 }
 
+void k_numbermodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KNumberModel_OnMetaObject((KNumberModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_numbermodel_qbase_meta_object(void* self) {
+    return KNumberModel_QBaseMetaObject((KNumberModel*)self);
+}
+
 void* k_numbermodel_metacast(void* self, const char* param1) {
     return KNumberModel_Metacast((KNumberModel*)self, param1);
+}
+
+void k_numbermodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KNumberModel_OnMetacast((KNumberModel*)self, (intptr_t)callback);
+}
+
+void* k_numbermodel_qbase_metacast(void* self, const char* param1) {
+    return KNumberModel_QBaseMetacast((KNumberModel*)self, param1);
 }
 
 int32_t k_numbermodel_metacall(void* self, int32_t param1, int param2, void* param3) {

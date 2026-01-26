@@ -23,10 +23,41 @@ QStyle* q_style_new();
 ///
 const QMetaObject* q_style_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QStyle*
+/// @param callback const QMetaObject* func()
+///
+void q_style_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QStyle*
+///
+const QMetaObject* q_style_qbase_meta_object(void* self);
+
 /// @param self QStyle*
 /// @param param1 const char*
 ///
 void* q_style_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QStyle*
+/// @param callback void* func(QStyle* self, const char* param1)
+///
+void q_style_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QStyle*
+/// @param param1 const char*
+///
+void* q_style_qbase_metacast(void* self, const char* param1);
 
 /// @param self QStyle*
 /// @param param1 enum QMetaObject__Call

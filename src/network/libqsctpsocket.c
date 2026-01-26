@@ -24,8 +24,24 @@ const QMetaObject* q_sctpsocket_meta_object(void* self) {
     return QSctpSocket_MetaObject((QSctpSocket*)self);
 }
 
+void q_sctpsocket_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QSctpSocket_OnMetaObject((QSctpSocket*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_sctpsocket_qbase_meta_object(void* self) {
+    return QSctpSocket_QBaseMetaObject((QSctpSocket*)self);
+}
+
 void* q_sctpsocket_metacast(void* self, const char* param1) {
     return QSctpSocket_Metacast((QSctpSocket*)self, param1);
+}
+
+void q_sctpsocket_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QSctpSocket_OnMetacast((QSctpSocket*)self, (intptr_t)callback);
+}
+
+void* q_sctpsocket_qbase_metacast(void* self, const char* param1) {
+    return QSctpSocket_QBaseMetacast((QSctpSocket*)self, param1);
 }
 
 int32_t q_sctpsocket_metacall(void* self, int32_t param1, int param2, void* param3) {

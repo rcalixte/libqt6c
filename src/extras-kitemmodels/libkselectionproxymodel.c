@@ -28,8 +28,24 @@ const QMetaObject* k_selectionproxymodel_meta_object(void* self) {
     return KSelectionProxyModel_MetaObject((KSelectionProxyModel*)self);
 }
 
+void k_selectionproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KSelectionProxyModel_OnMetaObject((KSelectionProxyModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_selectionproxymodel_qbase_meta_object(void* self) {
+    return KSelectionProxyModel_QBaseMetaObject((KSelectionProxyModel*)self);
+}
+
 void* k_selectionproxymodel_metacast(void* self, const char* param1) {
     return KSelectionProxyModel_Metacast((KSelectionProxyModel*)self, param1);
+}
+
+void k_selectionproxymodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KSelectionProxyModel_OnMetacast((KSelectionProxyModel*)self, (intptr_t)callback);
+}
+
+void* k_selectionproxymodel_qbase_metacast(void* self, const char* param1) {
+    return KSelectionProxyModel_QBaseMetacast((KSelectionProxyModel*)self, param1);
 }
 
 int32_t k_selectionproxymodel_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -31,10 +31,41 @@ QsciLexerTekHex* q_scilexertekhex_new2(void* parent);
 ///
 const QMetaObject* q_scilexertekhex_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QsciLexerTekHex*
+/// @param callback const QMetaObject* func()
+///
+void q_scilexertekhex_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QsciLexerTekHex*
+///
+const QMetaObject* q_scilexertekhex_qbase_meta_object(void* self);
+
 /// @param self QsciLexerTekHex*
 /// @param param1 const char*
 ///
 void* q_scilexertekhex_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QsciLexerTekHex*
+/// @param callback void* func(QsciLexerTekHex* self, const char* param1)
+///
+void q_scilexertekhex_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QsciLexerTekHex*
+/// @param param1 const char*
+///
+void* q_scilexertekhex_qbase_metacast(void* self, const char* param1);
 
 /// @param self QsciLexerTekHex*
 /// @param param1 enum QMetaObject__Call

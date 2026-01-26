@@ -22,8 +22,24 @@ const QMetaObject* k_nscore__question_meta_object(void* self) {
     return KNSCore__Question_MetaObject((KNSCore__Question*)self);
 }
 
+void k_nscore__question_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KNSCore__Question_OnMetaObject((KNSCore__Question*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_nscore__question_qbase_meta_object(void* self) {
+    return KNSCore__Question_QBaseMetaObject((KNSCore__Question*)self);
+}
+
 void* k_nscore__question_metacast(void* self, const char* param1) {
     return KNSCore__Question_Metacast((KNSCore__Question*)self, param1);
+}
+
+void k_nscore__question_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KNSCore__Question_OnMetacast((KNSCore__Question*)self, (intptr_t)callback);
+}
+
+void* k_nscore__question_qbase_metacast(void* self, const char* param1) {
+    return KNSCore__Question_QBaseMetacast((KNSCore__Question*)self, param1);
 }
 
 int32_t k_nscore__question_metacall(void* self, int32_t param1, int param2, void* param3) {

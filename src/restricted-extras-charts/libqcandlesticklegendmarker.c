@@ -20,8 +20,24 @@ const QMetaObject* q_candlesticklegendmarker_meta_object(void* self) {
     return QCandlestickLegendMarker_MetaObject((QCandlestickLegendMarker*)self);
 }
 
+void q_candlesticklegendmarker_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCandlestickLegendMarker_OnMetaObject((QCandlestickLegendMarker*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_candlesticklegendmarker_qbase_meta_object(void* self) {
+    return QCandlestickLegendMarker_QBaseMetaObject((QCandlestickLegendMarker*)self);
+}
+
 void* q_candlesticklegendmarker_metacast(void* self, const char* param1) {
     return QCandlestickLegendMarker_Metacast((QCandlestickLegendMarker*)self, param1);
+}
+
+void q_candlesticklegendmarker_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCandlestickLegendMarker_OnMetacast((QCandlestickLegendMarker*)self, (intptr_t)callback);
+}
+
+void* q_candlesticklegendmarker_qbase_metacast(void* self, const char* param1) {
+    return QCandlestickLegendMarker_QBaseMetacast((QCandlestickLegendMarker*)self, param1);
 }
 
 int32_t q_candlesticklegendmarker_metacall(void* self, int32_t param1, int param2, void* param3) {

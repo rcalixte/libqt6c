@@ -48,10 +48,41 @@ QCheckBox* q_checkbox_new4(const char* text, void* parent);
 ///
 const QMetaObject* q_checkbox_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCheckBox*
+/// @param callback const QMetaObject* func()
+///
+void q_checkbox_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCheckBox*
+///
+const QMetaObject* q_checkbox_qbase_meta_object(void* self);
+
 /// @param self QCheckBox*
 /// @param param1 const char*
 ///
 void* q_checkbox_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCheckBox*
+/// @param callback void* func(QCheckBox* self, const char* param1)
+///
+void q_checkbox_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCheckBox*
+/// @param param1 const char*
+///
+void* q_checkbox_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCheckBox*
 /// @param param1 enum QMetaObject__Call

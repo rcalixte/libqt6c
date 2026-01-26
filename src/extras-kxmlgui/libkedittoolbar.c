@@ -36,8 +36,24 @@ const QMetaObject* k_edittoolbar_meta_object(void* self) {
     return KEditToolBar_MetaObject((KEditToolBar*)self);
 }
 
+void k_edittoolbar_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KEditToolBar_OnMetaObject((KEditToolBar*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_edittoolbar_qbase_meta_object(void* self) {
+    return KEditToolBar_QBaseMetaObject((KEditToolBar*)self);
+}
+
 void* k_edittoolbar_metacast(void* self, const char* param1) {
     return KEditToolBar_Metacast((KEditToolBar*)self, param1);
+}
+
+void k_edittoolbar_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KEditToolBar_OnMetacast((KEditToolBar*)self, (intptr_t)callback);
+}
+
+void* k_edittoolbar_qbase_metacast(void* self, const char* param1) {
+    return KEditToolBar_QBaseMetacast((KEditToolBar*)self, param1);
 }
 
 int32_t k_edittoolbar_metacall(void* self, int32_t param1, int param2, void* param3) {

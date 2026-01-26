@@ -22,8 +22,24 @@ const QMetaObject* q_scilexerperl_meta_object(void* self) {
     return QsciLexerPerl_MetaObject((QsciLexerPerl*)self);
 }
 
+void q_scilexerperl_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QsciLexerPerl_OnMetaObject((QsciLexerPerl*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_scilexerperl_qbase_meta_object(void* self) {
+    return QsciLexerPerl_QBaseMetaObject((QsciLexerPerl*)self);
+}
+
 void* q_scilexerperl_metacast(void* self, const char* param1) {
     return QsciLexerPerl_Metacast((QsciLexerPerl*)self, param1);
+}
+
+void q_scilexerperl_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QsciLexerPerl_OnMetacast((QsciLexerPerl*)self, (intptr_t)callback);
+}
+
+void* q_scilexerperl_qbase_metacast(void* self, const char* param1) {
+    return QsciLexerPerl_QBaseMetacast((QsciLexerPerl*)self, param1);
 }
 
 int32_t q_scilexerperl_metacall(void* self, int32_t param1, int param2, void* param3) {

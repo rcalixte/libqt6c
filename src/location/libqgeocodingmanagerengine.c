@@ -72,8 +72,24 @@ const QMetaObject* q_geocodingmanagerengine_meta_object(void* self) {
     return QGeoCodingManagerEngine_MetaObject((QGeoCodingManagerEngine*)self);
 }
 
+void q_geocodingmanagerengine_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QGeoCodingManagerEngine_OnMetaObject((QGeoCodingManagerEngine*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_geocodingmanagerengine_qbase_meta_object(void* self) {
+    return QGeoCodingManagerEngine_QBaseMetaObject((QGeoCodingManagerEngine*)self);
+}
+
 void* q_geocodingmanagerengine_metacast(void* self, const char* param1) {
     return QGeoCodingManagerEngine_Metacast((QGeoCodingManagerEngine*)self, param1);
+}
+
+void q_geocodingmanagerengine_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QGeoCodingManagerEngine_OnMetacast((QGeoCodingManagerEngine*)self, (intptr_t)callback);
+}
+
+void* q_geocodingmanagerengine_qbase_metacast(void* self, const char* param1) {
+    return QGeoCodingManagerEngine_QBaseMetacast((QGeoCodingManagerEngine*)self, param1);
 }
 
 int32_t q_geocodingmanagerengine_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -27,8 +27,24 @@ const QMetaObject* q_sqlquerymodel_meta_object(void* self) {
     return QSqlQueryModel_MetaObject((QSqlQueryModel*)self);
 }
 
+void q_sqlquerymodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QSqlQueryModel_OnMetaObject((QSqlQueryModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_sqlquerymodel_qbase_meta_object(void* self) {
+    return QSqlQueryModel_QBaseMetaObject((QSqlQueryModel*)self);
+}
+
 void* q_sqlquerymodel_metacast(void* self, const char* param1) {
     return QSqlQueryModel_Metacast((QSqlQueryModel*)self, param1);
+}
+
+void q_sqlquerymodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QSqlQueryModel_OnMetacast((QSqlQueryModel*)self, (intptr_t)callback);
+}
+
+void* q_sqlquerymodel_qbase_metacast(void* self, const char* param1) {
+    return QSqlQueryModel_QBaseMetacast((QSqlQueryModel*)self, param1);
 }
 
 int32_t q_sqlquerymodel_metacall(void* self, int32_t param1, int param2, void* param3) {

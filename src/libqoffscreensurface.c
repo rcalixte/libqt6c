@@ -25,8 +25,24 @@ const QMetaObject* q_offscreensurface_meta_object(void* self) {
     return QOffscreenSurface_MetaObject((QOffscreenSurface*)self);
 }
 
+void q_offscreensurface_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QOffscreenSurface_OnMetaObject((QOffscreenSurface*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_offscreensurface_qbase_meta_object(void* self) {
+    return QOffscreenSurface_QBaseMetaObject((QOffscreenSurface*)self);
+}
+
 void* q_offscreensurface_metacast(void* self, const char* param1) {
     return QOffscreenSurface_Metacast((QOffscreenSurface*)self, param1);
+}
+
+void q_offscreensurface_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QOffscreenSurface_OnMetacast((QOffscreenSurface*)self, (intptr_t)callback);
+}
+
+void* q_offscreensurface_qbase_metacast(void* self, const char* param1) {
+    return QOffscreenSurface_QBaseMetacast((QOffscreenSurface*)self, param1);
 }
 
 int32_t q_offscreensurface_metacall(void* self, int32_t param1, int param2, void* param3) {

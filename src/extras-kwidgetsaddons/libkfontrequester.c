@@ -32,8 +32,24 @@ const QMetaObject* k_fontrequester_meta_object(void* self) {
     return KFontRequester_MetaObject((KFontRequester*)self);
 }
 
+void k_fontrequester_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KFontRequester_OnMetaObject((KFontRequester*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_fontrequester_qbase_meta_object(void* self) {
+    return KFontRequester_QBaseMetaObject((KFontRequester*)self);
+}
+
 void* k_fontrequester_metacast(void* self, const char* param1) {
     return KFontRequester_Metacast((KFontRequester*)self, param1);
+}
+
+void k_fontrequester_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KFontRequester_OnMetacast((KFontRequester*)self, (intptr_t)callback);
+}
+
+void* k_fontrequester_qbase_metacast(void* self, const char* param1) {
+    return KFontRequester_QBaseMetacast((KFontRequester*)self, param1);
 }
 
 int32_t k_fontrequester_metacall(void* self, int32_t param1, int param2, void* param3) {

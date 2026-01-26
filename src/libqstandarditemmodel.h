@@ -902,10 +902,41 @@ QStandardItemModel* q_standarditemmodel_new4(int rows, int columns, void* parent
 ///
 const QMetaObject* q_standarditemmodel_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QStandardItemModel*
+/// @param callback const QMetaObject* func()
+///
+void q_standarditemmodel_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QStandardItemModel*
+///
+const QMetaObject* q_standarditemmodel_qbase_meta_object(void* self);
+
 /// @param self QStandardItemModel*
 /// @param param1 const char*
 ///
 void* q_standarditemmodel_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QStandardItemModel*
+/// @param callback void* func(QStandardItemModel* self, const char* param1)
+///
+void q_standarditemmodel_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QStandardItemModel*
+/// @param param1 const char*
+///
+void* q_standarditemmodel_qbase_metacast(void* self, const char* param1);
 
 /// @param self QStandardItemModel*
 /// @param param1 enum QMetaObject__Call

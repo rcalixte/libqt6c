@@ -32,8 +32,24 @@ const QMetaObject* k_urlnavigator_meta_object(void* self) {
     return KUrlNavigator_MetaObject((KUrlNavigator*)self);
 }
 
+void k_urlnavigator_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KUrlNavigator_OnMetaObject((KUrlNavigator*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_urlnavigator_qbase_meta_object(void* self) {
+    return KUrlNavigator_QBaseMetaObject((KUrlNavigator*)self);
+}
+
 void* k_urlnavigator_metacast(void* self, const char* param1) {
     return KUrlNavigator_Metacast((KUrlNavigator*)self, param1);
+}
+
+void k_urlnavigator_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KUrlNavigator_OnMetacast((KUrlNavigator*)self, (intptr_t)callback);
+}
+
+void* k_urlnavigator_qbase_metacast(void* self, const char* param1) {
+    return KUrlNavigator_QBaseMetacast((KUrlNavigator*)self, param1);
 }
 
 int32_t k_urlnavigator_metacall(void* self, int32_t param1, int param2, void* param3) {

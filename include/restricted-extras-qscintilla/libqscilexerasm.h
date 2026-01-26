@@ -31,10 +31,41 @@ QsciLexerAsm* q_scilexerasm_new2(void* parent);
 ///
 const QMetaObject* q_scilexerasm_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QsciLexerAsm*
+/// @param callback const QMetaObject* func()
+///
+void q_scilexerasm_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QsciLexerAsm*
+///
+const QMetaObject* q_scilexerasm_qbase_meta_object(void* self);
+
 /// @param self QsciLexerAsm*
 /// @param param1 const char*
 ///
 void* q_scilexerasm_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QsciLexerAsm*
+/// @param callback void* func(QsciLexerAsm* self, const char* param1)
+///
+void q_scilexerasm_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QsciLexerAsm*
+/// @param param1 const char*
+///
+void* q_scilexerasm_qbase_metacast(void* self, const char* param1);
 
 /// @param self QsciLexerAsm*
 /// @param param1 enum QMetaObject__Call

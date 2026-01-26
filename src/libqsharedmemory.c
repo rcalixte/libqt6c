@@ -34,8 +34,24 @@ const QMetaObject* q_sharedmemory_meta_object(void* self) {
     return QSharedMemory_MetaObject((QSharedMemory*)self);
 }
 
+void q_sharedmemory_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QSharedMemory_OnMetaObject((QSharedMemory*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_sharedmemory_qbase_meta_object(void* self) {
+    return QSharedMemory_QBaseMetaObject((QSharedMemory*)self);
+}
+
 void* q_sharedmemory_metacast(void* self, const char* param1) {
     return QSharedMemory_Metacast((QSharedMemory*)self, param1);
+}
+
+void q_sharedmemory_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QSharedMemory_OnMetacast((QSharedMemory*)self, (intptr_t)callback);
+}
+
+void* q_sharedmemory_qbase_metacast(void* self, const char* param1) {
+    return QSharedMemory_QBaseMetacast((QSharedMemory*)self, param1);
 }
 
 int32_t q_sharedmemory_metacall(void* self, int32_t param1, int param2, void* param3) {

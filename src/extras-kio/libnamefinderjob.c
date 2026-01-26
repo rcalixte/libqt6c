@@ -16,8 +16,24 @@ const QMetaObject* k_io__namefinderjob_meta_object(void* self) {
     return KIO__NameFinderJob_MetaObject((KIO__NameFinderJob*)self);
 }
 
+void k_io__namefinderjob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KIO__NameFinderJob_OnMetaObject((KIO__NameFinderJob*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_io__namefinderjob_qbase_meta_object(void* self) {
+    return KIO__NameFinderJob_QBaseMetaObject((KIO__NameFinderJob*)self);
+}
+
 void* k_io__namefinderjob_metacast(void* self, const char* param1) {
     return KIO__NameFinderJob_Metacast((KIO__NameFinderJob*)self, param1);
+}
+
+void k_io__namefinderjob_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KIO__NameFinderJob_OnMetacast((KIO__NameFinderJob*)self, (intptr_t)callback);
+}
+
+void* k_io__namefinderjob_qbase_metacast(void* self, const char* param1) {
+    return KIO__NameFinderJob_QBaseMetacast((KIO__NameFinderJob*)self, param1);
 }
 
 int32_t k_io__namefinderjob_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -48,10 +48,41 @@ QSplitter* q_splitter_new4(int32_t param1, void* parent);
 ///
 const QMetaObject* q_splitter_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QSplitter*
+/// @param callback const QMetaObject* func()
+///
+void q_splitter_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QSplitter*
+///
+const QMetaObject* q_splitter_qbase_meta_object(void* self);
+
 /// @param self QSplitter*
 /// @param param1 const char*
 ///
 void* q_splitter_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QSplitter*
+/// @param callback void* func(QSplitter* self, const char* param1)
+///
+void q_splitter_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QSplitter*
+/// @param param1 const char*
+///
+void* q_splitter_qbase_metacast(void* self, const char* param1);
 
 /// @param self QSplitter*
 /// @param param1 enum QMetaObject__Call
@@ -5303,10 +5334,41 @@ QSplitterHandle* q_splitterhandle_new(int32_t o, void* parent);
 ///
 const QMetaObject* q_splitterhandle_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QSplitterHandle*
+/// @param callback const QMetaObject* func()
+///
+void q_splitterhandle_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QSplitterHandle*
+///
+const QMetaObject* q_splitterhandle_qbase_meta_object(void* self);
+
 /// @param self QSplitterHandle*
 /// @param param1 const char*
 ///
 void* q_splitterhandle_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QSplitterHandle*
+/// @param callback void* func(QSplitterHandle* self, const char* param1)
+///
+void q_splitterhandle_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QSplitterHandle*
+/// @param param1 const char*
+///
+void* q_splitterhandle_qbase_metacast(void* self, const char* param1);
 
 /// @param self QSplitterHandle*
 /// @param param1 enum QMetaObject__Call

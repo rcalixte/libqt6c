@@ -55,8 +55,24 @@ const QMetaObject* q_webengineview_meta_object(void* self) {
     return QWebEngineView_MetaObject((QWebEngineView*)self);
 }
 
+void q_webengineview_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QWebEngineView_OnMetaObject((QWebEngineView*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_webengineview_qbase_meta_object(void* self) {
+    return QWebEngineView_QBaseMetaObject((QWebEngineView*)self);
+}
+
 void* q_webengineview_metacast(void* self, const char* param1) {
     return QWebEngineView_Metacast((QWebEngineView*)self, param1);
+}
+
+void q_webengineview_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QWebEngineView_OnMetacast((QWebEngineView*)self, (intptr_t)callback);
+}
+
+void* q_webengineview_qbase_metacast(void* self, const char* param1) {
+    return QWebEngineView_QBaseMetacast((QWebEngineView*)self, param1);
 }
 
 int32_t q_webengineview_metacall(void* self, int32_t param1, int param2, void* param3) {

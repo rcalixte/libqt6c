@@ -63,8 +63,24 @@ const QMetaObject* q_completer_meta_object(void* self) {
     return QCompleter_MetaObject((QCompleter*)self);
 }
 
+void q_completer_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCompleter_OnMetaObject((QCompleter*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_completer_qbase_meta_object(void* self) {
+    return QCompleter_QBaseMetaObject((QCompleter*)self);
+}
+
 void* q_completer_metacast(void* self, const char* param1) {
     return QCompleter_Metacast((QCompleter*)self, param1);
+}
+
+void q_completer_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCompleter_OnMetacast((QCompleter*)self, (intptr_t)callback);
+}
+
+void* q_completer_qbase_metacast(void* self, const char* param1) {
+    return QCompleter_QBaseMetacast((QCompleter*)self, param1);
 }
 
 int32_t q_completer_metacall(void* self, int32_t param1, int param2, void* param3) {

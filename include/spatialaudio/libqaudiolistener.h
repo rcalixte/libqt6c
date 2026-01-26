@@ -53,21 +53,6 @@ QAudioEngine* q_audiolistener_engine(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
-///
-/// @param self QAudioListener*
-///
-const QMetaObject* q_audiolistener_meta_object(void* self);
-
-/// Inherited from QObject
-///
-/// @param self QAudioListener*
-/// @param param1 const char*
-///
-void* q_audiolistener_metacast(void* self, const char* param1);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
@@ -464,6 +449,70 @@ void q_audiolistener_destroyed1(void* self, void* param1);
 /// @param callback void func(QAudioListener* self, QObject* param1)
 ///
 void q_audiolistener_on_destroyed1(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self QAudioListener*
+///
+const QMetaObject* q_audiolistener_meta_object(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self QAudioListener*
+///
+const QMetaObject* q_audiolistener_qbase_meta_object(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self QAudioListener*
+/// @param callback const QMetaObject* func()
+///
+void q_audiolistener_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qt_metacast)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self QAudioListener*
+/// @param param1 const char*
+///
+void* q_audiolistener_metacast(void* self, const char* param1);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qt_metacast)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self QAudioListener*
+/// @param param1 const char*
+///
+void* q_audiolistener_qbase_metacast(void* self, const char* param1);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qt_metacast)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self QAudioListener*
+/// @param callback void* func(QAudioListener* self, const char* param1)
+///
+void q_audiolistener_on_metacast(void* self, void* (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///

@@ -29,8 +29,24 @@ const QMetaObject* k_ratingwidget_meta_object(void* self) {
     return KRatingWidget_MetaObject((KRatingWidget*)self);
 }
 
+void k_ratingwidget_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KRatingWidget_OnMetaObject((KRatingWidget*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_ratingwidget_qbase_meta_object(void* self) {
+    return KRatingWidget_QBaseMetaObject((KRatingWidget*)self);
+}
+
 void* k_ratingwidget_metacast(void* self, const char* param1) {
     return KRatingWidget_Metacast((KRatingWidget*)self, param1);
+}
+
+void k_ratingwidget_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KRatingWidget_OnMetacast((KRatingWidget*)self, (intptr_t)callback);
+}
+
+void* k_ratingwidget_qbase_metacast(void* self, const char* param1) {
+    return KRatingWidget_QBaseMetacast((KRatingWidget*)self, param1);
 }
 
 int32_t k_ratingwidget_metacall(void* self, int32_t param1, int param2, void* param3) {

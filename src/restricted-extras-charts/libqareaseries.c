@@ -32,8 +32,24 @@ const QMetaObject* q_areaseries_meta_object(void* self) {
     return QAreaSeries_MetaObject((QAreaSeries*)self);
 }
 
+void q_areaseries_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QAreaSeries_OnMetaObject((QAreaSeries*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_areaseries_qbase_meta_object(void* self) {
+    return QAreaSeries_QBaseMetaObject((QAreaSeries*)self);
+}
+
 void* q_areaseries_metacast(void* self, const char* param1) {
     return QAreaSeries_Metacast((QAreaSeries*)self, param1);
+}
+
+void q_areaseries_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QAreaSeries_OnMetacast((QAreaSeries*)self, (intptr_t)callback);
+}
+
+void* q_areaseries_qbase_metacast(void* self, const char* param1) {
+    return QAreaSeries_QBaseMetacast((QAreaSeries*)self, param1);
 }
 
 int32_t q_areaseries_metacall(void* self, int32_t param1, int param2, void* param3) {

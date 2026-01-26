@@ -29,8 +29,24 @@ const QMetaObject* q_networkaccessmanager_meta_object(void* self) {
     return QNetworkAccessManager_MetaObject((QNetworkAccessManager*)self);
 }
 
+void q_networkaccessmanager_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QNetworkAccessManager_OnMetaObject((QNetworkAccessManager*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_networkaccessmanager_qbase_meta_object(void* self) {
+    return QNetworkAccessManager_QBaseMetaObject((QNetworkAccessManager*)self);
+}
+
 void* q_networkaccessmanager_metacast(void* self, const char* param1) {
     return QNetworkAccessManager_Metacast((QNetworkAccessManager*)self, param1);
+}
+
+void q_networkaccessmanager_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QNetworkAccessManager_OnMetacast((QNetworkAccessManager*)self, (intptr_t)callback);
+}
+
+void* q_networkaccessmanager_qbase_metacast(void* self, const char* param1) {
+    return QNetworkAccessManager_QBaseMetacast((QNetworkAccessManager*)self, param1);
 }
 
 int32_t q_networkaccessmanager_metacall(void* self, int32_t param1, int param2, void* param3) {

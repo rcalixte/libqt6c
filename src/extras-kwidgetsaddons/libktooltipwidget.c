@@ -27,8 +27,24 @@ const QMetaObject* k_tooltipwidget_meta_object(void* self) {
     return KToolTipWidget_MetaObject((KToolTipWidget*)self);
 }
 
+void k_tooltipwidget_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KToolTipWidget_OnMetaObject((KToolTipWidget*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_tooltipwidget_qbase_meta_object(void* self) {
+    return KToolTipWidget_QBaseMetaObject((KToolTipWidget*)self);
+}
+
 void* k_tooltipwidget_metacast(void* self, const char* param1) {
     return KToolTipWidget_Metacast((KToolTipWidget*)self, param1);
+}
+
+void k_tooltipwidget_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KToolTipWidget_OnMetacast((KToolTipWidget*)self, (intptr_t)callback);
+}
+
+void* k_tooltipwidget_qbase_metacast(void* self, const char* param1) {
+    return KToolTipWidget_QBaseMetacast((KToolTipWidget*)self, param1);
 }
 
 int32_t k_tooltipwidget_metacall(void* self, int32_t param1, int param2, void* param3) {

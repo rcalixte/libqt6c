@@ -63,8 +63,24 @@ const QMetaObject* k_selectionwatcher_meta_object(void* self) {
     return KSelectionWatcher_MetaObject((KSelectionWatcher*)self);
 }
 
+void k_selectionwatcher_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KSelectionWatcher_OnMetaObject((KSelectionWatcher*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_selectionwatcher_qbase_meta_object(void* self) {
+    return KSelectionWatcher_QBaseMetaObject((KSelectionWatcher*)self);
+}
+
 void* k_selectionwatcher_metacast(void* self, const char* param1) {
     return KSelectionWatcher_Metacast((KSelectionWatcher*)self, param1);
+}
+
+void k_selectionwatcher_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KSelectionWatcher_OnMetacast((KSelectionWatcher*)self, (intptr_t)callback);
+}
+
+void* k_selectionwatcher_qbase_metacast(void* self, const char* param1) {
+    return KSelectionWatcher_QBaseMetacast((KSelectionWatcher*)self, param1);
 }
 
 int32_t k_selectionwatcher_metacall(void* self, int32_t param1, int param2, void* param3) {

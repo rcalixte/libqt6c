@@ -18,8 +18,24 @@ const QMetaObject* q_vcandlestickmodelmapper_meta_object(void* self) {
     return QVCandlestickModelMapper_MetaObject((QVCandlestickModelMapper*)self);
 }
 
+void q_vcandlestickmodelmapper_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QVCandlestickModelMapper_OnMetaObject((QVCandlestickModelMapper*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_vcandlestickmodelmapper_qbase_meta_object(void* self) {
+    return QVCandlestickModelMapper_QBaseMetaObject((QVCandlestickModelMapper*)self);
+}
+
 void* q_vcandlestickmodelmapper_metacast(void* self, const char* param1) {
     return QVCandlestickModelMapper_Metacast((QVCandlestickModelMapper*)self, param1);
+}
+
+void q_vcandlestickmodelmapper_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QVCandlestickModelMapper_OnMetacast((QVCandlestickModelMapper*)self, (intptr_t)callback);
+}
+
+void* q_vcandlestickmodelmapper_qbase_metacast(void* self, const char* param1) {
+    return QVCandlestickModelMapper_QBaseMetacast((QVCandlestickModelMapper*)self, param1);
 }
 
 int32_t q_vcandlestickmodelmapper_metacall(void* self, int32_t param1, int param2, void* param3) {

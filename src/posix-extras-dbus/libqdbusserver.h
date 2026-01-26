@@ -48,10 +48,41 @@ QDBusServer* q_dbusserver_new4(void* parent);
 ///
 const QMetaObject* q_dbusserver_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QDBusServer*
+/// @param callback const QMetaObject* func()
+///
+void q_dbusserver_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QDBusServer*
+///
+const QMetaObject* q_dbusserver_qbase_meta_object(void* self);
+
 /// @param self QDBusServer*
 /// @param param1 const char*
 ///
 void* q_dbusserver_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QDBusServer*
+/// @param callback void* func(QDBusServer* self, const char* param1)
+///
+void q_dbusserver_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QDBusServer*
+/// @param param1 const char*
+///
+void* q_dbusserver_qbase_metacast(void* self, const char* param1);
 
 /// @param self QDBusServer*
 /// @param param1 enum QMetaObject__Call

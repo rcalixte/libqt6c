@@ -36,8 +36,24 @@ const QMetaObject* q_treeview_meta_object(void* self) {
     return QTreeView_MetaObject((QTreeView*)self);
 }
 
+void q_treeview_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QTreeView_OnMetaObject((QTreeView*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_treeview_qbase_meta_object(void* self) {
+    return QTreeView_QBaseMetaObject((QTreeView*)self);
+}
+
 void* q_treeview_metacast(void* self, const char* param1) {
     return QTreeView_Metacast((QTreeView*)self, param1);
+}
+
+void q_treeview_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QTreeView_OnMetacast((QTreeView*)self, (intptr_t)callback);
+}
+
+void* q_treeview_qbase_metacast(void* self, const char* param1) {
+    return QTreeView_QBaseMetacast((QTreeView*)self, param1);
 }
 
 int32_t q_treeview_metacall(void* self, int32_t param1, int param2, void* param3) {

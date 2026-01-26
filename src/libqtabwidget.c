@@ -28,8 +28,24 @@ const QMetaObject* q_tabwidget_meta_object(void* self) {
     return QTabWidget_MetaObject((QTabWidget*)self);
 }
 
+void q_tabwidget_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QTabWidget_OnMetaObject((QTabWidget*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_tabwidget_qbase_meta_object(void* self) {
+    return QTabWidget_QBaseMetaObject((QTabWidget*)self);
+}
+
 void* q_tabwidget_metacast(void* self, const char* param1) {
     return QTabWidget_Metacast((QTabWidget*)self, param1);
+}
+
+void q_tabwidget_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QTabWidget_OnMetacast((QTabWidget*)self, (intptr_t)callback);
+}
+
+void* q_tabwidget_qbase_metacast(void* self, const char* param1) {
+    return QTabWidget_QBaseMetacast((QTabWidget*)self, param1);
 }
 
 int32_t q_tabwidget_metacall(void* self, int32_t param1, int param2, void* param3) {

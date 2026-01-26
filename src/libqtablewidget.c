@@ -349,8 +349,24 @@ const QMetaObject* q_tablewidget_meta_object(void* self) {
     return QTableWidget_MetaObject((QTableWidget*)self);
 }
 
+void q_tablewidget_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QTableWidget_OnMetaObject((QTableWidget*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_tablewidget_qbase_meta_object(void* self) {
+    return QTableWidget_QBaseMetaObject((QTableWidget*)self);
+}
+
 void* q_tablewidget_metacast(void* self, const char* param1) {
     return QTableWidget_Metacast((QTableWidget*)self, param1);
+}
+
+void q_tablewidget_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QTableWidget_OnMetacast((QTableWidget*)self, (intptr_t)callback);
+}
+
+void* q_tablewidget_qbase_metacast(void* self, const char* param1) {
+    return QTableWidget_QBaseMetacast((QTableWidget*)self, param1);
 }
 
 int32_t q_tablewidget_metacall(void* self, int32_t param1, int param2, void* param3) {

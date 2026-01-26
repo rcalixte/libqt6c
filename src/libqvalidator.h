@@ -31,10 +31,41 @@ QValidator* q_validator_new2(void* parent);
 ///
 const QMetaObject* q_validator_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QValidator*
+/// @param callback const QMetaObject* func()
+///
+void q_validator_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QValidator*
+///
+const QMetaObject* q_validator_qbase_meta_object(void* self);
+
 /// @param self QValidator*
 /// @param param1 const char*
 ///
 void* q_validator_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QValidator*
+/// @param callback void* func(QValidator* self, const char* param1)
+///
+void q_validator_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QValidator*
+/// @param param1 const char*
+///
+void* q_validator_qbase_metacast(void* self, const char* param1);
 
 /// @param self QValidator*
 /// @param param1 enum QMetaObject__Call
@@ -953,10 +984,41 @@ QIntValidator* q_intvalidator_new4(int bottom, int top, void* parent);
 ///
 const QMetaObject* q_intvalidator_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QIntValidator*
+/// @param callback const QMetaObject* func()
+///
+void q_intvalidator_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QIntValidator*
+///
+const QMetaObject* q_intvalidator_qbase_meta_object(void* self);
+
 /// @param self QIntValidator*
 /// @param param1 const char*
 ///
 void* q_intvalidator_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QIntValidator*
+/// @param callback void* func(QIntValidator* self, const char* param1)
+///
+void q_intvalidator_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QIntValidator*
+/// @param param1 const char*
+///
+void* q_intvalidator_qbase_metacast(void* self, const char* param1);
 
 /// @param self QIntValidator*
 /// @param param1 enum QMetaObject__Call
@@ -1947,10 +2009,41 @@ QDoubleValidator* q_doublevalidator_new4(double bottom, double top, int decimals
 ///
 const QMetaObject* q_doublevalidator_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QDoubleValidator*
+/// @param callback const QMetaObject* func()
+///
+void q_doublevalidator_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QDoubleValidator*
+///
+const QMetaObject* q_doublevalidator_qbase_meta_object(void* self);
+
 /// @param self QDoubleValidator*
 /// @param param1 const char*
 ///
 void* q_doublevalidator_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QDoubleValidator*
+/// @param callback void* func(QDoubleValidator* self, const char* param1)
+///
+void q_doublevalidator_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QDoubleValidator*
+/// @param param1 const char*
+///
+void* q_doublevalidator_qbase_metacast(void* self, const char* param1);
 
 /// @param self QDoubleValidator*
 /// @param param1 enum QMetaObject__Call
@@ -3002,10 +3095,41 @@ QRegularExpressionValidator* q_regularexpressionvalidator_new4(void* re, void* p
 ///
 const QMetaObject* q_regularexpressionvalidator_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QRegularExpressionValidator*
+/// @param callback const QMetaObject* func()
+///
+void q_regularexpressionvalidator_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QRegularExpressionValidator*
+///
+const QMetaObject* q_regularexpressionvalidator_qbase_meta_object(void* self);
+
 /// @param self QRegularExpressionValidator*
 /// @param param1 const char*
 ///
 void* q_regularexpressionvalidator_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QRegularExpressionValidator*
+/// @param callback void* func(QRegularExpressionValidator* self, const char* param1)
+///
+void q_regularexpressionvalidator_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QRegularExpressionValidator*
+/// @param param1 const char*
+///
+void* q_regularexpressionvalidator_qbase_metacast(void* self, const char* param1);
 
 /// @param self QRegularExpressionValidator*
 /// @param param1 enum QMetaObject__Call

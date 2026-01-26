@@ -17,8 +17,24 @@ const QMetaObject* k_io__forwardingworkerbase_meta_object(void* self) {
     return KIO__ForwardingWorkerBase_MetaObject((KIO__ForwardingWorkerBase*)self);
 }
 
+void k_io__forwardingworkerbase_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KIO__ForwardingWorkerBase_OnMetaObject((KIO__ForwardingWorkerBase*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_io__forwardingworkerbase_qbase_meta_object(void* self) {
+    return KIO__ForwardingWorkerBase_QBaseMetaObject((KIO__ForwardingWorkerBase*)self);
+}
+
 void* k_io__forwardingworkerbase_metacast(void* self, const char* param1) {
     return KIO__ForwardingWorkerBase_Metacast((KIO__ForwardingWorkerBase*)self, param1);
+}
+
+void k_io__forwardingworkerbase_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KIO__ForwardingWorkerBase_OnMetacast((KIO__ForwardingWorkerBase*)self, (intptr_t)callback);
+}
+
+void* k_io__forwardingworkerbase_qbase_metacast(void* self, const char* param1) {
+    return KIO__ForwardingWorkerBase_QBaseMetacast((KIO__ForwardingWorkerBase*)self, param1);
 }
 
 int32_t k_io__forwardingworkerbase_metacall(void* self, int32_t param1, int param2, void* param3) {

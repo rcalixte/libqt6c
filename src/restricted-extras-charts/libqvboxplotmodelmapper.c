@@ -20,8 +20,24 @@ const QMetaObject* q_vboxplotmodelmapper_meta_object(void* self) {
     return QVBoxPlotModelMapper_MetaObject((QVBoxPlotModelMapper*)self);
 }
 
+void q_vboxplotmodelmapper_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QVBoxPlotModelMapper_OnMetaObject((QVBoxPlotModelMapper*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_vboxplotmodelmapper_qbase_meta_object(void* self) {
+    return QVBoxPlotModelMapper_QBaseMetaObject((QVBoxPlotModelMapper*)self);
+}
+
 void* q_vboxplotmodelmapper_metacast(void* self, const char* param1) {
     return QVBoxPlotModelMapper_Metacast((QVBoxPlotModelMapper*)self, param1);
+}
+
+void q_vboxplotmodelmapper_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QVBoxPlotModelMapper_OnMetacast((QVBoxPlotModelMapper*)self, (intptr_t)callback);
+}
+
+void* q_vboxplotmodelmapper_qbase_metacast(void* self, const char* param1) {
+    return QVBoxPlotModelMapper_QBaseMetacast((QVBoxPlotModelMapper*)self, param1);
 }
 
 int32_t q_vboxplotmodelmapper_metacall(void* self, int32_t param1, int param2, void* param3) {

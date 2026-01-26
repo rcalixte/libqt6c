@@ -38,10 +38,41 @@ KFind* k_find_new2(const char* pattern, int64_t options, void* parent, void* fin
 ///
 const QMetaObject* k_find_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KFind*
+/// @param callback const QMetaObject* func()
+///
+void k_find_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KFind*
+///
+const QMetaObject* k_find_qbase_meta_object(void* self);
+
 /// @param self KFind*
 /// @param param1 const char*
 ///
 void* k_find_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KFind*
+/// @param callback void* func(KFind* self, const char* param1)
+///
+void k_find_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KFind*
+/// @param param1 const char*
+///
+void* k_find_qbase_metacast(void* self, const char* param1);
 
 /// @param self KFind*
 /// @param param1 enum QMetaObject__Call

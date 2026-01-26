@@ -14,8 +14,24 @@ const QMetaObject* k_modifierkeyinfoprovider_meta_object(void* self) {
     return KModifierKeyInfoProvider_MetaObject((KModifierKeyInfoProvider*)self);
 }
 
+void k_modifierkeyinfoprovider_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KModifierKeyInfoProvider_OnMetaObject((KModifierKeyInfoProvider*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_modifierkeyinfoprovider_qbase_meta_object(void* self) {
+    return KModifierKeyInfoProvider_QBaseMetaObject((KModifierKeyInfoProvider*)self);
+}
+
 void* k_modifierkeyinfoprovider_metacast(void* self, const char* param1) {
     return KModifierKeyInfoProvider_Metacast((KModifierKeyInfoProvider*)self, param1);
+}
+
+void k_modifierkeyinfoprovider_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KModifierKeyInfoProvider_OnMetacast((KModifierKeyInfoProvider*)self, (intptr_t)callback);
+}
+
+void* k_modifierkeyinfoprovider_qbase_metacast(void* self, const char* param1) {
+    return KModifierKeyInfoProvider_QBaseMetacast((KModifierKeyInfoProvider*)self, param1);
 }
 
 int32_t k_modifierkeyinfoprovider_metacall(void* self, int32_t param1, int param2, void* param3) {

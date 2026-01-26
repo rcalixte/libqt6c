@@ -25,8 +25,24 @@ const QMetaObject* q_sortfilterproxymodel_meta_object(void* self) {
     return QSortFilterProxyModel_MetaObject((QSortFilterProxyModel*)self);
 }
 
+void q_sortfilterproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QSortFilterProxyModel_OnMetaObject((QSortFilterProxyModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_sortfilterproxymodel_qbase_meta_object(void* self) {
+    return QSortFilterProxyModel_QBaseMetaObject((QSortFilterProxyModel*)self);
+}
+
 void* q_sortfilterproxymodel_metacast(void* self, const char* param1) {
     return QSortFilterProxyModel_Metacast((QSortFilterProxyModel*)self, param1);
+}
+
+void q_sortfilterproxymodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QSortFilterProxyModel_OnMetacast((QSortFilterProxyModel*)self, (intptr_t)callback);
+}
+
+void* q_sortfilterproxymodel_qbase_metacast(void* self, const char* param1) {
+    return QSortFilterProxyModel_QBaseMetacast((QSortFilterProxyModel*)self, param1);
 }
 
 int32_t q_sortfilterproxymodel_metacall(void* self, int32_t param1, int param2, void* param3) {

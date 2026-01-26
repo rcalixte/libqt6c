@@ -18,8 +18,24 @@ const QMetaObject* q_webengineurlschemehandler_meta_object(void* self) {
     return QWebEngineUrlSchemeHandler_MetaObject((QWebEngineUrlSchemeHandler*)self);
 }
 
+void q_webengineurlschemehandler_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QWebEngineUrlSchemeHandler_OnMetaObject((QWebEngineUrlSchemeHandler*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_webengineurlschemehandler_qbase_meta_object(void* self) {
+    return QWebEngineUrlSchemeHandler_QBaseMetaObject((QWebEngineUrlSchemeHandler*)self);
+}
+
 void* q_webengineurlschemehandler_metacast(void* self, const char* param1) {
     return QWebEngineUrlSchemeHandler_Metacast((QWebEngineUrlSchemeHandler*)self, param1);
+}
+
+void q_webengineurlschemehandler_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QWebEngineUrlSchemeHandler_OnMetacast((QWebEngineUrlSchemeHandler*)self, (intptr_t)callback);
+}
+
+void* q_webengineurlschemehandler_qbase_metacast(void* self, const char* param1) {
+    return QWebEngineUrlSchemeHandler_QBaseMetacast((QWebEngineUrlSchemeHandler*)self, param1);
 }
 
 int32_t q_webengineurlschemehandler_metacall(void* self, int32_t param1, int param2, void* param3) {

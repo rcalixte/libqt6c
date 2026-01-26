@@ -39,8 +39,24 @@ const QMetaObject* q_termwidget_meta_object(void* self) {
     return QTermWidget_MetaObject((QTermWidget*)self);
 }
 
+void q_termwidget_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QTermWidget_OnMetaObject((QTermWidget*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_termwidget_qbase_meta_object(void* self) {
+    return QTermWidget_QBaseMetaObject((QTermWidget*)self);
+}
+
 void* q_termwidget_metacast(void* self, const char* param1) {
     return QTermWidget_Metacast((QTermWidget*)self, param1);
+}
+
+void q_termwidget_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QTermWidget_OnMetacast((QTermWidget*)self, (intptr_t)callback);
+}
+
+void* q_termwidget_qbase_metacast(void* self, const char* param1) {
+    return QTermWidget_QBaseMetacast((QTermWidget*)self, param1);
 }
 
 int32_t q_termwidget_metacall(void* self, int32_t param1, int param2, void* param3) {

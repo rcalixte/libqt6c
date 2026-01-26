@@ -35,8 +35,24 @@ const QMetaObject* k_aboutplugindialog_meta_object(void* self) {
     return KAboutPluginDialog_MetaObject((KAboutPluginDialog*)self);
 }
 
+void k_aboutplugindialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KAboutPluginDialog_OnMetaObject((KAboutPluginDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_aboutplugindialog_qbase_meta_object(void* self) {
+    return KAboutPluginDialog_QBaseMetaObject((KAboutPluginDialog*)self);
+}
+
 void* k_aboutplugindialog_metacast(void* self, const char* param1) {
     return KAboutPluginDialog_Metacast((KAboutPluginDialog*)self, param1);
+}
+
+void k_aboutplugindialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KAboutPluginDialog_OnMetacast((KAboutPluginDialog*)self, (intptr_t)callback);
+}
+
+void* k_aboutplugindialog_qbase_metacast(void* self, const char* param1) {
+    return KAboutPluginDialog_QBaseMetacast((KAboutPluginDialog*)self, param1);
 }
 
 int32_t k_aboutplugindialog_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -44,8 +44,24 @@ const QMetaObject* k_urllabel_meta_object(void* self) {
     return KUrlLabel_MetaObject((KUrlLabel*)self);
 }
 
+void k_urllabel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KUrlLabel_OnMetaObject((KUrlLabel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_urllabel_qbase_meta_object(void* self) {
+    return KUrlLabel_QBaseMetaObject((KUrlLabel*)self);
+}
+
 void* k_urllabel_metacast(void* self, const char* param1) {
     return KUrlLabel_Metacast((KUrlLabel*)self, param1);
+}
+
+void k_urllabel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KUrlLabel_OnMetacast((KUrlLabel*)self, (intptr_t)callback);
+}
+
+void* k_urllabel_qbase_metacast(void* self, const char* param1) {
+    return KUrlLabel_QBaseMetacast((KUrlLabel*)self, param1);
 }
 
 int32_t k_urllabel_metacall(void* self, int32_t param1, int param2, void* param3) {

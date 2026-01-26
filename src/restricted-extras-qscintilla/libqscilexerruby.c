@@ -22,8 +22,24 @@ const QMetaObject* q_scilexerruby_meta_object(void* self) {
     return QsciLexerRuby_MetaObject((QsciLexerRuby*)self);
 }
 
+void q_scilexerruby_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QsciLexerRuby_OnMetaObject((QsciLexerRuby*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_scilexerruby_qbase_meta_object(void* self) {
+    return QsciLexerRuby_QBaseMetaObject((QsciLexerRuby*)self);
+}
+
 void* q_scilexerruby_metacast(void* self, const char* param1) {
     return QsciLexerRuby_Metacast((QsciLexerRuby*)self, param1);
+}
+
+void q_scilexerruby_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QsciLexerRuby_OnMetacast((QsciLexerRuby*)self, (intptr_t)callback);
+}
+
+void* q_scilexerruby_qbase_metacast(void* self, const char* param1) {
+    return QsciLexerRuby_QBaseMetacast((QsciLexerRuby*)self, param1);
 }
 
 int32_t q_scilexerruby_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -25,8 +25,24 @@ const QMetaObject* k_rearrangecolumnsproxymodel_meta_object(void* self) {
     return KRearrangeColumnsProxyModel_MetaObject((KRearrangeColumnsProxyModel*)self);
 }
 
+void k_rearrangecolumnsproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KRearrangeColumnsProxyModel_OnMetaObject((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_rearrangecolumnsproxymodel_qbase_meta_object(void* self) {
+    return KRearrangeColumnsProxyModel_QBaseMetaObject((KRearrangeColumnsProxyModel*)self);
+}
+
 void* k_rearrangecolumnsproxymodel_metacast(void* self, const char* param1) {
     return KRearrangeColumnsProxyModel_Metacast((KRearrangeColumnsProxyModel*)self, param1);
+}
+
+void k_rearrangecolumnsproxymodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KRearrangeColumnsProxyModel_OnMetacast((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
+}
+
+void* k_rearrangecolumnsproxymodel_qbase_metacast(void* self, const char* param1) {
+    return KRearrangeColumnsProxyModel_QBaseMetacast((KRearrangeColumnsProxyModel*)self, param1);
 }
 
 int32_t k_rearrangecolumnsproxymodel_metacall(void* self, int32_t param1, int param2, void* param3) {

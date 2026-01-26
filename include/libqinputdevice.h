@@ -64,10 +64,41 @@ QInputDevice* q_inputdevice_new5(const char* name, long long systemId, int32_t t
 ///
 const QMetaObject* q_inputdevice_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QInputDevice*
+/// @param callback const QMetaObject* func()
+///
+void q_inputdevice_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QInputDevice*
+///
+const QMetaObject* q_inputdevice_qbase_meta_object(void* self);
+
 /// @param self QInputDevice*
 /// @param param1 const char*
 ///
 void* q_inputdevice_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QInputDevice*
+/// @param callback void* func(QInputDevice* self, const char* param1)
+///
+void q_inputdevice_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QInputDevice*
+/// @param param1 const char*
+///
+void* q_inputdevice_qbase_metacast(void* self, const char* param1);
 
 /// @param self QInputDevice*
 /// @param param1 enum QMetaObject__Call

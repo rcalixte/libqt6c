@@ -19,8 +19,24 @@ const QMetaObject* k_keysequencerecorder_meta_object(void* self) {
     return KKeySequenceRecorder_MetaObject((KKeySequenceRecorder*)self);
 }
 
+void k_keysequencerecorder_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KKeySequenceRecorder_OnMetaObject((KKeySequenceRecorder*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_keysequencerecorder_qbase_meta_object(void* self) {
+    return KKeySequenceRecorder_QBaseMetaObject((KKeySequenceRecorder*)self);
+}
+
 void* k_keysequencerecorder_metacast(void* self, const char* param1) {
     return KKeySequenceRecorder_Metacast((KKeySequenceRecorder*)self, param1);
+}
+
+void k_keysequencerecorder_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KKeySequenceRecorder_OnMetacast((KKeySequenceRecorder*)self, (intptr_t)callback);
+}
+
+void* k_keysequencerecorder_qbase_metacast(void* self, const char* param1) {
+    return KKeySequenceRecorder_QBaseMetacast((KKeySequenceRecorder*)self, param1);
 }
 
 int32_t k_keysequencerecorder_metacall(void* self, int32_t param1, int param2, void* param3) {

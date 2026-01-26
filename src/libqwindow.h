@@ -39,10 +39,41 @@ QWindow* q_window_new3(void* screen);
 ///
 const QMetaObject* q_window_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QWindow*
+/// @param callback const QMetaObject* func()
+///
+void q_window_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QWindow*
+///
+const QMetaObject* q_window_qbase_meta_object(void* self);
+
 /// @param self QWindow*
 /// @param param1 const char*
 ///
 void* q_window_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QWindow*
+/// @param callback void* func(QWindow* self, const char* param1)
+///
+void q_window_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QWindow*
+/// @param param1 const char*
+///
+void* q_window_qbase_metacast(void* self, const char* param1);
 
 /// @param self QWindow*
 /// @param param1 enum QMetaObject__Call

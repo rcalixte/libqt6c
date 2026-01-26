@@ -38,8 +38,24 @@ const QMetaObject* k_multitabbar_meta_object(void* self) {
     return KMultiTabBar_MetaObject((KMultiTabBar*)self);
 }
 
+void k_multitabbar_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KMultiTabBar_OnMetaObject((KMultiTabBar*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_multitabbar_qbase_meta_object(void* self) {
+    return KMultiTabBar_QBaseMetaObject((KMultiTabBar*)self);
+}
+
 void* k_multitabbar_metacast(void* self, const char* param1) {
     return KMultiTabBar_Metacast((KMultiTabBar*)self, param1);
+}
+
+void k_multitabbar_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KMultiTabBar_OnMetacast((KMultiTabBar*)self, (intptr_t)callback);
+}
+
+void* k_multitabbar_qbase_metacast(void* self, const char* param1) {
+    return KMultiTabBar_QBaseMetacast((KMultiTabBar*)self, param1);
 }
 
 int32_t k_multitabbar_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -687,10 +687,41 @@ QDesignerWidgetDataBaseInterface* q_designerwidgetdatabaseinterface_new2(void* p
 ///
 const QMetaObject* q_designerwidgetdatabaseinterface_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QDesignerWidgetDataBaseInterface*
+/// @param callback const QMetaObject* func()
+///
+void q_designerwidgetdatabaseinterface_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QDesignerWidgetDataBaseInterface*
+///
+const QMetaObject* q_designerwidgetdatabaseinterface_qbase_meta_object(void* self);
+
 /// @param self QDesignerWidgetDataBaseInterface*
 /// @param param1 const char*
 ///
 void* q_designerwidgetdatabaseinterface_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QDesignerWidgetDataBaseInterface*
+/// @param callback void* func(QDesignerWidgetDataBaseInterface* self, const char* param1)
+///
+void q_designerwidgetdatabaseinterface_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QDesignerWidgetDataBaseInterface*
+/// @param param1 const char*
+///
+void* q_designerwidgetdatabaseinterface_qbase_metacast(void* self, const char* param1);
 
 /// @param self QDesignerWidgetDataBaseInterface*
 /// @param param1 enum QMetaObject__Call

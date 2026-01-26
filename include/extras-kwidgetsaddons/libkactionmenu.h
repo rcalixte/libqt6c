@@ -44,10 +44,41 @@ KActionMenu* k_actionmenu_new3(void* icon, const char* text, void* parent);
 ///
 const QMetaObject* k_actionmenu_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KActionMenu*
+/// @param callback const QMetaObject* func()
+///
+void k_actionmenu_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KActionMenu*
+///
+const QMetaObject* k_actionmenu_qbase_meta_object(void* self);
+
 /// @param self KActionMenu*
 /// @param param1 const char*
 ///
 void* k_actionmenu_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KActionMenu*
+/// @param callback void* func(KActionMenu* self, const char* param1)
+///
+void k_actionmenu_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KActionMenu*
+/// @param param1 const char*
+///
+void* k_actionmenu_qbase_metacast(void* self, const char* param1);
 
 /// @param self KActionMenu*
 /// @param param1 enum QMetaObject__Call

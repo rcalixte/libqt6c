@@ -22,8 +22,24 @@ const QMetaObject* q_boxlayout_meta_object(void* self) {
     return QBoxLayout_MetaObject((QBoxLayout*)self);
 }
 
+void q_boxlayout_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QBoxLayout_OnMetaObject((QBoxLayout*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_boxlayout_qbase_meta_object(void* self) {
+    return QBoxLayout_QBaseMetaObject((QBoxLayout*)self);
+}
+
 void* q_boxlayout_metacast(void* self, const char* param1) {
     return QBoxLayout_Metacast((QBoxLayout*)self, param1);
+}
+
+void q_boxlayout_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QBoxLayout_OnMetacast((QBoxLayout*)self, (intptr_t)callback);
+}
+
+void* q_boxlayout_qbase_metacast(void* self, const char* param1) {
+    return QBoxLayout_QBaseMetacast((QBoxLayout*)self, param1);
 }
 
 int32_t q_boxlayout_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -946,8 +962,24 @@ const QMetaObject* q_hboxlayout_meta_object(void* self) {
     return QHBoxLayout_MetaObject((QHBoxLayout*)self);
 }
 
+void q_hboxlayout_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QHBoxLayout_OnMetaObject((QHBoxLayout*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_hboxlayout_qbase_meta_object(void* self) {
+    return QHBoxLayout_QBaseMetaObject((QHBoxLayout*)self);
+}
+
 void* q_hboxlayout_metacast(void* self, const char* param1) {
     return QHBoxLayout_Metacast((QHBoxLayout*)self, param1);
+}
+
+void q_hboxlayout_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QHBoxLayout_OnMetacast((QHBoxLayout*)self, (intptr_t)callback);
+}
+
+void* q_hboxlayout_qbase_metacast(void* self, const char* param1) {
+    return QHBoxLayout_QBaseMetacast((QHBoxLayout*)self, param1);
 }
 
 int32_t q_hboxlayout_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -1870,8 +1902,24 @@ const QMetaObject* q_vboxlayout_meta_object(void* self) {
     return QVBoxLayout_MetaObject((QVBoxLayout*)self);
 }
 
+void q_vboxlayout_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QVBoxLayout_OnMetaObject((QVBoxLayout*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_vboxlayout_qbase_meta_object(void* self) {
+    return QVBoxLayout_QBaseMetaObject((QVBoxLayout*)self);
+}
+
 void* q_vboxlayout_metacast(void* self, const char* param1) {
     return QVBoxLayout_Metacast((QVBoxLayout*)self, param1);
+}
+
+void q_vboxlayout_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QVBoxLayout_OnMetacast((QVBoxLayout*)self, (intptr_t)callback);
+}
+
+void* q_vboxlayout_qbase_metacast(void* self, const char* param1) {
+    return QVBoxLayout_QBaseMetacast((QVBoxLayout*)self, param1);
 }
 
 int32_t q_vboxlayout_metacall(void* self, int32_t param1, int param2, void* param3) {

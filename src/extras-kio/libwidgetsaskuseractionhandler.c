@@ -23,8 +23,24 @@ const QMetaObject* k_io__widgetsaskuseractionhandler_meta_object(void* self) {
     return KIO__WidgetsAskUserActionHandler_MetaObject((KIO__WidgetsAskUserActionHandler*)self);
 }
 
+void k_io__widgetsaskuseractionhandler_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KIO__WidgetsAskUserActionHandler_OnMetaObject((KIO__WidgetsAskUserActionHandler*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_io__widgetsaskuseractionhandler_qbase_meta_object(void* self) {
+    return KIO__WidgetsAskUserActionHandler_QBaseMetaObject((KIO__WidgetsAskUserActionHandler*)self);
+}
+
 void* k_io__widgetsaskuseractionhandler_metacast(void* self, const char* param1) {
     return KIO__WidgetsAskUserActionHandler_Metacast((KIO__WidgetsAskUserActionHandler*)self, param1);
+}
+
+void k_io__widgetsaskuseractionhandler_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KIO__WidgetsAskUserActionHandler_OnMetacast((KIO__WidgetsAskUserActionHandler*)self, (intptr_t)callback);
+}
+
+void* k_io__widgetsaskuseractionhandler_qbase_metacast(void* self, const char* param1) {
+    return KIO__WidgetsAskUserActionHandler_QBaseMetacast((KIO__WidgetsAskUserActionHandler*)self, param1);
 }
 
 int32_t k_io__widgetsaskuseractionhandler_metacall(void* self, int32_t param1, int param2, void* param3) {

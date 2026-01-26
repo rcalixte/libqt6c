@@ -18,8 +18,24 @@ const QMetaObject* k_localizedtranslator_meta_object(void* self) {
     return KLocalizedTranslator_MetaObject((KLocalizedTranslator*)self);
 }
 
+void k_localizedtranslator_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KLocalizedTranslator_OnMetaObject((KLocalizedTranslator*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_localizedtranslator_qbase_meta_object(void* self) {
+    return KLocalizedTranslator_QBaseMetaObject((KLocalizedTranslator*)self);
+}
+
 void* k_localizedtranslator_metacast(void* self, const char* param1) {
     return KLocalizedTranslator_Metacast((KLocalizedTranslator*)self, param1);
+}
+
+void k_localizedtranslator_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KLocalizedTranslator_OnMetacast((KLocalizedTranslator*)self, (intptr_t)callback);
+}
+
+void* k_localizedtranslator_qbase_metacast(void* self, const char* param1) {
+    return KLocalizedTranslator_QBaseMetacast((KLocalizedTranslator*)self, param1);
 }
 
 int32_t k_localizedtranslator_metacall(void* self, int32_t param1, int param2, void* param3) {

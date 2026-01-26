@@ -58,8 +58,24 @@ const QMetaObject* k_iconloader_meta_object(void* self) {
     return KIconLoader_MetaObject((KIconLoader*)self);
 }
 
+void k_iconloader_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KIconLoader_OnMetaObject((KIconLoader*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_iconloader_qbase_meta_object(void* self) {
+    return KIconLoader_QBaseMetaObject((KIconLoader*)self);
+}
+
 void* k_iconloader_metacast(void* self, const char* param1) {
     return KIconLoader_Metacast((KIconLoader*)self, param1);
+}
+
+void k_iconloader_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KIconLoader_OnMetacast((KIconLoader*)self, (intptr_t)callback);
+}
+
+void* k_iconloader_qbase_metacast(void* self, const char* param1) {
+    return KIconLoader_QBaseMetacast((KIconLoader*)self, param1);
 }
 
 int32_t k_iconloader_metacall(void* self, int32_t param1, int param2, void* param3) {

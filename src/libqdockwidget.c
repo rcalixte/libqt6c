@@ -43,8 +43,24 @@ const QMetaObject* q_dockwidget_meta_object(void* self) {
     return QDockWidget_MetaObject((QDockWidget*)self);
 }
 
+void q_dockwidget_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDockWidget_OnMetaObject((QDockWidget*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_dockwidget_qbase_meta_object(void* self) {
+    return QDockWidget_QBaseMetaObject((QDockWidget*)self);
+}
+
 void* q_dockwidget_metacast(void* self, const char* param1) {
     return QDockWidget_Metacast((QDockWidget*)self, param1);
+}
+
+void q_dockwidget_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDockWidget_OnMetacast((QDockWidget*)self, (intptr_t)callback);
+}
+
+void* q_dockwidget_qbase_metacast(void* self, const char* param1) {
+    return QDockWidget_QBaseMetacast((QDockWidget*)self, param1);
 }
 
 int32_t q_dockwidget_metacall(void* self, int32_t param1, int param2, void* param3) {

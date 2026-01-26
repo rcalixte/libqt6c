@@ -40,10 +40,41 @@ KAssistantDialog* k_assistantdialog_new3(void* parent, int32_t flags);
 ///
 const QMetaObject* k_assistantdialog_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KAssistantDialog*
+/// @param callback const QMetaObject* func()
+///
+void k_assistantdialog_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KAssistantDialog*
+///
+const QMetaObject* k_assistantdialog_qbase_meta_object(void* self);
+
 /// @param self KAssistantDialog*
 /// @param param1 const char*
 ///
 void* k_assistantdialog_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KAssistantDialog*
+/// @param callback void* func(KAssistantDialog* self, const char* param1)
+///
+void k_assistantdialog_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KAssistantDialog*
+/// @param param1 const char*
+///
+void* k_assistantdialog_qbase_metacast(void* self, const char* param1);
 
 /// @param self KAssistantDialog*
 /// @param param1 enum QMetaObject__Call

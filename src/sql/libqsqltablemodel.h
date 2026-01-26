@@ -40,10 +40,41 @@ QSqlTableModel* q_sqltablemodel_new3(void* parent, void* db);
 ///
 const QMetaObject* q_sqltablemodel_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QSqlTableModel*
+/// @param callback const QMetaObject* func()
+///
+void q_sqltablemodel_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QSqlTableModel*
+///
+const QMetaObject* q_sqltablemodel_qbase_meta_object(void* self);
+
 /// @param self QSqlTableModel*
 /// @param param1 const char*
 ///
 void* q_sqltablemodel_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QSqlTableModel*
+/// @param callback void* func(QSqlTableModel* self, const char* param1)
+///
+void q_sqltablemodel_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QSqlTableModel*
+/// @param param1 const char*
+///
+void* q_sqltablemodel_qbase_metacast(void* self, const char* param1);
 
 /// @param self QSqlTableModel*
 /// @param param1 enum QMetaObject__Call

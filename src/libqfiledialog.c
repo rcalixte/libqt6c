@@ -47,8 +47,24 @@ const QMetaObject* q_filedialog_meta_object(void* self) {
     return QFileDialog_MetaObject((QFileDialog*)self);
 }
 
+void q_filedialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QFileDialog_OnMetaObject((QFileDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_filedialog_qbase_meta_object(void* self) {
+    return QFileDialog_QBaseMetaObject((QFileDialog*)self);
+}
+
 void* q_filedialog_metacast(void* self, const char* param1) {
     return QFileDialog_Metacast((QFileDialog*)self, param1);
+}
+
+void q_filedialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QFileDialog_OnMetacast((QFileDialog*)self, (intptr_t)callback);
+}
+
+void* q_filedialog_qbase_metacast(void* self, const char* param1) {
+    return QFileDialog_QBaseMetacast((QFileDialog*)self, param1);
 }
 
 int32_t q_filedialog_metacall(void* self, int32_t param1, int param2, void* param3) {

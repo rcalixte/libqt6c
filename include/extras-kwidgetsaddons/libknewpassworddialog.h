@@ -31,10 +31,41 @@ KNewPasswordDialog* k_newpassworddialog_new2();
 ///
 const QMetaObject* k_newpassworddialog_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KNewPasswordDialog*
+/// @param callback const QMetaObject* func()
+///
+void k_newpassworddialog_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KNewPasswordDialog*
+///
+const QMetaObject* k_newpassworddialog_qbase_meta_object(void* self);
+
 /// @param self KNewPasswordDialog*
 /// @param param1 const char*
 ///
 void* k_newpassworddialog_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KNewPasswordDialog*
+/// @param callback void* func(KNewPasswordDialog* self, const char* param1)
+///
+void k_newpassworddialog_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KNewPasswordDialog*
+/// @param param1 const char*
+///
+void* k_newpassworddialog_qbase_metacast(void* self, const char* param1);
 
 /// @param self KNewPasswordDialog*
 /// @param param1 enum QMetaObject__Call

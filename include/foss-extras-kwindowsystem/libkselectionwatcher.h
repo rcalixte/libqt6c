@@ -127,10 +127,41 @@ KSelectionWatcher* k_selectionwatcher_new10(const char* selection, xcb_connectio
 ///
 const QMetaObject* k_selectionwatcher_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KSelectionWatcher*
+/// @param callback const QMetaObject* func()
+///
+void k_selectionwatcher_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KSelectionWatcher*
+///
+const QMetaObject* k_selectionwatcher_qbase_meta_object(void* self);
+
 /// @param self KSelectionWatcher*
 /// @param param1 const char*
 ///
 void* k_selectionwatcher_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KSelectionWatcher*
+/// @param callback void* func(KSelectionWatcher* self, const char* param1)
+///
+void k_selectionwatcher_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KSelectionWatcher*
+/// @param param1 const char*
+///
+void* k_selectionwatcher_qbase_metacast(void* self, const char* param1);
 
 /// @param self KSelectionWatcher*
 /// @param param1 enum QMetaObject__Call

@@ -67,8 +67,24 @@ const QMetaObject* q_dbuspendingcallwatcher_meta_object(void* self) {
     return QDBusPendingCallWatcher_MetaObject((QDBusPendingCallWatcher*)self);
 }
 
+void q_dbuspendingcallwatcher_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDBusPendingCallWatcher_OnMetaObject((QDBusPendingCallWatcher*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_dbuspendingcallwatcher_qbase_meta_object(void* self) {
+    return QDBusPendingCallWatcher_QBaseMetaObject((QDBusPendingCallWatcher*)self);
+}
+
 void* q_dbuspendingcallwatcher_metacast(void* self, const char* param1) {
     return QDBusPendingCallWatcher_Metacast((QDBusPendingCallWatcher*)self, param1);
+}
+
+void q_dbuspendingcallwatcher_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDBusPendingCallWatcher_OnMetacast((QDBusPendingCallWatcher*)self, (intptr_t)callback);
+}
+
+void* q_dbuspendingcallwatcher_qbase_metacast(void* self, const char* param1) {
+    return QDBusPendingCallWatcher_QBaseMetacast((QDBusPendingCallWatcher*)self, param1);
 }
 
 int32_t q_dbuspendingcallwatcher_metacall(void* self, int32_t param1, int param2, void* param3) {

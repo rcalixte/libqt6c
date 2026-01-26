@@ -127,8 +127,24 @@ const QMetaObject* q_process_meta_object(void* self) {
     return QProcess_MetaObject((QProcess*)self);
 }
 
+void q_process_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QProcess_OnMetaObject((QProcess*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_process_qbase_meta_object(void* self) {
+    return QProcess_QBaseMetaObject((QProcess*)self);
+}
+
 void* q_process_metacast(void* self, const char* param1) {
     return QProcess_Metacast((QProcess*)self, param1);
+}
+
+void q_process_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QProcess_OnMetacast((QProcess*)self, (intptr_t)callback);
+}
+
+void* q_process_qbase_metacast(void* self, const char* param1) {
+    return QProcess_QBaseMetacast((QProcess*)self, param1);
 }
 
 int32_t q_process_metacall(void* self, int32_t param1, int param2, void* param3) {

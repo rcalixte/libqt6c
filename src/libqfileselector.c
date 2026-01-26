@@ -18,8 +18,24 @@ const QMetaObject* q_fileselector_meta_object(void* self) {
     return QFileSelector_MetaObject((QFileSelector*)self);
 }
 
+void q_fileselector_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QFileSelector_OnMetaObject((QFileSelector*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_fileselector_qbase_meta_object(void* self) {
+    return QFileSelector_QBaseMetaObject((QFileSelector*)self);
+}
+
 void* q_fileselector_metacast(void* self, const char* param1) {
     return QFileSelector_Metacast((QFileSelector*)self, param1);
+}
+
+void q_fileselector_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QFileSelector_OnMetacast((QFileSelector*)self, (intptr_t)callback);
+}
+
+void* q_fileselector_qbase_metacast(void* self, const char* param1) {
+    return QFileSelector_QBaseMetacast((QFileSelector*)self, param1);
 }
 
 int32_t q_fileselector_metacall(void* self, int32_t param1, int param2, void* param3) {

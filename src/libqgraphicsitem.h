@@ -2196,10 +2196,41 @@ QGraphicsObject* q_graphicsobject_new2(void* parent);
 ///
 const QMetaObject* q_graphicsobject_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsObject*
+/// @param callback const QMetaObject* func()
+///
+void q_graphicsobject_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QGraphicsObject*
+///
+const QMetaObject* q_graphicsobject_qbase_meta_object(void* self);
+
 /// @param self QGraphicsObject*
 /// @param param1 const char*
 ///
 void* q_graphicsobject_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsObject*
+/// @param callback void* func(QGraphicsObject* self, const char* param1)
+///
+void q_graphicsobject_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QGraphicsObject*
+/// @param param1 const char*
+///
+void* q_graphicsobject_qbase_metacast(void* self, const char* param1);
 
 /// @param self QGraphicsObject*
 /// @param param1 enum QMetaObject__Call
@@ -25650,10 +25681,41 @@ QGraphicsTextItem* q_graphicstextitem_new4(const char* text, void* parent);
 ///
 const QMetaObject* q_graphicstextitem_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsTextItem*
+/// @param callback const QMetaObject* func()
+///
+void q_graphicstextitem_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QGraphicsTextItem*
+///
+const QMetaObject* q_graphicstextitem_qbase_meta_object(void* self);
+
 /// @param self QGraphicsTextItem*
 /// @param param1 const char*
 ///
 void* q_graphicstextitem_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsTextItem*
+/// @param callback void* func(QGraphicsTextItem* self, const char* param1)
+///
+void q_graphicstextitem_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QGraphicsTextItem*
+/// @param param1 const char*
+///
+void* q_graphicstextitem_qbase_metacast(void* self, const char* param1);
 
 /// @param self QGraphicsTextItem*
 /// @param param1 enum QMetaObject__Call

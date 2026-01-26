@@ -35,8 +35,24 @@ const QMetaObject* q_radiobutton_meta_object(void* self) {
     return QRadioButton_MetaObject((QRadioButton*)self);
 }
 
+void q_radiobutton_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QRadioButton_OnMetaObject((QRadioButton*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_radiobutton_qbase_meta_object(void* self) {
+    return QRadioButton_QBaseMetaObject((QRadioButton*)self);
+}
+
 void* q_radiobutton_metacast(void* self, const char* param1) {
     return QRadioButton_Metacast((QRadioButton*)self, param1);
+}
+
+void q_radiobutton_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QRadioButton_OnMetacast((QRadioButton*)self, (intptr_t)callback);
+}
+
+void* q_radiobutton_qbase_metacast(void* self, const char* param1) {
+    return QRadioButton_QBaseMetacast((QRadioButton*)self, param1);
 }
 
 int32_t q_radiobutton_metacall(void* self, int32_t param1, int param2, void* param3) {

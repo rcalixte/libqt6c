@@ -23,8 +23,24 @@ const QMetaObject* q_mediarecorder_meta_object(void* self) {
     return QMediaRecorder_MetaObject((QMediaRecorder*)self);
 }
 
+void q_mediarecorder_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QMediaRecorder_OnMetaObject((QMediaRecorder*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_mediarecorder_qbase_meta_object(void* self) {
+    return QMediaRecorder_QBaseMetaObject((QMediaRecorder*)self);
+}
+
 void* q_mediarecorder_metacast(void* self, const char* param1) {
     return QMediaRecorder_Metacast((QMediaRecorder*)self, param1);
+}
+
+void q_mediarecorder_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QMediaRecorder_OnMetacast((QMediaRecorder*)self, (intptr_t)callback);
+}
+
+void* q_mediarecorder_qbase_metacast(void* self, const char* param1) {
+    return QMediaRecorder_QBaseMetacast((QMediaRecorder*)self, param1);
 }
 
 int32_t q_mediarecorder_metacall(void* self, int32_t param1, int param2, void* param3) {

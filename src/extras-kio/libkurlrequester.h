@@ -57,10 +57,41 @@ KUrlRequester* k_urlrequester_new5(void* url, void* parent);
 ///
 const QMetaObject* k_urlrequester_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KUrlRequester*
+/// @param callback const QMetaObject* func()
+///
+void k_urlrequester_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KUrlRequester*
+///
+const QMetaObject* k_urlrequester_qbase_meta_object(void* self);
+
 /// @param self KUrlRequester*
 /// @param param1 const char*
 ///
 void* k_urlrequester_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KUrlRequester*
+/// @param callback void* func(KUrlRequester* self, const char* param1)
+///
+void k_urlrequester_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KUrlRequester*
+/// @param param1 const char*
+///
+void* k_urlrequester_qbase_metacast(void* self, const char* param1);
 
 /// @param self KUrlRequester*
 /// @param param1 enum QMetaObject__Call
@@ -5141,10 +5172,41 @@ KUrlComboRequester* k_urlcomborequester_new2();
 ///
 const QMetaObject* k_urlcomborequester_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KUrlComboRequester*
+/// @param callback const QMetaObject* func()
+///
+void k_urlcomborequester_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KUrlComboRequester*
+///
+const QMetaObject* k_urlcomborequester_qbase_meta_object(void* self);
+
 /// @param self KUrlComboRequester*
 /// @param param1 const char*
 ///
 void* k_urlcomborequester_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KUrlComboRequester*
+/// @param callback void* func(KUrlComboRequester* self, const char* param1)
+///
+void k_urlcomborequester_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KUrlComboRequester*
+/// @param param1 const char*
+///
+void* k_urlcomborequester_qbase_metacast(void* self, const char* param1);
 
 /// @param self KUrlComboRequester*
 /// @param param1 enum QMetaObject__Call

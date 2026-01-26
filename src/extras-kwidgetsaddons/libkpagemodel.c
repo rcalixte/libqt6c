@@ -22,8 +22,24 @@ const QMetaObject* k_pagemodel_meta_object(void* self) {
     return KPageModel_MetaObject((KPageModel*)self);
 }
 
+void k_pagemodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KPageModel_OnMetaObject((KPageModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_pagemodel_qbase_meta_object(void* self) {
+    return KPageModel_QBaseMetaObject((KPageModel*)self);
+}
+
 void* k_pagemodel_metacast(void* self, const char* param1) {
     return KPageModel_Metacast((KPageModel*)self, param1);
+}
+
+void k_pagemodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KPageModel_OnMetacast((KPageModel*)self, (intptr_t)callback);
+}
+
+void* k_pagemodel_qbase_metacast(void* self, const char* param1) {
+    return KPageModel_QBaseMetacast((KPageModel*)self, param1);
 }
 
 int32_t k_pagemodel_metacall(void* self, int32_t param1, int param2, void* param3) {

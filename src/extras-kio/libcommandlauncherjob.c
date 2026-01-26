@@ -1,6 +1,7 @@
 #include "../extras-kcoreaddons/libkjob.hpp"
 #include "../libqcoreevent.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "../libqprocess.hpp"
 #include "libcommandlauncherjob.hpp"
@@ -100,14 +101,6 @@ void k_io__commandlauncherjob_qbase_start(void* self) {
 
 long long k_io__commandlauncherjob_pid(void* self) {
     return KIO__CommandLauncherJob_Pid((KIO__CommandLauncherJob*)self);
-}
-
-const QMetaObject* k_io__commandlauncherjob_meta_object(void* self) {
-    return KJob_MetaObject((KJob*)self);
-}
-
-void* k_io__commandlauncherjob_metacast(void* self, const char* param1) {
-    return KJob_Metacast((KJob*)self, param1);
 }
 
 const char* k_io__commandlauncherjob_tr(const char* s) {
@@ -435,6 +428,30 @@ void k_io__commandlauncherjob_destroyed1(void* self, void* param1) {
 
 void k_io__commandlauncherjob_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_io__commandlauncherjob_meta_object(void* self) {
+    return KIO__CommandLauncherJob_MetaObject((KIO__CommandLauncherJob*)self);
+}
+
+const QMetaObject* k_io__commandlauncherjob_qbase_meta_object(void* self) {
+    return KIO__CommandLauncherJob_QBaseMetaObject((KIO__CommandLauncherJob*)self);
+}
+
+void k_io__commandlauncherjob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KIO__CommandLauncherJob_OnMetaObject((KIO__CommandLauncherJob*)self, (intptr_t)callback);
+}
+
+void* k_io__commandlauncherjob_metacast(void* self, const char* param1) {
+    return KIO__CommandLauncherJob_Metacast((KIO__CommandLauncherJob*)self, param1);
+}
+
+void* k_io__commandlauncherjob_qbase_metacast(void* self, const char* param1) {
+    return KIO__CommandLauncherJob_QBaseMetacast((KIO__CommandLauncherJob*)self, param1);
+}
+
+void k_io__commandlauncherjob_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KIO__CommandLauncherJob_OnMetacast((KIO__CommandLauncherJob*)self, (intptr_t)callback);
 }
 
 int32_t k_io__commandlauncherjob_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -35,8 +35,24 @@ const QMetaObject* k_assistantdialog_meta_object(void* self) {
     return KAssistantDialog_MetaObject((KAssistantDialog*)self);
 }
 
+void k_assistantdialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KAssistantDialog_OnMetaObject((KAssistantDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_assistantdialog_qbase_meta_object(void* self) {
+    return KAssistantDialog_QBaseMetaObject((KAssistantDialog*)self);
+}
+
 void* k_assistantdialog_metacast(void* self, const char* param1) {
     return KAssistantDialog_Metacast((KAssistantDialog*)self, param1);
+}
+
+void k_assistantdialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KAssistantDialog_OnMetacast((KAssistantDialog*)self, (intptr_t)callback);
+}
+
+void* k_assistantdialog_qbase_metacast(void* self, const char* param1) {
+    return KAssistantDialog_QBaseMetacast((KAssistantDialog*)self, param1);
 }
 
 int32_t k_assistantdialog_metacall(void* self, int32_t param1, int param2, void* param3) {

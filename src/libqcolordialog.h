@@ -48,10 +48,41 @@ QColorDialog* q_colordialog_new4(void* initial, void* parent);
 ///
 const QMetaObject* q_colordialog_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QColorDialog*
+/// @param callback const QMetaObject* func()
+///
+void q_colordialog_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QColorDialog*
+///
+const QMetaObject* q_colordialog_qbase_meta_object(void* self);
+
 /// @param self QColorDialog*
 /// @param param1 const char*
 ///
 void* q_colordialog_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QColorDialog*
+/// @param callback void* func(QColorDialog* self, const char* param1)
+///
+void q_colordialog_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QColorDialog*
+/// @param param1 const char*
+///
+void* q_colordialog_qbase_metacast(void* self, const char* param1);
 
 /// @param self QColorDialog*
 /// @param param1 enum QMetaObject__Call

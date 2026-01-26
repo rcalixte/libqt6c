@@ -14,8 +14,24 @@ const QMetaObject* q_sciabstractapis_meta_object(void* self) {
     return QsciAbstractAPIs_MetaObject((QsciAbstractAPIs*)self);
 }
 
+void q_sciabstractapis_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QsciAbstractAPIs_OnMetaObject((QsciAbstractAPIs*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_sciabstractapis_qbase_meta_object(void* self) {
+    return QsciAbstractAPIs_QBaseMetaObject((QsciAbstractAPIs*)self);
+}
+
 void* q_sciabstractapis_metacast(void* self, const char* param1) {
     return QsciAbstractAPIs_Metacast((QsciAbstractAPIs*)self, param1);
+}
+
+void q_sciabstractapis_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QsciAbstractAPIs_OnMetacast((QsciAbstractAPIs*)self, (intptr_t)callback);
+}
+
+void* q_sciabstractapis_qbase_metacast(void* self, const char* param1) {
+    return QsciAbstractAPIs_QBaseMetacast((QsciAbstractAPIs*)self, param1);
 }
 
 int32_t q_sciabstractapis_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -38,8 +38,24 @@ const QMetaObject* k_datepickerpopup_meta_object(void* self) {
     return KDatePickerPopup_MetaObject((KDatePickerPopup*)self);
 }
 
+void k_datepickerpopup_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KDatePickerPopup_OnMetaObject((KDatePickerPopup*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_datepickerpopup_qbase_meta_object(void* self) {
+    return KDatePickerPopup_QBaseMetaObject((KDatePickerPopup*)self);
+}
+
 void* k_datepickerpopup_metacast(void* self, const char* param1) {
     return KDatePickerPopup_Metacast((KDatePickerPopup*)self, param1);
+}
+
+void k_datepickerpopup_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KDatePickerPopup_OnMetacast((KDatePickerPopup*)self, (intptr_t)callback);
+}
+
+void* k_datepickerpopup_qbase_metacast(void* self, const char* param1) {
+    return KDatePickerPopup_QBaseMetacast((KDatePickerPopup*)self, param1);
 }
 
 int32_t k_datepickerpopup_metacall(void* self, int32_t param1, int param2, void* param3) {

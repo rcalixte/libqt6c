@@ -34,10 +34,41 @@ QPlaceManagerEngine* q_placemanagerengine_new2(libqt_map parameters, void* paren
 ///
 const QMetaObject* q_placemanagerengine_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QPlaceManagerEngine*
+/// @param callback const QMetaObject* func()
+///
+void q_placemanagerengine_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QPlaceManagerEngine*
+///
+const QMetaObject* q_placemanagerengine_qbase_meta_object(void* self);
+
 /// @param self QPlaceManagerEngine*
 /// @param param1 const char*
 ///
 void* q_placemanagerengine_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QPlaceManagerEngine*
+/// @param callback void* func(QPlaceManagerEngine* self, const char* param1)
+///
+void q_placemanagerengine_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QPlaceManagerEngine*
+/// @param param1 const char*
+///
+void* q_placemanagerengine_qbase_metacast(void* self, const char* param1);
 
 /// @param self QPlaceManagerEngine*
 /// @param param1 enum QMetaObject__Call

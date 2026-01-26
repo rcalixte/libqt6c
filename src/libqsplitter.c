@@ -35,8 +35,24 @@ const QMetaObject* q_splitter_meta_object(void* self) {
     return QSplitter_MetaObject((QSplitter*)self);
 }
 
+void q_splitter_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QSplitter_OnMetaObject((QSplitter*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_splitter_qbase_meta_object(void* self) {
+    return QSplitter_QBaseMetaObject((QSplitter*)self);
+}
+
 void* q_splitter_metacast(void* self, const char* param1) {
     return QSplitter_Metacast((QSplitter*)self, param1);
+}
+
+void q_splitter_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QSplitter_OnMetacast((QSplitter*)self, (intptr_t)callback);
+}
+
+void* q_splitter_qbase_metacast(void* self, const char* param1) {
+    return QSplitter_QBaseMetacast((QSplitter*)self, param1);
 }
 
 int32_t q_splitter_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -2357,8 +2373,24 @@ const QMetaObject* q_splitterhandle_meta_object(void* self) {
     return QSplitterHandle_MetaObject((QSplitterHandle*)self);
 }
 
+void q_splitterhandle_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QSplitterHandle_OnMetaObject((QSplitterHandle*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_splitterhandle_qbase_meta_object(void* self) {
+    return QSplitterHandle_QBaseMetaObject((QSplitterHandle*)self);
+}
+
 void* q_splitterhandle_metacast(void* self, const char* param1) {
     return QSplitterHandle_Metacast((QSplitterHandle*)self, param1);
+}
+
+void q_splitterhandle_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QSplitterHandle_OnMetacast((QSplitterHandle*)self, (intptr_t)callback);
+}
+
+void* q_splitterhandle_qbase_metacast(void* self, const char* param1) {
+    return QSplitterHandle_QBaseMetacast((QSplitterHandle*)self, param1);
 }
 
 int32_t q_splitterhandle_metacall(void* self, int32_t param1, int param2, void* param3) {

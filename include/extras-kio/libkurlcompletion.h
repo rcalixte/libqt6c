@@ -31,10 +31,41 @@ KUrlCompletion* k_urlcompletion_new2(int32_t param1);
 ///
 const QMetaObject* k_urlcompletion_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KUrlCompletion*
+/// @param callback const QMetaObject* func()
+///
+void k_urlcompletion_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KUrlCompletion*
+///
+const QMetaObject* k_urlcompletion_qbase_meta_object(void* self);
+
 /// @param self KUrlCompletion*
 /// @param param1 const char*
 ///
 void* k_urlcompletion_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KUrlCompletion*
+/// @param callback void* func(KUrlCompletion* self, const char* param1)
+///
+void k_urlcompletion_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KUrlCompletion*
+/// @param param1 const char*
+///
+void* k_urlcompletion_qbase_metacast(void* self, const char* param1);
 
 /// @param self KUrlCompletion*
 /// @param param1 enum QMetaObject__Call

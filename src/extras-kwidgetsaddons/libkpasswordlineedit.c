@@ -27,8 +27,24 @@ const QMetaObject* k_passwordlineedit_meta_object(void* self) {
     return KPasswordLineEdit_MetaObject((KPasswordLineEdit*)self);
 }
 
+void k_passwordlineedit_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KPasswordLineEdit_OnMetaObject((KPasswordLineEdit*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_passwordlineedit_qbase_meta_object(void* self) {
+    return KPasswordLineEdit_QBaseMetaObject((KPasswordLineEdit*)self);
+}
+
 void* k_passwordlineedit_metacast(void* self, const char* param1) {
     return KPasswordLineEdit_Metacast((KPasswordLineEdit*)self, param1);
+}
+
+void k_passwordlineedit_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KPasswordLineEdit_OnMetacast((KPasswordLineEdit*)self, (intptr_t)callback);
+}
+
+void* k_passwordlineedit_qbase_metacast(void* self, const char* param1) {
+    return KPasswordLineEdit_QBaseMetacast((KPasswordLineEdit*)self, param1);
 }
 
 int32_t k_passwordlineedit_metacall(void* self, int32_t param1, int param2, void* param3) {

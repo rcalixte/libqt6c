@@ -40,10 +40,41 @@ KNSCore__Question* k_nscore__question_new3(int32_t param1, void* parent);
 ///
 const QMetaObject* k_nscore__question_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KNSCore__Question*
+/// @param callback const QMetaObject* func()
+///
+void k_nscore__question_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KNSCore__Question*
+///
+const QMetaObject* k_nscore__question_qbase_meta_object(void* self);
+
 /// @param self KNSCore__Question*
 /// @param param1 const char*
 ///
 void* k_nscore__question_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KNSCore__Question*
+/// @param callback void* func(KNSCore__Question* self, const char* param1)
+///
+void k_nscore__question_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KNSCore__Question*
+/// @param param1 const char*
+///
+void* k_nscore__question_qbase_metacast(void* self, const char* param1);
 
 /// @param self KNSCore__Question*
 /// @param param1 enum QMetaObject__Call

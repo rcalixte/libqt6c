@@ -36,10 +36,41 @@ QXYLegendMarker* q_xylegendmarker_new2(void* series, void* legend, void* parent)
 ///
 const QMetaObject* q_xylegendmarker_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QXYLegendMarker*
+/// @param callback const QMetaObject* func()
+///
+void q_xylegendmarker_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QXYLegendMarker*
+///
+const QMetaObject* q_xylegendmarker_qbase_meta_object(void* self);
+
 /// @param self QXYLegendMarker*
 /// @param param1 const char*
 ///
 void* q_xylegendmarker_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QXYLegendMarker*
+/// @param callback void* func(QXYLegendMarker* self, const char* param1)
+///
+void q_xylegendmarker_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QXYLegendMarker*
+/// @param param1 const char*
+///
+void* q_xylegendmarker_qbase_metacast(void* self, const char* param1);
 
 /// @param self QXYLegendMarker*
 /// @param param1 enum QMetaObject__Call

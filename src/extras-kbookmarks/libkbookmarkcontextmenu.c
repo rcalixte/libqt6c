@@ -31,8 +31,24 @@ const QMetaObject* k_bookmarkcontextmenu_meta_object(void* self) {
     return KBookmarkContextMenu_MetaObject((KBookmarkContextMenu*)self);
 }
 
+void k_bookmarkcontextmenu_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KBookmarkContextMenu_OnMetaObject((KBookmarkContextMenu*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_bookmarkcontextmenu_qbase_meta_object(void* self) {
+    return KBookmarkContextMenu_QBaseMetaObject((KBookmarkContextMenu*)self);
+}
+
 void* k_bookmarkcontextmenu_metacast(void* self, const char* param1) {
     return KBookmarkContextMenu_Metacast((KBookmarkContextMenu*)self, param1);
+}
+
+void k_bookmarkcontextmenu_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KBookmarkContextMenu_OnMetacast((KBookmarkContextMenu*)self, (intptr_t)callback);
+}
+
+void* k_bookmarkcontextmenu_qbase_metacast(void* self, const char* param1) {
+    return KBookmarkContextMenu_QBaseMetacast((KBookmarkContextMenu*)self, param1);
 }
 
 int32_t k_bookmarkcontextmenu_metacall(void* self, int32_t param1, int param2, void* param3) {

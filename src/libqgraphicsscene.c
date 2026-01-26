@@ -53,8 +53,24 @@ const QMetaObject* q_graphicsscene_meta_object(void* self) {
     return QGraphicsScene_MetaObject((QGraphicsScene*)self);
 }
 
+void q_graphicsscene_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QGraphicsScene_OnMetaObject((QGraphicsScene*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_graphicsscene_qbase_meta_object(void* self) {
+    return QGraphicsScene_QBaseMetaObject((QGraphicsScene*)self);
+}
+
 void* q_graphicsscene_metacast(void* self, const char* param1) {
     return QGraphicsScene_Metacast((QGraphicsScene*)self, param1);
+}
+
+void q_graphicsscene_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QGraphicsScene_OnMetacast((QGraphicsScene*)self, (intptr_t)callback);
+}
+
+void* q_graphicsscene_qbase_metacast(void* self, const char* param1) {
+    return QGraphicsScene_QBaseMetacast((QGraphicsScene*)self, param1);
 }
 
 int32_t q_graphicsscene_metacall(void* self, int32_t param1, int param2, void* param3) {

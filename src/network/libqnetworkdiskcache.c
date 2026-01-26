@@ -20,8 +20,24 @@ const QMetaObject* q_networkdiskcache_meta_object(void* self) {
     return QNetworkDiskCache_MetaObject((QNetworkDiskCache*)self);
 }
 
+void q_networkdiskcache_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QNetworkDiskCache_OnMetaObject((QNetworkDiskCache*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_networkdiskcache_qbase_meta_object(void* self) {
+    return QNetworkDiskCache_QBaseMetaObject((QNetworkDiskCache*)self);
+}
+
 void* q_networkdiskcache_metacast(void* self, const char* param1) {
     return QNetworkDiskCache_Metacast((QNetworkDiskCache*)self, param1);
+}
+
+void q_networkdiskcache_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QNetworkDiskCache_OnMetacast((QNetworkDiskCache*)self, (intptr_t)callback);
+}
+
+void* q_networkdiskcache_qbase_metacast(void* self, const char* param1) {
+    return QNetworkDiskCache_QBaseMetacast((QNetworkDiskCache*)self, param1);
 }
 
 int32_t q_networkdiskcache_metacall(void* self, int32_t param1, int param2, void* param3) {

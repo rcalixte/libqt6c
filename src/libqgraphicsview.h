@@ -48,10 +48,41 @@ QGraphicsView* q_graphicsview_new4(void* scene, void* parent);
 ///
 const QMetaObject* q_graphicsview_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsView*
+/// @param callback const QMetaObject* func()
+///
+void q_graphicsview_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QGraphicsView*
+///
+const QMetaObject* q_graphicsview_qbase_meta_object(void* self);
+
 /// @param self QGraphicsView*
 /// @param param1 const char*
 ///
 void* q_graphicsview_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsView*
+/// @param callback void* func(QGraphicsView* self, const char* param1)
+///
+void q_graphicsview_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QGraphicsView*
+/// @param param1 const char*
+///
+void* q_graphicsview_qbase_metacast(void* self, const char* param1);
 
 /// @param self QGraphicsView*
 /// @param param1 enum QMetaObject__Call

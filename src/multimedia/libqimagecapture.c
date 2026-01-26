@@ -22,8 +22,24 @@ const QMetaObject* q_imagecapture_meta_object(void* self) {
     return QImageCapture_MetaObject((QImageCapture*)self);
 }
 
+void q_imagecapture_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QImageCapture_OnMetaObject((QImageCapture*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_imagecapture_qbase_meta_object(void* self) {
+    return QImageCapture_QBaseMetaObject((QImageCapture*)self);
+}
+
 void* q_imagecapture_metacast(void* self, const char* param1) {
     return QImageCapture_Metacast((QImageCapture*)self, param1);
+}
+
+void q_imagecapture_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QImageCapture_OnMetacast((QImageCapture*)self, (intptr_t)callback);
+}
+
+void* q_imagecapture_qbase_metacast(void* self, const char* param1) {
+    return QImageCapture_QBaseMetacast((QImageCapture*)self, param1);
 }
 
 int32_t q_imagecapture_metacall(void* self, int32_t param1, int param2, void* param3) {

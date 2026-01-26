@@ -21,8 +21,24 @@ const QMetaObject* q_designerformwindowtoolinterface_meta_object(void* self) {
     return QDesignerFormWindowToolInterface_MetaObject((QDesignerFormWindowToolInterface*)self);
 }
 
+void q_designerformwindowtoolinterface_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDesignerFormWindowToolInterface_OnMetaObject((QDesignerFormWindowToolInterface*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_designerformwindowtoolinterface_qbase_meta_object(void* self) {
+    return QDesignerFormWindowToolInterface_QBaseMetaObject((QDesignerFormWindowToolInterface*)self);
+}
+
 void* q_designerformwindowtoolinterface_metacast(void* self, const char* param1) {
     return QDesignerFormWindowToolInterface_Metacast((QDesignerFormWindowToolInterface*)self, param1);
+}
+
+void q_designerformwindowtoolinterface_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDesignerFormWindowToolInterface_OnMetacast((QDesignerFormWindowToolInterface*)self, (intptr_t)callback);
+}
+
+void* q_designerformwindowtoolinterface_qbase_metacast(void* self, const char* param1) {
+    return QDesignerFormWindowToolInterface_QBaseMetacast((QDesignerFormWindowToolInterface*)self, param1);
 }
 
 int32_t q_designerformwindowtoolinterface_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -25,10 +25,41 @@ KTextEditor__Application* k_texteditor__application_new(void* parent);
 ///
 const QMetaObject* k_texteditor__application_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KTextEditor__Application*
+/// @param callback const QMetaObject* func()
+///
+void k_texteditor__application_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KTextEditor__Application*
+///
+const QMetaObject* k_texteditor__application_qbase_meta_object(void* self);
+
 /// @param self KTextEditor__Application*
 /// @param param1 const char*
 ///
 void* k_texteditor__application_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KTextEditor__Application*
+/// @param callback void* func(KTextEditor__Application* self, const char* param1)
+///
+void k_texteditor__application_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KTextEditor__Application*
+/// @param param1 const char*
+///
+void* k_texteditor__application_qbase_metacast(void* self, const char* param1);
 
 /// @param self KTextEditor__Application*
 /// @param param1 enum QMetaObject__Call

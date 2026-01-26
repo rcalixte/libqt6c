@@ -48,8 +48,24 @@ const QMetaObject* k_io__renamedialog_meta_object(void* self) {
     return KIO__RenameDialog_MetaObject((KIO__RenameDialog*)self);
 }
 
+void k_io__renamedialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KIO__RenameDialog_OnMetaObject((KIO__RenameDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_io__renamedialog_qbase_meta_object(void* self) {
+    return KIO__RenameDialog_QBaseMetaObject((KIO__RenameDialog*)self);
+}
+
 void* k_io__renamedialog_metacast(void* self, const char* param1) {
     return KIO__RenameDialog_Metacast((KIO__RenameDialog*)self, param1);
+}
+
+void k_io__renamedialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KIO__RenameDialog_OnMetacast((KIO__RenameDialog*)self, (intptr_t)callback);
+}
+
+void* k_io__renamedialog_qbase_metacast(void* self, const char* param1) {
+    return KIO__RenameDialog_QBaseMetacast((KIO__RenameDialog*)self, param1);
 }
 
 int32_t k_io__renamedialog_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -19,8 +19,24 @@ const QMetaObject* q_graphicstransform_meta_object(void* self) {
     return QGraphicsTransform_MetaObject((QGraphicsTransform*)self);
 }
 
+void q_graphicstransform_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QGraphicsTransform_OnMetaObject((QGraphicsTransform*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_graphicstransform_qbase_meta_object(void* self) {
+    return QGraphicsTransform_QBaseMetaObject((QGraphicsTransform*)self);
+}
+
 void* q_graphicstransform_metacast(void* self, const char* param1) {
     return QGraphicsTransform_Metacast((QGraphicsTransform*)self, param1);
+}
+
+void q_graphicstransform_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QGraphicsTransform_OnMetacast((QGraphicsTransform*)self, (intptr_t)callback);
+}
+
+void* q_graphicstransform_qbase_metacast(void* self, const char* param1) {
+    return QGraphicsTransform_QBaseMetacast((QGraphicsTransform*)self, param1);
 }
 
 int32_t q_graphicstransform_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -411,8 +427,24 @@ const QMetaObject* q_graphicsscale_meta_object(void* self) {
     return QGraphicsScale_MetaObject((QGraphicsScale*)self);
 }
 
+void q_graphicsscale_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QGraphicsScale_OnMetaObject((QGraphicsScale*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_graphicsscale_qbase_meta_object(void* self) {
+    return QGraphicsScale_QBaseMetaObject((QGraphicsScale*)self);
+}
+
 void* q_graphicsscale_metacast(void* self, const char* param1) {
     return QGraphicsScale_Metacast((QGraphicsScale*)self, param1);
+}
+
+void q_graphicsscale_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QGraphicsScale_OnMetacast((QGraphicsScale*)self, (intptr_t)callback);
+}
+
+void* q_graphicsscale_qbase_metacast(void* self, const char* param1) {
+    return QGraphicsScale_QBaseMetacast((QGraphicsScale*)self, param1);
 }
 
 int32_t q_graphicsscale_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -875,8 +907,24 @@ const QMetaObject* q_graphicsrotation_meta_object(void* self) {
     return QGraphicsRotation_MetaObject((QGraphicsRotation*)self);
 }
 
+void q_graphicsrotation_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QGraphicsRotation_OnMetaObject((QGraphicsRotation*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_graphicsrotation_qbase_meta_object(void* self) {
+    return QGraphicsRotation_QBaseMetaObject((QGraphicsRotation*)self);
+}
+
 void* q_graphicsrotation_metacast(void* self, const char* param1) {
     return QGraphicsRotation_Metacast((QGraphicsRotation*)self, param1);
+}
+
+void q_graphicsrotation_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QGraphicsRotation_OnMetacast((QGraphicsRotation*)self, (intptr_t)callback);
+}
+
+void* q_graphicsrotation_qbase_metacast(void* self, const char* param1) {
+    return QGraphicsRotation_QBaseMetacast((QGraphicsRotation*)self, param1);
 }
 
 int32_t q_graphicsrotation_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -26,8 +26,24 @@ const QMetaObject* k_sslinfodialog_meta_object(void* self) {
     return KSslInfoDialog_MetaObject((KSslInfoDialog*)self);
 }
 
+void k_sslinfodialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KSslInfoDialog_OnMetaObject((KSslInfoDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_sslinfodialog_qbase_meta_object(void* self) {
+    return KSslInfoDialog_QBaseMetaObject((KSslInfoDialog*)self);
+}
+
 void* k_sslinfodialog_metacast(void* self, const char* param1) {
     return KSslInfoDialog_Metacast((KSslInfoDialog*)self, param1);
+}
+
+void k_sslinfodialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KSslInfoDialog_OnMetacast((KSslInfoDialog*)self, (intptr_t)callback);
+}
+
+void* k_sslinfodialog_qbase_metacast(void* self, const char* param1) {
+    return KSslInfoDialog_QBaseMetacast((KSslInfoDialog*)self, param1);
 }
 
 int32_t k_sslinfodialog_metacall(void* self, int32_t param1, int param2, void* param3) {

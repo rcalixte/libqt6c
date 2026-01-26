@@ -319,8 +319,24 @@ const QMetaObject* q_keychain__readpasswordjob_meta_object(void* self) {
     return QKeychain__ReadPasswordJob_MetaObject((QKeychain__ReadPasswordJob*)self);
 }
 
+void q_keychain__readpasswordjob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QKeychain__ReadPasswordJob_OnMetaObject((QKeychain__ReadPasswordJob*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_keychain__readpasswordjob_qbase_meta_object(void* self) {
+    return QKeychain__ReadPasswordJob_QBaseMetaObject((QKeychain__ReadPasswordJob*)self);
+}
+
 void* q_keychain__readpasswordjob_metacast(void* self, const char* param1) {
     return QKeychain__ReadPasswordJob_Metacast((QKeychain__ReadPasswordJob*)self, param1);
+}
+
+void q_keychain__readpasswordjob_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QKeychain__ReadPasswordJob_OnMetacast((QKeychain__ReadPasswordJob*)self, (intptr_t)callback);
+}
+
+void* q_keychain__readpasswordjob_qbase_metacast(void* self, const char* param1) {
+    return QKeychain__ReadPasswordJob_QBaseMetacast((QKeychain__ReadPasswordJob*)self, param1);
 }
 
 int32_t q_keychain__readpasswordjob_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -786,8 +802,24 @@ const QMetaObject* q_keychain__writepasswordjob_meta_object(void* self) {
     return QKeychain__WritePasswordJob_MetaObject((QKeychain__WritePasswordJob*)self);
 }
 
+void q_keychain__writepasswordjob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QKeychain__WritePasswordJob_OnMetaObject((QKeychain__WritePasswordJob*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_keychain__writepasswordjob_qbase_meta_object(void* self) {
+    return QKeychain__WritePasswordJob_QBaseMetaObject((QKeychain__WritePasswordJob*)self);
+}
+
 void* q_keychain__writepasswordjob_metacast(void* self, const char* param1) {
     return QKeychain__WritePasswordJob_Metacast((QKeychain__WritePasswordJob*)self, param1);
+}
+
+void q_keychain__writepasswordjob_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QKeychain__WritePasswordJob_OnMetacast((QKeychain__WritePasswordJob*)self, (intptr_t)callback);
+}
+
+void* q_keychain__writepasswordjob_qbase_metacast(void* self, const char* param1) {
+    return QKeychain__WritePasswordJob_QBaseMetacast((QKeychain__WritePasswordJob*)self, param1);
 }
 
 int32_t q_keychain__writepasswordjob_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -1247,8 +1279,24 @@ const QMetaObject* q_keychain__deletepasswordjob_meta_object(void* self) {
     return QKeychain__DeletePasswordJob_MetaObject((QKeychain__DeletePasswordJob*)self);
 }
 
+void q_keychain__deletepasswordjob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QKeychain__DeletePasswordJob_OnMetaObject((QKeychain__DeletePasswordJob*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_keychain__deletepasswordjob_qbase_meta_object(void* self) {
+    return QKeychain__DeletePasswordJob_QBaseMetaObject((QKeychain__DeletePasswordJob*)self);
+}
+
 void* q_keychain__deletepasswordjob_metacast(void* self, const char* param1) {
     return QKeychain__DeletePasswordJob_Metacast((QKeychain__DeletePasswordJob*)self, param1);
+}
+
+void q_keychain__deletepasswordjob_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QKeychain__DeletePasswordJob_OnMetacast((QKeychain__DeletePasswordJob*)self, (intptr_t)callback);
+}
+
+void* q_keychain__deletepasswordjob_qbase_metacast(void* self, const char* param1) {
+    return QKeychain__DeletePasswordJob_QBaseMetacast((QKeychain__DeletePasswordJob*)self, param1);
 }
 
 int32_t q_keychain__deletepasswordjob_metacall(void* self, int32_t param1, int param2, void* param3) {

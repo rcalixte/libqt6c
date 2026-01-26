@@ -16,8 +16,24 @@ const QMetaObject* k_syntaxhighlighting__repository_meta_object(void* self) {
     return KSyntaxHighlighting__Repository_MetaObject((KSyntaxHighlighting__Repository*)self);
 }
 
+void k_syntaxhighlighting__repository_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KSyntaxHighlighting__Repository_OnMetaObject((KSyntaxHighlighting__Repository*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_syntaxhighlighting__repository_qbase_meta_object(void* self) {
+    return KSyntaxHighlighting__Repository_QBaseMetaObject((KSyntaxHighlighting__Repository*)self);
+}
+
 void* k_syntaxhighlighting__repository_metacast(void* self, const char* param1) {
     return KSyntaxHighlighting__Repository_Metacast((KSyntaxHighlighting__Repository*)self, param1);
+}
+
+void k_syntaxhighlighting__repository_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KSyntaxHighlighting__Repository_OnMetacast((KSyntaxHighlighting__Repository*)self, (intptr_t)callback);
+}
+
+void* k_syntaxhighlighting__repository_qbase_metacast(void* self, const char* param1) {
+    return KSyntaxHighlighting__Repository_QBaseMetacast((KSyntaxHighlighting__Repository*)self, param1);
 }
 
 int32_t k_syntaxhighlighting__repository_metacall(void* self, int32_t param1, int param2, void* param3) {

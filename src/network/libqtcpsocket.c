@@ -22,8 +22,24 @@ const QMetaObject* q_tcpsocket_meta_object(void* self) {
     return QTcpSocket_MetaObject((QTcpSocket*)self);
 }
 
+void q_tcpsocket_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QTcpSocket_OnMetaObject((QTcpSocket*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_tcpsocket_qbase_meta_object(void* self) {
+    return QTcpSocket_QBaseMetaObject((QTcpSocket*)self);
+}
+
 void* q_tcpsocket_metacast(void* self, const char* param1) {
     return QTcpSocket_Metacast((QTcpSocket*)self, param1);
+}
+
+void q_tcpsocket_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QTcpSocket_OnMetacast((QTcpSocket*)self, (intptr_t)callback);
+}
+
+void* q_tcpsocket_qbase_metacast(void* self, const char* param1) {
+    return QTcpSocket_QBaseMetacast((QTcpSocket*)self, param1);
 }
 
 int32_t q_tcpsocket_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -30,8 +30,24 @@ const QMetaObject* q_designerwidgetboxinterface_meta_object(void* self) {
     return QDesignerWidgetBoxInterface_MetaObject((QDesignerWidgetBoxInterface*)self);
 }
 
+void q_designerwidgetboxinterface_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDesignerWidgetBoxInterface_OnMetaObject((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_designerwidgetboxinterface_qbase_meta_object(void* self) {
+    return QDesignerWidgetBoxInterface_QBaseMetaObject((QDesignerWidgetBoxInterface*)self);
+}
+
 void* q_designerwidgetboxinterface_metacast(void* self, const char* param1) {
     return QDesignerWidgetBoxInterface_Metacast((QDesignerWidgetBoxInterface*)self, param1);
+}
+
+void q_designerwidgetboxinterface_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDesignerWidgetBoxInterface_OnMetacast((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
+}
+
+void* q_designerwidgetboxinterface_qbase_metacast(void* self, const char* param1) {
+    return QDesignerWidgetBoxInterface_QBaseMetacast((QDesignerWidgetBoxInterface*)self, param1);
 }
 
 int32_t q_designerwidgetboxinterface_metacall(void* self, int32_t param1, int param2, void* param3) {

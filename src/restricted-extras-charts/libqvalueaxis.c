@@ -18,8 +18,24 @@ const QMetaObject* q_valueaxis_meta_object(void* self) {
     return QValueAxis_MetaObject((QValueAxis*)self);
 }
 
+void q_valueaxis_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QValueAxis_OnMetaObject((QValueAxis*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_valueaxis_qbase_meta_object(void* self) {
+    return QValueAxis_QBaseMetaObject((QValueAxis*)self);
+}
+
 void* q_valueaxis_metacast(void* self, const char* param1) {
     return QValueAxis_Metacast((QValueAxis*)self, param1);
+}
+
+void q_valueaxis_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QValueAxis_OnMetacast((QValueAxis*)self, (intptr_t)callback);
+}
+
+void* q_valueaxis_qbase_metacast(void* self, const char* param1) {
+    return QValueAxis_QBaseMetacast((QValueAxis*)self, param1);
 }
 
 int32_t q_valueaxis_metacall(void* self, int32_t param1, int param2, void* param3) {

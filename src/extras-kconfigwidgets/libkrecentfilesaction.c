@@ -29,8 +29,24 @@ const QMetaObject* k_recentfilesaction_meta_object(void* self) {
     return KRecentFilesAction_MetaObject((KRecentFilesAction*)self);
 }
 
+void k_recentfilesaction_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KRecentFilesAction_OnMetaObject((KRecentFilesAction*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_recentfilesaction_qbase_meta_object(void* self) {
+    return KRecentFilesAction_QBaseMetaObject((KRecentFilesAction*)self);
+}
+
 void* k_recentfilesaction_metacast(void* self, const char* param1) {
     return KRecentFilesAction_Metacast((KRecentFilesAction*)self, param1);
+}
+
+void k_recentfilesaction_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KRecentFilesAction_OnMetacast((KRecentFilesAction*)self, (intptr_t)callback);
+}
+
+void* k_recentfilesaction_qbase_metacast(void* self, const char* param1) {
+    return KRecentFilesAction_QBaseMetacast((KRecentFilesAction*)self, param1);
 }
 
 int32_t k_recentfilesaction_metacall(void* self, int32_t param1, int param2, void* param3) {

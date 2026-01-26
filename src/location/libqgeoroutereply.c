@@ -19,8 +19,24 @@ const QMetaObject* q_georoutereply_meta_object(void* self) {
     return QGeoRouteReply_MetaObject((QGeoRouteReply*)self);
 }
 
+void q_georoutereply_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QGeoRouteReply_OnMetaObject((QGeoRouteReply*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_georoutereply_qbase_meta_object(void* self) {
+    return QGeoRouteReply_QBaseMetaObject((QGeoRouteReply*)self);
+}
+
 void* q_georoutereply_metacast(void* self, const char* param1) {
     return QGeoRouteReply_Metacast((QGeoRouteReply*)self, param1);
+}
+
+void q_georoutereply_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QGeoRouteReply_OnMetacast((QGeoRouteReply*)self, (intptr_t)callback);
+}
+
+void* q_georoutereply_qbase_metacast(void* self, const char* param1) {
+    return QGeoRouteReply_QBaseMetacast((QGeoRouteReply*)self, param1);
 }
 
 int32_t q_georoutereply_metacall(void* self, int32_t param1, int param2, void* param3) {

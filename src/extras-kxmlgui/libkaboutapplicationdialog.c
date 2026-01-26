@@ -35,8 +35,24 @@ const QMetaObject* k_aboutapplicationdialog_meta_object(void* self) {
     return KAboutApplicationDialog_MetaObject((KAboutApplicationDialog*)self);
 }
 
+void k_aboutapplicationdialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KAboutApplicationDialog_OnMetaObject((KAboutApplicationDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_aboutapplicationdialog_qbase_meta_object(void* self) {
+    return KAboutApplicationDialog_QBaseMetaObject((KAboutApplicationDialog*)self);
+}
+
 void* k_aboutapplicationdialog_metacast(void* self, const char* param1) {
     return KAboutApplicationDialog_Metacast((KAboutApplicationDialog*)self, param1);
+}
+
+void k_aboutapplicationdialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KAboutApplicationDialog_OnMetacast((KAboutApplicationDialog*)self, (intptr_t)callback);
+}
+
+void* k_aboutapplicationdialog_qbase_metacast(void* self, const char* param1) {
+    return KAboutApplicationDialog_QBaseMetacast((KAboutApplicationDialog*)self, param1);
 }
 
 int32_t k_aboutapplicationdialog_metacall(void* self, int32_t param1, int param2, void* param3) {

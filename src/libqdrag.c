@@ -16,8 +16,24 @@ const QMetaObject* q_drag_meta_object(void* self) {
     return QDrag_MetaObject((QDrag*)self);
 }
 
+void q_drag_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDrag_OnMetaObject((QDrag*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_drag_qbase_meta_object(void* self) {
+    return QDrag_QBaseMetaObject((QDrag*)self);
+}
+
 void* q_drag_metacast(void* self, const char* param1) {
     return QDrag_Metacast((QDrag*)self, param1);
+}
+
+void q_drag_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDrag_OnMetacast((QDrag*)self, (intptr_t)callback);
+}
+
+void* q_drag_qbase_metacast(void* self, const char* param1) {
+    return QDrag_QBaseMetacast((QDrag*)self, param1);
 }
 
 int32_t q_drag_metacall(void* self, int32_t param1, int param2, void* param3) {

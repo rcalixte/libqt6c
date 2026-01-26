@@ -18,8 +18,24 @@ const QMetaObject* k_startupinfo_meta_object(void* self) {
     return KStartupInfo_MetaObject((KStartupInfo*)self);
 }
 
+void k_startupinfo_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KStartupInfo_OnMetaObject((KStartupInfo*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_startupinfo_qbase_meta_object(void* self) {
+    return KStartupInfo_QBaseMetaObject((KStartupInfo*)self);
+}
+
 void* k_startupinfo_metacast(void* self, const char* param1) {
     return KStartupInfo_Metacast((KStartupInfo*)self, param1);
+}
+
+void k_startupinfo_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KStartupInfo_OnMetacast((KStartupInfo*)self, (intptr_t)callback);
+}
+
+void* k_startupinfo_qbase_metacast(void* self, const char* param1) {
+    return KStartupInfo_QBaseMetacast((KStartupInfo*)self, param1);
 }
 
 int32_t k_startupinfo_metacall(void* self, int32_t param1, int param2, void* param3) {

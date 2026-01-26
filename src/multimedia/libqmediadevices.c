@@ -19,8 +19,24 @@ const QMetaObject* q_mediadevices_meta_object(void* self) {
     return QMediaDevices_MetaObject((QMediaDevices*)self);
 }
 
+void q_mediadevices_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QMediaDevices_OnMetaObject((QMediaDevices*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_mediadevices_qbase_meta_object(void* self) {
+    return QMediaDevices_QBaseMetaObject((QMediaDevices*)self);
+}
+
 void* q_mediadevices_metacast(void* self, const char* param1) {
     return QMediaDevices_Metacast((QMediaDevices*)self, param1);
+}
+
+void q_mediadevices_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QMediaDevices_OnMetacast((QMediaDevices*)self, (intptr_t)callback);
+}
+
+void* q_mediadevices_qbase_metacast(void* self, const char* param1) {
+    return QMediaDevices_QBaseMetacast((QMediaDevices*)self, param1);
 }
 
 int32_t q_mediadevices_metacall(void* self, int32_t param1, int param2, void* param3) {

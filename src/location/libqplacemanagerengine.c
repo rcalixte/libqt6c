@@ -87,8 +87,24 @@ const QMetaObject* q_placemanagerengine_meta_object(void* self) {
     return QPlaceManagerEngine_MetaObject((QPlaceManagerEngine*)self);
 }
 
+void q_placemanagerengine_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QPlaceManagerEngine_OnMetaObject((QPlaceManagerEngine*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_placemanagerengine_qbase_meta_object(void* self) {
+    return QPlaceManagerEngine_QBaseMetaObject((QPlaceManagerEngine*)self);
+}
+
 void* q_placemanagerengine_metacast(void* self, const char* param1) {
     return QPlaceManagerEngine_Metacast((QPlaceManagerEngine*)self, param1);
+}
+
+void q_placemanagerengine_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QPlaceManagerEngine_OnMetacast((QPlaceManagerEngine*)self, (intptr_t)callback);
+}
+
+void* q_placemanagerengine_qbase_metacast(void* self, const char* param1) {
+    return QPlaceManagerEngine_QBaseMetacast((QPlaceManagerEngine*)self, param1);
 }
 
 int32_t q_placemanagerengine_metacall(void* self, int32_t param1, int param2, void* param3) {

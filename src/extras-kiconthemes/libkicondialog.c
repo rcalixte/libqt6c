@@ -26,8 +26,24 @@ const QMetaObject* k_icondialog_meta_object(void* self) {
     return KIconDialog_MetaObject((KIconDialog*)self);
 }
 
+void k_icondialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KIconDialog_OnMetaObject((KIconDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_icondialog_qbase_meta_object(void* self) {
+    return KIconDialog_QBaseMetaObject((KIconDialog*)self);
+}
+
 void* k_icondialog_metacast(void* self, const char* param1) {
     return KIconDialog_Metacast((KIconDialog*)self, param1);
+}
+
+void k_icondialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KIconDialog_OnMetacast((KIconDialog*)self, (intptr_t)callback);
+}
+
+void* k_icondialog_qbase_metacast(void* self, const char* param1) {
+    return KIconDialog_QBaseMetacast((KIconDialog*)self, param1);
 }
 
 int32_t k_icondialog_metacall(void* self, int32_t param1, int param2, void* param3) {

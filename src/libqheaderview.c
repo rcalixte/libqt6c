@@ -35,8 +35,24 @@ const QMetaObject* q_headerview_meta_object(void* self) {
     return QHeaderView_MetaObject((QHeaderView*)self);
 }
 
+void q_headerview_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QHeaderView_OnMetaObject((QHeaderView*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_headerview_qbase_meta_object(void* self) {
+    return QHeaderView_QBaseMetaObject((QHeaderView*)self);
+}
+
 void* q_headerview_metacast(void* self, const char* param1) {
     return QHeaderView_Metacast((QHeaderView*)self, param1);
+}
+
+void q_headerview_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QHeaderView_OnMetacast((QHeaderView*)self, (intptr_t)callback);
+}
+
+void* q_headerview_qbase_metacast(void* self, const char* param1) {
+    return QHeaderView_QBaseMetacast((QHeaderView*)self, param1);
 }
 
 int32_t q_headerview_metacall(void* self, int32_t param1, int param2, void* param3) {

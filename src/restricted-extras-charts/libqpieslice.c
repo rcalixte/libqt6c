@@ -30,8 +30,24 @@ const QMetaObject* q_pieslice_meta_object(void* self) {
     return QPieSlice_MetaObject((QPieSlice*)self);
 }
 
+void q_pieslice_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QPieSlice_OnMetaObject((QPieSlice*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_pieslice_qbase_meta_object(void* self) {
+    return QPieSlice_QBaseMetaObject((QPieSlice*)self);
+}
+
 void* q_pieslice_metacast(void* self, const char* param1) {
     return QPieSlice_Metacast((QPieSlice*)self, param1);
+}
+
+void q_pieslice_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QPieSlice_OnMetacast((QPieSlice*)self, (intptr_t)callback);
+}
+
+void* q_pieslice_qbase_metacast(void* self, const char* param1) {
+    return QPieSlice_QBaseMetacast((QPieSlice*)self, param1);
 }
 
 int32_t q_pieslice_metacall(void* self, int32_t param1, int param2, void* param3) {

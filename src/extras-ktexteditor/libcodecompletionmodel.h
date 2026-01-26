@@ -25,10 +25,41 @@ KTextEditor__CodeCompletionModel* k_texteditor__codecompletionmodel_new(void* pa
 ///
 const QMetaObject* k_texteditor__codecompletionmodel_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KTextEditor__CodeCompletionModel*
+/// @param callback const QMetaObject* func()
+///
+void k_texteditor__codecompletionmodel_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KTextEditor__CodeCompletionModel*
+///
+const QMetaObject* k_texteditor__codecompletionmodel_qbase_meta_object(void* self);
+
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param param1 const char*
 ///
 void* k_texteditor__codecompletionmodel_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KTextEditor__CodeCompletionModel*
+/// @param callback void* func(KTextEditor__CodeCompletionModel* self, const char* param1)
+///
+void k_texteditor__codecompletionmodel_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KTextEditor__CodeCompletionModel*
+/// @param param1 const char*
+///
+void* k_texteditor__codecompletionmodel_qbase_metacast(void* self, const char* param1);
 
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param param1 enum QMetaObject__Call

@@ -39,8 +39,24 @@ const QMetaObject* q_accounts__manager_meta_object(void* self) {
     return Accounts__Manager_MetaObject((Accounts__Manager*)self);
 }
 
+void q_accounts__manager_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    Accounts__Manager_OnMetaObject((Accounts__Manager*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_accounts__manager_qbase_meta_object(void* self) {
+    return Accounts__Manager_QBaseMetaObject((Accounts__Manager*)self);
+}
+
 void* q_accounts__manager_metacast(void* self, const char* param1) {
     return Accounts__Manager_Metacast((Accounts__Manager*)self, param1);
+}
+
+void q_accounts__manager_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    Accounts__Manager_OnMetacast((Accounts__Manager*)self, (intptr_t)callback);
+}
+
+void* q_accounts__manager_qbase_metacast(void* self, const char* param1) {
+    return Accounts__Manager_QBaseMetacast((Accounts__Manager*)self, param1);
 }
 
 int32_t q_accounts__manager_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -31,10 +31,41 @@ QTextBrowser* q_textbrowser_new2();
 ///
 const QMetaObject* q_textbrowser_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QTextBrowser*
+/// @param callback const QMetaObject* func()
+///
+void q_textbrowser_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QTextBrowser*
+///
+const QMetaObject* q_textbrowser_qbase_meta_object(void* self);
+
 /// @param self QTextBrowser*
 /// @param param1 const char*
 ///
 void* q_textbrowser_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QTextBrowser*
+/// @param callback void* func(QTextBrowser* self, const char* param1)
+///
+void q_textbrowser_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QTextBrowser*
+/// @param param1 const char*
+///
+void* q_textbrowser_qbase_metacast(void* self, const char* param1);
 
 /// @param self QTextBrowser*
 /// @param param1 enum QMetaObject__Call

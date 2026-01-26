@@ -22,8 +22,24 @@ const QMetaObject* q_scilexersql_meta_object(void* self) {
     return QsciLexerSQL_MetaObject((QsciLexerSQL*)self);
 }
 
+void q_scilexersql_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QsciLexerSQL_OnMetaObject((QsciLexerSQL*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_scilexersql_qbase_meta_object(void* self) {
+    return QsciLexerSQL_QBaseMetaObject((QsciLexerSQL*)self);
+}
+
 void* q_scilexersql_metacast(void* self, const char* param1) {
     return QsciLexerSQL_Metacast((QsciLexerSQL*)self, param1);
+}
+
+void q_scilexersql_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QsciLexerSQL_OnMetacast((QsciLexerSQL*)self, (intptr_t)callback);
+}
+
+void* q_scilexersql_qbase_metacast(void* self, const char* param1) {
+    return QsciLexerSQL_QBaseMetacast((QsciLexerSQL*)self, param1);
 }
 
 int32_t q_scilexersql_metacall(void* self, int32_t param1, int param2, void* param3) {

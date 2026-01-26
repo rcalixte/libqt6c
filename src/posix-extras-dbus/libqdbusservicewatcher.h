@@ -61,10 +61,41 @@ QDBusServiceWatcher* q_dbusservicewatcher_new5(const char* service, void* connec
 ///
 const QMetaObject* q_dbusservicewatcher_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QDBusServiceWatcher*
+/// @param callback const QMetaObject* func()
+///
+void q_dbusservicewatcher_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QDBusServiceWatcher*
+///
+const QMetaObject* q_dbusservicewatcher_qbase_meta_object(void* self);
+
 /// @param self QDBusServiceWatcher*
 /// @param param1 const char*
 ///
 void* q_dbusservicewatcher_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QDBusServiceWatcher*
+/// @param callback void* func(QDBusServiceWatcher* self, const char* param1)
+///
+void q_dbusservicewatcher_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QDBusServiceWatcher*
+/// @param param1 const char*
+///
+void* q_dbusservicewatcher_qbase_metacast(void* self, const char* param1);
 
 /// @param self QDBusServiceWatcher*
 /// @param param1 enum QMetaObject__Call

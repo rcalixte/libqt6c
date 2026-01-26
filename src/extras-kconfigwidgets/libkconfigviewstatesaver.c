@@ -20,8 +20,24 @@ const QMetaObject* k_configviewstatesaver_meta_object(void* self) {
     return KConfigViewStateSaver_MetaObject((KConfigViewStateSaver*)self);
 }
 
+void k_configviewstatesaver_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KConfigViewStateSaver_OnMetaObject((KConfigViewStateSaver*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_configviewstatesaver_qbase_meta_object(void* self) {
+    return KConfigViewStateSaver_QBaseMetaObject((KConfigViewStateSaver*)self);
+}
+
 void* k_configviewstatesaver_metacast(void* self, const char* param1) {
     return KConfigViewStateSaver_Metacast((KConfigViewStateSaver*)self, param1);
+}
+
+void k_configviewstatesaver_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KConfigViewStateSaver_OnMetacast((KConfigViewStateSaver*)self, (intptr_t)callback);
+}
+
+void* k_configviewstatesaver_qbase_metacast(void* self, const char* param1) {
+    return KConfigViewStateSaver_QBaseMetacast((KConfigViewStateSaver*)self, param1);
 }
 
 int32_t k_configviewstatesaver_metacall(void* self, int32_t param1, int param2, void* param3) {

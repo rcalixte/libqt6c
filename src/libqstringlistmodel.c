@@ -56,8 +56,24 @@ const QMetaObject* q_stringlistmodel_meta_object(void* self) {
     return QStringListModel_MetaObject((QStringListModel*)self);
 }
 
+void q_stringlistmodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QStringListModel_OnMetaObject((QStringListModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_stringlistmodel_qbase_meta_object(void* self) {
+    return QStringListModel_QBaseMetaObject((QStringListModel*)self);
+}
+
 void* q_stringlistmodel_metacast(void* self, const char* param1) {
     return QStringListModel_Metacast((QStringListModel*)self, param1);
+}
+
+void q_stringlistmodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QStringListModel_OnMetacast((QStringListModel*)self, (intptr_t)callback);
+}
+
+void* q_stringlistmodel_qbase_metacast(void* self, const char* param1) {
+    return QStringListModel_QBaseMetacast((QStringListModel*)self, param1);
 }
 
 int32_t q_stringlistmodel_metacall(void* self, int32_t param1, int param2, void* param3) {

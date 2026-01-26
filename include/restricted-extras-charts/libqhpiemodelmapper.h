@@ -31,10 +31,41 @@ QHPieModelMapper* q_hpiemodelmapper_new2(void* parent);
 ///
 const QMetaObject* q_hpiemodelmapper_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QHPieModelMapper*
+/// @param callback const QMetaObject* func()
+///
+void q_hpiemodelmapper_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QHPieModelMapper*
+///
+const QMetaObject* q_hpiemodelmapper_qbase_meta_object(void* self);
+
 /// @param self QHPieModelMapper*
 /// @param param1 const char*
 ///
 void* q_hpiemodelmapper_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QHPieModelMapper*
+/// @param callback void* func(QHPieModelMapper* self, const char* param1)
+///
+void q_hpiemodelmapper_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QHPieModelMapper*
+/// @param param1 const char*
+///
+void* q_hpiemodelmapper_qbase_metacast(void* self, const char* param1);
 
 /// @param self QHPieModelMapper*
 /// @param param1 enum QMetaObject__Call

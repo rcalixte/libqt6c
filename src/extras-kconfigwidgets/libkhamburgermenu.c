@@ -18,8 +18,24 @@ const QMetaObject* k_hamburgermenu_meta_object(void* self) {
     return KHamburgerMenu_MetaObject((KHamburgerMenu*)self);
 }
 
+void k_hamburgermenu_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KHamburgerMenu_OnMetaObject((KHamburgerMenu*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_hamburgermenu_qbase_meta_object(void* self) {
+    return KHamburgerMenu_QBaseMetaObject((KHamburgerMenu*)self);
+}
+
 void* k_hamburgermenu_metacast(void* self, const char* param1) {
     return KHamburgerMenu_Metacast((KHamburgerMenu*)self, param1);
+}
+
+void k_hamburgermenu_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KHamburgerMenu_OnMetacast((KHamburgerMenu*)self, (intptr_t)callback);
+}
+
+void* k_hamburgermenu_qbase_metacast(void* self, const char* param1) {
+    return KHamburgerMenu_QBaseMetacast((KHamburgerMenu*)self, param1);
 }
 
 int32_t k_hamburgermenu_metacall(void* self, int32_t param1, int param2, void* param3) {

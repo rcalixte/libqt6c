@@ -15,8 +15,24 @@ const QMetaObject* k_onsole__emulation_meta_object(void* self) {
     return Konsole__Emulation_MetaObject((Konsole__Emulation*)self);
 }
 
+void k_onsole__emulation_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    Konsole__Emulation_OnMetaObject((Konsole__Emulation*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_onsole__emulation_qbase_meta_object(void* self) {
+    return Konsole__Emulation_QBaseMetaObject((Konsole__Emulation*)self);
+}
+
 void* k_onsole__emulation_metacast(void* self, const char* param1) {
     return Konsole__Emulation_Metacast((Konsole__Emulation*)self, param1);
+}
+
+void k_onsole__emulation_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    Konsole__Emulation_OnMetacast((Konsole__Emulation*)self, (intptr_t)callback);
+}
+
+void* k_onsole__emulation_qbase_metacast(void* self, const char* param1) {
+    return Konsole__Emulation_QBaseMetacast((Konsole__Emulation*)self, param1);
 }
 
 int32_t k_onsole__emulation_metacall(void* self, int32_t param1, int param2, void* param3) {

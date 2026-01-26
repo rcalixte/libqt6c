@@ -24,8 +24,24 @@ const QMetaObject* q_openglshader_meta_object(void* self) {
     return QOpenGLShader_MetaObject((QOpenGLShader*)self);
 }
 
+void q_openglshader_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QOpenGLShader_OnMetaObject((QOpenGLShader*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_openglshader_qbase_meta_object(void* self) {
+    return QOpenGLShader_QBaseMetaObject((QOpenGLShader*)self);
+}
+
 void* q_openglshader_metacast(void* self, const char* param1) {
     return QOpenGLShader_Metacast((QOpenGLShader*)self, param1);
+}
+
+void q_openglshader_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QOpenGLShader_OnMetacast((QOpenGLShader*)self, (intptr_t)callback);
+}
+
+void* q_openglshader_qbase_metacast(void* self, const char* param1) {
+    return QOpenGLShader_QBaseMetacast((QOpenGLShader*)self, param1);
 }
 
 int32_t q_openglshader_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -442,8 +458,24 @@ const QMetaObject* q_openglshaderprogram_meta_object(void* self) {
     return QOpenGLShaderProgram_MetaObject((QOpenGLShaderProgram*)self);
 }
 
+void q_openglshaderprogram_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QOpenGLShaderProgram_OnMetaObject((QOpenGLShaderProgram*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_openglshaderprogram_qbase_meta_object(void* self) {
+    return QOpenGLShaderProgram_QBaseMetaObject((QOpenGLShaderProgram*)self);
+}
+
 void* q_openglshaderprogram_metacast(void* self, const char* param1) {
     return QOpenGLShaderProgram_Metacast((QOpenGLShaderProgram*)self, param1);
+}
+
+void q_openglshaderprogram_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QOpenGLShaderProgram_OnMetacast((QOpenGLShaderProgram*)self, (intptr_t)callback);
+}
+
+void* q_openglshaderprogram_qbase_metacast(void* self, const char* param1) {
+    return QOpenGLShaderProgram_QBaseMetacast((QOpenGLShaderProgram*)self, param1);
 }
 
 int32_t q_openglshaderprogram_metacall(void* self, int32_t param1, int param2, void* param3) {

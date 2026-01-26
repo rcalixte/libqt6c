@@ -18,8 +18,24 @@ const QMetaObject* k_toolbarpopupaction_meta_object(void* self) {
     return KToolBarPopupAction_MetaObject((KToolBarPopupAction*)self);
 }
 
+void k_toolbarpopupaction_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KToolBarPopupAction_OnMetaObject((KToolBarPopupAction*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_toolbarpopupaction_qbase_meta_object(void* self) {
+    return KToolBarPopupAction_QBaseMetaObject((KToolBarPopupAction*)self);
+}
+
 void* k_toolbarpopupaction_metacast(void* self, const char* param1) {
     return KToolBarPopupAction_Metacast((KToolBarPopupAction*)self, param1);
+}
+
+void k_toolbarpopupaction_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KToolBarPopupAction_OnMetacast((KToolBarPopupAction*)self, (intptr_t)callback);
+}
+
+void* k_toolbarpopupaction_qbase_metacast(void* self, const char* param1) {
+    return KToolBarPopupAction_QBaseMetacast((KToolBarPopupAction*)self, param1);
 }
 
 int32_t k_toolbarpopupaction_metacall(void* self, int32_t param1, int param2, void* param3) {

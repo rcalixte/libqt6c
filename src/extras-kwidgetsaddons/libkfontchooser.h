@@ -48,10 +48,41 @@ KFontChooser* k_fontchooser_new4(int32_t flags, void* parent);
 ///
 const QMetaObject* k_fontchooser_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KFontChooser*
+/// @param callback const QMetaObject* func()
+///
+void k_fontchooser_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KFontChooser*
+///
+const QMetaObject* k_fontchooser_qbase_meta_object(void* self);
+
 /// @param self KFontChooser*
 /// @param param1 const char*
 ///
 void* k_fontchooser_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KFontChooser*
+/// @param callback void* func(KFontChooser* self, const char* param1)
+///
+void k_fontchooser_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KFontChooser*
+/// @param param1 const char*
+///
+void* k_fontchooser_qbase_metacast(void* self, const char* param1);
 
 /// @param self KFontChooser*
 /// @param param1 enum QMetaObject__Call

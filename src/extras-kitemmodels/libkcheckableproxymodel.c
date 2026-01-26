@@ -25,8 +25,24 @@ const QMetaObject* k_checkableproxymodel_meta_object(void* self) {
     return KCheckableProxyModel_MetaObject((KCheckableProxyModel*)self);
 }
 
+void k_checkableproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KCheckableProxyModel_OnMetaObject((KCheckableProxyModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_checkableproxymodel_qbase_meta_object(void* self) {
+    return KCheckableProxyModel_QBaseMetaObject((KCheckableProxyModel*)self);
+}
+
 void* k_checkableproxymodel_metacast(void* self, const char* param1) {
     return KCheckableProxyModel_Metacast((KCheckableProxyModel*)self, param1);
+}
+
+void k_checkableproxymodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KCheckableProxyModel_OnMetacast((KCheckableProxyModel*)self, (intptr_t)callback);
+}
+
+void* k_checkableproxymodel_qbase_metacast(void* self, const char* param1) {
+    return KCheckableProxyModel_QBaseMetacast((KCheckableProxyModel*)self, param1);
 }
 
 int32_t k_checkableproxymodel_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -22,8 +22,24 @@ const QMetaObject* q_scilexerproperties_meta_object(void* self) {
     return QsciLexerProperties_MetaObject((QsciLexerProperties*)self);
 }
 
+void q_scilexerproperties_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QsciLexerProperties_OnMetaObject((QsciLexerProperties*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_scilexerproperties_qbase_meta_object(void* self) {
+    return QsciLexerProperties_QBaseMetaObject((QsciLexerProperties*)self);
+}
+
 void* q_scilexerproperties_metacast(void* self, const char* param1) {
     return QsciLexerProperties_Metacast((QsciLexerProperties*)self, param1);
+}
+
+void q_scilexerproperties_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QsciLexerProperties_OnMetacast((QsciLexerProperties*)self, (intptr_t)callback);
+}
+
+void* q_scilexerproperties_qbase_metacast(void* self, const char* param1) {
+    return QsciLexerProperties_QBaseMetacast((QsciLexerProperties*)self, param1);
 }
 
 int32_t q_scilexerproperties_metacall(void* self, int32_t param1, int param2, void* param3) {

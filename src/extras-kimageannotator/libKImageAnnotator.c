@@ -30,8 +30,24 @@ const QMetaObject* k_imageannotator__kimageannotator_meta_object(void* self) {
     return kImageAnnotator__KImageAnnotator_MetaObject((kImageAnnotator__KImageAnnotator*)self);
 }
 
+void k_imageannotator__kimageannotator_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    kImageAnnotator__KImageAnnotator_OnMetaObject((kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_imageannotator__kimageannotator_qbase_meta_object(void* self) {
+    return kImageAnnotator__KImageAnnotator_QBaseMetaObject((kImageAnnotator__KImageAnnotator*)self);
+}
+
 void* k_imageannotator__kimageannotator_metacast(void* self, const char* param1) {
     return kImageAnnotator__KImageAnnotator_Metacast((kImageAnnotator__KImageAnnotator*)self, param1);
+}
+
+void k_imageannotator__kimageannotator_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    kImageAnnotator__KImageAnnotator_OnMetacast((kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
+}
+
+void* k_imageannotator__kimageannotator_qbase_metacast(void* self, const char* param1) {
+    return kImageAnnotator__KImageAnnotator_QBaseMetacast((kImageAnnotator__KImageAnnotator*)self, param1);
 }
 
 int32_t k_imageannotator__kimageannotator_metacall(void* self, int32_t param1, int param2, void* param3) {

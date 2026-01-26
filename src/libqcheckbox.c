@@ -35,8 +35,24 @@ const QMetaObject* q_checkbox_meta_object(void* self) {
     return QCheckBox_MetaObject((QCheckBox*)self);
 }
 
+void q_checkbox_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCheckBox_OnMetaObject((QCheckBox*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_checkbox_qbase_meta_object(void* self) {
+    return QCheckBox_QBaseMetaObject((QCheckBox*)self);
+}
+
 void* q_checkbox_metacast(void* self, const char* param1) {
     return QCheckBox_Metacast((QCheckBox*)self, param1);
+}
+
+void q_checkbox_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCheckBox_OnMetacast((QCheckBox*)self, (intptr_t)callback);
+}
+
+void* q_checkbox_qbase_metacast(void* self, const char* param1) {
+    return QCheckBox_QBaseMetacast((QCheckBox*)self, param1);
 }
 
 int32_t q_checkbox_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -18,8 +18,24 @@ const QMetaObject* q_iodevice_meta_object(void* self) {
     return QIODevice_MetaObject((QIODevice*)self);
 }
 
+void q_iodevice_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QIODevice_OnMetaObject((QIODevice*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_iodevice_qbase_meta_object(void* self) {
+    return QIODevice_QBaseMetaObject((QIODevice*)self);
+}
+
 void* q_iodevice_metacast(void* self, const char* param1) {
     return QIODevice_Metacast((QIODevice*)self, param1);
+}
+
+void q_iodevice_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QIODevice_OnMetacast((QIODevice*)self, (intptr_t)callback);
+}
+
+void* q_iodevice_qbase_metacast(void* self, const char* param1) {
+    return QIODevice_QBaseMetacast((QIODevice*)self, param1);
 }
 
 int32_t q_iodevice_metacall(void* self, int32_t param1, int param2, void* param3) {

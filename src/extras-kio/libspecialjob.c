@@ -24,8 +24,24 @@ const QMetaObject* k_io__specialjob_meta_object(void* self) {
     return KIO__SpecialJob_MetaObject((KIO__SpecialJob*)self);
 }
 
+void k_io__specialjob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KIO__SpecialJob_OnMetaObject((KIO__SpecialJob*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_io__specialjob_qbase_meta_object(void* self) {
+    return KIO__SpecialJob_QBaseMetaObject((KIO__SpecialJob*)self);
+}
+
 void* k_io__specialjob_metacast(void* self, const char* param1) {
     return KIO__SpecialJob_Metacast((KIO__SpecialJob*)self, param1);
+}
+
+void k_io__specialjob_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KIO__SpecialJob_OnMetacast((KIO__SpecialJob*)self, (intptr_t)callback);
+}
+
+void* k_io__specialjob_qbase_metacast(void* self, const char* param1) {
+    return KIO__SpecialJob_QBaseMetacast((KIO__SpecialJob*)self, param1);
 }
 
 int32_t k_io__specialjob_metacall(void* self, int32_t param1, int param2, void* param3) {

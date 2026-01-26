@@ -17,8 +17,24 @@ const QMetaObject* k_bookmarkaction_meta_object(void* self) {
     return KBookmarkAction_MetaObject((KBookmarkAction*)self);
 }
 
+void k_bookmarkaction_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KBookmarkAction_OnMetaObject((KBookmarkAction*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_bookmarkaction_qbase_meta_object(void* self) {
+    return KBookmarkAction_QBaseMetaObject((KBookmarkAction*)self);
+}
+
 void* k_bookmarkaction_metacast(void* self, const char* param1) {
     return KBookmarkAction_Metacast((KBookmarkAction*)self, param1);
+}
+
+void k_bookmarkaction_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KBookmarkAction_OnMetacast((KBookmarkAction*)self, (intptr_t)callback);
+}
+
+void* k_bookmarkaction_qbase_metacast(void* self, const char* param1) {
+    return KBookmarkAction_QBaseMetacast((KBookmarkAction*)self, param1);
 }
 
 int32_t k_bookmarkaction_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -3235,10 +3235,41 @@ QCPLayer* q_cplayer_new(void* parentPlot, const char* layerName);
 ///
 const QMetaObject* q_cplayer_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPLayer*
+/// @param callback const QMetaObject* func()
+///
+void q_cplayer_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPLayer*
+///
+const QMetaObject* q_cplayer_qbase_meta_object(void* self);
+
 /// @param self QCPLayer*
 /// @param param1 const char*
 ///
 void* q_cplayer_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPLayer*
+/// @param callback void* func(QCPLayer* self, const char* param1)
+///
+void q_cplayer_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPLayer*
+/// @param param1 const char*
+///
+void* q_cplayer_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPLayer*
 /// @param param1 enum QMetaObject__Call
@@ -4221,10 +4252,41 @@ QCPLayerable* q_cplayerable_new3(void* plot, const char* targetLayer, void* pare
 ///
 const QMetaObject* q_cplayerable_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPLayerable*
+/// @param callback const QMetaObject* func()
+///
+void q_cplayerable_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPLayerable*
+///
+const QMetaObject* q_cplayerable_qbase_meta_object(void* self);
+
 /// @param self QCPLayerable*
 /// @param param1 const char*
 ///
 void* q_cplayerable_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPLayerable*
+/// @param callback void* func(QCPLayerable* self, const char* param1)
+///
+void q_cplayerable_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPLayerable*
+/// @param param1 const char*
+///
+void* q_cplayerable_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPLayerable*
 /// @param param1 enum QMetaObject__Call
@@ -6125,10 +6187,41 @@ QCPSelectionRect* q_cpselectionrect_new(void* parentPlot);
 ///
 const QMetaObject* q_cpselectionrect_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPSelectionRect*
+/// @param callback const QMetaObject* func()
+///
+void q_cpselectionrect_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPSelectionRect*
+///
+const QMetaObject* q_cpselectionrect_qbase_meta_object(void* self);
+
 /// @param self QCPSelectionRect*
 /// @param param1 const char*
 ///
 void* q_cpselectionrect_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPSelectionRect*
+/// @param callback void* func(QCPSelectionRect* self, const char* param1)
+///
+void q_cpselectionrect_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPSelectionRect*
+/// @param param1 const char*
+///
+void* q_cpselectionrect_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPSelectionRect*
 /// @param param1 enum QMetaObject__Call
@@ -7821,10 +7914,41 @@ QCPMarginGroup* q_cpmargingroup_new(void* parentPlot);
 ///
 const QMetaObject* q_cpmargingroup_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPMarginGroup*
+/// @param callback const QMetaObject* func()
+///
+void q_cpmargingroup_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPMarginGroup*
+///
+const QMetaObject* q_cpmargingroup_qbase_meta_object(void* self);
+
 /// @param self QCPMarginGroup*
 /// @param param1 const char*
 ///
 void* q_cpmargingroup_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPMarginGroup*
+/// @param callback void* func(QCPMarginGroup* self, const char* param1)
+///
+void q_cpmargingroup_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPMarginGroup*
+/// @param param1 const char*
+///
+void* q_cpmargingroup_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPMarginGroup*
 /// @param param1 enum QMetaObject__Call
@@ -8742,10 +8866,41 @@ QCPLayoutElement* q_cplayoutelement_new2(void* parentPlot);
 ///
 const QMetaObject* q_cplayoutelement_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPLayoutElement*
+/// @param callback const QMetaObject* func()
+///
+void q_cplayoutelement_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPLayoutElement*
+///
+const QMetaObject* q_cplayoutelement_qbase_meta_object(void* self);
+
 /// @param self QCPLayoutElement*
 /// @param param1 const char*
 ///
 void* q_cplayoutelement_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPLayoutElement*
+/// @param callback void* func(QCPLayoutElement* self, const char* param1)
+///
+void q_cplayoutelement_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPLayoutElement*
+/// @param param1 const char*
+///
+void* q_cplayoutelement_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPLayoutElement*
 /// @param param1 enum QMetaObject__Call
@@ -10515,10 +10670,41 @@ QCPLayout* q_cplayout_new();
 ///
 const QMetaObject* q_cplayout_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPLayout*
+/// @param callback const QMetaObject* func()
+///
+void q_cplayout_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPLayout*
+///
+const QMetaObject* q_cplayout_qbase_meta_object(void* self);
+
 /// @param self QCPLayout*
 /// @param param1 const char*
 ///
 void* q_cplayout_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPLayout*
+/// @param callback void* func(QCPLayout* self, const char* param1)
+///
+void q_cplayout_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPLayout*
+/// @param param1 const char*
+///
+void* q_cplayout_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPLayout*
 /// @param param1 enum QMetaObject__Call
@@ -12666,10 +12852,41 @@ QCPLayoutGrid* q_cplayoutgrid_new();
 ///
 const QMetaObject* q_cplayoutgrid_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPLayoutGrid*
+/// @param callback const QMetaObject* func()
+///
+void q_cplayoutgrid_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPLayoutGrid*
+///
+const QMetaObject* q_cplayoutgrid_qbase_meta_object(void* self);
+
 /// @param self QCPLayoutGrid*
 /// @param param1 const char*
 ///
 void* q_cplayoutgrid_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPLayoutGrid*
+/// @param callback void* func(QCPLayoutGrid* self, const char* param1)
+///
+void q_cplayoutgrid_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPLayoutGrid*
+/// @param param1 const char*
+///
+void* q_cplayoutgrid_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPLayoutGrid*
 /// @param param1 enum QMetaObject__Call
@@ -15092,10 +15309,41 @@ QCPLayoutInset* q_cplayoutinset_new();
 ///
 const QMetaObject* q_cplayoutinset_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPLayoutInset*
+/// @param callback const QMetaObject* func()
+///
+void q_cplayoutinset_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPLayoutInset*
+///
+const QMetaObject* q_cplayoutinset_qbase_meta_object(void* self);
+
 /// @param self QCPLayoutInset*
 /// @param param1 const char*
 ///
 void* q_cplayoutinset_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPLayoutInset*
+/// @param callback void* func(QCPLayoutInset* self, const char* param1)
+///
+void q_cplayoutinset_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPLayoutInset*
+/// @param param1 const char*
+///
+void* q_cplayoutinset_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPLayoutInset*
 /// @param param1 enum QMetaObject__Call
@@ -21126,10 +21374,41 @@ QCPGrid* q_cpgrid_new(void* parentAxis);
 ///
 const QMetaObject* q_cpgrid_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPGrid*
+/// @param callback const QMetaObject* func()
+///
+void q_cpgrid_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPGrid*
+///
+const QMetaObject* q_cpgrid_qbase_meta_object(void* self);
+
 /// @param self QCPGrid*
 /// @param param1 const char*
 ///
 void* q_cpgrid_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPGrid*
+/// @param callback void* func(QCPGrid* self, const char* param1)
+///
+void q_cpgrid_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPGrid*
+/// @param param1 const char*
+///
+void* q_cpgrid_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPGrid*
 /// @param param1 enum QMetaObject__Call
@@ -22741,10 +23020,41 @@ QCPAxis* q_cpaxis_new(void* parent, int32_t type);
 ///
 const QMetaObject* q_cpaxis_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPAxis*
+/// @param callback const QMetaObject* func()
+///
+void q_cpaxis_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPAxis*
+///
+const QMetaObject* q_cpaxis_qbase_meta_object(void* self);
+
 /// @param self QCPAxis*
 /// @param param1 const char*
 ///
 void* q_cpaxis_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPAxis*
+/// @param callback void* func(QCPAxis* self, const char* param1)
+///
+void q_cpaxis_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPAxis*
+/// @param param1 const char*
+///
+void* q_cpaxis_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPAxis*
 /// @param param1 enum QMetaObject__Call
@@ -25546,10 +25856,41 @@ QCPAbstractPlottable* q_cpabstractplottable_new(void* keyAxis, void* valueAxis);
 ///
 const QMetaObject* q_cpabstractplottable_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPAbstractPlottable*
+/// @param callback const QMetaObject* func()
+///
+void q_cpabstractplottable_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPAbstractPlottable*
+///
+const QMetaObject* q_cpabstractplottable_qbase_meta_object(void* self);
+
 /// @param self QCPAbstractPlottable*
 /// @param param1 const char*
 ///
 void* q_cpabstractplottable_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPAbstractPlottable*
+/// @param callback void* func(QCPAbstractPlottable* self, const char* param1)
+///
+void q_cpabstractplottable_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPAbstractPlottable*
+/// @param param1 const char*
+///
+void* q_cpabstractplottable_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPAbstractPlottable*
 /// @param param1 enum QMetaObject__Call
@@ -27989,10 +28330,41 @@ QCPAbstractItem* q_cpabstractitem_new(void* parentPlot);
 ///
 const QMetaObject* q_cpabstractitem_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPAbstractItem*
+/// @param callback const QMetaObject* func()
+///
+void q_cpabstractitem_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPAbstractItem*
+///
+const QMetaObject* q_cpabstractitem_qbase_meta_object(void* self);
+
 /// @param self QCPAbstractItem*
 /// @param param1 const char*
 ///
 void* q_cpabstractitem_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPAbstractItem*
+/// @param callback void* func(QCPAbstractItem* self, const char* param1)
+///
+void q_cpabstractitem_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPAbstractItem*
+/// @param param1 const char*
+///
+void* q_cpabstractitem_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPAbstractItem*
 /// @param param1 enum QMetaObject__Call
@@ -29664,10 +30036,41 @@ QCustomPlot* q_customplot_new2();
 ///
 const QMetaObject* q_customplot_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCustomPlot*
+/// @param callback const QMetaObject* func()
+///
+void q_customplot_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCustomPlot*
+///
+const QMetaObject* q_customplot_qbase_meta_object(void* self);
+
 /// @param self QCustomPlot*
 /// @param param1 const char*
 ///
 void* q_customplot_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCustomPlot*
+/// @param callback void* func(QCustomPlot* self, const char* param1)
+///
+void q_customplot_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCustomPlot*
+/// @param param1 const char*
+///
+void* q_customplot_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCustomPlot*
 /// @param param1 enum QMetaObject__Call
@@ -37089,10 +37492,41 @@ QCPAxisRect* q_cpaxisrect_new2(void* parentPlot, bool setupDefaultAxes);
 ///
 const QMetaObject* q_cpaxisrect_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPAxisRect*
+/// @param callback const QMetaObject* func()
+///
+void q_cpaxisrect_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPAxisRect*
+///
+const QMetaObject* q_cpaxisrect_qbase_meta_object(void* self);
+
 /// @param self QCPAxisRect*
 /// @param param1 const char*
 ///
 void* q_cpaxisrect_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPAxisRect*
+/// @param callback void* func(QCPAxisRect* self, const char* param1)
+///
+void q_cpaxisrect_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPAxisRect*
+/// @param param1 const char*
+///
+void* q_cpaxisrect_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPAxisRect*
 /// @param param1 enum QMetaObject__Call
@@ -39357,10 +39791,41 @@ QCPAbstractLegendItem* q_cpabstractlegenditem_new(void* parent);
 ///
 const QMetaObject* q_cpabstractlegenditem_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPAbstractLegendItem*
+/// @param callback const QMetaObject* func()
+///
+void q_cpabstractlegenditem_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPAbstractLegendItem*
+///
+const QMetaObject* q_cpabstractlegenditem_qbase_meta_object(void* self);
+
 /// @param self QCPAbstractLegendItem*
 /// @param param1 const char*
 ///
 void* q_cpabstractlegenditem_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPAbstractLegendItem*
+/// @param callback void* func(QCPAbstractLegendItem* self, const char* param1)
+///
+void q_cpabstractlegenditem_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPAbstractLegendItem*
+/// @param param1 const char*
+///
+void* q_cpabstractlegenditem_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPAbstractLegendItem*
 /// @param param1 enum QMetaObject__Call
@@ -41311,10 +41776,41 @@ QCPPlottableLegendItem* q_cpplottablelegenditem_new(void* parent, void* plottabl
 ///
 const QMetaObject* q_cpplottablelegenditem_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPPlottableLegendItem*
+/// @param callback const QMetaObject* func()
+///
+void q_cpplottablelegenditem_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPPlottableLegendItem*
+///
+const QMetaObject* q_cpplottablelegenditem_qbase_meta_object(void* self);
+
 /// @param self QCPPlottableLegendItem*
 /// @param param1 const char*
 ///
 void* q_cpplottablelegenditem_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPPlottableLegendItem*
+/// @param callback void* func(QCPPlottableLegendItem* self, const char* param1)
+///
+void q_cpplottablelegenditem_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPPlottableLegendItem*
+/// @param param1 const char*
+///
+void* q_cpplottablelegenditem_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPPlottableLegendItem*
 /// @param param1 enum QMetaObject__Call
@@ -43411,10 +43907,41 @@ QCPLegend* q_cplegend_new();
 ///
 const QMetaObject* q_cplegend_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPLegend*
+/// @param callback const QMetaObject* func()
+///
+void q_cplegend_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPLegend*
+///
+const QMetaObject* q_cplegend_qbase_meta_object(void* self);
+
 /// @param self QCPLegend*
 /// @param param1 const char*
 ///
 void* q_cplegend_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPLegend*
+/// @param callback void* func(QCPLegend* self, const char* param1)
+///
+void q_cplegend_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPLegend*
+/// @param param1 const char*
+///
+void* q_cplegend_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPLegend*
 /// @param param1 enum QMetaObject__Call
@@ -46300,10 +46827,41 @@ QCPTextElement* q_cptextelement_new5(void* parentPlot, const char* text, void* f
 ///
 const QMetaObject* q_cptextelement_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPTextElement*
+/// @param callback const QMetaObject* func()
+///
+void q_cptextelement_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPTextElement*
+///
+const QMetaObject* q_cptextelement_qbase_meta_object(void* self);
+
 /// @param self QCPTextElement*
 /// @param param1 const char*
 ///
 void* q_cptextelement_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPTextElement*
+/// @param callback void* func(QCPTextElement* self, const char* param1)
+///
+void q_cptextelement_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPTextElement*
+/// @param param1 const char*
+///
+void* q_cptextelement_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPTextElement*
 /// @param param1 enum QMetaObject__Call
@@ -48325,10 +48883,41 @@ QCPColorScale* q_cpcolorscale_new(void* parentPlot);
 ///
 const QMetaObject* q_cpcolorscale_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPColorScale*
+/// @param callback const QMetaObject* func()
+///
+void q_cpcolorscale_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPColorScale*
+///
+const QMetaObject* q_cpcolorscale_qbase_meta_object(void* self);
+
 /// @param self QCPColorScale*
 /// @param param1 const char*
 ///
 void* q_cpcolorscale_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPColorScale*
+/// @param callback void* func(QCPColorScale* self, const char* param1)
+///
+void q_cpcolorscale_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPColorScale*
+/// @param param1 const char*
+///
+void* q_cpcolorscale_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPColorScale*
 /// @param param1 enum QMetaObject__Call
@@ -50469,10 +51058,41 @@ QCPGraph* q_cpgraph_new(void* keyAxis, void* valueAxis);
 ///
 const QMetaObject* q_cpgraph_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPGraph*
+/// @param callback const QMetaObject* func()
+///
+void q_cpgraph_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPGraph*
+///
+const QMetaObject* q_cpgraph_qbase_meta_object(void* self);
+
 /// @param self QCPGraph*
 /// @param param1 const char*
 ///
 void* q_cpgraph_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPGraph*
+/// @param callback void* func(QCPGraph* self, const char* param1)
+///
+void q_cpgraph_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPGraph*
+/// @param param1 const char*
+///
+void* q_cpgraph_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPGraph*
 /// @param param1 enum QMetaObject__Call
@@ -53611,10 +54231,41 @@ QCPCurve* q_cpcurve_new(void* keyAxis, void* valueAxis);
 ///
 const QMetaObject* q_cpcurve_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPCurve*
+/// @param callback const QMetaObject* func()
+///
+void q_cpcurve_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPCurve*
+///
+const QMetaObject* q_cpcurve_qbase_meta_object(void* self);
+
 /// @param self QCPCurve*
 /// @param param1 const char*
 ///
 void* q_cpcurve_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPCurve*
+/// @param callback void* func(QCPCurve* self, const char* param1)
+///
+void q_cpcurve_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPCurve*
+/// @param param1 const char*
+///
+void* q_cpcurve_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPCurve*
 /// @param param1 enum QMetaObject__Call
@@ -56425,10 +57076,41 @@ QCPBarsGroup* q_cpbarsgroup_new(void* parentPlot);
 ///
 const QMetaObject* q_cpbarsgroup_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPBarsGroup*
+/// @param callback const QMetaObject* func()
+///
+void q_cpbarsgroup_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPBarsGroup*
+///
+const QMetaObject* q_cpbarsgroup_qbase_meta_object(void* self);
+
 /// @param self QCPBarsGroup*
 /// @param param1 const char*
 ///
 void* q_cpbarsgroup_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPBarsGroup*
+/// @param callback void* func(QCPBarsGroup* self, const char* param1)
+///
+void q_cpbarsgroup_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPBarsGroup*
+/// @param param1 const char*
+///
+void* q_cpbarsgroup_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPBarsGroup*
 /// @param param1 enum QMetaObject__Call
@@ -57556,10 +58238,41 @@ QCPBars* q_cpbars_new(void* keyAxis, void* valueAxis);
 ///
 const QMetaObject* q_cpbars_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPBars*
+/// @param callback const QMetaObject* func()
+///
+void q_cpbars_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPBars*
+///
+const QMetaObject* q_cpbars_qbase_meta_object(void* self);
+
 /// @param self QCPBars*
 /// @param param1 const char*
 ///
 void* q_cpbars_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPBars*
+/// @param callback void* func(QCPBars* self, const char* param1)
+///
+void q_cpbars_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPBars*
+/// @param param1 const char*
+///
+void* q_cpbars_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPBars*
 /// @param param1 enum QMetaObject__Call
@@ -60318,10 +61031,41 @@ QCPStatisticalBox* q_cpstatisticalbox_new(void* keyAxis, void* valueAxis);
 ///
 const QMetaObject* q_cpstatisticalbox_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPStatisticalBox*
+/// @param callback const QMetaObject* func()
+///
+void q_cpstatisticalbox_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPStatisticalBox*
+///
+const QMetaObject* q_cpstatisticalbox_qbase_meta_object(void* self);
+
 /// @param self QCPStatisticalBox*
 /// @param param1 const char*
 ///
 void* q_cpstatisticalbox_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPStatisticalBox*
+/// @param callback void* func(QCPStatisticalBox* self, const char* param1)
+///
+void q_cpstatisticalbox_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPStatisticalBox*
+/// @param param1 const char*
+///
+void* q_cpstatisticalbox_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPStatisticalBox*
 /// @param param1 enum QMetaObject__Call
@@ -63050,10 +63794,41 @@ QCPColorMap* q_cpcolormap_new(void* keyAxis, void* valueAxis);
 ///
 const QMetaObject* q_cpcolormap_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPColorMap*
+/// @param callback const QMetaObject* func()
+///
+void q_cpcolormap_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPColorMap*
+///
+const QMetaObject* q_cpcolormap_qbase_meta_object(void* self);
+
 /// @param self QCPColorMap*
 /// @param param1 const char*
 ///
 void* q_cpcolormap_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPColorMap*
+/// @param callback void* func(QCPColorMap* self, const char* param1)
+///
+void q_cpcolormap_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPColorMap*
+/// @param param1 const char*
+///
+void* q_cpcolormap_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPColorMap*
 /// @param param1 enum QMetaObject__Call
@@ -65429,10 +66204,41 @@ QCPFinancial* q_cpfinancial_new(void* keyAxis, void* valueAxis);
 ///
 const QMetaObject* q_cpfinancial_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPFinancial*
+/// @param callback const QMetaObject* func()
+///
+void q_cpfinancial_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPFinancial*
+///
+const QMetaObject* q_cpfinancial_qbase_meta_object(void* self);
+
 /// @param self QCPFinancial*
 /// @param param1 const char*
 ///
 void* q_cpfinancial_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPFinancial*
+/// @param callback void* func(QCPFinancial* self, const char* param1)
+///
+void q_cpfinancial_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPFinancial*
+/// @param param1 const char*
+///
+void* q_cpfinancial_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPFinancial*
 /// @param param1 enum QMetaObject__Call
@@ -68065,10 +68871,41 @@ QCPErrorBars* q_cperrorbars_new(void* keyAxis, void* valueAxis);
 ///
 const QMetaObject* q_cperrorbars_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPErrorBars*
+/// @param callback const QMetaObject* func()
+///
+void q_cperrorbars_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPErrorBars*
+///
+const QMetaObject* q_cperrorbars_qbase_meta_object(void* self);
+
 /// @param self QCPErrorBars*
 /// @param param1 const char*
 ///
 void* q_cperrorbars_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPErrorBars*
+/// @param callback void* func(QCPErrorBars* self, const char* param1)
+///
+void q_cperrorbars_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPErrorBars*
+/// @param param1 const char*
+///
+void* q_cperrorbars_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPErrorBars*
 /// @param param1 enum QMetaObject__Call
@@ -70511,10 +71348,41 @@ QCPItemStraightLine* q_cpitemstraightline_new(void* parentPlot);
 ///
 const QMetaObject* q_cpitemstraightline_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPItemStraightLine*
+/// @param callback const QMetaObject* func()
+///
+void q_cpitemstraightline_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPItemStraightLine*
+///
+const QMetaObject* q_cpitemstraightline_qbase_meta_object(void* self);
+
 /// @param self QCPItemStraightLine*
 /// @param param1 const char*
 ///
 void* q_cpitemstraightline_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPItemStraightLine*
+/// @param callback void* func(QCPItemStraightLine* self, const char* param1)
+///
+void q_cpitemstraightline_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPItemStraightLine*
+/// @param param1 const char*
+///
+void* q_cpitemstraightline_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPItemStraightLine*
 /// @param param1 enum QMetaObject__Call
@@ -72376,10 +73244,41 @@ QCPItemLine* q_cpitemline_new(void* parentPlot);
 ///
 const QMetaObject* q_cpitemline_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPItemLine*
+/// @param callback const QMetaObject* func()
+///
+void q_cpitemline_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPItemLine*
+///
+const QMetaObject* q_cpitemline_qbase_meta_object(void* self);
+
 /// @param self QCPItemLine*
 /// @param param1 const char*
 ///
 void* q_cpitemline_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPItemLine*
+/// @param callback void* func(QCPItemLine* self, const char* param1)
+///
+void q_cpitemline_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPItemLine*
+/// @param param1 const char*
+///
+void* q_cpitemline_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPItemLine*
 /// @param param1 enum QMetaObject__Call
@@ -74267,10 +75166,41 @@ QCPItemCurve* q_cpitemcurve_new(void* parentPlot);
 ///
 const QMetaObject* q_cpitemcurve_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPItemCurve*
+/// @param callback const QMetaObject* func()
+///
+void q_cpitemcurve_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPItemCurve*
+///
+const QMetaObject* q_cpitemcurve_qbase_meta_object(void* self);
+
 /// @param self QCPItemCurve*
 /// @param param1 const char*
 ///
 void* q_cpitemcurve_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPItemCurve*
+/// @param callback void* func(QCPItemCurve* self, const char* param1)
+///
+void q_cpitemcurve_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPItemCurve*
+/// @param param1 const char*
+///
+void* q_cpitemcurve_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPItemCurve*
 /// @param param1 enum QMetaObject__Call
@@ -76141,10 +77071,41 @@ QCPItemRect* q_cpitemrect_new(void* parentPlot);
 ///
 const QMetaObject* q_cpitemrect_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPItemRect*
+/// @param callback const QMetaObject* func()
+///
+void q_cpitemrect_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPItemRect*
+///
+const QMetaObject* q_cpitemrect_qbase_meta_object(void* self);
+
 /// @param self QCPItemRect*
 /// @param param1 const char*
 ///
 void* q_cpitemrect_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPItemRect*
+/// @param callback void* func(QCPItemRect* self, const char* param1)
+///
+void q_cpitemrect_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPItemRect*
+/// @param param1 const char*
+///
+void* q_cpitemrect_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPItemRect*
 /// @param param1 enum QMetaObject__Call
@@ -78054,10 +79015,41 @@ QCPItemText* q_cpitemtext_new(void* parentPlot);
 ///
 const QMetaObject* q_cpitemtext_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPItemText*
+/// @param callback const QMetaObject* func()
+///
+void q_cpitemtext_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPItemText*
+///
+const QMetaObject* q_cpitemtext_qbase_meta_object(void* self);
+
 /// @param self QCPItemText*
 /// @param param1 const char*
 ///
 void* q_cpitemtext_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPItemText*
+/// @param callback void* func(QCPItemText* self, const char* param1)
+///
+void q_cpitemtext_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPItemText*
+/// @param param1 const char*
+///
+void* q_cpitemtext_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPItemText*
 /// @param param1 enum QMetaObject__Call
@@ -80162,10 +81154,41 @@ QCPItemEllipse* q_cpitemellipse_new(void* parentPlot);
 ///
 const QMetaObject* q_cpitemellipse_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPItemEllipse*
+/// @param callback const QMetaObject* func()
+///
+void q_cpitemellipse_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPItemEllipse*
+///
+const QMetaObject* q_cpitemellipse_qbase_meta_object(void* self);
+
 /// @param self QCPItemEllipse*
 /// @param param1 const char*
 ///
 void* q_cpitemellipse_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPItemEllipse*
+/// @param callback void* func(QCPItemEllipse* self, const char* param1)
+///
+void q_cpitemellipse_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPItemEllipse*
+/// @param param1 const char*
+///
+void* q_cpitemellipse_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPItemEllipse*
 /// @param param1 enum QMetaObject__Call
@@ -82093,10 +83116,41 @@ QCPItemPixmap* q_cpitempixmap_new(void* parentPlot);
 ///
 const QMetaObject* q_cpitempixmap_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPItemPixmap*
+/// @param callback const QMetaObject* func()
+///
+void q_cpitempixmap_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPItemPixmap*
+///
+const QMetaObject* q_cpitempixmap_qbase_meta_object(void* self);
+
 /// @param self QCPItemPixmap*
 /// @param param1 const char*
 ///
 void* q_cpitempixmap_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPItemPixmap*
+/// @param callback void* func(QCPItemPixmap* self, const char* param1)
+///
+void q_cpitempixmap_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPItemPixmap*
+/// @param param1 const char*
+///
+void* q_cpitempixmap_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPItemPixmap*
 /// @param param1 enum QMetaObject__Call
@@ -84195,10 +85249,41 @@ QCPItemTracer* q_cpitemtracer_new(void* parentPlot);
 ///
 const QMetaObject* q_cpitemtracer_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPItemTracer*
+/// @param callback const QMetaObject* func()
+///
+void q_cpitemtracer_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPItemTracer*
+///
+const QMetaObject* q_cpitemtracer_qbase_meta_object(void* self);
+
 /// @param self QCPItemTracer*
 /// @param param1 const char*
 ///
 void* q_cpitemtracer_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPItemTracer*
+/// @param callback void* func(QCPItemTracer* self, const char* param1)
+///
+void q_cpitemtracer_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPItemTracer*
+/// @param param1 const char*
+///
+void* q_cpitemtracer_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPItemTracer*
 /// @param param1 enum QMetaObject__Call
@@ -86138,10 +87223,41 @@ QCPItemBracket* q_cpitembracket_new(void* parentPlot);
 ///
 const QMetaObject* q_cpitembracket_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPItemBracket*
+/// @param callback const QMetaObject* func()
+///
+void q_cpitembracket_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPItemBracket*
+///
+const QMetaObject* q_cpitembracket_qbase_meta_object(void* self);
+
 /// @param self QCPItemBracket*
 /// @param param1 const char*
 ///
 void* q_cpitembracket_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPItemBracket*
+/// @param callback void* func(QCPItemBracket* self, const char* param1)
+///
+void q_cpitembracket_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPItemBracket*
+/// @param param1 const char*
+///
+void* q_cpitembracket_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPItemBracket*
 /// @param param1 enum QMetaObject__Call
@@ -88000,10 +89116,41 @@ QCPPolarAxisRadial* q_cppolaraxisradial_new(void* parent);
 ///
 const QMetaObject* q_cppolaraxisradial_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPPolarAxisRadial*
+/// @param callback const QMetaObject* func()
+///
+void q_cppolaraxisradial_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPPolarAxisRadial*
+///
+const QMetaObject* q_cppolaraxisradial_qbase_meta_object(void* self);
+
 /// @param self QCPPolarAxisRadial*
 /// @param param1 const char*
 ///
 void* q_cppolaraxisradial_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPPolarAxisRadial*
+/// @param callback void* func(QCPPolarAxisRadial* self, const char* param1)
+///
+void q_cppolaraxisradial_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPPolarAxisRadial*
+/// @param param1 const char*
+///
+void* q_cppolaraxisradial_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPPolarAxisRadial*
 /// @param param1 enum QMetaObject__Call
@@ -90343,10 +91490,41 @@ QCPPolarAxisAngular* q_cppolaraxisangular_new(void* parentPlot);
 ///
 const QMetaObject* q_cppolaraxisangular_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPPolarAxisAngular*
+/// @param callback const QMetaObject* func()
+///
+void q_cppolaraxisangular_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPPolarAxisAngular*
+///
+const QMetaObject* q_cppolaraxisangular_qbase_meta_object(void* self);
+
 /// @param self QCPPolarAxisAngular*
 /// @param param1 const char*
 ///
 void* q_cppolaraxisangular_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPPolarAxisAngular*
+/// @param callback void* func(QCPPolarAxisAngular* self, const char* param1)
+///
+void q_cppolaraxisangular_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPPolarAxisAngular*
+/// @param param1 const char*
+///
+void* q_cppolaraxisangular_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPPolarAxisAngular*
 /// @param param1 enum QMetaObject__Call
@@ -93278,10 +94456,41 @@ QCPPolarGrid* q_cppolargrid_new(void* parentAxis);
 ///
 const QMetaObject* q_cppolargrid_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPPolarGrid*
+/// @param callback const QMetaObject* func()
+///
+void q_cppolargrid_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPPolarGrid*
+///
+const QMetaObject* q_cppolargrid_qbase_meta_object(void* self);
+
 /// @param self QCPPolarGrid*
 /// @param param1 const char*
 ///
 void* q_cppolargrid_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPPolarGrid*
+/// @param callback void* func(QCPPolarGrid* self, const char* param1)
+///
+void q_cppolargrid_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPPolarGrid*
+/// @param param1 const char*
+///
+void* q_cppolargrid_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPPolarGrid*
 /// @param param1 enum QMetaObject__Call
@@ -94996,10 +96205,41 @@ QCPPolarLegendItem* q_cppolarlegenditem_new(void* parent, void* graph);
 ///
 const QMetaObject* q_cppolarlegenditem_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPPolarLegendItem*
+/// @param callback const QMetaObject* func()
+///
+void q_cppolarlegenditem_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPPolarLegendItem*
+///
+const QMetaObject* q_cppolarlegenditem_qbase_meta_object(void* self);
+
 /// @param self QCPPolarLegendItem*
 /// @param param1 const char*
 ///
 void* q_cppolarlegenditem_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPPolarLegendItem*
+/// @param callback void* func(QCPPolarLegendItem* self, const char* param1)
+///
+void q_cppolarlegenditem_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPPolarLegendItem*
+/// @param param1 const char*
+///
+void* q_cppolarlegenditem_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPPolarLegendItem*
 /// @param param1 enum QMetaObject__Call
@@ -97099,10 +98339,41 @@ QCPPolarGraph* q_cppolargraph_new(void* keyAxis, void* valueAxis);
 ///
 const QMetaObject* q_cppolargraph_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCPPolarGraph*
+/// @param callback const QMetaObject* func()
+///
+void q_cppolargraph_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCPPolarGraph*
+///
+const QMetaObject* q_cppolargraph_qbase_meta_object(void* self);
+
 /// @param self QCPPolarGraph*
 /// @param param1 const char*
 ///
 void* q_cppolargraph_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCPPolarGraph*
+/// @param callback void* func(QCPPolarGraph* self, const char* param1)
+///
+void q_cppolargraph_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCPPolarGraph*
+/// @param param1 const char*
+///
+void* q_cppolargraph_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCPPolarGraph*
 /// @param param1 enum QMetaObject__Call

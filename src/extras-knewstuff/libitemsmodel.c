@@ -25,8 +25,24 @@ const QMetaObject* k_nscore__itemsmodel_meta_object(void* self) {
     return KNSCore__ItemsModel_MetaObject((KNSCore__ItemsModel*)self);
 }
 
+void k_nscore__itemsmodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KNSCore__ItemsModel_OnMetaObject((KNSCore__ItemsModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_nscore__itemsmodel_qbase_meta_object(void* self) {
+    return KNSCore__ItemsModel_QBaseMetaObject((KNSCore__ItemsModel*)self);
+}
+
 void* k_nscore__itemsmodel_metacast(void* self, const char* param1) {
     return KNSCore__ItemsModel_Metacast((KNSCore__ItemsModel*)self, param1);
+}
+
+void k_nscore__itemsmodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KNSCore__ItemsModel_OnMetacast((KNSCore__ItemsModel*)self, (intptr_t)callback);
+}
+
+void* k_nscore__itemsmodel_qbase_metacast(void* self, const char* param1) {
+    return KNSCore__ItemsModel_QBaseMetacast((KNSCore__ItemsModel*)self, param1);
 }
 
 int32_t k_nscore__itemsmodel_metacall(void* self, int32_t param1, int param2, void* param3) {

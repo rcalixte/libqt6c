@@ -31,10 +31,41 @@ QStackedBarSeries* q_stackedbarseries_new2(void* parent);
 ///
 const QMetaObject* q_stackedbarseries_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QStackedBarSeries*
+/// @param callback const QMetaObject* func()
+///
+void q_stackedbarseries_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QStackedBarSeries*
+///
+const QMetaObject* q_stackedbarseries_qbase_meta_object(void* self);
+
 /// @param self QStackedBarSeries*
 /// @param param1 const char*
 ///
 void* q_stackedbarseries_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QStackedBarSeries*
+/// @param callback void* func(QStackedBarSeries* self, const char* param1)
+///
+void q_stackedbarseries_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QStackedBarSeries*
+/// @param param1 const char*
+///
+void* q_stackedbarseries_qbase_metacast(void* self, const char* param1);
 
 /// @param self QStackedBarSeries*
 /// @param param1 enum QMetaObject__Call

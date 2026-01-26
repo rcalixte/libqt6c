@@ -34,10 +34,41 @@ KNSWidgets__Dialog* k_nswidgets__dialog_new2(const char* configFile, void* paren
 ///
 const QMetaObject* k_nswidgets__dialog_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KNSWidgets__Dialog*
+/// @param callback const QMetaObject* func()
+///
+void k_nswidgets__dialog_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KNSWidgets__Dialog*
+///
+const QMetaObject* k_nswidgets__dialog_qbase_meta_object(void* self);
+
 /// @param self KNSWidgets__Dialog*
 /// @param param1 const char*
 ///
 void* k_nswidgets__dialog_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KNSWidgets__Dialog*
+/// @param callback void* func(KNSWidgets__Dialog* self, const char* param1)
+///
+void k_nswidgets__dialog_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KNSWidgets__Dialog*
+/// @param param1 const char*
+///
+void* k_nswidgets__dialog_qbase_metacast(void* self, const char* param1);
 
 /// @param self KNSWidgets__Dialog*
 /// @param param1 enum QMetaObject__Call

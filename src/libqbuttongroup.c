@@ -18,8 +18,24 @@ const QMetaObject* q_buttongroup_meta_object(void* self) {
     return QButtonGroup_MetaObject((QButtonGroup*)self);
 }
 
+void q_buttongroup_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QButtonGroup_OnMetaObject((QButtonGroup*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_buttongroup_qbase_meta_object(void* self) {
+    return QButtonGroup_QBaseMetaObject((QButtonGroup*)self);
+}
+
 void* q_buttongroup_metacast(void* self, const char* param1) {
     return QButtonGroup_Metacast((QButtonGroup*)self, param1);
+}
+
+void q_buttongroup_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QButtonGroup_OnMetacast((QButtonGroup*)self, (intptr_t)callback);
+}
+
+void* q_buttongroup_qbase_metacast(void* self, const char* param1) {
+    return QButtonGroup_QBaseMetacast((QButtonGroup*)self, param1);
 }
 
 int32_t q_buttongroup_metacall(void* self, int32_t param1, int param2, void* param3) {

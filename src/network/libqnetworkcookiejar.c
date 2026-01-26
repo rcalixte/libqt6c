@@ -19,8 +19,24 @@ const QMetaObject* q_networkcookiejar_meta_object(void* self) {
     return QNetworkCookieJar_MetaObject((QNetworkCookieJar*)self);
 }
 
+void q_networkcookiejar_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QNetworkCookieJar_OnMetaObject((QNetworkCookieJar*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_networkcookiejar_qbase_meta_object(void* self) {
+    return QNetworkCookieJar_QBaseMetaObject((QNetworkCookieJar*)self);
+}
+
 void* q_networkcookiejar_metacast(void* self, const char* param1) {
     return QNetworkCookieJar_Metacast((QNetworkCookieJar*)self, param1);
+}
+
+void q_networkcookiejar_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QNetworkCookieJar_OnMetacast((QNetworkCookieJar*)self, (intptr_t)callback);
+}
+
+void* q_networkcookiejar_qbase_metacast(void* self, const char* param1) {
+    return QNetworkCookieJar_QBaseMetacast((QNetworkCookieJar*)self, param1);
 }
 
 int32_t q_networkcookiejar_metacall(void* self, int32_t param1, int param2, void* param3) {

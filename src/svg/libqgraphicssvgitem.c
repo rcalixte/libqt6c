@@ -37,8 +37,24 @@ const QMetaObject* q_graphicssvgitem_meta_object(void* self) {
     return QGraphicsSvgItem_MetaObject((QGraphicsSvgItem*)self);
 }
 
+void q_graphicssvgitem_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QGraphicsSvgItem_OnMetaObject((QGraphicsSvgItem*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_graphicssvgitem_qbase_meta_object(void* self) {
+    return QGraphicsSvgItem_QBaseMetaObject((QGraphicsSvgItem*)self);
+}
+
 void* q_graphicssvgitem_metacast(void* self, const char* param1) {
     return QGraphicsSvgItem_Metacast((QGraphicsSvgItem*)self, param1);
+}
+
+void q_graphicssvgitem_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QGraphicsSvgItem_OnMetacast((QGraphicsSvgItem*)self, (intptr_t)callback);
+}
+
+void* q_graphicssvgitem_qbase_metacast(void* self, const char* param1) {
+    return QGraphicsSvgItem_QBaseMetacast((QGraphicsSvgItem*)self, param1);
 }
 
 int32_t q_graphicssvgitem_metacall(void* self, int32_t param1, int param2, void* param3) {

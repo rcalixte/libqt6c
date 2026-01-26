@@ -27,8 +27,24 @@ const QMetaObject* q_rubberband_meta_object(void* self) {
     return QRubberBand_MetaObject((QRubberBand*)self);
 }
 
+void q_rubberband_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QRubberBand_OnMetaObject((QRubberBand*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_rubberband_qbase_meta_object(void* self) {
+    return QRubberBand_QBaseMetaObject((QRubberBand*)self);
+}
+
 void* q_rubberband_metacast(void* self, const char* param1) {
     return QRubberBand_Metacast((QRubberBand*)self, param1);
+}
+
+void q_rubberband_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QRubberBand_OnMetacast((QRubberBand*)self, (intptr_t)callback);
+}
+
+void* q_rubberband_qbase_metacast(void* self, const char* param1) {
+    return QRubberBand_QBaseMetacast((QRubberBand*)self, param1);
 }
 
 int32_t q_rubberband_metacall(void* self, int32_t param1, int param2, void* param3) {

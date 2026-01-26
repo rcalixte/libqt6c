@@ -40,10 +40,41 @@ KListWidgetSearchLine* k_listwidgetsearchline_new3(void* parent, void* listWidge
 ///
 const QMetaObject* k_listwidgetsearchline_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KListWidgetSearchLine*
+/// @param callback const QMetaObject* func()
+///
+void k_listwidgetsearchline_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KListWidgetSearchLine*
+///
+const QMetaObject* k_listwidgetsearchline_qbase_meta_object(void* self);
+
 /// @param self KListWidgetSearchLine*
 /// @param param1 const char*
 ///
 void* k_listwidgetsearchline_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KListWidgetSearchLine*
+/// @param callback void* func(KListWidgetSearchLine* self, const char* param1)
+///
+void k_listwidgetsearchline_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KListWidgetSearchLine*
+/// @param param1 const char*
+///
+void* k_listwidgetsearchline_qbase_metacast(void* self, const char* param1);
 
 /// @param self KListWidgetSearchLine*
 /// @param param1 enum QMetaObject__Call

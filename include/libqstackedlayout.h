@@ -39,10 +39,41 @@ QStackedLayout* q_stackedlayout_new3(void* parentLayout);
 ///
 const QMetaObject* q_stackedlayout_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QStackedLayout*
+/// @param callback const QMetaObject* func()
+///
+void q_stackedlayout_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QStackedLayout*
+///
+const QMetaObject* q_stackedlayout_qbase_meta_object(void* self);
+
 /// @param self QStackedLayout*
 /// @param param1 const char*
 ///
 void* q_stackedlayout_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QStackedLayout*
+/// @param callback void* func(QStackedLayout* self, const char* param1)
+///
+void q_stackedlayout_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QStackedLayout*
+/// @param param1 const char*
+///
+void* q_stackedlayout_qbase_metacast(void* self, const char* param1);
 
 /// @param self QStackedLayout*
 /// @param param1 enum QMetaObject__Call

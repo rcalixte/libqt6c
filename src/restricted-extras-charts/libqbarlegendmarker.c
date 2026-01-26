@@ -21,8 +21,24 @@ const QMetaObject* q_barlegendmarker_meta_object(void* self) {
     return QBarLegendMarker_MetaObject((QBarLegendMarker*)self);
 }
 
+void q_barlegendmarker_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QBarLegendMarker_OnMetaObject((QBarLegendMarker*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_barlegendmarker_qbase_meta_object(void* self) {
+    return QBarLegendMarker_QBaseMetaObject((QBarLegendMarker*)self);
+}
+
 void* q_barlegendmarker_metacast(void* self, const char* param1) {
     return QBarLegendMarker_Metacast((QBarLegendMarker*)self, param1);
+}
+
+void q_barlegendmarker_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QBarLegendMarker_OnMetacast((QBarLegendMarker*)self, (intptr_t)callback);
+}
+
+void* q_barlegendmarker_qbase_metacast(void* self, const char* param1) {
+    return QBarLegendMarker_QBaseMetacast((QBarLegendMarker*)self, param1);
 }
 
 int32_t q_barlegendmarker_metacall(void* self, int32_t param1, int param2, void* param3) {

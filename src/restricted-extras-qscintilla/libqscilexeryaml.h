@@ -31,10 +31,41 @@ QsciLexerYAML* q_scilexeryaml_new2(void* parent);
 ///
 const QMetaObject* q_scilexeryaml_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QsciLexerYAML*
+/// @param callback const QMetaObject* func()
+///
+void q_scilexeryaml_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QsciLexerYAML*
+///
+const QMetaObject* q_scilexeryaml_qbase_meta_object(void* self);
+
 /// @param self QsciLexerYAML*
 /// @param param1 const char*
 ///
 void* q_scilexeryaml_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QsciLexerYAML*
+/// @param callback void* func(QsciLexerYAML* self, const char* param1)
+///
+void q_scilexeryaml_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QsciLexerYAML*
+/// @param param1 const char*
+///
+void* q_scilexeryaml_qbase_metacast(void* self, const char* param1);
 
 /// @param self QsciLexerYAML*
 /// @param param1 enum QMetaObject__Call

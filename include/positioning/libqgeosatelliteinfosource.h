@@ -25,10 +25,41 @@ QGeoSatelliteInfoSource* q_geosatelliteinfosource_new(void* parent);
 ///
 const QMetaObject* q_geosatelliteinfosource_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QGeoSatelliteInfoSource*
+/// @param callback const QMetaObject* func()
+///
+void q_geosatelliteinfosource_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QGeoSatelliteInfoSource*
+///
+const QMetaObject* q_geosatelliteinfosource_qbase_meta_object(void* self);
+
 /// @param self QGeoSatelliteInfoSource*
 /// @param param1 const char*
 ///
 void* q_geosatelliteinfosource_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QGeoSatelliteInfoSource*
+/// @param callback void* func(QGeoSatelliteInfoSource* self, const char* param1)
+///
+void q_geosatelliteinfosource_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QGeoSatelliteInfoSource*
+/// @param param1 const char*
+///
+void* q_geosatelliteinfosource_qbase_metacast(void* self, const char* param1);
 
 /// @param self QGeoSatelliteInfoSource*
 /// @param param1 enum QMetaObject__Call
