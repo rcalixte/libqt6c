@@ -48,10 +48,41 @@ QPrintDialog* q_printdialog_new4(void* printer, void* parent);
 ///
 const QMetaObject* q_printdialog_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QPrintDialog*
+/// @param callback const QMetaObject* func()
+///
+void q_printdialog_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QPrintDialog*
+///
+const QMetaObject* q_printdialog_qbase_meta_object(void* self);
+
 /// @param self QPrintDialog*
 /// @param param1 const char*
 ///
 void* q_printdialog_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QPrintDialog*
+/// @param callback void* func(QPrintDialog* self, const char* param1)
+///
+void q_printdialog_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QPrintDialog*
+/// @param param1 const char*
+///
+void* q_printdialog_qbase_metacast(void* self, const char* param1);
 
 /// @param self QPrintDialog*
 /// @param param1 enum QMetaObject__Call

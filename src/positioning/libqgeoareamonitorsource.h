@@ -25,10 +25,41 @@ QGeoAreaMonitorSource* q_geoareamonitorsource_new(void* parent);
 ///
 const QMetaObject* q_geoareamonitorsource_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QGeoAreaMonitorSource*
+/// @param callback const QMetaObject* func()
+///
+void q_geoareamonitorsource_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QGeoAreaMonitorSource*
+///
+const QMetaObject* q_geoareamonitorsource_qbase_meta_object(void* self);
+
 /// @param self QGeoAreaMonitorSource*
 /// @param param1 const char*
 ///
 void* q_geoareamonitorsource_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QGeoAreaMonitorSource*
+/// @param callback void* func(QGeoAreaMonitorSource* self, const char* param1)
+///
+void q_geoareamonitorsource_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QGeoAreaMonitorSource*
+/// @param param1 const char*
+///
+void* q_geoareamonitorsource_qbase_metacast(void* self, const char* param1);
 
 /// @param self QGeoAreaMonitorSource*
 /// @param param1 enum QMetaObject__Call

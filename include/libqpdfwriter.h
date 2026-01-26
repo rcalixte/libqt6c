@@ -33,10 +33,41 @@ QPdfWriter* q_pdfwriter_new2(void* device);
 ///
 const QMetaObject* q_pdfwriter_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QPdfWriter*
+/// @param callback const QMetaObject* func()
+///
+void q_pdfwriter_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QPdfWriter*
+///
+const QMetaObject* q_pdfwriter_qbase_meta_object(void* self);
+
 /// @param self QPdfWriter*
 /// @param param1 const char*
 ///
 void* q_pdfwriter_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QPdfWriter*
+/// @param callback void* func(QPdfWriter* self, const char* param1)
+///
+void q_pdfwriter_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QPdfWriter*
+/// @param param1 const char*
+///
+void* q_pdfwriter_qbase_metacast(void* self, const char* param1);
 
 /// @param self QPdfWriter*
 /// @param param1 enum QMetaObject__Call

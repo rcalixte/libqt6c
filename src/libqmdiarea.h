@@ -31,10 +31,41 @@ QMdiArea* q_mdiarea_new2();
 ///
 const QMetaObject* q_mdiarea_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QMdiArea*
+/// @param callback const QMetaObject* func()
+///
+void q_mdiarea_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QMdiArea*
+///
+const QMetaObject* q_mdiarea_qbase_meta_object(void* self);
+
 /// @param self QMdiArea*
 /// @param param1 const char*
 ///
 void* q_mdiarea_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QMdiArea*
+/// @param callback void* func(QMdiArea* self, const char* param1)
+///
+void q_mdiarea_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QMdiArea*
+/// @param param1 const char*
+///
+void* q_mdiarea_qbase_metacast(void* self, const char* param1);
 
 /// @param self QMdiArea*
 /// @param param1 enum QMetaObject__Call

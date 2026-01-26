@@ -27,8 +27,24 @@ const QMetaObject* k_actionselector_meta_object(void* self) {
     return KActionSelector_MetaObject((KActionSelector*)self);
 }
 
+void k_actionselector_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KActionSelector_OnMetaObject((KActionSelector*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_actionselector_qbase_meta_object(void* self) {
+    return KActionSelector_QBaseMetaObject((KActionSelector*)self);
+}
+
 void* k_actionselector_metacast(void* self, const char* param1) {
     return KActionSelector_Metacast((KActionSelector*)self, param1);
+}
+
+void k_actionselector_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KActionSelector_OnMetacast((KActionSelector*)self, (intptr_t)callback);
+}
+
+void* k_actionselector_qbase_metacast(void* self, const char* param1) {
+    return KActionSelector_QBaseMetacast((KActionSelector*)self, param1);
 }
 
 int32_t k_actionselector_metacall(void* self, int32_t param1, int param2, void* param3) {

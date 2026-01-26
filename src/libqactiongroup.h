@@ -25,10 +25,41 @@ QActionGroup* q_actiongroup_new(void* parent);
 ///
 const QMetaObject* q_actiongroup_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QActionGroup*
+/// @param callback const QMetaObject* func()
+///
+void q_actiongroup_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QActionGroup*
+///
+const QMetaObject* q_actiongroup_qbase_meta_object(void* self);
+
 /// @param self QActionGroup*
 /// @param param1 const char*
 ///
 void* q_actiongroup_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QActionGroup*
+/// @param callback void* func(QActionGroup* self, const char* param1)
+///
+void q_actiongroup_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QActionGroup*
+/// @param param1 const char*
+///
+void* q_actiongroup_qbase_metacast(void* self, const char* param1);
 
 /// @param self QActionGroup*
 /// @param param1 enum QMetaObject__Call

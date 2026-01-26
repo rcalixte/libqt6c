@@ -20,8 +20,24 @@ const QMetaObject* q_vpiemodelmapper_meta_object(void* self) {
     return QVPieModelMapper_MetaObject((QVPieModelMapper*)self);
 }
 
+void q_vpiemodelmapper_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QVPieModelMapper_OnMetaObject((QVPieModelMapper*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_vpiemodelmapper_qbase_meta_object(void* self) {
+    return QVPieModelMapper_QBaseMetaObject((QVPieModelMapper*)self);
+}
+
 void* q_vpiemodelmapper_metacast(void* self, const char* param1) {
     return QVPieModelMapper_Metacast((QVPieModelMapper*)self, param1);
+}
+
+void q_vpiemodelmapper_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QVPieModelMapper_OnMetacast((QVPieModelMapper*)self, (intptr_t)callback);
+}
+
+void* q_vpiemodelmapper_qbase_metacast(void* self, const char* param1) {
+    return QVPieModelMapper_QBaseMetacast((QVPieModelMapper*)self, param1);
 }
 
 int32_t q_vpiemodelmapper_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -25,8 +25,24 @@ const QMetaObject* q_designerresourcebrowserinterface_meta_object(void* self) {
     return QDesignerResourceBrowserInterface_MetaObject((QDesignerResourceBrowserInterface*)self);
 }
 
+void q_designerresourcebrowserinterface_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDesignerResourceBrowserInterface_OnMetaObject((QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_designerresourcebrowserinterface_qbase_meta_object(void* self) {
+    return QDesignerResourceBrowserInterface_QBaseMetaObject((QDesignerResourceBrowserInterface*)self);
+}
+
 void* q_designerresourcebrowserinterface_metacast(void* self, const char* param1) {
     return QDesignerResourceBrowserInterface_Metacast((QDesignerResourceBrowserInterface*)self, param1);
+}
+
+void q_designerresourcebrowserinterface_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDesignerResourceBrowserInterface_OnMetacast((QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
+}
+
+void* q_designerresourcebrowserinterface_qbase_metacast(void* self, const char* param1) {
+    return QDesignerResourceBrowserInterface_QBaseMetacast((QDesignerResourceBrowserInterface*)self, param1);
 }
 
 int32_t q_designerresourcebrowserinterface_metacall(void* self, int32_t param1, int param2, void* param3) {

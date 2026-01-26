@@ -21,8 +21,24 @@ const QMetaObject* q_boxplotseries_meta_object(void* self) {
     return QBoxPlotSeries_MetaObject((QBoxPlotSeries*)self);
 }
 
+void q_boxplotseries_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QBoxPlotSeries_OnMetaObject((QBoxPlotSeries*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_boxplotseries_qbase_meta_object(void* self) {
+    return QBoxPlotSeries_QBaseMetaObject((QBoxPlotSeries*)self);
+}
+
 void* q_boxplotseries_metacast(void* self, const char* param1) {
     return QBoxPlotSeries_Metacast((QBoxPlotSeries*)self, param1);
+}
+
+void q_boxplotseries_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QBoxPlotSeries_OnMetacast((QBoxPlotSeries*)self, (intptr_t)callback);
+}
+
+void* q_boxplotseries_qbase_metacast(void* self, const char* param1) {
+    return QBoxPlotSeries_QBaseMetacast((QBoxPlotSeries*)self, param1);
 }
 
 int32_t q_boxplotseries_metacall(void* self, int32_t param1, int param2, void* param3) {

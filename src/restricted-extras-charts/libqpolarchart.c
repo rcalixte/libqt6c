@@ -37,8 +37,24 @@ const QMetaObject* q_polarchart_meta_object(void* self) {
     return QPolarChart_MetaObject((QPolarChart*)self);
 }
 
+void q_polarchart_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QPolarChart_OnMetaObject((QPolarChart*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_polarchart_qbase_meta_object(void* self) {
+    return QPolarChart_QBaseMetaObject((QPolarChart*)self);
+}
+
 void* q_polarchart_metacast(void* self, const char* param1) {
     return QPolarChart_Metacast((QPolarChart*)self, param1);
+}
+
+void q_polarchart_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QPolarChart_OnMetacast((QPolarChart*)self, (intptr_t)callback);
+}
+
+void* q_polarchart_qbase_metacast(void* self, const char* param1) {
+    return QPolarChart_QBaseMetacast((QPolarChart*)self, param1);
 }
 
 int32_t q_polarchart_metacall(void* self, int32_t param1, int param2, void* param3) {

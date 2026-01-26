@@ -17,8 +17,24 @@ const QMetaObject* q_openglvertexarrayobject_meta_object(void* self) {
     return QOpenGLVertexArrayObject_MetaObject((QOpenGLVertexArrayObject*)self);
 }
 
+void q_openglvertexarrayobject_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QOpenGLVertexArrayObject_OnMetaObject((QOpenGLVertexArrayObject*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_openglvertexarrayobject_qbase_meta_object(void* self) {
+    return QOpenGLVertexArrayObject_QBaseMetaObject((QOpenGLVertexArrayObject*)self);
+}
+
 void* q_openglvertexarrayobject_metacast(void* self, const char* param1) {
     return QOpenGLVertexArrayObject_Metacast((QOpenGLVertexArrayObject*)self, param1);
+}
+
+void q_openglvertexarrayobject_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QOpenGLVertexArrayObject_OnMetacast((QOpenGLVertexArrayObject*)self, (intptr_t)callback);
+}
+
+void* q_openglvertexarrayobject_qbase_metacast(void* self, const char* param1) {
+    return QOpenGLVertexArrayObject_QBaseMetacast((QOpenGLVertexArrayObject*)self, param1);
 }
 
 int32_t q_openglvertexarrayobject_metacall(void* self, int32_t param1, int param2, void* param3) {

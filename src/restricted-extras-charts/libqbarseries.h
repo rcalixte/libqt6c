@@ -31,10 +31,41 @@ QBarSeries* q_barseries_new2(void* parent);
 ///
 const QMetaObject* q_barseries_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QBarSeries*
+/// @param callback const QMetaObject* func()
+///
+void q_barseries_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QBarSeries*
+///
+const QMetaObject* q_barseries_qbase_meta_object(void* self);
+
 /// @param self QBarSeries*
 /// @param param1 const char*
 ///
 void* q_barseries_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QBarSeries*
+/// @param callback void* func(QBarSeries* self, const char* param1)
+///
+void q_barseries_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QBarSeries*
+/// @param param1 const char*
+///
+void* q_barseries_qbase_metacast(void* self, const char* param1);
 
 /// @param self QBarSeries*
 /// @param param1 enum QMetaObject__Call

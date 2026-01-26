@@ -18,8 +18,24 @@ const QMetaObject* k_compositejob_meta_object(void* self) {
     return KCompositeJob_MetaObject((KCompositeJob*)self);
 }
 
+void k_compositejob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KCompositeJob_OnMetaObject((KCompositeJob*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_compositejob_qbase_meta_object(void* self) {
+    return KCompositeJob_QBaseMetaObject((KCompositeJob*)self);
+}
+
 void* k_compositejob_metacast(void* self, const char* param1) {
     return KCompositeJob_Metacast((KCompositeJob*)self, param1);
+}
+
+void k_compositejob_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KCompositeJob_OnMetacast((KCompositeJob*)self, (intptr_t)callback);
+}
+
+void* k_compositejob_qbase_metacast(void* self, const char* param1) {
+    return KCompositeJob_QBaseMetacast((KCompositeJob*)self, param1);
 }
 
 int32_t k_compositejob_metacall(void* self, int32_t param1, int param2, void* param3) {

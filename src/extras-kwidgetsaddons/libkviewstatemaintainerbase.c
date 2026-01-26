@@ -19,8 +19,24 @@ const QMetaObject* k_viewstatemaintainerbase_meta_object(void* self) {
     return KViewStateMaintainerBase_MetaObject((KViewStateMaintainerBase*)self);
 }
 
+void k_viewstatemaintainerbase_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KViewStateMaintainerBase_OnMetaObject((KViewStateMaintainerBase*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_viewstatemaintainerbase_qbase_meta_object(void* self) {
+    return KViewStateMaintainerBase_QBaseMetaObject((KViewStateMaintainerBase*)self);
+}
+
 void* k_viewstatemaintainerbase_metacast(void* self, const char* param1) {
     return KViewStateMaintainerBase_Metacast((KViewStateMaintainerBase*)self, param1);
+}
+
+void k_viewstatemaintainerbase_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KViewStateMaintainerBase_OnMetacast((KViewStateMaintainerBase*)self, (intptr_t)callback);
+}
+
+void* k_viewstatemaintainerbase_qbase_metacast(void* self, const char* param1) {
+    return KViewStateMaintainerBase_QBaseMetacast((KViewStateMaintainerBase*)self, param1);
 }
 
 int32_t k_viewstatemaintainerbase_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -39,10 +39,41 @@ KNotificationAction* k_notificationaction_new3(void* parent);
 ///
 const QMetaObject* k_notificationaction_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KNotificationAction*
+/// @param callback const QMetaObject* func()
+///
+void k_notificationaction_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KNotificationAction*
+///
+const QMetaObject* k_notificationaction_qbase_meta_object(void* self);
+
 /// @param self KNotificationAction*
 /// @param param1 const char*
 ///
 void* k_notificationaction_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KNotificationAction*
+/// @param callback void* func(KNotificationAction* self, const char* param1)
+///
+void k_notificationaction_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KNotificationAction*
+/// @param param1 const char*
+///
+void* k_notificationaction_qbase_metacast(void* self, const char* param1);
 
 /// @param self KNotificationAction*
 /// @param param1 enum QMetaObject__Call
@@ -915,10 +946,41 @@ KNotification* k_notification_new3(const char* eventId, int32_t flags, void* par
 ///
 const QMetaObject* k_notification_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KNotification*
+/// @param callback const QMetaObject* func()
+///
+void k_notification_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KNotification*
+///
+const QMetaObject* k_notification_qbase_meta_object(void* self);
+
 /// @param self KNotification*
 /// @param param1 const char*
 ///
 void* k_notification_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KNotification*
+/// @param callback void* func(KNotification* self, const char* param1)
+///
+void k_notification_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KNotification*
+/// @param param1 const char*
+///
+void* k_notification_qbase_metacast(void* self, const char* param1);
 
 /// @param self KNotification*
 /// @param param1 enum QMetaObject__Call

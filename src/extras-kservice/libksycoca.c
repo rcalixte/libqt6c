@@ -14,8 +14,24 @@ const QMetaObject* k_sycoca_meta_object(void* self) {
     return KSycoca_MetaObject((KSycoca*)self);
 }
 
+void k_sycoca_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KSycoca_OnMetaObject((KSycoca*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_sycoca_qbase_meta_object(void* self) {
+    return KSycoca_QBaseMetaObject((KSycoca*)self);
+}
+
 void* k_sycoca_metacast(void* self, const char* param1) {
     return KSycoca_Metacast((KSycoca*)self, param1);
+}
+
+void k_sycoca_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KSycoca_OnMetacast((KSycoca*)self, (intptr_t)callback);
+}
+
+void* k_sycoca_qbase_metacast(void* self, const char* param1) {
+    return KSycoca_QBaseMetacast((KSycoca*)self, param1);
 }
 
 int32_t k_sycoca_metacall(void* self, int32_t param1, int param2, void* param3) {

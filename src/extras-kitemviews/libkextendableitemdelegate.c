@@ -26,8 +26,24 @@ const QMetaObject* k_extendableitemdelegate_meta_object(void* self) {
     return KExtendableItemDelegate_MetaObject((KExtendableItemDelegate*)self);
 }
 
+void k_extendableitemdelegate_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KExtendableItemDelegate_OnMetaObject((KExtendableItemDelegate*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_extendableitemdelegate_qbase_meta_object(void* self) {
+    return KExtendableItemDelegate_QBaseMetaObject((KExtendableItemDelegate*)self);
+}
+
 void* k_extendableitemdelegate_metacast(void* self, const char* param1) {
     return KExtendableItemDelegate_Metacast((KExtendableItemDelegate*)self, param1);
+}
+
+void k_extendableitemdelegate_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KExtendableItemDelegate_OnMetacast((KExtendableItemDelegate*)self, (intptr_t)callback);
+}
+
+void* k_extendableitemdelegate_qbase_metacast(void* self, const char* param1) {
+    return KExtendableItemDelegate_QBaseMetacast((KExtendableItemDelegate*)self, param1);
 }
 
 int32_t k_extendableitemdelegate_metacall(void* self, int32_t param1, int param2, void* param3) {

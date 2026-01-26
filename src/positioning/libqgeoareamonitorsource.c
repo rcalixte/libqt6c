@@ -18,8 +18,24 @@ const QMetaObject* q_geoareamonitorsource_meta_object(void* self) {
     return QGeoAreaMonitorSource_MetaObject((QGeoAreaMonitorSource*)self);
 }
 
+void q_geoareamonitorsource_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QGeoAreaMonitorSource_OnMetaObject((QGeoAreaMonitorSource*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_geoareamonitorsource_qbase_meta_object(void* self) {
+    return QGeoAreaMonitorSource_QBaseMetaObject((QGeoAreaMonitorSource*)self);
+}
+
 void* q_geoareamonitorsource_metacast(void* self, const char* param1) {
     return QGeoAreaMonitorSource_Metacast((QGeoAreaMonitorSource*)self, param1);
+}
+
+void q_geoareamonitorsource_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QGeoAreaMonitorSource_OnMetacast((QGeoAreaMonitorSource*)self, (intptr_t)callback);
+}
+
+void* q_geoareamonitorsource_qbase_metacast(void* self, const char* param1) {
+    return QGeoAreaMonitorSource_QBaseMetacast((QGeoAreaMonitorSource*)self, param1);
 }
 
 int32_t q_geoareamonitorsource_metacall(void* self, int32_t param1, int param2, void* param3) {

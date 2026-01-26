@@ -120,8 +120,24 @@ const QMetaObject* q_undostack_meta_object(void* self) {
     return QUndoStack_MetaObject((QUndoStack*)self);
 }
 
+void q_undostack_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QUndoStack_OnMetaObject((QUndoStack*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_undostack_qbase_meta_object(void* self) {
+    return QUndoStack_QBaseMetaObject((QUndoStack*)self);
+}
+
 void* q_undostack_metacast(void* self, const char* param1) {
     return QUndoStack_Metacast((QUndoStack*)self, param1);
+}
+
+void q_undostack_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QUndoStack_OnMetacast((QUndoStack*)self, (intptr_t)callback);
+}
+
+void* q_undostack_qbase_metacast(void* self, const char* param1) {
+    return QUndoStack_QBaseMetacast((QUndoStack*)self, param1);
 }
 
 int32_t q_undostack_metacall(void* self, int32_t param1, int param2, void* param3) {

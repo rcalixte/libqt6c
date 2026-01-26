@@ -21,8 +21,24 @@ const QMetaObject* q_graphicsitemanimation_meta_object(void* self) {
     return QGraphicsItemAnimation_MetaObject((QGraphicsItemAnimation*)self);
 }
 
+void q_graphicsitemanimation_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QGraphicsItemAnimation_OnMetaObject((QGraphicsItemAnimation*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_graphicsitemanimation_qbase_meta_object(void* self) {
+    return QGraphicsItemAnimation_QBaseMetaObject((QGraphicsItemAnimation*)self);
+}
+
 void* q_graphicsitemanimation_metacast(void* self, const char* param1) {
     return QGraphicsItemAnimation_Metacast((QGraphicsItemAnimation*)self, param1);
+}
+
+void q_graphicsitemanimation_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QGraphicsItemAnimation_OnMetacast((QGraphicsItemAnimation*)self, (intptr_t)callback);
+}
+
+void* q_graphicsitemanimation_qbase_metacast(void* self, const char* param1) {
+    return QGraphicsItemAnimation_QBaseMetacast((QGraphicsItemAnimation*)self, param1);
 }
 
 int32_t q_graphicsitemanimation_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -22,8 +22,24 @@ const QMetaObject* k_io__skipdialog_meta_object(void* self) {
     return KIO__SkipDialog_MetaObject((KIO__SkipDialog*)self);
 }
 
+void k_io__skipdialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KIO__SkipDialog_OnMetaObject((KIO__SkipDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_io__skipdialog_qbase_meta_object(void* self) {
+    return KIO__SkipDialog_QBaseMetaObject((KIO__SkipDialog*)self);
+}
+
 void* k_io__skipdialog_metacast(void* self, const char* param1) {
     return KIO__SkipDialog_Metacast((KIO__SkipDialog*)self, param1);
+}
+
+void k_io__skipdialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KIO__SkipDialog_OnMetacast((KIO__SkipDialog*)self, (intptr_t)callback);
+}
+
+void* k_io__skipdialog_qbase_metacast(void* self, const char* param1) {
+    return KIO__SkipDialog_QBaseMetacast((KIO__SkipDialog*)self, param1);
 }
 
 int32_t k_io__skipdialog_metacall(void* self, int32_t param1, int param2, void* param3) {

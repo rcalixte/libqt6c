@@ -20,8 +20,24 @@ const QMetaObject* k_toolbarlabelaction_meta_object(void* self) {
     return KToolBarLabelAction_MetaObject((KToolBarLabelAction*)self);
 }
 
+void k_toolbarlabelaction_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KToolBarLabelAction_OnMetaObject((KToolBarLabelAction*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_toolbarlabelaction_qbase_meta_object(void* self) {
+    return KToolBarLabelAction_QBaseMetaObject((KToolBarLabelAction*)self);
+}
+
 void* k_toolbarlabelaction_metacast(void* self, const char* param1) {
     return KToolBarLabelAction_Metacast((KToolBarLabelAction*)self, param1);
+}
+
+void k_toolbarlabelaction_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KToolBarLabelAction_OnMetacast((KToolBarLabelAction*)self, (intptr_t)callback);
+}
+
+void* k_toolbarlabelaction_qbase_metacast(void* self, const char* param1) {
+    return KToolBarLabelAction_QBaseMetacast((KToolBarLabelAction*)self, param1);
 }
 
 int32_t k_toolbarlabelaction_metacall(void* self, int32_t param1, int param2, void* param3) {

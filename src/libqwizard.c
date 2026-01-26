@@ -32,8 +32,24 @@ const QMetaObject* q_wizard_meta_object(void* self) {
     return QWizard_MetaObject((QWizard*)self);
 }
 
+void q_wizard_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QWizard_OnMetaObject((QWizard*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_wizard_qbase_meta_object(void* self) {
+    return QWizard_QBaseMetaObject((QWizard*)self);
+}
+
 void* q_wizard_metacast(void* self, const char* param1) {
     return QWizard_Metacast((QWizard*)self, param1);
+}
+
+void q_wizard_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QWizard_OnMetacast((QWizard*)self, (intptr_t)callback);
+}
+
+void* q_wizard_qbase_metacast(void* self, const char* param1) {
+    return QWizard_QBaseMetacast((QWizard*)self, param1);
 }
 
 int32_t q_wizard_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -2483,8 +2499,24 @@ const QMetaObject* q_wizardpage_meta_object(void* self) {
     return QWizardPage_MetaObject((QWizardPage*)self);
 }
 
+void q_wizardpage_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QWizardPage_OnMetaObject((QWizardPage*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_wizardpage_qbase_meta_object(void* self) {
+    return QWizardPage_QBaseMetaObject((QWizardPage*)self);
+}
+
 void* q_wizardpage_metacast(void* self, const char* param1) {
     return QWizardPage_Metacast((QWizardPage*)self, param1);
+}
+
+void q_wizardpage_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QWizardPage_OnMetacast((QWizardPage*)self, (intptr_t)callback);
+}
+
+void* q_wizardpage_qbase_metacast(void* self, const char* param1) {
+    return QWizardPage_QBaseMetacast((QWizardPage*)self, param1);
 }
 
 int32_t q_wizardpage_metacall(void* self, int32_t param1, int param2, void* param3) {

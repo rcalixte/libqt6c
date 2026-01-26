@@ -25,8 +25,24 @@ const QMetaObject* k_busyindicatorwidget_meta_object(void* self) {
     return KBusyIndicatorWidget_MetaObject((KBusyIndicatorWidget*)self);
 }
 
+void k_busyindicatorwidget_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KBusyIndicatorWidget_OnMetaObject((KBusyIndicatorWidget*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_busyindicatorwidget_qbase_meta_object(void* self) {
+    return KBusyIndicatorWidget_QBaseMetaObject((KBusyIndicatorWidget*)self);
+}
+
 void* k_busyindicatorwidget_metacast(void* self, const char* param1) {
     return KBusyIndicatorWidget_Metacast((KBusyIndicatorWidget*)self, param1);
+}
+
+void k_busyindicatorwidget_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KBusyIndicatorWidget_OnMetacast((KBusyIndicatorWidget*)self, (intptr_t)callback);
+}
+
+void* k_busyindicatorwidget_qbase_metacast(void* self, const char* param1) {
+    return KBusyIndicatorWidget_QBaseMetacast((KBusyIndicatorWidget*)self, param1);
 }
 
 int32_t k_busyindicatorwidget_metacall(void* self, int32_t param1, int param2, void* param3) {

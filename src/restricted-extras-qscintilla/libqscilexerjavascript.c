@@ -23,8 +23,24 @@ const QMetaObject* q_scilexerjavascript_meta_object(void* self) {
     return QsciLexerJavaScript_MetaObject((QsciLexerJavaScript*)self);
 }
 
+void q_scilexerjavascript_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QsciLexerJavaScript_OnMetaObject((QsciLexerJavaScript*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_scilexerjavascript_qbase_meta_object(void* self) {
+    return QsciLexerJavaScript_QBaseMetaObject((QsciLexerJavaScript*)self);
+}
+
 void* q_scilexerjavascript_metacast(void* self, const char* param1) {
     return QsciLexerJavaScript_Metacast((QsciLexerJavaScript*)self, param1);
+}
+
+void q_scilexerjavascript_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QsciLexerJavaScript_OnMetacast((QsciLexerJavaScript*)self, (intptr_t)callback);
+}
+
+void* q_scilexerjavascript_qbase_metacast(void* self, const char* param1) {
+    return QsciLexerJavaScript_QBaseMetacast((QsciLexerJavaScript*)self, param1);
 }
 
 int32_t q_scilexerjavascript_metacall(void* self, int32_t param1, int param2, void* param3) {

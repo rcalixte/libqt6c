@@ -53,10 +53,41 @@ KFontAction* k_fontaction_new4(void* icon, const char* text, void* parent);
 ///
 const QMetaObject* k_fontaction_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KFontAction*
+/// @param callback const QMetaObject* func()
+///
+void k_fontaction_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KFontAction*
+///
+const QMetaObject* k_fontaction_qbase_meta_object(void* self);
+
 /// @param self KFontAction*
 /// @param param1 const char*
 ///
 void* k_fontaction_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KFontAction*
+/// @param callback void* func(KFontAction* self, const char* param1)
+///
+void k_fontaction_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KFontAction*
+/// @param param1 const char*
+///
+void* k_fontaction_qbase_metacast(void* self, const char* param1);
 
 /// @param self KFontAction*
 /// @param param1 enum QMetaObject__Call

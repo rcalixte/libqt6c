@@ -17,8 +17,24 @@ const QMetaObject* k_texteditor__inlinenoteprovider_meta_object(void* self) {
     return KTextEditor__InlineNoteProvider_MetaObject((KTextEditor__InlineNoteProvider*)self);
 }
 
+void k_texteditor__inlinenoteprovider_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KTextEditor__InlineNoteProvider_OnMetaObject((KTextEditor__InlineNoteProvider*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_texteditor__inlinenoteprovider_qbase_meta_object(void* self) {
+    return KTextEditor__InlineNoteProvider_QBaseMetaObject((KTextEditor__InlineNoteProvider*)self);
+}
+
 void* k_texteditor__inlinenoteprovider_metacast(void* self, const char* param1) {
     return KTextEditor__InlineNoteProvider_Metacast((KTextEditor__InlineNoteProvider*)self, param1);
+}
+
+void k_texteditor__inlinenoteprovider_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KTextEditor__InlineNoteProvider_OnMetacast((KTextEditor__InlineNoteProvider*)self, (intptr_t)callback);
+}
+
+void* k_texteditor__inlinenoteprovider_qbase_metacast(void* self, const char* param1) {
+    return KTextEditor__InlineNoteProvider_QBaseMetacast((KTextEditor__InlineNoteProvider*)self, param1);
 }
 
 int32_t k_texteditor__inlinenoteprovider_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -22,8 +22,24 @@ const QMetaObject* q_scilexerfortran77_meta_object(void* self) {
     return QsciLexerFortran77_MetaObject((QsciLexerFortran77*)self);
 }
 
+void q_scilexerfortran77_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QsciLexerFortran77_OnMetaObject((QsciLexerFortran77*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_scilexerfortran77_qbase_meta_object(void* self) {
+    return QsciLexerFortran77_QBaseMetaObject((QsciLexerFortran77*)self);
+}
+
 void* q_scilexerfortran77_metacast(void* self, const char* param1) {
     return QsciLexerFortran77_Metacast((QsciLexerFortran77*)self, param1);
+}
+
+void q_scilexerfortran77_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QsciLexerFortran77_OnMetacast((QsciLexerFortran77*)self, (intptr_t)callback);
+}
+
+void* q_scilexerfortran77_qbase_metacast(void* self, const char* param1) {
+    return QsciLexerFortran77_QBaseMetacast((QsciLexerFortran77*)self, param1);
 }
 
 int32_t q_scilexerfortran77_metacall(void* self, int32_t param1, int param2, void* param3) {

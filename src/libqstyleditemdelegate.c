@@ -28,8 +28,24 @@ const QMetaObject* q_styleditemdelegate_meta_object(void* self) {
     return QStyledItemDelegate_MetaObject((QStyledItemDelegate*)self);
 }
 
+void q_styleditemdelegate_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QStyledItemDelegate_OnMetaObject((QStyledItemDelegate*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_styleditemdelegate_qbase_meta_object(void* self) {
+    return QStyledItemDelegate_QBaseMetaObject((QStyledItemDelegate*)self);
+}
+
 void* q_styleditemdelegate_metacast(void* self, const char* param1) {
     return QStyledItemDelegate_Metacast((QStyledItemDelegate*)self, param1);
+}
+
+void q_styleditemdelegate_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QStyledItemDelegate_OnMetacast((QStyledItemDelegate*)self, (intptr_t)callback);
+}
+
+void* q_styleditemdelegate_qbase_metacast(void* self, const char* param1) {
+    return QStyledItemDelegate_QBaseMetacast((QStyledItemDelegate*)self, param1);
 }
 
 int32_t q_styleditemdelegate_metacall(void* self, int32_t param1, int param2, void* param3) {

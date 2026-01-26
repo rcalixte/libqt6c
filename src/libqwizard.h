@@ -40,10 +40,41 @@ QWizard* q_wizard_new3(void* parent, int32_t flags);
 ///
 const QMetaObject* q_wizard_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QWizard*
+/// @param callback const QMetaObject* func()
+///
+void q_wizard_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QWizard*
+///
+const QMetaObject* q_wizard_qbase_meta_object(void* self);
+
 /// @param self QWizard*
 /// @param param1 const char*
 ///
 void* q_wizard_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QWizard*
+/// @param callback void* func(QWizard* self, const char* param1)
+///
+void q_wizard_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QWizard*
+/// @param param1 const char*
+///
+void* q_wizard_qbase_metacast(void* self, const char* param1);
 
 /// @param self QWizard*
 /// @param param1 enum QMetaObject__Call
@@ -5550,10 +5581,41 @@ QWizardPage* q_wizardpage_new2();
 ///
 const QMetaObject* q_wizardpage_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QWizardPage*
+/// @param callback const QMetaObject* func()
+///
+void q_wizardpage_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QWizardPage*
+///
+const QMetaObject* q_wizardpage_qbase_meta_object(void* self);
+
 /// @param self QWizardPage*
 /// @param param1 const char*
 ///
 void* q_wizardpage_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QWizardPage*
+/// @param callback void* func(QWizardPage* self, const char* param1)
+///
+void q_wizardpage_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QWizardPage*
+/// @param param1 const char*
+///
+void* q_wizardpage_qbase_metacast(void* self, const char* param1);
 
 /// @param self QWizardPage*
 /// @param param1 enum QMetaObject__Call

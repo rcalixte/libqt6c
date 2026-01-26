@@ -24,8 +24,24 @@ const QMetaObject* k_toggleaction_meta_object(void* self) {
     return KToggleAction_MetaObject((KToggleAction*)self);
 }
 
+void k_toggleaction_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KToggleAction_OnMetaObject((KToggleAction*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_toggleaction_qbase_meta_object(void* self) {
+    return KToggleAction_QBaseMetaObject((KToggleAction*)self);
+}
+
 void* k_toggleaction_metacast(void* self, const char* param1) {
     return KToggleAction_Metacast((KToggleAction*)self, param1);
+}
+
+void k_toggleaction_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KToggleAction_OnMetacast((KToggleAction*)self, (intptr_t)callback);
+}
+
+void* k_toggleaction_qbase_metacast(void* self, const char* param1) {
+    return KToggleAction_QBaseMetacast((KToggleAction*)self, param1);
 }
 
 int32_t k_toggleaction_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -31,10 +31,41 @@ QTimer* q_timer_new2(void* parent);
 ///
 const QMetaObject* q_timer_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QTimer*
+/// @param callback const QMetaObject* func()
+///
+void q_timer_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QTimer*
+///
+const QMetaObject* q_timer_qbase_meta_object(void* self);
+
 /// @param self QTimer*
 /// @param param1 const char*
 ///
 void* q_timer_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QTimer*
+/// @param callback void* func(QTimer* self, const char* param1)
+///
+void q_timer_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QTimer*
+/// @param param1 const char*
+///
+void* q_timer_qbase_metacast(void* self, const char* param1);
 
 /// @param self QTimer*
 /// @param param1 enum QMetaObject__Call

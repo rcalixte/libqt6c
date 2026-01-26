@@ -31,10 +31,41 @@ KRatingWidget* k_ratingwidget_new2();
 ///
 const QMetaObject* k_ratingwidget_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KRatingWidget*
+/// @param callback const QMetaObject* func()
+///
+void k_ratingwidget_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KRatingWidget*
+///
+const QMetaObject* k_ratingwidget_qbase_meta_object(void* self);
+
 /// @param self KRatingWidget*
 /// @param param1 const char*
 ///
 void* k_ratingwidget_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KRatingWidget*
+/// @param callback void* func(KRatingWidget* self, const char* param1)
+///
+void k_ratingwidget_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KRatingWidget*
+/// @param param1 const char*
+///
+void* k_ratingwidget_qbase_metacast(void* self, const char* param1);
 
 /// @param self KRatingWidget*
 /// @param param1 enum QMetaObject__Call

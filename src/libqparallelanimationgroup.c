@@ -19,8 +19,24 @@ const QMetaObject* q_parallelanimationgroup_meta_object(void* self) {
     return QParallelAnimationGroup_MetaObject((QParallelAnimationGroup*)self);
 }
 
+void q_parallelanimationgroup_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QParallelAnimationGroup_OnMetaObject((QParallelAnimationGroup*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_parallelanimationgroup_qbase_meta_object(void* self) {
+    return QParallelAnimationGroup_QBaseMetaObject((QParallelAnimationGroup*)self);
+}
+
 void* q_parallelanimationgroup_metacast(void* self, const char* param1) {
     return QParallelAnimationGroup_Metacast((QParallelAnimationGroup*)self, param1);
+}
+
+void q_parallelanimationgroup_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QParallelAnimationGroup_OnMetacast((QParallelAnimationGroup*)self, (intptr_t)callback);
+}
+
+void* q_parallelanimationgroup_qbase_metacast(void* self, const char* param1) {
+    return QParallelAnimationGroup_QBaseMetacast((QParallelAnimationGroup*)self, param1);
 }
 
 int32_t q_parallelanimationgroup_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -71,10 +71,41 @@ KLed* k_led_new6(void* color, int32_t state, int32_t look, int32_t shape, void* 
 ///
 const QMetaObject* k_led_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KLed*
+/// @param callback const QMetaObject* func()
+///
+void k_led_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KLed*
+///
+const QMetaObject* k_led_qbase_meta_object(void* self);
+
 /// @param self KLed*
 /// @param param1 const char*
 ///
 void* k_led_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KLed*
+/// @param callback void* func(KLed* self, const char* param1)
+///
+void k_led_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KLed*
+/// @param param1 const char*
+///
+void* k_led_qbase_metacast(void* self, const char* param1);
 
 /// @param self KLed*
 /// @param param1 enum QMetaObject__Call

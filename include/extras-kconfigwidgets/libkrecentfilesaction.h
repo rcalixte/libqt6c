@@ -44,10 +44,41 @@ KRecentFilesAction* k_recentfilesaction_new3(void* icon, const char* text, void*
 ///
 const QMetaObject* k_recentfilesaction_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KRecentFilesAction*
+/// @param callback const QMetaObject* func()
+///
+void k_recentfilesaction_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KRecentFilesAction*
+///
+const QMetaObject* k_recentfilesaction_qbase_meta_object(void* self);
+
 /// @param self KRecentFilesAction*
 /// @param param1 const char*
 ///
 void* k_recentfilesaction_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KRecentFilesAction*
+/// @param callback void* func(KRecentFilesAction* self, const char* param1)
+///
+void k_recentfilesaction_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KRecentFilesAction*
+/// @param param1 const char*
+///
+void* k_recentfilesaction_qbase_metacast(void* self, const char* param1);
 
 /// @param self KRecentFilesAction*
 /// @param param1 enum QMetaObject__Call

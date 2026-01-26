@@ -31,10 +31,41 @@ QVCandlestickModelMapper* q_vcandlestickmodelmapper_new2(void* parent);
 ///
 const QMetaObject* q_vcandlestickmodelmapper_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QVCandlestickModelMapper*
+/// @param callback const QMetaObject* func()
+///
+void q_vcandlestickmodelmapper_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QVCandlestickModelMapper*
+///
+const QMetaObject* q_vcandlestickmodelmapper_qbase_meta_object(void* self);
+
 /// @param self QVCandlestickModelMapper*
 /// @param param1 const char*
 ///
 void* q_vcandlestickmodelmapper_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QVCandlestickModelMapper*
+/// @param callback void* func(QVCandlestickModelMapper* self, const char* param1)
+///
+void q_vcandlestickmodelmapper_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QVCandlestickModelMapper*
+/// @param param1 const char*
+///
+void* q_vcandlestickmodelmapper_qbase_metacast(void* self, const char* param1);
 
 /// @param self QVCandlestickModelMapper*
 /// @param param1 enum QMetaObject__Call

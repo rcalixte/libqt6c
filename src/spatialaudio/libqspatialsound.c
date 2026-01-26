@@ -17,8 +17,24 @@ const QMetaObject* q_spatialsound_meta_object(void* self) {
     return QSpatialSound_MetaObject((QSpatialSound*)self);
 }
 
+void q_spatialsound_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QSpatialSound_OnMetaObject((QSpatialSound*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_spatialsound_qbase_meta_object(void* self) {
+    return QSpatialSound_QBaseMetaObject((QSpatialSound*)self);
+}
+
 void* q_spatialsound_metacast(void* self, const char* param1) {
     return QSpatialSound_Metacast((QSpatialSound*)self, param1);
+}
+
+void q_spatialsound_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QSpatialSound_OnMetacast((QSpatialSound*)self, (intptr_t)callback);
+}
+
+void* q_spatialsound_qbase_metacast(void* self, const char* param1) {
+    return QSpatialSound_QBaseMetacast((QSpatialSound*)self, param1);
 }
 
 int32_t q_spatialsound_metacall(void* self, int32_t param1, int param2, void* param3) {

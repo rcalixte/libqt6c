@@ -23,8 +23,24 @@ const QMetaObject* k_nameandurlinputdialog_meta_object(void* self) {
     return KNameAndUrlInputDialog_MetaObject((KNameAndUrlInputDialog*)self);
 }
 
+void k_nameandurlinputdialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KNameAndUrlInputDialog_OnMetaObject((KNameAndUrlInputDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_nameandurlinputdialog_qbase_meta_object(void* self) {
+    return KNameAndUrlInputDialog_QBaseMetaObject((KNameAndUrlInputDialog*)self);
+}
+
 void* k_nameandurlinputdialog_metacast(void* self, const char* param1) {
     return KNameAndUrlInputDialog_Metacast((KNameAndUrlInputDialog*)self, param1);
+}
+
+void k_nameandurlinputdialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KNameAndUrlInputDialog_OnMetacast((KNameAndUrlInputDialog*)self, (intptr_t)callback);
+}
+
+void* k_nameandurlinputdialog_qbase_metacast(void* self, const char* param1) {
+    return KNameAndUrlInputDialog_QBaseMetacast((KNameAndUrlInputDialog*)self, param1);
 }
 
 int32_t k_nameandurlinputdialog_metacall(void* self, int32_t param1, int param2, void* param3) {

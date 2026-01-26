@@ -26,8 +26,24 @@ const QMetaObject* q_designerpropertyeditorinterface_meta_object(void* self) {
     return QDesignerPropertyEditorInterface_MetaObject((QDesignerPropertyEditorInterface*)self);
 }
 
+void q_designerpropertyeditorinterface_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDesignerPropertyEditorInterface_OnMetaObject((QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_designerpropertyeditorinterface_qbase_meta_object(void* self) {
+    return QDesignerPropertyEditorInterface_QBaseMetaObject((QDesignerPropertyEditorInterface*)self);
+}
+
 void* q_designerpropertyeditorinterface_metacast(void* self, const char* param1) {
     return QDesignerPropertyEditorInterface_Metacast((QDesignerPropertyEditorInterface*)self, param1);
+}
+
+void q_designerpropertyeditorinterface_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDesignerPropertyEditorInterface_OnMetacast((QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
+}
+
+void* q_designerpropertyeditorinterface_qbase_metacast(void* self, const char* param1) {
+    return QDesignerPropertyEditorInterface_QBaseMetacast((QDesignerPropertyEditorInterface*)self, param1);
 }
 
 int32_t q_designerpropertyeditorinterface_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -41,10 +41,41 @@ KContextualHelpButton* k_contextualhelpbutton_new3();
 ///
 const QMetaObject* k_contextualhelpbutton_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KContextualHelpButton*
+/// @param callback const QMetaObject* func()
+///
+void k_contextualhelpbutton_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KContextualHelpButton*
+///
+const QMetaObject* k_contextualhelpbutton_qbase_meta_object(void* self);
+
 /// @param self KContextualHelpButton*
 /// @param param1 const char*
 ///
 void* k_contextualhelpbutton_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KContextualHelpButton*
+/// @param callback void* func(KContextualHelpButton* self, const char* param1)
+///
+void k_contextualhelpbutton_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KContextualHelpButton*
+/// @param param1 const char*
+///
+void* k_contextualhelpbutton_qbase_metacast(void* self, const char* param1);
 
 /// @param self KContextualHelpButton*
 /// @param param1 enum QMetaObject__Call

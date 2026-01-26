@@ -28,8 +28,24 @@ const QMetaObject* k_pageview_meta_object(void* self) {
     return KPageView_MetaObject((KPageView*)self);
 }
 
+void k_pageview_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KPageView_OnMetaObject((KPageView*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_pageview_qbase_meta_object(void* self) {
+    return KPageView_QBaseMetaObject((KPageView*)self);
+}
+
 void* k_pageview_metacast(void* self, const char* param1) {
     return KPageView_Metacast((KPageView*)self, param1);
+}
+
+void k_pageview_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KPageView_OnMetacast((KPageView*)self, (intptr_t)callback);
+}
+
+void* k_pageview_qbase_metacast(void* self, const char* param1) {
+    return KPageView_QBaseMetacast((KPageView*)self, param1);
 }
 
 int32_t k_pageview_metacall(void* self, int32_t param1, int param2, void* param3) {

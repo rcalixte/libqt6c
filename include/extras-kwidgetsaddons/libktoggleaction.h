@@ -44,10 +44,41 @@ KToggleAction* k_toggleaction_new3(void* icon, const char* text, void* parent);
 ///
 const QMetaObject* k_toggleaction_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KToggleAction*
+/// @param callback const QMetaObject* func()
+///
+void k_toggleaction_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KToggleAction*
+///
+const QMetaObject* k_toggleaction_qbase_meta_object(void* self);
+
 /// @param self KToggleAction*
 /// @param param1 const char*
 ///
 void* k_toggleaction_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KToggleAction*
+/// @param callback void* func(KToggleAction* self, const char* param1)
+///
+void k_toggleaction_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KToggleAction*
+/// @param param1 const char*
+///
+void* k_toggleaction_qbase_metacast(void* self, const char* param1);
 
 /// @param self KToggleAction*
 /// @param param1 enum QMetaObject__Call

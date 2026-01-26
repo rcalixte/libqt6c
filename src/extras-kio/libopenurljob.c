@@ -28,8 +28,24 @@ const QMetaObject* k_io__openurljob_meta_object(void* self) {
     return KIO__OpenUrlJob_MetaObject((KIO__OpenUrlJob*)self);
 }
 
+void k_io__openurljob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KIO__OpenUrlJob_OnMetaObject((KIO__OpenUrlJob*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_io__openurljob_qbase_meta_object(void* self) {
+    return KIO__OpenUrlJob_QBaseMetaObject((KIO__OpenUrlJob*)self);
+}
+
 void* k_io__openurljob_metacast(void* self, const char* param1) {
     return KIO__OpenUrlJob_Metacast((KIO__OpenUrlJob*)self, param1);
+}
+
+void k_io__openurljob_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KIO__OpenUrlJob_OnMetacast((KIO__OpenUrlJob*)self, (intptr_t)callback);
+}
+
+void* k_io__openurljob_qbase_metacast(void* self, const char* param1) {
+    return KIO__OpenUrlJob_QBaseMetacast((KIO__OpenUrlJob*)self, param1);
 }
 
 int32_t k_io__openurljob_metacall(void* self, int32_t param1, int param2, void* param3) {

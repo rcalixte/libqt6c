@@ -22,8 +22,24 @@ const QMetaObject* k_previewwidgetbase_meta_object(void* self) {
     return KPreviewWidgetBase_MetaObject((KPreviewWidgetBase*)self);
 }
 
+void k_previewwidgetbase_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KPreviewWidgetBase_OnMetaObject((KPreviewWidgetBase*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_previewwidgetbase_qbase_meta_object(void* self) {
+    return KPreviewWidgetBase_QBaseMetaObject((KPreviewWidgetBase*)self);
+}
+
 void* k_previewwidgetbase_metacast(void* self, const char* param1) {
     return KPreviewWidgetBase_Metacast((KPreviewWidgetBase*)self, param1);
+}
+
+void k_previewwidgetbase_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KPreviewWidgetBase_OnMetacast((KPreviewWidgetBase*)self, (intptr_t)callback);
+}
+
+void* k_previewwidgetbase_qbase_metacast(void* self, const char* param1) {
+    return KPreviewWidgetBase_QBaseMetacast((KPreviewWidgetBase*)self, param1);
 }
 
 int32_t k_previewwidgetbase_metacall(void* self, int32_t param1, int param2, void* param3) {

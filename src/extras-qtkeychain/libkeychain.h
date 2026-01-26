@@ -597,10 +597,41 @@ QKeychain__ReadPasswordJob* q_keychain__readpasswordjob_new2(const char* service
 ///
 const QMetaObject* q_keychain__readpasswordjob_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QKeychain__ReadPasswordJob*
+/// @param callback const QMetaObject* func()
+///
+void q_keychain__readpasswordjob_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QKeychain__ReadPasswordJob*
+///
+const QMetaObject* q_keychain__readpasswordjob_qbase_meta_object(void* self);
+
 /// @param self QKeychain__ReadPasswordJob*
 /// @param param1 const char*
 ///
 void* q_keychain__readpasswordjob_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QKeychain__ReadPasswordJob*
+/// @param callback void* func(QKeychain__ReadPasswordJob* self, const char* param1)
+///
+void q_keychain__readpasswordjob_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QKeychain__ReadPasswordJob*
+/// @param param1 const char*
+///
+void* q_keychain__readpasswordjob_qbase_metacast(void* self, const char* param1);
 
 /// @param self QKeychain__ReadPasswordJob*
 /// @param param1 enum QMetaObject__Call
@@ -1612,10 +1643,41 @@ QKeychain__WritePasswordJob* q_keychain__writepasswordjob_new2(const char* servi
 ///
 const QMetaObject* q_keychain__writepasswordjob_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QKeychain__WritePasswordJob*
+/// @param callback const QMetaObject* func()
+///
+void q_keychain__writepasswordjob_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QKeychain__WritePasswordJob*
+///
+const QMetaObject* q_keychain__writepasswordjob_qbase_meta_object(void* self);
+
 /// @param self QKeychain__WritePasswordJob*
 /// @param param1 const char*
 ///
 void* q_keychain__writepasswordjob_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QKeychain__WritePasswordJob*
+/// @param callback void* func(QKeychain__WritePasswordJob* self, const char* param1)
+///
+void q_keychain__writepasswordjob_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QKeychain__WritePasswordJob*
+/// @param param1 const char*
+///
+void* q_keychain__writepasswordjob_qbase_metacast(void* self, const char* param1);
 
 /// @param self QKeychain__WritePasswordJob*
 /// @param param1 enum QMetaObject__Call
@@ -2625,10 +2687,41 @@ QKeychain__DeletePasswordJob* q_keychain__deletepasswordjob_new2(const char* ser
 ///
 const QMetaObject* q_keychain__deletepasswordjob_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QKeychain__DeletePasswordJob*
+/// @param callback const QMetaObject* func()
+///
+void q_keychain__deletepasswordjob_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QKeychain__DeletePasswordJob*
+///
+const QMetaObject* q_keychain__deletepasswordjob_qbase_meta_object(void* self);
+
 /// @param self QKeychain__DeletePasswordJob*
 /// @param param1 const char*
 ///
 void* q_keychain__deletepasswordjob_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QKeychain__DeletePasswordJob*
+/// @param callback void* func(QKeychain__DeletePasswordJob* self, const char* param1)
+///
+void q_keychain__deletepasswordjob_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QKeychain__DeletePasswordJob*
+/// @param param1 const char*
+///
+void* q_keychain__deletepasswordjob_qbase_metacast(void* self, const char* param1);
 
 /// @param self QKeychain__DeletePasswordJob*
 /// @param param1 enum QMetaObject__Call

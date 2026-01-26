@@ -34,10 +34,41 @@ KXMLGUIFactory* k_xmlguifactory_new2(void* builder, void* parent);
 ///
 const QMetaObject* k_xmlguifactory_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KXMLGUIFactory*
+/// @param callback const QMetaObject* func()
+///
+void k_xmlguifactory_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KXMLGUIFactory*
+///
+const QMetaObject* k_xmlguifactory_qbase_meta_object(void* self);
+
 /// @param self KXMLGUIFactory*
 /// @param param1 const char*
 ///
 void* k_xmlguifactory_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KXMLGUIFactory*
+/// @param callback void* func(KXMLGUIFactory* self, const char* param1)
+///
+void k_xmlguifactory_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KXMLGUIFactory*
+/// @param param1 const char*
+///
+void* k_xmlguifactory_qbase_metacast(void* self, const char* param1);
 
 /// @param self KXMLGUIFactory*
 /// @param param1 enum QMetaObject__Call

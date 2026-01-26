@@ -48,10 +48,41 @@ QPlainTextEdit* q_plaintextedit_new4(const char* text, void* parent);
 ///
 const QMetaObject* q_plaintextedit_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QPlainTextEdit*
+/// @param callback const QMetaObject* func()
+///
+void q_plaintextedit_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QPlainTextEdit*
+///
+const QMetaObject* q_plaintextedit_qbase_meta_object(void* self);
+
 /// @param self QPlainTextEdit*
 /// @param param1 const char*
 ///
 void* q_plaintextedit_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QPlainTextEdit*
+/// @param callback void* func(QPlainTextEdit* self, const char* param1)
+///
+void q_plaintextedit_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QPlainTextEdit*
+/// @param param1 const char*
+///
+void* q_plaintextedit_qbase_metacast(void* self, const char* param1);
 
 /// @param self QPlainTextEdit*
 /// @param param1 enum QMetaObject__Call
@@ -6087,10 +6118,41 @@ QPlainTextDocumentLayout* q_plaintextdocumentlayout_new(void* document);
 ///
 const QMetaObject* q_plaintextdocumentlayout_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QPlainTextDocumentLayout*
+/// @param callback const QMetaObject* func()
+///
+void q_plaintextdocumentlayout_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QPlainTextDocumentLayout*
+///
+const QMetaObject* q_plaintextdocumentlayout_qbase_meta_object(void* self);
+
 /// @param self QPlainTextDocumentLayout*
 /// @param param1 const char*
 ///
 void* q_plaintextdocumentlayout_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QPlainTextDocumentLayout*
+/// @param callback void* func(QPlainTextDocumentLayout* self, const char* param1)
+///
+void q_plaintextdocumentlayout_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QPlainTextDocumentLayout*
+/// @param param1 const char*
+///
+void* q_plaintextdocumentlayout_qbase_metacast(void* self, const char* param1);
 
 /// @param self QPlainTextDocumentLayout*
 /// @param param1 enum QMetaObject__Call

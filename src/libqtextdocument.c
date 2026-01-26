@@ -55,8 +55,24 @@ const QMetaObject* q_textdocument_meta_object(void* self) {
     return QTextDocument_MetaObject((QTextDocument*)self);
 }
 
+void q_textdocument_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QTextDocument_OnMetaObject((QTextDocument*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_textdocument_qbase_meta_object(void* self) {
+    return QTextDocument_QBaseMetaObject((QTextDocument*)self);
+}
+
 void* q_textdocument_metacast(void* self, const char* param1) {
     return QTextDocument_Metacast((QTextDocument*)self, param1);
+}
+
+void q_textdocument_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QTextDocument_OnMetacast((QTextDocument*)self, (intptr_t)callback);
+}
+
+void* q_textdocument_qbase_metacast(void* self, const char* param1) {
+    return QTextDocument_QBaseMetacast((QTextDocument*)self, param1);
 }
 
 int32_t q_textdocument_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -35,8 +35,24 @@ const QMetaObject* q_slider_meta_object(void* self) {
     return QSlider_MetaObject((QSlider*)self);
 }
 
+void q_slider_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QSlider_OnMetaObject((QSlider*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_slider_qbase_meta_object(void* self) {
+    return QSlider_QBaseMetaObject((QSlider*)self);
+}
+
 void* q_slider_metacast(void* self, const char* param1) {
     return QSlider_Metacast((QSlider*)self, param1);
+}
+
+void q_slider_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QSlider_OnMetacast((QSlider*)self, (intptr_t)callback);
+}
+
+void* q_slider_qbase_metacast(void* self, const char* param1) {
+    return QSlider_QBaseMetacast((QSlider*)self, param1);
 }
 
 int32_t q_slider_metacall(void* self, int32_t param1, int param2, void* param3) {

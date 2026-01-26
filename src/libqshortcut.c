@@ -46,8 +46,24 @@ const QMetaObject* q_shortcut_meta_object(void* self) {
     return QShortcut_MetaObject((QShortcut*)self);
 }
 
+void q_shortcut_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QShortcut_OnMetaObject((QShortcut*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_shortcut_qbase_meta_object(void* self) {
+    return QShortcut_QBaseMetaObject((QShortcut*)self);
+}
+
 void* q_shortcut_metacast(void* self, const char* param1) {
     return QShortcut_Metacast((QShortcut*)self, param1);
+}
+
+void q_shortcut_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QShortcut_OnMetacast((QShortcut*)self, (intptr_t)callback);
+}
+
+void* q_shortcut_qbase_metacast(void* self, const char* param1) {
+    return QShortcut_QBaseMetacast((QShortcut*)self, param1);
 }
 
 int32_t q_shortcut_metacall(void* self, int32_t param1, int param2, void* param3) {

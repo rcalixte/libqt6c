@@ -46,10 +46,41 @@ KMessageDialog* k_messagedialog_new3(int32_t type, const char* text, void* paren
 ///
 const QMetaObject* k_messagedialog_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KMessageDialog*
+/// @param callback const QMetaObject* func()
+///
+void k_messagedialog_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KMessageDialog*
+///
+const QMetaObject* k_messagedialog_qbase_meta_object(void* self);
+
 /// @param self KMessageDialog*
 /// @param param1 const char*
 ///
 void* k_messagedialog_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KMessageDialog*
+/// @param callback void* func(KMessageDialog* self, const char* param1)
+///
+void k_messagedialog_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KMessageDialog*
+/// @param param1 const char*
+///
+void* k_messagedialog_qbase_metacast(void* self, const char* param1);
 
 /// @param self KMessageDialog*
 /// @param param1 enum QMetaObject__Call

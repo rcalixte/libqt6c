@@ -18,8 +18,24 @@ const QMetaObject* k_emailvalidator_meta_object(void* self) {
     return KEmailValidator_MetaObject((KEmailValidator*)self);
 }
 
+void k_emailvalidator_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KEmailValidator_OnMetaObject((KEmailValidator*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_emailvalidator_qbase_meta_object(void* self) {
+    return KEmailValidator_QBaseMetaObject((KEmailValidator*)self);
+}
+
 void* k_emailvalidator_metacast(void* self, const char* param1) {
     return KEmailValidator_Metacast((KEmailValidator*)self, param1);
+}
+
+void k_emailvalidator_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KEmailValidator_OnMetacast((KEmailValidator*)self, (intptr_t)callback);
+}
+
+void* k_emailvalidator_qbase_metacast(void* self, const char* param1) {
+    return KEmailValidator_QBaseMetacast((KEmailValidator*)self, param1);
 }
 
 int32_t k_emailvalidator_metacall(void* self, int32_t param1, int param2, void* param3) {

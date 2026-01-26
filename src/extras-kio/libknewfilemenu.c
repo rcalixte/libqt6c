@@ -19,8 +19,24 @@ const QMetaObject* k_newfilemenu_meta_object(void* self) {
     return KNewFileMenu_MetaObject((KNewFileMenu*)self);
 }
 
+void k_newfilemenu_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KNewFileMenu_OnMetaObject((KNewFileMenu*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_newfilemenu_qbase_meta_object(void* self) {
+    return KNewFileMenu_QBaseMetaObject((KNewFileMenu*)self);
+}
+
 void* k_newfilemenu_metacast(void* self, const char* param1) {
     return KNewFileMenu_Metacast((KNewFileMenu*)self, param1);
+}
+
+void k_newfilemenu_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KNewFileMenu_OnMetacast((KNewFileMenu*)self, (intptr_t)callback);
+}
+
+void* k_newfilemenu_qbase_metacast(void* self, const char* param1) {
+    return KNewFileMenu_QBaseMetacast((KNewFileMenu*)self, param1);
 }
 
 int32_t k_newfilemenu_metacall(void* self, int32_t param1, int param2, void* param3) {

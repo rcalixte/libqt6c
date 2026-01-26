@@ -19,8 +19,24 @@ const QMetaObject* q_barseries_meta_object(void* self) {
     return QBarSeries_MetaObject((QBarSeries*)self);
 }
 
+void q_barseries_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QBarSeries_OnMetaObject((QBarSeries*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_barseries_qbase_meta_object(void* self) {
+    return QBarSeries_QBaseMetaObject((QBarSeries*)self);
+}
+
 void* q_barseries_metacast(void* self, const char* param1) {
     return QBarSeries_Metacast((QBarSeries*)self, param1);
+}
+
+void q_barseries_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QBarSeries_OnMetacast((QBarSeries*)self, (intptr_t)callback);
+}
+
+void* q_barseries_qbase_metacast(void* self, const char* param1) {
+    return QBarSeries_QBaseMetacast((QBarSeries*)self, param1);
 }
 
 int32_t q_barseries_metacall(void* self, int32_t param1, int param2, void* param3) {

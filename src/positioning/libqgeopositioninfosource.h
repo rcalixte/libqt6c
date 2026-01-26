@@ -25,10 +25,41 @@ QGeoPositionInfoSource* q_geopositioninfosource_new(void* parent);
 ///
 const QMetaObject* q_geopositioninfosource_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QGeoPositionInfoSource*
+/// @param callback const QMetaObject* func()
+///
+void q_geopositioninfosource_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QGeoPositionInfoSource*
+///
+const QMetaObject* q_geopositioninfosource_qbase_meta_object(void* self);
+
 /// @param self QGeoPositionInfoSource*
 /// @param param1 const char*
 ///
 void* q_geopositioninfosource_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QGeoPositionInfoSource*
+/// @param callback void* func(QGeoPositionInfoSource* self, const char* param1)
+///
+void q_geopositioninfosource_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QGeoPositionInfoSource*
+/// @param param1 const char*
+///
+void* q_geopositioninfosource_qbase_metacast(void* self, const char* param1);
 
 /// @param self QGeoPositionInfoSource*
 /// @param param1 enum QMetaObject__Call

@@ -40,10 +40,41 @@ QGraphicsProxyWidget* q_graphicsproxywidget_new3(void* parent, int32_t wFlags);
 ///
 const QMetaObject* q_graphicsproxywidget_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsProxyWidget*
+/// @param callback const QMetaObject* func()
+///
+void q_graphicsproxywidget_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QGraphicsProxyWidget*
+///
+const QMetaObject* q_graphicsproxywidget_qbase_meta_object(void* self);
+
 /// @param self QGraphicsProxyWidget*
 /// @param param1 const char*
 ///
 void* q_graphicsproxywidget_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsProxyWidget*
+/// @param callback void* func(QGraphicsProxyWidget* self, const char* param1)
+///
+void q_graphicsproxywidget_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QGraphicsProxyWidget*
+/// @param param1 const char*
+///
+void* q_graphicsproxywidget_qbase_metacast(void* self, const char* param1);
 
 /// @param self QGraphicsProxyWidget*
 /// @param param1 enum QMetaObject__Call

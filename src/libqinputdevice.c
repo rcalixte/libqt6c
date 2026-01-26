@@ -30,8 +30,24 @@ const QMetaObject* q_inputdevice_meta_object(void* self) {
     return QInputDevice_MetaObject((QInputDevice*)self);
 }
 
+void q_inputdevice_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QInputDevice_OnMetaObject((QInputDevice*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_inputdevice_qbase_meta_object(void* self) {
+    return QInputDevice_QBaseMetaObject((QInputDevice*)self);
+}
+
 void* q_inputdevice_metacast(void* self, const char* param1) {
     return QInputDevice_Metacast((QInputDevice*)self, param1);
+}
+
+void q_inputdevice_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QInputDevice_OnMetacast((QInputDevice*)self, (intptr_t)callback);
+}
+
+void* q_inputdevice_qbase_metacast(void* self, const char* param1) {
+    return QInputDevice_QBaseMetacast((QInputDevice*)self, param1);
 }
 
 int32_t q_inputdevice_metacall(void* self, int32_t param1, int param2, void* param3) {

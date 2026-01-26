@@ -167,21 +167,6 @@ void k_abstractviewadapter_qbase_connect(void* self, int32_t signal, void* recei
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
-///
-/// @param self KAbstractViewAdapter*
-///
-const QMetaObject* k_abstractviewadapter_meta_object(void* self);
-
-/// Inherited from QObject
-///
-/// @param self KAbstractViewAdapter*
-/// @param param1 const char*
-///
-void* k_abstractviewadapter_metacast(void* self, const char* param1);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
@@ -567,6 +552,70 @@ void k_abstractviewadapter_destroyed1(void* self, void* param1);
 /// @param callback void func(KAbstractViewAdapter* self, QObject* param1)
 ///
 void k_abstractviewadapter_on_destroyed1(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self KAbstractViewAdapter*
+///
+const QMetaObject* k_abstractviewadapter_meta_object(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self KAbstractViewAdapter*
+///
+const QMetaObject* k_abstractviewadapter_qbase_meta_object(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self KAbstractViewAdapter*
+/// @param callback const QMetaObject* func()
+///
+void k_abstractviewadapter_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qt_metacast)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self KAbstractViewAdapter*
+/// @param param1 const char*
+///
+void* k_abstractviewadapter_metacast(void* self, const char* param1);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qt_metacast)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self KAbstractViewAdapter*
+/// @param param1 const char*
+///
+void* k_abstractviewadapter_qbase_metacast(void* self, const char* param1);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#qt_metacast)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self KAbstractViewAdapter*
+/// @param callback void* func(KAbstractViewAdapter* self, const char* param1)
+///
+void k_abstractviewadapter_on_metacast(void* self, void* (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///

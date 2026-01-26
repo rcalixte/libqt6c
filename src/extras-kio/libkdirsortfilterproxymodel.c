@@ -27,8 +27,24 @@ const QMetaObject* k_dirsortfilterproxymodel_meta_object(void* self) {
     return KDirSortFilterProxyModel_MetaObject((KDirSortFilterProxyModel*)self);
 }
 
+void k_dirsortfilterproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KDirSortFilterProxyModel_OnMetaObject((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_dirsortfilterproxymodel_qbase_meta_object(void* self) {
+    return KDirSortFilterProxyModel_QBaseMetaObject((KDirSortFilterProxyModel*)self);
+}
+
 void* k_dirsortfilterproxymodel_metacast(void* self, const char* param1) {
     return KDirSortFilterProxyModel_Metacast((KDirSortFilterProxyModel*)self, param1);
+}
+
+void k_dirsortfilterproxymodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KDirSortFilterProxyModel_OnMetacast((KDirSortFilterProxyModel*)self, (intptr_t)callback);
+}
+
+void* k_dirsortfilterproxymodel_qbase_metacast(void* self, const char* param1) {
+    return KDirSortFilterProxyModel_QBaseMetacast((KDirSortFilterProxyModel*)self, param1);
 }
 
 int32_t k_dirsortfilterproxymodel_metacall(void* self, int32_t param1, int param2, void* param3) {

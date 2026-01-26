@@ -31,10 +31,41 @@ QComboBox* q_combobox_new2();
 ///
 const QMetaObject* q_combobox_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QComboBox*
+/// @param callback const QMetaObject* func()
+///
+void q_combobox_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QComboBox*
+///
+const QMetaObject* q_combobox_qbase_meta_object(void* self);
+
 /// @param self QComboBox*
 /// @param param1 const char*
 ///
 void* q_combobox_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QComboBox*
+/// @param callback void* func(QComboBox* self, const char* param1)
+///
+void q_combobox_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QComboBox*
+/// @param param1 const char*
+///
+void* q_combobox_qbase_metacast(void* self, const char* param1);
 
 /// @param self QComboBox*
 /// @param param1 enum QMetaObject__Call

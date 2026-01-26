@@ -48,8 +48,24 @@ const QMetaObject* q_textedit_meta_object(void* self) {
     return QTextEdit_MetaObject((QTextEdit*)self);
 }
 
+void q_textedit_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QTextEdit_OnMetaObject((QTextEdit*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_textedit_qbase_meta_object(void* self) {
+    return QTextEdit_QBaseMetaObject((QTextEdit*)self);
+}
+
 void* q_textedit_metacast(void* self, const char* param1) {
     return QTextEdit_Metacast((QTextEdit*)self, param1);
+}
+
+void q_textedit_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QTextEdit_OnMetacast((QTextEdit*)self, (intptr_t)callback);
+}
+
+void* q_textedit_qbase_metacast(void* self, const char* param1) {
+    return QTextEdit_QBaseMetacast((QTextEdit*)self, param1);
 }
 
 int32_t q_textedit_metacall(void* self, int32_t param1, int param2, void* param3) {

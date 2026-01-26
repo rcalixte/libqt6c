@@ -40,10 +40,41 @@ QMdiSubWindow* q_mdisubwindow_new3(void* parent, int32_t flags);
 ///
 const QMetaObject* q_mdisubwindow_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QMdiSubWindow*
+/// @param callback const QMetaObject* func()
+///
+void q_mdisubwindow_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QMdiSubWindow*
+///
+const QMetaObject* q_mdisubwindow_qbase_meta_object(void* self);
+
 /// @param self QMdiSubWindow*
 /// @param param1 const char*
 ///
 void* q_mdisubwindow_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QMdiSubWindow*
+/// @param callback void* func(QMdiSubWindow* self, const char* param1)
+///
+void q_mdisubwindow_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QMdiSubWindow*
+/// @param param1 const char*
+///
+void* q_mdisubwindow_qbase_metacast(void* self, const char* param1);
 
 /// @param self QMdiSubWindow*
 /// @param param1 enum QMetaObject__Call

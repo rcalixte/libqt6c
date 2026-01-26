@@ -35,8 +35,24 @@ const QMetaObject* k_fontchooser_meta_object(void* self) {
     return KFontChooser_MetaObject((KFontChooser*)self);
 }
 
+void k_fontchooser_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KFontChooser_OnMetaObject((KFontChooser*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_fontchooser_qbase_meta_object(void* self) {
+    return KFontChooser_QBaseMetaObject((KFontChooser*)self);
+}
+
 void* k_fontchooser_metacast(void* self, const char* param1) {
     return KFontChooser_Metacast((KFontChooser*)self, param1);
+}
+
+void k_fontchooser_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KFontChooser_OnMetacast((KFontChooser*)self, (intptr_t)callback);
+}
+
+void* k_fontchooser_qbase_metacast(void* self, const char* param1) {
+    return KFontChooser_QBaseMetacast((KFontChooser*)self, param1);
 }
 
 int32_t k_fontchooser_metacall(void* self, int32_t param1, int param2, void* param3) {

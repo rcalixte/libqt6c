@@ -45,8 +45,24 @@ const QMetaObject* k_richtextedit_meta_object(void* self) {
     return KRichTextEdit_MetaObject((KRichTextEdit*)self);
 }
 
+void k_richtextedit_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KRichTextEdit_OnMetaObject((KRichTextEdit*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_richtextedit_qbase_meta_object(void* self) {
+    return KRichTextEdit_QBaseMetaObject((KRichTextEdit*)self);
+}
+
 void* k_richtextedit_metacast(void* self, const char* param1) {
     return KRichTextEdit_Metacast((KRichTextEdit*)self, param1);
+}
+
+void k_richtextedit_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KRichTextEdit_OnMetacast((KRichTextEdit*)self, (intptr_t)callback);
+}
+
+void* k_richtextedit_qbase_metacast(void* self, const char* param1) {
+    return KRichTextEdit_QBaseMetacast((KRichTextEdit*)self, param1);
 }
 
 int32_t k_richtextedit_metacall(void* self, int32_t param1, int param2, void* param3) {

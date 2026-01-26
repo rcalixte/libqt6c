@@ -28,8 +28,24 @@ const QMetaObject* k_keysequencewidget_meta_object(void* self) {
     return KKeySequenceWidget_MetaObject((KKeySequenceWidget*)self);
 }
 
+void k_keysequencewidget_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KKeySequenceWidget_OnMetaObject((KKeySequenceWidget*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_keysequencewidget_qbase_meta_object(void* self) {
+    return KKeySequenceWidget_QBaseMetaObject((KKeySequenceWidget*)self);
+}
+
 void* k_keysequencewidget_metacast(void* self, const char* param1) {
     return KKeySequenceWidget_Metacast((KKeySequenceWidget*)self, param1);
+}
+
+void k_keysequencewidget_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KKeySequenceWidget_OnMetacast((KKeySequenceWidget*)self, (intptr_t)callback);
+}
+
+void* k_keysequencewidget_qbase_metacast(void* self, const char* param1) {
+    return KKeySequenceWidget_QBaseMetacast((KKeySequenceWidget*)self, param1);
 }
 
 int32_t k_keysequencewidget_metacall(void* self, int32_t param1, int param2, void* param3) {

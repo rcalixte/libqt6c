@@ -24,8 +24,24 @@ const QMetaObject* k_commandbar_meta_object(void* self) {
     return KCommandBar_MetaObject((KCommandBar*)self);
 }
 
+void k_commandbar_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KCommandBar_OnMetaObject((KCommandBar*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_commandbar_qbase_meta_object(void* self) {
+    return KCommandBar_QBaseMetaObject((KCommandBar*)self);
+}
+
 void* k_commandbar_metacast(void* self, const char* param1) {
     return KCommandBar_Metacast((KCommandBar*)self, param1);
+}
+
+void k_commandbar_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KCommandBar_OnMetacast((KCommandBar*)self, (intptr_t)callback);
+}
+
+void* k_commandbar_qbase_metacast(void* self, const char* param1) {
+    return KCommandBar_QBaseMetacast((KCommandBar*)self, param1);
 }
 
 int32_t k_commandbar_metacall(void* self, int32_t param1, int param2, void* param3) {

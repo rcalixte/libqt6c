@@ -33,8 +33,24 @@ const QMetaObject* k_colorpicker__kcolorpicker_meta_object(void* self) {
     return kColorPicker__KColorPicker_MetaObject((kColorPicker__KColorPicker*)self);
 }
 
+void k_colorpicker__kcolorpicker_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    kColorPicker__KColorPicker_OnMetaObject((kColorPicker__KColorPicker*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_colorpicker__kcolorpicker_qbase_meta_object(void* self) {
+    return kColorPicker__KColorPicker_QBaseMetaObject((kColorPicker__KColorPicker*)self);
+}
+
 void* k_colorpicker__kcolorpicker_metacast(void* self, const char* param1) {
     return kColorPicker__KColorPicker_Metacast((kColorPicker__KColorPicker*)self, param1);
+}
+
+void k_colorpicker__kcolorpicker_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    kColorPicker__KColorPicker_OnMetacast((kColorPicker__KColorPicker*)self, (intptr_t)callback);
+}
+
+void* k_colorpicker__kcolorpicker_qbase_metacast(void* self, const char* param1) {
+    return kColorPicker__KColorPicker_QBaseMetacast((kColorPicker__KColorPicker*)self, param1);
 }
 
 int32_t k_colorpicker__kcolorpicker_metacall(void* self, int32_t param1, int param2, void* param3) {

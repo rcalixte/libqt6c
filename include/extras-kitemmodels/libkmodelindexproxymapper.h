@@ -36,10 +36,41 @@ KModelIndexProxyMapper* k_modelindexproxymapper_new2(void* leftModel, void* righ
 ///
 const QMetaObject* k_modelindexproxymapper_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KModelIndexProxyMapper*
+/// @param callback const QMetaObject* func()
+///
+void k_modelindexproxymapper_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KModelIndexProxyMapper*
+///
+const QMetaObject* k_modelindexproxymapper_qbase_meta_object(void* self);
+
 /// @param self KModelIndexProxyMapper*
 /// @param param1 const char*
 ///
 void* k_modelindexproxymapper_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KModelIndexProxyMapper*
+/// @param callback void* func(KModelIndexProxyMapper* self, const char* param1)
+///
+void k_modelindexproxymapper_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KModelIndexProxyMapper*
+/// @param param1 const char*
+///
+void* k_modelindexproxymapper_qbase_metacast(void* self, const char* param1);
 
 /// @param self KModelIndexProxyMapper*
 /// @param param1 enum QMetaObject__Call

@@ -43,8 +43,24 @@ const QMetaObject* k_separator_meta_object(void* self) {
     return KSeparator_MetaObject((KSeparator*)self);
 }
 
+void k_separator_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KSeparator_OnMetaObject((KSeparator*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_separator_qbase_meta_object(void* self) {
+    return KSeparator_QBaseMetaObject((KSeparator*)self);
+}
+
 void* k_separator_metacast(void* self, const char* param1) {
     return KSeparator_Metacast((KSeparator*)self, param1);
+}
+
+void k_separator_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KSeparator_OnMetacast((KSeparator*)self, (intptr_t)callback);
+}
+
+void* k_separator_qbase_metacast(void* self, const char* param1) {
+    return KSeparator_QBaseMetacast((KSeparator*)self, param1);
 }
 
 int32_t k_separator_metacall(void* self, int32_t param1, int param2, void* param3) {

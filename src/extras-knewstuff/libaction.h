@@ -27,10 +27,41 @@ KNSWidgets__Action* k_nswidgets__action_new(const char* text, const char* config
 ///
 const QMetaObject* k_nswidgets__action_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KNSWidgets__Action*
+/// @param callback const QMetaObject* func()
+///
+void k_nswidgets__action_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KNSWidgets__Action*
+///
+const QMetaObject* k_nswidgets__action_qbase_meta_object(void* self);
+
 /// @param self KNSWidgets__Action*
 /// @param param1 const char*
 ///
 void* k_nswidgets__action_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KNSWidgets__Action*
+/// @param callback void* func(KNSWidgets__Action* self, const char* param1)
+///
+void k_nswidgets__action_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KNSWidgets__Action*
+/// @param param1 const char*
+///
+void* k_nswidgets__action_qbase_metacast(void* self, const char* param1);
 
 /// @param self KNSWidgets__Action*
 /// @param param1 enum QMetaObject__Call

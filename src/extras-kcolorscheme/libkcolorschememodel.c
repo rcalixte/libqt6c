@@ -22,8 +22,24 @@ const QMetaObject* k_colorschememodel_meta_object(void* self) {
     return KColorSchemeModel_MetaObject((KColorSchemeModel*)self);
 }
 
+void k_colorschememodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KColorSchemeModel_OnMetaObject((KColorSchemeModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_colorschememodel_qbase_meta_object(void* self) {
+    return KColorSchemeModel_QBaseMetaObject((KColorSchemeModel*)self);
+}
+
 void* k_colorschememodel_metacast(void* self, const char* param1) {
     return KColorSchemeModel_Metacast((KColorSchemeModel*)self, param1);
+}
+
+void k_colorschememodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KColorSchemeModel_OnMetacast((KColorSchemeModel*)self, (intptr_t)callback);
+}
+
+void* k_colorschememodel_qbase_metacast(void* self, const char* param1) {
+    return KColorSchemeModel_QBaseMetacast((KColorSchemeModel*)self, param1);
 }
 
 int32_t k_colorschememodel_metacall(void* self, int32_t param1, int param2, void* param3) {

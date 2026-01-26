@@ -26,8 +26,24 @@ const QMetaObject* k_notificationaction_meta_object(void* self) {
     return KNotificationAction_MetaObject((KNotificationAction*)self);
 }
 
+void k_notificationaction_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KNotificationAction_OnMetaObject((KNotificationAction*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_notificationaction_qbase_meta_object(void* self) {
+    return KNotificationAction_QBaseMetaObject((KNotificationAction*)self);
+}
+
 void* k_notificationaction_metacast(void* self, const char* param1) {
     return KNotificationAction_Metacast((KNotificationAction*)self, param1);
+}
+
+void k_notificationaction_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KNotificationAction_OnMetacast((KNotificationAction*)self, (intptr_t)callback);
+}
+
+void* k_notificationaction_qbase_metacast(void* self, const char* param1) {
+    return KNotificationAction_QBaseMetacast((KNotificationAction*)self, param1);
 }
 
 int32_t k_notificationaction_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -425,8 +441,24 @@ const QMetaObject* k_notification_meta_object(void* self) {
     return KNotification_MetaObject((KNotification*)self);
 }
 
+void k_notification_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KNotification_OnMetaObject((KNotification*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_notification_qbase_meta_object(void* self) {
+    return KNotification_QBaseMetaObject((KNotification*)self);
+}
+
 void* k_notification_metacast(void* self, const char* param1) {
     return KNotification_Metacast((KNotification*)self, param1);
+}
+
+void k_notification_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KNotification_OnMetacast((KNotification*)self, (intptr_t)callback);
+}
+
+void* k_notification_qbase_metacast(void* self, const char* param1) {
+    return KNotification_QBaseMetacast((KNotification*)self, param1);
 }
 
 int32_t k_notification_metacall(void* self, int32_t param1, int param2, void* param3) {

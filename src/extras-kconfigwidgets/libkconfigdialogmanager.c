@@ -16,8 +16,24 @@ const QMetaObject* k_configdialogmanager_meta_object(void* self) {
     return KConfigDialogManager_MetaObject((KConfigDialogManager*)self);
 }
 
+void k_configdialogmanager_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KConfigDialogManager_OnMetaObject((KConfigDialogManager*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_configdialogmanager_qbase_meta_object(void* self) {
+    return KConfigDialogManager_QBaseMetaObject((KConfigDialogManager*)self);
+}
+
 void* k_configdialogmanager_metacast(void* self, const char* param1) {
     return KConfigDialogManager_Metacast((KConfigDialogManager*)self, param1);
+}
+
+void k_configdialogmanager_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KConfigDialogManager_OnMetacast((KConfigDialogManager*)self, (intptr_t)callback);
+}
+
+void* k_configdialogmanager_qbase_metacast(void* self, const char* param1) {
+    return KConfigDialogManager_QBaseMetacast((KConfigDialogManager*)self, param1);
 }
 
 int32_t k_configdialogmanager_metacall(void* self, int32_t param1, int param2, void* param3) {

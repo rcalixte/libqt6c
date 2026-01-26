@@ -35,8 +35,24 @@ const QMetaObject* k_charselect_meta_object(void* self) {
     return KCharSelect_MetaObject((KCharSelect*)self);
 }
 
+void k_charselect_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KCharSelect_OnMetaObject((KCharSelect*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_charselect_qbase_meta_object(void* self) {
+    return KCharSelect_QBaseMetaObject((KCharSelect*)self);
+}
+
 void* k_charselect_metacast(void* self, const char* param1) {
     return KCharSelect_Metacast((KCharSelect*)self, param1);
+}
+
+void k_charselect_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KCharSelect_OnMetacast((KCharSelect*)self, (intptr_t)callback);
+}
+
+void* k_charselect_qbase_metacast(void* self, const char* param1) {
+    return KCharSelect_QBaseMetacast((KCharSelect*)self, param1);
 }
 
 int32_t k_charselect_metacall(void* self, int32_t param1, int param2, void* param3) {

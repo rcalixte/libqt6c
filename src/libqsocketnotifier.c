@@ -25,8 +25,24 @@ const QMetaObject* q_socketnotifier_meta_object(void* self) {
     return QSocketNotifier_MetaObject((QSocketNotifier*)self);
 }
 
+void q_socketnotifier_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QSocketNotifier_OnMetaObject((QSocketNotifier*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_socketnotifier_qbase_meta_object(void* self) {
+    return QSocketNotifier_QBaseMetaObject((QSocketNotifier*)self);
+}
+
 void* q_socketnotifier_metacast(void* self, const char* param1) {
     return QSocketNotifier_Metacast((QSocketNotifier*)self, param1);
+}
+
+void q_socketnotifier_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QSocketNotifier_OnMetacast((QSocketNotifier*)self, (intptr_t)callback);
+}
+
+void* q_socketnotifier_qbase_metacast(void* self, const char* param1) {
+    return QSocketNotifier_QBaseMetacast((QSocketNotifier*)self, param1);
 }
 
 int32_t q_socketnotifier_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -40,8 +40,24 @@ const QMetaObject* q_chartview_meta_object(void* self) {
     return QChartView_MetaObject((QChartView*)self);
 }
 
+void q_chartview_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QChartView_OnMetaObject((QChartView*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_chartview_qbase_meta_object(void* self) {
+    return QChartView_QBaseMetaObject((QChartView*)self);
+}
+
 void* q_chartview_metacast(void* self, const char* param1) {
     return QChartView_Metacast((QChartView*)self, param1);
+}
+
+void q_chartview_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QChartView_OnMetacast((QChartView*)self, (intptr_t)callback);
+}
+
+void* q_chartview_qbase_metacast(void* self, const char* param1) {
+    return QChartView_QBaseMetacast((QChartView*)self, param1);
 }
 
 int32_t q_chartview_metacall(void* self, int32_t param1, int param2, void* param3) {

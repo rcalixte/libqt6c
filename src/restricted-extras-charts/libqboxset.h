@@ -79,10 +79,41 @@ QBoxSet* q_boxset_new6(double le, double lq, double m, double uq, double ue, con
 ///
 const QMetaObject* q_boxset_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QBoxSet*
+/// @param callback const QMetaObject* func()
+///
+void q_boxset_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QBoxSet*
+///
+const QMetaObject* q_boxset_qbase_meta_object(void* self);
+
 /// @param self QBoxSet*
 /// @param param1 const char*
 ///
 void* q_boxset_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QBoxSet*
+/// @param callback void* func(QBoxSet* self, const char* param1)
+///
+void q_boxset_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QBoxSet*
+/// @param param1 const char*
+///
+void* q_boxset_qbase_metacast(void* self, const char* param1);
 
 /// @param self QBoxSet*
 /// @param param1 enum QMetaObject__Call

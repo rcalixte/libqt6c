@@ -48,10 +48,41 @@ QChartView* q_chartview_new4(void* chart, void* parent);
 ///
 const QMetaObject* q_chartview_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QChartView*
+/// @param callback const QMetaObject* func()
+///
+void q_chartview_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QChartView*
+///
+const QMetaObject* q_chartview_qbase_meta_object(void* self);
+
 /// @param self QChartView*
 /// @param param1 const char*
 ///
 void* q_chartview_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QChartView*
+/// @param callback void* func(QChartView* self, const char* param1)
+///
+void q_chartview_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QChartView*
+/// @param param1 const char*
+///
+void* q_chartview_qbase_metacast(void* self, const char* param1);
 
 /// @param self QChartView*
 /// @param param1 enum QMetaObject__Call

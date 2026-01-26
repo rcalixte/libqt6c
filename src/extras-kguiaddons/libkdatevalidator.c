@@ -19,8 +19,24 @@ const QMetaObject* k_datevalidator_meta_object(void* self) {
     return KDateValidator_MetaObject((KDateValidator*)self);
 }
 
+void k_datevalidator_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KDateValidator_OnMetaObject((KDateValidator*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_datevalidator_qbase_meta_object(void* self) {
+    return KDateValidator_QBaseMetaObject((KDateValidator*)self);
+}
+
 void* k_datevalidator_metacast(void* self, const char* param1) {
     return KDateValidator_Metacast((KDateValidator*)self, param1);
+}
+
+void k_datevalidator_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KDateValidator_OnMetacast((KDateValidator*)self, (intptr_t)callback);
+}
+
+void* k_datevalidator_qbase_metacast(void* self, const char* param1) {
+    return KDateValidator_QBaseMetacast((KDateValidator*)self, param1);
 }
 
 int32_t k_datevalidator_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -32,8 +32,24 @@ const QMetaObject* q_designerformeditorinterface_meta_object(void* self) {
     return QDesignerFormEditorInterface_MetaObject((QDesignerFormEditorInterface*)self);
 }
 
+void q_designerformeditorinterface_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDesignerFormEditorInterface_OnMetaObject((QDesignerFormEditorInterface*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_designerformeditorinterface_qbase_meta_object(void* self) {
+    return QDesignerFormEditorInterface_QBaseMetaObject((QDesignerFormEditorInterface*)self);
+}
+
 void* q_designerformeditorinterface_metacast(void* self, const char* param1) {
     return QDesignerFormEditorInterface_Metacast((QDesignerFormEditorInterface*)self, param1);
+}
+
+void q_designerformeditorinterface_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDesignerFormEditorInterface_OnMetacast((QDesignerFormEditorInterface*)self, (intptr_t)callback);
+}
+
+void* q_designerformeditorinterface_qbase_metacast(void* self, const char* param1) {
+    return QDesignerFormEditorInterface_QBaseMetacast((QDesignerFormEditorInterface*)self, param1);
 }
 
 int32_t q_designerformeditorinterface_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -25,8 +25,24 @@ const QMetaObject* k_nscore__enginebase_meta_object(void* self) {
     return KNSCore__EngineBase_MetaObject((KNSCore__EngineBase*)self);
 }
 
+void k_nscore__enginebase_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KNSCore__EngineBase_OnMetaObject((KNSCore__EngineBase*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_nscore__enginebase_qbase_meta_object(void* self) {
+    return KNSCore__EngineBase_QBaseMetaObject((KNSCore__EngineBase*)self);
+}
+
 void* k_nscore__enginebase_metacast(void* self, const char* param1) {
     return KNSCore__EngineBase_Metacast((KNSCore__EngineBase*)self, param1);
+}
+
+void k_nscore__enginebase_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KNSCore__EngineBase_OnMetacast((KNSCore__EngineBase*)self, (intptr_t)callback);
+}
+
+void* k_nscore__enginebase_qbase_metacast(void* self, const char* param1) {
+    return KNSCore__EngineBase_QBaseMetacast((KNSCore__EngineBase*)self, param1);
 }
 
 int32_t k_nscore__enginebase_metacall(void* self, int32_t param1, int param2, void* param3) {

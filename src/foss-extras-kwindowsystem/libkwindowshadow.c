@@ -44,8 +44,24 @@ const QMetaObject* k_windowshadow_meta_object(void* self) {
     return KWindowShadow_MetaObject((KWindowShadow*)self);
 }
 
+void k_windowshadow_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KWindowShadow_OnMetaObject((KWindowShadow*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_windowshadow_qbase_meta_object(void* self) {
+    return KWindowShadow_QBaseMetaObject((KWindowShadow*)self);
+}
+
 void* k_windowshadow_metacast(void* self, const char* param1) {
     return KWindowShadow_Metacast((KWindowShadow*)self, param1);
+}
+
+void k_windowshadow_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KWindowShadow_OnMetacast((KWindowShadow*)self, (intptr_t)callback);
+}
+
+void* k_windowshadow_qbase_metacast(void* self, const char* param1) {
+    return KWindowShadow_QBaseMetacast((KWindowShadow*)self, param1);
 }
 
 int32_t k_windowshadow_metacall(void* self, int32_t param1, int param2, void* param3) {

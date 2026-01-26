@@ -40,10 +40,41 @@ QOpenGLWidget* q_openglwidget_new3(void* parent, int32_t f);
 ///
 const QMetaObject* q_openglwidget_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QOpenGLWidget*
+/// @param callback const QMetaObject* func()
+///
+void q_openglwidget_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QOpenGLWidget*
+///
+const QMetaObject* q_openglwidget_qbase_meta_object(void* self);
+
 /// @param self QOpenGLWidget*
 /// @param param1 const char*
 ///
 void* q_openglwidget_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QOpenGLWidget*
+/// @param callback void* func(QOpenGLWidget* self, const char* param1)
+///
+void q_openglwidget_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QOpenGLWidget*
+/// @param param1 const char*
+///
+void* q_openglwidget_qbase_metacast(void* self, const char* param1);
 
 /// @param self QOpenGLWidget*
 /// @param param1 enum QMetaObject__Call

@@ -31,10 +31,41 @@ QPdfPageNavigator* q_pdfpagenavigator_new2(void* parent);
 ///
 const QMetaObject* q_pdfpagenavigator_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QPdfPageNavigator*
+/// @param callback const QMetaObject* func()
+///
+void q_pdfpagenavigator_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QPdfPageNavigator*
+///
+const QMetaObject* q_pdfpagenavigator_qbase_meta_object(void* self);
+
 /// @param self QPdfPageNavigator*
 /// @param param1 const char*
 ///
 void* q_pdfpagenavigator_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QPdfPageNavigator*
+/// @param callback void* func(QPdfPageNavigator* self, const char* param1)
+///
+void q_pdfpagenavigator_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QPdfPageNavigator*
+/// @param param1 const char*
+///
+void* q_pdfpagenavigator_qbase_metacast(void* self, const char* param1);
 
 /// @param self QPdfPageNavigator*
 /// @param param1 enum QMetaObject__Call

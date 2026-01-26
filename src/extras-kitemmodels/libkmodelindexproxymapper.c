@@ -19,8 +19,24 @@ const QMetaObject* k_modelindexproxymapper_meta_object(void* self) {
     return KModelIndexProxyMapper_MetaObject((KModelIndexProxyMapper*)self);
 }
 
+void k_modelindexproxymapper_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KModelIndexProxyMapper_OnMetaObject((KModelIndexProxyMapper*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_modelindexproxymapper_qbase_meta_object(void* self) {
+    return KModelIndexProxyMapper_QBaseMetaObject((KModelIndexProxyMapper*)self);
+}
+
 void* k_modelindexproxymapper_metacast(void* self, const char* param1) {
     return KModelIndexProxyMapper_Metacast((KModelIndexProxyMapper*)self, param1);
+}
+
+void k_modelindexproxymapper_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KModelIndexProxyMapper_OnMetacast((KModelIndexProxyMapper*)self, (intptr_t)callback);
+}
+
+void* k_modelindexproxymapper_qbase_metacast(void* self, const char* param1) {
+    return KModelIndexProxyMapper_QBaseMetacast((KModelIndexProxyMapper*)self, param1);
 }
 
 int32_t k_modelindexproxymapper_metacall(void* self, int32_t param1, int param2, void* param3) {

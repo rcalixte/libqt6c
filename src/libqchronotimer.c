@@ -25,8 +25,24 @@ const QMetaObject* q_chronotimer_meta_object(void* self) {
     return QChronoTimer_MetaObject((QChronoTimer*)self);
 }
 
+void q_chronotimer_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QChronoTimer_OnMetaObject((QChronoTimer*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_chronotimer_qbase_meta_object(void* self) {
+    return QChronoTimer_QBaseMetaObject((QChronoTimer*)self);
+}
+
 void* q_chronotimer_metacast(void* self, const char* param1) {
     return QChronoTimer_Metacast((QChronoTimer*)self, param1);
+}
+
+void q_chronotimer_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QChronoTimer_OnMetacast((QChronoTimer*)self, (intptr_t)callback);
+}
+
+void* q_chronotimer_qbase_metacast(void* self, const char* param1) {
+    return QChronoTimer_QBaseMetacast((QChronoTimer*)self, param1);
 }
 
 int32_t q_chronotimer_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -27,8 +27,24 @@ const QMetaObject* q_pluginloader_meta_object(void* self) {
     return QPluginLoader_MetaObject((QPluginLoader*)self);
 }
 
+void q_pluginloader_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QPluginLoader_OnMetaObject((QPluginLoader*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_pluginloader_qbase_meta_object(void* self) {
+    return QPluginLoader_QBaseMetaObject((QPluginLoader*)self);
+}
+
 void* q_pluginloader_metacast(void* self, const char* param1) {
     return QPluginLoader_Metacast((QPluginLoader*)self, param1);
+}
+
+void q_pluginloader_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QPluginLoader_OnMetacast((QPluginLoader*)self, (intptr_t)callback);
+}
+
+void* q_pluginloader_qbase_metacast(void* self, const char* param1) {
+    return QPluginLoader_QBaseMetacast((QPluginLoader*)self, param1);
 }
 
 int32_t q_pluginloader_metacall(void* self, int32_t param1, int param2, void* param3) {

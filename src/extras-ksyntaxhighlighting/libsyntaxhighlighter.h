@@ -39,10 +39,41 @@ KSyntaxHighlighting__SyntaxHighlighter* k_syntaxhighlighting__syntaxhighlighter_
 ///
 const QMetaObject* k_syntaxhighlighting__syntaxhighlighter_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KSyntaxHighlighting__SyntaxHighlighter*
+/// @param callback const QMetaObject* func()
+///
+void k_syntaxhighlighting__syntaxhighlighter_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KSyntaxHighlighting__SyntaxHighlighter*
+///
+const QMetaObject* k_syntaxhighlighting__syntaxhighlighter_qbase_meta_object(void* self);
+
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param param1 const char*
 ///
 void* k_syntaxhighlighting__syntaxhighlighter_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KSyntaxHighlighting__SyntaxHighlighter*
+/// @param callback void* func(KSyntaxHighlighting__SyntaxHighlighter* self, const char* param1)
+///
+void k_syntaxhighlighting__syntaxhighlighter_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KSyntaxHighlighting__SyntaxHighlighter*
+/// @param param1 const char*
+///
+void* k_syntaxhighlighting__syntaxhighlighter_qbase_metacast(void* self, const char* param1);
 
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param param1 enum QMetaObject__Call

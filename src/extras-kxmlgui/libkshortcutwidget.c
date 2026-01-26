@@ -27,8 +27,24 @@ const QMetaObject* k_shortcutwidget_meta_object(void* self) {
     return KShortcutWidget_MetaObject((KShortcutWidget*)self);
 }
 
+void k_shortcutwidget_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KShortcutWidget_OnMetaObject((KShortcutWidget*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_shortcutwidget_qbase_meta_object(void* self) {
+    return KShortcutWidget_QBaseMetaObject((KShortcutWidget*)self);
+}
+
 void* k_shortcutwidget_metacast(void* self, const char* param1) {
     return KShortcutWidget_Metacast((KShortcutWidget*)self, param1);
+}
+
+void k_shortcutwidget_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KShortcutWidget_OnMetacast((KShortcutWidget*)self, (intptr_t)callback);
+}
+
+void* k_shortcutwidget_qbase_metacast(void* self, const char* param1) {
+    return KShortcutWidget_QBaseMetacast((KShortcutWidget*)self, param1);
 }
 
 int32_t k_shortcutwidget_metacall(void* self, int32_t param1, int param2, void* param3) {

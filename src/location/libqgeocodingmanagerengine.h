@@ -34,10 +34,41 @@ QGeoCodingManagerEngine* q_geocodingmanagerengine_new2(libqt_map parameters, voi
 ///
 const QMetaObject* q_geocodingmanagerengine_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QGeoCodingManagerEngine*
+/// @param callback const QMetaObject* func()
+///
+void q_geocodingmanagerengine_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QGeoCodingManagerEngine*
+///
+const QMetaObject* q_geocodingmanagerengine_qbase_meta_object(void* self);
+
 /// @param self QGeoCodingManagerEngine*
 /// @param param1 const char*
 ///
 void* q_geocodingmanagerengine_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QGeoCodingManagerEngine*
+/// @param callback void* func(QGeoCodingManagerEngine* self, const char* param1)
+///
+void q_geocodingmanagerengine_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QGeoCodingManagerEngine*
+/// @param param1 const char*
+///
+void* q_geocodingmanagerengine_qbase_metacast(void* self, const char* param1);
 
 /// @param self QGeoCodingManagerEngine*
 /// @param param1 enum QMetaObject__Call

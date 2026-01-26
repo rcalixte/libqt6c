@@ -34,10 +34,41 @@ QPlaceIdReply* q_placeidreply_new2(int32_t operationType, void* parent);
 ///
 const QMetaObject* q_placeidreply_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QPlaceIdReply*
+/// @param callback const QMetaObject* func()
+///
+void q_placeidreply_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QPlaceIdReply*
+///
+const QMetaObject* q_placeidreply_qbase_meta_object(void* self);
+
 /// @param self QPlaceIdReply*
 /// @param param1 const char*
 ///
 void* q_placeidreply_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QPlaceIdReply*
+/// @param callback void* func(QPlaceIdReply* self, const char* param1)
+///
+void q_placeidreply_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QPlaceIdReply*
+/// @param param1 const char*
+///
+void* q_placeidreply_qbase_metacast(void* self, const char* param1);
 
 /// @param self QPlaceIdReply*
 /// @param param1 enum QMetaObject__Call

@@ -22,8 +22,24 @@ const QMetaObject* q_accounts__watch_meta_object(void* self) {
     return Accounts__Watch_MetaObject((Accounts__Watch*)self);
 }
 
+void q_accounts__watch_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    Accounts__Watch_OnMetaObject((Accounts__Watch*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_accounts__watch_qbase_meta_object(void* self) {
+    return Accounts__Watch_QBaseMetaObject((Accounts__Watch*)self);
+}
+
 void* q_accounts__watch_metacast(void* self, const char* param1) {
     return Accounts__Watch_Metacast((Accounts__Watch*)self, param1);
+}
+
+void q_accounts__watch_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    Accounts__Watch_OnMetacast((Accounts__Watch*)self, (intptr_t)callback);
+}
+
+void* q_accounts__watch_qbase_metacast(void* self, const char* param1) {
+    return Accounts__Watch_QBaseMetacast((Accounts__Watch*)self, param1);
 }
 
 int32_t q_accounts__watch_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -398,8 +414,24 @@ const QMetaObject* q_accounts__account_meta_object(void* self) {
     return Accounts__Account_MetaObject((Accounts__Account*)self);
 }
 
+void q_accounts__account_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    Accounts__Account_OnMetaObject((Accounts__Account*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_accounts__account_qbase_meta_object(void* self) {
+    return Accounts__Account_QBaseMetaObject((Accounts__Account*)self);
+}
+
 void* q_accounts__account_metacast(void* self, const char* param1) {
     return Accounts__Account_Metacast((Accounts__Account*)self, param1);
+}
+
+void q_accounts__account_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    Accounts__Account_OnMetacast((Accounts__Account*)self, (intptr_t)callback);
+}
+
+void* q_accounts__account_qbase_metacast(void* self, const char* param1) {
+    return Accounts__Account_QBaseMetacast((Accounts__Account*)self, param1);
 }
 
 int32_t q_accounts__account_metacall(void* self, int32_t param1, int param2, void* param3) {

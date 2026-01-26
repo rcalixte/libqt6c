@@ -21,8 +21,24 @@ const QMetaObject* k_texteditor__mainwindow_meta_object(void* self) {
     return KTextEditor__MainWindow_MetaObject((KTextEditor__MainWindow*)self);
 }
 
+void k_texteditor__mainwindow_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KTextEditor__MainWindow_OnMetaObject((KTextEditor__MainWindow*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_texteditor__mainwindow_qbase_meta_object(void* self) {
+    return KTextEditor__MainWindow_QBaseMetaObject((KTextEditor__MainWindow*)self);
+}
+
 void* k_texteditor__mainwindow_metacast(void* self, const char* param1) {
     return KTextEditor__MainWindow_Metacast((KTextEditor__MainWindow*)self, param1);
+}
+
+void k_texteditor__mainwindow_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KTextEditor__MainWindow_OnMetacast((KTextEditor__MainWindow*)self, (intptr_t)callback);
+}
+
+void* k_texteditor__mainwindow_qbase_metacast(void* self, const char* param1) {
+    return KTextEditor__MainWindow_QBaseMetacast((KTextEditor__MainWindow*)self, param1);
 }
 
 int32_t k_texteditor__mainwindow_metacall(void* self, int32_t param1, int param2, void* param3) {

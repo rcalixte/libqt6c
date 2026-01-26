@@ -19,8 +19,24 @@ const QMetaObject* k_terminallauncherjob_meta_object(void* self) {
     return KTerminalLauncherJob_MetaObject((KTerminalLauncherJob*)self);
 }
 
+void k_terminallauncherjob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KTerminalLauncherJob_OnMetaObject((KTerminalLauncherJob*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_terminallauncherjob_qbase_meta_object(void* self) {
+    return KTerminalLauncherJob_QBaseMetaObject((KTerminalLauncherJob*)self);
+}
+
 void* k_terminallauncherjob_metacast(void* self, const char* param1) {
     return KTerminalLauncherJob_Metacast((KTerminalLauncherJob*)self, param1);
+}
+
+void k_terminallauncherjob_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KTerminalLauncherJob_OnMetacast((KTerminalLauncherJob*)self, (intptr_t)callback);
+}
+
+void* k_terminallauncherjob_qbase_metacast(void* self, const char* param1) {
+    return KTerminalLauncherJob_QBaseMetacast((KTerminalLauncherJob*)self, param1);
 }
 
 int32_t k_terminallauncherjob_metacall(void* self, int32_t param1, int param2, void* param3) {

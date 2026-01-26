@@ -22,8 +22,24 @@ const QMetaObject* q_scatterseries_meta_object(void* self) {
     return QScatterSeries_MetaObject((QScatterSeries*)self);
 }
 
+void q_scatterseries_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QScatterSeries_OnMetaObject((QScatterSeries*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_scatterseries_qbase_meta_object(void* self) {
+    return QScatterSeries_QBaseMetaObject((QScatterSeries*)self);
+}
+
 void* q_scatterseries_metacast(void* self, const char* param1) {
     return QScatterSeries_Metacast((QScatterSeries*)self, param1);
+}
+
+void q_scatterseries_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QScatterSeries_OnMetacast((QScatterSeries*)self, (intptr_t)callback);
+}
+
+void* q_scatterseries_qbase_metacast(void* self, const char* param1) {
+    return QScatterSeries_QBaseMetacast((QScatterSeries*)self, param1);
 }
 
 int32_t q_scatterseries_metacall(void* self, int32_t param1, int param2, void* param3) {

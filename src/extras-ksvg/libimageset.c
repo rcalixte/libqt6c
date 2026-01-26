@@ -30,8 +30,24 @@ const QMetaObject* k_svg__imageset_meta_object(void* self) {
     return KSvg__ImageSet_MetaObject((KSvg__ImageSet*)self);
 }
 
+void k_svg__imageset_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KSvg__ImageSet_OnMetaObject((KSvg__ImageSet*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_svg__imageset_qbase_meta_object(void* self) {
+    return KSvg__ImageSet_QBaseMetaObject((KSvg__ImageSet*)self);
+}
+
 void* k_svg__imageset_metacast(void* self, const char* param1) {
     return KSvg__ImageSet_Metacast((KSvg__ImageSet*)self, param1);
+}
+
+void k_svg__imageset_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KSvg__ImageSet_OnMetacast((KSvg__ImageSet*)self, (intptr_t)callback);
+}
+
+void* k_svg__imageset_qbase_metacast(void* self, const char* param1) {
+    return KSvg__ImageSet_QBaseMetacast((KSvg__ImageSet*)self, param1);
 }
 
 int32_t k_svg__imageset_metacall(void* self, int32_t param1, int param2, void* param3) {

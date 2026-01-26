@@ -29,8 +29,24 @@ const QMetaObject* k_datecombobox_meta_object(void* self) {
     return KDateComboBox_MetaObject((KDateComboBox*)self);
 }
 
+void k_datecombobox_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KDateComboBox_OnMetaObject((KDateComboBox*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_datecombobox_qbase_meta_object(void* self) {
+    return KDateComboBox_QBaseMetaObject((KDateComboBox*)self);
+}
+
 void* k_datecombobox_metacast(void* self, const char* param1) {
     return KDateComboBox_Metacast((KDateComboBox*)self, param1);
+}
+
+void k_datecombobox_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KDateComboBox_OnMetacast((KDateComboBox*)self, (intptr_t)callback);
+}
+
+void* k_datecombobox_qbase_metacast(void* self, const char* param1) {
+    return KDateComboBox_QBaseMetacast((KDateComboBox*)self, param1);
 }
 
 int32_t k_datecombobox_metacall(void* self, int32_t param1, int param2, void* param3) {

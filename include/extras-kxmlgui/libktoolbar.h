@@ -109,10 +109,41 @@ KToolBar* k_toolbar_new9(const char* objectName, void* parentWindow, int32_t are
 ///
 const QMetaObject* k_toolbar_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KToolBar*
+/// @param callback const QMetaObject* func()
+///
+void k_toolbar_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KToolBar*
+///
+const QMetaObject* k_toolbar_qbase_meta_object(void* self);
+
 /// @param self KToolBar*
 /// @param param1 const char*
 ///
 void* k_toolbar_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KToolBar*
+/// @param callback void* func(KToolBar* self, const char* param1)
+///
+void k_toolbar_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KToolBar*
+/// @param param1 const char*
+///
+void* k_toolbar_qbase_metacast(void* self, const char* param1);
 
 /// @param self KToolBar*
 /// @param param1 enum QMetaObject__Call

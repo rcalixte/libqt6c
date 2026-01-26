@@ -36,8 +36,24 @@ const QMetaObject* k_selector_meta_object(void* self) {
     return KSelector_MetaObject((KSelector*)self);
 }
 
+void k_selector_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KSelector_OnMetaObject((KSelector*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_selector_qbase_meta_object(void* self) {
+    return KSelector_QBaseMetaObject((KSelector*)self);
+}
+
 void* k_selector_metacast(void* self, const char* param1) {
     return KSelector_Metacast((KSelector*)self, param1);
+}
+
+void k_selector_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KSelector_OnMetacast((KSelector*)self, (intptr_t)callback);
+}
+
+void* k_selector_qbase_metacast(void* self, const char* param1) {
+    return KSelector_QBaseMetacast((KSelector*)self, param1);
 }
 
 int32_t k_selector_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -2354,8 +2370,24 @@ const QMetaObject* k_gradientselector_meta_object(void* self) {
     return KGradientSelector_MetaObject((KGradientSelector*)self);
 }
 
+void k_gradientselector_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KGradientSelector_OnMetaObject((KGradientSelector*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_gradientselector_qbase_meta_object(void* self) {
+    return KGradientSelector_QBaseMetaObject((KGradientSelector*)self);
+}
+
 void* k_gradientselector_metacast(void* self, const char* param1) {
     return KGradientSelector_Metacast((KGradientSelector*)self, param1);
+}
+
+void k_gradientselector_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KGradientSelector_OnMetacast((KGradientSelector*)self, (intptr_t)callback);
+}
+
+void* k_gradientselector_qbase_metacast(void* self, const char* param1) {
+    return KGradientSelector_QBaseMetacast((KGradientSelector*)self, param1);
 }
 
 int32_t k_gradientselector_metacall(void* self, int32_t param1, int param2, void* param3) {

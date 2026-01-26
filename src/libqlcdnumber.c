@@ -35,8 +35,24 @@ const QMetaObject* q_lcdnumber_meta_object(void* self) {
     return QLCDNumber_MetaObject((QLCDNumber*)self);
 }
 
+void q_lcdnumber_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QLCDNumber_OnMetaObject((QLCDNumber*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_lcdnumber_qbase_meta_object(void* self) {
+    return QLCDNumber_QBaseMetaObject((QLCDNumber*)self);
+}
+
 void* q_lcdnumber_metacast(void* self, const char* param1) {
     return QLCDNumber_Metacast((QLCDNumber*)self, param1);
+}
+
+void q_lcdnumber_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QLCDNumber_OnMetacast((QLCDNumber*)self, (intptr_t)callback);
+}
+
+void* q_lcdnumber_qbase_metacast(void* self, const char* param1) {
+    return QLCDNumber_QBaseMetacast((QLCDNumber*)self, param1);
 }
 
 int32_t q_lcdnumber_metacall(void* self, int32_t param1, int param2, void* param3) {

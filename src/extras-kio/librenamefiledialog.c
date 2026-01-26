@@ -24,8 +24,24 @@ const QMetaObject* k_io__renamefiledialog_meta_object(void* self) {
     return KIO__RenameFileDialog_MetaObject((KIO__RenameFileDialog*)self);
 }
 
+void k_io__renamefiledialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KIO__RenameFileDialog_OnMetaObject((KIO__RenameFileDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_io__renamefiledialog_qbase_meta_object(void* self) {
+    return KIO__RenameFileDialog_QBaseMetaObject((KIO__RenameFileDialog*)self);
+}
+
 void* k_io__renamefiledialog_metacast(void* self, const char* param1) {
     return KIO__RenameFileDialog_Metacast((KIO__RenameFileDialog*)self, param1);
+}
+
+void k_io__renamefiledialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KIO__RenameFileDialog_OnMetacast((KIO__RenameFileDialog*)self, (intptr_t)callback);
+}
+
+void* k_io__renamefiledialog_qbase_metacast(void* self, const char* param1) {
+    return KIO__RenameFileDialog_QBaseMetacast((KIO__RenameFileDialog*)self, param1);
 }
 
 int32_t k_io__renamefiledialog_metacall(void* self, int32_t param1, int param2, void* param3) {

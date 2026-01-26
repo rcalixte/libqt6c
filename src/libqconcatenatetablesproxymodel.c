@@ -22,8 +22,24 @@ const QMetaObject* q_concatenatetablesproxymodel_meta_object(void* self) {
     return QConcatenateTablesProxyModel_MetaObject((QConcatenateTablesProxyModel*)self);
 }
 
+void q_concatenatetablesproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QConcatenateTablesProxyModel_OnMetaObject((QConcatenateTablesProxyModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_concatenatetablesproxymodel_qbase_meta_object(void* self) {
+    return QConcatenateTablesProxyModel_QBaseMetaObject((QConcatenateTablesProxyModel*)self);
+}
+
 void* q_concatenatetablesproxymodel_metacast(void* self, const char* param1) {
     return QConcatenateTablesProxyModel_Metacast((QConcatenateTablesProxyModel*)self, param1);
+}
+
+void q_concatenatetablesproxymodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QConcatenateTablesProxyModel_OnMetacast((QConcatenateTablesProxyModel*)self, (intptr_t)callback);
+}
+
+void* q_concatenatetablesproxymodel_qbase_metacast(void* self, const char* param1) {
+    return QConcatenateTablesProxyModel_QBaseMetacast((QConcatenateTablesProxyModel*)self, param1);
 }
 
 int32_t q_concatenatetablesproxymodel_metacall(void* self, int32_t param1, int param2, void* param3) {

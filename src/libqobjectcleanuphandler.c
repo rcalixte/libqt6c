@@ -13,8 +13,24 @@ const QMetaObject* q_objectcleanuphandler_meta_object(void* self) {
     return QObjectCleanupHandler_MetaObject((QObjectCleanupHandler*)self);
 }
 
+void q_objectcleanuphandler_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QObjectCleanupHandler_OnMetaObject((QObjectCleanupHandler*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_objectcleanuphandler_qbase_meta_object(void* self) {
+    return QObjectCleanupHandler_QBaseMetaObject((QObjectCleanupHandler*)self);
+}
+
 void* q_objectcleanuphandler_metacast(void* self, const char* param1) {
     return QObjectCleanupHandler_Metacast((QObjectCleanupHandler*)self, param1);
+}
+
+void q_objectcleanuphandler_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QObjectCleanupHandler_OnMetacast((QObjectCleanupHandler*)self, (intptr_t)callback);
+}
+
+void* q_objectcleanuphandler_qbase_metacast(void* self, const char* param1) {
+    return QObjectCleanupHandler_QBaseMetacast((QObjectCleanupHandler*)self, param1);
 }
 
 int32_t q_objectcleanuphandler_metacall(void* self, int32_t param1, int param2, void* param3) {

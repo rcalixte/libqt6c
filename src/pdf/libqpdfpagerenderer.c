@@ -21,8 +21,24 @@ const QMetaObject* q_pdfpagerenderer_meta_object(void* self) {
     return QPdfPageRenderer_MetaObject((QPdfPageRenderer*)self);
 }
 
+void q_pdfpagerenderer_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QPdfPageRenderer_OnMetaObject((QPdfPageRenderer*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_pdfpagerenderer_qbase_meta_object(void* self) {
+    return QPdfPageRenderer_QBaseMetaObject((QPdfPageRenderer*)self);
+}
+
 void* q_pdfpagerenderer_metacast(void* self, const char* param1) {
     return QPdfPageRenderer_Metacast((QPdfPageRenderer*)self, param1);
+}
+
+void q_pdfpagerenderer_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QPdfPageRenderer_OnMetacast((QPdfPageRenderer*)self, (intptr_t)callback);
+}
+
+void* q_pdfpagerenderer_qbase_metacast(void* self, const char* param1) {
+    return QPdfPageRenderer_QBaseMetacast((QPdfPageRenderer*)self, param1);
 }
 
 int32_t q_pdfpagerenderer_metacall(void* self, int32_t param1, int param2, void* param3) {

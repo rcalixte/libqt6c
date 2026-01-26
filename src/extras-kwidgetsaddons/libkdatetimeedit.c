@@ -28,8 +28,24 @@ const QMetaObject* k_datetimeedit_meta_object(void* self) {
     return KDateTimeEdit_MetaObject((KDateTimeEdit*)self);
 }
 
+void k_datetimeedit_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KDateTimeEdit_OnMetaObject((KDateTimeEdit*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_datetimeedit_qbase_meta_object(void* self) {
+    return KDateTimeEdit_QBaseMetaObject((KDateTimeEdit*)self);
+}
+
 void* k_datetimeedit_metacast(void* self, const char* param1) {
     return KDateTimeEdit_Metacast((KDateTimeEdit*)self, param1);
+}
+
+void k_datetimeedit_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KDateTimeEdit_OnMetacast((KDateTimeEdit*)self, (intptr_t)callback);
+}
+
+void* k_datetimeedit_qbase_metacast(void* self, const char* param1) {
+    return KDateTimeEdit_QBaseMetacast((KDateTimeEdit*)self, param1);
 }
 
 int32_t k_datetimeedit_metacall(void* self, int32_t param1, int param2, void* param3) {

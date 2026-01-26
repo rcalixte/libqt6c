@@ -18,8 +18,24 @@ const QMetaObject* k_jobuidelegate_meta_object(void* self) {
     return KJobUiDelegate_MetaObject((KJobUiDelegate*)self);
 }
 
+void k_jobuidelegate_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KJobUiDelegate_OnMetaObject((KJobUiDelegate*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_jobuidelegate_qbase_meta_object(void* self) {
+    return KJobUiDelegate_QBaseMetaObject((KJobUiDelegate*)self);
+}
+
 void* k_jobuidelegate_metacast(void* self, const char* param1) {
     return KJobUiDelegate_Metacast((KJobUiDelegate*)self, param1);
+}
+
+void k_jobuidelegate_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KJobUiDelegate_OnMetacast((KJobUiDelegate*)self, (intptr_t)callback);
+}
+
+void* k_jobuidelegate_qbase_metacast(void* self, const char* param1) {
+    return KJobUiDelegate_QBaseMetacast((KJobUiDelegate*)self, param1);
 }
 
 int32_t k_jobuidelegate_metacall(void* self, int32_t param1, int param2, void* param3) {

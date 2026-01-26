@@ -27,10 +27,41 @@ KToggleToolBarAction* k_toggletoolbaraction_new(void* toolBar, const char* text,
 ///
 const QMetaObject* k_toggletoolbaraction_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KToggleToolBarAction*
+/// @param callback const QMetaObject* func()
+///
+void k_toggletoolbaraction_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KToggleToolBarAction*
+///
+const QMetaObject* k_toggletoolbaraction_qbase_meta_object(void* self);
+
 /// @param self KToggleToolBarAction*
 /// @param param1 const char*
 ///
 void* k_toggletoolbaraction_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KToggleToolBarAction*
+/// @param callback void* func(KToggleToolBarAction* self, const char* param1)
+///
+void k_toggletoolbaraction_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KToggleToolBarAction*
+/// @param param1 const char*
+///
+void* k_toggletoolbaraction_qbase_metacast(void* self, const char* param1);
 
 /// @param self KToggleToolBarAction*
 /// @param param1 enum QMetaObject__Call

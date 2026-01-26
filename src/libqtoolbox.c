@@ -32,8 +32,24 @@ const QMetaObject* q_toolbox_meta_object(void* self) {
     return QToolBox_MetaObject((QToolBox*)self);
 }
 
+void q_toolbox_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QToolBox_OnMetaObject((QToolBox*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_toolbox_qbase_meta_object(void* self) {
+    return QToolBox_QBaseMetaObject((QToolBox*)self);
+}
+
 void* q_toolbox_metacast(void* self, const char* param1) {
     return QToolBox_Metacast((QToolBox*)self, param1);
+}
+
+void q_toolbox_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QToolBox_OnMetacast((QToolBox*)self, (intptr_t)callback);
+}
+
+void* q_toolbox_qbase_metacast(void* self, const char* param1) {
+    return QToolBox_QBaseMetacast((QToolBox*)self, param1);
 }
 
 int32_t q_toolbox_metacall(void* self, int32_t param1, int param2, void* param3) {

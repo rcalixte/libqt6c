@@ -18,8 +18,24 @@ const QMetaObject* k_nscore__questionlistener_meta_object(void* self) {
     return KNSCore__QuestionListener_MetaObject((KNSCore__QuestionListener*)self);
 }
 
+void k_nscore__questionlistener_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KNSCore__QuestionListener_OnMetaObject((KNSCore__QuestionListener*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_nscore__questionlistener_qbase_meta_object(void* self) {
+    return KNSCore__QuestionListener_QBaseMetaObject((KNSCore__QuestionListener*)self);
+}
+
 void* k_nscore__questionlistener_metacast(void* self, const char* param1) {
     return KNSCore__QuestionListener_Metacast((KNSCore__QuestionListener*)self, param1);
+}
+
+void k_nscore__questionlistener_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KNSCore__QuestionListener_OnMetacast((KNSCore__QuestionListener*)self, (intptr_t)callback);
+}
+
+void* k_nscore__questionlistener_qbase_metacast(void* self, const char* param1) {
+    return KNSCore__QuestionListener_QBaseMetacast((KNSCore__QuestionListener*)self, param1);
 }
 
 int32_t k_nscore__questionlistener_metacall(void* self, int32_t param1, int param2, void* param3) {

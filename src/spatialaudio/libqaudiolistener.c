@@ -1,6 +1,7 @@
 #include "libqaudioengine.hpp"
 #include "../libqcoreevent.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "../libqquaternion.hpp"
 #include "../libqvectornd.hpp"
@@ -29,14 +30,6 @@ QQuaternion* q_audiolistener_rotation(void* self) {
 
 QAudioEngine* q_audiolistener_engine(void* self) {
     return QAudioListener_Engine((QAudioListener*)self);
-}
-
-const QMetaObject* q_audiolistener_meta_object(void* self) {
-    return QObject_MetaObject((QObject*)self);
-}
-
-void* q_audiolistener_metacast(void* self, const char* param1) {
-    return QObject_Metacast((QObject*)self, param1);
 }
 
 const char* q_audiolistener_tr(const char* s) {
@@ -237,6 +230,30 @@ void q_audiolistener_destroyed1(void* self, void* param1) {
 
 void q_audiolistener_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_audiolistener_meta_object(void* self) {
+    return QAudioListener_MetaObject((QAudioListener*)self);
+}
+
+const QMetaObject* q_audiolistener_qbase_meta_object(void* self) {
+    return QAudioListener_QBaseMetaObject((QAudioListener*)self);
+}
+
+void q_audiolistener_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QAudioListener_OnMetaObject((QAudioListener*)self, (intptr_t)callback);
+}
+
+void* q_audiolistener_metacast(void* self, const char* param1) {
+    return QAudioListener_Metacast((QAudioListener*)self, param1);
+}
+
+void* q_audiolistener_qbase_metacast(void* self, const char* param1) {
+    return QAudioListener_QBaseMetacast((QAudioListener*)self, param1);
+}
+
+void q_audiolistener_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QAudioListener_OnMetacast((QAudioListener*)self, (intptr_t)callback);
 }
 
 int32_t q_audiolistener_metacall(void* self, int32_t param1, int param2, void* param3) {

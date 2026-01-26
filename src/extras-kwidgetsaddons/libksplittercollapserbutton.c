@@ -25,8 +25,24 @@ const QMetaObject* k_splittercollapserbutton_meta_object(void* self) {
     return KSplitterCollapserButton_MetaObject((KSplitterCollapserButton*)self);
 }
 
+void k_splittercollapserbutton_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KSplitterCollapserButton_OnMetaObject((KSplitterCollapserButton*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_splittercollapserbutton_qbase_meta_object(void* self) {
+    return KSplitterCollapserButton_QBaseMetaObject((KSplitterCollapserButton*)self);
+}
+
 void* k_splittercollapserbutton_metacast(void* self, const char* param1) {
     return KSplitterCollapserButton_Metacast((KSplitterCollapserButton*)self, param1);
+}
+
+void k_splittercollapserbutton_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KSplitterCollapserButton_OnMetacast((KSplitterCollapserButton*)self, (intptr_t)callback);
+}
+
+void* k_splittercollapserbutton_qbase_metacast(void* self, const char* param1) {
+    return KSplitterCollapserButton_QBaseMetacast((KSplitterCollapserButton*)self, param1);
 }
 
 int32_t k_splittercollapserbutton_metacall(void* self, int32_t param1, int param2, void* param3) {

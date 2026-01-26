@@ -48,10 +48,41 @@ KHistoryComboBox* k_historycombobox_new4(bool useCompletion, void* parent);
 ///
 const QMetaObject* k_historycombobox_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KHistoryComboBox*
+/// @param callback const QMetaObject* func()
+///
+void k_historycombobox_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KHistoryComboBox*
+///
+const QMetaObject* k_historycombobox_qbase_meta_object(void* self);
+
 /// @param self KHistoryComboBox*
 /// @param param1 const char*
 ///
 void* k_historycombobox_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KHistoryComboBox*
+/// @param callback void* func(KHistoryComboBox* self, const char* param1)
+///
+void k_historycombobox_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KHistoryComboBox*
+/// @param param1 const char*
+///
+void* k_historycombobox_qbase_metacast(void* self, const char* param1);
 
 /// @param self KHistoryComboBox*
 /// @param param1 enum QMetaObject__Call

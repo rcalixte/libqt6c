@@ -30,8 +30,24 @@ const QMetaObject* k_imagefilepreview_meta_object(void* self) {
     return KImageFilePreview_MetaObject((KImageFilePreview*)self);
 }
 
+void k_imagefilepreview_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KImageFilePreview_OnMetaObject((KImageFilePreview*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_imagefilepreview_qbase_meta_object(void* self) {
+    return KImageFilePreview_QBaseMetaObject((KImageFilePreview*)self);
+}
+
 void* k_imagefilepreview_metacast(void* self, const char* param1) {
     return KImageFilePreview_Metacast((KImageFilePreview*)self, param1);
+}
+
+void k_imagefilepreview_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KImageFilePreview_OnMetacast((KImageFilePreview*)self, (intptr_t)callback);
+}
+
+void* k_imagefilepreview_qbase_metacast(void* self, const char* param1) {
+    return KImageFilePreview_QBaseMetacast((KImageFilePreview*)self, param1);
 }
 
 int32_t k_imagefilepreview_metacall(void* self, int32_t param1, int param2, void* param3) {

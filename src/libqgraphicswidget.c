@@ -40,8 +40,24 @@ const QMetaObject* q_graphicswidget_meta_object(void* self) {
     return QGraphicsWidget_MetaObject((QGraphicsWidget*)self);
 }
 
+void q_graphicswidget_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QGraphicsWidget_OnMetaObject((QGraphicsWidget*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_graphicswidget_qbase_meta_object(void* self) {
+    return QGraphicsWidget_QBaseMetaObject((QGraphicsWidget*)self);
+}
+
 void* q_graphicswidget_metacast(void* self, const char* param1) {
     return QGraphicsWidget_Metacast((QGraphicsWidget*)self, param1);
+}
+
+void q_graphicswidget_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QGraphicsWidget_OnMetacast((QGraphicsWidget*)self, (intptr_t)callback);
+}
+
+void* q_graphicswidget_qbase_metacast(void* self, const char* param1) {
+    return QGraphicsWidget_QBaseMetacast((QGraphicsWidget*)self, param1);
 }
 
 int32_t q_graphicswidget_metacall(void* self, int32_t param1, int param2, void* param3) {

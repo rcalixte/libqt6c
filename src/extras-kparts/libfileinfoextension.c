@@ -14,8 +14,24 @@ const QMetaObject* k_parts__fileinfoextension_meta_object(void* self) {
     return KParts__FileInfoExtension_MetaObject((KParts__FileInfoExtension*)self);
 }
 
+void k_parts__fileinfoextension_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KParts__FileInfoExtension_OnMetaObject((KParts__FileInfoExtension*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_parts__fileinfoextension_qbase_meta_object(void* self) {
+    return KParts__FileInfoExtension_QBaseMetaObject((KParts__FileInfoExtension*)self);
+}
+
 void* k_parts__fileinfoextension_metacast(void* self, const char* param1) {
     return KParts__FileInfoExtension_Metacast((KParts__FileInfoExtension*)self, param1);
+}
+
+void k_parts__fileinfoextension_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KParts__FileInfoExtension_OnMetacast((KParts__FileInfoExtension*)self, (intptr_t)callback);
+}
+
+void* k_parts__fileinfoextension_qbase_metacast(void* self, const char* param1) {
+    return KParts__FileInfoExtension_QBaseMetacast((KParts__FileInfoExtension*)self, param1);
 }
 
 int32_t k_parts__fileinfoextension_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -31,10 +31,41 @@ QTranslator* q_translator_new2(void* parent);
 ///
 const QMetaObject* q_translator_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QTranslator*
+/// @param callback const QMetaObject* func()
+///
+void q_translator_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QTranslator*
+///
+const QMetaObject* q_translator_qbase_meta_object(void* self);
+
 /// @param self QTranslator*
 /// @param param1 const char*
 ///
 void* q_translator_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QTranslator*
+/// @param callback void* func(QTranslator* self, const char* param1)
+///
+void q_translator_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QTranslator*
+/// @param param1 const char*
+///
+void* q_translator_qbase_metacast(void* self, const char* param1);
 
 /// @param self QTranslator*
 /// @param param1 enum QMetaObject__Call

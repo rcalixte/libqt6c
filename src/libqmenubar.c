@@ -30,8 +30,24 @@ const QMetaObject* q_menubar_meta_object(void* self) {
     return QMenuBar_MetaObject((QMenuBar*)self);
 }
 
+void q_menubar_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QMenuBar_OnMetaObject((QMenuBar*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_menubar_qbase_meta_object(void* self) {
+    return QMenuBar_QBaseMetaObject((QMenuBar*)self);
+}
+
 void* q_menubar_metacast(void* self, const char* param1) {
     return QMenuBar_Metacast((QMenuBar*)self, param1);
+}
+
+void q_menubar_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QMenuBar_OnMetacast((QMenuBar*)self, (intptr_t)callback);
+}
+
+void* q_menubar_qbase_metacast(void* self, const char* param1) {
+    return QMenuBar_QBaseMetacast((QMenuBar*)self, param1);
 }
 
 int32_t q_menubar_metacall(void* self, int32_t param1, int param2, void* param3) {

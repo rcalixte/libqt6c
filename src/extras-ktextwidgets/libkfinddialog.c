@@ -81,8 +81,24 @@ const QMetaObject* k_finddialog_meta_object(void* self) {
     return KFindDialog_MetaObject((KFindDialog*)self);
 }
 
+void k_finddialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KFindDialog_OnMetaObject((KFindDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_finddialog_qbase_meta_object(void* self) {
+    return KFindDialog_QBaseMetaObject((KFindDialog*)self);
+}
+
 void* k_finddialog_metacast(void* self, const char* param1) {
     return KFindDialog_Metacast((KFindDialog*)self, param1);
+}
+
+void k_finddialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KFindDialog_OnMetacast((KFindDialog*)self, (intptr_t)callback);
+}
+
+void* k_finddialog_qbase_metacast(void* self, const char* param1) {
+    return KFindDialog_QBaseMetacast((KFindDialog*)self, param1);
 }
 
 int32_t k_finddialog_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -35,8 +35,24 @@ const QMetaObject* q_candlestickset_meta_object(void* self) {
     return QCandlestickSet_MetaObject((QCandlestickSet*)self);
 }
 
+void q_candlestickset_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCandlestickSet_OnMetaObject((QCandlestickSet*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_candlestickset_qbase_meta_object(void* self) {
+    return QCandlestickSet_QBaseMetaObject((QCandlestickSet*)self);
+}
+
 void* q_candlestickset_metacast(void* self, const char* param1) {
     return QCandlestickSet_Metacast((QCandlestickSet*)self, param1);
+}
+
+void q_candlestickset_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCandlestickSet_OnMetacast((QCandlestickSet*)self, (intptr_t)callback);
+}
+
+void* q_candlestickset_qbase_metacast(void* self, const char* param1) {
+    return QCandlestickSet_QBaseMetacast((QCandlestickSet*)self, param1);
 }
 
 int32_t q_candlestickset_metacall(void* self, int32_t param1, int param2, void* param3) {

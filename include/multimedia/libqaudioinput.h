@@ -48,10 +48,41 @@ QAudioInput* q_audioinput_new4(void* deviceInfo, void* parent);
 ///
 const QMetaObject* q_audioinput_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QAudioInput*
+/// @param callback const QMetaObject* func()
+///
+void q_audioinput_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QAudioInput*
+///
+const QMetaObject* q_audioinput_qbase_meta_object(void* self);
+
 /// @param self QAudioInput*
 /// @param param1 const char*
 ///
 void* q_audioinput_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QAudioInput*
+/// @param callback void* func(QAudioInput* self, const char* param1)
+///
+void q_audioinput_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QAudioInput*
+/// @param param1 const char*
+///
+void* q_audioinput_qbase_metacast(void* self, const char* param1);
 
 /// @param self QAudioInput*
 /// @param param1 enum QMetaObject__Call

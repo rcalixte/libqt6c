@@ -19,8 +19,24 @@ const QMetaObject* k_categorydrawer_meta_object(void* self) {
     return KCategoryDrawer_MetaObject((KCategoryDrawer*)self);
 }
 
+void k_categorydrawer_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KCategoryDrawer_OnMetaObject((KCategoryDrawer*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_categorydrawer_qbase_meta_object(void* self) {
+    return KCategoryDrawer_QBaseMetaObject((KCategoryDrawer*)self);
+}
+
 void* k_categorydrawer_metacast(void* self, const char* param1) {
     return KCategoryDrawer_Metacast((KCategoryDrawer*)self, param1);
+}
+
+void k_categorydrawer_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KCategoryDrawer_OnMetacast((KCategoryDrawer*)self, (intptr_t)callback);
+}
+
+void* k_categorydrawer_qbase_metacast(void* self, const char* param1) {
+    return KCategoryDrawer_QBaseMetacast((KCategoryDrawer*)self, param1);
 }
 
 int32_t k_categorydrawer_metacall(void* self, int32_t param1, int param2, void* param3) {

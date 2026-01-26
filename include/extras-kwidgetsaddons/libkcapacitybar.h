@@ -48,10 +48,41 @@ KCapacityBar* k_capacitybar_new4(int32_t drawTextMode, void* parent);
 ///
 const QMetaObject* k_capacitybar_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCapacityBar*
+/// @param callback const QMetaObject* func()
+///
+void k_capacitybar_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KCapacityBar*
+///
+const QMetaObject* k_capacitybar_qbase_meta_object(void* self);
+
 /// @param self KCapacityBar*
 /// @param param1 const char*
 ///
 void* k_capacitybar_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KCapacityBar*
+/// @param callback void* func(KCapacityBar* self, const char* param1)
+///
+void k_capacitybar_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KCapacityBar*
+/// @param param1 const char*
+///
+void* k_capacitybar_qbase_metacast(void* self, const char* param1);
 
 /// @param self KCapacityBar*
 /// @param param1 enum QMetaObject__Call

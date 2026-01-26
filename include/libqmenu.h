@@ -48,10 +48,41 @@ QMenu* q_menu_new4(const char* title, void* parent);
 ///
 const QMetaObject* q_menu_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QMenu*
+/// @param callback const QMetaObject* func()
+///
+void q_menu_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QMenu*
+///
+const QMetaObject* q_menu_qbase_meta_object(void* self);
+
 /// @param self QMenu*
 /// @param param1 const char*
 ///
 void* q_menu_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QMenu*
+/// @param callback void* func(QMenu* self, const char* param1)
+///
+void q_menu_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QMenu*
+/// @param param1 const char*
+///
+void* q_menu_qbase_metacast(void* self, const char* param1);
 
 /// @param self QMenu*
 /// @param param1 enum QMetaObject__Call

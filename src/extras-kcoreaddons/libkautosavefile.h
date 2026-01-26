@@ -48,10 +48,41 @@ KAutoSaveFile* k_autosavefile_new4(void* parent);
 ///
 const QMetaObject* k_autosavefile_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KAutoSaveFile*
+/// @param callback const QMetaObject* func()
+///
+void k_autosavefile_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KAutoSaveFile*
+///
+const QMetaObject* k_autosavefile_qbase_meta_object(void* self);
+
 /// @param self KAutoSaveFile*
 /// @param param1 const char*
 ///
 void* k_autosavefile_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KAutoSaveFile*
+/// @param callback void* func(KAutoSaveFile* self, const char* param1)
+///
+void k_autosavefile_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KAutoSaveFile*
+/// @param param1 const char*
+///
+void* k_autosavefile_qbase_metacast(void* self, const char* param1);
 
 /// @param self KAutoSaveFile*
 /// @param param1 enum QMetaObject__Call

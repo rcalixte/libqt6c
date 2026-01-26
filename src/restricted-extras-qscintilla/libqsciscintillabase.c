@@ -36,8 +36,24 @@ const QMetaObject* q_sciscintillabase_meta_object(void* self) {
     return QsciScintillaBase_MetaObject((QsciScintillaBase*)self);
 }
 
+void q_sciscintillabase_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QsciScintillaBase_OnMetaObject((QsciScintillaBase*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_sciscintillabase_qbase_meta_object(void* self) {
+    return QsciScintillaBase_QBaseMetaObject((QsciScintillaBase*)self);
+}
+
 void* q_sciscintillabase_metacast(void* self, const char* param1) {
     return QsciScintillaBase_Metacast((QsciScintillaBase*)self, param1);
+}
+
+void q_sciscintillabase_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QsciScintillaBase_OnMetacast((QsciScintillaBase*)self, (intptr_t)callback);
+}
+
+void* q_sciscintillabase_qbase_metacast(void* self, const char* param1) {
+    return QsciScintillaBase_QBaseMetacast((QsciScintillaBase*)self, param1);
 }
 
 int32_t q_sciscintillabase_metacall(void* self, int32_t param1, int param2, void* param3) {

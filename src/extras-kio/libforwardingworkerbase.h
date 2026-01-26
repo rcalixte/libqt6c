@@ -27,10 +27,41 @@ KIO__ForwardingWorkerBase* k_io__forwardingworkerbase_new(const char* protocol, 
 ///
 const QMetaObject* k_io__forwardingworkerbase_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KIO__ForwardingWorkerBase*
+/// @param callback const QMetaObject* func()
+///
+void k_io__forwardingworkerbase_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KIO__ForwardingWorkerBase*
+///
+const QMetaObject* k_io__forwardingworkerbase_qbase_meta_object(void* self);
+
 /// @param self KIO__ForwardingWorkerBase*
 /// @param param1 const char*
 ///
 void* k_io__forwardingworkerbase_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KIO__ForwardingWorkerBase*
+/// @param callback void* func(KIO__ForwardingWorkerBase* self, const char* param1)
+///
+void k_io__forwardingworkerbase_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KIO__ForwardingWorkerBase*
+/// @param param1 const char*
+///
+void* k_io__forwardingworkerbase_qbase_metacast(void* self, const char* param1);
 
 /// @param self KIO__ForwardingWorkerBase*
 /// @param param1 enum QMetaObject__Call

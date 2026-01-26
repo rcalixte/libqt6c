@@ -23,10 +23,41 @@ Konsole__Emulation* k_onsole__emulation_new();
 ///
 const QMetaObject* k_onsole__emulation_meta_object(void* self);
 
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+///
+/// Allows for overriding the related default method
+///
+/// @param self Konsole__Emulation*
+/// @param callback const QMetaObject* func()
+///
+void k_onsole__emulation_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
+///
+/// Base class method implementation
+///
+/// @param self Konsole__Emulation*
+///
+const QMetaObject* k_onsole__emulation_qbase_meta_object(void* self);
+
 /// @param self Konsole__Emulation*
 /// @param param1 const char*
 ///
 void* k_onsole__emulation_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self Konsole__Emulation*
+/// @param callback void* func(Konsole__Emulation* self, const char* param1)
+///
+void k_onsole__emulation_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self Konsole__Emulation*
+/// @param param1 const char*
+///
+void* k_onsole__emulation_qbase_metacast(void* self, const char* param1);
 
 /// @param self Konsole__Emulation*
 /// @param param1 enum QMetaObject__Call

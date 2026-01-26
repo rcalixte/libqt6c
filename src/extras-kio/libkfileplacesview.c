@@ -38,8 +38,24 @@ const QMetaObject* k_fileplacesview_meta_object(void* self) {
     return KFilePlacesView_MetaObject((KFilePlacesView*)self);
 }
 
+void k_fileplacesview_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KFilePlacesView_OnMetaObject((KFilePlacesView*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_fileplacesview_qbase_meta_object(void* self) {
+    return KFilePlacesView_QBaseMetaObject((KFilePlacesView*)self);
+}
+
 void* k_fileplacesview_metacast(void* self, const char* param1) {
     return KFilePlacesView_Metacast((KFilePlacesView*)self, param1);
+}
+
+void k_fileplacesview_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KFilePlacesView_OnMetacast((KFilePlacesView*)self, (intptr_t)callback);
+}
+
+void* k_fileplacesview_qbase_metacast(void* self, const char* param1) {
+    return KFilePlacesView_QBaseMetacast((KFilePlacesView*)self, param1);
 }
 
 int32_t k_fileplacesview_metacall(void* self, int32_t param1, int param2, void* param3) {

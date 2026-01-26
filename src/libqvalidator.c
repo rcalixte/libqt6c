@@ -19,8 +19,24 @@ const QMetaObject* q_validator_meta_object(void* self) {
     return QValidator_MetaObject((QValidator*)self);
 }
 
+void q_validator_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QValidator_OnMetaObject((QValidator*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_validator_qbase_meta_object(void* self) {
+    return QValidator_QBaseMetaObject((QValidator*)self);
+}
+
 void* q_validator_metacast(void* self, const char* param1) {
     return QValidator_Metacast((QValidator*)self, param1);
+}
+
+void q_validator_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QValidator_OnMetacast((QValidator*)self, (intptr_t)callback);
+}
+
+void* q_validator_qbase_metacast(void* self, const char* param1) {
+    return QValidator_QBaseMetacast((QValidator*)self, param1);
 }
 
 int32_t q_validator_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -435,8 +451,24 @@ const QMetaObject* q_intvalidator_meta_object(void* self) {
     return QIntValidator_MetaObject((QIntValidator*)self);
 }
 
+void q_intvalidator_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QIntValidator_OnMetaObject((QIntValidator*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_intvalidator_qbase_meta_object(void* self) {
+    return QIntValidator_QBaseMetaObject((QIntValidator*)self);
+}
+
 void* q_intvalidator_metacast(void* self, const char* param1) {
     return QIntValidator_Metacast((QIntValidator*)self, param1);
+}
+
+void q_intvalidator_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QIntValidator_OnMetacast((QIntValidator*)self, (intptr_t)callback);
+}
+
+void* q_intvalidator_qbase_metacast(void* self, const char* param1) {
+    return QIntValidator_QBaseMetacast((QIntValidator*)self, param1);
 }
 
 int32_t q_intvalidator_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -887,8 +919,24 @@ const QMetaObject* q_doublevalidator_meta_object(void* self) {
     return QDoubleValidator_MetaObject((QDoubleValidator*)self);
 }
 
+void q_doublevalidator_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDoubleValidator_OnMetaObject((QDoubleValidator*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_doublevalidator_qbase_meta_object(void* self) {
+    return QDoubleValidator_QBaseMetaObject((QDoubleValidator*)self);
+}
+
 void* q_doublevalidator_metacast(void* self, const char* param1) {
     return QDoubleValidator_Metacast((QDoubleValidator*)self, param1);
+}
+
+void q_doublevalidator_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDoubleValidator_OnMetacast((QDoubleValidator*)self, (intptr_t)callback);
+}
+
+void* q_doublevalidator_qbase_metacast(void* self, const char* param1) {
+    return QDoubleValidator_QBaseMetacast((QDoubleValidator*)self, param1);
 }
 
 int32_t q_doublevalidator_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -1375,8 +1423,24 @@ const QMetaObject* q_regularexpressionvalidator_meta_object(void* self) {
     return QRegularExpressionValidator_MetaObject((QRegularExpressionValidator*)self);
 }
 
+void q_regularexpressionvalidator_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QRegularExpressionValidator_OnMetaObject((QRegularExpressionValidator*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_regularexpressionvalidator_qbase_meta_object(void* self) {
+    return QRegularExpressionValidator_QBaseMetaObject((QRegularExpressionValidator*)self);
+}
+
 void* q_regularexpressionvalidator_metacast(void* self, const char* param1) {
     return QRegularExpressionValidator_Metacast((QRegularExpressionValidator*)self, param1);
+}
+
+void q_regularexpressionvalidator_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QRegularExpressionValidator_OnMetacast((QRegularExpressionValidator*)self, (intptr_t)callback);
+}
+
+void* q_regularexpressionvalidator_qbase_metacast(void* self, const char* param1) {
+    return QRegularExpressionValidator_QBaseMetacast((QRegularExpressionValidator*)self, param1);
 }
 
 int32_t q_regularexpressionvalidator_metacall(void* self, int32_t param1, int param2, void* param3) {

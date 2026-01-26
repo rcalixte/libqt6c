@@ -31,10 +31,41 @@ KProcess* k_process_new2(void* parent);
 ///
 const QMetaObject* k_process_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KProcess*
+/// @param callback const QMetaObject* func()
+///
+void k_process_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KProcess*
+///
+const QMetaObject* k_process_qbase_meta_object(void* self);
+
 /// @param self KProcess*
 /// @param param1 const char*
 ///
 void* k_process_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KProcess*
+/// @param callback void* func(KProcess* self, const char* param1)
+///
+void k_process_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KProcess*
+/// @param param1 const char*
+///
+void* k_process_qbase_metacast(void* self, const char* param1);
 
 /// @param self KProcess*
 /// @param param1 enum QMetaObject__Call

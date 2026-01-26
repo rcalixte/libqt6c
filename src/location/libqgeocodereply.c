@@ -17,8 +17,24 @@ const QMetaObject* q_geocodereply_meta_object(void* self) {
     return QGeoCodeReply_MetaObject((QGeoCodeReply*)self);
 }
 
+void q_geocodereply_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QGeoCodeReply_OnMetaObject((QGeoCodeReply*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_geocodereply_qbase_meta_object(void* self) {
+    return QGeoCodeReply_QBaseMetaObject((QGeoCodeReply*)self);
+}
+
 void* q_geocodereply_metacast(void* self, const char* param1) {
     return QGeoCodeReply_Metacast((QGeoCodeReply*)self, param1);
+}
+
+void q_geocodereply_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QGeoCodeReply_OnMetacast((QGeoCodeReply*)self, (intptr_t)callback);
+}
+
+void* q_geocodereply_qbase_metacast(void* self, const char* param1) {
+    return QGeoCodeReply_QBaseMetacast((QGeoCodeReply*)self, param1);
 }
 
 int32_t q_geocodereply_metacall(void* self, int32_t param1, int param2, void* param3) {

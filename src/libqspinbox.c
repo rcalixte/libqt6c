@@ -28,8 +28,24 @@ const QMetaObject* q_spinbox_meta_object(void* self) {
     return QSpinBox_MetaObject((QSpinBox*)self);
 }
 
+void q_spinbox_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QSpinBox_OnMetaObject((QSpinBox*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_spinbox_qbase_meta_object(void* self) {
+    return QSpinBox_QBaseMetaObject((QSpinBox*)self);
+}
+
 void* q_spinbox_metacast(void* self, const char* param1) {
     return QSpinBox_Metacast((QSpinBox*)self, param1);
+}
+
+void q_spinbox_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QSpinBox_OnMetacast((QSpinBox*)self, (intptr_t)callback);
+}
+
+void* q_spinbox_qbase_metacast(void* self, const char* param1) {
+    return QSpinBox_QBaseMetacast((QSpinBox*)self, param1);
 }
 
 int32_t q_spinbox_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -2459,8 +2475,24 @@ const QMetaObject* q_doublespinbox_meta_object(void* self) {
     return QDoubleSpinBox_MetaObject((QDoubleSpinBox*)self);
 }
 
+void q_doublespinbox_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDoubleSpinBox_OnMetaObject((QDoubleSpinBox*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_doublespinbox_qbase_meta_object(void* self) {
+    return QDoubleSpinBox_QBaseMetaObject((QDoubleSpinBox*)self);
+}
+
 void* q_doublespinbox_metacast(void* self, const char* param1) {
     return QDoubleSpinBox_Metacast((QDoubleSpinBox*)self, param1);
+}
+
+void q_doublespinbox_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDoubleSpinBox_OnMetacast((QDoubleSpinBox*)self, (intptr_t)callback);
+}
+
+void* q_doublespinbox_qbase_metacast(void* self, const char* param1) {
+    return QDoubleSpinBox_QBaseMetacast((QDoubleSpinBox*)self, param1);
 }
 
 int32_t q_doublespinbox_metacall(void* self, int32_t param1, int param2, void* param3) {

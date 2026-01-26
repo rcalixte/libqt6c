@@ -20,8 +20,24 @@ const QMetaObject* k_dualaction_meta_object(void* self) {
     return KDualAction_MetaObject((KDualAction*)self);
 }
 
+void k_dualaction_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KDualAction_OnMetaObject((KDualAction*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_dualaction_qbase_meta_object(void* self) {
+    return KDualAction_QBaseMetaObject((KDualAction*)self);
+}
+
 void* k_dualaction_metacast(void* self, const char* param1) {
     return KDualAction_Metacast((KDualAction*)self, param1);
+}
+
+void k_dualaction_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KDualAction_OnMetacast((KDualAction*)self, (intptr_t)callback);
+}
+
+void* k_dualaction_qbase_metacast(void* self, const char* param1) {
+    return KDualAction_QBaseMetacast((KDualAction*)self, param1);
 }
 
 int32_t k_dualaction_metacall(void* self, int32_t param1, int param2, void* param3) {

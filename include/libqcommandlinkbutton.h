@@ -67,10 +67,41 @@ QCommandLinkButton* q_commandlinkbutton_new6(const char* text, const char* descr
 ///
 const QMetaObject* q_commandlinkbutton_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCommandLinkButton*
+/// @param callback const QMetaObject* func()
+///
+void q_commandlinkbutton_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCommandLinkButton*
+///
+const QMetaObject* q_commandlinkbutton_qbase_meta_object(void* self);
+
 /// @param self QCommandLinkButton*
 /// @param param1 const char*
 ///
 void* q_commandlinkbutton_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCommandLinkButton*
+/// @param callback void* func(QCommandLinkButton* self, const char* param1)
+///
+void q_commandlinkbutton_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCommandLinkButton*
+/// @param param1 const char*
+///
+void* q_commandlinkbutton_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCommandLinkButton*
 /// @param param1 enum QMetaObject__Call

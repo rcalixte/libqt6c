@@ -26,8 +26,24 @@ const QMetaObject* k_fontsizeaction_meta_object(void* self) {
     return KFontSizeAction_MetaObject((KFontSizeAction*)self);
 }
 
+void k_fontsizeaction_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KFontSizeAction_OnMetaObject((KFontSizeAction*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_fontsizeaction_qbase_meta_object(void* self) {
+    return KFontSizeAction_QBaseMetaObject((KFontSizeAction*)self);
+}
+
 void* k_fontsizeaction_metacast(void* self, const char* param1) {
     return KFontSizeAction_Metacast((KFontSizeAction*)self, param1);
+}
+
+void k_fontsizeaction_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KFontSizeAction_OnMetacast((KFontSizeAction*)self, (intptr_t)callback);
+}
+
+void* k_fontsizeaction_qbase_metacast(void* self, const char* param1) {
+    return KFontSizeAction_QBaseMetacast((KFontSizeAction*)self, param1);
 }
 
 int32_t k_fontsizeaction_metacall(void* self, int32_t param1, int param2, void* param3) {

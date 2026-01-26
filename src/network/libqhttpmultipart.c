@@ -71,8 +71,24 @@ const QMetaObject* q_httpmultipart_meta_object(void* self) {
     return QHttpMultiPart_MetaObject((QHttpMultiPart*)self);
 }
 
+void q_httpmultipart_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QHttpMultiPart_OnMetaObject((QHttpMultiPart*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_httpmultipart_qbase_meta_object(void* self) {
+    return QHttpMultiPart_QBaseMetaObject((QHttpMultiPart*)self);
+}
+
 void* q_httpmultipart_metacast(void* self, const char* param1) {
     return QHttpMultiPart_Metacast((QHttpMultiPart*)self, param1);
+}
+
+void q_httpmultipart_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QHttpMultiPart_OnMetacast((QHttpMultiPart*)self, (intptr_t)callback);
+}
+
+void* q_httpmultipart_qbase_metacast(void* self, const char* param1) {
+    return QHttpMultiPart_QBaseMetacast((QHttpMultiPart*)self, param1);
 }
 
 int32_t q_httpmultipart_metacall(void* self, int32_t param1, int param2, void* param3) {

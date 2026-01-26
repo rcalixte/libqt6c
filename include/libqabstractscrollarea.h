@@ -31,10 +31,41 @@ QAbstractScrollArea* q_abstractscrollarea_new2();
 ///
 const QMetaObject* q_abstractscrollarea_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QAbstractScrollArea*
+/// @param callback const QMetaObject* func()
+///
+void q_abstractscrollarea_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QAbstractScrollArea*
+///
+const QMetaObject* q_abstractscrollarea_qbase_meta_object(void* self);
+
 /// @param self QAbstractScrollArea*
 /// @param param1 const char*
 ///
 void* q_abstractscrollarea_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QAbstractScrollArea*
+/// @param callback void* func(QAbstractScrollArea* self, const char* param1)
+///
+void q_abstractscrollarea_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QAbstractScrollArea*
+/// @param param1 const char*
+///
+void* q_abstractscrollarea_qbase_metacast(void* self, const char* param1);
 
 /// @param self QAbstractScrollArea*
 /// @param param1 enum QMetaObject__Call

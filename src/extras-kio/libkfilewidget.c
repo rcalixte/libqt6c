@@ -33,8 +33,24 @@ const QMetaObject* k_filewidget_meta_object(void* self) {
     return KFileWidget_MetaObject((KFileWidget*)self);
 }
 
+void k_filewidget_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KFileWidget_OnMetaObject((KFileWidget*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_filewidget_qbase_meta_object(void* self) {
+    return KFileWidget_QBaseMetaObject((KFileWidget*)self);
+}
+
 void* k_filewidget_metacast(void* self, const char* param1) {
     return KFileWidget_Metacast((KFileWidget*)self, param1);
+}
+
+void k_filewidget_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KFileWidget_OnMetacast((KFileWidget*)self, (intptr_t)callback);
+}
+
+void* k_filewidget_qbase_metacast(void* self, const char* param1) {
+    return KFileWidget_QBaseMetacast((KFileWidget*)self, param1);
 }
 
 int32_t k_filewidget_metacall(void* self, int32_t param1, int param2, void* param3) {

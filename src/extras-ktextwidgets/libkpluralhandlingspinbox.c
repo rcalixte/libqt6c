@@ -30,8 +30,24 @@ const QMetaObject* k_pluralhandlingspinbox_meta_object(void* self) {
     return KPluralHandlingSpinBox_MetaObject((KPluralHandlingSpinBox*)self);
 }
 
+void k_pluralhandlingspinbox_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KPluralHandlingSpinBox_OnMetaObject((KPluralHandlingSpinBox*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_pluralhandlingspinbox_qbase_meta_object(void* self) {
+    return KPluralHandlingSpinBox_QBaseMetaObject((KPluralHandlingSpinBox*)self);
+}
+
 void* k_pluralhandlingspinbox_metacast(void* self, const char* param1) {
     return KPluralHandlingSpinBox_Metacast((KPluralHandlingSpinBox*)self, param1);
+}
+
+void k_pluralhandlingspinbox_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KPluralHandlingSpinBox_OnMetacast((KPluralHandlingSpinBox*)self, (intptr_t)callback);
+}
+
+void* k_pluralhandlingspinbox_qbase_metacast(void* self, const char* param1) {
+    return KPluralHandlingSpinBox_QBaseMetacast((KPluralHandlingSpinBox*)self, param1);
 }
 
 int32_t k_pluralhandlingspinbox_metacall(void* self, int32_t param1, int param2, void* param3) {

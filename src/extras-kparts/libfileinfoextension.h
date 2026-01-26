@@ -25,10 +25,41 @@ KParts__FileInfoExtension* k_parts__fileinfoextension_new(void* parent);
 ///
 const QMetaObject* k_parts__fileinfoextension_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KParts__FileInfoExtension*
+/// @param callback const QMetaObject* func()
+///
+void k_parts__fileinfoextension_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KParts__FileInfoExtension*
+///
+const QMetaObject* k_parts__fileinfoextension_qbase_meta_object(void* self);
+
 /// @param self KParts__FileInfoExtension*
 /// @param param1 const char*
 ///
 void* k_parts__fileinfoextension_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KParts__FileInfoExtension*
+/// @param callback void* func(KParts__FileInfoExtension* self, const char* param1)
+///
+void k_parts__fileinfoextension_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KParts__FileInfoExtension*
+/// @param param1 const char*
+///
+void* k_parts__fileinfoextension_qbase_metacast(void* self, const char* param1);
 
 /// @param self KParts__FileInfoExtension*
 /// @param param1 enum QMetaObject__Call

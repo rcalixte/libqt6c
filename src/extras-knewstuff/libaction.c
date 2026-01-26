@@ -15,8 +15,24 @@ const QMetaObject* k_nswidgets__action_meta_object(void* self) {
     return KNSWidgets__Action_MetaObject((KNSWidgets__Action*)self);
 }
 
+void k_nswidgets__action_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KNSWidgets__Action_OnMetaObject((KNSWidgets__Action*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_nswidgets__action_qbase_meta_object(void* self) {
+    return KNSWidgets__Action_QBaseMetaObject((KNSWidgets__Action*)self);
+}
+
 void* k_nswidgets__action_metacast(void* self, const char* param1) {
     return KNSWidgets__Action_Metacast((KNSWidgets__Action*)self, param1);
+}
+
+void k_nswidgets__action_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KNSWidgets__Action_OnMetacast((KNSWidgets__Action*)self, (intptr_t)callback);
+}
+
+void* k_nswidgets__action_qbase_metacast(void* self, const char* param1) {
+    return KNSWidgets__Action_QBaseMetacast((KNSWidgets__Action*)self, param1);
 }
 
 int32_t k_nswidgets__action_metacall(void* self, int32_t param1, int param2, void* param3) {

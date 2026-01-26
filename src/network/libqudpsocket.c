@@ -24,8 +24,24 @@ const QMetaObject* q_udpsocket_meta_object(void* self) {
     return QUdpSocket_MetaObject((QUdpSocket*)self);
 }
 
+void q_udpsocket_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QUdpSocket_OnMetaObject((QUdpSocket*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_udpsocket_qbase_meta_object(void* self) {
+    return QUdpSocket_QBaseMetaObject((QUdpSocket*)self);
+}
+
 void* q_udpsocket_metacast(void* self, const char* param1) {
     return QUdpSocket_Metacast((QUdpSocket*)self, param1);
+}
+
+void q_udpsocket_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QUdpSocket_OnMetacast((QUdpSocket*)self, (intptr_t)callback);
+}
+
+void* q_udpsocket_qbase_metacast(void* self, const char* param1) {
+    return QUdpSocket_QBaseMetacast((QUdpSocket*)self, param1);
 }
 
 int32_t q_udpsocket_metacall(void* self, int32_t param1, int param2, void* param3) {

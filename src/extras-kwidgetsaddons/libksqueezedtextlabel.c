@@ -37,8 +37,24 @@ const QMetaObject* k_squeezedtextlabel_meta_object(void* self) {
     return KSqueezedTextLabel_MetaObject((KSqueezedTextLabel*)self);
 }
 
+void k_squeezedtextlabel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KSqueezedTextLabel_OnMetaObject((KSqueezedTextLabel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_squeezedtextlabel_qbase_meta_object(void* self) {
+    return KSqueezedTextLabel_QBaseMetaObject((KSqueezedTextLabel*)self);
+}
+
 void* k_squeezedtextlabel_metacast(void* self, const char* param1) {
     return KSqueezedTextLabel_Metacast((KSqueezedTextLabel*)self, param1);
+}
+
+void k_squeezedtextlabel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KSqueezedTextLabel_OnMetacast((KSqueezedTextLabel*)self, (intptr_t)callback);
+}
+
+void* k_squeezedtextlabel_qbase_metacast(void* self, const char* param1) {
+    return KSqueezedTextLabel_QBaseMetacast((KSqueezedTextLabel*)self, param1);
 }
 
 int32_t k_squeezedtextlabel_metacall(void* self, int32_t param1, int param2, void* param3) {

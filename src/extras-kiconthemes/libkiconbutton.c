@@ -29,8 +29,24 @@ const QMetaObject* k_iconbutton_meta_object(void* self) {
     return KIconButton_MetaObject((KIconButton*)self);
 }
 
+void k_iconbutton_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KIconButton_OnMetaObject((KIconButton*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_iconbutton_qbase_meta_object(void* self) {
+    return KIconButton_QBaseMetaObject((KIconButton*)self);
+}
+
 void* k_iconbutton_metacast(void* self, const char* param1) {
     return KIconButton_Metacast((KIconButton*)self, param1);
+}
+
+void k_iconbutton_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KIconButton_OnMetacast((KIconButton*)self, (intptr_t)callback);
+}
+
+void* k_iconbutton_qbase_metacast(void* self, const char* param1) {
+    return KIconButton_QBaseMetacast((KIconButton*)self, param1);
 }
 
 int32_t k_iconbutton_metacall(void* self, int32_t param1, int param2, void* param3) {

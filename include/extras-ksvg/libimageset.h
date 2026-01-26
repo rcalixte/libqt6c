@@ -58,10 +58,41 @@ KSvg__ImageSet* k_svg__imageset_new5(const char* imageSetName, const char* baseP
 ///
 const QMetaObject* k_svg__imageset_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KSvg__ImageSet*
+/// @param callback const QMetaObject* func()
+///
+void k_svg__imageset_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KSvg__ImageSet*
+///
+const QMetaObject* k_svg__imageset_qbase_meta_object(void* self);
+
 /// @param self KSvg__ImageSet*
 /// @param param1 const char*
 ///
 void* k_svg__imageset_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KSvg__ImageSet*
+/// @param callback void* func(KSvg__ImageSet* self, const char* param1)
+///
+void k_svg__imageset_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KSvg__ImageSet*
+/// @param param1 const char*
+///
+void* k_svg__imageset_qbase_metacast(void* self, const char* param1);
 
 /// @param self KSvg__ImageSet*
 /// @param param1 enum QMetaObject__Call

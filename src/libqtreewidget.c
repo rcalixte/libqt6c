@@ -504,8 +504,24 @@ const QMetaObject* q_treewidget_meta_object(void* self) {
     return QTreeWidget_MetaObject((QTreeWidget*)self);
 }
 
+void q_treewidget_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QTreeWidget_OnMetaObject((QTreeWidget*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_treewidget_qbase_meta_object(void* self) {
+    return QTreeWidget_QBaseMetaObject((QTreeWidget*)self);
+}
+
 void* q_treewidget_metacast(void* self, const char* param1) {
     return QTreeWidget_Metacast((QTreeWidget*)self, param1);
+}
+
+void q_treewidget_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QTreeWidget_OnMetacast((QTreeWidget*)self, (intptr_t)callback);
+}
+
+void* q_treewidget_qbase_metacast(void* self, const char* param1) {
+    return QTreeWidget_QBaseMetacast((QTreeWidget*)self, param1);
 }
 
 int32_t q_treewidget_metacall(void* self, int32_t param1, int param2, void* param3) {

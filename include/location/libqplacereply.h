@@ -31,10 +31,41 @@ QPlaceReply* q_placereply_new2(void* parent);
 ///
 const QMetaObject* q_placereply_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QPlaceReply*
+/// @param callback const QMetaObject* func()
+///
+void q_placereply_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QPlaceReply*
+///
+const QMetaObject* q_placereply_qbase_meta_object(void* self);
+
 /// @param self QPlaceReply*
 /// @param param1 const char*
 ///
 void* q_placereply_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QPlaceReply*
+/// @param callback void* func(QPlaceReply* self, const char* param1)
+///
+void q_placereply_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QPlaceReply*
+/// @param param1 const char*
+///
+void* q_placereply_qbase_metacast(void* self, const char* param1);
 
 /// @param self QPlaceReply*
 /// @param param1 enum QMetaObject__Call

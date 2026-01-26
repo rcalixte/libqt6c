@@ -17,8 +17,24 @@ const QMetaObject* k_colorschemewatcher_meta_object(void* self) {
     return KColorSchemeWatcher_MetaObject((KColorSchemeWatcher*)self);
 }
 
+void k_colorschemewatcher_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KColorSchemeWatcher_OnMetaObject((KColorSchemeWatcher*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_colorschemewatcher_qbase_meta_object(void* self) {
+    return KColorSchemeWatcher_QBaseMetaObject((KColorSchemeWatcher*)self);
+}
+
 void* k_colorschemewatcher_metacast(void* self, const char* param1) {
     return KColorSchemeWatcher_Metacast((KColorSchemeWatcher*)self, param1);
+}
+
+void k_colorschemewatcher_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KColorSchemeWatcher_OnMetacast((KColorSchemeWatcher*)self, (intptr_t)callback);
+}
+
+void* k_colorschemewatcher_qbase_metacast(void* self, const char* param1) {
+    return KColorSchemeWatcher_QBaseMetacast((KColorSchemeWatcher*)self, param1);
 }
 
 int32_t k_colorschemewatcher_metacall(void* self, int32_t param1, int param2, void* param3) {

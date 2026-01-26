@@ -31,10 +31,41 @@ QsciLexerDiff* q_scilexerdiff_new2(void* parent);
 ///
 const QMetaObject* q_scilexerdiff_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QsciLexerDiff*
+/// @param callback const QMetaObject* func()
+///
+void q_scilexerdiff_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QsciLexerDiff*
+///
+const QMetaObject* q_scilexerdiff_qbase_meta_object(void* self);
+
 /// @param self QsciLexerDiff*
 /// @param param1 const char*
 ///
 void* q_scilexerdiff_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QsciLexerDiff*
+/// @param callback void* func(QsciLexerDiff* self, const char* param1)
+///
+void q_scilexerdiff_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QsciLexerDiff*
+/// @param param1 const char*
+///
+void* q_scilexerdiff_qbase_metacast(void* self, const char* param1);
 
 /// @param self QsciLexerDiff*
 /// @param param1 enum QMetaObject__Call

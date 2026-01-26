@@ -31,10 +31,41 @@ QValueAxis* q_valueaxis_new2(void* parent);
 ///
 const QMetaObject* q_valueaxis_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QValueAxis*
+/// @param callback const QMetaObject* func()
+///
+void q_valueaxis_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QValueAxis*
+///
+const QMetaObject* q_valueaxis_qbase_meta_object(void* self);
+
 /// @param self QValueAxis*
 /// @param param1 const char*
 ///
 void* q_valueaxis_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QValueAxis*
+/// @param callback void* func(QValueAxis* self, const char* param1)
+///
+void q_valueaxis_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QValueAxis*
+/// @param param1 const char*
+///
+void* q_valueaxis_qbase_metacast(void* self, const char* param1);
 
 /// @param self QValueAxis*
 /// @param param1 enum QMetaObject__Call

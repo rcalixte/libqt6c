@@ -31,10 +31,41 @@ QWebChannelAbstractTransport* q_webchannelabstracttransport_new2(void* parent);
 ///
 const QMetaObject* q_webchannelabstracttransport_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QWebChannelAbstractTransport*
+/// @param callback const QMetaObject* func()
+///
+void q_webchannelabstracttransport_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QWebChannelAbstractTransport*
+///
+const QMetaObject* q_webchannelabstracttransport_qbase_meta_object(void* self);
+
 /// @param self QWebChannelAbstractTransport*
 /// @param param1 const char*
 ///
 void* q_webchannelabstracttransport_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QWebChannelAbstractTransport*
+/// @param callback void* func(QWebChannelAbstractTransport* self, const char* param1)
+///
+void q_webchannelabstracttransport_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QWebChannelAbstractTransport*
+/// @param param1 const char*
+///
+void* q_webchannelabstracttransport_qbase_metacast(void* self, const char* param1);
 
 /// @param self QWebChannelAbstractTransport*
 /// @param param1 enum QMetaObject__Call

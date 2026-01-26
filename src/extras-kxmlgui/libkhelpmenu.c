@@ -37,8 +37,24 @@ const QMetaObject* k_helpmenu_meta_object(void* self) {
     return KHelpMenu_MetaObject((KHelpMenu*)self);
 }
 
+void k_helpmenu_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KHelpMenu_OnMetaObject((KHelpMenu*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_helpmenu_qbase_meta_object(void* self) {
+    return KHelpMenu_QBaseMetaObject((KHelpMenu*)self);
+}
+
 void* k_helpmenu_metacast(void* self, const char* param1) {
     return KHelpMenu_Metacast((KHelpMenu*)self, param1);
+}
+
+void k_helpmenu_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KHelpMenu_OnMetacast((KHelpMenu*)self, (intptr_t)callback);
+}
+
+void* k_helpmenu_qbase_metacast(void* self, const char* param1) {
+    return KHelpMenu_QBaseMetacast((KHelpMenu*)self, param1);
 }
 
 int32_t k_helpmenu_metacall(void* self, int32_t param1, int param2, void* param3) {

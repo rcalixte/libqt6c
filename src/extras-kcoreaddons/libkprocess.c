@@ -20,8 +20,24 @@ const QMetaObject* k_process_meta_object(void* self) {
     return KProcess_MetaObject((KProcess*)self);
 }
 
+void k_process_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KProcess_OnMetaObject((KProcess*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_process_qbase_meta_object(void* self) {
+    return KProcess_QBaseMetaObject((KProcess*)self);
+}
+
 void* k_process_metacast(void* self, const char* param1) {
     return KProcess_Metacast((KProcess*)self, param1);
+}
+
+void k_process_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KProcess_OnMetacast((KProcess*)self, (intptr_t)callback);
+}
+
+void* k_process_qbase_metacast(void* self, const char* param1) {
+    return KProcess_QBaseMetacast((KProcess*)self, param1);
 }
 
 int32_t k_process_metacall(void* self, int32_t param1, int param2, void* param3) {

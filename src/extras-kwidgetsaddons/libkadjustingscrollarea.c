@@ -30,8 +30,24 @@ const QMetaObject* k_adjustingscrollarea_meta_object(void* self) {
     return KAdjustingScrollArea_MetaObject((KAdjustingScrollArea*)self);
 }
 
+void k_adjustingscrollarea_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KAdjustingScrollArea_OnMetaObject((KAdjustingScrollArea*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_adjustingscrollarea_qbase_meta_object(void* self) {
+    return KAdjustingScrollArea_QBaseMetaObject((KAdjustingScrollArea*)self);
+}
+
 void* k_adjustingscrollarea_metacast(void* self, const char* param1) {
     return KAdjustingScrollArea_Metacast((KAdjustingScrollArea*)self, param1);
+}
+
+void k_adjustingscrollarea_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KAdjustingScrollArea_OnMetacast((KAdjustingScrollArea*)self, (intptr_t)callback);
+}
+
+void* k_adjustingscrollarea_qbase_metacast(void* self, const char* param1) {
+    return KAdjustingScrollArea_QBaseMetacast((KAdjustingScrollArea*)self, param1);
 }
 
 int32_t k_adjustingscrollarea_metacall(void* self, int32_t param1, int param2, void* param3) {

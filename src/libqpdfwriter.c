@@ -29,8 +29,24 @@ const QMetaObject* q_pdfwriter_meta_object(void* self) {
     return QPdfWriter_MetaObject((QPdfWriter*)self);
 }
 
+void q_pdfwriter_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QPdfWriter_OnMetaObject((QPdfWriter*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_pdfwriter_qbase_meta_object(void* self) {
+    return QPdfWriter_QBaseMetaObject((QPdfWriter*)self);
+}
+
 void* q_pdfwriter_metacast(void* self, const char* param1) {
     return QPdfWriter_Metacast((QPdfWriter*)self, param1);
+}
+
+void q_pdfwriter_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QPdfWriter_OnMetacast((QPdfWriter*)self, (intptr_t)callback);
+}
+
+void* q_pdfwriter_qbase_metacast(void* self, const char* param1) {
+    return QPdfWriter_QBaseMetacast((QPdfWriter*)self, param1);
 }
 
 int32_t q_pdfwriter_metacall(void* self, int32_t param1, int param2, void* param3) {

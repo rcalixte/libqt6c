@@ -213,8 +213,24 @@ const QMetaObject* q_imageioplugin_meta_object(void* self) {
     return QImageIOPlugin_MetaObject((QImageIOPlugin*)self);
 }
 
+void q_imageioplugin_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QImageIOPlugin_OnMetaObject((QImageIOPlugin*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_imageioplugin_qbase_meta_object(void* self) {
+    return QImageIOPlugin_QBaseMetaObject((QImageIOPlugin*)self);
+}
+
 void* q_imageioplugin_metacast(void* self, const char* param1) {
     return QImageIOPlugin_Metacast((QImageIOPlugin*)self, param1);
+}
+
+void q_imageioplugin_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QImageIOPlugin_OnMetacast((QImageIOPlugin*)self, (intptr_t)callback);
+}
+
+void* q_imageioplugin_qbase_metacast(void* self, const char* param1) {
+    return QImageIOPlugin_QBaseMetacast((QImageIOPlugin*)self, param1);
 }
 
 int32_t q_imageioplugin_metacall(void* self, int32_t param1, int param2, void* param3) {

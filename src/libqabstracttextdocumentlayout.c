@@ -24,8 +24,24 @@ const QMetaObject* q_abstracttextdocumentlayout_meta_object(void* self) {
     return QAbstractTextDocumentLayout_MetaObject((QAbstractTextDocumentLayout*)self);
 }
 
+void q_abstracttextdocumentlayout_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QAbstractTextDocumentLayout_OnMetaObject((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_abstracttextdocumentlayout_qbase_meta_object(void* self) {
+    return QAbstractTextDocumentLayout_QBaseMetaObject((QAbstractTextDocumentLayout*)self);
+}
+
 void* q_abstracttextdocumentlayout_metacast(void* self, const char* param1) {
     return QAbstractTextDocumentLayout_Metacast((QAbstractTextDocumentLayout*)self, param1);
+}
+
+void q_abstracttextdocumentlayout_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QAbstractTextDocumentLayout_OnMetacast((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
+}
+
+void* q_abstracttextdocumentlayout_qbase_metacast(void* self, const char* param1) {
+    return QAbstractTextDocumentLayout_QBaseMetacast((QAbstractTextDocumentLayout*)self, param1);
 }
 
 int32_t q_abstracttextdocumentlayout_metacall(void* self, int32_t param1, int param2, void* param3) {

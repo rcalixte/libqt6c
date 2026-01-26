@@ -34,8 +34,24 @@ const QMetaObject* k_pixmapsequencewidget_meta_object(void* self) {
     return KPixmapSequenceWidget_MetaObject((KPixmapSequenceWidget*)self);
 }
 
+void k_pixmapsequencewidget_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KPixmapSequenceWidget_OnMetaObject((KPixmapSequenceWidget*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_pixmapsequencewidget_qbase_meta_object(void* self) {
+    return KPixmapSequenceWidget_QBaseMetaObject((KPixmapSequenceWidget*)self);
+}
+
 void* k_pixmapsequencewidget_metacast(void* self, const char* param1) {
     return KPixmapSequenceWidget_Metacast((KPixmapSequenceWidget*)self, param1);
+}
+
+void k_pixmapsequencewidget_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KPixmapSequenceWidget_OnMetacast((KPixmapSequenceWidget*)self, (intptr_t)callback);
+}
+
+void* k_pixmapsequencewidget_qbase_metacast(void* self, const char* param1) {
+    return KPixmapSequenceWidget_QBaseMetacast((KPixmapSequenceWidget*)self, param1);
 }
 
 int32_t k_pixmapsequencewidget_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -23,8 +23,24 @@ const QMetaObject* q_scilexerjava_meta_object(void* self) {
     return QsciLexerJava_MetaObject((QsciLexerJava*)self);
 }
 
+void q_scilexerjava_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QsciLexerJava_OnMetaObject((QsciLexerJava*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_scilexerjava_qbase_meta_object(void* self) {
+    return QsciLexerJava_QBaseMetaObject((QsciLexerJava*)self);
+}
+
 void* q_scilexerjava_metacast(void* self, const char* param1) {
     return QsciLexerJava_Metacast((QsciLexerJava*)self, param1);
+}
+
+void q_scilexerjava_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QsciLexerJava_OnMetacast((QsciLexerJava*)self, (intptr_t)callback);
+}
+
+void* q_scilexerjava_qbase_metacast(void* self, const char* param1) {
+    return QsciLexerJava_QBaseMetacast((QsciLexerJava*)self, param1);
 }
 
 int32_t q_scilexerjava_metacall(void* self, int32_t param1, int param2, void* param3) {

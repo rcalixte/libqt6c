@@ -19,8 +19,24 @@ const QMetaObject* k_bookmarkmanager_meta_object(void* self) {
     return KBookmarkManager_MetaObject((KBookmarkManager*)self);
 }
 
+void k_bookmarkmanager_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KBookmarkManager_OnMetaObject((KBookmarkManager*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_bookmarkmanager_qbase_meta_object(void* self) {
+    return KBookmarkManager_QBaseMetaObject((KBookmarkManager*)self);
+}
+
 void* k_bookmarkmanager_metacast(void* self, const char* param1) {
     return KBookmarkManager_Metacast((KBookmarkManager*)self, param1);
+}
+
+void k_bookmarkmanager_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KBookmarkManager_OnMetacast((KBookmarkManager*)self, (intptr_t)callback);
+}
+
+void* k_bookmarkmanager_qbase_metacast(void* self, const char* param1) {
+    return KBookmarkManager_QBaseMetacast((KBookmarkManager*)self, param1);
 }
 
 int32_t k_bookmarkmanager_metacall(void* self, int32_t param1, int param2, void* param3) {

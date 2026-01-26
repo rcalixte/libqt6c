@@ -45,8 +45,24 @@ const QMetaObject* k_editlistwidget_meta_object(void* self) {
     return KEditListWidget_MetaObject((KEditListWidget*)self);
 }
 
+void k_editlistwidget_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KEditListWidget_OnMetaObject((KEditListWidget*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_editlistwidget_qbase_meta_object(void* self) {
+    return KEditListWidget_QBaseMetaObject((KEditListWidget*)self);
+}
+
 void* k_editlistwidget_metacast(void* self, const char* param1) {
     return KEditListWidget_Metacast((KEditListWidget*)self, param1);
+}
+
+void k_editlistwidget_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KEditListWidget_OnMetacast((KEditListWidget*)self, (intptr_t)callback);
+}
+
+void* k_editlistwidget_qbase_metacast(void* self, const char* param1) {
+    return KEditListWidget_QBaseMetacast((KEditListWidget*)self, param1);
 }
 
 int32_t k_editlistwidget_metacall(void* self, int32_t param1, int param2, void* param3) {

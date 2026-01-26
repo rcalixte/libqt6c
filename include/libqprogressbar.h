@@ -31,10 +31,41 @@ QProgressBar* q_progressbar_new2();
 ///
 const QMetaObject* q_progressbar_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QProgressBar*
+/// @param callback const QMetaObject* func()
+///
+void q_progressbar_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QProgressBar*
+///
+const QMetaObject* q_progressbar_qbase_meta_object(void* self);
+
 /// @param self QProgressBar*
 /// @param param1 const char*
 ///
 void* q_progressbar_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QProgressBar*
+/// @param callback void* func(QProgressBar* self, const char* param1)
+///
+void q_progressbar_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QProgressBar*
+/// @param param1 const char*
+///
+void* q_progressbar_qbase_metacast(void* self, const char* param1);
 
 /// @param self QProgressBar*
 /// @param param1 enum QMetaObject__Call

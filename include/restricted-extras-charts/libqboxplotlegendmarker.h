@@ -36,10 +36,41 @@ QBoxPlotLegendMarker* q_boxplotlegendmarker_new2(void* series, void* legend, voi
 ///
 const QMetaObject* q_boxplotlegendmarker_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QBoxPlotLegendMarker*
+/// @param callback const QMetaObject* func()
+///
+void q_boxplotlegendmarker_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QBoxPlotLegendMarker*
+///
+const QMetaObject* q_boxplotlegendmarker_qbase_meta_object(void* self);
+
 /// @param self QBoxPlotLegendMarker*
 /// @param param1 const char*
 ///
 void* q_boxplotlegendmarker_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QBoxPlotLegendMarker*
+/// @param callback void* func(QBoxPlotLegendMarker* self, const char* param1)
+///
+void q_boxplotlegendmarker_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QBoxPlotLegendMarker*
+/// @param param1 const char*
+///
+void* q_boxplotlegendmarker_qbase_metacast(void* self, const char* param1);
 
 /// @param self QBoxPlotLegendMarker*
 /// @param param1 enum QMetaObject__Call

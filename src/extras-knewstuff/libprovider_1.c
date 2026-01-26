@@ -17,8 +17,24 @@ const QMetaObject* k_nscore__provider_meta_object(void* self) {
     return KNSCore__Provider_MetaObject((KNSCore__Provider*)self);
 }
 
+void k_nscore__provider_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KNSCore__Provider_OnMetaObject((KNSCore__Provider*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_nscore__provider_qbase_meta_object(void* self) {
+    return KNSCore__Provider_QBaseMetaObject((KNSCore__Provider*)self);
+}
+
 void* k_nscore__provider_metacast(void* self, const char* param1) {
     return KNSCore__Provider_Metacast((KNSCore__Provider*)self, param1);
+}
+
+void k_nscore__provider_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KNSCore__Provider_OnMetacast((KNSCore__Provider*)self, (intptr_t)callback);
+}
+
+void* k_nscore__provider_qbase_metacast(void* self, const char* param1) {
+    return KNSCore__Provider_QBaseMetacast((KNSCore__Provider*)self, param1);
 }
 
 int32_t k_nscore__provider_metacall(void* self, int32_t param1, int param2, void* param3) {

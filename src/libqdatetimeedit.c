@@ -56,8 +56,24 @@ const QMetaObject* q_datetimeedit_meta_object(void* self) {
     return QDateTimeEdit_MetaObject((QDateTimeEdit*)self);
 }
 
+void q_datetimeedit_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDateTimeEdit_OnMetaObject((QDateTimeEdit*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_datetimeedit_qbase_meta_object(void* self) {
+    return QDateTimeEdit_QBaseMetaObject((QDateTimeEdit*)self);
+}
+
 void* q_datetimeedit_metacast(void* self, const char* param1) {
     return QDateTimeEdit_Metacast((QDateTimeEdit*)self, param1);
+}
+
+void q_datetimeedit_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDateTimeEdit_OnMetacast((QDateTimeEdit*)self, (intptr_t)callback);
+}
+
+void* q_datetimeedit_qbase_metacast(void* self, const char* param1) {
+    return QDateTimeEdit_QBaseMetacast((QDateTimeEdit*)self, param1);
 }
 
 int32_t q_datetimeedit_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -2620,8 +2636,24 @@ const QMetaObject* q_timeedit_meta_object(void* self) {
     return QTimeEdit_MetaObject((QTimeEdit*)self);
 }
 
+void q_timeedit_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QTimeEdit_OnMetaObject((QTimeEdit*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_timeedit_qbase_meta_object(void* self) {
+    return QTimeEdit_QBaseMetaObject((QTimeEdit*)self);
+}
+
 void* q_timeedit_metacast(void* self, const char* param1) {
     return QTimeEdit_Metacast((QTimeEdit*)self, param1);
+}
+
+void q_timeedit_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QTimeEdit_OnMetacast((QTimeEdit*)self, (intptr_t)callback);
+}
+
+void* q_timeedit_qbase_metacast(void* self, const char* param1) {
+    return QTimeEdit_QBaseMetacast((QTimeEdit*)self, param1);
 }
 
 int32_t q_timeedit_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -5192,8 +5224,24 @@ const QMetaObject* q_dateedit_meta_object(void* self) {
     return QDateEdit_MetaObject((QDateEdit*)self);
 }
 
+void q_dateedit_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDateEdit_OnMetaObject((QDateEdit*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_dateedit_qbase_meta_object(void* self) {
+    return QDateEdit_QBaseMetaObject((QDateEdit*)self);
+}
+
 void* q_dateedit_metacast(void* self, const char* param1) {
     return QDateEdit_Metacast((QDateEdit*)self, param1);
+}
+
+void q_dateedit_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDateEdit_OnMetacast((QDateEdit*)self, (intptr_t)callback);
+}
+
+void* q_dateedit_qbase_metacast(void* self, const char* param1) {
+    return QDateEdit_QBaseMetacast((QDateEdit*)self, param1);
 }
 
 int32_t q_dateedit_metacall(void* self, int32_t param1, int param2, void* param3) {

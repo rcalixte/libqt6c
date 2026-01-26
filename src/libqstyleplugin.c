@@ -18,8 +18,24 @@ const QMetaObject* q_styleplugin_meta_object(void* self) {
     return QStylePlugin_MetaObject((QStylePlugin*)self);
 }
 
+void q_styleplugin_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QStylePlugin_OnMetaObject((QStylePlugin*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_styleplugin_qbase_meta_object(void* self) {
+    return QStylePlugin_QBaseMetaObject((QStylePlugin*)self);
+}
+
 void* q_styleplugin_metacast(void* self, const char* param1) {
     return QStylePlugin_Metacast((QStylePlugin*)self, param1);
+}
+
+void q_styleplugin_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QStylePlugin_OnMetacast((QStylePlugin*)self, (intptr_t)callback);
+}
+
+void* q_styleplugin_qbase_metacast(void* self, const char* param1) {
+    return QStylePlugin_QBaseMetacast((QStylePlugin*)self, param1);
 }
 
 int32_t q_styleplugin_metacall(void* self, int32_t param1, int param2, void* param3) {

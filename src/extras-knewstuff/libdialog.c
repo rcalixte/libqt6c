@@ -28,8 +28,24 @@ const QMetaObject* k_nswidgets__dialog_meta_object(void* self) {
     return KNSWidgets__Dialog_MetaObject((KNSWidgets__Dialog*)self);
 }
 
+void k_nswidgets__dialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KNSWidgets__Dialog_OnMetaObject((KNSWidgets__Dialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_nswidgets__dialog_qbase_meta_object(void* self) {
+    return KNSWidgets__Dialog_QBaseMetaObject((KNSWidgets__Dialog*)self);
+}
+
 void* k_nswidgets__dialog_metacast(void* self, const char* param1) {
     return KNSWidgets__Dialog_Metacast((KNSWidgets__Dialog*)self, param1);
+}
+
+void k_nswidgets__dialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KNSWidgets__Dialog_OnMetacast((KNSWidgets__Dialog*)self, (intptr_t)callback);
+}
+
+void* k_nswidgets__dialog_qbase_metacast(void* self, const char* param1) {
+    return KNSWidgets__Dialog_QBaseMetacast((KNSWidgets__Dialog*)self, param1);
 }
 
 int32_t k_nswidgets__dialog_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -24,8 +24,24 @@ const QMetaObject* q_pdfsearchmodel_meta_object(void* self) {
     return QPdfSearchModel_MetaObject((QPdfSearchModel*)self);
 }
 
+void q_pdfsearchmodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QPdfSearchModel_OnMetaObject((QPdfSearchModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_pdfsearchmodel_qbase_meta_object(void* self) {
+    return QPdfSearchModel_QBaseMetaObject((QPdfSearchModel*)self);
+}
+
 void* q_pdfsearchmodel_metacast(void* self, const char* param1) {
     return QPdfSearchModel_Metacast((QPdfSearchModel*)self, param1);
+}
+
+void q_pdfsearchmodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QPdfSearchModel_OnMetacast((QPdfSearchModel*)self, (intptr_t)callback);
+}
+
+void* q_pdfsearchmodel_qbase_metacast(void* self, const char* param1) {
+    return QPdfSearchModel_QBaseMetacast((QPdfSearchModel*)self, param1);
 }
 
 int32_t q_pdfsearchmodel_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -40,8 +40,24 @@ const QMetaObject* k_xmlguiwindow_meta_object(void* self) {
     return KXmlGuiWindow_MetaObject((KXmlGuiWindow*)self);
 }
 
+void k_xmlguiwindow_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KXmlGuiWindow_OnMetaObject((KXmlGuiWindow*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_xmlguiwindow_qbase_meta_object(void* self) {
+    return KXmlGuiWindow_QBaseMetaObject((KXmlGuiWindow*)self);
+}
+
 void* k_xmlguiwindow_metacast(void* self, const char* param1) {
     return KXmlGuiWindow_Metacast((KXmlGuiWindow*)self, param1);
+}
+
+void k_xmlguiwindow_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KXmlGuiWindow_OnMetacast((KXmlGuiWindow*)self, (intptr_t)callback);
+}
+
+void* k_xmlguiwindow_qbase_metacast(void* self, const char* param1) {
+    return KXmlGuiWindow_QBaseMetacast((KXmlGuiWindow*)self, param1);
 }
 
 int32_t k_xmlguiwindow_metacall(void* self, int32_t param1, int param2, void* param3) {

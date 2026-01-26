@@ -33,8 +33,24 @@ const QMetaObject* k_languagebutton_meta_object(void* self) {
     return KLanguageButton_MetaObject((KLanguageButton*)self);
 }
 
+void k_languagebutton_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KLanguageButton_OnMetaObject((KLanguageButton*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_languagebutton_qbase_meta_object(void* self) {
+    return KLanguageButton_QBaseMetaObject((KLanguageButton*)self);
+}
+
 void* k_languagebutton_metacast(void* self, const char* param1) {
     return KLanguageButton_Metacast((KLanguageButton*)self, param1);
+}
+
+void k_languagebutton_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KLanguageButton_OnMetacast((KLanguageButton*)self, (intptr_t)callback);
+}
+
+void* k_languagebutton_qbase_metacast(void* self, const char* param1) {
+    return KLanguageButton_QBaseMetacast((KLanguageButton*)self, param1);
 }
 
 int32_t k_languagebutton_metacall(void* self, int32_t param1, int param2, void* param3) {

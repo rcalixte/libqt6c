@@ -111,10 +111,41 @@ KOpenWithDialog* k_openwithdialog_new10(libqt_list /* of QUrl* */ urls, const ch
 ///
 const QMetaObject* k_openwithdialog_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KOpenWithDialog*
+/// @param callback const QMetaObject* func()
+///
+void k_openwithdialog_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KOpenWithDialog*
+///
+const QMetaObject* k_openwithdialog_qbase_meta_object(void* self);
+
 /// @param self KOpenWithDialog*
 /// @param param1 const char*
 ///
 void* k_openwithdialog_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KOpenWithDialog*
+/// @param callback void* func(KOpenWithDialog* self, const char* param1)
+///
+void k_openwithdialog_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KOpenWithDialog*
+/// @param param1 const char*
+///
+void* k_openwithdialog_qbase_metacast(void* self, const char* param1);
 
 /// @param self KOpenWithDialog*
 /// @param param1 enum QMetaObject__Call

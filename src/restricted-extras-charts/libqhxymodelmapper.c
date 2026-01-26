@@ -20,8 +20,24 @@ const QMetaObject* q_hxymodelmapper_meta_object(void* self) {
     return QHXYModelMapper_MetaObject((QHXYModelMapper*)self);
 }
 
+void q_hxymodelmapper_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QHXYModelMapper_OnMetaObject((QHXYModelMapper*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_hxymodelmapper_qbase_meta_object(void* self) {
+    return QHXYModelMapper_QBaseMetaObject((QHXYModelMapper*)self);
+}
+
 void* q_hxymodelmapper_metacast(void* self, const char* param1) {
     return QHXYModelMapper_Metacast((QHXYModelMapper*)self, param1);
+}
+
+void q_hxymodelmapper_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QHXYModelMapper_OnMetacast((QHXYModelMapper*)self, (intptr_t)callback);
+}
+
+void* q_hxymodelmapper_qbase_metacast(void* self, const char* param1) {
+    return QHXYModelMapper_QBaseMetacast((QHXYModelMapper*)self, param1);
 }
 
 int32_t q_hxymodelmapper_metacall(void* self, int32_t param1, int param2, void* param3) {

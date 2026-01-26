@@ -20,8 +20,24 @@ const QMetaObject* q_tcpserver_meta_object(void* self) {
     return QTcpServer_MetaObject((QTcpServer*)self);
 }
 
+void q_tcpserver_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QTcpServer_OnMetaObject((QTcpServer*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_tcpserver_qbase_meta_object(void* self) {
+    return QTcpServer_QBaseMetaObject((QTcpServer*)self);
+}
+
 void* q_tcpserver_metacast(void* self, const char* param1) {
     return QTcpServer_Metacast((QTcpServer*)self, param1);
+}
+
+void q_tcpserver_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QTcpServer_OnMetacast((QTcpServer*)self, (intptr_t)callback);
+}
+
+void* q_tcpserver_qbase_metacast(void* self, const char* param1) {
+    return QTcpServer_QBaseMetacast((QTcpServer*)self, param1);
 }
 
 int32_t q_tcpserver_metacall(void* self, int32_t param1, int param2, void* param3) {

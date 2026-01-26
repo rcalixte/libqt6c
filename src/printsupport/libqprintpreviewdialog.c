@@ -43,8 +43,24 @@ const QMetaObject* q_printpreviewdialog_meta_object(void* self) {
     return QPrintPreviewDialog_MetaObject((QPrintPreviewDialog*)self);
 }
 
+void q_printpreviewdialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QPrintPreviewDialog_OnMetaObject((QPrintPreviewDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_printpreviewdialog_qbase_meta_object(void* self) {
+    return QPrintPreviewDialog_QBaseMetaObject((QPrintPreviewDialog*)self);
+}
+
 void* q_printpreviewdialog_metacast(void* self, const char* param1) {
     return QPrintPreviewDialog_Metacast((QPrintPreviewDialog*)self, param1);
+}
+
+void q_printpreviewdialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QPrintPreviewDialog_OnMetacast((QPrintPreviewDialog*)self, (intptr_t)callback);
+}
+
+void* q_printpreviewdialog_qbase_metacast(void* self, const char* param1) {
+    return QPrintPreviewDialog_QBaseMetacast((QPrintPreviewDialog*)self, param1);
 }
 
 int32_t q_printpreviewdialog_metacall(void* self, int32_t param1, int param2, void* param3) {

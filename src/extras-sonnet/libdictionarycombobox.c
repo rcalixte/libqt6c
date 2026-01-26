@@ -28,8 +28,24 @@ const QMetaObject* k_sonnet__dictionarycombobox_meta_object(void* self) {
     return Sonnet__DictionaryComboBox_MetaObject((Sonnet__DictionaryComboBox*)self);
 }
 
+void k_sonnet__dictionarycombobox_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    Sonnet__DictionaryComboBox_OnMetaObject((Sonnet__DictionaryComboBox*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_sonnet__dictionarycombobox_qbase_meta_object(void* self) {
+    return Sonnet__DictionaryComboBox_QBaseMetaObject((Sonnet__DictionaryComboBox*)self);
+}
+
 void* k_sonnet__dictionarycombobox_metacast(void* self, const char* param1) {
     return Sonnet__DictionaryComboBox_Metacast((Sonnet__DictionaryComboBox*)self, param1);
+}
+
+void k_sonnet__dictionarycombobox_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    Sonnet__DictionaryComboBox_OnMetacast((Sonnet__DictionaryComboBox*)self, (intptr_t)callback);
+}
+
+void* k_sonnet__dictionarycombobox_qbase_metacast(void* self, const char* param1) {
+    return Sonnet__DictionaryComboBox_QBaseMetacast((Sonnet__DictionaryComboBox*)self, param1);
 }
 
 int32_t k_sonnet__dictionarycombobox_metacall(void* self, int32_t param1, int param2, void* param3) {

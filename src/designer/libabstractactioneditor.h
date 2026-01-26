@@ -34,10 +34,41 @@ QDesignerActionEditorInterface* q_designeractioneditorinterface_new2(void* paren
 ///
 const QMetaObject* q_designeractioneditorinterface_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QDesignerActionEditorInterface*
+/// @param callback const QMetaObject* func()
+///
+void q_designeractioneditorinterface_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QDesignerActionEditorInterface*
+///
+const QMetaObject* q_designeractioneditorinterface_qbase_meta_object(void* self);
+
 /// @param self QDesignerActionEditorInterface*
 /// @param param1 const char*
 ///
 void* q_designeractioneditorinterface_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QDesignerActionEditorInterface*
+/// @param callback void* func(QDesignerActionEditorInterface* self, const char* param1)
+///
+void q_designeractioneditorinterface_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QDesignerActionEditorInterface*
+/// @param param1 const char*
+///
+void* q_designeractioneditorinterface_qbase_metacast(void* self, const char* param1);
 
 /// @param self QDesignerActionEditorInterface*
 /// @param param1 enum QMetaObject__Call

@@ -31,10 +31,41 @@ KPageModel* k_pagemodel_new2(void* parent);
 ///
 const QMetaObject* k_pagemodel_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KPageModel*
+/// @param callback const QMetaObject* func()
+///
+void k_pagemodel_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KPageModel*
+///
+const QMetaObject* k_pagemodel_qbase_meta_object(void* self);
+
 /// @param self KPageModel*
 /// @param param1 const char*
 ///
 void* k_pagemodel_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KPageModel*
+/// @param callback void* func(KPageModel* self, const char* param1)
+///
+void k_pagemodel_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KPageModel*
+/// @param param1 const char*
+///
+void* k_pagemodel_qbase_metacast(void* self, const char* param1);
 
 /// @param self KPageModel*
 /// @param param1 enum QMetaObject__Call

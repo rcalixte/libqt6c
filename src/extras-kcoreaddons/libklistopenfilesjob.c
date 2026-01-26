@@ -15,8 +15,24 @@ const QMetaObject* k_listopenfilesjob_meta_object(void* self) {
     return KListOpenFilesJob_MetaObject((KListOpenFilesJob*)self);
 }
 
+void k_listopenfilesjob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KListOpenFilesJob_OnMetaObject((KListOpenFilesJob*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_listopenfilesjob_qbase_meta_object(void* self) {
+    return KListOpenFilesJob_QBaseMetaObject((KListOpenFilesJob*)self);
+}
+
 void* k_listopenfilesjob_metacast(void* self, const char* param1) {
     return KListOpenFilesJob_Metacast((KListOpenFilesJob*)self, param1);
+}
+
+void k_listopenfilesjob_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KListOpenFilesJob_OnMetacast((KListOpenFilesJob*)self, (intptr_t)callback);
+}
+
+void* k_listopenfilesjob_qbase_metacast(void* self, const char* param1) {
+    return KListOpenFilesJob_QBaseMetacast((KListOpenFilesJob*)self, param1);
 }
 
 int32_t k_listopenfilesjob_metacall(void* self, int32_t param1, int param2, void* param3) {

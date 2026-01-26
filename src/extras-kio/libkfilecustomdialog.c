@@ -36,8 +36,24 @@ const QMetaObject* k_filecustomdialog_meta_object(void* self) {
     return KFileCustomDialog_MetaObject((KFileCustomDialog*)self);
 }
 
+void k_filecustomdialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KFileCustomDialog_OnMetaObject((KFileCustomDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_filecustomdialog_qbase_meta_object(void* self) {
+    return KFileCustomDialog_QBaseMetaObject((KFileCustomDialog*)self);
+}
+
 void* k_filecustomdialog_metacast(void* self, const char* param1) {
     return KFileCustomDialog_Metacast((KFileCustomDialog*)self, param1);
+}
+
+void k_filecustomdialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KFileCustomDialog_OnMetacast((KFileCustomDialog*)self, (intptr_t)callback);
+}
+
+void* k_filecustomdialog_qbase_metacast(void* self, const char* param1) {
+    return KFileCustomDialog_QBaseMetacast((KFileCustomDialog*)self, param1);
 }
 
 int32_t k_filecustomdialog_metacall(void* self, int32_t param1, int param2, void* param3) {

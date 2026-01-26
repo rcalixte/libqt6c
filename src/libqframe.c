@@ -31,8 +31,24 @@ const QMetaObject* q_frame_meta_object(void* self) {
     return QFrame_MetaObject((QFrame*)self);
 }
 
+void q_frame_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QFrame_OnMetaObject((QFrame*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_frame_qbase_meta_object(void* self) {
+    return QFrame_QBaseMetaObject((QFrame*)self);
+}
+
 void* q_frame_metacast(void* self, const char* param1) {
     return QFrame_Metacast((QFrame*)self, param1);
+}
+
+void q_frame_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QFrame_OnMetacast((QFrame*)self, (intptr_t)callback);
+}
+
+void* q_frame_qbase_metacast(void* self, const char* param1) {
+    return QFrame_QBaseMetacast((QFrame*)self, param1);
 }
 
 int32_t q_frame_metacall(void* self, int32_t param1, int param2, void* param3) {

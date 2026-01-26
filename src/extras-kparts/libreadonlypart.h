@@ -40,10 +40,41 @@ KParts__ReadOnlyPart* k_parts__readonlypart_new3(void* parent, void* data);
 ///
 const QMetaObject* k_parts__readonlypart_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KParts__ReadOnlyPart*
+/// @param callback const QMetaObject* func()
+///
+void k_parts__readonlypart_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KParts__ReadOnlyPart*
+///
+const QMetaObject* k_parts__readonlypart_qbase_meta_object(void* self);
+
 /// @param self KParts__ReadOnlyPart*
 /// @param param1 const char*
 ///
 void* k_parts__readonlypart_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KParts__ReadOnlyPart*
+/// @param callback void* func(KParts__ReadOnlyPart* self, const char* param1)
+///
+void k_parts__readonlypart_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KParts__ReadOnlyPart*
+/// @param param1 const char*
+///
+void* k_parts__readonlypart_qbase_metacast(void* self, const char* param1);
 
 /// @param self KParts__ReadOnlyPart*
 /// @param param1 enum QMetaObject__Call

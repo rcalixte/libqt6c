@@ -20,8 +20,24 @@ const QMetaObject* q_boxplotlegendmarker_meta_object(void* self) {
     return QBoxPlotLegendMarker_MetaObject((QBoxPlotLegendMarker*)self);
 }
 
+void q_boxplotlegendmarker_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QBoxPlotLegendMarker_OnMetaObject((QBoxPlotLegendMarker*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_boxplotlegendmarker_qbase_meta_object(void* self) {
+    return QBoxPlotLegendMarker_QBaseMetaObject((QBoxPlotLegendMarker*)self);
+}
+
 void* q_boxplotlegendmarker_metacast(void* self, const char* param1) {
     return QBoxPlotLegendMarker_Metacast((QBoxPlotLegendMarker*)self, param1);
+}
+
+void q_boxplotlegendmarker_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QBoxPlotLegendMarker_OnMetacast((QBoxPlotLegendMarker*)self, (intptr_t)callback);
+}
+
+void* q_boxplotlegendmarker_qbase_metacast(void* self, const char* param1) {
+    return QBoxPlotLegendMarker_QBaseMetacast((QBoxPlotLegendMarker*)self, param1);
 }
 
 int32_t q_boxplotlegendmarker_metacall(void* self, int32_t param1, int param2, void* param3) {

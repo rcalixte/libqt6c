@@ -22,8 +22,24 @@ const QMetaObject* q_nmeapositioninfosource_meta_object(void* self) {
     return QNmeaPositionInfoSource_MetaObject((QNmeaPositionInfoSource*)self);
 }
 
+void q_nmeapositioninfosource_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QNmeaPositionInfoSource_OnMetaObject((QNmeaPositionInfoSource*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_nmeapositioninfosource_qbase_meta_object(void* self) {
+    return QNmeaPositionInfoSource_QBaseMetaObject((QNmeaPositionInfoSource*)self);
+}
+
 void* q_nmeapositioninfosource_metacast(void* self, const char* param1) {
     return QNmeaPositionInfoSource_Metacast((QNmeaPositionInfoSource*)self, param1);
+}
+
+void q_nmeapositioninfosource_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QNmeaPositionInfoSource_OnMetacast((QNmeaPositionInfoSource*)self, (intptr_t)callback);
+}
+
+void* q_nmeapositioninfosource_qbase_metacast(void* self, const char* param1) {
+    return QNmeaPositionInfoSource_QBaseMetacast((QNmeaPositionInfoSource*)self, param1);
 }
 
 int32_t q_nmeapositioninfosource_metacall(void* self, int32_t param1, int param2, void* param3) {

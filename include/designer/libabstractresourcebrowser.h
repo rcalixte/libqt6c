@@ -31,10 +31,41 @@ QDesignerResourceBrowserInterface* q_designerresourcebrowserinterface_new2();
 ///
 const QMetaObject* q_designerresourcebrowserinterface_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QDesignerResourceBrowserInterface*
+/// @param callback const QMetaObject* func()
+///
+void q_designerresourcebrowserinterface_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QDesignerResourceBrowserInterface*
+///
+const QMetaObject* q_designerresourcebrowserinterface_qbase_meta_object(void* self);
+
 /// @param self QDesignerResourceBrowserInterface*
 /// @param param1 const char*
 ///
 void* q_designerresourcebrowserinterface_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QDesignerResourceBrowserInterface*
+/// @param callback void* func(QDesignerResourceBrowserInterface* self, const char* param1)
+///
+void q_designerresourcebrowserinterface_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QDesignerResourceBrowserInterface*
+/// @param param1 const char*
+///
+void* q_designerresourcebrowserinterface_qbase_metacast(void* self, const char* param1);
 
 /// @param self QDesignerResourceBrowserInterface*
 /// @param param1 enum QMetaObject__Call

@@ -26,8 +26,24 @@ const QMetaObject* q_pauseanimation_meta_object(void* self) {
     return QPauseAnimation_MetaObject((QPauseAnimation*)self);
 }
 
+void q_pauseanimation_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QPauseAnimation_OnMetaObject((QPauseAnimation*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_pauseanimation_qbase_meta_object(void* self) {
+    return QPauseAnimation_QBaseMetaObject((QPauseAnimation*)self);
+}
+
 void* q_pauseanimation_metacast(void* self, const char* param1) {
     return QPauseAnimation_Metacast((QPauseAnimation*)self, param1);
+}
+
+void q_pauseanimation_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QPauseAnimation_OnMetacast((QPauseAnimation*)self, (intptr_t)callback);
+}
+
+void* q_pauseanimation_qbase_metacast(void* self, const char* param1) {
+    return QPauseAnimation_QBaseMetacast((QPauseAnimation*)self, param1);
 }
 
 int32_t q_pauseanimation_metacall(void* self, int32_t param1, int param2, void* param3) {

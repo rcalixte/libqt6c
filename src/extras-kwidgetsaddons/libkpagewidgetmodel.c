@@ -26,8 +26,24 @@ const QMetaObject* k_pagewidgetitem_meta_object(void* self) {
     return KPageWidgetItem_MetaObject((KPageWidgetItem*)self);
 }
 
+void k_pagewidgetitem_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KPageWidgetItem_OnMetaObject((KPageWidgetItem*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_pagewidgetitem_qbase_meta_object(void* self) {
+    return KPageWidgetItem_QBaseMetaObject((KPageWidgetItem*)self);
+}
+
 void* k_pagewidgetitem_metacast(void* self, const char* param1) {
     return KPageWidgetItem_Metacast((KPageWidgetItem*)self, param1);
+}
+
+void k_pagewidgetitem_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KPageWidgetItem_OnMetacast((KPageWidgetItem*)self, (intptr_t)callback);
+}
+
+void* k_pagewidgetitem_qbase_metacast(void* self, const char* param1) {
+    return KPageWidgetItem_QBaseMetacast((KPageWidgetItem*)self, param1);
 }
 
 int32_t k_pagewidgetitem_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -493,8 +509,24 @@ const QMetaObject* k_pagewidgetmodel_meta_object(void* self) {
     return KPageWidgetModel_MetaObject((KPageWidgetModel*)self);
 }
 
+void k_pagewidgetmodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KPageWidgetModel_OnMetaObject((KPageWidgetModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_pagewidgetmodel_qbase_meta_object(void* self) {
+    return KPageWidgetModel_QBaseMetaObject((KPageWidgetModel*)self);
+}
+
 void* k_pagewidgetmodel_metacast(void* self, const char* param1) {
     return KPageWidgetModel_Metacast((KPageWidgetModel*)self, param1);
+}
+
+void k_pagewidgetmodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KPageWidgetModel_OnMetacast((KPageWidgetModel*)self, (intptr_t)callback);
+}
+
+void* k_pagewidgetmodel_qbase_metacast(void* self, const char* param1) {
+    return KPageWidgetModel_QBaseMetacast((KPageWidgetModel*)self, param1);
 }
 
 int32_t k_pagewidgetmodel_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -53,10 +53,41 @@ KUrlComboBox* k_urlcombobox_new4(int32_t mode, bool rw, void* parent);
 ///
 const QMetaObject* k_urlcombobox_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KUrlComboBox*
+/// @param callback const QMetaObject* func()
+///
+void k_urlcombobox_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KUrlComboBox*
+///
+const QMetaObject* k_urlcombobox_qbase_meta_object(void* self);
+
 /// @param self KUrlComboBox*
 /// @param param1 const char*
 ///
 void* k_urlcombobox_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KUrlComboBox*
+/// @param callback void* func(KUrlComboBox* self, const char* param1)
+///
+void k_urlcombobox_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KUrlComboBox*
+/// @param param1 const char*
+///
+void* k_urlcombobox_qbase_metacast(void* self, const char* param1);
 
 /// @param self KUrlComboBox*
 /// @param param1 enum QMetaObject__Call

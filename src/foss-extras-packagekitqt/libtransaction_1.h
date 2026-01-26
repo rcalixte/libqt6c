@@ -25,10 +25,41 @@ PackageKit__Transaction* q_packagekit__transaction_new(void* tid);
 ///
 const QMetaObject* q_packagekit__transaction_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self PackageKit__Transaction*
+/// @param callback const QMetaObject* func()
+///
+void q_packagekit__transaction_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self PackageKit__Transaction*
+///
+const QMetaObject* q_packagekit__transaction_qbase_meta_object(void* self);
+
 /// @param self PackageKit__Transaction*
 /// @param param1 const char*
 ///
 void* q_packagekit__transaction_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self PackageKit__Transaction*
+/// @param callback void* func(PackageKit__Transaction* self, const char* param1)
+///
+void q_packagekit__transaction_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self PackageKit__Transaction*
+/// @param param1 const char*
+///
+void* q_packagekit__transaction_qbase_metacast(void* self, const char* param1);
 
 /// @param self PackageKit__Transaction*
 /// @param param1 enum QMetaObject__Call

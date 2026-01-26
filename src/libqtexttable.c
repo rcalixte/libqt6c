@@ -97,8 +97,24 @@ const QMetaObject* q_texttable_meta_object(void* self) {
     return QTextTable_MetaObject((QTextTable*)self);
 }
 
+void q_texttable_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QTextTable_OnMetaObject((QTextTable*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_texttable_qbase_meta_object(void* self) {
+    return QTextTable_QBaseMetaObject((QTextTable*)self);
+}
+
 void* q_texttable_metacast(void* self, const char* param1) {
     return QTextTable_Metacast((QTextTable*)self, param1);
+}
+
+void q_texttable_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QTextTable_OnMetacast((QTextTable*)self, (intptr_t)callback);
+}
+
+void* q_texttable_qbase_metacast(void* self, const char* param1) {
+    return QTextTable_QBaseMetacast((QTextTable*)self, param1);
 }
 
 int32_t q_texttable_metacall(void* self, int32_t param1, int param2, void* param3) {

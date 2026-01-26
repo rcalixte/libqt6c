@@ -111,21 +111,6 @@ bool k_configloader_qbase_usr_save(void* self);
 
 /// Inherited from KConfigSkeleton
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
-///
-/// @param self KConfigLoader*
-///
-const QMetaObject* k_configloader_meta_object(void* self);
-
-/// Inherited from KConfigSkeleton
-///
-/// @param self KConfigLoader*
-/// @param param1 const char*
-///
-void* k_configloader_metacast(void* self, const char* param1);
-
-/// Inherited from KConfigSkeleton
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
@@ -1353,6 +1338,70 @@ void k_configloader_destroyed1(void* self, void* param1);
 /// @param callback void func(KConfigLoader* self, QObject* param1)
 ///
 void k_configloader_on_destroyed1(void* self, void (*callback)(void*, void*));
+
+/// Inherited from KConfigSkeleton
+///
+/// [Upstream resources](https://api.kde.org/kconfigskeleton.html#metaObject)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self KConfigLoader*
+///
+const QMetaObject* k_configloader_meta_object(void* self);
+
+/// Inherited from KConfigSkeleton
+///
+/// [Upstream resources](https://api.kde.org/kconfigskeleton.html#metaObject)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self KConfigLoader*
+///
+const QMetaObject* k_configloader_qbase_meta_object(void* self);
+
+/// Inherited from KConfigSkeleton
+///
+/// [Upstream resources](https://api.kde.org/kconfigskeleton.html#metaObject)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self KConfigLoader*
+/// @param callback const QMetaObject* func()
+///
+void k_configloader_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// Inherited from KConfigSkeleton
+///
+/// [Upstream resources](https://api.kde.org/kconfigskeleton.html#qt_metacast)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self KConfigLoader*
+/// @param param1 const char*
+///
+void* k_configloader_metacast(void* self, const char* param1);
+
+/// Inherited from KConfigSkeleton
+///
+/// [Upstream resources](https://api.kde.org/kconfigskeleton.html#qt_metacast)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self KConfigLoader*
+/// @param param1 const char*
+///
+void* k_configloader_qbase_metacast(void* self, const char* param1);
+
+/// Inherited from KConfigSkeleton
+///
+/// [Upstream resources](https://api.kde.org/kconfigskeleton.html#qt_metacast)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self KConfigLoader*
+/// @param callback void* func(KConfigLoader* self, const char* param1)
+///
+void k_configloader_on_metacast(void* self, void* (*callback)(void*, const char*));
 
 /// Inherited from KConfigSkeleton
 ///

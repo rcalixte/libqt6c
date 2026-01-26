@@ -19,8 +19,24 @@ const QMetaObject* q_localsocket_meta_object(void* self) {
     return QLocalSocket_MetaObject((QLocalSocket*)self);
 }
 
+void q_localsocket_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QLocalSocket_OnMetaObject((QLocalSocket*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_localsocket_qbase_meta_object(void* self) {
+    return QLocalSocket_QBaseMetaObject((QLocalSocket*)self);
+}
+
 void* q_localsocket_metacast(void* self, const char* param1) {
     return QLocalSocket_Metacast((QLocalSocket*)self, param1);
+}
+
+void q_localsocket_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QLocalSocket_OnMetacast((QLocalSocket*)self, (intptr_t)callback);
+}
+
+void* q_localsocket_qbase_metacast(void* self, const char* param1) {
+    return QLocalSocket_QBaseMetacast((QLocalSocket*)self, param1);
 }
 
 int32_t q_localsocket_metacall(void* self, int32_t param1, int param2, void* param3) {

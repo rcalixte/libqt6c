@@ -48,10 +48,41 @@ QRadioButton* q_radiobutton_new4(const char* text, void* parent);
 ///
 const QMetaObject* q_radiobutton_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QRadioButton*
+/// @param callback const QMetaObject* func()
+///
+void q_radiobutton_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QRadioButton*
+///
+const QMetaObject* q_radiobutton_qbase_meta_object(void* self);
+
 /// @param self QRadioButton*
 /// @param param1 const char*
 ///
 void* q_radiobutton_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QRadioButton*
+/// @param callback void* func(QRadioButton* self, const char* param1)
+///
+void q_radiobutton_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QRadioButton*
+/// @param param1 const char*
+///
+void* q_radiobutton_qbase_metacast(void* self, const char* param1);
 
 /// @param self QRadioButton*
 /// @param param1 enum QMetaObject__Call

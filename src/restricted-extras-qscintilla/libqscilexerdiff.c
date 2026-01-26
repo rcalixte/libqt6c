@@ -22,8 +22,24 @@ const QMetaObject* q_scilexerdiff_meta_object(void* self) {
     return QsciLexerDiff_MetaObject((QsciLexerDiff*)self);
 }
 
+void q_scilexerdiff_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QsciLexerDiff_OnMetaObject((QsciLexerDiff*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_scilexerdiff_qbase_meta_object(void* self) {
+    return QsciLexerDiff_QBaseMetaObject((QsciLexerDiff*)self);
+}
+
 void* q_scilexerdiff_metacast(void* self, const char* param1) {
     return QsciLexerDiff_Metacast((QsciLexerDiff*)self, param1);
+}
+
+void q_scilexerdiff_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QsciLexerDiff_OnMetacast((QsciLexerDiff*)self, (intptr_t)callback);
+}
+
+void* q_scilexerdiff_qbase_metacast(void* self, const char* param1) {
+    return QsciLexerDiff_QBaseMetacast((QsciLexerDiff*)self, param1);
 }
 
 int32_t q_scilexerdiff_metacall(void* self, int32_t param1, int param2, void* param3) {

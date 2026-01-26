@@ -36,8 +36,24 @@ const QMetaObject* q_printdialog_meta_object(void* self) {
     return QPrintDialog_MetaObject((QPrintDialog*)self);
 }
 
+void q_printdialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QPrintDialog_OnMetaObject((QPrintDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_printdialog_qbase_meta_object(void* self) {
+    return QPrintDialog_QBaseMetaObject((QPrintDialog*)self);
+}
+
 void* q_printdialog_metacast(void* self, const char* param1) {
     return QPrintDialog_Metacast((QPrintDialog*)self, param1);
+}
+
+void q_printdialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QPrintDialog_OnMetacast((QPrintDialog*)self, (intptr_t)callback);
+}
+
+void* q_printdialog_qbase_metacast(void* self, const char* param1) {
+    return QPrintDialog_QBaseMetacast((QPrintDialog*)self, param1);
 }
 
 int32_t q_printdialog_metacall(void* self, int32_t param1, int param2, void* param3) {

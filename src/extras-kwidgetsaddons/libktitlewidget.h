@@ -31,10 +31,41 @@ KTitleWidget* k_titlewidget_new2();
 ///
 const QMetaObject* k_titlewidget_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KTitleWidget*
+/// @param callback const QMetaObject* func()
+///
+void k_titlewidget_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KTitleWidget*
+///
+const QMetaObject* k_titlewidget_qbase_meta_object(void* self);
+
 /// @param self KTitleWidget*
 /// @param param1 const char*
 ///
 void* k_titlewidget_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KTitleWidget*
+/// @param callback void* func(KTitleWidget* self, const char* param1)
+///
+void k_titlewidget_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KTitleWidget*
+/// @param param1 const char*
+///
+void* k_titlewidget_qbase_metacast(void* self, const char* param1);
 
 /// @param self KTitleWidget*
 /// @param param1 enum QMetaObject__Call

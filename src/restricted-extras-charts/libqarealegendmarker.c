@@ -20,8 +20,24 @@ const QMetaObject* q_arealegendmarker_meta_object(void* self) {
     return QAreaLegendMarker_MetaObject((QAreaLegendMarker*)self);
 }
 
+void q_arealegendmarker_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QAreaLegendMarker_OnMetaObject((QAreaLegendMarker*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_arealegendmarker_qbase_meta_object(void* self) {
+    return QAreaLegendMarker_QBaseMetaObject((QAreaLegendMarker*)self);
+}
+
 void* q_arealegendmarker_metacast(void* self, const char* param1) {
     return QAreaLegendMarker_Metacast((QAreaLegendMarker*)self, param1);
+}
+
+void q_arealegendmarker_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QAreaLegendMarker_OnMetacast((QAreaLegendMarker*)self, (intptr_t)callback);
+}
+
+void* q_arealegendmarker_qbase_metacast(void* self, const char* param1) {
+    return QAreaLegendMarker_QBaseMetacast((QAreaLegendMarker*)self, param1);
 }
 
 int32_t q_arealegendmarker_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -16,8 +16,24 @@ const QMetaObject* q_textlist_meta_object(void* self) {
     return QTextList_MetaObject((QTextList*)self);
 }
 
+void q_textlist_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QTextList_OnMetaObject((QTextList*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_textlist_qbase_meta_object(void* self) {
+    return QTextList_QBaseMetaObject((QTextList*)self);
+}
+
 void* q_textlist_metacast(void* self, const char* param1) {
     return QTextList_Metacast((QTextList*)self, param1);
+}
+
+void q_textlist_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QTextList_OnMetacast((QTextList*)self, (intptr_t)callback);
+}
+
+void* q_textlist_qbase_metacast(void* self, const char* param1) {
+    return QTextList_QBaseMetacast((QTextList*)self, param1);
 }
 
 int32_t q_textlist_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -34,10 +34,41 @@ QNmeaSatelliteInfoSource* q_nmeasatelliteinfosource_new2(int32_t mode, void* par
 ///
 const QMetaObject* q_nmeasatelliteinfosource_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QNmeaSatelliteInfoSource*
+/// @param callback const QMetaObject* func()
+///
+void q_nmeasatelliteinfosource_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QNmeaSatelliteInfoSource*
+///
+const QMetaObject* q_nmeasatelliteinfosource_qbase_meta_object(void* self);
+
 /// @param self QNmeaSatelliteInfoSource*
 /// @param param1 const char*
 ///
 void* q_nmeasatelliteinfosource_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QNmeaSatelliteInfoSource*
+/// @param callback void* func(QNmeaSatelliteInfoSource* self, const char* param1)
+///
+void q_nmeasatelliteinfosource_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QNmeaSatelliteInfoSource*
+/// @param param1 const char*
+///
+void* q_nmeasatelliteinfosource_qbase_metacast(void* self, const char* param1);
 
 /// @param self QNmeaSatelliteInfoSource*
 /// @param param1 enum QMetaObject__Call

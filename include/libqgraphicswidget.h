@@ -40,10 +40,41 @@ QGraphicsWidget* q_graphicswidget_new3(void* parent, int32_t wFlags);
 ///
 const QMetaObject* q_graphicswidget_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsWidget*
+/// @param callback const QMetaObject* func()
+///
+void q_graphicswidget_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QGraphicsWidget*
+///
+const QMetaObject* q_graphicswidget_qbase_meta_object(void* self);
+
 /// @param self QGraphicsWidget*
 /// @param param1 const char*
 ///
 void* q_graphicswidget_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsWidget*
+/// @param callback void* func(QGraphicsWidget* self, const char* param1)
+///
+void q_graphicswidget_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QGraphicsWidget*
+/// @param param1 const char*
+///
+void* q_graphicswidget_qbase_metacast(void* self, const char* param1);
 
 /// @param self QGraphicsWidget*
 /// @param param1 enum QMetaObject__Call

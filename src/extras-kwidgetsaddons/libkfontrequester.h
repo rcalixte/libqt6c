@@ -40,10 +40,41 @@ KFontRequester* k_fontrequester_new3(void* parent, bool onlyFixed);
 ///
 const QMetaObject* k_fontrequester_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KFontRequester*
+/// @param callback const QMetaObject* func()
+///
+void k_fontrequester_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KFontRequester*
+///
+const QMetaObject* k_fontrequester_qbase_meta_object(void* self);
+
 /// @param self KFontRequester*
 /// @param param1 const char*
 ///
 void* k_fontrequester_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KFontRequester*
+/// @param callback void* func(KFontRequester* self, const char* param1)
+///
+void k_fontrequester_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KFontRequester*
+/// @param param1 const char*
+///
+void* k_fontrequester_qbase_metacast(void* self, const char* param1);
 
 /// @param self KFontRequester*
 /// @param param1 enum QMetaObject__Call

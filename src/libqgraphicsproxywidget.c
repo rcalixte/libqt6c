@@ -34,8 +34,24 @@ const QMetaObject* q_graphicsproxywidget_meta_object(void* self) {
     return QGraphicsProxyWidget_MetaObject((QGraphicsProxyWidget*)self);
 }
 
+void q_graphicsproxywidget_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QGraphicsProxyWidget_OnMetaObject((QGraphicsProxyWidget*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_graphicsproxywidget_qbase_meta_object(void* self) {
+    return QGraphicsProxyWidget_QBaseMetaObject((QGraphicsProxyWidget*)self);
+}
+
 void* q_graphicsproxywidget_metacast(void* self, const char* param1) {
     return QGraphicsProxyWidget_Metacast((QGraphicsProxyWidget*)self, param1);
+}
+
+void q_graphicsproxywidget_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QGraphicsProxyWidget_OnMetacast((QGraphicsProxyWidget*)self, (intptr_t)callback);
+}
+
+void* q_graphicsproxywidget_qbase_metacast(void* self, const char* param1) {
+    return QGraphicsProxyWidget_QBaseMetacast((QGraphicsProxyWidget*)self, param1);
 }
 
 int32_t q_graphicsproxywidget_metacall(void* self, int32_t param1, int param2, void* param3) {

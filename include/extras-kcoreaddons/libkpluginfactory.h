@@ -23,10 +23,41 @@ KPluginFactory* k_pluginfactory_new();
 ///
 const QMetaObject* k_pluginfactory_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KPluginFactory*
+/// @param callback const QMetaObject* func()
+///
+void k_pluginfactory_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KPluginFactory*
+///
+const QMetaObject* k_pluginfactory_qbase_meta_object(void* self);
+
 /// @param self KPluginFactory*
 /// @param param1 const char*
 ///
 void* k_pluginfactory_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KPluginFactory*
+/// @param callback void* func(KPluginFactory* self, const char* param1)
+///
+void k_pluginfactory_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KPluginFactory*
+/// @param param1 const char*
+///
+void* k_pluginfactory_qbase_metacast(void* self, const char* param1);
 
 /// @param self KPluginFactory*
 /// @param param1 enum QMetaObject__Call

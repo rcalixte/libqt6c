@@ -19,8 +19,24 @@ const QMetaObject* k_attica__providermanager_meta_object(void* self) {
     return Attica__ProviderManager_MetaObject((Attica__ProviderManager*)self);
 }
 
+void k_attica__providermanager_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    Attica__ProviderManager_OnMetaObject((Attica__ProviderManager*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_attica__providermanager_qbase_meta_object(void* self) {
+    return Attica__ProviderManager_QBaseMetaObject((Attica__ProviderManager*)self);
+}
+
 void* k_attica__providermanager_metacast(void* self, const char* param1) {
     return Attica__ProviderManager_Metacast((Attica__ProviderManager*)self, param1);
+}
+
+void k_attica__providermanager_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    Attica__ProviderManager_OnMetacast((Attica__ProviderManager*)self, (intptr_t)callback);
+}
+
+void* k_attica__providermanager_qbase_metacast(void* self, const char* param1) {
+    return Attica__ProviderManager_QBaseMetacast((Attica__ProviderManager*)self, param1);
 }
 
 int32_t k_attica__providermanager_metacall(void* self, int32_t param1, int param2, void* param3) {

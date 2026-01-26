@@ -51,8 +51,24 @@ const QMetaObject* q_dialogbuttonbox_meta_object(void* self) {
     return QDialogButtonBox_MetaObject((QDialogButtonBox*)self);
 }
 
+void q_dialogbuttonbox_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDialogButtonBox_OnMetaObject((QDialogButtonBox*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_dialogbuttonbox_qbase_meta_object(void* self) {
+    return QDialogButtonBox_QBaseMetaObject((QDialogButtonBox*)self);
+}
+
 void* q_dialogbuttonbox_metacast(void* self, const char* param1) {
     return QDialogButtonBox_Metacast((QDialogButtonBox*)self, param1);
+}
+
+void q_dialogbuttonbox_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDialogButtonBox_OnMetacast((QDialogButtonBox*)self, (intptr_t)callback);
+}
+
+void* q_dialogbuttonbox_qbase_metacast(void* self, const char* param1) {
+    return QDialogButtonBox_QBaseMetacast((QDialogButtonBox*)self, param1);
 }
 
 int32_t q_dialogbuttonbox_metacall(void* self, int32_t param1, int param2, void* param3) {

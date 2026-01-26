@@ -22,8 +22,24 @@ const QMetaObject* q_layout_meta_object(void* self) {
     return QLayout_MetaObject((QLayout*)self);
 }
 
+void q_layout_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QLayout_OnMetaObject((QLayout*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_layout_qbase_meta_object(void* self) {
+    return QLayout_QBaseMetaObject((QLayout*)self);
+}
+
 void* q_layout_metacast(void* self, const char* param1) {
     return QLayout_Metacast((QLayout*)self, param1);
+}
+
+void q_layout_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QLayout_OnMetacast((QLayout*)self, (intptr_t)callback);
+}
+
+void* q_layout_qbase_metacast(void* self, const char* param1) {
+    return QLayout_QBaseMetacast((QLayout*)self, param1);
 }
 
 int32_t q_layout_metacall(void* self, int32_t param1, int param2, void* param3) {

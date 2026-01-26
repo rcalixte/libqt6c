@@ -104,8 +104,24 @@ const QMetaObject* k_replacedialog_meta_object(void* self) {
     return KReplaceDialog_MetaObject((KReplaceDialog*)self);
 }
 
+void k_replacedialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KReplaceDialog_OnMetaObject((KReplaceDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_replacedialog_qbase_meta_object(void* self) {
+    return KReplaceDialog_QBaseMetaObject((KReplaceDialog*)self);
+}
+
 void* k_replacedialog_metacast(void* self, const char* param1) {
     return KReplaceDialog_Metacast((KReplaceDialog*)self, param1);
+}
+
+void k_replacedialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KReplaceDialog_OnMetacast((KReplaceDialog*)self, (intptr_t)callback);
+}
+
+void* k_replacedialog_qbase_metacast(void* self, const char* param1) {
+    return KReplaceDialog_QBaseMetacast((KReplaceDialog*)self, param1);
 }
 
 int32_t k_replacedialog_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -48,10 +48,41 @@ KPixmapSequenceWidget* k_pixmapsequencewidget_new4(void* seq, void* parent);
 ///
 const QMetaObject* k_pixmapsequencewidget_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KPixmapSequenceWidget*
+/// @param callback const QMetaObject* func()
+///
+void k_pixmapsequencewidget_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KPixmapSequenceWidget*
+///
+const QMetaObject* k_pixmapsequencewidget_qbase_meta_object(void* self);
+
 /// @param self KPixmapSequenceWidget*
 /// @param param1 const char*
 ///
 void* k_pixmapsequencewidget_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KPixmapSequenceWidget*
+/// @param callback void* func(KPixmapSequenceWidget* self, const char* param1)
+///
+void k_pixmapsequencewidget_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KPixmapSequenceWidget*
+/// @param param1 const char*
+///
+void* k_pixmapsequencewidget_qbase_metacast(void* self, const char* param1);
 
 /// @param self KPixmapSequenceWidget*
 /// @param param1 enum QMetaObject__Call

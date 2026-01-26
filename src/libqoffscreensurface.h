@@ -40,10 +40,41 @@ QOffscreenSurface* q_offscreensurface_new3(void* screen, void* parent);
 ///
 const QMetaObject* q_offscreensurface_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QOffscreenSurface*
+/// @param callback const QMetaObject* func()
+///
+void q_offscreensurface_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QOffscreenSurface*
+///
+const QMetaObject* q_offscreensurface_qbase_meta_object(void* self);
+
 /// @param self QOffscreenSurface*
 /// @param param1 const char*
 ///
 void* q_offscreensurface_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QOffscreenSurface*
+/// @param callback void* func(QOffscreenSurface* self, const char* param1)
+///
+void q_offscreensurface_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QOffscreenSurface*
+/// @param param1 const char*
+///
+void* q_offscreensurface_qbase_metacast(void* self, const char* param1);
 
 /// @param self QOffscreenSurface*
 /// @param param1 enum QMetaObject__Call

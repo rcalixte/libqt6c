@@ -20,8 +20,24 @@ const QMetaObject* k_filepreviewgenerator_meta_object(void* self) {
     return KFilePreviewGenerator_MetaObject((KFilePreviewGenerator*)self);
 }
 
+void k_filepreviewgenerator_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KFilePreviewGenerator_OnMetaObject((KFilePreviewGenerator*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_filepreviewgenerator_qbase_meta_object(void* self) {
+    return KFilePreviewGenerator_QBaseMetaObject((KFilePreviewGenerator*)self);
+}
+
 void* k_filepreviewgenerator_metacast(void* self, const char* param1) {
     return KFilePreviewGenerator_Metacast((KFilePreviewGenerator*)self, param1);
+}
+
+void k_filepreviewgenerator_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KFilePreviewGenerator_OnMetacast((KFilePreviewGenerator*)self, (intptr_t)callback);
+}
+
+void* k_filepreviewgenerator_qbase_metacast(void* self, const char* param1) {
+    return KFilePreviewGenerator_QBaseMetacast((KFilePreviewGenerator*)self, param1);
 }
 
 int32_t k_filepreviewgenerator_metacall(void* self, int32_t param1, int param2, void* param3) {

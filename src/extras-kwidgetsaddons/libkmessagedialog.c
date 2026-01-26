@@ -32,8 +32,24 @@ const QMetaObject* k_messagedialog_meta_object(void* self) {
     return KMessageDialog_MetaObject((KMessageDialog*)self);
 }
 
+void k_messagedialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KMessageDialog_OnMetaObject((KMessageDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_messagedialog_qbase_meta_object(void* self) {
+    return KMessageDialog_QBaseMetaObject((KMessageDialog*)self);
+}
+
 void* k_messagedialog_metacast(void* self, const char* param1) {
     return KMessageDialog_Metacast((KMessageDialog*)self, param1);
+}
+
+void k_messagedialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KMessageDialog_OnMetacast((KMessageDialog*)self, (intptr_t)callback);
+}
+
+void* k_messagedialog_qbase_metacast(void* self, const char* param1) {
+    return KMessageDialog_QBaseMetacast((KMessageDialog*)self, param1);
 }
 
 int32_t k_messagedialog_metacall(void* self, int32_t param1, int param2, void* param3) {

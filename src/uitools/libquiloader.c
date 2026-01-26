@@ -23,8 +23,24 @@ const QMetaObject* q_uiloader_meta_object(void* self) {
     return QUiLoader_MetaObject((QUiLoader*)self);
 }
 
+void q_uiloader_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QUiLoader_OnMetaObject((QUiLoader*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_uiloader_qbase_meta_object(void* self) {
+    return QUiLoader_QBaseMetaObject((QUiLoader*)self);
+}
+
 void* q_uiloader_metacast(void* self, const char* param1) {
     return QUiLoader_Metacast((QUiLoader*)self, param1);
+}
+
+void q_uiloader_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QUiLoader_OnMetacast((QUiLoader*)self, (intptr_t)callback);
+}
+
+void* q_uiloader_qbase_metacast(void* self, const char* param1) {
+    return QUiLoader_QBaseMetacast((QUiLoader*)self, param1);
 }
 
 int32_t q_uiloader_metacall(void* self, int32_t param1, int param2, void* param3) {

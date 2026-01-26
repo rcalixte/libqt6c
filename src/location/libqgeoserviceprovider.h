@@ -44,10 +44,41 @@ QGeoServiceProvider* q_geoserviceprovider_new3(const char* providerName, libqt_m
 ///
 const QMetaObject* q_geoserviceprovider_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QGeoServiceProvider*
+/// @param callback const QMetaObject* func()
+///
+void q_geoserviceprovider_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QGeoServiceProvider*
+///
+const QMetaObject* q_geoserviceprovider_qbase_meta_object(void* self);
+
 /// @param self QGeoServiceProvider*
 /// @param param1 const char*
 ///
 void* q_geoserviceprovider_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QGeoServiceProvider*
+/// @param callback void* func(QGeoServiceProvider* self, const char* param1)
+///
+void q_geoserviceprovider_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QGeoServiceProvider*
+/// @param param1 const char*
+///
+void* q_geoserviceprovider_qbase_metacast(void* self, const char* param1);
 
 /// @param self QGeoServiceProvider*
 /// @param param1 enum QMetaObject__Call

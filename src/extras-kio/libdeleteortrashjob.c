@@ -16,8 +16,24 @@ const QMetaObject* k_io__deleteortrashjob_meta_object(void* self) {
     return KIO__DeleteOrTrashJob_MetaObject((KIO__DeleteOrTrashJob*)self);
 }
 
+void k_io__deleteortrashjob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KIO__DeleteOrTrashJob_OnMetaObject((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_io__deleteortrashjob_qbase_meta_object(void* self) {
+    return KIO__DeleteOrTrashJob_QBaseMetaObject((KIO__DeleteOrTrashJob*)self);
+}
+
 void* k_io__deleteortrashjob_metacast(void* self, const char* param1) {
     return KIO__DeleteOrTrashJob_Metacast((KIO__DeleteOrTrashJob*)self, param1);
+}
+
+void k_io__deleteortrashjob_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KIO__DeleteOrTrashJob_OnMetacast((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
+}
+
+void* k_io__deleteortrashjob_qbase_metacast(void* self, const char* param1) {
+    return KIO__DeleteOrTrashJob_QBaseMetacast((KIO__DeleteOrTrashJob*)self, param1);
 }
 
 int32_t k_io__deleteortrashjob_metacall(void* self, int32_t param1, int param2, void* param3) {

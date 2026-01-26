@@ -29,8 +29,24 @@ const QMetaObject* q_guiapplication_meta_object(void* self) {
     return QGuiApplication_MetaObject((QGuiApplication*)self);
 }
 
+void q_guiapplication_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QGuiApplication_OnMetaObject((QGuiApplication*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_guiapplication_qbase_meta_object(void* self) {
+    return QGuiApplication_QBaseMetaObject((QGuiApplication*)self);
+}
+
 void* q_guiapplication_metacast(void* self, const char* param1) {
     return QGuiApplication_Metacast((QGuiApplication*)self, param1);
+}
+
+void q_guiapplication_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QGuiApplication_OnMetacast((QGuiApplication*)self, (intptr_t)callback);
+}
+
+void* q_guiapplication_qbase_metacast(void* self, const char* param1) {
+    return QGuiApplication_QBaseMetacast((QGuiApplication*)self, param1);
 }
 
 int32_t q_guiapplication_metacall(void* self, int32_t param1, int param2, void* param3) {

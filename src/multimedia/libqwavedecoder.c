@@ -28,8 +28,24 @@ const QMetaObject* q_wavedecoder_meta_object(void* self) {
     return QWaveDecoder_MetaObject((QWaveDecoder*)self);
 }
 
+void q_wavedecoder_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QWaveDecoder_OnMetaObject((QWaveDecoder*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_wavedecoder_qbase_meta_object(void* self) {
+    return QWaveDecoder_QBaseMetaObject((QWaveDecoder*)self);
+}
+
 void* q_wavedecoder_metacast(void* self, const char* param1) {
     return QWaveDecoder_Metacast((QWaveDecoder*)self, param1);
+}
+
+void q_wavedecoder_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QWaveDecoder_OnMetacast((QWaveDecoder*)self, (intptr_t)callback);
+}
+
+void* q_wavedecoder_qbase_metacast(void* self, const char* param1) {
+    return QWaveDecoder_QBaseMetacast((QWaveDecoder*)self, param1);
 }
 
 int32_t q_wavedecoder_metacall(void* self, int32_t param1, int param2, void* param3) {

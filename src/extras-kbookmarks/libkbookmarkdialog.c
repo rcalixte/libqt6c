@@ -30,8 +30,24 @@ const QMetaObject* k_bookmarkdialog_meta_object(void* self) {
     return KBookmarkDialog_MetaObject((KBookmarkDialog*)self);
 }
 
+void k_bookmarkdialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KBookmarkDialog_OnMetaObject((KBookmarkDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_bookmarkdialog_qbase_meta_object(void* self) {
+    return KBookmarkDialog_QBaseMetaObject((KBookmarkDialog*)self);
+}
+
 void* k_bookmarkdialog_metacast(void* self, const char* param1) {
     return KBookmarkDialog_Metacast((KBookmarkDialog*)self, param1);
+}
+
+void k_bookmarkdialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KBookmarkDialog_OnMetacast((KBookmarkDialog*)self, (intptr_t)callback);
+}
+
+void* k_bookmarkdialog_qbase_metacast(void* self, const char* param1) {
+    return KBookmarkDialog_QBaseMetacast((KBookmarkDialog*)self, param1);
 }
 
 int32_t k_bookmarkdialog_metacall(void* self, int32_t param1, int param2, void* param3) {

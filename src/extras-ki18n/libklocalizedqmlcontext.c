@@ -18,8 +18,24 @@ const QMetaObject* k_localizedqmlcontext_meta_object(void* self) {
     return KLocalizedQmlContext_MetaObject((KLocalizedQmlContext*)self);
 }
 
+void k_localizedqmlcontext_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KLocalizedQmlContext_OnMetaObject((KLocalizedQmlContext*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_localizedqmlcontext_qbase_meta_object(void* self) {
+    return KLocalizedQmlContext_QBaseMetaObject((KLocalizedQmlContext*)self);
+}
+
 void* k_localizedqmlcontext_metacast(void* self, const char* param1) {
     return KLocalizedQmlContext_Metacast((KLocalizedQmlContext*)self, param1);
+}
+
+void k_localizedqmlcontext_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KLocalizedQmlContext_OnMetacast((KLocalizedQmlContext*)self, (intptr_t)callback);
+}
+
+void* k_localizedqmlcontext_qbase_metacast(void* self, const char* param1) {
+    return KLocalizedQmlContext_QBaseMetacast((KLocalizedQmlContext*)self, param1);
 }
 
 int32_t k_localizedqmlcontext_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -48,10 +48,41 @@ KPixmapSequenceOverlayPainter* k_pixmapsequenceoverlaypainter_new4(void* seq, vo
 ///
 const QMetaObject* k_pixmapsequenceoverlaypainter_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KPixmapSequenceOverlayPainter*
+/// @param callback const QMetaObject* func()
+///
+void k_pixmapsequenceoverlaypainter_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KPixmapSequenceOverlayPainter*
+///
+const QMetaObject* k_pixmapsequenceoverlaypainter_qbase_meta_object(void* self);
+
 /// @param self KPixmapSequenceOverlayPainter*
 /// @param param1 const char*
 ///
 void* k_pixmapsequenceoverlaypainter_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KPixmapSequenceOverlayPainter*
+/// @param callback void* func(KPixmapSequenceOverlayPainter* self, const char* param1)
+///
+void k_pixmapsequenceoverlaypainter_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KPixmapSequenceOverlayPainter*
+/// @param param1 const char*
+///
+void* k_pixmapsequenceoverlaypainter_qbase_metacast(void* self, const char* param1);
 
 /// @param self KPixmapSequenceOverlayPainter*
 /// @param param1 enum QMetaObject__Call

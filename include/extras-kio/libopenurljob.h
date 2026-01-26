@@ -53,10 +53,41 @@ KIO__OpenUrlJob* k_io__openurljob_new4(void* url, const char* mimeType, void* pa
 ///
 const QMetaObject* k_io__openurljob_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KIO__OpenUrlJob*
+/// @param callback const QMetaObject* func()
+///
+void k_io__openurljob_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KIO__OpenUrlJob*
+///
+const QMetaObject* k_io__openurljob_qbase_meta_object(void* self);
+
 /// @param self KIO__OpenUrlJob*
 /// @param param1 const char*
 ///
 void* k_io__openurljob_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KIO__OpenUrlJob*
+/// @param callback void* func(KIO__OpenUrlJob* self, const char* param1)
+///
+void k_io__openurljob_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KIO__OpenUrlJob*
+/// @param param1 const char*
+///
+void* k_io__openurljob_qbase_metacast(void* self, const char* param1);
 
 /// @param self KIO__OpenUrlJob*
 /// @param param1 enum QMetaObject__Call

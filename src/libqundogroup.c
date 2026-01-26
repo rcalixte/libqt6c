@@ -19,8 +19,24 @@ const QMetaObject* q_undogroup_meta_object(void* self) {
     return QUndoGroup_MetaObject((QUndoGroup*)self);
 }
 
+void q_undogroup_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QUndoGroup_OnMetaObject((QUndoGroup*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_undogroup_qbase_meta_object(void* self) {
+    return QUndoGroup_QBaseMetaObject((QUndoGroup*)self);
+}
+
 void* q_undogroup_metacast(void* self, const char* param1) {
     return QUndoGroup_Metacast((QUndoGroup*)self, param1);
+}
+
+void q_undogroup_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QUndoGroup_OnMetacast((QUndoGroup*)self, (intptr_t)callback);
+}
+
+void* q_undogroup_qbase_metacast(void* self, const char* param1) {
+    return QUndoGroup_QBaseMetacast((QUndoGroup*)self, param1);
 }
 
 int32_t q_undogroup_metacall(void* self, int32_t param1, int param2, void* param3) {

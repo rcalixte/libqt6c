@@ -25,8 +25,24 @@ const QMetaObject* k_widgetitemdelegate_meta_object(void* self) {
     return KWidgetItemDelegate_MetaObject((KWidgetItemDelegate*)self);
 }
 
+void k_widgetitemdelegate_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KWidgetItemDelegate_OnMetaObject((KWidgetItemDelegate*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_widgetitemdelegate_qbase_meta_object(void* self) {
+    return KWidgetItemDelegate_QBaseMetaObject((KWidgetItemDelegate*)self);
+}
+
 void* k_widgetitemdelegate_metacast(void* self, const char* param1) {
     return KWidgetItemDelegate_Metacast((KWidgetItemDelegate*)self, param1);
+}
+
+void k_widgetitemdelegate_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KWidgetItemDelegate_OnMetacast((KWidgetItemDelegate*)self, (intptr_t)callback);
+}
+
+void* k_widgetitemdelegate_qbase_metacast(void* self, const char* param1) {
+    return KWidgetItemDelegate_QBaseMetacast((KWidgetItemDelegate*)self, param1);
 }
 
 int32_t k_widgetitemdelegate_metacall(void* self, int32_t param1, int param2, void* param3) {

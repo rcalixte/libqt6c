@@ -23,8 +23,24 @@ const QMetaObject* q_sslserver_meta_object(void* self) {
     return QSslServer_MetaObject((QSslServer*)self);
 }
 
+void q_sslserver_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QSslServer_OnMetaObject((QSslServer*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_sslserver_qbase_meta_object(void* self) {
+    return QSslServer_QBaseMetaObject((QSslServer*)self);
+}
+
 void* q_sslserver_metacast(void* self, const char* param1) {
     return QSslServer_Metacast((QSslServer*)self, param1);
+}
+
+void q_sslserver_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QSslServer_OnMetacast((QSslServer*)self, (intptr_t)callback);
+}
+
+void* q_sslserver_qbase_metacast(void* self, const char* param1) {
+    return QSslServer_QBaseMetacast((QSslServer*)self, param1);
 }
 
 int32_t q_sslserver_metacall(void* self, int32_t param1, int param2, void* param3) {

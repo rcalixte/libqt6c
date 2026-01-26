@@ -259,8 +259,24 @@ const QMetaObject* q_openglcontext_meta_object(void* self) {
     return QOpenGLContext_MetaObject((QOpenGLContext*)self);
 }
 
+void q_openglcontext_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QOpenGLContext_OnMetaObject((QOpenGLContext*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_openglcontext_qbase_meta_object(void* self) {
+    return QOpenGLContext_QBaseMetaObject((QOpenGLContext*)self);
+}
+
 void* q_openglcontext_metacast(void* self, const char* param1) {
     return QOpenGLContext_Metacast((QOpenGLContext*)self, param1);
+}
+
+void q_openglcontext_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QOpenGLContext_OnMetacast((QOpenGLContext*)self, (intptr_t)callback);
+}
+
+void* q_openglcontext_qbase_metacast(void* self, const char* param1) {
+    return QOpenGLContext_QBaseMetacast((QOpenGLContext*)self, param1);
 }
 
 int32_t q_openglcontext_metacall(void* self, int32_t param1, int param2, void* param3) {

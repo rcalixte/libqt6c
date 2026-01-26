@@ -29,8 +29,24 @@ const QMetaObject* q_scrollarea_meta_object(void* self) {
     return QScrollArea_MetaObject((QScrollArea*)self);
 }
 
+void q_scrollarea_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QScrollArea_OnMetaObject((QScrollArea*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_scrollarea_qbase_meta_object(void* self) {
+    return QScrollArea_QBaseMetaObject((QScrollArea*)self);
+}
+
 void* q_scrollarea_metacast(void* self, const char* param1) {
     return QScrollArea_Metacast((QScrollArea*)self, param1);
+}
+
+void q_scrollarea_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QScrollArea_OnMetacast((QScrollArea*)self, (intptr_t)callback);
+}
+
+void* q_scrollarea_qbase_metacast(void* self, const char* param1) {
+    return QScrollArea_QBaseMetacast((QScrollArea*)self, param1);
 }
 
 int32_t q_scrollarea_metacall(void* self, int32_t param1, int param2, void* param3) {

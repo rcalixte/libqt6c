@@ -55,8 +55,24 @@ const QMetaObject* q_undoview_meta_object(void* self) {
     return QUndoView_MetaObject((QUndoView*)self);
 }
 
+void q_undoview_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QUndoView_OnMetaObject((QUndoView*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_undoview_qbase_meta_object(void* self) {
+    return QUndoView_QBaseMetaObject((QUndoView*)self);
+}
+
 void* q_undoview_metacast(void* self, const char* param1) {
     return QUndoView_Metacast((QUndoView*)self, param1);
+}
+
+void q_undoview_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QUndoView_OnMetacast((QUndoView*)self, (intptr_t)callback);
+}
+
+void* q_undoview_qbase_metacast(void* self, const char* param1) {
+    return QUndoView_QBaseMetacast((QUndoView*)self, param1);
 }
 
 int32_t q_undoview_metacall(void* self, int32_t param1, int param2, void* param3) {

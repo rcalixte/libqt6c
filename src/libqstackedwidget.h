@@ -31,10 +31,41 @@ QStackedWidget* q_stackedwidget_new2();
 ///
 const QMetaObject* q_stackedwidget_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QStackedWidget*
+/// @param callback const QMetaObject* func()
+///
+void q_stackedwidget_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QStackedWidget*
+///
+const QMetaObject* q_stackedwidget_qbase_meta_object(void* self);
+
 /// @param self QStackedWidget*
 /// @param param1 const char*
 ///
 void* q_stackedwidget_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QStackedWidget*
+/// @param callback void* func(QStackedWidget* self, const char* param1)
+///
+void q_stackedwidget_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QStackedWidget*
+/// @param param1 const char*
+///
+void* q_stackedwidget_qbase_metacast(void* self, const char* param1);
 
 /// @param self QStackedWidget*
 /// @param param1 enum QMetaObject__Call

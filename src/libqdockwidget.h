@@ -67,10 +67,41 @@ QDockWidget* q_dockwidget_new6(void* parent, int32_t flags);
 ///
 const QMetaObject* q_dockwidget_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QDockWidget*
+/// @param callback const QMetaObject* func()
+///
+void q_dockwidget_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QDockWidget*
+///
+const QMetaObject* q_dockwidget_qbase_meta_object(void* self);
+
 /// @param self QDockWidget*
 /// @param param1 const char*
 ///
 void* q_dockwidget_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QDockWidget*
+/// @param callback void* func(QDockWidget* self, const char* param1)
+///
+void q_dockwidget_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QDockWidget*
+/// @param param1 const char*
+///
+void* q_dockwidget_qbase_metacast(void* self, const char* param1);
 
 /// @param self QDockWidget*
 /// @param param1 enum QMetaObject__Call

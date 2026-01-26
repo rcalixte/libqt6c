@@ -24,8 +24,24 @@ const QMetaObject* k_descendantsproxymodel_meta_object(void* self) {
     return KDescendantsProxyModel_MetaObject((KDescendantsProxyModel*)self);
 }
 
+void k_descendantsproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KDescendantsProxyModel_OnMetaObject((KDescendantsProxyModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_descendantsproxymodel_qbase_meta_object(void* self) {
+    return KDescendantsProxyModel_QBaseMetaObject((KDescendantsProxyModel*)self);
+}
+
 void* k_descendantsproxymodel_metacast(void* self, const char* param1) {
     return KDescendantsProxyModel_Metacast((KDescendantsProxyModel*)self, param1);
+}
+
+void k_descendantsproxymodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KDescendantsProxyModel_OnMetacast((KDescendantsProxyModel*)self, (intptr_t)callback);
+}
+
+void* k_descendantsproxymodel_qbase_metacast(void* self, const char* param1) {
+    return KDescendantsProxyModel_QBaseMetacast((KDescendantsProxyModel*)self, param1);
 }
 
 int32_t k_descendantsproxymodel_metacall(void* self, int32_t param1, int param2, void* param3) {

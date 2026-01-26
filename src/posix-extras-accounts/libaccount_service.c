@@ -21,8 +21,24 @@ const QMetaObject* q_accounts__accountservice_meta_object(void* self) {
     return Accounts__AccountService_MetaObject((Accounts__AccountService*)self);
 }
 
+void q_accounts__accountservice_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    Accounts__AccountService_OnMetaObject((Accounts__AccountService*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_accounts__accountservice_qbase_meta_object(void* self) {
+    return Accounts__AccountService_QBaseMetaObject((Accounts__AccountService*)self);
+}
+
 void* q_accounts__accountservice_metacast(void* self, const char* param1) {
     return Accounts__AccountService_Metacast((Accounts__AccountService*)self, param1);
+}
+
+void q_accounts__accountservice_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    Accounts__AccountService_OnMetacast((Accounts__AccountService*)self, (intptr_t)callback);
+}
+
+void* q_accounts__accountservice_qbase_metacast(void* self, const char* param1) {
+    return Accounts__AccountService_QBaseMetacast((Accounts__AccountService*)self, param1);
 }
 
 int32_t q_accounts__accountservice_metacall(void* self, int32_t param1, int param2, void* param3) {

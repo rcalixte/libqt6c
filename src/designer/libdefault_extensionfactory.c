@@ -19,8 +19,24 @@ const QMetaObject* q_extensionfactory_meta_object(void* self) {
     return QExtensionFactory_MetaObject((QExtensionFactory*)self);
 }
 
+void q_extensionfactory_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QExtensionFactory_OnMetaObject((QExtensionFactory*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_extensionfactory_qbase_meta_object(void* self) {
+    return QExtensionFactory_QBaseMetaObject((QExtensionFactory*)self);
+}
+
 void* q_extensionfactory_metacast(void* self, const char* param1) {
     return QExtensionFactory_Metacast((QExtensionFactory*)self, param1);
+}
+
+void q_extensionfactory_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QExtensionFactory_OnMetacast((QExtensionFactory*)self, (intptr_t)callback);
+}
+
+void* q_extensionfactory_qbase_metacast(void* self, const char* param1) {
+    return QExtensionFactory_QBaseMetacast((QExtensionFactory*)self, param1);
 }
 
 int32_t q_extensionfactory_metacall(void* self, int32_t param1, int param2, void* param3) {

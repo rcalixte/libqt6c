@@ -48,10 +48,41 @@ QGraphicsSvgItem* q_graphicssvgitem_new4(const char* fileName, void* parentItem)
 ///
 const QMetaObject* q_graphicssvgitem_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsSvgItem*
+/// @param callback const QMetaObject* func()
+///
+void q_graphicssvgitem_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QGraphicsSvgItem*
+///
+const QMetaObject* q_graphicssvgitem_qbase_meta_object(void* self);
+
 /// @param self QGraphicsSvgItem*
 /// @param param1 const char*
 ///
 void* q_graphicssvgitem_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsSvgItem*
+/// @param callback void* func(QGraphicsSvgItem* self, const char* param1)
+///
+void q_graphicssvgitem_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QGraphicsSvgItem*
+/// @param param1 const char*
+///
+void* q_graphicssvgitem_qbase_metacast(void* self, const char* param1);
 
 /// @param self QGraphicsSvgItem*
 /// @param param1 enum QMetaObject__Call

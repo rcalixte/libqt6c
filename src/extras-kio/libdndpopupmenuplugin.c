@@ -16,8 +16,24 @@ const QMetaObject* k_io__dndpopupmenuplugin_meta_object(void* self) {
     return KIO__DndPopupMenuPlugin_MetaObject((KIO__DndPopupMenuPlugin*)self);
 }
 
+void k_io__dndpopupmenuplugin_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KIO__DndPopupMenuPlugin_OnMetaObject((KIO__DndPopupMenuPlugin*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_io__dndpopupmenuplugin_qbase_meta_object(void* self) {
+    return KIO__DndPopupMenuPlugin_QBaseMetaObject((KIO__DndPopupMenuPlugin*)self);
+}
+
 void* k_io__dndpopupmenuplugin_metacast(void* self, const char* param1) {
     return KIO__DndPopupMenuPlugin_Metacast((KIO__DndPopupMenuPlugin*)self, param1);
+}
+
+void k_io__dndpopupmenuplugin_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KIO__DndPopupMenuPlugin_OnMetacast((KIO__DndPopupMenuPlugin*)self, (intptr_t)callback);
+}
+
+void* k_io__dndpopupmenuplugin_qbase_metacast(void* self, const char* param1) {
+    return KIO__DndPopupMenuPlugin_QBaseMetacast((KIO__DndPopupMenuPlugin*)self, param1);
 }
 
 int32_t k_io__dndpopupmenuplugin_metacall(void* self, int32_t param1, int param2, void* param3) {

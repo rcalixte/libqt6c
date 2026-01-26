@@ -71,8 +71,24 @@ const QMetaObject* k_propertiesdialog_meta_object(void* self) {
     return KPropertiesDialog_MetaObject((KPropertiesDialog*)self);
 }
 
+void k_propertiesdialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KPropertiesDialog_OnMetaObject((KPropertiesDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_propertiesdialog_qbase_meta_object(void* self) {
+    return KPropertiesDialog_QBaseMetaObject((KPropertiesDialog*)self);
+}
+
 void* k_propertiesdialog_metacast(void* self, const char* param1) {
     return KPropertiesDialog_Metacast((KPropertiesDialog*)self, param1);
+}
+
+void k_propertiesdialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KPropertiesDialog_OnMetacast((KPropertiesDialog*)self, (intptr_t)callback);
+}
+
+void* k_propertiesdialog_qbase_metacast(void* self, const char* param1) {
+    return KPropertiesDialog_QBaseMetacast((KPropertiesDialog*)self, param1);
 }
 
 int32_t k_propertiesdialog_metacall(void* self, int32_t param1, int param2, void* param3) {

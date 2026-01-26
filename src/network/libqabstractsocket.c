@@ -19,8 +19,24 @@ const QMetaObject* q_abstractsocket_meta_object(void* self) {
     return QAbstractSocket_MetaObject((QAbstractSocket*)self);
 }
 
+void q_abstractsocket_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QAbstractSocket_OnMetaObject((QAbstractSocket*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_abstractsocket_qbase_meta_object(void* self) {
+    return QAbstractSocket_QBaseMetaObject((QAbstractSocket*)self);
+}
+
 void* q_abstractsocket_metacast(void* self, const char* param1) {
     return QAbstractSocket_Metacast((QAbstractSocket*)self, param1);
+}
+
+void q_abstractsocket_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QAbstractSocket_OnMetacast((QAbstractSocket*)self, (intptr_t)callback);
+}
+
+void* q_abstractsocket_qbase_metacast(void* self, const char* param1) {
+    return QAbstractSocket_QBaseMetacast((QAbstractSocket*)self, param1);
 }
 
 int32_t q_abstractsocket_metacall(void* self, int32_t param1, int param2, void* param3) {

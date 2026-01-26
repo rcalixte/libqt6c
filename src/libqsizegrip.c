@@ -21,8 +21,24 @@ const QMetaObject* q_sizegrip_meta_object(void* self) {
     return QSizeGrip_MetaObject((QSizeGrip*)self);
 }
 
+void q_sizegrip_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QSizeGrip_OnMetaObject((QSizeGrip*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_sizegrip_qbase_meta_object(void* self) {
+    return QSizeGrip_QBaseMetaObject((QSizeGrip*)self);
+}
+
 void* q_sizegrip_metacast(void* self, const char* param1) {
     return QSizeGrip_Metacast((QSizeGrip*)self, param1);
+}
+
+void q_sizegrip_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QSizeGrip_OnMetacast((QSizeGrip*)self, (intptr_t)callback);
+}
+
+void* q_sizegrip_qbase_metacast(void* self, const char* param1) {
+    return QSizeGrip_QBaseMetacast((QSizeGrip*)self, param1);
 }
 
 int32_t q_sizegrip_metacall(void* self, int32_t param1, int param2, void* param3) {

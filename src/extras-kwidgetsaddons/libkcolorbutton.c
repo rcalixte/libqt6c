@@ -45,8 +45,24 @@ const QMetaObject* k_colorbutton_meta_object(void* self) {
     return KColorButton_MetaObject((KColorButton*)self);
 }
 
+void k_colorbutton_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KColorButton_OnMetaObject((KColorButton*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_colorbutton_qbase_meta_object(void* self) {
+    return KColorButton_QBaseMetaObject((KColorButton*)self);
+}
+
 void* k_colorbutton_metacast(void* self, const char* param1) {
     return KColorButton_Metacast((KColorButton*)self, param1);
+}
+
+void k_colorbutton_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KColorButton_OnMetacast((KColorButton*)self, (intptr_t)callback);
+}
+
+void* k_colorbutton_qbase_metacast(void* self, const char* param1) {
+    return KColorButton_QBaseMetacast((KColorButton*)self, param1);
 }
 
 int32_t k_colorbutton_metacall(void* self, int32_t param1, int param2, void* param3) {

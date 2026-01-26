@@ -31,10 +31,41 @@ QAbstractButton* q_abstractbutton_new2();
 ///
 const QMetaObject* q_abstractbutton_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QAbstractButton*
+/// @param callback const QMetaObject* func()
+///
+void q_abstractbutton_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QAbstractButton*
+///
+const QMetaObject* q_abstractbutton_qbase_meta_object(void* self);
+
 /// @param self QAbstractButton*
 /// @param param1 const char*
 ///
 void* q_abstractbutton_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QAbstractButton*
+/// @param callback void* func(QAbstractButton* self, const char* param1)
+///
+void q_abstractbutton_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QAbstractButton*
+/// @param param1 const char*
+///
+void* q_abstractbutton_qbase_metacast(void* self, const char* param1);
 
 /// @param self QAbstractButton*
 /// @param param1 enum QMetaObject__Call

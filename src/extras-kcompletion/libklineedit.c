@@ -42,8 +42,24 @@ const QMetaObject* k_lineedit_meta_object(void* self) {
     return KLineEdit_MetaObject((KLineEdit*)self);
 }
 
+void k_lineedit_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KLineEdit_OnMetaObject((KLineEdit*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_lineedit_qbase_meta_object(void* self) {
+    return KLineEdit_QBaseMetaObject((KLineEdit*)self);
+}
+
 void* k_lineedit_metacast(void* self, const char* param1) {
     return KLineEdit_Metacast((KLineEdit*)self, param1);
+}
+
+void k_lineedit_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KLineEdit_OnMetacast((KLineEdit*)self, (intptr_t)callback);
+}
+
+void* k_lineedit_qbase_metacast(void* self, const char* param1) {
+    return KLineEdit_QBaseMetacast((KLineEdit*)self, param1);
 }
 
 int32_t k_lineedit_metacall(void* self, int32_t param1, int param2, void* param3) {

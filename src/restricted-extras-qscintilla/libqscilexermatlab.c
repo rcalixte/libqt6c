@@ -22,8 +22,24 @@ const QMetaObject* q_scilexermatlab_meta_object(void* self) {
     return QsciLexerMatlab_MetaObject((QsciLexerMatlab*)self);
 }
 
+void q_scilexermatlab_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QsciLexerMatlab_OnMetaObject((QsciLexerMatlab*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_scilexermatlab_qbase_meta_object(void* self) {
+    return QsciLexerMatlab_QBaseMetaObject((QsciLexerMatlab*)self);
+}
+
 void* q_scilexermatlab_metacast(void* self, const char* param1) {
     return QsciLexerMatlab_Metacast((QsciLexerMatlab*)self, param1);
+}
+
+void q_scilexermatlab_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QsciLexerMatlab_OnMetacast((QsciLexerMatlab*)self, (intptr_t)callback);
+}
+
+void* q_scilexermatlab_qbase_metacast(void* self, const char* param1) {
+    return QsciLexerMatlab_QBaseMetacast((QsciLexerMatlab*)self, param1);
 }
 
 int32_t q_scilexermatlab_metacall(void* self, int32_t param1, int param2, void* param3) {

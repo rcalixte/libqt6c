@@ -20,8 +20,24 @@ const QMetaObject* k_dirlister_meta_object(void* self) {
     return KDirLister_MetaObject((KDirLister*)self);
 }
 
+void k_dirlister_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KDirLister_OnMetaObject((KDirLister*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_dirlister_qbase_meta_object(void* self) {
+    return KDirLister_QBaseMetaObject((KDirLister*)self);
+}
+
 void* k_dirlister_metacast(void* self, const char* param1) {
     return KDirLister_Metacast((KDirLister*)self, param1);
+}
+
+void k_dirlister_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KDirLister_OnMetacast((KDirLister*)self, (intptr_t)callback);
+}
+
+void* k_dirlister_qbase_metacast(void* self, const char* param1) {
+    return KDirLister_QBaseMetacast((KDirLister*)self, param1);
 }
 
 int32_t k_dirlister_metacall(void* self, int32_t param1, int param2, void* param3) {

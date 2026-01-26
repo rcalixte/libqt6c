@@ -39,8 +39,24 @@ const QMetaObject* k_xmessages_meta_object(void* self) {
     return KXMessages_MetaObject((KXMessages*)self);
 }
 
+void k_xmessages_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KXMessages_OnMetaObject((KXMessages*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_xmessages_qbase_meta_object(void* self) {
+    return KXMessages_QBaseMetaObject((KXMessages*)self);
+}
+
 void* k_xmessages_metacast(void* self, const char* param1) {
     return KXMessages_Metacast((KXMessages*)self, param1);
+}
+
+void k_xmessages_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KXMessages_OnMetacast((KXMessages*)self, (intptr_t)callback);
+}
+
+void* k_xmessages_qbase_metacast(void* self, const char* param1) {
+    return KXMessages_QBaseMetacast((KXMessages*)self, param1);
 }
 
 int32_t k_xmessages_metacall(void* self, int32_t param1, int param2, void* param3) {

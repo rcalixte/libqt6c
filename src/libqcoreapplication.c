@@ -22,8 +22,24 @@ const QMetaObject* q_coreapplication_meta_object(void* self) {
     return QCoreApplication_MetaObject((QCoreApplication*)self);
 }
 
+void q_coreapplication_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCoreApplication_OnMetaObject((QCoreApplication*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_coreapplication_qbase_meta_object(void* self) {
+    return QCoreApplication_QBaseMetaObject((QCoreApplication*)self);
+}
+
 void* q_coreapplication_metacast(void* self, const char* param1) {
     return QCoreApplication_Metacast((QCoreApplication*)self, param1);
+}
+
+void q_coreapplication_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCoreApplication_OnMetacast((QCoreApplication*)self, (intptr_t)callback);
+}
+
+void* q_coreapplication_qbase_metacast(void* self, const char* param1) {
+    return QCoreApplication_QBaseMetacast((QCoreApplication*)self, param1);
 }
 
 int32_t q_coreapplication_metacall(void* self, int32_t param1, int param2, void* param3) {

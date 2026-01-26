@@ -289,8 +289,24 @@ const QMetaObject* q_abstractitemmodel_meta_object(void* self) {
     return QAbstractItemModel_MetaObject((QAbstractItemModel*)self);
 }
 
+void q_abstractitemmodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QAbstractItemModel_OnMetaObject((QAbstractItemModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_abstractitemmodel_qbase_meta_object(void* self) {
+    return QAbstractItemModel_QBaseMetaObject((QAbstractItemModel*)self);
+}
+
 void* q_abstractitemmodel_metacast(void* self, const char* param1) {
     return QAbstractItemModel_Metacast((QAbstractItemModel*)self, param1);
+}
+
+void q_abstractitemmodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QAbstractItemModel_OnMetacast((QAbstractItemModel*)self, (intptr_t)callback);
+}
+
+void* q_abstractitemmodel_qbase_metacast(void* self, const char* param1) {
+    return QAbstractItemModel_QBaseMetacast((QAbstractItemModel*)self, param1);
 }
 
 int32_t q_abstractitemmodel_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -1696,8 +1712,24 @@ const QMetaObject* q_abstracttablemodel_meta_object(void* self) {
     return QAbstractTableModel_MetaObject((QAbstractTableModel*)self);
 }
 
+void q_abstracttablemodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QAbstractTableModel_OnMetaObject((QAbstractTableModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_abstracttablemodel_qbase_meta_object(void* self) {
+    return QAbstractTableModel_QBaseMetaObject((QAbstractTableModel*)self);
+}
+
 void* q_abstracttablemodel_metacast(void* self, const char* param1) {
     return QAbstractTableModel_Metacast((QAbstractTableModel*)self, param1);
+}
+
+void q_abstracttablemodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QAbstractTableModel_OnMetacast((QAbstractTableModel*)self, (intptr_t)callback);
+}
+
+void* q_abstracttablemodel_qbase_metacast(void* self, const char* param1) {
+    return QAbstractTableModel_QBaseMetacast((QAbstractTableModel*)self, param1);
 }
 
 int32_t q_abstracttablemodel_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -3082,8 +3114,24 @@ const QMetaObject* q_abstractlistmodel_meta_object(void* self) {
     return QAbstractListModel_MetaObject((QAbstractListModel*)self);
 }
 
+void q_abstractlistmodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QAbstractListModel_OnMetaObject((QAbstractListModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_abstractlistmodel_qbase_meta_object(void* self) {
+    return QAbstractListModel_QBaseMetaObject((QAbstractListModel*)self);
+}
+
 void* q_abstractlistmodel_metacast(void* self, const char* param1) {
     return QAbstractListModel_Metacast((QAbstractListModel*)self, param1);
+}
+
+void q_abstractlistmodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QAbstractListModel_OnMetacast((QAbstractListModel*)self, (intptr_t)callback);
+}
+
+void* q_abstractlistmodel_qbase_metacast(void* self, const char* param1) {
+    return QAbstractListModel_QBaseMetacast((QAbstractListModel*)self, param1);
 }
 
 int32_t q_abstractlistmodel_metacall(void* self, int32_t param1, int param2, void* param3) {

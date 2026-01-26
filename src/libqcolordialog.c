@@ -35,8 +35,24 @@ const QMetaObject* q_colordialog_meta_object(void* self) {
     return QColorDialog_MetaObject((QColorDialog*)self);
 }
 
+void q_colordialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QColorDialog_OnMetaObject((QColorDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_colordialog_qbase_meta_object(void* self) {
+    return QColorDialog_QBaseMetaObject((QColorDialog*)self);
+}
+
 void* q_colordialog_metacast(void* self, const char* param1) {
     return QColorDialog_Metacast((QColorDialog*)self, param1);
+}
+
+void q_colordialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QColorDialog_OnMetacast((QColorDialog*)self, (intptr_t)callback);
+}
+
+void* q_colordialog_qbase_metacast(void* self, const char* param1) {
+    return QColorDialog_QBaseMetacast((QColorDialog*)self, param1);
 }
 
 int32_t q_colordialog_metacall(void* self, int32_t param1, int param2, void* param3) {

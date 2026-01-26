@@ -18,8 +18,24 @@ const QMetaObject* k_dirwatch_meta_object(void* self) {
     return KDirWatch_MetaObject((KDirWatch*)self);
 }
 
+void k_dirwatch_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KDirWatch_OnMetaObject((KDirWatch*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_dirwatch_qbase_meta_object(void* self) {
+    return KDirWatch_QBaseMetaObject((KDirWatch*)self);
+}
+
 void* k_dirwatch_metacast(void* self, const char* param1) {
     return KDirWatch_Metacast((KDirWatch*)self, param1);
+}
+
+void k_dirwatch_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KDirWatch_OnMetacast((KDirWatch*)self, (intptr_t)callback);
+}
+
+void* k_dirwatch_qbase_metacast(void* self, const char* param1) {
+    return KDirWatch_QBaseMetacast((KDirWatch*)self, param1);
 }
 
 int32_t k_dirwatch_metacall(void* self, int32_t param1, int param2, void* param3) {

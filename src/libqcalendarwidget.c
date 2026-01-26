@@ -29,8 +29,24 @@ const QMetaObject* q_calendarwidget_meta_object(void* self) {
     return QCalendarWidget_MetaObject((QCalendarWidget*)self);
 }
 
+void q_calendarwidget_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCalendarWidget_OnMetaObject((QCalendarWidget*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_calendarwidget_qbase_meta_object(void* self) {
+    return QCalendarWidget_QBaseMetaObject((QCalendarWidget*)self);
+}
+
 void* q_calendarwidget_metacast(void* self, const char* param1) {
     return QCalendarWidget_Metacast((QCalendarWidget*)self, param1);
+}
+
+void q_calendarwidget_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCalendarWidget_OnMetacast((QCalendarWidget*)self, (intptr_t)callback);
+}
+
+void* q_calendarwidget_qbase_metacast(void* self, const char* param1) {
+    return QCalendarWidget_QBaseMetacast((QCalendarWidget*)self, param1);
 }
 
 int32_t q_calendarwidget_metacall(void* self, int32_t param1, int param2, void* param3) {

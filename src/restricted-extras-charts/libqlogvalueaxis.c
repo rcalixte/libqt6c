@@ -18,8 +18,24 @@ const QMetaObject* q_logvalueaxis_meta_object(void* self) {
     return QLogValueAxis_MetaObject((QLogValueAxis*)self);
 }
 
+void q_logvalueaxis_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QLogValueAxis_OnMetaObject((QLogValueAxis*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_logvalueaxis_qbase_meta_object(void* self) {
+    return QLogValueAxis_QBaseMetaObject((QLogValueAxis*)self);
+}
+
 void* q_logvalueaxis_metacast(void* self, const char* param1) {
     return QLogValueAxis_Metacast((QLogValueAxis*)self, param1);
+}
+
+void q_logvalueaxis_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QLogValueAxis_OnMetacast((QLogValueAxis*)self, (intptr_t)callback);
+}
+
+void* q_logvalueaxis_qbase_metacast(void* self, const char* param1) {
+    return QLogValueAxis_QBaseMetacast((QLogValueAxis*)self, param1);
 }
 
 int32_t q_logvalueaxis_metacall(void* self, int32_t param1, int param2, void* param3) {

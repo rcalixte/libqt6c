@@ -35,8 +35,24 @@ const QMetaObject* k_parts__readwritepart_meta_object(void* self) {
     return KParts__ReadWritePart_MetaObject((KParts__ReadWritePart*)self);
 }
 
+void k_parts__readwritepart_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KParts__ReadWritePart_OnMetaObject((KParts__ReadWritePart*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_parts__readwritepart_qbase_meta_object(void* self) {
+    return KParts__ReadWritePart_QBaseMetaObject((KParts__ReadWritePart*)self);
+}
+
 void* k_parts__readwritepart_metacast(void* self, const char* param1) {
     return KParts__ReadWritePart_Metacast((KParts__ReadWritePart*)self, param1);
+}
+
+void k_parts__readwritepart_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KParts__ReadWritePart_OnMetacast((KParts__ReadWritePart*)self, (intptr_t)callback);
+}
+
+void* k_parts__readwritepart_qbase_metacast(void* self, const char* param1) {
+    return KParts__ReadWritePart_QBaseMetacast((KParts__ReadWritePart*)self, param1);
 }
 
 int32_t k_parts__readwritepart_metacall(void* self, int32_t param1, int param2, void* param3) {

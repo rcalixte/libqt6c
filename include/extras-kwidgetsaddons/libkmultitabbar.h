@@ -48,10 +48,41 @@ KMultiTabBar* k_multitabbar_new4(int32_t pos, void* parent);
 ///
 const QMetaObject* k_multitabbar_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KMultiTabBar*
+/// @param callback const QMetaObject* func()
+///
+void k_multitabbar_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KMultiTabBar*
+///
+const QMetaObject* k_multitabbar_qbase_meta_object(void* self);
+
 /// @param self KMultiTabBar*
 /// @param param1 const char*
 ///
 void* k_multitabbar_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KMultiTabBar*
+/// @param callback void* func(KMultiTabBar* self, const char* param1)
+///
+void k_multitabbar_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KMultiTabBar*
+/// @param param1 const char*
+///
+void* k_multitabbar_qbase_metacast(void* self, const char* param1);
 
 /// @param self KMultiTabBar*
 /// @param param1 enum QMetaObject__Call

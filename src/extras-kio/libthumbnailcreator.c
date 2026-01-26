@@ -92,8 +92,24 @@ const QMetaObject* k_io__thumbnailcreator_meta_object(void* self) {
     return KIO__ThumbnailCreator_MetaObject((KIO__ThumbnailCreator*)self);
 }
 
+void k_io__thumbnailcreator_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KIO__ThumbnailCreator_OnMetaObject((KIO__ThumbnailCreator*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_io__thumbnailcreator_qbase_meta_object(void* self) {
+    return KIO__ThumbnailCreator_QBaseMetaObject((KIO__ThumbnailCreator*)self);
+}
+
 void* k_io__thumbnailcreator_metacast(void* self, const char* param1) {
     return KIO__ThumbnailCreator_Metacast((KIO__ThumbnailCreator*)self, param1);
+}
+
+void k_io__thumbnailcreator_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KIO__ThumbnailCreator_OnMetacast((KIO__ThumbnailCreator*)self, (intptr_t)callback);
+}
+
+void* k_io__thumbnailcreator_qbase_metacast(void* self, const char* param1) {
+    return KIO__ThumbnailCreator_QBaseMetacast((KIO__ThumbnailCreator*)self, param1);
 }
 
 int32_t k_io__thumbnailcreator_metacall(void* self, int32_t param1, int param2, void* param3) {

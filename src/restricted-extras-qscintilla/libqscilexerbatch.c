@@ -22,8 +22,24 @@ const QMetaObject* q_scilexerbatch_meta_object(void* self) {
     return QsciLexerBatch_MetaObject((QsciLexerBatch*)self);
 }
 
+void q_scilexerbatch_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QsciLexerBatch_OnMetaObject((QsciLexerBatch*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_scilexerbatch_qbase_meta_object(void* self) {
+    return QsciLexerBatch_QBaseMetaObject((QsciLexerBatch*)self);
+}
+
 void* q_scilexerbatch_metacast(void* self, const char* param1) {
     return QsciLexerBatch_Metacast((QsciLexerBatch*)self, param1);
+}
+
+void q_scilexerbatch_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QsciLexerBatch_OnMetacast((QsciLexerBatch*)self, (intptr_t)callback);
+}
+
+void* q_scilexerbatch_qbase_metacast(void* self, const char* param1) {
+    return QsciLexerBatch_QBaseMetacast((QsciLexerBatch*)self, param1);
 }
 
 int32_t q_scilexerbatch_metacall(void* self, int32_t param1, int param2, void* param3) {

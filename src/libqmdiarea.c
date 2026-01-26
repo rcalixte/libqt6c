@@ -31,8 +31,24 @@ const QMetaObject* q_mdiarea_meta_object(void* self) {
     return QMdiArea_MetaObject((QMdiArea*)self);
 }
 
+void q_mdiarea_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QMdiArea_OnMetaObject((QMdiArea*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_mdiarea_qbase_meta_object(void* self) {
+    return QMdiArea_QBaseMetaObject((QMdiArea*)self);
+}
+
 void* q_mdiarea_metacast(void* self, const char* param1) {
     return QMdiArea_Metacast((QMdiArea*)self, param1);
+}
+
+void q_mdiarea_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QMdiArea_OnMetacast((QMdiArea*)self, (intptr_t)callback);
+}
+
+void* q_mdiarea_qbase_metacast(void* self, const char* param1) {
+    return QMdiArea_QBaseMetacast((QMdiArea*)self, param1);
 }
 
 int32_t q_mdiarea_metacall(void* self, int32_t param1, int param2, void* param3) {

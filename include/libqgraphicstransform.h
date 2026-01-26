@@ -31,10 +31,41 @@ QGraphicsTransform* q_graphicstransform_new2(void* parent);
 ///
 const QMetaObject* q_graphicstransform_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsTransform*
+/// @param callback const QMetaObject* func()
+///
+void q_graphicstransform_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QGraphicsTransform*
+///
+const QMetaObject* q_graphicstransform_qbase_meta_object(void* self);
+
 /// @param self QGraphicsTransform*
 /// @param param1 const char*
 ///
 void* q_graphicstransform_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsTransform*
+/// @param callback void* func(QGraphicsTransform* self, const char* param1)
+///
+void q_graphicstransform_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QGraphicsTransform*
+/// @param param1 const char*
+///
+void* q_graphicstransform_qbase_metacast(void* self, const char* param1);
 
 /// @param self QGraphicsTransform*
 /// @param param1 enum QMetaObject__Call
@@ -900,10 +931,41 @@ QGraphicsScale* q_graphicsscale_new2(void* parent);
 ///
 const QMetaObject* q_graphicsscale_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsScale*
+/// @param callback const QMetaObject* func()
+///
+void q_graphicsscale_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QGraphicsScale*
+///
+const QMetaObject* q_graphicsscale_qbase_meta_object(void* self);
+
 /// @param self QGraphicsScale*
 /// @param param1 const char*
 ///
 void* q_graphicsscale_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsScale*
+/// @param callback void* func(QGraphicsScale* self, const char* param1)
+///
+void q_graphicsscale_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QGraphicsScale*
+/// @param param1 const char*
+///
+void* q_graphicsscale_qbase_metacast(void* self, const char* param1);
 
 /// @param self QGraphicsScale*
 /// @param param1 enum QMetaObject__Call
@@ -1894,10 +1956,41 @@ QGraphicsRotation* q_graphicsrotation_new2(void* parent);
 ///
 const QMetaObject* q_graphicsrotation_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsRotation*
+/// @param callback const QMetaObject* func()
+///
+void q_graphicsrotation_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QGraphicsRotation*
+///
+const QMetaObject* q_graphicsrotation_qbase_meta_object(void* self);
+
 /// @param self QGraphicsRotation*
 /// @param param1 const char*
 ///
 void* q_graphicsrotation_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsRotation*
+/// @param callback void* func(QGraphicsRotation* self, const char* param1)
+///
+void q_graphicsrotation_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QGraphicsRotation*
+/// @param param1 const char*
+///
+void* q_graphicsrotation_qbase_metacast(void* self, const char* param1);
 
 /// @param self QGraphicsRotation*
 /// @param param1 enum QMetaObject__Call

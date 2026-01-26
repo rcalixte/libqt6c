@@ -22,8 +22,24 @@ const QMetaObject* q_scilexerverilog_meta_object(void* self) {
     return QsciLexerVerilog_MetaObject((QsciLexerVerilog*)self);
 }
 
+void q_scilexerverilog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QsciLexerVerilog_OnMetaObject((QsciLexerVerilog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_scilexerverilog_qbase_meta_object(void* self) {
+    return QsciLexerVerilog_QBaseMetaObject((QsciLexerVerilog*)self);
+}
+
 void* q_scilexerverilog_metacast(void* self, const char* param1) {
     return QsciLexerVerilog_Metacast((QsciLexerVerilog*)self, param1);
+}
+
+void q_scilexerverilog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QsciLexerVerilog_OnMetacast((QsciLexerVerilog*)self, (intptr_t)callback);
+}
+
+void* q_scilexerverilog_qbase_metacast(void* self, const char* param1) {
+    return QsciLexerVerilog_QBaseMetacast((QsciLexerVerilog*)self, param1);
 }
 
 int32_t q_scilexerverilog_metacall(void* self, int32_t param1, int param2, void* param3) {

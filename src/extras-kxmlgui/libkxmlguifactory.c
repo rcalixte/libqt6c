@@ -22,8 +22,24 @@ const QMetaObject* k_xmlguifactory_meta_object(void* self) {
     return KXMLGUIFactory_MetaObject((KXMLGUIFactory*)self);
 }
 
+void k_xmlguifactory_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KXMLGUIFactory_OnMetaObject((KXMLGUIFactory*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_xmlguifactory_qbase_meta_object(void* self) {
+    return KXMLGUIFactory_QBaseMetaObject((KXMLGUIFactory*)self);
+}
+
 void* k_xmlguifactory_metacast(void* self, const char* param1) {
     return KXMLGUIFactory_Metacast((KXMLGUIFactory*)self, param1);
+}
+
+void k_xmlguifactory_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KXMLGUIFactory_OnMetacast((KXMLGUIFactory*)self, (intptr_t)callback);
+}
+
+void* k_xmlguifactory_qbase_metacast(void* self, const char* param1) {
+    return KXMLGUIFactory_QBaseMetacast((KXMLGUIFactory*)self, param1);
 }
 
 int32_t k_xmlguifactory_metacall(void* self, int32_t param1, int param2, void* param3) {

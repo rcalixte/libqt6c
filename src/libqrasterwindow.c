@@ -27,8 +27,24 @@ const QMetaObject* q_rasterwindow_meta_object(void* self) {
     return QRasterWindow_MetaObject((QRasterWindow*)self);
 }
 
+void q_rasterwindow_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QRasterWindow_OnMetaObject((QRasterWindow*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_rasterwindow_qbase_meta_object(void* self) {
+    return QRasterWindow_QBaseMetaObject((QRasterWindow*)self);
+}
+
 void* q_rasterwindow_metacast(void* self, const char* param1) {
     return QRasterWindow_Metacast((QRasterWindow*)self, param1);
+}
+
+void q_rasterwindow_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QRasterWindow_OnMetacast((QRasterWindow*)self, (intptr_t)callback);
+}
+
+void* q_rasterwindow_qbase_metacast(void* self, const char* param1) {
+    return QRasterWindow_QBaseMetacast((QRasterWindow*)self, param1);
 }
 
 int32_t q_rasterwindow_metacall(void* self, int32_t param1, int param2, void* param3) {

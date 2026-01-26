@@ -21,8 +21,24 @@ const QMetaObject* k_parts__statusbarextension_meta_object(void* self) {
     return KParts__StatusBarExtension_MetaObject((KParts__StatusBarExtension*)self);
 }
 
+void k_parts__statusbarextension_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KParts__StatusBarExtension_OnMetaObject((KParts__StatusBarExtension*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_parts__statusbarextension_qbase_meta_object(void* self) {
+    return KParts__StatusBarExtension_QBaseMetaObject((KParts__StatusBarExtension*)self);
+}
+
 void* k_parts__statusbarextension_metacast(void* self, const char* param1) {
     return KParts__StatusBarExtension_Metacast((KParts__StatusBarExtension*)self, param1);
+}
+
+void k_parts__statusbarextension_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KParts__StatusBarExtension_OnMetacast((KParts__StatusBarExtension*)self, (intptr_t)callback);
+}
+
+void* k_parts__statusbarextension_qbase_metacast(void* self, const char* param1) {
+    return KParts__StatusBarExtension_QBaseMetacast((KParts__StatusBarExtension*)self, param1);
 }
 
 int32_t k_parts__statusbarextension_metacall(void* self, int32_t param1, int param2, void* param3) {

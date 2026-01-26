@@ -24,8 +24,24 @@ const QMetaObject* k_compressiondevice_meta_object(void* self) {
     return KCompressionDevice_MetaObject((KCompressionDevice*)self);
 }
 
+void k_compressiondevice_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KCompressionDevice_OnMetaObject((KCompressionDevice*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_compressiondevice_qbase_meta_object(void* self) {
+    return KCompressionDevice_QBaseMetaObject((KCompressionDevice*)self);
+}
+
 void* k_compressiondevice_metacast(void* self, const char* param1) {
     return KCompressionDevice_Metacast((KCompressionDevice*)self, param1);
+}
+
+void k_compressiondevice_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KCompressionDevice_OnMetacast((KCompressionDevice*)self, (intptr_t)callback);
+}
+
+void* k_compressiondevice_qbase_metacast(void* self, const char* param1) {
+    return KCompressionDevice_QBaseMetacast((KCompressionDevice*)self, param1);
 }
 
 int32_t k_compressiondevice_metacall(void* self, int32_t param1, int param2, void* param3) {

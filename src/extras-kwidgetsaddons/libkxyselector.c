@@ -27,8 +27,24 @@ const QMetaObject* k_xyselector_meta_object(void* self) {
     return KXYSelector_MetaObject((KXYSelector*)self);
 }
 
+void k_xyselector_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KXYSelector_OnMetaObject((KXYSelector*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_xyselector_qbase_meta_object(void* self) {
+    return KXYSelector_QBaseMetaObject((KXYSelector*)self);
+}
+
 void* k_xyselector_metacast(void* self, const char* param1) {
     return KXYSelector_Metacast((KXYSelector*)self, param1);
+}
+
+void k_xyselector_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KXYSelector_OnMetacast((KXYSelector*)self, (intptr_t)callback);
+}
+
+void* k_xyselector_qbase_metacast(void* self, const char* param1) {
+    return KXYSelector_QBaseMetacast((KXYSelector*)self, param1);
 }
 
 int32_t k_xyselector_metacall(void* self, int32_t param1, int param2, void* param3) {

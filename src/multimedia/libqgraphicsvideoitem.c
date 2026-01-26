@@ -29,8 +29,24 @@ const QMetaObject* q_graphicsvideoitem_meta_object(void* self) {
     return QGraphicsVideoItem_MetaObject((QGraphicsVideoItem*)self);
 }
 
+void q_graphicsvideoitem_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QGraphicsVideoItem_OnMetaObject((QGraphicsVideoItem*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_graphicsvideoitem_qbase_meta_object(void* self) {
+    return QGraphicsVideoItem_QBaseMetaObject((QGraphicsVideoItem*)self);
+}
+
 void* q_graphicsvideoitem_metacast(void* self, const char* param1) {
     return QGraphicsVideoItem_Metacast((QGraphicsVideoItem*)self, param1);
+}
+
+void q_graphicsvideoitem_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QGraphicsVideoItem_OnMetacast((QGraphicsVideoItem*)self, (intptr_t)callback);
+}
+
+void* q_graphicsvideoitem_qbase_metacast(void* self, const char* param1) {
+    return QGraphicsVideoItem_QBaseMetacast((QGraphicsVideoItem*)self, param1);
 }
 
 int32_t q_graphicsvideoitem_metacall(void* self, int32_t param1, int param2, void* param3) {

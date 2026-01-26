@@ -25,8 +25,24 @@ const QMetaObject* k_categorizedsortfilterproxymodel_meta_object(void* self) {
     return KCategorizedSortFilterProxyModel_MetaObject((KCategorizedSortFilterProxyModel*)self);
 }
 
+void k_categorizedsortfilterproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KCategorizedSortFilterProxyModel_OnMetaObject((KCategorizedSortFilterProxyModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_categorizedsortfilterproxymodel_qbase_meta_object(void* self) {
+    return KCategorizedSortFilterProxyModel_QBaseMetaObject((KCategorizedSortFilterProxyModel*)self);
+}
+
 void* k_categorizedsortfilterproxymodel_metacast(void* self, const char* param1) {
     return KCategorizedSortFilterProxyModel_Metacast((KCategorizedSortFilterProxyModel*)self, param1);
+}
+
+void k_categorizedsortfilterproxymodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KCategorizedSortFilterProxyModel_OnMetacast((KCategorizedSortFilterProxyModel*)self, (intptr_t)callback);
+}
+
+void* k_categorizedsortfilterproxymodel_qbase_metacast(void* self, const char* param1) {
+    return KCategorizedSortFilterProxyModel_QBaseMetacast((KCategorizedSortFilterProxyModel*)self, param1);
 }
 
 int32_t k_categorizedsortfilterproxymodel_metacall(void* self, int32_t param1, int param2, void* param3) {

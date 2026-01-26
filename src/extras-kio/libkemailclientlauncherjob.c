@@ -19,8 +19,24 @@ const QMetaObject* k_emailclientlauncherjob_meta_object(void* self) {
     return KEMailClientLauncherJob_MetaObject((KEMailClientLauncherJob*)self);
 }
 
+void k_emailclientlauncherjob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KEMailClientLauncherJob_OnMetaObject((KEMailClientLauncherJob*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_emailclientlauncherjob_qbase_meta_object(void* self) {
+    return KEMailClientLauncherJob_QBaseMetaObject((KEMailClientLauncherJob*)self);
+}
+
 void* k_emailclientlauncherjob_metacast(void* self, const char* param1) {
     return KEMailClientLauncherJob_Metacast((KEMailClientLauncherJob*)self, param1);
+}
+
+void k_emailclientlauncherjob_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KEMailClientLauncherJob_OnMetacast((KEMailClientLauncherJob*)self, (intptr_t)callback);
+}
+
+void* k_emailclientlauncherjob_qbase_metacast(void* self, const char* param1) {
+    return KEMailClientLauncherJob_QBaseMetacast((KEMailClientLauncherJob*)self, param1);
 }
 
 int32_t k_emailclientlauncherjob_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -31,10 +31,41 @@ QImageCapture* q_imagecapture_new2(void* parent);
 ///
 const QMetaObject* q_imagecapture_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QImageCapture*
+/// @param callback const QMetaObject* func()
+///
+void q_imagecapture_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QImageCapture*
+///
+const QMetaObject* q_imagecapture_qbase_meta_object(void* self);
+
 /// @param self QImageCapture*
 /// @param param1 const char*
 ///
 void* q_imagecapture_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QImageCapture*
+/// @param callback void* func(QImageCapture* self, const char* param1)
+///
+void q_imagecapture_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QImageCapture*
+/// @param param1 const char*
+///
+void* q_imagecapture_qbase_metacast(void* self, const char* param1);
 
 /// @param self QImageCapture*
 /// @param param1 enum QMetaObject__Call

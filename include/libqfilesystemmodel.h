@@ -31,10 +31,41 @@ QFileSystemModel* q_filesystemmodel_new2(void* parent);
 ///
 const QMetaObject* q_filesystemmodel_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QFileSystemModel*
+/// @param callback const QMetaObject* func()
+///
+void q_filesystemmodel_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QFileSystemModel*
+///
+const QMetaObject* q_filesystemmodel_qbase_meta_object(void* self);
+
 /// @param self QFileSystemModel*
 /// @param param1 const char*
 ///
 void* q_filesystemmodel_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QFileSystemModel*
+/// @param callback void* func(QFileSystemModel* self, const char* param1)
+///
+void q_filesystemmodel_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QFileSystemModel*
+/// @param param1 const char*
+///
+void* q_filesystemmodel_qbase_metacast(void* self, const char* param1);
 
 /// @param self QFileSystemModel*
 /// @param param1 enum QMetaObject__Call

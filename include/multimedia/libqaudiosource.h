@@ -67,10 +67,41 @@ QAudioSource* q_audiosource_new6(void* audioDeviceInfo, void* format, void* pare
 ///
 const QMetaObject* q_audiosource_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QAudioSource*
+/// @param callback const QMetaObject* func()
+///
+void q_audiosource_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QAudioSource*
+///
+const QMetaObject* q_audiosource_qbase_meta_object(void* self);
+
 /// @param self QAudioSource*
 /// @param param1 const char*
 ///
 void* q_audiosource_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QAudioSource*
+/// @param callback void* func(QAudioSource* self, const char* param1)
+///
+void q_audiosource_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QAudioSource*
+/// @param param1 const char*
+///
+void* q_audiosource_qbase_metacast(void* self, const char* param1);
 
 /// @param self QAudioSource*
 /// @param param1 enum QMetaObject__Call

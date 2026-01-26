@@ -18,8 +18,24 @@ const QMetaObject* q_abstractanimation_meta_object(void* self) {
     return QAbstractAnimation_MetaObject((QAbstractAnimation*)self);
 }
 
+void q_abstractanimation_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QAbstractAnimation_OnMetaObject((QAbstractAnimation*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_abstractanimation_qbase_meta_object(void* self) {
+    return QAbstractAnimation_QBaseMetaObject((QAbstractAnimation*)self);
+}
+
 void* q_abstractanimation_metacast(void* self, const char* param1) {
     return QAbstractAnimation_Metacast((QAbstractAnimation*)self, param1);
+}
+
+void q_abstractanimation_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QAbstractAnimation_OnMetacast((QAbstractAnimation*)self, (intptr_t)callback);
+}
+
+void* q_abstractanimation_qbase_metacast(void* self, const char* param1) {
+    return QAbstractAnimation_QBaseMetacast((QAbstractAnimation*)self, param1);
 }
 
 int32_t q_abstractanimation_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -534,8 +550,24 @@ const QMetaObject* q_animationdriver_meta_object(void* self) {
     return QAnimationDriver_MetaObject((QAnimationDriver*)self);
 }
 
+void q_animationdriver_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QAnimationDriver_OnMetaObject((QAnimationDriver*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_animationdriver_qbase_meta_object(void* self) {
+    return QAnimationDriver_QBaseMetaObject((QAnimationDriver*)self);
+}
+
 void* q_animationdriver_metacast(void* self, const char* param1) {
     return QAnimationDriver_Metacast((QAnimationDriver*)self, param1);
+}
+
+void q_animationdriver_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QAnimationDriver_OnMetacast((QAnimationDriver*)self, (intptr_t)callback);
+}
+
+void* q_animationdriver_qbase_metacast(void* self, const char* param1) {
+    return QAnimationDriver_QBaseMetacast((QAnimationDriver*)self, param1);
 }
 
 int32_t q_animationdriver_metacall(void* self, int32_t param1, int param2, void* param3) {

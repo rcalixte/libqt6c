@@ -40,10 +40,41 @@ QTimeLine* q_timeline_new3(int duration, void* parent);
 ///
 const QMetaObject* q_timeline_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QTimeLine*
+/// @param callback const QMetaObject* func()
+///
+void q_timeline_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QTimeLine*
+///
+const QMetaObject* q_timeline_qbase_meta_object(void* self);
+
 /// @param self QTimeLine*
 /// @param param1 const char*
 ///
 void* q_timeline_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QTimeLine*
+/// @param callback void* func(QTimeLine* self, const char* param1)
+///
+void q_timeline_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QTimeLine*
+/// @param param1 const char*
+///
+void* q_timeline_qbase_metacast(void* self, const char* param1);
 
 /// @param self QTimeLine*
 /// @param param1 enum QMetaObject__Call

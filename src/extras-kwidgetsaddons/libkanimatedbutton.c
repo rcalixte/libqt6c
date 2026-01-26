@@ -28,8 +28,24 @@ const QMetaObject* k_animatedbutton_meta_object(void* self) {
     return KAnimatedButton_MetaObject((KAnimatedButton*)self);
 }
 
+void k_animatedbutton_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KAnimatedButton_OnMetaObject((KAnimatedButton*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_animatedbutton_qbase_meta_object(void* self) {
+    return KAnimatedButton_QBaseMetaObject((KAnimatedButton*)self);
+}
+
 void* k_animatedbutton_metacast(void* self, const char* param1) {
     return KAnimatedButton_Metacast((KAnimatedButton*)self, param1);
+}
+
+void k_animatedbutton_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KAnimatedButton_OnMetacast((KAnimatedButton*)self, (intptr_t)callback);
+}
+
+void* k_animatedbutton_qbase_metacast(void* self, const char* param1) {
+    return KAnimatedButton_QBaseMetacast((KAnimatedButton*)self, param1);
 }
 
 int32_t k_animatedbutton_metacall(void* self, int32_t param1, int param2, void* param3) {

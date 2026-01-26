@@ -67,10 +67,41 @@ QLabel* q_label_new6(const char* text, void* parent, int32_t f);
 ///
 const QMetaObject* q_label_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QLabel*
+/// @param callback const QMetaObject* func()
+///
+void q_label_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QLabel*
+///
+const QMetaObject* q_label_qbase_meta_object(void* self);
+
 /// @param self QLabel*
 /// @param param1 const char*
 ///
 void* q_label_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QLabel*
+/// @param callback void* func(QLabel* self, const char* param1)
+///
+void q_label_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QLabel*
+/// @param param1 const char*
+///
+void* q_label_qbase_metacast(void* self, const char* param1);
 
 /// @param self QLabel*
 /// @param param1 enum QMetaObject__Call

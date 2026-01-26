@@ -42,8 +42,24 @@ const QMetaObject* k_led_meta_object(void* self) {
     return KLed_MetaObject((KLed*)self);
 }
 
+void k_led_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KLed_OnMetaObject((KLed*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_led_qbase_meta_object(void* self) {
+    return KLed_QBaseMetaObject((KLed*)self);
+}
+
 void* k_led_metacast(void* self, const char* param1) {
     return KLed_Metacast((KLed*)self, param1);
+}
+
+void k_led_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KLed_OnMetacast((KLed*)self, (intptr_t)callback);
+}
+
+void* k_led_qbase_metacast(void* self, const char* param1) {
+    return KLed_QBaseMetacast((KLed*)self, param1);
 }
 
 int32_t k_led_metacall(void* self, int32_t param1, int param2, void* param3) {

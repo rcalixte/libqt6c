@@ -27,8 +27,24 @@ const QMetaObject* q_abstractspinbox_meta_object(void* self) {
     return QAbstractSpinBox_MetaObject((QAbstractSpinBox*)self);
 }
 
+void q_abstractspinbox_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QAbstractSpinBox_OnMetaObject((QAbstractSpinBox*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_abstractspinbox_qbase_meta_object(void* self) {
+    return QAbstractSpinBox_QBaseMetaObject((QAbstractSpinBox*)self);
+}
+
 void* q_abstractspinbox_metacast(void* self, const char* param1) {
     return QAbstractSpinBox_Metacast((QAbstractSpinBox*)self, param1);
+}
+
+void q_abstractspinbox_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QAbstractSpinBox_OnMetacast((QAbstractSpinBox*)self, (intptr_t)callback);
+}
+
+void* q_abstractspinbox_qbase_metacast(void* self, const char* param1) {
+    return QAbstractSpinBox_QBaseMetacast((QAbstractSpinBox*)self, param1);
 }
 
 int32_t q_abstractspinbox_metacall(void* self, int32_t param1, int param2, void* param3) {

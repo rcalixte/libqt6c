@@ -320,8 +320,24 @@ const QMetaObject* q_dnslookup_meta_object(void* self) {
     return QDnsLookup_MetaObject((QDnsLookup*)self);
 }
 
+void q_dnslookup_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDnsLookup_OnMetaObject((QDnsLookup*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_dnslookup_qbase_meta_object(void* self) {
+    return QDnsLookup_QBaseMetaObject((QDnsLookup*)self);
+}
+
 void* q_dnslookup_metacast(void* self, const char* param1) {
     return QDnsLookup_Metacast((QDnsLookup*)self, param1);
+}
+
+void q_dnslookup_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDnsLookup_OnMetacast((QDnsLookup*)self, (intptr_t)callback);
+}
+
+void* q_dnslookup_qbase_metacast(void* self, const char* param1) {
+    return QDnsLookup_QBaseMetacast((QDnsLookup*)self, param1);
 }
 
 int32_t q_dnslookup_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -34,8 +34,24 @@ const QMetaObject* q_groupbox_meta_object(void* self) {
     return QGroupBox_MetaObject((QGroupBox*)self);
 }
 
+void q_groupbox_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QGroupBox_OnMetaObject((QGroupBox*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_groupbox_qbase_meta_object(void* self) {
+    return QGroupBox_QBaseMetaObject((QGroupBox*)self);
+}
+
 void* q_groupbox_metacast(void* self, const char* param1) {
     return QGroupBox_Metacast((QGroupBox*)self, param1);
+}
+
+void q_groupbox_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QGroupBox_OnMetacast((QGroupBox*)self, (intptr_t)callback);
+}
+
+void* q_groupbox_qbase_metacast(void* self, const char* param1) {
+    return QGroupBox_QBaseMetacast((QGroupBox*)self, param1);
 }
 
 int32_t q_groupbox_metacall(void* self, int32_t param1, int param2, void* param3) {

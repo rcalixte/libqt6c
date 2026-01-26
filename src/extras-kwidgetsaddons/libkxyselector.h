@@ -31,10 +31,41 @@ KXYSelector* k_xyselector_new2();
 ///
 const QMetaObject* k_xyselector_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KXYSelector*
+/// @param callback const QMetaObject* func()
+///
+void k_xyselector_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KXYSelector*
+///
+const QMetaObject* k_xyselector_qbase_meta_object(void* self);
+
 /// @param self KXYSelector*
 /// @param param1 const char*
 ///
 void* k_xyselector_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KXYSelector*
+/// @param callback void* func(KXYSelector* self, const char* param1)
+///
+void k_xyselector_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KXYSelector*
+/// @param param1 const char*
+///
+void* k_xyselector_qbase_metacast(void* self, const char* param1);
 
 /// @param self KXYSelector*
 /// @param param1 enum QMetaObject__Call

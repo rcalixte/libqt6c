@@ -22,8 +22,24 @@ const QMetaObject* q_scilexervhdl_meta_object(void* self) {
     return QsciLexerVHDL_MetaObject((QsciLexerVHDL*)self);
 }
 
+void q_scilexervhdl_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QsciLexerVHDL_OnMetaObject((QsciLexerVHDL*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_scilexervhdl_qbase_meta_object(void* self) {
+    return QsciLexerVHDL_QBaseMetaObject((QsciLexerVHDL*)self);
+}
+
 void* q_scilexervhdl_metacast(void* self, const char* param1) {
     return QsciLexerVHDL_Metacast((QsciLexerVHDL*)self, param1);
+}
+
+void q_scilexervhdl_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QsciLexerVHDL_OnMetacast((QsciLexerVHDL*)self, (intptr_t)callback);
+}
+
+void* q_scilexervhdl_qbase_metacast(void* self, const char* param1) {
+    return QsciLexerVHDL_QBaseMetacast((QsciLexerVHDL*)self, param1);
 }
 
 int32_t q_scilexervhdl_metacall(void* self, int32_t param1, int param2, void* param3) {

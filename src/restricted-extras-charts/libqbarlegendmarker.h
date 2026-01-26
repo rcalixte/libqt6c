@@ -38,10 +38,41 @@ QBarLegendMarker* q_barlegendmarker_new2(void* series, void* barset, void* legen
 ///
 const QMetaObject* q_barlegendmarker_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QBarLegendMarker*
+/// @param callback const QMetaObject* func()
+///
+void q_barlegendmarker_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QBarLegendMarker*
+///
+const QMetaObject* q_barlegendmarker_qbase_meta_object(void* self);
+
 /// @param self QBarLegendMarker*
 /// @param param1 const char*
 ///
 void* q_barlegendmarker_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QBarLegendMarker*
+/// @param callback void* func(QBarLegendMarker* self, const char* param1)
+///
+void q_barlegendmarker_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QBarLegendMarker*
+/// @param param1 const char*
+///
+void* q_barlegendmarker_qbase_metacast(void* self, const char* param1);
 
 /// @param self QBarLegendMarker*
 /// @param param1 enum QMetaObject__Call

@@ -33,8 +33,24 @@ const QMetaObject* k_listwidgetsearchline_meta_object(void* self) {
     return KListWidgetSearchLine_MetaObject((KListWidgetSearchLine*)self);
 }
 
+void k_listwidgetsearchline_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KListWidgetSearchLine_OnMetaObject((KListWidgetSearchLine*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_listwidgetsearchline_qbase_meta_object(void* self) {
+    return KListWidgetSearchLine_QBaseMetaObject((KListWidgetSearchLine*)self);
+}
+
 void* k_listwidgetsearchline_metacast(void* self, const char* param1) {
     return KListWidgetSearchLine_Metacast((KListWidgetSearchLine*)self, param1);
+}
+
+void k_listwidgetsearchline_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KListWidgetSearchLine_OnMetacast((KListWidgetSearchLine*)self, (intptr_t)callback);
+}
+
+void* k_listwidgetsearchline_qbase_metacast(void* self, const char* param1) {
+    return KListWidgetSearchLine_QBaseMetacast((KListWidgetSearchLine*)self, param1);
 }
 
 int32_t k_listwidgetsearchline_metacall(void* self, int32_t param1, int param2, void* param3) {

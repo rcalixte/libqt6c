@@ -34,10 +34,41 @@ QDesignerIntegrationInterface* q_designerintegrationinterface_new2(void* core, v
 ///
 const QMetaObject* q_designerintegrationinterface_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QDesignerIntegrationInterface*
+/// @param callback const QMetaObject* func()
+///
+void q_designerintegrationinterface_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QDesignerIntegrationInterface*
+///
+const QMetaObject* q_designerintegrationinterface_qbase_meta_object(void* self);
+
 /// @param self QDesignerIntegrationInterface*
 /// @param param1 const char*
 ///
 void* q_designerintegrationinterface_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QDesignerIntegrationInterface*
+/// @param callback void* func(QDesignerIntegrationInterface* self, const char* param1)
+///
+void q_designerintegrationinterface_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QDesignerIntegrationInterface*
+/// @param param1 const char*
+///
+void* q_designerintegrationinterface_qbase_metacast(void* self, const char* param1);
 
 /// @param self QDesignerIntegrationInterface*
 /// @param param1 enum QMetaObject__Call
@@ -1443,10 +1474,41 @@ QDesignerIntegration* q_designerintegration_new2(void* core, void* parent);
 ///
 const QMetaObject* q_designerintegration_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QDesignerIntegration*
+/// @param callback const QMetaObject* func()
+///
+void q_designerintegration_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QDesignerIntegration*
+///
+const QMetaObject* q_designerintegration_qbase_meta_object(void* self);
+
 /// @param self QDesignerIntegration*
 /// @param param1 const char*
 ///
 void* q_designerintegration_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QDesignerIntegration*
+/// @param callback void* func(QDesignerIntegration* self, const char* param1)
+///
+void q_designerintegration_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QDesignerIntegration*
+/// @param param1 const char*
+///
+void* q_designerintegration_qbase_metacast(void* self, const char* param1);
 
 /// @param self QDesignerIntegration*
 /// @param param1 enum QMetaObject__Call

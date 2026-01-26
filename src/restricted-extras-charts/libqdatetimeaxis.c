@@ -19,8 +19,24 @@ const QMetaObject* q_datetimeaxis_meta_object(void* self) {
     return QDateTimeAxis_MetaObject((QDateTimeAxis*)self);
 }
 
+void q_datetimeaxis_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDateTimeAxis_OnMetaObject((QDateTimeAxis*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_datetimeaxis_qbase_meta_object(void* self) {
+    return QDateTimeAxis_QBaseMetaObject((QDateTimeAxis*)self);
+}
+
 void* q_datetimeaxis_metacast(void* self, const char* param1) {
     return QDateTimeAxis_Metacast((QDateTimeAxis*)self, param1);
+}
+
+void q_datetimeaxis_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDateTimeAxis_OnMetacast((QDateTimeAxis*)self, (intptr_t)callback);
+}
+
+void* q_datetimeaxis_qbase_metacast(void* self, const char* param1) {
+    return QDateTimeAxis_QBaseMetacast((QDateTimeAxis*)self, param1);
 }
 
 int32_t q_datetimeaxis_metacall(void* self, int32_t param1, int param2, void* param3) {

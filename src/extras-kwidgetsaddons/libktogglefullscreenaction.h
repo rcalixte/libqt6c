@@ -34,10 +34,41 @@ KToggleFullScreenAction* k_togglefullscreenaction_new2(void* window, void* paren
 ///
 const QMetaObject* k_togglefullscreenaction_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KToggleFullScreenAction*
+/// @param callback const QMetaObject* func()
+///
+void k_togglefullscreenaction_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KToggleFullScreenAction*
+///
+const QMetaObject* k_togglefullscreenaction_qbase_meta_object(void* self);
+
 /// @param self KToggleFullScreenAction*
 /// @param param1 const char*
 ///
 void* k_togglefullscreenaction_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KToggleFullScreenAction*
+/// @param callback void* func(KToggleFullScreenAction* self, const char* param1)
+///
+void k_togglefullscreenaction_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KToggleFullScreenAction*
+/// @param param1 const char*
+///
+void* k_togglefullscreenaction_qbase_metacast(void* self, const char* param1);
 
 /// @param self KToggleFullScreenAction*
 /// @param param1 enum QMetaObject__Call

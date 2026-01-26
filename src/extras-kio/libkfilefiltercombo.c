@@ -34,8 +34,24 @@ const QMetaObject* k_filefiltercombo_meta_object(void* self) {
     return KFileFilterCombo_MetaObject((KFileFilterCombo*)self);
 }
 
+void k_filefiltercombo_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KFileFilterCombo_OnMetaObject((KFileFilterCombo*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_filefiltercombo_qbase_meta_object(void* self) {
+    return KFileFilterCombo_QBaseMetaObject((KFileFilterCombo*)self);
+}
+
 void* k_filefiltercombo_metacast(void* self, const char* param1) {
     return KFileFilterCombo_Metacast((KFileFilterCombo*)self, param1);
+}
+
+void k_filefiltercombo_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KFileFilterCombo_OnMetacast((KFileFilterCombo*)self, (intptr_t)callback);
+}
+
+void* k_filefiltercombo_qbase_metacast(void* self, const char* param1) {
+    return KFileFilterCombo_QBaseMetacast((KFileFilterCombo*)self, param1);
 }
 
 int32_t k_filefiltercombo_metacall(void* self, int32_t param1, int param2, void* param3) {

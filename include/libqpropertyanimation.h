@@ -50,10 +50,41 @@ QPropertyAnimation* q_propertyanimation_new4(void* target, const char* propertyN
 ///
 const QMetaObject* q_propertyanimation_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QPropertyAnimation*
+/// @param callback const QMetaObject* func()
+///
+void q_propertyanimation_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QPropertyAnimation*
+///
+const QMetaObject* q_propertyanimation_qbase_meta_object(void* self);
+
 /// @param self QPropertyAnimation*
 /// @param param1 const char*
 ///
 void* q_propertyanimation_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QPropertyAnimation*
+/// @param callback void* func(QPropertyAnimation* self, const char* param1)
+///
+void q_propertyanimation_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QPropertyAnimation*
+/// @param param1 const char*
+///
+void* q_propertyanimation_qbase_metacast(void* self, const char* param1);
 
 /// @param self QPropertyAnimation*
 /// @param param1 enum QMetaObject__Call

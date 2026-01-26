@@ -19,8 +19,24 @@ const QMetaObject* k_windowstatesaver_meta_object(void* self) {
     return KWindowStateSaver_MetaObject((KWindowStateSaver*)self);
 }
 
+void k_windowstatesaver_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KWindowStateSaver_OnMetaObject((KWindowStateSaver*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_windowstatesaver_qbase_meta_object(void* self) {
+    return KWindowStateSaver_QBaseMetaObject((KWindowStateSaver*)self);
+}
+
 void* k_windowstatesaver_metacast(void* self, const char* param1) {
     return KWindowStateSaver_Metacast((KWindowStateSaver*)self, param1);
+}
+
+void k_windowstatesaver_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KWindowStateSaver_OnMetacast((KWindowStateSaver*)self, (intptr_t)callback);
+}
+
+void* k_windowstatesaver_qbase_metacast(void* self, const char* param1) {
+    return KWindowStateSaver_QBaseMetacast((KWindowStateSaver*)self, param1);
 }
 
 int32_t k_windowstatesaver_metacall(void* self, int32_t param1, int param2, void* param3) {

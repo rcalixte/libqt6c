@@ -20,8 +20,24 @@ const QMetaObject* k_twofingerswipe_meta_object(void* self) {
     return KTwoFingerSwipe_MetaObject((KTwoFingerSwipe*)self);
 }
 
+void k_twofingerswipe_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KTwoFingerSwipe_OnMetaObject((KTwoFingerSwipe*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_twofingerswipe_qbase_meta_object(void* self) {
+    return KTwoFingerSwipe_QBaseMetaObject((KTwoFingerSwipe*)self);
+}
+
 void* k_twofingerswipe_metacast(void* self, const char* param1) {
     return KTwoFingerSwipe_Metacast((KTwoFingerSwipe*)self, param1);
+}
+
+void k_twofingerswipe_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KTwoFingerSwipe_OnMetacast((KTwoFingerSwipe*)self, (intptr_t)callback);
+}
+
+void* k_twofingerswipe_qbase_metacast(void* self, const char* param1) {
+    return KTwoFingerSwipe_QBaseMetacast((KTwoFingerSwipe*)self, param1);
 }
 
 int32_t k_twofingerswipe_metacall(void* self, int32_t param1, int param2, void* param3) {

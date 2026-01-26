@@ -144,8 +144,24 @@ const QMetaObject* k_mimetypechooser_meta_object(void* self) {
     return KMimeTypeChooser_MetaObject((KMimeTypeChooser*)self);
 }
 
+void k_mimetypechooser_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KMimeTypeChooser_OnMetaObject((KMimeTypeChooser*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_mimetypechooser_qbase_meta_object(void* self) {
+    return KMimeTypeChooser_QBaseMetaObject((KMimeTypeChooser*)self);
+}
+
 void* k_mimetypechooser_metacast(void* self, const char* param1) {
     return KMimeTypeChooser_Metacast((KMimeTypeChooser*)self, param1);
+}
+
+void k_mimetypechooser_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KMimeTypeChooser_OnMetacast((KMimeTypeChooser*)self, (intptr_t)callback);
+}
+
+void* k_mimetypechooser_qbase_metacast(void* self, const char* param1) {
+    return KMimeTypeChooser_QBaseMetacast((KMimeTypeChooser*)self, param1);
 }
 
 int32_t k_mimetypechooser_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -2428,8 +2444,24 @@ const QMetaObject* k_mimetypechooserdialog_meta_object(void* self) {
     return KMimeTypeChooserDialog_MetaObject((KMimeTypeChooserDialog*)self);
 }
 
+void k_mimetypechooserdialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KMimeTypeChooserDialog_OnMetaObject((KMimeTypeChooserDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_mimetypechooserdialog_qbase_meta_object(void* self) {
+    return KMimeTypeChooserDialog_QBaseMetaObject((KMimeTypeChooserDialog*)self);
+}
+
 void* k_mimetypechooserdialog_metacast(void* self, const char* param1) {
     return KMimeTypeChooserDialog_Metacast((KMimeTypeChooserDialog*)self, param1);
+}
+
+void k_mimetypechooserdialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KMimeTypeChooserDialog_OnMetacast((KMimeTypeChooserDialog*)self, (intptr_t)callback);
+}
+
+void* k_mimetypechooserdialog_qbase_metacast(void* self, const char* param1) {
+    return KMimeTypeChooserDialog_QBaseMetacast((KMimeTypeChooserDialog*)self, param1);
 }
 
 int32_t k_mimetypechooserdialog_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -1427,8 +1427,24 @@ const QMetaObject* q_cplayer_meta_object(void* self) {
     return QCPLayer_MetaObject((QCPLayer*)self);
 }
 
+void q_cplayer_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPLayer_OnMetaObject((QCPLayer*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cplayer_qbase_meta_object(void* self) {
+    return QCPLayer_QBaseMetaObject((QCPLayer*)self);
+}
+
 void* q_cplayer_metacast(void* self, const char* param1) {
     return QCPLayer_Metacast((QCPLayer*)self, param1);
+}
+
+void q_cplayer_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPLayer_OnMetacast((QCPLayer*)self, (intptr_t)callback);
+}
+
+void* q_cplayer_qbase_metacast(void* self, const char* param1) {
+    return QCPLayer_QBaseMetacast((QCPLayer*)self, param1);
 }
 
 int32_t q_cplayer_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -1882,8 +1898,24 @@ const QMetaObject* q_cplayerable_meta_object(void* self) {
     return QCPLayerable_MetaObject((QCPLayerable*)self);
 }
 
+void q_cplayerable_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPLayerable_OnMetaObject((QCPLayerable*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cplayerable_qbase_meta_object(void* self) {
+    return QCPLayerable_QBaseMetaObject((QCPLayerable*)self);
+}
+
 void* q_cplayerable_metacast(void* self, const char* param1) {
     return QCPLayerable_Metacast((QCPLayerable*)self, param1);
+}
+
+void q_cplayerable_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPLayerable_OnMetacast((QCPLayerable*)self, (intptr_t)callback);
+}
+
+void* q_cplayerable_qbase_metacast(void* self, const char* param1) {
+    return QCPLayerable_QBaseMetacast((QCPLayerable*)self, param1);
 }
 
 int32_t q_cplayerable_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -2823,8 +2855,24 @@ const QMetaObject* q_cpselectionrect_meta_object(void* self) {
     return QCPSelectionRect_MetaObject((QCPSelectionRect*)self);
 }
 
+void q_cpselectionrect_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPSelectionRect_OnMetaObject((QCPSelectionRect*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpselectionrect_qbase_meta_object(void* self) {
+    return QCPSelectionRect_QBaseMetaObject((QCPSelectionRect*)self);
+}
+
 void* q_cpselectionrect_metacast(void* self, const char* param1) {
     return QCPSelectionRect_Metacast((QCPSelectionRect*)self, param1);
+}
+
+void q_cpselectionrect_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPSelectionRect_OnMetacast((QCPSelectionRect*)self, (intptr_t)callback);
+}
+
+void* q_cpselectionrect_qbase_metacast(void* self, const char* param1) {
+    return QCPSelectionRect_QBaseMetacast((QCPSelectionRect*)self, param1);
 }
 
 int32_t q_cpselectionrect_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -3551,8 +3599,24 @@ const QMetaObject* q_cpmargingroup_meta_object(void* self) {
     return QCPMarginGroup_MetaObject((QCPMarginGroup*)self);
 }
 
+void q_cpmargingroup_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPMarginGroup_OnMetaObject((QCPMarginGroup*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpmargingroup_qbase_meta_object(void* self) {
+    return QCPMarginGroup_QBaseMetaObject((QCPMarginGroup*)self);
+}
+
 void* q_cpmargingroup_metacast(void* self, const char* param1) {
     return QCPMarginGroup_Metacast((QCPMarginGroup*)self, param1);
+}
+
+void q_cpmargingroup_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPMarginGroup_OnMetacast((QCPMarginGroup*)self, (intptr_t)callback);
+}
+
+void* q_cpmargingroup_qbase_metacast(void* self, const char* param1) {
+    return QCPMarginGroup_QBaseMetacast((QCPMarginGroup*)self, param1);
 }
 
 int32_t q_cpmargingroup_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -3968,8 +4032,24 @@ const QMetaObject* q_cplayoutelement_meta_object(void* self) {
     return QCPLayoutElement_MetaObject((QCPLayoutElement*)self);
 }
 
+void q_cplayoutelement_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPLayoutElement_OnMetaObject((QCPLayoutElement*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cplayoutelement_qbase_meta_object(void* self) {
+    return QCPLayoutElement_QBaseMetaObject((QCPLayoutElement*)self);
+}
+
 void* q_cplayoutelement_metacast(void* self, const char* param1) {
     return QCPLayoutElement_Metacast((QCPLayoutElement*)self, param1);
+}
+
+void q_cplayoutelement_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPLayoutElement_OnMetacast((QCPLayoutElement*)self, (intptr_t)callback);
+}
+
+void* q_cplayoutelement_qbase_metacast(void* self, const char* param1) {
+    return QCPLayoutElement_QBaseMetacast((QCPLayoutElement*)self, param1);
 }
 
 int32_t q_cplayoutelement_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -4748,8 +4828,24 @@ const QMetaObject* q_cplayout_meta_object(void* self) {
     return QCPLayout_MetaObject((QCPLayout*)self);
 }
 
+void q_cplayout_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPLayout_OnMetaObject((QCPLayout*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cplayout_qbase_meta_object(void* self) {
+    return QCPLayout_QBaseMetaObject((QCPLayout*)self);
+}
+
 void* q_cplayout_metacast(void* self, const char* param1) {
     return QCPLayout_Metacast((QCPLayout*)self, param1);
+}
+
+void q_cplayout_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPLayout_OnMetacast((QCPLayout*)self, (intptr_t)callback);
+}
+
+void* q_cplayout_qbase_metacast(void* self, const char* param1) {
+    return QCPLayout_QBaseMetacast((QCPLayout*)self, param1);
 }
 
 int32_t q_cplayout_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -5662,8 +5758,24 @@ const QMetaObject* q_cplayoutgrid_meta_object(void* self) {
     return QCPLayoutGrid_MetaObject((QCPLayoutGrid*)self);
 }
 
+void q_cplayoutgrid_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPLayoutGrid_OnMetaObject((QCPLayoutGrid*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cplayoutgrid_qbase_meta_object(void* self) {
+    return QCPLayoutGrid_QBaseMetaObject((QCPLayoutGrid*)self);
+}
+
 void* q_cplayoutgrid_metacast(void* self, const char* param1) {
     return QCPLayoutGrid_Metacast((QCPLayoutGrid*)self, param1);
+}
+
+void q_cplayoutgrid_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPLayoutGrid_OnMetacast((QCPLayoutGrid*)self, (intptr_t)callback);
+}
+
+void* q_cplayoutgrid_qbase_metacast(void* self, const char* param1) {
+    return QCPLayoutGrid_QBaseMetacast((QCPLayoutGrid*)self, param1);
 }
 
 int32_t q_cplayoutgrid_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -6706,8 +6818,24 @@ const QMetaObject* q_cplayoutinset_meta_object(void* self) {
     return QCPLayoutInset_MetaObject((QCPLayoutInset*)self);
 }
 
+void q_cplayoutinset_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPLayoutInset_OnMetaObject((QCPLayoutInset*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cplayoutinset_qbase_meta_object(void* self) {
+    return QCPLayoutInset_QBaseMetaObject((QCPLayoutInset*)self);
+}
+
 void* q_cplayoutinset_metacast(void* self, const char* param1) {
     return QCPLayoutInset_Metacast((QCPLayoutInset*)self, param1);
+}
+
+void q_cplayoutinset_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPLayoutInset_OnMetacast((QCPLayoutInset*)self, (intptr_t)callback);
+}
+
+void* q_cplayoutinset_qbase_metacast(void* self, const char* param1) {
+    return QCPLayoutInset_QBaseMetacast((QCPLayoutInset*)self, param1);
 }
 
 int32_t q_cplayoutinset_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -9701,8 +9829,24 @@ const QMetaObject* q_cpgrid_meta_object(void* self) {
     return QCPGrid_MetaObject((QCPGrid*)self);
 }
 
+void q_cpgrid_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPGrid_OnMetaObject((QCPGrid*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpgrid_qbase_meta_object(void* self) {
+    return QCPGrid_QBaseMetaObject((QCPGrid*)self);
+}
+
 void* q_cpgrid_metacast(void* self, const char* param1) {
     return QCPGrid_Metacast((QCPGrid*)self, param1);
+}
+
+void q_cpgrid_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPGrid_OnMetacast((QCPGrid*)self, (intptr_t)callback);
+}
+
+void* q_cpgrid_qbase_metacast(void* self, const char* param1) {
+    return QCPGrid_QBaseMetacast((QCPGrid*)self, param1);
 }
 
 int32_t q_cpgrid_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -10389,8 +10533,24 @@ const QMetaObject* q_cpaxis_meta_object(void* self) {
     return QCPAxis_MetaObject((QCPAxis*)self);
 }
 
+void q_cpaxis_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPAxis_OnMetaObject((QCPAxis*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpaxis_qbase_meta_object(void* self) {
+    return QCPAxis_QBaseMetaObject((QCPAxis*)self);
+}
+
 void* q_cpaxis_metacast(void* self, const char* param1) {
     return QCPAxis_Metacast((QCPAxis*)self, param1);
+}
+
+void q_cpaxis_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPAxis_OnMetacast((QCPAxis*)self, (intptr_t)callback);
+}
+
+void* q_cpaxis_qbase_metacast(void* self, const char* param1) {
+    return QCPAxis_QBaseMetacast((QCPAxis*)self, param1);
 }
 
 int32_t q_cpaxis_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -11794,8 +11954,24 @@ const QMetaObject* q_cpabstractplottable_meta_object(void* self) {
     return QCPAbstractPlottable_MetaObject((QCPAbstractPlottable*)self);
 }
 
+void q_cpabstractplottable_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPAbstractPlottable_OnMetaObject((QCPAbstractPlottable*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpabstractplottable_qbase_meta_object(void* self) {
+    return QCPAbstractPlottable_QBaseMetaObject((QCPAbstractPlottable*)self);
+}
+
 void* q_cpabstractplottable_metacast(void* self, const char* param1) {
     return QCPAbstractPlottable_Metacast((QCPAbstractPlottable*)self, param1);
+}
+
+void q_cpabstractplottable_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPAbstractPlottable_OnMetacast((QCPAbstractPlottable*)self, (intptr_t)callback);
+}
+
+void* q_cpabstractplottable_qbase_metacast(void* self, const char* param1) {
+    return QCPAbstractPlottable_QBaseMetacast((QCPAbstractPlottable*)self, param1);
 }
 
 int32_t q_cpabstractplottable_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -12923,8 +13099,24 @@ const QMetaObject* q_cpabstractitem_meta_object(void* self) {
     return QCPAbstractItem_MetaObject((QCPAbstractItem*)self);
 }
 
+void q_cpabstractitem_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPAbstractItem_OnMetaObject((QCPAbstractItem*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpabstractitem_qbase_meta_object(void* self) {
+    return QCPAbstractItem_QBaseMetaObject((QCPAbstractItem*)self);
+}
+
 void* q_cpabstractitem_metacast(void* self, const char* param1) {
     return QCPAbstractItem_Metacast((QCPAbstractItem*)self, param1);
+}
+
+void q_cpabstractitem_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPAbstractItem_OnMetacast((QCPAbstractItem*)self, (intptr_t)callback);
+}
+
+void* q_cpabstractitem_qbase_metacast(void* self, const char* param1) {
+    return QCPAbstractItem_QBaseMetacast((QCPAbstractItem*)self, param1);
 }
 
 int32_t q_cpabstractitem_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -13661,8 +13853,24 @@ const QMetaObject* q_customplot_meta_object(void* self) {
     return QCustomPlot_MetaObject((QCustomPlot*)self);
 }
 
+void q_customplot_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCustomPlot_OnMetaObject((QCustomPlot*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_customplot_qbase_meta_object(void* self) {
+    return QCustomPlot_QBaseMetaObject((QCustomPlot*)self);
+}
+
 void* q_customplot_metacast(void* self, const char* param1) {
     return QCustomPlot_Metacast((QCustomPlot*)self, param1);
+}
+
+void q_customplot_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCustomPlot_OnMetacast((QCustomPlot*)self, (intptr_t)callback);
+}
+
+void* q_customplot_qbase_metacast(void* self, const char* param1) {
+    return QCustomPlot_QBaseMetacast((QCustomPlot*)self, param1);
 }
 
 int32_t q_customplot_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -17131,8 +17339,24 @@ const QMetaObject* q_cpaxisrect_meta_object(void* self) {
     return QCPAxisRect_MetaObject((QCPAxisRect*)self);
 }
 
+void q_cpaxisrect_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPAxisRect_OnMetaObject((QCPAxisRect*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpaxisrect_qbase_meta_object(void* self) {
+    return QCPAxisRect_QBaseMetaObject((QCPAxisRect*)self);
+}
+
 void* q_cpaxisrect_metacast(void* self, const char* param1) {
     return QCPAxisRect_Metacast((QCPAxisRect*)self, param1);
+}
+
+void q_cpaxisrect_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPAxisRect_OnMetacast((QCPAxisRect*)self, (intptr_t)callback);
+}
+
+void* q_cpaxisrect_qbase_metacast(void* self, const char* param1) {
+    return QCPAxisRect_QBaseMetacast((QCPAxisRect*)self, param1);
 }
 
 int32_t q_cpaxisrect_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -18167,8 +18391,24 @@ const QMetaObject* q_cpabstractlegenditem_meta_object(void* self) {
     return QCPAbstractLegendItem_MetaObject((QCPAbstractLegendItem*)self);
 }
 
+void q_cpabstractlegenditem_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPAbstractLegendItem_OnMetaObject((QCPAbstractLegendItem*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpabstractlegenditem_qbase_meta_object(void* self) {
+    return QCPAbstractLegendItem_QBaseMetaObject((QCPAbstractLegendItem*)self);
+}
+
 void* q_cpabstractlegenditem_metacast(void* self, const char* param1) {
     return QCPAbstractLegendItem_Metacast((QCPAbstractLegendItem*)self, param1);
+}
+
+void q_cpabstractlegenditem_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPAbstractLegendItem_OnMetacast((QCPAbstractLegendItem*)self, (intptr_t)callback);
+}
+
+void* q_cpabstractlegenditem_qbase_metacast(void* self, const char* param1) {
+    return QCPAbstractLegendItem_QBaseMetacast((QCPAbstractLegendItem*)self, param1);
 }
 
 int32_t q_cpabstractlegenditem_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -19015,8 +19255,24 @@ const QMetaObject* q_cpplottablelegenditem_meta_object(void* self) {
     return QCPPlottableLegendItem_MetaObject((QCPPlottableLegendItem*)self);
 }
 
+void q_cpplottablelegenditem_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPPlottableLegendItem_OnMetaObject((QCPPlottableLegendItem*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpplottablelegenditem_qbase_meta_object(void* self) {
+    return QCPPlottableLegendItem_QBaseMetaObject((QCPPlottableLegendItem*)self);
+}
+
 void* q_cpplottablelegenditem_metacast(void* self, const char* param1) {
     return QCPPlottableLegendItem_Metacast((QCPPlottableLegendItem*)self, param1);
+}
+
+void q_cpplottablelegenditem_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPPlottableLegendItem_OnMetacast((QCPPlottableLegendItem*)self, (intptr_t)callback);
+}
+
+void* q_cpplottablelegenditem_qbase_metacast(void* self, const char* param1) {
+    return QCPPlottableLegendItem_QBaseMetacast((QCPPlottableLegendItem*)self, param1);
 }
 
 int32_t q_cpplottablelegenditem_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -19903,8 +20159,24 @@ const QMetaObject* q_cplegend_meta_object(void* self) {
     return QCPLegend_MetaObject((QCPLegend*)self);
 }
 
+void q_cplegend_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPLegend_OnMetaObject((QCPLegend*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cplegend_qbase_meta_object(void* self) {
+    return QCPLegend_QBaseMetaObject((QCPLegend*)self);
+}
+
 void* q_cplegend_metacast(void* self, const char* param1) {
     return QCPLegend_Metacast((QCPLegend*)self, param1);
+}
+
+void q_cplegend_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPLegend_OnMetacast((QCPLegend*)self, (intptr_t)callback);
+}
+
+void* q_cplegend_qbase_metacast(void* self, const char* param1) {
+    return QCPLegend_QBaseMetacast((QCPLegend*)self, param1);
 }
 
 int32_t q_cplegend_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -21160,8 +21432,24 @@ const QMetaObject* q_cptextelement_meta_object(void* self) {
     return QCPTextElement_MetaObject((QCPTextElement*)self);
 }
 
+void q_cptextelement_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPTextElement_OnMetaObject((QCPTextElement*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cptextelement_qbase_meta_object(void* self) {
+    return QCPTextElement_QBaseMetaObject((QCPTextElement*)self);
+}
+
 void* q_cptextelement_metacast(void* self, const char* param1) {
     return QCPTextElement_Metacast((QCPTextElement*)self, param1);
+}
+
+void q_cptextelement_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPTextElement_OnMetacast((QCPTextElement*)self, (intptr_t)callback);
+}
+
+void* q_cptextelement_qbase_metacast(void* self, const char* param1) {
+    return QCPTextElement_QBaseMetacast((QCPTextElement*)self, param1);
 }
 
 int32_t q_cptextelement_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -22063,8 +22351,24 @@ const QMetaObject* q_cpcolorscale_meta_object(void* self) {
     return QCPColorScale_MetaObject((QCPColorScale*)self);
 }
 
+void q_cpcolorscale_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPColorScale_OnMetaObject((QCPColorScale*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpcolorscale_qbase_meta_object(void* self) {
+    return QCPColorScale_QBaseMetaObject((QCPColorScale*)self);
+}
+
 void* q_cpcolorscale_metacast(void* self, const char* param1) {
     return QCPColorScale_Metacast((QCPColorScale*)self, param1);
+}
+
+void q_cpcolorscale_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPColorScale_OnMetacast((QCPColorScale*)self, (intptr_t)callback);
+}
+
+void* q_cpcolorscale_qbase_metacast(void* self, const char* param1) {
+    return QCPColorScale_QBaseMetacast((QCPColorScale*)self, param1);
 }
 
 int32_t q_cpcolorscale_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -23019,8 +23323,24 @@ const QMetaObject* q_cpgraph_meta_object(void* self) {
     return QCPGraph_MetaObject((QCPGraph*)self);
 }
 
+void q_cpgraph_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPGraph_OnMetaObject((QCPGraph*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpgraph_qbase_meta_object(void* self) {
+    return QCPGraph_QBaseMetaObject((QCPGraph*)self);
+}
+
 void* q_cpgraph_metacast(void* self, const char* param1) {
     return QCPGraph_Metacast((QCPGraph*)self, param1);
+}
+
+void q_cpgraph_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPGraph_OnMetacast((QCPGraph*)self, (intptr_t)callback);
+}
+
+void* q_cpgraph_qbase_metacast(void* self, const char* param1) {
+    return QCPGraph_QBaseMetacast((QCPGraph*)self, param1);
 }
 
 int32_t q_cpgraph_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -24370,8 +24690,24 @@ const QMetaObject* q_cpcurve_meta_object(void* self) {
     return QCPCurve_MetaObject((QCPCurve*)self);
 }
 
+void q_cpcurve_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPCurve_OnMetaObject((QCPCurve*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpcurve_qbase_meta_object(void* self) {
+    return QCPCurve_QBaseMetaObject((QCPCurve*)self);
+}
+
 void* q_cpcurve_metacast(void* self, const char* param1) {
     return QCPCurve_Metacast((QCPCurve*)self, param1);
+}
+
+void q_cpcurve_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPCurve_OnMetacast((QCPCurve*)self, (intptr_t)callback);
+}
+
+void* q_cpcurve_qbase_metacast(void* self, const char* param1) {
+    return QCPCurve_QBaseMetacast((QCPCurve*)self, param1);
 }
 
 int32_t q_cpcurve_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -25519,8 +25855,24 @@ const QMetaObject* q_cpbarsgroup_meta_object(void* self) {
     return QCPBarsGroup_MetaObject((QCPBarsGroup*)self);
 }
 
+void q_cpbarsgroup_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPBarsGroup_OnMetaObject((QCPBarsGroup*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpbarsgroup_qbase_meta_object(void* self) {
+    return QCPBarsGroup_QBaseMetaObject((QCPBarsGroup*)self);
+}
+
 void* q_cpbarsgroup_metacast(void* self, const char* param1) {
     return QCPBarsGroup_Metacast((QCPBarsGroup*)self, param1);
+}
+
+void q_cpbarsgroup_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPBarsGroup_OnMetacast((QCPBarsGroup*)self, (intptr_t)callback);
+}
+
+void* q_cpbarsgroup_qbase_metacast(void* self, const char* param1) {
+    return QCPBarsGroup_QBaseMetacast((QCPBarsGroup*)self, param1);
 }
 
 int32_t q_cpbarsgroup_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -26056,8 +26408,24 @@ const QMetaObject* q_cpbars_meta_object(void* self) {
     return QCPBars_MetaObject((QCPBars*)self);
 }
 
+void q_cpbars_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPBars_OnMetaObject((QCPBars*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpbars_qbase_meta_object(void* self) {
+    return QCPBars_QBaseMetaObject((QCPBars*)self);
+}
+
 void* q_cpbars_metacast(void* self, const char* param1) {
     return QCPBars_Metacast((QCPBars*)self, param1);
+}
+
+void q_cpbars_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPBars_OnMetacast((QCPBars*)self, (intptr_t)callback);
+}
+
+void* q_cpbars_qbase_metacast(void* self, const char* param1) {
+    return QCPBars_QBaseMetacast((QCPBars*)self, param1);
 }
 
 int32_t q_cpbars_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -27252,8 +27620,24 @@ const QMetaObject* q_cpstatisticalbox_meta_object(void* self) {
     return QCPStatisticalBox_MetaObject((QCPStatisticalBox*)self);
 }
 
+void q_cpstatisticalbox_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPStatisticalBox_OnMetaObject((QCPStatisticalBox*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpstatisticalbox_qbase_meta_object(void* self) {
+    return QCPStatisticalBox_QBaseMetaObject((QCPStatisticalBox*)self);
+}
+
 void* q_cpstatisticalbox_metacast(void* self, const char* param1) {
     return QCPStatisticalBox_Metacast((QCPStatisticalBox*)self, param1);
+}
+
+void q_cpstatisticalbox_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPStatisticalBox_OnMetacast((QCPStatisticalBox*)self, (intptr_t)callback);
+}
+
+void* q_cpstatisticalbox_qbase_metacast(void* self, const char* param1) {
+    return QCPStatisticalBox_QBaseMetacast((QCPStatisticalBox*)self, param1);
 }
 
 int32_t q_cpstatisticalbox_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -28419,8 +28803,24 @@ const QMetaObject* q_cpcolormap_meta_object(void* self) {
     return QCPColorMap_MetaObject((QCPColorMap*)self);
 }
 
+void q_cpcolormap_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPColorMap_OnMetaObject((QCPColorMap*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpcolormap_qbase_meta_object(void* self) {
+    return QCPColorMap_QBaseMetaObject((QCPColorMap*)self);
+}
+
 void* q_cpcolormap_metacast(void* self, const char* param1) {
     return QCPColorMap_Metacast((QCPColorMap*)self, param1);
+}
+
+void q_cpcolormap_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPColorMap_OnMetacast((QCPColorMap*)self, (intptr_t)callback);
+}
+
+void* q_cpcolormap_qbase_metacast(void* self, const char* param1) {
+    return QCPColorMap_QBaseMetacast((QCPColorMap*)self, param1);
 }
 
 int32_t q_cpcolormap_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -29478,8 +29878,24 @@ const QMetaObject* q_cpfinancial_meta_object(void* self) {
     return QCPFinancial_MetaObject((QCPFinancial*)self);
 }
 
+void q_cpfinancial_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPFinancial_OnMetaObject((QCPFinancial*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpfinancial_qbase_meta_object(void* self) {
+    return QCPFinancial_QBaseMetaObject((QCPFinancial*)self);
+}
+
 void* q_cpfinancial_metacast(void* self, const char* param1) {
     return QCPFinancial_Metacast((QCPFinancial*)self, param1);
+}
+
+void q_cpfinancial_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPFinancial_OnMetacast((QCPFinancial*)self, (intptr_t)callback);
+}
+
+void* q_cpfinancial_qbase_metacast(void* self, const char* param1) {
+    return QCPFinancial_QBaseMetacast((QCPFinancial*)self, param1);
 }
 
 int32_t q_cpfinancial_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -30597,8 +31013,24 @@ const QMetaObject* q_cperrorbars_meta_object(void* self) {
     return QCPErrorBars_MetaObject((QCPErrorBars*)self);
 }
 
+void q_cperrorbars_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPErrorBars_OnMetaObject((QCPErrorBars*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cperrorbars_qbase_meta_object(void* self) {
+    return QCPErrorBars_QBaseMetaObject((QCPErrorBars*)self);
+}
+
 void* q_cperrorbars_metacast(void* self, const char* param1) {
     return QCPErrorBars_Metacast((QCPErrorBars*)self, param1);
+}
+
+void q_cperrorbars_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPErrorBars_OnMetacast((QCPErrorBars*)self, (intptr_t)callback);
+}
+
+void* q_cperrorbars_qbase_metacast(void* self, const char* param1) {
+    return QCPErrorBars_QBaseMetacast((QCPErrorBars*)self, param1);
 }
 
 int32_t q_cperrorbars_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -31660,8 +32092,24 @@ const QMetaObject* q_cpitemstraightline_meta_object(void* self) {
     return QCPItemStraightLine_MetaObject((QCPItemStraightLine*)self);
 }
 
+void q_cpitemstraightline_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPItemStraightLine_OnMetaObject((QCPItemStraightLine*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpitemstraightline_qbase_meta_object(void* self) {
+    return QCPItemStraightLine_QBaseMetaObject((QCPItemStraightLine*)self);
+}
+
 void* q_cpitemstraightline_metacast(void* self, const char* param1) {
     return QCPItemStraightLine_Metacast((QCPItemStraightLine*)self, param1);
+}
+
+void q_cpitemstraightline_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPItemStraightLine_OnMetacast((QCPItemStraightLine*)self, (intptr_t)callback);
+}
+
+void* q_cpitemstraightline_qbase_metacast(void* self, const char* param1) {
+    return QCPItemStraightLine_QBaseMetacast((QCPItemStraightLine*)self, param1);
 }
 
 int32_t q_cpitemstraightline_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -32442,8 +32890,24 @@ const QMetaObject* q_cpitemline_meta_object(void* self) {
     return QCPItemLine_MetaObject((QCPItemLine*)self);
 }
 
+void q_cpitemline_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPItemLine_OnMetaObject((QCPItemLine*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpitemline_qbase_meta_object(void* self) {
+    return QCPItemLine_QBaseMetaObject((QCPItemLine*)self);
+}
+
 void* q_cpitemline_metacast(void* self, const char* param1) {
     return QCPItemLine_Metacast((QCPItemLine*)self, param1);
+}
+
+void q_cpitemline_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPItemLine_OnMetacast((QCPItemLine*)self, (intptr_t)callback);
+}
+
+void* q_cpitemline_qbase_metacast(void* self, const char* param1) {
+    return QCPItemLine_QBaseMetacast((QCPItemLine*)self, param1);
 }
 
 int32_t q_cpitemline_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -33240,8 +33704,24 @@ const QMetaObject* q_cpitemcurve_meta_object(void* self) {
     return QCPItemCurve_MetaObject((QCPItemCurve*)self);
 }
 
+void q_cpitemcurve_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPItemCurve_OnMetaObject((QCPItemCurve*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpitemcurve_qbase_meta_object(void* self) {
+    return QCPItemCurve_QBaseMetaObject((QCPItemCurve*)self);
+}
+
 void* q_cpitemcurve_metacast(void* self, const char* param1) {
     return QCPItemCurve_Metacast((QCPItemCurve*)self, param1);
+}
+
+void q_cpitemcurve_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPItemCurve_OnMetacast((QCPItemCurve*)self, (intptr_t)callback);
+}
+
+void* q_cpitemcurve_qbase_metacast(void* self, const char* param1) {
+    return QCPItemCurve_QBaseMetacast((QCPItemCurve*)self, param1);
 }
 
 int32_t q_cpitemcurve_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -34034,8 +34514,24 @@ const QMetaObject* q_cpitemrect_meta_object(void* self) {
     return QCPItemRect_MetaObject((QCPItemRect*)self);
 }
 
+void q_cpitemrect_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPItemRect_OnMetaObject((QCPItemRect*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpitemrect_qbase_meta_object(void* self) {
+    return QCPItemRect_QBaseMetaObject((QCPItemRect*)self);
+}
+
 void* q_cpitemrect_metacast(void* self, const char* param1) {
     return QCPItemRect_Metacast((QCPItemRect*)self, param1);
+}
+
+void q_cpitemrect_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPItemRect_OnMetacast((QCPItemRect*)self, (intptr_t)callback);
+}
+
+void* q_cpitemrect_qbase_metacast(void* self, const char* param1) {
+    return QCPItemRect_QBaseMetacast((QCPItemRect*)self, param1);
 }
 
 int32_t q_cpitemrect_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -34856,8 +35352,24 @@ const QMetaObject* q_cpitemtext_meta_object(void* self) {
     return QCPItemText_MetaObject((QCPItemText*)self);
 }
 
+void q_cpitemtext_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPItemText_OnMetaObject((QCPItemText*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpitemtext_qbase_meta_object(void* self) {
+    return QCPItemText_QBaseMetaObject((QCPItemText*)self);
+}
+
 void* q_cpitemtext_metacast(void* self, const char* param1) {
     return QCPItemText_Metacast((QCPItemText*)self, param1);
+}
+
+void q_cpitemtext_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPItemText_OnMetacast((QCPItemText*)self, (intptr_t)callback);
+}
+
+void* q_cpitemtext_qbase_metacast(void* self, const char* param1) {
+    return QCPItemText_QBaseMetacast((QCPItemText*)self, param1);
 }
 
 int32_t q_cpitemtext_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -35789,8 +36301,24 @@ const QMetaObject* q_cpitemellipse_meta_object(void* self) {
     return QCPItemEllipse_MetaObject((QCPItemEllipse*)self);
 }
 
+void q_cpitemellipse_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPItemEllipse_OnMetaObject((QCPItemEllipse*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpitemellipse_qbase_meta_object(void* self) {
+    return QCPItemEllipse_QBaseMetaObject((QCPItemEllipse*)self);
+}
+
 void* q_cpitemellipse_metacast(void* self, const char* param1) {
     return QCPItemEllipse_Metacast((QCPItemEllipse*)self, param1);
+}
+
+void q_cpitemellipse_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPItemEllipse_OnMetacast((QCPItemEllipse*)self, (intptr_t)callback);
+}
+
+void* q_cpitemellipse_qbase_metacast(void* self, const char* param1) {
+    return QCPItemEllipse_QBaseMetacast((QCPItemEllipse*)self, param1);
 }
 
 int32_t q_cpitemellipse_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -36623,8 +37151,24 @@ const QMetaObject* q_cpitempixmap_meta_object(void* self) {
     return QCPItemPixmap_MetaObject((QCPItemPixmap*)self);
 }
 
+void q_cpitempixmap_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPItemPixmap_OnMetaObject((QCPItemPixmap*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpitempixmap_qbase_meta_object(void* self) {
+    return QCPItemPixmap_QBaseMetaObject((QCPItemPixmap*)self);
+}
+
 void* q_cpitempixmap_metacast(void* self, const char* param1) {
     return QCPItemPixmap_Metacast((QCPItemPixmap*)self, param1);
+}
+
+void q_cpitempixmap_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPItemPixmap_OnMetacast((QCPItemPixmap*)self, (intptr_t)callback);
+}
+
+void* q_cpitempixmap_qbase_metacast(void* self, const char* param1) {
+    return QCPItemPixmap_QBaseMetacast((QCPItemPixmap*)self, param1);
 }
 
 int32_t q_cpitempixmap_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -37533,8 +38077,24 @@ const QMetaObject* q_cpitemtracer_meta_object(void* self) {
     return QCPItemTracer_MetaObject((QCPItemTracer*)self);
 }
 
+void q_cpitemtracer_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPItemTracer_OnMetaObject((QCPItemTracer*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpitemtracer_qbase_meta_object(void* self) {
+    return QCPItemTracer_QBaseMetaObject((QCPItemTracer*)self);
+}
+
 void* q_cpitemtracer_metacast(void* self, const char* param1) {
     return QCPItemTracer_Metacast((QCPItemTracer*)self, param1);
+}
+
+void q_cpitemtracer_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPItemTracer_OnMetacast((QCPItemTracer*)self, (intptr_t)callback);
+}
+
+void* q_cpitemtracer_qbase_metacast(void* self, const char* param1) {
+    return QCPItemTracer_QBaseMetacast((QCPItemTracer*)self, param1);
 }
 
 int32_t q_cpitemtracer_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -38367,8 +38927,24 @@ const QMetaObject* q_cpitembracket_meta_object(void* self) {
     return QCPItemBracket_MetaObject((QCPItemBracket*)self);
 }
 
+void q_cpitembracket_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPItemBracket_OnMetaObject((QCPItemBracket*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cpitembracket_qbase_meta_object(void* self) {
+    return QCPItemBracket_QBaseMetaObject((QCPItemBracket*)self);
+}
+
 void* q_cpitembracket_metacast(void* self, const char* param1) {
     return QCPItemBracket_Metacast((QCPItemBracket*)self, param1);
+}
+
+void q_cpitembracket_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPItemBracket_OnMetacast((QCPItemBracket*)self, (intptr_t)callback);
+}
+
+void* q_cpitembracket_qbase_metacast(void* self, const char* param1) {
+    return QCPItemBracket_QBaseMetacast((QCPItemBracket*)self, param1);
 }
 
 int32_t q_cpitembracket_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -39157,8 +39733,24 @@ const QMetaObject* q_cppolaraxisradial_meta_object(void* self) {
     return QCPPolarAxisRadial_MetaObject((QCPPolarAxisRadial*)self);
 }
 
+void q_cppolaraxisradial_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPPolarAxisRadial_OnMetaObject((QCPPolarAxisRadial*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cppolaraxisradial_qbase_meta_object(void* self) {
+    return QCPPolarAxisRadial_QBaseMetaObject((QCPPolarAxisRadial*)self);
+}
+
 void* q_cppolaraxisradial_metacast(void* self, const char* param1) {
     return QCPPolarAxisRadial_Metacast((QCPPolarAxisRadial*)self, param1);
+}
+
+void q_cppolaraxisradial_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPPolarAxisRadial_OnMetacast((QCPPolarAxisRadial*)self, (intptr_t)callback);
+}
+
+void* q_cppolaraxisradial_qbase_metacast(void* self, const char* param1) {
+    return QCPPolarAxisRadial_QBaseMetacast((QCPPolarAxisRadial*)self, param1);
 }
 
 int32_t q_cppolaraxisradial_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -40316,8 +40908,24 @@ const QMetaObject* q_cppolaraxisangular_meta_object(void* self) {
     return QCPPolarAxisAngular_MetaObject((QCPPolarAxisAngular*)self);
 }
 
+void q_cppolaraxisangular_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPPolarAxisAngular_OnMetaObject((QCPPolarAxisAngular*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cppolaraxisangular_qbase_meta_object(void* self) {
+    return QCPPolarAxisAngular_QBaseMetaObject((QCPPolarAxisAngular*)self);
+}
+
 void* q_cppolaraxisangular_metacast(void* self, const char* param1) {
     return QCPPolarAxisAngular_Metacast((QCPPolarAxisAngular*)self, param1);
+}
+
+void q_cppolaraxisangular_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPPolarAxisAngular_OnMetacast((QCPPolarAxisAngular*)self, (intptr_t)callback);
+}
+
+void* q_cppolaraxisangular_qbase_metacast(void* self, const char* param1) {
+    return QCPPolarAxisAngular_QBaseMetacast((QCPPolarAxisAngular*)self, param1);
 }
 
 int32_t q_cppolaraxisangular_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -41759,8 +42367,24 @@ const QMetaObject* q_cppolargrid_meta_object(void* self) {
     return QCPPolarGrid_MetaObject((QCPPolarGrid*)self);
 }
 
+void q_cppolargrid_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPPolarGrid_OnMetaObject((QCPPolarGrid*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cppolargrid_qbase_meta_object(void* self) {
+    return QCPPolarGrid_QBaseMetaObject((QCPPolarGrid*)self);
+}
+
 void* q_cppolargrid_metacast(void* self, const char* param1) {
     return QCPPolarGrid_Metacast((QCPPolarGrid*)self, param1);
+}
+
+void q_cppolargrid_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPPolarGrid_OnMetacast((QCPPolarGrid*)self, (intptr_t)callback);
+}
+
+void* q_cppolargrid_qbase_metacast(void* self, const char* param1) {
+    return QCPPolarGrid_QBaseMetacast((QCPPolarGrid*)self, param1);
 }
 
 int32_t q_cppolargrid_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -42491,8 +43115,24 @@ const QMetaObject* q_cppolarlegenditem_meta_object(void* self) {
     return QCPPolarLegendItem_MetaObject((QCPPolarLegendItem*)self);
 }
 
+void q_cppolarlegenditem_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPPolarLegendItem_OnMetaObject((QCPPolarLegendItem*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cppolarlegenditem_qbase_meta_object(void* self) {
+    return QCPPolarLegendItem_QBaseMetaObject((QCPPolarLegendItem*)self);
+}
+
 void* q_cppolarlegenditem_metacast(void* self, const char* param1) {
     return QCPPolarLegendItem_Metacast((QCPPolarLegendItem*)self, param1);
+}
+
+void q_cppolarlegenditem_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPPolarLegendItem_OnMetacast((QCPPolarLegendItem*)self, (intptr_t)callback);
+}
+
+void* q_cppolarlegenditem_qbase_metacast(void* self, const char* param1) {
+    return QCPPolarLegendItem_QBaseMetacast((QCPPolarLegendItem*)self, param1);
 }
 
 int32_t q_cppolarlegenditem_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -43379,8 +44019,24 @@ const QMetaObject* q_cppolargraph_meta_object(void* self) {
     return QCPPolarGraph_MetaObject((QCPPolarGraph*)self);
 }
 
+void q_cppolargraph_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QCPPolarGraph_OnMetaObject((QCPPolarGraph*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_cppolargraph_qbase_meta_object(void* self) {
+    return QCPPolarGraph_QBaseMetaObject((QCPPolarGraph*)self);
+}
+
 void* q_cppolargraph_metacast(void* self, const char* param1) {
     return QCPPolarGraph_Metacast((QCPPolarGraph*)self, param1);
+}
+
+void q_cppolargraph_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QCPPolarGraph_OnMetacast((QCPPolarGraph*)self, (intptr_t)callback);
+}
+
+void* q_cppolargraph_qbase_metacast(void* self, const char* param1) {
+    return QCPPolarGraph_QBaseMetacast((QCPPolarGraph*)self, param1);
 }
 
 int32_t q_cppolargraph_metacall(void* self, int32_t param1, int param2, void* param3) {

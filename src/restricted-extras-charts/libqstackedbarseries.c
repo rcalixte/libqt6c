@@ -19,8 +19,24 @@ const QMetaObject* q_stackedbarseries_meta_object(void* self) {
     return QStackedBarSeries_MetaObject((QStackedBarSeries*)self);
 }
 
+void q_stackedbarseries_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QStackedBarSeries_OnMetaObject((QStackedBarSeries*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_stackedbarseries_qbase_meta_object(void* self) {
+    return QStackedBarSeries_QBaseMetaObject((QStackedBarSeries*)self);
+}
+
 void* q_stackedbarseries_metacast(void* self, const char* param1) {
     return QStackedBarSeries_Metacast((QStackedBarSeries*)self, param1);
+}
+
+void q_stackedbarseries_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QStackedBarSeries_OnMetacast((QStackedBarSeries*)self, (intptr_t)callback);
+}
+
+void* q_stackedbarseries_qbase_metacast(void* self, const char* param1) {
+    return QStackedBarSeries_QBaseMetacast((QStackedBarSeries*)self, param1);
 }
 
 int32_t q_stackedbarseries_metacall(void* self, int32_t param1, int param2, void* param3) {

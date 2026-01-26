@@ -26,8 +26,24 @@ const QMetaObject* q_errormessage_meta_object(void* self) {
     return QErrorMessage_MetaObject((QErrorMessage*)self);
 }
 
+void q_errormessage_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QErrorMessage_OnMetaObject((QErrorMessage*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_errormessage_qbase_meta_object(void* self) {
+    return QErrorMessage_QBaseMetaObject((QErrorMessage*)self);
+}
+
 void* q_errormessage_metacast(void* self, const char* param1) {
     return QErrorMessage_Metacast((QErrorMessage*)self, param1);
+}
+
+void q_errormessage_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QErrorMessage_OnMetacast((QErrorMessage*)self, (intptr_t)callback);
+}
+
+void* q_errormessage_qbase_metacast(void* self, const char* param1) {
+    return QErrorMessage_QBaseMetacast((QErrorMessage*)self, param1);
 }
 
 int32_t q_errormessage_metacall(void* self, int32_t param1, int param2, void* param3) {

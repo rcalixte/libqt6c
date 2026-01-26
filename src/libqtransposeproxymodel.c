@@ -24,8 +24,24 @@ const QMetaObject* q_transposeproxymodel_meta_object(void* self) {
     return QTransposeProxyModel_MetaObject((QTransposeProxyModel*)self);
 }
 
+void q_transposeproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QTransposeProxyModel_OnMetaObject((QTransposeProxyModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_transposeproxymodel_qbase_meta_object(void* self) {
+    return QTransposeProxyModel_QBaseMetaObject((QTransposeProxyModel*)self);
+}
+
 void* q_transposeproxymodel_metacast(void* self, const char* param1) {
     return QTransposeProxyModel_Metacast((QTransposeProxyModel*)self, param1);
+}
+
+void q_transposeproxymodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QTransposeProxyModel_OnMetacast((QTransposeProxyModel*)self, (intptr_t)callback);
+}
+
+void* q_transposeproxymodel_qbase_metacast(void* self, const char* param1) {
+    return QTransposeProxyModel_QBaseMetacast((QTransposeProxyModel*)self, param1);
 }
 
 int32_t q_transposeproxymodel_metacall(void* self, int32_t param1, int param2, void* param3) {

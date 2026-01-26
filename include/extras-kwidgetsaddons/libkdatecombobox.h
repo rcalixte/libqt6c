@@ -31,10 +31,41 @@ KDateComboBox* k_datecombobox_new2();
 ///
 const QMetaObject* k_datecombobox_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KDateComboBox*
+/// @param callback const QMetaObject* func()
+///
+void k_datecombobox_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KDateComboBox*
+///
+const QMetaObject* k_datecombobox_qbase_meta_object(void* self);
+
 /// @param self KDateComboBox*
 /// @param param1 const char*
 ///
 void* k_datecombobox_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KDateComboBox*
+/// @param callback void* func(KDateComboBox* self, const char* param1)
+///
+void k_datecombobox_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KDateComboBox*
+/// @param param1 const char*
+///
+void* k_datecombobox_qbase_metacast(void* self, const char* param1);
 
 /// @param self KDateComboBox*
 /// @param param1 enum QMetaObject__Call

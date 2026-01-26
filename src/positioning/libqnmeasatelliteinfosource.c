@@ -22,8 +22,24 @@ const QMetaObject* q_nmeasatelliteinfosource_meta_object(void* self) {
     return QNmeaSatelliteInfoSource_MetaObject((QNmeaSatelliteInfoSource*)self);
 }
 
+void q_nmeasatelliteinfosource_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QNmeaSatelliteInfoSource_OnMetaObject((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_nmeasatelliteinfosource_qbase_meta_object(void* self) {
+    return QNmeaSatelliteInfoSource_QBaseMetaObject((QNmeaSatelliteInfoSource*)self);
+}
+
 void* q_nmeasatelliteinfosource_metacast(void* self, const char* param1) {
     return QNmeaSatelliteInfoSource_Metacast((QNmeaSatelliteInfoSource*)self, param1);
+}
+
+void q_nmeasatelliteinfosource_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QNmeaSatelliteInfoSource_OnMetacast((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
+}
+
+void* q_nmeasatelliteinfosource_qbase_metacast(void* self, const char* param1) {
+    return QNmeaSatelliteInfoSource_QBaseMetacast((QNmeaSatelliteInfoSource*)self, param1);
 }
 
 int32_t q_nmeasatelliteinfosource_metacall(void* self, int32_t param1, int param2, void* param3) {

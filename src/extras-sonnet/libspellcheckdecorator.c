@@ -20,8 +20,24 @@ const QMetaObject* k_sonnet__spellcheckdecorator_meta_object(void* self) {
     return Sonnet__SpellCheckDecorator_MetaObject((Sonnet__SpellCheckDecorator*)self);
 }
 
+void k_sonnet__spellcheckdecorator_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    Sonnet__SpellCheckDecorator_OnMetaObject((Sonnet__SpellCheckDecorator*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_sonnet__spellcheckdecorator_qbase_meta_object(void* self) {
+    return Sonnet__SpellCheckDecorator_QBaseMetaObject((Sonnet__SpellCheckDecorator*)self);
+}
+
 void* k_sonnet__spellcheckdecorator_metacast(void* self, const char* param1) {
     return Sonnet__SpellCheckDecorator_Metacast((Sonnet__SpellCheckDecorator*)self, param1);
+}
+
+void k_sonnet__spellcheckdecorator_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    Sonnet__SpellCheckDecorator_OnMetacast((Sonnet__SpellCheckDecorator*)self, (intptr_t)callback);
+}
+
+void* k_sonnet__spellcheckdecorator_qbase_metacast(void* self, const char* param1) {
+    return Sonnet__SpellCheckDecorator_QBaseMetacast((Sonnet__SpellCheckDecorator*)self, param1);
 }
 
 int32_t k_sonnet__spellcheckdecorator_metacall(void* self, int32_t param1, int param2, void* param3) {

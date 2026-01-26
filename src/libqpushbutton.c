@@ -45,8 +45,24 @@ const QMetaObject* q_pushbutton_meta_object(void* self) {
     return QPushButton_MetaObject((QPushButton*)self);
 }
 
+void q_pushbutton_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QPushButton_OnMetaObject((QPushButton*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_pushbutton_qbase_meta_object(void* self) {
+    return QPushButton_QBaseMetaObject((QPushButton*)self);
+}
+
 void* q_pushbutton_metacast(void* self, const char* param1) {
     return QPushButton_Metacast((QPushButton*)self, param1);
+}
+
+void q_pushbutton_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QPushButton_OnMetacast((QPushButton*)self, (intptr_t)callback);
+}
+
+void* q_pushbutton_qbase_metacast(void* self, const char* param1) {
+    return QPushButton_QBaseMetacast((QPushButton*)self, param1);
 }
 
 int32_t q_pushbutton_metacall(void* self, int32_t param1, int param2, void* param3) {

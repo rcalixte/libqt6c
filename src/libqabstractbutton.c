@@ -28,8 +28,24 @@ const QMetaObject* q_abstractbutton_meta_object(void* self) {
     return QAbstractButton_MetaObject((QAbstractButton*)self);
 }
 
+void q_abstractbutton_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QAbstractButton_OnMetaObject((QAbstractButton*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_abstractbutton_qbase_meta_object(void* self) {
+    return QAbstractButton_QBaseMetaObject((QAbstractButton*)self);
+}
+
 void* q_abstractbutton_metacast(void* self, const char* param1) {
     return QAbstractButton_Metacast((QAbstractButton*)self, param1);
+}
+
+void q_abstractbutton_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QAbstractButton_OnMetacast((QAbstractButton*)self, (intptr_t)callback);
+}
+
+void* q_abstractbutton_qbase_metacast(void* self, const char* param1) {
+    return QAbstractButton_QBaseMetacast((QAbstractButton*)self, param1);
 }
 
 int32_t q_abstractbutton_metacall(void* self, int32_t param1, int param2, void* param3) {

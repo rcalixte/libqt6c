@@ -26,8 +26,24 @@ const QMetaObject* k_configskeleton_meta_object(void* self) {
     return KConfigSkeleton_MetaObject((KConfigSkeleton*)self);
 }
 
+void k_configskeleton_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KConfigSkeleton_OnMetaObject((KConfigSkeleton*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_configskeleton_qbase_meta_object(void* self) {
+    return KConfigSkeleton_QBaseMetaObject((KConfigSkeleton*)self);
+}
+
 void* k_configskeleton_metacast(void* self, const char* param1) {
     return KConfigSkeleton_Metacast((KConfigSkeleton*)self, param1);
+}
+
+void k_configskeleton_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KConfigSkeleton_OnMetacast((KConfigSkeleton*)self, (intptr_t)callback);
+}
+
+void* k_configskeleton_qbase_metacast(void* self, const char* param1) {
+    return KConfigSkeleton_QBaseMetacast((KConfigSkeleton*)self, param1);
 }
 
 int32_t k_configskeleton_metacall(void* self, int32_t param1, int param2, void* param3) {

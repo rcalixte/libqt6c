@@ -27,8 +27,24 @@ const QMetaObject* k_breadcrumbselectionmodel_meta_object(void* self) {
     return KBreadcrumbSelectionModel_MetaObject((KBreadcrumbSelectionModel*)self);
 }
 
+void k_breadcrumbselectionmodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KBreadcrumbSelectionModel_OnMetaObject((KBreadcrumbSelectionModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_breadcrumbselectionmodel_qbase_meta_object(void* self) {
+    return KBreadcrumbSelectionModel_QBaseMetaObject((KBreadcrumbSelectionModel*)self);
+}
+
 void* k_breadcrumbselectionmodel_metacast(void* self, const char* param1) {
     return KBreadcrumbSelectionModel_Metacast((KBreadcrumbSelectionModel*)self, param1);
+}
+
+void k_breadcrumbselectionmodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KBreadcrumbSelectionModel_OnMetacast((KBreadcrumbSelectionModel*)self, (intptr_t)callback);
+}
+
+void* k_breadcrumbselectionmodel_qbase_metacast(void* self, const char* param1) {
+    return KBreadcrumbSelectionModel_QBaseMetacast((KBreadcrumbSelectionModel*)self, param1);
 }
 
 int32_t k_breadcrumbselectionmodel_metacall(void* self, int32_t param1, int param2, void* param3) {

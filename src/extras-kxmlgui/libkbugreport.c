@@ -27,8 +27,24 @@ const QMetaObject* k_bugreport_meta_object(void* self) {
     return KBugReport_MetaObject((KBugReport*)self);
 }
 
+void k_bugreport_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KBugReport_OnMetaObject((KBugReport*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_bugreport_qbase_meta_object(void* self) {
+    return KBugReport_QBaseMetaObject((KBugReport*)self);
+}
+
 void* k_bugreport_metacast(void* self, const char* param1) {
     return KBugReport_Metacast((KBugReport*)self, param1);
+}
+
+void k_bugreport_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KBugReport_OnMetacast((KBugReport*)self, (intptr_t)callback);
+}
+
+void* k_bugreport_qbase_metacast(void* self, const char* param1) {
+    return KBugReport_QBaseMetacast((KBugReport*)self, param1);
 }
 
 int32_t k_bugreport_metacall(void* self, int32_t param1, int param2, void* param3) {

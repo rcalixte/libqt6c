@@ -21,8 +21,24 @@ const QMetaObject* q_pielegendmarker_meta_object(void* self) {
     return QPieLegendMarker_MetaObject((QPieLegendMarker*)self);
 }
 
+void q_pielegendmarker_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QPieLegendMarker_OnMetaObject((QPieLegendMarker*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_pielegendmarker_qbase_meta_object(void* self) {
+    return QPieLegendMarker_QBaseMetaObject((QPieLegendMarker*)self);
+}
+
 void* q_pielegendmarker_metacast(void* self, const char* param1) {
     return QPieLegendMarker_Metacast((QPieLegendMarker*)self, param1);
+}
+
+void q_pielegendmarker_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QPieLegendMarker_OnMetacast((QPieLegendMarker*)self, (intptr_t)callback);
+}
+
+void* q_pielegendmarker_qbase_metacast(void* self, const char* param1) {
+    return QPieLegendMarker_QBaseMetacast((QPieLegendMarker*)self, param1);
 }
 
 int32_t q_pielegendmarker_metacall(void* self, int32_t param1, int param2, void* param3) {

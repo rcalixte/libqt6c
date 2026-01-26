@@ -31,10 +31,41 @@ QGesture* q_gesture_new2(void* parent);
 ///
 const QMetaObject* q_gesture_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QGesture*
+/// @param callback const QMetaObject* func()
+///
+void q_gesture_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QGesture*
+///
+const QMetaObject* q_gesture_qbase_meta_object(void* self);
+
 /// @param self QGesture*
 /// @param param1 const char*
 ///
 void* q_gesture_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QGesture*
+/// @param callback void* func(QGesture* self, const char* param1)
+///
+void q_gesture_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QGesture*
+/// @param param1 const char*
+///
+void* q_gesture_qbase_metacast(void* self, const char* param1);
 
 /// @param self QGesture*
 /// @param param1 enum QMetaObject__Call
@@ -908,10 +939,41 @@ QPanGesture* q_pangesture_new2(void* parent);
 ///
 const QMetaObject* q_pangesture_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QPanGesture*
+/// @param callback const QMetaObject* func()
+///
+void q_pangesture_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QPanGesture*
+///
+const QMetaObject* q_pangesture_qbase_meta_object(void* self);
+
 /// @param self QPanGesture*
 /// @param param1 const char*
 ///
 void* q_pangesture_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QPanGesture*
+/// @param callback void* func(QPanGesture* self, const char* param1)
+///
+void q_pangesture_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QPanGesture*
+/// @param param1 const char*
+///
+void* q_pangesture_qbase_metacast(void* self, const char* param1);
 
 /// @param self QPanGesture*
 /// @param param1 enum QMetaObject__Call
@@ -1846,10 +1908,41 @@ QPinchGesture* q_pinchgesture_new2(void* parent);
 ///
 const QMetaObject* q_pinchgesture_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QPinchGesture*
+/// @param callback const QMetaObject* func()
+///
+void q_pinchgesture_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QPinchGesture*
+///
+const QMetaObject* q_pinchgesture_qbase_meta_object(void* self);
+
 /// @param self QPinchGesture*
 /// @param param1 const char*
 ///
 void* q_pinchgesture_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QPinchGesture*
+/// @param callback void* func(QPinchGesture* self, const char* param1)
+///
+void q_pinchgesture_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QPinchGesture*
+/// @param param1 const char*
+///
+void* q_pinchgesture_qbase_metacast(void* self, const char* param1);
 
 /// @param self QPinchGesture*
 /// @param param1 enum QMetaObject__Call
@@ -2886,10 +2979,41 @@ QSwipeGesture* q_swipegesture_new2(void* parent);
 ///
 const QMetaObject* q_swipegesture_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QSwipeGesture*
+/// @param callback const QMetaObject* func()
+///
+void q_swipegesture_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QSwipeGesture*
+///
+const QMetaObject* q_swipegesture_qbase_meta_object(void* self);
+
 /// @param self QSwipeGesture*
 /// @param param1 const char*
 ///
 void* q_swipegesture_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QSwipeGesture*
+/// @param callback void* func(QSwipeGesture* self, const char* param1)
+///
+void q_swipegesture_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QSwipeGesture*
+/// @param param1 const char*
+///
+void* q_swipegesture_qbase_metacast(void* self, const char* param1);
 
 /// @param self QSwipeGesture*
 /// @param param1 enum QMetaObject__Call
@@ -3808,10 +3932,41 @@ QTapGesture* q_tapgesture_new2(void* parent);
 ///
 const QMetaObject* q_tapgesture_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QTapGesture*
+/// @param callback const QMetaObject* func()
+///
+void q_tapgesture_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QTapGesture*
+///
+const QMetaObject* q_tapgesture_qbase_meta_object(void* self);
+
 /// @param self QTapGesture*
 /// @param param1 const char*
 ///
 void* q_tapgesture_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QTapGesture*
+/// @param callback void* func(QTapGesture* self, const char* param1)
+///
+void q_tapgesture_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QTapGesture*
+/// @param param1 const char*
+///
+void* q_tapgesture_qbase_metacast(void* self, const char* param1);
 
 /// @param self QTapGesture*
 /// @param param1 enum QMetaObject__Call
@@ -4714,10 +4869,41 @@ QTapAndHoldGesture* q_tapandholdgesture_new2(void* parent);
 ///
 const QMetaObject* q_tapandholdgesture_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QTapAndHoldGesture*
+/// @param callback const QMetaObject* func()
+///
+void q_tapandholdgesture_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QTapAndHoldGesture*
+///
+const QMetaObject* q_tapandholdgesture_qbase_meta_object(void* self);
+
 /// @param self QTapAndHoldGesture*
 /// @param param1 const char*
 ///
 void* q_tapandholdgesture_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QTapAndHoldGesture*
+/// @param callback void* func(QTapAndHoldGesture* self, const char* param1)
+///
+void q_tapandholdgesture_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QTapAndHoldGesture*
+/// @param param1 const char*
+///
+void* q_tapandholdgesture_qbase_metacast(void* self, const char* param1);
 
 /// @param self QTapAndHoldGesture*
 /// @param param1 enum QMetaObject__Call

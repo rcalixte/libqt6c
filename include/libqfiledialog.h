@@ -70,10 +70,41 @@ QFileDialog* q_filedialog_new6(void* parent, const char* caption, const char* di
 ///
 const QMetaObject* q_filedialog_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QFileDialog*
+/// @param callback const QMetaObject* func()
+///
+void q_filedialog_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QFileDialog*
+///
+const QMetaObject* q_filedialog_qbase_meta_object(void* self);
+
 /// @param self QFileDialog*
 /// @param param1 const char*
 ///
 void* q_filedialog_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QFileDialog*
+/// @param callback void* func(QFileDialog* self, const char* param1)
+///
+void q_filedialog_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QFileDialog*
+/// @param param1 const char*
+///
+void* q_filedialog_qbase_metacast(void* self, const char* param1);
 
 /// @param self QFileDialog*
 /// @param param1 enum QMetaObject__Call

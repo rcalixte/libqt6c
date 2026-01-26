@@ -26,8 +26,24 @@ const QMetaObject* q_videowidget_meta_object(void* self) {
     return QVideoWidget_MetaObject((QVideoWidget*)self);
 }
 
+void q_videowidget_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QVideoWidget_OnMetaObject((QVideoWidget*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_videowidget_qbase_meta_object(void* self) {
+    return QVideoWidget_QBaseMetaObject((QVideoWidget*)self);
+}
+
 void* q_videowidget_metacast(void* self, const char* param1) {
     return QVideoWidget_Metacast((QVideoWidget*)self, param1);
+}
+
+void q_videowidget_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QVideoWidget_OnMetacast((QVideoWidget*)self, (intptr_t)callback);
+}
+
+void* q_videowidget_qbase_metacast(void* self, const char* param1) {
+    return QVideoWidget_QBaseMetacast((QVideoWidget*)self, param1);
 }
 
 int32_t q_videowidget_metacall(void* self, int32_t param1, int param2, void* param3) {

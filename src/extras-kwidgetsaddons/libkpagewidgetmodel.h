@@ -34,10 +34,41 @@ KPageWidgetItem* k_pagewidgetitem_new2(void* widget, const char* name);
 ///
 const QMetaObject* k_pagewidgetitem_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KPageWidgetItem*
+/// @param callback const QMetaObject* func()
+///
+void k_pagewidgetitem_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KPageWidgetItem*
+///
+const QMetaObject* k_pagewidgetitem_qbase_meta_object(void* self);
+
 /// @param self KPageWidgetItem*
 /// @param param1 const char*
 ///
 void* k_pagewidgetitem_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KPageWidgetItem*
+/// @param callback void* func(KPageWidgetItem* self, const char* param1)
+///
+void k_pagewidgetitem_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KPageWidgetItem*
+/// @param param1 const char*
+///
+void* k_pagewidgetitem_qbase_metacast(void* self, const char* param1);
 
 /// @param self KPageWidgetItem*
 /// @param param1 enum QMetaObject__Call
@@ -1011,10 +1042,41 @@ KPageWidgetModel* k_pagewidgetmodel_new2(void* parent);
 ///
 const QMetaObject* k_pagewidgetmodel_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KPageWidgetModel*
+/// @param callback const QMetaObject* func()
+///
+void k_pagewidgetmodel_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KPageWidgetModel*
+///
+const QMetaObject* k_pagewidgetmodel_qbase_meta_object(void* self);
+
 /// @param self KPageWidgetModel*
 /// @param param1 const char*
 ///
 void* k_pagewidgetmodel_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KPageWidgetModel*
+/// @param callback void* func(KPageWidgetModel* self, const char* param1)
+///
+void k_pagewidgetmodel_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KPageWidgetModel*
+/// @param param1 const char*
+///
+void* k_pagewidgetmodel_qbase_metacast(void* self, const char* param1);
 
 /// @param self KPageWidgetModel*
 /// @param param1 enum QMetaObject__Call

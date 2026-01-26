@@ -26,8 +26,24 @@ const QMetaObject* k_sonnet__backgroundchecker_meta_object(void* self) {
     return Sonnet__BackgroundChecker_MetaObject((Sonnet__BackgroundChecker*)self);
 }
 
+void k_sonnet__backgroundchecker_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    Sonnet__BackgroundChecker_OnMetaObject((Sonnet__BackgroundChecker*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_sonnet__backgroundchecker_qbase_meta_object(void* self) {
+    return Sonnet__BackgroundChecker_QBaseMetaObject((Sonnet__BackgroundChecker*)self);
+}
+
 void* k_sonnet__backgroundchecker_metacast(void* self, const char* param1) {
     return Sonnet__BackgroundChecker_Metacast((Sonnet__BackgroundChecker*)self, param1);
+}
+
+void k_sonnet__backgroundchecker_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    Sonnet__BackgroundChecker_OnMetacast((Sonnet__BackgroundChecker*)self, (intptr_t)callback);
+}
+
+void* k_sonnet__backgroundchecker_qbase_metacast(void* self, const char* param1) {
+    return Sonnet__BackgroundChecker_QBaseMetacast((Sonnet__BackgroundChecker*)self, param1);
 }
 
 int32_t k_sonnet__backgroundchecker_metacall(void* self, int32_t param1, int param2, void* param3) {

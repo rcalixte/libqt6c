@@ -31,10 +31,41 @@ QCalendarWidget* q_calendarwidget_new2();
 ///
 const QMetaObject* q_calendarwidget_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QCalendarWidget*
+/// @param callback const QMetaObject* func()
+///
+void q_calendarwidget_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QCalendarWidget*
+///
+const QMetaObject* q_calendarwidget_qbase_meta_object(void* self);
+
 /// @param self QCalendarWidget*
 /// @param param1 const char*
 ///
 void* q_calendarwidget_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QCalendarWidget*
+/// @param callback void* func(QCalendarWidget* self, const char* param1)
+///
+void q_calendarwidget_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QCalendarWidget*
+/// @param param1 const char*
+///
+void* q_calendarwidget_qbase_metacast(void* self, const char* param1);
 
 /// @param self QCalendarWidget*
 /// @param param1 enum QMetaObject__Call

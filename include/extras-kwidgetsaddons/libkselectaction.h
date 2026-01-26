@@ -44,10 +44,41 @@ KSelectAction* k_selectaction_new3(void* icon, const char* text, void* parent);
 ///
 const QMetaObject* k_selectaction_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KSelectAction*
+/// @param callback const QMetaObject* func()
+///
+void k_selectaction_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self KSelectAction*
+///
+const QMetaObject* k_selectaction_qbase_meta_object(void* self);
+
 /// @param self KSelectAction*
 /// @param param1 const char*
 ///
 void* k_selectaction_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self KSelectAction*
+/// @param callback void* func(KSelectAction* self, const char* param1)
+///
+void k_selectaction_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self KSelectAction*
+/// @param param1 const char*
+///
+void* k_selectaction_qbase_metacast(void* self, const char* param1);
 
 /// @param self KSelectAction*
 /// @param param1 enum QMetaObject__Call

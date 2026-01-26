@@ -34,8 +34,24 @@ const QMetaObject* q_abstractitemview_meta_object(void* self) {
     return QAbstractItemView_MetaObject((QAbstractItemView*)self);
 }
 
+void q_abstractitemview_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QAbstractItemView_OnMetaObject((QAbstractItemView*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_abstractitemview_qbase_meta_object(void* self) {
+    return QAbstractItemView_QBaseMetaObject((QAbstractItemView*)self);
+}
+
 void* q_abstractitemview_metacast(void* self, const char* param1) {
     return QAbstractItemView_Metacast((QAbstractItemView*)self, param1);
+}
+
+void q_abstractitemview_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QAbstractItemView_OnMetacast((QAbstractItemView*)self, (intptr_t)callback);
+}
+
+void* q_abstractitemview_qbase_metacast(void* self, const char* param1) {
+    return QAbstractItemView_QBaseMetacast((QAbstractItemView*)self, param1);
 }
 
 int32_t q_abstractitemview_metacall(void* self, int32_t param1, int param2, void* param3) {

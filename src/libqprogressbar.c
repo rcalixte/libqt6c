@@ -26,8 +26,24 @@ const QMetaObject* q_progressbar_meta_object(void* self) {
     return QProgressBar_MetaObject((QProgressBar*)self);
 }
 
+void q_progressbar_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QProgressBar_OnMetaObject((QProgressBar*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_progressbar_qbase_meta_object(void* self) {
+    return QProgressBar_QBaseMetaObject((QProgressBar*)self);
+}
+
 void* q_progressbar_metacast(void* self, const char* param1) {
     return QProgressBar_Metacast((QProgressBar*)self, param1);
+}
+
+void q_progressbar_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QProgressBar_OnMetacast((QProgressBar*)self, (intptr_t)callback);
+}
+
+void* q_progressbar_qbase_metacast(void* self, const char* param1) {
+    return QProgressBar_QBaseMetacast((QProgressBar*)self, param1);
 }
 
 int32_t q_progressbar_metacall(void* self, int32_t param1, int param2, void* param3) {

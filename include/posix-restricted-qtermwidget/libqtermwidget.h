@@ -48,10 +48,41 @@ QTermWidget* q_termwidget_new4(int startnow, void* parent);
 ///
 const QMetaObject* q_termwidget_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QTermWidget*
+/// @param callback const QMetaObject* func()
+///
+void q_termwidget_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QTermWidget*
+///
+const QMetaObject* q_termwidget_qbase_meta_object(void* self);
+
 /// @param self QTermWidget*
 /// @param param1 const char*
 ///
 void* q_termwidget_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QTermWidget*
+/// @param callback void* func(QTermWidget* self, const char* param1)
+///
+void q_termwidget_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QTermWidget*
+/// @param param1 const char*
+///
+void* q_termwidget_qbase_metacast(void* self, const char* param1);
 
 /// @param self QTermWidget*
 /// @param param1 enum QMetaObject__Call

@@ -14,8 +14,24 @@ const QMetaObject* k_parts__listingnotificationextension_meta_object(void* self)
     return KParts__ListingNotificationExtension_MetaObject((KParts__ListingNotificationExtension*)self);
 }
 
+void k_parts__listingnotificationextension_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KParts__ListingNotificationExtension_OnMetaObject((KParts__ListingNotificationExtension*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_parts__listingnotificationextension_qbase_meta_object(void* self) {
+    return KParts__ListingNotificationExtension_QBaseMetaObject((KParts__ListingNotificationExtension*)self);
+}
+
 void* k_parts__listingnotificationextension_metacast(void* self, const char* param1) {
     return KParts__ListingNotificationExtension_Metacast((KParts__ListingNotificationExtension*)self, param1);
+}
+
+void k_parts__listingnotificationextension_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KParts__ListingNotificationExtension_OnMetacast((KParts__ListingNotificationExtension*)self, (intptr_t)callback);
+}
+
+void* k_parts__listingnotificationextension_qbase_metacast(void* self, const char* param1) {
+    return KParts__ListingNotificationExtension_QBaseMetacast((KParts__ListingNotificationExtension*)self, param1);
 }
 
 int32_t k_parts__listingnotificationextension_metacall(void* self, int32_t param1, int param2, void* param3) {

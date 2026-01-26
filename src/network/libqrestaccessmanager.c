@@ -24,8 +24,24 @@ const QMetaObject* q_restaccessmanager_meta_object(void* self) {
     return QRestAccessManager_MetaObject((QRestAccessManager*)self);
 }
 
+void q_restaccessmanager_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QRestAccessManager_OnMetaObject((QRestAccessManager*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_restaccessmanager_qbase_meta_object(void* self) {
+    return QRestAccessManager_QBaseMetaObject((QRestAccessManager*)self);
+}
+
 void* q_restaccessmanager_metacast(void* self, const char* param1) {
     return QRestAccessManager_Metacast((QRestAccessManager*)self, param1);
+}
+
+void q_restaccessmanager_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QRestAccessManager_OnMetacast((QRestAccessManager*)self, (intptr_t)callback);
+}
+
+void* q_restaccessmanager_qbase_metacast(void* self, const char* param1) {
+    return QRestAccessManager_QBaseMetacast((QRestAccessManager*)self, param1);
 }
 
 int32_t q_restaccessmanager_metacall(void* self, int32_t param1, int param2, void* param3) {

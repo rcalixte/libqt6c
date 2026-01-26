@@ -20,8 +20,24 @@ const QMetaObject* k_togglefullscreenaction_meta_object(void* self) {
     return KToggleFullScreenAction_MetaObject((KToggleFullScreenAction*)self);
 }
 
+void k_togglefullscreenaction_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KToggleFullScreenAction_OnMetaObject((KToggleFullScreenAction*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_togglefullscreenaction_qbase_meta_object(void* self) {
+    return KToggleFullScreenAction_QBaseMetaObject((KToggleFullScreenAction*)self);
+}
+
 void* k_togglefullscreenaction_metacast(void* self, const char* param1) {
     return KToggleFullScreenAction_Metacast((KToggleFullScreenAction*)self, param1);
+}
+
+void k_togglefullscreenaction_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KToggleFullScreenAction_OnMetacast((KToggleFullScreenAction*)self, (intptr_t)callback);
+}
+
+void* k_togglefullscreenaction_qbase_metacast(void* self, const char* param1) {
+    return KToggleFullScreenAction_QBaseMetacast((KToggleFullScreenAction*)self, param1);
 }
 
 int32_t k_togglefullscreenaction_metacall(void* self, int32_t param1, int param2, void* param3) {

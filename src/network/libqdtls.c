@@ -23,8 +23,24 @@ const QMetaObject* q_dtlsclientverifier_meta_object(void* self) {
     return QDtlsClientVerifier_MetaObject((QDtlsClientVerifier*)self);
 }
 
+void q_dtlsclientverifier_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDtlsClientVerifier_OnMetaObject((QDtlsClientVerifier*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_dtlsclientverifier_qbase_meta_object(void* self) {
+    return QDtlsClientVerifier_QBaseMetaObject((QDtlsClientVerifier*)self);
+}
+
 void* q_dtlsclientverifier_metacast(void* self, const char* param1) {
     return QDtlsClientVerifier_Metacast((QDtlsClientVerifier*)self, param1);
+}
+
+void q_dtlsclientverifier_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDtlsClientVerifier_OnMetacast((QDtlsClientVerifier*)self, (intptr_t)callback);
+}
+
+void* q_dtlsclientverifier_qbase_metacast(void* self, const char* param1) {
+    return QDtlsClientVerifier_QBaseMetacast((QDtlsClientVerifier*)self, param1);
 }
 
 int32_t q_dtlsclientverifier_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -421,8 +437,24 @@ const QMetaObject* q_dtls_meta_object(void* self) {
     return QDtls_MetaObject((QDtls*)self);
 }
 
+void q_dtls_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QDtls_OnMetaObject((QDtls*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_dtls_qbase_meta_object(void* self) {
+    return QDtls_QBaseMetaObject((QDtls*)self);
+}
+
 void* q_dtls_metacast(void* self, const char* param1) {
     return QDtls_Metacast((QDtls*)self, param1);
+}
+
+void q_dtls_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QDtls_OnMetacast((QDtls*)self, (intptr_t)callback);
+}
+
+void* q_dtls_qbase_metacast(void* self, const char* param1) {
+    return QDtls_QBaseMetacast((QDtls*)self, param1);
 }
 
 int32_t q_dtls_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -40,8 +40,24 @@ const QMetaObject* k_shortcutsdialog_meta_object(void* self) {
     return KShortcutsDialog_MetaObject((KShortcutsDialog*)self);
 }
 
+void k_shortcutsdialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KShortcutsDialog_OnMetaObject((KShortcutsDialog*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_shortcutsdialog_qbase_meta_object(void* self) {
+    return KShortcutsDialog_QBaseMetaObject((KShortcutsDialog*)self);
+}
+
 void* k_shortcutsdialog_metacast(void* self, const char* param1) {
     return KShortcutsDialog_Metacast((KShortcutsDialog*)self, param1);
+}
+
+void k_shortcutsdialog_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KShortcutsDialog_OnMetacast((KShortcutsDialog*)self, (intptr_t)callback);
+}
+
+void* k_shortcutsdialog_qbase_metacast(void* self, const char* param1) {
+    return KShortcutsDialog_QBaseMetacast((KShortcutsDialog*)self, param1);
 }
 
 int32_t k_shortcutsdialog_metacall(void* self, int32_t param1, int param2, void* param3) {

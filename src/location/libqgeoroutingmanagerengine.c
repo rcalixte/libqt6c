@@ -74,8 +74,24 @@ const QMetaObject* q_georoutingmanagerengine_meta_object(void* self) {
     return QGeoRoutingManagerEngine_MetaObject((QGeoRoutingManagerEngine*)self);
 }
 
+void q_georoutingmanagerengine_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QGeoRoutingManagerEngine_OnMetaObject((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_georoutingmanagerengine_qbase_meta_object(void* self) {
+    return QGeoRoutingManagerEngine_QBaseMetaObject((QGeoRoutingManagerEngine*)self);
+}
+
 void* q_georoutingmanagerengine_metacast(void* self, const char* param1) {
     return QGeoRoutingManagerEngine_Metacast((QGeoRoutingManagerEngine*)self, param1);
+}
+
+void q_georoutingmanagerengine_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QGeoRoutingManagerEngine_OnMetacast((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
+}
+
+void* q_georoutingmanagerengine_qbase_metacast(void* self, const char* param1) {
+    return QGeoRoutingManagerEngine_QBaseMetacast((QGeoRoutingManagerEngine*)self, param1);
 }
 
 int32_t q_georoutingmanagerengine_metacall(void* self, int32_t param1, int param2, void* param3) {

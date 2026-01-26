@@ -17,8 +17,24 @@ const QMetaObject* k_lineediturldropeventfilter_meta_object(void* self) {
     return KLineEditUrlDropEventFilter_MetaObject((KLineEditUrlDropEventFilter*)self);
 }
 
+void k_lineediturldropeventfilter_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KLineEditUrlDropEventFilter_OnMetaObject((KLineEditUrlDropEventFilter*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_lineediturldropeventfilter_qbase_meta_object(void* self) {
+    return KLineEditUrlDropEventFilter_QBaseMetaObject((KLineEditUrlDropEventFilter*)self);
+}
+
 void* k_lineediturldropeventfilter_metacast(void* self, const char* param1) {
     return KLineEditUrlDropEventFilter_Metacast((KLineEditUrlDropEventFilter*)self, param1);
+}
+
+void k_lineediturldropeventfilter_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KLineEditUrlDropEventFilter_OnMetacast((KLineEditUrlDropEventFilter*)self, (intptr_t)callback);
+}
+
+void* k_lineediturldropeventfilter_qbase_metacast(void* self, const char* param1) {
+    return KLineEditUrlDropEventFilter_QBaseMetacast((KLineEditUrlDropEventFilter*)self, param1);
 }
 
 int32_t k_lineediturldropeventfilter_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -655,8 +655,24 @@ const QMetaObject* k_coreconfigskeleton_meta_object(void* self) {
     return KCoreConfigSkeleton_MetaObject((KCoreConfigSkeleton*)self);
 }
 
+void k_coreconfigskeleton_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KCoreConfigSkeleton_OnMetaObject((KCoreConfigSkeleton*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_coreconfigskeleton_qbase_meta_object(void* self) {
+    return KCoreConfigSkeleton_QBaseMetaObject((KCoreConfigSkeleton*)self);
+}
+
 void* k_coreconfigskeleton_metacast(void* self, const char* param1) {
     return KCoreConfigSkeleton_Metacast((KCoreConfigSkeleton*)self, param1);
+}
+
+void k_coreconfigskeleton_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KCoreConfigSkeleton_OnMetacast((KCoreConfigSkeleton*)self, (intptr_t)callback);
+}
+
+void* k_coreconfigskeleton_qbase_metacast(void* self, const char* param1) {
+    return KCoreConfigSkeleton_QBaseMetacast((KCoreConfigSkeleton*)self, param1);
 }
 
 int32_t k_coreconfigskeleton_metacall(void* self, int32_t param1, int param2, void* param3) {

@@ -34,8 +34,24 @@ const QMetaObject* q_proxystyle_meta_object(void* self) {
     return QProxyStyle_MetaObject((QProxyStyle*)self);
 }
 
+void q_proxystyle_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    QProxyStyle_OnMetaObject((QProxyStyle*)self, (intptr_t)callback);
+}
+
+const QMetaObject* q_proxystyle_qbase_meta_object(void* self) {
+    return QProxyStyle_QBaseMetaObject((QProxyStyle*)self);
+}
+
 void* q_proxystyle_metacast(void* self, const char* param1) {
     return QProxyStyle_Metacast((QProxyStyle*)self, param1);
+}
+
+void q_proxystyle_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    QProxyStyle_OnMetacast((QProxyStyle*)self, (intptr_t)callback);
+}
+
+void* q_proxystyle_qbase_metacast(void* self, const char* param1) {
+    return QProxyStyle_QBaseMetacast((QProxyStyle*)self, param1);
 }
 
 int32_t q_proxystyle_metacall(void* self, int32_t param1, int param2, void* param3) {

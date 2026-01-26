@@ -18,8 +18,24 @@ const QMetaObject* k_io__kurifiltersearchprovideractions_meta_object(void* self)
     return KIO__KUriFilterSearchProviderActions_MetaObject((KIO__KUriFilterSearchProviderActions*)self);
 }
 
+void k_io__kurifiltersearchprovideractions_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KIO__KUriFilterSearchProviderActions_OnMetaObject((KIO__KUriFilterSearchProviderActions*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_io__kurifiltersearchprovideractions_qbase_meta_object(void* self) {
+    return KIO__KUriFilterSearchProviderActions_QBaseMetaObject((KIO__KUriFilterSearchProviderActions*)self);
+}
+
 void* k_io__kurifiltersearchprovideractions_metacast(void* self, const char* param1) {
     return KIO__KUriFilterSearchProviderActions_Metacast((KIO__KUriFilterSearchProviderActions*)self, param1);
+}
+
+void k_io__kurifiltersearchprovideractions_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KIO__KUriFilterSearchProviderActions_OnMetacast((KIO__KUriFilterSearchProviderActions*)self, (intptr_t)callback);
+}
+
+void* k_io__kurifiltersearchprovideractions_qbase_metacast(void* self, const char* param1) {
+    return KIO__KUriFilterSearchProviderActions_QBaseMetacast((KIO__KUriFilterSearchProviderActions*)self, param1);
 }
 
 int32_t k_io__kurifiltersearchprovideractions_metacall(void* self, int32_t param1, int param2, void* param3) {

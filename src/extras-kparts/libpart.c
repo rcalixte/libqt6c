@@ -32,8 +32,24 @@ const QMetaObject* k_parts__part_meta_object(void* self) {
     return KParts__Part_MetaObject((KParts__Part*)self);
 }
 
+void k_parts__part_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KParts__Part_OnMetaObject((KParts__Part*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_parts__part_qbase_meta_object(void* self) {
+    return KParts__Part_QBaseMetaObject((KParts__Part*)self);
+}
+
 void* k_parts__part_metacast(void* self, const char* param1) {
     return KParts__Part_Metacast((KParts__Part*)self, param1);
+}
+
+void k_parts__part_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KParts__Part_OnMetacast((KParts__Part*)self, (intptr_t)callback);
+}
+
+void* k_parts__part_qbase_metacast(void* self, const char* param1) {
+    return KParts__Part_QBaseMetacast((KParts__Part*)self, param1);
 }
 
 int32_t k_parts__part_metacall(void* self, int32_t param1, int param2, void* param3) {

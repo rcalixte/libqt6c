@@ -25,8 +25,24 @@ const QMetaObject* k_extracolumnsproxymodel_meta_object(void* self) {
     return KExtraColumnsProxyModel_MetaObject((KExtraColumnsProxyModel*)self);
 }
 
+void k_extracolumnsproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KExtraColumnsProxyModel_OnMetaObject((KExtraColumnsProxyModel*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_extracolumnsproxymodel_qbase_meta_object(void* self) {
+    return KExtraColumnsProxyModel_QBaseMetaObject((KExtraColumnsProxyModel*)self);
+}
+
 void* k_extracolumnsproxymodel_metacast(void* self, const char* param1) {
     return KExtraColumnsProxyModel_Metacast((KExtraColumnsProxyModel*)self, param1);
+}
+
+void k_extracolumnsproxymodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KExtraColumnsProxyModel_OnMetacast((KExtraColumnsProxyModel*)self, (intptr_t)callback);
+}
+
+void* k_extracolumnsproxymodel_qbase_metacast(void* self, const char* param1) {
+    return KExtraColumnsProxyModel_QBaseMetacast((KExtraColumnsProxyModel*)self, param1);
 }
 
 int32_t k_extracolumnsproxymodel_metacall(void* self, int32_t param1, int param2, void* param3) {

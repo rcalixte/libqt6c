@@ -25,10 +25,41 @@ QAmbientSound* q_ambientsound_new(void* engine);
 ///
 const QMetaObject* q_ambientsound_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QAmbientSound*
+/// @param callback const QMetaObject* func()
+///
+void q_ambientsound_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QAmbientSound*
+///
+const QMetaObject* q_ambientsound_qbase_meta_object(void* self);
+
 /// @param self QAmbientSound*
 /// @param param1 const char*
 ///
 void* q_ambientsound_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QAmbientSound*
+/// @param callback void* func(QAmbientSound* self, const char* param1)
+///
+void q_ambientsound_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QAmbientSound*
+/// @param param1 const char*
+///
+void* q_ambientsound_qbase_metacast(void* self, const char* param1);
 
 /// @param self QAmbientSound*
 /// @param param1 enum QMetaObject__Call

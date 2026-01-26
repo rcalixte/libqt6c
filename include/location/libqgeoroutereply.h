@@ -36,10 +36,41 @@ QGeoRouteReply* q_georoutereply_new2(int32_t error, const char* errorString, voi
 ///
 const QMetaObject* q_georoutereply_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QGeoRouteReply*
+/// @param callback const QMetaObject* func()
+///
+void q_georoutereply_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QGeoRouteReply*
+///
+const QMetaObject* q_georoutereply_qbase_meta_object(void* self);
+
 /// @param self QGeoRouteReply*
 /// @param param1 const char*
 ///
 void* q_georoutereply_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QGeoRouteReply*
+/// @param callback void* func(QGeoRouteReply* self, const char* param1)
+///
+void q_georoutereply_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QGeoRouteReply*
+/// @param param1 const char*
+///
+void* q_georoutereply_qbase_metacast(void* self, const char* param1);
 
 /// @param self QGeoRouteReply*
 /// @param param1 enum QMetaObject__Call

@@ -48,10 +48,41 @@ QAudioBufferInput* q_audiobufferinput_new4(void* format, void* parent);
 ///
 const QMetaObject* q_audiobufferinput_meta_object(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QAudioBufferInput*
+/// @param callback const QMetaObject* func()
+///
+void q_audiobufferinput_on_meta_object(void* self, const QMetaObject* (*callback)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// Base class method implementation
+///
+/// @param self QAudioBufferInput*
+///
+const QMetaObject* q_audiobufferinput_qbase_meta_object(void* self);
+
 /// @param self QAudioBufferInput*
 /// @param param1 const char*
 ///
 void* q_audiobufferinput_metacast(void* self, const char* param1);
+
+/// Allows for overriding the related default method
+///
+/// @param self QAudioBufferInput*
+/// @param callback void* func(QAudioBufferInput* self, const char* param1)
+///
+void q_audiobufferinput_on_metacast(void* self, void* (*callback)(void*, const char*));
+
+/// Base class method implementation
+///
+/// @param self QAudioBufferInput*
+/// @param param1 const char*
+///
+void* q_audiobufferinput_qbase_metacast(void* self, const char* param1);
 
 /// @param self QAudioBufferInput*
 /// @param param1 enum QMetaObject__Call

@@ -38,8 +38,24 @@ const QMetaObject* k_completionbox_meta_object(void* self) {
     return KCompletionBox_MetaObject((KCompletionBox*)self);
 }
 
+void k_completionbox_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+    KCompletionBox_OnMetaObject((KCompletionBox*)self, (intptr_t)callback);
+}
+
+const QMetaObject* k_completionbox_qbase_meta_object(void* self) {
+    return KCompletionBox_QBaseMetaObject((KCompletionBox*)self);
+}
+
 void* k_completionbox_metacast(void* self, const char* param1) {
     return KCompletionBox_Metacast((KCompletionBox*)self, param1);
+}
+
+void k_completionbox_on_metacast(void* self, void* (*callback)(void*, const char*)) {
+    KCompletionBox_OnMetacast((KCompletionBox*)self, (intptr_t)callback);
+}
+
+void* k_completionbox_qbase_metacast(void* self, const char* param1) {
+    return KCompletionBox_QBaseMetacast((KCompletionBox*)self, param1);
 }
 
 int32_t k_completionbox_metacall(void* self, int32_t param1, int param2, void* param3) {
