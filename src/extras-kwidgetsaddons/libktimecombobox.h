@@ -4072,16 +4072,6 @@ void k_timecombobox_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self KTimeComboBox*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool k_timecombobox_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KTimeComboBox*

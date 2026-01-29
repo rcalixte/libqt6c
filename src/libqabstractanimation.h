@@ -705,16 +705,6 @@ void q_abstractanimation_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QAbstractAnimation*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_abstractanimation_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QAbstractAnimation*
@@ -1680,16 +1670,6 @@ bool q_animationdriver_inherits(void* self, const char* classname);
 /// @param self QAnimationDriver*
 ///
 void q_animationdriver_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QAnimationDriver*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_animationdriver_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

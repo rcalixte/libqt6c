@@ -388,16 +388,6 @@ void k_standardshortcut__standardshortcutwatcher_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self KStandardShortcut__StandardShortcutWatcher*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool k_standardshortcut__standardshortcutwatcher_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*

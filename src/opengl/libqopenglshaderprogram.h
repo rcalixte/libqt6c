@@ -493,16 +493,6 @@ void q_openglshader_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QOpenGLShader*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_openglshader_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QOpenGLShader*
@@ -2428,16 +2418,6 @@ bool q_openglshaderprogram_inherits(void* self, const char* classname);
 /// @param self QOpenGLShaderProgram*
 ///
 void q_openglshaderprogram_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QOpenGLShaderProgram*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_openglshaderprogram_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

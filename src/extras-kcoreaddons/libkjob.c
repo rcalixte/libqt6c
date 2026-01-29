@@ -559,10 +559,6 @@ void k_job_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool k_job_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t k_job_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }

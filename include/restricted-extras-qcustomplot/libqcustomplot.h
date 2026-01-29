@@ -3769,16 +3769,6 @@ void q_cplayer_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPLayer*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cplayer_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QCPLayer*
@@ -5158,16 +5148,6 @@ bool q_cplayerable_inherits(void* self, const char* classname);
 /// @param self QCPLayerable*
 ///
 void q_cplayerable_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPLayerable*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cplayerable_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -6931,16 +6911,6 @@ void q_cpselectionrect_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPSelectionRect*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpselectionrect_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QCPSelectionRect*
@@ -8396,16 +8366,6 @@ void q_cpmargingroup_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPMarginGroup*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpmargingroup_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QCPMarginGroup*
@@ -9756,16 +9716,6 @@ bool q_cplayoutelement_inherits(void* self, const char* classname);
 /// @param self QCPLayoutElement*
 ///
 void q_cplayoutelement_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPLayoutElement*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cplayoutelement_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -11676,16 +11626,6 @@ bool q_cplayout_inherits(void* self, const char* classname);
 /// @param self QCPLayout*
 ///
 void q_cplayout_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPLayout*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cplayout_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -14025,16 +13965,6 @@ void q_cplayoutgrid_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPLayoutGrid*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cplayoutgrid_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QCPLayoutGrid*
@@ -16253,16 +16183,6 @@ bool q_cplayoutinset_inherits(void* self, const char* classname);
 /// @param self QCPLayoutInset*
 ///
 void q_cplayoutinset_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPLayoutInset*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cplayoutinset_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -22036,16 +21956,6 @@ void q_cpgrid_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPGrid*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpgrid_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QCPGrid*
@@ -24740,16 +24650,6 @@ void q_cpaxis_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPAxis*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpaxis_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QCPAxis*
@@ -26949,16 +26849,6 @@ bool q_cpabstractplottable_inherits(void* self, const char* classname);
 /// @param self QCPAbstractPlottable*
 ///
 void q_cpabstractplottable_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPAbstractPlottable*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpabstractplottable_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -29219,16 +29109,6 @@ bool q_cpabstractitem_inherits(void* self, const char* classname);
 /// @param self QCPAbstractItem*
 ///
 void q_cpabstractitem_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPAbstractItem*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpabstractitem_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -34977,16 +34857,6 @@ void q_customplot_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCustomPlot*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_customplot_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QCustomPlot*
@@ -38884,16 +38754,6 @@ void q_cpaxisrect_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPAxisRect*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpaxisrect_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QCPAxisRect*
@@ -40768,16 +40628,6 @@ bool q_cpabstractlegenditem_inherits(void* self, const char* classname);
 /// @param self QCPAbstractLegendItem*
 ///
 void q_cpabstractlegenditem_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPAbstractLegendItem*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpabstractlegenditem_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -42725,16 +42575,6 @@ bool q_cpplottablelegenditem_inherits(void* self, const char* classname);
 /// @param self QCPPlottableLegendItem*
 ///
 void q_cpplottablelegenditem_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPPlottableLegendItem*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpplottablelegenditem_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -45383,16 +45223,6 @@ void q_cplegend_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPLegend*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cplegend_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QCPLegend*
@@ -47980,16 +47810,6 @@ void q_cptextelement_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPTextElement*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cptextelement_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QCPTextElement*
@@ -49892,16 +49712,6 @@ bool q_cpcolorscale_inherits(void* self, const char* classname);
 /// @param self QCPColorScale*
 ///
 void q_cpcolorscale_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPColorScale*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpcolorscale_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -52684,16 +52494,6 @@ bool q_cpgraph_inherits(void* self, const char* classname);
 /// @param self QCPGraph*
 ///
 void q_cpgraph_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPGraph*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpgraph_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -55668,16 +55468,6 @@ void q_cpcurve_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPCurve*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpcurve_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QCPCurve*
@@ -57652,16 +57442,6 @@ void q_cpbarsgroup_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPBarsGroup*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpbarsgroup_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QCPBarsGroup*
@@ -59511,16 +59291,6 @@ bool q_cpbars_inherits(void* self, const char* classname);
 /// @param self QCPBars*
 ///
 void q_cpbars_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPBars*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpbars_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -62200,16 +61970,6 @@ bool q_cpstatisticalbox_inherits(void* self, const char* classname);
 /// @param self QCPStatisticalBox*
 ///
 void q_cpstatisticalbox_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPStatisticalBox*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpstatisticalbox_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -64964,16 +64724,6 @@ void q_cpcolormap_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPColorMap*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpcolormap_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QCPColorMap*
@@ -67399,16 +67149,6 @@ bool q_cpfinancial_inherits(void* self, const char* classname);
 /// @param self QCPFinancial*
 ///
 void q_cpfinancial_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPFinancial*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpfinancial_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -70294,16 +70034,6 @@ void q_cperrorbars_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPErrorBars*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cperrorbars_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QCPErrorBars*
@@ -72124,16 +71854,6 @@ bool q_cpitemstraightline_inherits(void* self, const char* classname);
 /// @param self QCPItemStraightLine*
 ///
 void q_cpitemstraightline_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPItemStraightLine*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpitemstraightline_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -74049,16 +73769,6 @@ void q_cpitemline_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPItemLine*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpitemline_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QCPItemLine*
@@ -75951,16 +75661,6 @@ bool q_cpitemcurve_inherits(void* self, const char* classname);
 /// @param self QCPItemCurve*
 ///
 void q_cpitemcurve_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPItemCurve*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpitemcurve_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -77928,16 +77628,6 @@ bool q_cpitemrect_inherits(void* self, const char* classname);
 /// @param self QCPItemRect*
 ///
 void q_cpitemrect_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPItemRect*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpitemrect_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -80070,16 +79760,6 @@ void q_cpitemtext_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPItemText*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpitemtext_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QCPItemText*
@@ -82029,16 +81709,6 @@ bool q_cpitemellipse_inherits(void* self, const char* classname);
 /// @param self QCPItemEllipse*
 ///
 void q_cpitemellipse_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPItemEllipse*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpitemellipse_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -84165,16 +83835,6 @@ void q_cpitempixmap_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPItemPixmap*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpitempixmap_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QCPItemPixmap*
@@ -86106,16 +85766,6 @@ void q_cpitemtracer_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPItemTracer*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpitemtracer_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QCPItemTracer*
@@ -88029,16 +87679,6 @@ bool q_cpitembracket_inherits(void* self, const char* classname);
 /// @param self QCPItemBracket*
 ///
 void q_cpitembracket_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPItemBracket*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cpitembracket_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -90786,16 +90426,6 @@ bool q_cppolaraxisradial_inherits(void* self, const char* classname);
 /// @param self QCPPolarAxisRadial*
 ///
 void q_cppolaraxisradial_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPPolarAxisRadial*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cppolaraxisradial_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -93557,16 +93187,6 @@ void q_cppolaraxisangular_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPPolarAxisAngular*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cppolaraxisangular_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QCPPolarAxisAngular*
@@ -95218,16 +94838,6 @@ bool q_cppolargrid_inherits(void* self, const char* classname);
 /// @param self QCPPolarGrid*
 ///
 void q_cppolargrid_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPPolarGrid*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cppolargrid_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -97154,16 +96764,6 @@ bool q_cppolarlegenditem_inherits(void* self, const char* classname);
 /// @param self QCPPolarLegendItem*
 ///
 void q_cppolarlegenditem_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPPolarLegendItem*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cppolarlegenditem_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -99745,16 +99345,6 @@ bool q_cppolargraph_inherits(void* self, const char* classname);
 /// @param self QCPPolarGraph*
 ///
 void q_cppolargraph_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QCPPolarGraph*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_cppolargraph_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

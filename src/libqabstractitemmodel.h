@@ -2742,16 +2742,6 @@ void q_abstractitemmodel_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QAbstractItemModel*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_abstractitemmodel_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QAbstractItemModel*
@@ -4198,16 +4188,6 @@ bool q_abstracttablemodel_inherits(void* self, const char* classname);
 /// @param self QAbstractTableModel*
 ///
 void q_abstracttablemodel_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QAbstractTableModel*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_abstracttablemodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -7555,16 +7535,6 @@ bool q_abstractlistmodel_inherits(void* self, const char* classname);
 /// @param self QAbstractListModel*
 ///
 void q_abstractlistmodel_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QAbstractListModel*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_abstractlistmodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

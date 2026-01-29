@@ -201,10 +201,6 @@ const char* q_dbusabstractinterfacebase_tr3(const char* s, const char* c, int n)
     return _ret;
 }
 
-bool q_dbusabstractinterfacebase_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_dbusabstractinterfacebase_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -496,10 +492,6 @@ bool q_dbusabstractinterface_inherits(void* self, const char* classname) {
 
 void q_dbusabstractinterface_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_dbusabstractinterface_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_dbusabstractinterface_start_timer22(void* self, int interval, int32_t timerType) {

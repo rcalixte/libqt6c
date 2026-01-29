@@ -380,16 +380,6 @@ const char* q_audiolistener_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QAudioListener*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_audiolistener_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QAudioListener*

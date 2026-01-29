@@ -618,14 +618,6 @@ const char* q_object_tr2(const char* s, const char* c);
 ///
 const char* q_object_tr3(const char* s, const char* c, int n);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QObject*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_object_move_to_thread2(void* self, void* thread, void* param2);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QObject*

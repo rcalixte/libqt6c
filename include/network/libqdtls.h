@@ -460,16 +460,6 @@ void q_dtlsclientverifier_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QDtlsClientVerifier*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_dtlsclientverifier_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QDtlsClientVerifier*
@@ -1550,16 +1540,6 @@ bool q_dtls_inherits(void* self, const char* classname);
 /// @param self QDtls*
 ///
 void q_dtls_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QDtls*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_dtls_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

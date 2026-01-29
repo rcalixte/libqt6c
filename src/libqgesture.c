@@ -255,10 +255,6 @@ void q_gesture_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_gesture_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_gesture_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -697,10 +693,6 @@ bool q_pangesture_inherits(void* self, const char* classname) {
 
 void q_pangesture_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_pangesture_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_pangesture_start_timer22(void* self, int interval, int32_t timerType) {
@@ -1203,10 +1195,6 @@ void q_pinchgesture_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_pinchgesture_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_pinchgesture_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -1635,10 +1623,6 @@ void q_swipegesture_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_swipegesture_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_swipegesture_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -2057,10 +2041,6 @@ bool q_tapgesture_inherits(void* self, const char* classname) {
 
 void q_tapgesture_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_tapgesture_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_tapgesture_start_timer22(void* self, int interval, int32_t timerType) {
@@ -2489,10 +2469,6 @@ bool q_tapandholdgesture_inherits(void* self, const char* classname) {
 
 void q_tapandholdgesture_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_tapandholdgesture_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_tapandholdgesture_start_timer22(void* self, int interval, int32_t timerType) {

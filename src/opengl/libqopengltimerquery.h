@@ -473,16 +473,6 @@ void q_opengltimerquery_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QOpenGLTimerQuery*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_opengltimerquery_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QOpenGLTimerQuery*
@@ -1395,16 +1385,6 @@ bool q_opengltimemonitor_inherits(void* self, const char* classname);
 /// @param self QOpenGLTimeMonitor*
 ///
 void q_opengltimemonitor_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QOpenGLTimeMonitor*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_opengltimemonitor_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

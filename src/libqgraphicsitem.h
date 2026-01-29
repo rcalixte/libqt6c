@@ -2804,16 +2804,6 @@ void q_graphicsobject_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QGraphicsObject*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_graphicsobject_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QGraphicsObject*
@@ -27185,16 +27175,6 @@ bool q_graphicstextitem_inherits(void* self, const char* classname);
 /// @param self QGraphicsTextItem*
 ///
 void q_graphicstextitem_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QGraphicsTextItem*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_graphicstextitem_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

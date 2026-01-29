@@ -797,13 +797,6 @@ const char* q_sqlquerymodel_tr3(const char* s, const char* c, int n);
 ///
 void q_sqlquerymodel_set_query22(void* self, const char* query, void* db);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#query)
-///
-/// @param self QSqlQueryModel*
-/// @param param1 Disambiguated_t*
-///
-const QSqlQuery* q_sqlquerymodel_query1(void* self, void* param1);
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
@@ -1458,16 +1451,6 @@ bool q_sqlquerymodel_inherits(void* self, const char* classname);
 /// @param self QSqlQueryModel*
 ///
 void q_sqlquerymodel_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QSqlQueryModel*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_sqlquerymodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

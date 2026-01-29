@@ -1714,10 +1714,6 @@ void q_cplayer_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_cplayer_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_cplayer_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -2352,10 +2348,6 @@ bool q_cplayerable_inherits(void* self, const char* classname) {
 
 void q_cplayerable_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_cplayerable_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_cplayerable_start_timer22(void* self, int interval, int32_t timerType) {
@@ -3243,10 +3235,6 @@ void q_cpselectionrect_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_cpselectionrect_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_cpselectionrect_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -3850,10 +3838,6 @@ bool q_cpmargingroup_inherits(void* self, const char* classname) {
 
 void q_cpmargingroup_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_cpmargingroup_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_cpmargingroup_start_timer22(void* self, int interval, int32_t timerType) {
@@ -4494,10 +4478,6 @@ bool q_cplayoutelement_inherits(void* self, const char* classname) {
 
 void q_cplayoutelement_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_cplayoutelement_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_cplayoutelement_start_timer22(void* self, int interval, int32_t timerType) {
@@ -5328,10 +5308,6 @@ bool q_cplayout_inherits(void* self, const char* classname) {
 
 void q_cplayout_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_cplayout_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_cplayout_start_timer22(void* self, int interval, int32_t timerType) {
@@ -6352,10 +6328,6 @@ void q_cplayoutgrid_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_cplayoutgrid_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_cplayoutgrid_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -7286,10 +7258,6 @@ bool q_cplayoutinset_inherits(void* self, const char* classname) {
 
 void q_cplayoutinset_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_cplayoutinset_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_cplayoutinset_start_timer22(void* self, int interval, int32_t timerType) {
@@ -10177,10 +10145,6 @@ void q_cpgrid_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_cpgrid_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_cpgrid_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -11478,10 +11442,6 @@ void q_cpaxis_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_cpaxis_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_cpaxis_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -12521,10 +12481,6 @@ void q_cpabstractplottable_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_cpabstractplottable_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_cpabstractplottable_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -13551,10 +13507,6 @@ bool q_cpabstractitem_inherits(void* self, const char* classname) {
 
 void q_cpabstractitem_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_cpabstractitem_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_cpabstractitem_start_timer22(void* self, int interval, int32_t timerType) {
@@ -16281,10 +16233,6 @@ void q_customplot_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_customplot_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_customplot_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -18059,10 +18007,6 @@ void q_cpaxisrect_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_cpaxisrect_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_cpaxisrect_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -18883,10 +18827,6 @@ bool q_cpabstractlegenditem_inherits(void* self, const char* classname) {
 
 void q_cpabstractlegenditem_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_cpabstractlegenditem_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_cpabstractlegenditem_start_timer22(void* self, int interval, int32_t timerType) {
@@ -19727,10 +19667,6 @@ bool q_cpplottablelegenditem_inherits(void* self, const char* classname) {
 
 void q_cpplottablelegenditem_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_cpplottablelegenditem_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_cpplottablelegenditem_start_timer22(void* self, int interval, int32_t timerType) {
@@ -20900,10 +20836,6 @@ void q_cplegend_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_cplegend_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_cplegend_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -22017,10 +21949,6 @@ void q_cptextelement_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_cptextelement_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_cptextelement_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -22867,10 +22795,6 @@ bool q_cpcolorscale_inherits(void* self, const char* classname) {
 
 void q_cpcolorscale_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_cpcolorscale_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_cpcolorscale_start_timer22(void* self, int interval, int32_t timerType) {
@@ -24096,10 +24020,6 @@ bool q_cpgraph_inherits(void* self, const char* classname) {
 
 void q_cpgraph_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_cpgraph_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_cpgraph_start_timer22(void* self, int interval, int32_t timerType) {
@@ -25343,10 +25263,6 @@ void q_cpcurve_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_cpcurve_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_cpcurve_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -26158,10 +26074,6 @@ bool q_cpbarsgroup_inherits(void* self, const char* classname) {
 
 void q_cpbarsgroup_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_cpbarsgroup_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_cpbarsgroup_start_timer22(void* self, int interval, int32_t timerType) {
@@ -27029,10 +26941,6 @@ bool q_cpbars_inherits(void* self, const char* classname) {
 
 void q_cpbars_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_cpbars_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_cpbars_start_timer22(void* self, int interval, int32_t timerType) {
@@ -28185,10 +28093,6 @@ bool q_cpstatisticalbox_inherits(void* self, const char* classname) {
 
 void q_cpstatisticalbox_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_cpstatisticalbox_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_cpstatisticalbox_start_timer22(void* self, int interval, int32_t timerType) {
@@ -29390,10 +29294,6 @@ void q_cpcolormap_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_cpcolormap_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_cpcolormap_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -30459,10 +30359,6 @@ bool q_cpfinancial_inherits(void* self, const char* classname) {
 
 void q_cpfinancial_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_cpfinancial_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_cpfinancial_start_timer22(void* self, int interval, int32_t timerType) {
@@ -31708,10 +31604,6 @@ void q_cperrorbars_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_cperrorbars_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_cperrorbars_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -32484,10 +32376,6 @@ bool q_cpitemstraightline_inherits(void* self, const char* classname) {
 
 void q_cpitemstraightline_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_cpitemstraightline_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_cpitemstraightline_start_timer22(void* self, int interval, int32_t timerType) {
@@ -33300,10 +33188,6 @@ void q_cpitemline_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_cpitemline_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_cpitemline_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -34108,10 +33992,6 @@ bool q_cpitemcurve_inherits(void* self, const char* classname) {
 
 void q_cpitemcurve_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_cpitemcurve_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_cpitemcurve_start_timer22(void* self, int interval, int32_t timerType) {
@@ -34958,10 +34838,6 @@ bool q_cpitemrect_inherits(void* self, const char* classname) {
 
 void q_cpitemrect_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_cpitemrect_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_cpitemrect_start_timer22(void* self, int interval, int32_t timerType) {
@@ -35909,10 +35785,6 @@ void q_cpitemtext_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_cpitemtext_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_cpitemtext_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -36757,10 +36629,6 @@ bool q_cpitemellipse_inherits(void* self, const char* classname) {
 
 void q_cpitemellipse_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_cpitemellipse_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_cpitemellipse_start_timer22(void* self, int interval, int32_t timerType) {
@@ -37685,10 +37553,6 @@ void q_cpitempixmap_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_cpitempixmap_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_cpitempixmap_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -38523,10 +38387,6 @@ void q_cpitemtracer_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_cpitemtracer_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_cpitemtracer_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -39339,10 +39199,6 @@ bool q_cpitembracket_inherits(void* self, const char* classname) {
 
 void q_cpitembracket_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_cpitembracket_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_cpitembracket_start_timer22(void* self, int interval, int32_t timerType) {
@@ -40646,10 +40502,6 @@ bool q_cppolaraxisradial_inherits(void* self, const char* classname) {
 
 void q_cppolaraxisradial_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_cppolaraxisradial_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_cppolaraxisradial_start_timer22(void* self, int interval, int32_t timerType) {
@@ -42035,10 +41887,6 @@ void q_cppolaraxisangular_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_cppolaraxisangular_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_cppolaraxisangular_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -42757,10 +42605,6 @@ bool q_cppolargrid_inherits(void* self, const char* classname) {
 
 void q_cppolargrid_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_cppolargrid_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_cppolargrid_start_timer22(void* self, int interval, int32_t timerType) {
@@ -43587,10 +43431,6 @@ bool q_cppolarlegenditem_inherits(void* self, const char* classname) {
 
 void q_cppolarlegenditem_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_cppolarlegenditem_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_cppolarlegenditem_start_timer22(void* self, int interval, int32_t timerType) {
@@ -44730,10 +44570,6 @@ bool q_cppolargraph_inherits(void* self, const char* classname) {
 
 void q_cppolargraph_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_cppolargraph_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_cppolargraph_start_timer22(void* self, int interval, int32_t timerType) {

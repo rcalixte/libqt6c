@@ -5,7 +5,6 @@
 #include "libqobjectdefs.hpp"
 #include "libqthread.hpp"
 #include "libqvariant.hpp"
-#include "libqnamespace.hpp"
 #include "libqobject.hpp"
 #include "libqobject.h"
 
@@ -355,10 +354,6 @@ const char* q_object_tr3(const char* s, const char* c, int n) {
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
-}
-
-bool q_object_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_object_start_timer22(void* self, int interval, int32_t timerType) {

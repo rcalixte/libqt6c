@@ -3890,16 +3890,6 @@ void q_datetimeedit_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QDateTimeEdit*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_datetimeedit_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QDateTimeEdit*
@@ -9305,16 +9295,6 @@ bool q_timeedit_inherits(void* self, const char* classname);
 /// @param self QTimeEdit*
 ///
 void q_timeedit_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QTimeEdit*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_timeedit_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -15259,16 +15239,6 @@ bool q_dateedit_inherits(void* self, const char* classname);
 /// @param self QDateEdit*
 ///
 void q_dateedit_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QDateEdit*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_dateedit_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

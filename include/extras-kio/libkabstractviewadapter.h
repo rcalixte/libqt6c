@@ -483,16 +483,6 @@ const char* k_abstractviewadapter_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self KAbstractViewAdapter*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool k_abstractviewadapter_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KAbstractViewAdapter*

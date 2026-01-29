@@ -257,10 +257,6 @@ void k_notificationaction_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool k_notificationaction_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t k_notificationaction_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -1070,10 +1066,6 @@ bool k_notification_inherits(void* self, const char* classname) {
 
 void k_notification_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool k_notification_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t k_notification_start_timer22(void* self, int interval, int32_t timerType) {

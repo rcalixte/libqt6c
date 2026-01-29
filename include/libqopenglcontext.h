@@ -385,16 +385,6 @@ void q_openglcontextgroup_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QOpenGLContextGroup*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_openglcontextgroup_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QOpenGLContextGroup*
@@ -1060,16 +1050,6 @@ bool q_openglcontext_inherits(void* self, const char* classname);
 /// @param self QOpenGLContext*
 ///
 void q_openglcontext_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QOpenGLContext*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_openglcontext_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

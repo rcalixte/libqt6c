@@ -495,16 +495,6 @@ void q_validator_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QValidator*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_validator_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QValidator*
@@ -1515,16 +1505,6 @@ bool q_intvalidator_inherits(void* self, const char* classname);
 /// @param self QIntValidator*
 ///
 void q_intvalidator_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QIntValidator*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_intvalidator_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -2608,16 +2588,6 @@ void q_doublevalidator_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QDoubleValidator*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_doublevalidator_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QDoubleValidator*
@@ -3566,16 +3536,6 @@ bool q_regularexpressionvalidator_inherits(void* self, const char* classname);
 /// @param self QRegularExpressionValidator*
 ///
 void q_regularexpressionvalidator_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QRegularExpressionValidator*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_regularexpressionvalidator_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

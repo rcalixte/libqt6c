@@ -1,58 +1,6 @@
 #include "libqnamespace.hpp"
 #include "libqnamespace.h"
 
-Disambiguated_t* q_disambiguated_t_new(void* other) {
-    return Disambiguated_t_new((Disambiguated_t*)other);
-}
-
-Disambiguated_t* q_disambiguated_t_new2(void* other) {
-    return Disambiguated_t_new2((Disambiguated_t*)other);
-}
-
-Disambiguated_t* q_disambiguated_t_new3() {
-    return Disambiguated_t_new3();
-}
-
-Disambiguated_t* q_disambiguated_t_new4(void* param1) {
-    return Disambiguated_t_new4((Disambiguated_t*)param1);
-}
-
-void q_disambiguated_t_copy_assign(void* self, void* other) {
-    Disambiguated_t_CopyAssign((Disambiguated_t*)self, (Disambiguated_t*)other);
-}
-
-void q_disambiguated_t_move_assign(void* self, void* other) {
-    Disambiguated_t_MoveAssign((Disambiguated_t*)self, (Disambiguated_t*)other);
-}
-
-void q_disambiguated_t_delete(void* self) {
-    Disambiguated_t_Delete((Disambiguated_t*)(self));
-}
-
-QInternal* q_internal_new(void* other) {
-    return QInternal_new((QInternal*)other);
-}
-
-QInternal* q_internal_new2(void* other) {
-    return QInternal_new2((QInternal*)other);
-}
-
-void q_internal_copy_assign(void* self, void* other) {
-    QInternal_CopyAssign((QInternal*)self, (QInternal*)other);
-}
-
-void q_internal_move_assign(void* self, void* other) {
-    QInternal_MoveAssign((QInternal*)self, (QInternal*)other);
-}
-
-bool q_internal_activate_callbacks(int32_t param1, void* param2) {
-    return QInternal_ActivateCallbacks(param1, param2);
-}
-
-void q_internal_delete(void* self) {
-    QInternal_Delete((QInternal*)(self));
-}
-
 QKeyCombination* q_keycombination_new(void* other) {
     return QKeyCombination_new((QKeyCombination*)other);
 }

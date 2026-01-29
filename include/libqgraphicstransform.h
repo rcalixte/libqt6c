@@ -461,16 +461,6 @@ void q_graphicstransform_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QGraphicsTransform*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_graphicstransform_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QGraphicsTransform*
@@ -1455,16 +1445,6 @@ void q_graphicsscale_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QGraphicsScale*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_graphicsscale_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QGraphicsScale*
@@ -2445,16 +2425,6 @@ bool q_graphicsrotation_inherits(void* self, const char* classname);
 /// @param self QGraphicsRotation*
 ///
 void q_graphicsrotation_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QGraphicsRotation*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_graphicsrotation_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

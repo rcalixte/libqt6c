@@ -1916,10 +1916,6 @@ void q_datetimeedit_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_datetimeedit_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_datetimeedit_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -4304,10 +4300,6 @@ bool q_timeedit_inherits(void* self, const char* classname) {
 
 void q_timeedit_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_timeedit_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_timeedit_start_timer22(void* self, int interval, int32_t timerType) {
@@ -6892,10 +6884,6 @@ bool q_dateedit_inherits(void* self, const char* classname) {
 
 void q_dateedit_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_dateedit_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_dateedit_start_timer22(void* self, int interval, int32_t timerType) {

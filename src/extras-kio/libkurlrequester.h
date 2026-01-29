@@ -3165,16 +3165,6 @@ void k_urlrequester_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self KUrlRequester*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool k_urlrequester_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KUrlRequester*
@@ -8272,16 +8262,6 @@ bool k_urlcomborequester_inherits(void* self, const char* classname);
 /// @param self KUrlComboRequester*
 ///
 void k_urlcomborequester_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self KUrlComboRequester*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool k_urlcomborequester_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

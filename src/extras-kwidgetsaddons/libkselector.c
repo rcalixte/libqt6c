@@ -1602,10 +1602,6 @@ void k_selector_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool k_selector_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t k_selector_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -3924,10 +3920,6 @@ bool k_gradientselector_inherits(void* self, const char* classname) {
 
 void k_gradientselector_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool k_gradientselector_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t k_gradientselector_start_timer22(void* self, int interval, int32_t timerType) {

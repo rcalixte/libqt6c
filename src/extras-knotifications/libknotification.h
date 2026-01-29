@@ -463,16 +463,6 @@ void k_notificationaction_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self KNotificationAction*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool k_notificationaction_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KNotificationAction*
@@ -1977,16 +1967,6 @@ bool k_notification_inherits(void* self, const char* classname);
 /// @param self KNotification*
 ///
 void k_notification_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self KNotification*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool k_notification_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

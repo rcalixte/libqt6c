@@ -427,16 +427,6 @@ void q_accounts__watch_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self Accounts__Watch*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_accounts__watch_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self Accounts__Watch*
@@ -1759,16 +1749,6 @@ bool q_accounts__account_inherits(void* self, const char* classname);
 /// @param self Accounts__Account*
 ///
 void q_accounts__account_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self Accounts__Account*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_accounts__account_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

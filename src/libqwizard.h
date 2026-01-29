@@ -3512,16 +3512,6 @@ void q_wizard_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QWizard*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_wizard_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QWizard*
@@ -8745,16 +8735,6 @@ bool q_wizardpage_inherits(void* self, const char* classname);
 /// @param self QWizardPage*
 ///
 void q_wizardpage_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QWizardPage*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_wizardpage_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
