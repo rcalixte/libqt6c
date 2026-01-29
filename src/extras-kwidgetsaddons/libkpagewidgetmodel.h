@@ -572,16 +572,6 @@ void k_pagewidgetitem_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self KPageWidgetItem*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool k_pagewidgetitem_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KPageWidgetItem*
@@ -1994,16 +1984,6 @@ bool k_pagewidgetmodel_inherits(void* self, const char* classname);
 /// @param self KPageWidgetModel*
 ///
 void k_pagewidgetmodel_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self KPageWidgetModel*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool k_pagewidgetmodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

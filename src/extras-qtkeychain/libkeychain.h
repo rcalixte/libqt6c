@@ -485,16 +485,6 @@ void q_keychain__job_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QKeychain__Job*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_keychain__job_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QKeychain__Job*
@@ -1136,16 +1126,6 @@ bool q_keychain__readpasswordjob_inherits(void* self, const char* classname);
 /// @param self QKeychain__ReadPasswordJob*
 ///
 void q_keychain__readpasswordjob_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QKeychain__ReadPasswordJob*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_keychain__readpasswordjob_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -2183,16 +2163,6 @@ void q_keychain__writepasswordjob_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QKeychain__WritePasswordJob*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_keychain__writepasswordjob_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QKeychain__WritePasswordJob*
@@ -3210,16 +3180,6 @@ bool q_keychain__deletepasswordjob_inherits(void* self, const char* classname);
 /// @param self QKeychain__DeletePasswordJob*
 ///
 void q_keychain__deletepasswordjob_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QKeychain__DeletePasswordJob*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_keychain__deletepasswordjob_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

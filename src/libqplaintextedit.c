@@ -2278,10 +2278,6 @@ void q_plaintextedit_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_plaintextedit_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_plaintextedit_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -3258,10 +3254,6 @@ bool q_plaintextdocumentlayout_inherits(void* self, const char* classname) {
 
 void q_plaintextdocumentlayout_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_plaintextdocumentlayout_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_plaintextdocumentlayout_start_timer22(void* self, int interval, int32_t timerType) {

@@ -278,10 +278,6 @@ void q_openglshader_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_openglshader_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_openglshader_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -1190,10 +1186,6 @@ bool q_openglshaderprogram_inherits(void* self, const char* classname) {
 
 void q_openglshaderprogram_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_openglshaderprogram_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_openglshaderprogram_start_timer22(void* self, int interval, int32_t timerType) {

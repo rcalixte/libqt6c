@@ -787,15 +787,6 @@ QSqlError* q_sqlrelationaltablemodel_last_error(void* self);
 ///
 void q_sqlrelationaltablemodel_set_query22(void* self, const char* query, void* db);
 
-/// Inherited from QSqlQueryModel
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qsqlquerymodel.html#query)
-///
-/// @param self QSqlRelationalTableModel*
-/// @param param1 Disambiguated_t*
-///
-const QSqlQuery* q_sqlrelationaltablemodel_query1(void* self, void* param1);
-
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
@@ -1450,16 +1441,6 @@ bool q_sqlrelationaltablemodel_inherits(void* self, const char* classname);
 /// @param self QSqlRelationalTableModel*
 ///
 void q_sqlrelationaltablemodel_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QSqlRelationalTableModel*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_sqlrelationaltablemodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

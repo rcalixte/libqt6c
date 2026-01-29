@@ -219,10 +219,6 @@ void q_textobject_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_textobject_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_textobject_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -457,10 +453,6 @@ bool q_textblockgroup_inherits(void* self, const char* classname) {
 
 void q_textblockgroup_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_textblockgroup_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_textblockgroup_start_timer22(void* self, int interval, int32_t timerType) {
@@ -758,10 +750,6 @@ bool q_textframe_inherits(void* self, const char* classname) {
 
 void q_textframe_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_textframe_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_textframe_start_timer22(void* self, int interval, int32_t timerType) {

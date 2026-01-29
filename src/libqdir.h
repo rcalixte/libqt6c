@@ -502,13 +502,6 @@ const char* q_dir_clean_path(const char* path);
 ///
 void q_dir_refresh(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#count)
-///
-/// @param self QDir*
-/// @param param1 Disambiguated_t*
-///
-int64_t q_dir_count1(void* self, void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#isEmpty)
 ///
 /// @param self QDir*

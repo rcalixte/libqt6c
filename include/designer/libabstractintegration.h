@@ -1012,16 +1012,6 @@ void q_designerintegrationinterface_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QDesignerIntegrationInterface*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_designerintegrationinterface_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QDesignerIntegrationInterface*
@@ -2477,16 +2467,6 @@ bool q_designerintegration_inherits(void* self, const char* classname);
 /// @param self QDesignerIntegration*
 ///
 void q_designerintegration_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QDesignerIntegration*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_designerintegration_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

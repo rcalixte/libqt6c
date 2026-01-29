@@ -469,16 +469,6 @@ void q_gesture_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QGesture*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_gesture_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QGesture*
@@ -1435,16 +1425,6 @@ bool q_pangesture_inherits(void* self, const char* classname);
 /// @param self QPanGesture*
 ///
 void q_pangesture_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QPanGesture*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_pangesture_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -2509,16 +2489,6 @@ void q_pinchgesture_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QPinchGesture*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_pinchgesture_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QPinchGesture*
@@ -3462,16 +3432,6 @@ void q_swipegesture_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QSwipeGesture*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_swipegesture_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QSwipeGesture*
@@ -4396,16 +4356,6 @@ bool q_tapgesture_inherits(void* self, const char* classname);
 /// @param self QTapGesture*
 ///
 void q_tapgesture_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QTapGesture*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_tapgesture_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -5343,16 +5293,6 @@ bool q_tapandholdgesture_inherits(void* self, const char* classname);
 /// @param self QTapAndHoldGesture*
 ///
 void q_tapandholdgesture_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QTapAndHoldGesture*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_tapandholdgesture_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

@@ -246,10 +246,6 @@ const char* k_onsole__filter_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-bool k_onsole__filter_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t k_onsole__filter_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -664,10 +660,6 @@ const char* k_onsole__regexpfilter_tr3(const char* s, const char* c, int n) {
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
-}
-
-bool k_onsole__regexpfilter_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t k_onsole__regexpfilter_start_timer22(void* self, int interval, int32_t timerType) {
@@ -1160,10 +1152,6 @@ void k_onsole__urlfilter_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool k_onsole__urlfilter_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t k_onsole__urlfilter_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -1608,10 +1596,6 @@ bool k_onsole__filterobject_inherits(void* self, const char* classname) {
 
 void k_onsole__filterobject_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool k_onsole__filterobject_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t k_onsole__filterobject_start_timer22(void* self, int interval, int32_t timerType) {

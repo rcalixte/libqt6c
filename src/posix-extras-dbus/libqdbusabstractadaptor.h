@@ -373,16 +373,6 @@ void q_dbusabstractadaptor_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QDBusAbstractAdaptor*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_dbusabstractadaptor_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QDBusAbstractAdaptor*

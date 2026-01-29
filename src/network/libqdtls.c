@@ -257,10 +257,6 @@ void q_dtlsclientverifier_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_dtlsclientverifier_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_dtlsclientverifier_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -781,10 +777,6 @@ bool q_dtls_inherits(void* self, const char* classname) {
 
 void q_dtls_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_dtls_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_dtls_start_timer22(void* self, int interval, int32_t timerType) {

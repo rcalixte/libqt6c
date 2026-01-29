@@ -383,16 +383,6 @@ const char* q_dbusabstractinterfacebase_tr3(const char* s, const char* c, int n)
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QDBusAbstractInterfaceBase*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_dbusabstractinterfacebase_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QDBusAbstractInterfaceBase*
@@ -938,16 +928,6 @@ bool q_dbusabstractinterface_inherits(void* self, const char* classname);
 /// @param self QDBusAbstractInterface*
 ///
 void q_dbusabstractinterface_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QDBusAbstractInterface*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_dbusabstractinterface_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

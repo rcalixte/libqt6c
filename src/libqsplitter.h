@@ -3392,16 +3392,6 @@ void q_splitter_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QSplitter*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_splitter_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QSplitter*
@@ -8370,16 +8360,6 @@ bool q_splitterhandle_inherits(void* self, const char* classname);
 /// @param self QSplitterHandle*
 ///
 void q_splitterhandle_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QSplitterHandle*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_splitterhandle_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

@@ -462,16 +462,6 @@ const char* k_onsole__filter_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self Konsole__Filter*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool k_onsole__filter_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self Konsole__Filter*
@@ -1428,16 +1418,6 @@ const char* k_onsole__regexpfilter_tr2(const char* s, const char* c);
 /// @param n int
 ///
 const char* k_onsole__regexpfilter_tr3(const char* s, const char* c, int n);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self Konsole__RegExpFilter*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool k_onsole__regexpfilter_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -2560,16 +2540,6 @@ void k_onsole__urlfilter_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self Konsole__UrlFilter*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool k_onsole__urlfilter_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self Konsole__UrlFilter*
@@ -3566,16 +3536,6 @@ bool k_onsole__filterobject_inherits(void* self, const char* classname);
 /// @param self Konsole__FilterObject*
 ///
 void k_onsole__filterobject_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self Konsole__FilterObject*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool k_onsole__filterobject_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

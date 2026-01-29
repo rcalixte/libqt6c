@@ -3032,16 +3032,6 @@ void k_multitabbar_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self KMultiTabBar*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool k_multitabbar_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KMultiTabBar*
@@ -8266,16 +8256,6 @@ void k_multitabbarbutton_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self KMultiTabBarButton*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool k_multitabbarbutton_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KMultiTabBarButton*
@@ -11683,16 +11663,6 @@ bool k_multitabbartab_inherits(void* self, const char* classname);
 /// @param self KMultiTabBarTab*
 ///
 void k_multitabbartab_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self KMultiTabBarTab*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool k_multitabbartab_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

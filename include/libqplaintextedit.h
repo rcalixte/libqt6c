@@ -4575,16 +4575,6 @@ void q_plaintextedit_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QPlainTextEdit*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_plaintextedit_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QPlainTextEdit*
@@ -6894,16 +6884,6 @@ bool q_plaintextdocumentlayout_inherits(void* self, const char* classname);
 /// @param self QPlainTextDocumentLayout*
 ///
 void q_plaintextdocumentlayout_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QPlainTextDocumentLayout*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_plaintextdocumentlayout_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

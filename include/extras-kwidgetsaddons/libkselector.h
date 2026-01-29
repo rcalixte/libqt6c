@@ -3367,16 +3367,6 @@ void k_selector_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self KSelector*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool k_selector_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KSelector*
@@ -8659,16 +8649,6 @@ bool k_gradientselector_inherits(void* self, const char* classname);
 /// @param self KGradientSelector*
 ///
 void k_gradientselector_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self KGradientSelector*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool k_gradientselector_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

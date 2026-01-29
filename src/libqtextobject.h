@@ -397,16 +397,6 @@ void q_textobject_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QTextObject*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_textobject_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QTextObject*
@@ -869,16 +859,6 @@ bool q_textblockgroup_inherits(void* self, const char* classname);
 /// @param self QTextBlockGroup*
 ///
 void q_textblockgroup_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QTextBlockGroup*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_textblockgroup_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -1441,16 +1421,6 @@ bool q_textframe_inherits(void* self, const char* classname);
 /// @param self QTextFrame*
 ///
 void q_textframe_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QTextFrame*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_textframe_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

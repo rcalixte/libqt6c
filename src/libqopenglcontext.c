@@ -211,10 +211,6 @@ void q_openglcontextgroup_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-bool q_openglcontextgroup_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
-}
-
 int32_t q_openglcontextgroup_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
@@ -577,10 +573,6 @@ bool q_openglcontext_inherits(void* self, const char* classname) {
 
 void q_openglcontext_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
-}
-
-bool q_openglcontext_move_to_thread2(void* self, void* thread, void* param2) {
-    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_openglcontext_start_timer22(void* self, int interval, int32_t timerType) {

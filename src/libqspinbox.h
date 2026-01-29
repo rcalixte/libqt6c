@@ -3352,16 +3352,6 @@ void q_spinbox_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QSpinBox*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_spinbox_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QSpinBox*
@@ -8883,16 +8873,6 @@ bool q_doublespinbox_inherits(void* self, const char* classname);
 /// @param self QDoubleSpinBox*
 ///
 void q_doublespinbox_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QDoubleSpinBox*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_doublespinbox_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

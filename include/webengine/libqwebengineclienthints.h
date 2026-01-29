@@ -535,16 +535,6 @@ void q_webengineclienthints_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QWebEngineClientHints*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_webengineclienthints_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QWebEngineClientHints*

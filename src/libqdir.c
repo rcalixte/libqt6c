@@ -1,6 +1,5 @@
 #include "libqchar.hpp"
 #include "libqfileinfo.hpp"
-#include "libqnamespace.hpp"
 #include "libqdir.hpp"
 #include "libqdir.h"
 
@@ -461,10 +460,6 @@ const char* q_dir_clean_path(const char* path) {
 
 void q_dir_refresh(void* self) {
     QDir_Refresh((QDir*)self);
-}
-
-int64_t q_dir_count1(void* self, void* param1) {
-    return QDir_Count1((QDir*)self, (Disambiguated_t*)param1);
 }
 
 bool q_dir_is_empty1(void* self, int32_t filters) {

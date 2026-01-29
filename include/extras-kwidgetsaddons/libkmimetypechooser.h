@@ -2891,16 +2891,6 @@ void k_mimetypechooser_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self KMimeTypeChooser*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool k_mimetypechooser_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KMimeTypeChooser*
@@ -7968,16 +7958,6 @@ bool k_mimetypechooserdialog_inherits(void* self, const char* classname);
 /// @param self KMimeTypeChooserDialog*
 ///
 void k_mimetypechooserdialog_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self KMimeTypeChooserDialog*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool k_mimetypechooserdialog_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

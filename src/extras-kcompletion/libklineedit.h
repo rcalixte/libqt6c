@@ -4265,16 +4265,6 @@ void k_lineedit_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self KLineEdit*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool k_lineedit_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self KLineEdit*

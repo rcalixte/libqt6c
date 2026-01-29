@@ -750,16 +750,6 @@ void q_graphicseffect_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QGraphicsEffect*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_graphicseffect_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QGraphicsEffect*
@@ -1729,16 +1719,6 @@ bool q_graphicscolorizeeffect_inherits(void* self, const char* classname);
 /// @param self QGraphicsColorizeEffect*
 ///
 void q_graphicscolorizeeffect_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QGraphicsColorizeEffect*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_graphicscolorizeeffect_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -2961,16 +2941,6 @@ bool q_graphicsblureffect_inherits(void* self, const char* classname);
 /// @param self QGraphicsBlurEffect*
 ///
 void q_graphicsblureffect_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QGraphicsBlurEffect*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_graphicsblureffect_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -4229,16 +4199,6 @@ void q_graphicsdropshadoweffect_delete_later(void* self);
 
 /// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QGraphicsDropShadowEffect*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_graphicsdropshadoweffect_move_to_thread2(void* self, void* thread, void* param2);
-
-/// Inherited from QObject
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// @param self QGraphicsDropShadowEffect*
@@ -5398,16 +5358,6 @@ bool q_graphicsopacityeffect_inherits(void* self, const char* classname);
 /// @param self QGraphicsOpacityEffect*
 ///
 void q_graphicsopacityeffect_delete_later(void* self);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// @param self QGraphicsOpacityEffect*
-/// @param thread QThread*
-/// @param param2 Disambiguated_t*
-///
-bool q_graphicsopacityeffect_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
