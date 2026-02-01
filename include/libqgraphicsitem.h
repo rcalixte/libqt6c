@@ -2663,11 +2663,22 @@ void q_graphicsobject_remove_event_filter(void* self, void* obj);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+QMetaObject__Connection* q_graphicsobject_connect(void* sender, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_graphicsobject_connect(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_graphicsobject_connect2(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
@@ -2678,7 +2689,18 @@ QMetaObject__Connection* q_graphicsobject_connect(void* sender, void* signal, vo
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_graphicsobject_connect2(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_graphicsobject_connect3(void* self, void* sender, const char* signal, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_graphicsobject_disconnect(void* sender, const char* signal, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2689,7 +2711,24 @@ QMetaObject__Connection* q_graphicsobject_connect2(void* self, void* sender, con
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_graphicsobject_disconnect(void* sender, void* signal, void* receiver, void* member);
+bool q_graphicsobject_disconnect2(void* sender, void* signal, void* receiver, void* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QGraphicsObject*
+///
+bool q_graphicsobject_disconnect3(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QGraphicsObject*
+/// @param receiver QObject*
+///
+bool q_graphicsobject_disconnect4(void* self, void* receiver);
 
 /// Inherited from QObject
 ///
@@ -2697,7 +2736,7 @@ bool q_graphicsobject_disconnect(void* sender, void* signal, void* receiver, voi
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_graphicsobject_disconnect2(void* param1);
+bool q_graphicsobject_disconnect5(void* param1);
 
 /// Inherited from QObject
 ///
@@ -2827,12 +2866,24 @@ int32_t q_graphicsobject_start_timer23(void* self, int64_t time, int32_t timerTy
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+/// @param param5 enum Qt__ConnectionType
+///
+QMetaObject__Connection* q_graphicsobject_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicsobject_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_graphicsobject_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -2845,6 +2896,46 @@ QMetaObject__Connection* q_graphicsobject_connect5(void* sender, void* signal, v
 /// @param type enum Qt__ConnectionType
 ///
 QMetaObject__Connection* q_graphicsobject_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QGraphicsObject*
+/// @param signal const char*
+///
+bool q_graphicsobject_disconnect1(void* self, const char* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QGraphicsObject*
+/// @param signal const char*
+/// @param receiver QObject*
+///
+bool q_graphicsobject_disconnect22(void* self, const char* signal, void* receiver);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QGraphicsObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_graphicsobject_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QGraphicsObject*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_graphicsobject_disconnect23(void* self, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -27037,11 +27128,22 @@ void q_graphicstextitem_remove_event_filter(void* self, void* obj);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+QMetaObject__Connection* q_graphicstextitem_connect(void* sender, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_graphicstextitem_connect(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_graphicstextitem_connect2(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
@@ -27052,7 +27154,18 @@ QMetaObject__Connection* q_graphicstextitem_connect(void* sender, void* signal, 
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_graphicstextitem_connect2(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_graphicstextitem_connect3(void* self, void* sender, const char* signal, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_graphicstextitem_disconnect(void* sender, const char* signal, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -27063,7 +27176,24 @@ QMetaObject__Connection* q_graphicstextitem_connect2(void* self, void* sender, c
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_graphicstextitem_disconnect(void* sender, void* signal, void* receiver, void* member);
+bool q_graphicstextitem_disconnect2(void* sender, void* signal, void* receiver, void* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QGraphicsTextItem*
+///
+bool q_graphicstextitem_disconnect3(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QGraphicsTextItem*
+/// @param receiver QObject*
+///
+bool q_graphicstextitem_disconnect4(void* self, void* receiver);
 
 /// Inherited from QObject
 ///
@@ -27071,7 +27201,7 @@ bool q_graphicstextitem_disconnect(void* sender, void* signal, void* receiver, v
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_graphicstextitem_disconnect2(void* param1);
+bool q_graphicstextitem_disconnect5(void* param1);
 
 /// Inherited from QObject
 ///
@@ -27201,12 +27331,24 @@ int32_t q_graphicstextitem_start_timer23(void* self, int64_t time, int32_t timer
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+/// @param param5 enum Qt__ConnectionType
+///
+QMetaObject__Connection* q_graphicstextitem_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicstextitem_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_graphicstextitem_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -27219,6 +27361,46 @@ QMetaObject__Connection* q_graphicstextitem_connect5(void* sender, void* signal,
 /// @param type enum Qt__ConnectionType
 ///
 QMetaObject__Connection* q_graphicstextitem_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QGraphicsTextItem*
+/// @param signal const char*
+///
+bool q_graphicstextitem_disconnect1(void* self, const char* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QGraphicsTextItem*
+/// @param signal const char*
+/// @param receiver QObject*
+///
+bool q_graphicstextitem_disconnect22(void* self, const char* signal, void* receiver);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QGraphicsTextItem*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_graphicstextitem_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QGraphicsTextItem*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_graphicstextitem_disconnect23(void* self, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

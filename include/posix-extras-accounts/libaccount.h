@@ -286,11 +286,22 @@ void q_accounts__watch_remove_event_filter(void* self, void* obj);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+QMetaObject__Connection* q_accounts__watch_connect(void* sender, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_accounts__watch_connect(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_accounts__watch_connect2(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
@@ -301,7 +312,18 @@ QMetaObject__Connection* q_accounts__watch_connect(void* sender, void* signal, v
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_accounts__watch_connect2(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_accounts__watch_connect3(void* self, void* sender, const char* signal, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_accounts__watch_disconnect(void* sender, const char* signal, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -312,7 +334,24 @@ QMetaObject__Connection* q_accounts__watch_connect2(void* self, void* sender, co
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_accounts__watch_disconnect(void* sender, void* signal, void* receiver, void* member);
+bool q_accounts__watch_disconnect2(void* sender, void* signal, void* receiver, void* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Accounts__Watch*
+///
+bool q_accounts__watch_disconnect3(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Accounts__Watch*
+/// @param receiver QObject*
+///
+bool q_accounts__watch_disconnect4(void* self, void* receiver);
 
 /// Inherited from QObject
 ///
@@ -320,7 +359,7 @@ bool q_accounts__watch_disconnect(void* sender, void* signal, void* receiver, vo
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_accounts__watch_disconnect2(void* param1);
+bool q_accounts__watch_disconnect5(void* param1);
 
 /// Inherited from QObject
 ///
@@ -450,12 +489,24 @@ int32_t q_accounts__watch_start_timer23(void* self, int64_t time, int32_t timerT
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+/// @param param5 enum Qt__ConnectionType
+///
+QMetaObject__Connection* q_accounts__watch_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_accounts__watch_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_accounts__watch_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -468,6 +519,46 @@ QMetaObject__Connection* q_accounts__watch_connect5(void* sender, void* signal, 
 /// @param type enum Qt__ConnectionType
 ///
 QMetaObject__Connection* q_accounts__watch_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Accounts__Watch*
+/// @param signal const char*
+///
+bool q_accounts__watch_disconnect1(void* self, const char* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Accounts__Watch*
+/// @param signal const char*
+/// @param receiver QObject*
+///
+bool q_accounts__watch_disconnect22(void* self, const char* signal, void* receiver);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Accounts__Watch*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_accounts__watch_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Accounts__Watch*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_accounts__watch_disconnect23(void* self, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1611,11 +1702,22 @@ void q_accounts__account_remove_event_filter(void* self, void* obj);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+QMetaObject__Connection* q_accounts__account_connect(void* sender, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_accounts__account_connect(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_accounts__account_connect2(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
@@ -1626,7 +1728,18 @@ QMetaObject__Connection* q_accounts__account_connect(void* sender, void* signal,
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_accounts__account_connect2(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_accounts__account_connect3(void* self, void* sender, const char* signal, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_accounts__account_disconnect(void* sender, const char* signal, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1637,7 +1750,24 @@ QMetaObject__Connection* q_accounts__account_connect2(void* self, void* sender, 
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_accounts__account_disconnect(void* sender, void* signal, void* receiver, void* member);
+bool q_accounts__account_disconnect2(void* sender, void* signal, void* receiver, void* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Accounts__Account*
+///
+bool q_accounts__account_disconnect3(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Accounts__Account*
+/// @param receiver QObject*
+///
+bool q_accounts__account_disconnect4(void* self, void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1645,7 +1775,7 @@ bool q_accounts__account_disconnect(void* sender, void* signal, void* receiver, 
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_accounts__account_disconnect2(void* param1);
+bool q_accounts__account_disconnect5(void* param1);
 
 /// Inherited from QObject
 ///
@@ -1775,12 +1905,24 @@ int32_t q_accounts__account_start_timer23(void* self, int64_t time, int32_t time
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+/// @param param5 enum Qt__ConnectionType
+///
+QMetaObject__Connection* q_accounts__account_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_accounts__account_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_accounts__account_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -1793,6 +1935,46 @@ QMetaObject__Connection* q_accounts__account_connect5(void* sender, void* signal
 /// @param type enum Qt__ConnectionType
 ///
 QMetaObject__Connection* q_accounts__account_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Accounts__Account*
+/// @param signal const char*
+///
+bool q_accounts__account_disconnect1(void* self, const char* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Accounts__Account*
+/// @param signal const char*
+/// @param receiver QObject*
+///
+bool q_accounts__account_disconnect22(void* self, const char* signal, void* receiver);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Accounts__Account*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_accounts__account_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Accounts__Account*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_accounts__account_disconnect23(void* self, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

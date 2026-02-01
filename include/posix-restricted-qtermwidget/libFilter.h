@@ -298,11 +298,22 @@ void k_onsole__filter_remove_event_filter(void* self, void* obj);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+QMetaObject__Connection* k_onsole__filter_connect(void* sender, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_onsole__filter_connect(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_onsole__filter_connect2(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
@@ -313,7 +324,18 @@ QMetaObject__Connection* k_onsole__filter_connect(void* sender, void* signal, vo
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_onsole__filter_connect2(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_onsole__filter_connect3(void* self, void* sender, const char* signal, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_onsole__filter_disconnect(void* sender, const char* signal, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -324,7 +346,24 @@ QMetaObject__Connection* k_onsole__filter_connect2(void* self, void* sender, con
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_onsole__filter_disconnect(void* sender, void* signal, void* receiver, void* member);
+bool k_onsole__filter_disconnect2(void* sender, void* signal, void* receiver, void* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Konsole__Filter*
+///
+bool k_onsole__filter_disconnect3(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Konsole__Filter*
+/// @param receiver QObject*
+///
+bool k_onsole__filter_disconnect4(void* self, void* receiver);
 
 /// Inherited from QObject
 ///
@@ -332,7 +371,7 @@ bool k_onsole__filter_disconnect(void* sender, void* signal, void* receiver, voi
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_onsole__filter_disconnect2(void* param1);
+bool k_onsole__filter_disconnect5(void* param1);
 
 /// Inherited from QObject
 ///
@@ -485,12 +524,24 @@ int32_t k_onsole__filter_start_timer23(void* self, int64_t time, int32_t timerTy
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+/// @param param5 enum Qt__ConnectionType
+///
+QMetaObject__Connection* k_onsole__filter_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_onsole__filter_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_onsole__filter_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -503,6 +554,46 @@ QMetaObject__Connection* k_onsole__filter_connect5(void* sender, void* signal, v
 /// @param type enum Qt__ConnectionType
 ///
 QMetaObject__Connection* k_onsole__filter_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Konsole__Filter*
+/// @param signal const char*
+///
+bool k_onsole__filter_disconnect1(void* self, const char* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Konsole__Filter*
+/// @param signal const char*
+/// @param receiver QObject*
+///
+bool k_onsole__filter_disconnect22(void* self, const char* signal, void* receiver);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Konsole__Filter*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_onsole__filter_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Konsole__Filter*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_onsole__filter_disconnect23(void* self, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1257,11 +1348,22 @@ void k_onsole__regexpfilter_remove_event_filter(void* self, void* obj);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+QMetaObject__Connection* k_onsole__regexpfilter_connect(void* sender, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_onsole__regexpfilter_connect(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_onsole__regexpfilter_connect2(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
@@ -1272,7 +1374,18 @@ QMetaObject__Connection* k_onsole__regexpfilter_connect(void* sender, void* sign
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_onsole__regexpfilter_connect2(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_onsole__regexpfilter_connect3(void* self, void* sender, const char* signal, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_onsole__regexpfilter_disconnect(void* sender, const char* signal, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1283,7 +1396,24 @@ QMetaObject__Connection* k_onsole__regexpfilter_connect2(void* self, void* sende
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_onsole__regexpfilter_disconnect(void* sender, void* signal, void* receiver, void* member);
+bool k_onsole__regexpfilter_disconnect2(void* sender, void* signal, void* receiver, void* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Konsole__RegExpFilter*
+///
+bool k_onsole__regexpfilter_disconnect3(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Konsole__RegExpFilter*
+/// @param receiver QObject*
+///
+bool k_onsole__regexpfilter_disconnect4(void* self, void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1291,7 +1421,7 @@ bool k_onsole__regexpfilter_disconnect(void* sender, void* signal, void* receive
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_onsole__regexpfilter_disconnect2(void* param1);
+bool k_onsole__regexpfilter_disconnect5(void* param1);
 
 /// Inherited from QObject
 ///
@@ -1444,12 +1574,24 @@ int32_t k_onsole__regexpfilter_start_timer23(void* self, int64_t time, int32_t t
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+/// @param param5 enum Qt__ConnectionType
+///
+QMetaObject__Connection* k_onsole__regexpfilter_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_onsole__regexpfilter_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_onsole__regexpfilter_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -1462,6 +1604,46 @@ QMetaObject__Connection* k_onsole__regexpfilter_connect5(void* sender, void* sig
 /// @param type enum Qt__ConnectionType
 ///
 QMetaObject__Connection* k_onsole__regexpfilter_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Konsole__RegExpFilter*
+/// @param signal const char*
+///
+bool k_onsole__regexpfilter_disconnect1(void* self, const char* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Konsole__RegExpFilter*
+/// @param signal const char*
+/// @param receiver QObject*
+///
+bool k_onsole__regexpfilter_disconnect22(void* self, const char* signal, void* receiver);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Konsole__RegExpFilter*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_onsole__regexpfilter_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Konsole__RegExpFilter*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_onsole__regexpfilter_disconnect23(void* self, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2399,11 +2581,22 @@ void k_onsole__urlfilter_remove_event_filter(void* self, void* obj);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+QMetaObject__Connection* k_onsole__urlfilter_connect(void* sender, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_onsole__urlfilter_connect(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_onsole__urlfilter_connect2(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
@@ -2414,7 +2607,18 @@ QMetaObject__Connection* k_onsole__urlfilter_connect(void* sender, void* signal,
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_onsole__urlfilter_connect2(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_onsole__urlfilter_connect3(void* self, void* sender, const char* signal, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_onsole__urlfilter_disconnect(void* sender, const char* signal, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2425,7 +2629,24 @@ QMetaObject__Connection* k_onsole__urlfilter_connect2(void* self, void* sender, 
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_onsole__urlfilter_disconnect(void* sender, void* signal, void* receiver, void* member);
+bool k_onsole__urlfilter_disconnect2(void* sender, void* signal, void* receiver, void* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Konsole__UrlFilter*
+///
+bool k_onsole__urlfilter_disconnect3(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Konsole__UrlFilter*
+/// @param receiver QObject*
+///
+bool k_onsole__urlfilter_disconnect4(void* self, void* receiver);
 
 /// Inherited from QObject
 ///
@@ -2433,7 +2654,7 @@ bool k_onsole__urlfilter_disconnect(void* sender, void* signal, void* receiver, 
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_onsole__urlfilter_disconnect2(void* param1);
+bool k_onsole__urlfilter_disconnect5(void* param1);
 
 /// Inherited from QObject
 ///
@@ -2563,12 +2784,24 @@ int32_t k_onsole__urlfilter_start_timer23(void* self, int64_t time, int32_t time
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+/// @param param5 enum Qt__ConnectionType
+///
+QMetaObject__Connection* k_onsole__urlfilter_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_onsole__urlfilter_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_onsole__urlfilter_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -2581,6 +2814,46 @@ QMetaObject__Connection* k_onsole__urlfilter_connect5(void* sender, void* signal
 /// @param type enum Qt__ConnectionType
 ///
 QMetaObject__Connection* k_onsole__urlfilter_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Konsole__UrlFilter*
+/// @param signal const char*
+///
+bool k_onsole__urlfilter_disconnect1(void* self, const char* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Konsole__UrlFilter*
+/// @param signal const char*
+/// @param receiver QObject*
+///
+bool k_onsole__urlfilter_disconnect22(void* self, const char* signal, void* receiver);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Konsole__UrlFilter*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_onsole__urlfilter_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Konsole__UrlFilter*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_onsole__urlfilter_disconnect23(void* self, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3398,11 +3671,22 @@ void k_onsole__filterobject_remove_event_filter(void* self, void* obj);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+QMetaObject__Connection* k_onsole__filterobject_connect(void* sender, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_onsole__filterobject_connect(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_onsole__filterobject_connect2(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
@@ -3413,7 +3697,18 @@ QMetaObject__Connection* k_onsole__filterobject_connect(void* sender, void* sign
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_onsole__filterobject_connect2(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_onsole__filterobject_connect3(void* self, void* sender, const char* signal, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_onsole__filterobject_disconnect(void* sender, const char* signal, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3424,7 +3719,24 @@ QMetaObject__Connection* k_onsole__filterobject_connect2(void* self, void* sende
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_onsole__filterobject_disconnect(void* sender, void* signal, void* receiver, void* member);
+bool k_onsole__filterobject_disconnect2(void* sender, void* signal, void* receiver, void* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Konsole__FilterObject*
+///
+bool k_onsole__filterobject_disconnect3(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Konsole__FilterObject*
+/// @param receiver QObject*
+///
+bool k_onsole__filterobject_disconnect4(void* self, void* receiver);
 
 /// Inherited from QObject
 ///
@@ -3432,7 +3744,7 @@ bool k_onsole__filterobject_disconnect(void* sender, void* signal, void* receive
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_onsole__filterobject_disconnect2(void* param1);
+bool k_onsole__filterobject_disconnect5(void* param1);
 
 /// Inherited from QObject
 ///
@@ -3562,12 +3874,24 @@ int32_t k_onsole__filterobject_start_timer23(void* self, int64_t time, int32_t t
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+/// @param param5 enum Qt__ConnectionType
+///
+QMetaObject__Connection* k_onsole__filterobject_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_onsole__filterobject_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_onsole__filterobject_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -3580,6 +3904,46 @@ QMetaObject__Connection* k_onsole__filterobject_connect5(void* sender, void* sig
 /// @param type enum Qt__ConnectionType
 ///
 QMetaObject__Connection* k_onsole__filterobject_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Konsole__FilterObject*
+/// @param signal const char*
+///
+bool k_onsole__filterobject_disconnect1(void* self, const char* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Konsole__FilterObject*
+/// @param signal const char*
+/// @param receiver QObject*
+///
+bool k_onsole__filterobject_disconnect22(void* self, const char* signal, void* receiver);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Konsole__FilterObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_onsole__filterobject_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self Konsole__FilterObject*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_onsole__filterobject_disconnect23(void* self, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

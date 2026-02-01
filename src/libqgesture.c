@@ -176,20 +176,36 @@ void q_gesture_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_gesture_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_gesture_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_gesture_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_gesture_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_gesture_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_gesture_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_gesture_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_gesture_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_gesture_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_gesture_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_gesture_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_gesture_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_gesture_dump_object_tree(void* self) {
@@ -263,12 +279,32 @@ int32_t q_gesture_start_timer23(void* self, int64_t time, int32_t timerType) {
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_gesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_gesture_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_gesture_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_gesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_gesture_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_gesture_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_gesture_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_gesture_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_gesture_destroyed1(void* self, void* param1) {
@@ -616,20 +652,36 @@ void q_pangesture_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_pangesture_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_pangesture_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_pangesture_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_pangesture_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_pangesture_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_pangesture_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_pangesture_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_pangesture_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_pangesture_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_pangesture_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_pangesture_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_pangesture_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_pangesture_dump_object_tree(void* self) {
@@ -703,12 +755,32 @@ int32_t q_pangesture_start_timer23(void* self, int64_t time, int32_t timerType) 
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_pangesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_pangesture_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_pangesture_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_pangesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_pangesture_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_pangesture_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_pangesture_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_pangesture_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_pangesture_destroyed1(void* self, void* param1) {
@@ -1116,20 +1188,36 @@ void q_pinchgesture_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_pinchgesture_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_pinchgesture_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_pinchgesture_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_pinchgesture_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_pinchgesture_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_pinchgesture_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_pinchgesture_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_pinchgesture_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_pinchgesture_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_pinchgesture_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_pinchgesture_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_pinchgesture_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_pinchgesture_dump_object_tree(void* self) {
@@ -1203,12 +1291,32 @@ int32_t q_pinchgesture_start_timer23(void* self, int64_t time, int32_t timerType
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_pinchgesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_pinchgesture_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_pinchgesture_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_pinchgesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_pinchgesture_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_pinchgesture_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_pinchgesture_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_pinchgesture_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_pinchgesture_destroyed1(void* self, void* param1) {
@@ -1544,20 +1652,36 @@ void q_swipegesture_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_swipegesture_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_swipegesture_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_swipegesture_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_swipegesture_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_swipegesture_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_swipegesture_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_swipegesture_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_swipegesture_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_swipegesture_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_swipegesture_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_swipegesture_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_swipegesture_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_swipegesture_dump_object_tree(void* self) {
@@ -1631,12 +1755,32 @@ int32_t q_swipegesture_start_timer23(void* self, int64_t time, int32_t timerType
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_swipegesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_swipegesture_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_swipegesture_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_swipegesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_swipegesture_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_swipegesture_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_swipegesture_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_swipegesture_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_swipegesture_destroyed1(void* self, void* param1) {
@@ -1964,20 +2108,36 @@ void q_tapgesture_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_tapgesture_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_tapgesture_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_tapgesture_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_tapgesture_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_tapgesture_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_tapgesture_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_tapgesture_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_tapgesture_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_tapgesture_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_tapgesture_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_tapgesture_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_tapgesture_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_tapgesture_dump_object_tree(void* self) {
@@ -2051,12 +2211,32 @@ int32_t q_tapgesture_start_timer23(void* self, int64_t time, int32_t timerType) 
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_tapgesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_tapgesture_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_tapgesture_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_tapgesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_tapgesture_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_tapgesture_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_tapgesture_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_tapgesture_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_tapgesture_destroyed1(void* self, void* param1) {
@@ -2392,20 +2572,36 @@ void q_tapandholdgesture_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_tapandholdgesture_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_tapandholdgesture_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_tapandholdgesture_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_tapandholdgesture_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_tapandholdgesture_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_tapandholdgesture_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_tapandholdgesture_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_tapandholdgesture_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_tapandholdgesture_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_tapandholdgesture_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_tapandholdgesture_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_tapandholdgesture_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_tapandholdgesture_dump_object_tree(void* self) {
@@ -2479,12 +2675,32 @@ int32_t q_tapandholdgesture_start_timer23(void* self, int64_t time, int32_t time
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_tapandholdgesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_tapandholdgesture_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_tapandholdgesture_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_tapandholdgesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_tapandholdgesture_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_tapandholdgesture_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_tapandholdgesture_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_tapandholdgesture_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_tapandholdgesture_destroyed1(void* self, void* param1) {

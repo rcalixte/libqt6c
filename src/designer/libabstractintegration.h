@@ -871,11 +871,22 @@ void q_designerintegrationinterface_remove_event_filter(void* self, void* obj);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+QMetaObject__Connection* q_designerintegrationinterface_connect(void* sender, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_designerintegrationinterface_connect(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_designerintegrationinterface_connect2(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
@@ -886,7 +897,18 @@ QMetaObject__Connection* q_designerintegrationinterface_connect(void* sender, vo
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_designerintegrationinterface_connect2(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_designerintegrationinterface_connect3(void* self, void* sender, const char* signal, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_designerintegrationinterface_disconnect(void* sender, const char* signal, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -897,7 +919,24 @@ QMetaObject__Connection* q_designerintegrationinterface_connect2(void* self, voi
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_designerintegrationinterface_disconnect(void* sender, void* signal, void* receiver, void* member);
+bool q_designerintegrationinterface_disconnect2(void* sender, void* signal, void* receiver, void* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QDesignerIntegrationInterface*
+///
+bool q_designerintegrationinterface_disconnect3(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QDesignerIntegrationInterface*
+/// @param receiver QObject*
+///
+bool q_designerintegrationinterface_disconnect4(void* self, void* receiver);
 
 /// Inherited from QObject
 ///
@@ -905,7 +944,7 @@ bool q_designerintegrationinterface_disconnect(void* sender, void* signal, void*
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_designerintegrationinterface_disconnect2(void* param1);
+bool q_designerintegrationinterface_disconnect5(void* param1);
 
 /// Inherited from QObject
 ///
@@ -1035,12 +1074,24 @@ int32_t q_designerintegrationinterface_start_timer23(void* self, int64_t time, i
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+/// @param param5 enum Qt__ConnectionType
+///
+QMetaObject__Connection* q_designerintegrationinterface_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_designerintegrationinterface_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_designerintegrationinterface_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -1053,6 +1104,46 @@ QMetaObject__Connection* q_designerintegrationinterface_connect5(void* sender, v
 /// @param type enum Qt__ConnectionType
 ///
 QMetaObject__Connection* q_designerintegrationinterface_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QDesignerIntegrationInterface*
+/// @param signal const char*
+///
+bool q_designerintegrationinterface_disconnect1(void* self, const char* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QDesignerIntegrationInterface*
+/// @param signal const char*
+/// @param receiver QObject*
+///
+bool q_designerintegrationinterface_disconnect22(void* self, const char* signal, void* receiver);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QDesignerIntegrationInterface*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_designerintegrationinterface_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QDesignerIntegrationInterface*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_designerintegrationinterface_disconnect23(void* self, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2329,11 +2420,22 @@ void q_designerintegration_remove_event_filter(void* self, void* obj);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+QMetaObject__Connection* q_designerintegration_connect(void* sender, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_designerintegration_connect(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_designerintegration_connect2(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
@@ -2344,7 +2446,18 @@ QMetaObject__Connection* q_designerintegration_connect(void* sender, void* signa
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_designerintegration_connect2(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_designerintegration_connect3(void* self, void* sender, const char* signal, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_designerintegration_disconnect(void* sender, const char* signal, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2355,7 +2468,24 @@ QMetaObject__Connection* q_designerintegration_connect2(void* self, void* sender
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_designerintegration_disconnect(void* sender, void* signal, void* receiver, void* member);
+bool q_designerintegration_disconnect2(void* sender, void* signal, void* receiver, void* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QDesignerIntegration*
+///
+bool q_designerintegration_disconnect3(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QDesignerIntegration*
+/// @param receiver QObject*
+///
+bool q_designerintegration_disconnect4(void* self, void* receiver);
 
 /// Inherited from QObject
 ///
@@ -2363,7 +2493,7 @@ bool q_designerintegration_disconnect(void* sender, void* signal, void* receiver
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_designerintegration_disconnect2(void* param1);
+bool q_designerintegration_disconnect5(void* param1);
 
 /// Inherited from QObject
 ///
@@ -2493,12 +2623,24 @@ int32_t q_designerintegration_start_timer23(void* self, int64_t time, int32_t ti
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+/// @param param5 enum Qt__ConnectionType
+///
+QMetaObject__Connection* q_designerintegration_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_designerintegration_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_designerintegration_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -2511,6 +2653,46 @@ QMetaObject__Connection* q_designerintegration_connect5(void* sender, void* sign
 /// @param type enum Qt__ConnectionType
 ///
 QMetaObject__Connection* q_designerintegration_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QDesignerIntegration*
+/// @param signal const char*
+///
+bool q_designerintegration_disconnect1(void* self, const char* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QDesignerIntegration*
+/// @param signal const char*
+/// @param receiver QObject*
+///
+bool q_designerintegration_disconnect22(void* self, const char* signal, void* receiver);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QDesignerIntegration*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_designerintegration_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QDesignerIntegration*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_designerintegration_disconnect23(void* self, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

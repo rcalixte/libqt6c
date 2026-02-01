@@ -383,11 +383,22 @@ void k_twofingertap_remove_event_filter(void* self, void* obj);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+QMetaObject__Connection* k_twofingertap_connect(void* sender, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_twofingertap_connect(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_twofingertap_connect2(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
@@ -398,7 +409,18 @@ QMetaObject__Connection* k_twofingertap_connect(void* sender, void* signal, void
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_twofingertap_connect2(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_twofingertap_connect3(void* self, void* sender, const char* signal, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_twofingertap_disconnect(void* sender, const char* signal, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -409,7 +431,24 @@ QMetaObject__Connection* k_twofingertap_connect2(void* self, void* sender, const
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_twofingertap_disconnect(void* sender, void* signal, void* receiver, void* member);
+bool k_twofingertap_disconnect2(void* sender, void* signal, void* receiver, void* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self KTwoFingerTap*
+///
+bool k_twofingertap_disconnect3(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self KTwoFingerTap*
+/// @param receiver QObject*
+///
+bool k_twofingertap_disconnect4(void* self, void* receiver);
 
 /// Inherited from QObject
 ///
@@ -417,7 +456,7 @@ bool k_twofingertap_disconnect(void* sender, void* signal, void* receiver, void*
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_twofingertap_disconnect2(void* param1);
+bool k_twofingertap_disconnect5(void* param1);
 
 /// Inherited from QObject
 ///
@@ -547,12 +586,24 @@ int32_t k_twofingertap_start_timer23(void* self, int64_t time, int32_t timerType
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+/// @param param5 enum Qt__ConnectionType
+///
+QMetaObject__Connection* k_twofingertap_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_twofingertap_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_twofingertap_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -565,6 +616,46 @@ QMetaObject__Connection* k_twofingertap_connect5(void* sender, void* signal, voi
 /// @param type enum Qt__ConnectionType
 ///
 QMetaObject__Connection* k_twofingertap_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self KTwoFingerTap*
+/// @param signal const char*
+///
+bool k_twofingertap_disconnect1(void* self, const char* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self KTwoFingerTap*
+/// @param signal const char*
+/// @param receiver QObject*
+///
+bool k_twofingertap_disconnect22(void* self, const char* signal, void* receiver);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self KTwoFingerTap*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_twofingertap_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self KTwoFingerTap*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_twofingertap_disconnect23(void* self, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

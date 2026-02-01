@@ -316,20 +316,36 @@ void q_graphicseffect_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_graphicseffect_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_graphicseffect_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_graphicseffect_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_graphicseffect_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_graphicseffect_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_graphicseffect_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_graphicseffect_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_graphicseffect_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_graphicseffect_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_graphicseffect_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_graphicseffect_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_graphicseffect_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_graphicseffect_dump_object_tree(void* self) {
@@ -403,12 +419,32 @@ int32_t q_graphicseffect_start_timer23(void* self, int64_t time, int32_t timerTy
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_graphicseffect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_graphicseffect_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_graphicseffect_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_graphicseffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_graphicseffect_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_graphicseffect_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_graphicseffect_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_graphicseffect_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_graphicseffect_destroyed1(void* self, void* param1) {
@@ -764,20 +800,36 @@ void q_graphicscolorizeeffect_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_graphicscolorizeeffect_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_graphicscolorizeeffect_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_graphicscolorizeeffect_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_graphicscolorizeeffect_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_graphicscolorizeeffect_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_graphicscolorizeeffect_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_graphicscolorizeeffect_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_graphicscolorizeeffect_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_graphicscolorizeeffect_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_graphicscolorizeeffect_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_graphicscolorizeeffect_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_graphicscolorizeeffect_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_graphicscolorizeeffect_dump_object_tree(void* self) {
@@ -851,12 +903,32 @@ int32_t q_graphicscolorizeeffect_start_timer23(void* self, int64_t time, int32_t
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_graphicscolorizeeffect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_graphicscolorizeeffect_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_graphicscolorizeeffect_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_graphicscolorizeeffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_graphicscolorizeeffect_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_graphicscolorizeeffect_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_graphicscolorizeeffect_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_graphicscolorizeeffect_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_graphicscolorizeeffect_destroyed1(void* self, void* param1) {
@@ -1308,20 +1380,36 @@ void q_graphicsblureffect_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_graphicsblureffect_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_graphicsblureffect_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_graphicsblureffect_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_graphicsblureffect_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_graphicsblureffect_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_graphicsblureffect_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_graphicsblureffect_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_graphicsblureffect_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_graphicsblureffect_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_graphicsblureffect_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_graphicsblureffect_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_graphicsblureffect_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_graphicsblureffect_dump_object_tree(void* self) {
@@ -1395,12 +1483,32 @@ int32_t q_graphicsblureffect_start_timer23(void* self, int64_t time, int32_t tim
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_graphicsblureffect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_graphicsblureffect_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_graphicsblureffect_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_graphicsblureffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_graphicsblureffect_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_graphicsblureffect_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_graphicsblureffect_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_graphicsblureffect_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_graphicsblureffect_destroyed1(void* self, void* param1) {
@@ -1880,20 +1988,36 @@ void q_graphicsdropshadoweffect_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_graphicsdropshadoweffect_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_graphicsdropshadoweffect_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_graphicsdropshadoweffect_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_graphicsdropshadoweffect_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_graphicsdropshadoweffect_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_graphicsdropshadoweffect_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_graphicsdropshadoweffect_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_graphicsdropshadoweffect_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_graphicsdropshadoweffect_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_graphicsdropshadoweffect_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_graphicsdropshadoweffect_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_graphicsdropshadoweffect_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_graphicsdropshadoweffect_dump_object_tree(void* self) {
@@ -1967,12 +2091,32 @@ int32_t q_graphicsdropshadoweffect_start_timer23(void* self, int64_t time, int32
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_graphicsdropshadoweffect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_graphicsdropshadoweffect_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_graphicsdropshadoweffect_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_graphicsdropshadoweffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_graphicsdropshadoweffect_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_graphicsdropshadoweffect_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_graphicsdropshadoweffect_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_graphicsdropshadoweffect_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_graphicsdropshadoweffect_destroyed1(void* self, void* param1) {
@@ -2400,20 +2544,36 @@ void q_graphicsopacityeffect_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_graphicsopacityeffect_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_graphicsopacityeffect_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_graphicsopacityeffect_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_graphicsopacityeffect_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_graphicsopacityeffect_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_graphicsopacityeffect_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_graphicsopacityeffect_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_graphicsopacityeffect_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_graphicsopacityeffect_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_graphicsopacityeffect_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_graphicsopacityeffect_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_graphicsopacityeffect_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_graphicsopacityeffect_dump_object_tree(void* self) {
@@ -2487,12 +2647,32 @@ int32_t q_graphicsopacityeffect_start_timer23(void* self, int64_t time, int32_t 
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_graphicsopacityeffect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_graphicsopacityeffect_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_graphicsopacityeffect_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_graphicsopacityeffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_graphicsopacityeffect_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_graphicsopacityeffect_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_graphicsopacityeffect_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_graphicsopacityeffect_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_graphicsopacityeffect_destroyed1(void* self, void* param1) {
