@@ -2081,6 +2081,10 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				}
 			}
 
+			if m.IsFinal {
+				continue
+			}
+
 			// We need to brute force these for now
 			if _, ok := skipFunction[cmdStructName+"_"+mSafeMethodName]; ok {
 				continue
@@ -2788,6 +2792,10 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				}
 			}
 
+			if m.IsFinal {
+				continue
+			}
+
 			// We need to brute force these for now
 			if _, ok := skipFunction[cmdStructName+"_"+mSafeMethodName]; ok {
 				continue
@@ -2897,7 +2905,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			ret.WriteString(returnTypeDecl + " " + cmdMethodName + safeMethodName + "(void* self" + commaParams + cfsParams + ") {\n    " +
 				preamble + returnFunc + "\n}\n\n")
 
-			if !AllowVirtual(m) {
+			if !AllowVirtual(m) || m.IsFinal {
 				continue
 			}
 
