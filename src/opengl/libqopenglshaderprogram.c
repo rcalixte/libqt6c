@@ -199,20 +199,36 @@ void q_openglshader_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_openglshader_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_openglshader_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_openglshader_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_openglshader_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_openglshader_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_openglshader_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_openglshader_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_openglshader_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_openglshader_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_openglshader_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_openglshader_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_openglshader_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_openglshader_dump_object_tree(void* self) {
@@ -286,12 +302,32 @@ int32_t q_openglshader_start_timer23(void* self, int64_t time, int32_t timerType
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_openglshader_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_openglshader_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_openglshader_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_openglshader_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_openglshader_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_openglshader_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_openglshader_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_openglshader_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_openglshader_destroyed1(void* self, void* param1) {
@@ -1109,20 +1145,36 @@ void q_openglshaderprogram_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_openglshaderprogram_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_openglshaderprogram_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_openglshaderprogram_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_openglshaderprogram_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_openglshaderprogram_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_openglshaderprogram_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_openglshaderprogram_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_openglshaderprogram_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_openglshaderprogram_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_openglshaderprogram_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_openglshaderprogram_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_openglshaderprogram_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_openglshaderprogram_dump_object_tree(void* self) {
@@ -1196,12 +1248,32 @@ int32_t q_openglshaderprogram_start_timer23(void* self, int64_t time, int32_t ti
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_openglshaderprogram_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_openglshaderprogram_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_openglshaderprogram_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_openglshaderprogram_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_openglshaderprogram_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_openglshaderprogram_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_openglshaderprogram_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_openglshaderprogram_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_openglshaderprogram_destroyed1(void* self, void* param1) {

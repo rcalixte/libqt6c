@@ -260,6 +260,18 @@ QAction* k_actioncollection_add_action2(void* self, int32_t actionType) {
     return KActionCollection_AddAction2((KActionCollection*)self, actionType);
 }
 
+QAction* k_actioncollection_add_action3(void* self, int32_t actionType, const char* name) {
+    return KActionCollection_AddAction3((KActionCollection*)self, actionType, qstring(name));
+}
+
+QAction* k_actioncollection_add_action4(void* self, int32_t actionType) {
+    return KActionCollection_AddAction4((KActionCollection*)self, actionType);
+}
+
+QAction* k_actioncollection_add_action5(void* self, const char* name) {
+    return KActionCollection_AddAction5((KActionCollection*)self, qstring(name));
+}
+
 QKeySequence* k_actioncollection_default_shortcut(void* action) {
     return KActionCollection_DefaultShortcut((QAction*)action);
 }
@@ -317,6 +329,30 @@ void k_actioncollection_write_settings2(void* self, void* config, bool writeDefa
 
 void k_actioncollection_write_settings3(void* self, void* config, bool writeDefaults, void* oneAction) {
     KActionCollection_WriteSettings3((KActionCollection*)self, (KConfigGroup*)config, writeDefaults, (QAction*)oneAction);
+}
+
+QAction* k_actioncollection_add_action22(void* self, int32_t actionType, void* receiver) {
+    return KActionCollection_AddAction22((KActionCollection*)self, actionType, (QObject*)receiver);
+}
+
+QAction* k_actioncollection_add_action32(void* self, int32_t actionType, void* receiver, const char* member) {
+    return KActionCollection_AddAction32((KActionCollection*)self, actionType, (QObject*)receiver, member);
+}
+
+QAction* k_actioncollection_add_action33(void* self, int32_t actionType, const char* name, void* receiver) {
+    return KActionCollection_AddAction33((KActionCollection*)self, actionType, qstring(name), (QObject*)receiver);
+}
+
+QAction* k_actioncollection_add_action42(void* self, int32_t actionType, const char* name, void* receiver, const char* member) {
+    return KActionCollection_AddAction42((KActionCollection*)self, actionType, qstring(name), (QObject*)receiver, member);
+}
+
+QAction* k_actioncollection_add_action23(void* self, const char* name, void* receiver) {
+    return KActionCollection_AddAction23((KActionCollection*)self, qstring(name), (QObject*)receiver);
+}
+
+QAction* k_actioncollection_add_action34(void* self, const char* name, void* receiver, const char* member) {
+    return KActionCollection_AddAction34((KActionCollection*)self, qstring(name), (QObject*)receiver, member);
 }
 
 const char* k_actioncollection_object_name(void* self) {
@@ -391,20 +427,36 @@ void k_actioncollection_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_actioncollection_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* k_actioncollection_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_actioncollection_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* k_actioncollection_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool k_actioncollection_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* k_actioncollection_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_actioncollection_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool k_actioncollection_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool k_actioncollection_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool k_actioncollection_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool k_actioncollection_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool k_actioncollection_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void k_actioncollection_dump_object_tree(void* self) {
@@ -478,12 +530,32 @@ int32_t k_actioncollection_start_timer23(void* self, int64_t time, int32_t timer
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_actioncollection_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* k_actioncollection_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* k_actioncollection_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* k_actioncollection_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool k_actioncollection_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool k_actioncollection_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool k_actioncollection_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool k_actioncollection_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void k_actioncollection_destroyed1(void* self, void* param1) {

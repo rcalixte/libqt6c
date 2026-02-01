@@ -431,11 +431,22 @@ void k_pagewidgetitem_remove_event_filter(void* self, void* obj);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+QMetaObject__Connection* k_pagewidgetitem_connect(void* sender, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_pagewidgetitem_connect(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_pagewidgetitem_connect2(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
@@ -446,7 +457,18 @@ QMetaObject__Connection* k_pagewidgetitem_connect(void* sender, void* signal, vo
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_pagewidgetitem_connect2(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_pagewidgetitem_connect3(void* self, void* sender, const char* signal, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_pagewidgetitem_disconnect(void* sender, const char* signal, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -457,7 +479,24 @@ QMetaObject__Connection* k_pagewidgetitem_connect2(void* self, void* sender, con
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_pagewidgetitem_disconnect(void* sender, void* signal, void* receiver, void* member);
+bool k_pagewidgetitem_disconnect2(void* sender, void* signal, void* receiver, void* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self KPageWidgetItem*
+///
+bool k_pagewidgetitem_disconnect3(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self KPageWidgetItem*
+/// @param receiver QObject*
+///
+bool k_pagewidgetitem_disconnect4(void* self, void* receiver);
 
 /// Inherited from QObject
 ///
@@ -465,7 +504,7 @@ bool k_pagewidgetitem_disconnect(void* sender, void* signal, void* receiver, voi
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_pagewidgetitem_disconnect2(void* param1);
+bool k_pagewidgetitem_disconnect5(void* param1);
 
 /// Inherited from QObject
 ///
@@ -595,12 +634,24 @@ int32_t k_pagewidgetitem_start_timer23(void* self, int64_t time, int32_t timerTy
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+/// @param param5 enum Qt__ConnectionType
+///
+QMetaObject__Connection* k_pagewidgetitem_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_pagewidgetitem_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_pagewidgetitem_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -613,6 +664,46 @@ QMetaObject__Connection* k_pagewidgetitem_connect5(void* sender, void* signal, v
 /// @param type enum Qt__ConnectionType
 ///
 QMetaObject__Connection* k_pagewidgetitem_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self KPageWidgetItem*
+/// @param signal const char*
+///
+bool k_pagewidgetitem_disconnect1(void* self, const char* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self KPageWidgetItem*
+/// @param signal const char*
+/// @param receiver QObject*
+///
+bool k_pagewidgetitem_disconnect22(void* self, const char* signal, void* receiver);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self KPageWidgetItem*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_pagewidgetitem_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self KPageWidgetItem*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_pagewidgetitem_disconnect23(void* self, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1854,11 +1945,22 @@ void k_pagewidgetmodel_remove_event_filter(void* self, void* obj);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+QMetaObject__Connection* k_pagewidgetmodel_connect(void* sender, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_pagewidgetmodel_connect(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_pagewidgetmodel_connect2(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
@@ -1869,7 +1971,18 @@ QMetaObject__Connection* k_pagewidgetmodel_connect(void* sender, void* signal, v
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_pagewidgetmodel_connect2(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_pagewidgetmodel_connect3(void* self, void* sender, const char* signal, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_pagewidgetmodel_disconnect(void* sender, const char* signal, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1880,7 +1993,24 @@ QMetaObject__Connection* k_pagewidgetmodel_connect2(void* self, void* sender, co
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_pagewidgetmodel_disconnect(void* sender, void* signal, void* receiver, void* member);
+bool k_pagewidgetmodel_disconnect2(void* sender, void* signal, void* receiver, void* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self KPageWidgetModel*
+///
+bool k_pagewidgetmodel_disconnect3(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self KPageWidgetModel*
+/// @param receiver QObject*
+///
+bool k_pagewidgetmodel_disconnect4(void* self, void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1888,7 +2018,7 @@ bool k_pagewidgetmodel_disconnect(void* sender, void* signal, void* receiver, vo
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_pagewidgetmodel_disconnect2(void* param1);
+bool k_pagewidgetmodel_disconnect5(void* param1);
 
 /// Inherited from QObject
 ///
@@ -2010,12 +2140,24 @@ int32_t k_pagewidgetmodel_start_timer23(void* self, int64_t time, int32_t timerT
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+/// @param param5 enum Qt__ConnectionType
+///
+QMetaObject__Connection* k_pagewidgetmodel_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_pagewidgetmodel_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_pagewidgetmodel_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -2028,6 +2170,46 @@ QMetaObject__Connection* k_pagewidgetmodel_connect5(void* sender, void* signal, 
 /// @param type enum Qt__ConnectionType
 ///
 QMetaObject__Connection* k_pagewidgetmodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self KPageWidgetModel*
+/// @param signal const char*
+///
+bool k_pagewidgetmodel_disconnect1(void* self, const char* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self KPageWidgetModel*
+/// @param signal const char*
+/// @param receiver QObject*
+///
+bool k_pagewidgetmodel_disconnect22(void* self, const char* signal, void* receiver);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self KPageWidgetModel*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_pagewidgetmodel_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self KPageWidgetModel*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_pagewidgetmodel_disconnect23(void* self, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

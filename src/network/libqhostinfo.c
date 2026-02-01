@@ -1,4 +1,5 @@
 #include "libqhostaddress.hpp"
+#include "../libqobject.hpp"
 #include "libqhostinfo.hpp"
 #include "libqhostinfo.h"
 
@@ -67,6 +68,10 @@ void q_hostinfo_set_lookup_id(void* self, int id) {
 
 int32_t q_hostinfo_lookup_id(void* self) {
     return QHostInfo_LookupId((QHostInfo*)self);
+}
+
+int32_t q_hostinfo_lookup_host(const char* name, void* receiver, const char* member) {
+    return QHostInfo_LookupHost(qstring(name), (QObject*)receiver, member);
 }
 
 void q_hostinfo_abort_host_lookup(int lookupId) {

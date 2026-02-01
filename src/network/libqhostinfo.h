@@ -120,6 +120,14 @@ void q_hostinfo_set_lookup_id(void* self, int id);
 ///
 int32_t q_hostinfo_lookup_id(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qhostinfo.html#lookupHost)
+///
+/// @param name const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+int32_t q_hostinfo_lookup_host(const char* name, void* receiver, const char* member);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostinfo.html#abortHostLookup)
 ///
 /// @param lookupId int

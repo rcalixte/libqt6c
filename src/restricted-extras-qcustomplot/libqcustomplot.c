@@ -1635,20 +1635,36 @@ void q_cplayer_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cplayer_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cplayer_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cplayer_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cplayer_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cplayer_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cplayer_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cplayer_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cplayer_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cplayer_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cplayer_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cplayer_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cplayer_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cplayer_dump_object_tree(void* self) {
@@ -1722,12 +1738,32 @@ int32_t q_cplayer_start_timer23(void* self, int64_t time, int32_t timerType) {
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cplayer_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cplayer_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cplayer_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cplayer_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cplayer_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cplayer_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cplayer_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cplayer_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cplayer_destroyed1(void* self, void* param1) {
@@ -2271,20 +2307,36 @@ void q_cplayerable_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cplayerable_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cplayerable_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cplayerable_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cplayerable_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cplayerable_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cplayerable_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cplayerable_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cplayerable_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cplayerable_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cplayerable_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cplayerable_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cplayerable_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cplayerable_dump_object_tree(void* self) {
@@ -2358,12 +2410,32 @@ int32_t q_cplayerable_start_timer23(void* self, int64_t time, int32_t timerType)
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cplayerable_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cplayerable_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cplayerable_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cplayerable_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cplayerable_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cplayerable_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cplayerable_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cplayerable_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cplayerable_destroyed1(void* self, void* param1) {
@@ -3156,20 +3228,36 @@ void q_cpselectionrect_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpselectionrect_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpselectionrect_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpselectionrect_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpselectionrect_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpselectionrect_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpselectionrect_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpselectionrect_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpselectionrect_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpselectionrect_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpselectionrect_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpselectionrect_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpselectionrect_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpselectionrect_dump_object_tree(void* self) {
@@ -3243,12 +3331,32 @@ int32_t q_cpselectionrect_start_timer23(void* self, int64_t time, int32_t timerT
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpselectionrect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpselectionrect_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpselectionrect_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpselectionrect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpselectionrect_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpselectionrect_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpselectionrect_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpselectionrect_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpselectionrect_destroyed1(void* self, void* param1) {
@@ -3761,20 +3869,36 @@ void q_cpmargingroup_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpmargingroup_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpmargingroup_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpmargingroup_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpmargingroup_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpmargingroup_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpmargingroup_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpmargingroup_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpmargingroup_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpmargingroup_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpmargingroup_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpmargingroup_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpmargingroup_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpmargingroup_dump_object_tree(void* self) {
@@ -3848,12 +3972,32 @@ int32_t q_cpmargingroup_start_timer23(void* self, int64_t time, int32_t timerTyp
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpmargingroup_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpmargingroup_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpmargingroup_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpmargingroup_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpmargingroup_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpmargingroup_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpmargingroup_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpmargingroup_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpmargingroup_destroyed1(void* self, void* param1) {
@@ -4401,20 +4545,36 @@ void q_cplayoutelement_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cplayoutelement_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cplayoutelement_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cplayoutelement_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cplayoutelement_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cplayoutelement_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cplayoutelement_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cplayoutelement_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cplayoutelement_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cplayoutelement_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cplayoutelement_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cplayoutelement_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cplayoutelement_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cplayoutelement_dump_object_tree(void* self) {
@@ -4488,12 +4648,32 @@ int32_t q_cplayoutelement_start_timer23(void* self, int64_t time, int32_t timerT
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cplayoutelement_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cplayoutelement_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cplayoutelement_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cplayoutelement_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cplayoutelement_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cplayoutelement_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cplayoutelement_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cplayoutelement_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cplayoutelement_destroyed1(void* self, void* param1) {
@@ -5231,20 +5411,36 @@ void q_cplayout_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cplayout_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cplayout_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cplayout_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cplayout_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cplayout_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cplayout_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cplayout_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cplayout_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cplayout_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cplayout_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cplayout_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cplayout_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cplayout_dump_object_tree(void* self) {
@@ -5318,12 +5514,32 @@ int32_t q_cplayout_start_timer23(void* self, int64_t time, int32_t timerType) {
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cplayout_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cplayout_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cplayout_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cplayout_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cplayout_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cplayout_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cplayout_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cplayout_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cplayout_destroyed1(void* self, void* param1) {
@@ -6249,20 +6465,36 @@ void q_cplayoutgrid_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cplayoutgrid_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cplayoutgrid_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cplayoutgrid_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cplayoutgrid_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cplayoutgrid_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cplayoutgrid_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cplayoutgrid_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cplayoutgrid_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cplayoutgrid_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cplayoutgrid_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cplayoutgrid_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cplayoutgrid_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cplayoutgrid_dump_object_tree(void* self) {
@@ -6336,12 +6568,32 @@ int32_t q_cplayoutgrid_start_timer23(void* self, int64_t time, int32_t timerType
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cplayoutgrid_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cplayoutgrid_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cplayoutgrid_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cplayoutgrid_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cplayoutgrid_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cplayoutgrid_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cplayoutgrid_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cplayoutgrid_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cplayoutgrid_destroyed1(void* self, void* param1) {
@@ -7181,20 +7433,36 @@ void q_cplayoutinset_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cplayoutinset_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cplayoutinset_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cplayoutinset_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cplayoutinset_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cplayoutinset_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cplayoutinset_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cplayoutinset_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cplayoutinset_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cplayoutinset_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cplayoutinset_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cplayoutinset_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cplayoutinset_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cplayoutinset_dump_object_tree(void* self) {
@@ -7268,12 +7536,32 @@ int32_t q_cplayoutinset_start_timer23(void* self, int64_t time, int32_t timerTyp
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cplayoutinset_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cplayoutinset_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cplayoutinset_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cplayoutinset_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cplayoutinset_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cplayoutinset_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cplayoutinset_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cplayoutinset_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cplayoutinset_destroyed1(void* self, void* param1) {
@@ -10066,20 +10354,36 @@ void q_cpgrid_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpgrid_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpgrid_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpgrid_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpgrid_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpgrid_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpgrid_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpgrid_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpgrid_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpgrid_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpgrid_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpgrid_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpgrid_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpgrid_dump_object_tree(void* self) {
@@ -10153,12 +10457,32 @@ int32_t q_cpgrid_start_timer23(void* self, int64_t time, int32_t timerType) {
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpgrid_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpgrid_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpgrid_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpgrid_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpgrid_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpgrid_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpgrid_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpgrid_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpgrid_destroyed1(void* self, void* param1) {
@@ -11363,20 +11687,36 @@ void q_cpaxis_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpaxis_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpaxis_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpaxis_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpaxis_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpaxis_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpaxis_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpaxis_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpaxis_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpaxis_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpaxis_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpaxis_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpaxis_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpaxis_dump_object_tree(void* self) {
@@ -11450,12 +11790,32 @@ int32_t q_cpaxis_start_timer23(void* self, int64_t time, int32_t timerType) {
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpaxis_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpaxis_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpaxis_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpaxis_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpaxis_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpaxis_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpaxis_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpaxis_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpaxis_destroyed1(void* self, void* param1) {
@@ -12402,20 +12762,36 @@ void q_cpabstractplottable_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpabstractplottable_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpabstractplottable_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpabstractplottable_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpabstractplottable_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpabstractplottable_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpabstractplottable_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpabstractplottable_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpabstractplottable_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpabstractplottable_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpabstractplottable_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpabstractplottable_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpabstractplottable_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpabstractplottable_dump_object_tree(void* self) {
@@ -12489,12 +12865,32 @@ int32_t q_cpabstractplottable_start_timer23(void* self, int64_t time, int32_t ti
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpabstractplottable_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpabstractplottable_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpabstractplottable_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpabstractplottable_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpabstractplottable_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpabstractplottable_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpabstractplottable_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpabstractplottable_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpabstractplottable_destroyed1(void* self, void* param1) {
@@ -13430,20 +13826,36 @@ void q_cpabstractitem_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpabstractitem_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpabstractitem_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpabstractitem_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpabstractitem_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpabstractitem_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpabstractitem_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpabstractitem_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpabstractitem_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpabstractitem_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpabstractitem_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpabstractitem_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpabstractitem_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpabstractitem_dump_object_tree(void* self) {
@@ -13517,12 +13929,32 @@ int32_t q_cpabstractitem_start_timer23(void* self, int64_t time, int32_t timerTy
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpabstractitem_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpabstractitem_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpabstractitem_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpabstractitem_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpabstractitem_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpabstractitem_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpabstractitem_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpabstractitem_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpabstractitem_destroyed1(void* self, void* param1) {
@@ -16154,20 +16586,36 @@ void q_customplot_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_customplot_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_customplot_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_customplot_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_customplot_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_customplot_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_customplot_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_customplot_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_customplot_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_customplot_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_customplot_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_customplot_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_customplot_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_customplot_dump_object_tree(void* self) {
@@ -16241,12 +16689,32 @@ int32_t q_customplot_start_timer23(void* self, int64_t time, int32_t timerType) 
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_customplot_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_customplot_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_customplot_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_customplot_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_customplot_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_customplot_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_customplot_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_customplot_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_customplot_destroyed1(void* self, void* param1) {
@@ -17928,20 +18396,36 @@ void q_cpaxisrect_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpaxisrect_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpaxisrect_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpaxisrect_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpaxisrect_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpaxisrect_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpaxisrect_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpaxisrect_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpaxisrect_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpaxisrect_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpaxisrect_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpaxisrect_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpaxisrect_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpaxisrect_dump_object_tree(void* self) {
@@ -18015,12 +18499,32 @@ int32_t q_cpaxisrect_start_timer23(void* self, int64_t time, int32_t timerType) 
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpaxisrect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpaxisrect_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpaxisrect_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpaxisrect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpaxisrect_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpaxisrect_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpaxisrect_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpaxisrect_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpaxisrect_destroyed1(void* self, void* param1) {
@@ -18750,20 +19254,36 @@ void q_cpabstractlegenditem_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpabstractlegenditem_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpabstractlegenditem_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpabstractlegenditem_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpabstractlegenditem_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpabstractlegenditem_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpabstractlegenditem_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpabstractlegenditem_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpabstractlegenditem_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpabstractlegenditem_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpabstractlegenditem_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpabstractlegenditem_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpabstractlegenditem_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpabstractlegenditem_dump_object_tree(void* self) {
@@ -18837,12 +19357,32 @@ int32_t q_cpabstractlegenditem_start_timer23(void* self, int64_t time, int32_t t
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpabstractlegenditem_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpabstractlegenditem_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpabstractlegenditem_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpabstractlegenditem_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpabstractlegenditem_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpabstractlegenditem_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpabstractlegenditem_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpabstractlegenditem_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpabstractlegenditem_destroyed1(void* self, void* param1) {
@@ -19590,20 +20130,36 @@ void q_cpplottablelegenditem_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpplottablelegenditem_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpplottablelegenditem_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpplottablelegenditem_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpplottablelegenditem_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpplottablelegenditem_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpplottablelegenditem_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpplottablelegenditem_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpplottablelegenditem_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpplottablelegenditem_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpplottablelegenditem_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpplottablelegenditem_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpplottablelegenditem_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpplottablelegenditem_dump_object_tree(void* self) {
@@ -19677,12 +20233,32 @@ int32_t q_cpplottablelegenditem_start_timer23(void* self, int64_t time, int32_t 
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpplottablelegenditem_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpplottablelegenditem_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpplottablelegenditem_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpplottablelegenditem_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpplottablelegenditem_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpplottablelegenditem_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpplottablelegenditem_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpplottablelegenditem_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpplottablelegenditem_destroyed1(void* self, void* param1) {
@@ -20757,20 +21333,36 @@ void q_cplegend_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cplegend_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cplegend_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cplegend_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cplegend_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cplegend_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cplegend_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cplegend_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cplegend_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cplegend_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cplegend_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cplegend_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cplegend_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cplegend_dump_object_tree(void* self) {
@@ -20844,12 +21436,32 @@ int32_t q_cplegend_start_timer23(void* self, int64_t time, int32_t timerType) {
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cplegend_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cplegend_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cplegend_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cplegend_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cplegend_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cplegend_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cplegend_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cplegend_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cplegend_destroyed1(void* self, void* param1) {
@@ -21870,20 +22482,36 @@ void q_cptextelement_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cptextelement_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cptextelement_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cptextelement_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cptextelement_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cptextelement_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cptextelement_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cptextelement_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cptextelement_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cptextelement_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cptextelement_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cptextelement_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cptextelement_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cptextelement_dump_object_tree(void* self) {
@@ -21957,12 +22585,32 @@ int32_t q_cptextelement_start_timer23(void* self, int64_t time, int32_t timerTyp
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cptextelement_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cptextelement_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cptextelement_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cptextelement_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cptextelement_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cptextelement_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cptextelement_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cptextelement_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cptextelement_destroyed1(void* self, void* param1) {
@@ -22718,20 +23366,36 @@ void q_cpcolorscale_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpcolorscale_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpcolorscale_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpcolorscale_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpcolorscale_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpcolorscale_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpcolorscale_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpcolorscale_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpcolorscale_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpcolorscale_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpcolorscale_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpcolorscale_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpcolorscale_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpcolorscale_dump_object_tree(void* self) {
@@ -22805,12 +23469,32 @@ int32_t q_cpcolorscale_start_timer23(void* self, int64_t time, int32_t timerType
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpcolorscale_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpcolorscale_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpcolorscale_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpcolorscale_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpcolorscale_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpcolorscale_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpcolorscale_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpcolorscale_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpcolorscale_destroyed1(void* self, void* param1) {
@@ -23943,20 +24627,36 @@ void q_cpgraph_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpgraph_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpgraph_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpgraph_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpgraph_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpgraph_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpgraph_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpgraph_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpgraph_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpgraph_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpgraph_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpgraph_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpgraph_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpgraph_dump_object_tree(void* self) {
@@ -24030,12 +24730,32 @@ int32_t q_cpgraph_start_timer23(void* self, int64_t time, int32_t timerType) {
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpgraph_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpgraph_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpgraph_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpgraph_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpgraph_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpgraph_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpgraph_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpgraph_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpgraph_destroyed1(void* self, void* param1) {
@@ -25184,20 +25904,36 @@ void q_cpcurve_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpcurve_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpcurve_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpcurve_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpcurve_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpcurve_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpcurve_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpcurve_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpcurve_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpcurve_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpcurve_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpcurve_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpcurve_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpcurve_dump_object_tree(void* self) {
@@ -25271,12 +26007,32 @@ int32_t q_cpcurve_start_timer23(void* self, int64_t time, int32_t timerType) {
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpcurve_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpcurve_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpcurve_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpcurve_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpcurve_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpcurve_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpcurve_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpcurve_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpcurve_destroyed1(void* self, void* param1) {
@@ -25997,20 +26753,36 @@ void q_cpbarsgroup_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpbarsgroup_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpbarsgroup_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpbarsgroup_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpbarsgroup_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpbarsgroup_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpbarsgroup_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpbarsgroup_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpbarsgroup_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpbarsgroup_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpbarsgroup_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpbarsgroup_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpbarsgroup_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpbarsgroup_dump_object_tree(void* self) {
@@ -26084,12 +26856,32 @@ int32_t q_cpbarsgroup_start_timer23(void* self, int64_t time, int32_t timerType)
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpbarsgroup_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpbarsgroup_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpbarsgroup_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpbarsgroup_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpbarsgroup_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpbarsgroup_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpbarsgroup_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpbarsgroup_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpbarsgroup_destroyed1(void* self, void* param1) {
@@ -26864,20 +27656,36 @@ void q_cpbars_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpbars_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpbars_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpbars_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpbars_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpbars_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpbars_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpbars_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpbars_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpbars_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpbars_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpbars_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpbars_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpbars_dump_object_tree(void* self) {
@@ -26951,12 +27759,32 @@ int32_t q_cpbars_start_timer23(void* self, int64_t time, int32_t timerType) {
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpbars_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpbars_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpbars_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpbars_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpbars_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpbars_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpbars_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpbars_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpbars_destroyed1(void* self, void* param1) {
@@ -28016,20 +28844,36 @@ void q_cpstatisticalbox_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpstatisticalbox_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpstatisticalbox_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpstatisticalbox_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpstatisticalbox_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpstatisticalbox_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpstatisticalbox_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpstatisticalbox_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpstatisticalbox_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpstatisticalbox_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpstatisticalbox_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpstatisticalbox_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpstatisticalbox_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpstatisticalbox_dump_object_tree(void* self) {
@@ -28103,12 +28947,32 @@ int32_t q_cpstatisticalbox_start_timer23(void* self, int64_t time, int32_t timer
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpstatisticalbox_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpstatisticalbox_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpstatisticalbox_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpstatisticalbox_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpstatisticalbox_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpstatisticalbox_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpstatisticalbox_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpstatisticalbox_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpstatisticalbox_destroyed1(void* self, void* param1) {
@@ -29215,20 +30079,36 @@ void q_cpcolormap_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpcolormap_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpcolormap_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpcolormap_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpcolormap_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpcolormap_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpcolormap_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpcolormap_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpcolormap_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpcolormap_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpcolormap_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpcolormap_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpcolormap_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpcolormap_dump_object_tree(void* self) {
@@ -29302,12 +30182,32 @@ int32_t q_cpcolormap_start_timer23(void* self, int64_t time, int32_t timerType) 
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpcolormap_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpcolormap_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpcolormap_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpcolormap_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpcolormap_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpcolormap_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpcolormap_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpcolormap_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpcolormap_destroyed1(void* self, void* param1) {
@@ -30282,20 +31182,36 @@ void q_cpfinancial_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpfinancial_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpfinancial_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpfinancial_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpfinancial_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpfinancial_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpfinancial_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpfinancial_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpfinancial_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpfinancial_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpfinancial_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpfinancial_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpfinancial_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpfinancial_dump_object_tree(void* self) {
@@ -30369,12 +31285,32 @@ int32_t q_cpfinancial_start_timer23(void* self, int64_t time, int32_t timerType)
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpfinancial_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpfinancial_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpfinancial_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpfinancial_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpfinancial_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpfinancial_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpfinancial_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpfinancial_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpfinancial_destroyed1(void* self, void* param1) {
@@ -31525,20 +32461,36 @@ void q_cperrorbars_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cperrorbars_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cperrorbars_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cperrorbars_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cperrorbars_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cperrorbars_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cperrorbars_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cperrorbars_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cperrorbars_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cperrorbars_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cperrorbars_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cperrorbars_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cperrorbars_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cperrorbars_dump_object_tree(void* self) {
@@ -31612,12 +32564,32 @@ int32_t q_cperrorbars_start_timer23(void* self, int64_t time, int32_t timerType)
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cperrorbars_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cperrorbars_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cperrorbars_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cperrorbars_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cperrorbars_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cperrorbars_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cperrorbars_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cperrorbars_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cperrorbars_destroyed1(void* self, void* param1) {
@@ -32299,20 +33271,36 @@ void q_cpitemstraightline_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpitemstraightline_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpitemstraightline_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpitemstraightline_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpitemstraightline_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpitemstraightline_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpitemstraightline_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpitemstraightline_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpitemstraightline_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpitemstraightline_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpitemstraightline_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpitemstraightline_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpitemstraightline_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpitemstraightline_dump_object_tree(void* self) {
@@ -32386,12 +33374,32 @@ int32_t q_cpitemstraightline_start_timer23(void* self, int64_t time, int32_t tim
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpitemstraightline_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpitemstraightline_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpitemstraightline_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpitemstraightline_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpitemstraightline_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpitemstraightline_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpitemstraightline_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpitemstraightline_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpitemstraightline_destroyed1(void* self, void* param1) {
@@ -33109,20 +34117,36 @@ void q_cpitemline_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpitemline_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpitemline_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpitemline_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpitemline_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpitemline_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpitemline_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpitemline_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpitemline_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpitemline_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpitemline_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpitemline_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpitemline_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpitemline_dump_object_tree(void* self) {
@@ -33196,12 +34220,32 @@ int32_t q_cpitemline_start_timer23(void* self, int64_t time, int32_t timerType) 
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpitemline_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpitemline_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpitemline_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpitemline_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpitemline_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpitemline_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpitemline_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpitemline_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpitemline_destroyed1(void* self, void* param1) {
@@ -33915,20 +34959,36 @@ void q_cpitemcurve_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpitemcurve_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpitemcurve_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpitemcurve_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpitemcurve_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpitemcurve_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpitemcurve_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpitemcurve_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpitemcurve_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpitemcurve_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpitemcurve_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpitemcurve_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpitemcurve_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpitemcurve_dump_object_tree(void* self) {
@@ -34002,12 +35062,32 @@ int32_t q_cpitemcurve_start_timer23(void* self, int64_t time, int32_t timerType)
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpitemcurve_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpitemcurve_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpitemcurve_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpitemcurve_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpitemcurve_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpitemcurve_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpitemcurve_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpitemcurve_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpitemcurve_destroyed1(void* self, void* param1) {
@@ -34761,20 +35841,36 @@ void q_cpitemrect_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpitemrect_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpitemrect_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpitemrect_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpitemrect_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpitemrect_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpitemrect_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpitemrect_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpitemrect_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpitemrect_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpitemrect_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpitemrect_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpitemrect_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpitemrect_dump_object_tree(void* self) {
@@ -34848,12 +35944,32 @@ int32_t q_cpitemrect_start_timer23(void* self, int64_t time, int32_t timerType) 
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpitemrect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpitemrect_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpitemrect_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpitemrect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpitemrect_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpitemrect_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpitemrect_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpitemrect_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpitemrect_destroyed1(void* self, void* param1) {
@@ -35706,20 +36822,36 @@ void q_cpitemtext_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpitemtext_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpitemtext_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpitemtext_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpitemtext_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpitemtext_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpitemtext_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpitemtext_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpitemtext_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpitemtext_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpitemtext_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpitemtext_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpitemtext_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpitemtext_dump_object_tree(void* self) {
@@ -35793,12 +36925,32 @@ int32_t q_cpitemtext_start_timer23(void* self, int64_t time, int32_t timerType) 
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpitemtext_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpitemtext_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpitemtext_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpitemtext_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpitemtext_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpitemtext_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpitemtext_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpitemtext_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpitemtext_destroyed1(void* self, void* param1) {
@@ -36552,20 +37704,36 @@ void q_cpitemellipse_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpitemellipse_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpitemellipse_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpitemellipse_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpitemellipse_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpitemellipse_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpitemellipse_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpitemellipse_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpitemellipse_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpitemellipse_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpitemellipse_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpitemellipse_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpitemellipse_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpitemellipse_dump_object_tree(void* self) {
@@ -36639,12 +37807,32 @@ int32_t q_cpitemellipse_start_timer23(void* self, int64_t time, int32_t timerTyp
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpitemellipse_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpitemellipse_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpitemellipse_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpitemellipse_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpitemellipse_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpitemellipse_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpitemellipse_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpitemellipse_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpitemellipse_destroyed1(void* self, void* param1) {
@@ -37474,20 +38662,36 @@ void q_cpitempixmap_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpitempixmap_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpitempixmap_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpitempixmap_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpitempixmap_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpitempixmap_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpitempixmap_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpitempixmap_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpitempixmap_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpitempixmap_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpitempixmap_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpitempixmap_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpitempixmap_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpitempixmap_dump_object_tree(void* self) {
@@ -37561,12 +38765,32 @@ int32_t q_cpitempixmap_start_timer23(void* self, int64_t time, int32_t timerType
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpitempixmap_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpitempixmap_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpitempixmap_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpitempixmap_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpitempixmap_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpitempixmap_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpitempixmap_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpitempixmap_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpitempixmap_destroyed1(void* self, void* param1) {
@@ -38308,20 +39532,36 @@ void q_cpitemtracer_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpitemtracer_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpitemtracer_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpitemtracer_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpitemtracer_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpitemtracer_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpitemtracer_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpitemtracer_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpitemtracer_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpitemtracer_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpitemtracer_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpitemtracer_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpitemtracer_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpitemtracer_dump_object_tree(void* self) {
@@ -38395,12 +39635,32 @@ int32_t q_cpitemtracer_start_timer23(void* self, int64_t time, int32_t timerType
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpitemtracer_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpitemtracer_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpitemtracer_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpitemtracer_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpitemtracer_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpitemtracer_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpitemtracer_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpitemtracer_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpitemtracer_destroyed1(void* self, void* param1) {
@@ -39122,20 +40382,36 @@ void q_cpitembracket_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cpitembracket_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cpitembracket_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cpitembracket_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cpitembracket_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cpitembracket_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cpitembracket_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cpitembracket_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cpitembracket_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cpitembracket_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cpitembracket_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cpitembracket_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cpitembracket_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cpitembracket_dump_object_tree(void* self) {
@@ -39209,12 +40485,32 @@ int32_t q_cpitembracket_start_timer23(void* self, int64_t time, int32_t timerTyp
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cpitembracket_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cpitembracket_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cpitembracket_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cpitembracket_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cpitembracket_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cpitembracket_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cpitembracket_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cpitembracket_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cpitembracket_destroyed1(void* self, void* param1) {
@@ -40425,20 +41721,36 @@ void q_cppolaraxisradial_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cppolaraxisradial_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cppolaraxisradial_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cppolaraxisradial_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cppolaraxisradial_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cppolaraxisradial_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cppolaraxisradial_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cppolaraxisradial_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cppolaraxisradial_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cppolaraxisradial_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cppolaraxisradial_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cppolaraxisradial_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cppolaraxisradial_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cppolaraxisradial_dump_object_tree(void* self) {
@@ -40512,12 +41824,32 @@ int32_t q_cppolaraxisradial_start_timer23(void* self, int64_t time, int32_t time
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cppolaraxisradial_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cppolaraxisradial_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cppolaraxisradial_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cppolaraxisradial_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cppolaraxisradial_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cppolaraxisradial_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cppolaraxisradial_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cppolaraxisradial_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cppolaraxisradial_destroyed1(void* self, void* param1) {
@@ -41808,20 +43140,36 @@ void q_cppolaraxisangular_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cppolaraxisangular_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cppolaraxisangular_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cppolaraxisangular_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cppolaraxisangular_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cppolaraxisangular_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cppolaraxisangular_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cppolaraxisangular_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cppolaraxisangular_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cppolaraxisangular_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cppolaraxisangular_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cppolaraxisangular_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cppolaraxisangular_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cppolaraxisangular_dump_object_tree(void* self) {
@@ -41895,12 +43243,32 @@ int32_t q_cppolaraxisangular_start_timer23(void* self, int64_t time, int32_t tim
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cppolaraxisangular_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cppolaraxisangular_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cppolaraxisangular_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cppolaraxisangular_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cppolaraxisangular_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cppolaraxisangular_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cppolaraxisangular_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cppolaraxisangular_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cppolaraxisangular_destroyed1(void* self, void* param1) {
@@ -42528,20 +43896,36 @@ void q_cppolargrid_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cppolargrid_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cppolargrid_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cppolargrid_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cppolargrid_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cppolargrid_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cppolargrid_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cppolargrid_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cppolargrid_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cppolargrid_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cppolargrid_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cppolargrid_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cppolargrid_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cppolargrid_dump_object_tree(void* self) {
@@ -42615,12 +43999,32 @@ int32_t q_cppolargrid_start_timer23(void* self, int64_t time, int32_t timerType)
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cppolargrid_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cppolargrid_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cppolargrid_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cppolargrid_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cppolargrid_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cppolargrid_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cppolargrid_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cppolargrid_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cppolargrid_destroyed1(void* self, void* param1) {
@@ -43354,20 +44758,36 @@ void q_cppolarlegenditem_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cppolarlegenditem_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cppolarlegenditem_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cppolarlegenditem_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cppolarlegenditem_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cppolarlegenditem_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cppolarlegenditem_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cppolarlegenditem_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cppolarlegenditem_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cppolarlegenditem_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cppolarlegenditem_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cppolarlegenditem_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cppolarlegenditem_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cppolarlegenditem_dump_object_tree(void* self) {
@@ -43441,12 +44861,32 @@ int32_t q_cppolarlegenditem_start_timer23(void* self, int64_t time, int32_t time
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cppolarlegenditem_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cppolarlegenditem_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cppolarlegenditem_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cppolarlegenditem_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cppolarlegenditem_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cppolarlegenditem_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cppolarlegenditem_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cppolarlegenditem_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cppolarlegenditem_destroyed1(void* self, void* param1) {
@@ -44493,20 +45933,36 @@ void q_cppolargraph_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_cppolargraph_connect(void* sender, void* signal, void* receiver, void* method) {
-    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+QMetaObject__Connection* q_cppolargraph_connect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_cppolargraph_connect2(void* self, void* sender, const char* signal, const char* member) {
-    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+QMetaObject__Connection* q_cppolargraph_connect2(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-bool q_cppolargraph_disconnect(void* sender, void* signal, void* receiver, void* member) {
-    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+QMetaObject__Connection* q_cppolargraph_connect3(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_cppolargraph_disconnect2(void* param1) {
-    return QObject_Disconnect2((QMetaObject__Connection*)param1);
+bool q_cppolargraph_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
+}
+
+bool q_cppolargraph_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+bool q_cppolargraph_disconnect3(void* self) {
+    return QObject_Disconnect3((QObject*)self);
+}
+
+bool q_cppolargraph_disconnect4(void* self, void* receiver) {
+    return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
+}
+
+bool q_cppolargraph_disconnect5(void* param1) {
+    return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
 void q_cppolargraph_dump_object_tree(void* self) {
@@ -44580,12 +46036,32 @@ int32_t q_cppolargraph_start_timer23(void* self, int64_t time, int32_t timerType
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_cppolargraph_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
+QMetaObject__Connection* q_cppolargraph_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+    return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
+}
+
+QMetaObject__Connection* q_cppolargraph_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
 QMetaObject__Connection* q_cppolargraph_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
+}
+
+bool q_cppolargraph_disconnect1(void* self, const char* signal) {
+    return QObject_Disconnect1((QObject*)self, signal);
+}
+
+bool q_cppolargraph_disconnect22(void* self, const char* signal, void* receiver) {
+    return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
+}
+
+bool q_cppolargraph_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+    return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
+}
+
+bool q_cppolargraph_disconnect23(void* self, void* receiver, const char* member) {
+    return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
 void q_cppolargraph_destroyed1(void* self, void* param1) {

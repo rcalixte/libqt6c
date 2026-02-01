@@ -964,7 +964,6 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 			retExpr, cleanupType = emitAssignCppToCabi(indent+"\t"+namePrefix+"_karr["+namePrefix+"_ctr] = ", kType, namePrefix+"_itr->first")
 			afterCall += retExpr
 
-			valueCleanupType = NoFree
 			retExpr, valueCleanupType = emitAssignCppToCabi(indent+"\t"+namePrefix+"_varr["+namePrefix+"_ctr] = ", vType, namePrefix+"_itr->second")
 			afterCall += retExpr
 			afterCall += indent + "\t" + namePrefix + "_ctr++;\n"
@@ -1026,7 +1025,7 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 			retExpr, cleanupType = emitAssignCppToCabi(indent+"*"+namePrefix+"_first = ", kType, namePrefix+"_ret.first")
 			afterCall += retExpr
 
-			valueCleanupType := NoFree
+			var valueCleanupType CleanupType
 			retExpr, valueCleanupType = emitAssignCppToCabi(indent+"*"+namePrefix+"_second = ", vType, namePrefix+"_ret.second")
 			afterCall += retExpr
 
@@ -1324,15 +1323,15 @@ var (
 		"QHostAddress_IsInSubnet2":              {}, // linker error
 	}
 
-	cTypes = map[string]struct{}{
-		"char":          {},
-		"double":        {},
-		"float":         {},
-		"int":           {},
-		"long long":     {},
-		"uint16_t":      {},
-		"unsigned char": {},
-		"unsigned int":  {},
+	cTypes = []string{
+		"char",
+		"double",
+		"float",
+		"int",
+		"long long",
+		"uint16_t",
+		"unsigned char",
+		"unsigned int",
 	}
 )
 
@@ -1386,6 +1385,10 @@ func emitVirtualBindingHeader(src *CppParsedHeader, packageName string) (string,
 			virtualMethods = append(virtualMethods, protectedMethods...)
 
 			for _, m := range virtualMethods {
+				if m.IsFinal {
+					continue
+				}
+
 				var showHiddenParams bool
 				baseName := methodPrefixName + "_" + m.SafeMethodName()
 				if _, ok := seenMethodVariants[baseName]; ok {
@@ -1491,6 +1494,10 @@ func emitVirtualBindingHeader(src *CppParsedHeader, packageName string) (string,
 			seenVirtuals := map[string]bool{}
 
 			for _, m := range virtualMethods {
+				if m.IsFinal {
+					continue
+				}
+
 				var showHiddenParams bool
 				baseName := methodPrefixName + "_" + m.SafeMethodName()
 				if b, ok := seenVirtuals[m.MethodName]; ok && b {
@@ -1639,16 +1646,6 @@ extern "C" {
 
 `)
 
-	// We need this macro for QObjectData::dynamicMetaObject for Qt 6.9
-	if srcFilename == "qobject.h" {
-		ret.WriteString("// Based on the macro from Qt (LGPLv3), see https://www.qt.io/qt-licensing/\n" +
-			"// Macro is trivial and used here under fair use\n" +
-			"// Usage does not imply derivation\n" +
-			"#ifndef QT_VERSION_CHECK\n" +
-			"#define QT_VERSION_CHECK(major, minor, patch) ((major<<16)|(minor<<8)|(patch))\n" +
-			"#endif\n\n")
-	}
-
 	foundTypesList := getReferencedTypes(src, qtextradefs)
 
 	ret.WriteString("#ifdef __cplusplus\n")
@@ -1693,7 +1690,7 @@ extern "C" {
 		fType = strings.TrimSuffix(fType, "*")
 		fType = strings.TrimPrefix(fType, "const ")
 
-		if _, ok := cTypes[fType]; ok {
+		if slices.Contains(cTypes, fType) {
 			continue
 		}
 
@@ -1891,6 +1888,11 @@ extern "C" {
 				ret.WriteString(m.ReturnType.RenderTypeCabi(false) + " " + methodPrefixName + "_" + mSafeMethodName + "(" +
 					emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ");\n")
 			}
+
+			if m.IsFinal {
+				continue
+			}
+
 			if m.LinuxOnly {
 				maybeMacro = "#ifdef __linux__\n"
 				maybeEndMacro = "#endif\n"
@@ -2391,6 +2393,10 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 						maybeElse + emptyReturn + "\n}\n\n")
 				}
 
+				if m.IsFinal {
+					continue
+				}
+
 				ret.WriteString("// Base class handler implementation\n")
 
 				ret.WriteString(
@@ -2424,6 +2430,10 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 						"\tauto* " + vVar + " = " + virtualTarget + ";\n" +
 						vbpreamble + "\tif (" + vVar + " && " + vVar + "->isVirtual" + strippedPrefix + ") {\n" +
 						virtualReturn + "\t} else {\n" + elseReturn + "\n}\n}\n\n")
+				}
+
+				if m.IsFinal {
+					continue
 				}
 
 				ret.WriteString("// Base class handler implementation\n")

@@ -297,11 +297,22 @@ void q_webengineurlschemehandler_remove_event_filter(void* self, void* obj);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+QMetaObject__Connection* q_webengineurlschemehandler_connect(void* sender, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_webengineurlschemehandler_connect(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_webengineurlschemehandler_connect2(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
@@ -312,7 +323,18 @@ QMetaObject__Connection* q_webengineurlschemehandler_connect(void* sender, void*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_webengineurlschemehandler_connect2(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_webengineurlschemehandler_connect3(void* self, void* sender, const char* signal, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_webengineurlschemehandler_disconnect(void* sender, const char* signal, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -323,7 +345,24 @@ QMetaObject__Connection* q_webengineurlschemehandler_connect2(void* self, void* 
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_webengineurlschemehandler_disconnect(void* sender, void* signal, void* receiver, void* member);
+bool q_webengineurlschemehandler_disconnect2(void* sender, void* signal, void* receiver, void* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QWebEngineUrlSchemeHandler*
+///
+bool q_webengineurlschemehandler_disconnect3(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QWebEngineUrlSchemeHandler*
+/// @param receiver QObject*
+///
+bool q_webengineurlschemehandler_disconnect4(void* self, void* receiver);
 
 /// Inherited from QObject
 ///
@@ -331,7 +370,7 @@ bool q_webengineurlschemehandler_disconnect(void* sender, void* signal, void* re
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_webengineurlschemehandler_disconnect2(void* param1);
+bool q_webengineurlschemehandler_disconnect5(void* param1);
 
 /// Inherited from QObject
 ///
@@ -461,12 +500,24 @@ int32_t q_webengineurlschemehandler_start_timer23(void* self, int64_t time, int3
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+/// @param param5 enum Qt__ConnectionType
+///
+QMetaObject__Connection* q_webengineurlschemehandler_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_webengineurlschemehandler_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_webengineurlschemehandler_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -479,6 +530,46 @@ QMetaObject__Connection* q_webengineurlschemehandler_connect5(void* sender, void
 /// @param type enum Qt__ConnectionType
 ///
 QMetaObject__Connection* q_webengineurlschemehandler_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QWebEngineUrlSchemeHandler*
+/// @param signal const char*
+///
+bool q_webengineurlschemehandler_disconnect1(void* self, const char* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QWebEngineUrlSchemeHandler*
+/// @param signal const char*
+/// @param receiver QObject*
+///
+bool q_webengineurlschemehandler_disconnect22(void* self, const char* signal, void* receiver);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QWebEngineUrlSchemeHandler*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_webengineurlschemehandler_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QWebEngineUrlSchemeHandler*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_webengineurlschemehandler_disconnect23(void* self, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

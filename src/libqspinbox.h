@@ -3211,11 +3211,22 @@ void q_spinbox_remove_event_filter(void* self, void* obj);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+QMetaObject__Connection* q_spinbox_connect(void* sender, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_spinbox_connect(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_spinbox_connect2(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
@@ -3226,7 +3237,18 @@ QMetaObject__Connection* q_spinbox_connect(void* sender, void* signal, void* rec
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_spinbox_connect2(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_spinbox_connect3(void* self, void* sender, const char* signal, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_spinbox_disconnect(void* sender, const char* signal, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3237,7 +3259,24 @@ QMetaObject__Connection* q_spinbox_connect2(void* self, void* sender, const char
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_spinbox_disconnect(void* sender, void* signal, void* receiver, void* member);
+bool q_spinbox_disconnect2(void* sender, void* signal, void* receiver, void* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QSpinBox*
+///
+bool q_spinbox_disconnect3(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QSpinBox*
+/// @param receiver QObject*
+///
+bool q_spinbox_disconnect4(void* self, void* receiver);
 
 /// Inherited from QObject
 ///
@@ -3245,7 +3284,7 @@ bool q_spinbox_disconnect(void* sender, void* signal, void* receiver, void* memb
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_spinbox_disconnect2(void* param1);
+bool q_spinbox_disconnect5(void* param1);
 
 /// Inherited from QObject
 ///
@@ -3375,12 +3414,24 @@ int32_t q_spinbox_start_timer23(void* self, int64_t time, int32_t timerType);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+/// @param param5 enum Qt__ConnectionType
+///
+QMetaObject__Connection* q_spinbox_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_spinbox_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_spinbox_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -3393,6 +3444,46 @@ QMetaObject__Connection* q_spinbox_connect5(void* sender, void* signal, void* re
 /// @param type enum Qt__ConnectionType
 ///
 QMetaObject__Connection* q_spinbox_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QSpinBox*
+/// @param signal const char*
+///
+bool q_spinbox_disconnect1(void* self, const char* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QSpinBox*
+/// @param signal const char*
+/// @param receiver QObject*
+///
+bool q_spinbox_disconnect22(void* self, const char* signal, void* receiver);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QSpinBox*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_spinbox_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QSpinBox*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_spinbox_disconnect23(void* self, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -8735,11 +8826,22 @@ void q_doublespinbox_remove_event_filter(void* self, void* obj);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+QMetaObject__Connection* q_doublespinbox_connect(void* sender, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_doublespinbox_connect(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_doublespinbox_connect2(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
@@ -8750,7 +8852,18 @@ QMetaObject__Connection* q_doublespinbox_connect(void* sender, void* signal, voi
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_doublespinbox_connect2(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_doublespinbox_connect3(void* self, void* sender, const char* signal, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_doublespinbox_disconnect(void* sender, const char* signal, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -8761,7 +8874,24 @@ QMetaObject__Connection* q_doublespinbox_connect2(void* self, void* sender, cons
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_doublespinbox_disconnect(void* sender, void* signal, void* receiver, void* member);
+bool q_doublespinbox_disconnect2(void* sender, void* signal, void* receiver, void* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QDoubleSpinBox*
+///
+bool q_doublespinbox_disconnect3(void* self);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QDoubleSpinBox*
+/// @param receiver QObject*
+///
+bool q_doublespinbox_disconnect4(void* self, void* receiver);
 
 /// Inherited from QObject
 ///
@@ -8769,7 +8899,7 @@ bool q_doublespinbox_disconnect(void* sender, void* signal, void* receiver, void
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_doublespinbox_disconnect2(void* param1);
+bool q_doublespinbox_disconnect5(void* param1);
 
 /// Inherited from QObject
 ///
@@ -8899,12 +9029,24 @@ int32_t q_doublespinbox_start_timer23(void* self, int64_t time, int32_t timerTyp
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
 /// @param sender QObject*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+/// @param param5 enum Qt__ConnectionType
+///
+QMetaObject__Connection* q_doublespinbox_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// @param sender QObject*
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_doublespinbox_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_doublespinbox_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -8917,6 +9059,46 @@ QMetaObject__Connection* q_doublespinbox_connect5(void* sender, void* signal, vo
 /// @param type enum Qt__ConnectionType
 ///
 QMetaObject__Connection* q_doublespinbox_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QDoubleSpinBox*
+/// @param signal const char*
+///
+bool q_doublespinbox_disconnect1(void* self, const char* signal);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QDoubleSpinBox*
+/// @param signal const char*
+/// @param receiver QObject*
+///
+bool q_doublespinbox_disconnect22(void* self, const char* signal, void* receiver);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QDoubleSpinBox*
+/// @param signal const char*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_doublespinbox_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self QDoubleSpinBox*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_doublespinbox_disconnect23(void* self, void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
