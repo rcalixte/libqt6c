@@ -6,6 +6,7 @@ import (
 	"math"
 	"path/filepath"
 	"reflect"
+	"slices"
 	"sort"
 	"strconv"
 	"strings"
@@ -1721,7 +1722,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 		return "", nil
 	}
 
-	ret := strings.Builder{}
+	ret.Reset()
 
 	srcFilename := filepath.Base(src.Filename)
 	includeGuard := strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(packageName, "/", "_"), "-", "_")) + "_QT6C_LIB" + strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(srcFilename, ".", "_"), "-", "_"))
@@ -2062,7 +2063,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				if _, ok := noQtConnect[cmdStructName]; ok {
 					addConnect = false
 				}
-				if _, ok := skipQtConnect[cmdStructName+"_"+m.MethodName]; ok {
+				if slices.Contains(unmatchedQtConnect, cmdStructName+"_"+mSafeMethodName) {
 					addConnect = false
 				}
 
@@ -2392,7 +2393,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		return "", nil
 	}
 
-	ret := strings.Builder{}
+	ret.Reset()
 
 	var parentInclude string
 
@@ -2777,7 +2778,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				if _, ok := noQtConnect[cmdStructName]; ok {
 					addConnect = false
 				}
-				if _, ok := skipQtConnect[cmdStructName+"_"+m.MethodName]; ok {
+				if slices.Contains(unmatchedQtConnect, cmdStructName+"_"+mSafeMethodName) {
 					addConnect = false
 				}
 
