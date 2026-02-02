@@ -1138,7 +1138,7 @@ func getReferencedTypes(src *CppParsedHeader, qtextradefs map[string]struct{}) [
 			maybeAddType(kType)
 			maybeAddType(vType)
 
-			if (kType.IntType() || IsKnownClass(kType.ParameterType)) && (vType.IntType() || IsKnownClass(vType.ParameterType)) {
+			if qtextradefs != nil && (kType.IntType() || IsKnownClass(kType.ParameterType)) && (vType.IntType() || IsKnownClass(vType.ParameterType)) {
 				kParam := kType.ParameterType
 				vParam := vType.ParameterType
 
@@ -1261,6 +1261,8 @@ func cabiPreventStructDeclaration(className string) bool {
 }
 
 var (
+	ret = strings.Builder{}
+
 	noQtConnect = map[string]struct{}{
 		"Accounts__AccountService":      {},
 		"KNSCore__EngineBase":           {},
@@ -1284,9 +1286,8 @@ var (
 		"QsciScintillaBase":             {},
 	}
 
-	// temporary hack
-	skipQtConnect = map[string]struct{}{
-		"KCoreDirLister_refreshItems": {},
+	unmatchedQtConnect = []string{
+		"QWebSocket_Error2",
 	}
 
 	moveCtorOnly = map[string]struct{}{
@@ -1336,7 +1337,11 @@ var (
 )
 
 func emitVirtualBindingHeader(src *CppParsedHeader, packageName string) (string, error) {
-	ret := strings.Builder{}
+	if len(src.Classes) == 0 {
+		return "", nil
+	}
+
+	ret.Reset()
 
 	srcFilename := filepath.Base(src.Filename)
 	includeGuard := strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(packageName, "/", "_"), "-", "_")) + "C_LIBVIRTUAL" + strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(srcFilename, ".", "_"), "-", "_"))
@@ -1618,7 +1623,12 @@ func emitVirtualBindingHeader(src *CppParsedHeader, packageName string) (string,
 }
 
 func emitBindingHeader(src *CppParsedHeader, packageName string) (string, map[string]struct{}, error) {
-	ret := strings.Builder{}
+	if len(src.Classes) == 0 {
+		return "", nil, nil
+	}
+
+	ret.Reset()
+
 	qtstructdefs := make(map[string]struct{})
 	qtextradefs := make(map[string]struct{})
 
@@ -1850,7 +1860,7 @@ extern "C" {
 				if _, ok := noQtConnect[methodPrefixName]; ok {
 					addConnect = false
 				}
-				if _, ok := skipQtConnect[methodPrefixName+"_"+m.MethodName]; ok {
+				if slices.Contains(unmatchedQtConnect, methodPrefixName+"_"+mSafeMethodName) {
 					addConnect = false
 				}
 
@@ -1931,7 +1941,7 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 		return "", nil
 	}
 
-	ret := strings.Builder{}
+	ret.Reset()
 
 	srcFilename := filepath.Base(src.Filename)
 	seenClassMethods := map[string]bool{}
@@ -1940,7 +1950,7 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 		ret.WriteString("#include <PackageKit/Transaction>\n")
 	}
 
-	referencedTypes := getReferencedTypes(src, map[string]struct{}{})
+	referencedTypes := getReferencedTypes(src, nil)
 	seenRefs := make([]string, 0, len(referencedTypes))
 
 	for _, ref := range referencedTypes {
@@ -2271,7 +2281,7 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 				if _, ok := noQtConnect[methodPrefixName]; ok {
 					continue
 				}
-				if _, ok := skipQtConnect[methodPrefixName+"_"+m.MethodName]; ok {
+				if slices.Contains(unmatchedQtConnect, methodPrefixName+"_"+mSafeMethodName) {
 					continue
 				}
 
