@@ -679,7 +679,7 @@ QTreeWidgetItem* q_treewidgetitem_take_child(void* self, int index);
 /// @param self QTreeWidgetItem*
 /// @param children libqt_list of QTreeWidgetItem*
 ///
-void q_treewidgetitem_add_children(void* self, libqt_list /* of QTreeWidgetItem* */ children);
+void q_treewidgetitem_add_children(void* self, libqt_list children);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitem.html#insertChildren)
 ///
@@ -687,7 +687,7 @@ void q_treewidgetitem_add_children(void* self, libqt_list /* of QTreeWidgetItem*
 /// @param index int
 /// @param children libqt_list of QTreeWidgetItem*
 ///
-void q_treewidgetitem_insert_children(void* self, int index, libqt_list /* of QTreeWidgetItem* */ children);
+void q_treewidgetitem_insert_children(void* self, int index, libqt_list children);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitem.html#takeChildren)
 ///
@@ -896,14 +896,14 @@ int32_t q_treewidget_index_of_top_level_item(void* self, void* item);
 /// @param index int
 /// @param items libqt_list of QTreeWidgetItem*
 ///
-void q_treewidget_insert_top_level_items(void* self, int index, libqt_list /* of QTreeWidgetItem* */ items);
+void q_treewidget_insert_top_level_items(void* self, int index, libqt_list items);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidget.html#addTopLevelItems)
 ///
 /// @param self QTreeWidget*
 /// @param items libqt_list of QTreeWidgetItem*
 ///
-void q_treewidget_add_top_level_items(void* self, libqt_list /* of QTreeWidgetItem* */ items);
+void q_treewidget_add_top_level_items(void* self, libqt_list items);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidget.html#headerItem)
 ///
@@ -1356,16 +1356,16 @@ const char** q_treewidget_qbase_mime_types(void* self);
 /// @param self QTreeWidget*
 /// @param items libqt_list of QTreeWidgetItem*
 ///
-QMimeData* q_treewidget_mime_data(void* self, libqt_list /* of QTreeWidgetItem* */ items);
+QMimeData* q_treewidget_mime_data(void* self, libqt_list items);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidget.html#mimeData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QTreeWidget*
-/// @param callback QMimeData* func(QTreeWidget* self, QTreeWidgetItem** items)
+/// @param callback QMimeData* func(QTreeWidget* self, libqt_list of QTreeWidgetItem* items)
 ///
-void q_treewidget_on_mime_data(void* self, QMimeData* (*callback)(void*, QTreeWidgetItem**));
+void q_treewidget_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidget.html#mimeData)
 ///
@@ -1374,7 +1374,7 @@ void q_treewidget_on_mime_data(void* self, QMimeData* (*callback)(void*, QTreeWi
 /// @param self QTreeWidget*
 /// @param items libqt_list of QTreeWidgetItem*
 ///
-QMimeData* q_treewidget_qbase_mime_data(void* self, libqt_list /* of QTreeWidgetItem* */ items);
+QMimeData* q_treewidget_qbase_mime_data(void* self, libqt_list items);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidget.html#dropMimeData)
 ///
@@ -4837,7 +4837,7 @@ void q_treewidget_add_action(void* self, void* action);
 /// @param self QTreeWidget*
 /// @param actions libqt_list of QAction*
 ///
-void q_treewidget_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_treewidget_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -4847,7 +4847,7 @@ void q_treewidget_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_treewidget_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_treewidget_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -6128,7 +6128,7 @@ void q_treewidget_on_reset(void* self, void (*callback)());
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_treewidget_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void q_treewidget_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QTreeView
 ///
@@ -6141,7 +6141,7 @@ void q_treewidget_data_changed(void* self, void* topLeft, void* bottomRight, lib
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_treewidget_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void q_treewidget_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QTreeView
 ///
@@ -6150,9 +6150,9 @@ void q_treewidget_qbase_data_changed(void* self, void* topLeft, void* bottomRigh
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTreeWidget*
-/// @param callback void func(QTreeWidget* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
+/// @param callback void func(QTreeWidget* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void q_treewidget_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
+void q_treewidget_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
 
 /// Inherited from QTreeView
 ///
@@ -6523,9 +6523,9 @@ libqt_list q_treewidget_qbase_selected_indexes(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTreeWidget*
-/// @param callback QModelIndex** func()
+/// @param callback libqt_list of QModelIndex* func()
 ///
-void q_treewidget_on_selected_indexes(void* self, QModelIndex** (*callback)());
+void q_treewidget_on_selected_indexes(void* self, libqt_list (*callback)());
 
 /// Inherited from QTreeView
 ///

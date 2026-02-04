@@ -156,16 +156,16 @@ QPlaceSearchRequest* q_placesearchreply_next_page_request(void* self);
 /// @param self QPlaceSearchReply*
 /// @param results libqt_list of QPlaceSearchResult*
 ///
-void q_placesearchreply_set_results(void* self, libqt_list /* of QPlaceSearchResult* */ results);
+void q_placesearchreply_set_results(void* self, libqt_list results);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchreply.html#setResults)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QPlaceSearchReply*
-/// @param callback void func(QPlaceSearchReply* self, QPlaceSearchResult** results)
+/// @param callback void func(QPlaceSearchReply* self, libqt_list of QPlaceSearchResult* results)
 ///
-void q_placesearchreply_on_set_results(void* self, void (*callback)(void*, QPlaceSearchResult**));
+void q_placesearchreply_on_set_results(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchreply.html#setResults)
 ///
@@ -174,7 +174,7 @@ void q_placesearchreply_on_set_results(void* self, void (*callback)(void*, QPlac
 /// @param self QPlaceSearchReply*
 /// @param results libqt_list of QPlaceSearchResult*
 ///
-void q_placesearchreply_qbase_set_results(void* self, libqt_list /* of QPlaceSearchResult* */ results);
+void q_placesearchreply_qbase_set_results(void* self, libqt_list results);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchreply.html#setRequest)
 ///

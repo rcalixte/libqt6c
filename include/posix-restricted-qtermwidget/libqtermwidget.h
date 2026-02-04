@@ -440,7 +440,7 @@ void q_termwidget_set_environment(void* self, const char* environment[static 1])
 /// @param self QTermWidget*
 /// @param callback void func(QTermWidget* self, const char** environment)
 ///
-void q_termwidget_on_set_environment(void* self, void (*callback)(void*, const char**));
+void q_termwidget_on_set_environment(void* self, void (*callback)(void*, const char***));
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -540,7 +540,7 @@ void q_termwidget_set_args(void* self, const char* args[static 1]);
 /// @param self QTermWidget*
 /// @param callback void func(QTermWidget* self, const char** args)
 ///
-void q_termwidget_on_set_args(void* self, void (*callback)(void*, const char**));
+void q_termwidget_on_set_args(void* self, void (*callback)(void*, const char***));
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -1196,9 +1196,9 @@ libqt_list q_termwidget_filter_actions(void* self, void* position);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback QAction** func(QTermWidget* self, QPoint* position)
+/// @param callback libqt_list of QAction* func(QTermWidget* self, QPoint* position)
 ///
-void q_termwidget_on_filter_actions(void* self, QAction** (*callback)(void*, void*));
+void q_termwidget_on_filter_actions(void* self, libqt_list (*callback)(void*, void*));
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -3947,7 +3947,7 @@ void q_termwidget_add_action(void* self, void* action);
 /// @param self QTermWidget*
 /// @param actions libqt_list of QAction*
 ///
-void q_termwidget_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_termwidget_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3957,7 +3957,7 @@ void q_termwidget_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_termwidget_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_termwidget_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

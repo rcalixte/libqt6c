@@ -155,7 +155,7 @@ void q_signon__identityinfo_set_access_control_list(void* self, const char* acce
 /// @param self SignOn__IdentityInfo*
 /// @param accessControlList libqt_list of SignOn__SecurityContext*
 ///
-void q_signon__identityinfo_set_access_control_list2(void* self, libqt_list /* of SignOn__SecurityContext* */ accessControlList);
+void q_signon__identityinfo_set_access_control_list2(void* self, libqt_list accessControlList);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1IdentityInfo.html)
 ///

@@ -138,7 +138,7 @@ void k_overlayiconplugin_overlays_changed(void* self, void* url, const char* ove
 /// @param self KOverlayIconPlugin*
 /// @param callback void func(KOverlayIconPlugin* self, QUrl* url, const char** overlays)
 ///
-void k_overlayiconplugin_on_overlays_changed(void* self, void (*callback)(void*, void*, const char**));
+void k_overlayiconplugin_on_overlays_changed(void* self, void (*callback)(void*, void*, const char***));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

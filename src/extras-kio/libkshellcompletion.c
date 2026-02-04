@@ -89,7 +89,7 @@ void k_shellcompletion_post_process_matches(void* self, const char* matches[stat
     free(matches_qstr);
 }
 
-void k_shellcompletion_on_post_process_matches(void* self, void (*callback)(void*, const char**)) {
+void k_shellcompletion_on_post_process_matches(void* self, void (*callback)(void*, const char***)) {
     KShellCompletion_OnPostProcessMatches((KShellCompletion*)self, (intptr_t)callback);
 }
 
@@ -364,7 +364,7 @@ void k_shellcompletion_matches(void* self, const char* matchlist[static 1]) {
     free(matchlist_qstr);
 }
 
-void k_shellcompletion_on_matches(void* self, void (*callback)(void*, const char**)) {
+void k_shellcompletion_on_matches(void* self, void (*callback)(void*, const char***)) {
     KCompletion_Connect_Matches((KCompletion*)self, (intptr_t)callback);
 }
 
@@ -803,7 +803,7 @@ void k_shellcompletion_qbase_set_items(void* self, const char* itemList[static 1
     free(itemList_qstr);
 }
 
-void k_shellcompletion_on_set_items(void* self, void (*callback)(void*, const char**)) {
+void k_shellcompletion_on_set_items(void* self, void (*callback)(void*, const char***)) {
     KShellCompletion_OnSetItems((KShellCompletion*)self, (intptr_t)callback);
 }
 

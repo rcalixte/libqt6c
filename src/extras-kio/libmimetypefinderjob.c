@@ -661,7 +661,7 @@ libqt_list /* of KJob* */ k_io__mimetypefinderjob_qbase_subjobs(void* self) {
     return _arr;
 }
 
-void k_io__mimetypefinderjob_on_subjobs(void* self, KJob** (*callback)()) {
+void k_io__mimetypefinderjob_on_subjobs(void* self, libqt_list /* of KJob* */ (*callback)()) {
     KIO__MimeTypeFinderJob_OnSubjobs((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 

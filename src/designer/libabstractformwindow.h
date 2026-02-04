@@ -325,7 +325,7 @@ void q_designerformwindowinterface_end_command(void* self);
 /// @param self QDesignerFormWindowInterface*
 /// @param widgets libqt_list of QWidget*
 ///
-void q_designerformwindowinterface_simplify_selection(void* self, libqt_list /* of QWidget* */ widgets);
+void q_designerformwindowinterface_simplify_selection(void* self, libqt_list widgets);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowinterface.html#emitSelectionChanged)
 ///
@@ -2606,7 +2606,7 @@ void q_designerformwindowinterface_add_action(void* self, void* action);
 /// @param self QDesignerFormWindowInterface*
 /// @param actions libqt_list of QAction*
 ///
-void q_designerformwindowinterface_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_designerformwindowinterface_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2616,7 +2616,7 @@ void q_designerformwindowinterface_add_actions(void* self, libqt_list /* of QAct
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_designerformwindowinterface_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_designerformwindowinterface_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

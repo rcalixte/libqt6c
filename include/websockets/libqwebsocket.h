@@ -336,7 +336,7 @@ long long q_websocket_send_binary_message(void* self, const char* data);
 /// @param self QWebSocket*
 /// @param errors libqt_list of QSslError*
 ///
-void q_websocket_ignore_ssl_errors(void* self, libqt_list /* of QSslError* */ errors);
+void q_websocket_ignore_ssl_errors(void* self, libqt_list errors);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#continueInterruptedHandshake)
 ///
@@ -684,14 +684,14 @@ void q_websocket_on_peer_verify_error(void* self, void (*callback)(void*, void*)
 /// @param self QWebSocket*
 /// @param errors libqt_list of QSslError*
 ///
-void q_websocket_ssl_errors(void* self, libqt_list /* of QSslError* */ errors);
+void q_websocket_ssl_errors(void* self, libqt_list errors);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#sslErrors)
 ///
 /// @param self QWebSocket*
-/// @param callback void func(QWebSocket* self, QSslError** errors)
+/// @param callback void func(QWebSocket* self, libqt_list of QSslError* errors)
 ///
-void q_websocket_on_ssl_errors(void* self, void (*callback)(void*, QSslError**));
+void q_websocket_on_ssl_errors(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#preSharedKeyAuthenticationRequired)
 ///

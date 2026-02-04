@@ -144,16 +144,16 @@ QPlaceMatchRequest* q_placematchreply_request(void* self);
 /// @param self QPlaceMatchReply*
 /// @param results libqt_list of QPlace*
 ///
-void q_placematchreply_set_places(void* self, libqt_list /* of QPlace* */ results);
+void q_placematchreply_set_places(void* self, libqt_list results);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacematchreply.html#setPlaces)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QPlaceMatchReply*
-/// @param callback void func(QPlaceMatchReply* self, QPlace** results)
+/// @param callback void func(QPlaceMatchReply* self, libqt_list of QPlace* results)
 ///
-void q_placematchreply_on_set_places(void* self, void (*callback)(void*, QPlace**));
+void q_placematchreply_on_set_places(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacematchreply.html#setPlaces)
 ///
@@ -162,7 +162,7 @@ void q_placematchreply_on_set_places(void* self, void (*callback)(void*, QPlace*
 /// @param self QPlaceMatchReply*
 /// @param results libqt_list of QPlace*
 ///
-void q_placematchreply_qbase_set_places(void* self, libqt_list /* of QPlace* */ results);
+void q_placematchreply_qbase_set_places(void* self, libqt_list results);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacematchreply.html#setRequest)
 ///

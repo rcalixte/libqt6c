@@ -482,7 +482,7 @@ void q_xmlstreamreader_add_extra_namespace_declaration(void* self, void* extraNa
 /// @param self QXmlStreamReader*
 /// @param extraNamespaceDeclaractions libqt_list of QXmlStreamNamespaceDeclaration*
 ///
-void q_xmlstreamreader_add_extra_namespace_declarations(void* self, libqt_list /* of QXmlStreamNamespaceDeclaration* */ extraNamespaceDeclaractions);
+void q_xmlstreamreader_add_extra_namespace_declarations(void* self, libqt_list extraNamespaceDeclaractions);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#notationDeclarations)
 ///

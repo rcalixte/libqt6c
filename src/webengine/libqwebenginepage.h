@@ -1126,7 +1126,7 @@ const char** q_webenginepage_choose_files(void* self, int32_t mode, const char* 
 /// @param self QWebEnginePage*
 /// @param callback const char** func(QWebEnginePage* self, enum QWebEnginePage__FileSelectionMode mode, const char** oldFiles, const char** acceptedMimeTypes)
 ///
-void q_webenginepage_on_choose_files(void* self, const char** (*callback)(void*, int32_t, const char**, const char**));
+void q_webenginepage_on_choose_files(void* self, const char** (*callback)(void*, int32_t, const char***, const char***));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#chooseFiles)
 ///

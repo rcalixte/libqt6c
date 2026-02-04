@@ -74,7 +74,7 @@ void k_nscore__cache_write_registry(void* self);
 /// @param param1 KNSCore__Provider__SearchRequest*
 /// @param entries libqt_list of KNSCore__Entry*
 ///
-void k_nscore__cache_insert_request(void* self, void* param1, libqt_list /* of KNSCore__Entry* */ entries);
+void k_nscore__cache_insert_request(void* self, void* param1, libqt_list entries);
 
 /// [Upstream resources](https://api.kde.org/knscore-cache.html#requestFromCache)
 ///

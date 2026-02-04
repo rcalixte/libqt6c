@@ -243,7 +243,7 @@ bool q_concatenatetablesproxymodel_set_item_data(void* self, void* index, libqt_
 /// Allows for overriding the related default method
 ///
 /// @param self QConcatenateTablesProxyModel*
-/// @param callback bool func(QConcatenateTablesProxyModel* self, QModelIndex* index, libqt_map of int to QVariant*)
+/// @param callback bool func(QConcatenateTablesProxyModel* self, QModelIndex* index, libqt_map of int to QVariant* roles)
 ///
 void q_concatenatetablesproxymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map));
 
@@ -449,16 +449,16 @@ const char** q_concatenatetablesproxymodel_qbase_mime_types(void* self);
 /// @param self QConcatenateTablesProxyModel*
 /// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* q_concatenatetablesproxymodel_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes);
+QMimeData* q_concatenatetablesproxymodel_mime_data(void* self, libqt_list indexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#mimeData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QConcatenateTablesProxyModel*
-/// @param callback QMimeData* func(QConcatenateTablesProxyModel* self, QModelIndex** indexes)
+/// @param callback QMimeData* func(QConcatenateTablesProxyModel* self, libqt_list of QModelIndex* indexes)
 ///
-void q_concatenatetablesproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**));
+void q_concatenatetablesproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#mimeData)
 ///
@@ -467,7 +467,7 @@ void q_concatenatetablesproxymodel_on_mime_data(void* self, QMimeData* (*callbac
 /// @param self QConcatenateTablesProxyModel*
 /// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* q_concatenatetablesproxymodel_qbase_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes);
+QMimeData* q_concatenatetablesproxymodel_qbase_mime_data(void* self, libqt_list indexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#canDropMimeData)
 ///
@@ -801,16 +801,16 @@ bool q_concatenatetablesproxymodel_check_index2(void* self, void* index, int32_t
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_concatenatetablesproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void q_concatenatetablesproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QConcatenateTablesProxyModel*
-/// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
+/// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void q_concatenatetablesproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
+void q_concatenatetablesproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -819,16 +819,16 @@ void q_concatenatetablesproxymodel_on_data_changed3(void* self, void (*callback)
 /// @param self QConcatenateTablesProxyModel*
 /// @param parents libqt_list of QPersistentModelIndex*
 ///
-void q_concatenatetablesproxymodel_layout_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents);
+void q_concatenatetablesproxymodel_layout_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QConcatenateTablesProxyModel*
-/// @param callback void func(QConcatenateTablesProxyModel* self, QPersistentModelIndex** parents)
+/// @param callback void func(QConcatenateTablesProxyModel* self, libqt_list of QPersistentModelIndex* parents)
 ///
-void q_concatenatetablesproxymodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
+void q_concatenatetablesproxymodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -838,16 +838,16 @@ void q_concatenatetablesproxymodel_on_layout_changed1(void* self, void (*callbac
 /// @param parents libqt_list of QPersistentModelIndex*
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
 ///
-void q_concatenatetablesproxymodel_layout_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint);
+void q_concatenatetablesproxymodel_layout_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QConcatenateTablesProxyModel*
-/// @param callback void func(QConcatenateTablesProxyModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+/// @param callback void func(QConcatenateTablesProxyModel* self, libqt_list of QPersistentModelIndex* parents, enum QAbstractItemModel__LayoutChangeHint hint)
 ///
-void q_concatenatetablesproxymodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
+void q_concatenatetablesproxymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -856,16 +856,16 @@ void q_concatenatetablesproxymodel_on_layout_changed2(void* self, void (*callbac
 /// @param self QConcatenateTablesProxyModel*
 /// @param parents libqt_list of QPersistentModelIndex*
 ///
-void q_concatenatetablesproxymodel_layout_about_to_be_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents);
+void q_concatenatetablesproxymodel_layout_about_to_be_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QConcatenateTablesProxyModel*
-/// @param callback void func(QConcatenateTablesProxyModel* self, QPersistentModelIndex** parents)
+/// @param callback void func(QConcatenateTablesProxyModel* self, libqt_list of QPersistentModelIndex* parents)
 ///
-void q_concatenatetablesproxymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
+void q_concatenatetablesproxymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -875,16 +875,16 @@ void q_concatenatetablesproxymodel_on_layout_about_to_be_changed1(void* self, vo
 /// @param parents libqt_list of QPersistentModelIndex*
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
 ///
-void q_concatenatetablesproxymodel_layout_about_to_be_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint);
+void q_concatenatetablesproxymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QConcatenateTablesProxyModel*
-/// @param callback void func(QConcatenateTablesProxyModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+/// @param callback void func(QConcatenateTablesProxyModel* self, libqt_list of QPersistentModelIndex* parents, enum QAbstractItemModel__LayoutChangeHint hint)
 ///
-void q_concatenatetablesproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
+void q_concatenatetablesproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QObject
 ///
@@ -1942,9 +1942,9 @@ libqt_list q_concatenatetablesproxymodel_qbase_match(void* self, void* start, in
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
-/// @param callback QModelIndex** func(QConcatenateTablesProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
+/// @param callback libqt_list of QModelIndex* func(QConcatenateTablesProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 ///
-void q_concatenatetablesproxymodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t));
+void q_concatenatetablesproxymodel_on_match(void* self, libqt_list (*callback)(void*, void*, int, void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2409,7 +2409,7 @@ void q_concatenatetablesproxymodel_on_create_index(void* self, QModelIndex* (*ca
 /// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void q_concatenatetablesproxymodel_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream);
+void q_concatenatetablesproxymodel_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2421,7 +2421,7 @@ void q_concatenatetablesproxymodel_encode_data(void* self, libqt_list /* of QMod
 /// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void q_concatenatetablesproxymodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream);
+void q_concatenatetablesproxymodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2430,9 +2430,9 @@ void q_concatenatetablesproxymodel_qbase_encode_data(void* self, libqt_list /* o
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
-/// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex** indexes, QDataStream* stream)
+/// @param callback void func(QConcatenateTablesProxyModel* self, libqt_list of QModelIndex* indexes, QDataStream* stream)
 ///
-void q_concatenatetablesproxymodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*));
+void q_concatenatetablesproxymodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2996,7 +2996,7 @@ void q_concatenatetablesproxymodel_on_change_persistent_index(void* self, void (
 /// @param from libqt_list of QModelIndex*
 /// @param to libqt_list of QModelIndex*
 ///
-void q_concatenatetablesproxymodel_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
+void q_concatenatetablesproxymodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3008,7 +3008,7 @@ void q_concatenatetablesproxymodel_change_persistent_index_list(void* self, libq
 /// @param from libqt_list of QModelIndex*
 /// @param to libqt_list of QModelIndex*
 ///
-void q_concatenatetablesproxymodel_qbase_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
+void q_concatenatetablesproxymodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3017,9 +3017,9 @@ void q_concatenatetablesproxymodel_qbase_change_persistent_index_list(void* self
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
-/// @param callback void func(QConcatenateTablesProxyModel* self, QModelIndex** from, QModelIndex** to)
+/// @param callback void func(QConcatenateTablesProxyModel* self, libqt_list of QModelIndex* from, libqt_list of QModelIndex* to)
 ///
-void q_concatenatetablesproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**));
+void q_concatenatetablesproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3052,9 +3052,9 @@ libqt_list q_concatenatetablesproxymodel_qbase_persistent_index_list(void* self)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
-/// @param callback QModelIndex** func()
+/// @param callback libqt_list of QModelIndex* func()
 ///
-void q_concatenatetablesproxymodel_on_persistent_index_list(void* self, QModelIndex** (*callback)());
+void q_concatenatetablesproxymodel_on_persistent_index_list(void* self, libqt_list (*callback)());
 
 /// Inherited from QObject
 ///

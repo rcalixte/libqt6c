@@ -966,7 +966,7 @@ libqt_list k_texteditor__attribute_length_vector_property(void* self, int proper
 /// @param propertyId int
 /// @param lengths libqt_list of QTextLength*
 ///
-void k_texteditor__attribute_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths);
+void k_texteditor__attribute_set_property2(void* self, int propertyId, libqt_list lengths);
 
 /// Inherited from QTextFormat
 ///

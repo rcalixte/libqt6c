@@ -153,7 +153,7 @@ void k_urifiltersearchprovider_set_keys(void* self, const char* keys[static 1]);
 /// @param self KUriFilterSearchProvider*
 /// @param callback void func(KUriFilterSearchProvider* self, const char** keys)
 ///
-void k_urifiltersearchprovider_on_set_keys(void* self, void (*callback)(void*, const char**));
+void k_urifiltersearchprovider_on_set_keys(void* self, void (*callback)(void*, const char***));
 
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setKeys)
 ///

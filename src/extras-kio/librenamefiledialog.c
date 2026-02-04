@@ -67,7 +67,7 @@ void k_io__renamefiledialog_renaming_finished(void* self, libqt_list /* of QUrl*
     KIO__RenameFileDialog_RenamingFinished((KIO__RenameFileDialog*)self, urls);
 }
 
-void k_io__renamefiledialog_on_renaming_finished(void* self, void (*callback)(void*, QUrl**)) {
+void k_io__renamefiledialog_on_renaming_finished(void* self, void (*callback)(void*, libqt_list /* of QUrl* */)) {
     KIO__RenameFileDialog_Connect_RenamingFinished((KIO__RenameFileDialog*)self, (intptr_t)callback);
 }
 

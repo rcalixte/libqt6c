@@ -74,7 +74,7 @@ void q_placesearchrequest_set_category(void* self, void* category);
 /// @param self QPlaceSearchRequest*
 /// @param categories libqt_list of QPlaceCategory*
 ///
-void q_placesearchrequest_set_categories(void* self, libqt_list /* of QPlaceCategory* */ categories);
+void q_placesearchrequest_set_categories(void* self, libqt_list categories);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchrequest.html#searchArea)
 ///

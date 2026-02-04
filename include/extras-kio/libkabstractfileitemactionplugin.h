@@ -107,9 +107,9 @@ libqt_list k_abstractfileitemactionplugin_actions(void* self, void* fileItemInfo
 /// Allows for overriding the related default method
 ///
 /// @param self KAbstractFileItemActionPlugin*
-/// @param callback QAction** func(KAbstractFileItemActionPlugin* self, KFileItemListProperties* fileItemInfos, QWidget* parentWidget)
+/// @param callback libqt_list of QAction* func(KAbstractFileItemActionPlugin* self, KFileItemListProperties* fileItemInfos, QWidget* parentWidget)
 ///
-void k_abstractfileitemactionplugin_on_actions(void* self, QAction** (*callback)(void*, void*, void*));
+void k_abstractfileitemactionplugin_on_actions(void* self, libqt_list (*callback)(void*, void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kabstractfileitemactionplugin.html#actions)
 ///

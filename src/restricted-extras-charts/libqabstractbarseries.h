@@ -78,7 +78,7 @@ bool q_abstractbarseries_take(void* self, void* set);
 /// @param self QAbstractBarSeries*
 /// @param sets libqt_list of QBarSet*
 ///
-bool q_abstractbarseries_append2(void* self, libqt_list /* of QBarSet* */ sets);
+bool q_abstractbarseries_append2(void* self, libqt_list sets);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries-qtcharts.html#insert)
 ///
@@ -339,28 +339,28 @@ void q_abstractbarseries_on_labels_precision_changed(void* self, void (*callback
 /// @param self QAbstractBarSeries*
 /// @param sets libqt_list of QBarSet*
 ///
-void q_abstractbarseries_barsets_added(void* self, libqt_list /* of QBarSet* */ sets);
+void q_abstractbarseries_barsets_added(void* self, libqt_list sets);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries-qtcharts.html#barsetsAdded)
 ///
 /// @param self QAbstractBarSeries*
-/// @param callback void func(QAbstractBarSeries* self, QBarSet** sets)
+/// @param callback void func(QAbstractBarSeries* self, libqt_list of QBarSet* sets)
 ///
-void q_abstractbarseries_on_barsets_added(void* self, void (*callback)(void*, QBarSet**));
+void q_abstractbarseries_on_barsets_added(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries-qtcharts.html#barsetsRemoved)
 ///
 /// @param self QAbstractBarSeries*
 /// @param sets libqt_list of QBarSet*
 ///
-void q_abstractbarseries_barsets_removed(void* self, libqt_list /* of QBarSet* */ sets);
+void q_abstractbarseries_barsets_removed(void* self, libqt_list sets);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries-qtcharts.html#barsetsRemoved)
 ///
 /// @param self QAbstractBarSeries*
-/// @param callback void func(QAbstractBarSeries* self, QBarSet** sets)
+/// @param callback void func(QAbstractBarSeries* self, libqt_list of QBarSet* sets)
 ///
-void q_abstractbarseries_on_barsets_removed(void* self, void (*callback)(void*, QBarSet**));
+void q_abstractbarseries_on_barsets_removed(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

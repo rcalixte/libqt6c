@@ -76,7 +76,7 @@ void k_nswidgets__button_dialog_finished(void* self, libqt_list /* of KNSCore__E
     KNSWidgets__Button_DialogFinished((KNSWidgets__Button*)self, changedEntries);
 }
 
-void k_nswidgets__button_on_dialog_finished(void* self, void (*callback)(void*, KNSCore__Entry**)) {
+void k_nswidgets__button_on_dialog_finished(void* self, void (*callback)(void*, libqt_list /* of KNSCore__Entry* */)) {
     KNSWidgets__Button_Connect_DialogFinished((KNSWidgets__Button*)self, (intptr_t)callback);
 }
 

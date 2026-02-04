@@ -793,7 +793,7 @@ void q_stylepainter_draw_lines(void* self, void* lines, int lineCount);
 /// @param self QStylePainter*
 /// @param lines libqt_list of QLineF*
 ///
-void q_stylepainter_draw_lines2(void* self, libqt_list /* of QLineF* */ lines);
+void q_stylepainter_draw_lines2(void* self, libqt_list lines);
 
 /// Inherited from QPainter
 ///
@@ -812,7 +812,7 @@ void q_stylepainter_draw_lines3(void* self, void* pointPairs, int lineCount);
 /// @param self QStylePainter*
 /// @param pointPairs libqt_list of QPointF*
 ///
-void q_stylepainter_draw_lines4(void* self, libqt_list /* of QPointF* */ pointPairs);
+void q_stylepainter_draw_lines4(void* self, libqt_list pointPairs);
 
 /// Inherited from QPainter
 ///
@@ -831,7 +831,7 @@ void q_stylepainter_draw_lines5(void* self, void* lines, int lineCount);
 /// @param self QStylePainter*
 /// @param lines libqt_list of QLine*
 ///
-void q_stylepainter_draw_lines6(void* self, libqt_list /* of QLine* */ lines);
+void q_stylepainter_draw_lines6(void* self, libqt_list lines);
 
 /// Inherited from QPainter
 ///
@@ -850,7 +850,7 @@ void q_stylepainter_draw_lines7(void* self, void* pointPairs, int lineCount);
 /// @param self QStylePainter*
 /// @param pointPairs libqt_list of QPoint*
 ///
-void q_stylepainter_draw_lines8(void* self, libqt_list /* of QPoint* */ pointPairs);
+void q_stylepainter_draw_lines8(void* self, libqt_list pointPairs);
 
 /// Inherited from QPainter
 ///
@@ -899,7 +899,7 @@ void q_stylepainter_draw_rects(void* self, void* rects, int rectCount);
 /// @param self QStylePainter*
 /// @param rectangles libqt_list of QRectF*
 ///
-void q_stylepainter_draw_rects2(void* self, libqt_list /* of QRectF* */ rectangles);
+void q_stylepainter_draw_rects2(void* self, libqt_list rectangles);
 
 /// Inherited from QPainter
 ///
@@ -918,7 +918,7 @@ void q_stylepainter_draw_rects3(void* self, void* rects, int rectCount);
 /// @param self QStylePainter*
 /// @param rectangles libqt_list of QRect*
 ///
-void q_stylepainter_draw_rects4(void* self, libqt_list /* of QRect* */ rectangles);
+void q_stylepainter_draw_rects4(void* self, libqt_list rectangles);
 
 /// Inherited from QPainter
 ///

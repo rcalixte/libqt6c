@@ -104,9 +104,9 @@ libqt_list k_texteditor__inlinenoteprovider_inline_notes(void* self, int line);
 /// Allows for overriding the related default method
 ///
 /// @param self KTextEditor__InlineNoteProvider*
-/// @param callback int* func(KTextEditor__InlineNoteProvider* self, int line)
+/// @param callback libqt_list of int func(KTextEditor__InlineNoteProvider* self, int line)
 ///
-void k_texteditor__inlinenoteprovider_on_inline_notes(void* self, int* (*callback)(void*, int));
+void k_texteditor__inlinenoteprovider_on_inline_notes(void* self, libqt_list (*callback)(void*, int));
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-inlinenoteprovider.html#inlineNotes)
 ///

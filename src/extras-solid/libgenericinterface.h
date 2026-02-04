@@ -89,7 +89,7 @@ void k_solid__genericinterface_property_changed(void* self, libqt_map changes);
 /// [Upstream resources](https://api.kde.org/solid-genericinterface.html#propertyChanged)
 ///
 /// @param self Solid__GenericInterface*
-/// @param callback void func(Solid__GenericInterface* self, libqt_map of const char* to int)
+/// @param callback void func(Solid__GenericInterface* self, libqt_map of const char* to int changes)
 ///
 void k_solid__genericinterface_on_property_changed(void* self, void (*callback)(void*, libqt_map));
 

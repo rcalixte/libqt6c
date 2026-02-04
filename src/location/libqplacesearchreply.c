@@ -92,7 +92,7 @@ void q_placesearchreply_set_results(void* self, libqt_list /* of QPlaceSearchRes
     QPlaceSearchReply_SetResults((QPlaceSearchReply*)self, results);
 }
 
-void q_placesearchreply_on_set_results(void* self, void (*callback)(void*, QPlaceSearchResult**)) {
+void q_placesearchreply_on_set_results(void* self, void (*callback)(void*, libqt_list /* of QPlaceSearchResult* */)) {
     QPlaceSearchReply_OnSetResults((QPlaceSearchReply*)self, (intptr_t)callback);
 }
 

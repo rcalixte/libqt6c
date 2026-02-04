@@ -1365,16 +1365,16 @@ void q_headerview_qbase_scroll_contents_by(void* self, int dx, int dy);
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_headerview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void q_headerview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qheaderview.html#dataChanged)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void func(QHeaderView* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
+/// @param callback void func(QHeaderView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void q_headerview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
+void q_headerview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qheaderview.html#dataChanged)
 ///
@@ -1385,7 +1385,7 @@ void q_headerview_on_data_changed(void* self, void (*callback)(void*, void*, voi
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_headerview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void q_headerview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qheaderview.html#rowsInserted)
 ///
@@ -4465,7 +4465,7 @@ void q_headerview_add_action(void* self, void* action);
 /// @param self QHeaderView*
 /// @param actions libqt_list of QAction*
 ///
-void q_headerview_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_headerview_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -4475,7 +4475,7 @@ void q_headerview_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_headerview_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_headerview_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -6176,9 +6176,9 @@ libqt_list q_headerview_qbase_selected_indexes(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback QModelIndex** func()
+/// @param callback libqt_list of QModelIndex* func()
 ///
-void q_headerview_on_selected_indexes(void* self, QModelIndex** (*callback)());
+void q_headerview_on_selected_indexes(void* self, libqt_list (*callback)());
 
 /// Inherited from QAbstractItemView
 ///

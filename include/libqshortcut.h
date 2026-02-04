@@ -201,7 +201,7 @@ void q_shortcut_set_keys(void* self, int32_t key);
 /// @param self QShortcut*
 /// @param keys libqt_list of QKeySequence*
 ///
-void q_shortcut_set_keys2(void* self, libqt_list /* of QKeySequence* */ keys);
+void q_shortcut_set_keys2(void* self, libqt_list keys);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qshortcut.html#keys)
 ///

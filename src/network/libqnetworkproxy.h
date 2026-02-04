@@ -509,9 +509,9 @@ libqt_list q_networkproxyfactory_query_proxy(void* self, void* query);
 /// Allows for overriding the related default method
 ///
 /// @param self QNetworkProxyFactory*
-/// @param callback QNetworkProxy** func(QNetworkProxyFactory* self, QNetworkProxyQuery* query)
+/// @param callback libqt_list of QNetworkProxy* func(QNetworkProxyFactory* self, QNetworkProxyQuery* query)
 ///
-void q_networkproxyfactory_on_query_proxy(void* self, QNetworkProxy** (*callback)(void*, void*));
+void q_networkproxyfactory_on_query_proxy(void* self, libqt_list (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyfactory.html#queryProxy)
 ///

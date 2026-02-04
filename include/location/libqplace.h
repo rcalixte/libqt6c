@@ -59,7 +59,7 @@ void q_place_set_category(void* self, void* category);
 /// @param self QPlace*
 /// @param categories libqt_list of QPlaceCategory*
 ///
-void q_place_set_categories(void* self, libqt_list /* of QPlaceCategory* */ categories);
+void q_place_set_categories(void* self, libqt_list categories);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#location)
 ///
@@ -305,7 +305,7 @@ libqt_list q_place_contact_details(void* self, const char* contactType);
 /// @param contactType const char*
 /// @param details libqt_list of QPlaceContactDetail*
 ///
-void q_place_set_contact_details(void* self, const char* contactType, libqt_list /* of QPlaceContactDetail* */ details);
+void q_place_set_contact_details(void* self, const char* contactType, libqt_list details);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplace.html#appendContactDetail)
 ///

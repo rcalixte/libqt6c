@@ -841,7 +841,7 @@ QKeySequence* k_recentfilesaction_shortcut(void* self);
 /// @param self KRecentFilesAction*
 /// @param shortcuts libqt_list of QKeySequence*
 ///
-void k_recentfilesaction_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts);
+void k_recentfilesaction_set_shortcuts(void* self, libqt_list shortcuts);
 
 /// Inherited from QAction
 ///
@@ -2138,9 +2138,9 @@ libqt_list k_recentfilesaction_qbase_created_widgets(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesAction*
-/// @param callback QWidget** func()
+/// @param callback libqt_list of QWidget* func()
 ///
-void k_recentfilesaction_on_created_widgets(void* self, QWidget** (*callback)());
+void k_recentfilesaction_on_created_widgets(void* self, libqt_list (*callback)());
 
 /// Inherited from QObject
 ///

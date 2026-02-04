@@ -320,7 +320,7 @@ QKeySequence* k_bookmarkaction_shortcut(void* self);
 /// @param self KBookmarkAction*
 /// @param shortcuts libqt_list of QKeySequence*
 ///
-void k_bookmarkaction_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts);
+void k_bookmarkaction_set_shortcuts(void* self, libqt_list shortcuts);
 
 /// Inherited from QAction
 ///

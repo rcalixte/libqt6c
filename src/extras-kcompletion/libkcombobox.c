@@ -262,7 +262,7 @@ void k_combobox_set_completed_items(void* self, const char* items[static 1], boo
     free(items_qstr);
 }
 
-void k_combobox_on_set_completed_items(void* self, void (*callback)(void*, const char**, bool)) {
+void k_combobox_on_set_completed_items(void* self, void (*callback)(void*, const char***, bool)) {
     KComboBox_OnSetCompletedItems((KComboBox*)self, (intptr_t)callback);
 }
 

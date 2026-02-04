@@ -63,7 +63,7 @@ libqt_list /* of QNetworkCookie* */ q_networkcookiejar_cookies_for_url(void* sel
     return _arr;
 }
 
-void q_networkcookiejar_on_cookies_for_url(void* self, QNetworkCookie** (*callback)(void*, void*)) {
+void q_networkcookiejar_on_cookies_for_url(void* self, libqt_list /* of QNetworkCookie* */ (*callback)(void*, void*)) {
     QNetworkCookieJar_OnCookiesForUrl((QNetworkCookieJar*)self, (intptr_t)callback);
 }
 
@@ -76,7 +76,7 @@ bool q_networkcookiejar_set_cookies_from_url(void* self, libqt_list /* of QNetwo
     return QNetworkCookieJar_SetCookiesFromUrl((QNetworkCookieJar*)self, cookieList, (QUrl*)url);
 }
 
-void q_networkcookiejar_on_set_cookies_from_url(void* self, bool (*callback)(void*, QNetworkCookie**, void*)) {
+void q_networkcookiejar_on_set_cookies_from_url(void* self, bool (*callback)(void*, libqt_list /* of QNetworkCookie* */, void*)) {
     QNetworkCookieJar_OnSetCookiesFromUrl((QNetworkCookieJar*)self, (intptr_t)callback);
 }
 
@@ -125,7 +125,7 @@ libqt_list /* of QNetworkCookie* */ q_networkcookiejar_all_cookies(void* self) {
     return _arr;
 }
 
-void q_networkcookiejar_on_all_cookies(void* self, QNetworkCookie** (*callback)()) {
+void q_networkcookiejar_on_all_cookies(void* self, libqt_list /* of QNetworkCookie* */ (*callback)()) {
     QNetworkCookieJar_OnAllCookies((QNetworkCookieJar*)self, (intptr_t)callback);
 }
 
@@ -138,7 +138,7 @@ void q_networkcookiejar_set_all_cookies(void* self, libqt_list /* of QNetworkCoo
     QNetworkCookieJar_SetAllCookies((QNetworkCookieJar*)self, cookieList);
 }
 
-void q_networkcookiejar_on_set_all_cookies(void* self, void (*callback)(void*, QNetworkCookie**)) {
+void q_networkcookiejar_on_set_all_cookies(void* self, void (*callback)(void*, libqt_list /* of QNetworkCookie* */)) {
     QNetworkCookieJar_OnSetAllCookies((QNetworkCookieJar*)self, (intptr_t)callback);
 }
 

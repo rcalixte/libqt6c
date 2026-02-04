@@ -1564,7 +1564,7 @@ libqt_list q_abstracttextdocumentlayout__paintcontext_selections(void* self);
 /// @param self QAbstractTextDocumentLayout__PaintContext*
 /// @param selections libqt_list of QAbstractTextDocumentLayout__Selection*
 ///
-void q_abstracttextdocumentlayout__paintcontext_set_selections(void* self, libqt_list /* of QAbstractTextDocumentLayout__Selection* */ selections);
+void q_abstracttextdocumentlayout__paintcontext_set_selections(void* self, libqt_list selections);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout-paintcontext.html#operator-eq)
 ///

@@ -343,28 +343,28 @@ void q_geosatelliteinfosource_qbase_request_update(void* self, int timeout);
 /// @param self QGeoSatelliteInfoSource*
 /// @param satellites libqt_list of QGeoSatelliteInfo*
 ///
-void q_geosatelliteinfosource_satellites_in_view_updated(void* self, libqt_list /* of QGeoSatelliteInfo* */ satellites);
+void q_geosatelliteinfosource_satellites_in_view_updated(void* self, libqt_list satellites);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfosource.html#satellitesInViewUpdated)
 ///
 /// @param self QGeoSatelliteInfoSource*
-/// @param callback void func(QGeoSatelliteInfoSource* self, QGeoSatelliteInfo** satellites)
+/// @param callback void func(QGeoSatelliteInfoSource* self, libqt_list of QGeoSatelliteInfo* satellites)
 ///
-void q_geosatelliteinfosource_on_satellites_in_view_updated(void* self, void (*callback)(void*, QGeoSatelliteInfo**));
+void q_geosatelliteinfosource_on_satellites_in_view_updated(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfosource.html#satellitesInUseUpdated)
 ///
 /// @param self QGeoSatelliteInfoSource*
 /// @param satellites libqt_list of QGeoSatelliteInfo*
 ///
-void q_geosatelliteinfosource_satellites_in_use_updated(void* self, libqt_list /* of QGeoSatelliteInfo* */ satellites);
+void q_geosatelliteinfosource_satellites_in_use_updated(void* self, libqt_list satellites);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfosource.html#satellitesInUseUpdated)
 ///
 /// @param self QGeoSatelliteInfoSource*
-/// @param callback void func(QGeoSatelliteInfoSource* self, QGeoSatelliteInfo** satellites)
+/// @param callback void func(QGeoSatelliteInfoSource* self, libqt_list of QGeoSatelliteInfo* satellites)
 ///
-void q_geosatelliteinfosource_on_satellites_in_use_updated(void* self, void (*callback)(void*, QGeoSatelliteInfo**));
+void q_geosatelliteinfosource_on_satellites_in_use_updated(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfosource.html#errorOccurred)
 ///

@@ -460,7 +460,7 @@ QKeySequence* k_toolbarlabelaction_shortcut(void* self);
 /// @param self KToolBarLabelAction*
 /// @param shortcuts libqt_list of QKeySequence*
 ///
-void k_toolbarlabelaction_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts);
+void k_toolbarlabelaction_set_shortcuts(void* self, libqt_list shortcuts);
 
 /// Inherited from QAction
 ///
@@ -1555,9 +1555,9 @@ libqt_list k_toolbarlabelaction_qbase_created_widgets(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback QWidget** func()
+/// @param callback libqt_list of QWidget* func()
 ///
-void k_toolbarlabelaction_on_created_widgets(void* self, QWidget** (*callback)());
+void k_toolbarlabelaction_on_created_widgets(void* self, libqt_list (*callback)());
 
 /// Inherited from QObject
 ///

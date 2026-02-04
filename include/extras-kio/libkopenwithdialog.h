@@ -25,7 +25,7 @@ KOpenWithDialog* k_openwithdialog_new(void* parent);
 ///
 /// @param urls libqt_list of QUrl*
 ///
-KOpenWithDialog* k_openwithdialog_new2(libqt_list /* of QUrl* */ urls);
+KOpenWithDialog* k_openwithdialog_new2(libqt_list urls);
 
 /// [Upstream resources](https://api.kde.org/kopenwithdialog.html)
 
@@ -35,7 +35,7 @@ KOpenWithDialog* k_openwithdialog_new2(libqt_list /* of QUrl* */ urls);
 /// @param text const char*
 /// @param value const char*
 ///
-KOpenWithDialog* k_openwithdialog_new3(libqt_list /* of QUrl* */ urls, const char* text, const char* value);
+KOpenWithDialog* k_openwithdialog_new3(libqt_list urls, const char* text, const char* value);
 
 /// [Upstream resources](https://api.kde.org/kopenwithdialog.html)
 
@@ -55,7 +55,7 @@ KOpenWithDialog* k_openwithdialog_new4(const char* mimeType, const char* value);
 /// @param text const char*
 /// @param value const char*
 ///
-KOpenWithDialog* k_openwithdialog_new5(libqt_list /* of QUrl* */ urls, const char* mimeType, const char* text, const char* value);
+KOpenWithDialog* k_openwithdialog_new5(libqt_list urls, const char* mimeType, const char* text, const char* value);
 
 /// [Upstream resources](https://api.kde.org/kopenwithdialog.html)
 
@@ -70,7 +70,7 @@ KOpenWithDialog* k_openwithdialog_new6();
 /// @param urls libqt_list of QUrl*
 /// @param parent QWidget*
 ///
-KOpenWithDialog* k_openwithdialog_new7(libqt_list /* of QUrl* */ urls, void* parent);
+KOpenWithDialog* k_openwithdialog_new7(libqt_list urls, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kopenwithdialog.html)
 
@@ -81,7 +81,7 @@ KOpenWithDialog* k_openwithdialog_new7(libqt_list /* of QUrl* */ urls, void* par
 /// @param value const char*
 /// @param parent QWidget*
 ///
-KOpenWithDialog* k_openwithdialog_new8(libqt_list /* of QUrl* */ urls, const char* text, const char* value, void* parent);
+KOpenWithDialog* k_openwithdialog_new8(libqt_list urls, const char* text, const char* value, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kopenwithdialog.html)
 
@@ -103,7 +103,7 @@ KOpenWithDialog* k_openwithdialog_new9(const char* mimeType, const char* value, 
 /// @param value const char*
 /// @param parent QWidget*
 ///
-KOpenWithDialog* k_openwithdialog_new10(libqt_list /* of QUrl* */ urls, const char* mimeType, const char* text, const char* value, void* parent);
+KOpenWithDialog* k_openwithdialog_new10(libqt_list urls, const char* mimeType, const char* text, const char* value, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -2277,7 +2277,7 @@ void k_openwithdialog_add_action(void* self, void* action);
 /// @param self KOpenWithDialog*
 /// @param actions libqt_list of QAction*
 ///
-void k_openwithdialog_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_openwithdialog_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2287,7 +2287,7 @@ void k_openwithdialog_add_actions(void* self, libqt_list /* of QAction* */ actio
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_openwithdialog_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_openwithdialog_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

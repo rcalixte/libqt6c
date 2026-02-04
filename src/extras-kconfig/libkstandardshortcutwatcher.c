@@ -28,7 +28,7 @@ void k_standardshortcut__standardshortcutwatcher_shortcut_changed(void* self, in
     KStandardShortcut__StandardShortcutWatcher_ShortcutChanged((KStandardShortcut__StandardShortcutWatcher*)self, id, shortcut);
 }
 
-void k_standardshortcut__standardshortcutwatcher_on_shortcut_changed(void* self, void (*callback)(void*, int32_t, QKeySequence**)) {
+void k_standardshortcut__standardshortcutwatcher_on_shortcut_changed(void* self, void (*callback)(void*, int32_t, libqt_list /* of QKeySequence* */)) {
     KStandardShortcut__StandardShortcutWatcher_Connect_ShortcutChanged((KStandardShortcut__StandardShortcutWatcher*)self, (intptr_t)callback);
 }
 

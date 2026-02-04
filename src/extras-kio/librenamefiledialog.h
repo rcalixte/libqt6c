@@ -98,14 +98,14 @@ const char* k_io__renamefiledialog_tr(const char* s);
 /// @param self KIO__RenameFileDialog*
 /// @param urls libqt_list of QUrl*
 ///
-void k_io__renamefiledialog_renaming_finished(void* self, libqt_list /* of QUrl* */ urls);
+void k_io__renamefiledialog_renaming_finished(void* self, libqt_list urls);
 
 /// [Upstream resources](https://api.kde.org/kio-renamefiledialog.html#renamingFinished)
 ///
 /// @param self KIO__RenameFileDialog*
-/// @param callback void func(KIO__RenameFileDialog* self, QUrl** urls)
+/// @param callback void func(KIO__RenameFileDialog* self, libqt_list of QUrl* urls)
 ///
-void k_io__renamefiledialog_on_renaming_finished(void* self, void (*callback)(void*, QUrl**));
+void k_io__renamefiledialog_on_renaming_finished(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://api.kde.org/kio-renamefiledialog.html#error)
 ///
@@ -2141,7 +2141,7 @@ void k_io__renamefiledialog_add_action(void* self, void* action);
 /// @param self KIO__RenameFileDialog*
 /// @param actions libqt_list of QAction*
 ///
-void k_io__renamefiledialog_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_io__renamefiledialog_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2151,7 +2151,7 @@ void k_io__renamefiledialog_add_actions(void* self, libqt_list /* of QAction* */
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_io__renamefiledialog_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_io__renamefiledialog_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

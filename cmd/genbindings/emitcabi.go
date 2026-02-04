@@ -70,8 +70,6 @@ func (p CppParameter) RenderTypeCabi(isSlot bool) string {
 		if isSlot {
 			if innerType == "libqt_string" {
 				return "const char**"
-			} else if inner.IntType() || IsKnownClass(inner.ParameterType) {
-				return innerType + "*"
 			}
 		}
 
@@ -380,73 +378,35 @@ func emitCABI2CppForwarding(p CppParameter, indent, currentClass string, isSlot 
 
 		preamble += indent + containerQtType + maybePointer + " " + nameprefix + "_" + containerType + ";\n"
 
-		if isSlot && listType.IntType() {
-			var maybeCast, maybeCloseCast string
-			if listType.IsKnownEnum() {
-				maybeCast = "static_cast<" + listType.ParameterType + ">("
-				maybeCloseCast = ")"
-			}
+		dataField := ".data." + unionType
+		iterField := ".len"
 
-			sentinel := "-1"
-			if lType == "double" {
-				sentinel = "-1.0"
-			} else if lType == "float" {
-				sentinel = "-1.0f"
-			} else if strings.Contains(lType, "uint") || strings.Contains(lType, "unsigned") {
-				sentinel = "0"
-			}
-
-			preamble += indent + "for (" + lType + "* ptr = " + p.ParameterName + "; *ptr != " + sentinel + "; ++ptr) {\n"
-			preamble += indent + "\t" + nameprefix + "_" + containerType + refType + "push_back(" + maybeCast + "*ptr" + maybeCloseCast + ");\n"
-			preamble += indent + "}\n"
-
+		if isSlot && lType == "const char*" {
+			preamble += indent + "size_t " + p.ParameterName + "_len = libqt_strv_length(" + p.ParameterName + ");\n"
+			preamble += indent + nameprefix + "_" + containerType + refType + "reserve(" + p.ParameterName + "_len);\n"
+			dataField = ""
+			iterField = "_len"
 		} else {
-			dataField := ".data." + unionType
-			iterField := ".len"
-			if isSlot && lType == "const char*" {
-				preamble += indent + "size_t " + p.ParameterName + "_len = libqt_strv_length(" + p.ParameterName + ");\n"
-				preamble += indent + nameprefix + "_" + containerType + refType + "reserve(" + p.ParameterName + "_len);\n"
-				dataField = ""
-				iterField = "_len"
-			} else if isSlot && IsKnownClass(listType.ParameterType) {
-				if p.ByRef {
-					preamble += indent + nameprefix + "_" + containerType + " = new " + containerQtType + ";\n"
-				}
-			} else {
-				preamble += indent + nameprefix + "_" + containerType + refType + "reserve(" + p.ParameterName + ".len);\n"
-			}
-
-			if isSlot && IsKnownClass(listType.ParameterType) {
-				maybeExtraDeref := "*"
-				if strings.HasSuffix(containerQtType, "*>") {
-					maybeExtraDeref = ""
-				}
-				preamble += indent + "// Iterate until null pointer sentinel\n"
-				preamble += indent + "for (" + lType + "* ptridx = " + nameprefix + "; *ptridx != nullptr; ptridx++) {\n"
-				preamble += indent + "\t" + nameprefix + "_" + containerType + refType + "push_back(" + maybeExtraDeref + "*ptridx);\n"
-				preamble += indent + "}\n"
-			} else {
-				preamble += indent + lType + "* " + nameprefix + "_arr = static_cast<" + lType + "*>(" + p.ParameterName + dataField + ");\n"
-
-				iterator := "i"
-				if p.ParameterName[len(p.ParameterName)-1] == ']' {
-					iterator = "j"
-				}
-				preamble += indent + "for(size_t " + iterator + " = 0; " + iterator + " < " + p.ParameterName + iterField + "; ++" + iterator + ") {\n"
-
-				listType.ParameterName = nameprefix + "_arr[" + iterator + "]"
-				addPre, addFwd := emitCABI2CppForwarding(listType, indent+"\t", currentClass, isSlot)
-				preamble += addPre
-				preamble += indent + "\t" + nameprefix + "_" + containerType + refType + "push_back(" + addFwd + ");\n"
-
-				preamble += indent + "}\n"
-			}
-
+			preamble += indent + nameprefix + "_" + containerType + refType + "reserve(" + p.ParameterName + ".len);\n"
 		}
 
-		// TODO fully support native types and remove the prefix check
-		if isSlot && !strings.HasPrefix(p.RenderTypeCabi(true), "libqt_list") {
-			preamble += indent + "free(" + nameprefix + ");\n"
+		preamble += indent + lType + "* " + nameprefix + "_arr = static_cast<" + lType + "*>(" + p.ParameterName + dataField + ");\n"
+
+		iterator := "i"
+		if p.ParameterName[len(p.ParameterName)-1] == ']' {
+			iterator = "j"
+		}
+		preamble += indent + "for(size_t " + iterator + " = 0; " + iterator + " < " + p.ParameterName + iterField + "; ++" + iterator + ") {\n"
+
+		listType.ParameterName = nameprefix + "_arr[" + iterator + "]"
+		addPre, addFwd := emitCABI2CppForwarding(listType, indent+"\t", currentClass, isSlot)
+		preamble += addPre
+		preamble += indent + "\t" + nameprefix + "_" + containerType + refType + "push_back(" + addFwd + ");\n"
+
+		preamble += indent + "}\n"
+
+		if isSlot {
+			preamble += indent + "libqt_free(" + nameprefix + dataField + ");\n"
 		}
 
 		// Support passing QList<>* (very rare, but used in qnetwork)
@@ -809,39 +769,14 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 		}
 
 		if isSignal {
-			if t.IntType() {
-				sentinel := "-1"
-				if cType == "double" {
-					sentinel = "-1.0"
-				} else if cType == "float" {
-					sentinel = "-1.0f"
-				} else if strings.Contains(cType, "uint") || strings.Contains(cType, "unsigned") {
-					sentinel = "0"
-				}
-
-				afterCall += indent + "// Append sentinel value to the list\n"
-				afterCall += indent + namePrefix + "_arr[" + namePrefix + "_ret" + memberRef + "size()] = " + sentinel + ";\n"
-
-				afterCall += indent + assignExpression + namePrefix + "_arr;\n"
-
-			} else if IsKnownClass(t.ParameterType) {
-				afterCall += indent + "// Append sentinel value to the list\n"
-				afterCall += indent + namePrefix + "_arr[" + namePrefix + "_ret" + memberRef + "size()] = nullptr;\n"
-
-				sigvalIndex := strings.Index(assignExpression, "sigval")
-				assignExpression = cType + "* " + assignExpression[sigvalIndex:sigvalIndex+7] + " = "
-				afterCall += indent + assignExpression + namePrefix + "_arr;\n"
-			}
-
 			cleanupType = QListFree
-
-		} else {
-			afterCall += indent + "libqt_list " + namePrefix + "_out;\n"
-			afterCall += indent + namePrefix + "_out.len = " + namePrefix + "_ret" + memberRef + "size();\n"
-			afterCall += indent + namePrefix + "_out.data." + unionType + " = " + castType + maybeLParen + namePrefix + "_arr" + maybeRParen + ";\n"
-
-			afterCall += indent + assignExpression + namePrefix + "_out;\n"
 		}
+
+		afterCall += indent + "libqt_list " + namePrefix + "_out;\n"
+		afterCall += indent + namePrefix + "_out.len = " + namePrefix + "_ret" + memberRef + "size();\n"
+		afterCall += indent + namePrefix + "_out.data." + unionType + " = " + castType + maybeLParen + namePrefix + "_arr" + maybeRParen + ";\n"
+
+		afterCall += indent + assignExpression + namePrefix + "_out;\n"
 
 		return indent + shouldReturn + rvalue + ";\n" + afterCall, cleanupType
 
@@ -1852,7 +1787,7 @@ extern "C" {
 					maybeEndMacro = "#endif\n"
 				}
 
-				ret.WriteString(fmt.Sprintf("%s%s %s_%s(%s);\n%s", maybeMacro, returnCabi, methodPrefixName, mSafeMethodName, emitParametersCabi(m, maybeConst+methodPrefixName+"*"), maybeEndMacro))
+				ret.WriteString(maybeMacro + returnCabi + " " + methodPrefixName + "_" + mSafeMethodName + "(" + emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ");\n" + maybeEndMacro)
 			}
 
 			if m.IsSignal {
@@ -1865,7 +1800,8 @@ extern "C" {
 				}
 
 				if addConnect {
-					ret.WriteString(fmt.Sprintf("%s %s_Connect_%s(%s* self, intptr_t slot);\n", m.ReturnType.RenderTypeCabi(false), methodPrefixName, mSafeMethodName, methodPrefixName))
+					maybeConst := ifv(m.IsConst, "const ", "")
+					ret.WriteString(m.ReturnType.RenderTypeCabi(false) + " " + methodPrefixName + "_Connect_" + mSafeMethodName + "(" + maybeConst + methodPrefixName + "* self, intptr_t slot);\n")
 				}
 			}
 		}
@@ -1914,7 +1850,8 @@ extern "C" {
 		}
 
 		for _, m := range c.PrivateSignals {
-			ret.WriteString(fmt.Sprintf("%s %s_Connect_%s(%s* self, intptr_t slot);\n", m.ReturnType.RenderTypeCabi(false), methodPrefixName, m.SafeMethodName(), methodPrefixName))
+			maybeConst := ifv(m.IsConst, "const ", "")
+			ret.WriteString(m.ReturnType.RenderTypeCabi(false) + " " + methodPrefixName + "_Connect_" + m.SafeMethodName() + "(" + maybeConst + methodPrefixName + "* self, intptr_t slot);\n")
 		}
 
 		// delete
@@ -2325,10 +2262,11 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 				}
 
 				signalCode += "\t" + bindingFunc + ");\n" + sigCleanup + "\t});\n"
+				maybeConst := ifv(m.IsConst, "const ", "")
 
 				ret.WriteString(
-					"void " + methodPrefixName + "_Connect_" + mSafeMethodName + "(" + methodPrefixName + "* self, intptr_t slot) {\n" +
-						"\tvoid (*slotFunc)(" + methodPrefixName + "*" + sigRet + ") = reinterpret_cast<void (*)(" + methodPrefixName + "*" + sigRet + ")>(slot);\n" +
+					"void " + methodPrefixName + "_Connect_" + mSafeMethodName + "(" + maybeConst + methodPrefixName + "* self, intptr_t slot) {\n" +
+						"\tvoid (*slotFunc)(" + maybeConst + methodPrefixName + "*" + sigRet + ") = reinterpret_cast<void (*)(" + maybeConst + methodPrefixName + "*" + sigRet + ")>(slot);\n" +
 						"\t" + c.ClassName + "::connect(self, &" + c.ClassName + "::" + m.CppCallTarget() + ", [self, slotFunc](" + emitParametersCpp(m, showHiddenParams) + ") {\n" +
 						signalCode + "}\n\n",
 				)
@@ -2500,10 +2438,11 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 			}
 
 			signalCode += "\t" + bindingFunc + ");\n" + sigCleanup + "\t});\n"
+			maybeConst := ifv(m.IsConst, "const ", "")
 
 			ret.WriteString(
-				"void " + methodPrefixName + "_Connect_" + m.SafeMethodName() + "(" + methodPrefixName + "* self, intptr_t slot) {\n" +
-					"\tvoid (*slotFunc)(" + methodPrefixName + "*" + sigRet + ") = reinterpret_cast<void (*)(" + methodPrefixName + "*" + sigRet + ")>(slot);\n" +
+				"void " + methodPrefixName + "_Connect_" + m.SafeMethodName() + "(" + maybeConst + methodPrefixName + "* self, intptr_t slot) {\n" +
+					"\tvoid (*slotFunc)(" + maybeConst + methodPrefixName + "*" + sigRet + ") = reinterpret_cast<void (*)(" + maybeConst + methodPrefixName + "*" + sigRet + ")>(slot);\n" +
 					"\t" + c.ClassName + "::connect(self, &" + c.ClassName + "::" + m.CppCallTarget() + ", [self, slotFunc](" + emitParametersCpp(m, false) + ") {\n" +
 					signalCode + "}\n\n",
 			)

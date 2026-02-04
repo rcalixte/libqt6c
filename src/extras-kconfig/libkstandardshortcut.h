@@ -74,7 +74,7 @@ libqt_list k_standardshortcut_hardcoded_default_shortcut(int32_t param1);
 /// @param param1 enum KStandardShortcut__StandardShortcut
 /// @param param2 libqt_list of QKeySequence*
 ///
-void k_standardshortcut_save_shortcut(int32_t param1, libqt_list /* of QKeySequence* */ param2);
+void k_standardshortcut_save_shortcut(int32_t param1, libqt_list param2);
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#category)
 ///

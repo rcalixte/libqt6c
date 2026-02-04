@@ -332,7 +332,7 @@ int32_t q_filedialog_accept_mode(void* self);
 /// @param self QFileDialog*
 /// @param urls libqt_list of QUrl*
 ///
-void q_filedialog_set_sidebar_urls(void* self, libqt_list /* of QUrl* */ urls);
+void q_filedialog_set_sidebar_urls(void* self, libqt_list urls);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#sidebarUrls)
 ///
@@ -538,7 +538,7 @@ void q_filedialog_files_selected(void* self, const char* files[static 1]);
 /// @param self QFileDialog*
 /// @param callback void func(QFileDialog* self, const char** files)
 ///
-void q_filedialog_on_files_selected(void* self, void (*callback)(void*, const char**));
+void q_filedialog_on_files_selected(void* self, void (*callback)(void*, const char***));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#currentChanged)
 ///
@@ -587,14 +587,14 @@ void q_filedialog_on_url_selected(void* self, void (*callback)(void*, void*));
 /// @param self QFileDialog*
 /// @param urls libqt_list of QUrl*
 ///
-void q_filedialog_urls_selected(void* self, libqt_list /* of QUrl* */ urls);
+void q_filedialog_urls_selected(void* self, libqt_list urls);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#urlsSelected)
 ///
 /// @param self QFileDialog*
-/// @param callback void func(QFileDialog* self, QUrl** urls)
+/// @param callback void func(QFileDialog* self, libqt_list of QUrl* urls)
 ///
-void q_filedialog_on_urls_selected(void* self, void (*callback)(void*, QUrl**));
+void q_filedialog_on_urls_selected(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#currentUrlChanged)
 ///
@@ -3086,7 +3086,7 @@ void q_filedialog_add_action(void* self, void* action);
 /// @param self QFileDialog*
 /// @param actions libqt_list of QAction*
 ///
-void q_filedialog_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_filedialog_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3096,7 +3096,7 @@ void q_filedialog_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_filedialog_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_filedialog_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

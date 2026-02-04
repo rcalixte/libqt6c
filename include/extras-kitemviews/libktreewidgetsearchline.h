@@ -32,7 +32,7 @@ KTreeWidgetSearchLine* k_treewidgetsearchline_new2();
 /// @param parent QWidget*
 /// @param treeWidgets libqt_list of QTreeWidget*
 ///
-KTreeWidgetSearchLine* k_treewidgetsearchline_new3(void* parent, libqt_list /* of QTreeWidget* */ treeWidgets);
+KTreeWidgetSearchLine* k_treewidgetsearchline_new3(void* parent, libqt_list treeWidgets);
 
 /// [Upstream resources](https://api.kde.org/ktreewidgetsearchline.html)
 
@@ -267,7 +267,7 @@ void k_treewidgetsearchline_set_keep_parents_visible(void* self, bool value);
 /// @param self KTreeWidgetSearchLine*
 /// @param columns libqt_list of int
 ///
-void k_treewidgetsearchline_set_search_columns(void* self, libqt_list /* of int */ columns);
+void k_treewidgetsearchline_set_search_columns(void* self, libqt_list columns);
 
 /// [Upstream resources](https://api.kde.org/ktreewidgetsearchline.html#setTreeWidget)
 ///
@@ -281,7 +281,7 @@ void k_treewidgetsearchline_set_tree_widget(void* self, void* treeWidget);
 /// @param self KTreeWidgetSearchLine*
 /// @param treeWidgets libqt_list of QTreeWidget*
 ///
-void k_treewidgetsearchline_set_tree_widgets(void* self, libqt_list /* of QTreeWidget* */ treeWidgets);
+void k_treewidgetsearchline_set_tree_widgets(void* self, libqt_list treeWidgets);
 
 /// [Upstream resources](https://api.kde.org/ktreewidgetsearchline.html#itemMatches)
 ///
@@ -3089,7 +3089,7 @@ void k_treewidgetsearchline_set_accept_drops(void* self, bool on);
 /// @param self KTreeWidgetSearchLine*
 /// @param actions libqt_list of QAction*
 ///
-void k_treewidgetsearchline_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_treewidgetsearchline_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3099,7 +3099,7 @@ void k_treewidgetsearchline_add_actions(void* self, libqt_list /* of QAction* */
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_treewidgetsearchline_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_treewidgetsearchline_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

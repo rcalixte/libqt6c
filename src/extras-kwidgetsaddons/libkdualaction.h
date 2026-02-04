@@ -493,7 +493,7 @@ QKeySequence* k_dualaction_shortcut(void* self);
 /// @param self KDualAction*
 /// @param shortcuts libqt_list of QKeySequence*
 ///
-void k_dualaction_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts);
+void k_dualaction_set_shortcuts(void* self, libqt_list shortcuts);
 
 /// Inherited from QAction
 ///

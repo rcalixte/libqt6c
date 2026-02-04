@@ -515,7 +515,7 @@ void q_sslsocket_ssl_errors(void* self, libqt_list /* of QSslError* */ errors) {
     QSslSocket_SslErrors((QSslSocket*)self, errors);
 }
 
-void q_sslsocket_on_ssl_errors(void* self, void (*callback)(void*, QSslError**)) {
+void q_sslsocket_on_ssl_errors(void* self, void (*callback)(void*, libqt_list /* of QSslError* */)) {
     QSslSocket_Connect_SslErrors((QSslSocket*)self, (intptr_t)callback);
 }
 

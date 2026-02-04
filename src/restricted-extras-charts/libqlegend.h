@@ -820,7 +820,7 @@ void q_legend_add_action(void* self, void* action);
 /// @param self QLegend*
 /// @param actions libqt_list of QAction*
 ///
-void q_legend_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_legend_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -830,7 +830,7 @@ void q_legend_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_legend_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_legend_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -2480,7 +2480,7 @@ libqt_list q_legend_transformations(void* self);
 /// @param self QLegend*
 /// @param transformations libqt_list of QGraphicsTransform*
 ///
-void q_legend_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations);
+void q_legend_set_transformations(void* self, libqt_list transformations);
 
 /// Inherited from QGraphicsItem
 ///

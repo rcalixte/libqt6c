@@ -143,7 +143,7 @@ libqt_list q_rawfont_glyph_indexes_for_string(void* self, const char* text);
 ///
 /// @return libqt_list of QPointF*
 ///
-libqt_list q_rawfont_advances_for_glyph_indexes(void* self, libqt_list /* of uint32_t */ glyphIndexes);
+libqt_list q_rawfont_advances_for_glyph_indexes(void* self, libqt_list glyphIndexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#advancesForGlyphIndexes)
 ///
@@ -153,7 +153,7 @@ libqt_list q_rawfont_advances_for_glyph_indexes(void* self, libqt_list /* of uin
 ///
 /// @return libqt_list of QPointF*
 ///
-libqt_list q_rawfont_advances_for_glyph_indexes2(void* self, libqt_list /* of uint32_t */ glyphIndexes, int32_t layoutFlags);
+libqt_list q_rawfont_advances_for_glyph_indexes2(void* self, libqt_list glyphIndexes, int32_t layoutFlags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#glyphIndexesForChars)
 ///

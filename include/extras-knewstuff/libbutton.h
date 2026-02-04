@@ -114,14 +114,14 @@ void k_nswidgets__button_set_config_file(void* self, const char* configFile);
 /// @param self KNSWidgets__Button*
 /// @param changedEntries libqt_list of KNSCore__Entry*
 ///
-void k_nswidgets__button_dialog_finished(void* self, libqt_list /* of KNSCore__Entry* */ changedEntries);
+void k_nswidgets__button_dialog_finished(void* self, libqt_list changedEntries);
 
 /// [Upstream resources](https://api.kde.org/knswidgets-button.html#dialogFinished)
 ///
 /// @param self KNSWidgets__Button*
-/// @param callback void func(KNSWidgets__Button* self, KNSCore__Entry** changedEntries)
+/// @param callback void func(KNSWidgets__Button* self, libqt_list of KNSCore__Entry* changedEntries)
 ///
-void k_nswidgets__button_on_dialog_finished(void* self, void (*callback)(void*, KNSCore__Entry**));
+void k_nswidgets__button_on_dialog_finished(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -2432,7 +2432,7 @@ void k_nswidgets__button_add_action(void* self, void* action);
 /// @param self KNSWidgets__Button*
 /// @param actions libqt_list of QAction*
 ///
-void k_nswidgets__button_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_nswidgets__button_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2442,7 +2442,7 @@ void k_nswidgets__button_add_actions(void* self, libqt_list /* of QAction* */ ac
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_nswidgets__button_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_nswidgets__button_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

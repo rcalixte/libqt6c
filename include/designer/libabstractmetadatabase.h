@@ -80,9 +80,9 @@ libqt_list q_designermetadatabaseiteminterface_tab_order(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QDesignerMetaDataBaseItemInterface*
-/// @param callback QWidget** func()
+/// @param callback libqt_list of QWidget* func()
 ///
-void q_designermetadatabaseiteminterface_on_tab_order(void* self, QWidget** (*callback)());
+void q_designermetadatabaseiteminterface_on_tab_order(void* self, libqt_list (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#tabOrder)
 ///
@@ -99,16 +99,16 @@ libqt_list q_designermetadatabaseiteminterface_qbase_tab_order(void* self);
 /// @param self QDesignerMetaDataBaseItemInterface*
 /// @param tabOrder libqt_list of QWidget*
 ///
-void q_designermetadatabaseiteminterface_set_tab_order(void* self, libqt_list /* of QWidget* */ tabOrder);
+void q_designermetadatabaseiteminterface_set_tab_order(void* self, libqt_list tabOrder);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#setTabOrder)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QDesignerMetaDataBaseItemInterface*
-/// @param callback void func(QDesignerMetaDataBaseItemInterface* self, QWidget** tabOrder)
+/// @param callback void func(QDesignerMetaDataBaseItemInterface* self, libqt_list of QWidget* tabOrder)
 ///
-void q_designermetadatabaseiteminterface_on_set_tab_order(void* self, void (*callback)(void*, QWidget**));
+void q_designermetadatabaseiteminterface_on_set_tab_order(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#setTabOrder)
 ///
@@ -117,7 +117,7 @@ void q_designermetadatabaseiteminterface_on_set_tab_order(void* self, void (*cal
 /// @param self QDesignerMetaDataBaseItemInterface*
 /// @param tabOrder libqt_list of QWidget*
 ///
-void q_designermetadatabaseiteminterface_qbase_set_tab_order(void* self, libqt_list /* of QWidget* */ tabOrder);
+void q_designermetadatabaseiteminterface_qbase_set_tab_order(void* self, libqt_list tabOrder);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#enabled)
 ///
@@ -350,9 +350,9 @@ libqt_list q_designermetadatabaseinterface_objects(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QDesignerMetaDataBaseInterface*
-/// @param callback QObject** func()
+/// @param callback libqt_list of QObject* func()
 ///
-void q_designermetadatabaseinterface_on_objects(void* self, QObject** (*callback)());
+void q_designermetadatabaseinterface_on_objects(void* self, libqt_list (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseinterface.html#objects)
 ///

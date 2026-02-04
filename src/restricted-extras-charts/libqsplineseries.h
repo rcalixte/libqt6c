@@ -170,7 +170,7 @@ void q_splineseries_append2(void* self, void* point);
 /// @param self QSplineSeries*
 /// @param points libqt_list of QPointF*
 ///
-void q_splineseries_append3(void* self, libqt_list /* of QPointF* */ points);
+void q_splineseries_append3(void* self, libqt_list points);
 
 /// Inherited from QXYSeries
 ///
@@ -324,7 +324,7 @@ QXYSeries* q_splineseries_operator_shift_left(void* self, void* point);
 /// @param self QSplineSeries*
 /// @param points libqt_list of QPointF*
 ///
-QXYSeries* q_splineseries_operator_shift_left2(void* self, libqt_list /* of QPointF* */ points);
+QXYSeries* q_splineseries_operator_shift_left2(void* self, libqt_list points);
 
 /// Inherited from QXYSeries
 ///
@@ -467,7 +467,7 @@ bool q_splineseries_point_labels_clipping(void* self);
 /// @param self QSplineSeries*
 /// @param points libqt_list of QPointF*
 ///
-void q_splineseries_replace5(void* self, libqt_list /* of QPointF* */ points);
+void q_splineseries_replace5(void* self, libqt_list points);
 
 /// Inherited from QXYSeries
 ///
@@ -529,7 +529,7 @@ void q_splineseries_deselect_all_points(void* self);
 /// @param self QSplineSeries*
 /// @param indexes libqt_list of int
 ///
-void q_splineseries_select_points(void* self, libqt_list /* of int */ indexes);
+void q_splineseries_select_points(void* self, libqt_list indexes);
 
 /// Inherited from QXYSeries
 ///
@@ -538,7 +538,7 @@ void q_splineseries_select_points(void* self, libqt_list /* of int */ indexes);
 /// @param self QSplineSeries*
 /// @param indexes libqt_list of int
 ///
-void q_splineseries_deselect_points(void* self, libqt_list /* of int */ indexes);
+void q_splineseries_deselect_points(void* self, libqt_list indexes);
 
 /// Inherited from QXYSeries
 ///
@@ -547,7 +547,7 @@ void q_splineseries_deselect_points(void* self, libqt_list /* of int */ indexes)
 /// @param self QSplineSeries*
 /// @param indexes libqt_list of int
 ///
-void q_splineseries_toggle_selection(void* self, libqt_list /* of int */ indexes);
+void q_splineseries_toggle_selection(void* self, libqt_list indexes);
 
 /// Inherited from QXYSeries
 ///
@@ -790,7 +790,7 @@ libqt_map q_splineseries_points_configuration(void* self);
 /// @param minSize double
 /// @param maxSize double
 ///
-void q_splineseries_size_by(void* self, libqt_list /* of double */ sourceData, double minSize, double maxSize);
+void q_splineseries_size_by(void* self, libqt_list sourceData, double minSize, double maxSize);
 
 /// Inherited from QXYSeries
 ///
@@ -799,7 +799,7 @@ void q_splineseries_size_by(void* self, libqt_list /* of double */ sourceData, d
 /// @param self QSplineSeries*
 /// @param sourceData libqt_list of double
 ///
-void q_splineseries_color_by(void* self, libqt_list /* of double */ sourceData);
+void q_splineseries_color_by(void* self, libqt_list sourceData);
 
 /// Inherited from QXYSeries
 ///
@@ -1247,7 +1247,7 @@ void q_splineseries_points_configuration_changed(void* self, libqt_map configura
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#pointsConfigurationChanged)
 ///
 /// @param self QSplineSeries*
-/// @param callback void func(QSplineSeries* self, libqt_map of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant*)
+/// @param callback void func(QSplineSeries* self, libqt_map of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* configuration)
 ///
 void q_splineseries_on_points_configuration_changed(void* self, void (*callback)(void*, libqt_map));
 
@@ -1313,7 +1313,7 @@ void q_splineseries_set_best_fit_line_visible1(void* self, bool visible);
 /// @param sourceData libqt_list of double
 /// @param gradient QLinearGradient*
 ///
-void q_splineseries_color_by2(void* self, libqt_list /* of double */ sourceData, void* gradient);
+void q_splineseries_color_by2(void* self, libqt_list sourceData, void* gradient);
 
 /// Inherited from QAbstractSeries
 ///

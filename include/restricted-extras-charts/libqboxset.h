@@ -158,7 +158,7 @@ void q_boxset_append(void* self, double value);
 /// @param self QBoxSet*
 /// @param values libqt_list of double
 ///
-void q_boxset_append2(void* self, libqt_list /* of double */ values);
+void q_boxset_append2(void* self, libqt_list values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qboxset-qtcharts.html#clear)
 ///

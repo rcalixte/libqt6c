@@ -95,7 +95,7 @@ double q_georoutesegment_distance(void* self);
 /// @param self QGeoRouteSegment*
 /// @param path libqt_list of QGeoCoordinate*
 ///
-void q_georoutesegment_set_path(void* self, libqt_list /* of QGeoCoordinate* */ path);
+void q_georoutesegment_set_path(void* self, libqt_list path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutesegment.html#path)
 ///

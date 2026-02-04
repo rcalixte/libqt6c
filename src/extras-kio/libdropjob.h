@@ -44,7 +44,7 @@ const char* k_io__dropjob_tr(const char* s);
 /// @param self KIO__DropJob*
 /// @param actions libqt_list of QAction*
 ///
-void k_io__dropjob_set_application_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_io__dropjob_set_application_actions(void* self, libqt_list actions);
 
 /// [Upstream resources](https://api.kde.org/kio-dropjob.html#showMenu)
 ///

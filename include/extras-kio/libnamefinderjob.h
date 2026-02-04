@@ -1433,9 +1433,9 @@ libqt_list k_io__namefinderjob_qbase_subjobs(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KIO__NameFinderJob*
-/// @param callback KJob** func()
+/// @param callback libqt_list of KJob* func()
 ///
-void k_io__namefinderjob_on_subjobs(void* self, KJob** (*callback)());
+void k_io__namefinderjob_on_subjobs(void* self, libqt_list (*callback)());
 
 /// Inherited from KCompositeJob
 ///

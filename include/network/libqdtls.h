@@ -1273,7 +1273,7 @@ libqt_list q_dtls_peer_verification_errors(void* self);
 /// @param self QDtls*
 /// @param errorsToIgnore libqt_list of QSslError*
 ///
-void q_dtls_ignore_verification_errors(void* self, libqt_list /* of QSslError* */ errorsToIgnore);
+void q_dtls_ignore_verification_errors(void* self, libqt_list errorsToIgnore);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtls.html#pskRequired)
 ///

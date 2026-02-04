@@ -513,7 +513,7 @@ void k_datetimeedit_set_date_display_format(void* self, int32_t format);
 /// @param self KDateTimeEdit*
 /// @param calendarLocales libqt_list of QLocale*
 ///
-void k_datetimeedit_set_calendar_locales_list(void* self, libqt_list /* of QLocale* */ calendarLocales);
+void k_datetimeedit_set_calendar_locales_list(void* self, libqt_list calendarLocales);
 
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#setDateMap)
 ///
@@ -541,14 +541,14 @@ void k_datetimeedit_set_time_list_interval(void* self, int minutes);
 /// @param self KDateTimeEdit*
 /// @param timeList libqt_list of QTime*
 ///
-void k_datetimeedit_set_time_list(void* self, libqt_list /* of QTime* */ timeList);
+void k_datetimeedit_set_time_list(void* self, libqt_list timeList);
 
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#setTimeZones)
 ///
 /// @param self KDateTimeEdit*
 /// @param zones libqt_list of QTimeZone*
 ///
-void k_datetimeedit_set_time_zones(void* self, libqt_list /* of QTimeZone* */ zones);
+void k_datetimeedit_set_time_zones(void* self, libqt_list zones);
 
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#eventFilter)
 ///
@@ -812,7 +812,7 @@ void k_datetimeedit_set_maximum_date_time2(void* self, void* maxDateTime, const 
 /// @param timeList libqt_list of QTime*
 /// @param minWarnMsg const char*
 ///
-void k_datetimeedit_set_time_list2(void* self, libqt_list /* of QTime* */ timeList, const char* minWarnMsg);
+void k_datetimeedit_set_time_list2(void* self, libqt_list timeList, const char* minWarnMsg);
 
 /// [Upstream resources](https://api.kde.org/kdatetimeedit.html#setTimeList)
 ///
@@ -821,7 +821,7 @@ void k_datetimeedit_set_time_list2(void* self, libqt_list /* of QTime* */ timeLi
 /// @param minWarnMsg const char*
 /// @param maxWarnMsg const char*
 ///
-void k_datetimeedit_set_time_list3(void* self, libqt_list /* of QTime* */ timeList, const char* minWarnMsg, const char* maxWarnMsg);
+void k_datetimeedit_set_time_list3(void* self, libqt_list timeList, const char* minWarnMsg, const char* maxWarnMsg);
 
 /// Inherited from QWidget
 ///
@@ -2729,7 +2729,7 @@ void k_datetimeedit_add_action(void* self, void* action);
 /// @param self KDateTimeEdit*
 /// @param actions libqt_list of QAction*
 ///
-void k_datetimeedit_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_datetimeedit_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2739,7 +2739,7 @@ void k_datetimeedit_add_actions(void* self, libqt_list /* of QAction* */ actions
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_datetimeedit_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_datetimeedit_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

@@ -750,7 +750,7 @@ QKeySequence* k_fontsizeaction_shortcut(void* self);
 /// @param self KFontSizeAction*
 /// @param shortcuts libqt_list of QKeySequence*
 ///
-void k_fontsizeaction_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts);
+void k_fontsizeaction_set_shortcuts(void* self, libqt_list shortcuts);
 
 /// Inherited from QAction
 ///
@@ -2047,9 +2047,9 @@ libqt_list k_fontsizeaction_qbase_created_widgets(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontSizeAction*
-/// @param callback QWidget** func()
+/// @param callback libqt_list of QWidget* func()
 ///
-void k_fontsizeaction_on_created_widgets(void* self, QWidget** (*callback)());
+void k_fontsizeaction_on_created_widgets(void* self, libqt_list (*callback)());
 
 /// Inherited from QObject
 ///

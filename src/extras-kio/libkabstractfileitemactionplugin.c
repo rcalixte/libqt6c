@@ -60,7 +60,7 @@ libqt_list /* of QAction* */ k_abstractfileitemactionplugin_actions(void* self, 
     return _arr;
 }
 
-void k_abstractfileitemactionplugin_on_actions(void* self, QAction** (*callback)(void*, void*, void*)) {
+void k_abstractfileitemactionplugin_on_actions(void* self, libqt_list /* of QAction* */ (*callback)(void*, void*, void*)) {
     KAbstractFileItemActionPlugin_OnActions((KAbstractFileItemActionPlugin*)self, (intptr_t)callback);
 }
 

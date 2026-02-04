@@ -133,9 +133,9 @@ libqt_list k_widgetitemdelegate_create_item_widgets(void* self, void* index);
 /// Allows for overriding the related default method
 ///
 /// @param self KWidgetItemDelegate*
-/// @param callback QWidget** func(KWidgetItemDelegate* self, QModelIndex* index)
+/// @param callback libqt_list of QWidget* func(KWidgetItemDelegate* self, QModelIndex* index)
 ///
-void k_widgetitemdelegate_on_create_item_widgets(void* self, QWidget** (*callback)(void*, void*));
+void k_widgetitemdelegate_on_create_item_widgets(void* self, libqt_list (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#createItemWidgets)
 ///
@@ -155,16 +155,16 @@ libqt_list k_widgetitemdelegate_qbase_create_item_widgets(void* self, void* inde
 /// @param option QStyleOptionViewItem*
 /// @param index QPersistentModelIndex*
 ///
-void k_widgetitemdelegate_update_item_widgets(void* self, libqt_list /* of QWidget* */ widgets, void* option, void* index);
+void k_widgetitemdelegate_update_item_widgets(void* self, libqt_list widgets, void* option, void* index);
 
 /// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#updateItemWidgets)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KWidgetItemDelegate*
-/// @param callback void func(KWidgetItemDelegate* self, QWidget** widgets, QStyleOptionViewItem* option, QPersistentModelIndex* index)
+/// @param callback void func(KWidgetItemDelegate* self, libqt_list of QWidget* widgets, QStyleOptionViewItem* option, QPersistentModelIndex* index)
 ///
-void k_widgetitemdelegate_on_update_item_widgets(void* self, void (*callback)(void*, QWidget**, void*, void*));
+void k_widgetitemdelegate_on_update_item_widgets(void* self, void (*callback)(void*, libqt_list, void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#updateItemWidgets)
 ///
@@ -175,7 +175,7 @@ void k_widgetitemdelegate_on_update_item_widgets(void* self, void (*callback)(vo
 /// @param option QStyleOptionViewItem*
 /// @param index QPersistentModelIndex*
 ///
-void k_widgetitemdelegate_qbase_update_item_widgets(void* self, libqt_list /* of QWidget* */ widgets, void* option, void* index);
+void k_widgetitemdelegate_qbase_update_item_widgets(void* self, libqt_list widgets, void* option, void* index);
 
 /// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#setBlockedEventTypes)
 ///
@@ -183,16 +183,16 @@ void k_widgetitemdelegate_qbase_update_item_widgets(void* self, libqt_list /* of
 /// @param widget QWidget*
 /// @param types libqt_list of enum QEvent__Type
 ///
-void k_widgetitemdelegate_set_blocked_event_types(void* self, void* widget, libqt_list /* of enum QEvent__Type */ types);
+void k_widgetitemdelegate_set_blocked_event_types(void* self, void* widget, libqt_list types);
 
 /// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#setBlockedEventTypes)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KWidgetItemDelegate*
-/// @param callback void func(KWidgetItemDelegate* self, QWidget* widget, libqt_list of enum QEvent__Type of enum QEvent__Type)
+/// @param callback void func(KWidgetItemDelegate* self, QWidget* widget, libqt_list of enum QEvent__Type types)
 ///
-void k_widgetitemdelegate_on_set_blocked_event_types(void* self, void (*callback)(void*, void*, libqt_list /* of enum QEvent__Type */));
+void k_widgetitemdelegate_on_set_blocked_event_types(void* self, void (*callback)(void*, void*, libqt_list));
 
 /// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#setBlockedEventTypes)
 ///
@@ -202,7 +202,7 @@ void k_widgetitemdelegate_on_set_blocked_event_types(void* self, void (*callback
 /// @param widget QWidget*
 /// @param types libqt_list of enum QEvent__Type
 ///
-void k_widgetitemdelegate_qbase_set_blocked_event_types(void* self, void* widget, libqt_list /* of enum QEvent__Type */ types);
+void k_widgetitemdelegate_qbase_set_blocked_event_types(void* self, void* widget, libqt_list types);
 
 /// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#blockedEventTypes)
 ///
@@ -218,7 +218,7 @@ libqt_list k_widgetitemdelegate_blocked_event_types(void* self, void* widget);
 /// Allows for overriding the related default method
 ///
 /// @param self KWidgetItemDelegate*
-/// @param callback libqt_list /* of enum QEvent__Type */ func(KWidgetItemDelegate* self, QWidget* widget)
+/// @param callback libqt_list of enum QEvent__Type func(KWidgetItemDelegate* self, QWidget* widget)
 ///
 void k_widgetitemdelegate_on_blocked_event_types(void* self, libqt_list (*callback)(void*, void*));
 
@@ -1134,9 +1134,9 @@ libqt_list k_widgetitemdelegate_qbase_painting_roles(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KWidgetItemDelegate*
-/// @param callback int* func()
+/// @param callback libqt_list of int func()
 ///
-void k_widgetitemdelegate_on_painting_roles(void* self, int* (*callback)());
+void k_widgetitemdelegate_on_painting_roles(void* self, libqt_list (*callback)());
 
 /// Inherited from QObject
 ///

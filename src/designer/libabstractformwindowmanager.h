@@ -382,16 +382,16 @@ QDesignerFormEditorInterface* q_designerformwindowmanagerinterface_qbase_core(vo
 /// @param self QDesignerFormWindowManagerInterface*
 /// @param item_list libqt_list of QDesignerDnDItemInterface*
 ///
-void q_designerformwindowmanagerinterface_drag_items(void* self, libqt_list /* of QDesignerDnDItemInterface* */ item_list);
+void q_designerformwindowmanagerinterface_drag_items(void* self, libqt_list item_list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowmanagerinterface.html#dragItems)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QDesignerFormWindowManagerInterface*
-/// @param callback void func(QDesignerFormWindowManagerInterface* self, QDesignerDnDItemInterface** item_list)
+/// @param callback void func(QDesignerFormWindowManagerInterface* self, libqt_list of QDesignerDnDItemInterface* item_list)
 ///
-void q_designerformwindowmanagerinterface_on_drag_items(void* self, void (*callback)(void*, QDesignerDnDItemInterface**));
+void q_designerformwindowmanagerinterface_on_drag_items(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowmanagerinterface.html#dragItems)
 ///
@@ -400,7 +400,7 @@ void q_designerformwindowmanagerinterface_on_drag_items(void* self, void (*callb
 /// @param self QDesignerFormWindowManagerInterface*
 /// @param item_list libqt_list of QDesignerDnDItemInterface*
 ///
-void q_designerformwindowmanagerinterface_qbase_drag_items(void* self, libqt_list /* of QDesignerDnDItemInterface* */ item_list);
+void q_designerformwindowmanagerinterface_qbase_drag_items(void* self, libqt_list item_list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowmanagerinterface.html#createPreviewPixmap)
 ///

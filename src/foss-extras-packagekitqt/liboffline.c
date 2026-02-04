@@ -96,7 +96,7 @@ void q_packagekit__offline_prepared_updates(void* self, const char* updates[stat
     free(updates_qstr);
 }
 
-void q_packagekit__offline_on_prepared_updates(void* self, void (*callback)(void*, const char**)) {
+void q_packagekit__offline_on_prepared_updates(void* self, void (*callback)(void*, const char***)) {
     PackageKit__Offline_Connect_PreparedUpdates((PackageKit__Offline*)self, (intptr_t)callback);
 }
 

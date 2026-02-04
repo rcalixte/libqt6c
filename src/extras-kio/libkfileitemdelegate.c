@@ -545,7 +545,7 @@ libqt_list /* of int */ k_fileitemdelegate_qbase_painting_roles(void* self) {
     return _arr;
 }
 
-void k_fileitemdelegate_on_painting_roles(void* self, int* (*callback)()) {
+void k_fileitemdelegate_on_painting_roles(void* self, libqt_list /* of int */ (*callback)()) {
     KFileItemDelegate_OnPaintingRoles((KFileItemDelegate*)self, (intptr_t)callback);
 }
 

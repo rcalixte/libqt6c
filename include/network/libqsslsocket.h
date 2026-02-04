@@ -515,7 +515,7 @@ void q_sslsocket_set_ssl_configuration(void* self, void* config);
 /// @param self QSslSocket*
 /// @param localChain libqt_list of QSslCertificate*
 ///
-void q_sslsocket_set_local_certificate_chain(void* self, libqt_list /* of QSslCertificate* */ localChain);
+void q_sslsocket_set_local_certificate_chain(void* self, libqt_list localChain);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#localCertificateChain)
 ///
@@ -798,7 +798,7 @@ bool q_sslsocket_is_feature_supported(int32_t feat);
 /// @param self QSslSocket*
 /// @param errors libqt_list of QSslError*
 ///
-void q_sslsocket_ignore_ssl_errors(void* self, libqt_list /* of QSslError* */ errors);
+void q_sslsocket_ignore_ssl_errors(void* self, libqt_list errors);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#continueInterruptedHandshake)
 ///
@@ -856,14 +856,14 @@ void q_sslsocket_on_peer_verify_error(void* self, void (*callback)(void*, void*)
 /// @param self QSslSocket*
 /// @param errors libqt_list of QSslError*
 ///
-void q_sslsocket_ssl_errors(void* self, libqt_list /* of QSslError* */ errors);
+void q_sslsocket_ssl_errors(void* self, libqt_list errors);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#sslErrors)
 ///
 /// @param self QSslSocket*
-/// @param callback void func(QSslSocket* self, QSslError** errors)
+/// @param callback void func(QSslSocket* self, libqt_list of QSslError* errors)
 ///
-void q_sslsocket_on_ssl_errors(void* self, void (*callback)(void*, QSslError**));
+void q_sslsocket_on_ssl_errors(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#modeChanged)
 ///

@@ -2385,7 +2385,7 @@ void k_encodingfiledialog_add_action(void* self, void* action);
 /// @param self KEncodingFileDialog*
 /// @param actions libqt_list of QAction*
 ///
-void k_encodingfiledialog_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_encodingfiledialog_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2395,7 +2395,7 @@ void k_encodingfiledialog_add_actions(void* self, libqt_list /* of QAction* */ a
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_encodingfiledialog_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_encodingfiledialog_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3500,7 +3500,7 @@ libqt_list k_encodingfiledialog__result_u_r_ls(void* self);
 /// @param self KEncodingFileDialog__Result*
 /// @param URLs libqt_list of QUrl*
 ///
-void k_encodingfiledialog__result_set_u_r_ls(void* self, libqt_list /* of QUrl* */ URLs);
+void k_encodingfiledialog__result_set_u_r_ls(void* self, libqt_list URLs);
 
 /// [Upstream resources](https://api.kde.org/kencodingfiledialog-result.html#encoding-var)
 ///

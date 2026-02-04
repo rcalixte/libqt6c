@@ -281,7 +281,7 @@ void q_printdialog_set_option2(void* self, int32_t option, bool on);
 /// @param self QPrintDialog*
 /// @param tabs libqt_list of QWidget*
 ///
-void q_printdialog_set_option_tabs(void* self, libqt_list /* of QWidget* */ tabs);
+void q_printdialog_set_option_tabs(void* self, libqt_list tabs);
 
 /// Inherited from QAbstractPrintDialog
 ///
@@ -2346,7 +2346,7 @@ void q_printdialog_add_action(void* self, void* action);
 /// @param self QPrintDialog*
 /// @param actions libqt_list of QAction*
 ///
-void q_printdialog_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_printdialog_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2356,7 +2356,7 @@ void q_printdialog_add_actions(void* self, libqt_list /* of QAction* */ actions)
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_printdialog_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_printdialog_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

@@ -149,7 +149,7 @@ void q_signon__authservice_methods_available(void* self, const char* methods[sta
 /// @param self SignOn__AuthService*
 /// @param callback void func(SignOn__AuthService* self, const char** methods)
 ///
-void q_signon__authservice_on_methods_available(void* self, void (*callback)(void*, const char**));
+void q_signon__authservice_on_methods_available(void* self, void (*callback)(void*, const char***));
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1AuthService.html)
 ///
@@ -164,21 +164,21 @@ void q_signon__authservice_mechanisms_available(void* self, const char* method, 
 /// @param self SignOn__AuthService*
 /// @param callback void func(SignOn__AuthService* self, const char* method, const char** mechanisms)
 ///
-void q_signon__authservice_on_mechanisms_available(void* self, void (*callback)(void*, const char*, const char**));
+void q_signon__authservice_on_mechanisms_available(void* self, void (*callback)(void*, const char*, const char***));
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1AuthService.html)
 ///
 /// @param self SignOn__AuthService*
 /// @param identityList libqt_list of SignOn__IdentityInfo*
 ///
-void q_signon__authservice_identities(void* self, libqt_list /* of SignOn__IdentityInfo* */ identityList);
+void q_signon__authservice_identities(void* self, libqt_list identityList);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1AuthService.html)
 ///
 /// @param self SignOn__AuthService*
-/// @param callback void func(SignOn__AuthService* self, SignOn__IdentityInfo** identityList)
+/// @param callback void func(SignOn__AuthService* self, libqt_list of SignOn__IdentityInfo* identityList)
 ///
-void q_signon__authservice_on_identities(void* self, void (*callback)(void*, SignOn__IdentityInfo**));
+void q_signon__authservice_on_identities(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1AuthService.html)
 ///

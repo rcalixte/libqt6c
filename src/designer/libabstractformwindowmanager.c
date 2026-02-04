@@ -223,7 +223,7 @@ void q_designerformwindowmanagerinterface_drag_items(void* self, libqt_list /* o
     QDesignerFormWindowManagerInterface_DragItems((QDesignerFormWindowManagerInterface*)self, item_list);
 }
 
-void q_designerformwindowmanagerinterface_on_drag_items(void* self, void (*callback)(void*, QDesignerDnDItemInterface**)) {
+void q_designerformwindowmanagerinterface_on_drag_items(void* self, void (*callback)(void*, libqt_list /* of QDesignerDnDItemInterface* */)) {
     QDesignerFormWindowManagerInterface_OnDragItems((QDesignerFormWindowManagerInterface*)self, (intptr_t)callback);
 }
 

@@ -2368,7 +2368,7 @@ void k_urlrequester_add_action(void* self, void* action);
 /// @param self KUrlRequester*
 /// @param actions libqt_list of QAction*
 ///
-void k_urlrequester_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_urlrequester_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2378,7 +2378,7 @@ void k_urlrequester_add_actions(void* self, libqt_list /* of QAction* */ actions
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_urlrequester_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_urlrequester_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -7559,7 +7559,7 @@ void k_urlcomborequester_add_action(void* self, void* action);
 /// @param self KUrlComboRequester*
 /// @param actions libqt_list of QAction*
 ///
-void k_urlcomborequester_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_urlcomborequester_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -7569,7 +7569,7 @@ void k_urlcomborequester_add_actions(void* self, libqt_list /* of QAction* */ ac
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_urlcomborequester_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_urlcomborequester_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

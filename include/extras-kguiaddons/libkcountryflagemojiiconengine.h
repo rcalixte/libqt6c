@@ -401,9 +401,9 @@ libqt_list k_countryflagemojiiconengine_qbase_available_sizes(void* self, int32_
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCountryFlagEmojiIconEngine*
-/// @param callback QSize** func(KCountryFlagEmojiIconEngine* self, enum QIcon__Mode mode, enum QIcon__State state)
+/// @param callback libqt_list of QSize* func(KCountryFlagEmojiIconEngine* self, enum QIcon__Mode mode, enum QIcon__State state)
 ///
-void k_countryflagemojiiconengine_on_available_sizes(void* self, QSize** (*callback)(void*, int32_t, int32_t));
+void k_countryflagemojiiconengine_on_available_sizes(void* self, libqt_list (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QIconEngine
 ///

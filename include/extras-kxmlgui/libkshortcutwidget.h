@@ -131,28 +131,28 @@ libqt_list k_shortcutwidget_shortcut(void* self);
 /// @param self KShortcutWidget*
 /// @param actionCollections libqt_list of KActionCollection*
 ///
-void k_shortcutwidget_set_check_action_collections(void* self, libqt_list /* of KActionCollection* */ actionCollections);
+void k_shortcutwidget_set_check_action_collections(void* self, libqt_list actionCollections);
 
 /// [Upstream resources](https://api.kde.org/kshortcutwidget.html#shortcutChanged)
 ///
 /// @param self KShortcutWidget*
 /// @param cut libqt_list of QKeySequence*
 ///
-void k_shortcutwidget_shortcut_changed(void* self, libqt_list /* of QKeySequence* */ cut);
+void k_shortcutwidget_shortcut_changed(void* self, libqt_list cut);
 
 /// [Upstream resources](https://api.kde.org/kshortcutwidget.html#shortcutChanged)
 ///
 /// @param self KShortcutWidget*
-/// @param callback void func(KShortcutWidget* self, QKeySequence** cut)
+/// @param callback void func(KShortcutWidget* self, libqt_list of QKeySequence* cut)
 ///
-void k_shortcutwidget_on_shortcut_changed(void* self, void (*callback)(void*, QKeySequence**));
+void k_shortcutwidget_on_shortcut_changed(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://api.kde.org/kshortcutwidget.html#setShortcut)
 ///
 /// @param self KShortcutWidget*
 /// @param cut libqt_list of QKeySequence*
 ///
-void k_shortcutwidget_set_shortcut(void* self, libqt_list /* of QKeySequence* */ cut);
+void k_shortcutwidget_set_shortcut(void* self, libqt_list cut);
 
 /// [Upstream resources](https://api.kde.org/kshortcutwidget.html#clearShortcut)
 ///
@@ -2091,7 +2091,7 @@ void k_shortcutwidget_add_action(void* self, void* action);
 /// @param self KShortcutWidget*
 /// @param actions libqt_list of QAction*
 ///
-void k_shortcutwidget_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_shortcutwidget_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2101,7 +2101,7 @@ void k_shortcutwidget_add_actions(void* self, libqt_list /* of QAction* */ actio
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_shortcutwidget_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_shortcutwidget_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

@@ -404,7 +404,7 @@ QAction* k_actioncollection_add_action(void* self, const char* name, void* actio
 /// @param self KActionCollection*
 /// @param actions libqt_list of QAction*
 ///
-void k_actioncollection_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_actioncollection_add_actions(void* self, libqt_list actions);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#removeAction)
 ///
@@ -475,7 +475,7 @@ void k_actioncollection_set_default_shortcut(void* action, void* shortcut);
 /// @param action QAction*
 /// @param shortcuts libqt_list of QKeySequence*
 ///
-void k_actioncollection_set_default_shortcuts(void* action, libqt_list /* of QKeySequence* */ shortcuts);
+void k_actioncollection_set_default_shortcuts(void* action, libqt_list shortcuts);
 
 /// [Upstream resources](https://api.kde.org/kactioncollection.html#isShortcutsConfigurable)
 ///

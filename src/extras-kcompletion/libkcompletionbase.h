@@ -153,7 +153,7 @@ int32_t k_completionbase_completion_mode(void* self);
 /// @param item enum KCompletionBase__KeyBindingType
 /// @param key libqt_list of QKeySequence*
 ///
-bool k_completionbase_set_key_binding(void* self, int32_t item, libqt_list /* of QKeySequence* */ key);
+bool k_completionbase_set_key_binding(void* self, int32_t item, libqt_list key);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#keyBinding)
 ///
@@ -210,7 +210,7 @@ void k_completionbase_set_completed_items(void* self, const char* items[static 1
 /// @param self KCompletionBase*
 /// @param callback void func(KCompletionBase* self, const char** items, bool autoSuggest)
 ///
-void k_completionbase_on_set_completed_items(void* self, void (*callback)(void*, const char**, bool));
+void k_completionbase_on_set_completed_items(void* self, void (*callback)(void*, const char***, bool));
 
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setCompletedItems)
 ///
@@ -281,7 +281,7 @@ void k_completionbase_set_key_binding_map(void* self, libqt_map keyBindingMap);
 /// Allows for overriding the related default method
 ///
 /// @param self KCompletionBase*
-/// @param callback void func(KCompletionBase* self, libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence**)
+/// @param callback void func(KCompletionBase* self, libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence** keyBindingMap)
 ///
 void k_completionbase_on_set_key_binding_map(void* self, void (*callback)(void*, libqt_map));
 

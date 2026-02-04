@@ -304,7 +304,7 @@ void k_fileitemdelegate_qbase_update_editor_geometry(void* self, void* editor, v
 /// @param self KFileItemDelegate*
 /// @param list libqt_list of enum KFileItemDelegate__Information
 ///
-void k_fileitemdelegate_set_show_information(void* self, libqt_list /* of enum KFileItemDelegate__Information */ list);
+void k_fileitemdelegate_set_show_information(void* self, libqt_list list);
 
 /// [Upstream resources](https://api.kde.org/kfileitemdelegate.html#setShowInformation)
 ///
@@ -1114,9 +1114,9 @@ libqt_list k_fileitemdelegate_qbase_painting_roles(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFileItemDelegate*
-/// @param callback int* func()
+/// @param callback libqt_list of int func()
 ///
-void k_fileitemdelegate_on_painting_roles(void* self, int* (*callback)());
+void k_fileitemdelegate_on_painting_roles(void* self, libqt_list (*callback)());
 
 /// Inherited from QObject
 ///

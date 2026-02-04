@@ -219,7 +219,7 @@ QImage* q_image_convert_to_format(void* self, int32_t f);
 /// @param f enum QImage__Format
 /// @param colorTable libqt_list of uint32_t
 ///
-QImage* q_image_convert_to_format2(void* self, int32_t f, libqt_list /* of uint32_t */ colorTable);
+QImage* q_image_convert_to_format2(void* self, int32_t f, libqt_list colorTable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#reinterpretAsFormat)
 ///
@@ -476,7 +476,7 @@ libqt_list q_image_color_table(void* self);
 /// @param self QImage*
 /// @param colors libqt_list of uint32_t
 ///
-void q_image_set_color_table(void* self, libqt_list /* of uint32_t */ colors);
+void q_image_set_color_table(void* self, libqt_list colors);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#devicePixelRatio)
 ///
@@ -1130,7 +1130,7 @@ QImage* q_image_convert_to_format22(void* self, int32_t f, int32_t flags);
 /// @param colorTable libqt_list of uint32_t
 /// @param flags flag of enum Qt__ImageConversionFlag
 ///
-QImage* q_image_convert_to_format3(void* self, int32_t f, libqt_list /* of uint32_t */ colorTable, int32_t flags);
+QImage* q_image_convert_to_format3(void* self, int32_t f, libqt_list colorTable, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#convertedTo)
 ///

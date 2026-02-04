@@ -1045,7 +1045,7 @@ void k_io__forwardingworkerbase_stat_entry(void* self, void* _entry);
 /// @param self KIO__ForwardingWorkerBase*
 /// @param _entry libqt_list of KIO__UDSEntry*
 ///
-void k_io__forwardingworkerbase_list_entries(void* self, libqt_list /* of KIO__UDSEntry* */ _entry);
+void k_io__forwardingworkerbase_list_entries(void* self, libqt_list _entry);
 
 /// Inherited from KIO::WorkerBase
 ///

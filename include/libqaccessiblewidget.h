@@ -158,7 +158,7 @@ libqt_list q_accessiblewidget_relations(void* self, int32_t match);
 /// Allows for overriding the related default method
 ///
 /// @param self QAccessibleWidget*
-/// @param callback libqt_list /* of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ func(QAccessibleWidget* self, flag of enum QAccessible__RelationFlag match)
+/// @param callback libqt_list of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag func(QAccessibleWidget* self, flag of enum QAccessible__RelationFlag match)
 ///
 void q_accessiblewidget_on_relations(void* self, libqt_list (*callback)(void*, int32_t));
 

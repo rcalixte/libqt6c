@@ -170,7 +170,7 @@ QMimeData* k_descendantsproxymodel_mime_data(void* self, libqt_list /* of QModel
     return KDescendantsProxyModel_MimeData((KDescendantsProxyModel*)self, indexes);
 }
 
-void k_descendantsproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**)) {
+void k_descendantsproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list /* of QModelIndex* */)) {
     KDescendantsProxyModel_OnMimeData((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -379,7 +379,7 @@ libqt_list /* of QModelIndex* */ k_descendantsproxymodel_match(void* self, void*
     return _arr;
 }
 
-void k_descendantsproxymodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t)) {
+void k_descendantsproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
     KDescendantsProxyModel_OnMatch((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -554,7 +554,7 @@ void k_descendantsproxymodel_layout_changed1(void* self, libqt_list /* of QPersi
     QAbstractItemModel_LayoutChanged1((QAbstractItemModel*)self, parents);
 }
 
-void k_descendantsproxymodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
+void k_descendantsproxymodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */)) {
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -562,7 +562,7 @@ void k_descendantsproxymodel_layout_changed2(void* self, libqt_list /* of QPersi
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void k_descendantsproxymodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
+void k_descendantsproxymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */, int32_t)) {
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -570,7 +570,7 @@ void k_descendantsproxymodel_layout_about_to_be_changed1(void* self, libqt_list 
     QAbstractItemModel_LayoutAboutToBeChanged1((QAbstractItemModel*)self, parents);
 }
 
-void k_descendantsproxymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
+void k_descendantsproxymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -578,7 +578,7 @@ void k_descendantsproxymodel_layout_about_to_be_changed2(void* self, libqt_list 
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void k_descendantsproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
+void k_descendantsproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */, int32_t)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -1279,7 +1279,7 @@ void k_descendantsproxymodel_qbase_encode_data(void* self, libqt_list /* of QMod
     KDescendantsProxyModel_QBaseEncodeData((KDescendantsProxyModel*)self, indexes, (QDataStream*)stream);
 }
 
-void k_descendantsproxymodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*)) {
+void k_descendantsproxymodel_on_encode_data(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, void*)) {
     KDescendantsProxyModel_OnEncodeData((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -1483,7 +1483,7 @@ void k_descendantsproxymodel_qbase_change_persistent_index_list(void* self, libq
     KDescendantsProxyModel_QBaseChangePersistentIndexList((KDescendantsProxyModel*)self, from, to);
 }
 
-void k_descendantsproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**)) {
+void k_descendantsproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)) {
     KDescendantsProxyModel_OnChangePersistentIndexList((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -1497,7 +1497,7 @@ libqt_list /* of QModelIndex* */ k_descendantsproxymodel_qbase_persistent_index_
     return _arr;
 }
 
-void k_descendantsproxymodel_on_persistent_index_list(void* self, QModelIndex** (*callback)()) {
+void k_descendantsproxymodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
     KDescendantsProxyModel_OnPersistentIndexList((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 

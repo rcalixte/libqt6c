@@ -2258,7 +2258,7 @@ void q_stackedwidget_add_action(void* self, void* action);
 /// @param self QStackedWidget*
 /// @param actions libqt_list of QAction*
 ///
-void q_stackedwidget_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_stackedwidget_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2268,7 +2268,7 @@ void q_stackedwidget_add_actions(void* self, libqt_list /* of QAction* */ action
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_stackedwidget_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_stackedwidget_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

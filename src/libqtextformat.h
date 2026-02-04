@@ -289,7 +289,7 @@ libqt_list q_textformat_length_vector_property(void* self, int propertyId);
 /// @param propertyId int
 /// @param lengths libqt_list of QTextLength*
 ///
-void q_textformat_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths);
+void q_textformat_set_property2(void* self, int propertyId, libqt_list lengths);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextformat.html#properties)
 ///
@@ -1171,7 +1171,7 @@ libqt_list q_textcharformat_length_vector_property(void* self, int propertyId);
 /// @param propertyId int
 /// @param lengths libqt_list of QTextLength*
 ///
-void q_textcharformat_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths);
+void q_textcharformat_set_property2(void* self, int propertyId, libqt_list lengths);
 
 /// Inherited from QTextFormat
 ///
@@ -1621,7 +1621,7 @@ int32_t q_textblockformat_page_break_policy(void* self);
 /// @param self QTextBlockFormat*
 /// @param tabs libqt_list of QTextOption__Tab*
 ///
-void q_textblockformat_set_tab_positions(void* self, libqt_list /* of QTextOption__Tab* */ tabs);
+void q_textblockformat_set_tab_positions(void* self, libqt_list tabs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockformat.html#tabPositions)
 ///
@@ -1836,7 +1836,7 @@ libqt_list q_textblockformat_length_vector_property(void* self, int propertyId);
 /// @param propertyId int
 /// @param lengths libqt_list of QTextLength*
 ///
-void q_textblockformat_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths);
+void q_textblockformat_set_property2(void* self, int propertyId, libqt_list lengths);
 
 /// Inherited from QTextFormat
 ///
@@ -2380,7 +2380,7 @@ libqt_list q_textlistformat_length_vector_property(void* self, int propertyId);
 /// @param propertyId int
 /// @param lengths libqt_list of QTextLength*
 ///
-void q_textlistformat_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths);
+void q_textlistformat_set_property2(void* self, int propertyId, libqt_list lengths);
 
 /// Inherited from QTextFormat
 ///
@@ -3529,7 +3529,7 @@ libqt_list q_textimageformat_length_vector_property(void* self, int propertyId);
 /// @param propertyId int
 /// @param lengths libqt_list of QTextLength*
 ///
-void q_textimageformat_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths);
+void q_textimageformat_set_property2(void* self, int propertyId, libqt_list lengths);
 
 /// Inherited from QTextFormat
 ///
@@ -4191,7 +4191,7 @@ libqt_list q_textframeformat_length_vector_property(void* self, int propertyId);
 /// @param propertyId int
 /// @param lengths libqt_list of QTextLength*
 ///
-void q_textframeformat_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths);
+void q_textframeformat_set_property2(void* self, int propertyId, libqt_list lengths);
 
 /// Inherited from QTextFormat
 ///
@@ -4492,7 +4492,7 @@ void q_texttableformat_set_columns(void* self, int columns);
 /// @param self QTextTableFormat*
 /// @param constraints libqt_list of QTextLength*
 ///
-void q_texttableformat_set_column_width_constraints(void* self, libqt_list /* of QTextLength* */ constraints);
+void q_texttableformat_set_column_width_constraints(void* self, libqt_list constraints);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttableformat.html#columnWidthConstraints)
 ///
@@ -5010,7 +5010,7 @@ libqt_list q_texttableformat_length_vector_property(void* self, int propertyId);
 /// @param propertyId int
 /// @param lengths libqt_list of QTextLength*
 ///
-void q_texttableformat_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths);
+void q_texttableformat_set_property2(void* self, int propertyId, libqt_list lengths);
 
 /// Inherited from QTextFormat
 ///
@@ -6330,7 +6330,7 @@ libqt_list q_texttablecellformat_length_vector_property(void* self, int property
 /// @param propertyId int
 /// @param lengths libqt_list of QTextLength*
 ///
-void q_texttablecellformat_set_property2(void* self, int propertyId, libqt_list /* of QTextLength* */ lengths);
+void q_texttablecellformat_set_property2(void* self, int propertyId, libqt_list lengths);
 
 /// Inherited from QTextFormat
 ///

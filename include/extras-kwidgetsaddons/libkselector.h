@@ -2570,7 +2570,7 @@ void k_selector_add_action(void* self, void* action);
 /// @param self KSelector*
 /// @param actions libqt_list of QAction*
 ///
-void k_selector_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_selector_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2580,7 +2580,7 @@ void k_selector_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_selector_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_selector_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -7946,7 +7946,7 @@ void k_gradientselector_add_action(void* self, void* action);
 /// @param self KGradientSelector*
 /// @param actions libqt_list of QAction*
 ///
-void k_gradientselector_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_gradientselector_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -7956,7 +7956,7 @@ void k_gradientselector_add_actions(void* self, libqt_list /* of QAction* */ act
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_gradientselector_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_gradientselector_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

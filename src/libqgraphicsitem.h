@@ -634,7 +634,7 @@ libqt_list q_graphicsitem_transformations(void* self);
 /// @param self QGraphicsItem*
 /// @param transformations libqt_list of QGraphicsTransform*
 ///
-void q_graphicsitem_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations);
+void q_graphicsitem_set_transformations(void* self, libqt_list transformations);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformOriginPoint)
 ///
@@ -3750,7 +3750,7 @@ libqt_list q_graphicsobject_transformations(void* self);
 /// @param self QGraphicsObject*
 /// @param transformations libqt_list of QGraphicsTransform*
 ///
-void q_graphicsobject_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations);
+void q_graphicsobject_set_transformations(void* self, libqt_list transformations);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6939,7 +6939,7 @@ libqt_list q_abstractgraphicsshapeitem_transformations(void* self);
 /// @param self QAbstractGraphicsShapeItem*
 /// @param transformations libqt_list of QGraphicsTransform*
 ///
-void q_abstractgraphicsshapeitem_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations);
+void q_abstractgraphicsshapeitem_set_transformations(void* self, libqt_list transformations);
 
 /// Inherited from QGraphicsItem
 ///
@@ -9994,7 +9994,7 @@ libqt_list q_graphicspathitem_transformations(void* self);
 /// @param self QGraphicsPathItem*
 /// @param transformations libqt_list of QGraphicsTransform*
 ///
-void q_graphicspathitem_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations);
+void q_graphicspathitem_set_transformations(void* self, libqt_list transformations);
 
 /// Inherited from QGraphicsItem
 ///
@@ -12818,7 +12818,7 @@ libqt_list q_graphicsrectitem_transformations(void* self);
 /// @param self QGraphicsRectItem*
 /// @param transformations libqt_list of QGraphicsTransform*
 ///
-void q_graphicsrectitem_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations);
+void q_graphicsrectitem_set_transformations(void* self, libqt_list transformations);
 
 /// Inherited from QGraphicsItem
 ///
@@ -15668,7 +15668,7 @@ libqt_list q_graphicsellipseitem_transformations(void* self);
 /// @param self QGraphicsEllipseItem*
 /// @param transformations libqt_list of QGraphicsTransform*
 ///
-void q_graphicsellipseitem_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations);
+void q_graphicsellipseitem_set_transformations(void* self, libqt_list transformations);
 
 /// Inherited from QGraphicsItem
 ///
@@ -18444,7 +18444,7 @@ libqt_list q_graphicspolygonitem_transformations(void* self);
 /// @param self QGraphicsPolygonItem*
 /// @param transformations libqt_list of QGraphicsTransform*
 ///
-void q_graphicspolygonitem_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations);
+void q_graphicspolygonitem_set_transformations(void* self, libqt_list transformations);
 
 /// Inherited from QGraphicsItem
 ///
@@ -21247,7 +21247,7 @@ libqt_list q_graphicslineitem_transformations(void* self);
 /// @param self QGraphicsLineItem*
 /// @param transformations libqt_list of QGraphicsTransform*
 ///
-void q_graphicslineitem_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations);
+void q_graphicslineitem_set_transformations(void* self, libqt_list transformations);
 
 /// Inherited from QGraphicsItem
 ///
@@ -24055,7 +24055,7 @@ libqt_list q_graphicspixmapitem_transformations(void* self);
 /// @param self QGraphicsPixmapItem*
 /// @param transformations libqt_list of QGraphicsTransform*
 ///
-void q_graphicspixmapitem_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations);
+void q_graphicspixmapitem_set_transformations(void* self, libqt_list transformations);
 
 /// Inherited from QGraphicsItem
 ///
@@ -28215,7 +28215,7 @@ libqt_list q_graphicstextitem_transformations(void* self);
 /// @param self QGraphicsTextItem*
 /// @param transformations libqt_list of QGraphicsTransform*
 ///
-void q_graphicstextitem_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations);
+void q_graphicstextitem_set_transformations(void* self, libqt_list transformations);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30766,7 +30766,7 @@ libqt_list q_graphicssimpletextitem_transformations(void* self);
 /// @param self QGraphicsSimpleTextItem*
 /// @param transformations libqt_list of QGraphicsTransform*
 ///
-void q_graphicssimpletextitem_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations);
+void q_graphicssimpletextitem_set_transformations(void* self, libqt_list transformations);
 
 /// Inherited from QGraphicsItem
 ///
@@ -33382,7 +33382,7 @@ libqt_list q_graphicsitemgroup_transformations(void* self);
 /// @param self QGraphicsItemGroup*
 /// @param transformations libqt_list of QGraphicsTransform*
 ///
-void q_graphicsitemgroup_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations);
+void q_graphicsitemgroup_set_transformations(void* self, libqt_list transformations);
 
 /// Inherited from QGraphicsItem
 ///

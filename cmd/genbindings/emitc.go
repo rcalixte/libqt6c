@@ -579,19 +579,8 @@ func (p CppParameter) renderReturnTypeC(cfs *cFileState, isSlot, includeContaine
 
 	if isSlot {
 		// overrides for slot callbacks
-		if strings.HasPrefix(ret, "libqt_list") {
-			if strings.Contains(ret, "of libqt_string") {
-				ret = "const char**"
-			} else if t, _, ok := p.QListOf(); ok {
-				if t.IntType() && t.ParameterType == "int" {
-					ret = "int*"
-				}
-			}
-			if t, _, ok := p.QListOf(); ok {
-				if IsKnownClass(t.ParameterType) {
-					ret = t.RenderTypeC(cfs, true, true, false) + "*"
-				}
-			}
+		if t, _, ok := p.QListOf(); ok && (t.ParameterType == "QString" || t.ParameterType == "QByteArray") {
+			ret = "const char**"
 		} else if !cfs.isC {
 			uncomment := strings.NewReplacer("/*", "", "*/", "")
 			ret = strings.TrimSpace(strings.ReplaceAll(uncomment.Replace(ret), "  ", " "))
@@ -610,20 +599,15 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 	for _, p := range params {
 		pName := p.ParameterName
 		pType := p.RenderTypeC(cfs, false, true, true)
-		var pTypeSlot string
 
 		if t, _, ok := p.QListOf(); ok {
-			if isSlot && IsKnownClass(t.ParameterType) {
-				pType = t.RenderTypeC(cfs, false, true, true) + "*"
-			} else if IsKnownClass(t.ParameterType) || strings.Contains(t.ParameterType, "::") ||
+			if IsKnownClass(t.ParameterType) || strings.Contains(t.ParameterType, "::") ||
 				t.IntType() || strings.Contains(pType, "libqt_") || strings.HasPrefix(pType, "pair_") {
 				pName = cComment("of " + strings.TrimSpace(t.RenderTypeC(cfs, false, true, true)))
-				pTypeSlot = pName
 				pType = "libqt_list"
 			} else if (strings.Contains(pType, "char*") && !strings.Contains(pType, "libqt_")) ||
 				!strings.HasPrefix(pType, "libqt_") {
 				pType += "*"
-				pTypeSlot = "[]"
 			}
 		}
 
@@ -635,13 +619,11 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 				}
 			}
 			pName = cComment("of " + strings.TrimSpace(k.RenderTypeC(cfs, false, true, true)) + " to " + strings.TrimSpace(v.RenderTypeC(cfs, false, true, true)) + maybePointer)
-			pTypeSlot = pName
 			pType = "libqt_map" + ifv(p.Pointer, "*", "")
 		}
 
 		if t1, t2, ok := p.QPairOf(); ok {
 			pName = cComment("tuple of " + strings.TrimSpace(t1.RenderTypeC(cfs, false, true, true)) + " and " + strings.TrimSpace(t2.RenderTypeC(cfs, false, true, true)))
-			pTypeSlot = pName
 
 			if t1.IntType() || IsKnownClass(t1.ParameterType) && (t2.IntType() || IsKnownClass(t2.ParameterType)) {
 				fParam := t1.ParameterType
@@ -665,19 +647,14 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 		}
 
 		if isSlot {
-			resParam := strings.ReplaceAll(pType+" "+pTypeSlot, "**[]", "**")
-			if strings.HasPrefix(resParam, "libqt_list") {
-				if strings.Contains(resParam, "of libqt_string") {
-					resParam = "const char**"
-				} else if strings.Contains(resParam, "of int") {
-					resParam = "int*"
-					pName = ""
-				} else if IsKnownClass(strings.TrimSuffix(resParam, "*")) {
-					resParam = resParam + "*"
-				}
-			} else {
-				resParam = pType
+			resParam := pType
+
+			if l, _, ok := p.QListOf(); ok && (l.ParameterType == "QString" || l.ParameterType == "QByteArray") {
+				resParam = "const char**"
+			} else if strings.HasPrefix(pType, "libqt_") {
+				pName += " " + p.ParameterName
 			}
+
 			tmp = append(tmp, resParam+" "+strings.TrimSpace(pName))
 		} else {
 			if strings.Contains(pType, "libqt") || strings.HasPrefix(pType, "pair_") {
@@ -716,26 +693,17 @@ func (cfs *cFileState) emitParametersC(params []CppParameter, isSlot bool) strin
 		pName := p.ParameterName
 		pType := p.RenderTypeC(cfs, false, false, cfs.isC)
 		if t, _, ok := p.QListOf(); ok {
-			if isSlot && IsKnownClass(t.ParameterType) {
-				pType = t.RenderTypeC(cfs, false, true, false) + "*"
-			} else if IsKnownClass(t.ParameterType) || strings.Contains(t.ParameterType, "::") ||
+			if IsKnownClass(t.ParameterType) || strings.Contains(t.ParameterType, "::") ||
 				t.IntType() {
 				pName = p.ParameterName
-				pType = "libqt_list" + cppComment("of "+strings.TrimSpace(t.RenderTypeC(cfs, false, true, true)))
+				pType = "libqt_list" + ifv(cfs.isC, cppComment("of "+strings.TrimSpace(t.RenderTypeC(cfs, false, true, true))), "")
 			} else if (strings.Contains(pType, "char*") && !strings.Contains(pType, "libqt_")) ||
 				!strings.HasPrefix(pType, "libqt_") {
 				pName += "[static 1]"
 			}
 			if isSlot {
-				if pType == "libqt_list" {
-					pTypeCheck := t.RenderTypeC(cfs, false, true, false)
-					if pTypeCheck == "libqt_string" {
-						pType = "const char**"
-					} else if pTypeCheck == "int" {
-						pType = "int*"
-					} else if IsKnownClass(pTypeCheck) {
-						pType = pTypeCheck + "**"
-					}
+				if l, _, ok := p.QListOf(); ok && (l.ParameterType == "QString" || l.ParameterType == "QByteArray") {
+					pType = "const char**"
 				}
 			}
 		}

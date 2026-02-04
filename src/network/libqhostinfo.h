@@ -75,7 +75,7 @@ libqt_list q_hostinfo_addresses(void* self);
 /// @param self QHostInfo*
 /// @param addresses libqt_list of QHostAddress*
 ///
-void q_hostinfo_set_addresses(void* self, libqt_list /* of QHostAddress* */ addresses);
+void q_hostinfo_set_addresses(void* self, libqt_list addresses);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostinfo.html#error)
 ///

@@ -843,16 +843,16 @@ void q_abstractitemview_update(void* self, void* index);
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_abstractitemview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void q_abstractitemview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dataChanged)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractItemView*
-/// @param callback void func(QAbstractItemView* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
+/// @param callback void func(QAbstractItemView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void q_abstractitemview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
+void q_abstractitemview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dataChanged)
 ///
@@ -863,7 +863,7 @@ void q_abstractitemview_on_data_changed(void* self, void (*callback)(void*, void
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_abstractitemview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void q_abstractitemview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#rowsInserted)
 ///
@@ -1483,9 +1483,9 @@ libqt_list q_abstractitemview_selected_indexes(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractItemView*
-/// @param callback QModelIndex** func()
+/// @param callback libqt_list of QModelIndex* func()
 ///
-void q_abstractitemview_on_selected_indexes(void* self, QModelIndex** (*callback)());
+void q_abstractitemview_on_selected_indexes(void* self, libqt_list (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#selectedIndexes)
 ///
@@ -4536,7 +4536,7 @@ void q_abstractitemview_add_action(void* self, void* action);
 /// @param self QAbstractItemView*
 /// @param actions libqt_list of QAction*
 ///
-void q_abstractitemview_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_abstractitemview_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -4546,7 +4546,7 @@ void q_abstractitemview_add_actions(void* self, libqt_list /* of QAction* */ act
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_abstractitemview_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_abstractitemview_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

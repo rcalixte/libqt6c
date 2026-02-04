@@ -612,16 +612,16 @@ void q_designerwidgetdatabaseiteminterface_qbase_set_extends(void* self, const c
 /// @param self QDesignerWidgetDataBaseItemInterface*
 /// @param list libqt_list of QVariant*
 ///
-void q_designerwidgetdatabaseiteminterface_set_default_property_values(void* self, libqt_list /* of QVariant* */ list);
+void q_designerwidgetdatabaseiteminterface_set_default_property_values(void* self, libqt_list list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#setDefaultPropertyValues)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QDesignerWidgetDataBaseItemInterface*
-/// @param callback void func(QDesignerWidgetDataBaseItemInterface* self, QVariant** list)
+/// @param callback void func(QDesignerWidgetDataBaseItemInterface* self, libqt_list of QVariant* list)
 ///
-void q_designerwidgetdatabaseiteminterface_on_set_default_property_values(void* self, void (*callback)(void*, QVariant**));
+void q_designerwidgetdatabaseiteminterface_on_set_default_property_values(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#setDefaultPropertyValues)
 ///
@@ -630,7 +630,7 @@ void q_designerwidgetdatabaseiteminterface_on_set_default_property_values(void* 
 /// @param self QDesignerWidgetDataBaseItemInterface*
 /// @param list libqt_list of QVariant*
 ///
-void q_designerwidgetdatabaseiteminterface_qbase_set_default_property_values(void* self, libqt_list /* of QVariant* */ list);
+void q_designerwidgetdatabaseiteminterface_qbase_set_default_property_values(void* self, libqt_list list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#defaultPropertyValues)
 ///
@@ -645,9 +645,9 @@ libqt_list q_designerwidgetdatabaseiteminterface_default_property_values(void* s
 /// Allows for overriding the related default method
 ///
 /// @param self QDesignerWidgetDataBaseItemInterface*
-/// @param callback QVariant** func()
+/// @param callback libqt_list of QVariant* func()
 ///
-void q_designerwidgetdatabaseiteminterface_on_default_property_values(void* self, QVariant** (*callback)());
+void q_designerwidgetdatabaseiteminterface_on_default_property_values(void* self, libqt_list (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#defaultPropertyValues)
 ///

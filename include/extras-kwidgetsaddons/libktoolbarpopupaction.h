@@ -393,7 +393,7 @@ QKeySequence* k_toolbarpopupaction_shortcut(void* self);
 /// @param self KToolBarPopupAction*
 /// @param shortcuts libqt_list of QKeySequence*
 ///
-void k_toolbarpopupaction_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts);
+void k_toolbarpopupaction_set_shortcuts(void* self, libqt_list shortcuts);
 
 /// Inherited from QAction
 ///
@@ -1556,9 +1556,9 @@ libqt_list k_toolbarpopupaction_qbase_created_widgets(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback QWidget** func()
+/// @param callback libqt_list of QWidget* func()
 ///
-void k_toolbarpopupaction_on_created_widgets(void* self, QWidget** (*callback)());
+void k_toolbarpopupaction_on_created_widgets(void* self, libqt_list (*callback)());
 
 /// Inherited from QObject
 ///

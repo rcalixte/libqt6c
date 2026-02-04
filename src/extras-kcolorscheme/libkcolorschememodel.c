@@ -235,7 +235,7 @@ void k_colorschememodel_layout_changed1(void* self, libqt_list /* of QPersistent
     QAbstractItemModel_LayoutChanged1((QAbstractItemModel*)self, parents);
 }
 
-void k_colorschememodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
+void k_colorschememodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */)) {
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -243,7 +243,7 @@ void k_colorschememodel_layout_changed2(void* self, libqt_list /* of QPersistent
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void k_colorschememodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
+void k_colorschememodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */, int32_t)) {
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -251,7 +251,7 @@ void k_colorschememodel_layout_about_to_be_changed1(void* self, libqt_list /* of
     QAbstractItemModel_LayoutAboutToBeChanged1((QAbstractItemModel*)self, parents);
 }
 
-void k_colorschememodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
+void k_colorschememodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -259,7 +259,7 @@ void k_colorschememodel_layout_about_to_be_changed2(void* self, libqt_list /* of
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void k_colorschememodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
+void k_colorschememodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */, int32_t)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -702,7 +702,7 @@ QMimeData* k_colorschememodel_qbase_mime_data(void* self, libqt_list /* of QMode
     return KColorSchemeModel_QBaseMimeData((KColorSchemeModel*)self, indexes);
 }
 
-void k_colorschememodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**)) {
+void k_colorschememodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list /* of QModelIndex* */)) {
     KColorSchemeModel_OnMimeData((KColorSchemeModel*)self, (intptr_t)callback);
 }
 
@@ -872,7 +872,7 @@ libqt_list /* of QModelIndex* */ k_colorschememodel_qbase_match(void* self, void
     return _arr;
 }
 
-void k_colorschememodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t)) {
+void k_colorschememodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
     KColorSchemeModel_OnMatch((KColorSchemeModel*)self, (intptr_t)callback);
 }
 
@@ -1110,7 +1110,7 @@ void k_colorschememodel_qbase_encode_data(void* self, libqt_list /* of QModelInd
     KColorSchemeModel_QBaseEncodeData((KColorSchemeModel*)self, indexes, (QDataStream*)stream);
 }
 
-void k_colorschememodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*)) {
+void k_colorschememodel_on_encode_data(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, void*)) {
     KColorSchemeModel_OnEncodeData((KColorSchemeModel*)self, (intptr_t)callback);
 }
 
@@ -1314,7 +1314,7 @@ void k_colorschememodel_qbase_change_persistent_index_list(void* self, libqt_lis
     KColorSchemeModel_QBaseChangePersistentIndexList((KColorSchemeModel*)self, from, to);
 }
 
-void k_colorschememodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**)) {
+void k_colorschememodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)) {
     KColorSchemeModel_OnChangePersistentIndexList((KColorSchemeModel*)self, (intptr_t)callback);
 }
 
@@ -1328,7 +1328,7 @@ libqt_list /* of QModelIndex* */ k_colorschememodel_qbase_persistent_index_list(
     return _arr;
 }
 
-void k_colorschememodel_on_persistent_index_list(void* self, QModelIndex** (*callback)()) {
+void k_colorschememodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
     KColorSchemeModel_OnPersistentIndexList((KColorSchemeModel*)self, (intptr_t)callback);
 }
 

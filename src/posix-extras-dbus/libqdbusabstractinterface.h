@@ -671,7 +671,7 @@ QDBusMessage* q_dbusabstractinterface_call2(void* self, int32_t mode, const char
 /// @param method const char*
 /// @param args libqt_list of QVariant*
 ///
-QDBusMessage* q_dbusabstractinterface_call_with_argument_list(void* self, int32_t mode, const char* method, libqt_list /* of QVariant* */ args);
+QDBusMessage* q_dbusabstractinterface_call_with_argument_list(void* self, int32_t mode, const char* method, libqt_list args);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#callWithCallback)
 ///
@@ -682,7 +682,7 @@ QDBusMessage* q_dbusabstractinterface_call_with_argument_list(void* self, int32_
 /// @param member const char*
 /// @param errorSlot const char*
 ///
-bool q_dbusabstractinterface_call_with_callback(void* self, const char* method, libqt_list /* of QVariant* */ args, void* receiver, const char* member, const char* errorSlot);
+bool q_dbusabstractinterface_call_with_callback(void* self, const char* method, libqt_list args, void* receiver, const char* member, const char* errorSlot);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#callWithCallback)
 ///
@@ -692,7 +692,7 @@ bool q_dbusabstractinterface_call_with_callback(void* self, const char* method, 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_dbusabstractinterface_call_with_callback2(void* self, const char* method, libqt_list /* of QVariant* */ args, void* receiver, const char* member);
+bool q_dbusabstractinterface_call_with_callback2(void* self, const char* method, libqt_list args, void* receiver, const char* member);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusabstractinterface.html#asyncCall)
 ///
@@ -707,7 +707,7 @@ QDBusPendingCall* q_dbusabstractinterface_async_call(void* self, const char* met
 /// @param method const char*
 /// @param args libqt_list of QVariant*
 ///
-QDBusPendingCall* q_dbusabstractinterface_async_call_with_argument_list(void* self, const char* method, libqt_list /* of QVariant* */ args);
+QDBusPendingCall* q_dbusabstractinterface_async_call_with_argument_list(void* self, const char* method, libqt_list args);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

@@ -2364,7 +2364,7 @@ void k_buildsycocaprogressdialog_add_action(void* self, void* action);
 /// @param self KBuildSycocaProgressDialog*
 /// @param actions libqt_list of QAction*
 ///
-void k_buildsycocaprogressdialog_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_buildsycocaprogressdialog_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2374,7 +2374,7 @@ void k_buildsycocaprogressdialog_add_actions(void* self, libqt_list /* of QActio
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_buildsycocaprogressdialog_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_buildsycocaprogressdialog_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

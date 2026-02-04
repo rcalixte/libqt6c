@@ -40,7 +40,7 @@ QGeoRouteRequest* q_georouterequest_new3(void* other);
 ///
 /// @param waypoints libqt_list of QGeoCoordinate*
 ///
-QGeoRouteRequest* q_georouterequest_new4(libqt_list /* of QGeoCoordinate* */ waypoints);
+QGeoRouteRequest* q_georouterequest_new4(libqt_list waypoints);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#operator-eq)
 ///
@@ -61,7 +61,7 @@ void q_georouterequest_swap(void* self, void* other);
 /// @param self QGeoRouteRequest*
 /// @param waypoints libqt_list of QGeoCoordinate*
 ///
-void q_georouterequest_set_waypoints(void* self, libqt_list /* of QGeoCoordinate* */ waypoints);
+void q_georouterequest_set_waypoints(void* self, libqt_list waypoints);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#waypoints)
 ///
@@ -76,7 +76,7 @@ libqt_list q_georouterequest_waypoints(void* self);
 /// @param self QGeoRouteRequest*
 /// @param areas libqt_list of QGeoRectangle*
 ///
-void q_georouterequest_set_exclude_areas(void* self, libqt_list /* of QGeoRectangle* */ areas);
+void q_georouterequest_set_exclude_areas(void* self, libqt_list areas);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorouterequest.html#excludeAreas)
 ///

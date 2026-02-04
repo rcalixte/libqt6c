@@ -6288,7 +6288,7 @@ void q_tapandholdgesture_delete(void* self);
 ///
 /// @param gestures libqt_list of QGesture*
 ///
-QGestureEvent* q_gestureevent_new(libqt_list /* of QGesture* */ gestures);
+QGestureEvent* q_gestureevent_new(libqt_list gestures);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgestureevent.html)
 

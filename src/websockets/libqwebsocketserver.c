@@ -282,7 +282,7 @@ void q_websocketserver_ssl_errors(void* self, libqt_list /* of QSslError* */ err
     QWebSocketServer_SslErrors((QWebSocketServer*)self, errors);
 }
 
-void q_websocketserver_on_ssl_errors(void* self, void (*callback)(void*, QSslError**)) {
+void q_websocketserver_on_ssl_errors(void* self, void (*callback)(void*, libqt_list /* of QSslError* */)) {
     QWebSocketServer_Connect_SslErrors((QWebSocketServer*)self, (intptr_t)callback);
 }
 

@@ -250,7 +250,7 @@ void q_geosatelliteinfosource_satellites_in_view_updated(void* self, libqt_list 
     QGeoSatelliteInfoSource_SatellitesInViewUpdated((QGeoSatelliteInfoSource*)self, satellites);
 }
 
-void q_geosatelliteinfosource_on_satellites_in_view_updated(void* self, void (*callback)(void*, QGeoSatelliteInfo**)) {
+void q_geosatelliteinfosource_on_satellites_in_view_updated(void* self, void (*callback)(void*, libqt_list /* of QGeoSatelliteInfo* */)) {
     QGeoSatelliteInfoSource_Connect_SatellitesInViewUpdated((QGeoSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
@@ -258,7 +258,7 @@ void q_geosatelliteinfosource_satellites_in_use_updated(void* self, libqt_list /
     QGeoSatelliteInfoSource_SatellitesInUseUpdated((QGeoSatelliteInfoSource*)self, satellites);
 }
 
-void q_geosatelliteinfosource_on_satellites_in_use_updated(void* self, void (*callback)(void*, QGeoSatelliteInfo**)) {
+void q_geosatelliteinfosource_on_satellites_in_use_updated(void* self, void (*callback)(void*, libqt_list /* of QGeoSatelliteInfo* */)) {
     QGeoSatelliteInfoSource_Connect_SatellitesInUseUpdated((QGeoSatelliteInfoSource*)self, (intptr_t)callback);
 }
 

@@ -179,7 +179,7 @@ void q_pieseries_added(void* self, libqt_list /* of QPieSlice* */ slices) {
     QPieSeries_Added((QPieSeries*)self, slices);
 }
 
-void q_pieseries_on_added(void* self, void (*callback)(void*, QPieSlice**)) {
+void q_pieseries_on_added(void* self, void (*callback)(void*, libqt_list /* of QPieSlice* */)) {
     QPieSeries_Connect_Added((QPieSeries*)self, (intptr_t)callback);
 }
 
@@ -187,7 +187,7 @@ void q_pieseries_removed(void* self, libqt_list /* of QPieSlice* */ slices) {
     QPieSeries_Removed((QPieSeries*)self, slices);
 }
 
-void q_pieseries_on_removed(void* self, void (*callback)(void*, QPieSlice**)) {
+void q_pieseries_on_removed(void* self, void (*callback)(void*, libqt_list /* of QPieSlice* */)) {
     QPieSeries_Connect_Removed((QPieSeries*)self, (intptr_t)callback);
 }
 

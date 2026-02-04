@@ -541,16 +541,16 @@ void k_fileplacesview_qbase_rows_inserted(void* self, void* parent, int start, i
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void k_fileplacesview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void k_fileplacesview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#dataChanged)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KFilePlacesView*
-/// @param callback void func(KFilePlacesView* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
+/// @param callback void func(KFilePlacesView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void k_fileplacesview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
+void k_fileplacesview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#dataChanged)
 ///
@@ -561,7 +561,7 @@ void k_fileplacesview_on_data_changed(void* self, void (*callback)(void*, void*,
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void k_fileplacesview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void k_fileplacesview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#placeActivated)
 ///
@@ -981,16 +981,16 @@ int32_t k_fileplacesview_item_alignment(void* self);
 /// @param self KFilePlacesView*
 /// @param indexes libqt_list of QModelIndex*
 ///
-void k_fileplacesview_indexes_moved(void* self, libqt_list /* of QModelIndex* */ indexes);
+void k_fileplacesview_indexes_moved(void* self, libqt_list indexes);
 
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#indexesMoved)
 ///
 /// @param self KFilePlacesView*
-/// @param callback void func(KFilePlacesView* self, QModelIndex** indexes)
+/// @param callback void func(KFilePlacesView* self, libqt_list of QModelIndex* indexes)
 ///
-void k_fileplacesview_on_indexes_moved(void* self, void (*callback)(void*, QModelIndex**));
+void k_fileplacesview_on_indexes_moved(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemView
 ///
@@ -3789,7 +3789,7 @@ void k_fileplacesview_add_action(void* self, void* action);
 /// @param self KFilePlacesView*
 /// @param actions libqt_list of QAction*
 ///
-void k_fileplacesview_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_fileplacesview_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3799,7 +3799,7 @@ void k_fileplacesview_add_actions(void* self, libqt_list /* of QAction* */ actio
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_fileplacesview_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_fileplacesview_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -5502,9 +5502,9 @@ libqt_list k_fileplacesview_qbase_selected_indexes(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFilePlacesView*
-/// @param callback QModelIndex** func()
+/// @param callback libqt_list of QModelIndex* func()
 ///
-void k_fileplacesview_on_selected_indexes(void* self, QModelIndex** (*callback)());
+void k_fileplacesview_on_selected_indexes(void* self, libqt_list (*callback)());
 
 /// Inherited from QListView
 ///

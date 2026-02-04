@@ -102,7 +102,7 @@ void k_nscore__provider_set_cached_entries(void* self, libqt_list /* of KNSCore_
     KNSCore__Provider_SetCachedEntries((KNSCore__Provider*)self, cachedEntries);
 }
 
-void k_nscore__provider_on_set_cached_entries(void* self, void (*callback)(void*, KNSCore__Entry**)) {
+void k_nscore__provider_on_set_cached_entries(void* self, void (*callback)(void*, libqt_list /* of KNSCore__Entry* */)) {
     KNSCore__Provider_OnSetCachedEntries((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
@@ -386,7 +386,7 @@ void k_nscore__provider_loading_finished(void* self, void* param1, libqt_list /*
     KNSCore__Provider_LoadingFinished((KNSCore__Provider*)self, (KNSCore__Provider__SearchRequest*)param1, param2);
 }
 
-void k_nscore__provider_on_loading_finished(void* self, void (*callback)(void*, void*, KNSCore__Entry**)) {
+void k_nscore__provider_on_loading_finished(void* self, void (*callback)(void*, void*, libqt_list /* of KNSCore__Entry* */)) {
     KNSCore__Provider_Connect_LoadingFinished((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
@@ -426,7 +426,7 @@ void k_nscore__provider_search_presets_loaded(void* self, libqt_list /* of KNSCo
     KNSCore__Provider_SearchPresetsLoaded((KNSCore__Provider*)self, presets);
 }
 
-void k_nscore__provider_on_search_presets_loaded(void* self, void (*callback)(void*, KNSCore__Provider__SearchPreset**)) {
+void k_nscore__provider_on_search_presets_loaded(void* self, void (*callback)(void*, libqt_list /* of KNSCore__Provider__SearchPreset* */)) {
     KNSCore__Provider_Connect_SearchPresetsLoaded((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
@@ -458,7 +458,7 @@ void k_nscore__provider_categories_metadata_loded(void* self, libqt_list /* of K
     KNSCore__Provider_CategoriesMetadataLoded((KNSCore__Provider*)self, categories);
 }
 
-void k_nscore__provider_on_categories_metadata_loded(void* self, void (*callback)(void*, KNSCore__Provider__CategoryMetadata**)) {
+void k_nscore__provider_on_categories_metadata_loded(void* self, void (*callback)(void*, libqt_list /* of KNSCore__Provider__CategoryMetadata* */)) {
     KNSCore__Provider_Connect_CategoriesMetadataLoded((KNSCore__Provider*)self, (intptr_t)callback);
 }
 

@@ -84,7 +84,7 @@ void q_sciabstractapis_update_auto_completion_list(void* self, const char* conte
     free(list_qstr);
 }
 
-void q_sciabstractapis_on_update_auto_completion_list(void* self, void (*callback)(void*, const char**, const char**)) {
+void q_sciabstractapis_on_update_auto_completion_list(void* self, void (*callback)(void*, const char***, const char***)) {
     QsciAbstractAPIs_OnUpdateAutoCompletionList((QsciAbstractAPIs*)self, (intptr_t)callback);
 }
 
@@ -154,7 +154,7 @@ const char** q_sciabstractapis_call_tips(void* self, const char* context[static 
     return _ret;
 }
 
-void q_sciabstractapis_on_call_tips(void* self, const char** (*callback)(void*, const char**, int, int32_t, libqt_list /* of int */)) {
+void q_sciabstractapis_on_call_tips(void* self, const char** (*callback)(void*, const char***, int, int32_t, libqt_list /* of int */)) {
     QsciAbstractAPIs_OnCallTips((QsciAbstractAPIs*)self, (intptr_t)callback);
 }
 

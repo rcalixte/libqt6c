@@ -53,7 +53,7 @@ void q_webenginescriptcollection_insert(void* self, void* param1);
 /// @param self QWebEngineScriptCollection*
 /// @param list libqt_list of QWebEngineScript*
 ///
-void q_webenginescriptcollection_insert2(void* self, libqt_list /* of QWebEngineScript* */ list);
+void q_webenginescriptcollection_insert2(void* self, libqt_list list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginescriptcollection.html#remove)
 ///

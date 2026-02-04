@@ -180,16 +180,16 @@ void k_io__widgetsaskuseractionhandler_qbase_ask_user_skip(void* self, void* job
 /// @param confirmationType enum KIO__AskUserActionInterface__ConfirmationType
 /// @param parent QWidget*
 ///
-void k_io__widgetsaskuseractionhandler_ask_user_delete(void* self, libqt_list /* of QUrl* */ urls, int32_t deletionType, int32_t confirmationType, void* parent);
+void k_io__widgetsaskuseractionhandler_ask_user_delete(void* self, libqt_list urls, int32_t deletionType, int32_t confirmationType, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kio-widgetsaskuseractionhandler.html#askUserDelete)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KIO__WidgetsAskUserActionHandler*
-/// @param callback void func(KIO__WidgetsAskUserActionHandler* self, QUrl** urls, enum KIO__AskUserActionInterface__DeletionType deletionType, enum KIO__AskUserActionInterface__ConfirmationType confirmationType, QWidget* parent)
+/// @param callback void func(KIO__WidgetsAskUserActionHandler* self, libqt_list of QUrl* urls, enum KIO__AskUserActionInterface__DeletionType deletionType, enum KIO__AskUserActionInterface__ConfirmationType confirmationType, QWidget* parent)
 ///
-void k_io__widgetsaskuseractionhandler_on_ask_user_delete(void* self, void (*callback)(void*, QUrl**, int32_t, int32_t, void*));
+void k_io__widgetsaskuseractionhandler_on_ask_user_delete(void* self, void (*callback)(void*, libqt_list, int32_t, int32_t, void*));
 
 /// [Upstream resources](https://api.kde.org/kio-widgetsaskuseractionhandler.html#askUserDelete)
 ///
@@ -201,7 +201,7 @@ void k_io__widgetsaskuseractionhandler_on_ask_user_delete(void* self, void (*cal
 /// @param confirmationType enum KIO__AskUserActionInterface__ConfirmationType
 /// @param parent QWidget*
 ///
-void k_io__widgetsaskuseractionhandler_qbase_ask_user_delete(void* self, libqt_list /* of QUrl* */ urls, int32_t deletionType, int32_t confirmationType, void* parent);
+void k_io__widgetsaskuseractionhandler_qbase_ask_user_delete(void* self, libqt_list urls, int32_t deletionType, int32_t confirmationType, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kio-widgetsaskuseractionhandler.html#requestUserMessageBox)
 ///
@@ -259,7 +259,7 @@ void k_io__widgetsaskuseractionhandler_ask_ignore_ssl_errors(void* self, libqt_m
 /// Allows for overriding the related default method
 ///
 /// @param self KIO__WidgetsAskUserActionHandler*
-/// @param callback void func(KIO__WidgetsAskUserActionHandler* self, libqt_map of const char* to QVariant*, QWidget* parent)
+/// @param callback void func(KIO__WidgetsAskUserActionHandler* self, libqt_map of const char* to QVariant* sslErrorData, QWidget* parent)
 ///
 void k_io__widgetsaskuseractionhandler_on_ask_ignore_ssl_errors(void* self, void (*callback)(void*, libqt_map, void*));
 
@@ -348,16 +348,16 @@ void k_io__widgetsaskuseractionhandler_on_ask_user_skip_result(void* self, void 
 /// @param deletionType enum KIO__AskUserActionInterface__DeletionType
 /// @param parent QWidget*
 ///
-void k_io__widgetsaskuseractionhandler_ask_user_delete_result(void* self, bool allowDelete, libqt_list /* of QUrl* */ urls, int32_t deletionType, void* parent);
+void k_io__widgetsaskuseractionhandler_ask_user_delete_result(void* self, bool allowDelete, libqt_list urls, int32_t deletionType, void* parent);
 
 /// Inherited from KIO::AskUserActionInterface
 ///
 /// [Upstream resources](https://api.kde.org/kio-askuseractioninterface.html#askUserDeleteResult)
 ///
 /// @param self KIO__WidgetsAskUserActionHandler*
-/// @param callback void func(KIO__WidgetsAskUserActionHandler* self, bool allowDelete, QUrl** urls, enum KIO__AskUserActionInterface__DeletionType deletionType, QWidget* parent)
+/// @param callback void func(KIO__WidgetsAskUserActionHandler* self, bool allowDelete, libqt_list of QUrl* urls, enum KIO__AskUserActionInterface__DeletionType deletionType, QWidget* parent)
 ///
-void k_io__widgetsaskuseractionhandler_on_ask_user_delete_result(void* self, void (*callback)(void*, bool, QUrl**, int32_t, void*));
+void k_io__widgetsaskuseractionhandler_on_ask_user_delete_result(void* self, void (*callback)(void*, bool, libqt_list, int32_t, void*));
 
 /// Inherited from KIO::AskUserActionInterface
 ///

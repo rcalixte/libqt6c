@@ -296,7 +296,7 @@ void k_imageannotator__kimageannotator_set_stickers(void* self, const char* stic
 /// @param self kImageAnnotator__KImageAnnotator*
 /// @param actions libqt_list of QAction*
 ///
-void k_imageannotator__kimageannotator_add_tab_context_menu_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_imageannotator__kimageannotator_add_tab_context_menu_actions(void* self, libqt_list actions);
 
 /// [Upstream resources](https://github.com/ksnip/kImageAnnotator)
 ///
@@ -2321,7 +2321,7 @@ void k_imageannotator__kimageannotator_add_action(void* self, void* action);
 /// @param self kImageAnnotator__KImageAnnotator*
 /// @param actions libqt_list of QAction*
 ///
-void k_imageannotator__kimageannotator_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_imageannotator__kimageannotator_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2331,7 +2331,7 @@ void k_imageannotator__kimageannotator_add_actions(void* self, libqt_list /* of 
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_imageannotator__kimageannotator_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_imageannotator__kimageannotator_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

@@ -1785,7 +1785,7 @@ libqt_list q_graphicsvideoitem_transformations(void* self);
 /// @param self QGraphicsVideoItem*
 /// @param transformations libqt_list of QGraphicsTransform*
 ///
-void q_graphicsvideoitem_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations);
+void q_graphicsvideoitem_set_transformations(void* self, libqt_list transformations);
 
 /// Inherited from QGraphicsItem
 ///

@@ -667,7 +667,7 @@ libqt_list /* of KJob* */ k_io__openurljob_qbase_subjobs(void* self) {
     return _arr;
 }
 
-void k_io__openurljob_on_subjobs(void* self, KJob** (*callback)()) {
+void k_io__openurljob_on_subjobs(void* self, libqt_list /* of KJob* */ (*callback)()) {
     KIO__OpenUrlJob_OnSubjobs((KIO__OpenUrlJob*)self, (intptr_t)callback);
 }
 

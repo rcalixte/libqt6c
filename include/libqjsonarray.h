@@ -42,7 +42,7 @@ QJsonArray* q_jsonarray_from_string_list(const char* list[static 1]);
 ///
 /// @param list libqt_list of QVariant*
 ///
-QJsonArray* q_jsonarray_from_variant_list(libqt_list /* of QVariant* */ list);
+QJsonArray* q_jsonarray_from_variant_list(libqt_list list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonarray.html#toVariantList)
 ///

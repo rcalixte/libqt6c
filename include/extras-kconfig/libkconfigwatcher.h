@@ -52,7 +52,7 @@ void k_configwatcher_config_changed(void* self, void* group, const char* names[s
 /// @param self KConfigWatcher*
 /// @param callback void func(KConfigWatcher* self, KConfigGroup* group, const char** names)
 ///
-void k_configwatcher_on_config_changed(void* self, void (*callback)(void*, void*, const char**));
+void k_configwatcher_on_config_changed(void* self, void (*callback)(void*, void*, const char***));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

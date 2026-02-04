@@ -293,7 +293,7 @@ void k_completion_set_items(void* self, const char* itemList[static 1]) {
     free(itemList_qstr);
 }
 
-void k_completion_on_set_items(void* self, void (*callback)(void*, const char**)) {
+void k_completion_on_set_items(void* self, void (*callback)(void*, const char***)) {
     KCompletion_OnSetItems((KCompletion*)self, (intptr_t)callback);
 }
 
@@ -358,7 +358,7 @@ void k_completion_matches(void* self, const char* matchlist[static 1]) {
     free(matchlist_qstr);
 }
 
-void k_completion_on_matches(void* self, void (*callback)(void*, const char**)) {
+void k_completion_on_matches(void* self, void (*callback)(void*, const char***)) {
     KCompletion_Connect_Matches((KCompletion*)self, (intptr_t)callback);
 }
 
@@ -385,7 +385,7 @@ void k_completion_post_process_matches(void* self, const char* matchList[static 
     free(matchList_qstr);
 }
 
-void k_completion_on_post_process_matches(void* self, void (*callback)(void*, const char**)) {
+void k_completion_on_post_process_matches(void* self, void (*callback)(void*, const char***)) {
     KCompletion_OnPostProcessMatches((KCompletion*)self, (intptr_t)callback);
 }
 

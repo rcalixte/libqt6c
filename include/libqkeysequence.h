@@ -166,7 +166,7 @@ libqt_list q_keysequence_list_from_string(const char* str);
 ///
 /// @param list libqt_list of QKeySequence*
 ///
-const char* q_keysequence_list_to_string(libqt_list /* of QKeySequence* */ list);
+const char* q_keysequence_list_to_string(libqt_list list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#matches)
 ///
@@ -298,7 +298,7 @@ libqt_list q_keysequence_list_from_string2(const char* str, int32_t format);
 /// @param list libqt_list of QKeySequence*
 /// @param format enum QKeySequence__SequenceFormat
 ///
-const char* q_keysequence_list_to_string2(libqt_list /* of QKeySequence* */ list, int32_t format);
+const char* q_keysequence_list_to_string2(libqt_list list, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequence.html#dtor.QKeySequence)
 ///

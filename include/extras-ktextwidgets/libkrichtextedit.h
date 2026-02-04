@@ -1166,7 +1166,7 @@ void k_richtextedit_set_accept_rich_text(void* self, bool accept);
 /// @param self KRichTextEdit*
 /// @param selections libqt_list of QTextEdit__ExtraSelection*
 ///
-void k_richtextedit_set_extra_selections(void* self, libqt_list /* of QTextEdit__ExtraSelection* */ selections);
+void k_richtextedit_set_extra_selections(void* self, libqt_list selections);
 
 /// Inherited from QTextEdit
 ///
@@ -3768,7 +3768,7 @@ void k_richtextedit_add_action(void* self, void* action);
 /// @param self KRichTextEdit*
 /// @param actions libqt_list of QAction*
 ///
-void k_richtextedit_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_richtextedit_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3778,7 +3778,7 @@ void k_richtextedit_add_actions(void* self, libqt_list /* of QAction* */ actions
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_richtextedit_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_richtextedit_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

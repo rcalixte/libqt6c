@@ -162,7 +162,7 @@ void k_previewwidgetbase_set_supported_mime_types(void* self, const char* mimeTy
 /// @param self KPreviewWidgetBase*
 /// @param callback void func(KPreviewWidgetBase* self, const char** mimeTypes)
 ///
-void k_previewwidgetbase_on_set_supported_mime_types(void* self, void (*callback)(void*, const char**));
+void k_previewwidgetbase_on_set_supported_mime_types(void* self, void (*callback)(void*, const char***));
 
 /// [Upstream resources](https://api.kde.org/kpreviewwidgetbase.html#setSupportedMimeTypes)
 ///
@@ -2098,7 +2098,7 @@ void k_previewwidgetbase_add_action(void* self, void* action);
 /// @param self KPreviewWidgetBase*
 /// @param actions libqt_list of QAction*
 ///
-void k_previewwidgetbase_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_previewwidgetbase_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2108,7 +2108,7 @@ void k_previewwidgetbase_add_actions(void* self, libqt_list /* of QAction* */ ac
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_previewwidgetbase_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_previewwidgetbase_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

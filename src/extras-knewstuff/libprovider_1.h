@@ -168,16 +168,16 @@ bool k_nscore__provider_qbase_is_initialized(void* self);
 /// @param self KNSCore__Provider*
 /// @param cachedEntries libqt_list of KNSCore__Entry*
 ///
-void k_nscore__provider_set_cached_entries(void* self, libqt_list /* of KNSCore__Entry* */ cachedEntries);
+void k_nscore__provider_set_cached_entries(void* self, libqt_list cachedEntries);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#setCachedEntries)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KNSCore__Provider*
-/// @param callback void func(KNSCore__Provider* self, KNSCore__Entry** cachedEntries)
+/// @param callback void func(KNSCore__Provider* self, libqt_list of KNSCore__Entry* cachedEntries)
 ///
-void k_nscore__provider_on_set_cached_entries(void* self, void (*callback)(void*, KNSCore__Entry**));
+void k_nscore__provider_on_set_cached_entries(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#setCachedEntries)
 ///
@@ -186,7 +186,7 @@ void k_nscore__provider_on_set_cached_entries(void* self, void (*callback)(void*
 /// @param self KNSCore__Provider*
 /// @param cachedEntries libqt_list of KNSCore__Entry*
 ///
-void k_nscore__provider_qbase_set_cached_entries(void* self, libqt_list /* of KNSCore__Entry* */ cachedEntries);
+void k_nscore__provider_qbase_set_cached_entries(void* self, libqt_list cachedEntries);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#name)
 ///
@@ -607,14 +607,14 @@ void k_nscore__provider_on_provider_initialized(void* self, void (*callback)(voi
 /// @param param1 KNSCore__Provider__SearchRequest*
 /// @param param2 libqt_list of KNSCore__Entry*
 ///
-void k_nscore__provider_loading_finished(void* self, void* param1, libqt_list /* of KNSCore__Entry* */ param2);
+void k_nscore__provider_loading_finished(void* self, void* param1, libqt_list param2);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadingFinished)
 ///
 /// @param self KNSCore__Provider*
-/// @param callback void func(KNSCore__Provider* self, KNSCore__Provider__SearchRequest* param1, KNSCore__Entry** param2)
+/// @param callback void func(KNSCore__Provider* self, KNSCore__Provider__SearchRequest* param1, libqt_list of KNSCore__Entry* param2)
 ///
-void k_nscore__provider_on_loading_finished(void* self, void (*callback)(void*, void*, KNSCore__Entry**));
+void k_nscore__provider_on_loading_finished(void* self, void (*callback)(void*, void*, libqt_list));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadingFailed)
 ///
@@ -676,14 +676,14 @@ void k_nscore__provider_on_basics_loaded(void* self, void (*callback)(void*));
 /// @param self KNSCore__Provider*
 /// @param presets libqt_list of KNSCore__Provider__SearchPreset*
 ///
-void k_nscore__provider_search_presets_loaded(void* self, libqt_list /* of KNSCore__Provider__SearchPreset* */ presets);
+void k_nscore__provider_search_presets_loaded(void* self, libqt_list presets);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#searchPresetsLoaded)
 ///
 /// @param self KNSCore__Provider*
-/// @param callback void func(KNSCore__Provider* self, KNSCore__Provider__SearchPreset** presets)
+/// @param callback void func(KNSCore__Provider* self, libqt_list of KNSCore__Provider__SearchPreset* presets)
 ///
-void k_nscore__provider_on_search_presets_loaded(void* self, void (*callback)(void*, KNSCore__Provider__SearchPreset**));
+void k_nscore__provider_on_search_presets_loaded(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#signalInformation)
 ///
@@ -734,14 +734,14 @@ void k_nscore__provider_on_signal_error_code(void* self, void (*callback)(void*,
 /// @param self KNSCore__Provider*
 /// @param categories libqt_list of KNSCore__Provider__CategoryMetadata*
 ///
-void k_nscore__provider_categories_metadata_loded(void* self, libqt_list /* of KNSCore__Provider__CategoryMetadata* */ categories);
+void k_nscore__provider_categories_metadata_loded(void* self, libqt_list categories);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#categoriesMetadataLoded)
 ///
 /// @param self KNSCore__Provider*
-/// @param callback void func(KNSCore__Provider* self, KNSCore__Provider__CategoryMetadata** categories)
+/// @param callback void func(KNSCore__Provider* self, libqt_list of KNSCore__Provider__CategoryMetadata* categories)
 ///
-void k_nscore__provider_on_categories_metadata_loded(void* self, void (*callback)(void*, KNSCore__Provider__CategoryMetadata**));
+void k_nscore__provider_on_categories_metadata_loded(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#tagFilterChanged)
 ///

@@ -254,7 +254,7 @@ void k_diroperator_set_current_item2(void* self, void* item);
 /// @param self KDirOperator*
 /// @param urls libqt_list of QUrl*
 ///
-void k_diroperator_set_current_items(void* self, libqt_list /* of QUrl* */ urls);
+void k_diroperator_set_current_items(void* self, libqt_list urls);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#setCurrentItems)
 ///
@@ -1743,14 +1743,14 @@ void k_diroperator_on_file_selected(void* self, void (*callback)(void*, void*));
 /// @param event QDropEvent*
 /// @param urls libqt_list of QUrl*
 ///
-void k_diroperator_dropped(void* self, void* item, void* event, libqt_list /* of QUrl* */ urls);
+void k_diroperator_dropped(void* self, void* item, void* event, libqt_list urls);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#dropped)
 ///
 /// @param self KDirOperator*
-/// @param callback void func(KDirOperator* self, KFileItem* item, QDropEvent* event, QUrl** urls)
+/// @param callback void func(KDirOperator* self, KFileItem* item, QDropEvent* event, libqt_list of QUrl* urls)
 ///
-void k_diroperator_on_dropped(void* self, void (*callback)(void*, void*, void*, QUrl**));
+void k_diroperator_on_dropped(void* self, void (*callback)(void*, void*, void*, libqt_list));
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#contextMenuAboutToShow)
 ///
@@ -1799,14 +1799,14 @@ void k_diroperator_on_key_enter_return_pressed(void* self, void (*callback)(void
 /// @param self KDirOperator*
 /// @param urls libqt_list of QUrl*
 ///
-void k_diroperator_renaming_finished(void* self, libqt_list /* of QUrl* */ urls);
+void k_diroperator_renaming_finished(void* self, libqt_list urls);
 
 /// [Upstream resources](https://api.kde.org/kdiroperator.html#renamingFinished)
 ///
 /// @param self KDirOperator*
-/// @param callback void func(KDirOperator* self, QUrl** urls)
+/// @param callback void func(KDirOperator* self, libqt_list of QUrl* urls)
 ///
-void k_diroperator_on_renaming_finished(void* self, void (*callback)(void*, QUrl**));
+void k_diroperator_on_renaming_finished(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -3716,7 +3716,7 @@ void k_diroperator_add_action(void* self, void* action);
 /// @param self KDirOperator*
 /// @param actions libqt_list of QAction*
 ///
-void k_diroperator_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_diroperator_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3726,7 +3726,7 @@ void k_diroperator_add_actions(void* self, libqt_list /* of QAction* */ actions)
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_diroperator_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_diroperator_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

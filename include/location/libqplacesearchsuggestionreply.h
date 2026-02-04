@@ -147,7 +147,7 @@ void q_placesearchsuggestionreply_set_suggestions(void* self, const char* sugges
 /// @param self QPlaceSearchSuggestionReply*
 /// @param callback void func(QPlaceSearchSuggestionReply* self, const char** suggestions)
 ///
-void q_placesearchsuggestionreply_on_set_suggestions(void* self, void (*callback)(void*, const char**));
+void q_placesearchsuggestionreply_on_set_suggestions(void* self, void (*callback)(void*, const char***));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchsuggestionreply.html#setSuggestions)
 ///

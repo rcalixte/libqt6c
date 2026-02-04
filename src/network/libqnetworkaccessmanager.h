@@ -218,7 +218,7 @@ bool q_networkaccessmanager_is_strict_transport_security_store_enabled(void* sel
 /// @param self QNetworkAccessManager*
 /// @param knownHosts libqt_list of QHstsPolicy*
 ///
-void q_networkaccessmanager_add_strict_transport_security_hosts(void* self, libqt_list /* of QHstsPolicy* */ knownHosts);
+void q_networkaccessmanager_add_strict_transport_security_hosts(void* self, libqt_list knownHosts);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#strictTransportSecurityHosts)
 ///
@@ -482,14 +482,14 @@ void q_networkaccessmanager_on_encrypted(void* self, void (*callback)(void*, voi
 /// @param reply QNetworkReply*
 /// @param errors libqt_list of QSslError*
 ///
-void q_networkaccessmanager_ssl_errors(void* self, void* reply, libqt_list /* of QSslError* */ errors);
+void q_networkaccessmanager_ssl_errors(void* self, void* reply, libqt_list errors);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#sslErrors)
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback void func(QNetworkAccessManager* self, QNetworkReply* reply, QSslError** errors)
+/// @param callback void func(QNetworkAccessManager* self, QNetworkReply* reply, libqt_list of QSslError* errors)
 ///
-void q_networkaccessmanager_on_ssl_errors(void* self, void (*callback)(void*, void*, QSslError**));
+void q_networkaccessmanager_on_ssl_errors(void* self, void (*callback)(void*, void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#preSharedKeyAuthenticationRequired)
 ///

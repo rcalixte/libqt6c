@@ -129,7 +129,7 @@ libqt_list /* of QSize* */ q_iconengine_available_sizes(void* self, int32_t mode
     return _arr;
 }
 
-void q_iconengine_on_available_sizes(void* self, QSize** (*callback)(void*, int32_t, int32_t)) {
+void q_iconengine_on_available_sizes(void* self, libqt_list /* of QSize* */ (*callback)(void*, int32_t, int32_t)) {
     QIconEngine_OnAvailableSizes((QIconEngine*)self, (intptr_t)callback);
 }
 

@@ -1242,7 +1242,7 @@ libqt_list k_notification_urls(void* self);
 /// @param self KNotification*
 /// @param urls libqt_list of QUrl*
 ///
-void k_notification_set_urls(void* self, libqt_list /* of QUrl* */ urls);
+void k_notification_set_urls(void* self, libqt_list urls);
 
 /// [Upstream resources](https://api.kde.org/knotification.html#urgency)
 ///

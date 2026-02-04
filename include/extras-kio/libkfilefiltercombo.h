@@ -103,7 +103,7 @@ const char* k_filefiltercombo_tr(const char* s);
 /// @param self KFileFilterCombo*
 /// @param filters libqt_list of KFileFilter*
 ///
-void k_filefiltercombo_set_filters(void* self, libqt_list /* of KFileFilter* */ filters);
+void k_filefiltercombo_set_filters(void* self, libqt_list filters);
 
 /// [Upstream resources](https://api.kde.org/kfilefiltercombo.html#currentFilter)
 ///
@@ -210,7 +210,7 @@ const char* k_filefiltercombo_tr3(const char* s, const char* c, int n);
 /// @param filters libqt_list of KFileFilter*
 /// @param defaultFilter KFileFilter*
 ///
-void k_filefiltercombo_set_filters2(void* self, libqt_list /* of KFileFilter* */ filters, void* defaultFilter);
+void k_filefiltercombo_set_filters2(void* self, libqt_list filters, void* defaultFilter);
 
 /// Inherited from KComboBox
 ///
@@ -3176,7 +3176,7 @@ void k_filefiltercombo_add_action(void* self, void* action);
 /// @param self KFileFilterCombo*
 /// @param actions libqt_list of QAction*
 ///
-void k_filefiltercombo_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_filefiltercombo_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3186,7 +3186,7 @@ void k_filefiltercombo_add_actions(void* self, libqt_list /* of QAction* */ acti
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_filefiltercombo_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_filefiltercombo_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -4304,7 +4304,7 @@ int32_t k_filefiltercombo_completion_mode(void* self);
 /// @param item enum KCompletionBase__KeyBindingType
 /// @param key libqt_list of QKeySequence*
 ///
-bool k_filefiltercombo_set_key_binding(void* self, int32_t item, libqt_list /* of QKeySequence* */ key);
+bool k_filefiltercombo_set_key_binding(void* self, int32_t item, libqt_list key);
 
 /// Inherited from KCompletionBase
 ///
@@ -4505,7 +4505,7 @@ void k_filefiltercombo_qbase_set_completed_items(void* self, const char* items[s
 /// @param self KFileFilterCombo*
 /// @param callback void func(KFileFilterCombo* self, const char** items, bool autoSuggest)
 ///
-void k_filefiltercombo_on_set_completed_items(void* self, void (*callback)(void*, const char**, bool));
+void k_filefiltercombo_on_set_completed_items(void* self, void (*callback)(void*, const char***, bool));
 
 /// Inherited from KComboBox
 ///
@@ -6693,7 +6693,7 @@ void k_filefiltercombo_qbase_set_key_binding_map(void* self, libqt_map keyBindin
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFileFilterCombo*
-/// @param callback void func(KFileFilterCombo* self, libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence**)
+/// @param callback void func(KFileFilterCombo* self, libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence** keyBindingMap)
 ///
 void k_filefiltercombo_on_set_key_binding_map(void* self, void (*callback)(void*, libqt_map));
 

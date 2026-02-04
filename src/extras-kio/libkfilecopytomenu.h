@@ -97,7 +97,7 @@ const char* k_filecopytomenu_tr(const char* s);
 /// @param self KFileCopyToMenu*
 /// @param urls libqt_list of QUrl*
 ///
-void k_filecopytomenu_set_urls(void* self, libqt_list /* of QUrl* */ urls);
+void k_filecopytomenu_set_urls(void* self, libqt_list urls);
 
 /// [Upstream resources](https://api.kde.org/kfilecopytomenu.html#setReadOnly)
 ///

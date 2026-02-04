@@ -2841,7 +2841,7 @@ void k_listwidgetsearchline_set_accept_drops(void* self, bool on);
 /// @param self KListWidgetSearchLine*
 /// @param actions libqt_list of QAction*
 ///
-void k_listwidgetsearchline_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_listwidgetsearchline_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2851,7 +2851,7 @@ void k_listwidgetsearchline_add_actions(void* self, libqt_list /* of QAction* */
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_listwidgetsearchline_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_listwidgetsearchline_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

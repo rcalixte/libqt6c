@@ -195,7 +195,7 @@ bool q_stackedbarseries_take(void* self, void* set);
 /// @param self QStackedBarSeries*
 /// @param sets libqt_list of QBarSet*
 ///
-bool q_stackedbarseries_append2(void* self, libqt_list /* of QBarSet* */ sets);
+bool q_stackedbarseries_append2(void* self, libqt_list sets);
 
 /// Inherited from QAbstractBarSeries
 ///
@@ -530,16 +530,16 @@ void q_stackedbarseries_on_labels_precision_changed(void* self, void (*callback)
 /// @param self QStackedBarSeries*
 /// @param sets libqt_list of QBarSet*
 ///
-void q_stackedbarseries_barsets_added(void* self, libqt_list /* of QBarSet* */ sets);
+void q_stackedbarseries_barsets_added(void* self, libqt_list sets);
 
 /// Inherited from QAbstractBarSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#barsetsAdded)
 ///
 /// @param self QStackedBarSeries*
-/// @param callback void func(QStackedBarSeries* self, QBarSet** sets)
+/// @param callback void func(QStackedBarSeries* self, libqt_list of QBarSet* sets)
 ///
-void q_stackedbarseries_on_barsets_added(void* self, void (*callback)(void*, QBarSet**));
+void q_stackedbarseries_on_barsets_added(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractBarSeries
 ///
@@ -548,16 +548,16 @@ void q_stackedbarseries_on_barsets_added(void* self, void (*callback)(void*, QBa
 /// @param self QStackedBarSeries*
 /// @param sets libqt_list of QBarSet*
 ///
-void q_stackedbarseries_barsets_removed(void* self, libqt_list /* of QBarSet* */ sets);
+void q_stackedbarseries_barsets_removed(void* self, libqt_list sets);
 
 /// Inherited from QAbstractBarSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbarseries.html#barsetsRemoved)
 ///
 /// @param self QStackedBarSeries*
-/// @param callback void func(QStackedBarSeries* self, QBarSet** sets)
+/// @param callback void func(QStackedBarSeries* self, libqt_list of QBarSet* sets)
 ///
-void q_stackedbarseries_on_barsets_removed(void* self, void (*callback)(void*, QBarSet**));
+void q_stackedbarseries_on_barsets_removed(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractBarSeries
 ///

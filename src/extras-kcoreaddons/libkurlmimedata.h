@@ -19,7 +19,7 @@
 /// @param param2 libqt_list of QUrl*
 /// @param param3 QMimeData*
 ///
-void k_urlmimedata_set_urls(libqt_list /* of QUrl* */ param1, libqt_list /* of QUrl* */ param2, void* param3);
+void k_urlmimedata_set_urls(libqt_list param1, libqt_list param2, void* param3);
 
 /// [Upstream resources](https://api.kde.org/kurlmimedata.html#exportUrlsToPortal)
 ///

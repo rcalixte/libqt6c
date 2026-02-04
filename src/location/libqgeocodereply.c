@@ -176,7 +176,7 @@ void q_geocodereply_set_locations(void* self, libqt_list /* of QGeoLocation* */ 
     QGeoCodeReply_SetLocations((QGeoCodeReply*)self, locations);
 }
 
-void q_geocodereply_on_set_locations(void* self, void (*callback)(void*, QGeoLocation**)) {
+void q_geocodereply_on_set_locations(void* self, void (*callback)(void*, libqt_list /* of QGeoLocation* */)) {
     QGeoCodeReply_OnSetLocations((QGeoCodeReply*)self, (intptr_t)callback);
 }
 

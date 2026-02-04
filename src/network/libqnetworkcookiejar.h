@@ -112,9 +112,9 @@ libqt_list q_networkcookiejar_cookies_for_url(void* self, void* url);
 /// Allows for overriding the related default method
 ///
 /// @param self QNetworkCookieJar*
-/// @param callback QNetworkCookie** func(QNetworkCookieJar* self, QUrl* url)
+/// @param callback libqt_list of QNetworkCookie* func(QNetworkCookieJar* self, QUrl* url)
 ///
-void q_networkcookiejar_on_cookies_for_url(void* self, QNetworkCookie** (*callback)(void*, void*));
+void q_networkcookiejar_on_cookies_for_url(void* self, libqt_list (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#cookiesForUrl)
 ///
@@ -133,16 +133,16 @@ libqt_list q_networkcookiejar_qbase_cookies_for_url(void* self, void* url);
 /// @param cookieList libqt_list of QNetworkCookie*
 /// @param url QUrl*
 ///
-bool q_networkcookiejar_set_cookies_from_url(void* self, libqt_list /* of QNetworkCookie* */ cookieList, void* url);
+bool q_networkcookiejar_set_cookies_from_url(void* self, libqt_list cookieList, void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#setCookiesFromUrl)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QNetworkCookieJar*
-/// @param callback bool func(QNetworkCookieJar* self, QNetworkCookie** cookieList, QUrl* url)
+/// @param callback bool func(QNetworkCookieJar* self, libqt_list of QNetworkCookie* cookieList, QUrl* url)
 ///
-void q_networkcookiejar_on_set_cookies_from_url(void* self, bool (*callback)(void*, QNetworkCookie**, void*));
+void q_networkcookiejar_on_set_cookies_from_url(void* self, bool (*callback)(void*, libqt_list, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#setCookiesFromUrl)
 ///
@@ -152,7 +152,7 @@ void q_networkcookiejar_on_set_cookies_from_url(void* self, bool (*callback)(voi
 /// @param cookieList libqt_list of QNetworkCookie*
 /// @param url QUrl*
 ///
-bool q_networkcookiejar_qbase_set_cookies_from_url(void* self, libqt_list /* of QNetworkCookie* */ cookieList, void* url);
+bool q_networkcookiejar_qbase_set_cookies_from_url(void* self, libqt_list cookieList, void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#insertCookie)
 ///
@@ -242,9 +242,9 @@ libqt_list q_networkcookiejar_all_cookies(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QNetworkCookieJar*
-/// @param callback QNetworkCookie** func()
+/// @param callback libqt_list of QNetworkCookie* func()
 ///
-void q_networkcookiejar_on_all_cookies(void* self, QNetworkCookie** (*callback)());
+void q_networkcookiejar_on_all_cookies(void* self, libqt_list (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#allCookies)
 ///
@@ -261,16 +261,16 @@ libqt_list q_networkcookiejar_qbase_all_cookies(void* self);
 /// @param self QNetworkCookieJar*
 /// @param cookieList libqt_list of QNetworkCookie*
 ///
-void q_networkcookiejar_set_all_cookies(void* self, libqt_list /* of QNetworkCookie* */ cookieList);
+void q_networkcookiejar_set_all_cookies(void* self, libqt_list cookieList);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#setAllCookies)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QNetworkCookieJar*
-/// @param callback void func(QNetworkCookieJar* self, QNetworkCookie** cookieList)
+/// @param callback void func(QNetworkCookieJar* self, libqt_list of QNetworkCookie* cookieList)
 ///
-void q_networkcookiejar_on_set_all_cookies(void* self, void (*callback)(void*, QNetworkCookie**));
+void q_networkcookiejar_on_set_all_cookies(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#setAllCookies)
 ///
@@ -279,7 +279,7 @@ void q_networkcookiejar_on_set_all_cookies(void* self, void (*callback)(void*, Q
 /// @param self QNetworkCookieJar*
 /// @param cookieList libqt_list of QNetworkCookie*
 ///
-void q_networkcookiejar_qbase_set_all_cookies(void* self, libqt_list /* of QNetworkCookie* */ cookieList);
+void q_networkcookiejar_qbase_set_all_cookies(void* self, libqt_list cookieList);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#validateCookie)
 ///

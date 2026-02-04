@@ -20,7 +20,7 @@
 /// @param confirm enum KIO__AskUserActionInterface__ConfirmationType
 /// @param parent QObject*
 ///
-KIO__DeleteOrTrashJob* k_io__deleteortrashjob_new(libqt_list /* of QUrl* */ urls, int32_t deletionType, int32_t confirm, void* parent);
+KIO__DeleteOrTrashJob* k_io__deleteortrashjob_new(libqt_list urls, int32_t deletionType, int32_t confirm, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1394,9 +1394,9 @@ libqt_list k_io__deleteortrashjob_qbase_subjobs(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KIO__DeleteOrTrashJob*
-/// @param callback KJob** func()
+/// @param callback libqt_list of KJob* func()
 ///
-void k_io__deleteortrashjob_on_subjobs(void* self, KJob** (*callback)());
+void k_io__deleteortrashjob_on_subjobs(void* self, libqt_list (*callback)());
 
 /// Inherited from KCompositeJob
 ///

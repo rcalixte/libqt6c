@@ -122,7 +122,7 @@ KBookmark* k_bookmarkdialog_add_bookmark(void* self, const char* title, void* ur
 /// @param self KBookmarkDialog*
 /// @param list libqt_list of KBookmarkOwner__FutureBookmark*
 ///
-KBookmarkGroup* k_bookmarkdialog_add_bookmarks(void* self, libqt_list /* of KBookmarkOwner__FutureBookmark* */ list);
+KBookmarkGroup* k_bookmarkdialog_add_bookmarks(void* self, libqt_list list);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkdialog.html#createNewFolder)
 ///
@@ -218,7 +218,7 @@ KBookmark* k_bookmarkdialog_add_bookmark4(void* self, const char* title, void* u
 /// @param list libqt_list of KBookmarkOwner__FutureBookmark*
 /// @param name const char*
 ///
-KBookmarkGroup* k_bookmarkdialog_add_bookmarks2(void* self, libqt_list /* of KBookmarkOwner__FutureBookmark* */ list, const char* name);
+KBookmarkGroup* k_bookmarkdialog_add_bookmarks2(void* self, libqt_list list, const char* name);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkdialog.html#addBookmarks)
 ///
@@ -227,7 +227,7 @@ KBookmarkGroup* k_bookmarkdialog_add_bookmarks2(void* self, libqt_list /* of KBo
 /// @param name const char*
 /// @param parent KBookmarkGroup*
 ///
-KBookmarkGroup* k_bookmarkdialog_add_bookmarks3(void* self, libqt_list /* of KBookmarkOwner__FutureBookmark* */ list, const char* name, void* parent);
+KBookmarkGroup* k_bookmarkdialog_add_bookmarks3(void* self, libqt_list list, const char* name, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkdialog.html#createNewFolder)
 ///
@@ -2245,7 +2245,7 @@ void k_bookmarkdialog_add_action(void* self, void* action);
 /// @param self KBookmarkDialog*
 /// @param actions libqt_list of QAction*
 ///
-void k_bookmarkdialog_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_bookmarkdialog_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2255,7 +2255,7 @@ void k_bookmarkdialog_add_actions(void* self, libqt_list /* of QAction* */ actio
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_bookmarkdialog_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_bookmarkdialog_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

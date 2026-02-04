@@ -260,7 +260,7 @@ void q_barseries_barsets_added(void* self, libqt_list /* of QBarSet* */ sets) {
     QAbstractBarSeries_BarsetsAdded((QAbstractBarSeries*)self, sets);
 }
 
-void q_barseries_on_barsets_added(void* self, void (*callback)(void*, QBarSet**)) {
+void q_barseries_on_barsets_added(void* self, void (*callback)(void*, libqt_list /* of QBarSet* */)) {
     QAbstractBarSeries_Connect_BarsetsAdded((QAbstractBarSeries*)self, (intptr_t)callback);
 }
 
@@ -268,7 +268,7 @@ void q_barseries_barsets_removed(void* self, libqt_list /* of QBarSet* */ sets) 
     QAbstractBarSeries_BarsetsRemoved((QAbstractBarSeries*)self, sets);
 }
 
-void q_barseries_on_barsets_removed(void* self, void (*callback)(void*, QBarSet**)) {
+void q_barseries_on_barsets_removed(void* self, void (*callback)(void*, libqt_list /* of QBarSet* */)) {
     QAbstractBarSeries_Connect_BarsetsRemoved((QAbstractBarSeries*)self, (intptr_t)callback);
 }
 

@@ -298,7 +298,7 @@ libqt_list q_accessibleobject_qbase_relations(void* self, int32_t match);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessibleObject*
-/// @param callback libqt_list /* of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ func(QAccessibleObject* self, flag of enum QAccessible__RelationFlag match)
+/// @param callback libqt_list of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag func(QAccessibleObject* self, flag of enum QAccessible__RelationFlag match)
 ///
 void q_accessibleobject_on_relations(void* self, libqt_list (*callback)(void*, int32_t));
 
@@ -1195,7 +1195,7 @@ libqt_list q_accessibleapplication_qbase_relations(void* self, int32_t match);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessibleApplication*
-/// @param callback libqt_list /* of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ func(QAccessibleApplication* self, flag of enum QAccessible__RelationFlag match)
+/// @param callback libqt_list of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag func(QAccessibleApplication* self, flag of enum QAccessible__RelationFlag match)
 ///
 void q_accessibleapplication_on_relations(void* self, libqt_list (*callback)(void*, int32_t));
 

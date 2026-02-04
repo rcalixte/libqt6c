@@ -346,7 +346,7 @@ void q_designerwidgetdatabaseiteminterface_set_default_property_values(void* sel
     QDesignerWidgetDataBaseItemInterface_SetDefaultPropertyValues((QDesignerWidgetDataBaseItemInterface*)self, list);
 }
 
-void q_designerwidgetdatabaseiteminterface_on_set_default_property_values(void* self, void (*callback)(void*, QVariant**)) {
+void q_designerwidgetdatabaseiteminterface_on_set_default_property_values(void* self, void (*callback)(void*, libqt_list /* of QVariant* */)) {
     QDesignerWidgetDataBaseItemInterface_OnSetDefaultPropertyValues((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
@@ -359,7 +359,7 @@ libqt_list /* of QVariant* */ q_designerwidgetdatabaseiteminterface_default_prop
     return _arr;
 }
 
-void q_designerwidgetdatabaseiteminterface_on_default_property_values(void* self, QVariant** (*callback)()) {
+void q_designerwidgetdatabaseiteminterface_on_default_property_values(void* self, libqt_list /* of QVariant* */ (*callback)()) {
     QDesignerWidgetDataBaseItemInterface_OnDefaultPropertyValues((QDesignerWidgetDataBaseItemInterface*)self, (intptr_t)callback);
 }
 

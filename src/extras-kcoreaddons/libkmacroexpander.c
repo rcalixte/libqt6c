@@ -46,7 +46,7 @@ int32_t k_macroexpanderbase_expand_plain_macro(void* self, const char* str, int 
     return _out;
 }
 
-void k_macroexpanderbase_on_expand_plain_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**)) {
+void k_macroexpanderbase_on_expand_plain_macro(void* self, int32_t (*callback)(void*, const char*, int, const char***)) {
     KMacroExpanderBase_OnExpandPlainMacro((KMacroExpanderBase*)self, (intptr_t)callback);
 }
 
@@ -80,7 +80,7 @@ int32_t k_macroexpanderbase_expand_escaped_macro(void* self, const char* str, in
     return _out;
 }
 
-void k_macroexpanderbase_on_expand_escaped_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**)) {
+void k_macroexpanderbase_on_expand_escaped_macro(void* self, int32_t (*callback)(void*, const char*, int, const char***)) {
     KMacroExpanderBase_OnExpandEscapedMacro((KMacroExpanderBase*)self, (intptr_t)callback);
 }
 
@@ -126,7 +126,7 @@ int32_t k_wordmacroexpander_expand_plain_macro(void* self, const char* str, int 
     return _out;
 }
 
-void k_wordmacroexpander_on_expand_plain_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**)) {
+void k_wordmacroexpander_on_expand_plain_macro(void* self, int32_t (*callback)(void*, const char*, int, const char***)) {
     KWordMacroExpander_OnExpandPlainMacro((KWordMacroExpander*)self, (intptr_t)callback);
 }
 
@@ -160,7 +160,7 @@ int32_t k_wordmacroexpander_expand_escaped_macro(void* self, const char* str, in
     return _out;
 }
 
-void k_wordmacroexpander_on_expand_escaped_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**)) {
+void k_wordmacroexpander_on_expand_escaped_macro(void* self, int32_t (*callback)(void*, const char*, int, const char***)) {
     KWordMacroExpander_OnExpandEscapedMacro((KWordMacroExpander*)self, (intptr_t)callback);
 }
 
@@ -194,7 +194,7 @@ bool k_wordmacroexpander_expand_macro(void* self, const char* str, const char* r
     return _out;
 }
 
-void k_wordmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, const char*, const char**)) {
+void k_wordmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, const char*, const char***)) {
     KWordMacroExpander_OnExpandMacro((KWordMacroExpander*)self, (intptr_t)callback);
 }
 
@@ -260,7 +260,7 @@ int32_t k_charmacroexpander_expand_plain_macro(void* self, const char* str, int 
     return _out;
 }
 
-void k_charmacroexpander_on_expand_plain_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**)) {
+void k_charmacroexpander_on_expand_plain_macro(void* self, int32_t (*callback)(void*, const char*, int, const char***)) {
     KCharMacroExpander_OnExpandPlainMacro((KCharMacroExpander*)self, (intptr_t)callback);
 }
 
@@ -294,7 +294,7 @@ int32_t k_charmacroexpander_expand_escaped_macro(void* self, const char* str, in
     return _out;
 }
 
-void k_charmacroexpander_on_expand_escaped_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**)) {
+void k_charmacroexpander_on_expand_escaped_macro(void* self, int32_t (*callback)(void*, const char*, int, const char***)) {
     KCharMacroExpander_OnExpandEscapedMacro((KCharMacroExpander*)self, (intptr_t)callback);
 }
 
@@ -328,7 +328,7 @@ bool k_charmacroexpander_expand_macro(void* self, void* chr, const char* retVal[
     return _out;
 }
 
-void k_charmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, void*, const char**)) {
+void k_charmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, void*, const char***)) {
     KCharMacroExpander_OnExpandMacro((KCharMacroExpander*)self, (intptr_t)callback);
 }
 

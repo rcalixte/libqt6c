@@ -260,7 +260,7 @@ void k_urlcompletion_post_process_matches(void* self, const char* matches[static
     free(matches_qstr);
 }
 
-void k_urlcompletion_on_post_process_matches(void* self, void (*callback)(void*, const char**)) {
+void k_urlcompletion_on_post_process_matches(void* self, void (*callback)(void*, const char***)) {
     KUrlCompletion_OnPostProcessMatches((KUrlCompletion*)self, (intptr_t)callback);
 }
 
@@ -487,7 +487,7 @@ void k_urlcompletion_matches(void* self, const char* matchlist[static 1]) {
     free(matchlist_qstr);
 }
 
-void k_urlcompletion_on_matches(void* self, void (*callback)(void*, const char**)) {
+void k_urlcompletion_on_matches(void* self, void (*callback)(void*, const char***)) {
     KCompletion_Connect_Matches((KCompletion*)self, (intptr_t)callback);
 }
 
@@ -806,7 +806,7 @@ void k_urlcompletion_qbase_set_items(void* self, const char* itemList[static 1])
     free(itemList_qstr);
 }
 
-void k_urlcompletion_on_set_items(void* self, void (*callback)(void*, const char**)) {
+void k_urlcompletion_on_set_items(void* self, void (*callback)(void*, const char***)) {
     KUrlCompletion_OnSetItems((KUrlCompletion*)self, (intptr_t)callback);
 }
 

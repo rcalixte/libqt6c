@@ -134,7 +134,7 @@ int32_t k_attica__forum_topics(void* self);
 /// @param self Attica__Forum*
 /// @param comments libqt_list of Attica__Forum*
 ///
-void k_attica__forum_set_children(void* self, libqt_list /* of Attica__Forum* */ comments);
+void k_attica__forum_set_children(void* self, libqt_list comments);
 
 /// [Upstream resources](https://api.kde.org/attica-forum.html#children)
 ///

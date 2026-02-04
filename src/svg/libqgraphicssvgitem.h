@@ -1737,7 +1737,7 @@ libqt_list q_graphicssvgitem_transformations(void* self);
 /// @param self QGraphicsSvgItem*
 /// @param transformations libqt_list of QGraphicsTransform*
 ///
-void q_graphicssvgitem_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations);
+void q_graphicssvgitem_set_transformations(void* self, libqt_list transformations);
 
 /// Inherited from QGraphicsItem
 ///

@@ -124,7 +124,7 @@ bool q_boxplotseries_take(void* self, void* box);
 /// @param self QBoxPlotSeries*
 /// @param boxes libqt_list of QBoxSet*
 ///
-bool q_boxplotseries_append2(void* self, libqt_list /* of QBoxSet* */ boxes);
+bool q_boxplotseries_append2(void* self, libqt_list boxes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#insert)
 ///
@@ -374,28 +374,28 @@ void q_boxplotseries_on_box_width_changed(void* self, void (*callback)(void*));
 /// @param self QBoxPlotSeries*
 /// @param sets libqt_list of QBoxSet*
 ///
-void q_boxplotseries_boxsets_added(void* self, libqt_list /* of QBoxSet* */ sets);
+void q_boxplotseries_boxsets_added(void* self, libqt_list sets);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#boxsetsAdded)
 ///
 /// @param self QBoxPlotSeries*
-/// @param callback void func(QBoxPlotSeries* self, QBoxSet** sets)
+/// @param callback void func(QBoxPlotSeries* self, libqt_list of QBoxSet* sets)
 ///
-void q_boxplotseries_on_boxsets_added(void* self, void (*callback)(void*, QBoxSet**));
+void q_boxplotseries_on_boxsets_added(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#boxsetsRemoved)
 ///
 /// @param self QBoxPlotSeries*
 /// @param sets libqt_list of QBoxSet*
 ///
-void q_boxplotseries_boxsets_removed(void* self, libqt_list /* of QBoxSet* */ sets);
+void q_boxplotseries_boxsets_removed(void* self, libqt_list sets);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#boxsetsRemoved)
 ///
 /// @param self QBoxPlotSeries*
-/// @param callback void func(QBoxPlotSeries* self, QBoxSet** sets)
+/// @param callback void func(QBoxPlotSeries* self, libqt_list of QBoxSet* sets)
 ///
-void q_boxplotseries_on_boxsets_removed(void* self, void (*callback)(void*, QBoxSet**));
+void q_boxplotseries_on_boxsets_removed(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

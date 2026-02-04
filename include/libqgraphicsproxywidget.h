@@ -1375,7 +1375,7 @@ void q_graphicsproxywidget_add_action(void* self, void* action);
 /// @param self QGraphicsProxyWidget*
 /// @param actions libqt_list of QAction*
 ///
-void q_graphicsproxywidget_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_graphicsproxywidget_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -1385,7 +1385,7 @@ void q_graphicsproxywidget_add_actions(void* self, libqt_list /* of QAction* */ 
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_graphicsproxywidget_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_graphicsproxywidget_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -2990,7 +2990,7 @@ libqt_list q_graphicsproxywidget_transformations(void* self);
 /// @param self QGraphicsProxyWidget*
 /// @param transformations libqt_list of QGraphicsTransform*
 ///
-void q_graphicsproxywidget_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations);
+void q_graphicsproxywidget_set_transformations(void* self, libqt_list transformations);
 
 /// Inherited from QGraphicsItem
 ///

@@ -64,7 +64,7 @@ KIO__ApplicationLauncherJob* k_io__applicationlauncherjob_new6(void* parent);
 /// @param self KIO__ApplicationLauncherJob*
 /// @param urls libqt_list of QUrl*
 ///
-void k_io__applicationlauncherjob_set_urls(void* self, libqt_list /* of QUrl* */ urls);
+void k_io__applicationlauncherjob_set_urls(void* self, libqt_list urls);
 
 /// [Upstream resources](https://api.kde.org/kio-applicationlauncherjob.html#setRunFlags)
 ///

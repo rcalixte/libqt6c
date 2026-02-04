@@ -370,9 +370,9 @@ libqt_list q_abstractitemdelegate_painting_roles(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback int* func()
+/// @param callback libqt_list of int func()
 ///
-void q_abstractitemdelegate_on_painting_roles(void* self, int* (*callback)());
+void q_abstractitemdelegate_on_painting_roles(void* self, libqt_list (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paintingRoles)
 ///

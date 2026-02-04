@@ -1719,7 +1719,7 @@ void q_widget_add_action(void* self, void* action);
 /// @param self QWidget*
 /// @param actions libqt_list of QAction*
 ///
-void q_widget_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_widget_add_actions(void* self, libqt_list actions);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
@@ -1727,7 +1727,7 @@ void q_widget_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_widget_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_widget_insert_actions(void* self, void* before, libqt_list actions);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#insertAction)
 ///

@@ -737,16 +737,16 @@ void k_categorizedview_qbase_current_changed(void* self, void* current, void* pr
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void k_categorizedview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void k_categorizedview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#dataChanged)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback void func(KCategorizedView* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
+/// @param callback void func(KCategorizedView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void k_categorizedview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
+void k_categorizedview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#dataChanged)
 ///
@@ -757,7 +757,7 @@ void k_categorizedview_on_data_changed(void* self, void (*callback)(void*, void*
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void k_categorizedview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void k_categorizedview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#rowsInserted)
 ///
@@ -1105,16 +1105,16 @@ int32_t k_categorizedview_item_alignment(void* self);
 /// @param self KCategorizedView*
 /// @param indexes libqt_list of QModelIndex*
 ///
-void k_categorizedview_indexes_moved(void* self, libqt_list /* of QModelIndex* */ indexes);
+void k_categorizedview_indexes_moved(void* self, libqt_list indexes);
 
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#indexesMoved)
 ///
 /// @param self KCategorizedView*
-/// @param callback void func(KCategorizedView* self, QModelIndex** indexes)
+/// @param callback void func(KCategorizedView* self, libqt_list of QModelIndex* indexes)
 ///
-void k_categorizedview_on_indexes_moved(void* self, void (*callback)(void*, QModelIndex**));
+void k_categorizedview_on_indexes_moved(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemView
 ///
@@ -3913,7 +3913,7 @@ void k_categorizedview_add_action(void* self, void* action);
 /// @param self KCategorizedView*
 /// @param actions libqt_list of QAction*
 ///
-void k_categorizedview_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_categorizedview_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3923,7 +3923,7 @@ void k_categorizedview_add_actions(void* self, libqt_list /* of QAction* */ acti
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_categorizedview_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_categorizedview_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -5356,9 +5356,9 @@ libqt_list k_categorizedview_qbase_selected_indexes(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback QModelIndex** func()
+/// @param callback libqt_list of QModelIndex* func()
 ///
-void k_categorizedview_on_selected_indexes(void* self, QModelIndex** (*callback)());
+void k_categorizedview_on_selected_indexes(void* self, libqt_list (*callback)());
 
 /// Inherited from QListView
 ///

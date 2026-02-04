@@ -394,7 +394,7 @@ QKeySequence* k_togglefullscreenaction_shortcut(void* self);
 /// @param self KToggleFullScreenAction*
 /// @param shortcuts libqt_list of QKeySequence*
 ///
-void k_togglefullscreenaction_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts);
+void k_togglefullscreenaction_set_shortcuts(void* self, libqt_list shortcuts);
 
 /// Inherited from QAction
 ///

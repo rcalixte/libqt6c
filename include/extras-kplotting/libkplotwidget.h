@@ -200,7 +200,7 @@ void k_plotwidget_add_plot_object(void* self, void* object);
 /// @param self KPlotWidget*
 /// @param objects libqt_list of KPlotObject*
 ///
-void k_plotwidget_add_plot_objects(void* self, libqt_list /* of KPlotObject* */ objects);
+void k_plotwidget_add_plot_objects(void* self, libqt_list objects);
 
 /// [Upstream resources](https://api.kde.org/kplotwidget.html#plotObjects)
 ///
@@ -560,9 +560,9 @@ libqt_list k_plotwidget_points_under_point(void* self, void* p);
 /// Allows for overriding the related default method
 ///
 /// @param self KPlotWidget*
-/// @param callback KPlotPoint** func(KPlotWidget* self, QPoint* p)
+/// @param callback libqt_list of KPlotPoint* func(KPlotWidget* self, QPoint* p)
 ///
-void k_plotwidget_on_points_under_point(void* self, KPlotPoint** (*callback)(void*, void*));
+void k_plotwidget_on_points_under_point(void* self, libqt_list (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kplotwidget.html#pointsUnderPoint)
 ///
@@ -2631,7 +2631,7 @@ void k_plotwidget_add_action(void* self, void* action);
 /// @param self KPlotWidget*
 /// @param actions libqt_list of QAction*
 ///
-void k_plotwidget_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_plotwidget_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2641,7 +2641,7 @@ void k_plotwidget_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_plotwidget_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_plotwidget_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

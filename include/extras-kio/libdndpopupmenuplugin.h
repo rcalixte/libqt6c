@@ -107,9 +107,9 @@ libqt_list k_io__dndpopupmenuplugin_setup(void* self, void* popupMenuInfo, void*
 /// Allows for overriding the related default method
 ///
 /// @param self KIO__DndPopupMenuPlugin*
-/// @param callback QAction** func(KIO__DndPopupMenuPlugin* self, KFileItemListProperties* popupMenuInfo, QUrl* destination)
+/// @param callback libqt_list of QAction* func(KIO__DndPopupMenuPlugin* self, KFileItemListProperties* popupMenuInfo, QUrl* destination)
 ///
-void k_io__dndpopupmenuplugin_on_setup(void* self, QAction** (*callback)(void*, void*, void*));
+void k_io__dndpopupmenuplugin_on_setup(void* self, libqt_list (*callback)(void*, void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kio-dndpopupmenuplugin.html#setup)
 ///

@@ -139,7 +139,7 @@ void k_io__thumbnailresult_delete(void* self);
 /// @param parent QObject*
 /// @param args libqt_list of QVariant*
 ///
-KIO__ThumbnailCreator* k_io__thumbnailcreator_new(void* parent, libqt_list /* of QVariant* */ args);
+KIO__ThumbnailCreator* k_io__thumbnailcreator_new(void* parent, libqt_list args);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///

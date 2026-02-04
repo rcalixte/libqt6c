@@ -111,16 +111,16 @@ void k_pluginfactory_set_meta_data(void* self, void* metaData);
 /// @param parent QObject*
 /// @param args libqt_list of QVariant*
 ///
-QObject* k_pluginfactory_create(void* self, const char* iface, void* parentWidget, void* parent, libqt_list /* of QVariant* */ args);
+QObject* k_pluginfactory_create(void* self, const char* iface, void* parentWidget, void* parent, libqt_list args);
 
 /// [Upstream resources](https://api.kde.org/kpluginfactory.html#create)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KPluginFactory*
-/// @param callback QObject* func(KPluginFactory* self, const char* iface, QWidget* parentWidget, QObject* parent, QVariant** args)
+/// @param callback QObject* func(KPluginFactory* self, const char* iface, QWidget* parentWidget, QObject* parent, libqt_list of QVariant* args)
 ///
-void k_pluginfactory_on_create(void* self, QObject* (*callback)(void*, const char*, void*, void*, QVariant**));
+void k_pluginfactory_on_create(void* self, QObject* (*callback)(void*, const char*, void*, void*, libqt_list));
 
 /// [Upstream resources](https://api.kde.org/kpluginfactory.html#create)
 ///
@@ -132,7 +132,7 @@ void k_pluginfactory_on_create(void* self, QObject* (*callback)(void*, const cha
 /// @param parent QObject*
 /// @param args libqt_list of QVariant*
 ///
-QObject* k_pluginfactory_qbase_create(void* self, const char* iface, void* parentWidget, void* parent, libqt_list /* of QVariant* */ args);
+QObject* k_pluginfactory_qbase_create(void* self, const char* iface, void* parentWidget, void* parent, libqt_list args);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

@@ -520,7 +520,7 @@ libqt_list /* of QModelIndex* */ q_tableview_selected_indexes(void* self) {
     return _arr;
 }
 
-void q_tableview_on_selected_indexes(void* self, QModelIndex** (*callback)()) {
+void q_tableview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
     QTableView_OnSelectedIndexes((QTableView*)self, (intptr_t)callback);
 }
 

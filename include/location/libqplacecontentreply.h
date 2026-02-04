@@ -180,7 +180,7 @@ void q_placecontentreply_set_content(void* self, libqt_map content);
 /// Allows for overriding the related default method
 ///
 /// @param self QPlaceContentReply*
-/// @param callback void func(QPlaceContentReply* self, libqt_map of int to QPlaceContent*)
+/// @param callback void func(QPlaceContentReply* self, libqt_map of int to QPlaceContent* content)
 ///
 void q_placecontentreply_on_set_content(void* self, void (*callback)(void*, libqt_map));
 

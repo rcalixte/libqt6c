@@ -153,7 +153,7 @@ int32_t q_georoute_travel_mode(void* self);
 /// @param self QGeoRoute*
 /// @param path libqt_list of QGeoCoordinate*
 ///
-void q_georoute_set_path(void* self, libqt_list /* of QGeoCoordinate* */ path);
+void q_georoute_set_path(void* self, libqt_list path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroute.html#path)
 ///
@@ -168,7 +168,7 @@ libqt_list q_georoute_path(void* self);
 /// @param self QGeoRoute*
 /// @param legs libqt_list of QGeoRoute*
 ///
-void q_georoute_set_route_legs(void* self, libqt_list /* of QGeoRoute* */ legs);
+void q_georoute_set_route_legs(void* self, libqt_list legs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroute.html#routeLegs)
 ///

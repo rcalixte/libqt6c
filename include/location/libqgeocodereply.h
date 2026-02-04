@@ -321,16 +321,16 @@ void q_geocodereply_qbase_add_location(void* self, void* location);
 /// @param self QGeoCodeReply*
 /// @param locations libqt_list of QGeoLocation*
 ///
-void q_geocodereply_set_locations(void* self, libqt_list /* of QGeoLocation* */ locations);
+void q_geocodereply_set_locations(void* self, libqt_list locations);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setLocations)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QGeoCodeReply*
-/// @param callback void func(QGeoCodeReply* self, QGeoLocation** locations)
+/// @param callback void func(QGeoCodeReply* self, libqt_list of QGeoLocation* locations)
 ///
-void q_geocodereply_on_set_locations(void* self, void (*callback)(void*, QGeoLocation**));
+void q_geocodereply_on_set_locations(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setLocations)
 ///
@@ -339,7 +339,7 @@ void q_geocodereply_on_set_locations(void* self, void (*callback)(void*, QGeoLoc
 /// @param self QGeoCodeReply*
 /// @param locations libqt_list of QGeoLocation*
 ///
-void q_geocodereply_qbase_set_locations(void* self, libqt_list /* of QGeoLocation* */ locations);
+void q_geocodereply_qbase_set_locations(void* self, libqt_list locations);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setLimit)
 ///

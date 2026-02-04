@@ -118,7 +118,7 @@ double q_textoption_tab_stop_distance(void* self);
 /// @param self QTextOption*
 /// @param tabStops libqt_list of double
 ///
-void q_textoption_set_tab_array(void* self, libqt_list /* of double */ tabStops);
+void q_textoption_set_tab_array(void* self, libqt_list tabStops);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#tabArray)
 ///
@@ -133,7 +133,7 @@ libqt_list q_textoption_tab_array(void* self);
 /// @param self QTextOption*
 /// @param tabStops libqt_list of QTextOption__Tab*
 ///
-void q_textoption_set_tabs(void* self, libqt_list /* of QTextOption__Tab* */ tabStops);
+void q_textoption_set_tabs(void* self, libqt_list tabStops);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextoption.html#tabs)
 ///

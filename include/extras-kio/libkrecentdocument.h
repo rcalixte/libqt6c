@@ -58,7 +58,7 @@ void k_recentdocument_add(void* url);
 /// @param url QUrl*
 /// @param groups libqt_list of enum KRecentDocument__RecentDocumentGroup
 ///
-void k_recentdocument_add2(void* url, libqt_list /* of enum KRecentDocument__RecentDocumentGroup */ groups);
+void k_recentdocument_add2(void* url, libqt_list groups);
 
 /// [Upstream resources](https://api.kde.org/krecentdocument.html#add)
 ///
@@ -73,7 +73,7 @@ void k_recentdocument_add3(void* url, const char* desktopEntryName);
 /// @param desktopEntryName const char*
 /// @param groups libqt_list of enum KRecentDocument__RecentDocumentGroup
 ///
-void k_recentdocument_add4(void* url, const char* desktopEntryName, libqt_list /* of enum KRecentDocument__RecentDocumentGroup */ groups);
+void k_recentdocument_add4(void* url, const char* desktopEntryName, libqt_list groups);
 
 /// [Upstream resources](https://api.kde.org/krecentdocument.html#removeFile)
 ///

@@ -234,9 +234,9 @@ libqt_list q_widgetaction_created_widgets(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetAction*
-/// @param callback QWidget** func()
+/// @param callback libqt_list of QWidget* func()
 ///
-void q_widgetaction_on_created_widgets(void* self, QWidget** (*callback)());
+void q_widgetaction_on_created_widgets(void* self, libqt_list (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
 ///
@@ -466,7 +466,7 @@ QKeySequence* q_widgetaction_shortcut(void* self);
 /// @param self QWidgetAction*
 /// @param shortcuts libqt_list of QKeySequence*
 ///
-void q_widgetaction_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts);
+void q_widgetaction_set_shortcuts(void* self, libqt_list shortcuts);
 
 /// Inherited from QAction
 ///

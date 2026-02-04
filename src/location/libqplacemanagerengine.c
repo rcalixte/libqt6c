@@ -322,7 +322,7 @@ libqt_list /* of QPlaceCategory* */ q_placemanagerengine_child_categories(void* 
     return _arr;
 }
 
-void q_placemanagerengine_on_child_categories(void* self, QPlaceCategory** (*callback)(void*, const char*)) {
+void q_placemanagerengine_on_child_categories(void* self, libqt_list /* of QPlaceCategory* */ (*callback)(void*, const char*)) {
     QPlaceManagerEngine_OnChildCategories((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
@@ -336,7 +336,7 @@ libqt_list /* of QLocale* */ q_placemanagerengine_locales(void* self) {
     return _arr;
 }
 
-void q_placemanagerengine_on_locales(void* self, QLocale** (*callback)()) {
+void q_placemanagerengine_on_locales(void* self, libqt_list /* of QLocale* */ (*callback)()) {
     QPlaceManagerEngine_OnLocales((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
@@ -349,7 +349,7 @@ void q_placemanagerengine_set_locales(void* self, libqt_list /* of QLocale* */ l
     QPlaceManagerEngine_SetLocales((QPlaceManagerEngine*)self, locales);
 }
 
-void q_placemanagerengine_on_set_locales(void* self, void (*callback)(void*, QLocale**)) {
+void q_placemanagerengine_on_set_locales(void* self, void (*callback)(void*, libqt_list /* of QLocale* */)) {
     QPlaceManagerEngine_OnSetLocales((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 

@@ -2288,7 +2288,7 @@ void k_shortcutsdialog_add_action(void* self, void* action);
 /// @param self KShortcutsDialog*
 /// @param actions libqt_list of QAction*
 ///
-void k_shortcutsdialog_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_shortcutsdialog_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2298,7 +2298,7 @@ void k_shortcutsdialog_add_actions(void* self, libqt_list /* of QAction* */ acti
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_shortcutsdialog_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_shortcutsdialog_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

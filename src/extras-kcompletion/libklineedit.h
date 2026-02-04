@@ -480,7 +480,7 @@ void k_lineedit_set_completed_items(void* self, const char* items[static 1], boo
 /// @param self KLineEdit*
 /// @param callback void func(KLineEdit* self, const char** items, bool autoSuggest)
 ///
-void k_lineedit_on_set_completed_items(void* self, void (*callback)(void*, const char**, bool));
+void k_lineedit_on_set_completed_items(void* self, void (*callback)(void*, const char***, bool));
 
 /// [Upstream resources](https://api.kde.org/klineedit.html#setCompletedItems)
 ///
@@ -3477,7 +3477,7 @@ void k_lineedit_set_accept_drops(void* self, bool on);
 /// @param self KLineEdit*
 /// @param actions libqt_list of QAction*
 ///
-void k_lineedit_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_lineedit_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3487,7 +3487,7 @@ void k_lineedit_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_lineedit_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_lineedit_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -4596,7 +4596,7 @@ int32_t k_lineedit_completion_mode(void* self);
 /// @param item enum KCompletionBase__KeyBindingType
 /// @param key libqt_list of QKeySequence*
 ///
-bool k_lineedit_set_key_binding(void* self, int32_t item, libqt_list /* of QKeySequence* */ key);
+bool k_lineedit_set_key_binding(void* self, int32_t item, libqt_list key);
 
 /// Inherited from KCompletionBase
 ///
@@ -6457,7 +6457,7 @@ void k_lineedit_qbase_set_key_binding_map(void* self, libqt_map keyBindingMap);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLineEdit*
-/// @param callback void func(KLineEdit* self, libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence**)
+/// @param callback void func(KLineEdit* self, libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence** keyBindingMap)
 ///
 void k_lineedit_on_set_key_binding_map(void* self, void (*callback)(void*, libqt_map));
 

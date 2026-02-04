@@ -4606,9 +4606,9 @@ libqt_list k_onsole__filter__hotspot_actions(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__Filter__HotSpot*
-/// @param callback QAction** func()
+/// @param callback libqt_list of QAction* func()
 ///
-void k_onsole__filter__hotspot_on_actions(void* self, QAction** (*callback)());
+void k_onsole__filter__hotspot_on_actions(void* self, libqt_list (*callback)());
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -4783,9 +4783,9 @@ libqt_list k_onsole__regexpfilter__hotspot_qbase_actions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__RegExpFilter__HotSpot*
-/// @param callback QAction** func()
+/// @param callback libqt_list of QAction* func()
 ///
-void k_onsole__regexpfilter__hotspot_on_actions(void* self, QAction** (*callback)());
+void k_onsole__regexpfilter__hotspot_on_actions(void* self, libqt_list (*callback)());
 
 /// Inherited from Konsole::Filter::HotSpot
 ///
@@ -4856,9 +4856,9 @@ libqt_list k_onsole__urlfilter__hotspot_actions(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__UrlFilter__HotSpot*
-/// @param callback QAction** func()
+/// @param callback libqt_list of QAction* func()
 ///
-void k_onsole__urlfilter__hotspot_on_actions(void* self, QAction** (*callback)());
+void k_onsole__urlfilter__hotspot_on_actions(void* self, libqt_list (*callback)());
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///

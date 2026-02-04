@@ -46,7 +46,7 @@ const char* k_io__openwithhandlerinterface_tr(const char* s);
 /// @param urls libqt_list of QUrl*
 /// @param mimeType const char*
 ///
-void k_io__openwithhandlerinterface_prompt_user_for_application(void* self, void* job, libqt_list /* of QUrl* */ urls, const char* mimeType);
+void k_io__openwithhandlerinterface_prompt_user_for_application(void* self, void* job, libqt_list urls, const char* mimeType);
 
 /// [Upstream resources](https://api.kde.org/kio-openwithhandlerinterface.html#canceled)
 ///

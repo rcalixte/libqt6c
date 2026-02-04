@@ -142,7 +142,7 @@ void k_parts__partbase_reload_x_m_l(void* self);
 /// @param name const char*
 /// @param actionList libqt_list of QAction*
 ///
-void k_parts__partbase_plug_action_list(void* self, const char* name, libqt_list /* of QAction* */ actionList);
+void k_parts__partbase_plug_action_list(void* self, const char* name, libqt_list actionList);
 
 /// Inherited from KXMLGUIClient
 ///

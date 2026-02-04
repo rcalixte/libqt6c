@@ -151,7 +151,7 @@ void k_xmlguifactory_remove_client(void* self, void* client);
 /// @param name const char*
 /// @param actionList libqt_list of QAction*
 ///
-void k_xmlguifactory_plug_action_list(void* self, void* client, const char* name, libqt_list /* of QAction* */ actionList);
+void k_xmlguifactory_plug_action_list(void* self, void* client, const char* name, libqt_list actionList);
 
 /// [Upstream resources](https://api.kde.org/kxmlguifactory.html#unplugActionList)
 ///

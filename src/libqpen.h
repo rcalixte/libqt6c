@@ -125,7 +125,7 @@ libqt_list q_pen_dash_pattern(void* self);
 /// @param self QPen*
 /// @param pattern libqt_list of double
 ///
-void q_pen_set_dash_pattern(void* self, libqt_list /* of double */ pattern);
+void q_pen_set_dash_pattern(void* self, libqt_list pattern);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpen.html#dashOffset)
 ///

@@ -180,7 +180,7 @@ void q_networkreply_set_ssl_configuration(void* self, void* configuration);
 /// @param self QNetworkReply*
 /// @param errors libqt_list of QSslError*
 ///
-void q_networkreply_ignore_ssl_errors(void* self, libqt_list /* of QSslError* */ errors);
+void q_networkreply_ignore_ssl_errors(void* self, libqt_list errors);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkreply.html#abort)
 ///
@@ -278,14 +278,14 @@ void q_networkreply_on_encrypted(void* self, void (*callback)(void*));
 /// @param self QNetworkReply*
 /// @param errors libqt_list of QSslError*
 ///
-void q_networkreply_ssl_errors(void* self, libqt_list /* of QSslError* */ errors);
+void q_networkreply_ssl_errors(void* self, libqt_list errors);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkreply.html#sslErrors)
 ///
 /// @param self QNetworkReply*
-/// @param callback void func(QNetworkReply* self, QSslError** errors)
+/// @param callback void func(QNetworkReply* self, libqt_list of QSslError* errors)
 ///
-void q_networkreply_on_ssl_errors(void* self, void (*callback)(void*, QSslError**));
+void q_networkreply_on_ssl_errors(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkreply.html#preSharedKeyAuthenticationRequired)
 ///

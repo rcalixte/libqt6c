@@ -15,7 +15,7 @@ libqt_list /* of QWidget* */ q_designerlayoutdecorationextension_widgets(void* s
     return _arr;
 }
 
-void q_designerlayoutdecorationextension_on_widgets(void* self, QWidget** (*callback)(void*, void*)) {
+void q_designerlayoutdecorationextension_on_widgets(void* self, libqt_list /* of QWidget* */ (*callback)(void*, void*)) {
     QDesignerLayoutDecorationExtension_OnWidgets((QDesignerLayoutDecorationExtension*)self, (intptr_t)callback);
 }
 

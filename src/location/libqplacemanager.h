@@ -167,7 +167,7 @@ void q_placemanager_set_locale(void* self, void* locale);
 /// @param self QPlaceManager*
 /// @param locale libqt_list of QLocale*
 ///
-void q_placemanager_set_locales(void* self, libqt_list /* of QLocale* */ locale);
+void q_placemanager_set_locales(void* self, libqt_list locale);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanager.html#compatiblePlace)
 ///

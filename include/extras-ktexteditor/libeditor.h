@@ -221,7 +221,7 @@ const char* k_texteditor__editor_expand_text(void* self, const char* text, void*
 /// @param self KTextEditor__Editor*
 /// @param widgets libqt_list of QWidget*
 ///
-void k_texteditor__editor_add_variable_expansion(void* self, libqt_list /* of QWidget* */ widgets);
+void k_texteditor__editor_add_variable_expansion(void* self, libqt_list widgets);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -248,7 +248,7 @@ const char* k_texteditor__editor_tr3(const char* s, const char* c, int n);
 /// @param widgets libqt_list of QWidget*
 /// @param variables const char**
 ///
-void k_texteditor__editor_add_variable_expansion2(void* self, libqt_list /* of QWidget* */ widgets, const char* variables[static 1]);
+void k_texteditor__editor_add_variable_expansion2(void* self, libqt_list widgets, const char* variables[static 1]);
 
 /// Inherited from QObject
 ///

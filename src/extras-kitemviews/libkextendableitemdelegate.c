@@ -594,7 +594,7 @@ libqt_list /* of int */ k_extendableitemdelegate_qbase_painting_roles(void* self
     return _arr;
 }
 
-void k_extendableitemdelegate_on_painting_roles(void* self, int* (*callback)()) {
+void k_extendableitemdelegate_on_painting_roles(void* self, libqt_list /* of int */ (*callback)()) {
     KExtendableItemDelegate_OnPaintingRoles((KExtendableItemDelegate*)self, (intptr_t)callback);
 }
 
