@@ -997,9 +997,9 @@ libqt_list q_tableview_selected_indexes(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTableView*
-/// @param callback QModelIndex** func()
+/// @param callback libqt_list of QModelIndex* func()
 ///
-void q_tableview_on_selected_indexes(void* self, QModelIndex** (*callback)());
+void q_tableview_on_selected_indexes(void* self, libqt_list (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#selectedIndexes)
 ///
@@ -4052,7 +4052,7 @@ void q_tableview_add_action(void* self, void* action);
 /// @param self QTableView*
 /// @param actions libqt_list of QAction*
 ///
-void q_tableview_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_tableview_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -4062,7 +4062,7 @@ void q_tableview_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_tableview_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_tableview_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -5275,7 +5275,7 @@ void q_tableview_on_select_all(void* self, void (*callback)());
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_tableview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void q_tableview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5288,7 +5288,7 @@ void q_tableview_data_changed(void* self, void* topLeft, void* bottomRight, libq
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_tableview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void q_tableview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5297,9 +5297,9 @@ void q_tableview_qbase_data_changed(void* self, void* topLeft, void* bottomRight
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableView*
-/// @param callback void func(QTableView* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
+/// @param callback void func(QTableView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void q_tableview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
+void q_tableview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
 
 /// Inherited from QAbstractItemView
 ///

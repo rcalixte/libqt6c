@@ -106,7 +106,7 @@ const char* q_abstractprintdialog_tr(const char* s);
 /// @param self QAbstractPrintDialog*
 /// @param tabs libqt_list of QWidget*
 ///
-void q_abstractprintdialog_set_option_tabs(void* self, libqt_list /* of QWidget* */ tabs);
+void q_abstractprintdialog_set_option_tabs(void* self, libqt_list tabs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractprintdialog.html#setPrintRange)
 ///
@@ -2189,7 +2189,7 @@ void q_abstractprintdialog_add_action(void* self, void* action);
 /// @param self QAbstractPrintDialog*
 /// @param actions libqt_list of QAction*
 ///
-void q_abstractprintdialog_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_abstractprintdialog_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2199,7 +2199,7 @@ void q_abstractprintdialog_add_actions(void* self, libqt_list /* of QAction* */ 
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_abstractprintdialog_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_abstractprintdialog_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

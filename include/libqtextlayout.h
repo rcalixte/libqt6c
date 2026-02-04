@@ -254,7 +254,7 @@ const char* q_textlayout_preedit_area_text(void* self);
 /// @param self QTextLayout*
 /// @param overrides libqt_list of QTextLayout__FormatRange*
 ///
-void q_textlayout_set_formats(void* self, libqt_list /* of QTextLayout__FormatRange* */ overrides);
+void q_textlayout_set_formats(void* self, libqt_list overrides);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlayout.html#formats)
 ///
@@ -484,7 +484,7 @@ int32_t q_textlayout_previous_cursor_position2(void* self, int oldPos, int32_t m
 /// @param pos QPointF*
 /// @param selections libqt_list of QTextLayout__FormatRange*
 ///
-void q_textlayout_draw3(void* self, void* p, void* pos, libqt_list /* of QTextLayout__FormatRange* */ selections);
+void q_textlayout_draw3(void* self, void* p, void* pos, libqt_list selections);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlayout.html#draw)
 ///
@@ -494,7 +494,7 @@ void q_textlayout_draw3(void* self, void* p, void* pos, libqt_list /* of QTextLa
 /// @param selections libqt_list of QTextLayout__FormatRange*
 /// @param clip QRectF*
 ///
-void q_textlayout_draw4(void* self, void* p, void* pos, libqt_list /* of QTextLayout__FormatRange* */ selections, void* clip);
+void q_textlayout_draw4(void* self, void* p, void* pos, libqt_list selections, void* clip);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlayout.html#glyphRuns)
 ///

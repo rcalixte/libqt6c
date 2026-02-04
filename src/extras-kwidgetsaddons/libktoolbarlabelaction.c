@@ -731,7 +731,7 @@ libqt_list /* of QWidget* */ k_toolbarlabelaction_qbase_created_widgets(void* se
     return _arr;
 }
 
-void k_toolbarlabelaction_on_created_widgets(void* self, QWidget** (*callback)()) {
+void k_toolbarlabelaction_on_created_widgets(void* self, libqt_list /* of QWidget* */ (*callback)()) {
     KToolBarLabelAction_OnCreatedWidgets((KToolBarLabelAction*)self, (intptr_t)callback);
 }
 

@@ -324,16 +324,16 @@ int32_t q_designerwidgetboxinterface_find_or_insert_category(void* self, const c
 /// @param item_list libqt_list of QDesignerDnDItemInterface*
 /// @param global_mouse_pos QPoint*
 ///
-void q_designerwidgetboxinterface_drop_widgets(void* self, libqt_list /* of QDesignerDnDItemInterface* */ item_list, void* global_mouse_pos);
+void q_designerwidgetboxinterface_drop_widgets(void* self, libqt_list item_list, void* global_mouse_pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#dropWidgets)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QDesignerWidgetBoxInterface*
-/// @param callback void func(QDesignerWidgetBoxInterface* self, QDesignerDnDItemInterface** item_list, QPoint* global_mouse_pos)
+/// @param callback void func(QDesignerWidgetBoxInterface* self, libqt_list of QDesignerDnDItemInterface* item_list, QPoint* global_mouse_pos)
 ///
-void q_designerwidgetboxinterface_on_drop_widgets(void* self, void (*callback)(void*, QDesignerDnDItemInterface**, void*));
+void q_designerwidgetboxinterface_on_drop_widgets(void* self, void (*callback)(void*, libqt_list, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#dropWidgets)
 ///
@@ -343,7 +343,7 @@ void q_designerwidgetboxinterface_on_drop_widgets(void* self, void (*callback)(v
 /// @param item_list libqt_list of QDesignerDnDItemInterface*
 /// @param global_mouse_pos QPoint*
 ///
-void q_designerwidgetboxinterface_qbase_drop_widgets(void* self, libqt_list /* of QDesignerDnDItemInterface* */ item_list, void* global_mouse_pos);
+void q_designerwidgetboxinterface_qbase_drop_widgets(void* self, libqt_list item_list, void* global_mouse_pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#setFileName)
 ///
@@ -2366,7 +2366,7 @@ void q_designerwidgetboxinterface_add_action(void* self, void* action);
 /// @param self QDesignerWidgetBoxInterface*
 /// @param actions libqt_list of QAction*
 ///
-void q_designerwidgetboxinterface_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_designerwidgetboxinterface_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2376,7 +2376,7 @@ void q_designerwidgetboxinterface_add_actions(void* self, libqt_list /* of QActi
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_designerwidgetboxinterface_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_designerwidgetboxinterface_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

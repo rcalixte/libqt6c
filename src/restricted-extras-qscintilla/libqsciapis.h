@@ -172,7 +172,7 @@ void q_sciapis_update_auto_completion_list(void* self, const char* context[stati
 /// @param self QsciAPIs*
 /// @param callback void func(QsciAPIs* self, const char** context, const char** list)
 ///
-void q_sciapis_on_update_auto_completion_list(void* self, void (*callback)(void*, const char**, const char**));
+void q_sciapis_on_update_auto_completion_list(void* self, void (*callback)(void*, const char***, const char***));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
@@ -219,16 +219,16 @@ void q_sciapis_qbase_auto_completion_selected(void* self, const char* sel);
 /// @param style enum QsciScintilla__CallTipsStyle
 /// @param shifts libqt_list of int
 ///
-const char** q_sciapis_call_tips(void* self, const char* context[static 1], int commas, int32_t style, libqt_list /* of int */ shifts);
+const char** q_sciapis_call_tips(void* self, const char* context[static 1], int commas, int32_t style, libqt_list shifts);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QsciAPIs*
-/// @param callback const char** func(QsciAPIs* self, const char** context, int commas, enum QsciScintilla__CallTipsStyle style, int* )
+/// @param callback const char** func(QsciAPIs* self, const char** context, int commas, enum QsciScintilla__CallTipsStyle style, libqt_list of int shifts)
 ///
-void q_sciapis_on_call_tips(void* self, const char** (*callback)(void*, const char**, int, int32_t, libqt_list /* of int */));
+void q_sciapis_on_call_tips(void* self, const char** (*callback)(void*, const char***, int, int32_t, libqt_list));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
@@ -240,7 +240,7 @@ void q_sciapis_on_call_tips(void* self, const char** (*callback)(void*, const ch
 /// @param style enum QsciScintilla__CallTipsStyle
 /// @param shifts libqt_list of int
 ///
-const char** q_sciapis_qbase_call_tips(void* self, const char* context[static 1], int commas, int32_t style, libqt_list /* of int */ shifts);
+const char** q_sciapis_qbase_call_tips(void* self, const char* context[static 1], int commas, int32_t style, libqt_list shifts);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///

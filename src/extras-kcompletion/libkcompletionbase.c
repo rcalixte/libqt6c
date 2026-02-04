@@ -115,7 +115,7 @@ void k_completionbase_set_completed_items(void* self, const char* items[static 1
     free(items_qstr);
 }
 
-void k_completionbase_on_set_completed_items(void* self, void (*callback)(void*, const char**, bool)) {
+void k_completionbase_on_set_completed_items(void* self, void (*callback)(void*, const char***, bool)) {
     KCompletionBase_OnSetCompletedItems((KCompletionBase*)self, (intptr_t)callback);
 }
 

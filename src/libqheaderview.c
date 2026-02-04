@@ -2903,7 +2903,7 @@ libqt_list /* of QModelIndex* */ q_headerview_qbase_selected_indexes(void* self)
     return _arr;
 }
 
-void q_headerview_on_selected_indexes(void* self, QModelIndex** (*callback)()) {
+void q_headerview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
     QHeaderView_OnSelectedIndexes((QHeaderView*)self, (intptr_t)callback);
 }
 

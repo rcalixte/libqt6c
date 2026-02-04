@@ -41,7 +41,7 @@ KPropertiesDialog* k_propertiesdialog_new3(void* url);
 ///
 /// @param urls libqt_list of QUrl*
 ///
-KPropertiesDialog* k_propertiesdialog_new4(libqt_list /* of QUrl* */ urls);
+KPropertiesDialog* k_propertiesdialog_new4(libqt_list urls);
 
 /// [Upstream resources](https://api.kde.org/kpropertiesdialog.html)
 
@@ -95,7 +95,7 @@ KPropertiesDialog* k_propertiesdialog_new9(void* url, void* parent);
 /// @param urls libqt_list of QUrl*
 /// @param parent QWidget*
 ///
-KPropertiesDialog* k_propertiesdialog_new10(libqt_list /* of QUrl* */ urls, void* parent);
+KPropertiesDialog* k_propertiesdialog_new10(libqt_list urls, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kpropertiesdialog.html)
 
@@ -218,7 +218,7 @@ bool k_propertiesdialog_show_dialog3(void* _items);
 ///
 /// @param urls libqt_list of QUrl*
 ///
-bool k_propertiesdialog_show_dialog4(libqt_list /* of QUrl* */ urls);
+bool k_propertiesdialog_show_dialog4(libqt_list urls);
 
 /// [Upstream resources](https://api.kde.org/kpropertiesdialog.html#url)
 ///
@@ -461,7 +461,7 @@ bool k_propertiesdialog_show_dialog34(void* _items, void* parent, bool modal);
 /// @param urls libqt_list of QUrl*
 /// @param parent QWidget*
 ///
-bool k_propertiesdialog_show_dialog25(libqt_list /* of QUrl* */ urls, void* parent);
+bool k_propertiesdialog_show_dialog25(libqt_list urls, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kpropertiesdialog.html#showDialog)
 ///
@@ -469,7 +469,7 @@ bool k_propertiesdialog_show_dialog25(libqt_list /* of QUrl* */ urls, void* pare
 /// @param parent QWidget*
 /// @param modal bool
 ///
-bool k_propertiesdialog_show_dialog35(libqt_list /* of QUrl* */ urls, void* parent, bool modal);
+bool k_propertiesdialog_show_dialog35(libqt_list urls, void* parent, bool modal);
 
 /// Inherited from KPageDialog
 ///
@@ -2632,7 +2632,7 @@ void k_propertiesdialog_add_action(void* self, void* action);
 /// @param self KPropertiesDialog*
 /// @param actions libqt_list of QAction*
 ///
-void k_propertiesdialog_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_propertiesdialog_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2642,7 +2642,7 @@ void k_propertiesdialog_add_actions(void* self, libqt_list /* of QAction* */ act
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_propertiesdialog_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_propertiesdialog_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

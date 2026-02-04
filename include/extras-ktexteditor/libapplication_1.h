@@ -146,7 +146,7 @@ bool k_texteditor__application_close_document(void* self, void* document);
 /// @param self KTextEditor__Application*
 /// @param documents libqt_list of KTextEditor__Document*
 ///
-bool k_texteditor__application_close_documents(void* self, libqt_list /* of KTextEditor__Document* */ documents);
+bool k_texteditor__application_close_documents(void* self, libqt_list documents);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-application.html#documentCreated)
 ///

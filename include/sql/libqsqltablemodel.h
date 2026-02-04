@@ -1333,16 +1333,16 @@ bool q_sqltablemodel_check_index2(void* self, void* index, int32_t options);
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_sqltablemodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void q_sqltablemodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QSqlTableModel*
-/// @param callback void func(QSqlTableModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
+/// @param callback void func(QSqlTableModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void q_sqltablemodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
+void q_sqltablemodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1351,16 +1351,16 @@ void q_sqltablemodel_on_data_changed3(void* self, void (*callback)(void*, void*,
 /// @param self QSqlTableModel*
 /// @param parents libqt_list of QPersistentModelIndex*
 ///
-void q_sqltablemodel_layout_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents);
+void q_sqltablemodel_layout_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QSqlTableModel*
-/// @param callback void func(QSqlTableModel* self, QPersistentModelIndex** parents)
+/// @param callback void func(QSqlTableModel* self, libqt_list of QPersistentModelIndex* parents)
 ///
-void q_sqltablemodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
+void q_sqltablemodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1370,16 +1370,16 @@ void q_sqltablemodel_on_layout_changed1(void* self, void (*callback)(void*, QPer
 /// @param parents libqt_list of QPersistentModelIndex*
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
 ///
-void q_sqltablemodel_layout_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint);
+void q_sqltablemodel_layout_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QSqlTableModel*
-/// @param callback void func(QSqlTableModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+/// @param callback void func(QSqlTableModel* self, libqt_list of QPersistentModelIndex* parents, enum QAbstractItemModel__LayoutChangeHint hint)
 ///
-void q_sqltablemodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
+void q_sqltablemodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1388,16 +1388,16 @@ void q_sqltablemodel_on_layout_changed2(void* self, void (*callback)(void*, QPer
 /// @param self QSqlTableModel*
 /// @param parents libqt_list of QPersistentModelIndex*
 ///
-void q_sqltablemodel_layout_about_to_be_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents);
+void q_sqltablemodel_layout_about_to_be_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QSqlTableModel*
-/// @param callback void func(QSqlTableModel* self, QPersistentModelIndex** parents)
+/// @param callback void func(QSqlTableModel* self, libqt_list of QPersistentModelIndex* parents)
 ///
-void q_sqltablemodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
+void q_sqltablemodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1407,16 +1407,16 @@ void q_sqltablemodel_on_layout_about_to_be_changed1(void* self, void (*callback)
 /// @param parents libqt_list of QPersistentModelIndex*
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
 ///
-void q_sqltablemodel_layout_about_to_be_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint);
+void q_sqltablemodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QSqlTableModel*
-/// @param callback void func(QSqlTableModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+/// @param callback void func(QSqlTableModel* self, libqt_list of QPersistentModelIndex* parents, enum QAbstractItemModel__LayoutChangeHint hint)
 ///
-void q_sqltablemodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
+void q_sqltablemodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QObject
 ///
@@ -2325,7 +2325,7 @@ bool q_sqltablemodel_qbase_set_item_data(void* self, void* index, libqt_map role
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlTableModel*
-/// @param callback bool func(QSqlTableModel* self, QModelIndex* index, libqt_map of int to QVariant*)
+/// @param callback bool func(QSqlTableModel* self, QModelIndex* index, libqt_map of int to QVariant* roles)
 ///
 void q_sqltablemodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map));
 
@@ -2373,7 +2373,7 @@ void q_sqltablemodel_on_mime_types(void* self, const char** (*callback)());
 /// @param self QSqlTableModel*
 /// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* q_sqltablemodel_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes);
+QMimeData* q_sqltablemodel_mime_data(void* self, libqt_list indexes);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2384,7 +2384,7 @@ QMimeData* q_sqltablemodel_mime_data(void* self, libqt_list /* of QModelIndex* *
 /// @param self QSqlTableModel*
 /// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* q_sqltablemodel_qbase_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes);
+QMimeData* q_sqltablemodel_qbase_mime_data(void* self, libqt_list indexes);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2393,9 +2393,9 @@ QMimeData* q_sqltablemodel_qbase_mime_data(void* self, libqt_list /* of QModelIn
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlTableModel*
-/// @param callback QMimeData* func(QSqlTableModel* self, QModelIndex** indexes)
+/// @param callback QMimeData* func(QSqlTableModel* self, libqt_list of QModelIndex* indexes)
 ///
-void q_sqltablemodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**));
+void q_sqltablemodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2664,9 +2664,9 @@ libqt_list q_sqltablemodel_qbase_match(void* self, void* start, int role, void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlTableModel*
-/// @param callback QModelIndex** func(QSqlTableModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
+/// @param callback libqt_list of QModelIndex* func(QSqlTableModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 ///
-void q_sqltablemodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t));
+void q_sqltablemodel_on_match(void* self, libqt_list (*callback)(void*, void*, int, void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3412,7 +3412,7 @@ void q_sqltablemodel_on_create_index(void* self, QModelIndex* (*callback)(void*,
 /// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void q_sqltablemodel_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream);
+void q_sqltablemodel_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3424,7 +3424,7 @@ void q_sqltablemodel_encode_data(void* self, libqt_list /* of QModelIndex* */ in
 /// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void q_sqltablemodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream);
+void q_sqltablemodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3433,9 +3433,9 @@ void q_sqltablemodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlTableModel*
-/// @param callback void func(QSqlTableModel* self, QModelIndex** indexes, QDataStream* stream)
+/// @param callback void func(QSqlTableModel* self, libqt_list of QModelIndex* indexes, QDataStream* stream)
 ///
-void q_sqltablemodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*));
+void q_sqltablemodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3665,7 +3665,7 @@ void q_sqltablemodel_on_change_persistent_index(void* self, void (*callback)(voi
 /// @param from libqt_list of QModelIndex*
 /// @param to libqt_list of QModelIndex*
 ///
-void q_sqltablemodel_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
+void q_sqltablemodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3677,7 +3677,7 @@ void q_sqltablemodel_change_persistent_index_list(void* self, libqt_list /* of Q
 /// @param from libqt_list of QModelIndex*
 /// @param to libqt_list of QModelIndex*
 ///
-void q_sqltablemodel_qbase_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
+void q_sqltablemodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3686,9 +3686,9 @@ void q_sqltablemodel_qbase_change_persistent_index_list(void* self, libqt_list /
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlTableModel*
-/// @param callback void func(QSqlTableModel* self, QModelIndex** from, QModelIndex** to)
+/// @param callback void func(QSqlTableModel* self, libqt_list of QModelIndex* from, libqt_list of QModelIndex* to)
 ///
-void q_sqltablemodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**));
+void q_sqltablemodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3721,9 +3721,9 @@ libqt_list q_sqltablemodel_qbase_persistent_index_list(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlTableModel*
-/// @param callback QModelIndex** func()
+/// @param callback libqt_list of QModelIndex* func()
 ///
-void q_sqltablemodel_on_persistent_index_list(void* self, QModelIndex** (*callback)());
+void q_sqltablemodel_on_persistent_index_list(void* self, libqt_list (*callback)());
 
 /// Inherited from QObject
 ///

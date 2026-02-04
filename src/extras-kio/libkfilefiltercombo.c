@@ -2147,7 +2147,7 @@ void k_filefiltercombo_qbase_set_completed_items(void* self, const char* items[s
     free(items_qstr);
 }
 
-void k_filefiltercombo_on_set_completed_items(void* self, void (*callback)(void*, const char**, bool)) {
+void k_filefiltercombo_on_set_completed_items(void* self, void (*callback)(void*, const char***, bool)) {
     KFileFilterCombo_OnSetCompletedItems((KFileFilterCombo*)self, (intptr_t)callback);
 }
 

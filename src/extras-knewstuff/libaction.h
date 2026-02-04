@@ -99,14 +99,14 @@ const char* k_nswidgets__action_tr(const char* s);
 /// @param self KNSWidgets__Action*
 /// @param changedEntries libqt_list of KNSCore__Entry*
 ///
-void k_nswidgets__action_dialog_finished(void* self, libqt_list /* of KNSCore__Entry* */ changedEntries);
+void k_nswidgets__action_dialog_finished(void* self, libqt_list changedEntries);
 
 /// [Upstream resources](https://api.kde.org/knswidgets-action.html#dialogFinished)
 ///
 /// @param self KNSWidgets__Action*
-/// @param callback void func(KNSWidgets__Action* self, KNSCore__Entry** changedEntries)
+/// @param callback void func(KNSWidgets__Action* self, libqt_list of KNSCore__Entry* changedEntries)
 ///
-void k_nswidgets__action_on_dialog_finished(void* self, void (*callback)(void*, KNSCore__Entry**));
+void k_nswidgets__action_on_dialog_finished(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -326,7 +326,7 @@ QKeySequence* k_nswidgets__action_shortcut(void* self);
 /// @param self KNSWidgets__Action*
 /// @param shortcuts libqt_list of QKeySequence*
 ///
-void k_nswidgets__action_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts);
+void k_nswidgets__action_set_shortcuts(void* self, libqt_list shortcuts);
 
 /// Inherited from QAction
 ///

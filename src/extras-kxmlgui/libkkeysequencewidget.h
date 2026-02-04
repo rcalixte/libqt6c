@@ -177,7 +177,7 @@ QKeySequence* k_keysequencewidget_key_sequence(void* self);
 /// @param self KKeySequenceWidget*
 /// @param actionCollections libqt_list of KActionCollection*
 ///
-void k_keysequencewidget_set_check_action_collections(void* self, libqt_list /* of KActionCollection* */ actionCollections);
+void k_keysequencewidget_set_check_action_collections(void* self, libqt_list actionCollections);
 
 /// [Upstream resources](https://api.kde.org/kkeysequencewidget.html#setComponentName)
 ///
@@ -2207,7 +2207,7 @@ void k_keysequencewidget_add_action(void* self, void* action);
 /// @param self KKeySequenceWidget*
 /// @param actions libqt_list of QAction*
 ///
-void k_keysequencewidget_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_keysequencewidget_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2217,7 +2217,7 @@ void k_keysequencewidget_add_actions(void* self, libqt_list /* of QAction* */ ac
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_keysequencewidget_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_keysequencewidget_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

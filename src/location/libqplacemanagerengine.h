@@ -433,9 +433,9 @@ libqt_list q_placemanagerengine_child_categories(void* self, const char* parentI
 /// Allows for overriding the related default method
 ///
 /// @param self QPlaceManagerEngine*
-/// @param callback QPlaceCategory** func(QPlaceManagerEngine* self, const char* parentId)
+/// @param callback libqt_list of QPlaceCategory* func(QPlaceManagerEngine* self, const char* parentId)
 ///
-void q_placemanagerengine_on_child_categories(void* self, QPlaceCategory** (*callback)(void*, const char*));
+void q_placemanagerengine_on_child_categories(void* self, libqt_list (*callback)(void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#childCategories)
 ///
@@ -461,9 +461,9 @@ libqt_list q_placemanagerengine_locales(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QPlaceManagerEngine*
-/// @param callback QLocale** func()
+/// @param callback libqt_list of QLocale* func()
 ///
-void q_placemanagerengine_on_locales(void* self, QLocale** (*callback)());
+void q_placemanagerengine_on_locales(void* self, libqt_list (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#locales)
 ///
@@ -480,16 +480,16 @@ libqt_list q_placemanagerengine_qbase_locales(void* self);
 /// @param self QPlaceManagerEngine*
 /// @param locales libqt_list of QLocale*
 ///
-void q_placemanagerengine_set_locales(void* self, libqt_list /* of QLocale* */ locales);
+void q_placemanagerengine_set_locales(void* self, libqt_list locales);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#setLocales)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QPlaceManagerEngine*
-/// @param callback void func(QPlaceManagerEngine* self, QLocale** locales)
+/// @param callback void func(QPlaceManagerEngine* self, libqt_list of QLocale* locales)
 ///
-void q_placemanagerengine_on_set_locales(void* self, void (*callback)(void*, QLocale**));
+void q_placemanagerengine_on_set_locales(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#setLocales)
 ///
@@ -498,7 +498,7 @@ void q_placemanagerengine_on_set_locales(void* self, void (*callback)(void*, QLo
 /// @param self QPlaceManagerEngine*
 /// @param locales libqt_list of QLocale*
 ///
-void q_placemanagerengine_qbase_set_locales(void* self, libqt_list /* of QLocale* */ locales);
+void q_placemanagerengine_qbase_set_locales(void* self, libqt_list locales);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#constructIconUrl)
 ///

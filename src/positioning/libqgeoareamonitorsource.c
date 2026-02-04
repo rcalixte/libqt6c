@@ -180,7 +180,7 @@ libqt_list /* of QGeoAreaMonitorInfo* */ q_geoareamonitorsource_active_monitors(
     return _arr;
 }
 
-void q_geoareamonitorsource_on_active_monitors(void* self, QGeoAreaMonitorInfo** (*callback)()) {
+void q_geoareamonitorsource_on_active_monitors(void* self, libqt_list /* of QGeoAreaMonitorInfo* */ (*callback)()) {
     QGeoAreaMonitorSource_OnActiveMonitors((QGeoAreaMonitorSource*)self, (intptr_t)callback);
 }
 
@@ -194,7 +194,7 @@ libqt_list /* of QGeoAreaMonitorInfo* */ q_geoareamonitorsource_active_monitors2
     return _arr;
 }
 
-void q_geoareamonitorsource_on_active_monitors2(void* self, QGeoAreaMonitorInfo** (*callback)(void*, void*)) {
+void q_geoareamonitorsource_on_active_monitors2(void* self, libqt_list /* of QGeoAreaMonitorInfo* */ (*callback)(void*, void*)) {
     QGeoAreaMonitorSource_OnActiveMonitors2((QGeoAreaMonitorSource*)self, (intptr_t)callback);
 }
 

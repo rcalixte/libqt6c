@@ -18,7 +18,7 @@
 /// @param service KService*
 /// @param urls libqt_list of QUrl*
 ///
-KIO__DesktopExecParser* k_io__desktopexecparser_new(void* service, libqt_list /* of QUrl* */ urls);
+KIO__DesktopExecParser* k_io__desktopexecparser_new(void* service, libqt_list urls);
 
 /// [Upstream resources](https://api.kde.org/kio-desktopexecparser.html#setUrlsAreTempFiles)
 ///

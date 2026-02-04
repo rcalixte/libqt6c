@@ -84,7 +84,7 @@ void q_placematchreply_set_places(void* self, libqt_list /* of QPlace* */ result
     QPlaceMatchReply_SetPlaces((QPlaceMatchReply*)self, results);
 }
 
-void q_placematchreply_on_set_places(void* self, void (*callback)(void*, QPlace**)) {
+void q_placematchreply_on_set_places(void* self, void (*callback)(void*, libqt_list /* of QPlace* */)) {
     QPlaceMatchReply_OnSetPlaces((QPlaceMatchReply*)self, (intptr_t)callback);
 }
 

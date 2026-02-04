@@ -439,7 +439,7 @@ QKeySequence* k_actionmenu_shortcut(void* self);
 /// @param self KActionMenu*
 /// @param shortcuts libqt_list of QKeySequence*
 ///
-void k_actionmenu_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts);
+void k_actionmenu_set_shortcuts(void* self, libqt_list shortcuts);
 
 /// Inherited from QAction
 ///
@@ -1602,9 +1602,9 @@ libqt_list k_actionmenu_qbase_created_widgets(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KActionMenu*
-/// @param callback QWidget** func()
+/// @param callback libqt_list of QWidget* func()
 ///
-void k_actionmenu_on_created_widgets(void* self, QWidget** (*callback)());
+void k_actionmenu_on_created_widgets(void* self, libqt_list (*callback)());
 
 /// Inherited from QObject
 ///

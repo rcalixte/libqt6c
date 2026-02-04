@@ -673,7 +673,7 @@ void q_packagekit__daemon_transaction_list_changed(void* self, const char* tids[
     free(tids_qstr);
 }
 
-void q_packagekit__daemon_on_transaction_list_changed(void* self, void (*callback)(void*, const char**)) {
+void q_packagekit__daemon_on_transaction_list_changed(void* self, void (*callback)(void*, const char***)) {
     PackageKit__Daemon_Connect_TransactionListChanged((PackageKit__Daemon*)self, (intptr_t)callback);
 }
 

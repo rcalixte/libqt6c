@@ -67,7 +67,7 @@ QObject* k_pluginfactory_create(void* self, const char* iface, void* parentWidge
     return KPluginFactory_Create((KPluginFactory*)self, iface, (QWidget*)parentWidget, (QObject*)parent, args);
 }
 
-void k_pluginfactory_on_create(void* self, QObject* (*callback)(void*, const char*, void*, void*, QVariant**)) {
+void k_pluginfactory_on_create(void* self, QObject* (*callback)(void*, const char*, void*, void*, libqt_list /* of QVariant* */)) {
     KPluginFactory_OnCreate((KPluginFactory*)self, (intptr_t)callback);
 }
 

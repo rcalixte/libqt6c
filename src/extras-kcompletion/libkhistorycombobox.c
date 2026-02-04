@@ -192,7 +192,7 @@ void k_historycombobox_insert_items(void* self, const char* items[static 1]) {
     free(items_qstr);
 }
 
-void k_historycombobox_on_insert_items(void* self, void (*callback)(void*, const char**)) {
+void k_historycombobox_on_insert_items(void* self, void (*callback)(void*, const char***)) {
     KHistoryComboBox_OnInsertItems((KHistoryComboBox*)self, (intptr_t)callback);
 }
 
@@ -2228,7 +2228,7 @@ void k_historycombobox_qbase_set_completed_items(void* self, const char* items[s
     free(items_qstr);
 }
 
-void k_historycombobox_on_set_completed_items(void* self, void (*callback)(void*, const char**, bool)) {
+void k_historycombobox_on_set_completed_items(void* self, void (*callback)(void*, const char***, bool)) {
     KHistoryComboBox_OnSetCompletedItems((KHistoryComboBox*)self, (intptr_t)callback);
 }
 

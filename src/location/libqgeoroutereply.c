@@ -146,7 +146,7 @@ void q_georoutereply_set_routes(void* self, libqt_list /* of QGeoRoute* */ route
     QGeoRouteReply_SetRoutes((QGeoRouteReply*)self, routes);
 }
 
-void q_georoutereply_on_set_routes(void* self, void (*callback)(void*, QGeoRoute**)) {
+void q_georoutereply_on_set_routes(void* self, void (*callback)(void*, libqt_list /* of QGeoRoute* */)) {
     QGeoRouteReply_OnSetRoutes((QGeoRouteReply*)self, (intptr_t)callback);
 }
 
@@ -158,7 +158,7 @@ void q_georoutereply_add_routes(void* self, libqt_list /* of QGeoRoute* */ route
     QGeoRouteReply_AddRoutes((QGeoRouteReply*)self, routes);
 }
 
-void q_georoutereply_on_add_routes(void* self, void (*callback)(void*, QGeoRoute**)) {
+void q_georoutereply_on_add_routes(void* self, void (*callback)(void*, libqt_list /* of QGeoRoute* */)) {
     QGeoRouteReply_OnAddRoutes((QGeoRouteReply*)self, (intptr_t)callback);
 }
 

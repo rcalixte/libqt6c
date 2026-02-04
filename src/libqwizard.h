@@ -311,7 +311,7 @@ const char* q_wizard_button_text(void* self, int32_t which);
 /// @param self QWizard*
 /// @param layout libqt_list of enum QWizard__WizardButton
 ///
-void q_wizard_set_button_layout(void* self, libqt_list /* of enum QWizard__WizardButton */ layout);
+void q_wizard_set_button_layout(void* self, libqt_list layout);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#setButton)
 ///
@@ -2715,7 +2715,7 @@ void q_wizard_add_action(void* self, void* action);
 /// @param self QWizard*
 /// @param actions libqt_list of QAction*
 ///
-void q_wizard_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_wizard_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2725,7 +2725,7 @@ void q_wizard_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_wizard_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_wizard_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -8032,7 +8032,7 @@ void q_wizardpage_add_action(void* self, void* action);
 /// @param self QWizardPage*
 /// @param actions libqt_list of QAction*
 ///
-void q_wizardpage_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_wizardpage_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -8042,7 +8042,7 @@ void q_wizardpage_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_wizardpage_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_wizardpage_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

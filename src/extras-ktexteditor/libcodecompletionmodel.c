@@ -305,7 +305,7 @@ void k_texteditor__codecompletionmodel_layout_changed1(void* self, libqt_list /*
     QAbstractItemModel_LayoutChanged1((QAbstractItemModel*)self, parents);
 }
 
-void k_texteditor__codecompletionmodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
+void k_texteditor__codecompletionmodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */)) {
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -313,7 +313,7 @@ void k_texteditor__codecompletionmodel_layout_changed2(void* self, libqt_list /*
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void k_texteditor__codecompletionmodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
+void k_texteditor__codecompletionmodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */, int32_t)) {
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -321,7 +321,7 @@ void k_texteditor__codecompletionmodel_layout_about_to_be_changed1(void* self, l
     QAbstractItemModel_LayoutAboutToBeChanged1((QAbstractItemModel*)self, parents);
 }
 
-void k_texteditor__codecompletionmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
+void k_texteditor__codecompletionmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -329,7 +329,7 @@ void k_texteditor__codecompletionmodel_layout_about_to_be_changed2(void* self, l
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void k_texteditor__codecompletionmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
+void k_texteditor__codecompletionmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */, int32_t)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -736,7 +736,7 @@ QMimeData* k_texteditor__codecompletionmodel_qbase_mime_data(void* self, libqt_l
     return KTextEditor__CodeCompletionModel_QBaseMimeData((KTextEditor__CodeCompletionModel*)self, indexes);
 }
 
-void k_texteditor__codecompletionmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**)) {
+void k_texteditor__codecompletionmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list /* of QModelIndex* */)) {
     KTextEditor__CodeCompletionModel_OnMimeData((KTextEditor__CodeCompletionModel*)self, (intptr_t)callback);
 }
 
@@ -930,7 +930,7 @@ libqt_list /* of QModelIndex* */ k_texteditor__codecompletionmodel_qbase_match(v
     return _arr;
 }
 
-void k_texteditor__codecompletionmodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t)) {
+void k_texteditor__codecompletionmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
     KTextEditor__CodeCompletionModel_OnMatch((KTextEditor__CodeCompletionModel*)self, (intptr_t)callback);
 }
 
@@ -1168,7 +1168,7 @@ void k_texteditor__codecompletionmodel_qbase_encode_data(void* self, libqt_list 
     KTextEditor__CodeCompletionModel_QBaseEncodeData((KTextEditor__CodeCompletionModel*)self, indexes, (QDataStream*)stream);
 }
 
-void k_texteditor__codecompletionmodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*)) {
+void k_texteditor__codecompletionmodel_on_encode_data(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, void*)) {
     KTextEditor__CodeCompletionModel_OnEncodeData((KTextEditor__CodeCompletionModel*)self, (intptr_t)callback);
 }
 
@@ -1372,7 +1372,7 @@ void k_texteditor__codecompletionmodel_qbase_change_persistent_index_list(void* 
     KTextEditor__CodeCompletionModel_QBaseChangePersistentIndexList((KTextEditor__CodeCompletionModel*)self, from, to);
 }
 
-void k_texteditor__codecompletionmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**)) {
+void k_texteditor__codecompletionmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)) {
     KTextEditor__CodeCompletionModel_OnChangePersistentIndexList((KTextEditor__CodeCompletionModel*)self, (intptr_t)callback);
 }
 
@@ -1386,7 +1386,7 @@ libqt_list /* of QModelIndex* */ k_texteditor__codecompletionmodel_qbase_persist
     return _arr;
 }
 
-void k_texteditor__codecompletionmodel_on_persistent_index_list(void* self, QModelIndex** (*callback)()) {
+void k_texteditor__codecompletionmodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
     KTextEditor__CodeCompletionModel_OnPersistentIndexList((KTextEditor__CodeCompletionModel*)self, (intptr_t)callback);
 }
 

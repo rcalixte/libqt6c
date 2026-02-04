@@ -370,7 +370,7 @@ QKeySequence* k_toolbarspaceraction_shortcut(void* self);
 /// @param self KToolBarSpacerAction*
 /// @param shortcuts libqt_list of QKeySequence*
 ///
-void k_toolbarspaceraction_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts);
+void k_toolbarspaceraction_set_shortcuts(void* self, libqt_list shortcuts);
 
 /// Inherited from QAction
 ///
@@ -1533,9 +1533,9 @@ libqt_list k_toolbarspaceraction_qbase_created_widgets(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarSpacerAction*
-/// @param callback QWidget** func()
+/// @param callback libqt_list of QWidget* func()
 ///
-void k_toolbarspaceraction_on_created_widgets(void* self, QWidget** (*callback)());
+void k_toolbarspaceraction_on_created_widgets(void* self, libqt_list (*callback)());
 
 /// Inherited from QObject
 ///

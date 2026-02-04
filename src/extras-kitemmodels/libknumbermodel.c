@@ -373,7 +373,7 @@ void k_numbermodel_layout_changed1(void* self, libqt_list /* of QPersistentModel
     QAbstractItemModel_LayoutChanged1((QAbstractItemModel*)self, parents);
 }
 
-void k_numbermodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
+void k_numbermodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */)) {
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -381,7 +381,7 @@ void k_numbermodel_layout_changed2(void* self, libqt_list /* of QPersistentModel
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void k_numbermodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
+void k_numbermodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */, int32_t)) {
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -389,7 +389,7 @@ void k_numbermodel_layout_about_to_be_changed1(void* self, libqt_list /* of QPer
     QAbstractItemModel_LayoutAboutToBeChanged1((QAbstractItemModel*)self, parents);
 }
 
-void k_numbermodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
+void k_numbermodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -397,7 +397,7 @@ void k_numbermodel_layout_about_to_be_changed2(void* self, libqt_list /* of QPer
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void k_numbermodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
+void k_numbermodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */, int32_t)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -840,7 +840,7 @@ QMimeData* k_numbermodel_qbase_mime_data(void* self, libqt_list /* of QModelInde
     return KNumberModel_QBaseMimeData((KNumberModel*)self, indexes);
 }
 
-void k_numbermodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**)) {
+void k_numbermodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list /* of QModelIndex* */)) {
     KNumberModel_OnMimeData((KNumberModel*)self, (intptr_t)callback);
 }
 
@@ -1010,7 +1010,7 @@ libqt_list /* of QModelIndex* */ k_numbermodel_qbase_match(void* self, void* sta
     return _arr;
 }
 
-void k_numbermodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t)) {
+void k_numbermodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
     KNumberModel_OnMatch((KNumberModel*)self, (intptr_t)callback);
 }
 
@@ -1178,7 +1178,7 @@ void k_numbermodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* *
     KNumberModel_QBaseEncodeData((KNumberModel*)self, indexes, (QDataStream*)stream);
 }
 
-void k_numbermodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*)) {
+void k_numbermodel_on_encode_data(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, void*)) {
     KNumberModel_OnEncodeData((KNumberModel*)self, (intptr_t)callback);
 }
 
@@ -1382,7 +1382,7 @@ void k_numbermodel_qbase_change_persistent_index_list(void* self, libqt_list /* 
     KNumberModel_QBaseChangePersistentIndexList((KNumberModel*)self, from, to);
 }
 
-void k_numbermodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**)) {
+void k_numbermodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)) {
     KNumberModel_OnChangePersistentIndexList((KNumberModel*)self, (intptr_t)callback);
 }
 
@@ -1396,7 +1396,7 @@ libqt_list /* of QModelIndex* */ k_numbermodel_qbase_persistent_index_list(void*
     return _arr;
 }
 
-void k_numbermodel_on_persistent_index_list(void* self, QModelIndex** (*callback)()) {
+void k_numbermodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
     KNumberModel_OnPersistentIndexList((KNumberModel*)self, (intptr_t)callback);
 }
 

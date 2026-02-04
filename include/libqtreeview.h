@@ -610,16 +610,16 @@ void q_treeview_qbase_reset(void* self);
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_treeview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void q_treeview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#dataChanged)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QTreeView*
-/// @param callback void func(QTreeView* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
+/// @param callback void func(QTreeView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void q_treeview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
+void q_treeview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#dataChanged)
 ///
@@ -630,7 +630,7 @@ void q_treeview_on_data_changed(void* self, void (*callback)(void*, void*, void*
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_treeview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void q_treeview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#selectAll)
 ///
@@ -1131,9 +1131,9 @@ libqt_list q_treeview_selected_indexes(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTreeView*
-/// @param callback QModelIndex** func()
+/// @param callback libqt_list of QModelIndex* func()
 ///
-void q_treeview_on_selected_indexes(void* self, QModelIndex** (*callback)());
+void q_treeview_on_selected_indexes(void* self, libqt_list (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreeview.html#selectedIndexes)
 ///
@@ -4529,7 +4529,7 @@ void q_treeview_add_action(void* self, void* action);
 /// @param self QTreeView*
 /// @param actions libqt_list of QAction*
 ///
-void q_treeview_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_treeview_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -4539,7 +4539,7 @@ void q_treeview_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_treeview_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_treeview_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

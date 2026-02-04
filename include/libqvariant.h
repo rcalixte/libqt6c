@@ -167,7 +167,7 @@ QVariant* q_variant_new19(void* jsonObject);
 ///
 /// @param list libqt_list of QVariant*
 ///
-QVariant* q_variant_new20(libqt_list /* of QVariant* */ list);
+QVariant* q_variant_new20(libqt_list list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
 

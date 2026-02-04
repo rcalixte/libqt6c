@@ -128,7 +128,7 @@ void q_barset_append(void* self, double value);
 /// @param self QBarSet*
 /// @param values libqt_list of double
 ///
-void q_barset_append2(void* self, libqt_list /* of double */ values);
+void q_barset_append2(void* self, libqt_list values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarset-qtcharts.html#operator-lt-lt)
 ///
@@ -336,21 +336,21 @@ void q_barset_deselect_all_bars(void* self);
 /// @param self QBarSet*
 /// @param indexes libqt_list of int
 ///
-void q_barset_select_bars(void* self, libqt_list /* of int */ indexes);
+void q_barset_select_bars(void* self, libqt_list indexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarset-qtcharts.html#deselectBars)
 ///
 /// @param self QBarSet*
 /// @param indexes libqt_list of int
 ///
-void q_barset_deselect_bars(void* self, libqt_list /* of int */ indexes);
+void q_barset_deselect_bars(void* self, libqt_list indexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarset-qtcharts.html#toggleSelection)
 ///
 /// @param self QBarSet*
 /// @param indexes libqt_list of int
 ///
-void q_barset_toggle_selection(void* self, libqt_list /* of int */ indexes);
+void q_barset_toggle_selection(void* self, libqt_list indexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarset-qtcharts.html#selectedBars)
 ///
@@ -601,14 +601,14 @@ void q_barset_on_value_changed(void* self, void (*callback)(void*, int));
 /// @param self QBarSet*
 /// @param indexes libqt_list of int
 ///
-void q_barset_selected_bars_changed(void* self, libqt_list /* of int */ indexes);
+void q_barset_selected_bars_changed(void* self, libqt_list indexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarset-qtcharts.html#selectedBarsChanged)
 ///
 /// @param self QBarSet*
-/// @param callback void func(QBarSet* self, int* )
+/// @param callback void func(QBarSet* self, libqt_list of int indexes)
 ///
-void q_barset_on_selected_bars_changed(void* self, void (*callback)(void*, libqt_list /* of int */));
+void q_barset_on_selected_bars_changed(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

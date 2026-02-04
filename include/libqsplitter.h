@@ -258,7 +258,7 @@ libqt_list q_splitter_sizes(void* self);
 /// @param self QSplitter*
 /// @param list libqt_list of int
 ///
-void q_splitter_set_sizes(void* self, libqt_list /* of int */ list);
+void q_splitter_set_sizes(void* self, libqt_list list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsplitter.html#saveState)
 ///
@@ -2595,7 +2595,7 @@ void q_splitter_add_action(void* self, void* action);
 /// @param self QSplitter*
 /// @param actions libqt_list of QAction*
 ///
-void q_splitter_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_splitter_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2605,7 +2605,7 @@ void q_splitter_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_splitter_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_splitter_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -7657,7 +7657,7 @@ void q_splitterhandle_add_action(void* self, void* action);
 /// @param self QSplitterHandle*
 /// @param actions libqt_list of QAction*
 ///
-void q_splitterhandle_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_splitterhandle_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -7667,7 +7667,7 @@ void q_splitterhandle_add_actions(void* self, libqt_list /* of QAction* */ actio
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_splitterhandle_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_splitterhandle_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

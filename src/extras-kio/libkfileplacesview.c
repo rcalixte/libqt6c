@@ -511,7 +511,7 @@ void k_fileplacesview_indexes_moved(void* self, libqt_list /* of QModelIndex* */
     QListView_IndexesMoved((QListView*)self, indexes);
 }
 
-void k_fileplacesview_on_indexes_moved(void* self, void (*callback)(void*, QModelIndex**)) {
+void k_fileplacesview_on_indexes_moved(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */)) {
     QListView_Connect_IndexesMoved((QListView*)self, (intptr_t)callback);
 }
 
@@ -2535,7 +2535,7 @@ libqt_list /* of QModelIndex* */ k_fileplacesview_qbase_selected_indexes(void* s
     return _arr;
 }
 
-void k_fileplacesview_on_selected_indexes(void* self, QModelIndex** (*callback)()) {
+void k_fileplacesview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
     KFilePlacesView_OnSelectedIndexes((KFilePlacesView*)self, (intptr_t)callback);
 }
 

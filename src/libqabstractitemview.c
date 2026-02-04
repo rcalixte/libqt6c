@@ -782,7 +782,7 @@ libqt_list /* of QModelIndex* */ q_abstractitemview_selected_indexes(void* self)
     return _arr;
 }
 
-void q_abstractitemview_on_selected_indexes(void* self, QModelIndex** (*callback)()) {
+void q_abstractitemview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
     QAbstractItemView_OnSelectedIndexes((QAbstractItemView*)self, (intptr_t)callback);
 }
 

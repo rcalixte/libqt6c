@@ -638,7 +638,7 @@ QKeySequence* k_newfilemenu_shortcut(void* self);
 /// @param self KNewFileMenu*
 /// @param shortcuts libqt_list of QKeySequence*
 ///
-void k_newfilemenu_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts);
+void k_newfilemenu_set_shortcuts(void* self, libqt_list shortcuts);
 
 /// Inherited from QAction
 ///
@@ -1834,9 +1834,9 @@ libqt_list k_newfilemenu_qbase_created_widgets(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KNewFileMenu*
-/// @param callback QWidget** func()
+/// @param callback libqt_list of QWidget* func()
 ///
-void k_newfilemenu_on_created_widgets(void* self, QWidget** (*callback)());
+void k_newfilemenu_on_created_widgets(void* self, libqt_list (*callback)());
 
 /// Inherited from QObject
 ///

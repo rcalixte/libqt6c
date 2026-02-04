@@ -398,7 +398,7 @@ QMimeData* k_fileplacesmodel_mime_data(void* self, libqt_list /* of QModelIndex*
     return KFilePlacesModel_MimeData((KFilePlacesModel*)self, indexes);
 }
 
-void k_fileplacesmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**)) {
+void k_fileplacesmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list /* of QModelIndex* */)) {
     KFilePlacesModel_OnMimeData((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
@@ -638,7 +638,7 @@ void k_fileplacesmodel_layout_changed1(void* self, libqt_list /* of QPersistentM
     QAbstractItemModel_LayoutChanged1((QAbstractItemModel*)self, parents);
 }
 
-void k_fileplacesmodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
+void k_fileplacesmodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */)) {
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -646,7 +646,7 @@ void k_fileplacesmodel_layout_changed2(void* self, libqt_list /* of QPersistentM
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void k_fileplacesmodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
+void k_fileplacesmodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */, int32_t)) {
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -654,7 +654,7 @@ void k_fileplacesmodel_layout_about_to_be_changed1(void* self, libqt_list /* of 
     QAbstractItemModel_LayoutAboutToBeChanged1((QAbstractItemModel*)self, parents);
 }
 
-void k_fileplacesmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
+void k_fileplacesmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -662,7 +662,7 @@ void k_fileplacesmodel_layout_about_to_be_changed2(void* self, libqt_list /* of 
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void k_fileplacesmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
+void k_fileplacesmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */, int32_t)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -1185,7 +1185,7 @@ libqt_list /* of QModelIndex* */ k_fileplacesmodel_qbase_match(void* self, void*
     return _arr;
 }
 
-void k_fileplacesmodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t)) {
+void k_fileplacesmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
     KFilePlacesModel_OnMatch((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
@@ -1353,7 +1353,7 @@ void k_fileplacesmodel_qbase_encode_data(void* self, libqt_list /* of QModelInde
     KFilePlacesModel_QBaseEncodeData((KFilePlacesModel*)self, indexes, (QDataStream*)stream);
 }
 
-void k_fileplacesmodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*)) {
+void k_fileplacesmodel_on_encode_data(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, void*)) {
     KFilePlacesModel_OnEncodeData((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
@@ -1557,7 +1557,7 @@ void k_fileplacesmodel_qbase_change_persistent_index_list(void* self, libqt_list
     KFilePlacesModel_QBaseChangePersistentIndexList((KFilePlacesModel*)self, from, to);
 }
 
-void k_fileplacesmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**)) {
+void k_fileplacesmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)) {
     KFilePlacesModel_OnChangePersistentIndexList((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
@@ -1571,7 +1571,7 @@ libqt_list /* of QModelIndex* */ k_fileplacesmodel_qbase_persistent_index_list(v
     return _arr;
 }
 
-void k_fileplacesmodel_on_persistent_index_list(void* self, QModelIndex** (*callback)()) {
+void k_fileplacesmodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
     KFilePlacesModel_OnPersistentIndexList((KFilePlacesModel*)self, (intptr_t)callback);
 }
 

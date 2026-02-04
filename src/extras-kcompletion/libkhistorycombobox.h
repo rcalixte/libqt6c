@@ -241,7 +241,7 @@ void k_historycombobox_insert_items(void* self, const char* items[static 1]);
 /// @param self KHistoryComboBox*
 /// @param callback void func(KHistoryComboBox* self, const char** items)
 ///
-void k_historycombobox_on_insert_items(void* self, void (*callback)(void*, const char**));
+void k_historycombobox_on_insert_items(void* self, void (*callback)(void*, const char***));
 
 /// [Upstream resources](https://api.kde.org/khistorycombobox.html#insertItems)
 ///
@@ -3248,7 +3248,7 @@ void k_historycombobox_add_action(void* self, void* action);
 /// @param self KHistoryComboBox*
 /// @param actions libqt_list of QAction*
 ///
-void k_historycombobox_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_historycombobox_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3258,7 +3258,7 @@ void k_historycombobox_add_actions(void* self, libqt_list /* of QAction* */ acti
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_historycombobox_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_historycombobox_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -4376,7 +4376,7 @@ int32_t k_historycombobox_completion_mode(void* self);
 /// @param item enum KCompletionBase__KeyBindingType
 /// @param key libqt_list of QKeySequence*
 ///
-bool k_historycombobox_set_key_binding(void* self, int32_t item, libqt_list /* of QKeySequence* */ key);
+bool k_historycombobox_set_key_binding(void* self, int32_t item, libqt_list key);
 
 /// Inherited from KCompletionBase
 ///
@@ -4577,7 +4577,7 @@ void k_historycombobox_qbase_set_completed_items(void* self, const char* items[s
 /// @param self KHistoryComboBox*
 /// @param callback void func(KHistoryComboBox* self, const char** items, bool autoSuggest)
 ///
-void k_historycombobox_on_set_completed_items(void* self, void (*callback)(void*, const char**, bool));
+void k_historycombobox_on_set_completed_items(void* self, void (*callback)(void*, const char***, bool));
 
 /// Inherited from KComboBox
 ///
@@ -6734,7 +6734,7 @@ void k_historycombobox_qbase_set_key_binding_map(void* self, libqt_map keyBindin
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KHistoryComboBox*
-/// @param callback void func(KHistoryComboBox* self, libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence**)
+/// @param callback void func(KHistoryComboBox* self, libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence** keyBindingMap)
 ///
 void k_historycombobox_on_set_key_binding_map(void* self, void (*callback)(void*, libqt_map));
 

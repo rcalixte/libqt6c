@@ -196,7 +196,7 @@ void k_fileitemactions_add_actions_to2(void* self, void* menu, int32_t sources);
 /// @param sources flag of enum KFileItemActions__MenuActionSource
 /// @param additionalActions libqt_list of QAction*
 ///
-void k_fileitemactions_add_actions_to3(void* self, void* menu, int32_t sources, libqt_list /* of QAction* */ additionalActions);
+void k_fileitemactions_add_actions_to3(void* self, void* menu, int32_t sources, libqt_list additionalActions);
 
 /// [Upstream resources](https://api.kde.org/kfileitemactions.html#addActionsTo)
 ///
@@ -206,7 +206,7 @@ void k_fileitemactions_add_actions_to3(void* self, void* menu, int32_t sources, 
 /// @param additionalActions libqt_list of QAction*
 /// @param excludeList const char**
 ///
-void k_fileitemactions_add_actions_to4(void* self, void* menu, int32_t sources, libqt_list /* of QAction* */ additionalActions, const char* excludeList[static 1]);
+void k_fileitemactions_add_actions_to4(void* self, void* menu, int32_t sources, libqt_list additionalActions, const char* excludeList[static 1]);
 
 /// Inherited from QObject
 ///

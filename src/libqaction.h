@@ -289,7 +289,7 @@ QKeySequence* q_action_shortcut(void* self);
 /// @param self QAction*
 /// @param shortcuts libqt_list of QKeySequence*
 ///
-void q_action_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts);
+void q_action_set_shortcuts(void* self, libqt_list shortcuts);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
 ///

@@ -97,7 +97,7 @@ const char* k_commandbar_tr(const char* s);
 /// @param self KCommandBar*
 /// @param actions libqt_list of KCommandBar__ActionGroup*
 ///
-void k_commandbar_set_actions(void* self, libqt_list /* of KCommandBar__ActionGroup* */ actions);
+void k_commandbar_set_actions(void* self, libqt_list actions);
 
 /// [Upstream resources](https://api.kde.org/kcommandbar.html#show)
 ///
@@ -2163,7 +2163,7 @@ void k_commandbar_add_action(void* self, void* action);
 /// @param self KCommandBar*
 /// @param actions libqt_list of QAction*
 ///
-void k_commandbar_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_commandbar_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2173,7 +2173,7 @@ void k_commandbar_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_commandbar_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_commandbar_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -5169,7 +5169,7 @@ libqt_list k_commandbar__actiongroup_actions(void* self);
 /// @param self KCommandBar__ActionGroup*
 /// @param actions libqt_list of QAction*
 ///
-void k_commandbar__actiongroup_set_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_commandbar__actiongroup_set_actions(void* self, libqt_list actions);
 
 /// [Upstream resources](https://api.kde.org/kcommandbar-actiongroup.html#operator-eq)
 ///

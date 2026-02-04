@@ -97,7 +97,7 @@ void q_signon__authservice_methods_available(void* self, const char* methods[sta
     free(methods_qstr);
 }
 
-void q_signon__authservice_on_methods_available(void* self, void (*callback)(void*, const char**)) {
+void q_signon__authservice_on_methods_available(void* self, void (*callback)(void*, const char***)) {
     SignOn__AuthService_Connect_MethodsAvailable((SignOn__AuthService*)self, (intptr_t)callback);
 }
 
@@ -116,7 +116,7 @@ void q_signon__authservice_mechanisms_available(void* self, const char* method, 
     free(mechanisms_qstr);
 }
 
-void q_signon__authservice_on_mechanisms_available(void* self, void (*callback)(void*, const char*, const char**)) {
+void q_signon__authservice_on_mechanisms_available(void* self, void (*callback)(void*, const char*, const char***)) {
     SignOn__AuthService_Connect_MechanismsAvailable((SignOn__AuthService*)self, (intptr_t)callback);
 }
 
@@ -124,7 +124,7 @@ void q_signon__authservice_identities(void* self, libqt_list /* of SignOn__Ident
     SignOn__AuthService_Identities((SignOn__AuthService*)self, identityList);
 }
 
-void q_signon__authservice_on_identities(void* self, void (*callback)(void*, SignOn__IdentityInfo**)) {
+void q_signon__authservice_on_identities(void* self, void (*callback)(void*, libqt_list /* of SignOn__IdentityInfo* */)) {
     SignOn__AuthService_Connect_Identities((SignOn__AuthService*)self, (intptr_t)callback);
 }
 

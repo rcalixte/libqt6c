@@ -353,7 +353,7 @@ void k_columnheadersmodel_layout_changed1(void* self, libqt_list /* of QPersiste
     QAbstractItemModel_LayoutChanged1((QAbstractItemModel*)self, parents);
 }
 
-void k_columnheadersmodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
+void k_columnheadersmodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */)) {
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -361,7 +361,7 @@ void k_columnheadersmodel_layout_changed2(void* self, libqt_list /* of QPersiste
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void k_columnheadersmodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
+void k_columnheadersmodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */, int32_t)) {
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -369,7 +369,7 @@ void k_columnheadersmodel_layout_about_to_be_changed1(void* self, libqt_list /* 
     QAbstractItemModel_LayoutAboutToBeChanged1((QAbstractItemModel*)self, parents);
 }
 
-void k_columnheadersmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
+void k_columnheadersmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -377,7 +377,7 @@ void k_columnheadersmodel_layout_about_to_be_changed2(void* self, libqt_list /* 
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void k_columnheadersmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
+void k_columnheadersmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */, int32_t)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -820,7 +820,7 @@ QMimeData* k_columnheadersmodel_qbase_mime_data(void* self, libqt_list /* of QMo
     return KColumnHeadersModel_QBaseMimeData((KColumnHeadersModel*)self, indexes);
 }
 
-void k_columnheadersmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**)) {
+void k_columnheadersmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list /* of QModelIndex* */)) {
     KColumnHeadersModel_OnMimeData((KColumnHeadersModel*)self, (intptr_t)callback);
 }
 
@@ -990,7 +990,7 @@ libqt_list /* of QModelIndex* */ k_columnheadersmodel_qbase_match(void* self, vo
     return _arr;
 }
 
-void k_columnheadersmodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t)) {
+void k_columnheadersmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
     KColumnHeadersModel_OnMatch((KColumnHeadersModel*)self, (intptr_t)callback);
 }
 
@@ -1158,7 +1158,7 @@ void k_columnheadersmodel_qbase_encode_data(void* self, libqt_list /* of QModelI
     KColumnHeadersModel_QBaseEncodeData((KColumnHeadersModel*)self, indexes, (QDataStream*)stream);
 }
 
-void k_columnheadersmodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*)) {
+void k_columnheadersmodel_on_encode_data(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, void*)) {
     KColumnHeadersModel_OnEncodeData((KColumnHeadersModel*)self, (intptr_t)callback);
 }
 
@@ -1362,7 +1362,7 @@ void k_columnheadersmodel_qbase_change_persistent_index_list(void* self, libqt_l
     KColumnHeadersModel_QBaseChangePersistentIndexList((KColumnHeadersModel*)self, from, to);
 }
 
-void k_columnheadersmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**)) {
+void k_columnheadersmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)) {
     KColumnHeadersModel_OnChangePersistentIndexList((KColumnHeadersModel*)self, (intptr_t)callback);
 }
 
@@ -1376,7 +1376,7 @@ libqt_list /* of QModelIndex* */ k_columnheadersmodel_qbase_persistent_index_lis
     return _arr;
 }
 
-void k_columnheadersmodel_on_persistent_index_list(void* self, QModelIndex** (*callback)()) {
+void k_columnheadersmodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
     KColumnHeadersModel_OnPersistentIndexList((KColumnHeadersModel*)self, (intptr_t)callback);
 }
 

@@ -90,7 +90,7 @@ void k_io__widgetsaskuseractionhandler_ask_user_delete(void* self, libqt_list /*
     KIO__WidgetsAskUserActionHandler_AskUserDelete((KIO__WidgetsAskUserActionHandler*)self, urls, deletionType, confirmationType, (QWidget*)parent);
 }
 
-void k_io__widgetsaskuseractionhandler_on_ask_user_delete(void* self, void (*callback)(void*, QUrl**, int32_t, int32_t, void*)) {
+void k_io__widgetsaskuseractionhandler_on_ask_user_delete(void* self, void (*callback)(void*, libqt_list /* of QUrl* */, int32_t, int32_t, void*)) {
     KIO__WidgetsAskUserActionHandler_OnAskUserDelete((KIO__WidgetsAskUserActionHandler*)self, (intptr_t)callback);
 }
 
@@ -206,7 +206,7 @@ void k_io__widgetsaskuseractionhandler_ask_user_delete_result(void* self, bool a
     KIO__AskUserActionInterface_AskUserDeleteResult((KIO__AskUserActionInterface*)self, allowDelete, urls, deletionType, (QWidget*)parent);
 }
 
-void k_io__widgetsaskuseractionhandler_on_ask_user_delete_result(void* self, void (*callback)(void*, bool, QUrl**, int32_t, void*)) {
+void k_io__widgetsaskuseractionhandler_on_ask_user_delete_result(void* self, void (*callback)(void*, bool, libqt_list /* of QUrl* */, int32_t, void*)) {
     KIO__AskUserActionInterface_Connect_AskUserDeleteResult((KIO__AskUserActionInterface*)self, (intptr_t)callback);
 }
 

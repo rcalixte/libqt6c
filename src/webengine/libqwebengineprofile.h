@@ -271,7 +271,7 @@ void q_webengineprofile_clear_all_visited_links(void* self);
 /// @param self QWebEngineProfile*
 /// @param urls libqt_list of QUrl*
 ///
-void q_webengineprofile_clear_visited_links(void* self, libqt_list /* of QUrl* */ urls);
+void q_webengineprofile_clear_visited_links(void* self, libqt_list urls);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#visitedLinksContainsUrl)
 ///

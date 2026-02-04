@@ -173,7 +173,7 @@ void q_designerwidgetboxinterface_drop_widgets(void* self, libqt_list /* of QDes
     QDesignerWidgetBoxInterface_DropWidgets((QDesignerWidgetBoxInterface*)self, item_list, (QPoint*)global_mouse_pos);
 }
 
-void q_designerwidgetboxinterface_on_drop_widgets(void* self, void (*callback)(void*, QDesignerDnDItemInterface**, void*)) {
+void q_designerwidgetboxinterface_on_drop_widgets(void* self, void (*callback)(void*, libqt_list /* of QDesignerDnDItemInterface* */, void*)) {
     QDesignerWidgetBoxInterface_OnDropWidgets((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 

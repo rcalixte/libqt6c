@@ -257,7 +257,7 @@ void k_xmlguiclient_reload_x_m_l(void* self);
 /// @param name const char*
 /// @param actionList libqt_list of QAction*
 ///
-void k_xmlguiclient_plug_action_list(void* self, const char* name, libqt_list /* of QAction* */ actionList);
+void k_xmlguiclient_plug_action_list(void* self, const char* name, libqt_list actionList);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#unplugActionList)
 ///

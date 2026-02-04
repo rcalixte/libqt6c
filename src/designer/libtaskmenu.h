@@ -53,9 +53,9 @@ libqt_list q_designertaskmenuextension_task_actions(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QDesignerTaskMenuExtension*
-/// @param callback QAction** func()
+/// @param callback libqt_list of QAction* func()
 ///
-void q_designertaskmenuextension_on_task_actions(void* self, QAction** (*callback)());
+void q_designertaskmenuextension_on_task_actions(void* self, libqt_list (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignertaskmenuextension.html#taskActions)
 ///

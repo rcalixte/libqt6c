@@ -211,7 +211,7 @@ bool k_texteditor__view_set_cursor_position(void* self, void* position);
 /// @param self KTextEditor__View*
 /// @param positions libqt_list of KTextEditor__Cursor*
 ///
-void k_texteditor__view_set_cursor_positions(void* self, libqt_list /* of KTextEditor__Cursor* */ positions);
+void k_texteditor__view_set_cursor_positions(void* self, libqt_list positions);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-view.html#cursorPosition)
 ///
@@ -337,7 +337,7 @@ bool k_texteditor__view_set_selection(void* self, void* range);
 /// @param self KTextEditor__View*
 /// @param ranges libqt_list of KTextEditor__Range*
 ///
-void k_texteditor__view_set_selections(void* self, libqt_list /* of KTextEditor__Range* */ ranges);
+void k_texteditor__view_set_selections(void* self, libqt_list ranges);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-view.html#selection)
 ///
@@ -786,7 +786,7 @@ void k_texteditor__view_set_automatic_invocation_enabled(void* self, bool enable
 /// @param models libqt_list of KTextEditor__CodeCompletionModel*
 /// @param invocationType enum KTextEditor__CodeCompletionModel__InvocationType
 ///
-void k_texteditor__view_start_completion2(void* self, void* word, libqt_list /* of KTextEditor__CodeCompletionModel* */ models, int32_t invocationType);
+void k_texteditor__view_start_completion2(void* self, void* word, libqt_list models, int32_t invocationType);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-view.html#codeCompletionModels)
 ///
@@ -2800,7 +2800,7 @@ void k_texteditor__view_add_action(void* self, void* action);
 /// @param self KTextEditor__View*
 /// @param actions libqt_list of QAction*
 ///
-void k_texteditor__view_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_texteditor__view_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2810,7 +2810,7 @@ void k_texteditor__view_add_actions(void* self, libqt_list /* of QAction* */ act
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_texteditor__view_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_texteditor__view_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -4045,7 +4045,7 @@ void k_texteditor__view_reload_x_m_l(void* self);
 /// @param name const char*
 /// @param actionList libqt_list of QAction*
 ///
-void k_texteditor__view_plug_action_list(void* self, const char* name, libqt_list /* of QAction* */ actionList);
+void k_texteditor__view_plug_action_list(void* self, const char* name, libqt_list actionList);
 
 /// Inherited from KXMLGUIClient
 ///

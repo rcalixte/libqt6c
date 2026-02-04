@@ -273,7 +273,7 @@ void k_timecombobox_set_time_list_interval(void* self, int minutes);
 /// @param self KTimeComboBox*
 /// @param timeList libqt_list of QTime*
 ///
-void k_timecombobox_set_time_list(void* self, libqt_list /* of QTime* */ timeList);
+void k_timecombobox_set_time_list(void* self, libqt_list timeList);
 
 /// [Upstream resources](https://api.kde.org/ktimecombobox.html#eventFilter)
 ///
@@ -583,7 +583,7 @@ void k_timecombobox_set_maximum_time2(void* self, void* maxTime, const char* max
 /// @param timeList libqt_list of QTime*
 /// @param minWarnMsg const char*
 ///
-void k_timecombobox_set_time_list2(void* self, libqt_list /* of QTime* */ timeList, const char* minWarnMsg);
+void k_timecombobox_set_time_list2(void* self, libqt_list timeList, const char* minWarnMsg);
 
 /// [Upstream resources](https://api.kde.org/ktimecombobox.html#setTimeList)
 ///
@@ -592,7 +592,7 @@ void k_timecombobox_set_time_list2(void* self, libqt_list /* of QTime* */ timeLi
 /// @param minWarnMsg const char*
 /// @param maxWarnMsg const char*
 ///
-void k_timecombobox_set_time_list3(void* self, libqt_list /* of QTime* */ timeList, const char* minWarnMsg, const char* maxWarnMsg);
+void k_timecombobox_set_time_list3(void* self, libqt_list timeList, const char* minWarnMsg, const char* maxWarnMsg);
 
 /// Inherited from QComboBox
 ///
@@ -3275,7 +3275,7 @@ void k_timecombobox_add_action(void* self, void* action);
 /// @param self KTimeComboBox*
 /// @param actions libqt_list of QAction*
 ///
-void k_timecombobox_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_timecombobox_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3285,7 +3285,7 @@ void k_timecombobox_add_actions(void* self, libqt_list /* of QAction* */ actions
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_timecombobox_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_timecombobox_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

@@ -3093,7 +3093,7 @@ void q_datetimeedit_add_action(void* self, void* action);
 /// @param self QDateTimeEdit*
 /// @param actions libqt_list of QAction*
 ///
-void q_datetimeedit_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_datetimeedit_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3103,7 +3103,7 @@ void q_datetimeedit_add_actions(void* self, libqt_list /* of QAction* */ actions
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_datetimeedit_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_datetimeedit_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -8592,7 +8592,7 @@ void q_timeedit_add_action(void* self, void* action);
 /// @param self QTimeEdit*
 /// @param actions libqt_list of QAction*
 ///
-void q_timeedit_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_timeedit_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -8602,7 +8602,7 @@ void q_timeedit_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_timeedit_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_timeedit_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -14627,7 +14627,7 @@ void q_dateedit_add_action(void* self, void* action);
 /// @param self QDateEdit*
 /// @param actions libqt_list of QAction*
 ///
-void q_dateedit_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_dateedit_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -14637,7 +14637,7 @@ void q_dateedit_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_dateedit_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_dateedit_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

@@ -137,7 +137,7 @@ bool q_pieseries_append(void* self, void* slice);
 /// @param self QPieSeries*
 /// @param slices libqt_list of QPieSlice*
 ///
-bool q_pieseries_append2(void* self, libqt_list /* of QPieSlice* */ slices);
+bool q_pieseries_append2(void* self, libqt_list slices);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#operator-lt-lt)
 ///
@@ -304,28 +304,28 @@ void q_pieseries_set_labels_position(void* self, int32_t position);
 /// @param self QPieSeries*
 /// @param slices libqt_list of QPieSlice*
 ///
-void q_pieseries_added(void* self, libqt_list /* of QPieSlice* */ slices);
+void q_pieseries_added(void* self, libqt_list slices);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#added)
 ///
 /// @param self QPieSeries*
-/// @param callback void func(QPieSeries* self, QPieSlice** slices)
+/// @param callback void func(QPieSeries* self, libqt_list of QPieSlice* slices)
 ///
-void q_pieseries_on_added(void* self, void (*callback)(void*, QPieSlice**));
+void q_pieseries_on_added(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#removed)
 ///
 /// @param self QPieSeries*
 /// @param slices libqt_list of QPieSlice*
 ///
-void q_pieseries_removed(void* self, libqt_list /* of QPieSlice* */ slices);
+void q_pieseries_removed(void* self, libqt_list slices);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#removed)
 ///
 /// @param self QPieSeries*
-/// @param callback void func(QPieSeries* self, QPieSlice** slices)
+/// @param callback void func(QPieSeries* self, libqt_list of QPieSlice* slices)
 ///
-void q_pieseries_on_removed(void* self, void (*callback)(void*, QPieSlice**));
+void q_pieseries_on_removed(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#clicked)
 ///

@@ -130,14 +130,14 @@ int32_t q_sslserver_handshake_timeout(void* self);
 /// @param socket QSslSocket*
 /// @param errors libqt_list of QSslError*
 ///
-void q_sslserver_ssl_errors(void* self, void* socket, libqt_list /* of QSslError* */ errors);
+void q_sslserver_ssl_errors(void* self, void* socket, libqt_list errors);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslserver.html#sslErrors)
 ///
 /// @param self QSslServer*
-/// @param callback void func(QSslServer* self, QSslSocket* socket, QSslError** errors)
+/// @param callback void func(QSslServer* self, QSslSocket* socket, libqt_list of QSslError* errors)
 ///
-void q_sslserver_on_ssl_errors(void* self, void (*callback)(void*, void*, QSslError**));
+void q_sslserver_on_ssl_errors(void* self, void (*callback)(void*, void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslserver.html#peerVerifyError)
 ///

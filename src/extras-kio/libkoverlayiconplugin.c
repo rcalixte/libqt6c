@@ -114,7 +114,7 @@ void k_overlayiconplugin_overlays_changed(void* self, void* url, const char* ove
     free(overlays_qstr);
 }
 
-void k_overlayiconplugin_on_overlays_changed(void* self, void (*callback)(void*, void*, const char**)) {
+void k_overlayiconplugin_on_overlays_changed(void* self, void (*callback)(void*, void*, const char***)) {
     KOverlayIconPlugin_Connect_OverlaysChanged((KOverlayIconPlugin*)self, (intptr_t)callback);
 }
 

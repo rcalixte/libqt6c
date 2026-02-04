@@ -271,7 +271,7 @@ void q_undoview_indexes_moved(void* self, libqt_list /* of QModelIndex* */ index
     QListView_IndexesMoved((QListView*)self, indexes);
 }
 
-void q_undoview_on_indexes_moved(void* self, void (*callback)(void*, QModelIndex**)) {
+void q_undoview_on_indexes_moved(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */)) {
     QListView_Connect_IndexesMoved((QListView*)self, (intptr_t)callback);
 }
 
@@ -2391,7 +2391,7 @@ libqt_list /* of QModelIndex* */ q_undoview_qbase_selected_indexes(void* self) {
     return _arr;
 }
 
-void q_undoview_on_selected_indexes(void* self, QModelIndex** (*callback)()) {
+void q_undoview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
     QUndoView_OnSelectedIndexes((QUndoView*)self, (intptr_t)callback);
 }
 

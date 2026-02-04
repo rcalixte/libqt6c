@@ -1061,7 +1061,7 @@ void q_sciscintilla_set_call_tips_visible(void* self, int nr);
 /// @param self QsciScintilla*
 /// @param folds libqt_list of int
 ///
-void q_sciscintilla_set_contracted_folds(void* self, libqt_list /* of int */ folds);
+void q_sciscintilla_set_contracted_folds(void* self, libqt_list folds);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -6612,7 +6612,7 @@ void q_sciscintilla_add_action(void* self, void* action);
 /// @param self QsciScintilla*
 /// @param actions libqt_list of QAction*
 ///
-void q_sciscintilla_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_sciscintilla_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -6622,7 +6622,7 @@ void q_sciscintilla_add_actions(void* self, libqt_list /* of QAction* */ actions
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_sciscintilla_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_sciscintilla_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

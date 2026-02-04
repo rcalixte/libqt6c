@@ -900,7 +900,7 @@ libqt_list /* of QWidget* */ k_newfilemenu_qbase_created_widgets(void* self) {
     return _arr;
 }
 
-void k_newfilemenu_on_created_widgets(void* self, QWidget** (*callback)()) {
+void k_newfilemenu_on_created_widgets(void* self, libqt_list /* of QWidget* */ (*callback)()) {
     KNewFileMenu_OnCreatedWidgets((KNewFileMenu*)self, (intptr_t)callback);
 }
 

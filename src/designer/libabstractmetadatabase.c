@@ -46,7 +46,7 @@ libqt_list /* of QWidget* */ q_designermetadatabaseiteminterface_tab_order(void*
     return _arr;
 }
 
-void q_designermetadatabaseiteminterface_on_tab_order(void* self, QWidget** (*callback)()) {
+void q_designermetadatabaseiteminterface_on_tab_order(void* self, libqt_list /* of QWidget* */ (*callback)()) {
     QDesignerMetaDataBaseItemInterface_OnTabOrder((QDesignerMetaDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
@@ -59,7 +59,7 @@ void q_designermetadatabaseiteminterface_set_tab_order(void* self, libqt_list /*
     QDesignerMetaDataBaseItemInterface_SetTabOrder((QDesignerMetaDataBaseItemInterface*)self, tabOrder);
 }
 
-void q_designermetadatabaseiteminterface_on_set_tab_order(void* self, void (*callback)(void*, QWidget**)) {
+void q_designermetadatabaseiteminterface_on_set_tab_order(void* self, void (*callback)(void*, libqt_list /* of QWidget* */)) {
     QDesignerMetaDataBaseItemInterface_OnSetTabOrder((QDesignerMetaDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
@@ -187,7 +187,7 @@ libqt_list /* of QObject* */ q_designermetadatabaseinterface_objects(void* self)
     return _arr;
 }
 
-void q_designermetadatabaseinterface_on_objects(void* self, QObject** (*callback)()) {
+void q_designermetadatabaseinterface_on_objects(void* self, libqt_list /* of QObject* */ (*callback)()) {
     QDesignerMetaDataBaseInterface_OnObjects((QDesignerMetaDataBaseInterface*)self, (intptr_t)callback);
 }
 

@@ -197,7 +197,7 @@ int32_t q_nmeasatelliteinfosource_parse_satellite_info_from_nmea(void* self, con
     return QNmeaSatelliteInfoSource_ParseSatelliteInfoFromNmea((QNmeaSatelliteInfoSource*)self, data, size, infos, system);
 }
 
-void q_nmeasatelliteinfosource_on_parse_satellite_info_from_nmea(void* self, int32_t (*callback)(void*, const char*, int, QGeoSatelliteInfo**, int32_t*)) {
+void q_nmeasatelliteinfosource_on_parse_satellite_info_from_nmea(void* self, int32_t (*callback)(void*, const char*, int, libqt_list /* of QGeoSatelliteInfo* */, int32_t*)) {
     QNmeaSatelliteInfoSource_OnParseSatelliteInfoFromNmea((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
@@ -209,7 +209,7 @@ int32_t q_nmeasatelliteinfosource_parse_satellite_info_from_nmea2(void* self, co
     return QNmeaSatelliteInfoSource_ParseSatelliteInfoFromNmea2((QNmeaSatelliteInfoSource*)self, qstring(data), infos, system);
 }
 
-void q_nmeasatelliteinfosource_on_parse_satellite_info_from_nmea2(void* self, int32_t (*callback)(void*, const char*, QGeoSatelliteInfo**, int32_t*)) {
+void q_nmeasatelliteinfosource_on_parse_satellite_info_from_nmea2(void* self, int32_t (*callback)(void*, const char*, libqt_list /* of QGeoSatelliteInfo* */, int32_t*)) {
     QNmeaSatelliteInfoSource_OnParseSatelliteInfoFromNmea2((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
@@ -343,7 +343,7 @@ void q_nmeasatelliteinfosource_satellites_in_view_updated(void* self, libqt_list
     QGeoSatelliteInfoSource_SatellitesInViewUpdated((QGeoSatelliteInfoSource*)self, satellites);
 }
 
-void q_nmeasatelliteinfosource_on_satellites_in_view_updated(void* self, void (*callback)(void*, QGeoSatelliteInfo**)) {
+void q_nmeasatelliteinfosource_on_satellites_in_view_updated(void* self, void (*callback)(void*, libqt_list /* of QGeoSatelliteInfo* */)) {
     QGeoSatelliteInfoSource_Connect_SatellitesInViewUpdated((QGeoSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
@@ -351,7 +351,7 @@ void q_nmeasatelliteinfosource_satellites_in_use_updated(void* self, libqt_list 
     QGeoSatelliteInfoSource_SatellitesInUseUpdated((QGeoSatelliteInfoSource*)self, satellites);
 }
 
-void q_nmeasatelliteinfosource_on_satellites_in_use_updated(void* self, void (*callback)(void*, QGeoSatelliteInfo**)) {
+void q_nmeasatelliteinfosource_on_satellites_in_use_updated(void* self, void (*callback)(void*, libqt_list /* of QGeoSatelliteInfo* */)) {
     QGeoSatelliteInfoSource_Connect_SatellitesInUseUpdated((QGeoSatelliteInfoSource*)self, (intptr_t)callback);
 }
 

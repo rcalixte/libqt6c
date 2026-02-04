@@ -1025,7 +1025,7 @@ void k_diroperator_dropped(void* self, void* item, void* event, libqt_list /* of
     KDirOperator_Dropped((KDirOperator*)self, (KFileItem*)item, (QDropEvent*)event, urls);
 }
 
-void k_diroperator_on_dropped(void* self, void (*callback)(void*, void*, void*, QUrl**)) {
+void k_diroperator_on_dropped(void* self, void (*callback)(void*, void*, void*, libqt_list /* of QUrl* */)) {
     KDirOperator_Connect_Dropped((KDirOperator*)self, (intptr_t)callback);
 }
 
@@ -1057,7 +1057,7 @@ void k_diroperator_renaming_finished(void* self, libqt_list /* of QUrl* */ urls)
     KDirOperator_RenamingFinished((KDirOperator*)self, urls);
 }
 
-void k_diroperator_on_renaming_finished(void* self, void (*callback)(void*, QUrl**)) {
+void k_diroperator_on_renaming_finished(void* self, void (*callback)(void*, libqt_list /* of QUrl* */)) {
     KDirOperator_Connect_RenamingFinished((KDirOperator*)self, (intptr_t)callback);
 }
 

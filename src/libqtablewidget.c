@@ -812,7 +812,7 @@ QMimeData* q_tablewidget_mime_data(void* self, libqt_list /* of QTableWidgetItem
     return QTableWidget_MimeData((QTableWidget*)self, items);
 }
 
-void q_tablewidget_on_mime_data(void* self, QMimeData* (*callback)(void*, QTableWidgetItem**)) {
+void q_tablewidget_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list /* of QTableWidgetItem* */)) {
     QTableWidget_OnMimeData((QTableWidget*)self, (intptr_t)callback);
 }
 
@@ -3006,7 +3006,7 @@ libqt_list /* of QModelIndex* */ q_tablewidget_qbase_selected_indexes(void* self
     return _arr;
 }
 
-void q_tablewidget_on_selected_indexes(void* self, QModelIndex** (*callback)()) {
+void q_tablewidget_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
     QTableWidget_OnSelectedIndexes((QTableWidget*)self, (intptr_t)callback);
 }
 

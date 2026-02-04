@@ -52,14 +52,14 @@ libqt_list q_placematchrequest_places(void* self);
 /// @param self QPlaceMatchRequest*
 /// @param places libqt_list of QPlace*
 ///
-void q_placematchrequest_set_places(void* self, libqt_list /* of QPlace* */ places);
+void q_placematchrequest_set_places(void* self, libqt_list places);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacematchrequest.html#setResults)
 ///
 /// @param self QPlaceMatchRequest*
 /// @param results libqt_list of QPlaceSearchResult*
 ///
-void q_placematchrequest_set_results(void* self, libqt_list /* of QPlaceSearchResult* */ results);
+void q_placematchrequest_set_results(void* self, libqt_list results);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacematchrequest.html#parameters)
 ///

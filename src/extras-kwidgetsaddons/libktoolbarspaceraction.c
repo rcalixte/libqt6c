@@ -711,7 +711,7 @@ libqt_list /* of QWidget* */ k_toolbarspaceraction_qbase_created_widgets(void* s
     return _arr;
 }
 
-void k_toolbarspaceraction_on_created_widgets(void* self, QWidget** (*callback)()) {
+void k_toolbarspaceraction_on_created_widgets(void* self, libqt_list /* of QWidget* */ (*callback)()) {
     KToolBarSpacerAction_OnCreatedWidgets((KToolBarSpacerAction*)self, (intptr_t)callback);
 }
 

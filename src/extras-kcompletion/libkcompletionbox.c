@@ -683,7 +683,7 @@ void k_completionbox_indexes_moved(void* self, libqt_list /* of QModelIndex* */ 
     QListView_IndexesMoved((QListView*)self, indexes);
 }
 
-void k_completionbox_on_indexes_moved(void* self, void (*callback)(void*, QModelIndex**)) {
+void k_completionbox_on_indexes_moved(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */)) {
     QListView_Connect_IndexesMoved((QListView*)self, (intptr_t)callback);
 }
 
@@ -2555,7 +2555,7 @@ QMimeData* k_completionbox_qbase_mime_data(void* self, libqt_list /* of QListWid
     return KCompletionBox_QBaseMimeData((KCompletionBox*)self, items);
 }
 
-void k_completionbox_on_mime_data(void* self, QMimeData* (*callback)(void*, QListWidgetItem**)) {
+void k_completionbox_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list /* of QListWidgetItem* */)) {
     KCompletionBox_OnMimeData((KCompletionBox*)self, (intptr_t)callback);
 }
 
@@ -2893,7 +2893,7 @@ libqt_list /* of QModelIndex* */ k_completionbox_qbase_selected_indexes(void* se
     return _arr;
 }
 
-void k_completionbox_on_selected_indexes(void* self, QModelIndex** (*callback)()) {
+void k_completionbox_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
     KCompletionBox_OnSelectedIndexes((KCompletionBox*)self, (intptr_t)callback);
 }
 

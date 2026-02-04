@@ -105,7 +105,7 @@ char* q_messageauthenticationcode_hash(const char* message, const char* key, int
 /// @param key const char*
 /// @param method enum QCryptographicHash__Algorithm
 ///
-const char* q_messageauthenticationcode_hash_into(libqt_list /* of char */ buffer, const char* message, const char* key, int32_t method);
+const char* q_messageauthenticationcode_hash_into(libqt_list buffer, const char* message, const char* key, int32_t method);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessageauthenticationcode.html#hashInto)
 ///
@@ -116,7 +116,7 @@ const char* q_messageauthenticationcode_hash_into(libqt_list /* of char */ buffe
 /// @param key const char*
 /// @param method enum QCryptographicHash__Algorithm
 ///
-const char* q_messageauthenticationcode_hash_into2(libqt_list /* of unsigned char */ buffer, const char* message, const char* key, int32_t method);
+const char* q_messageauthenticationcode_hash_into2(libqt_list buffer, const char* message, const char* key, int32_t method);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessageauthenticationcode.html#hashInto)
 ///
@@ -127,7 +127,7 @@ const char* q_messageauthenticationcode_hash_into2(libqt_list /* of unsigned cha
 /// @param key const char*
 /// @param method enum QCryptographicHash__Algorithm
 ///
-const char* q_messageauthenticationcode_hash_into4(libqt_list /* of char */ buffer, libqt_list /* of const char* */ messageParts, const char* key, int32_t method);
+const char* q_messageauthenticationcode_hash_into4(libqt_list buffer, libqt_list messageParts, const char* key, int32_t method);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessageauthenticationcode.html#hashInto)
 ///
@@ -138,7 +138,7 @@ const char* q_messageauthenticationcode_hash_into4(libqt_list /* of char */ buff
 /// @param key const char*
 /// @param method enum QCryptographicHash__Algorithm
 ///
-const char* q_messageauthenticationcode_hash_into5(libqt_list /* of unsigned char */ buffer, libqt_list /* of const char* */ messageParts, const char* key, int32_t method);
+const char* q_messageauthenticationcode_hash_into5(libqt_list buffer, libqt_list messageParts, const char* key, int32_t method);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessageauthenticationcode.html#dtor.QMessageAuthenticationCode)
 ///

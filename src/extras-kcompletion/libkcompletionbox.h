@@ -1237,16 +1237,16 @@ int32_t k_completionbox_item_alignment(void* self);
 /// @param self KCompletionBox*
 /// @param indexes libqt_list of QModelIndex*
 ///
-void k_completionbox_indexes_moved(void* self, libqt_list /* of QModelIndex* */ indexes);
+void k_completionbox_indexes_moved(void* self, libqt_list indexes);
 
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#indexesMoved)
 ///
 /// @param self KCompletionBox*
-/// @param callback void func(KCompletionBox* self, QModelIndex** indexes)
+/// @param callback void func(KCompletionBox* self, libqt_list of QModelIndex* indexes)
 ///
-void k_completionbox_on_indexes_moved(void* self, void (*callback)(void*, QModelIndex**));
+void k_completionbox_on_indexes_moved(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4049,7 +4049,7 @@ void k_completionbox_add_action(void* self, void* action);
 /// @param self KCompletionBox*
 /// @param actions libqt_list of QAction*
 ///
-void k_completionbox_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_completionbox_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -4059,7 +4059,7 @@ void k_completionbox_add_actions(void* self, libqt_list /* of QAction* */ action
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_completionbox_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_completionbox_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -5243,7 +5243,7 @@ void k_completionbox_on_mime_types(void* self, const char** (*callback)());
 /// @param self KCompletionBox*
 /// @param items libqt_list of QListWidgetItem*
 ///
-QMimeData* k_completionbox_mime_data(void* self, libqt_list /* of QListWidgetItem* */ items);
+QMimeData* k_completionbox_mime_data(void* self, libqt_list items);
 
 /// Inherited from QListWidget
 ///
@@ -5254,7 +5254,7 @@ QMimeData* k_completionbox_mime_data(void* self, libqt_list /* of QListWidgetIte
 /// @param self KCompletionBox*
 /// @param items libqt_list of QListWidgetItem*
 ///
-QMimeData* k_completionbox_qbase_mime_data(void* self, libqt_list /* of QListWidgetItem* */ items);
+QMimeData* k_completionbox_qbase_mime_data(void* self, libqt_list items);
 
 /// Inherited from QListWidget
 ///
@@ -5263,9 +5263,9 @@ QMimeData* k_completionbox_qbase_mime_data(void* self, libqt_list /* of QListWid
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompletionBox*
-/// @param callback QMimeData* func(KCompletionBox* self, QListWidgetItem** items)
+/// @param callback QMimeData* func(KCompletionBox* self, libqt_list of QListWidgetItem* items)
 ///
-void k_completionbox_on_mime_data(void* self, QMimeData* (*callback)(void*, QListWidgetItem**));
+void k_completionbox_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
 
 /// Inherited from QListWidget
 ///
@@ -5581,7 +5581,7 @@ void k_completionbox_on_scroll_contents_by(void* self, void (*callback)(void*, i
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void k_completionbox_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void k_completionbox_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QListView
 ///
@@ -5594,7 +5594,7 @@ void k_completionbox_data_changed(void* self, void* topLeft, void* bottomRight, 
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void k_completionbox_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void k_completionbox_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QListView
 ///
@@ -5603,9 +5603,9 @@ void k_completionbox_qbase_data_changed(void* self, void* topLeft, void* bottomR
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompletionBox*
-/// @param callback void func(KCompletionBox* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
+/// @param callback void func(KCompletionBox* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void k_completionbox_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
+void k_completionbox_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
 
 /// Inherited from QListView
 ///
@@ -6207,9 +6207,9 @@ libqt_list k_completionbox_qbase_selected_indexes(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompletionBox*
-/// @param callback QModelIndex** func()
+/// @param callback libqt_list of QModelIndex* func()
 ///
-void k_completionbox_on_selected_indexes(void* self, QModelIndex** (*callback)());
+void k_completionbox_on_selected_indexes(void* self, libqt_list (*callback)());
 
 /// Inherited from QListView
 ///

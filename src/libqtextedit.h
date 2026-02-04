@@ -531,7 +531,7 @@ void q_textedit_set_accept_rich_text(void* self, bool accept);
 /// @param self QTextEdit*
 /// @param selections libqt_list of QTextEdit__ExtraSelection*
 ///
-void q_textedit_set_extra_selections(void* self, libqt_list /* of QTextEdit__ExtraSelection* */ selections);
+void q_textedit_set_extra_selections(void* self, libqt_list selections);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextedit.html#extraSelections)
 ///
@@ -3802,7 +3802,7 @@ void q_textedit_add_action(void* self, void* action);
 /// @param self QTextEdit*
 /// @param actions libqt_list of QAction*
 ///
-void q_textedit_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_textedit_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3812,7 +3812,7 @@ void q_textedit_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_textedit_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_textedit_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

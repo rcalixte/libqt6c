@@ -144,7 +144,7 @@ int32_t k_attica__comment_score(void* self);
 /// @param self Attica__Comment*
 /// @param comments libqt_list of Attica__Comment*
 ///
-void k_attica__comment_set_children(void* self, libqt_list /* of Attica__Comment* */ comments);
+void k_attica__comment_set_children(void* self, libqt_list comments);
 
 /// [Upstream resources](https://api.kde.org/attica-comment.html#children)
 ///

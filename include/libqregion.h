@@ -242,7 +242,7 @@ void q_region_set_rects(void* self, void* rect, int num);
 /// @param self QRegion*
 /// @param r libqt_list of QRect*
 ///
-void q_region_set_rects2(void* self, libqt_list /* of QRect* */ r);
+void q_region_set_rects2(void* self, libqt_list r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregion.html#rects)
 ///

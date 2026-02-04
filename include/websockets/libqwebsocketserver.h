@@ -416,14 +416,14 @@ void q_websocketserver_on_peer_verify_error(void* self, void (*callback)(void*, 
 /// @param self QWebSocketServer*
 /// @param errors libqt_list of QSslError*
 ///
-void q_websocketserver_ssl_errors(void* self, libqt_list /* of QSslError* */ errors);
+void q_websocketserver_ssl_errors(void* self, libqt_list errors);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocketserver.html#sslErrors)
 ///
 /// @param self QWebSocketServer*
-/// @param callback void func(QWebSocketServer* self, QSslError** errors)
+/// @param callback void func(QWebSocketServer* self, libqt_list of QSslError* errors)
 ///
-void q_websocketserver_on_ssl_errors(void* self, void (*callback)(void*, QSslError**));
+void q_websocketserver_on_ssl_errors(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocketserver.html#preSharedKeyAuthenticationRequired)
 ///

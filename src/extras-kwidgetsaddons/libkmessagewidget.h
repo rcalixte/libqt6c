@@ -2488,7 +2488,7 @@ void k_messagewidget_set_accept_drops(void* self, bool on);
 /// @param self KMessageWidget*
 /// @param actions libqt_list of QAction*
 ///
-void k_messagewidget_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_messagewidget_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2498,7 +2498,7 @@ void k_messagewidget_add_actions(void* self, libqt_list /* of QAction* */ action
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_messagewidget_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_messagewidget_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

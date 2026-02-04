@@ -664,7 +664,7 @@ void q_graphicsscene_changed(void* self, libqt_list /* of QRectF* */ region) {
     QGraphicsScene_Changed((QGraphicsScene*)self, region);
 }
 
-void q_graphicsscene_on_changed(void* self, void (*callback)(void*, QRectF**)) {
+void q_graphicsscene_on_changed(void* self, void (*callback)(void*, libqt_list /* of QRectF* */)) {
     QGraphicsScene_Connect_Changed((QGraphicsScene*)self, (intptr_t)callback);
 }
 

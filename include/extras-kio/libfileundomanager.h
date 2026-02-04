@@ -64,7 +64,7 @@ KIO__FileUndoManager__UiInterface* k_io__fileundomanager_ui_interface(void* self
 /// @param dst QUrl*
 /// @param job KIO__Job*
 ///
-void k_io__fileundomanager_record_job(void* self, int32_t op, libqt_list /* of QUrl* */ src, void* dst, void* job);
+void k_io__fileundomanager_record_job(void* self, int32_t op, libqt_list src, void* dst, void* job);
 
 /// [Upstream resources](https://api.kde.org/kio-fileundomanager.html#recordCopyJob)
 ///

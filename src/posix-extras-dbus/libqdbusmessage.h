@@ -235,7 +235,7 @@ bool q_dbusmessage_is_interactive_authorization_allowed(void* self);
 /// @param self QDBusMessage*
 /// @param arguments libqt_list of QVariant*
 ///
-void q_dbusmessage_set_arguments(void* self, libqt_list /* of QVariant* */ arguments);
+void q_dbusmessage_set_arguments(void* self, libqt_list arguments);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#arguments)
 ///
@@ -257,7 +257,7 @@ QDBusMessage* q_dbusmessage_operator_shift_left(void* self, void* arg);
 /// @param self QDBusMessage*
 /// @param arguments libqt_list of QVariant*
 ///
-QDBusMessage* q_dbusmessage_create_reply1(void* self, libqt_list /* of QVariant* */ arguments);
+QDBusMessage* q_dbusmessage_create_reply1(void* self, libqt_list arguments);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmessage.html#dtor.QDBusMessage)
 ///

@@ -931,7 +931,7 @@ libqt_list /* of KJob* */ k_io__previewjob_qbase_subjobs(void* self) {
     return _arr;
 }
 
-void k_io__previewjob_on_subjobs(void* self, KJob** (*callback)()) {
+void k_io__previewjob_on_subjobs(void* self, libqt_list /* of KJob* */ (*callback)()) {
     KIO__PreviewJob_OnSubjobs((KIO__PreviewJob*)self, (intptr_t)callback);
 }
 

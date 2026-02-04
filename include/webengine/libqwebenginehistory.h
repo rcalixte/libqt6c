@@ -341,7 +341,7 @@ const char** q_webenginehistorymodel_mime_types(void* self);
 /// @param self QWebEngineHistoryModel*
 /// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* q_webenginehistorymodel_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes);
+QMimeData* q_webenginehistorymodel_mime_data(void* self, libqt_list indexes);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -745,16 +745,16 @@ bool q_webenginehistorymodel_check_index2(void* self, void* index, int32_t optio
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_webenginehistorymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void q_webenginehistorymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void func(QWebEngineHistoryModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
+/// @param callback void func(QWebEngineHistoryModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void q_webenginehistorymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
+void q_webenginehistorymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -763,16 +763,16 @@ void q_webenginehistorymodel_on_data_changed3(void* self, void (*callback)(void*
 /// @param self QWebEngineHistoryModel*
 /// @param parents libqt_list of QPersistentModelIndex*
 ///
-void q_webenginehistorymodel_layout_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents);
+void q_webenginehistorymodel_layout_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void func(QWebEngineHistoryModel* self, QPersistentModelIndex** parents)
+/// @param callback void func(QWebEngineHistoryModel* self, libqt_list of QPersistentModelIndex* parents)
 ///
-void q_webenginehistorymodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
+void q_webenginehistorymodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -782,16 +782,16 @@ void q_webenginehistorymodel_on_layout_changed1(void* self, void (*callback)(voi
 /// @param parents libqt_list of QPersistentModelIndex*
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
 ///
-void q_webenginehistorymodel_layout_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint);
+void q_webenginehistorymodel_layout_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void func(QWebEngineHistoryModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+/// @param callback void func(QWebEngineHistoryModel* self, libqt_list of QPersistentModelIndex* parents, enum QAbstractItemModel__LayoutChangeHint hint)
 ///
-void q_webenginehistorymodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
+void q_webenginehistorymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -800,16 +800,16 @@ void q_webenginehistorymodel_on_layout_changed2(void* self, void (*callback)(voi
 /// @param self QWebEngineHistoryModel*
 /// @param parents libqt_list of QPersistentModelIndex*
 ///
-void q_webenginehistorymodel_layout_about_to_be_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents);
+void q_webenginehistorymodel_layout_about_to_be_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void func(QWebEngineHistoryModel* self, QPersistentModelIndex** parents)
+/// @param callback void func(QWebEngineHistoryModel* self, libqt_list of QPersistentModelIndex* parents)
 ///
-void q_webenginehistorymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
+void q_webenginehistorymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -819,16 +819,16 @@ void q_webenginehistorymodel_on_layout_about_to_be_changed1(void* self, void (*c
 /// @param parents libqt_list of QPersistentModelIndex*
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
 ///
-void q_webenginehistorymodel_layout_about_to_be_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint);
+void q_webenginehistorymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void func(QWebEngineHistoryModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+/// @param callback void func(QWebEngineHistoryModel* self, libqt_list of QPersistentModelIndex* parents, enum QAbstractItemModel__LayoutChangeHint hint)
 ///
-void q_webenginehistorymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
+void q_webenginehistorymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QObject
 ///

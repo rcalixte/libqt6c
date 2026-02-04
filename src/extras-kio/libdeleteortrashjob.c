@@ -623,7 +623,7 @@ libqt_list /* of KJob* */ k_io__deleteortrashjob_qbase_subjobs(void* self) {
     return _arr;
 }
 
-void k_io__deleteortrashjob_on_subjobs(void* self, KJob** (*callback)()) {
+void k_io__deleteortrashjob_on_subjobs(void* self, libqt_list /* of KJob* */ (*callback)()) {
     KIO__DeleteOrTrashJob_OnSubjobs((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
 }
 

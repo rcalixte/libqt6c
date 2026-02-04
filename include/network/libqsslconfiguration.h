@@ -115,7 +115,7 @@ libqt_list q_sslconfiguration_local_certificate_chain(void* self);
 /// @param self QSslConfiguration*
 /// @param localChain libqt_list of QSslCertificate*
 ///
-void q_sslconfiguration_set_local_certificate_chain(void* self, libqt_list /* of QSslCertificate* */ localChain);
+void q_sslconfiguration_set_local_certificate_chain(void* self, libqt_list localChain);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#localCertificate)
 ///
@@ -184,7 +184,7 @@ libqt_list q_sslconfiguration_ciphers(void* self);
 /// @param self QSslConfiguration*
 /// @param ciphers libqt_list of QSslCipher*
 ///
-void q_sslconfiguration_set_ciphers(void* self, libqt_list /* of QSslCipher* */ ciphers);
+void q_sslconfiguration_set_ciphers(void* self, libqt_list ciphers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setCiphers)
 ///
@@ -212,7 +212,7 @@ libqt_list q_sslconfiguration_ca_certificates(void* self);
 /// @param self QSslConfiguration*
 /// @param certificates libqt_list of QSslCertificate*
 ///
-void q_sslconfiguration_set_ca_certificates(void* self, libqt_list /* of QSslCertificate* */ certificates);
+void q_sslconfiguration_set_ca_certificates(void* self, libqt_list certificates);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#addCaCertificates)
 ///
@@ -233,7 +233,7 @@ void q_sslconfiguration_add_ca_certificate(void* self, void* certificate);
 /// @param self QSslConfiguration*
 /// @param certificates libqt_list of QSslCertificate*
 ///
-void q_sslconfiguration_add_ca_certificates2(void* self, libqt_list /* of QSslCertificate* */ certificates);
+void q_sslconfiguration_add_ca_certificates2(void* self, libqt_list certificates);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#systemCaCertificates)
 ///
@@ -296,7 +296,7 @@ libqt_list q_sslconfiguration_elliptic_curves(void* self);
 /// @param self QSslConfiguration*
 /// @param curves libqt_list of QSslEllipticCurve*
 ///
-void q_sslconfiguration_set_elliptic_curves(void* self, libqt_list /* of QSslEllipticCurve* */ curves);
+void q_sslconfiguration_set_elliptic_curves(void* self, libqt_list curves);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#supportedEllipticCurves)
 ///

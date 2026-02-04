@@ -1323,16 +1323,16 @@ const char** q_tablewidget_qbase_mime_types(void* self);
 /// @param self QTableWidget*
 /// @param items libqt_list of QTableWidgetItem*
 ///
-QMimeData* q_tablewidget_mime_data(void* self, libqt_list /* of QTableWidgetItem* */ items);
+QMimeData* q_tablewidget_mime_data(void* self, libqt_list items);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtablewidget.html#mimeData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QTableWidget*
-/// @param callback QMimeData* func(QTableWidget* self, QTableWidgetItem** items)
+/// @param callback QMimeData* func(QTableWidget* self, libqt_list of QTableWidgetItem* items)
 ///
-void q_tablewidget_on_mime_data(void* self, QMimeData* (*callback)(void*, QTableWidgetItem**));
+void q_tablewidget_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtablewidget.html#mimeData)
 ///
@@ -1341,7 +1341,7 @@ void q_tablewidget_on_mime_data(void* self, QMimeData* (*callback)(void*, QTable
 /// @param self QTableWidget*
 /// @param items libqt_list of QTableWidgetItem*
 ///
-QMimeData* q_tablewidget_qbase_mime_data(void* self, libqt_list /* of QTableWidgetItem* */ items);
+QMimeData* q_tablewidget_qbase_mime_data(void* self, libqt_list items);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtablewidget.html#dropMimeData)
 ///
@@ -4616,7 +4616,7 @@ void q_tablewidget_add_action(void* self, void* action);
 /// @param self QTableWidget*
 /// @param actions libqt_list of QAction*
 ///
-void q_tablewidget_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_tablewidget_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -4626,7 +4626,7 @@ void q_tablewidget_add_actions(void* self, libqt_list /* of QAction* */ actions)
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_tablewidget_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_tablewidget_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -6195,9 +6195,9 @@ libqt_list q_tablewidget_qbase_selected_indexes(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback QModelIndex** func()
+/// @param callback libqt_list of QModelIndex* func()
 ///
-void q_tablewidget_on_selected_indexes(void* self, QModelIndex** (*callback)());
+void q_tablewidget_on_selected_indexes(void* self, libqt_list (*callback)());
 
 /// Inherited from QTableView
 ///
@@ -6668,7 +6668,7 @@ void q_tablewidget_on_select_all(void* self, void (*callback)());
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_tablewidget_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void q_tablewidget_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6681,7 +6681,7 @@ void q_tablewidget_data_changed(void* self, void* topLeft, void* bottomRight, li
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_tablewidget_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void q_tablewidget_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6690,9 +6690,9 @@ void q_tablewidget_qbase_data_changed(void* self, void* topLeft, void* bottomRig
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void func(QTableWidget* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
+/// @param callback void func(QTableWidget* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void q_tablewidget_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
+void q_tablewidget_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
 
 /// Inherited from QAbstractItemView
 ///

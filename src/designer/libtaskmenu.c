@@ -23,7 +23,7 @@ libqt_list /* of QAction* */ q_designertaskmenuextension_task_actions(void* self
     return _arr;
 }
 
-void q_designertaskmenuextension_on_task_actions(void* self, QAction** (*callback)()) {
+void q_designertaskmenuextension_on_task_actions(void* self, libqt_list /* of QAction* */ (*callback)()) {
     QDesignerTaskMenuExtension_OnTaskActions((QDesignerTaskMenuExtension*)self, (intptr_t)callback);
 }
 

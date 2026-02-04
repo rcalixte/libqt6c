@@ -123,7 +123,7 @@ libqt_list /* of QWidget* */ q_widgetaction_created_widgets(void* self) {
     return _arr;
 }
 
-void q_widgetaction_on_created_widgets(void* self, QWidget** (*callback)()) {
+void q_widgetaction_on_created_widgets(void* self, libqt_list /* of QWidget* */ (*callback)()) {
     QWidgetAction_OnCreatedWidgets((QWidgetAction*)self, (intptr_t)callback);
 }
 

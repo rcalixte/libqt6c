@@ -279,9 +279,9 @@ libqt_list q_iconengine_available_sizes(void* self, int32_t mode, int32_t state)
 /// Allows for overriding the related default method
 ///
 /// @param self QIconEngine*
-/// @param callback QSize** func(QIconEngine* self, enum QIcon__Mode mode, enum QIcon__State state)
+/// @param callback libqt_list of QSize* func(QIconEngine* self, enum QIcon__Mode mode, enum QIcon__State state)
 ///
-void q_iconengine_on_available_sizes(void* self, QSize** (*callback)(void*, int32_t, int32_t));
+void q_iconengine_on_available_sizes(void* self, libqt_list (*callback)(void*, int32_t, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#availableSizes)
 ///

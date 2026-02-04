@@ -195,7 +195,7 @@ QMimeData* k_selectionproxymodel_mime_data(void* self, libqt_list /* of QModelIn
     return KSelectionProxyModel_MimeData((KSelectionProxyModel*)self, indexes);
 }
 
-void k_selectionproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**)) {
+void k_selectionproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list /* of QModelIndex* */)) {
     KSelectionProxyModel_OnMimeData((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
@@ -322,7 +322,7 @@ libqt_list /* of QModelIndex* */ k_selectionproxymodel_match(void* self, void* s
     return _arr;
 }
 
-void k_selectionproxymodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t)) {
+void k_selectionproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
     KSelectionProxyModel_OnMatch((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
@@ -336,7 +336,7 @@ libqt_list /* of QPersistentModelIndex* */ k_selectionproxymodel_source_root_ind
     return _arr;
 }
 
-void k_selectionproxymodel_on_source_root_indexes(void* self, QPersistentModelIndex** (*callback)()) {
+void k_selectionproxymodel_on_source_root_indexes(void* self, libqt_list /* of QPersistentModelIndex* */ (*callback)()) {
     KSelectionProxyModel_OnSourceRootIndexes((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
@@ -463,7 +463,7 @@ void k_selectionproxymodel_layout_changed1(void* self, libqt_list /* of QPersist
     QAbstractItemModel_LayoutChanged1((QAbstractItemModel*)self, parents);
 }
 
-void k_selectionproxymodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
+void k_selectionproxymodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */)) {
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -471,7 +471,7 @@ void k_selectionproxymodel_layout_changed2(void* self, libqt_list /* of QPersist
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void k_selectionproxymodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
+void k_selectionproxymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */, int32_t)) {
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -479,7 +479,7 @@ void k_selectionproxymodel_layout_about_to_be_changed1(void* self, libqt_list /*
     QAbstractItemModel_LayoutAboutToBeChanged1((QAbstractItemModel*)self, parents);
 }
 
-void k_selectionproxymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
+void k_selectionproxymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -487,7 +487,7 @@ void k_selectionproxymodel_layout_about_to_be_changed2(void* self, libqt_list /*
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void k_selectionproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
+void k_selectionproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */, int32_t)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -1222,7 +1222,7 @@ void k_selectionproxymodel_qbase_encode_data(void* self, libqt_list /* of QModel
     KSelectionProxyModel_QBaseEncodeData((KSelectionProxyModel*)self, indexes, (QDataStream*)stream);
 }
 
-void k_selectionproxymodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*)) {
+void k_selectionproxymodel_on_encode_data(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, void*)) {
     KSelectionProxyModel_OnEncodeData((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
@@ -1426,7 +1426,7 @@ void k_selectionproxymodel_qbase_change_persistent_index_list(void* self, libqt_
     KSelectionProxyModel_QBaseChangePersistentIndexList((KSelectionProxyModel*)self, from, to);
 }
 
-void k_selectionproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**)) {
+void k_selectionproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)) {
     KSelectionProxyModel_OnChangePersistentIndexList((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
@@ -1440,7 +1440,7 @@ libqt_list /* of QModelIndex* */ k_selectionproxymodel_qbase_persistent_index_li
     return _arr;
 }
 
-void k_selectionproxymodel_on_persistent_index_list(void* self, QModelIndex** (*callback)()) {
+void k_selectionproxymodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
     KSelectionProxyModel_OnPersistentIndexList((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 

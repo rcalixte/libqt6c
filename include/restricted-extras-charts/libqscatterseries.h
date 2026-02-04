@@ -371,7 +371,7 @@ void q_scatterseries_append2(void* self, void* point);
 /// @param self QScatterSeries*
 /// @param points libqt_list of QPointF*
 ///
-void q_scatterseries_append3(void* self, libqt_list /* of QPointF* */ points);
+void q_scatterseries_append3(void* self, libqt_list points);
 
 /// Inherited from QXYSeries
 ///
@@ -525,7 +525,7 @@ QXYSeries* q_scatterseries_operator_shift_left(void* self, void* point);
 /// @param self QScatterSeries*
 /// @param points libqt_list of QPointF*
 ///
-QXYSeries* q_scatterseries_operator_shift_left2(void* self, libqt_list /* of QPointF* */ points);
+QXYSeries* q_scatterseries_operator_shift_left2(void* self, libqt_list points);
 
 /// Inherited from QXYSeries
 ///
@@ -660,7 +660,7 @@ bool q_scatterseries_point_labels_clipping(void* self);
 /// @param self QScatterSeries*
 /// @param points libqt_list of QPointF*
 ///
-void q_scatterseries_replace5(void* self, libqt_list /* of QPointF* */ points);
+void q_scatterseries_replace5(void* self, libqt_list points);
 
 /// Inherited from QXYSeries
 ///
@@ -722,7 +722,7 @@ void q_scatterseries_deselect_all_points(void* self);
 /// @param self QScatterSeries*
 /// @param indexes libqt_list of int
 ///
-void q_scatterseries_select_points(void* self, libqt_list /* of int */ indexes);
+void q_scatterseries_select_points(void* self, libqt_list indexes);
 
 /// Inherited from QXYSeries
 ///
@@ -731,7 +731,7 @@ void q_scatterseries_select_points(void* self, libqt_list /* of int */ indexes);
 /// @param self QScatterSeries*
 /// @param indexes libqt_list of int
 ///
-void q_scatterseries_deselect_points(void* self, libqt_list /* of int */ indexes);
+void q_scatterseries_deselect_points(void* self, libqt_list indexes);
 
 /// Inherited from QXYSeries
 ///
@@ -740,7 +740,7 @@ void q_scatterseries_deselect_points(void* self, libqt_list /* of int */ indexes
 /// @param self QScatterSeries*
 /// @param indexes libqt_list of int
 ///
-void q_scatterseries_toggle_selection(void* self, libqt_list /* of int */ indexes);
+void q_scatterseries_toggle_selection(void* self, libqt_list indexes);
 
 /// Inherited from QXYSeries
 ///
@@ -966,7 +966,7 @@ libqt_map q_scatterseries_points_configuration(void* self);
 /// @param minSize double
 /// @param maxSize double
 ///
-void q_scatterseries_size_by(void* self, libqt_list /* of double */ sourceData, double minSize, double maxSize);
+void q_scatterseries_size_by(void* self, libqt_list sourceData, double minSize, double maxSize);
 
 /// Inherited from QXYSeries
 ///
@@ -975,7 +975,7 @@ void q_scatterseries_size_by(void* self, libqt_list /* of double */ sourceData, 
 /// @param self QScatterSeries*
 /// @param sourceData libqt_list of double
 ///
-void q_scatterseries_color_by(void* self, libqt_list /* of double */ sourceData);
+void q_scatterseries_color_by(void* self, libqt_list sourceData);
 
 /// Inherited from QXYSeries
 ///
@@ -1405,7 +1405,7 @@ void q_scatterseries_points_configuration_changed(void* self, libqt_map configur
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#pointsConfigurationChanged)
 ///
 /// @param self QScatterSeries*
-/// @param callback void func(QScatterSeries* self, libqt_map of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant*)
+/// @param callback void func(QScatterSeries* self, libqt_map of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant* configuration)
 ///
 void q_scatterseries_on_points_configuration_changed(void* self, void (*callback)(void*, libqt_map));
 
@@ -1453,7 +1453,7 @@ void q_scatterseries_set_best_fit_line_visible1(void* self, bool visible);
 /// @param sourceData libqt_list of double
 /// @param gradient QLinearGradient*
 ///
-void q_scatterseries_color_by2(void* self, libqt_list /* of double */ sourceData, void* gradient);
+void q_scatterseries_color_by2(void* self, libqt_list sourceData, void* gradient);
 
 /// Inherited from QAbstractSeries
 ///

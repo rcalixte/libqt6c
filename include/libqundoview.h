@@ -489,16 +489,16 @@ int32_t q_undoview_item_alignment(void* self);
 /// @param self QUndoView*
 /// @param indexes libqt_list of QModelIndex*
 ///
-void q_undoview_indexes_moved(void* self, libqt_list /* of QModelIndex* */ indexes);
+void q_undoview_indexes_moved(void* self, libqt_list indexes);
 
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#indexesMoved)
 ///
 /// @param self QUndoView*
-/// @param callback void func(QUndoView* self, QModelIndex** indexes)
+/// @param callback void func(QUndoView* self, libqt_list of QModelIndex* indexes)
 ///
-void q_undoview_on_indexes_moved(void* self, void (*callback)(void*, QModelIndex**));
+void q_undoview_on_indexes_moved(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemView
 ///
@@ -3297,7 +3297,7 @@ void q_undoview_add_action(void* self, void* action);
 /// @param self QUndoView*
 /// @param actions libqt_list of QAction*
 ///
-void q_undoview_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_undoview_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3307,7 +3307,7 @@ void q_undoview_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_undoview_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_undoview_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -4623,7 +4623,7 @@ void q_undoview_on_scroll_contents_by(void* self, void (*callback)(void*, int, i
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_undoview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void q_undoview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QListView
 ///
@@ -4636,7 +4636,7 @@ void q_undoview_data_changed(void* self, void* topLeft, void* bottomRight, libqt
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_undoview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void q_undoview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QListView
 ///
@@ -4645,9 +4645,9 @@ void q_undoview_qbase_data_changed(void* self, void* topLeft, void* bottomRight,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUndoView*
-/// @param callback void func(QUndoView* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
+/// @param callback void func(QUndoView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void q_undoview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
+void q_undoview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
 
 /// Inherited from QListView
 ///
@@ -5282,9 +5282,9 @@ libqt_list q_undoview_qbase_selected_indexes(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUndoView*
-/// @param callback QModelIndex** func()
+/// @param callback libqt_list of QModelIndex* func()
 ///
-void q_undoview_on_selected_indexes(void* self, QModelIndex** (*callback)());
+void q_undoview_on_selected_indexes(void* self, libqt_list (*callback)());
 
 /// Inherited from QListView
 ///

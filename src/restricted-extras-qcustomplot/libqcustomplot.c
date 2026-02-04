@@ -4330,7 +4330,7 @@ libqt_list /* of QCPLayoutElement* */ q_cplayoutelement_elements(void* self, boo
     return _arr;
 }
 
-void q_cplayoutelement_on_elements(void* self, QCPLayoutElement** (*callback)(void*, bool)) {
+void q_cplayoutelement_on_elements(void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(void*, bool)) {
     QCPLayoutElement_OnElements((QCPLayoutElement*)self, (intptr_t)callback);
 }
 
@@ -5044,7 +5044,7 @@ libqt_list /* of QCPLayoutElement* */ q_cplayout_elements(void* self, bool recur
     return _arr;
 }
 
-void q_cplayout_on_elements(void* self, QCPLayoutElement** (*callback)(void*, bool)) {
+void q_cplayout_on_elements(void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(void*, bool)) {
     QCPLayout_OnElements((QCPLayout*)self, (intptr_t)callback);
 }
 
@@ -5178,7 +5178,7 @@ libqt_list /* of int */ q_cplayout_get_section_sizes(void* self, libqt_list /* o
     return _arr;
 }
 
-void q_cplayout_on_get_section_sizes(void* self, int* (*callback)(void*, libqt_list /* of int */, libqt_list /* of int */, libqt_list /* of double */, int)) {
+void q_cplayout_on_get_section_sizes(void* self, libqt_list /* of int */ (*callback)(void*, libqt_list /* of int */, libqt_list /* of int */, libqt_list /* of double */, int)) {
     QCPLayout_OnGetSectionSizes((QCPLayout*)self, (intptr_t)callback);
 }
 
@@ -6120,7 +6120,7 @@ libqt_list /* of QCPLayoutElement* */ q_cplayoutgrid_elements(void* self, bool r
     return _arr;
 }
 
-void q_cplayoutgrid_on_elements(void* self, QCPLayoutElement** (*callback)(void*, bool)) {
+void q_cplayoutgrid_on_elements(void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(void*, bool)) {
     QCPLayoutGrid_OnElements((QCPLayoutGrid*)self, (intptr_t)callback);
 }
 
@@ -6926,7 +6926,7 @@ libqt_list /* of int */ q_cplayoutgrid_qbase_get_section_sizes(void* self, libqt
     return _arr;
 }
 
-void q_cplayoutgrid_on_get_section_sizes(void* self, int* (*callback)(void*, libqt_list /* of int */, libqt_list /* of int */, libqt_list /* of double */, int)) {
+void q_cplayoutgrid_on_get_section_sizes(void* self, libqt_list /* of int */ (*callback)(void*, libqt_list /* of int */, libqt_list /* of int */, libqt_list /* of double */, int)) {
     QCPLayoutGrid_OnGetSectionSizes((QCPLayoutGrid*)self, (intptr_t)callback);
 }
 
@@ -7594,7 +7594,7 @@ libqt_list /* of QCPLayoutElement* */ q_cplayoutinset_qbase_elements(void* self,
     return _arr;
 }
 
-void q_cplayoutinset_on_elements(void* self, QCPLayoutElement** (*callback)(void*, bool)) {
+void q_cplayoutinset_on_elements(void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(void*, bool)) {
     QCPLayoutInset_OnElements((QCPLayoutInset*)self, (intptr_t)callback);
 }
 
@@ -7920,7 +7920,7 @@ libqt_list /* of int */ q_cplayoutinset_qbase_get_section_sizes(void* self, libq
     return _arr;
 }
 
-void q_cplayoutinset_on_get_section_sizes(void* self, int* (*callback)(void*, libqt_list /* of int */, libqt_list /* of int */, libqt_list /* of double */, int)) {
+void q_cplayoutinset_on_get_section_sizes(void* self, libqt_list /* of int */ (*callback)(void*, libqt_list /* of int */, libqt_list /* of int */, libqt_list /* of double */, int)) {
     QCPLayoutInset_OnGetSectionSizes((QCPLayoutInset*)self, (intptr_t)callback);
 }
 
@@ -8163,7 +8163,7 @@ void q_cpaxisticker_generate(void* self, void* range, void* locale, void* format
     free(tickLabels_qstr);
 }
 
-void q_cpaxisticker_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**)) {
+void q_cpaxisticker_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char***)) {
     QCPAxisTicker_OnGenerate((QCPAxisTicker*)self, (intptr_t)callback);
 }
 
@@ -8518,7 +8518,7 @@ void q_cpaxistickerdatetime_qbase_generate(void* self, void* range, void* locale
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickerdatetime_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**)) {
+void q_cpaxistickerdatetime_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char***)) {
     QCPAxisTickerDateTime_OnGenerate((QCPAxisTickerDateTime*)self, (intptr_t)callback);
 }
 
@@ -8761,7 +8761,7 @@ void q_cpaxistickertime_qbase_generate(void* self, void* range, void* locale, vo
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickertime_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**)) {
+void q_cpaxistickertime_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char***)) {
     QCPAxisTickerTime_OnGenerate((QCPAxisTickerTime*)self, (intptr_t)callback);
 }
 
@@ -8973,7 +8973,7 @@ void q_cpaxistickerfixed_qbase_generate(void* self, void* range, void* locale, v
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickerfixed_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**)) {
+void q_cpaxistickerfixed_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char***)) {
     QCPAxisTickerFixed_OnGenerate((QCPAxisTickerFixed*)self, (intptr_t)callback);
 }
 
@@ -9378,7 +9378,7 @@ void q_cpaxistickertext_qbase_generate(void* self, void* range, void* locale, vo
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickertext_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**)) {
+void q_cpaxistickertext_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char***)) {
     QCPAxisTickerText_OnGenerate((QCPAxisTickerText*)self, (intptr_t)callback);
 }
 
@@ -9709,7 +9709,7 @@ void q_cpaxistickerpi_qbase_generate(void* self, void* range, void* locale, void
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickerpi_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**)) {
+void q_cpaxistickerpi_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char***)) {
     QCPAxisTickerPi_OnGenerate((QCPAxisTickerPi*)self, (intptr_t)callback);
 }
 
@@ -9935,7 +9935,7 @@ void q_cpaxistickerlog_qbase_generate(void* self, void* range, void* locale, voi
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickerlog_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**)) {
+void q_cpaxistickerlog_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char***)) {
     QCPAxisTickerLog_OnGenerate((QCPAxisTickerLog*)self, (intptr_t)callback);
 }
 
@@ -15083,7 +15083,7 @@ libqt_list /* of QCPLayerable* */ q_customplot_layerable_list_at(void* self, voi
     return _arr;
 }
 
-void q_customplot_on_layerable_list_at(void* self, QCPLayerable** (*callback)(void*, void*, bool)) {
+void q_customplot_on_layerable_list_at(void* self, libqt_list /* of QCPLayerable* */ (*callback)(void*, void*, bool)) {
     QCustomPlot_OnLayerableListAt((QCustomPlot*)self, (intptr_t)callback);
 }
 
@@ -15387,7 +15387,7 @@ libqt_list /* of QCPLayerable* */ q_customplot_layerable_list_at3(void* self, vo
     return _arr;
 }
 
-void q_customplot_on_layerable_list_at3(void* self, QCPLayerable** (*callback)(void*, void*, bool, QVariant**)) {
+void q_customplot_on_layerable_list_at3(void* self, libqt_list /* of QCPLayerable* */ (*callback)(void*, void*, bool, libqt_list /* of QVariant* */)) {
     QCustomPlot_OnLayerableListAt3((QCustomPlot*)self, (intptr_t)callback);
 }
 
@@ -18027,7 +18027,7 @@ libqt_list /* of QCPLayoutElement* */ q_cpaxisrect_elements(void* self, bool rec
     return _arr;
 }
 
-void q_cpaxisrect_on_elements(void* self, QCPLayoutElement** (*callback)(void*, bool)) {
+void q_cpaxisrect_on_elements(void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(void*, bool)) {
     QCPAxisRect_OnElements((QCPAxisRect*)self, (intptr_t)callback);
 }
 
@@ -19439,7 +19439,7 @@ libqt_list /* of QCPLayoutElement* */ q_cpabstractlegenditem_qbase_elements(void
     return _arr;
 }
 
-void q_cpabstractlegenditem_on_elements(void* self, QCPLayoutElement** (*callback)(void*, bool)) {
+void q_cpabstractlegenditem_on_elements(void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(void*, bool)) {
     QCPAbstractLegendItem_OnElements((QCPAbstractLegendItem*)self, (intptr_t)callback);
 }
 
@@ -20375,7 +20375,7 @@ libqt_list /* of QCPLayoutElement* */ q_cpplottablelegenditem_qbase_elements(voi
     return _arr;
 }
 
-void q_cpplottablelegenditem_on_elements(void* self, QCPLayoutElement** (*callback)(void*, bool)) {
+void q_cpplottablelegenditem_on_elements(void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(void*, bool)) {
     QCPPlottableLegendItem_OnElements((QCPPlottableLegendItem*)self, (intptr_t)callback);
 }
 
@@ -21542,7 +21542,7 @@ libqt_list /* of QCPLayoutElement* */ q_cplegend_qbase_elements(void* self, bool
     return _arr;
 }
 
-void q_cplegend_on_elements(void* self, QCPLayoutElement** (*callback)(void*, bool)) {
+void q_cplegend_on_elements(void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(void*, bool)) {
     QCPLegend_OnElements((QCPLegend*)self, (intptr_t)callback);
 }
 
@@ -21844,7 +21844,7 @@ libqt_list /* of int */ q_cplegend_qbase_get_section_sizes(void* self, libqt_lis
     return _arr;
 }
 
-void q_cplegend_on_get_section_sizes(void* self, int* (*callback)(void*, libqt_list /* of int */, libqt_list /* of int */, libqt_list /* of double */, int)) {
+void q_cplegend_on_get_section_sizes(void* self, libqt_list /* of int */ (*callback)(void*, libqt_list /* of int */, libqt_list /* of int */, libqt_list /* of double */, int)) {
     QCPLegend_OnGetSectionSizes((QCPLegend*)self, (intptr_t)callback);
 }
 
@@ -22643,7 +22643,7 @@ libqt_list /* of QCPLayoutElement* */ q_cptextelement_qbase_elements(void* self,
     return _arr;
 }
 
-void q_cptextelement_on_elements(void* self, QCPLayoutElement** (*callback)(void*, bool)) {
+void q_cptextelement_on_elements(void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(void*, bool)) {
     QCPTextElement_OnElements((QCPTextElement*)self, (intptr_t)callback);
 }
 
@@ -23539,7 +23539,7 @@ libqt_list /* of QCPLayoutElement* */ q_cpcolorscale_qbase_elements(void* self, 
     return _arr;
 }
 
-void q_cpcolorscale_on_elements(void* self, QCPLayoutElement** (*callback)(void*, bool)) {
+void q_cpcolorscale_on_elements(void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(void*, bool)) {
     QCPColorScale_OnElements((QCPColorScale*)self, (intptr_t)callback);
 }
 
@@ -24086,7 +24086,7 @@ void q_cpgraph_draw_fill(void* self, void* painter, libqt_list /* of QPointF* */
     QCPGraph_DrawFill((QCPGraph*)self, (QCPPainter*)painter, lines);
 }
 
-void q_cpgraph_on_draw_fill(void* self, void (*callback)(void*, void*, QPointF**)) {
+void q_cpgraph_on_draw_fill(void* self, void (*callback)(void*, void*, libqt_list /* of QPointF* */)) {
     QCPGraph_OnDrawFill((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -24098,7 +24098,7 @@ void q_cpgraph_draw_scatter_plot(void* self, void* painter, libqt_list /* of QPo
     QCPGraph_DrawScatterPlot((QCPGraph*)self, (QCPPainter*)painter, scatters, (QCPScatterStyle*)style);
 }
 
-void q_cpgraph_on_draw_scatter_plot(void* self, void (*callback)(void*, void*, QPointF**, void*)) {
+void q_cpgraph_on_draw_scatter_plot(void* self, void (*callback)(void*, void*, libqt_list /* of QPointF* */, void*)) {
     QCPGraph_OnDrawScatterPlot((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -24110,7 +24110,7 @@ void q_cpgraph_draw_line_plot(void* self, void* painter, libqt_list /* of QPoint
     QCPGraph_DrawLinePlot((QCPGraph*)self, (QCPPainter*)painter, lines);
 }
 
-void q_cpgraph_on_draw_line_plot(void* self, void (*callback)(void*, void*, QPointF**)) {
+void q_cpgraph_on_draw_line_plot(void* self, void (*callback)(void*, void*, libqt_list /* of QPointF* */)) {
     QCPGraph_OnDrawLinePlot((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -24122,7 +24122,7 @@ void q_cpgraph_draw_impulse_plot(void* self, void* painter, libqt_list /* of QPo
     QCPGraph_DrawImpulsePlot((QCPGraph*)self, (QCPPainter*)painter, lines);
 }
 
-void q_cpgraph_on_draw_impulse_plot(void* self, void (*callback)(void*, void*, QPointF**)) {
+void q_cpgraph_on_draw_impulse_plot(void* self, void (*callback)(void*, void*, libqt_list /* of QPointF* */)) {
     QCPGraph_OnDrawImpulsePlot((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -24134,7 +24134,7 @@ void q_cpgraph_get_lines(void* self, libqt_list /* of QPointF* */ lines, void* d
     QCPGraph_GetLines((QCPGraph*)self, lines, (QCPDataRange*)dataRange);
 }
 
-void q_cpgraph_on_get_lines(void* self, void (*callback)(void*, QPointF**, void*)) {
+void q_cpgraph_on_get_lines(void* self, void (*callback)(void*, libqt_list /* of QPointF* */, void*)) {
     QCPGraph_OnGetLines((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -24146,7 +24146,7 @@ void q_cpgraph_get_scatters(void* self, libqt_list /* of QPointF* */ scatters, v
     QCPGraph_GetScatters((QCPGraph*)self, scatters, (QCPDataRange*)dataRange);
 }
 
-void q_cpgraph_on_get_scatters(void* self, void (*callback)(void*, QPointF**, void*)) {
+void q_cpgraph_on_get_scatters(void* self, void (*callback)(void*, libqt_list /* of QPointF* */, void*)) {
     QCPGraph_OnGetScatters((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -24159,7 +24159,7 @@ libqt_list /* of QPointF* */ q_cpgraph_data_to_lines(void* self, libqt_list /* o
     return _arr;
 }
 
-void q_cpgraph_on_data_to_lines(void* self, QPointF** (*callback)(void*, QCPGraphData**)) {
+void q_cpgraph_on_data_to_lines(void* self, libqt_list /* of QPointF* */ (*callback)(void*, libqt_list /* of QCPGraphData* */)) {
     QCPGraph_OnDataToLines((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -24173,7 +24173,7 @@ libqt_list /* of QPointF* */ q_cpgraph_data_to_step_left_lines(void* self, libqt
     return _arr;
 }
 
-void q_cpgraph_on_data_to_step_left_lines(void* self, QPointF** (*callback)(void*, QCPGraphData**)) {
+void q_cpgraph_on_data_to_step_left_lines(void* self, libqt_list /* of QPointF* */ (*callback)(void*, libqt_list /* of QCPGraphData* */)) {
     QCPGraph_OnDataToStepLeftLines((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -24187,7 +24187,7 @@ libqt_list /* of QPointF* */ q_cpgraph_data_to_step_right_lines(void* self, libq
     return _arr;
 }
 
-void q_cpgraph_on_data_to_step_right_lines(void* self, QPointF** (*callback)(void*, QCPGraphData**)) {
+void q_cpgraph_on_data_to_step_right_lines(void* self, libqt_list /* of QPointF* */ (*callback)(void*, libqt_list /* of QCPGraphData* */)) {
     QCPGraph_OnDataToStepRightLines((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -24201,7 +24201,7 @@ libqt_list /* of QPointF* */ q_cpgraph_data_to_step_center_lines(void* self, lib
     return _arr;
 }
 
-void q_cpgraph_on_data_to_step_center_lines(void* self, QPointF** (*callback)(void*, QCPGraphData**)) {
+void q_cpgraph_on_data_to_step_center_lines(void* self, libqt_list /* of QPointF* */ (*callback)(void*, libqt_list /* of QCPGraphData* */)) {
     QCPGraph_OnDataToStepCenterLines((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -24215,7 +24215,7 @@ libqt_list /* of QPointF* */ q_cpgraph_data_to_impulse_lines(void* self, libqt_l
     return _arr;
 }
 
-void q_cpgraph_on_data_to_impulse_lines(void* self, QPointF** (*callback)(void*, QCPGraphData**)) {
+void q_cpgraph_on_data_to_impulse_lines(void* self, libqt_list /* of QPointF* */ (*callback)(void*, libqt_list /* of QCPGraphData* */)) {
     QCPGraph_OnDataToImpulseLines((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -24229,7 +24229,7 @@ libqt_list /* of QCPDataRange* */ q_cpgraph_get_non_nan_segments(void* self, lib
     return _arr;
 }
 
-void q_cpgraph_on_get_non_nan_segments(void* self, QCPDataRange** (*callback)(void*, QPointF**, int32_t)) {
+void q_cpgraph_on_get_non_nan_segments(void* self, libqt_list /* of QCPDataRange* */ (*callback)(void*, libqt_list /* of QPointF* */, int32_t)) {
     QCPGraph_OnGetNonNanSegments((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -24242,7 +24242,7 @@ libqt_list /* of pair_qcpdatarange_qcpdatarange tuple of QCPDataRange* and QCPDa
     return QCPGraph_GetOverlappingSegments((QCPGraph*)self, thisSegments, thisData, otherSegments, otherData);
 }
 
-void q_cpgraph_on_get_overlapping_segments(void* self, libqt_list /* of pair_qcpdatarange_qcpdatarange tuple of QCPDataRange* and QCPDataRange* */ (*callback)(void*, QCPDataRange**, QPointF**, QCPDataRange**, QPointF**)) {
+void q_cpgraph_on_get_overlapping_segments(void* self, libqt_list /* of pair_qcpdatarange_qcpdatarange tuple of QCPDataRange* and QCPDataRange* */ (*callback)(void*, libqt_list /* of QCPDataRange* */, libqt_list /* of QPointF* */, libqt_list /* of QCPDataRange* */, libqt_list /* of QPointF* */)) {
     QCPGraph_OnGetOverlappingSegments((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -24278,7 +24278,7 @@ int32_t q_cpgraph_find_index_below_x(void* self, libqt_list /* of QPointF* */ da
     return QCPGraph_FindIndexBelowX((QCPGraph*)self, data, x);
 }
 
-void q_cpgraph_on_find_index_below_x(void* self, int32_t (*callback)(void*, QPointF**, double)) {
+void q_cpgraph_on_find_index_below_x(void* self, int32_t (*callback)(void*, libqt_list /* of QPointF* */, double)) {
     QCPGraph_OnFindIndexBelowX((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -24290,7 +24290,7 @@ int32_t q_cpgraph_find_index_above_x(void* self, libqt_list /* of QPointF* */ da
     return QCPGraph_FindIndexAboveX((QCPGraph*)self, data, x);
 }
 
-void q_cpgraph_on_find_index_above_x(void* self, int32_t (*callback)(void*, QPointF**, double)) {
+void q_cpgraph_on_find_index_above_x(void* self, int32_t (*callback)(void*, libqt_list /* of QPointF* */, double)) {
     QCPGraph_OnFindIndexAboveX((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -24302,7 +24302,7 @@ int32_t q_cpgraph_find_index_below_y(void* self, libqt_list /* of QPointF* */ da
     return QCPGraph_FindIndexBelowY((QCPGraph*)self, data, y);
 }
 
-void q_cpgraph_on_find_index_below_y(void* self, int32_t (*callback)(void*, QPointF**, double)) {
+void q_cpgraph_on_find_index_below_y(void* self, int32_t (*callback)(void*, libqt_list /* of QPointF* */, double)) {
     QCPGraph_OnFindIndexBelowY((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -24314,7 +24314,7 @@ int32_t q_cpgraph_find_index_above_y(void* self, libqt_list /* of QPointF* */ da
     return QCPGraph_FindIndexAboveY((QCPGraph*)self, data, y);
 }
 
-void q_cpgraph_on_find_index_above_y(void* self, int32_t (*callback)(void*, QPointF**, double)) {
+void q_cpgraph_on_find_index_above_y(void* self, int32_t (*callback)(void*, libqt_list /* of QPointF* */, double)) {
     QCPGraph_OnFindIndexAboveY((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -25481,7 +25481,7 @@ void q_cpcurve_draw_curve_line(void* self, void* painter, libqt_list /* of QPoin
     QCPCurve_DrawCurveLine((QCPCurve*)self, (QCPPainter*)painter, lines);
 }
 
-void q_cpcurve_on_draw_curve_line(void* self, void (*callback)(void*, void*, QPointF**)) {
+void q_cpcurve_on_draw_curve_line(void* self, void (*callback)(void*, void*, libqt_list /* of QPointF* */)) {
     QCPCurve_OnDrawCurveLine((QCPCurve*)self, (intptr_t)callback);
 }
 
@@ -25493,7 +25493,7 @@ void q_cpcurve_draw_scatter_plot(void* self, void* painter, libqt_list /* of QPo
     QCPCurve_DrawScatterPlot((QCPCurve*)self, (QCPPainter*)painter, points, (QCPScatterStyle*)style);
 }
 
-void q_cpcurve_on_draw_scatter_plot(void* self, void (*callback)(void*, void*, QPointF**, void*)) {
+void q_cpcurve_on_draw_scatter_plot(void* self, void (*callback)(void*, void*, libqt_list /* of QPointF* */, void*)) {
     QCPCurve_OnDrawScatterPlot((QCPCurve*)self, (intptr_t)callback);
 }
 
@@ -25505,7 +25505,7 @@ void q_cpcurve_get_curve_lines(void* self, libqt_list /* of QPointF* */ lines, v
     QCPCurve_GetCurveLines((QCPCurve*)self, lines, (QCPDataRange*)dataRange, penWidth);
 }
 
-void q_cpcurve_on_get_curve_lines(void* self, void (*callback)(void*, QPointF**, void*, double)) {
+void q_cpcurve_on_get_curve_lines(void* self, void (*callback)(void*, libqt_list /* of QPointF* */, void*, double)) {
     QCPCurve_OnGetCurveLines((QCPCurve*)self, (intptr_t)callback);
 }
 
@@ -25517,7 +25517,7 @@ void q_cpcurve_get_scatters(void* self, libqt_list /* of QPointF* */ scatters, v
     QCPCurve_GetScatters((QCPCurve*)self, scatters, (QCPDataRange*)dataRange, scatterWidth);
 }
 
-void q_cpcurve_on_get_scatters(void* self, void (*callback)(void*, QPointF**, void*, double)) {
+void q_cpcurve_on_get_scatters(void* self, void (*callback)(void*, libqt_list /* of QPointF* */, void*, double)) {
     QCPCurve_OnGetScatters((QCPCurve*)self, (intptr_t)callback);
 }
 
@@ -25554,7 +25554,7 @@ libqt_list /* of QPointF* */ q_cpcurve_get_optimized_corner_points(void* self, i
     return _arr;
 }
 
-void q_cpcurve_on_get_optimized_corner_points(void* self, QPointF** (*callback)(void*, int, int, double, double, double, double, double, double, double, double)) {
+void q_cpcurve_on_get_optimized_corner_points(void* self, libqt_list /* of QPointF* */ (*callback)(void*, int, int, double, double, double, double, double, double, double, double)) {
     QCPCurve_OnGetOptimizedCornerPoints((QCPCurve*)self, (intptr_t)callback);
 }
 
@@ -25591,7 +25591,7 @@ void q_cpcurve_get_traverse_corner_points(void* self, int prevRegion, int curren
     QCPCurve_GetTraverseCornerPoints((QCPCurve*)self, prevRegion, currentRegion, keyMin, valueMax, keyMax, valueMin, beforeTraverse, afterTraverse);
 }
 
-void q_cpcurve_on_get_traverse_corner_points(void* self, void (*callback)(void*, int, int, double, double, double, double, QPointF**, QPointF**)) {
+void q_cpcurve_on_get_traverse_corner_points(void* self, void (*callback)(void*, int, int, double, double, double, double, libqt_list /* of QPointF* */, libqt_list /* of QPointF* */)) {
     QCPCurve_OnGetTraverseCornerPoints((QCPCurve*)self, (intptr_t)callback);
 }
 
@@ -32136,7 +32136,7 @@ void q_cperrorbars_get_data_segments(void* self, libqt_list /* of QCPDataRange* 
     QCPErrorBars_GetDataSegments((QCPErrorBars*)self, selectedSegments, unselectedSegments);
 }
 
-void q_cperrorbars_on_get_data_segments(void* self, void (*callback)(void*, QCPDataRange**, QCPDataRange**)) {
+void q_cperrorbars_on_get_data_segments(void* self, void (*callback)(void*, libqt_list /* of QCPDataRange* */, libqt_list /* of QCPDataRange* */)) {
     QCPErrorBars_OnGetDataSegments((QCPErrorBars*)self, (intptr_t)callback);
 }
 
@@ -42542,7 +42542,7 @@ libqt_list /* of QCPLayoutElement* */ q_cppolaraxisangular_elements(void* self, 
     return _arr;
 }
 
-void q_cppolaraxisangular_on_elements(void* self, QCPLayoutElement** (*callback)(void*, bool)) {
+void q_cppolaraxisangular_on_elements(void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(void*, bool)) {
     QCPPolarAxisAngular_OnElements((QCPPolarAxisAngular*)self, (intptr_t)callback);
 }
 
@@ -43742,7 +43742,7 @@ void q_cppolargrid_draw_angular_grid(void* self, void* painter, void* center, do
     QCPPolarGrid_DrawAngularGrid((QCPPolarGrid*)self, (QCPPainter*)painter, (QPointF*)center, radius, ticksCosSin, (QPen*)pen);
 }
 
-void q_cppolargrid_on_draw_angular_grid(void* self, void (*callback)(void*, void*, void*, double, QPointF**, void*)) {
+void q_cppolargrid_on_draw_angular_grid(void* self, void (*callback)(void*, void*, void*, double, libqt_list /* of QPointF* */, void*)) {
     QCPPolarGrid_OnDrawAngularGrid((QCPPolarGrid*)self, (intptr_t)callback);
 }
 
@@ -45003,7 +45003,7 @@ libqt_list /* of QCPLayoutElement* */ q_cppolarlegenditem_qbase_elements(void* s
     return _arr;
 }
 
-void q_cppolarlegenditem_on_elements(void* self, QCPLayoutElement** (*callback)(void*, bool)) {
+void q_cppolarlegenditem_on_elements(void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(void*, bool)) {
     QCPPolarLegendItem_OnElements((QCPPolarLegendItem*)self, (intptr_t)callback);
 }
 
@@ -45633,7 +45633,7 @@ void q_cppolargraph_draw_line_plot(void* self, void* painter, libqt_list /* of Q
     QCPPolarGraph_DrawLinePlot((QCPPolarGraph*)self, (QCPPainter*)painter, lines);
 }
 
-void q_cppolargraph_on_draw_line_plot(void* self, void (*callback)(void*, void*, QPointF**)) {
+void q_cppolargraph_on_draw_line_plot(void* self, void (*callback)(void*, void*, libqt_list /* of QPointF* */)) {
     QCPPolarGraph_OnDrawLinePlot((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
@@ -45645,7 +45645,7 @@ void q_cppolargraph_draw_fill(void* self, void* painter, libqt_list /* of QPoint
     QCPPolarGraph_DrawFill((QCPPolarGraph*)self, (QCPPainter*)painter, lines);
 }
 
-void q_cppolargraph_on_draw_fill(void* self, void (*callback)(void*, void*, QPointF**)) {
+void q_cppolargraph_on_draw_fill(void* self, void (*callback)(void*, void*, libqt_list /* of QPointF* */)) {
     QCPPolarGraph_OnDrawFill((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
@@ -45657,7 +45657,7 @@ void q_cppolargraph_draw_scatter_plot(void* self, void* painter, libqt_list /* o
     QCPPolarGraph_DrawScatterPlot((QCPPolarGraph*)self, (QCPPainter*)painter, scatters, (QCPScatterStyle*)style);
 }
 
-void q_cppolargraph_on_draw_scatter_plot(void* self, void (*callback)(void*, void*, QPointF**, void*)) {
+void q_cppolargraph_on_draw_scatter_plot(void* self, void (*callback)(void*, void*, libqt_list /* of QPointF* */, void*)) {
     QCPPolarGraph_OnDrawScatterPlot((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
@@ -45717,7 +45717,7 @@ void q_cppolargraph_get_data_segments(void* self, libqt_list /* of QCPDataRange*
     QCPPolarGraph_GetDataSegments((QCPPolarGraph*)self, selectedSegments, unselectedSegments);
 }
 
-void q_cppolargraph_on_get_data_segments(void* self, void (*callback)(void*, QCPDataRange**, QCPDataRange**)) {
+void q_cppolargraph_on_get_data_segments(void* self, void (*callback)(void*, libqt_list /* of QCPDataRange* */, libqt_list /* of QCPDataRange* */)) {
     QCPPolarGraph_OnGetDataSegments((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
@@ -45729,7 +45729,7 @@ void q_cppolargraph_draw_polyline(void* self, void* painter, libqt_list /* of QP
     QCPPolarGraph_DrawPolyline((QCPPolarGraph*)self, (QCPPainter*)painter, lineData);
 }
 
-void q_cppolargraph_on_draw_polyline(void* self, void (*callback)(void*, void*, QPointF**)) {
+void q_cppolargraph_on_draw_polyline(void* self, void (*callback)(void*, void*, libqt_list /* of QPointF* */)) {
     QCPPolarGraph_OnDrawPolyline((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
@@ -45741,7 +45741,7 @@ void q_cppolargraph_get_lines(void* self, libqt_list /* of QPointF* */ lines, vo
     QCPPolarGraph_GetLines((QCPPolarGraph*)self, lines, (QCPDataRange*)dataRange);
 }
 
-void q_cppolargraph_on_get_lines(void* self, void (*callback)(void*, QPointF**, void*)) {
+void q_cppolargraph_on_get_lines(void* self, void (*callback)(void*, libqt_list /* of QPointF* */, void*)) {
     QCPPolarGraph_OnGetLines((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
@@ -45753,7 +45753,7 @@ void q_cppolargraph_get_scatters(void* self, libqt_list /* of QPointF* */ scatte
     QCPPolarGraph_GetScatters((QCPPolarGraph*)self, scatters, (QCPDataRange*)dataRange);
 }
 
-void q_cppolargraph_on_get_scatters(void* self, void (*callback)(void*, QPointF**, void*)) {
+void q_cppolargraph_on_get_scatters(void* self, void (*callback)(void*, libqt_list /* of QPointF* */, void*)) {
     QCPPolarGraph_OnGetScatters((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
@@ -45766,7 +45766,7 @@ libqt_list /* of QPointF* */ q_cppolargraph_data_to_lines(void* self, libqt_list
     return _arr;
 }
 
-void q_cppolargraph_on_data_to_lines(void* self, QPointF** (*callback)(void*, QCPGraphData**)) {
+void q_cppolargraph_on_data_to_lines(void* self, libqt_list /* of QPointF* */ (*callback)(void*, libqt_list /* of QCPGraphData* */)) {
     QCPPolarGraph_OnDataToLines((QCPPolarGraph*)self, (intptr_t)callback);
 }
 

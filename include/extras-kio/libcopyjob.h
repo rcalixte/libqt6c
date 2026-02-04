@@ -1289,7 +1289,7 @@ KIO__CopyJob* k_io_copy_as(void* param1, void* param2, int32_t param3);
 /// @param param2 QUrl*
 /// @param param3 flag of enum KIO__JobFlag
 ///
-KIO__CopyJob* k_io_copy2(libqt_list /* of QUrl* */ param1, void* param2, int32_t param3);
+KIO__CopyJob* k_io_copy2(libqt_list param1, void* param2, int32_t param3);
 
 /// [Upstream resources](https://api.kde.org/kio.html#move)
 ///
@@ -1313,7 +1313,7 @@ KIO__CopyJob* k_io_move_as(void* param1, void* param2, int32_t param3);
 /// @param param2 QUrl*
 /// @param param3 flag of enum KIO__JobFlag
 ///
-KIO__CopyJob* k_io_move2(libqt_list /* of QUrl* */ param1, void* param2, int32_t param3);
+KIO__CopyJob* k_io_move2(libqt_list param1, void* param2, int32_t param3);
 
 /// [Upstream resources](https://api.kde.org/kio.html#link)
 ///
@@ -1329,7 +1329,7 @@ KIO__CopyJob* k_io_link(void* param1, void* param2, int32_t param3);
 /// @param param2 QUrl*
 /// @param param3 flag of enum KIO__JobFlag
 ///
-KIO__CopyJob* k_io_link2(libqt_list /* of QUrl* */ param1, void* param2, int32_t param3);
+KIO__CopyJob* k_io_link2(libqt_list param1, void* param2, int32_t param3);
 
 /// [Upstream resources](https://api.kde.org/kio.html#linkAs)
 ///
@@ -1351,7 +1351,7 @@ KIO__CopyJob* k_io_trash(void* param1, int32_t param2);
 /// @param param1 libqt_list of QUrl*
 /// @param param2 flag of enum KIO__JobFlag
 ///
-KIO__CopyJob* k_io_trash2(libqt_list /* of QUrl* */ param1, int32_t param2);
+KIO__CopyJob* k_io_trash2(libqt_list param1, int32_t param2);
 
 /// [Upstream resources](https://api.kde.org/kio-copyjob.html#public-types)
 

@@ -234,7 +234,7 @@ void q_candlestickseries_candlestick_sets_added(void* self, libqt_list /* of QCa
     QCandlestickSeries_CandlestickSetsAdded((QCandlestickSeries*)self, sets);
 }
 
-void q_candlestickseries_on_candlestick_sets_added(void* self, void (*callback)(void*, QCandlestickSet**)) {
+void q_candlestickseries_on_candlestick_sets_added(void* self, void (*callback)(void*, libqt_list /* of QCandlestickSet* */)) {
     QCandlestickSeries_Connect_CandlestickSetsAdded((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
@@ -242,7 +242,7 @@ void q_candlestickseries_candlestick_sets_removed(void* self, libqt_list /* of Q
     QCandlestickSeries_CandlestickSetsRemoved((QCandlestickSeries*)self, sets);
 }
 
-void q_candlestickseries_on_candlestick_sets_removed(void* self, void (*callback)(void*, QCandlestickSet**)) {
+void q_candlestickseries_on_candlestick_sets_removed(void* self, void (*callback)(void*, libqt_list /* of QCandlestickSet* */)) {
     QCandlestickSeries_Connect_CandlestickSetsRemoved((QCandlestickSeries*)self, (intptr_t)callback);
 }
 

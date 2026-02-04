@@ -290,7 +290,7 @@ void k_lineedit_set_completed_items(void* self, const char* items[static 1], boo
     free(items_qstr);
 }
 
-void k_lineedit_on_set_completed_items(void* self, void (*callback)(void*, const char**, bool)) {
+void k_lineedit_on_set_completed_items(void* self, void (*callback)(void*, const char***, bool)) {
     KLineEdit_OnSetCompletedItems((KLineEdit*)self, (intptr_t)callback);
 }
 

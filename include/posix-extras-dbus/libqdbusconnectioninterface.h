@@ -277,7 +277,7 @@ QDBusMessage* q_dbusconnectioninterface_call2(void* self, int32_t mode, const ch
 /// @param method const char*
 /// @param args libqt_list of QVariant*
 ///
-QDBusMessage* q_dbusconnectioninterface_call_with_argument_list(void* self, int32_t mode, const char* method, libqt_list /* of QVariant* */ args);
+QDBusMessage* q_dbusconnectioninterface_call_with_argument_list(void* self, int32_t mode, const char* method, libqt_list args);
 
 /// Inherited from QDBusAbstractInterface
 ///
@@ -290,7 +290,7 @@ QDBusMessage* q_dbusconnectioninterface_call_with_argument_list(void* self, int3
 /// @param member const char*
 /// @param errorSlot const char*
 ///
-bool q_dbusconnectioninterface_call_with_callback(void* self, const char* method, libqt_list /* of QVariant* */ args, void* receiver, const char* member, const char* errorSlot);
+bool q_dbusconnectioninterface_call_with_callback(void* self, const char* method, libqt_list args, void* receiver, const char* member, const char* errorSlot);
 
 /// Inherited from QDBusAbstractInterface
 ///
@@ -302,7 +302,7 @@ bool q_dbusconnectioninterface_call_with_callback(void* self, const char* method
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_dbusconnectioninterface_call_with_callback2(void* self, const char* method, libqt_list /* of QVariant* */ args, void* receiver, const char* member);
+bool q_dbusconnectioninterface_call_with_callback2(void* self, const char* method, libqt_list args, void* receiver, const char* member);
 
 /// Inherited from QDBusAbstractInterface
 ///
@@ -321,7 +321,7 @@ QDBusPendingCall* q_dbusconnectioninterface_async_call(void* self, const char* m
 /// @param method const char*
 /// @param args libqt_list of QVariant*
 ///
-QDBusPendingCall* q_dbusconnectioninterface_async_call_with_argument_list(void* self, const char* method, libqt_list /* of QVariant* */ args);
+QDBusPendingCall* q_dbusconnectioninterface_async_call_with_argument_list(void* self, const char* method, libqt_list args);
 
 /// Inherited from QObject
 ///

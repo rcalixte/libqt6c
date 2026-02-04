@@ -747,7 +747,7 @@ QKeySequence* k_fontaction_shortcut(void* self);
 /// @param self KFontAction*
 /// @param shortcuts libqt_list of QKeySequence*
 ///
-void k_fontaction_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts);
+void k_fontaction_set_shortcuts(void* self, libqt_list shortcuts);
 
 /// Inherited from QAction
 ///
@@ -2027,9 +2027,9 @@ libqt_list k_fontaction_qbase_created_widgets(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontAction*
-/// @param callback QWidget** func()
+/// @param callback libqt_list of QWidget* func()
 ///
-void k_fontaction_on_created_widgets(void* self, QWidget** (*callback)());
+void k_fontaction_on_created_widgets(void* self, libqt_list (*callback)());
 
 /// Inherited from QObject
 ///

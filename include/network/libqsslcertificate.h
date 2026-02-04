@@ -305,7 +305,7 @@ libqt_list q_sslcertificate_from_data(const char* data);
 ///
 /// @return libqt_list of QSslError*
 ///
-libqt_list q_sslcertificate_verify(libqt_list /* of QSslCertificate* */ certificateChain);
+libqt_list q_sslcertificate_verify(libqt_list certificateChain);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#importPkcs12)
 ///
@@ -374,7 +374,7 @@ libqt_list q_sslcertificate_from_data2(const char* data, int32_t format);
 ///
 /// @return libqt_list of QSslError*
 ///
-libqt_list q_sslcertificate_verify2(libqt_list /* of QSslCertificate* */ certificateChain, const char* hostName);
+libqt_list q_sslcertificate_verify2(libqt_list certificateChain, const char* hostName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#importPkcs12)
 ///
@@ -383,7 +383,7 @@ libqt_list q_sslcertificate_verify2(libqt_list /* of QSslCertificate* */ certifi
 /// @param cert QSslCertificate*
 /// @param caCertificates libqt_list of QSslCertificate*
 ///
-bool q_sslcertificate_import_pkcs124(void* device, void* key, void* cert, libqt_list /* of QSslCertificate* */ caCertificates);
+bool q_sslcertificate_import_pkcs124(void* device, void* key, void* cert, libqt_list caCertificates);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#importPkcs12)
 ///
@@ -393,7 +393,7 @@ bool q_sslcertificate_import_pkcs124(void* device, void* key, void* cert, libqt_
 /// @param caCertificates libqt_list of QSslCertificate*
 /// @param passPhrase const char*
 ///
-bool q_sslcertificate_import_pkcs125(void* device, void* key, void* cert, libqt_list /* of QSslCertificate* */ caCertificates, const char* passPhrase);
+bool q_sslcertificate_import_pkcs125(void* device, void* key, void* cert, libqt_list caCertificates, const char* passPhrase);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#dtor.QSslCertificate)
 ///

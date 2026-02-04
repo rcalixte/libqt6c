@@ -537,7 +537,7 @@ KFileItemList* k_fileitemlist_new();
 ///
 /// @param items libqt_list of KFileItem*
 ///
-KFileItemList* k_fileitemlist_new2(libqt_list /* of KFileItem* */ items);
+KFileItemList* k_fileitemlist_new2(libqt_list items);
 
 /// [Upstream resources](https://api.kde.org/kfileitemlist.html#findByName)
 ///

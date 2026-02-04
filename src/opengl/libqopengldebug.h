@@ -296,7 +296,7 @@ void q_opengldebuglogger_enable_messages(void* self);
 /// @param self QOpenGLDebugLogger*
 /// @param ids libqt_list of uint32_t
 ///
-void q_opengldebuglogger_enable_messages2(void* self, libqt_list /* of uint32_t */ ids);
+void q_opengldebuglogger_enable_messages2(void* self, libqt_list ids);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#disableMessages)
 ///
@@ -309,7 +309,7 @@ void q_opengldebuglogger_disable_messages(void* self);
 /// @param self QOpenGLDebugLogger*
 /// @param ids libqt_list of uint32_t
 ///
-void q_opengldebuglogger_disable_messages2(void* self, libqt_list /* of uint32_t */ ids);
+void q_opengldebuglogger_disable_messages2(void* self, libqt_list ids);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#loggedMessages)
 ///
@@ -418,7 +418,7 @@ void q_opengldebuglogger_enable_messages3(void* self, int32_t sources, int32_t t
 /// @param ids libqt_list of uint32_t
 /// @param sources flag of enum QOpenGLDebugMessage__Source
 ///
-void q_opengldebuglogger_enable_messages23(void* self, libqt_list /* of uint32_t */ ids, int32_t sources);
+void q_opengldebuglogger_enable_messages23(void* self, libqt_list ids, int32_t sources);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#enableMessages)
 ///
@@ -427,7 +427,7 @@ void q_opengldebuglogger_enable_messages23(void* self, libqt_list /* of uint32_t
 /// @param sources flag of enum QOpenGLDebugMessage__Source
 /// @param types flag of enum QOpenGLDebugMessage__Type
 ///
-void q_opengldebuglogger_enable_messages32(void* self, libqt_list /* of uint32_t */ ids, int32_t sources, int32_t types);
+void q_opengldebuglogger_enable_messages32(void* self, libqt_list ids, int32_t sources, int32_t types);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#disableMessages)
 ///
@@ -459,7 +459,7 @@ void q_opengldebuglogger_disable_messages3(void* self, int32_t sources, int32_t 
 /// @param ids libqt_list of uint32_t
 /// @param sources flag of enum QOpenGLDebugMessage__Source
 ///
-void q_opengldebuglogger_disable_messages23(void* self, libqt_list /* of uint32_t */ ids, int32_t sources);
+void q_opengldebuglogger_disable_messages23(void* self, libqt_list ids, int32_t sources);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#disableMessages)
 ///
@@ -468,7 +468,7 @@ void q_opengldebuglogger_disable_messages23(void* self, libqt_list /* of uint32_
 /// @param sources flag of enum QOpenGLDebugMessage__Source
 /// @param types flag of enum QOpenGLDebugMessage__Type
 ///
-void q_opengldebuglogger_disable_messages32(void* self, libqt_list /* of uint32_t */ ids, int32_t sources, int32_t types);
+void q_opengldebuglogger_disable_messages32(void* self, libqt_list ids, int32_t sources, int32_t types);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#startLogging)
 ///

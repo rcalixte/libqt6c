@@ -674,7 +674,7 @@ void q_painterpathstroker_set_dash_pattern(void* self, int32_t dashPattern);
 /// @param self QPainterPathStroker*
 /// @param dashPattern libqt_list of double
 ///
-void q_painterpathstroker_set_dash_pattern2(void* self, libqt_list /* of double */ dashPattern);
+void q_painterpathstroker_set_dash_pattern2(void* self, libqt_list dashPattern);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpathstroker.html#dashPattern)
 ///

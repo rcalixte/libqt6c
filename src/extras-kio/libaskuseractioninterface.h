@@ -73,7 +73,7 @@ void k_io__askuseractioninterface_ask_user_skip(void* self, void* job, int32_t o
 /// @param confirmationType enum KIO__AskUserActionInterface__ConfirmationType
 /// @param parent QWidget*
 ///
-void k_io__askuseractioninterface_ask_user_delete(void* self, libqt_list /* of QUrl* */ urls, int32_t deletionType, int32_t confirmationType, void* parent);
+void k_io__askuseractioninterface_ask_user_delete(void* self, libqt_list urls, int32_t deletionType, int32_t confirmationType, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kio-askuseractioninterface.html#requestUserMessageBox)
 ///
@@ -138,14 +138,14 @@ void k_io__askuseractioninterface_on_ask_user_skip_result(void* self, void (*cal
 /// @param deletionType enum KIO__AskUserActionInterface__DeletionType
 /// @param parent QWidget*
 ///
-void k_io__askuseractioninterface_ask_user_delete_result(void* self, bool allowDelete, libqt_list /* of QUrl* */ urls, int32_t deletionType, void* parent);
+void k_io__askuseractioninterface_ask_user_delete_result(void* self, bool allowDelete, libqt_list urls, int32_t deletionType, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kio-askuseractioninterface.html#askUserDeleteResult)
 ///
 /// @param self KIO__AskUserActionInterface*
-/// @param callback void func(KIO__AskUserActionInterface* self, bool allowDelete, QUrl** urls, enum KIO__AskUserActionInterface__DeletionType deletionType, QWidget* parent)
+/// @param callback void func(KIO__AskUserActionInterface* self, bool allowDelete, libqt_list of QUrl* urls, enum KIO__AskUserActionInterface__DeletionType deletionType, QWidget* parent)
 ///
-void k_io__askuseractioninterface_on_ask_user_delete_result(void* self, void (*callback)(void*, bool, QUrl**, int32_t, void*));
+void k_io__askuseractioninterface_on_ask_user_delete_result(void* self, void (*callback)(void*, bool, libqt_list, int32_t, void*));
 
 /// [Upstream resources](https://api.kde.org/kio-askuseractioninterface.html#messageBoxResult)
 ///

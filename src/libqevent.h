@@ -262,7 +262,7 @@ QPointerEvent* q_pointerevent_new2(int32_t type, void* dev, int32_t modifiers);
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param points libqt_list of QEventPoint*
 ///
-QPointerEvent* q_pointerevent_new3(int32_t type, void* dev, int32_t modifiers, libqt_list /* of QEventPoint* */ points);
+QPointerEvent* q_pointerevent_new3(int32_t type, void* dev, int32_t modifiers, libqt_list points);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#clone)
 ///
@@ -6881,7 +6881,7 @@ QInputMethodEvent* q_inputmethodevent_new();
 /// @param preeditText const char*
 /// @param attributes libqt_list of QInputMethodEvent__Attribute*
 ///
-QInputMethodEvent* q_inputmethodevent_new2(const char* preeditText, libqt_list /* of QInputMethodEvent__Attribute* */ attributes);
+QInputMethodEvent* q_inputmethodevent_new2(const char* preeditText, libqt_list attributes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputmethodevent.html#clone)
 ///
@@ -9756,7 +9756,7 @@ QTouchEvent* q_touchevent_new4(int32_t eventType, void* device, int32_t modifier
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param touchPoints libqt_list of QEventPoint*
 ///
-QTouchEvent* q_touchevent_new5(int32_t eventType, void* device, int32_t modifiers, libqt_list /* of QEventPoint* */ touchPoints);
+QTouchEvent* q_touchevent_new5(int32_t eventType, void* device, int32_t modifiers, libqt_list touchPoints);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtouchevent.html)
 
@@ -9768,7 +9768,7 @@ QTouchEvent* q_touchevent_new5(int32_t eventType, void* device, int32_t modifier
 /// @param touchPointStates flag of enum QEventPoint__State
 /// @param touchPoints libqt_list of QEventPoint*
 ///
-QTouchEvent* q_touchevent_new6(int32_t eventType, void* device, int32_t modifiers, uint8_t touchPointStates, libqt_list /* of QEventPoint* */ touchPoints);
+QTouchEvent* q_touchevent_new6(int32_t eventType, void* device, int32_t modifiers, uint8_t touchPointStates, libqt_list touchPoints);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtouchevent.html#clone)
 ///

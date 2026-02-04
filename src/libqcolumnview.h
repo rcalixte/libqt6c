@@ -341,7 +341,7 @@ void q_columnview_set_preview_widget(void* self, void* widget);
 /// @param self QColumnView*
 /// @param list libqt_list of int
 ///
-void q_columnview_set_column_widths(void* self, libqt_list /* of int */ list);
+void q_columnview_set_column_widths(void* self, libqt_list list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolumnview.html#columnWidths)
 ///
@@ -3475,7 +3475,7 @@ void q_columnview_add_action(void* self, void* action);
 /// @param self QColumnView*
 /// @param actions libqt_list of QAction*
 ///
-void q_columnview_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_columnview_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3485,7 +3485,7 @@ void q_columnview_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_columnview_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_columnview_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -4764,7 +4764,7 @@ void q_columnview_on_do_items_layout(void* self, void (*callback)());
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_columnview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void q_columnview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemView
 ///
@@ -4777,7 +4777,7 @@ void q_columnview_data_changed(void* self, void* topLeft, void* bottomRight, lib
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_columnview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void q_columnview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemView
 ///
@@ -4786,9 +4786,9 @@ void q_columnview_qbase_data_changed(void* self, void* topLeft, void* bottomRigh
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColumnView*
-/// @param callback void func(QColumnView* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
+/// @param callback void func(QColumnView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void q_columnview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
+void q_columnview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5219,9 +5219,9 @@ libqt_list q_columnview_qbase_selected_indexes(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColumnView*
-/// @param callback QModelIndex** func()
+/// @param callback libqt_list of QModelIndex* func()
 ///
-void q_columnview_on_selected_indexes(void* self, QModelIndex** (*callback)());
+void q_columnview_on_selected_indexes(void* self, libqt_list (*callback)());
 
 /// Inherited from QAbstractItemView
 ///

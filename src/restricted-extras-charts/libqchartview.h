@@ -892,7 +892,7 @@ void q_chartview_set_foreground_brush(void* self, void* brush);
 /// @param self QChartView*
 /// @param rects libqt_list of QRectF*
 ///
-void q_chartview_update_scene(void* self, libqt_list /* of QRectF* */ rects);
+void q_chartview_update_scene(void* self, libqt_list rects);
 
 /// Inherited from QGraphicsView
 ///
@@ -3310,7 +3310,7 @@ void q_chartview_add_action(void* self, void* action);
 /// @param self QChartView*
 /// @param actions libqt_list of QAction*
 ///
-void q_chartview_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_chartview_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3320,7 +3320,7 @@ void q_chartview_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_chartview_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_chartview_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

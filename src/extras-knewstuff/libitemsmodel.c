@@ -286,7 +286,7 @@ void k_nscore__itemsmodel_layout_changed1(void* self, libqt_list /* of QPersiste
     QAbstractItemModel_LayoutChanged1((QAbstractItemModel*)self, parents);
 }
 
-void k_nscore__itemsmodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
+void k_nscore__itemsmodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */)) {
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -294,7 +294,7 @@ void k_nscore__itemsmodel_layout_changed2(void* self, libqt_list /* of QPersiste
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void k_nscore__itemsmodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
+void k_nscore__itemsmodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */, int32_t)) {
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -302,7 +302,7 @@ void k_nscore__itemsmodel_layout_about_to_be_changed1(void* self, libqt_list /* 
     QAbstractItemModel_LayoutAboutToBeChanged1((QAbstractItemModel*)self, parents);
 }
 
-void k_nscore__itemsmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
+void k_nscore__itemsmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -310,7 +310,7 @@ void k_nscore__itemsmodel_layout_about_to_be_changed2(void* self, libqt_list /* 
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void k_nscore__itemsmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
+void k_nscore__itemsmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */, int32_t)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -753,7 +753,7 @@ QMimeData* k_nscore__itemsmodel_qbase_mime_data(void* self, libqt_list /* of QMo
     return KNSCore__ItemsModel_QBaseMimeData((KNSCore__ItemsModel*)self, indexes);
 }
 
-void k_nscore__itemsmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**)) {
+void k_nscore__itemsmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list /* of QModelIndex* */)) {
     KNSCore__ItemsModel_OnMimeData((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 
@@ -923,7 +923,7 @@ libqt_list /* of QModelIndex* */ k_nscore__itemsmodel_qbase_match(void* self, vo
     return _arr;
 }
 
-void k_nscore__itemsmodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t)) {
+void k_nscore__itemsmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
     KNSCore__ItemsModel_OnMatch((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 
@@ -1161,7 +1161,7 @@ void k_nscore__itemsmodel_qbase_encode_data(void* self, libqt_list /* of QModelI
     KNSCore__ItemsModel_QBaseEncodeData((KNSCore__ItemsModel*)self, indexes, (QDataStream*)stream);
 }
 
-void k_nscore__itemsmodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*)) {
+void k_nscore__itemsmodel_on_encode_data(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, void*)) {
     KNSCore__ItemsModel_OnEncodeData((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 
@@ -1365,7 +1365,7 @@ void k_nscore__itemsmodel_qbase_change_persistent_index_list(void* self, libqt_l
     KNSCore__ItemsModel_QBaseChangePersistentIndexList((KNSCore__ItemsModel*)self, from, to);
 }
 
-void k_nscore__itemsmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**)) {
+void k_nscore__itemsmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)) {
     KNSCore__ItemsModel_OnChangePersistentIndexList((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 
@@ -1379,7 +1379,7 @@ libqt_list /* of QModelIndex* */ k_nscore__itemsmodel_qbase_persistent_index_lis
     return _arr;
 }
 
-void k_nscore__itemsmodel_on_persistent_index_list(void* self, QModelIndex** (*callback)()) {
+void k_nscore__itemsmodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
     KNSCore__ItemsModel_OnPersistentIndexList((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 

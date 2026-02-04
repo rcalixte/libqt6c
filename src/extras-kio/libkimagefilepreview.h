@@ -2235,7 +2235,7 @@ void k_imagefilepreview_add_action(void* self, void* action);
 /// @param self KImageFilePreview*
 /// @param actions libqt_list of QAction*
 ///
-void k_imagefilepreview_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_imagefilepreview_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2245,7 +2245,7 @@ void k_imagefilepreview_add_actions(void* self, libqt_list /* of QAction* */ act
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_imagefilepreview_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_imagefilepreview_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -4798,7 +4798,7 @@ void k_imagefilepreview_qbase_set_supported_mime_types(void* self, const char* m
 /// @param self KImageFilePreview*
 /// @param callback void func(KImageFilePreview* self, const char** mimeTypes)
 ///
-void k_imagefilepreview_on_set_supported_mime_types(void* self, void (*callback)(void*, const char**));
+void k_imagefilepreview_on_set_supported_mime_types(void* self, void (*callback)(void*, const char***));
 
 /// Inherited from QWidget
 ///

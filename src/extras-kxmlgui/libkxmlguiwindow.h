@@ -1123,7 +1123,7 @@ int32_t k_xmlguiwindow_dock_widget_area(void* self, void* dockwidget);
 /// @param sizes libqt_list of int
 /// @param orientation enum Qt__Orientation
 ///
-void k_xmlguiwindow_resize_docks(void* self, libqt_list /* of QDockWidget* */ docks, libqt_list /* of int */ sizes, int32_t orientation);
+void k_xmlguiwindow_resize_docks(void* self, libqt_list docks, libqt_list sizes, int32_t orientation);
 
 /// Inherited from QMainWindow
 ///
@@ -3161,7 +3161,7 @@ void k_xmlguiwindow_add_action(void* self, void* action);
 /// @param self KXmlGuiWindow*
 /// @param actions libqt_list of QAction*
 ///
-void k_xmlguiwindow_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_xmlguiwindow_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3171,7 +3171,7 @@ void k_xmlguiwindow_add_actions(void* self, libqt_list /* of QAction* */ actions
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_xmlguiwindow_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_xmlguiwindow_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -4349,7 +4349,7 @@ void k_xmlguiwindow_reload_x_m_l(void* self);
 /// @param name const char*
 /// @param actionList libqt_list of QAction*
 ///
-void k_xmlguiwindow_plug_action_list(void* self, const char* name, libqt_list /* of QAction* */ actionList);
+void k_xmlguiwindow_plug_action_list(void* self, const char* name, libqt_list actionList);
 
 /// Inherited from KXMLGUIClient
 ///

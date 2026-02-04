@@ -39,7 +39,7 @@ void k_configwatcher_config_changed(void* self, void* group, const char* names[s
     free(names_qstr);
 }
 
-void k_configwatcher_on_config_changed(void* self, void (*callback)(void*, void*, const char**)) {
+void k_configwatcher_on_config_changed(void* self, void (*callback)(void*, void*, const char***)) {
     KConfigWatcher_Connect_ConfigChanged((KConfigWatcher*)self, (intptr_t)callback);
 }
 

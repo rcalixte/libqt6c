@@ -461,7 +461,7 @@ libqt_list /* of QTextBlock* */ q_textlist_qbase_block_list(void* self) {
     return _arr;
 }
 
-void q_textlist_on_block_list(void* self, QTextBlock** (*callback)()) {
+void q_textlist_on_block_list(void* self, libqt_list /* of QTextBlock* */ (*callback)()) {
     QTextList_OnBlockList((QTextList*)self, (intptr_t)callback);
 }
 

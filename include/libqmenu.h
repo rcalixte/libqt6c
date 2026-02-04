@@ -291,7 +291,7 @@ QAction* q_menu_exec2(void* self, void* pos);
 /// @param actions libqt_list of QAction*
 /// @param pos QPoint*
 ///
-QAction* q_menu_exec3(libqt_list /* of QAction* */ actions, void* pos);
+QAction* q_menu_exec3(libqt_list actions, void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#sizeHint)
 ///
@@ -898,7 +898,7 @@ QAction* q_menu_exec22(void* self, void* pos, void* at);
 /// @param pos QPoint*
 /// @param at QAction*
 ///
-QAction* q_menu_exec32(libqt_list /* of QAction* */ actions, void* pos, void* at);
+QAction* q_menu_exec32(libqt_list actions, void* pos, void* at);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#exec)
 ///
@@ -907,7 +907,7 @@ QAction* q_menu_exec32(libqt_list /* of QAction* */ actions, void* pos, void* at
 /// @param at QAction*
 /// @param parent QWidget*
 ///
-QAction* q_menu_exec4(libqt_list /* of QAction* */ actions, void* pos, void* at, void* parent);
+QAction* q_menu_exec4(libqt_list actions, void* pos, void* at, void* parent);
 
 /// Inherited from QWidget
 ///
@@ -2815,7 +2815,7 @@ void q_menu_add_action(void* self, void* action);
 /// @param self QMenu*
 /// @param actions libqt_list of QAction*
 ///
-void q_menu_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_menu_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2825,7 +2825,7 @@ void q_menu_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_menu_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_menu_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

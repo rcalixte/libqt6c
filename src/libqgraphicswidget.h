@@ -466,7 +466,7 @@ void q_graphicswidget_add_action(void* self, void* action);
 /// @param self QGraphicsWidget*
 /// @param actions libqt_list of QAction*
 ///
-void q_graphicswidget_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_graphicswidget_add_actions(void* self, libqt_list actions);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#insertActions)
 ///
@@ -474,7 +474,7 @@ void q_graphicswidget_add_actions(void* self, libqt_list /* of QAction* */ actio
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_graphicswidget_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_graphicswidget_insert_actions(void* self, void* before, libqt_list actions);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#insertAction)
 ///
@@ -2828,7 +2828,7 @@ libqt_list q_graphicswidget_transformations(void* self);
 /// @param self QGraphicsWidget*
 /// @param transformations libqt_list of QGraphicsTransform*
 ///
-void q_graphicswidget_set_transformations(void* self, libqt_list /* of QGraphicsTransform* */ transformations);
+void q_graphicswidget_set_transformations(void* self, libqt_list transformations);
 
 /// Inherited from QGraphicsItem
 ///

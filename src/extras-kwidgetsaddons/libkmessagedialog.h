@@ -2277,7 +2277,7 @@ void k_messagedialog_add_action(void* self, void* action);
 /// @param self KMessageDialog*
 /// @param actions libqt_list of QAction*
 ///
-void k_messagedialog_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_messagedialog_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2287,7 +2287,7 @@ void k_messagedialog_add_actions(void* self, libqt_list /* of QAction* */ action
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_messagedialog_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_messagedialog_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

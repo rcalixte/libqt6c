@@ -103,7 +103,7 @@ libqt_list q_mimedata_urls(void* self);
 /// @param self QMimeData*
 /// @param urls libqt_list of QUrl*
 ///
-void q_mimedata_set_urls(void* self, libqt_list /* of QUrl* */ urls);
+void q_mimedata_set_urls(void* self, libqt_list urls);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#hasUrls)
 ///

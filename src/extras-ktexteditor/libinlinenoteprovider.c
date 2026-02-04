@@ -61,7 +61,7 @@ libqt_list /* of int */ k_texteditor__inlinenoteprovider_inline_notes(void* self
     return _arr;
 }
 
-void k_texteditor__inlinenoteprovider_on_inline_notes(void* self, int* (*callback)(void*, int)) {
+void k_texteditor__inlinenoteprovider_on_inline_notes(void* self, libqt_list /* of int */ (*callback)(void*, int)) {
     KTextEditor__InlineNoteProvider_OnInlineNotes((KTextEditor__InlineNoteProvider*)self, (intptr_t)callback);
 }
 

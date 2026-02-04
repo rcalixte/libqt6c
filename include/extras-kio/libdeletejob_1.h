@@ -1155,5 +1155,5 @@ KIO__DeleteJob* k_io_del(void* param1, int32_t param2);
 /// @param param1 libqt_list of QUrl*
 /// @param param2 flag of enum KIO__JobFlag
 ///
-KIO__DeleteJob* k_io_del2(libqt_list /* of QUrl* */ param1, int32_t param2);
+KIO__DeleteJob* k_io_del2(libqt_list param1, int32_t param2);
 #endif

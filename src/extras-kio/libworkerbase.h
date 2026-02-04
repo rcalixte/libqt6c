@@ -128,7 +128,7 @@ void k_io__workerbase_stat_entry(void* self, void* _entry);
 /// @param self KIO__WorkerBase*
 /// @param _entry libqt_list of KIO__UDSEntry*
 ///
-void k_io__workerbase_list_entries(void* self, libqt_list /* of KIO__UDSEntry* */ _entry);
+void k_io__workerbase_list_entries(void* self, libqt_list _entry);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#canResume)
 ///

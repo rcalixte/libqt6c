@@ -2393,7 +2393,7 @@ libqt_list /* of QModelIndex* */ q_columnview_qbase_selected_indexes(void* self)
     return _arr;
 }
 
-void q_columnview_on_selected_indexes(void* self, QModelIndex** (*callback)()) {
+void q_columnview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
     QColumnView_OnSelectedIndexes((QColumnView*)self, (intptr_t)callback);
 }
 

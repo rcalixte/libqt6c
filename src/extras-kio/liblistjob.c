@@ -41,7 +41,7 @@ void k_io__listjob_entries(void* self, void* job, libqt_list /* of KIO__UDSEntry
     KIO__ListJob_Entries((KIO__ListJob*)self, (KIO__Job*)job, list);
 }
 
-void k_io__listjob_on_entries(void* self, void (*callback)(void*, void*, KIO__UDSEntry**)) {
+void k_io__listjob_on_entries(void* self, void (*callback)(void*, void*, libqt_list /* of KIO__UDSEntry* */)) {
     KIO__ListJob_Connect_Entries((KIO__ListJob*)self, (intptr_t)callback);
 }
 

@@ -246,7 +246,7 @@ void q_designerformeditorinterface_set_settings_manager(void* self, void* settin
 /// @param self QDesignerFormEditorInterface*
 /// @param optionsPages libqt_list of QDesignerOptionsPageInterface*
 ///
-void q_designerformeditorinterface_set_options_pages(void* self, libqt_list /* of QDesignerOptionsPageInterface* */ optionsPages);
+void q_designerformeditorinterface_set_options_pages(void* self, libqt_list optionsPages);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorinterface.html#pluginInstances)
 ///

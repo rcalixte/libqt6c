@@ -337,7 +337,7 @@ void q_packagekit__transaction_files(void* self, const char* packageID, const ch
     free(filenames_qstr);
 }
 
-void q_packagekit__transaction_on_files(void* self, void (*callback)(void*, const char*, const char**)) {
+void q_packagekit__transaction_on_files(void* self, void (*callback)(void*, const char*, const char***)) {
     PackageKit__Transaction_Connect_Files((PackageKit__Transaction*)self, (intptr_t)callback);
 }
 
@@ -428,7 +428,7 @@ void q_packagekit__transaction_update_detail(void* self, const char* packageID, 
     free(cveUrls_qstr);
 }
 
-void q_packagekit__transaction_on_update_detail(void* self, void (*callback)(void*, const char*, const char**, const char**, const char**, const char**, const char**, int32_t, const char*, const char*, int32_t, void*, void*)) {
+void q_packagekit__transaction_on_update_detail(void* self, void (*callback)(void*, const char*, const char***, const char***, const char***, const char***, const char***, int32_t, const char*, const char*, int32_t, void*, void*)) {
     PackageKit__Transaction_Connect_UpdateDetail((PackageKit__Transaction*)self, (intptr_t)callback);
 }
 

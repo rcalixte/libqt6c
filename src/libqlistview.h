@@ -466,14 +466,14 @@ void q_listview_qbase_set_root_index(void* self, void* index);
 /// @param self QListView*
 /// @param indexes libqt_list of QModelIndex*
 ///
-void q_listview_indexes_moved(void* self, libqt_list /* of QModelIndex* */ indexes);
+void q_listview_indexes_moved(void* self, libqt_list indexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#indexesMoved)
 ///
 /// @param self QListView*
-/// @param callback void func(QListView* self, QModelIndex** indexes)
+/// @param callback void func(QListView* self, libqt_list of QModelIndex* indexes)
 ///
-void q_listview_on_indexes_moved(void* self, void (*callback)(void*, QModelIndex**));
+void q_listview_on_indexes_moved(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#event)
 ///
@@ -584,16 +584,16 @@ QSize* q_listview_qbase_contents_size(void* self);
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_listview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void q_listview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#dataChanged)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QListView*
-/// @param callback void func(QListView* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
+/// @param callback void func(QListView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void q_listview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
+void q_listview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#dataChanged)
 ///
@@ -604,7 +604,7 @@ void q_listview_on_data_changed(void* self, void (*callback)(void*, void*, void*
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_listview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void q_listview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#rowsInserted)
 ///
@@ -1129,9 +1129,9 @@ libqt_list q_listview_selected_indexes(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QListView*
-/// @param callback QModelIndex** func()
+/// @param callback libqt_list of QModelIndex* func()
 ///
-void q_listview_on_selected_indexes(void* self, QModelIndex** (*callback)());
+void q_listview_on_selected_indexes(void* self, libqt_list (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#selectedIndexes)
 ///
@@ -4084,7 +4084,7 @@ void q_listview_add_action(void* self, void* action);
 /// @param self QListView*
 /// @param actions libqt_list of QAction*
 ///
-void q_listview_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_listview_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -4094,7 +4094,7 @@ void q_listview_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_listview_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_listview_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

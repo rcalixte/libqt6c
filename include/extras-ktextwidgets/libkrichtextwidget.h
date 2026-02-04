@@ -122,9 +122,9 @@ libqt_list k_richtextwidget_create_actions(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KRichTextWidget*
-/// @param callback QAction** func()
+/// @param callback libqt_list of QAction* func()
 ///
-void k_richtextwidget_on_create_actions(void* self, QAction** (*callback)());
+void k_richtextwidget_on_create_actions(void* self, libqt_list (*callback)());
 
 /// [Upstream resources](https://api.kde.org/krichtextwidget.html#createActions)
 ///
@@ -1291,7 +1291,7 @@ void k_richtextwidget_set_accept_rich_text(void* self, bool accept);
 /// @param self KRichTextWidget*
 /// @param selections libqt_list of QTextEdit__ExtraSelection*
 ///
-void k_richtextwidget_set_extra_selections(void* self, libqt_list /* of QTextEdit__ExtraSelection* */ selections);
+void k_richtextwidget_set_extra_selections(void* self, libqt_list selections);
 
 /// Inherited from QTextEdit
 ///
@@ -3893,7 +3893,7 @@ void k_richtextwidget_add_action(void* self, void* action);
 /// @param self KRichTextWidget*
 /// @param actions libqt_list of QAction*
 ///
-void k_richtextwidget_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_richtextwidget_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3903,7 +3903,7 @@ void k_richtextwidget_add_actions(void* self, libqt_list /* of QAction* */ actio
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_richtextwidget_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_richtextwidget_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

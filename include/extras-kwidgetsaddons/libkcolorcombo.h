@@ -122,7 +122,7 @@ bool k_colorcombo_is_custom_color(void* self);
 /// @param self KColorCombo*
 /// @param colors libqt_list of QColor*
 ///
-void k_colorcombo_set_colors(void* self, libqt_list /* of QColor* */ colors);
+void k_colorcombo_set_colors(void* self, libqt_list colors);
 
 /// [Upstream resources](https://api.kde.org/kcolorcombo.html#colors)
 ///
@@ -2855,7 +2855,7 @@ void k_colorcombo_add_action(void* self, void* action);
 /// @param self KColorCombo*
 /// @param actions libqt_list of QAction*
 ///
-void k_colorcombo_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_colorcombo_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2865,7 +2865,7 @@ void k_colorcombo_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_colorcombo_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_colorcombo_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

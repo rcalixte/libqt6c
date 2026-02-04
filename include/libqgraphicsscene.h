@@ -323,7 +323,7 @@ void q_graphicsscene_set_selection_area2(void* self, void* path);
 /// @param self QGraphicsScene*
 /// @param items libqt_list of QGraphicsItem*
 ///
-QGraphicsItemGroup* q_graphicsscene_create_item_group(void* self, libqt_list /* of QGraphicsItem* */ items);
+QGraphicsItemGroup* q_graphicsscene_create_item_group(void* self, libqt_list items);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#destroyItemGroup)
 ///
@@ -1232,14 +1232,14 @@ bool q_graphicsscene_qbase_focus_next_prev_child(void* self, bool next);
 /// @param self QGraphicsScene*
 /// @param region libqt_list of QRectF*
 ///
-void q_graphicsscene_changed(void* self, libqt_list /* of QRectF* */ region);
+void q_graphicsscene_changed(void* self, libqt_list region);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#changed)
 ///
 /// @param self QGraphicsScene*
-/// @param callback void func(QGraphicsScene* self, QRectF** region)
+/// @param callback void func(QGraphicsScene* self, libqt_list of QRectF* region)
 ///
-void q_graphicsscene_on_changed(void* self, void (*callback)(void*, QRectF**));
+void q_graphicsscene_on_changed(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#sceneRectChanged)
 ///

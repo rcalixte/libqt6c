@@ -432,7 +432,7 @@ void k_combobox_set_completed_items(void* self, const char* items[static 1], boo
 /// @param self KComboBox*
 /// @param callback void func(KComboBox* self, const char** items, bool autoSuggest)
 ///
-void k_combobox_on_set_completed_items(void* self, void (*callback)(void*, const char**, bool));
+void k_combobox_on_set_completed_items(void* self, void (*callback)(void*, const char***, bool));
 
 /// [Upstream resources](https://api.kde.org/kcombobox.html#setCompletedItems)
 ///
@@ -3209,7 +3209,7 @@ void k_combobox_add_action(void* self, void* action);
 /// @param self KComboBox*
 /// @param actions libqt_list of QAction*
 ///
-void k_combobox_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_combobox_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3219,7 +3219,7 @@ void k_combobox_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_combobox_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_combobox_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -4337,7 +4337,7 @@ int32_t k_combobox_completion_mode(void* self);
 /// @param item enum KCompletionBase__KeyBindingType
 /// @param key libqt_list of QKeySequence*
 ///
-bool k_combobox_set_key_binding(void* self, int32_t item, libqt_list /* of QKeySequence* */ key);
+bool k_combobox_set_key_binding(void* self, int32_t item, libqt_list key);
 
 /// Inherited from KCompletionBase
 ///
@@ -6563,7 +6563,7 @@ void k_combobox_qbase_set_key_binding_map(void* self, libqt_map keyBindingMap);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KComboBox*
-/// @param callback void func(KComboBox* self, libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence**)
+/// @param callback void func(KComboBox* self, libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence** keyBindingMap)
 ///
 void k_combobox_on_set_key_binding_map(void* self, void (*callback)(void*, libqt_map));
 

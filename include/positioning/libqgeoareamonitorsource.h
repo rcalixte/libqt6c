@@ -311,9 +311,9 @@ libqt_list q_geoareamonitorsource_active_monitors(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QGeoAreaMonitorSource*
-/// @param callback QGeoAreaMonitorInfo** func()
+/// @param callback libqt_list of QGeoAreaMonitorInfo* func()
 ///
-void q_geoareamonitorsource_on_active_monitors(void* self, QGeoAreaMonitorInfo** (*callback)());
+void q_geoareamonitorsource_on_active_monitors(void* self, libqt_list (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorsource.html#activeMonitors)
 ///
@@ -339,9 +339,9 @@ libqt_list q_geoareamonitorsource_active_monitors2(void* self, void* lookupArea)
 /// Allows for overriding the related default method
 ///
 /// @param self QGeoAreaMonitorSource*
-/// @param callback QGeoAreaMonitorInfo** func(QGeoAreaMonitorSource* self, QGeoShape* lookupArea)
+/// @param callback libqt_list of QGeoAreaMonitorInfo* func(QGeoAreaMonitorSource* self, QGeoShape* lookupArea)
 ///
-void q_geoareamonitorsource_on_active_monitors2(void* self, QGeoAreaMonitorInfo** (*callback)(void*, void*));
+void q_geoareamonitorsource_on_active_monitors2(void* self, libqt_list (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoareamonitorsource.html#activeMonitors)
 ///

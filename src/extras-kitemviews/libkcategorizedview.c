@@ -564,7 +564,7 @@ void k_categorizedview_indexes_moved(void* self, libqt_list /* of QModelIndex* *
     QListView_IndexesMoved((QListView*)self, indexes);
 }
 
-void k_categorizedview_on_indexes_moved(void* self, void (*callback)(void*, QModelIndex**)) {
+void k_categorizedview_on_indexes_moved(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */)) {
     QListView_Connect_IndexesMoved((QListView*)self, (intptr_t)callback);
 }
 
@@ -2492,7 +2492,7 @@ libqt_list /* of QModelIndex* */ k_categorizedview_qbase_selected_indexes(void* 
     return _arr;
 }
 
-void k_categorizedview_on_selected_indexes(void* self, QModelIndex** (*callback)()) {
+void k_categorizedview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
     KCategorizedView_OnSelectedIndexes((KCategorizedView*)self, (intptr_t)callback);
 }
 

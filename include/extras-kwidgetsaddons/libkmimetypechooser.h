@@ -2094,7 +2094,7 @@ void k_mimetypechooser_add_action(void* self, void* action);
 /// @param self KMimeTypeChooser*
 /// @param actions libqt_list of QAction*
 ///
-void k_mimetypechooser_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_mimetypechooser_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2104,7 +2104,7 @@ void k_mimetypechooser_add_actions(void* self, libqt_list /* of QAction* */ acti
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_mimetypechooser_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_mimetypechooser_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -7255,7 +7255,7 @@ void k_mimetypechooserdialog_add_action(void* self, void* action);
 /// @param self KMimeTypeChooserDialog*
 /// @param actions libqt_list of QAction*
 ///
-void k_mimetypechooserdialog_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_mimetypechooserdialog_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -7265,7 +7265,7 @@ void k_mimetypechooserdialog_add_actions(void* self, libqt_list /* of QAction* *
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_mimetypechooserdialog_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_mimetypechooserdialog_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

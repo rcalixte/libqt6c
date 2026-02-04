@@ -394,7 +394,7 @@ void k_extracolumnsproxymodel_layout_changed1(void* self, libqt_list /* of QPers
     QAbstractItemModel_LayoutChanged1((QAbstractItemModel*)self, parents);
 }
 
-void k_extracolumnsproxymodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
+void k_extracolumnsproxymodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */)) {
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -402,7 +402,7 @@ void k_extracolumnsproxymodel_layout_changed2(void* self, libqt_list /* of QPers
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void k_extracolumnsproxymodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
+void k_extracolumnsproxymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */, int32_t)) {
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -410,7 +410,7 @@ void k_extracolumnsproxymodel_layout_about_to_be_changed1(void* self, libqt_list
     QAbstractItemModel_LayoutAboutToBeChanged1((QAbstractItemModel*)self, parents);
 }
 
-void k_extracolumnsproxymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
+void k_extracolumnsproxymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -418,7 +418,7 @@ void k_extracolumnsproxymodel_layout_about_to_be_changed2(void* self, libqt_list
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void k_extracolumnsproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
+void k_extracolumnsproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list /* of QPersistentModelIndex* */, int32_t)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -687,7 +687,7 @@ libqt_list /* of QModelIndex* */ k_extracolumnsproxymodel_qbase_match(void* self
     return _arr;
 }
 
-void k_extracolumnsproxymodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t)) {
+void k_extracolumnsproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
     KExtraColumnsProxyModel_OnMatch((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -953,7 +953,7 @@ QMimeData* k_extracolumnsproxymodel_qbase_mime_data(void* self, libqt_list /* of
     return KExtraColumnsProxyModel_QBaseMimeData((KExtraColumnsProxyModel*)self, indexes);
 }
 
-void k_extracolumnsproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**)) {
+void k_extracolumnsproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list /* of QModelIndex* */)) {
     KExtraColumnsProxyModel_OnMimeData((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -1269,7 +1269,7 @@ void k_extracolumnsproxymodel_qbase_encode_data(void* self, libqt_list /* of QMo
     KExtraColumnsProxyModel_QBaseEncodeData((KExtraColumnsProxyModel*)self, indexes, (QDataStream*)stream);
 }
 
-void k_extracolumnsproxymodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*)) {
+void k_extracolumnsproxymodel_on_encode_data(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, void*)) {
     KExtraColumnsProxyModel_OnEncodeData((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -1473,7 +1473,7 @@ void k_extracolumnsproxymodel_qbase_change_persistent_index_list(void* self, lib
     KExtraColumnsProxyModel_QBaseChangePersistentIndexList((KExtraColumnsProxyModel*)self, from, to);
 }
 
-void k_extracolumnsproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**)) {
+void k_extracolumnsproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)) {
     KExtraColumnsProxyModel_OnChangePersistentIndexList((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -1487,7 +1487,7 @@ libqt_list /* of QModelIndex* */ k_extracolumnsproxymodel_qbase_persistent_index
     return _arr;
 }
 
-void k_extracolumnsproxymodel_on_persistent_index_list(void* self, QModelIndex** (*callback)()) {
+void k_extracolumnsproxymodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
     KExtraColumnsProxyModel_OnPersistentIndexList((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 

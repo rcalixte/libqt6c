@@ -72,7 +72,7 @@ libqt_list /* of KBookmarkOwner__FutureBookmark* */ k_bookmarkowner_current_book
     return _arr;
 }
 
-void k_bookmarkowner_on_current_bookmark_list(void* self, KBookmarkOwner__FutureBookmark** (*callback)()) {
+void k_bookmarkowner_on_current_bookmark_list(void* self, libqt_list /* of KBookmarkOwner__FutureBookmark* */ (*callback)()) {
     KBookmarkOwner_OnCurrentBookmarkList((KBookmarkOwner*)self, (intptr_t)callback);
 }
 

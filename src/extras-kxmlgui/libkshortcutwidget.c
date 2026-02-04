@@ -91,7 +91,7 @@ void k_shortcutwidget_shortcut_changed(void* self, libqt_list /* of QKeySequence
     KShortcutWidget_ShortcutChanged((KShortcutWidget*)self, cut);
 }
 
-void k_shortcutwidget_on_shortcut_changed(void* self, void (*callback)(void*, QKeySequence**)) {
+void k_shortcutwidget_on_shortcut_changed(void* self, void (*callback)(void*, libqt_list /* of QKeySequence* */)) {
     KShortcutWidget_Connect_ShortcutChanged((KShortcutWidget*)self, (intptr_t)callback);
 }
 

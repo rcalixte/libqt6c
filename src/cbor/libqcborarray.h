@@ -337,7 +337,7 @@ QCborArray* q_cborarray_from_string_list(const char* list[static 1]);
 ///
 /// @param list libqt_list of QVariant*
 ///
-QCborArray* q_cborarray_from_variant_list(libqt_list /* of QVariant* */ list);
+QCborArray* q_cborarray_from_variant_list(libqt_list list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray.html#fromJsonArray)
 ///

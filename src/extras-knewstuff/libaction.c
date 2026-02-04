@@ -58,7 +58,7 @@ void k_nswidgets__action_dialog_finished(void* self, libqt_list /* of KNSCore__E
     KNSWidgets__Action_DialogFinished((KNSWidgets__Action*)self, changedEntries);
 }
 
-void k_nswidgets__action_on_dialog_finished(void* self, void (*callback)(void*, KNSCore__Entry**)) {
+void k_nswidgets__action_on_dialog_finished(void* self, void (*callback)(void*, libqt_list /* of KNSCore__Entry* */)) {
     KNSWidgets__Action_Connect_DialogFinished((KNSWidgets__Action*)self, (intptr_t)callback);
 }
 

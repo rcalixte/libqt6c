@@ -60,7 +60,7 @@ libqt_list /* of QAction* */ k_io__dndpopupmenuplugin_setup(void* self, void* po
     return _arr;
 }
 
-void k_io__dndpopupmenuplugin_on_setup(void* self, QAction** (*callback)(void*, void*, void*)) {
+void k_io__dndpopupmenuplugin_on_setup(void* self, libqt_list /* of QAction* */ (*callback)(void*, void*, void*)) {
     KIO__DndPopupMenuPlugin_OnSetup((KIO__DndPopupMenuPlugin*)self, (intptr_t)callback);
 }
 

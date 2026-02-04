@@ -92,7 +92,7 @@ void k_io__askuseractioninterface_ask_user_delete_result(void* self, bool allowD
     KIO__AskUserActionInterface_AskUserDeleteResult((KIO__AskUserActionInterface*)self, allowDelete, urls, deletionType, (QWidget*)parent);
 }
 
-void k_io__askuseractioninterface_on_ask_user_delete_result(void* self, void (*callback)(void*, bool, QUrl**, int32_t, void*)) {
+void k_io__askuseractioninterface_on_ask_user_delete_result(void* self, void (*callback)(void*, bool, libqt_list /* of QUrl* */, int32_t, void*)) {
     KIO__AskUserActionInterface_Connect_AskUserDeleteResult((KIO__AskUserActionInterface*)self, (intptr_t)callback);
 }
 

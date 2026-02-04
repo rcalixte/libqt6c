@@ -638,7 +638,7 @@ libqt_list /* of KJob* */ k_io__faviconrequestjob_qbase_subjobs(void* self) {
     return _arr;
 }
 
-void k_io__faviconrequestjob_on_subjobs(void* self, KJob** (*callback)()) {
+void k_io__faviconrequestjob_on_subjobs(void* self, libqt_list /* of KJob* */ (*callback)()) {
     KIO__FavIconRequestJob_OnSubjobs((KIO__FavIconRequestJob*)self, (intptr_t)callback);
 }
 

@@ -329,16 +329,16 @@ void q_nmeasatelliteinfosource_qbase_request_update(void* self, int timeout);
 ///
 /// @return enum QGeoSatelliteInfo__SatelliteSystem
 ///
-int32_t q_nmeasatelliteinfosource_parse_satellites_in_use_from_nmea(void* self, const char* data, int size, libqt_list /* of int */ pnrsInUse);
+int32_t q_nmeasatelliteinfosource_parse_satellites_in_use_from_nmea(void* self, const char* data, int size, libqt_list pnrsInUse);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#parseSatellitesInUseFromNmea)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QNmeaSatelliteInfoSource*
-/// @param callback int32_t func(QNmeaSatelliteInfoSource* self, const char* data, int size, int* )
+/// @param callback int32_t func(QNmeaSatelliteInfoSource* self, const char* data, int size, libqt_list of int pnrsInUse)
 ///
-void q_nmeasatelliteinfosource_on_parse_satellites_in_use_from_nmea(void* self, int32_t (*callback)(void*, const char*, int, libqt_list /* of int */));
+void q_nmeasatelliteinfosource_on_parse_satellites_in_use_from_nmea(void* self, int32_t (*callback)(void*, const char*, int, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#parseSatellitesInUseFromNmea)
 ///
@@ -351,7 +351,7 @@ void q_nmeasatelliteinfosource_on_parse_satellites_in_use_from_nmea(void* self, 
 ///
 /// @return enum QGeoSatelliteInfo__SatelliteSystem
 ///
-int32_t q_nmeasatelliteinfosource_qbase_parse_satellites_in_use_from_nmea(void* self, const char* data, int size, libqt_list /* of int */ pnrsInUse);
+int32_t q_nmeasatelliteinfosource_qbase_parse_satellites_in_use_from_nmea(void* self, const char* data, int size, libqt_list pnrsInUse);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#parseSatellitesInUseFromNmea)
 ///
@@ -361,16 +361,16 @@ int32_t q_nmeasatelliteinfosource_qbase_parse_satellites_in_use_from_nmea(void* 
 ///
 /// @return enum QGeoSatelliteInfo__SatelliteSystem
 ///
-int32_t q_nmeasatelliteinfosource_parse_satellites_in_use_from_nmea2(void* self, const char* data, libqt_list /* of int */ pnrsInUse);
+int32_t q_nmeasatelliteinfosource_parse_satellites_in_use_from_nmea2(void* self, const char* data, libqt_list pnrsInUse);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#parseSatellitesInUseFromNmea)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QNmeaSatelliteInfoSource*
-/// @param callback int32_t func(QNmeaSatelliteInfoSource* self, const char* data, int* )
+/// @param callback int32_t func(QNmeaSatelliteInfoSource* self, const char* data, libqt_list of int pnrsInUse)
 ///
-void q_nmeasatelliteinfosource_on_parse_satellites_in_use_from_nmea2(void* self, int32_t (*callback)(void*, const char*, libqt_list /* of int */));
+void q_nmeasatelliteinfosource_on_parse_satellites_in_use_from_nmea2(void* self, int32_t (*callback)(void*, const char*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#parseSatellitesInUseFromNmea)
 ///
@@ -382,7 +382,7 @@ void q_nmeasatelliteinfosource_on_parse_satellites_in_use_from_nmea2(void* self,
 ///
 /// @return enum QGeoSatelliteInfo__SatelliteSystem
 ///
-int32_t q_nmeasatelliteinfosource_qbase_parse_satellites_in_use_from_nmea2(void* self, const char* data, libqt_list /* of int */ pnrsInUse);
+int32_t q_nmeasatelliteinfosource_qbase_parse_satellites_in_use_from_nmea2(void* self, const char* data, libqt_list pnrsInUse);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#parseSatelliteInfoFromNmea)
 ///
@@ -394,16 +394,16 @@ int32_t q_nmeasatelliteinfosource_qbase_parse_satellites_in_use_from_nmea2(void*
 ///
 /// @return enum QNmeaSatelliteInfoSource__SatelliteInfoParseStatus
 ///
-int32_t q_nmeasatelliteinfosource_parse_satellite_info_from_nmea(void* self, const char* data, int size, libqt_list /* of QGeoSatelliteInfo* */ infos, int32_t* system);
+int32_t q_nmeasatelliteinfosource_parse_satellite_info_from_nmea(void* self, const char* data, int size, libqt_list infos, int32_t* system);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#parseSatelliteInfoFromNmea)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QNmeaSatelliteInfoSource*
-/// @param callback int32_t func(QNmeaSatelliteInfoSource* self, const char* data, int size, QGeoSatelliteInfo** infos, enum QGeoSatelliteInfo__SatelliteSystem* system)
+/// @param callback int32_t func(QNmeaSatelliteInfoSource* self, const char* data, int size, libqt_list of QGeoSatelliteInfo* infos, enum QGeoSatelliteInfo__SatelliteSystem* system)
 ///
-void q_nmeasatelliteinfosource_on_parse_satellite_info_from_nmea(void* self, int32_t (*callback)(void*, const char*, int, QGeoSatelliteInfo**, int32_t*));
+void q_nmeasatelliteinfosource_on_parse_satellite_info_from_nmea(void* self, int32_t (*callback)(void*, const char*, int, libqt_list, int32_t*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#parseSatelliteInfoFromNmea)
 ///
@@ -417,7 +417,7 @@ void q_nmeasatelliteinfosource_on_parse_satellite_info_from_nmea(void* self, int
 ///
 /// @return enum QNmeaSatelliteInfoSource__SatelliteInfoParseStatus
 ///
-int32_t q_nmeasatelliteinfosource_qbase_parse_satellite_info_from_nmea(void* self, const char* data, int size, libqt_list /* of QGeoSatelliteInfo* */ infos, int32_t* system);
+int32_t q_nmeasatelliteinfosource_qbase_parse_satellite_info_from_nmea(void* self, const char* data, int size, libqt_list infos, int32_t* system);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#parseSatelliteInfoFromNmea)
 ///
@@ -428,16 +428,16 @@ int32_t q_nmeasatelliteinfosource_qbase_parse_satellite_info_from_nmea(void* sel
 ///
 /// @return enum QNmeaSatelliteInfoSource__SatelliteInfoParseStatus
 ///
-int32_t q_nmeasatelliteinfosource_parse_satellite_info_from_nmea2(void* self, const char* data, libqt_list /* of QGeoSatelliteInfo* */ infos, int32_t* system);
+int32_t q_nmeasatelliteinfosource_parse_satellite_info_from_nmea2(void* self, const char* data, libqt_list infos, int32_t* system);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#parseSatelliteInfoFromNmea)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QNmeaSatelliteInfoSource*
-/// @param callback int32_t func(QNmeaSatelliteInfoSource* self, const char* data, QGeoSatelliteInfo** infos, enum QGeoSatelliteInfo__SatelliteSystem* system)
+/// @param callback int32_t func(QNmeaSatelliteInfoSource* self, const char* data, libqt_list of QGeoSatelliteInfo* infos, enum QGeoSatelliteInfo__SatelliteSystem* system)
 ///
-void q_nmeasatelliteinfosource_on_parse_satellite_info_from_nmea2(void* self, int32_t (*callback)(void*, const char*, QGeoSatelliteInfo**, int32_t*));
+void q_nmeasatelliteinfosource_on_parse_satellite_info_from_nmea2(void* self, int32_t (*callback)(void*, const char*, libqt_list, int32_t*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#parseSatelliteInfoFromNmea)
 ///
@@ -450,7 +450,7 @@ void q_nmeasatelliteinfosource_on_parse_satellite_info_from_nmea2(void* self, in
 ///
 /// @return enum QNmeaSatelliteInfoSource__SatelliteInfoParseStatus
 ///
-int32_t q_nmeasatelliteinfosource_qbase_parse_satellite_info_from_nmea2(void* self, const char* data, libqt_list /* of QGeoSatelliteInfo* */ infos, int32_t* system);
+int32_t q_nmeasatelliteinfosource_qbase_parse_satellite_info_from_nmea2(void* self, const char* data, libqt_list infos, int32_t* system);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeasatelliteinfosource.html#setError)
 ///
@@ -565,16 +565,16 @@ int32_t q_nmeasatelliteinfosource_update_interval(void* self);
 /// @param self QNmeaSatelliteInfoSource*
 /// @param satellites libqt_list of QGeoSatelliteInfo*
 ///
-void q_nmeasatelliteinfosource_satellites_in_view_updated(void* self, libqt_list /* of QGeoSatelliteInfo* */ satellites);
+void q_nmeasatelliteinfosource_satellites_in_view_updated(void* self, libqt_list satellites);
 
 /// Inherited from QGeoSatelliteInfoSource
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfosource.html#satellitesInViewUpdated)
 ///
 /// @param self QNmeaSatelliteInfoSource*
-/// @param callback void func(QNmeaSatelliteInfoSource* self, QGeoSatelliteInfo** satellites)
+/// @param callback void func(QNmeaSatelliteInfoSource* self, libqt_list of QGeoSatelliteInfo* satellites)
 ///
-void q_nmeasatelliteinfosource_on_satellites_in_view_updated(void* self, void (*callback)(void*, QGeoSatelliteInfo**));
+void q_nmeasatelliteinfosource_on_satellites_in_view_updated(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QGeoSatelliteInfoSource
 ///
@@ -583,16 +583,16 @@ void q_nmeasatelliteinfosource_on_satellites_in_view_updated(void* self, void (*
 /// @param self QNmeaSatelliteInfoSource*
 /// @param satellites libqt_list of QGeoSatelliteInfo*
 ///
-void q_nmeasatelliteinfosource_satellites_in_use_updated(void* self, libqt_list /* of QGeoSatelliteInfo* */ satellites);
+void q_nmeasatelliteinfosource_satellites_in_use_updated(void* self, libqt_list satellites);
 
 /// Inherited from QGeoSatelliteInfoSource
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeosatelliteinfosource.html#satellitesInUseUpdated)
 ///
 /// @param self QNmeaSatelliteInfoSource*
-/// @param callback void func(QNmeaSatelliteInfoSource* self, QGeoSatelliteInfo** satellites)
+/// @param callback void func(QNmeaSatelliteInfoSource* self, libqt_list of QGeoSatelliteInfo* satellites)
 ///
-void q_nmeasatelliteinfosource_on_satellites_in_use_updated(void* self, void (*callback)(void*, QGeoSatelliteInfo**));
+void q_nmeasatelliteinfosource_on_satellites_in_use_updated(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QGeoSatelliteInfoSource
 ///

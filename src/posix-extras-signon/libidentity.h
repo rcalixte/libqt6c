@@ -149,7 +149,7 @@ void q_signon__identity_methods_available(void* self, const char* methods[static
 /// @param self SignOn__Identity*
 /// @param callback void func(SignOn__Identity* self, const char** methods)
 ///
-void q_signon__identity_on_methods_available(void* self, void (*callback)(void*, const char**));
+void q_signon__identity_on_methods_available(void* self, void (*callback)(void*, const char***));
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Identity.html)
 ///

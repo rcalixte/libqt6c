@@ -411,7 +411,7 @@ const char** q_url_idn_whitelist();
 ///
 /// @param uris libqt_list of QUrl*
 ///
-const char** q_url_to_string_list(libqt_list /* of QUrl* */ uris);
+const char** q_url_to_string_list(libqt_list uris);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#fromStringList)
 ///

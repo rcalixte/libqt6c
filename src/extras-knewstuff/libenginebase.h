@@ -353,28 +353,28 @@ void k_nscore__enginebase_signal_error_code(void* self, int32_t errorCode, const
 /// @param self KNSCore__EngineBase*
 /// @param categories libqt_list of KNSCore__Provider__CategoryMetadata*
 ///
-void k_nscore__enginebase_signal_categories_metadata_loded(void* self, libqt_list /* of KNSCore__Provider__CategoryMetadata* */ categories);
+void k_nscore__enginebase_signal_categories_metadata_loded(void* self, libqt_list categories);
 
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#signalCategoriesMetadataLoaded)
 ///
 /// @param self KNSCore__EngineBase*
 /// @param categories libqt_list of KNSCore__CategoryMetadata*
 ///
-void k_nscore__enginebase_signal_categories_metadata_loaded(void* self, libqt_list /* of KNSCore__CategoryMetadata* */ categories);
+void k_nscore__enginebase_signal_categories_metadata_loaded(void* self, libqt_list categories);
 
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#signalSearchPresetsLoaded)
 ///
 /// @param self KNSCore__EngineBase*
 /// @param presets libqt_list of KNSCore__Provider__SearchPreset*
 ///
-void k_nscore__enginebase_signal_search_presets_loaded(void* self, libqt_list /* of KNSCore__Provider__SearchPreset* */ presets);
+void k_nscore__enginebase_signal_search_presets_loaded(void* self, libqt_list presets);
 
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#signalSearchPresetsLoaded)
 ///
 /// @param self KNSCore__EngineBase*
 /// @param presets libqt_list of KNSCore__SearchPreset*
 ///
-void k_nscore__enginebase_signal_search_presets_loaded2(void* self, libqt_list /* of KNSCore__SearchPreset* */ presets);
+void k_nscore__enginebase_signal_search_presets_loaded2(void* self, libqt_list presets);
 
 /// [Upstream resources](https://api.kde.org/knscore-enginebase.html#providersChanged)
 ///

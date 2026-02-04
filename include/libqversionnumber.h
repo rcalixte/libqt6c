@@ -23,7 +23,7 @@ QVersionNumber* q_versionnumber_new();
 ///
 /// @param args libqt_list of int
 ///
-QVersionNumber* q_versionnumber_new2(libqt_list /* of int */ args);
+QVersionNumber* q_versionnumber_new2(libqt_list args);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html)
 

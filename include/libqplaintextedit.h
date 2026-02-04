@@ -455,7 +455,7 @@ void q_plaintextedit_set_cursor_width(void* self, int width);
 /// @param self QPlainTextEdit*
 /// @param selections libqt_list of QTextEdit__ExtraSelection*
 ///
-void q_plaintextedit_set_extra_selections(void* self, libqt_list /* of QTextEdit__ExtraSelection* */ selections);
+void q_plaintextedit_set_extra_selections(void* self, libqt_list selections);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#extraSelections)
 ///
@@ -3786,7 +3786,7 @@ void q_plaintextedit_add_action(void* self, void* action);
 /// @param self QPlainTextEdit*
 /// @param actions libqt_list of QAction*
 ///
-void q_plaintextedit_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_plaintextedit_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3796,7 +3796,7 @@ void q_plaintextedit_add_actions(void* self, libqt_list /* of QAction* */ action
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_plaintextedit_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_plaintextedit_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

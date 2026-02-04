@@ -156,7 +156,7 @@ void k_filewidget_set_selected_url(void* self, void* url);
 /// @param self KFileWidget*
 /// @param urls libqt_list of QUrl*
 ///
-void k_filewidget_set_selected_urls(void* self, libqt_list /* of QUrl* */ urls);
+void k_filewidget_set_selected_urls(void* self, libqt_list urls);
 
 /// [Upstream resources](https://api.kde.org/kfilewidget.html#setOperationMode)
 ///
@@ -191,7 +191,7 @@ bool k_filewidget_keeps_location(void* self);
 /// @param self KFileWidget*
 /// @param filters libqt_list of KFileFilter*
 ///
-void k_filewidget_set_filters(void* self, libqt_list /* of KFileFilter* */ filters);
+void k_filewidget_set_filters(void* self, libqt_list filters);
 
 /// [Upstream resources](https://api.kde.org/kfilewidget.html#currentFilter)
 ///
@@ -568,7 +568,7 @@ void k_filewidget_set_url2(void* self, void* url, bool clearforward);
 /// @param filters libqt_list of KFileFilter*
 /// @param activeFilter KFileFilter*
 ///
-void k_filewidget_set_filters2(void* self, libqt_list /* of KFileFilter* */ filters, void* activeFilter);
+void k_filewidget_set_filters2(void* self, libqt_list filters, void* activeFilter);
 
 /// Inherited from QWidget
 ///
@@ -2476,7 +2476,7 @@ void k_filewidget_add_action(void* self, void* action);
 /// @param self KFileWidget*
 /// @param actions libqt_list of QAction*
 ///
-void k_filewidget_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_filewidget_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2486,7 +2486,7 @@ void k_filewidget_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_filewidget_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_filewidget_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

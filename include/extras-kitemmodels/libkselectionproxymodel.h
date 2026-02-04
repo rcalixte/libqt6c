@@ -375,16 +375,16 @@ QVariant* k_selectionproxymodel_qbase_header_data(void* self, int section, int32
 /// @param self KSelectionProxyModel*
 /// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* k_selectionproxymodel_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes);
+QMimeData* k_selectionproxymodel_mime_data(void* self, libqt_list indexes);
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#mimeData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KSelectionProxyModel*
-/// @param callback QMimeData* func(KSelectionProxyModel* self, QModelIndex** indexes)
+/// @param callback QMimeData* func(KSelectionProxyModel* self, libqt_list of QModelIndex* indexes)
 ///
-void k_selectionproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**));
+void k_selectionproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#mimeData)
 ///
@@ -393,7 +393,7 @@ void k_selectionproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*
 /// @param self KSelectionProxyModel*
 /// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* k_selectionproxymodel_qbase_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes);
+QMimeData* k_selectionproxymodel_qbase_mime_data(void* self, libqt_list indexes);
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#mimeTypes)
 ///
@@ -602,9 +602,9 @@ libqt_list k_selectionproxymodel_match(void* self, void* start, int role, void* 
 /// Allows for overriding the related default method
 ///
 /// @param self KSelectionProxyModel*
-/// @param callback QModelIndex** func(KSelectionProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
+/// @param callback libqt_list of QModelIndex* func(KSelectionProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 ///
-void k_selectionproxymodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t));
+void k_selectionproxymodel_on_match(void* self, libqt_list (*callback)(void*, void*, int, void*, int, int32_t));
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#match)
 ///
@@ -634,9 +634,9 @@ libqt_list k_selectionproxymodel_source_root_indexes(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KSelectionProxyModel*
-/// @param callback QPersistentModelIndex** func()
+/// @param callback libqt_list of QPersistentModelIndex* func()
 ///
-void k_selectionproxymodel_on_source_root_indexes(void* self, QPersistentModelIndex** (*callback)());
+void k_selectionproxymodel_on_source_root_indexes(void* self, libqt_list (*callback)());
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#sourceRootIndexes)
 ///
@@ -897,16 +897,16 @@ bool k_selectionproxymodel_check_index2(void* self, void* index, int32_t options
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void k_selectionproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void k_selectionproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KSelectionProxyModel*
-/// @param callback void func(KSelectionProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
+/// @param callback void func(KSelectionProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void k_selectionproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
+void k_selectionproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -915,16 +915,16 @@ void k_selectionproxymodel_on_data_changed3(void* self, void (*callback)(void*, 
 /// @param self KSelectionProxyModel*
 /// @param parents libqt_list of QPersistentModelIndex*
 ///
-void k_selectionproxymodel_layout_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents);
+void k_selectionproxymodel_layout_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KSelectionProxyModel*
-/// @param callback void func(KSelectionProxyModel* self, QPersistentModelIndex** parents)
+/// @param callback void func(KSelectionProxyModel* self, libqt_list of QPersistentModelIndex* parents)
 ///
-void k_selectionproxymodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
+void k_selectionproxymodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -934,16 +934,16 @@ void k_selectionproxymodel_on_layout_changed1(void* self, void (*callback)(void*
 /// @param parents libqt_list of QPersistentModelIndex*
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
 ///
-void k_selectionproxymodel_layout_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint);
+void k_selectionproxymodel_layout_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KSelectionProxyModel*
-/// @param callback void func(KSelectionProxyModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+/// @param callback void func(KSelectionProxyModel* self, libqt_list of QPersistentModelIndex* parents, enum QAbstractItemModel__LayoutChangeHint hint)
 ///
-void k_selectionproxymodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
+void k_selectionproxymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -952,16 +952,16 @@ void k_selectionproxymodel_on_layout_changed2(void* self, void (*callback)(void*
 /// @param self KSelectionProxyModel*
 /// @param parents libqt_list of QPersistentModelIndex*
 ///
-void k_selectionproxymodel_layout_about_to_be_changed1(void* self, libqt_list /* of QPersistentModelIndex* */ parents);
+void k_selectionproxymodel_layout_about_to_be_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KSelectionProxyModel*
-/// @param callback void func(KSelectionProxyModel* self, QPersistentModelIndex** parents)
+/// @param callback void func(KSelectionProxyModel* self, libqt_list of QPersistentModelIndex* parents)
 ///
-void k_selectionproxymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
+void k_selectionproxymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -971,16 +971,16 @@ void k_selectionproxymodel_on_layout_about_to_be_changed1(void* self, void (*cal
 /// @param parents libqt_list of QPersistentModelIndex*
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
 ///
-void k_selectionproxymodel_layout_about_to_be_changed2(void* self, libqt_list /* of QPersistentModelIndex* */ parents, int32_t hint);
+void k_selectionproxymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KSelectionProxyModel*
-/// @param callback void func(KSelectionProxyModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+/// @param callback void func(KSelectionProxyModel* self, libqt_list of QPersistentModelIndex* parents, enum QAbstractItemModel__LayoutChangeHint hint)
 ///
-void k_selectionproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
+void k_selectionproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QObject
 ///
@@ -1610,7 +1610,7 @@ bool k_selectionproxymodel_qbase_set_item_data(void* self, void* index, libqt_ma
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelectionProxyModel*
-/// @param callback bool func(KSelectionProxyModel* self, QModelIndex* index, libqt_map of int to QVariant*)
+/// @param callback bool func(KSelectionProxyModel* self, QModelIndex* index, libqt_map of int to QVariant* roles)
 ///
 void k_selectionproxymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map));
 
@@ -2634,7 +2634,7 @@ void k_selectionproxymodel_on_create_index(void* self, QModelIndex* (*callback)(
 /// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void k_selectionproxymodel_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream);
+void k_selectionproxymodel_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2646,7 +2646,7 @@ void k_selectionproxymodel_encode_data(void* self, libqt_list /* of QModelIndex*
 /// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void k_selectionproxymodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream);
+void k_selectionproxymodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2655,9 +2655,9 @@ void k_selectionproxymodel_qbase_encode_data(void* self, libqt_list /* of QModel
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelectionProxyModel*
-/// @param callback void func(KSelectionProxyModel* self, QModelIndex** indexes, QDataStream* stream)
+/// @param callback void func(KSelectionProxyModel* self, libqt_list of QModelIndex* indexes, QDataStream* stream)
 ///
-void k_selectionproxymodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*));
+void k_selectionproxymodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3221,7 +3221,7 @@ void k_selectionproxymodel_on_change_persistent_index(void* self, void (*callbac
 /// @param from libqt_list of QModelIndex*
 /// @param to libqt_list of QModelIndex*
 ///
-void k_selectionproxymodel_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
+void k_selectionproxymodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3233,7 +3233,7 @@ void k_selectionproxymodel_change_persistent_index_list(void* self, libqt_list /
 /// @param from libqt_list of QModelIndex*
 /// @param to libqt_list of QModelIndex*
 ///
-void k_selectionproxymodel_qbase_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
+void k_selectionproxymodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3242,9 +3242,9 @@ void k_selectionproxymodel_qbase_change_persistent_index_list(void* self, libqt_
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelectionProxyModel*
-/// @param callback void func(KSelectionProxyModel* self, QModelIndex** from, QModelIndex** to)
+/// @param callback void func(KSelectionProxyModel* self, libqt_list of QModelIndex* from, libqt_list of QModelIndex* to)
 ///
-void k_selectionproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**));
+void k_selectionproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3277,9 +3277,9 @@ libqt_list k_selectionproxymodel_qbase_persistent_index_list(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelectionProxyModel*
-/// @param callback QModelIndex** func()
+/// @param callback libqt_list of QModelIndex* func()
 ///
-void k_selectionproxymodel_on_persistent_index_list(void* self, QModelIndex** (*callback)());
+void k_selectionproxymodel_on_persistent_index_list(void* self, libqt_list (*callback)());
 
 /// Inherited from QObject
 ///

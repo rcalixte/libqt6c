@@ -264,7 +264,7 @@ libqt_list k_attica__content_icons2(void* self);
 /// @param self Attica__Content*
 /// @param icons libqt_list of Attica__Icon*
 ///
-void k_attica__content_set_icons(void* self, libqt_list /* of Attica__Icon* */ icons);
+void k_attica__content_set_icons(void* self, libqt_list icons);
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#videos)
 ///
@@ -279,7 +279,7 @@ libqt_list k_attica__content_videos(void* self);
 /// @param self Attica__Content*
 /// @param videos libqt_list of QUrl*
 ///
-void k_attica__content_set_videos(void* self, libqt_list /* of QUrl* */ videos);
+void k_attica__content_set_videos(void* self, libqt_list videos);
 
 /// [Upstream resources](https://api.kde.org/attica-content.html#tags)
 ///

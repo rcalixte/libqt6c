@@ -298,7 +298,7 @@ libqt_list /* of QNetworkProxy* */ q_networkproxyfactory_query_proxy(void* self,
     return _arr;
 }
 
-void q_networkproxyfactory_on_query_proxy(void* self, QNetworkProxy** (*callback)(void*, void*)) {
+void q_networkproxyfactory_on_query_proxy(void* self, libqt_list /* of QNetworkProxy* */ (*callback)(void*, void*)) {
     QNetworkProxyFactory_OnQueryProxy((QNetworkProxyFactory*)self, (intptr_t)callback);
 }
 

@@ -1075,16 +1075,16 @@ const char** q_listwidget_qbase_mime_types(void* self);
 /// @param self QListWidget*
 /// @param items libqt_list of QListWidgetItem*
 ///
-QMimeData* q_listwidget_mime_data(void* self, libqt_list /* of QListWidgetItem* */ items);
+QMimeData* q_listwidget_mime_data(void* self, libqt_list items);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#mimeData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QListWidget*
-/// @param callback QMimeData* func(QListWidget* self, QListWidgetItem** items)
+/// @param callback QMimeData* func(QListWidget* self, libqt_list of QListWidgetItem* items)
 ///
-void q_listwidget_on_mime_data(void* self, QMimeData* (*callback)(void*, QListWidgetItem**));
+void q_listwidget_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#mimeData)
 ///
@@ -1093,7 +1093,7 @@ void q_listwidget_on_mime_data(void* self, QMimeData* (*callback)(void*, QListWi
 /// @param self QListWidget*
 /// @param items libqt_list of QListWidgetItem*
 ///
-QMimeData* q_listwidget_qbase_mime_data(void* self, libqt_list /* of QListWidgetItem* */ items);
+QMimeData* q_listwidget_qbase_mime_data(void* self, libqt_list items);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#dropMimeData)
 ///
@@ -1469,16 +1469,16 @@ int32_t q_listwidget_item_alignment(void* self);
 /// @param self QListWidget*
 /// @param indexes libqt_list of QModelIndex*
 ///
-void q_listwidget_indexes_moved(void* self, libqt_list /* of QModelIndex* */ indexes);
+void q_listwidget_indexes_moved(void* self, libqt_list indexes);
 
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#indexesMoved)
 ///
 /// @param self QListWidget*
-/// @param callback void func(QListWidget* self, QModelIndex** indexes)
+/// @param callback void func(QListWidget* self, libqt_list of QModelIndex* indexes)
 ///
-void q_listwidget_on_indexes_moved(void* self, void (*callback)(void*, QModelIndex**));
+void q_listwidget_on_indexes_moved(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4281,7 +4281,7 @@ void q_listwidget_add_action(void* self, void* action);
 /// @param self QListWidget*
 /// @param actions libqt_list of QAction*
 ///
-void q_listwidget_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_listwidget_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -4291,7 +4291,7 @@ void q_listwidget_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_listwidget_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_listwidget_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -5574,7 +5574,7 @@ void q_listwidget_on_scroll_contents_by(void* self, void (*callback)(void*, int,
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_listwidget_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void q_listwidget_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QListView
 ///
@@ -5587,7 +5587,7 @@ void q_listwidget_data_changed(void* self, void* topLeft, void* bottomRight, lib
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_listwidget_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles);
+void q_listwidget_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QListView
 ///
@@ -5596,9 +5596,9 @@ void q_listwidget_qbase_data_changed(void* self, void* topLeft, void* bottomRigh
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void func(QListWidget* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* )
+/// @param callback void func(QListWidget* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void q_listwidget_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */));
+void q_listwidget_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
 
 /// Inherited from QListView
 ///
@@ -6200,9 +6200,9 @@ libqt_list q_listwidget_qbase_selected_indexes(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback QModelIndex** func()
+/// @param callback libqt_list of QModelIndex* func()
 ///
-void q_listwidget_on_selected_indexes(void* self, QModelIndex** (*callback)());
+void q_listwidget_on_selected_indexes(void* self, libqt_list (*callback)());
 
 /// Inherited from QListView
 ///

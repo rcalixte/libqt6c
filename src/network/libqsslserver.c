@@ -82,7 +82,7 @@ void q_sslserver_ssl_errors(void* self, void* socket, libqt_list /* of QSslError
     QSslServer_SslErrors((QSslServer*)self, (QSslSocket*)socket, errors);
 }
 
-void q_sslserver_on_ssl_errors(void* self, void (*callback)(void*, void*, QSslError**)) {
+void q_sslserver_on_ssl_errors(void* self, void (*callback)(void*, void*, libqt_list /* of QSslError* */)) {
     QSslServer_Connect_SslErrors((QSslServer*)self, (intptr_t)callback);
 }
 

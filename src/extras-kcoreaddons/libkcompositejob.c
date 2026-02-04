@@ -98,7 +98,7 @@ libqt_list /* of KJob* */ k_compositejob_subjobs(void* self) {
     return _arr;
 }
 
-void k_compositejob_on_subjobs(void* self, KJob** (*callback)()) {
+void k_compositejob_on_subjobs(void* self, libqt_list /* of KJob* */ (*callback)()) {
     KCompositeJob_OnSubjobs((KCompositeJob*)self, (intptr_t)callback);
 }
 

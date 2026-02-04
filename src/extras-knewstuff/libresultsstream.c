@@ -36,7 +36,7 @@ void k_nscore__resultsstream_entries_found(void* self, libqt_list /* of KNSCore_
     KNSCore__ResultsStream_EntriesFound((KNSCore__ResultsStream*)self, entries);
 }
 
-void k_nscore__resultsstream_on_entries_found(void* self, void (*callback)(void*, KNSCore__Entry**)) {
+void k_nscore__resultsstream_on_entries_found(void* self, void (*callback)(void*, libqt_list /* of KNSCore__Entry* */)) {
     KNSCore__ResultsStream_Connect_EntriesFound((KNSCore__ResultsStream*)self, (intptr_t)callback);
 }
 

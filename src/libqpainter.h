@@ -562,7 +562,7 @@ void q_painter_draw_lines(void* self, void* lines, int lineCount);
 /// @param self QPainter*
 /// @param lines libqt_list of QLineF*
 ///
-void q_painter_draw_lines2(void* self, libqt_list /* of QLineF* */ lines);
+void q_painter_draw_lines2(void* self, libqt_list lines);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
@@ -577,7 +577,7 @@ void q_painter_draw_lines3(void* self, void* pointPairs, int lineCount);
 /// @param self QPainter*
 /// @param pointPairs libqt_list of QPointF*
 ///
-void q_painter_draw_lines4(void* self, libqt_list /* of QPointF* */ pointPairs);
+void q_painter_draw_lines4(void* self, libqt_list pointPairs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
@@ -592,7 +592,7 @@ void q_painter_draw_lines5(void* self, void* lines, int lineCount);
 /// @param self QPainter*
 /// @param lines libqt_list of QLine*
 ///
-void q_painter_draw_lines6(void* self, libqt_list /* of QLine* */ lines);
+void q_painter_draw_lines6(void* self, libqt_list lines);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
@@ -607,7 +607,7 @@ void q_painter_draw_lines7(void* self, void* pointPairs, int lineCount);
 /// @param self QPainter*
 /// @param pointPairs libqt_list of QPoint*
 ///
-void q_painter_draw_lines8(void* self, libqt_list /* of QPoint* */ pointPairs);
+void q_painter_draw_lines8(void* self, libqt_list pointPairs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawRect)
 ///
@@ -646,7 +646,7 @@ void q_painter_draw_rects(void* self, void* rects, int rectCount);
 /// @param self QPainter*
 /// @param rectangles libqt_list of QRectF*
 ///
-void q_painter_draw_rects2(void* self, libqt_list /* of QRectF* */ rectangles);
+void q_painter_draw_rects2(void* self, libqt_list rectangles);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawRects)
 ///
@@ -661,7 +661,7 @@ void q_painter_draw_rects3(void* self, void* rects, int rectCount);
 /// @param self QPainter*
 /// @param rectangles libqt_list of QRect*
 ///
-void q_painter_draw_rects4(void* self, libqt_list /* of QRect* */ rectangles);
+void q_painter_draw_rects4(void* self, libqt_list rectangles);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#drawEllipse)
 ///

@@ -1073,5 +1073,5 @@ void k_io__restorejob_delete(void* self);
 /// @param param1 libqt_list of QUrl*
 /// @param param2 flag of enum KIO__JobFlag
 ///
-KIO__RestoreJob* k_io_restore_from_trash(libqt_list /* of QUrl* */ param1, int32_t param2);
+KIO__RestoreJob* k_io_restore_from_trash(libqt_list param1, int32_t param2);
 #endif

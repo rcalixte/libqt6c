@@ -56,14 +56,14 @@ void k_nscore__resultsstream_fetch_more(void* self);
 /// @param self KNSCore__ResultsStream*
 /// @param entries libqt_list of KNSCore__Entry*
 ///
-void k_nscore__resultsstream_entries_found(void* self, libqt_list /* of KNSCore__Entry* */ entries);
+void k_nscore__resultsstream_entries_found(void* self, libqt_list entries);
 
 /// [Upstream resources](https://api.kde.org/knscore-resultsstream.html#entriesFound)
 ///
 /// @param self KNSCore__ResultsStream*
-/// @param callback void func(KNSCore__ResultsStream* self, KNSCore__Entry** entries)
+/// @param callback void func(KNSCore__ResultsStream* self, libqt_list of KNSCore__Entry* entries)
 ///
-void k_nscore__resultsstream_on_entries_found(void* self, void (*callback)(void*, KNSCore__Entry**));
+void k_nscore__resultsstream_on_entries_found(void* self, void (*callback)(void*, libqt_list));
 
 /// [Upstream resources](https://api.kde.org/knscore-resultsstream.html#finished)
 ///

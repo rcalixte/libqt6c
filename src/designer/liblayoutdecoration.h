@@ -43,9 +43,9 @@ libqt_list q_designerlayoutdecorationextension_widgets(void* self, void* layout)
 /// Allows for overriding the related default method
 ///
 /// @param self QDesignerLayoutDecorationExtension*
-/// @param callback QWidget** func(QDesignerLayoutDecorationExtension* self, QLayout* layout)
+/// @param callback libqt_list of QWidget* func(QDesignerLayoutDecorationExtension* self, QLayout* layout)
 ///
-void q_designerlayoutdecorationextension_on_widgets(void* self, QWidget** (*callback)(void*, void*));
+void q_designerlayoutdecorationextension_on_widgets(void* self, libqt_list (*callback)(void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#widgets)
 ///

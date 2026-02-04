@@ -2296,7 +2296,7 @@ void q_statusbar_add_action(void* self, void* action);
 /// @param self QStatusBar*
 /// @param actions libqt_list of QAction*
 ///
-void q_statusbar_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void q_statusbar_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2306,7 +2306,7 @@ void q_statusbar_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void q_statusbar_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void q_statusbar_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

@@ -291,7 +291,7 @@ const char* k_configgroup_read_entry6(void* self, const char* key);
 ///
 /// @return libqt_list of QVariant*
 ///
-libqt_list k_configgroup_read_entry7(void* self, const char* key, libqt_list /* of QVariant* */ aDefault);
+libqt_list k_configgroup_read_entry7(void* self, const char* key, libqt_list aDefault);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
@@ -301,7 +301,7 @@ libqt_list k_configgroup_read_entry7(void* self, const char* key, libqt_list /* 
 ///
 /// @return libqt_list of QVariant*
 ///
-libqt_list k_configgroup_read_entry8(void* self, const char* key, libqt_list /* of QVariant* */ aDefault);
+libqt_list k_configgroup_read_entry8(void* self, const char* key, libqt_list aDefault);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#readEntry)
 ///
@@ -485,7 +485,7 @@ void k_configgroup_write_entry10(void* self, const char* key, const char* value[
 /// @param key const char*
 /// @param value libqt_list of QVariant*
 ///
-void k_configgroup_write_entry11(void* self, const char* key, libqt_list /* of QVariant* */ value);
+void k_configgroup_write_entry11(void* self, const char* key, libqt_list value);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
@@ -493,7 +493,7 @@ void k_configgroup_write_entry11(void* self, const char* key, libqt_list /* of Q
 /// @param key const char*
 /// @param value libqt_list of QVariant*
 ///
-void k_configgroup_write_entry12(void* self, const char* key, libqt_list /* of QVariant* */ value);
+void k_configgroup_write_entry12(void* self, const char* key, libqt_list value);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeXdgListEntry)
 ///
@@ -980,7 +980,7 @@ void k_configgroup_write_entry311(void* self, const char* key, const char* value
 /// @param value libqt_list of QVariant*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 ///
-void k_configgroup_write_entry312(void* self, const char* key, libqt_list /* of QVariant* */ value, int32_t pFlags);
+void k_configgroup_write_entry312(void* self, const char* key, libqt_list value, int32_t pFlags);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
@@ -989,7 +989,7 @@ void k_configgroup_write_entry312(void* self, const char* key, libqt_list /* of 
 /// @param value libqt_list of QVariant*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 ///
-void k_configgroup_write_entry313(void* self, const char* key, libqt_list /* of QVariant* */ value, int32_t pFlags);
+void k_configgroup_write_entry313(void* self, const char* key, libqt_list value, int32_t pFlags);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeXdgListEntry)
 ///

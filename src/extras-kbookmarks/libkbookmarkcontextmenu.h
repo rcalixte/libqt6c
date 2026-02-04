@@ -608,7 +608,7 @@ QAction* k_bookmarkcontextmenu_exec2(void* self, void* pos);
 /// @param actions libqt_list of QAction*
 /// @param pos QPoint*
 ///
-QAction* k_bookmarkcontextmenu_exec3(libqt_list /* of QAction* */ actions, void* pos);
+QAction* k_bookmarkcontextmenu_exec3(libqt_list actions, void* pos);
 
 /// Inherited from QMenu
 ///
@@ -821,7 +821,7 @@ QAction* k_bookmarkcontextmenu_exec22(void* self, void* pos, void* at);
 /// @param pos QPoint*
 /// @param at QAction*
 ///
-QAction* k_bookmarkcontextmenu_exec32(libqt_list /* of QAction* */ actions, void* pos, void* at);
+QAction* k_bookmarkcontextmenu_exec32(libqt_list actions, void* pos, void* at);
 
 /// Inherited from QMenu
 ///
@@ -832,7 +832,7 @@ QAction* k_bookmarkcontextmenu_exec32(libqt_list /* of QAction* */ actions, void
 /// @param at QAction*
 /// @param parent QWidget*
 ///
-QAction* k_bookmarkcontextmenu_exec4(libqt_list /* of QAction* */ actions, void* pos, void* at, void* parent);
+QAction* k_bookmarkcontextmenu_exec4(libqt_list actions, void* pos, void* at, void* parent);
 
 /// Inherited from QWidget
 ///
@@ -2741,7 +2741,7 @@ void k_bookmarkcontextmenu_add_action(void* self, void* action);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_bookmarkcontextmenu_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_bookmarkcontextmenu_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

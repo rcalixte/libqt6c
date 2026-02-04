@@ -449,7 +449,7 @@ void q_filedialog_files_selected(void* self, const char* files[static 1]) {
     free(files_qstr);
 }
 
-void q_filedialog_on_files_selected(void* self, void (*callback)(void*, const char**)) {
+void q_filedialog_on_files_selected(void* self, void (*callback)(void*, const char***)) {
     QFileDialog_Connect_FilesSelected((QFileDialog*)self, (intptr_t)callback);
 }
 
@@ -481,7 +481,7 @@ void q_filedialog_urls_selected(void* self, libqt_list /* of QUrl* */ urls) {
     QFileDialog_UrlsSelected((QFileDialog*)self, urls);
 }
 
-void q_filedialog_on_urls_selected(void* self, void (*callback)(void*, QUrl**)) {
+void q_filedialog_on_urls_selected(void* self, void (*callback)(void*, libqt_list /* of QUrl* */)) {
     QFileDialog_Connect_UrlsSelected((QFileDialog*)self, (intptr_t)callback);
 }
 

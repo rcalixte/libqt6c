@@ -142,7 +142,7 @@ QScrollerProperties* q_scroller_scroller_properties(void* self);
 /// @param self QScroller*
 /// @param positions libqt_list of double
 ///
-void q_scroller_set_snap_positions_x(void* self, libqt_list /* of double */ positions);
+void q_scroller_set_snap_positions_x(void* self, libqt_list positions);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#setSnapPositionsX)
 ///
@@ -157,7 +157,7 @@ void q_scroller_set_snap_positions_x2(void* self, double first, double interval)
 /// @param self QScroller*
 /// @param positions libqt_list of double
 ///
-void q_scroller_set_snap_positions_y(void* self, libqt_list /* of double */ positions);
+void q_scroller_set_snap_positions_y(void* self, libqt_list positions);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscroller.html#setSnapPositionsY)
 ///

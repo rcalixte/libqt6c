@@ -1116,7 +1116,7 @@ int32_t k_mainwindow_dock_widget_area(void* self, void* dockwidget);
 /// @param sizes libqt_list of int
 /// @param orientation enum Qt__Orientation
 ///
-void k_mainwindow_resize_docks(void* self, libqt_list /* of QDockWidget* */ docks, libqt_list /* of int */ sizes, int32_t orientation);
+void k_mainwindow_resize_docks(void* self, libqt_list docks, libqt_list sizes, int32_t orientation);
 
 /// Inherited from QMainWindow
 ///
@@ -3154,7 +3154,7 @@ void k_mainwindow_add_action(void* self, void* action);
 /// @param self KMainWindow*
 /// @param actions libqt_list of QAction*
 ///
-void k_mainwindow_add_actions(void* self, libqt_list /* of QAction* */ actions);
+void k_mainwindow_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3164,7 +3164,7 @@ void k_mainwindow_add_actions(void* self, libqt_list /* of QAction* */ actions);
 /// @param before QAction*
 /// @param actions libqt_list of QAction*
 ///
-void k_mainwindow_insert_actions(void* self, void* before, libqt_list /* of QAction* */ actions);
+void k_mainwindow_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///

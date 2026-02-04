@@ -354,7 +354,7 @@ QKeySequence* k_toggletoolbaraction_shortcut(void* self);
 /// @param self KToggleToolBarAction*
 /// @param shortcuts libqt_list of QKeySequence*
 ///
-void k_toggletoolbaraction_set_shortcuts(void* self, libqt_list /* of QKeySequence* */ shortcuts);
+void k_toggletoolbaraction_set_shortcuts(void* self, libqt_list shortcuts);
 
 /// Inherited from QAction
 ///
