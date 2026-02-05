@@ -690,7 +690,7 @@ void q_openglfunctions_4_4_compatibility_gl_get_uniformfv(void* self, uint32_t p
     QOpenGLFunctions_4_4_Compatibility_GlGetUniformfv((QOpenGLFunctions_4_4_Compatibility*)self, program, location, params);
 }
 
-int32_t q_openglfunctions_4_4_compatibility_gl_get_uniform_location(void* self, uint32_t program, char* name) {
+int32_t q_openglfunctions_4_4_compatibility_gl_get_uniform_location(void* self, uint32_t program, const char* name) {
     return QOpenGLFunctions_4_4_Compatibility_GlGetUniformLocation((QOpenGLFunctions_4_4_Compatibility*)self, program, name);
 }
 
@@ -714,7 +714,7 @@ void q_openglfunctions_4_4_compatibility_gl_get_programiv(void* self, uint32_t p
     QOpenGLFunctions_4_4_Compatibility_GlGetProgramiv((QOpenGLFunctions_4_4_Compatibility*)self, program, pname, params);
 }
 
-int32_t q_openglfunctions_4_4_compatibility_gl_get_attrib_location(void* self, uint32_t program, char* name) {
+int32_t q_openglfunctions_4_4_compatibility_gl_get_attrib_location(void* self, uint32_t program, const char* name) {
     return QOpenGLFunctions_4_4_Compatibility_GlGetAttribLocation((QOpenGLFunctions_4_4_Compatibility*)self, program, name);
 }
 
@@ -754,7 +754,7 @@ void q_openglfunctions_4_4_compatibility_gl_compile_shader(void* self, uint32_t 
     QOpenGLFunctions_4_4_Compatibility_GlCompileShader((QOpenGLFunctions_4_4_Compatibility*)self, shader);
 }
 
-void q_openglfunctions_4_4_compatibility_gl_bind_attrib_location(void* self, uint32_t program, uint32_t index, char* name) {
+void q_openglfunctions_4_4_compatibility_gl_bind_attrib_location(void* self, uint32_t program, uint32_t index, const char* name) {
     QOpenGLFunctions_4_4_Compatibility_GlBindAttribLocation((QOpenGLFunctions_4_4_Compatibility*)self, program, index, name);
 }
 
@@ -970,11 +970,11 @@ void q_openglfunctions_4_4_compatibility_gl_uniform1ui(void* self, int32_t locat
     QOpenGLFunctions_4_4_Compatibility_GlUniform1ui((QOpenGLFunctions_4_4_Compatibility*)self, location, v0);
 }
 
-int32_t q_openglfunctions_4_4_compatibility_gl_get_frag_data_location(void* self, uint32_t program, char* name) {
+int32_t q_openglfunctions_4_4_compatibility_gl_get_frag_data_location(void* self, uint32_t program, const char* name) {
     return QOpenGLFunctions_4_4_Compatibility_GlGetFragDataLocation((QOpenGLFunctions_4_4_Compatibility*)self, program, name);
 }
 
-void q_openglfunctions_4_4_compatibility_gl_bind_frag_data_location(void* self, uint32_t program, uint32_t color, char* name) {
+void q_openglfunctions_4_4_compatibility_gl_bind_frag_data_location(void* self, uint32_t program, uint32_t color, const char* name) {
     QOpenGLFunctions_4_4_Compatibility_GlBindFragDataLocation((QOpenGLFunctions_4_4_Compatibility*)self, program, color, name);
 }
 
@@ -1138,7 +1138,7 @@ void q_openglfunctions_4_4_compatibility_gl_get_active_uniform_blockiv(void* sel
     QOpenGLFunctions_4_4_Compatibility_GlGetActiveUniformBlockiv((QOpenGLFunctions_4_4_Compatibility*)self, program, uniformBlockIndex, pname, params);
 }
 
-uint32_t q_openglfunctions_4_4_compatibility_gl_get_uniform_block_index(void* self, uint32_t program, char* uniformBlockName) {
+uint32_t q_openglfunctions_4_4_compatibility_gl_get_uniform_block_index(void* self, uint32_t program, const char* uniformBlockName) {
     return QOpenGLFunctions_4_4_Compatibility_GlGetUniformBlockIndex((QOpenGLFunctions_4_4_Compatibility*)self, program, uniformBlockName);
 }
 
@@ -1326,11 +1326,11 @@ void q_openglfunctions_4_4_compatibility_gl_gen_samplers(void* self, int32_t cou
     QOpenGLFunctions_4_4_Compatibility_GlGenSamplers((QOpenGLFunctions_4_4_Compatibility*)self, count, samplers);
 }
 
-int32_t q_openglfunctions_4_4_compatibility_gl_get_frag_data_index(void* self, uint32_t program, char* name) {
+int32_t q_openglfunctions_4_4_compatibility_gl_get_frag_data_index(void* self, uint32_t program, const char* name) {
     return QOpenGLFunctions_4_4_Compatibility_GlGetFragDataIndex((QOpenGLFunctions_4_4_Compatibility*)self, program, name);
 }
 
-void q_openglfunctions_4_4_compatibility_gl_bind_frag_data_location_indexed(void* self, uint32_t program, uint32_t colorNumber, uint32_t index, char* name) {
+void q_openglfunctions_4_4_compatibility_gl_bind_frag_data_location_indexed(void* self, uint32_t program, uint32_t colorNumber, uint32_t index, const char* name) {
     QOpenGLFunctions_4_4_Compatibility_GlBindFragDataLocationIndexed((QOpenGLFunctions_4_4_Compatibility*)self, program, colorNumber, index, name);
 }
 
@@ -1410,11 +1410,11 @@ void q_openglfunctions_4_4_compatibility_gl_get_active_subroutine_uniformiv(void
     QOpenGLFunctions_4_4_Compatibility_GlGetActiveSubroutineUniformiv((QOpenGLFunctions_4_4_Compatibility*)self, program, shadertype, index, pname, values);
 }
 
-uint32_t q_openglfunctions_4_4_compatibility_gl_get_subroutine_index(void* self, uint32_t program, uint32_t shadertype, char* name) {
+uint32_t q_openglfunctions_4_4_compatibility_gl_get_subroutine_index(void* self, uint32_t program, uint32_t shadertype, const char* name) {
     return QOpenGLFunctions_4_4_Compatibility_GlGetSubroutineIndex((QOpenGLFunctions_4_4_Compatibility*)self, program, shadertype, name);
 }
 
-int32_t q_openglfunctions_4_4_compatibility_gl_get_subroutine_uniform_location(void* self, uint32_t program, uint32_t shadertype, char* name) {
+int32_t q_openglfunctions_4_4_compatibility_gl_get_subroutine_uniform_location(void* self, uint32_t program, uint32_t shadertype, const char* name) {
     return QOpenGLFunctions_4_4_Compatibility_GlGetSubroutineUniformLocation((QOpenGLFunctions_4_4_Compatibility*)self, program, shadertype, name);
 }
 
@@ -1914,7 +1914,7 @@ void q_openglfunctions_4_4_compatibility_gl_get_object_ptr_label(void* self, voi
     QOpenGLFunctions_4_4_Compatibility_GlGetObjectPtrLabel((QOpenGLFunctions_4_4_Compatibility*)self, ptr, bufSize, length, label);
 }
 
-void q_openglfunctions_4_4_compatibility_gl_object_ptr_label(void* self, void* ptr, int32_t length, char* label) {
+void q_openglfunctions_4_4_compatibility_gl_object_ptr_label(void* self, void* ptr, int32_t length, const char* label) {
     QOpenGLFunctions_4_4_Compatibility_GlObjectPtrLabel((QOpenGLFunctions_4_4_Compatibility*)self, ptr, length, label);
 }
 
@@ -1922,7 +1922,7 @@ void q_openglfunctions_4_4_compatibility_gl_get_object_label(void* self, uint32_
     QOpenGLFunctions_4_4_Compatibility_GlGetObjectLabel((QOpenGLFunctions_4_4_Compatibility*)self, identifier, name, bufSize, length, label);
 }
 
-void q_openglfunctions_4_4_compatibility_gl_object_label(void* self, uint32_t identifier, uint32_t name, int32_t length, char* label) {
+void q_openglfunctions_4_4_compatibility_gl_object_label(void* self, uint32_t identifier, uint32_t name, int32_t length, const char* label) {
     QOpenGLFunctions_4_4_Compatibility_GlObjectLabel((QOpenGLFunctions_4_4_Compatibility*)self, identifier, name, length, label);
 }
 
@@ -1930,11 +1930,11 @@ void q_openglfunctions_4_4_compatibility_gl_pop_debug_group(void* self) {
     QOpenGLFunctions_4_4_Compatibility_GlPopDebugGroup((QOpenGLFunctions_4_4_Compatibility*)self);
 }
 
-void q_openglfunctions_4_4_compatibility_gl_push_debug_group(void* self, uint32_t source, uint32_t id, int32_t length, char* message) {
+void q_openglfunctions_4_4_compatibility_gl_push_debug_group(void* self, uint32_t source, uint32_t id, int32_t length, const char* message) {
     QOpenGLFunctions_4_4_Compatibility_GlPushDebugGroup((QOpenGLFunctions_4_4_Compatibility*)self, source, id, length, message);
 }
 
-void q_openglfunctions_4_4_compatibility_gl_debug_message_insert(void* self, uint32_t source, uint32_t type, uint32_t id, uint32_t severity, int32_t length, char* buf) {
+void q_openglfunctions_4_4_compatibility_gl_debug_message_insert(void* self, uint32_t source, uint32_t type, uint32_t id, uint32_t severity, int32_t length, const char* buf) {
     QOpenGLFunctions_4_4_Compatibility_GlDebugMessageInsert((QOpenGLFunctions_4_4_Compatibility*)self, source, type, id, severity, length, buf);
 }
 
@@ -1986,11 +1986,11 @@ void q_openglfunctions_4_4_compatibility_gl_shader_storage_block_binding(void* s
     QOpenGLFunctions_4_4_Compatibility_GlShaderStorageBlockBinding((QOpenGLFunctions_4_4_Compatibility*)self, program, storageBlockIndex, storageBlockBinding);
 }
 
-int32_t q_openglfunctions_4_4_compatibility_gl_get_program_resource_location_index(void* self, uint32_t program, uint32_t programInterface, char* name) {
+int32_t q_openglfunctions_4_4_compatibility_gl_get_program_resource_location_index(void* self, uint32_t program, uint32_t programInterface, const char* name) {
     return QOpenGLFunctions_4_4_Compatibility_GlGetProgramResourceLocationIndex((QOpenGLFunctions_4_4_Compatibility*)self, program, programInterface, name);
 }
 
-int32_t q_openglfunctions_4_4_compatibility_gl_get_program_resource_location(void* self, uint32_t program, uint32_t programInterface, char* name) {
+int32_t q_openglfunctions_4_4_compatibility_gl_get_program_resource_location(void* self, uint32_t program, uint32_t programInterface, const char* name) {
     return QOpenGLFunctions_4_4_Compatibility_GlGetProgramResourceLocation((QOpenGLFunctions_4_4_Compatibility*)self, program, programInterface, name);
 }
 
@@ -1998,7 +1998,7 @@ void q_openglfunctions_4_4_compatibility_gl_get_program_resource_name(void* self
     QOpenGLFunctions_4_4_Compatibility_GlGetProgramResourceName((QOpenGLFunctions_4_4_Compatibility*)self, program, programInterface, index, bufSize, length, name);
 }
 
-uint32_t q_openglfunctions_4_4_compatibility_gl_get_program_resource_index(void* self, uint32_t program, uint32_t programInterface, char* name) {
+uint32_t q_openglfunctions_4_4_compatibility_gl_get_program_resource_index(void* self, uint32_t program, uint32_t programInterface, const char* name) {
     return QOpenGLFunctions_4_4_Compatibility_GlGetProgramResourceIndex((QOpenGLFunctions_4_4_Compatibility*)self, program, programInterface, name);
 }
 

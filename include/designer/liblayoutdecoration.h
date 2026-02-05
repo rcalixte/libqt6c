@@ -422,7 +422,7 @@ void q_designerlayoutdecorationextension_qbase_adjust_indicator(void* self, void
 ///
 void q_designerlayoutdecorationextension_delete(void* self);
 
-/// [Upstream resources](https://api.kde.org/layoutdecoration.html#public-types)
+/// [Upstream resources](https://doc.qt.io/qt-6/layoutdecoration.html#public-types)
 
 typedef enum {
     QDESIGNERLAYOUTDECORATIONEXTENSION_INSERTMODE_INSERTWIDGETMODE = 0,

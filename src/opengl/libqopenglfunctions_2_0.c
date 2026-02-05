@@ -542,7 +542,7 @@ void q_openglfunctions_2_0_gl_get_uniformfv(void* self, uint32_t program, int32_
     QOpenGLFunctions_2_0_GlGetUniformfv((QOpenGLFunctions_2_0*)self, program, location, params);
 }
 
-int32_t q_openglfunctions_2_0_gl_get_uniform_location(void* self, uint32_t program, char* name) {
+int32_t q_openglfunctions_2_0_gl_get_uniform_location(void* self, uint32_t program, const char* name) {
     return QOpenGLFunctions_2_0_GlGetUniformLocation((QOpenGLFunctions_2_0*)self, program, name);
 }
 
@@ -566,7 +566,7 @@ void q_openglfunctions_2_0_gl_get_programiv(void* self, uint32_t program, uint32
     QOpenGLFunctions_2_0_GlGetProgramiv((QOpenGLFunctions_2_0*)self, program, pname, params);
 }
 
-int32_t q_openglfunctions_2_0_gl_get_attrib_location(void* self, uint32_t program, char* name) {
+int32_t q_openglfunctions_2_0_gl_get_attrib_location(void* self, uint32_t program, const char* name) {
     return QOpenGLFunctions_2_0_GlGetAttribLocation((QOpenGLFunctions_2_0*)self, program, name);
 }
 
@@ -606,7 +606,7 @@ void q_openglfunctions_2_0_gl_compile_shader(void* self, uint32_t shader) {
     QOpenGLFunctions_2_0_GlCompileShader((QOpenGLFunctions_2_0*)self, shader);
 }
 
-void q_openglfunctions_2_0_gl_bind_attrib_location(void* self, uint32_t program, uint32_t index, char* name) {
+void q_openglfunctions_2_0_gl_bind_attrib_location(void* self, uint32_t program, uint32_t index, const char* name) {
     QOpenGLFunctions_2_0_GlBindAttribLocation((QOpenGLFunctions_2_0*)self, program, index, name);
 }
 

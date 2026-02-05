@@ -534,7 +534,7 @@ void q_openglfunctions_3_1_gl_get_uniformfv(void* self, uint32_t program, int32_
     QOpenGLFunctions_3_1_GlGetUniformfv((QOpenGLFunctions_3_1*)self, program, location, params);
 }
 
-int32_t q_openglfunctions_3_1_gl_get_uniform_location(void* self, uint32_t program, char* name) {
+int32_t q_openglfunctions_3_1_gl_get_uniform_location(void* self, uint32_t program, const char* name) {
     return QOpenGLFunctions_3_1_GlGetUniformLocation((QOpenGLFunctions_3_1*)self, program, name);
 }
 
@@ -558,7 +558,7 @@ void q_openglfunctions_3_1_gl_get_programiv(void* self, uint32_t program, uint32
     QOpenGLFunctions_3_1_GlGetProgramiv((QOpenGLFunctions_3_1*)self, program, pname, params);
 }
 
-int32_t q_openglfunctions_3_1_gl_get_attrib_location(void* self, uint32_t program, char* name) {
+int32_t q_openglfunctions_3_1_gl_get_attrib_location(void* self, uint32_t program, const char* name) {
     return QOpenGLFunctions_3_1_GlGetAttribLocation((QOpenGLFunctions_3_1*)self, program, name);
 }
 
@@ -598,7 +598,7 @@ void q_openglfunctions_3_1_gl_compile_shader(void* self, uint32_t shader) {
     QOpenGLFunctions_3_1_GlCompileShader((QOpenGLFunctions_3_1*)self, shader);
 }
 
-void q_openglfunctions_3_1_gl_bind_attrib_location(void* self, uint32_t program, uint32_t index, char* name) {
+void q_openglfunctions_3_1_gl_bind_attrib_location(void* self, uint32_t program, uint32_t index, const char* name) {
     QOpenGLFunctions_3_1_GlBindAttribLocation((QOpenGLFunctions_3_1*)self, program, index, name);
 }
 
@@ -814,11 +814,11 @@ void q_openglfunctions_3_1_gl_uniform1ui(void* self, int32_t location, uint32_t 
     QOpenGLFunctions_3_1_GlUniform1ui((QOpenGLFunctions_3_1*)self, location, v0);
 }
 
-int32_t q_openglfunctions_3_1_gl_get_frag_data_location(void* self, uint32_t program, char* name) {
+int32_t q_openglfunctions_3_1_gl_get_frag_data_location(void* self, uint32_t program, const char* name) {
     return QOpenGLFunctions_3_1_GlGetFragDataLocation((QOpenGLFunctions_3_1*)self, program, name);
 }
 
-void q_openglfunctions_3_1_gl_bind_frag_data_location(void* self, uint32_t program, uint32_t color, char* name) {
+void q_openglfunctions_3_1_gl_bind_frag_data_location(void* self, uint32_t program, uint32_t color, const char* name) {
     QOpenGLFunctions_3_1_GlBindFragDataLocation((QOpenGLFunctions_3_1*)self, program, color, name);
 }
 
@@ -906,7 +906,7 @@ void q_openglfunctions_3_1_gl_get_active_uniform_blockiv(void* self, uint32_t pr
     QOpenGLFunctions_3_1_GlGetActiveUniformBlockiv((QOpenGLFunctions_3_1*)self, program, uniformBlockIndex, pname, params);
 }
 
-uint32_t q_openglfunctions_3_1_gl_get_uniform_block_index(void* self, uint32_t program, char* uniformBlockName) {
+uint32_t q_openglfunctions_3_1_gl_get_uniform_block_index(void* self, uint32_t program, const char* uniformBlockName) {
     return QOpenGLFunctions_3_1_GlGetUniformBlockIndex((QOpenGLFunctions_3_1*)self, program, uniformBlockName);
 }
 

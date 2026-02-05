@@ -3703,7 +3703,7 @@ void q_designerformwindowinterface_on_object_name_changed(void* self, void (*cal
 ///
 void q_designerformwindowinterface_delete(void* self);
 
-/// [Upstream resources](https://api.kde.org/abstractformwindow.html#public-types)
+/// [Upstream resources](https://doc.qt.io/qt-6/abstractformwindow.html#public-types)
 
 typedef enum {
     QDESIGNERFORMWINDOWINTERFACE_FEATUREFLAG_EDITFEATURE = 1,
@@ -3712,7 +3712,7 @@ typedef enum {
     QDESIGNERFORMWINDOWINTERFACE_FEATUREFLAG_DEFAULTFEATURE = 3
 } QDesignerFormWindowInterface__FeatureFlag;
 
-/// [Upstream resources](https://api.kde.org/abstractformwindow.html#public-types)
+/// [Upstream resources](https://doc.qt.io/qt-6/abstractformwindow.html#public-types)
 
 typedef enum {
     QDESIGNERFORMWINDOWINTERFACE_RESOURCEFILESAVEMODE_SAVEALLRESOURCEFILES = 0,

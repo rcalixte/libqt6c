@@ -1253,9 +1253,9 @@ void q_openglfunctions_2_0_gl_get_uniformfv(void* self, uint32_t program, int32_
 ///
 /// @param self QOpenGLFunctions_2_0*
 /// @param program uint32_t
-/// @param name char*
+/// @param name const char*
 ///
-int32_t q_openglfunctions_2_0_gl_get_uniform_location(void* self, uint32_t program, char* name);
+int32_t q_openglfunctions_2_0_gl_get_uniform_location(void* self, uint32_t program, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-2-0.html#glGetShaderSource)
 ///
@@ -1309,9 +1309,9 @@ void q_openglfunctions_2_0_gl_get_programiv(void* self, uint32_t program, uint32
 ///
 /// @param self QOpenGLFunctions_2_0*
 /// @param program uint32_t
-/// @param name char*
+/// @param name const char*
 ///
-int32_t q_openglfunctions_2_0_gl_get_attrib_location(void* self, uint32_t program, char* name);
+int32_t q_openglfunctions_2_0_gl_get_attrib_location(void* self, uint32_t program, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-2-0.html#glGetAttachedShaders)
 ///
@@ -1384,9 +1384,9 @@ void q_openglfunctions_2_0_gl_compile_shader(void* self, uint32_t shader);
 /// @param self QOpenGLFunctions_2_0*
 /// @param program uint32_t
 /// @param index uint32_t
-/// @param name char*
+/// @param name const char*
 ///
-void q_openglfunctions_2_0_gl_bind_attrib_location(void* self, uint32_t program, uint32_t index, char* name);
+void q_openglfunctions_2_0_gl_bind_attrib_location(void* self, uint32_t program, uint32_t index, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-2-0.html#glAttachShader)
 ///
