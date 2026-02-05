@@ -86,7 +86,7 @@ const (
 	postUrl = ")\n"
 )
 
-func getPageUrl(pageType PageType, pageName, cmdURL, className string) string {
+func (cfs *cFileState) getPageUrl(pageType PageType, pageName, cmdURL, className string) string {
 	if strings.HasPrefix(pageName, "qsci") {
 		if pageType == EnumPage {
 			return ""
@@ -94,7 +94,7 @@ func getPageUrl(pageType PageType, pageName, cmdURL, className string) string {
 		return preUrl + "https://www.riverbankcomputing.com/static/Docs/QScintilla/class" + className + ".html" + postUrl
 	}
 
-	if strings.HasPrefix(pageName, "layershellqt") {
+	if strings.HasPrefix(pageName, "layershellqt") || (pageType == EnumPage && cfs.currentPackageName == "foss-extras-layershellqt") {
 		return preUrl + "https://invent.kde.org/plasma/layer-shell-qt" + postUrl
 	}
 
@@ -106,20 +106,22 @@ func getPageUrl(pageType PageType, pageName, cmdURL, className string) string {
 		return preUrl + "https://github.com/ksnip/kImageAnnotator" + postUrl
 	}
 
-	if strings.HasPrefix(pageName, "packagekit") {
+	if strings.HasPrefix(pageName, "packagekit") || (pageType == EnumPage && cfs.currentPackageName == "foss-extras-packagekitqt") {
 		return preUrl + "https://github.com/PackageKit/PackageKit-Qt" + postUrl
 	}
 
-	if strings.HasPrefix(pageName, "qkeychain") {
+	if strings.HasPrefix(pageName, "qkeychain") || (pageType == EnumPage && cfs.currentPackageName == "extras-qtkeychain") {
 		return preUrl + "https://github.com/frankosterfeld/qtkeychain" + postUrl
 	}
 
-	if strings.HasPrefix(pageName, "Accounts__") {
-		return preUrl + "https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1" + strings.ToUpper(pageName[10:11]) + pageName[11:] + ".html" + postUrl
+	if strings.HasPrefix(pageName, "Accounts__") || (pageType == EnumPage && cfs.currentPackageName == "posix-extras-accounts") {
+		classUrl := strings.TrimPrefix(pageName, "Accounts__")
+		return preUrl + "https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1" + strings.ToUpper(classUrl[0:1]) + classUrl[1:] + ".html" + postUrl
 	}
 
-	if strings.HasPrefix(pageName, "SignOn__") {
-		return preUrl + "https://accounts-sso.gitlab.io/signond/classSignOn_1_1" + strings.ToUpper(pageName[8:9]) + pageName[9:] + ".html" + postUrl
+	if strings.HasPrefix(pageName, "SignOn__") || (pageType == EnumPage && cfs.currentPackageName == "posix-extras-signon") {
+		classUrl := strings.TrimPrefix(pageName, "SignOn__")
+		return preUrl + "https://accounts-sso.gitlab.io/signond/classSignOn_1_1" + strings.ToUpper(classUrl[0:1]) + classUrl[1:] + ".html" + postUrl
 	}
 
 	if pageType == DtorPage && strings.Contains(className, "__") {
@@ -133,10 +135,34 @@ func getPageUrl(pageType PageType, pageName, cmdURL, className string) string {
 
 	qtUrl := "https://doc.qt.io/qt-6/"
 	types := ifv(pageName == "qt", "types", "public-types")
-	if pageName[0] != 'q' && pageName != "disambiguated_t" &&
-		pageName != "partial_ordering" && pageName != "weak_ordering" && pageName != "strong_ordering" {
+	if pageName == "question" || (pageName[0] != 'q' && cfs.currentPackageName != "designer" &&
+		pageName != "partial_ordering" && pageName != "weak_ordering" && pageName != "strong_ordering") {
 		qtUrl = "https://api.kde.org/"
 		pageName = strings.TrimSuffix(pageName, "_1")
+		if pageType == EnumPage {
+			switch cfs.currentPackageName {
+			case "extras-attica":
+				pageName = "attica-" + pageName
+			case "extras-kfilemetadata":
+				pageName = "kfilemetadata-" + pageName
+			case "extras-kio":
+				if pageType == EnumPage && !strings.HasPrefix(pageName, "k") {
+					pageName = "kio-" + pageName
+				}
+			case "extras-knewstuff":
+				pageName = "knscore-" + pageName
+			case "extras-kparts":
+				pageName = "kparts-" + pageName
+			case "extras-ksvg":
+				pageName = "ksvg-" + pageName
+			case "extras-ksyntaxhighlighting":
+				pageName = "ksyntaxhighlighting-" + pageName
+			case "extras-solid":
+				pageName = "solid-" + pageName
+			case "extras-sonnet":
+				pageName = "sonnet-" + pageName
+			}
+		}
 	}
 
 	if pageName == "qcustomplot" || strings.HasPrefix(pageName, "QCP") {
@@ -200,7 +226,7 @@ func cSafeMethodName(name string) string {
 }
 
 func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, includeContainerComment bool) string {
-	if (p.Pointer && p.ParameterType == "char") || p.ParameterType == "QByteArray" ||
+	if (p.Pointer && (p.ParameterType == "char" || p.ParameterType == "GLchar")) || p.ParameterType == "QByteArray" ||
 		p.ParameterType == "QAnyStringView" {
 		if p.Const {
 			return "const char" + strings.Repeat("*", max(p.PointerCount, 1))
@@ -577,6 +603,10 @@ func (p CppParameter) renderReturnTypeC(cfs *cFileState, isSlot, includeContaine
 		maybeConst = ""
 	}
 
+	if IsKnownClass(p.ParameterType) && p.PointerCount > 1 {
+		ret += "*"
+	}
+
 	if isSlot {
 		// overrides for slot callbacks
 		if t, _, ok := p.QListOf(); ok && (t.ParameterType == "QString" || t.ParameterType == "QByteArray") {
@@ -713,7 +743,7 @@ func (cfs *cFileState) emitParametersC(params []CppParameter, isSlot bool) strin
 		}
 		if IsKnownClass(p.ParameterType) && strings.HasSuffix(pType, "*") &&
 			!strings.Contains(pType, "char*") {
-			pType = "void*" + ifv(p.ByRef && p.Pointer, "*", "")
+			pType = "void*" + ifv((p.ByRef && p.Pointer) || p.PointerCount > 1, "*", "")
 		}
 		if isSlot {
 			if strings.HasSuffix(pName, "[static 1]") {
@@ -1042,14 +1072,14 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 			rvalue = nameprefix + "_pair"
 		}
 
-	} else if p.Pointer && p.ParameterType == "char" {
+	} else if p.Pointer && (p.ParameterType == "char" || p.ParameterType == "GLchar") {
 		// Single char*(*) argument
 		rvalue = nameprefix
 
 	} else if p.QtClassType() {
 		// The C++ type is a pointer to Qt class
 		// We want our functions to accept the C wrapper type, and forward as a pointer
-		rvalue = "(" + p.RenderTypeC(cfs, true, false, true) + ")" + p.ParameterName
+		rvalue = "(" + p.RenderTypeC(cfs, true, false, true) + ifv(p.PointerCount > 1, "*", "") + ")" + p.ParameterName
 
 	} else if p.IntType() || p.IsFlagType() || p.IsKnownEnum() {
 		if p.ParameterType == "unsigned long long" && (p.Pointer || p.ByRef) {
@@ -1800,7 +1830,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				(strings.Contains(src.Filename, "signon-qt") && cStructName[0] != 'Q')
 
 			pageName := ifv(isSpecialCase, cStructName, getPageName(cStructName)) + maybeCharts
-			ctorPageUrl = "\n\n" + getPageUrl(QtPage, pageName, "", cStructName)
+			ctorPageUrl = "\n\n" + cfs.getPageUrl(QtPage, pageName, "", cStructName)
 			ret.WriteString(ctorPageUrl)
 		}
 
@@ -1984,7 +2014,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 			if subjectURL != "" {
 				maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts") && inheritedFrom == "" && subjectURL != "qobject", "-qtcharts", "")
-				pageURL := getPageUrl(QtPage, subjectURL+maybeCharts, cmdURL, className)
+				pageURL := cfs.getPageUrl(QtPage, subjectURL+maybeCharts, cmdURL, className)
 				docCommentUrl = "\n" + pageURL + "///"
 				ret.WriteString(docCommentUrl)
 			}
@@ -2168,7 +2198,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				cmdURL = m.VariableFieldName + "-var"
 			}
 			maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts") && inheritedFrom == "", "-qtcharts", "")
-			pageURL := getPageUrl(QtPage, subjectURL+maybeCharts, cmdURL, className)
+			pageURL := cfs.getPageUrl(QtPage, subjectURL+maybeCharts, cmdURL, className)
 			documentationURL := "\n" + pageURL + "///"
 
 			// Add a package-private function to call the C++ base class method
@@ -2253,7 +2283,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 			if subjectURL != "" {
 				maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts") && inheritedFrom == "" && subjectURL != "qobject", "-qtcharts", "")
-				pageURL := getPageUrl(QtPage, subjectURL+maybeCharts, cmdURL, className)
+				pageURL := cfs.getPageUrl(QtPage, subjectURL+maybeCharts, cmdURL, className)
 				docCommentUrl = "\n" + pageURL + "///\n"
 			}
 
@@ -2273,7 +2303,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				(strings.Contains(src.Filename, "accounts-qt") && cStructName[0] != 'Q') ||
 				(strings.Contains(src.Filename, "signon-qt") && cStructName[0] != 'Q')
 
-			pageUrl := getPageUrl(DtorPage, ifv(isSpecialCase, cStructName, getPageName(cStructName))+maybeCharts, "", cStructName)
+			pageUrl := cfs.getPageUrl(DtorPage, ifv(isSpecialCase, cStructName, getPageName(cStructName))+maybeCharts, "", cStructName)
 			ret.WriteString(ifv(pageUrl != "", "\n"+pageUrl+"///\n", "\n") +
 				"/// Delete this object from C++ memory.\n///\n" +
 				"/// @param self " + cStructName + "*\n///\n" +
@@ -2285,21 +2315,8 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 	if len(src.Enums) > 0 {
 		maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
-		maybeUrlPrefix := ifv(strings.Contains(src.Filename, "KIO") && !strings.HasPrefix(getPageName(cfs.currentHeaderName), "k"), "kio-", "")
-		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "Accounts"), "Accounts__", maybeUrlPrefix)
-		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "Attica"), "attica-", maybeUrlPrefix)
-		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "KNSCore"), "knscore-", maybeUrlPrefix)
-		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "KParts"), "kparts-", maybeUrlPrefix)
-		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "KSvg"), "ksvg-", maybeUrlPrefix)
-		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "KSyntaxHighlighting"), "ksyntaxhighlighting-", maybeUrlPrefix)
-		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "LayerShellQt"), "layershellqt-", maybeUrlPrefix)
-		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "PackageKit"), "packagekit-", maybeUrlPrefix)
-		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "qt6keychain"), "qkeychain-", maybeUrlPrefix)
-		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "SignOn"), "SignOn__", maybeUrlPrefix)
-		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "Solid"), "solid-", maybeUrlPrefix)
-		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "Sonnet"), "sonnet-", maybeUrlPrefix)
-		pageName := maybeUrlPrefix + getPageName(cfs.currentHeaderName) + maybeCharts
-		pageUrl := getPageUrl(EnumPage, pageName, "", cfs.currentHeaderName)
+		pageName := getPageName(cfs.currentHeaderName) + maybeCharts
+		pageUrl := cfs.getPageUrl(EnumPage, pageName, "", cfs.currentHeaderName)
 		maybeUrl = ifv(pageUrl != "", "\n\n"+pageUrl, "")
 	}
 
