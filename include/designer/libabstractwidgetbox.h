@@ -5530,14 +5530,14 @@ bool q_designerwidgetboxinterface__category_is_null(void* self);
 ///
 void q_designerwidgetboxinterface__category_delete(void* self);
 
-/// [Upstream resources](https://api.kde.org/abstractwidgetbox.html#public-types)
+/// [Upstream resources](https://doc.qt.io/qt-6/abstractwidgetbox.html#public-types)
 
 typedef enum {
     QDESIGNERWIDGETBOXINTERFACE_WIDGET_TYPE_DEFAULT = 0,
     QDESIGNERWIDGETBOXINTERFACE_WIDGET_TYPE_CUSTOM = 1
 } QDesignerWidgetBoxInterface__Widget__Type;
 
-/// [Upstream resources](https://api.kde.org/abstractwidgetbox.html#public-types)
+/// [Upstream resources](https://doc.qt.io/qt-6/abstractwidgetbox.html#public-types)
 
 typedef enum {
     QDESIGNERWIDGETBOXINTERFACE_CATEGORY_TYPE_DEFAULT = 0,

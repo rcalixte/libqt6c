@@ -3081,7 +3081,7 @@ void q_designerintegration_on_is_signal_connected(void* self, bool (*callback)(v
 ///
 void q_designerintegration_delete(void* self);
 
-/// [Upstream resources](https://api.kde.org/abstractintegration.html#public-types)
+/// [Upstream resources](https://doc.qt.io/qt-6/abstractintegration.html#public-types)
 
 typedef enum {
     QDESIGNERINTEGRATIONINTERFACE_RESOURCEFILEWATCHERBEHAVIOUR_NORESOURCEFILEWATCHER = 0,
@@ -3089,7 +3089,7 @@ typedef enum {
     QDESIGNERINTEGRATIONINTERFACE_RESOURCEFILEWATCHERBEHAVIOUR_PROMPTTORELOADRESOURCEFILE = 2
 } QDesignerIntegrationInterface__ResourceFileWatcherBehaviour;
 
-/// [Upstream resources](https://api.kde.org/abstractintegration.html#public-types)
+/// [Upstream resources](https://doc.qt.io/qt-6/abstractintegration.html#public-types)
 
 typedef enum {
     QDESIGNERINTEGRATIONINTERFACE_FEATUREFLAG_RESOURCEEDITORFEATURE = 1,

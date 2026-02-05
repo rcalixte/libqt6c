@@ -534,7 +534,7 @@ void q_openglfunctions_3_3_core_gl_get_uniformfv(void* self, uint32_t program, i
     QOpenGLFunctions_3_3_Core_GlGetUniformfv((QOpenGLFunctions_3_3_Core*)self, program, location, params);
 }
 
-int32_t q_openglfunctions_3_3_core_gl_get_uniform_location(void* self, uint32_t program, char* name) {
+int32_t q_openglfunctions_3_3_core_gl_get_uniform_location(void* self, uint32_t program, const char* name) {
     return QOpenGLFunctions_3_3_Core_GlGetUniformLocation((QOpenGLFunctions_3_3_Core*)self, program, name);
 }
 
@@ -558,7 +558,7 @@ void q_openglfunctions_3_3_core_gl_get_programiv(void* self, uint32_t program, u
     QOpenGLFunctions_3_3_Core_GlGetProgramiv((QOpenGLFunctions_3_3_Core*)self, program, pname, params);
 }
 
-int32_t q_openglfunctions_3_3_core_gl_get_attrib_location(void* self, uint32_t program, char* name) {
+int32_t q_openglfunctions_3_3_core_gl_get_attrib_location(void* self, uint32_t program, const char* name) {
     return QOpenGLFunctions_3_3_Core_GlGetAttribLocation((QOpenGLFunctions_3_3_Core*)self, program, name);
 }
 
@@ -598,7 +598,7 @@ void q_openglfunctions_3_3_core_gl_compile_shader(void* self, uint32_t shader) {
     QOpenGLFunctions_3_3_Core_GlCompileShader((QOpenGLFunctions_3_3_Core*)self, shader);
 }
 
-void q_openglfunctions_3_3_core_gl_bind_attrib_location(void* self, uint32_t program, uint32_t index, char* name) {
+void q_openglfunctions_3_3_core_gl_bind_attrib_location(void* self, uint32_t program, uint32_t index, const char* name) {
     QOpenGLFunctions_3_3_Core_GlBindAttribLocation((QOpenGLFunctions_3_3_Core*)self, program, index, name);
 }
 
@@ -814,11 +814,11 @@ void q_openglfunctions_3_3_core_gl_uniform1ui(void* self, int32_t location, uint
     QOpenGLFunctions_3_3_Core_GlUniform1ui((QOpenGLFunctions_3_3_Core*)self, location, v0);
 }
 
-int32_t q_openglfunctions_3_3_core_gl_get_frag_data_location(void* self, uint32_t program, char* name) {
+int32_t q_openglfunctions_3_3_core_gl_get_frag_data_location(void* self, uint32_t program, const char* name) {
     return QOpenGLFunctions_3_3_Core_GlGetFragDataLocation((QOpenGLFunctions_3_3_Core*)self, program, name);
 }
 
-void q_openglfunctions_3_3_core_gl_bind_frag_data_location(void* self, uint32_t program, uint32_t color, char* name) {
+void q_openglfunctions_3_3_core_gl_bind_frag_data_location(void* self, uint32_t program, uint32_t color, const char* name) {
     QOpenGLFunctions_3_3_Core_GlBindFragDataLocation((QOpenGLFunctions_3_3_Core*)self, program, color, name);
 }
 
@@ -906,7 +906,7 @@ void q_openglfunctions_3_3_core_gl_get_active_uniform_blockiv(void* self, uint32
     QOpenGLFunctions_3_3_Core_GlGetActiveUniformBlockiv((QOpenGLFunctions_3_3_Core*)self, program, uniformBlockIndex, pname, params);
 }
 
-uint32_t q_openglfunctions_3_3_core_gl_get_uniform_block_index(void* self, uint32_t program, char* uniformBlockName) {
+uint32_t q_openglfunctions_3_3_core_gl_get_uniform_block_index(void* self, uint32_t program, const char* uniformBlockName) {
     return QOpenGLFunctions_3_3_Core_GlGetUniformBlockIndex((QOpenGLFunctions_3_3_Core*)self, program, uniformBlockName);
 }
 
@@ -1082,11 +1082,11 @@ void q_openglfunctions_3_3_core_gl_gen_samplers(void* self, int32_t count, uint3
     QOpenGLFunctions_3_3_Core_GlGenSamplers((QOpenGLFunctions_3_3_Core*)self, count, samplers);
 }
 
-int32_t q_openglfunctions_3_3_core_gl_get_frag_data_index(void* self, uint32_t program, char* name) {
+int32_t q_openglfunctions_3_3_core_gl_get_frag_data_index(void* self, uint32_t program, const char* name) {
     return QOpenGLFunctions_3_3_Core_GlGetFragDataIndex((QOpenGLFunctions_3_3_Core*)self, program, name);
 }
 
-void q_openglfunctions_3_3_core_gl_bind_frag_data_location_indexed(void* self, uint32_t program, uint32_t colorNumber, uint32_t index, char* name) {
+void q_openglfunctions_3_3_core_gl_bind_frag_data_location_indexed(void* self, uint32_t program, uint32_t colorNumber, uint32_t index, const char* name) {
     QOpenGLFunctions_3_3_Core_GlBindFragDataLocationIndexed((QOpenGLFunctions_3_3_Core*)self, program, colorNumber, index, name);
 }
 

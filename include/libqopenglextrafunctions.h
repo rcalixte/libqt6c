@@ -473,9 +473,9 @@ void q_openglextrafunctions_gl_get_uniformuiv(void* self, uint32_t program, int3
 ///
 /// @param self QOpenGLExtraFunctions*
 /// @param program uint32_t
-/// @param name char*
+/// @param name const char*
 ///
-int32_t q_openglextrafunctions_gl_get_frag_data_location(void* self, uint32_t program, char* name);
+int32_t q_openglextrafunctions_gl_get_frag_data_location(void* self, uint32_t program, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglextrafunctions.html#glUniform1ui)
 ///
@@ -622,9 +622,9 @@ void q_openglextrafunctions_gl_get_active_uniformsiv(void* self, uint32_t progra
 ///
 /// @param self QOpenGLExtraFunctions*
 /// @param program uint32_t
-/// @param uniformBlockName char*
+/// @param uniformBlockName const char*
 ///
-uint32_t q_openglextrafunctions_gl_get_uniform_block_index(void* self, uint32_t program, char* uniformBlockName);
+uint32_t q_openglextrafunctions_gl_get_uniform_block_index(void* self, uint32_t program, const char* uniformBlockName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglextrafunctions.html#glGetActiveUniformBlockiv)
 ///
@@ -958,9 +958,9 @@ void q_openglextrafunctions_gl_get_program_interfaceiv(void* self, uint32_t prog
 /// @param self QOpenGLExtraFunctions*
 /// @param program uint32_t
 /// @param programInterface uint32_t
-/// @param name char*
+/// @param name const char*
 ///
-uint32_t q_openglextrafunctions_gl_get_program_resource_index(void* self, uint32_t program, uint32_t programInterface, char* name);
+uint32_t q_openglextrafunctions_gl_get_program_resource_index(void* self, uint32_t program, uint32_t programInterface, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglextrafunctions.html#glGetProgramResourceName)
 ///
@@ -979,9 +979,9 @@ void q_openglextrafunctions_gl_get_program_resource_name(void* self, uint32_t pr
 /// @param self QOpenGLExtraFunctions*
 /// @param program uint32_t
 /// @param programInterface uint32_t
-/// @param name char*
+/// @param name const char*
 ///
-int32_t q_openglextrafunctions_gl_get_program_resource_location(void* self, uint32_t program, uint32_t programInterface, char* name);
+int32_t q_openglextrafunctions_gl_get_program_resource_location(void* self, uint32_t program, uint32_t programInterface, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglextrafunctions.html#glUseProgramStages)
 ///
@@ -1580,9 +1580,9 @@ void q_openglextrafunctions_gl_debug_message_control(void* self, uint32_t source
 /// @param id uint32_t
 /// @param severity uint32_t
 /// @param length int32_t
-/// @param buf char*
+/// @param buf const char*
 ///
-void q_openglextrafunctions_gl_debug_message_insert(void* self, uint32_t source, uint32_t type, uint32_t id, uint32_t severity, int32_t length, char* buf);
+void q_openglextrafunctions_gl_debug_message_insert(void* self, uint32_t source, uint32_t type, uint32_t id, uint32_t severity, int32_t length, const char* buf);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglextrafunctions.html#glPushDebugGroup)
 ///
@@ -1590,9 +1590,9 @@ void q_openglextrafunctions_gl_debug_message_insert(void* self, uint32_t source,
 /// @param source uint32_t
 /// @param id uint32_t
 /// @param length int32_t
-/// @param message char*
+/// @param message const char*
 ///
-void q_openglextrafunctions_gl_push_debug_group(void* self, uint32_t source, uint32_t id, int32_t length, char* message);
+void q_openglextrafunctions_gl_push_debug_group(void* self, uint32_t source, uint32_t id, int32_t length, const char* message);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglextrafunctions.html#glPopDebugGroup)
 ///
@@ -1606,9 +1606,9 @@ void q_openglextrafunctions_gl_pop_debug_group(void* self);
 /// @param identifier uint32_t
 /// @param name uint32_t
 /// @param length int32_t
-/// @param label char*
+/// @param label const char*
 ///
-void q_openglextrafunctions_gl_object_label(void* self, uint32_t identifier, uint32_t name, int32_t length, char* label);
+void q_openglextrafunctions_gl_object_label(void* self, uint32_t identifier, uint32_t name, int32_t length, const char* label);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglextrafunctions.html#glGetObjectLabel)
 ///
@@ -1626,9 +1626,9 @@ void q_openglextrafunctions_gl_get_object_label(void* self, uint32_t identifier,
 /// @param self QOpenGLExtraFunctions*
 /// @param ptr void*
 /// @param length int32_t
-/// @param label char*
+/// @param label const char*
 ///
-void q_openglextrafunctions_gl_object_ptr_label(void* self, void* ptr, int32_t length, char* label);
+void q_openglextrafunctions_gl_object_ptr_label(void* self, void* ptr, int32_t length, const char* label);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglextrafunctions.html#glGetObjectPtrLabel)
 ///

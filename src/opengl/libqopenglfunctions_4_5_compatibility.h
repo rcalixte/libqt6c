@@ -1577,9 +1577,9 @@ void q_openglfunctions_4_5_compatibility_gl_get_uniformfv(void* self, uint32_t p
 ///
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param program uint32_t
-/// @param name char*
+/// @param name const char*
 ///
-int32_t q_openglfunctions_4_5_compatibility_gl_get_uniform_location(void* self, uint32_t program, char* name);
+int32_t q_openglfunctions_4_5_compatibility_gl_get_uniform_location(void* self, uint32_t program, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glGetShaderSource)
 ///
@@ -1633,9 +1633,9 @@ void q_openglfunctions_4_5_compatibility_gl_get_programiv(void* self, uint32_t p
 ///
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param program uint32_t
-/// @param name char*
+/// @param name const char*
 ///
-int32_t q_openglfunctions_4_5_compatibility_gl_get_attrib_location(void* self, uint32_t program, char* name);
+int32_t q_openglfunctions_4_5_compatibility_gl_get_attrib_location(void* self, uint32_t program, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glGetAttachedShaders)
 ///
@@ -1708,9 +1708,9 @@ void q_openglfunctions_4_5_compatibility_gl_compile_shader(void* self, uint32_t 
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param program uint32_t
 /// @param index uint32_t
-/// @param name char*
+/// @param name const char*
 ///
-void q_openglfunctions_4_5_compatibility_gl_bind_attrib_location(void* self, uint32_t program, uint32_t index, char* name);
+void q_openglfunctions_4_5_compatibility_gl_bind_attrib_location(void* self, uint32_t program, uint32_t index, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glAttachShader)
 ///
@@ -2204,18 +2204,18 @@ void q_openglfunctions_4_5_compatibility_gl_uniform1ui(void* self, int32_t locat
 ///
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param program uint32_t
-/// @param name char*
+/// @param name const char*
 ///
-int32_t q_openglfunctions_4_5_compatibility_gl_get_frag_data_location(void* self, uint32_t program, char* name);
+int32_t q_openglfunctions_4_5_compatibility_gl_get_frag_data_location(void* self, uint32_t program, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glBindFragDataLocation)
 ///
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param program uint32_t
 /// @param color uint32_t
-/// @param name char*
+/// @param name const char*
 ///
-void q_openglfunctions_4_5_compatibility_gl_bind_frag_data_location(void* self, uint32_t program, uint32_t color, char* name);
+void q_openglfunctions_4_5_compatibility_gl_bind_frag_data_location(void* self, uint32_t program, uint32_t color, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glGetUniformuiv)
 ///
@@ -2569,9 +2569,9 @@ void q_openglfunctions_4_5_compatibility_gl_get_active_uniform_blockiv(void* sel
 ///
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param program uint32_t
-/// @param uniformBlockName char*
+/// @param uniformBlockName const char*
 ///
-uint32_t q_openglfunctions_4_5_compatibility_gl_get_uniform_block_index(void* self, uint32_t program, char* uniformBlockName);
+uint32_t q_openglfunctions_4_5_compatibility_gl_get_uniform_block_index(void* self, uint32_t program, const char* uniformBlockName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glGetActiveUniformName)
 ///
@@ -3015,9 +3015,9 @@ void q_openglfunctions_4_5_compatibility_gl_gen_samplers(void* self, int32_t cou
 ///
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param program uint32_t
-/// @param name char*
+/// @param name const char*
 ///
-int32_t q_openglfunctions_4_5_compatibility_gl_get_frag_data_index(void* self, uint32_t program, char* name);
+int32_t q_openglfunctions_4_5_compatibility_gl_get_frag_data_index(void* self, uint32_t program, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glBindFragDataLocationIndexed)
 ///
@@ -3025,9 +3025,9 @@ int32_t q_openglfunctions_4_5_compatibility_gl_get_frag_data_index(void* self, u
 /// @param program uint32_t
 /// @param colorNumber uint32_t
 /// @param index uint32_t
-/// @param name char*
+/// @param name const char*
 ///
-void q_openglfunctions_4_5_compatibility_gl_bind_frag_data_location_indexed(void* self, uint32_t program, uint32_t colorNumber, uint32_t index, char* name);
+void q_openglfunctions_4_5_compatibility_gl_bind_frag_data_location_indexed(void* self, uint32_t program, uint32_t colorNumber, uint32_t index, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glGetQueryIndexediv)
 ///
@@ -3200,18 +3200,18 @@ void q_openglfunctions_4_5_compatibility_gl_get_active_subroutine_uniformiv(void
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param program uint32_t
 /// @param shadertype uint32_t
-/// @param name char*
+/// @param name const char*
 ///
-uint32_t q_openglfunctions_4_5_compatibility_gl_get_subroutine_index(void* self, uint32_t program, uint32_t shadertype, char* name);
+uint32_t q_openglfunctions_4_5_compatibility_gl_get_subroutine_index(void* self, uint32_t program, uint32_t shadertype, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glGetSubroutineUniformLocation)
 ///
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param program uint32_t
 /// @param shadertype uint32_t
-/// @param name char*
+/// @param name const char*
 ///
-int32_t q_openglfunctions_4_5_compatibility_gl_get_subroutine_uniform_location(void* self, uint32_t program, uint32_t shadertype, char* name);
+int32_t q_openglfunctions_4_5_compatibility_gl_get_subroutine_uniform_location(void* self, uint32_t program, uint32_t shadertype, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glGetUniformdv)
 ///
@@ -4433,9 +4433,9 @@ void q_openglfunctions_4_5_compatibility_gl_get_object_ptr_label(void* self, voi
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param ptr void*
 /// @param length int32_t
-/// @param label char*
+/// @param label const char*
 ///
-void q_openglfunctions_4_5_compatibility_gl_object_ptr_label(void* self, void* ptr, int32_t length, char* label);
+void q_openglfunctions_4_5_compatibility_gl_object_ptr_label(void* self, void* ptr, int32_t length, const char* label);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glGetObjectLabel)
 ///
@@ -4454,9 +4454,9 @@ void q_openglfunctions_4_5_compatibility_gl_get_object_label(void* self, uint32_
 /// @param identifier uint32_t
 /// @param name uint32_t
 /// @param length int32_t
-/// @param label char*
+/// @param label const char*
 ///
-void q_openglfunctions_4_5_compatibility_gl_object_label(void* self, uint32_t identifier, uint32_t name, int32_t length, char* label);
+void q_openglfunctions_4_5_compatibility_gl_object_label(void* self, uint32_t identifier, uint32_t name, int32_t length, const char* label);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glPopDebugGroup)
 ///
@@ -4470,9 +4470,9 @@ void q_openglfunctions_4_5_compatibility_gl_pop_debug_group(void* self);
 /// @param source uint32_t
 /// @param id uint32_t
 /// @param length int32_t
-/// @param message char*
+/// @param message const char*
 ///
-void q_openglfunctions_4_5_compatibility_gl_push_debug_group(void* self, uint32_t source, uint32_t id, int32_t length, char* message);
+void q_openglfunctions_4_5_compatibility_gl_push_debug_group(void* self, uint32_t source, uint32_t id, int32_t length, const char* message);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glDebugMessageInsert)
 ///
@@ -4482,9 +4482,9 @@ void q_openglfunctions_4_5_compatibility_gl_push_debug_group(void* self, uint32_
 /// @param id uint32_t
 /// @param severity uint32_t
 /// @param length int32_t
-/// @param buf char*
+/// @param buf const char*
 ///
-void q_openglfunctions_4_5_compatibility_gl_debug_message_insert(void* self, uint32_t source, uint32_t type, uint32_t id, uint32_t severity, int32_t length, char* buf);
+void q_openglfunctions_4_5_compatibility_gl_debug_message_insert(void* self, uint32_t source, uint32_t type, uint32_t id, uint32_t severity, int32_t length, const char* buf);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glDebugMessageControl)
 ///
@@ -4619,18 +4619,18 @@ void q_openglfunctions_4_5_compatibility_gl_shader_storage_block_binding(void* s
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param program uint32_t
 /// @param programInterface uint32_t
-/// @param name char*
+/// @param name const char*
 ///
-int32_t q_openglfunctions_4_5_compatibility_gl_get_program_resource_location_index(void* self, uint32_t program, uint32_t programInterface, char* name);
+int32_t q_openglfunctions_4_5_compatibility_gl_get_program_resource_location_index(void* self, uint32_t program, uint32_t programInterface, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glGetProgramResourceLocation)
 ///
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param program uint32_t
 /// @param programInterface uint32_t
-/// @param name char*
+/// @param name const char*
 ///
-int32_t q_openglfunctions_4_5_compatibility_gl_get_program_resource_location(void* self, uint32_t program, uint32_t programInterface, char* name);
+int32_t q_openglfunctions_4_5_compatibility_gl_get_program_resource_location(void* self, uint32_t program, uint32_t programInterface, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glGetProgramResourceName)
 ///
@@ -4649,9 +4649,9 @@ void q_openglfunctions_4_5_compatibility_gl_get_program_resource_name(void* self
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param program uint32_t
 /// @param programInterface uint32_t
-/// @param name char*
+/// @param name const char*
 ///
-uint32_t q_openglfunctions_4_5_compatibility_gl_get_program_resource_index(void* self, uint32_t program, uint32_t programInterface, char* name);
+uint32_t q_openglfunctions_4_5_compatibility_gl_get_program_resource_index(void* self, uint32_t program, uint32_t programInterface, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glGetProgramInterfaceiv)
 ///

@@ -53,7 +53,7 @@ QWidget* q_designerdnditeminterface_source(void* self);
 ///
 void q_designerdnditeminterface_delete(void* self);
 
-/// [Upstream resources](https://api.kde.org/abstractdnditem.html#public-types)
+/// [Upstream resources](https://doc.qt.io/qt-6/abstractdnditem.html#public-types)
 
 typedef enum {
     QDESIGNERDNDITEMINTERFACE_DROPTYPE_MOVEDROP = 0,

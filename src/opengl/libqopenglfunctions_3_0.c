@@ -542,7 +542,7 @@ void q_openglfunctions_3_0_gl_get_uniformfv(void* self, uint32_t program, int32_
     QOpenGLFunctions_3_0_GlGetUniformfv((QOpenGLFunctions_3_0*)self, program, location, params);
 }
 
-int32_t q_openglfunctions_3_0_gl_get_uniform_location(void* self, uint32_t program, char* name) {
+int32_t q_openglfunctions_3_0_gl_get_uniform_location(void* self, uint32_t program, const char* name) {
     return QOpenGLFunctions_3_0_GlGetUniformLocation((QOpenGLFunctions_3_0*)self, program, name);
 }
 
@@ -566,7 +566,7 @@ void q_openglfunctions_3_0_gl_get_programiv(void* self, uint32_t program, uint32
     QOpenGLFunctions_3_0_GlGetProgramiv((QOpenGLFunctions_3_0*)self, program, pname, params);
 }
 
-int32_t q_openglfunctions_3_0_gl_get_attrib_location(void* self, uint32_t program, char* name) {
+int32_t q_openglfunctions_3_0_gl_get_attrib_location(void* self, uint32_t program, const char* name) {
     return QOpenGLFunctions_3_0_GlGetAttribLocation((QOpenGLFunctions_3_0*)self, program, name);
 }
 
@@ -606,7 +606,7 @@ void q_openglfunctions_3_0_gl_compile_shader(void* self, uint32_t shader) {
     QOpenGLFunctions_3_0_GlCompileShader((QOpenGLFunctions_3_0*)self, shader);
 }
 
-void q_openglfunctions_3_0_gl_bind_attrib_location(void* self, uint32_t program, uint32_t index, char* name) {
+void q_openglfunctions_3_0_gl_bind_attrib_location(void* self, uint32_t program, uint32_t index, const char* name) {
     QOpenGLFunctions_3_0_GlBindAttribLocation((QOpenGLFunctions_3_0*)self, program, index, name);
 }
 
@@ -822,11 +822,11 @@ void q_openglfunctions_3_0_gl_uniform1ui(void* self, int32_t location, uint32_t 
     QOpenGLFunctions_3_0_GlUniform1ui((QOpenGLFunctions_3_0*)self, location, v0);
 }
 
-int32_t q_openglfunctions_3_0_gl_get_frag_data_location(void* self, uint32_t program, char* name) {
+int32_t q_openglfunctions_3_0_gl_get_frag_data_location(void* self, uint32_t program, const char* name) {
     return QOpenGLFunctions_3_0_GlGetFragDataLocation((QOpenGLFunctions_3_0*)self, program, name);
 }
 
-void q_openglfunctions_3_0_gl_bind_frag_data_location(void* self, uint32_t program, uint32_t color, char* name) {
+void q_openglfunctions_3_0_gl_bind_frag_data_location(void* self, uint32_t program, uint32_t color, const char* name) {
     QOpenGLFunctions_3_0_GlBindFragDataLocation((QOpenGLFunctions_3_0*)self, program, color, name);
 }
 

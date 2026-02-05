@@ -191,7 +191,7 @@ void q_openglextrafunctions_gl_get_uniformuiv(void* self, uint32_t program, int3
     QOpenGLExtraFunctions_GlGetUniformuiv((QOpenGLExtraFunctions*)self, program, location, params);
 }
 
-int32_t q_openglextrafunctions_gl_get_frag_data_location(void* self, uint32_t program, char* name) {
+int32_t q_openglextrafunctions_gl_get_frag_data_location(void* self, uint32_t program, const char* name) {
     return QOpenGLExtraFunctions_GlGetFragDataLocation((QOpenGLExtraFunctions*)self, program, name);
 }
 
@@ -255,7 +255,7 @@ void q_openglextrafunctions_gl_get_active_uniformsiv(void* self, uint32_t progra
     QOpenGLExtraFunctions_GlGetActiveUniformsiv((QOpenGLExtraFunctions*)self, program, uniformCount, uniformIndices, pname, params);
 }
 
-uint32_t q_openglextrafunctions_gl_get_uniform_block_index(void* self, uint32_t program, char* uniformBlockName) {
+uint32_t q_openglextrafunctions_gl_get_uniform_block_index(void* self, uint32_t program, const char* uniformBlockName) {
     return QOpenGLExtraFunctions_GlGetUniformBlockIndex((QOpenGLExtraFunctions*)self, program, uniformBlockName);
 }
 
@@ -407,7 +407,7 @@ void q_openglextrafunctions_gl_get_program_interfaceiv(void* self, uint32_t prog
     QOpenGLExtraFunctions_GlGetProgramInterfaceiv((QOpenGLExtraFunctions*)self, program, programInterface, pname, params);
 }
 
-uint32_t q_openglextrafunctions_gl_get_program_resource_index(void* self, uint32_t program, uint32_t programInterface, char* name) {
+uint32_t q_openglextrafunctions_gl_get_program_resource_index(void* self, uint32_t program, uint32_t programInterface, const char* name) {
     return QOpenGLExtraFunctions_GlGetProgramResourceIndex((QOpenGLExtraFunctions*)self, program, programInterface, name);
 }
 
@@ -415,7 +415,7 @@ void q_openglextrafunctions_gl_get_program_resource_name(void* self, uint32_t pr
     QOpenGLExtraFunctions_GlGetProgramResourceName((QOpenGLExtraFunctions*)self, program, programInterface, index, bufSize, length, name);
 }
 
-int32_t q_openglextrafunctions_gl_get_program_resource_location(void* self, uint32_t program, uint32_t programInterface, char* name) {
+int32_t q_openglextrafunctions_gl_get_program_resource_location(void* self, uint32_t program, uint32_t programInterface, const char* name) {
     return QOpenGLExtraFunctions_GlGetProgramResourceLocation((QOpenGLExtraFunctions*)self, program, programInterface, name);
 }
 
@@ -655,11 +655,11 @@ void q_openglextrafunctions_gl_debug_message_control(void* self, uint32_t source
     QOpenGLExtraFunctions_GlDebugMessageControl((QOpenGLExtraFunctions*)self, source, type, severity, count, ids, enabled);
 }
 
-void q_openglextrafunctions_gl_debug_message_insert(void* self, uint32_t source, uint32_t type, uint32_t id, uint32_t severity, int32_t length, char* buf) {
+void q_openglextrafunctions_gl_debug_message_insert(void* self, uint32_t source, uint32_t type, uint32_t id, uint32_t severity, int32_t length, const char* buf) {
     QOpenGLExtraFunctions_GlDebugMessageInsert((QOpenGLExtraFunctions*)self, source, type, id, severity, length, buf);
 }
 
-void q_openglextrafunctions_gl_push_debug_group(void* self, uint32_t source, uint32_t id, int32_t length, char* message) {
+void q_openglextrafunctions_gl_push_debug_group(void* self, uint32_t source, uint32_t id, int32_t length, const char* message) {
     QOpenGLExtraFunctions_GlPushDebugGroup((QOpenGLExtraFunctions*)self, source, id, length, message);
 }
 
@@ -667,7 +667,7 @@ void q_openglextrafunctions_gl_pop_debug_group(void* self) {
     QOpenGLExtraFunctions_GlPopDebugGroup((QOpenGLExtraFunctions*)self);
 }
 
-void q_openglextrafunctions_gl_object_label(void* self, uint32_t identifier, uint32_t name, int32_t length, char* label) {
+void q_openglextrafunctions_gl_object_label(void* self, uint32_t identifier, uint32_t name, int32_t length, const char* label) {
     QOpenGLExtraFunctions_GlObjectLabel((QOpenGLExtraFunctions*)self, identifier, name, length, label);
 }
 
@@ -675,7 +675,7 @@ void q_openglextrafunctions_gl_get_object_label(void* self, uint32_t identifier,
     QOpenGLExtraFunctions_GlGetObjectLabel((QOpenGLExtraFunctions*)self, identifier, name, bufSize, length, label);
 }
 
-void q_openglextrafunctions_gl_object_ptr_label(void* self, void* ptr, int32_t length, char* label) {
+void q_openglextrafunctions_gl_object_ptr_label(void* self, void* ptr, int32_t length, const char* label) {
     QOpenGLExtraFunctions_GlObjectPtrLabel((QOpenGLExtraFunctions*)self, ptr, length, label);
 }
 

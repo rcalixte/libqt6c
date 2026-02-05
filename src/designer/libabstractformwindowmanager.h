@@ -1471,7 +1471,7 @@ void q_designerformwindowmanagerinterface_on_object_name_changed(void* self, voi
 ///
 void q_designerformwindowmanagerinterface_delete(void* self);
 
-/// [Upstream resources](https://api.kde.org/abstractformwindowmanager.html#public-types)
+/// [Upstream resources](https://doc.qt.io/qt-6/abstractformwindowmanager.html#public-types)
 
 typedef enum {
     QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTION_CUTACTION = 100,
@@ -1496,7 +1496,7 @@ typedef enum {
     QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTION_FORMWINDOWSETTINGSDIALOGACTION = 600
 } QDesignerFormWindowManagerInterface__Action;
 
-/// [Upstream resources](https://api.kde.org/abstractformwindowmanager.html#public-types)
+/// [Upstream resources](https://doc.qt.io/qt-6/abstractformwindowmanager.html#public-types)
 
 typedef enum {
     QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONGROUP_STYLEDPREVIEWACTIONGROUP = 100

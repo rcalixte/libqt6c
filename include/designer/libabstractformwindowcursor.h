@@ -357,7 +357,7 @@ bool q_designerformwindowcursorinterface_is_widget_selected(void* self, void* wi
 ///
 void q_designerformwindowcursorinterface_delete(void* self);
 
-/// [Upstream resources](https://api.kde.org/abstractformwindowcursor.html#public-types)
+/// [Upstream resources](https://doc.qt.io/qt-6/abstractformwindowcursor.html#public-types)
 
 typedef enum {
     QDESIGNERFORMWINDOWCURSORINTERFACE_MOVEOPERATION_NOMOVE = 0,
@@ -371,7 +371,7 @@ typedef enum {
     QDESIGNERFORMWINDOWCURSORINTERFACE_MOVEOPERATION_DOWN = 8
 } QDesignerFormWindowCursorInterface__MoveOperation;
 
-/// [Upstream resources](https://api.kde.org/abstractformwindowcursor.html#public-types)
+/// [Upstream resources](https://doc.qt.io/qt-6/abstractformwindowcursor.html#public-types)
 
 typedef enum {
     QDESIGNERFORMWINDOWCURSORINTERFACE_MOVEMODE_MOVEANCHOR = 0,
