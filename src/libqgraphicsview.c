@@ -696,6 +696,18 @@ void q_graphicsview_qbase_draw_foreground(void* self, void* painter, void* rect)
     QGraphicsView_QBaseDrawForeground((QGraphicsView*)self, (QPainter*)painter, (QRectF*)rect);
 }
 
+void q_graphicsview_draw_items(void* self, void* painter, int numItems, void** items, void* options) {
+    QGraphicsView_DrawItems((QGraphicsView*)self, (QPainter*)painter, numItems, (QGraphicsItem**)items, (QStyleOptionGraphicsItem*)options);
+}
+
+void q_graphicsview_on_draw_items(void* self, void (*callback)(void*, void*, int, void**, void*)) {
+    QGraphicsView_OnDrawItems((QGraphicsView*)self, (intptr_t)callback);
+}
+
+void q_graphicsview_qbase_draw_items(void* self, void* painter, int numItems, void** items, void* options) {
+    QGraphicsView_QBaseDrawItems((QGraphicsView*)self, (QPainter*)painter, numItems, (QGraphicsItem**)items, (QStyleOptionGraphicsItem*)options);
+}
+
 const char* q_graphicsview_tr2(const char* s, const char* c) {
     libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);

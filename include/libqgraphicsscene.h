@@ -1202,6 +1202,39 @@ void q_graphicsscene_on_draw_foreground(void* self, void (*callback)(void*, void
 ///
 void q_graphicsscene_qbase_draw_foreground(void* self, void* painter, void* rect);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#drawItems)
+///
+/// @param self QGraphicsScene*
+/// @param painter QPainter*
+/// @param numItems int
+/// @param items QGraphicsItem**
+/// @param options QStyleOptionGraphicsItem*
+/// @param widget QWidget*
+///
+void q_graphicsscene_draw_items(void* self, void* painter, int numItems, void** items, void* options, void* widget);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#drawItems)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QGraphicsScene*
+/// @param callback void func(QGraphicsScene* self, QPainter* painter, int numItems, QGraphicsItem** items, QStyleOptionGraphicsItem* options, QWidget* widget)
+///
+void q_graphicsscene_on_draw_items(void* self, void (*callback)(void*, void*, int, void**, void*, void*));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#drawItems)
+///
+/// Base class method implementation
+///
+/// @param self QGraphicsScene*
+/// @param painter QPainter*
+/// @param numItems int
+/// @param items QGraphicsItem**
+/// @param options QStyleOptionGraphicsItem*
+/// @param widget QWidget*
+///
+void q_graphicsscene_qbase_draw_items(void* self, void* painter, int numItems, void** items, void* options, void* widget);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#focusNextPrevChild)
 ///
 /// @param self QGraphicsScene*

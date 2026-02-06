@@ -245,6 +245,18 @@ QLayoutItem* q_formlayout_item_at(void* self, int row, int32_t role) {
     return QFormLayout_ItemAt((QFormLayout*)self, row, role);
 }
 
+void q_formlayout_get_item_position(void* self, int index, int* rowPtr, int32_t* rolePtr) {
+    QFormLayout_GetItemPosition((QFormLayout*)self, index, rowPtr, rolePtr);
+}
+
+void q_formlayout_get_widget_position(void* self, void* widget, int* rowPtr, int32_t* rolePtr) {
+    QFormLayout_GetWidgetPosition((QFormLayout*)self, (QWidget*)widget, rowPtr, rolePtr);
+}
+
+void q_formlayout_get_layout_position(void* self, void* layout, int* rowPtr, int32_t* rolePtr) {
+    QFormLayout_GetLayoutPosition((QFormLayout*)self, (QLayout*)layout, rowPtr, rolePtr);
+}
+
 QWidget* q_formlayout_label_for_field(void* self, void* field) {
     return QFormLayout_LabelForField((QFormLayout*)self, (QWidget*)field);
 }

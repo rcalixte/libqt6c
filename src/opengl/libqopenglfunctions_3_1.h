@@ -795,6 +795,17 @@ void q_openglfunctions_3_1_gl_point_parameterfv(void* self, uint32_t pname, floa
 ///
 void q_openglfunctions_3_1_gl_point_parameterf(void* self, uint32_t pname, float param);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-1.html#glMultiDrawElements)
+///
+/// @param self QOpenGLFunctions_3_1*
+/// @param mode uint32_t
+/// @param count int32_t*
+/// @param type uint32_t
+/// @param indices void*
+/// @param drawcount int32_t
+///
+void q_openglfunctions_3_1_gl_multi_draw_elements(void* self, uint32_t mode, int32_t* count, uint32_t type, void* indices, int32_t drawcount);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-1.html#glMultiDrawArrays)
 ///
 /// @param self QOpenGLFunctions_3_1*
@@ -814,6 +825,15 @@ void q_openglfunctions_3_1_gl_multi_draw_arrays(void* self, uint32_t mode, int32
 /// @param dfactorAlpha uint32_t
 ///
 void q_openglfunctions_3_1_gl_blend_func_separate(void* self, uint32_t sfactorRGB, uint32_t dfactorRGB, uint32_t sfactorAlpha, uint32_t dfactorAlpha);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-1.html#glGetBufferPointerv)
+///
+/// @param self QOpenGLFunctions_3_1*
+/// @param target uint32_t
+/// @param pname uint32_t
+/// @param params void*
+///
+void q_openglfunctions_3_1_gl_get_buffer_pointerv(void* self, uint32_t target, uint32_t pname, void* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-1.html#glGetBufferParameteriv)
 ///
@@ -1169,6 +1189,16 @@ void q_openglfunctions_3_1_gl_uniform1f(void* self, int32_t location, float v0);
 ///
 void q_openglfunctions_3_1_gl_use_program(void* self, uint32_t program);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-1.html#glShaderSource)
+///
+/// @param self QOpenGLFunctions_3_1*
+/// @param shader uint32_t
+/// @param count int32_t
+/// @param stringVal const char**
+/// @param length int32_t*
+///
+void q_openglfunctions_3_1_gl_shader_source(void* self, uint32_t shader, int32_t count, const char** stringVal, int32_t* length);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-1.html#glLinkProgram)
 ///
 /// @param self QOpenGLFunctions_3_1*
@@ -1189,6 +1219,15 @@ uint8_t q_openglfunctions_3_1_gl_is_shader(void* self, uint32_t shader);
 /// @param program uint32_t
 ///
 uint8_t q_openglfunctions_3_1_gl_is_program(void* self, uint32_t program);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-1.html#glGetVertexAttribPointerv)
+///
+/// @param self QOpenGLFunctions_3_1*
+/// @param index uint32_t
+/// @param pname uint32_t
+/// @param pointer void*
+///
+void q_openglfunctions_3_1_gl_get_vertex_attrib_pointerv(void* self, uint32_t index, uint32_t pname, void* pointer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-1.html#glGetVertexAttribiv)
 ///
@@ -1939,6 +1978,16 @@ void q_openglfunctions_3_1_gl_begin_conditional_render(void* self, uint32_t id, 
 ///
 void q_openglfunctions_3_1_gl_clamp_color(void* self, uint32_t target, uint32_t clamp);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-1.html#glTransformFeedbackVaryings)
+///
+/// @param self QOpenGLFunctions_3_1*
+/// @param program uint32_t
+/// @param count int32_t
+/// @param varyings const char**
+/// @param bufferMode uint32_t
+///
+void q_openglfunctions_3_1_gl_transform_feedback_varyings(void* self, uint32_t program, int32_t count, const char** varyings, uint32_t bufferMode);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-1.html#glBindBufferBase)
 ///
 /// @param self QOpenGLFunctions_3_1*
@@ -2095,6 +2144,16 @@ void q_openglfunctions_3_1_gl_get_active_uniform_name(void* self, uint32_t progr
 /// @param params int32_t*
 ///
 void q_openglfunctions_3_1_gl_get_active_uniformsiv(void* self, uint32_t program, int32_t uniformCount, uint32_t* uniformIndices, uint32_t pname, int32_t* params);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-1.html#glGetUniformIndices)
+///
+/// @param self QOpenGLFunctions_3_1*
+/// @param program uint32_t
+/// @param uniformCount int32_t
+/// @param uniformNames const char**
+/// @param uniformIndices uint32_t*
+///
+void q_openglfunctions_3_1_gl_get_uniform_indices(void* self, uint32_t program, int32_t uniformCount, const char** uniformNames, uint32_t* uniformIndices);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-1.html#glPrimitiveRestartIndex)
 ///

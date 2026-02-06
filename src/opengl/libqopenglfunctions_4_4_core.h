@@ -1498,6 +1498,16 @@ void q_openglfunctions_4_4_core_gl_uniform1f(void* self, int32_t location, float
 ///
 void q_openglfunctions_4_4_core_gl_use_program(void* self, uint32_t program);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-4-core.html#glShaderSource)
+///
+/// @param self QOpenGLFunctions_4_4_Core*
+/// @param shader uint32_t
+/// @param count int32_t
+/// @param stringVal const char**
+/// @param length int32_t*
+///
+void q_openglfunctions_4_4_core_gl_shader_source(void* self, uint32_t shader, int32_t count, const char** stringVal, int32_t* length);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-4-core.html#glLinkProgram)
 ///
 /// @param self QOpenGLFunctions_4_4_Core*
@@ -2449,6 +2459,16 @@ void q_openglfunctions_4_4_core_gl_begin_conditional_render(void* self, uint32_t
 ///
 void q_openglfunctions_4_4_core_gl_clamp_color(void* self, uint32_t target, uint32_t clamp);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-4-core.html#glTransformFeedbackVaryings)
+///
+/// @param self QOpenGLFunctions_4_4_Core*
+/// @param program uint32_t
+/// @param count int32_t
+/// @param varyings const char**
+/// @param bufferMode uint32_t
+///
+void q_openglfunctions_4_4_core_gl_transform_feedback_varyings(void* self, uint32_t program, int32_t count, const char** varyings, uint32_t bufferMode);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-4-core.html#glBindBufferBase)
 ///
 /// @param self QOpenGLFunctions_4_4_Core*
@@ -2594,6 +2614,16 @@ void q_openglfunctions_4_4_core_gl_get_active_uniform_name(void* self, uint32_t 
 /// @param params int32_t*
 ///
 void q_openglfunctions_4_4_core_gl_get_active_uniformsiv(void* self, uint32_t program, int32_t uniformCount, uint32_t* uniformIndices, uint32_t pname, int32_t* params);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-4-core.html#glGetUniformIndices)
+///
+/// @param self QOpenGLFunctions_4_4_Core*
+/// @param program uint32_t
+/// @param uniformCount int32_t
+/// @param uniformNames const char**
+/// @param uniformIndices uint32_t*
+///
+void q_openglfunctions_4_4_core_gl_get_uniform_indices(void* self, uint32_t program, int32_t uniformCount, const char** uniformNames, uint32_t* uniformIndices);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-4-core.html#glCopyBufferSubData)
 ///
@@ -4210,6 +4240,15 @@ void q_openglfunctions_4_4_core_gl_delete_program_pipelines(void* self, int32_t 
 /// @param pipeline uint32_t
 ///
 void q_openglfunctions_4_4_core_gl_bind_program_pipeline(void* self, uint32_t pipeline);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-4-core.html#glCreateShaderProgramv)
+///
+/// @param self QOpenGLFunctions_4_4_Core*
+/// @param type uint32_t
+/// @param count int32_t
+/// @param strings const char**
+///
+uint32_t q_openglfunctions_4_4_core_gl_create_shader_programv(void* self, uint32_t type, int32_t count, const char** strings);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-4-core.html#glActiveShaderProgram)
 ///

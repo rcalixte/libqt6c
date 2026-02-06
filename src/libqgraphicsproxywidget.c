@@ -1672,6 +1672,10 @@ void q_graphicsproxywidget_set_cache_mode2(void* self, int32_t mode, void* cache
     QGraphicsItem_SetCacheMode2((QGraphicsItem*)self, mode, (QSize*)cacheSize);
 }
 
+bool q_graphicsproxywidget_is_blocked_by_modal_panel1(void* self, void** blockingPanel) {
+    return QGraphicsItem_IsBlockedByModalPanel1((QGraphicsItem*)self, (QGraphicsItem**)blockingPanel);
+}
+
 void q_graphicsproxywidget_set_focus1(void* self, int32_t focusReason) {
     QGraphicsItem_SetFocus1((QGraphicsItem*)self, focusReason);
 }

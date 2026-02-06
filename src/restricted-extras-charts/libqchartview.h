@@ -5101,6 +5101,45 @@ void q_chartview_qbase_draw_foreground(void* self, void* painter, void* rect);
 ///
 void q_chartview_on_draw_foreground(void* self, void (*callback)(void*, void*, void*));
 
+/// Inherited from QGraphicsView
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#drawItems)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self QChartView*
+/// @param painter QPainter*
+/// @param numItems int
+/// @param items QGraphicsItem**
+/// @param options QStyleOptionGraphicsItem*
+///
+void q_chartview_draw_items(void* self, void* painter, int numItems, void** items, void* options);
+
+/// Inherited from QGraphicsView
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#drawItems)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self QChartView*
+/// @param painter QPainter*
+/// @param numItems int
+/// @param items QGraphicsItem**
+/// @param options QStyleOptionGraphicsItem*
+///
+void q_chartview_qbase_draw_items(void* self, void* painter, int numItems, void** items, void* options);
+
+/// Inherited from QGraphicsView
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#drawItems)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self QChartView*
+/// @param callback void func(QChartView* self, QPainter* painter, int numItems, QGraphicsItem** items, QStyleOptionGraphicsItem* options)
+///
+void q_chartview_on_draw_items(void* self, void (*callback)(void*, void*, int, void**, void*));
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)

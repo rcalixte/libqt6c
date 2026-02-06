@@ -3,6 +3,7 @@
 #include "libqchart.hpp"
 #include "../libqcoreevent.hpp"
 #include "../libqframe.hpp"
+#include "../libqgraphicsitem.hpp"
 #include "../libqgraphicsview.hpp"
 #include "../libqmargins.hpp"
 #include "../libqmetaobject.hpp"
@@ -2290,6 +2291,18 @@ void q_chartview_qbase_draw_foreground(void* self, void* painter, void* rect) {
 
 void q_chartview_on_draw_foreground(void* self, void (*callback)(void*, void*, void*)) {
     QChartView_OnDrawForeground((QChartView*)self, (intptr_t)callback);
+}
+
+void q_chartview_draw_items(void* self, void* painter, int numItems, void** items, void* options) {
+    QChartView_DrawItems((QChartView*)self, (QPainter*)painter, numItems, (QGraphicsItem**)items, (QStyleOptionGraphicsItem*)options);
+}
+
+void q_chartview_qbase_draw_items(void* self, void* painter, int numItems, void** items, void* options) {
+    QChartView_QBaseDrawItems((QChartView*)self, (QPainter*)painter, numItems, (QGraphicsItem**)items, (QStyleOptionGraphicsItem*)options);
+}
+
+void q_chartview_on_draw_items(void* self, void (*callback)(void*, void*, int, void**, void*)) {
+    QChartView_OnDrawItems((QChartView*)self, (intptr_t)callback);
 }
 
 QSize* q_chartview_minimum_size_hint(void* self) {

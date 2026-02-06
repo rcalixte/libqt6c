@@ -31,16 +31,20 @@ QPixmap* q_pixmap_new4(const char* fileName) {
     return QPixmap_new4(qstring(fileName));
 }
 
-QPixmap* q_pixmap_new5(void* param1) {
-    return QPixmap_new5((QPixmap*)param1);
+QPixmap* q_pixmap_new5(const char** xpm) {
+    return QPixmap_new5(xpm);
 }
 
-QPixmap* q_pixmap_new6(const char* fileName, const char* format) {
-    return QPixmap_new6(qstring(fileName), format);
+QPixmap* q_pixmap_new6(void* param1) {
+    return QPixmap_new6((QPixmap*)param1);
 }
 
-QPixmap* q_pixmap_new7(const char* fileName, const char* format, int32_t flags) {
-    return QPixmap_new7(qstring(fileName), format, flags);
+QPixmap* q_pixmap_new7(const char* fileName, const char* format) {
+    return QPixmap_new7(qstring(fileName), format);
+}
+
+QPixmap* q_pixmap_new8(const char* fileName, const char* format, int32_t flags) {
+    return QPixmap_new8(qstring(fileName), format, flags);
 }
 
 void q_pixmap_operator_assign(void* self, void* param1) {

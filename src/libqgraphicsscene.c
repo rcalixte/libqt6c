@@ -19,6 +19,7 @@
 #include "libqpoint.hpp"
 #include "libqrect.hpp"
 #include "libqstyle.hpp"
+#include "libqstyleoption.hpp"
 #include "libqtransform.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
@@ -646,6 +647,18 @@ void q_graphicsscene_on_draw_foreground(void* self, void (*callback)(void*, void
 
 void q_graphicsscene_qbase_draw_foreground(void* self, void* painter, void* rect) {
     QGraphicsScene_QBaseDrawForeground((QGraphicsScene*)self, (QPainter*)painter, (QRectF*)rect);
+}
+
+void q_graphicsscene_draw_items(void* self, void* painter, int numItems, void** items, void* options, void* widget) {
+    QGraphicsScene_DrawItems((QGraphicsScene*)self, (QPainter*)painter, numItems, (QGraphicsItem**)items, (QStyleOptionGraphicsItem*)options, (QWidget*)widget);
+}
+
+void q_graphicsscene_on_draw_items(void* self, void (*callback)(void*, void*, int, void**, void*, void*)) {
+    QGraphicsScene_OnDrawItems((QGraphicsScene*)self, (intptr_t)callback);
+}
+
+void q_graphicsscene_qbase_draw_items(void* self, void* painter, int numItems, void** items, void* options, void* widget) {
+    QGraphicsScene_QBaseDrawItems((QGraphicsScene*)self, (QPainter*)painter, numItems, (QGraphicsItem**)items, (QStyleOptionGraphicsItem*)options, (QWidget*)widget);
 }
 
 bool q_graphicsscene_focus_next_prev_child(void* self, bool next) {

@@ -258,6 +258,10 @@ void q_openglfunctions_2_1_gl_polygon_offset(void* self, float factor, float uni
     QOpenGLFunctions_2_1_GlPolygonOffset((QOpenGLFunctions_2_1*)self, factor, units);
 }
 
+void q_openglfunctions_2_1_gl_get_pointerv(void* self, uint32_t pname, void* params) {
+    QOpenGLFunctions_2_1_GlGetPointerv((QOpenGLFunctions_2_1*)self, pname, params);
+}
+
 void q_openglfunctions_2_1_gl_draw_elements(void* self, uint32_t mode, int32_t count, uint32_t type, void* indices) {
     QOpenGLFunctions_2_1_GlDrawElements((QOpenGLFunctions_2_1*)self, mode, count, type, indices);
 }
@@ -342,12 +346,20 @@ void q_openglfunctions_2_1_gl_point_parameterf(void* self, uint32_t pname, float
     QOpenGLFunctions_2_1_GlPointParameterf((QOpenGLFunctions_2_1*)self, pname, param);
 }
 
+void q_openglfunctions_2_1_gl_multi_draw_elements(void* self, uint32_t mode, int32_t* count, uint32_t type, void* indices, int32_t drawcount) {
+    QOpenGLFunctions_2_1_GlMultiDrawElements((QOpenGLFunctions_2_1*)self, mode, count, type, indices, drawcount);
+}
+
 void q_openglfunctions_2_1_gl_multi_draw_arrays(void* self, uint32_t mode, int32_t* first, int32_t* count, int32_t drawcount) {
     QOpenGLFunctions_2_1_GlMultiDrawArrays((QOpenGLFunctions_2_1*)self, mode, first, count, drawcount);
 }
 
 void q_openglfunctions_2_1_gl_blend_func_separate(void* self, uint32_t sfactorRGB, uint32_t dfactorRGB, uint32_t sfactorAlpha, uint32_t dfactorAlpha) {
     QOpenGLFunctions_2_1_GlBlendFuncSeparate((QOpenGLFunctions_2_1*)self, sfactorRGB, dfactorRGB, sfactorAlpha, dfactorAlpha);
+}
+
+void q_openglfunctions_2_1_gl_get_buffer_pointerv(void* self, uint32_t target, uint32_t pname, void* params) {
+    QOpenGLFunctions_2_1_GlGetBufferPointerv((QOpenGLFunctions_2_1*)self, target, pname, params);
 }
 
 void q_openglfunctions_2_1_gl_get_buffer_parameteriv(void* self, uint32_t target, uint32_t pname, int32_t* params) {
@@ -510,6 +522,10 @@ void q_openglfunctions_2_1_gl_use_program(void* self, uint32_t program) {
     QOpenGLFunctions_2_1_GlUseProgram((QOpenGLFunctions_2_1*)self, program);
 }
 
+void q_openglfunctions_2_1_gl_shader_source(void* self, uint32_t shader, int32_t count, const char** stringVal, int32_t* length) {
+    QOpenGLFunctions_2_1_GlShaderSource((QOpenGLFunctions_2_1*)self, shader, count, stringVal, length);
+}
+
 void q_openglfunctions_2_1_gl_link_program(void* self, uint32_t program) {
     QOpenGLFunctions_2_1_GlLinkProgram((QOpenGLFunctions_2_1*)self, program);
 }
@@ -520,6 +536,10 @@ uint8_t q_openglfunctions_2_1_gl_is_shader(void* self, uint32_t shader) {
 
 uint8_t q_openglfunctions_2_1_gl_is_program(void* self, uint32_t program) {
     return QOpenGLFunctions_2_1_GlIsProgram((QOpenGLFunctions_2_1*)self, program);
+}
+
+void q_openglfunctions_2_1_gl_get_vertex_attrib_pointerv(void* self, uint32_t index, uint32_t pname, void* pointer) {
+    QOpenGLFunctions_2_1_GlGetVertexAttribPointerv((QOpenGLFunctions_2_1*)self, index, pname, pointer);
 }
 
 void q_openglfunctions_2_1_gl_get_vertex_attribiv(void* self, uint32_t index, uint32_t pname, int32_t* params) {

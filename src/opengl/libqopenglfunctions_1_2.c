@@ -258,6 +258,10 @@ void q_openglfunctions_1_2_gl_polygon_offset(void* self, float factor, float uni
     QOpenGLFunctions_1_2_GlPolygonOffset((QOpenGLFunctions_1_2*)self, factor, units);
 }
 
+void q_openglfunctions_1_2_gl_get_pointerv(void* self, uint32_t pname, void* params) {
+    QOpenGLFunctions_1_2_GlGetPointerv((QOpenGLFunctions_1_2*)self, pname, params);
+}
+
 void q_openglfunctions_1_2_gl_draw_elements(void* self, uint32_t mode, int32_t count, uint32_t type, void* indices) {
     QOpenGLFunctions_1_2_GlDrawElements((QOpenGLFunctions_1_2*)self, mode, count, type, indices);
 }

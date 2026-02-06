@@ -86,26 +86,34 @@ QImage* q_image_new7(unsigned char* data, int width, int height, int64_t bytesPe
 
 /// q_image_new8 constructs a new QImage object.
 ///
-/// @param fileName const char*
+/// @param xpm const char**
 ///
-QImage* q_image_new8(const char* fileName);
+QImage* q_image_new8(const char** xpm);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html)
 
 /// q_image_new9 constructs a new QImage object.
 ///
-/// @param param1 QImage*
+/// @param fileName const char*
 ///
-QImage* q_image_new9(void* param1);
+QImage* q_image_new9(const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html)
 
 /// q_image_new10 constructs a new QImage object.
 ///
+/// @param param1 QImage*
+///
+QImage* q_image_new10(void* param1);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html)
+
+/// q_image_new11 constructs a new QImage object.
+///
 /// @param fileName const char*
 /// @param format const char*
 ///
-QImage* q_image_new10(const char* fileName, const char* format);
+QImage* q_image_new11(const char* fileName, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#operator-eq)
 ///

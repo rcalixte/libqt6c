@@ -654,6 +654,10 @@ void q_openglfunctions_4_5_core_gl_use_program(void* self, uint32_t program) {
     QOpenGLFunctions_4_5_Core_GlUseProgram((QOpenGLFunctions_4_5_Core*)self, program);
 }
 
+void q_openglfunctions_4_5_core_gl_shader_source(void* self, uint32_t shader, int32_t count, const char** stringVal, int32_t* length) {
+    QOpenGLFunctions_4_5_Core_GlShaderSource((QOpenGLFunctions_4_5_Core*)self, shader, count, stringVal, length);
+}
+
 void q_openglfunctions_4_5_core_gl_link_program(void* self, uint32_t program) {
     QOpenGLFunctions_4_5_Core_GlLinkProgram((QOpenGLFunctions_4_5_Core*)self, program);
 }
@@ -1086,6 +1090,10 @@ void q_openglfunctions_4_5_core_gl_clamp_color(void* self, uint32_t target, uint
     QOpenGLFunctions_4_5_Core_GlClampColor((QOpenGLFunctions_4_5_Core*)self, target, clamp);
 }
 
+void q_openglfunctions_4_5_core_gl_transform_feedback_varyings(void* self, uint32_t program, int32_t count, const char** varyings, uint32_t bufferMode) {
+    QOpenGLFunctions_4_5_Core_GlTransformFeedbackVaryings((QOpenGLFunctions_4_5_Core*)self, program, count, varyings, bufferMode);
+}
+
 void q_openglfunctions_4_5_core_gl_bind_buffer_base(void* self, uint32_t target, uint32_t index, uint32_t buffer) {
     QOpenGLFunctions_4_5_Core_GlBindBufferBase((QOpenGLFunctions_4_5_Core*)self, target, index, buffer);
 }
@@ -1148,6 +1156,10 @@ void q_openglfunctions_4_5_core_gl_get_active_uniform_name(void* self, uint32_t 
 
 void q_openglfunctions_4_5_core_gl_get_active_uniformsiv(void* self, uint32_t program, int32_t uniformCount, uint32_t* uniformIndices, uint32_t pname, int32_t* params) {
     QOpenGLFunctions_4_5_Core_GlGetActiveUniformsiv((QOpenGLFunctions_4_5_Core*)self, program, uniformCount, uniformIndices, pname, params);
+}
+
+void q_openglfunctions_4_5_core_gl_get_uniform_indices(void* self, uint32_t program, int32_t uniformCount, const char** uniformNames, uint32_t* uniformIndices) {
+    QOpenGLFunctions_4_5_Core_GlGetUniformIndices((QOpenGLFunctions_4_5_Core*)self, program, uniformCount, uniformNames, uniformIndices);
 }
 
 void q_openglfunctions_4_5_core_gl_copy_buffer_sub_data(void* self, uint32_t readTarget, uint32_t writeTarget, intptr_t readOffset, intptr_t writeOffset, intptr_t size) {
@@ -1824,6 +1836,10 @@ void q_openglfunctions_4_5_core_gl_delete_program_pipelines(void* self, int32_t 
 
 void q_openglfunctions_4_5_core_gl_bind_program_pipeline(void* self, uint32_t pipeline) {
     QOpenGLFunctions_4_5_Core_GlBindProgramPipeline((QOpenGLFunctions_4_5_Core*)self, pipeline);
+}
+
+uint32_t q_openglfunctions_4_5_core_gl_create_shader_programv(void* self, uint32_t type, int32_t count, const char** strings) {
+    return QOpenGLFunctions_4_5_Core_GlCreateShaderProgramv((QOpenGLFunctions_4_5_Core*)self, type, count, strings);
 }
 
 void q_openglfunctions_4_5_core_gl_active_shader_program(void* self, uint32_t pipeline, uint32_t program) {

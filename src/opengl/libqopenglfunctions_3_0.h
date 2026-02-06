@@ -570,6 +570,14 @@ void q_openglfunctions_3_0_gl_copy_tex_image1_d(void* self, uint32_t target, int
 ///
 void q_openglfunctions_3_0_gl_polygon_offset(void* self, float factor, float units);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-0.html#glGetPointerv)
+///
+/// @param self QOpenGLFunctions_3_0*
+/// @param pname uint32_t
+/// @param params void*
+///
+void q_openglfunctions_3_0_gl_get_pointerv(void* self, uint32_t pname, void* params);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-0.html#glDrawElements)
 ///
 /// @param self QOpenGLFunctions_3_0*
@@ -809,6 +817,17 @@ void q_openglfunctions_3_0_gl_point_parameterfv(void* self, uint32_t pname, floa
 ///
 void q_openglfunctions_3_0_gl_point_parameterf(void* self, uint32_t pname, float param);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-0.html#glMultiDrawElements)
+///
+/// @param self QOpenGLFunctions_3_0*
+/// @param mode uint32_t
+/// @param count int32_t*
+/// @param type uint32_t
+/// @param indices void*
+/// @param drawcount int32_t
+///
+void q_openglfunctions_3_0_gl_multi_draw_elements(void* self, uint32_t mode, int32_t* count, uint32_t type, void* indices, int32_t drawcount);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-0.html#glMultiDrawArrays)
 ///
 /// @param self QOpenGLFunctions_3_0*
@@ -828,6 +847,15 @@ void q_openglfunctions_3_0_gl_multi_draw_arrays(void* self, uint32_t mode, int32
 /// @param dfactorAlpha uint32_t
 ///
 void q_openglfunctions_3_0_gl_blend_func_separate(void* self, uint32_t sfactorRGB, uint32_t dfactorRGB, uint32_t sfactorAlpha, uint32_t dfactorAlpha);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-0.html#glGetBufferPointerv)
+///
+/// @param self QOpenGLFunctions_3_0*
+/// @param target uint32_t
+/// @param pname uint32_t
+/// @param params void*
+///
+void q_openglfunctions_3_0_gl_get_buffer_pointerv(void* self, uint32_t target, uint32_t pname, void* params);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-0.html#glGetBufferParameteriv)
 ///
@@ -1183,6 +1211,16 @@ void q_openglfunctions_3_0_gl_uniform1f(void* self, int32_t location, float v0);
 ///
 void q_openglfunctions_3_0_gl_use_program(void* self, uint32_t program);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-0.html#glShaderSource)
+///
+/// @param self QOpenGLFunctions_3_0*
+/// @param shader uint32_t
+/// @param count int32_t
+/// @param stringVal const char**
+/// @param length int32_t*
+///
+void q_openglfunctions_3_0_gl_shader_source(void* self, uint32_t shader, int32_t count, const char** stringVal, int32_t* length);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-0.html#glLinkProgram)
 ///
 /// @param self QOpenGLFunctions_3_0*
@@ -1203,6 +1241,15 @@ uint8_t q_openglfunctions_3_0_gl_is_shader(void* self, uint32_t shader);
 /// @param program uint32_t
 ///
 uint8_t q_openglfunctions_3_0_gl_is_program(void* self, uint32_t program);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-0.html#glGetVertexAttribPointerv)
+///
+/// @param self QOpenGLFunctions_3_0*
+/// @param index uint32_t
+/// @param pname uint32_t
+/// @param pointer void*
+///
+void q_openglfunctions_3_0_gl_get_vertex_attrib_pointerv(void* self, uint32_t index, uint32_t pname, void* pointer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-0.html#glGetVertexAttribiv)
 ///
@@ -1952,6 +1999,16 @@ void q_openglfunctions_3_0_gl_begin_conditional_render(void* self, uint32_t id, 
 /// @param clamp uint32_t
 ///
 void q_openglfunctions_3_0_gl_clamp_color(void* self, uint32_t target, uint32_t clamp);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-0.html#glTransformFeedbackVaryings)
+///
+/// @param self QOpenGLFunctions_3_0*
+/// @param program uint32_t
+/// @param count int32_t
+/// @param varyings const char**
+/// @param bufferMode uint32_t
+///
+void q_openglfunctions_3_0_gl_transform_feedback_varyings(void* self, uint32_t program, int32_t count, const char** varyings, uint32_t bufferMode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-0.html#glBindBufferBase)
 ///

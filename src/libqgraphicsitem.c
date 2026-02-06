@@ -1124,6 +1124,10 @@ void q_graphicsitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize) {
     QGraphicsItem_SetCacheMode2((QGraphicsItem*)self, mode, (QSize*)cacheSize);
 }
 
+bool q_graphicsitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel) {
+    return QGraphicsItem_IsBlockedByModalPanel1((QGraphicsItem*)self, (QGraphicsItem**)blockingPanel);
+}
+
 void q_graphicsitem_set_focus1(void* self, int32_t focusReason) {
     QGraphicsItem_SetFocus1((QGraphicsItem*)self, focusReason);
 }
@@ -2201,6 +2205,10 @@ void q_graphicsobject_set_flag2(void* self, int32_t flag, bool enabled) {
 
 void q_graphicsobject_set_cache_mode2(void* self, int32_t mode, void* cacheSize) {
     QGraphicsItem_SetCacheMode2((QGraphicsItem*)self, mode, (QSize*)cacheSize);
+}
+
+bool q_graphicsobject_is_blocked_by_modal_panel1(void* self, void** blockingPanel) {
+    return QGraphicsItem_IsBlockedByModalPanel1((QGraphicsItem*)self, (QGraphicsItem**)blockingPanel);
 }
 
 void q_graphicsobject_set_focus1(void* self, int32_t focusReason) {
@@ -3502,6 +3510,10 @@ void q_abstractgraphicsshapeitem_set_cache_mode2(void* self, int32_t mode, void*
     QGraphicsItem_SetCacheMode2((QGraphicsItem*)self, mode, (QSize*)cacheSize);
 }
 
+bool q_abstractgraphicsshapeitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel) {
+    return QGraphicsItem_IsBlockedByModalPanel1((QGraphicsItem*)self, (QGraphicsItem**)blockingPanel);
+}
+
 void q_abstractgraphicsshapeitem_set_focus1(void* self, int32_t focusReason) {
     QGraphicsItem_SetFocus1((QGraphicsItem*)self, focusReason);
 }
@@ -4777,6 +4789,10 @@ void q_graphicspathitem_set_cache_mode2(void* self, int32_t mode, void* cacheSiz
     QGraphicsItem_SetCacheMode2((QGraphicsItem*)self, mode, (QSize*)cacheSize);
 }
 
+bool q_graphicspathitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel) {
+    return QGraphicsItem_IsBlockedByModalPanel1((QGraphicsItem*)self, (QGraphicsItem**)blockingPanel);
+}
+
 void q_graphicspathitem_set_focus1(void* self, int32_t focusReason) {
     QGraphicsItem_SetFocus1((QGraphicsItem*)self, focusReason);
 }
@@ -5966,6 +5982,10 @@ void q_graphicsrectitem_set_flag2(void* self, int32_t flag, bool enabled) {
 
 void q_graphicsrectitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize) {
     QGraphicsItem_SetCacheMode2((QGraphicsItem*)self, mode, (QSize*)cacheSize);
+}
+
+bool q_graphicsrectitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel) {
+    return QGraphicsItem_IsBlockedByModalPanel1((QGraphicsItem*)self, (QGraphicsItem**)blockingPanel);
 }
 
 void q_graphicsrectitem_set_focus1(void* self, int32_t focusReason) {
@@ -7175,6 +7195,10 @@ void q_graphicsellipseitem_set_cache_mode2(void* self, int32_t mode, void* cache
     QGraphicsItem_SetCacheMode2((QGraphicsItem*)self, mode, (QSize*)cacheSize);
 }
 
+bool q_graphicsellipseitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel) {
+    return QGraphicsItem_IsBlockedByModalPanel1((QGraphicsItem*)self, (QGraphicsItem**)blockingPanel);
+}
+
 void q_graphicsellipseitem_set_focus1(void* self, int32_t focusReason) {
     QGraphicsItem_SetFocus1((QGraphicsItem*)self, focusReason);
 }
@@ -8344,6 +8368,10 @@ void q_graphicspolygonitem_set_flag2(void* self, int32_t flag, bool enabled) {
 
 void q_graphicspolygonitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize) {
     QGraphicsItem_SetCacheMode2((QGraphicsItem*)self, mode, (QSize*)cacheSize);
+}
+
+bool q_graphicspolygonitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel) {
+    return QGraphicsItem_IsBlockedByModalPanel1((QGraphicsItem*)self, (QGraphicsItem**)blockingPanel);
 }
 
 void q_graphicspolygonitem_set_focus1(void* self, int32_t focusReason) {
@@ -9527,6 +9555,10 @@ void q_graphicslineitem_set_flag2(void* self, int32_t flag, bool enabled) {
 
 void q_graphicslineitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize) {
     QGraphicsItem_SetCacheMode2((QGraphicsItem*)self, mode, (QSize*)cacheSize);
+}
+
+bool q_graphicslineitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel) {
+    return QGraphicsItem_IsBlockedByModalPanel1((QGraphicsItem*)self, (QGraphicsItem**)blockingPanel);
 }
 
 void q_graphicslineitem_set_focus1(void* self, int32_t focusReason) {
@@ -10718,6 +10750,10 @@ void q_graphicspixmapitem_set_flag2(void* self, int32_t flag, bool enabled) {
 
 void q_graphicspixmapitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize) {
     QGraphicsItem_SetCacheMode2((QGraphicsItem*)self, mode, (QSize*)cacheSize);
+}
+
+bool q_graphicspixmapitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel) {
+    return QGraphicsItem_IsBlockedByModalPanel1((QGraphicsItem*)self, (QGraphicsItem**)blockingPanel);
 }
 
 void q_graphicspixmapitem_set_focus1(void* self, int32_t focusReason) {
@@ -12585,6 +12621,10 @@ void q_graphicstextitem_set_cache_mode2(void* self, int32_t mode, void* cacheSiz
     QGraphicsItem_SetCacheMode2((QGraphicsItem*)self, mode, (QSize*)cacheSize);
 }
 
+bool q_graphicstextitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel) {
+    return QGraphicsItem_IsBlockedByModalPanel1((QGraphicsItem*)self, (QGraphicsItem**)blockingPanel);
+}
+
 void q_graphicstextitem_set_focus1(void* self, int32_t focusReason) {
     QGraphicsItem_SetFocus1((QGraphicsItem*)self, focusReason);
 }
@@ -13683,6 +13723,10 @@ void q_graphicssimpletextitem_set_cache_mode2(void* self, int32_t mode, void* ca
     QGraphicsItem_SetCacheMode2((QGraphicsItem*)self, mode, (QSize*)cacheSize);
 }
 
+bool q_graphicssimpletextitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel) {
+    return QGraphicsItem_IsBlockedByModalPanel1((QGraphicsItem*)self, (QGraphicsItem**)blockingPanel);
+}
+
 void q_graphicssimpletextitem_set_focus1(void* self, int32_t focusReason) {
     QGraphicsItem_SetFocus1((QGraphicsItem*)self, focusReason);
 }
@@ -14776,6 +14820,10 @@ void q_graphicsitemgroup_set_flag2(void* self, int32_t flag, bool enabled) {
 
 void q_graphicsitemgroup_set_cache_mode2(void* self, int32_t mode, void* cacheSize) {
     QGraphicsItem_SetCacheMode2((QGraphicsItem*)self, mode, (QSize*)cacheSize);
+}
+
+bool q_graphicsitemgroup_is_blocked_by_modal_panel1(void* self, void** blockingPanel) {
+    return QGraphicsItem_IsBlockedByModalPanel1((QGraphicsItem*)self, (QGraphicsItem**)blockingPanel);
 }
 
 void q_graphicsitemgroup_set_focus1(void* self, int32_t focusReason) {
