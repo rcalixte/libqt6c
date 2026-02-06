@@ -46,18 +46,17 @@ QPixmap* q_pixmap_new4(const char* fileName);
 
 /// q_pixmap_new5 constructs a new QPixmap object.
 ///
-/// @param param1 QPixmap*
+/// @param xpm const char**
 ///
-QPixmap* q_pixmap_new5(void* param1);
+QPixmap* q_pixmap_new5(const char** xpm);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html)
 
 /// q_pixmap_new6 constructs a new QPixmap object.
 ///
-/// @param fileName const char*
-/// @param format const char*
+/// @param param1 QPixmap*
 ///
-QPixmap* q_pixmap_new6(const char* fileName, const char* format);
+QPixmap* q_pixmap_new6(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html)
 
@@ -65,9 +64,18 @@ QPixmap* q_pixmap_new6(const char* fileName, const char* format);
 ///
 /// @param fileName const char*
 /// @param format const char*
+///
+QPixmap* q_pixmap_new7(const char* fileName, const char* format);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html)
+
+/// q_pixmap_new8 constructs a new QPixmap object.
+///
+/// @param fileName const char*
+/// @param format const char*
 /// @param flags flag of enum Qt__ImageConversionFlag
 ///
-QPixmap* q_pixmap_new7(const char* fileName, const char* format, int32_t flags);
+QPixmap* q_pixmap_new8(const char* fileName, const char* format, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#operator-eq)
 ///

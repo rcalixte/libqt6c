@@ -258,6 +258,10 @@ void q_openglfunctions_1_4_gl_polygon_offset(void* self, float factor, float uni
     QOpenGLFunctions_1_4_GlPolygonOffset((QOpenGLFunctions_1_4*)self, factor, units);
 }
 
+void q_openglfunctions_1_4_gl_get_pointerv(void* self, uint32_t pname, void* params) {
+    QOpenGLFunctions_1_4_GlGetPointerv((QOpenGLFunctions_1_4*)self, pname, params);
+}
+
 void q_openglfunctions_1_4_gl_draw_elements(void* self, uint32_t mode, int32_t count, uint32_t type, void* indices) {
     QOpenGLFunctions_1_4_GlDrawElements((QOpenGLFunctions_1_4*)self, mode, count, type, indices);
 }
@@ -340,6 +344,10 @@ void q_openglfunctions_1_4_gl_point_parameterfv(void* self, uint32_t pname, floa
 
 void q_openglfunctions_1_4_gl_point_parameterf(void* self, uint32_t pname, float param) {
     QOpenGLFunctions_1_4_GlPointParameterf((QOpenGLFunctions_1_4*)self, pname, param);
+}
+
+void q_openglfunctions_1_4_gl_multi_draw_elements(void* self, uint32_t mode, int32_t* count, uint32_t type, void* indices, int32_t drawcount) {
+    QOpenGLFunctions_1_4_GlMultiDrawElements((QOpenGLFunctions_1_4*)self, mode, count, type, indices, drawcount);
 }
 
 void q_openglfunctions_1_4_gl_multi_draw_arrays(void* self, uint32_t mode, int32_t* first, int32_t* count, int32_t drawcount) {

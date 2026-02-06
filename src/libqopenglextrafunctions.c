@@ -159,6 +159,10 @@ void q_openglextrafunctions_gl_bind_buffer_base(void* self, uint32_t target, uin
     QOpenGLExtraFunctions_GlBindBufferBase((QOpenGLExtraFunctions*)self, target, index, buffer);
 }
 
+void q_openglextrafunctions_gl_transform_feedback_varyings(void* self, uint32_t program, int32_t count, const char** varyings, uint32_t bufferMode) {
+    QOpenGLExtraFunctions_GlTransformFeedbackVaryings((QOpenGLExtraFunctions*)self, program, count, varyings, bufferMode);
+}
+
 void q_openglextrafunctions_gl_vertex_attrib_i_pointer(void* self, uint32_t index, int32_t size, uint32_t type, int32_t stride, void* pointer) {
     QOpenGLExtraFunctions_GlVertexAttribIPointer((QOpenGLExtraFunctions*)self, index, size, type, stride, pointer);
 }
@@ -249,6 +253,10 @@ const uint8_t* q_openglextrafunctions_gl_get_stringi(void* self, uint32_t name, 
 
 void q_openglextrafunctions_gl_copy_buffer_sub_data(void* self, uint32_t readTarget, uint32_t writeTarget, intptr_t readOffset, intptr_t writeOffset, intptr_t size) {
     QOpenGLExtraFunctions_GlCopyBufferSubData((QOpenGLExtraFunctions*)self, readTarget, writeTarget, readOffset, writeOffset, size);
+}
+
+void q_openglextrafunctions_gl_get_uniform_indices(void* self, uint32_t program, int32_t uniformCount, const char** uniformNames, uint32_t* uniformIndices) {
+    QOpenGLExtraFunctions_GlGetUniformIndices((QOpenGLExtraFunctions*)self, program, uniformCount, uniformNames, uniformIndices);
 }
 
 void q_openglextrafunctions_gl_get_active_uniformsiv(void* self, uint32_t program, int32_t uniformCount, uint32_t* uniformIndices, uint32_t pname, int32_t* params) {
@@ -425,6 +433,10 @@ void q_openglextrafunctions_gl_use_program_stages(void* self, uint32_t pipeline,
 
 void q_openglextrafunctions_gl_active_shader_program(void* self, uint32_t pipeline, uint32_t program) {
     QOpenGLExtraFunctions_GlActiveShaderProgram((QOpenGLExtraFunctions*)self, pipeline, program);
+}
+
+uint32_t q_openglextrafunctions_gl_create_shader_programv(void* self, uint32_t type, int32_t count, const char** strings) {
+    return QOpenGLExtraFunctions_GlCreateShaderProgramv((QOpenGLExtraFunctions*)self, type, count, strings);
 }
 
 void q_openglextrafunctions_gl_bind_program_pipeline(void* self, uint32_t pipeline) {

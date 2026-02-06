@@ -452,6 +452,33 @@ bool q_formlayout_is_row_visible3(void* self, void* layout);
 ///
 QLayoutItem* q_formlayout_item_at(void* self, int row, int32_t role);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qformlayout.html#getItemPosition)
+///
+/// @param self QFormLayout*
+/// @param index int
+/// @param rowPtr int*
+/// @param rolePtr enum QFormLayout__ItemRole*
+///
+void q_formlayout_get_item_position(void* self, int index, int* rowPtr, int32_t* rolePtr);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qformlayout.html#getWidgetPosition)
+///
+/// @param self QFormLayout*
+/// @param widget QWidget*
+/// @param rowPtr int*
+/// @param rolePtr enum QFormLayout__ItemRole*
+///
+void q_formlayout_get_widget_position(void* self, void* widget, int* rowPtr, int32_t* rolePtr);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qformlayout.html#getLayoutPosition)
+///
+/// @param self QFormLayout*
+/// @param layout QLayout*
+/// @param rowPtr int*
+/// @param rolePtr enum QFormLayout__ItemRole*
+///
+void q_formlayout_get_layout_position(void* self, void* layout, int* rowPtr, int32_t* rolePtr);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qformlayout.html#labelForField)
 ///
 /// @param self QFormLayout*

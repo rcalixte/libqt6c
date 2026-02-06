@@ -131,6 +131,29 @@ void q_openglversionfunctionsbackend_set_context(void* self, void* context);
 ///
 void q_openglversionfunctionsbackend_delete(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsstorage.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsstorage.html#backends-var)
+///
+/// @param self QOpenGLVersionFunctionsStorage*
+///
+QOpenGLVersionFunctionsBackend** q_openglversionfunctionsstorage_backends(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsstorage.html#backends-var)
+///
+/// @param self QOpenGLVersionFunctionsStorage*
+/// @param backends QOpenGLVersionFunctionsBackend**
+///
+void q_openglversionfunctionsstorage_set_backends(void* self, void** backends);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctionsstorage.html#dtor.QOpenGLVersionFunctionsStorage)
+///
+/// Delete this object from C++ memory.
+///
+/// @param self QOpenGLVersionFunctionsStorage*
+///
+void q_openglversionfunctionsstorage_delete(void* self);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractopenglfunctions.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractopenglfunctions.html#initializeOpenGLFunctions)

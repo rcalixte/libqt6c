@@ -393,6 +393,16 @@ void q_openglextrafunctions_gl_bind_buffer_range(void* self, uint32_t target, ui
 ///
 void q_openglextrafunctions_gl_bind_buffer_base(void* self, uint32_t target, uint32_t index, uint32_t buffer);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglextrafunctions.html#glTransformFeedbackVaryings)
+///
+/// @param self QOpenGLExtraFunctions*
+/// @param program uint32_t
+/// @param count int32_t
+/// @param varyings const char**
+/// @param bufferMode uint32_t
+///
+void q_openglextrafunctions_gl_transform_feedback_varyings(void* self, uint32_t program, int32_t count, const char** varyings, uint32_t bufferMode);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglextrafunctions.html#glVertexAttribIPointer)
 ///
 /// @param self QOpenGLExtraFunctions*
@@ -606,6 +616,16 @@ const uint8_t* q_openglextrafunctions_gl_get_stringi(void* self, uint32_t name, 
 /// @param size intptr_t
 ///
 void q_openglextrafunctions_gl_copy_buffer_sub_data(void* self, uint32_t readTarget, uint32_t writeTarget, intptr_t readOffset, intptr_t writeOffset, intptr_t size);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglextrafunctions.html#glGetUniformIndices)
+///
+/// @param self QOpenGLExtraFunctions*
+/// @param program uint32_t
+/// @param uniformCount int32_t
+/// @param uniformNames const char**
+/// @param uniformIndices uint32_t*
+///
+void q_openglextrafunctions_gl_get_uniform_indices(void* self, uint32_t program, int32_t uniformCount, const char** uniformNames, uint32_t* uniformIndices);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglextrafunctions.html#glGetActiveUniformsiv)
 ///
@@ -999,6 +1019,15 @@ void q_openglextrafunctions_gl_use_program_stages(void* self, uint32_t pipeline,
 /// @param program uint32_t
 ///
 void q_openglextrafunctions_gl_active_shader_program(void* self, uint32_t pipeline, uint32_t program);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglextrafunctions.html#glCreateShaderProgramv)
+///
+/// @param self QOpenGLExtraFunctions*
+/// @param type uint32_t
+/// @param count int32_t
+/// @param strings const char**
+///
+uint32_t q_openglextrafunctions_gl_create_shader_programv(void* self, uint32_t type, int32_t count, const char** strings);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglextrafunctions.html#glBindProgramPipeline)
 ///

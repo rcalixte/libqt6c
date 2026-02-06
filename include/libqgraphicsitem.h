@@ -2066,6 +2066,13 @@ void q_graphicsitem_set_flag2(void* self, int32_t flag, bool enabled);
 ///
 void q_graphicsitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
+///
+/// @param self QGraphicsItem*
+/// @param blockingPanel QGraphicsItem**
+///
+bool q_graphicsitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setFocus)
 ///
 /// @param self QGraphicsItem*
@@ -4328,6 +4335,15 @@ void q_graphicsobject_set_flag2(void* self, int32_t flag, bool enabled);
 /// @param cacheSize QSize*
 ///
 void q_graphicsobject_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
+
+/// Inherited from QGraphicsItem
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
+///
+/// @param self QGraphicsObject*
+/// @param blockingPanel QGraphicsItem**
+///
+bool q_graphicsobject_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
 
 /// Inherited from QGraphicsItem
 ///
@@ -7520,6 +7536,15 @@ void q_abstractgraphicsshapeitem_set_cache_mode2(void* self, int32_t mode, void*
 
 /// Inherited from QGraphicsItem
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
+///
+/// @param self QAbstractGraphicsShapeItem*
+/// @param blockingPanel QGraphicsItem**
+///
+bool q_abstractgraphicsshapeitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
+
+/// Inherited from QGraphicsItem
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setFocus)
 ///
 /// @param self QAbstractGraphicsShapeItem*
@@ -10575,6 +10600,15 @@ void q_graphicspathitem_set_cache_mode2(void* self, int32_t mode, void* cacheSiz
 
 /// Inherited from QGraphicsItem
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
+///
+/// @param self QGraphicsPathItem*
+/// @param blockingPanel QGraphicsItem**
+///
+bool q_graphicspathitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
+
+/// Inherited from QGraphicsItem
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setFocus)
 ///
 /// @param self QGraphicsPathItem*
@@ -13396,6 +13430,15 @@ void q_graphicsrectitem_set_flag2(void* self, int32_t flag, bool enabled);
 /// @param cacheSize QSize*
 ///
 void q_graphicsrectitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
+
+/// Inherited from QGraphicsItem
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
+///
+/// @param self QGraphicsRectItem*
+/// @param blockingPanel QGraphicsItem**
+///
+bool q_graphicsrectitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16249,6 +16292,15 @@ void q_graphicsellipseitem_set_cache_mode2(void* self, int32_t mode, void* cache
 
 /// Inherited from QGraphicsItem
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
+///
+/// @param self QGraphicsEllipseItem*
+/// @param blockingPanel QGraphicsItem**
+///
+bool q_graphicsellipseitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
+
+/// Inherited from QGraphicsItem
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setFocus)
 ///
 /// @param self QGraphicsEllipseItem*
@@ -19022,6 +19074,15 @@ void q_graphicspolygonitem_set_flag2(void* self, int32_t flag, bool enabled);
 /// @param cacheSize QSize*
 ///
 void q_graphicspolygonitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
+
+/// Inherited from QGraphicsItem
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
+///
+/// @param self QGraphicsPolygonItem*
+/// @param blockingPanel QGraphicsItem**
+///
+bool q_graphicspolygonitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
 
 /// Inherited from QGraphicsItem
 ///
@@ -21825,6 +21886,15 @@ void q_graphicslineitem_set_flag2(void* self, int32_t flag, bool enabled);
 /// @param cacheSize QSize*
 ///
 void q_graphicslineitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
+
+/// Inherited from QGraphicsItem
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
+///
+/// @param self QGraphicsLineItem*
+/// @param blockingPanel QGraphicsItem**
+///
+bool q_graphicslineitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
 
 /// Inherited from QGraphicsItem
 ///
@@ -24633,6 +24703,15 @@ void q_graphicspixmapitem_set_flag2(void* self, int32_t flag, bool enabled);
 /// @param cacheSize QSize*
 ///
 void q_graphicspixmapitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
+
+/// Inherited from QGraphicsItem
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
+///
+/// @param self QGraphicsPixmapItem*
+/// @param blockingPanel QGraphicsItem**
+///
+bool q_graphicspixmapitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
 
 /// Inherited from QGraphicsItem
 ///
@@ -28796,6 +28875,15 @@ void q_graphicstextitem_set_cache_mode2(void* self, int32_t mode, void* cacheSiz
 
 /// Inherited from QGraphicsItem
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
+///
+/// @param self QGraphicsTextItem*
+/// @param blockingPanel QGraphicsItem**
+///
+bool q_graphicstextitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
+
+/// Inherited from QGraphicsItem
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setFocus)
 ///
 /// @param self QGraphicsTextItem*
@@ -31344,6 +31432,15 @@ void q_graphicssimpletextitem_set_flag2(void* self, int32_t flag, bool enabled);
 /// @param cacheSize QSize*
 ///
 void q_graphicssimpletextitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
+
+/// Inherited from QGraphicsItem
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
+///
+/// @param self QGraphicsSimpleTextItem*
+/// @param blockingPanel QGraphicsItem**
+///
+bool q_graphicssimpletextitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
 
 /// Inherited from QGraphicsItem
 ///
@@ -33960,6 +34057,15 @@ void q_graphicsitemgroup_set_flag2(void* self, int32_t flag, bool enabled);
 /// @param cacheSize QSize*
 ///
 void q_graphicsitemgroup_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
+
+/// Inherited from QGraphicsItem
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
+///
+/// @param self QGraphicsItemGroup*
+/// @param blockingPanel QGraphicsItem**
+///
+bool q_graphicsitemgroup_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
 
 /// Inherited from QGraphicsItem
 ///

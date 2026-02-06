@@ -43,16 +43,20 @@ QImage* q_image_new7(unsigned char* data, int width, int height, int64_t bytesPe
     return QImage_new7(data, width, height, bytesPerLine, format);
 }
 
-QImage* q_image_new8(const char* fileName) {
-    return QImage_new8(qstring(fileName));
+QImage* q_image_new8(const char** xpm) {
+    return QImage_new8(xpm);
 }
 
-QImage* q_image_new9(void* param1) {
-    return QImage_new9((QImage*)param1);
+QImage* q_image_new9(const char* fileName) {
+    return QImage_new9(qstring(fileName));
 }
 
-QImage* q_image_new10(const char* fileName, const char* format) {
-    return QImage_new10(qstring(fileName), format);
+QImage* q_image_new10(void* param1) {
+    return QImage_new10((QImage*)param1);
+}
+
+QImage* q_image_new11(const char* fileName, const char* format) {
+    return QImage_new11(qstring(fileName), format);
 }
 
 void q_image_operator_assign(void* self, void* param1) {

@@ -570,6 +570,14 @@ void q_openglfunctions_1_4_gl_copy_tex_image1_d(void* self, uint32_t target, int
 ///
 void q_openglfunctions_1_4_gl_polygon_offset(void* self, float factor, float units);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-4.html#glGetPointerv)
+///
+/// @param self QOpenGLFunctions_1_4*
+/// @param pname uint32_t
+/// @param params void*
+///
+void q_openglfunctions_1_4_gl_get_pointerv(void* self, uint32_t pname, void* params);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-4.html#glDrawElements)
 ///
 /// @param self QOpenGLFunctions_1_4*
@@ -808,6 +816,17 @@ void q_openglfunctions_1_4_gl_point_parameterfv(void* self, uint32_t pname, floa
 /// @param param float
 ///
 void q_openglfunctions_1_4_gl_point_parameterf(void* self, uint32_t pname, float param);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-4.html#glMultiDrawElements)
+///
+/// @param self QOpenGLFunctions_1_4*
+/// @param mode uint32_t
+/// @param count int32_t*
+/// @param type uint32_t
+/// @param indices void*
+/// @param drawcount int32_t
+///
+void q_openglfunctions_1_4_gl_multi_draw_elements(void* self, uint32_t mode, int32_t* count, uint32_t type, void* indices, int32_t drawcount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-4.html#glMultiDrawArrays)
 ///

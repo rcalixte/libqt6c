@@ -570,6 +570,14 @@ void q_openglfunctions_1_2_gl_copy_tex_image1_d(void* self, uint32_t target, int
 ///
 void q_openglfunctions_1_2_gl_polygon_offset(void* self, float factor, float units);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-2.html#glGetPointerv)
+///
+/// @param self QOpenGLFunctions_1_2*
+/// @param pname uint32_t
+/// @param params void*
+///
+void q_openglfunctions_1_2_gl_get_pointerv(void* self, uint32_t pname, void* params);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-2.html#glDrawElements)
 ///
 /// @param self QOpenGLFunctions_1_2*

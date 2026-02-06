@@ -58,6 +58,18 @@ void q_openglversionfunctionsbackend_delete(void* self) {
     QOpenGLVersionFunctionsBackend_Delete((QOpenGLVersionFunctionsBackend*)(self));
 }
 
+QOpenGLVersionFunctionsBackend** q_openglversionfunctionsstorage_backends(void* self) {
+    return QOpenGLVersionFunctionsStorage_Backends((QOpenGLVersionFunctionsStorage*)self);
+}
+
+void q_openglversionfunctionsstorage_set_backends(void* self, void** backends) {
+    QOpenGLVersionFunctionsStorage_SetBackends((QOpenGLVersionFunctionsStorage*)self, (QOpenGLVersionFunctionsBackend**)backends);
+}
+
+void q_openglversionfunctionsstorage_delete(void* self) {
+    QOpenGLVersionFunctionsStorage_Delete((QOpenGLVersionFunctionsStorage*)(self));
+}
+
 bool q_abstractopenglfunctions_initialize_open_g_l_functions(void* self) {
     return QAbstractOpenGLFunctions_InitializeOpenGLFunctions((QAbstractOpenGLFunctions*)self);
 }

@@ -2366,6 +2366,15 @@ void q_graphicsvideoitem_set_cache_mode2(void* self, int32_t mode, void* cacheSi
 
 /// Inherited from QGraphicsItem
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
+///
+/// @param self QGraphicsVideoItem*
+/// @param blockingPanel QGraphicsItem**
+///
+bool q_graphicsvideoitem_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
+
+/// Inherited from QGraphicsItem
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#setFocus)
 ///
 /// @param self QGraphicsVideoItem*
