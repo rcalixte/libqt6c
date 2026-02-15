@@ -226,16 +226,20 @@ func cSafeMethodName(name string) string {
 }
 
 func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, includeContainerComment bool) string {
-	if (p.Pointer && (p.ParameterType == "char" || p.ParameterType == "GLchar")) || p.ParameterType == "QByteArray" ||
-		p.ParameterType == "QAnyStringView" {
+	if p.Pointer && (p.ParameterType == "char" || p.ParameterType == "GLchar") {
 		if p.Const {
 			return "const char" + strings.Repeat("*", max(p.PointerCount, 1))
 		}
 		return "char" + strings.Repeat("*", max(p.PointerCount, 1))
 	}
 
+	if p.ParameterType == "QByteArray" || p.ParameterType == "QByteArrayView" {
+		return "char*"
+	}
+
 	if p.ParameterType == "QString" || p.ParameterType == "QByteArrayView" ||
-		p.ParameterType == "QStringView" || p.ParameterType == "SignOn::MethodName" {
+		p.ParameterType == "QStringView" || p.ParameterType == "SignOn::MethodName" ||
+		p.ParameterType == "QAnyStringView" {
 		return "const char*"
 	}
 
@@ -492,7 +496,7 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, i
 }
 
 func (p CppParameter) returnAllocComment(cfs *cFileState, returnType string) string {
-	if p.ParameterType == "QString" || p.ParameterType == "QByteArray" ||
+	if p.ParameterType == "QString" || p.ParameterType == "QByteArray" || p.ParameterType == "QByteArrayView" ||
 		strings.HasPrefix(returnType, "char*") || strings.HasPrefix(returnType, "const char*") {
 		freeMethod := ifv(returnType == "const char*", "libqt_", "") + "free()"
 		return "\n/// @warning Caller is responsible for freeing the returned memory using `" + freeMethod + "`\n///"
@@ -611,6 +615,8 @@ func (p CppParameter) renderReturnTypeC(cfs *cFileState, isSlot, includeContaine
 		// overrides for slot callbacks
 		if t, _, ok := p.QListOf(); ok && (t.ParameterType == "QString" || t.ParameterType == "QByteArray") {
 			ret = "const char**"
+		} else if p.ParameterType == "QByteArray" {
+			ret = "libqt_string"
 		} else if !cfs.isC {
 			uncomment := strings.NewReplacer("/*", "", "*/", "")
 			ret = strings.TrimSpace(strings.ReplaceAll(uncomment.Replace(ret), "  ", " "))
@@ -671,6 +677,10 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 			}
 		}
 
+		if isSlot && p.ParameterType == "QByteArray" {
+			pType = "libqt_string"
+		}
+
 		if p.IsChronoSeconds() {
 			secType := strings.Split(p.ParameterType, "::")[2]
 			pType += " of " + secType
@@ -681,7 +691,7 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 
 			if l, _, ok := p.QListOf(); ok && (l.ParameterType == "QString" || l.ParameterType == "QByteArray") {
 				resParam = "const char**"
-			} else if strings.HasPrefix(pType, "libqt_") {
+			} else if strings.HasPrefix(pType, "libqt_") && p.ParameterType != "QByteArray" {
 				pName += " " + p.ParameterName
 			}
 
@@ -749,6 +759,10 @@ func (cfs *cFileState) emitParametersC(params []CppParameter, isSlot bool) strin
 			if strings.HasSuffix(pName, "[static 1]") {
 				pType += "*"
 			}
+			if p.ParameterType == "QByteArray" {
+				pType = "libqt_string"
+			}
+
 			tmp = append(tmp, pType)
 		} else {
 			tmp = append(tmp, pType+" "+pName)
@@ -1134,14 +1148,9 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 		return shouldReturn + rvalue + ";\n" + afterword
 
 	} else if rt.ParameterType == "QAnyStringView" {
-		shouldReturn := "char* " + namePrefix + "_ret = "
+		shouldReturn := "const char* " + namePrefix + "_ret = "
 
 		afterword += assignExpr + " " + namePrefix + "_ret;\n"
-		return shouldReturn + rvalue + ";\n" + afterword
-
-	} else if rt.ParameterType == "QAnyStringView" {
-		shouldReturn := "libqt_string " + namePrefix + "_str = "
-		afterword += assignExpr + " &" + namePrefix + "_str;\n"
 		return shouldReturn + rvalue + ";\n" + afterword
 
 	} else if rt.ParameterType == "char" && rt.Pointer {
@@ -2398,7 +2407,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		seenRefs[strings.TrimSuffix(cfs.currentHeaderName, "_1")] = struct{}{}
 	}
 
-	for _, ref := range getReferencedTypes(src, map[string]struct{}{}) {
+	for _, ref := range getReferencedTypes(src, nil) {
 		if cabiPreventStructDeclaration(ref) {
 			continue
 		}
