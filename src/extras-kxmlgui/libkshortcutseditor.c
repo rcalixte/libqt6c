@@ -912,7 +912,7 @@ char* k_shortcutseditor_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_shortcutseditor_restore_geometry(void* self, const char* geometry) {
+bool k_shortcutseditor_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1268,7 +1268,7 @@ const char* k_shortcutseditor_object_name(void* self) {
     return _ret;
 }
 
-void k_shortcutseditor_set_object_name(void* self, char* name) {
+void k_shortcutseditor_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1904,15 +1904,15 @@ void k_shortcutseditor_on_hide_event(void* self, void (*callback)(void*, void*))
     KShortcutsEditor_OnHideEvent((KShortcutsEditor*)self, (intptr_t)callback);
 }
 
-bool k_shortcutseditor_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_shortcutseditor_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KShortcutsEditor_NativeEvent((KShortcutsEditor*)self, qstring(eventType), message, result);
 }
 
-bool k_shortcutseditor_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_shortcutseditor_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KShortcutsEditor_QBaseNativeEvent((KShortcutsEditor*)self, qstring(eventType), message, result);
 }
 
-void k_shortcutseditor_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_shortcutseditor_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KShortcutsEditor_OnNativeEvent((KShortcutsEditor*)self, (intptr_t)callback);
 }
 

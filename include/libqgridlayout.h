@@ -1030,9 +1030,9 @@ const char* q_gridlayout_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QGridLayout*
-/// @param name char*
+/// @param name const char*
 ///
-void q_gridlayout_set_object_name(void* self, char* name);
+void q_gridlayout_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

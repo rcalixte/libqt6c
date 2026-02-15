@@ -1121,9 +1121,9 @@ char* q_scilexer_text_as_bytes(void* self, const char* text);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciLexer*
-/// @param callback char* func(QsciLexer* self, const char* text)
+/// @param callback libqt_string func(QsciLexer* self, const char* text)
 ///
-void q_scilexer_on_text_as_bytes(void* self, char* (*callback)(void*, const char*));
+void q_scilexer_on_text_as_bytes(void* self, libqt_string (*callback)(void*, const char*));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -1213,9 +1213,9 @@ const char* q_scilexer_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QsciLexer*
-/// @param name char*
+/// @param name const char*
 ///
-void q_scilexer_set_object_name(void* self, char* name);
+void q_scilexer_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

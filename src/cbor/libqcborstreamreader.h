@@ -39,9 +39,9 @@ QCborStreamReader* q_cborstreamreader_new3(unsigned char* data, int64_t lenVal);
 
 /// q_cborstreamreader_new4 constructs a new QCborStreamReader object.
 ///
-/// @param data const char*
+/// @param data char*
 ///
-QCborStreamReader* q_cborstreamreader_new4(const char* data);
+QCborStreamReader* q_cborstreamreader_new4(char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html)
 
@@ -67,9 +67,9 @@ QIODevice* q_cborstreamreader_device(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#addData)
 ///
 /// @param self QCborStreamReader*
-/// @param data const char*
+/// @param data char*
 ///
-void q_cborstreamreader_add_data(void* self, const char* data);
+void q_cborstreamreader_add_data(void* self, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#addData)
 ///

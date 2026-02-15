@@ -981,7 +981,7 @@ char* q_frame_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_frame_restore_geometry(void* self, const char* geometry) {
+bool q_frame_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1337,7 +1337,7 @@ const char* q_frame_object_name(void* self) {
     return _ret;
 }
 
-void q_frame_set_object_name(void* self, char* name) {
+void q_frame_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1937,15 +1937,15 @@ void q_frame_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QFrame_OnHideEvent((QFrame*)self, (intptr_t)callback);
 }
 
-bool q_frame_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_frame_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QFrame_NativeEvent((QFrame*)self, qstring(eventType), message, result);
 }
 
-bool q_frame_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_frame_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QFrame_QBaseNativeEvent((QFrame*)self, qstring(eventType), message, result);
 }
 
-void q_frame_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_frame_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QFrame_OnNativeEvent((QFrame*)self, (intptr_t)callback);
 }
 

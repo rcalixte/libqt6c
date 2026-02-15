@@ -49,9 +49,9 @@ void k_io__filejob_read(void* self, uint64_t size);
 /// [Upstream resources](https://api.kde.org/kio-filejob.html#write)
 ///
 /// @param self KIO__FileJob*
-/// @param data const char*
+/// @param data char*
 ///
-void k_io__filejob_write(void* self, const char* data);
+void k_io__filejob_write(void* self, char* data);
 
 /// [Upstream resources](https://api.kde.org/kio-filejob.html#close)
 ///
@@ -83,16 +83,16 @@ uint64_t k_io__filejob_size(void* self);
 ///
 /// @param self KIO__FileJob*
 /// @param job KIO__Job*
-/// @param data const char*
+/// @param data char*
 ///
-void k_io__filejob_data(void* self, void* job, const char* data);
+void k_io__filejob_data(void* self, void* job, char* data);
 
 /// [Upstream resources](https://api.kde.org/kio-filejob.html#data)
 ///
 /// @param self KIO__FileJob*
-/// @param callback void func(KIO__FileJob* self, KIO__Job* job, const char* data)
+/// @param callback void func(KIO__FileJob* self, KIO__Job* job, libqt_string data)
 ///
-void k_io__filejob_on_data(void* self, void (*callback)(void*, void*, const char*));
+void k_io__filejob_on_data(void* self, void (*callback)(void*, void*, libqt_string));
 
 /// [Upstream resources](https://api.kde.org/kio-filejob.html#redirection)
 ///
@@ -739,9 +739,9 @@ const char* k_io__filejob_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KIO__FileJob*
-/// @param name char*
+/// @param name const char*
 ///
-void k_io__filejob_set_object_name(void* self, char* name);
+void k_io__filejob_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

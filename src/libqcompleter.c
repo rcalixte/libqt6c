@@ -357,7 +357,7 @@ const char* q_completer_object_name(void* self) {
     return _ret;
 }
 
-void q_completer_set_object_name(void* self, char* name) {
+void q_completer_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

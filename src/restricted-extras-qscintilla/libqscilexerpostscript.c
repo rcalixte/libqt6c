@@ -293,7 +293,7 @@ const char* q_scilexerpostscript_object_name(void* self) {
     return _ret;
 }
 
-void q_scilexerpostscript_set_object_name(void* self, char* name) {
+void q_scilexerpostscript_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -937,7 +937,7 @@ char* q_scilexerpostscript_qbase_text_as_bytes(void* self, const char* text) {
     return _ret;
 }
 
-void q_scilexerpostscript_on_text_as_bytes(void* self, char* (*callback)(void*, const char*)) {
+void q_scilexerpostscript_on_text_as_bytes(void* self, libqt_string (*callback)(void*, const char*)) {
     QsciLexerPostScript_OnTextAsBytes((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 

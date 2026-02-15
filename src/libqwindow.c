@@ -946,15 +946,15 @@ void q_window_qbase_tablet_event(void* self, void* param1) {
     QWindow_QBaseTabletEvent((QWindow*)self, (QTabletEvent*)param1);
 }
 
-bool q_window_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_window_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QWindow_NativeEvent((QWindow*)self, qstring(eventType), message, result);
 }
 
-void q_window_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_window_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QWindow_OnNativeEvent((QWindow*)self, (intptr_t)callback);
 }
 
-bool q_window_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_window_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QWindow_QBaseNativeEvent((QWindow*)self, qstring(eventType), message, result);
 }
 
@@ -991,7 +991,7 @@ const char* q_window_object_name(void* self) {
     return _ret;
 }
 
-void q_window_set_object_name(void* self, char* name) {
+void q_window_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

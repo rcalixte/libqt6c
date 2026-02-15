@@ -1742,7 +1742,7 @@ char* k_categorizedview_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_categorizedview_restore_geometry(void* self, const char* geometry) {
+bool k_categorizedview_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -2098,7 +2098,7 @@ const char* k_categorizedview_object_name(void* self) {
     return _ret;
 }
 
-void k_categorizedview_set_object_name(void* self, char* name) {
+void k_categorizedview_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -3072,15 +3072,15 @@ void k_categorizedview_on_hide_event(void* self, void (*callback)(void*, void*))
     KCategorizedView_OnHideEvent((KCategorizedView*)self, (intptr_t)callback);
 }
 
-bool k_categorizedview_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_categorizedview_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KCategorizedView_NativeEvent((KCategorizedView*)self, qstring(eventType), message, result);
 }
 
-bool k_categorizedview_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_categorizedview_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KCategorizedView_QBaseNativeEvent((KCategorizedView*)self, qstring(eventType), message, result);
 }
 
-void k_categorizedview_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_categorizedview_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KCategorizedView_OnNativeEvent((KCategorizedView*)self, (intptr_t)callback);
 }
 

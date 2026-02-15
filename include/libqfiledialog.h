@@ -353,9 +353,9 @@ char* q_filedialog_save_state(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#restoreState)
 ///
 /// @param self QFileDialog*
-/// @param state const char*
+/// @param state char*
 ///
-bool q_filedialog_restore_state(void* self, const char* state);
+bool q_filedialog_restore_state(void* self, char* state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#setDefaultSuffix)
 ///
@@ -682,10 +682,10 @@ libqt_list q_filedialog_get_open_file_urls();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#saveFileContent)
 ///
-/// @param fileContent const char*
+/// @param fileContent char*
 /// @param fileNameHint const char*
 ///
-void q_filedialog_save_file_content(const char* fileContent, const char* fileNameHint);
+void q_filedialog_save_file_content(char* fileContent, const char* fileNameHint);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#done)
 ///
@@ -1079,11 +1079,11 @@ libqt_list q_filedialog_get_open_file_urls4(void* parent, const char* caption, v
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#saveFileContent)
 ///
-/// @param fileContent const char*
+/// @param fileContent char*
 /// @param fileNameHint const char*
 /// @param parent QWidget*
 ///
-void q_filedialog_save_file_content3(const char* fileContent, const char* fileNameHint, void* parent);
+void q_filedialog_save_file_content3(char* fileContent, const char* fileNameHint, void* parent);
 
 /// Inherited from QDialog
 ///
@@ -2803,9 +2803,9 @@ char* q_filedialog_save_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QFileDialog*
-/// @param geometry const char*
+/// @param geometry char*
 ///
-bool q_filedialog_restore_geometry(void* self, const char* geometry);
+bool q_filedialog_restore_geometry(void* self, char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -3611,9 +3611,9 @@ const char* q_filedialog_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QFileDialog*
-/// @param name char*
+/// @param name const char*
 ///
-void q_filedialog_set_object_name(void* self, char* name);
+void q_filedialog_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -5285,11 +5285,11 @@ void q_filedialog_on_hide_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_filedialog_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_filedialog_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -5298,11 +5298,11 @@ bool q_filedialog_native_event(void* self, const char* eventType, void* message,
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_filedialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_filedialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -5311,9 +5311,9 @@ bool q_filedialog_qbase_native_event(void* self, const char* eventType, void* me
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback bool func(QFileDialog* self, const char* eventType, void* message, intptr_t* result)
+/// @param callback bool func(QFileDialog* self, libqt_string eventType, void* message, intptr_t* result)
 ///
-void q_filedialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
+void q_filedialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///

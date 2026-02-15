@@ -84,10 +84,10 @@ void q_webengineurlrequestinfo_redirect(void* self, void* url);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#setHttpHeader)
 ///
 /// @param self QWebEngineUrlRequestInfo*
-/// @param name const char*
-/// @param value const char*
+/// @param name char*
+/// @param value char*
 ///
-void q_webengineurlrequestinfo_set_http_header(void* self, const char* name, const char* value);
+void q_webengineurlrequestinfo_set_http_header(void* self, char* name, char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#httpHeaders)
 ///

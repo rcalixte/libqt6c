@@ -353,9 +353,9 @@ const char* q_georoutereply_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QGeoRouteReply*
-/// @param name char*
+/// @param name const char*
 ///
-void q_georoutereply_set_object_name(void* self, char* name);
+void q_georoutereply_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

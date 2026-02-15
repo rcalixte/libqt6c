@@ -363,7 +363,7 @@ const char* k_checkableproxymodel_object_name(void* self) {
     return _ret;
 }
 
-void k_checkableproxymodel_set_object_name(void* self, char* name) {
+void k_checkableproxymodel_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

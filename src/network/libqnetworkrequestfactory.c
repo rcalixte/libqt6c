@@ -78,7 +78,7 @@ char* q_networkrequestfactory_bearer_token(void* self) {
     return _ret;
 }
 
-void q_networkrequestfactory_set_bearer_token(void* self, const char* token) {
+void q_networkrequestfactory_set_bearer_token(void* self, char* token) {
     QNetworkRequestFactory_SetBearerToken((QNetworkRequestFactory*)self, qstring(token));
 }
 

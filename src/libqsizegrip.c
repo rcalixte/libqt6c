@@ -979,7 +979,7 @@ char* q_sizegrip_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_sizegrip_restore_geometry(void* self, const char* geometry) {
+bool q_sizegrip_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1335,7 +1335,7 @@ const char* q_sizegrip_object_name(void* self) {
     return _ret;
 }
 
-void q_sizegrip_set_object_name(void* self, char* name) {
+void q_sizegrip_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1851,15 +1851,15 @@ void q_sizegrip_on_drop_event(void* self, void (*callback)(void*, void*)) {
     QSizeGrip_OnDropEvent((QSizeGrip*)self, (intptr_t)callback);
 }
 
-bool q_sizegrip_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_sizegrip_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QSizeGrip_NativeEvent((QSizeGrip*)self, qstring(eventType), message, result);
 }
 
-bool q_sizegrip_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_sizegrip_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QSizeGrip_QBaseNativeEvent((QSizeGrip*)self, qstring(eventType), message, result);
 }
 
-void q_sizegrip_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_sizegrip_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QSizeGrip_OnNativeEvent((QSizeGrip*)self, (intptr_t)callback);
 }
 

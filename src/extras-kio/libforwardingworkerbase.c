@@ -9,7 +9,7 @@
 #include "libforwardingworkerbase.hpp"
 #include "libforwardingworkerbase.h"
 
-KIO__ForwardingWorkerBase* k_io__forwardingworkerbase_new(const char* protocol, const char* poolSocket, const char* appSocket) {
+KIO__ForwardingWorkerBase* k_io__forwardingworkerbase_new(char* protocol, char* poolSocket, char* appSocket) {
     return KIO__ForwardingWorkerBase_new(qstring(protocol), qstring(poolSocket), qstring(appSocket));
 }
 
@@ -269,7 +269,7 @@ const char* k_io__forwardingworkerbase_object_name(void* self) {
     return _ret;
 }
 
-void k_io__forwardingworkerbase_set_object_name(void* self, char* name) {
+void k_io__forwardingworkerbase_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -481,7 +481,7 @@ void k_io__forwardingworkerbase_dispatch_loop(void* self) {
     KIO__WorkerBase_DispatchLoop((KIO__WorkerBase*)self);
 }
 
-void k_io__forwardingworkerbase_data(void* self, const char* data) {
+void k_io__forwardingworkerbase_data(void* self, char* data) {
     KIO__WorkerBase_Data((KIO__WorkerBase*)self, qstring(data));
 }
 
@@ -784,7 +784,7 @@ const char* k_io__forwardingworkerbase_config_value22(void* self, const char* ke
     return _ret;
 }
 
-void k_io__forwardingworkerbase_set_timeout_special_command2(void* self, int timeout, const char* data) {
+void k_io__forwardingworkerbase_set_timeout_special_command2(void* self, int timeout, char* data) {
     KIO__WorkerBase_SetTimeoutSpecialCommand2((KIO__WorkerBase*)self, timeout, qstring(data));
 }
 
@@ -952,15 +952,15 @@ void k_io__forwardingworkerbase_on_read(void* self, KIO__WorkerResult* (*callbac
     KIO__ForwardingWorkerBase_OnRead((KIO__ForwardingWorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__forwardingworkerbase_write(void* self, const char* data) {
+KIO__WorkerResult* k_io__forwardingworkerbase_write(void* self, char* data) {
     return KIO__ForwardingWorkerBase_Write((KIO__ForwardingWorkerBase*)self, qstring(data));
 }
 
-KIO__WorkerResult* k_io__forwardingworkerbase_qbase_write(void* self, const char* data) {
+KIO__WorkerResult* k_io__forwardingworkerbase_qbase_write(void* self, char* data) {
     return KIO__ForwardingWorkerBase_QBaseWrite((KIO__ForwardingWorkerBase*)self, qstring(data));
 }
 
-void k_io__forwardingworkerbase_on_write(void* self, KIO__WorkerResult* (*callback)(void*, const char*)) {
+void k_io__forwardingworkerbase_on_write(void* self, KIO__WorkerResult* (*callback)(void*, libqt_string)) {
     KIO__ForwardingWorkerBase_OnWrite((KIO__ForwardingWorkerBase*)self, (intptr_t)callback);
 }
 
@@ -1012,15 +1012,15 @@ void k_io__forwardingworkerbase_on_chown(void* self, KIO__WorkerResult* (*callba
     KIO__ForwardingWorkerBase_OnChown((KIO__ForwardingWorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__forwardingworkerbase_special(void* self, const char* data) {
+KIO__WorkerResult* k_io__forwardingworkerbase_special(void* self, char* data) {
     return KIO__ForwardingWorkerBase_Special((KIO__ForwardingWorkerBase*)self, qstring(data));
 }
 
-KIO__WorkerResult* k_io__forwardingworkerbase_qbase_special(void* self, const char* data) {
+KIO__WorkerResult* k_io__forwardingworkerbase_qbase_special(void* self, char* data) {
     return KIO__ForwardingWorkerBase_QBaseSpecial((KIO__ForwardingWorkerBase*)self, qstring(data));
 }
 
-void k_io__forwardingworkerbase_on_special(void* self, KIO__WorkerResult* (*callback)(void*, const char*)) {
+void k_io__forwardingworkerbase_on_special(void* self, KIO__WorkerResult* (*callback)(void*, libqt_string)) {
     KIO__ForwardingWorkerBase_OnSpecial((KIO__ForwardingWorkerBase*)self, (intptr_t)callback);
 }
 

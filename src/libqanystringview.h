@@ -23,9 +23,9 @@ QAnyStringView* q_anystringview_new(const char* other);
 
 /// q_anystringview_new2 constructs a new QAnyStringView object and invalidates the source QAnyStringView object.
 ///
-/// @param other char*
+/// @param other const char*
 ///
-QAnyStringView* q_anystringview_new2(char* other);
+QAnyStringView* q_anystringview_new2(const char* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qanystringview.html)
 
@@ -37,9 +37,9 @@ QAnyStringView* q_anystringview_new3();
 
 /// q_anystringview_new4 constructs a new QAnyStringView object.
 ///
-/// @param str const char*
+/// @param str char*
 ///
-QAnyStringView* q_anystringview_new4(const char* str);
+QAnyStringView* q_anystringview_new4(char* str);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qanystringview.html)
 
@@ -73,95 +73,95 @@ void q_anystringview_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qanystringview.html#mid)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAnyStringView*
 /// @param pos int64_t
 ///
-char* q_anystringview_mid(void* self, int64_t pos);
+const char* q_anystringview_mid(void* self, int64_t pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qanystringview.html#left)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAnyStringView*
 /// @param n int64_t
 ///
-char* q_anystringview_left(void* self, int64_t n);
+const char* q_anystringview_left(void* self, int64_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qanystringview.html#right)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAnyStringView*
 /// @param n int64_t
 ///
-char* q_anystringview_right(void* self, int64_t n);
+const char* q_anystringview_right(void* self, int64_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qanystringview.html#sliced)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAnyStringView*
 /// @param pos int64_t
 ///
-char* q_anystringview_sliced(void* self, int64_t pos);
+const char* q_anystringview_sliced(void* self, int64_t pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qanystringview.html#sliced)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAnyStringView*
 /// @param pos int64_t
 /// @param n int64_t
 ///
-char* q_anystringview_sliced2(void* self, int64_t pos, int64_t n);
+const char* q_anystringview_sliced2(void* self, int64_t pos, int64_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qanystringview.html#first)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAnyStringView*
 /// @param n int64_t
 ///
-char* q_anystringview_first(void* self, int64_t n);
+const char* q_anystringview_first(void* self, int64_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qanystringview.html#last)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAnyStringView*
 /// @param n int64_t
 ///
-char* q_anystringview_last(void* self, int64_t n);
+const char* q_anystringview_last(void* self, int64_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qanystringview.html#chopped)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAnyStringView*
 /// @param n int64_t
 ///
-char* q_anystringview_chopped(void* self, int64_t n);
+const char* q_anystringview_chopped(void* self, int64_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qanystringview.html#slice)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAnyStringView*
 /// @param pos int64_t
 ///
-char* q_anystringview_slice(void* self, int64_t pos);
+const char* q_anystringview_slice(void* self, int64_t pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qanystringview.html#slice)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAnyStringView*
 /// @param pos int64_t
 /// @param n int64_t
 ///
-char* q_anystringview_slice2(void* self, int64_t pos, int64_t n);
+const char* q_anystringview_slice2(void* self, int64_t pos, int64_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qanystringview.html#truncate)
 ///
@@ -199,17 +199,17 @@ const void* q_anystringview_data(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qanystringview.html#compare)
 ///
-/// @param lhs char*
-/// @param rhs char*
+/// @param lhs const char*
+/// @param rhs const char*
 ///
-int32_t q_anystringview_compare(char* lhs, char* rhs);
+int32_t q_anystringview_compare(const char* lhs, const char* rhs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qanystringview.html#equal)
 ///
-/// @param lhs char*
-/// @param rhs char*
+/// @param lhs const char*
+/// @param rhs const char*
 ///
-bool q_anystringview_equal(char* lhs, char* rhs);
+bool q_anystringview_equal(const char* lhs, const char* rhs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qanystringview.html#front)
 ///
@@ -261,21 +261,21 @@ int64_t q_anystringview_length(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qanystringview.html#mid)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QAnyStringView*
 /// @param pos int64_t
 /// @param n int64_t
 ///
-char* q_anystringview_mid2(void* self, int64_t pos, int64_t n);
+const char* q_anystringview_mid2(void* self, int64_t pos, int64_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qanystringview.html#compare)
 ///
-/// @param lhs char*
-/// @param rhs char*
+/// @param lhs const char*
+/// @param rhs const char*
 /// @param cs enum Qt__CaseSensitivity
 ///
-int32_t q_anystringview_compare3(char* lhs, char* rhs, int32_t cs);
+int32_t q_anystringview_compare3(const char* lhs, const char* rhs, int32_t cs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qanystringview.html#dtor.QAnyStringView)
 ///

@@ -795,9 +795,9 @@ const char* k_toggleaction_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KToggleAction*
-/// @param name char*
+/// @param name const char*
 ///
-void k_toggleaction_set_object_name(void* self, char* name);
+void k_toggleaction_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

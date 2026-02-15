@@ -682,9 +682,9 @@ const char* q_pdflinkmodel_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QPdfLinkModel*
-/// @param name char*
+/// @param name const char*
 ///
-void q_pdflinkmodel_set_object_name(void* self, char* name);
+void q_pdflinkmodel_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

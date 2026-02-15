@@ -201,7 +201,7 @@ const char* q_scilexermakefile_object_name(void* self) {
     return _ret;
 }
 
-void q_scilexermakefile_set_object_name(void* self, char* name) {
+void q_scilexermakefile_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -881,7 +881,7 @@ char* q_scilexermakefile_qbase_text_as_bytes(void* self, const char* text) {
     return _ret;
 }
 
-void q_scilexermakefile_on_text_as_bytes(void* self, char* (*callback)(void*, const char*)) {
+void q_scilexermakefile_on_text_as_bytes(void* self, libqt_string (*callback)(void*, const char*)) {
     QsciLexerMakefile_OnTextAsBytes((QsciLexerMakefile*)self, (intptr_t)callback);
 }
 

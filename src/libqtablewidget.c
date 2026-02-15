@@ -2208,7 +2208,7 @@ char* q_tablewidget_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_tablewidget_restore_geometry(void* self, const char* geometry) {
+bool q_tablewidget_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -2564,7 +2564,7 @@ const char* q_tablewidget_object_name(void* self) {
     return _ret;
 }
 
-void q_tablewidget_set_object_name(void* self, char* name) {
+void q_tablewidget_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -3766,15 +3766,15 @@ void q_tablewidget_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QTableWidget_OnHideEvent((QTableWidget*)self, (intptr_t)callback);
 }
 
-bool q_tablewidget_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_tablewidget_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QTableWidget_NativeEvent((QTableWidget*)self, qstring(eventType), message, result);
 }
 
-bool q_tablewidget_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_tablewidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QTableWidget_QBaseNativeEvent((QTableWidget*)self, qstring(eventType), message, result);
 }
 
-void q_tablewidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_tablewidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QTableWidget_OnNativeEvent((QTableWidget*)self, (intptr_t)callback);
 }
 

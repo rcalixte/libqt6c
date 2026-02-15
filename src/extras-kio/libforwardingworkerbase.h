@@ -15,11 +15,11 @@
 
 /// k_io__forwardingworkerbase_new constructs a new KIO::ForwardingWorkerBase object.
 ///
-/// @param protocol const char*
-/// @param poolSocket const char*
-/// @param appSocket const char*
+/// @param protocol char*
+/// @param poolSocket char*
+/// @param appSocket char*
 ///
-KIO__ForwardingWorkerBase* k_io__forwardingworkerbase_new(const char* protocol, const char* poolSocket, const char* appSocket);
+KIO__ForwardingWorkerBase* k_io__forwardingworkerbase_new(char* protocol, char* poolSocket, char* appSocket);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -554,9 +554,9 @@ const char* k_io__forwardingworkerbase_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param name char*
+/// @param name const char*
 ///
-void k_io__forwardingworkerbase_set_object_name(void* self, char* name);
+void k_io__forwardingworkerbase_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1007,9 +1007,9 @@ void k_io__forwardingworkerbase_dispatch_loop(void* self);
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#data)
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param data const char*
+/// @param data char*
 ///
-void k_io__forwardingworkerbase_data(void* self, const char* data);
+void k_io__forwardingworkerbase_data(void* self, char* data);
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -1587,9 +1587,9 @@ const char* k_io__forwardingworkerbase_config_value22(void* self, const char* ke
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param timeout int
-/// @param data const char*
+/// @param data char*
 ///
-void k_io__forwardingworkerbase_set_timeout_special_command2(void* self, int timeout, const char* data);
+void k_io__forwardingworkerbase_set_timeout_special_command2(void* self, int timeout, char* data);
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -2053,9 +2053,9 @@ void k_io__forwardingworkerbase_on_read(void* self, KIO__WorkerResult* (*callbac
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param data const char*
+/// @param data char*
 ///
-KIO__WorkerResult* k_io__forwardingworkerbase_write(void* self, const char* data);
+KIO__WorkerResult* k_io__forwardingworkerbase_write(void* self, char* data);
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -2064,9 +2064,9 @@ KIO__WorkerResult* k_io__forwardingworkerbase_write(void* self, const char* data
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param data const char*
+/// @param data char*
 ///
-KIO__WorkerResult* k_io__forwardingworkerbase_qbase_write(void* self, const char* data);
+KIO__WorkerResult* k_io__forwardingworkerbase_qbase_write(void* self, char* data);
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -2075,9 +2075,9 @@ KIO__WorkerResult* k_io__forwardingworkerbase_qbase_write(void* self, const char
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, const char* data)
+/// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, libqt_string data)
 ///
-void k_io__forwardingworkerbase_on_write(void* self, KIO__WorkerResult* (*callback)(void*, const char*));
+void k_io__forwardingworkerbase_on_write(void* self, KIO__WorkerResult* (*callback)(void*, libqt_string));
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -2220,9 +2220,9 @@ void k_io__forwardingworkerbase_on_chown(void* self, KIO__WorkerResult* (*callba
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param data const char*
+/// @param data char*
 ///
-KIO__WorkerResult* k_io__forwardingworkerbase_special(void* self, const char* data);
+KIO__WorkerResult* k_io__forwardingworkerbase_special(void* self, char* data);
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -2231,9 +2231,9 @@ KIO__WorkerResult* k_io__forwardingworkerbase_special(void* self, const char* da
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param data const char*
+/// @param data char*
 ///
-KIO__WorkerResult* k_io__forwardingworkerbase_qbase_special(void* self, const char* data);
+KIO__WorkerResult* k_io__forwardingworkerbase_qbase_special(void* self, char* data);
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -2242,9 +2242,9 @@ KIO__WorkerResult* k_io__forwardingworkerbase_qbase_special(void* self, const ch
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, const char* data)
+/// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, libqt_string data)
 ///
-void k_io__forwardingworkerbase_on_special(void* self, KIO__WorkerResult* (*callback)(void*, const char*));
+void k_io__forwardingworkerbase_on_special(void* self, KIO__WorkerResult* (*callback)(void*, libqt_string));
 
 /// Inherited from KIO::WorkerBase
 ///

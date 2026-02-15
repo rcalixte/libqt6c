@@ -48,7 +48,7 @@ char* q_itemeditorfactory_value_property_name(void* self, int userType) {
     return _ret;
 }
 
-void q_itemeditorfactory_on_value_property_name(void* self, char* (*callback)(void*, int)) {
+void q_itemeditorfactory_on_value_property_name(void* self, libqt_string (*callback)(void*, int)) {
     QItemEditorFactory_OnValuePropertyName((QItemEditorFactory*)self, (intptr_t)callback);
 }
 

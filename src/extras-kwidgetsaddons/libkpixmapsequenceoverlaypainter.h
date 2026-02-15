@@ -262,9 +262,9 @@ const char* k_pixmapsequenceoverlaypainter_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KPixmapSequenceOverlayPainter*
-/// @param name char*
+/// @param name const char*
 ///
-void k_pixmapsequenceoverlaypainter_set_object_name(void* self, char* name);
+void k_pixmapsequenceoverlaypainter_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

@@ -1791,9 +1791,9 @@ char* q_designerobjectinspectorinterface_save_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QDesignerObjectInspectorInterface*
-/// @param geometry const char*
+/// @param geometry char*
 ///
-bool q_designerobjectinspectorinterface_restore_geometry(void* self, const char* geometry);
+bool q_designerobjectinspectorinterface_restore_geometry(void* self, char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2599,9 +2599,9 @@ const char* q_designerobjectinspectorinterface_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QDesignerObjectInspectorInterface*
-/// @param name char*
+/// @param name const char*
 ///
-void q_designerobjectinspectorinterface_set_object_name(void* self, char* name);
+void q_designerobjectinspectorinterface_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4178,11 +4178,11 @@ void q_designerobjectinspectorinterface_on_hide_event(void* self, void (*callbac
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QDesignerObjectInspectorInterface*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_designerobjectinspectorinterface_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_designerobjectinspectorinterface_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4191,11 +4191,11 @@ bool q_designerobjectinspectorinterface_native_event(void* self, const char* eve
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QDesignerObjectInspectorInterface*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_designerobjectinspectorinterface_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_designerobjectinspectorinterface_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4204,9 +4204,9 @@ bool q_designerobjectinspectorinterface_qbase_native_event(void* self, const cha
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDesignerObjectInspectorInterface*
-/// @param callback bool func(QDesignerObjectInspectorInterface* self, const char* eventType, void* message, intptr_t* result)
+/// @param callback bool func(QDesignerObjectInspectorInterface* self, libqt_string eventType, void* message, intptr_t* result)
 ///
-void q_designerobjectinspectorinterface_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
+void q_designerobjectinspectorinterface_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///

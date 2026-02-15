@@ -422,7 +422,7 @@ const char* k_coredirlister_object_name(void* self) {
     return _ret;
 }
 
-void k_coredirlister_set_object_name(void* self, char* name) {
+void k_coredirlister_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

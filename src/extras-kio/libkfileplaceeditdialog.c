@@ -939,7 +939,7 @@ char* k_fileplaceeditdialog_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_fileplaceeditdialog_restore_geometry(void* self, const char* geometry) {
+bool k_fileplaceeditdialog_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1295,7 +1295,7 @@ const char* k_fileplaceeditdialog_object_name(void* self) {
     return _ret;
 }
 
-void k_fileplaceeditdialog_set_object_name(void* self, char* name) {
+void k_fileplaceeditdialog_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2003,15 +2003,15 @@ void k_fileplaceeditdialog_on_hide_event(void* self, void (*callback)(void*, voi
     KFilePlaceEditDialog_OnHideEvent((KFilePlaceEditDialog*)self, (intptr_t)callback);
 }
 
-bool k_fileplaceeditdialog_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_fileplaceeditdialog_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KFilePlaceEditDialog_NativeEvent((KFilePlaceEditDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_fileplaceeditdialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_fileplaceeditdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KFilePlaceEditDialog_QBaseNativeEvent((KFilePlaceEditDialog*)self, qstring(eventType), message, result);
 }
 
-void k_fileplaceeditdialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_fileplaceeditdialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KFilePlaceEditDialog_OnNativeEvent((KFilePlaceEditDialog*)self, (intptr_t)callback);
 }
 

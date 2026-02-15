@@ -146,9 +146,9 @@ const char* q_accounts__watch_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self Accounts__Watch*
-/// @param name char*
+/// @param name const char*
 ///
-void q_accounts__watch_set_object_name(void* self, char* name);
+void q_accounts__watch_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1562,9 +1562,9 @@ const char* q_accounts__account_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self Accounts__Account*
-/// @param name char*
+/// @param name const char*
 ///
-void q_accounts__account_set_object_name(void* self, char* name);
+void q_accounts__account_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

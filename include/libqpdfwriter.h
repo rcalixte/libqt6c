@@ -197,9 +197,9 @@ int32_t q_pdfwriter_resolution(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfwriter.html#setDocumentXmpMetadata)
 ///
 /// @param self QPdfWriter*
-/// @param xmpMetadata const char*
+/// @param xmpMetadata char*
 ///
-void q_pdfwriter_set_document_xmp_metadata(void* self, const char* xmpMetadata);
+void q_pdfwriter_set_document_xmp_metadata(void* self, char* xmpMetadata);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfwriter.html#documentXmpMetadata)
 ///
@@ -213,9 +213,9 @@ char* q_pdfwriter_document_xmp_metadata(void* self);
 ///
 /// @param self QPdfWriter*
 /// @param fileName const char*
-/// @param data const char*
+/// @param data char*
 ///
-void q_pdfwriter_add_file_attachment(void* self, const char* fileName, const char* data);
+void q_pdfwriter_add_file_attachment(void* self, const char* fileName, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfwriter.html#colorModel)
 ///
@@ -316,10 +316,10 @@ const char* q_pdfwriter_tr3(const char* s, const char* c, int n);
 ///
 /// @param self QPdfWriter*
 /// @param fileName const char*
-/// @param data const char*
+/// @param data char*
 /// @param mimeType const char*
 ///
-void q_pdfwriter_add_file_attachment3(void* self, const char* fileName, const char* data, const char* mimeType);
+void q_pdfwriter_add_file_attachment3(void* self, const char* fileName, char* data, const char* mimeType);
 
 /// Inherited from QObject
 ///
@@ -336,9 +336,9 @@ const char* q_pdfwriter_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QPdfWriter*
-/// @param name char*
+/// @param name const char*
 ///
-void q_pdfwriter_set_object_name(void* self, char* name);
+void q_pdfwriter_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

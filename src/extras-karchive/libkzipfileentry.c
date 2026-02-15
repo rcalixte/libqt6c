@@ -57,7 +57,7 @@ char* k_zipfileentry_data(void* self) {
     return _ret;
 }
 
-void k_zipfileentry_on_data(void* self, char* (*callback)()) {
+void k_zipfileentry_on_data(void* self, libqt_string (*callback)()) {
     KZipFileEntry_OnData((KZipFileEntry*)self, (intptr_t)callback);
 }
 

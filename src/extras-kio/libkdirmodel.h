@@ -1210,9 +1210,9 @@ const char* k_dirmodel_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KDirModel*
-/// @param name char*
+/// @param name const char*
 ///
-void k_dirmodel_set_object_name(void* self, char* name);
+void k_dirmodel_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

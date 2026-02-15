@@ -2272,9 +2272,9 @@ char* q_spinbox_save_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QSpinBox*
-/// @param geometry const char*
+/// @param geometry char*
 ///
-bool q_spinbox_restore_geometry(void* self, const char* geometry);
+bool q_spinbox_restore_geometry(void* self, char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -3080,9 +3080,9 @@ const char* q_spinbox_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QSpinBox*
-/// @param name char*
+/// @param name const char*
 ///
-void q_spinbox_set_object_name(void* self, char* name);
+void q_spinbox_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4857,11 +4857,11 @@ void q_spinbox_on_drop_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSpinBox*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_spinbox_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_spinbox_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4870,11 +4870,11 @@ bool q_spinbox_native_event(void* self, const char* eventType, void* message, in
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSpinBox*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_spinbox_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_spinbox_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4883,9 +4883,9 @@ bool q_spinbox_qbase_native_event(void* self, const char* eventType, void* messa
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSpinBox*
-/// @param callback bool func(QSpinBox* self, const char* eventType, void* message, intptr_t* result)
+/// @param callback bool func(QSpinBox* self, libqt_string eventType, void* message, intptr_t* result)
 ///
-void q_spinbox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
+void q_spinbox_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///
@@ -7887,9 +7887,9 @@ char* q_doublespinbox_save_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QDoubleSpinBox*
-/// @param geometry const char*
+/// @param geometry char*
 ///
-bool q_doublespinbox_restore_geometry(void* self, const char* geometry);
+bool q_doublespinbox_restore_geometry(void* self, char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -8695,9 +8695,9 @@ const char* q_doublespinbox_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QDoubleSpinBox*
-/// @param name char*
+/// @param name const char*
 ///
-void q_doublespinbox_set_object_name(void* self, char* name);
+void q_doublespinbox_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -10505,11 +10505,11 @@ void q_doublespinbox_on_drop_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QDoubleSpinBox*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_doublespinbox_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_doublespinbox_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -10518,11 +10518,11 @@ bool q_doublespinbox_native_event(void* self, const char* eventType, void* messa
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QDoubleSpinBox*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_doublespinbox_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_doublespinbox_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -10531,9 +10531,9 @@ bool q_doublespinbox_qbase_native_event(void* self, const char* eventType, void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDoubleSpinBox*
-/// @param callback bool func(QDoubleSpinBox* self, const char* eventType, void* message, intptr_t* result)
+/// @param callback bool func(QDoubleSpinBox* self, libqt_string eventType, void* message, intptr_t* result)
 ///
-void q_doublespinbox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
+void q_doublespinbox_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///

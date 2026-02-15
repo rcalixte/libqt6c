@@ -77,7 +77,7 @@ QVariant* q_variant_new14(void* bitarray) {
     return QVariant_new14((QBitArray*)bitarray);
 }
 
-QVariant* q_variant_new15(const char* bytearray) {
+QVariant* q_variant_new15(char* bytearray) {
     return QVariant_new15(qstring(bytearray));
 }
 

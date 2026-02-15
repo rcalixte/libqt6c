@@ -186,7 +186,7 @@ char* k_onsole__keyboardtranslator__entry_text(void* self) {
     return _ret;
 }
 
-void k_onsole__keyboardtranslator__entry_set_text(void* self, const char* text) {
+void k_onsole__keyboardtranslator__entry_set_text(void* self, char* text) {
     Konsole__KeyboardTranslator__Entry_SetText((Konsole__KeyboardTranslator__Entry*)self, qstring(text));
 }
 

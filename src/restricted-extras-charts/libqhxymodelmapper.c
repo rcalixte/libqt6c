@@ -176,7 +176,7 @@ const char* q_hxymodelmapper_object_name(void* self) {
     return _ret;
 }
 
-void q_hxymodelmapper_set_object_name(void* self, char* name) {
+void q_hxymodelmapper_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

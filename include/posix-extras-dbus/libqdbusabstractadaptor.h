@@ -92,9 +92,9 @@ const char* q_dbusabstractadaptor_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QDBusAbstractAdaptor*
-/// @param name char*
+/// @param name const char*
 ///
-void q_dbusabstractadaptor_set_object_name(void* self, char* name);
+void q_dbusabstractadaptor_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

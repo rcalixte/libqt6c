@@ -408,7 +408,7 @@ const char* k_numbermodel_object_name(void* self) {
     return _ret;
 }
 
-void k_numbermodel_set_object_name(void* self, char* name) {
+void k_numbermodel_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

@@ -349,7 +349,7 @@ const char* q_undostack_object_name(void* self) {
     return _ret;
 }
 
-void q_undostack_set_object_name(void* self, char* name) {
+void q_undostack_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

@@ -1489,7 +1489,7 @@ char* k_historycombobox_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_historycombobox_restore_geometry(void* self, const char* geometry) {
+bool k_historycombobox_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1845,7 +1845,7 @@ const char* k_historycombobox_object_name(void* self) {
     return _ret;
 }
 
-void k_historycombobox_set_object_name(void* self, char* name) {
+void k_historycombobox_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2676,15 +2676,15 @@ void k_historycombobox_on_drop_event(void* self, void (*callback)(void*, void*))
     KHistoryComboBox_OnDropEvent((KHistoryComboBox*)self, (intptr_t)callback);
 }
 
-bool k_historycombobox_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_historycombobox_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KHistoryComboBox_NativeEvent((KHistoryComboBox*)self, qstring(eventType), message, result);
 }
 
-bool k_historycombobox_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_historycombobox_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KHistoryComboBox_QBaseNativeEvent((KHistoryComboBox*)self, qstring(eventType), message, result);
 }
 
-void k_historycombobox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_historycombobox_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KHistoryComboBox_OnNativeEvent((KHistoryComboBox*)self, (intptr_t)callback);
 }
 

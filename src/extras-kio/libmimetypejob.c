@@ -55,7 +55,7 @@ void k_io__mimetypejob_set_async_data_enabled(void* self, bool enabled) {
     KIO__TransferJob_SetAsyncDataEnabled((KIO__TransferJob*)self, enabled);
 }
 
-void k_io__mimetypejob_send_async_data(void* self, const char* data) {
+void k_io__mimetypejob_send_async_data(void* self, char* data) {
     KIO__TransferJob_SendAsyncData((KIO__TransferJob*)self, qstring(data));
 }
 
@@ -74,11 +74,11 @@ void k_io__mimetypejob_set_total_size(void* self, uint64_t bytes) {
     KIO__TransferJob_SetTotalSize((KIO__TransferJob*)self, bytes);
 }
 
-void k_io__mimetypejob_data(void* self, void* job, const char* data) {
+void k_io__mimetypejob_data(void* self, void* job, char* data) {
     KIO__TransferJob_Data((KIO__TransferJob*)self, (KIO__Job*)job, qstring(data));
 }
 
-void k_io__mimetypejob_on_data(void* self, void (*callback)(void*, void*, const char*)) {
+void k_io__mimetypejob_on_data(void* self, void (*callback)(void*, void*, libqt_string)) {
     KIO__TransferJob_Connect_Data((KIO__TransferJob*)self, (intptr_t)callback);
 }
 
@@ -86,7 +86,7 @@ void k_io__mimetypejob_data_req(void* self, void* job, char* data) {
     KIO__TransferJob_DataReq((KIO__TransferJob*)self, (KIO__Job*)job, qstring(data));
 }
 
-void k_io__mimetypejob_on_data_req(void* self, void (*callback)(void*, void*, char*)) {
+void k_io__mimetypejob_on_data_req(void* self, void (*callback)(void*, void*, libqt_string)) {
     KIO__TransferJob_Connect_DataReq((KIO__TransferJob*)self, (intptr_t)callback);
 }
 
@@ -459,7 +459,7 @@ const char* k_io__mimetypejob_object_name(void* self) {
     return _ret;
 }
 
-void k_io__mimetypejob_set_object_name(void* self, char* name) {
+void k_io__mimetypejob_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

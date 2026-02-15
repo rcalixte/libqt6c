@@ -125,9 +125,9 @@ QVariant* q_variant_new14(void* bitarray);
 
 /// q_variant_new15 constructs a new QVariant object.
 ///
-/// @param bytearray const char*
+/// @param bytearray char*
 ///
-QVariant* q_variant_new15(const char* bytearray);
+QVariant* q_variant_new15(char* bytearray);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
 

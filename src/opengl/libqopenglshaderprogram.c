@@ -71,7 +71,7 @@ bool q_openglshader_compile_source_code(void* self, const char* source) {
     return QOpenGLShader_CompileSourceCode((QOpenGLShader*)self, source);
 }
 
-bool q_openglshader_compile_source_code2(void* self, const char* source) {
+bool q_openglshader_compile_source_code2(void* self, char* source) {
     return QOpenGLShader_CompileSourceCode2((QOpenGLShader*)self, qstring(source));
 }
 
@@ -134,7 +134,7 @@ const char* q_openglshader_object_name(void* self) {
     return _ret;
 }
 
-void q_openglshader_set_object_name(void* self, char* name) {
+void q_openglshader_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -546,7 +546,7 @@ bool q_openglshaderprogram_add_shader_from_source_code(void* self, int32_t type,
     return QOpenGLShaderProgram_AddShaderFromSourceCode((QOpenGLShaderProgram*)self, type, source);
 }
 
-bool q_openglshaderprogram_add_shader_from_source_code2(void* self, int32_t type, const char* source) {
+bool q_openglshaderprogram_add_shader_from_source_code2(void* self, int32_t type, char* source) {
     return QOpenGLShaderProgram_AddShaderFromSourceCode2((QOpenGLShaderProgram*)self, type, qstring(source));
 }
 
@@ -562,7 +562,7 @@ bool q_openglshaderprogram_add_cacheable_shader_from_source_code(void* self, int
     return QOpenGLShaderProgram_AddCacheableShaderFromSourceCode((QOpenGLShaderProgram*)self, type, source);
 }
 
-bool q_openglshaderprogram_add_cacheable_shader_from_source_code2(void* self, int32_t type, const char* source) {
+bool q_openglshaderprogram_add_cacheable_shader_from_source_code2(void* self, int32_t type, char* source) {
     return QOpenGLShaderProgram_AddCacheableShaderFromSourceCode2((QOpenGLShaderProgram*)self, type, qstring(source));
 }
 
@@ -651,7 +651,7 @@ void q_openglshaderprogram_bind_attribute_location(void* self, const char* name,
     QOpenGLShaderProgram_BindAttributeLocation((QOpenGLShaderProgram*)self, name, location);
 }
 
-void q_openglshaderprogram_bind_attribute_location2(void* self, const char* name, int location) {
+void q_openglshaderprogram_bind_attribute_location2(void* self, char* name, int location) {
     QOpenGLShaderProgram_BindAttributeLocation2((QOpenGLShaderProgram*)self, qstring(name), location);
 }
 
@@ -663,7 +663,7 @@ int32_t q_openglshaderprogram_attribute_location(void* self, const char* name) {
     return QOpenGLShaderProgram_AttributeLocation((QOpenGLShaderProgram*)self, name);
 }
 
-int32_t q_openglshaderprogram_attribute_location2(void* self, const char* name) {
+int32_t q_openglshaderprogram_attribute_location2(void* self, char* name) {
     return QOpenGLShaderProgram_AttributeLocation2((QOpenGLShaderProgram*)self, qstring(name));
 }
 
@@ -811,7 +811,7 @@ int32_t q_openglshaderprogram_uniform_location(void* self, const char* name) {
     return QOpenGLShaderProgram_UniformLocation((QOpenGLShaderProgram*)self, name);
 }
 
-int32_t q_openglshaderprogram_uniform_location2(void* self, const char* name) {
+int32_t q_openglshaderprogram_uniform_location2(void* self, char* name) {
     return QOpenGLShaderProgram_UniformLocation2((QOpenGLShaderProgram*)self, qstring(name));
 }
 
@@ -1080,7 +1080,7 @@ const char* q_openglshaderprogram_object_name(void* self) {
     return _ret;
 }
 
-void q_openglshaderprogram_set_object_name(void* self, char* name) {
+void q_openglshaderprogram_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

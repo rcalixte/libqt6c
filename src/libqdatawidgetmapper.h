@@ -180,9 +180,9 @@ void q_datawidgetmapper_add_mapping(void* self, void* widget, int section);
 /// @param self QDataWidgetMapper*
 /// @param widget QWidget*
 /// @param section int
-/// @param propertyName const char*
+/// @param propertyName char*
 ///
-void q_datawidgetmapper_add_mapping2(void* self, void* widget, int section, const char* propertyName);
+void q_datawidgetmapper_add_mapping2(void* self, void* widget, int section, char* propertyName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#removeMapping)
 ///
@@ -342,9 +342,9 @@ const char* q_datawidgetmapper_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QDataWidgetMapper*
-/// @param name char*
+/// @param name const char*
 ///
-void q_datawidgetmapper_set_object_name(void* self, char* name);
+void q_datawidgetmapper_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

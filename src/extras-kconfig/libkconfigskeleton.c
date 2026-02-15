@@ -472,7 +472,7 @@ const char* k_configskeleton_object_name(void* self) {
     return _ret;
 }
 
-void k_configskeleton_set_object_name(void* self, char* name) {
+void k_configskeleton_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

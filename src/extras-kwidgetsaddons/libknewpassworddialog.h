@@ -2039,9 +2039,9 @@ char* k_newpassworddialog_save_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self KNewPasswordDialog*
-/// @param geometry const char*
+/// @param geometry char*
 ///
-bool k_newpassworddialog_restore_geometry(void* self, const char* geometry);
+bool k_newpassworddialog_restore_geometry(void* self, char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2847,9 +2847,9 @@ const char* k_newpassworddialog_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KNewPasswordDialog*
-/// @param name char*
+/// @param name const char*
 ///
-void k_newpassworddialog_set_object_name(void* self, char* name);
+void k_newpassworddialog_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4587,11 +4587,11 @@ void k_newpassworddialog_on_hide_event(void* self, void (*callback)(void*, void*
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KNewPasswordDialog*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_newpassworddialog_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool k_newpassworddialog_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4600,11 +4600,11 @@ bool k_newpassworddialog_native_event(void* self, const char* eventType, void* m
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KNewPasswordDialog*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_newpassworddialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool k_newpassworddialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4613,9 +4613,9 @@ bool k_newpassworddialog_qbase_native_event(void* self, const char* eventType, v
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KNewPasswordDialog*
-/// @param callback bool func(KNewPasswordDialog* self, const char* eventType, void* message, intptr_t* result)
+/// @param callback bool func(KNewPasswordDialog* self, libqt_string eventType, void* message, intptr_t* result)
 ///
-void k_newpassworddialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
+void k_newpassworddialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///

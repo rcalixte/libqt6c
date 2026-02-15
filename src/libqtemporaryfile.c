@@ -158,7 +158,7 @@ char* q_temporaryfile_encode_name(const char* fileName) {
     return _ret;
 }
 
-const char* q_temporaryfile_decode_name(const char* localFileName) {
+const char* q_temporaryfile_decode_name(char* localFileName) {
     libqt_string _str = QFile_DecodeName(qstring(localFileName));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -387,7 +387,7 @@ long long q_temporaryfile_write2(void* self, const char* data) {
     return QIODevice_Write2((QIODevice*)self, data);
 }
 
-long long q_temporaryfile_write3(void* self, const char* data) {
+long long q_temporaryfile_write3(void* self, char* data) {
     return QIODevice_Write3((QIODevice*)self, qstring(data));
 }
 
@@ -487,7 +487,7 @@ const char* q_temporaryfile_object_name(void* self) {
     return _ret;
 }
 
-void q_temporaryfile_set_object_name(void* self, char* name) {
+void q_temporaryfile_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

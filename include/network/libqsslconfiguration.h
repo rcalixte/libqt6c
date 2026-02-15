@@ -267,9 +267,9 @@ char* q_sslconfiguration_session_ticket(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setSessionTicket)
 ///
 /// @param self QSslConfiguration*
-/// @param sessionTicket const char*
+/// @param sessionTicket char*
 ///
-void q_sslconfiguration_set_session_ticket(void* self, const char* sessionTicket);
+void q_sslconfiguration_set_session_ticket(void* self, char* sessionTicket);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#sessionTicketLifeTimeHint)
 ///
@@ -315,9 +315,9 @@ char* q_sslconfiguration_pre_shared_key_identity_hint(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setPreSharedKeyIdentityHint)
 ///
 /// @param self QSslConfiguration*
-/// @param hint const char*
+/// @param hint char*
 ///
-void q_sslconfiguration_set_pre_shared_key_identity_hint(void* self, const char* hint);
+void q_sslconfiguration_set_pre_shared_key_identity_hint(void* self, char* hint);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#diffieHellmanParameters)
 ///
@@ -355,10 +355,10 @@ libqt_map q_sslconfiguration_backend_configuration(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setBackendConfigurationOption)
 ///
 /// @param self QSslConfiguration*
-/// @param name const char*
+/// @param name char*
 /// @param value QVariant*
 ///
-void q_sslconfiguration_set_backend_configuration_option(void* self, const char* name, void* value);
+void q_sslconfiguration_set_backend_configuration_option(void* self, char* name, void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setBackendConfiguration)
 ///

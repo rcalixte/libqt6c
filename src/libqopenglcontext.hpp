@@ -60,7 +60,7 @@ QOpenGLContext* QOpenGLContext_CurrentContext();
 bool QOpenGLContext_AreSharing(QOpenGLContext* first, QOpenGLContext* second);
 QOpenGLFunctions* QOpenGLContext_Functions(const QOpenGLContext* self);
 QOpenGLExtraFunctions* QOpenGLContext_ExtraFunctions(const QOpenGLContext* self);
-libqt_list /* set of const char* */ QOpenGLContext_Extensions(const QOpenGLContext* self);
+libqt_list /* set of libqt_string */ QOpenGLContext_Extensions(const QOpenGLContext* self);
 bool QOpenGLContext_HasExtension(const QOpenGLContext* self, const libqt_string extension);
 int QOpenGLContext_OpenGLModuleType();
 bool QOpenGLContext_IsOpenGLES(const QOpenGLContext* self);

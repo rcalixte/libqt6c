@@ -51,7 +51,7 @@ QNetworkReply* k_attica__platformdependent_post(void* self, void* request, void*
     return Attica__PlatformDependent_Post((Attica__PlatformDependent*)self, (QNetworkRequest*)request, (QIODevice*)data);
 }
 
-QNetworkReply* k_attica__platformdependent_post2(void* self, void* request, const char* data) {
+QNetworkReply* k_attica__platformdependent_post2(void* self, void* request, char* data) {
     return Attica__PlatformDependent_Post2((Attica__PlatformDependent*)self, (QNetworkRequest*)request, qstring(data));
 }
 

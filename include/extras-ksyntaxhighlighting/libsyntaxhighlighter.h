@@ -321,9 +321,9 @@ const char* k_syntaxhighlighting__syntaxhighlighter_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
-/// @param name char*
+/// @param name const char*
 ///
-void k_syntaxhighlighting__syntaxhighlighter_set_object_name(void* self, char* name);
+void k_syntaxhighlighting__syntaxhighlighter_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

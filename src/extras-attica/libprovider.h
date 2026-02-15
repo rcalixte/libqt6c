@@ -443,9 +443,9 @@ Attica__PostJob* k_attica__provider_edit_remote_account(void* self, void* accoun
 /// @param self Attica__Provider*
 /// @param projectId const char*
 /// @param fileName const char*
-/// @param payload const char*
+/// @param payload char*
 ///
-Attica__PostJob* k_attica__provider_upload_tarball_to_build_service(void* self, const char* projectId, const char* fileName, const char* payload);
+Attica__PostJob* k_attica__provider_upload_tarball_to_build_service(void* self, const char* projectId, const char* fileName, char* payload);
 
 /// [Upstream resources](https://api.kde.org/attica-provider.html#voteForContent)
 ///
@@ -476,9 +476,9 @@ Attica__PostJob* k_attica__provider_set_download_file(void* self, const char* co
 /// @param self Attica__Provider*
 /// @param contentId const char*
 /// @param fileName const char*
-/// @param payload const char*
+/// @param payload char*
 ///
-Attica__PostJob* k_attica__provider_set_download_file2(void* self, const char* contentId, const char* fileName, const char* payload);
+Attica__PostJob* k_attica__provider_set_download_file2(void* self, const char* contentId, const char* fileName, char* payload);
 
 /// [Upstream resources](https://api.kde.org/attica-provider.html#deleteDownloadFile)
 ///
@@ -493,9 +493,9 @@ Attica__PostJob* k_attica__provider_delete_download_file(void* self, const char*
 /// @param contentId const char*
 /// @param previewId const char*
 /// @param fileName const char*
-/// @param image const char*
+/// @param image char*
 ///
-Attica__PostJob* k_attica__provider_set_preview_image(void* self, const char* contentId, const char* previewId, const char* fileName, const char* image);
+Attica__PostJob* k_attica__provider_set_preview_image(void* self, const char* contentId, const char* previewId, const char* fileName, char* image);
 
 /// [Upstream resources](https://api.kde.org/attica-provider.html#deletePreviewImage)
 ///

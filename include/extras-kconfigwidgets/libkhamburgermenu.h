@@ -879,9 +879,9 @@ const char* k_hamburgermenu_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KHamburgerMenu*
-/// @param name char*
+/// @param name const char*
 ///
-void k_hamburgermenu_set_object_name(void* self, char* name);
+void k_hamburgermenu_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

@@ -950,7 +950,7 @@ char* q_designerpropertyeditorinterface_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_designerpropertyeditorinterface_restore_geometry(void* self, const char* geometry) {
+bool q_designerpropertyeditorinterface_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1306,7 +1306,7 @@ const char* q_designerpropertyeditorinterface_object_name(void* self) {
     return _ret;
 }
 
-void q_designerpropertyeditorinterface_set_object_name(void* self, char* name) {
+void q_designerpropertyeditorinterface_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1942,15 +1942,15 @@ void q_designerpropertyeditorinterface_on_hide_event(void* self, void (*callback
     QDesignerPropertyEditorInterface_OnHideEvent((QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
 }
 
-bool q_designerpropertyeditorinterface_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_designerpropertyeditorinterface_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QDesignerPropertyEditorInterface_NativeEvent((QDesignerPropertyEditorInterface*)self, qstring(eventType), message, result);
 }
 
-bool q_designerpropertyeditorinterface_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_designerpropertyeditorinterface_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QDesignerPropertyEditorInterface_QBaseNativeEvent((QDesignerPropertyEditorInterface*)self, qstring(eventType), message, result);
 }
 
-void q_designerpropertyeditorinterface_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_designerpropertyeditorinterface_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QDesignerPropertyEditorInterface_OnNativeEvent((QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
 }
 

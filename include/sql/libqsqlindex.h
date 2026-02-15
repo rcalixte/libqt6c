@@ -148,9 +148,9 @@ QVariant* q_sqlindex_value(void* self, int i);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#value)
 ///
 /// @param self QSqlIndex*
-/// @param name char*
+/// @param name const char*
 ///
-QVariant* q_sqlindex_value2(void* self, char* name);
+QVariant* q_sqlindex_value2(void* self, const char* name);
 
 /// Inherited from QSqlRecord
 ///
@@ -167,10 +167,10 @@ void q_sqlindex_set_value(void* self, int i, void* val);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#setValue)
 ///
 /// @param self QSqlIndex*
-/// @param name char*
+/// @param name const char*
 /// @param val QVariant*
 ///
-void q_sqlindex_set_value2(void* self, char* name, void* val);
+void q_sqlindex_set_value2(void* self, const char* name, void* val);
 
 /// Inherited from QSqlRecord
 ///
@@ -186,9 +186,9 @@ void q_sqlindex_set_null(void* self, int i);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#setNull)
 ///
 /// @param self QSqlIndex*
-/// @param name char*
+/// @param name const char*
 ///
-void q_sqlindex_set_null2(void* self, char* name);
+void q_sqlindex_set_null2(void* self, const char* name);
 
 /// Inherited from QSqlRecord
 ///
@@ -204,18 +204,18 @@ bool q_sqlindex_is_null(void* self, int i);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#isNull)
 ///
 /// @param self QSqlIndex*
-/// @param name char*
+/// @param name const char*
 ///
-bool q_sqlindex_is_null2(void* self, char* name);
+bool q_sqlindex_is_null2(void* self, const char* name);
 
 /// Inherited from QSqlRecord
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#indexOf)
 ///
 /// @param self QSqlIndex*
-/// @param name char*
+/// @param name const char*
 ///
-int32_t q_sqlindex_index_of(void* self, char* name);
+int32_t q_sqlindex_index_of(void* self, const char* name);
 
 /// Inherited from QSqlRecord
 ///
@@ -242,9 +242,9 @@ QSqlField* q_sqlindex_field(void* self, int i);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#field)
 ///
 /// @param self QSqlIndex*
-/// @param name char*
+/// @param name const char*
 ///
-QSqlField* q_sqlindex_field2(void* self, char* name);
+QSqlField* q_sqlindex_field2(void* self, const char* name);
 
 /// Inherited from QSqlRecord
 ///
@@ -260,19 +260,19 @@ bool q_sqlindex_is_generated(void* self, int i);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#isGenerated)
 ///
 /// @param self QSqlIndex*
-/// @param name char*
+/// @param name const char*
 ///
-bool q_sqlindex_is_generated2(void* self, char* name);
+bool q_sqlindex_is_generated2(void* self, const char* name);
 
 /// Inherited from QSqlRecord
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#setGenerated)
 ///
 /// @param self QSqlIndex*
-/// @param name char*
+/// @param name const char*
 /// @param generated bool
 ///
-void q_sqlindex_set_generated(void* self, char* name, bool generated);
+void q_sqlindex_set_generated(void* self, const char* name, bool generated);
 
 /// Inherited from QSqlRecord
 ///
@@ -326,9 +326,9 @@ bool q_sqlindex_is_empty(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrecord.html#contains)
 ///
 /// @param self QSqlIndex*
-/// @param name char*
+/// @param name const char*
 ///
-bool q_sqlindex_contains(void* self, char* name);
+bool q_sqlindex_contains(void* self, const char* name);
 
 /// Inherited from QSqlRecord
 ///

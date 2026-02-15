@@ -1019,7 +1019,7 @@ char* k_encodingfiledialog_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_encodingfiledialog_restore_geometry(void* self, const char* geometry) {
+bool k_encodingfiledialog_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1391,7 +1391,7 @@ const char* k_encodingfiledialog_object_name(void* self) {
     return _ret;
 }
 
-void k_encodingfiledialog_set_object_name(void* self, char* name) {
+void k_encodingfiledialog_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

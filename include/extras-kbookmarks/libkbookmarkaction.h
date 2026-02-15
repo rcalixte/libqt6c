@@ -754,9 +754,9 @@ const char* k_bookmarkaction_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KBookmarkAction*
-/// @param name char*
+/// @param name const char*
 ///
-void k_bookmarkaction_set_object_name(void* self, char* name);
+void k_bookmarkaction_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

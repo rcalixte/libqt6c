@@ -93,7 +93,7 @@ QDBusArgument* q_dbusargument_operator_shift_left15(void* self, const char* arg[
     return _out;
 }
 
-QDBusArgument* q_dbusargument_operator_shift_left16(void* self, const char* arg) {
+QDBusArgument* q_dbusargument_operator_shift_left16(void* self, char* arg) {
     return QDBusArgument_OperatorShiftLeft16((QDBusArgument*)self, qstring(arg));
 }
 

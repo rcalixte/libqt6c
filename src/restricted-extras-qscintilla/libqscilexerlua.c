@@ -276,7 +276,7 @@ const char* q_scilexerlua_object_name(void* self) {
     return _ret;
 }
 
-void q_scilexerlua_set_object_name(void* self, char* name) {
+void q_scilexerlua_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -854,7 +854,7 @@ char* q_scilexerlua_qbase_text_as_bytes(void* self, const char* text) {
     return _ret;
 }
 
-void q_scilexerlua_on_text_as_bytes(void* self, char* (*callback)(void*, const char*)) {
+void q_scilexerlua_on_text_as_bytes(void* self, libqt_string (*callback)(void*, const char*)) {
     QsciLexerLua_OnTextAsBytes((QsciLexerLua*)self, (intptr_t)callback);
 }
 

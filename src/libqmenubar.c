@@ -1176,7 +1176,7 @@ char* q_menubar_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_menubar_restore_geometry(void* self, const char* geometry) {
+bool q_menubar_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1532,7 +1532,7 @@ const char* q_menubar_object_name(void* self) {
     return _ret;
 }
 
-void q_menubar_set_object_name(void* self, char* name) {
+void q_menubar_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1988,15 +1988,15 @@ void q_menubar_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QMenuBar_OnHideEvent((QMenuBar*)self, (intptr_t)callback);
 }
 
-bool q_menubar_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_menubar_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QMenuBar_NativeEvent((QMenuBar*)self, qstring(eventType), message, result);
 }
 
-bool q_menubar_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_menubar_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QMenuBar_QBaseNativeEvent((QMenuBar*)self, qstring(eventType), message, result);
 }
 
-void q_menubar_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_menubar_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QMenuBar_OnNativeEvent((QMenuBar*)self, (intptr_t)callback);
 }
 

@@ -5,7 +5,7 @@ QWebEngineUrlScheme* q_webengineurlscheme_new() {
     return QWebEngineUrlScheme_new();
 }
 
-QWebEngineUrlScheme* q_webengineurlscheme_new2(const char* name) {
+QWebEngineUrlScheme* q_webengineurlscheme_new2(char* name) {
     return QWebEngineUrlScheme_new2(qstring(name));
 }
 
@@ -32,7 +32,7 @@ char* q_webengineurlscheme_name(void* self) {
     return _ret;
 }
 
-void q_webengineurlscheme_set_name(void* self, const char* newValue) {
+void q_webengineurlscheme_set_name(void* self, char* newValue) {
     QWebEngineUrlScheme_SetName((QWebEngineUrlScheme*)self, qstring(newValue));
 }
 
@@ -64,7 +64,7 @@ void q_webengineurlscheme_register_scheme(void* scheme) {
     QWebEngineUrlScheme_RegisterScheme((QWebEngineUrlScheme*)scheme);
 }
 
-QWebEngineUrlScheme* q_webengineurlscheme_scheme_by_name(const char* name) {
+QWebEngineUrlScheme* q_webengineurlscheme_scheme_by_name(char* name) {
     return QWebEngineUrlScheme_SchemeByName(qstring(name));
 }
 

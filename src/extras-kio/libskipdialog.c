@@ -892,7 +892,7 @@ char* k_io__skipdialog_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_io__skipdialog_restore_geometry(void* self, const char* geometry) {
+bool k_io__skipdialog_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1248,7 +1248,7 @@ const char* k_io__skipdialog_object_name(void* self) {
     return _ret;
 }
 
-void k_io__skipdialog_set_object_name(void* self, char* name) {
+void k_io__skipdialog_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1956,15 +1956,15 @@ void k_io__skipdialog_on_hide_event(void* self, void (*callback)(void*, void*)) 
     KIO__SkipDialog_OnHideEvent((KIO__SkipDialog*)self, (intptr_t)callback);
 }
 
-bool k_io__skipdialog_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_io__skipdialog_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KIO__SkipDialog_NativeEvent((KIO__SkipDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_io__skipdialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_io__skipdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KIO__SkipDialog_QBaseNativeEvent((KIO__SkipDialog*)self, qstring(eventType), message, result);
 }
 
-void k_io__skipdialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_io__skipdialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KIO__SkipDialog_OnNativeEvent((KIO__SkipDialog*)self, (intptr_t)callback);
 }
 

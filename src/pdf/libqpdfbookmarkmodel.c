@@ -357,7 +357,7 @@ const char* q_pdfbookmarkmodel_object_name(void* self) {
     return _ret;
 }
 
-void q_pdfbookmarkmodel_set_object_name(void* self, char* name) {
+void q_pdfbookmarkmodel_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

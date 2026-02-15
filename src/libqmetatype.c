@@ -34,7 +34,7 @@ void q_metatype_move_assign(void* self, void* other) {
     QMetaType_MoveAssign((QMetaType*)self, (QMetaType*)other);
 }
 
-void q_metatype_register_normalized_typedef(const char* normalizedTypeName, void* type) {
+void q_metatype_register_normalized_typedef(char* normalizedTypeName, void* type) {
     QMetaType_RegisterNormalizedTypedef(qstring(normalizedTypeName), (QMetaType*)type);
 }
 
@@ -42,7 +42,7 @@ int32_t q_metatype_type(const char* typeName) {
     return QMetaType_Type(typeName);
 }
 
-int32_t q_metatype_type2(const char* typeName) {
+int32_t q_metatype_type2(char* typeName) {
     return QMetaType_Type2(qstring(typeName));
 }
 
@@ -190,7 +190,7 @@ QMetaType* q_metatype_underlying_type(void* self) {
     return QMetaType_UnderlyingType((QMetaType*)self);
 }
 
-QMetaType* q_metatype_from_name(const char* name) {
+QMetaType* q_metatype_from_name(char* name) {
     return QMetaType_FromName(qstring(name));
 }
 

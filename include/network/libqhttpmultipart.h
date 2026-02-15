@@ -64,17 +64,17 @@ void q_httppart_set_header(void* self, int32_t header, void* value);
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttppart.html#setRawHeader)
 ///
 /// @param self QHttpPart*
-/// @param headerName const char*
-/// @param headerValue const char*
+/// @param headerName char*
+/// @param headerValue char*
 ///
-void q_httppart_set_raw_header(void* self, const char* headerName, const char* headerValue);
+void q_httppart_set_raw_header(void* self, char* headerName, char* headerValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttppart.html#setBody)
 ///
 /// @param self QHttpPart*
-/// @param body const char*
+/// @param body char*
 ///
-void q_httppart_set_body(void* self, const char* body);
+void q_httppart_set_body(void* self, char* body);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttppart.html#setBodyDevice)
 ///
@@ -220,9 +220,9 @@ char* q_httpmultipart_boundary(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttpmultipart.html#setBoundary)
 ///
 /// @param self QHttpMultiPart*
-/// @param boundary const char*
+/// @param boundary char*
 ///
-void q_httpmultipart_set_boundary(void* self, const char* boundary);
+void q_httpmultipart_set_boundary(void* self, char* boundary);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -258,9 +258,9 @@ const char* q_httpmultipart_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QHttpMultiPart*
-/// @param name char*
+/// @param name const char*
 ///
-void q_httpmultipart_set_object_name(void* self, char* name);
+void q_httpmultipart_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

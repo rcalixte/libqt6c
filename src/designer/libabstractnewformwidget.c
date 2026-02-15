@@ -849,7 +849,7 @@ char* q_designernewformwidgetinterface_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_designernewformwidgetinterface_restore_geometry(void* self, const char* geometry) {
+bool q_designernewformwidgetinterface_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1233,7 +1233,7 @@ const char* q_designernewformwidgetinterface_object_name(void* self) {
     return _ret;
 }
 
-void q_designernewformwidgetinterface_set_object_name(void* self, char* name) {
+void q_designernewformwidgetinterface_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

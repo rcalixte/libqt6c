@@ -180,7 +180,7 @@ const char* q_scroller_object_name(void* self) {
     return _ret;
 }
 
-void q_scroller_set_object_name(void* self, char* name) {
+void q_scroller_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

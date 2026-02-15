@@ -2085,9 +2085,9 @@ char* k_encodingfiledialog_save_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self KEncodingFileDialog*
-/// @param geometry const char*
+/// @param geometry char*
 ///
-bool k_encodingfiledialog_restore_geometry(void* self, const char* geometry);
+bool k_encodingfiledialog_restore_geometry(void* self, char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2927,9 +2927,9 @@ const char* k_encodingfiledialog_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KEncodingFileDialog*
-/// @param name char*
+/// @param name const char*
 ///
-void k_encodingfiledialog_set_object_name(void* self, char* name);
+void k_encodingfiledialog_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

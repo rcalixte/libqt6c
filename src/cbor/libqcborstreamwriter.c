@@ -26,7 +26,7 @@ void q_cborstreamwriter_append3(void* self, uint64_t n) {
     QCborStreamWriter_Append3((QCborStreamWriter*)self, n);
 }
 
-void q_cborstreamwriter_append4(void* self, const char* ba) {
+void q_cborstreamwriter_append4(void* self, char* ba) {
     QCborStreamWriter_Append4((QCborStreamWriter*)self, qstring(ba));
 }
 

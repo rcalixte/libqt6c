@@ -141,7 +141,7 @@ const char* q_chronotimer_object_name(void* self) {
     return _ret;
 }
 
-void q_chronotimer_set_object_name(void* self, char* name) {
+void q_chronotimer_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

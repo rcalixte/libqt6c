@@ -702,9 +702,9 @@ const char* k_columnheadersmodel_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KColumnHeadersModel*
-/// @param name char*
+/// @param name const char*
 ///
-void k_columnheadersmodel_set_object_name(void* self, char* name);
+void k_columnheadersmodel_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

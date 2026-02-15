@@ -13,7 +13,7 @@ QStringEncoder* q_stringencoder_new2(int32_t encoding) {
     return QStringEncoder_new2(encoding);
 }
 
-QStringEncoder* q_stringencoder_new3(char* name) {
+QStringEncoder* q_stringencoder_new3(const char* name) {
     return QStringEncoder_new3(name);
 }
 
@@ -21,7 +21,7 @@ QStringEncoder* q_stringencoder_new4(int32_t encoding, int32_t flags) {
     return QStringEncoder_new4(encoding, flags);
 }
 
-QStringEncoder* q_stringencoder_new5(char* name, int32_t flags) {
+QStringEncoder* q_stringencoder_new5(const char* name, int32_t flags) {
     return QStringEncoder_new5(name, flags);
 }
 
@@ -80,7 +80,7 @@ QStringDecoder* q_stringdecoder_new2() {
     return QStringDecoder_new2();
 }
 
-QStringDecoder* q_stringdecoder_new3(char* name) {
+QStringDecoder* q_stringdecoder_new3(const char* name) {
     return QStringDecoder_new3(name);
 }
 
@@ -88,7 +88,7 @@ QStringDecoder* q_stringdecoder_new4(int32_t encoding, int32_t flags) {
     return QStringDecoder_new4(encoding, flags);
 }
 
-QStringDecoder* q_stringdecoder_new5(char* name, int32_t f) {
+QStringDecoder* q_stringdecoder_new5(const char* name, int32_t f) {
     return QStringDecoder_new5(name, f);
 }
 
@@ -96,11 +96,11 @@ int64_t q_stringdecoder_required_space(void* self, int64_t inputLength) {
     return QStringDecoder_RequiredSpace((QStringDecoder*)self, inputLength);
 }
 
-QChar* q_stringdecoder_append_to_buffer(void* self, void* out, const char* ba) {
+QChar* q_stringdecoder_append_to_buffer(void* self, void* out, char* ba) {
     return QStringDecoder_AppendToBuffer((QStringDecoder*)self, (QChar*)out, qstring(ba));
 }
 
-QStringDecoder* q_stringdecoder_decoder_for_html(const char* data) {
+QStringDecoder* q_stringdecoder_decoder_for_html(char* data) {
     return QStringDecoder_DecoderForHtml(qstring(data));
 }
 

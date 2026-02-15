@@ -88,10 +88,10 @@ QIODevice* q_webengineurlrequestjob_request_body(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#reply)
 ///
 /// @param self QWebEngineUrlRequestJob*
-/// @param contentType const char*
+/// @param contentType char*
 /// @param device QIODevice*
 ///
-void q_webengineurlrequestjob_reply(void* self, const char* contentType, void* device);
+void q_webengineurlrequestjob_reply(void* self, char* contentType, void* device);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#fail)
 ///
@@ -167,9 +167,9 @@ const char* q_webengineurlrequestjob_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QWebEngineUrlRequestJob*
-/// @param name char*
+/// @param name const char*
 ///
-void q_webengineurlrequestjob_set_object_name(void* self, char* name);
+void q_webengineurlrequestjob_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

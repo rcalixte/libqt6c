@@ -186,7 +186,7 @@ bool q_bitmap_load_from_data(void* self, unsigned char* buf, uint32_t lenVal) {
     return QPixmap_LoadFromData((QPixmap*)self, buf, lenVal);
 }
 
-bool q_bitmap_load_from_data2(void* self, const char* data) {
+bool q_bitmap_load_from_data2(void* self, char* data) {
     return QPixmap_LoadFromData2((QPixmap*)self, qstring(data));
 }
 
@@ -298,11 +298,11 @@ bool q_bitmap_load_from_data4(void* self, unsigned char* buf, uint32_t lenVal, c
     return QPixmap_LoadFromData4((QPixmap*)self, buf, lenVal, format, flags);
 }
 
-bool q_bitmap_load_from_data22(void* self, const char* data, const char* format) {
+bool q_bitmap_load_from_data22(void* self, char* data, const char* format) {
     return QPixmap_LoadFromData22((QPixmap*)self, qstring(data), format);
 }
 
-bool q_bitmap_load_from_data32(void* self, const char* data, const char* format, int32_t flags) {
+bool q_bitmap_load_from_data32(void* self, char* data, const char* format, int32_t flags) {
     return QPixmap_LoadFromData32((QPixmap*)self, qstring(data), format, flags);
 }
 

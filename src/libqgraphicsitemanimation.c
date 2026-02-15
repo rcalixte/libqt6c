@@ -205,7 +205,7 @@ const char* q_graphicsitemanimation_object_name(void* self) {
     return _ret;
 }
 
-void q_graphicsitemanimation_set_object_name(void* self, char* name) {
+void q_graphicsitemanimation_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

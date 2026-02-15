@@ -52,7 +52,7 @@ bool q_sqlquery_is_null(void* self, int field) {
     return QSqlQuery_IsNull((QSqlQuery*)self, field);
 }
 
-bool q_sqlquery_is_null2(void* self, char* name) {
+bool q_sqlquery_is_null2(void* self, const char* name) {
     return QSqlQuery_IsNull2((QSqlQuery*)self, name);
 }
 
@@ -111,7 +111,7 @@ QVariant* q_sqlquery_value(void* self, int i) {
     return QSqlQuery_Value((QSqlQuery*)self, i);
 }
 
-QVariant* q_sqlquery_value2(void* self, char* name) {
+QVariant* q_sqlquery_value2(void* self, const char* name) {
     return QSqlQuery_Value2((QSqlQuery*)self, name);
 }
 

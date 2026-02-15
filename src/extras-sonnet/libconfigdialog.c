@@ -943,7 +943,7 @@ char* k_sonnet__configdialog_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_sonnet__configdialog_restore_geometry(void* self, const char* geometry) {
+bool k_sonnet__configdialog_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1299,7 +1299,7 @@ const char* k_sonnet__configdialog_object_name(void* self) {
     return _ret;
 }
 
-void k_sonnet__configdialog_set_object_name(void* self, char* name) {
+void k_sonnet__configdialog_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2007,15 +2007,15 @@ void k_sonnet__configdialog_on_hide_event(void* self, void (*callback)(void*, vo
     Sonnet__ConfigDialog_OnHideEvent((Sonnet__ConfigDialog*)self, (intptr_t)callback);
 }
 
-bool k_sonnet__configdialog_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_sonnet__configdialog_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return Sonnet__ConfigDialog_NativeEvent((Sonnet__ConfigDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_sonnet__configdialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_sonnet__configdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return Sonnet__ConfigDialog_QBaseNativeEvent((Sonnet__ConfigDialog*)self, qstring(eventType), message, result);
 }
 
-void k_sonnet__configdialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_sonnet__configdialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     Sonnet__ConfigDialog_OnNativeEvent((Sonnet__ConfigDialog*)self, (intptr_t)callback);
 }
 

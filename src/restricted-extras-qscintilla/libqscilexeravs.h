@@ -517,9 +517,9 @@ const char* q_scilexeravs_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QsciLexerAVS*
-/// @param name char*
+/// @param name const char*
 ///
-void q_scilexeravs_set_object_name(void* self, char* name);
+void q_scilexeravs_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -2052,9 +2052,9 @@ char* q_scilexeravs_qbase_text_as_bytes(void* self, const char* text);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerAVS*
-/// @param callback char* func(QsciLexerAVS* self, const char* text)
+/// @param callback libqt_string func(QsciLexerAVS* self, const char* text)
 ///
-void q_scilexeravs_on_text_as_bytes(void* self, char* (*callback)(void*, const char*));
+void q_scilexeravs_on_text_as_bytes(void* self, libqt_string (*callback)(void*, const char*));
 
 /// Inherited from QsciLexer
 ///

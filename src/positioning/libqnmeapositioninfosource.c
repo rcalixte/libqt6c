@@ -189,15 +189,15 @@ bool q_nmeapositioninfosource_qbase_parse_pos_info_from_nmea_data(void* self, co
     return QNmeaPositionInfoSource_QBaseParsePosInfoFromNmeaData((QNmeaPositionInfoSource*)self, data, size, (QGeoPositionInfo*)posInfo, (bool*)hasFix);
 }
 
-bool q_nmeapositioninfosource_parse_pos_info_from_nmea_data2(void* self, const char* data, void* posInfo, bool* hasFix) {
+bool q_nmeapositioninfosource_parse_pos_info_from_nmea_data2(void* self, char* data, void* posInfo, bool* hasFix) {
     return QNmeaPositionInfoSource_ParsePosInfoFromNmeaData2((QNmeaPositionInfoSource*)self, qstring(data), (QGeoPositionInfo*)posInfo, (bool*)hasFix);
 }
 
-void q_nmeapositioninfosource_on_parse_pos_info_from_nmea_data2(void* self, bool (*callback)(void*, const char*, void*, bool*)) {
+void q_nmeapositioninfosource_on_parse_pos_info_from_nmea_data2(void* self, bool (*callback)(void*, char*, void*, bool*)) {
     QNmeaPositionInfoSource_OnParsePosInfoFromNmeaData2((QNmeaPositionInfoSource*)self, (intptr_t)callback);
 }
 
-bool q_nmeapositioninfosource_qbase_parse_pos_info_from_nmea_data2(void* self, const char* data, void* posInfo, bool* hasFix) {
+bool q_nmeapositioninfosource_qbase_parse_pos_info_from_nmea_data2(void* self, char* data, void* posInfo, bool* hasFix) {
     return QNmeaPositionInfoSource_QBaseParsePosInfoFromNmeaData2((QNmeaPositionInfoSource*)self, qstring(data), (QGeoPositionInfo*)posInfo, (bool*)hasFix);
 }
 
@@ -358,7 +358,7 @@ const char* q_nmeapositioninfosource_object_name(void* self) {
     return _ret;
 }
 
-void q_nmeapositioninfosource_set_object_name(void* self, char* name) {
+void q_nmeapositioninfosource_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

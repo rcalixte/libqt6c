@@ -397,7 +397,7 @@ const char* k_toggleaction_object_name(void* self) {
     return _ret;
 }
 
-void k_toggleaction_set_object_name(void* self, char* name) {
+void k_toggleaction_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

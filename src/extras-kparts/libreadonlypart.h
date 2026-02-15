@@ -204,9 +204,9 @@ bool k_parts__readonlypart_open_stream(void* self, const char* mimeType, void* u
 /// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#writeStream)
 ///
 /// @param self KParts__ReadOnlyPart*
-/// @param data const char*
+/// @param data char*
 ///
-bool k_parts__readonlypart_write_stream(void* self, const char* data);
+bool k_parts__readonlypart_write_stream(void* self, char* data);
 
 /// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#closeStream)
 ///
@@ -532,9 +532,9 @@ const char* k_parts__readonlypart_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KParts__ReadOnlyPart*
-/// @param name char*
+/// @param name const char*
 ///
-void k_parts__readonlypart_set_object_name(void* self, char* name);
+void k_parts__readonlypart_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

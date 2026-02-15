@@ -1033,7 +1033,7 @@ char* q_lcdnumber_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_lcdnumber_restore_geometry(void* self, const char* geometry) {
+bool q_lcdnumber_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1389,7 +1389,7 @@ const char* q_lcdnumber_object_name(void* self) {
     return _ret;
 }
 
-void q_lcdnumber_set_object_name(void* self, char* name) {
+void q_lcdnumber_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2013,15 +2013,15 @@ void q_lcdnumber_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QLCDNumber_OnHideEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
-bool q_lcdnumber_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_lcdnumber_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QLCDNumber_NativeEvent((QLCDNumber*)self, qstring(eventType), message, result);
 }
 
-bool q_lcdnumber_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_lcdnumber_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QLCDNumber_QBaseNativeEvent((QLCDNumber*)self, qstring(eventType), message, result);
 }
 
-void q_lcdnumber_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_lcdnumber_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QLCDNumber_OnNativeEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 

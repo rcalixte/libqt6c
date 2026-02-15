@@ -159,9 +159,9 @@ const char* q_accessibleplugin_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QAccessiblePlugin*
-/// @param name char*
+/// @param name const char*
 ///
-void q_accessibleplugin_set_object_name(void* self, char* name);
+void q_accessibleplugin_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

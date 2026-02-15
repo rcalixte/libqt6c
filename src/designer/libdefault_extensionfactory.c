@@ -107,7 +107,7 @@ const char* q_extensionfactory_object_name(void* self) {
     return _ret;
 }
 
-void q_extensionfactory_set_object_name(void* self, char* name) {
+void q_extensionfactory_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

@@ -170,7 +170,7 @@ void q_webenginepage_set_html(void* self, const char* html) {
     QWebEnginePage_SetHtml((QWebEnginePage*)self, qstring(html));
 }
 
-void q_webenginepage_set_content(void* self, const char* data) {
+void q_webenginepage_set_content(void* self, char* data) {
     QWebEnginePage_SetContent((QWebEnginePage*)self, qstring(data));
 }
 
@@ -830,11 +830,11 @@ void q_webenginepage_set_html2(void* self, const char* html, void* baseUrl) {
     QWebEnginePage_SetHtml2((QWebEnginePage*)self, qstring(html), (QUrl*)baseUrl);
 }
 
-void q_webenginepage_set_content2(void* self, const char* data, const char* mimeType) {
+void q_webenginepage_set_content2(void* self, char* data, const char* mimeType) {
     QWebEnginePage_SetContent2((QWebEnginePage*)self, qstring(data), qstring(mimeType));
 }
 
-void q_webenginepage_set_content3(void* self, const char* data, const char* mimeType, void* baseUrl) {
+void q_webenginepage_set_content3(void* self, char* data, const char* mimeType, void* baseUrl) {
     QWebEnginePage_SetContent3((QWebEnginePage*)self, qstring(data), qstring(mimeType), (QUrl*)baseUrl);
 }
 
@@ -865,7 +865,7 @@ const char* q_webenginepage_object_name(void* self) {
     return _ret;
 }
 
-void q_webenginepage_set_object_name(void* self, char* name) {
+void q_webenginepage_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

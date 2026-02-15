@@ -1079,7 +1079,7 @@ char* q_dialog_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_dialog_restore_geometry(void* self, const char* geometry) {
+bool q_dialog_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1435,7 +1435,7 @@ const char* q_dialog_object_name(void* self) {
     return _ret;
 }
 
-void q_dialog_set_object_name(void* self, char* name) {
+void q_dialog_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1975,15 +1975,15 @@ void q_dialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QDialog_OnHideEvent((QDialog*)self, (intptr_t)callback);
 }
 
-bool q_dialog_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_dialog_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QDialog_NativeEvent((QDialog*)self, qstring(eventType), message, result);
 }
 
-bool q_dialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_dialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QDialog_QBaseNativeEvent((QDialog*)self, qstring(eventType), message, result);
 }
 
-void q_dialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_dialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QDialog_OnNativeEvent((QDialog*)self, (intptr_t)callback);
 }
 

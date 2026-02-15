@@ -1025,9 +1025,9 @@ long long k_process_write2(void* self, const char* data);
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// @param self KProcess*
-/// @param data const char*
+/// @param data char*
 ///
-long long k_process_write3(void* self, const char* data);
+long long k_process_write3(void* self, char* data);
 
 /// Inherited from QIODevice
 ///
@@ -1228,9 +1228,9 @@ const char* k_process_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KProcess*
-/// @param name char*
+/// @param name const char*
 ///
-void k_process_set_object_name(void* self, char* name);
+void k_process_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

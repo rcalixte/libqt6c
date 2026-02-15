@@ -926,7 +926,7 @@ char* k_urlrequesterdialog_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_urlrequesterdialog_restore_geometry(void* self, const char* geometry) {
+bool k_urlrequesterdialog_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1282,7 +1282,7 @@ const char* k_urlrequesterdialog_object_name(void* self) {
     return _ret;
 }
 
-void k_urlrequesterdialog_set_object_name(void* self, char* name) {
+void k_urlrequesterdialog_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1990,15 +1990,15 @@ void k_urlrequesterdialog_on_hide_event(void* self, void (*callback)(void*, void
     KUrlRequesterDialog_OnHideEvent((KUrlRequesterDialog*)self, (intptr_t)callback);
 }
 
-bool k_urlrequesterdialog_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_urlrequesterdialog_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KUrlRequesterDialog_NativeEvent((KUrlRequesterDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_urlrequesterdialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_urlrequesterdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KUrlRequesterDialog_QBaseNativeEvent((KUrlRequesterDialog*)self, qstring(eventType), message, result);
 }
 
-void k_urlrequesterdialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_urlrequesterdialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KUrlRequesterDialog_OnNativeEvent((KUrlRequesterDialog*)self, (intptr_t)callback);
 }
 

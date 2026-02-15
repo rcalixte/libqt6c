@@ -191,7 +191,7 @@ const char* k_configviewstatesaver_object_name(void* self) {
     return _ret;
 }
 
-void k_configviewstatesaver_set_object_name(void* self, char* name) {
+void k_configviewstatesaver_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

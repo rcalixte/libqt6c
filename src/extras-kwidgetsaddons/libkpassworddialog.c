@@ -1078,7 +1078,7 @@ char* k_passworddialog_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_passworddialog_restore_geometry(void* self, const char* geometry) {
+bool k_passworddialog_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1434,7 +1434,7 @@ const char* k_passworddialog_object_name(void* self) {
     return _ret;
 }
 
-void k_passworddialog_set_object_name(void* self, char* name) {
+void k_passworddialog_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2130,15 +2130,15 @@ void k_passworddialog_on_hide_event(void* self, void (*callback)(void*, void*)) 
     KPasswordDialog_OnHideEvent((KPasswordDialog*)self, (intptr_t)callback);
 }
 
-bool k_passworddialog_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_passworddialog_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KPasswordDialog_NativeEvent((KPasswordDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_passworddialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_passworddialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KPasswordDialog_QBaseNativeEvent((KPasswordDialog*)self, qstring(eventType), message, result);
 }
 
-void k_passworddialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_passworddialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KPasswordDialog_OnNativeEvent((KPasswordDialog*)self, (intptr_t)callback);
 }
 

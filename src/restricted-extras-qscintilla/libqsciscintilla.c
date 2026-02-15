@@ -3204,7 +3204,7 @@ char* q_sciscintilla_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_sciscintilla_restore_geometry(void* self, const char* geometry) {
+bool q_sciscintilla_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -3560,7 +3560,7 @@ const char* q_sciscintilla_object_name(void* self) {
     return _ret;
 }
 
-void q_sciscintilla_set_object_name(void* self, char* name) {
+void q_sciscintilla_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -3838,19 +3838,19 @@ char* q_sciscintilla_qbase_from_mime_data(void* self, void* source, bool* rectan
     return _ret;
 }
 
-void q_sciscintilla_on_from_mime_data(void* self, char* (*callback)(void*, void*, bool*)) {
+void q_sciscintilla_on_from_mime_data(void* self, libqt_string (*callback)(void*, void*, bool*)) {
     QsciScintilla_OnFromMimeData((QsciScintilla*)self, (intptr_t)callback);
 }
 
-QMimeData* q_sciscintilla_to_mime_data(void* self, const char* text, bool rectangular) {
+QMimeData* q_sciscintilla_to_mime_data(void* self, char* text, bool rectangular) {
     return QsciScintilla_ToMimeData((QsciScintilla*)self, qstring(text), rectangular);
 }
 
-QMimeData* q_sciscintilla_qbase_to_mime_data(void* self, const char* text, bool rectangular) {
+QMimeData* q_sciscintilla_qbase_to_mime_data(void* self, char* text, bool rectangular) {
     return QsciScintilla_QBaseToMimeData((QsciScintilla*)self, qstring(text), rectangular);
 }
 
-void q_sciscintilla_on_to_mime_data(void* self, QMimeData* (*callback)(void*, const char*, bool)) {
+void q_sciscintilla_on_to_mime_data(void* self, QMimeData* (*callback)(void*, libqt_string, bool)) {
     QsciScintilla_OnToMimeData((QsciScintilla*)self, (intptr_t)callback);
 }
 
@@ -4310,15 +4310,15 @@ void q_sciscintilla_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QsciScintilla_OnHideEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
-bool q_sciscintilla_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_sciscintilla_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QsciScintilla_NativeEvent((QsciScintilla*)self, qstring(eventType), message, result);
 }
 
-bool q_sciscintilla_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_sciscintilla_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QsciScintilla_QBaseNativeEvent((QsciScintilla*)self, qstring(eventType), message, result);
 }
 
-void q_sciscintilla_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_sciscintilla_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QsciScintilla_OnNativeEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 

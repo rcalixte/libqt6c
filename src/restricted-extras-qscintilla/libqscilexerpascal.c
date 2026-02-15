@@ -332,7 +332,7 @@ const char* q_scilexerpascal_object_name(void* self) {
     return _ret;
 }
 
-void q_scilexerpascal_set_object_name(void* self, char* name) {
+void q_scilexerpascal_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -886,7 +886,7 @@ char* q_scilexerpascal_qbase_text_as_bytes(void* self, const char* text) {
     return _ret;
 }
 
-void q_scilexerpascal_on_text_as_bytes(void* self, char* (*callback)(void*, const char*)) {
+void q_scilexerpascal_on_text_as_bytes(void* self, libqt_string (*callback)(void*, const char*)) {
     QsciLexerPascal_OnTextAsBytes((QsciLexerPascal*)self, (intptr_t)callback);
 }
 

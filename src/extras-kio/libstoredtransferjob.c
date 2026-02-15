@@ -30,7 +30,7 @@ const char* k_io__storedtransferjob_tr(const char* s) {
     return _ret;
 }
 
-void k_io__storedtransferjob_set_data(void* self, const char* arr) {
+void k_io__storedtransferjob_set_data(void* self, char* arr) {
     KIO__StoredTransferJob_SetData((KIO__StoredTransferJob*)self, qstring(arr));
 }
 
@@ -67,7 +67,7 @@ void k_io__storedtransferjob_set_async_data_enabled(void* self, bool enabled) {
     KIO__TransferJob_SetAsyncDataEnabled((KIO__TransferJob*)self, enabled);
 }
 
-void k_io__storedtransferjob_send_async_data(void* self, const char* data) {
+void k_io__storedtransferjob_send_async_data(void* self, char* data) {
     KIO__TransferJob_SendAsyncData((KIO__TransferJob*)self, qstring(data));
 }
 
@@ -90,7 +90,7 @@ void k_io__storedtransferjob_data_req(void* self, void* job, char* data) {
     KIO__TransferJob_DataReq((KIO__TransferJob*)self, (KIO__Job*)job, qstring(data));
 }
 
-void k_io__storedtransferjob_on_data_req(void* self, void (*callback)(void*, void*, char*)) {
+void k_io__storedtransferjob_on_data_req(void* self, void (*callback)(void*, void*, libqt_string)) {
     KIO__TransferJob_Connect_DataReq((KIO__TransferJob*)self, (intptr_t)callback);
 }
 
@@ -463,7 +463,7 @@ const char* k_io__storedtransferjob_object_name(void* self) {
     return _ret;
 }
 
-void k_io__storedtransferjob_set_object_name(void* self, char* name) {
+void k_io__storedtransferjob_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -711,11 +711,11 @@ KIO__StoredTransferJob* k_io_stored_put(void* param1, void* param2, int param3, 
     return KIO_StoredPut((QIODevice*)param1, (QUrl*)param2, param3, param4);
 }
 
-KIO__StoredTransferJob* k_io_stored_put2(const char* param1, void* param2, int param3, int32_t param4) {
+KIO__StoredTransferJob* k_io_stored_put2(char* param1, void* param2, int param3, int32_t param4) {
     return KIO_StoredPut2(qstring(param1), (QUrl*)param2, param3, param4);
 }
 
-KIO__StoredTransferJob* k_io_stored_http_post(const char* param1, void* param2, int32_t param3) {
+KIO__StoredTransferJob* k_io_stored_http_post(char* param1, void* param2, int32_t param3) {
     return KIO_StoredHttpPost(qstring(param1), (QUrl*)param2, param3);
 }
 

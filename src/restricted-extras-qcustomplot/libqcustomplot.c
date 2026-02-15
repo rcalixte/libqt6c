@@ -1575,7 +1575,7 @@ const char* q_cplayer_object_name(void* self) {
     return _ret;
 }
 
-void q_cplayer_set_object_name(void* self, char* name) {
+void q_cplayer_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2242,7 +2242,7 @@ const char* q_cplayerable_object_name(void* self) {
     return _ret;
 }
 
-void q_cplayerable_set_object_name(void* self, char* name) {
+void q_cplayerable_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -3163,7 +3163,7 @@ const char* q_cpselectionrect_object_name(void* self) {
     return _ret;
 }
 
-void q_cpselectionrect_set_object_name(void* self, char* name) {
+void q_cpselectionrect_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -3804,7 +3804,7 @@ const char* q_cpmargingroup_object_name(void* self) {
     return _ret;
 }
 
-void q_cpmargingroup_set_object_name(void* self, char* name) {
+void q_cpmargingroup_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -4480,7 +4480,7 @@ const char* q_cplayoutelement_object_name(void* self) {
     return _ret;
 }
 
-void q_cplayoutelement_set_object_name(void* self, char* name) {
+void q_cplayoutelement_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -5346,7 +5346,7 @@ const char* q_cplayout_object_name(void* self) {
     return _ret;
 }
 
-void q_cplayout_set_object_name(void* self, char* name) {
+void q_cplayout_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -6400,7 +6400,7 @@ const char* q_cplayoutgrid_object_name(void* self) {
     return _ret;
 }
 
-void q_cplayoutgrid_set_object_name(void* self, char* name) {
+void q_cplayoutgrid_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -7368,7 +7368,7 @@ const char* q_cplayoutinset_object_name(void* self) {
     return _ret;
 }
 
-void q_cplayoutinset_set_object_name(void* self, char* name) {
+void q_cplayoutinset_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -10289,7 +10289,7 @@ const char* q_cpgrid_object_name(void* self) {
     return _ret;
 }
 
-void q_cpgrid_set_object_name(void* self, char* name) {
+void q_cpgrid_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -11622,7 +11622,7 @@ const char* q_cpaxis_object_name(void* self) {
     return _ret;
 }
 
-void q_cpaxis_set_object_name(void* self, char* name) {
+void q_cpaxis_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -12697,7 +12697,7 @@ const char* q_cpabstractplottable_object_name(void* self) {
     return _ret;
 }
 
-void q_cpabstractplottable_set_object_name(void* self, char* name) {
+void q_cpabstractplottable_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -13761,7 +13761,7 @@ const char* q_cpabstractitem_object_name(void* self) {
     return _ret;
 }
 
-void q_cpabstractitem_set_object_name(void* self, char* name) {
+void q_cpabstractitem_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -16169,7 +16169,7 @@ char* q_customplot_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_customplot_restore_geometry(void* self, const char* geometry) {
+bool q_customplot_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -16525,7 +16525,7 @@ const char* q_customplot_object_name(void* self) {
     return _ret;
 }
 
-void q_customplot_set_object_name(void* self, char* name) {
+void q_customplot_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -17053,15 +17053,15 @@ void q_customplot_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QCustomPlot_OnHideEvent((QCustomPlot*)self, (intptr_t)callback);
 }
 
-bool q_customplot_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_customplot_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QCustomPlot_NativeEvent((QCustomPlot*)self, qstring(eventType), message, result);
 }
 
-bool q_customplot_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_customplot_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QCustomPlot_QBaseNativeEvent((QCustomPlot*)self, qstring(eventType), message, result);
 }
 
-void q_customplot_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_customplot_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QCustomPlot_OnNativeEvent((QCustomPlot*)self, (intptr_t)callback);
 }
 
@@ -18331,7 +18331,7 @@ const char* q_cpaxisrect_object_name(void* self) {
     return _ret;
 }
 
-void q_cpaxisrect_set_object_name(void* self, char* name) {
+void q_cpaxisrect_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -19189,7 +19189,7 @@ const char* q_cpabstractlegenditem_object_name(void* self) {
     return _ret;
 }
 
-void q_cpabstractlegenditem_set_object_name(void* self, char* name) {
+void q_cpabstractlegenditem_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -20065,7 +20065,7 @@ const char* q_cpplottablelegenditem_object_name(void* self) {
     return _ret;
 }
 
-void q_cpplottablelegenditem_set_object_name(void* self, char* name) {
+void q_cpplottablelegenditem_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -21268,7 +21268,7 @@ const char* q_cplegend_object_name(void* self) {
     return _ret;
 }
 
-void q_cplegend_set_object_name(void* self, char* name) {
+void q_cplegend_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -22417,7 +22417,7 @@ const char* q_cptextelement_object_name(void* self) {
     return _ret;
 }
 
-void q_cptextelement_set_object_name(void* self, char* name) {
+void q_cptextelement_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -23301,7 +23301,7 @@ const char* q_cpcolorscale_object_name(void* self) {
     return _ret;
 }
 
-void q_cpcolorscale_set_object_name(void* self, char* name) {
+void q_cpcolorscale_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -24562,7 +24562,7 @@ const char* q_cpgraph_object_name(void* self) {
     return _ret;
 }
 
-void q_cpgraph_set_object_name(void* self, char* name) {
+void q_cpgraph_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -25839,7 +25839,7 @@ const char* q_cpcurve_object_name(void* self) {
     return _ret;
 }
 
-void q_cpcurve_set_object_name(void* self, char* name) {
+void q_cpcurve_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -26688,7 +26688,7 @@ const char* q_cpbarsgroup_object_name(void* self) {
     return _ret;
 }
 
-void q_cpbarsgroup_set_object_name(void* self, char* name) {
+void q_cpbarsgroup_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -27591,7 +27591,7 @@ const char* q_cpbars_object_name(void* self) {
     return _ret;
 }
 
-void q_cpbars_set_object_name(void* self, char* name) {
+void q_cpbars_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -28779,7 +28779,7 @@ const char* q_cpstatisticalbox_object_name(void* self) {
     return _ret;
 }
 
-void q_cpstatisticalbox_set_object_name(void* self, char* name) {
+void q_cpstatisticalbox_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -30014,7 +30014,7 @@ const char* q_cpcolormap_object_name(void* self) {
     return _ret;
 }
 
-void q_cpcolormap_set_object_name(void* self, char* name) {
+void q_cpcolormap_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -31117,7 +31117,7 @@ const char* q_cpfinancial_object_name(void* self) {
     return _ret;
 }
 
-void q_cpfinancial_set_object_name(void* self, char* name) {
+void q_cpfinancial_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -32396,7 +32396,7 @@ const char* q_cperrorbars_object_name(void* self) {
     return _ret;
 }
 
-void q_cperrorbars_set_object_name(void* self, char* name) {
+void q_cperrorbars_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -33206,7 +33206,7 @@ const char* q_cpitemstraightline_object_name(void* self) {
     return _ret;
 }
 
-void q_cpitemstraightline_set_object_name(void* self, char* name) {
+void q_cpitemstraightline_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -34052,7 +34052,7 @@ const char* q_cpitemline_object_name(void* self) {
     return _ret;
 }
 
-void q_cpitemline_set_object_name(void* self, char* name) {
+void q_cpitemline_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -34894,7 +34894,7 @@ const char* q_cpitemcurve_object_name(void* self) {
     return _ret;
 }
 
-void q_cpitemcurve_set_object_name(void* self, char* name) {
+void q_cpitemcurve_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -35776,7 +35776,7 @@ const char* q_cpitemrect_object_name(void* self) {
     return _ret;
 }
 
-void q_cpitemrect_set_object_name(void* self, char* name) {
+void q_cpitemrect_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -36757,7 +36757,7 @@ const char* q_cpitemtext_object_name(void* self) {
     return _ret;
 }
 
-void q_cpitemtext_set_object_name(void* self, char* name) {
+void q_cpitemtext_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -37639,7 +37639,7 @@ const char* q_cpitemellipse_object_name(void* self) {
     return _ret;
 }
 
-void q_cpitemellipse_set_object_name(void* self, char* name) {
+void q_cpitemellipse_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -38597,7 +38597,7 @@ const char* q_cpitempixmap_object_name(void* self) {
     return _ret;
 }
 
-void q_cpitempixmap_set_object_name(void* self, char* name) {
+void q_cpitempixmap_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -39467,7 +39467,7 @@ const char* q_cpitemtracer_object_name(void* self) {
     return _ret;
 }
 
-void q_cpitemtracer_set_object_name(void* self, char* name) {
+void q_cpitemtracer_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -40317,7 +40317,7 @@ const char* q_cpitembracket_object_name(void* self) {
     return _ret;
 }
 
-void q_cpitembracket_set_object_name(void* self, char* name) {
+void q_cpitembracket_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -41656,7 +41656,7 @@ const char* q_cppolaraxisradial_object_name(void* self) {
     return _ret;
 }
 
-void q_cppolaraxisradial_set_object_name(void* self, char* name) {
+void q_cppolaraxisradial_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -43075,7 +43075,7 @@ const char* q_cppolaraxisangular_object_name(void* self) {
     return _ret;
 }
 
-void q_cppolaraxisangular_set_object_name(void* self, char* name) {
+void q_cppolaraxisangular_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -43831,7 +43831,7 @@ const char* q_cppolargrid_object_name(void* self) {
     return _ret;
 }
 
-void q_cppolargrid_set_object_name(void* self, char* name) {
+void q_cppolargrid_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -44693,7 +44693,7 @@ const char* q_cppolarlegenditem_object_name(void* self) {
     return _ret;
 }
 
-void q_cppolarlegenditem_set_object_name(void* self, char* name) {
+void q_cppolarlegenditem_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -45868,7 +45868,7 @@ const char* q_cppolargraph_object_name(void* self) {
     return _ret;
 }
 
-void q_cppolargraph_set_object_name(void* self, char* name) {
+void q_cppolargraph_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

@@ -498,9 +498,9 @@ const char* q_geoareamonitorsource_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QGeoAreaMonitorSource*
-/// @param name char*
+/// @param name const char*
 ///
-void q_geoareamonitorsource_set_object_name(void* self, char* name);
+void q_geoareamonitorsource_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

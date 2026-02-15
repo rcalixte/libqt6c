@@ -1059,7 +1059,7 @@ char* q_groupbox_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_groupbox_restore_geometry(void* self, const char* geometry) {
+bool q_groupbox_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1415,7 +1415,7 @@ const char* q_groupbox_object_name(void* self) {
     return _ret;
 }
 
-void q_groupbox_set_object_name(void* self, char* name) {
+void q_groupbox_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1955,15 +1955,15 @@ void q_groupbox_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QGroupBox_OnHideEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
-bool q_groupbox_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_groupbox_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QGroupBox_NativeEvent((QGroupBox*)self, qstring(eventType), message, result);
 }
 
-bool q_groupbox_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_groupbox_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QGroupBox_QBaseNativeEvent((QGroupBox*)self, qstring(eventType), message, result);
 }
 
-void q_groupbox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_groupbox_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QGroupBox_OnNativeEvent((QGroupBox*)self, (intptr_t)callback);
 }
 

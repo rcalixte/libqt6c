@@ -400,7 +400,7 @@ const char* q_designerintegrationinterface_object_name(void* self) {
     return _ret;
 }
 
-void q_designerintegrationinterface_set_object_name(void* self, char* name) {
+void q_designerintegrationinterface_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1134,7 +1134,7 @@ const char* q_designerintegration_object_name(void* self) {
     return _ret;
 }
 
-void q_designerintegration_set_object_name(void* self, char* name) {
+void q_designerintegration_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

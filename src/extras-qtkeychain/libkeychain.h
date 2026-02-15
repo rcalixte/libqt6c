@@ -204,9 +204,9 @@ const char* q_keychain__job_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QKeychain__Job*
-/// @param name char*
+/// @param name const char*
 ///
-void q_keychain__job_set_object_name(void* self, char* name);
+void q_keychain__job_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -939,9 +939,9 @@ const char* q_keychain__readpasswordjob_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QKeychain__ReadPasswordJob*
-/// @param name char*
+/// @param name const char*
 ///
-void q_keychain__readpasswordjob_set_object_name(void* self, char* name);
+void q_keychain__readpasswordjob_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1875,9 +1875,9 @@ const char* q_keychain__writepasswordjob_tr(const char* s);
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
 /// @param self QKeychain__WritePasswordJob*
-/// @param data const char*
+/// @param data char*
 ///
-void q_keychain__writepasswordjob_set_binary_data(void* self, const char* data);
+void q_keychain__writepasswordjob_set_binary_data(void* self, char* data);
 
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
@@ -2064,9 +2064,9 @@ const char* q_keychain__writepasswordjob_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QKeychain__WritePasswordJob*
-/// @param name char*
+/// @param name const char*
 ///
-void q_keychain__writepasswordjob_set_object_name(void* self, char* name);
+void q_keychain__writepasswordjob_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3175,9 +3175,9 @@ const char* q_keychain__deletepasswordjob_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QKeychain__DeletePasswordJob*
-/// @param name char*
+/// @param name const char*
 ///
-void q_keychain__deletepasswordjob_set_object_name(void* self, char* name);
+void q_keychain__deletepasswordjob_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

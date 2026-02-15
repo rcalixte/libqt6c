@@ -589,7 +589,7 @@ const char* k_descendantsproxymodel_object_name(void* self) {
     return _ret;
 }
 
-void k_descendantsproxymodel_set_object_name(void* self, char* name) {
+void k_descendantsproxymodel_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

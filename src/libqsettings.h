@@ -260,9 +260,9 @@ void q_settings_set_atomic_sync_required(void* self, bool enable);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#beginGroup)
 ///
 /// @param self QSettings*
-/// @param prefix char*
+/// @param prefix const char*
 ///
-void q_settings_begin_group(void* self, char* prefix);
+void q_settings_begin_group(void* self, const char* prefix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#endGroup)
 ///
@@ -281,16 +281,16 @@ const char* q_settings_group(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#beginReadArray)
 ///
 /// @param self QSettings*
-/// @param prefix char*
+/// @param prefix const char*
 ///
-int32_t q_settings_begin_read_array(void* self, char* prefix);
+int32_t q_settings_begin_read_array(void* self, const char* prefix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#beginWriteArray)
 ///
 /// @param self QSettings*
-/// @param prefix char*
+/// @param prefix const char*
 ///
-void q_settings_begin_write_array(void* self, char* prefix);
+void q_settings_begin_write_array(void* self, const char* prefix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#endArray)
 ///
@@ -338,39 +338,39 @@ bool q_settings_is_writable(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#setValue)
 ///
 /// @param self QSettings*
-/// @param key char*
+/// @param key const char*
 /// @param value QVariant*
 ///
-void q_settings_set_value(void* self, char* key, void* value);
+void q_settings_set_value(void* self, const char* key, void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#value)
 ///
 /// @param self QSettings*
-/// @param key char*
+/// @param key const char*
 /// @param defaultValue QVariant*
 ///
-QVariant* q_settings_value(void* self, char* key, void* defaultValue);
+QVariant* q_settings_value(void* self, const char* key, void* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#value)
 ///
 /// @param self QSettings*
-/// @param key char*
+/// @param key const char*
 ///
-QVariant* q_settings_value2(void* self, char* key);
+QVariant* q_settings_value2(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#remove)
 ///
 /// @param self QSettings*
-/// @param key char*
+/// @param key const char*
 ///
-void q_settings_remove(void* self, char* key);
+void q_settings_remove(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#contains)
 ///
 /// @param self QSettings*
-/// @param key char*
+/// @param key const char*
 ///
-bool q_settings_contains(void* self, char* key);
+bool q_settings_contains(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#setFallbacksEnabled)
 ///
@@ -492,10 +492,10 @@ const char* q_settings_tr3(const char* s, const char* c, int n);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#beginWriteArray)
 ///
 /// @param self QSettings*
-/// @param prefix char*
+/// @param prefix const char*
 /// @param size int
 ///
-void q_settings_begin_write_array2(void* self, char* prefix, int size);
+void q_settings_begin_write_array2(void* self, const char* prefix, int size);
 
 /// Inherited from QObject
 ///
@@ -512,9 +512,9 @@ const char* q_settings_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QSettings*
-/// @param name char*
+/// @param name const char*
 ///
-void q_settings_set_object_name(void* self, char* name);
+void q_settings_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

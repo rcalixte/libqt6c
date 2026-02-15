@@ -129,7 +129,7 @@ char* q_mimedata_data(void* self, const char* mimetype) {
     return _ret;
 }
 
-void q_mimedata_set_data(void* self, const char* mimetype, const char* data) {
+void q_mimedata_set_data(void* self, const char* mimetype, char* data) {
     QMimeData_SetData((QMimeData*)self, qstring(mimetype), qstring(data));
 }
 
@@ -228,7 +228,7 @@ const char* q_mimedata_object_name(void* self) {
     return _ret;
 }
 
-void q_mimedata_set_object_name(void* self, char* name) {
+void q_mimedata_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

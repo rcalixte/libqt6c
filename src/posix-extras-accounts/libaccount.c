@@ -90,7 +90,7 @@ const char* q_accounts__watch_object_name(void* self) {
     return _ret;
 }
 
-void q_accounts__watch_set_object_name(void* self, char* name) {
+void q_accounts__watch_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -832,7 +832,7 @@ const char* q_accounts__account_object_name(void* self) {
     return _ret;
 }
 
-void q_accounts__account_set_object_name(void* self, char* name) {
+void q_accounts__account_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

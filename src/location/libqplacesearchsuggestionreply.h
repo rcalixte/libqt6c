@@ -308,9 +308,9 @@ const char* q_placesearchsuggestionreply_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QPlaceSearchSuggestionReply*
-/// @param name char*
+/// @param name const char*
 ///
-void q_placesearchsuggestionreply_set_object_name(void* self, char* name);
+void q_placesearchsuggestionreply_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

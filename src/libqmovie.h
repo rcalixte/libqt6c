@@ -46,38 +46,38 @@ QMovie* q_movie_new4(void* parent);
 /// q_movie_new5 constructs a new QMovie object.
 ///
 /// @param device QIODevice*
-/// @param format const char*
+/// @param format char*
 ///
-QMovie* q_movie_new5(void* device, const char* format);
+QMovie* q_movie_new5(void* device, char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmovie.html)
 
 /// q_movie_new6 constructs a new QMovie object.
 ///
 /// @param device QIODevice*
-/// @param format const char*
+/// @param format char*
 /// @param parent QObject*
 ///
-QMovie* q_movie_new6(void* device, const char* format, void* parent);
+QMovie* q_movie_new6(void* device, char* format, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmovie.html)
 
 /// q_movie_new7 constructs a new QMovie object.
 ///
 /// @param fileName const char*
-/// @param format const char*
+/// @param format char*
 ///
-QMovie* q_movie_new7(const char* fileName, const char* format);
+QMovie* q_movie_new7(const char* fileName, char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmovie.html)
 
 /// q_movie_new8 constructs a new QMovie object.
 ///
 /// @param fileName const char*
-/// @param format const char*
+/// @param format char*
 /// @param parent QObject*
 ///
-QMovie* q_movie_new8(const char* fileName, const char* format, void* parent);
+QMovie* q_movie_new8(const char* fileName, char* format, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -189,9 +189,9 @@ const char* q_movie_file_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qmovie.html#setFormat)
 ///
 /// @param self QMovie*
-/// @param format const char*
+/// @param format char*
 ///
-void q_movie_set_format(void* self, const char* format);
+void q_movie_set_format(void* self, char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmovie.html#format)
 ///
@@ -489,9 +489,9 @@ const char* q_movie_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QMovie*
-/// @param name char*
+/// @param name const char*
 ///
-void q_movie_set_object_name(void* self, char* name);
+void q_movie_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

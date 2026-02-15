@@ -128,7 +128,7 @@ const char* k_filemetadata__writerplugin_object_name(void* self) {
     return _ret;
 }
 
-void k_filemetadata__writerplugin_set_object_name(void* self, char* name) {
+void k_filemetadata__writerplugin_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

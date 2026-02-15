@@ -433,9 +433,9 @@ bool k_zip_write_sym_link(void* self, const char* name, const char* target);
 ///
 /// @param self KZip*
 /// @param name const char*
-/// @param data const char*
+/// @param data char*
 ///
-bool k_zip_write_file(void* self, const char* name, const char* data);
+bool k_zip_write_file(void* self, const char* name, char* data);
 
 /// Inherited from KArchive
 ///
@@ -464,9 +464,9 @@ bool k_zip_write_data(void* self, const char* data, long long size);
 /// [Upstream resources](https://api.kde.org/karchive.html#writeData)
 ///
 /// @param self KZip*
-/// @param data const char*
+/// @param data char*
 ///
-bool k_zip_write_data2(void* self, const char* data);
+bool k_zip_write_data2(void* self, char* data);
 
 /// Inherited from KArchive
 ///
@@ -639,10 +639,10 @@ bool k_zip_write_sym_link8(void* self, const char* name, const char* target, con
 ///
 /// @param self KZip*
 /// @param name const char*
-/// @param data const char*
+/// @param data char*
 /// @param perm mode_t
 ///
-bool k_zip_write_file3(void* self, const char* name, const char* data, mode_t perm);
+bool k_zip_write_file3(void* self, const char* name, char* data, mode_t perm);
 
 /// Inherited from KArchive
 ///
@@ -650,11 +650,11 @@ bool k_zip_write_file3(void* self, const char* name, const char* data, mode_t pe
 ///
 /// @param self KZip*
 /// @param name const char*
-/// @param data const char*
+/// @param data char*
 /// @param perm mode_t
 /// @param user const char*
 ///
-bool k_zip_write_file4(void* self, const char* name, const char* data, mode_t perm, const char* user);
+bool k_zip_write_file4(void* self, const char* name, char* data, mode_t perm, const char* user);
 
 /// Inherited from KArchive
 ///
@@ -662,12 +662,12 @@ bool k_zip_write_file4(void* self, const char* name, const char* data, mode_t pe
 ///
 /// @param self KZip*
 /// @param name const char*
-/// @param data const char*
+/// @param data char*
 /// @param perm mode_t
 /// @param user const char*
 /// @param group const char*
 ///
-bool k_zip_write_file5(void* self, const char* name, const char* data, mode_t perm, const char* user, const char* group);
+bool k_zip_write_file5(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group);
 
 /// Inherited from KArchive
 ///
@@ -675,13 +675,13 @@ bool k_zip_write_file5(void* self, const char* name, const char* data, mode_t pe
 ///
 /// @param self KZip*
 /// @param name const char*
-/// @param data const char*
+/// @param data char*
 /// @param perm mode_t
 /// @param user const char*
 /// @param group const char*
 /// @param atime QDateTime*
 ///
-bool k_zip_write_file6(void* self, const char* name, const char* data, mode_t perm, const char* user, const char* group, void* atime);
+bool k_zip_write_file6(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, void* atime);
 
 /// Inherited from KArchive
 ///
@@ -689,14 +689,14 @@ bool k_zip_write_file6(void* self, const char* name, const char* data, mode_t pe
 ///
 /// @param self KZip*
 /// @param name const char*
-/// @param data const char*
+/// @param data char*
 /// @param perm mode_t
 /// @param user const char*
 /// @param group const char*
 /// @param atime QDateTime*
 /// @param mtime QDateTime*
 ///
-bool k_zip_write_file7(void* self, const char* name, const char* data, mode_t perm, const char* user, const char* group, void* atime, void* mtime);
+bool k_zip_write_file7(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, void* atime, void* mtime);
 
 /// Inherited from KArchive
 ///
@@ -704,7 +704,7 @@ bool k_zip_write_file7(void* self, const char* name, const char* data, mode_t pe
 ///
 /// @param self KZip*
 /// @param name const char*
-/// @param data const char*
+/// @param data char*
 /// @param perm mode_t
 /// @param user const char*
 /// @param group const char*
@@ -712,7 +712,7 @@ bool k_zip_write_file7(void* self, const char* name, const char* data, mode_t pe
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_zip_write_file8(void* self, const char* name, const char* data, mode_t perm, const char* user, const char* group, void* atime, void* mtime, void* ctime);
+bool k_zip_write_file8(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, void* atime, void* mtime, void* ctime);
 
 /// Inherited from KArchive
 ///

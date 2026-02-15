@@ -79,9 +79,9 @@ void k_io__commandlauncherjob_set_desktop_name(void* self, const char* desktopNa
 /// [Upstream resources](https://api.kde.org/kio-commandlauncherjob.html#setStartupId)
 ///
 /// @param self KIO__CommandLauncherJob*
-/// @param startupId const char*
+/// @param startupId char*
 ///
-void k_io__commandlauncherjob_set_startup_id(void* self, const char* startupId);
+void k_io__commandlauncherjob_set_startup_id(void* self, char* startupId);
 
 /// [Upstream resources](https://api.kde.org/kio-commandlauncherjob.html#setWorkingDirectory)
 ///
@@ -455,9 +455,9 @@ const char* k_io__commandlauncherjob_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KIO__CommandLauncherJob*
-/// @param name char*
+/// @param name const char*
 ///
-void k_io__commandlauncherjob_set_object_name(void* self, char* name);
+void k_io__commandlauncherjob_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

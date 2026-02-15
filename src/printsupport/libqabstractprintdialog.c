@@ -937,7 +937,7 @@ char* q_abstractprintdialog_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_abstractprintdialog_restore_geometry(void* self, const char* geometry) {
+bool q_abstractprintdialog_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1293,7 +1293,7 @@ const char* q_abstractprintdialog_object_name(void* self) {
     return _ret;
 }
 
-void q_abstractprintdialog_set_object_name(void* self, char* name) {
+void q_abstractprintdialog_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2001,15 +2001,15 @@ void q_abstractprintdialog_on_hide_event(void* self, void (*callback)(void*, voi
     QAbstractPrintDialog_OnHideEvent((QAbstractPrintDialog*)self, (intptr_t)callback);
 }
 
-bool q_abstractprintdialog_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_abstractprintdialog_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QAbstractPrintDialog_NativeEvent((QAbstractPrintDialog*)self, qstring(eventType), message, result);
 }
 
-bool q_abstractprintdialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_abstractprintdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QAbstractPrintDialog_QBaseNativeEvent((QAbstractPrintDialog*)self, qstring(eventType), message, result);
 }
 
-void q_abstractprintdialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_abstractprintdialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QAbstractPrintDialog_OnNativeEvent((QAbstractPrintDialog*)self, (intptr_t)callback);
 }
 

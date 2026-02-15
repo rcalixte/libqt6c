@@ -117,9 +117,9 @@ const char* q_buffer_buffer2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#setData)
 ///
 /// @param self QBuffer*
-/// @param data const char*
+/// @param data char*
 ///
-void q_buffer_set_data(void* self, const char* data);
+void q_buffer_set_data(void* self, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#setData)
 ///
@@ -633,9 +633,9 @@ long long q_buffer_write2(void* self, const char* data);
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// @param self QBuffer*
-/// @param data const char*
+/// @param data char*
 ///
-long long q_buffer_write3(void* self, const char* data);
+long long q_buffer_write3(void* self, char* data);
 
 /// Inherited from QIODevice
 ///
@@ -836,9 +836,9 @@ const char* q_buffer_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QBuffer*
-/// @param name char*
+/// @param name const char*
 ///
-void q_buffer_set_object_name(void* self, char* name);
+void q_buffer_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

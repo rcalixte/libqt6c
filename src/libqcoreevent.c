@@ -246,7 +246,7 @@ void q_childevent_delete(void* self) {
     QChildEvent_Delete((QChildEvent*)(self));
 }
 
-QDynamicPropertyChangeEvent* q_dynamicpropertychangeevent_new(const char* name) {
+QDynamicPropertyChangeEvent* q_dynamicpropertychangeevent_new(char* name) {
     return QDynamicPropertyChangeEvent_new(qstring(name));
 }
 

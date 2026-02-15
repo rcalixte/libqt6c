@@ -53,7 +53,7 @@ void k_io__workerresult_delete(void* self) {
     KIO__WorkerResult_Delete((KIO__WorkerResult*)(self));
 }
 
-KIO__WorkerBase* k_io__workerbase_new(const char* protocol, const char* poolSocket, const char* appSocket) {
+KIO__WorkerBase* k_io__workerbase_new(char* protocol, char* poolSocket, char* appSocket) {
     return KIO__WorkerBase_new(qstring(protocol), qstring(poolSocket), qstring(appSocket));
 }
 
@@ -65,7 +65,7 @@ void k_io__workerbase_dispatch_loop(void* self) {
     KIO__WorkerBase_DispatchLoop((KIO__WorkerBase*)self);
 }
 
-void k_io__workerbase_data(void* self, const char* data) {
+void k_io__workerbase_data(void* self, char* data) {
     KIO__WorkerBase_Data((KIO__WorkerBase*)self, qstring(data));
 }
 
@@ -333,15 +333,15 @@ KIO__WorkerResult* k_io__workerbase_qbase_read(void* self, uint64_t size) {
     return KIO__WorkerBase_QBaseRead((KIO__WorkerBase*)self, size);
 }
 
-KIO__WorkerResult* k_io__workerbase_write(void* self, const char* data) {
+KIO__WorkerResult* k_io__workerbase_write(void* self, char* data) {
     return KIO__WorkerBase_Write((KIO__WorkerBase*)self, qstring(data));
 }
 
-void k_io__workerbase_on_write(void* self, KIO__WorkerResult* (*callback)(void*, const char*)) {
+void k_io__workerbase_on_write(void* self, KIO__WorkerResult* (*callback)(void*, libqt_string)) {
     KIO__WorkerBase_OnWrite((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_qbase_write(void* self, const char* data) {
+KIO__WorkerResult* k_io__workerbase_qbase_write(void* self, char* data) {
     return KIO__WorkerBase_QBaseWrite((KIO__WorkerBase*)self, qstring(data));
 }
 
@@ -525,15 +525,15 @@ KIO__WorkerResult* k_io__workerbase_qbase_del(void* self, void* url, bool isfile
     return KIO__WorkerBase_QBaseDel((KIO__WorkerBase*)self, (QUrl*)url, isfile);
 }
 
-KIO__WorkerResult* k_io__workerbase_special(void* self, const char* data) {
+KIO__WorkerResult* k_io__workerbase_special(void* self, char* data) {
     return KIO__WorkerBase_Special((KIO__WorkerBase*)self, qstring(data));
 }
 
-void k_io__workerbase_on_special(void* self, KIO__WorkerResult* (*callback)(void*, const char*)) {
+void k_io__workerbase_on_special(void* self, KIO__WorkerResult* (*callback)(void*, libqt_string)) {
     KIO__WorkerBase_OnSpecial((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_qbase_special(void* self, const char* data) {
+KIO__WorkerResult* k_io__workerbase_qbase_special(void* self, char* data) {
     return KIO__WorkerBase_QBaseSpecial((KIO__WorkerBase*)self, qstring(data));
 }
 
@@ -692,7 +692,7 @@ const char* k_io__workerbase_config_value22(void* self, const char* key, const c
     return _ret;
 }
 
-void k_io__workerbase_set_timeout_special_command2(void* self, int timeout, const char* data) {
+void k_io__workerbase_set_timeout_special_command2(void* self, int timeout, char* data) {
     KIO__WorkerBase_SetTimeoutSpecialCommand2((KIO__WorkerBase*)self, timeout, qstring(data));
 }
 

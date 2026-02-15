@@ -155,7 +155,7 @@ const char* k_coreurlnavigator_object_name(void* self) {
     return _ret;
 }
 
-void k_coreurlnavigator_set_object_name(void* self, char* name) {
+void k_coreurlnavigator_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

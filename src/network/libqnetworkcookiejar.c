@@ -179,7 +179,7 @@ const char* q_networkcookiejar_object_name(void* self) {
     return _ret;
 }
 
-void q_networkcookiejar_set_object_name(void* self, char* name) {
+void q_networkcookiejar_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

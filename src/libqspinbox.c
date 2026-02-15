@@ -1135,7 +1135,7 @@ char* q_spinbox_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_spinbox_restore_geometry(void* self, const char* geometry) {
+bool q_spinbox_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1491,7 +1491,7 @@ const char* q_spinbox_object_name(void* self) {
     return _ret;
 }
 
-void q_spinbox_set_object_name(void* self, char* name) {
+void q_spinbox_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2199,15 +2199,15 @@ void q_spinbox_on_drop_event(void* self, void (*callback)(void*, void*)) {
     QSpinBox_OnDropEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
-bool q_spinbox_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_spinbox_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QSpinBox_NativeEvent((QSpinBox*)self, qstring(eventType), message, result);
 }
 
-bool q_spinbox_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_spinbox_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QSpinBox_QBaseNativeEvent((QSpinBox*)self, qstring(eventType), message, result);
 }
 
-void q_spinbox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_spinbox_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QSpinBox_OnNativeEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
@@ -3602,7 +3602,7 @@ char* q_doublespinbox_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_doublespinbox_restore_geometry(void* self, const char* geometry) {
+bool q_doublespinbox_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -3958,7 +3958,7 @@ const char* q_doublespinbox_object_name(void* self) {
     return _ret;
 }
 
-void q_doublespinbox_set_object_name(void* self, char* name) {
+void q_doublespinbox_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -4678,15 +4678,15 @@ void q_doublespinbox_on_drop_event(void* self, void (*callback)(void*, void*)) {
     QDoubleSpinBox_OnDropEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
-bool q_doublespinbox_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_doublespinbox_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QDoubleSpinBox_NativeEvent((QDoubleSpinBox*)self, qstring(eventType), message, result);
 }
 
-bool q_doublespinbox_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_doublespinbox_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QDoubleSpinBox_QBaseNativeEvent((QDoubleSpinBox*)self, qstring(eventType), message, result);
 }
 
-void q_doublespinbox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_doublespinbox_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QDoubleSpinBox_OnNativeEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 

@@ -169,9 +169,9 @@ void q_svgwidget_load(void* self, const char* file);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvgwidget.html#load)
 ///
 /// @param self QSvgWidget*
-/// @param contents const char*
+/// @param contents char*
 ///
-void q_svgwidget_load2(void* self, const char* contents);
+void q_svgwidget_load2(void* self, char* contents);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvgwidget.html#paintEvent)
 ///
@@ -1840,9 +1840,9 @@ char* q_svgwidget_save_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QSvgWidget*
-/// @param geometry const char*
+/// @param geometry char*
 ///
-bool q_svgwidget_restore_geometry(void* self, const char* geometry);
+bool q_svgwidget_restore_geometry(void* self, char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2648,9 +2648,9 @@ const char* q_svgwidget_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QSvgWidget*
-/// @param name char*
+/// @param name const char*
 ///
-void q_svgwidget_set_object_name(void* self, char* name);
+void q_svgwidget_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4163,11 +4163,11 @@ void q_svgwidget_on_hide_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_svgwidget_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_svgwidget_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4176,11 +4176,11 @@ bool q_svgwidget_native_event(void* self, const char* eventType, void* message, 
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_svgwidget_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_svgwidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4189,9 +4189,9 @@ bool q_svgwidget_qbase_native_event(void* self, const char* eventType, void* mes
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback bool func(QSvgWidget* self, const char* eventType, void* message, intptr_t* result)
+/// @param callback bool func(QSvgWidget* self, libqt_string eventType, void* message, intptr_t* result)
 ///
-void q_svgwidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
+void q_svgwidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///

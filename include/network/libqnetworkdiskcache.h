@@ -386,9 +386,9 @@ const char* q_networkdiskcache_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QNetworkDiskCache*
-/// @param name char*
+/// @param name const char*
 ///
-void q_networkdiskcache_set_object_name(void* self, char* name);
+void q_networkdiskcache_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

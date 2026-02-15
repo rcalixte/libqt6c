@@ -1146,7 +1146,7 @@ char* k_splittercollapserbutton_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_splittercollapserbutton_restore_geometry(void* self, const char* geometry) {
+bool k_splittercollapserbutton_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1502,7 +1502,7 @@ const char* k_splittercollapserbutton_object_name(void* self) {
     return _ret;
 }
 
-void k_splittercollapserbutton_set_object_name(void* self, char* name) {
+void k_splittercollapserbutton_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2150,15 +2150,15 @@ void k_splittercollapserbutton_on_hide_event(void* self, void (*callback)(void*,
     KSplitterCollapserButton_OnHideEvent((KSplitterCollapserButton*)self, (intptr_t)callback);
 }
 
-bool k_splittercollapserbutton_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_splittercollapserbutton_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KSplitterCollapserButton_NativeEvent((KSplitterCollapserButton*)self, qstring(eventType), message, result);
 }
 
-bool k_splittercollapserbutton_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_splittercollapserbutton_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KSplitterCollapserButton_QBaseNativeEvent((KSplitterCollapserButton*)self, qstring(eventType), message, result);
 }
 
-void k_splittercollapserbutton_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_splittercollapserbutton_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KSplitterCollapserButton_OnNativeEvent((KSplitterCollapserButton*)self, (intptr_t)callback);
 }
 

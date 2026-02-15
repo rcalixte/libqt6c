@@ -22,7 +22,7 @@ void k_encodingprober_reset(void* self) {
     KEncodingProber_Reset((KEncodingProber*)self);
 }
 
-int32_t k_encodingprober_feed(void* self, const char* data) {
+int32_t k_encodingprober_feed(void* self, char* data) {
     return KEncodingProber_Feed((KEncodingProber*)self, qstring(data));
 }
 

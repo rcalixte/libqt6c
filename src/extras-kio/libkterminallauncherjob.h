@@ -111,9 +111,9 @@ void k_terminallauncherjob_set_working_directory(void* self, const char* working
 /// [Upstream resources](https://api.kde.org/kterminallauncherjob.html#setStartupId)
 ///
 /// @param self KTerminalLauncherJob*
-/// @param startupId const char*
+/// @param startupId char*
 ///
-void k_terminallauncherjob_set_startup_id(void* self, const char* startupId);
+void k_terminallauncherjob_set_startup_id(void* self, char* startupId);
 
 /// [Upstream resources](https://api.kde.org/kterminallauncherjob.html#setProcessEnvironment)
 ///
@@ -452,9 +452,9 @@ const char* k_terminallauncherjob_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KTerminalLauncherJob*
-/// @param name char*
+/// @param name const char*
 ///
-void k_terminallauncherjob_set_object_name(void* self, char* name);
+void k_terminallauncherjob_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

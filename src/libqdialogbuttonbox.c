@@ -994,7 +994,7 @@ char* q_dialogbuttonbox_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_dialogbuttonbox_restore_geometry(void* self, const char* geometry) {
+bool q_dialogbuttonbox_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1350,7 +1350,7 @@ const char* q_dialogbuttonbox_object_name(void* self) {
     return _ret;
 }
 
-void q_dialogbuttonbox_set_object_name(void* self, char* name) {
+void q_dialogbuttonbox_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1974,15 +1974,15 @@ void q_dialogbuttonbox_on_hide_event(void* self, void (*callback)(void*, void*))
     QDialogButtonBox_OnHideEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
-bool q_dialogbuttonbox_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_dialogbuttonbox_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QDialogButtonBox_NativeEvent((QDialogButtonBox*)self, qstring(eventType), message, result);
 }
 
-bool q_dialogbuttonbox_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_dialogbuttonbox_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QDialogButtonBox_QBaseNativeEvent((QDialogButtonBox*)self, qstring(eventType), message, result);
 }
 
-void q_dialogbuttonbox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_dialogbuttonbox_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QDialogButtonBox_OnNativeEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 

@@ -438,7 +438,7 @@ const char* k_actionmenu_object_name(void* self) {
     return _ret;
 }
 
-void k_actionmenu_set_object_name(void* self, char* name) {
+void k_actionmenu_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

@@ -1160,7 +1160,7 @@ char* k_datepickerpopup_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_datepickerpopup_restore_geometry(void* self, const char* geometry) {
+bool k_datepickerpopup_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1516,7 +1516,7 @@ const char* k_datepickerpopup_object_name(void* self) {
     return _ret;
 }
 
-void k_datepickerpopup_set_object_name(void* self, char* name) {
+void k_datepickerpopup_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2200,15 +2200,15 @@ void k_datepickerpopup_on_show_event(void* self, void (*callback)(void*, void*))
     KDatePickerPopup_OnShowEvent((KDatePickerPopup*)self, (intptr_t)callback);
 }
 
-bool k_datepickerpopup_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_datepickerpopup_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KDatePickerPopup_NativeEvent((KDatePickerPopup*)self, qstring(eventType), message, result);
 }
 
-bool k_datepickerpopup_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_datepickerpopup_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KDatePickerPopup_QBaseNativeEvent((KDatePickerPopup*)self, qstring(eventType), message, result);
 }
 
-void k_datepickerpopup_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_datepickerpopup_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KDatePickerPopup_OnNativeEvent((KDatePickerPopup*)self, (intptr_t)callback);
 }
 

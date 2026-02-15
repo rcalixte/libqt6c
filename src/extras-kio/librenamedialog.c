@@ -974,7 +974,7 @@ char* k_io__renamedialog_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_io__renamedialog_restore_geometry(void* self, const char* geometry) {
+bool k_io__renamedialog_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1330,7 +1330,7 @@ const char* k_io__renamedialog_object_name(void* self) {
     return _ret;
 }
 
-void k_io__renamedialog_set_object_name(void* self, char* name) {
+void k_io__renamedialog_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2038,15 +2038,15 @@ void k_io__renamedialog_on_hide_event(void* self, void (*callback)(void*, void*)
     KIO__RenameDialog_OnHideEvent((KIO__RenameDialog*)self, (intptr_t)callback);
 }
 
-bool k_io__renamedialog_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_io__renamedialog_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KIO__RenameDialog_NativeEvent((KIO__RenameDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_io__renamedialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_io__renamedialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KIO__RenameDialog_QBaseNativeEvent((KIO__RenameDialog*)self, qstring(eventType), message, result);
 }
 
-void k_io__renamedialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_io__renamedialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KIO__RenameDialog_OnNativeEvent((KIO__RenameDialog*)self, (intptr_t)callback);
 }
 

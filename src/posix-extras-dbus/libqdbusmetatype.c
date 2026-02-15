@@ -27,7 +27,7 @@ bool q_dbusmetatype_demarshall(void* param1, void* id, void* data) {
     return QDBusMetaType_Demarshall((QDBusArgument*)param1, (QMetaType*)id, data);
 }
 
-void q_dbusmetatype_register_custom_type(void* type, const char* signature) {
+void q_dbusmetatype_register_custom_type(void* type, char* signature) {
     QDBusMetaType_RegisterCustomType((QMetaType*)type, qstring(signature));
 }
 

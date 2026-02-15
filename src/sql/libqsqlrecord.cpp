@@ -37,7 +37,7 @@ QVariant* QSqlRecord_Value(const QSqlRecord* self, int i) {
     return new QVariant(self->value(static_cast<int>(i)));
 }
 
-QVariant* QSqlRecord_Value2(const QSqlRecord* self, char* name) {
+QVariant* QSqlRecord_Value2(const QSqlRecord* self, const char* name) {
     return new QVariant(self->value(QAnyStringView(name)));
 }
 
@@ -45,7 +45,7 @@ void QSqlRecord_SetValue(QSqlRecord* self, int i, const QVariant* val) {
     self->setValue(static_cast<int>(i), *val);
 }
 
-void QSqlRecord_SetValue2(QSqlRecord* self, char* name, const QVariant* val) {
+void QSqlRecord_SetValue2(QSqlRecord* self, const char* name, const QVariant* val) {
     self->setValue(QAnyStringView(name), *val);
 }
 
@@ -53,7 +53,7 @@ void QSqlRecord_SetNull(QSqlRecord* self, int i) {
     self->setNull(static_cast<int>(i));
 }
 
-void QSqlRecord_SetNull2(QSqlRecord* self, char* name) {
+void QSqlRecord_SetNull2(QSqlRecord* self, const char* name) {
     self->setNull(QAnyStringView(name));
 }
 
@@ -61,11 +61,11 @@ bool QSqlRecord_IsNull(const QSqlRecord* self, int i) {
     return self->isNull(static_cast<int>(i));
 }
 
-bool QSqlRecord_IsNull2(const QSqlRecord* self, char* name) {
+bool QSqlRecord_IsNull2(const QSqlRecord* self, const char* name) {
     return self->isNull(QAnyStringView(name));
 }
 
-int QSqlRecord_IndexOf(const QSqlRecord* self, char* name) {
+int QSqlRecord_IndexOf(const QSqlRecord* self, const char* name) {
     return self->indexOf(QAnyStringView(name));
 }
 
@@ -85,7 +85,7 @@ QSqlField* QSqlRecord_Field(const QSqlRecord* self, int i) {
     return new QSqlField(self->field(static_cast<int>(i)));
 }
 
-QSqlField* QSqlRecord_Field2(const QSqlRecord* self, char* name) {
+QSqlField* QSqlRecord_Field2(const QSqlRecord* self, const char* name) {
     return new QSqlField(self->field(QAnyStringView(name)));
 }
 
@@ -93,11 +93,11 @@ bool QSqlRecord_IsGenerated(const QSqlRecord* self, int i) {
     return self->isGenerated(static_cast<int>(i));
 }
 
-bool QSqlRecord_IsGenerated2(const QSqlRecord* self, char* name) {
+bool QSqlRecord_IsGenerated2(const QSqlRecord* self, const char* name) {
     return self->isGenerated(QAnyStringView(name));
 }
 
-void QSqlRecord_SetGenerated(QSqlRecord* self, char* name, bool generated) {
+void QSqlRecord_SetGenerated(QSqlRecord* self, const char* name, bool generated) {
     self->setGenerated(QAnyStringView(name), generated);
 }
 
@@ -125,7 +125,7 @@ bool QSqlRecord_IsEmpty(const QSqlRecord* self) {
     return self->isEmpty();
 }
 
-bool QSqlRecord_Contains(const QSqlRecord* self, char* name) {
+bool QSqlRecord_Contains(const QSqlRecord* self, const char* name) {
     return self->contains(QAnyStringView(name));
 }
 

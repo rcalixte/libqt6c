@@ -147,7 +147,7 @@ const char* q_dbuspendingcallwatcher_object_name(void* self) {
     return _ret;
 }
 
-void q_dbuspendingcallwatcher_set_object_name(void* self, char* name) {
+void q_dbuspendingcallwatcher_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

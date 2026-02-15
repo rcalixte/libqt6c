@@ -2530,9 +2530,9 @@ const char* q_graphicsobject_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QGraphicsObject*
-/// @param name char*
+/// @param name const char*
 ///
-void q_graphicsobject_set_object_name(void* self, char* name);
+void q_graphicsobject_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -27067,9 +27067,9 @@ const char* q_graphicstextitem_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QGraphicsTextItem*
-/// @param name char*
+/// @param name const char*
 ///
-void q_graphicstextitem_set_object_name(void* self, char* name);
+void q_graphicstextitem_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

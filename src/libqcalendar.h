@@ -45,9 +45,9 @@ QCalendar* q_calendar_new4(int32_t system);
 
 /// q_calendar_new5 constructs a new QCalendar object.
 ///
-/// @param name char*
+/// @param name const char*
 ///
-QCalendar* q_calendar_new5(char* name);
+QCalendar* q_calendar_new5(const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html)
 

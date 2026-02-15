@@ -38,8 +38,8 @@ bool QVersionNumber_IsPrefixOf(const QVersionNumber* self, const QVersionNumber*
 int QVersionNumber_Compare(const QVersionNumber* v1, const QVersionNumber* v2);
 QVersionNumber* QVersionNumber_CommonPrefix(const QVersionNumber* v1, const QVersionNumber* v2);
 libqt_string QVersionNumber_ToString(const QVersionNumber* self);
-QVersionNumber* QVersionNumber_FromString(char* stringVal);
-QVersionNumber* QVersionNumber_FromString2(char* stringVal, ptrdiff_t* suffixIndex);
+QVersionNumber* QVersionNumber_FromString(const char* stringVal);
+QVersionNumber* QVersionNumber_FromString2(const char* stringVal, ptrdiff_t* suffixIndex);
 void QVersionNumber_Delete(QVersionNumber* self);
 
 #ifdef __cplusplus

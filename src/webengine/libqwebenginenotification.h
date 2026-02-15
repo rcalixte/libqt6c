@@ -182,9 +182,9 @@ const char* q_webenginenotification_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QWebEngineNotification*
-/// @param name char*
+/// @param name const char*
 ///
-void q_webenginenotification_set_object_name(void* self, char* name);
+void q_webenginenotification_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

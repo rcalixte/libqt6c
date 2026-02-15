@@ -101,7 +101,7 @@ void q_abstracteventdispatcher_remove_native_event_filter(void* self, void* filt
     QAbstractEventDispatcher_RemoveNativeEventFilter((QAbstractEventDispatcher*)self, (QAbstractNativeEventFilter*)filterObj);
 }
 
-bool q_abstracteventdispatcher_filter_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_abstracteventdispatcher_filter_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QAbstractEventDispatcher_FilterNativeEvent((QAbstractEventDispatcher*)self, qstring(eventType), message, result);
 }
 
@@ -154,7 +154,7 @@ const char* q_abstracteventdispatcher_object_name(void* self) {
     return _ret;
 }
 
-void q_abstracteventdispatcher_set_object_name(void* self, char* name) {
+void q_abstracteventdispatcher_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -477,7 +477,7 @@ void q_abstracteventdispatcherv2_remove_native_event_filter(void* self, void* fi
     QAbstractEventDispatcher_RemoveNativeEventFilter((QAbstractEventDispatcher*)self, (QAbstractNativeEventFilter*)filterObj);
 }
 
-bool q_abstracteventdispatcherv2_filter_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_abstracteventdispatcherv2_filter_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QAbstractEventDispatcher_FilterNativeEvent((QAbstractEventDispatcher*)self, qstring(eventType), message, result);
 }
 
@@ -516,7 +516,7 @@ const char* q_abstracteventdispatcherv2_object_name(void* self) {
     return _ret;
 }
 
-void q_abstracteventdispatcherv2_set_object_name(void* self, char* name) {
+void q_abstracteventdispatcherv2_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

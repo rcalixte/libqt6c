@@ -940,7 +940,7 @@ char* k_texteditor__configpage_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_texteditor__configpage_restore_geometry(void* self, const char* geometry) {
+bool k_texteditor__configpage_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1296,7 +1296,7 @@ const char* k_texteditor__configpage_object_name(void* self) {
     return _ret;
 }
 
-void k_texteditor__configpage_set_object_name(void* self, char* name) {
+void k_texteditor__configpage_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1932,15 +1932,15 @@ void k_texteditor__configpage_on_hide_event(void* self, void (*callback)(void*, 
     KTextEditor__ConfigPage_OnHideEvent((KTextEditor__ConfigPage*)self, (intptr_t)callback);
 }
 
-bool k_texteditor__configpage_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_texteditor__configpage_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KTextEditor__ConfigPage_NativeEvent((KTextEditor__ConfigPage*)self, qstring(eventType), message, result);
 }
 
-bool k_texteditor__configpage_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_texteditor__configpage_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KTextEditor__ConfigPage_QBaseNativeEvent((KTextEditor__ConfigPage*)self, qstring(eventType), message, result);
 }
 
-void k_texteditor__configpage_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_texteditor__configpage_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KTextEditor__ConfigPage_OnNativeEvent((KTextEditor__ConfigPage*)self, (intptr_t)callback);
 }
 

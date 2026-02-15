@@ -1049,7 +1049,7 @@ char* k_editlistwidget_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_editlistwidget_restore_geometry(void* self, const char* geometry) {
+bool k_editlistwidget_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1405,7 +1405,7 @@ const char* k_editlistwidget_object_name(void* self) {
     return _ret;
 }
 
-void k_editlistwidget_set_object_name(void* self, char* name) {
+void k_editlistwidget_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2041,15 +2041,15 @@ void k_editlistwidget_on_hide_event(void* self, void (*callback)(void*, void*)) 
     KEditListWidget_OnHideEvent((KEditListWidget*)self, (intptr_t)callback);
 }
 
-bool k_editlistwidget_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_editlistwidget_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KEditListWidget_NativeEvent((KEditListWidget*)self, qstring(eventType), message, result);
 }
 
-bool k_editlistwidget_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_editlistwidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KEditListWidget_QBaseNativeEvent((KEditListWidget*)self, qstring(eventType), message, result);
 }
 
-void k_editlistwidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_editlistwidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KEditListWidget_OnNativeEvent((KEditListWidget*)self, (intptr_t)callback);
 }
 

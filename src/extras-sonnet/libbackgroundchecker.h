@@ -412,9 +412,9 @@ const char* k_sonnet__backgroundchecker_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self Sonnet__BackgroundChecker*
-/// @param name char*
+/// @param name const char*
 ///
-void k_sonnet__backgroundchecker_set_object_name(void* self, char* name);
+void k_sonnet__backgroundchecker_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

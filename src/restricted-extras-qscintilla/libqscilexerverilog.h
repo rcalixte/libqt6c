@@ -526,9 +526,9 @@ const char* q_scilexerverilog_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QsciLexerVerilog*
-/// @param name char*
+/// @param name const char*
 ///
-void q_scilexerverilog_set_object_name(void* self, char* name);
+void q_scilexerverilog_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -2028,9 +2028,9 @@ char* q_scilexerverilog_qbase_text_as_bytes(void* self, const char* text);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerVerilog*
-/// @param callback char* func(QsciLexerVerilog* self, const char* text)
+/// @param callback libqt_string func(QsciLexerVerilog* self, const char* text)
 ///
-void q_scilexerverilog_on_text_as_bytes(void* self, char* (*callback)(void*, const char*));
+void q_scilexerverilog_on_text_as_bytes(void* self, libqt_string (*callback)(void*, const char*));
 
 /// Inherited from QsciLexer
 ///

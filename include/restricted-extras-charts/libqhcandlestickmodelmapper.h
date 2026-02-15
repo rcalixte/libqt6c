@@ -409,9 +409,9 @@ const char* q_hcandlestickmodelmapper_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QHCandlestickModelMapper*
-/// @param name char*
+/// @param name const char*
 ///
-void q_hcandlestickmodelmapper_set_object_name(void* self, char* name);
+void q_hcandlestickmodelmapper_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

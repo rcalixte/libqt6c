@@ -385,7 +385,7 @@ const char* q_barset_object_name(void* self) {
     return _ret;
 }
 
-void q_barset_set_object_name(void* self, char* name) {
+void q_barset_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

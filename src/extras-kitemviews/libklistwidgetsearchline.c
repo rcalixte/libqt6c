@@ -1250,7 +1250,7 @@ char* k_listwidgetsearchline_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_listwidgetsearchline_restore_geometry(void* self, const char* geometry) {
+bool k_listwidgetsearchline_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1598,7 +1598,7 @@ const char* k_listwidgetsearchline_object_name(void* self) {
     return _ret;
 }
 
-void k_listwidgetsearchline_set_object_name(void* self, char* name) {
+void k_listwidgetsearchline_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2282,15 +2282,15 @@ void k_listwidgetsearchline_on_hide_event(void* self, void (*callback)(void*, vo
     KListWidgetSearchLine_OnHideEvent((KListWidgetSearchLine*)self, (intptr_t)callback);
 }
 
-bool k_listwidgetsearchline_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_listwidgetsearchline_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KListWidgetSearchLine_NativeEvent((KListWidgetSearchLine*)self, qstring(eventType), message, result);
 }
 
-bool k_listwidgetsearchline_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_listwidgetsearchline_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KListWidgetSearchLine_QBaseNativeEvent((KListWidgetSearchLine*)self, qstring(eventType), message, result);
 }
 
-void k_listwidgetsearchline_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_listwidgetsearchline_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KListWidgetSearchLine_OnNativeEvent((KListWidgetSearchLine*)self, (intptr_t)callback);
 }
 

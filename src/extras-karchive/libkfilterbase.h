@@ -150,27 +150,27 @@ bool k_filterbase_qbase_read_header(void* self);
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#writeHeader)
 ///
 /// @param self KFilterBase*
-/// @param filename const char*
+/// @param filename char*
 ///
-bool k_filterbase_write_header(void* self, const char* filename);
+bool k_filterbase_write_header(void* self, char* filename);
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#writeHeader)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KFilterBase*
-/// @param callback bool func(KFilterBase* self, const char* filename)
+/// @param callback bool func(KFilterBase* self, libqt_string filename)
 ///
-void k_filterbase_on_write_header(void* self, bool (*callback)(void*, const char*));
+void k_filterbase_on_write_header(void* self, bool (*callback)(void*, libqt_string));
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#writeHeader)
 ///
 /// Base class method implementation
 ///
 /// @param self KFilterBase*
-/// @param filename const char*
+/// @param filename char*
 ///
-bool k_filterbase_qbase_write_header(void* self, const char* filename);
+bool k_filterbase_qbase_write_header(void* self, char* filename);
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#setOutBuffer)
 ///

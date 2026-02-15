@@ -204,9 +204,9 @@ char* q_mimedata_data(void* self, const char* mimetype);
 ///
 /// @param self QMimeData*
 /// @param mimetype const char*
-/// @param data const char*
+/// @param data char*
 ///
-void q_mimedata_set_data(void* self, const char* mimetype, const char* data);
+void q_mimedata_set_data(void* self, const char* mimetype, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#removeFormat)
 ///
@@ -332,9 +332,9 @@ const char* q_mimedata_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QMimeData*
-/// @param name char*
+/// @param name const char*
 ///
-void q_mimedata_set_object_name(void* self, char* name);
+void q_mimedata_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

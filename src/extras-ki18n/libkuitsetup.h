@@ -15,9 +15,9 @@
 
 /// [Upstream resources](https://api.kde.org/kuit.html#setupForDomain)
 ///
-/// @param param1 const char*
+/// @param param1 char*
 ///
-KuitSetup* k_uit_setup_for_domain(const char* param1);
+KuitSetup* k_uit_setup_for_domain(char* param1);
 
 /// [Upstream resources](https://api.kde.org/kuitsetup.html)
 

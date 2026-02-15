@@ -101,7 +101,7 @@ const char* q_openglvertexarrayobject_object_name(void* self) {
     return _ret;
 }
 
-void q_openglvertexarrayobject_set_object_name(void* self, char* name) {
+void q_openglvertexarrayobject_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

@@ -1844,7 +1844,7 @@ char* k_diroperator_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_diroperator_restore_geometry(void* self, const char* geometry) {
+bool k_diroperator_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -2196,7 +2196,7 @@ const char* k_diroperator_object_name(void* self) {
     return _ret;
 }
 
-void k_diroperator_set_object_name(void* self, char* name) {
+void k_diroperator_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2820,15 +2820,15 @@ void k_diroperator_on_hide_event(void* self, void (*callback)(void*, void*)) {
     KDirOperator_OnHideEvent((KDirOperator*)self, (intptr_t)callback);
 }
 
-bool k_diroperator_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_diroperator_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KDirOperator_NativeEvent((KDirOperator*)self, qstring(eventType), message, result);
 }
 
-bool k_diroperator_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_diroperator_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KDirOperator_QBaseNativeEvent((KDirOperator*)self, qstring(eventType), message, result);
 }
 
-void k_diroperator_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_diroperator_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KDirOperator_OnNativeEvent((KDirOperator*)self, (intptr_t)callback);
 }
 

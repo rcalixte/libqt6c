@@ -1970,9 +1970,9 @@ char* k_popupframe_save_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self KPopupFrame*
-/// @param geometry const char*
+/// @param geometry char*
 ///
-bool k_popupframe_restore_geometry(void* self, const char* geometry);
+bool k_popupframe_restore_geometry(void* self, char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2778,9 +2778,9 @@ const char* k_popupframe_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KPopupFrame*
-/// @param name char*
+/// @param name const char*
 ///
-void k_popupframe_set_object_name(void* self, char* name);
+void k_popupframe_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4324,11 +4324,11 @@ void k_popupframe_on_show_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KPopupFrame*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_popupframe_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool k_popupframe_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4337,11 +4337,11 @@ bool k_popupframe_native_event(void* self, const char* eventType, void* message,
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KPopupFrame*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_popupframe_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool k_popupframe_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4350,9 +4350,9 @@ bool k_popupframe_qbase_native_event(void* self, const char* eventType, void* me
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPopupFrame*
-/// @param callback bool func(KPopupFrame* self, const char* eventType, void* message, intptr_t* result)
+/// @param callback bool func(KPopupFrame* self, libqt_string eventType, void* message, intptr_t* result)
 ///
-void k_popupframe_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
+void k_popupframe_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///

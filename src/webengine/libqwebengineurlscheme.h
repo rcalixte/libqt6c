@@ -21,9 +21,9 @@ QWebEngineUrlScheme* q_webengineurlscheme_new();
 
 /// q_webengineurlscheme_new2 constructs a new QWebEngineUrlScheme object.
 ///
-/// @param name const char*
+/// @param name char*
 ///
-QWebEngineUrlScheme* q_webengineurlscheme_new2(const char* name);
+QWebEngineUrlScheme* q_webengineurlscheme_new2(char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlscheme.html)
 
@@ -65,9 +65,9 @@ char* q_webengineurlscheme_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlscheme.html#setName)
 ///
 /// @param self QWebEngineUrlScheme*
-/// @param newValue const char*
+/// @param newValue char*
 ///
-void q_webengineurlscheme_set_name(void* self, const char* newValue);
+void q_webengineurlscheme_set_name(void* self, char* newValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlscheme.html#syntax)
 ///
@@ -120,9 +120,9 @@ void q_webengineurlscheme_register_scheme(void* scheme);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlscheme.html#schemeByName)
 ///
-/// @param name const char*
+/// @param name char*
 ///
-QWebEngineUrlScheme* q_webengineurlscheme_scheme_by_name(const char* name);
+QWebEngineUrlScheme* q_webengineurlscheme_scheme_by_name(char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlscheme.html#dtor.QWebEngineUrlScheme)
 ///

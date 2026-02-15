@@ -21,17 +21,17 @@ QByteArrayMatcher* q_bytearraymatcher_new();
 
 /// q_bytearraymatcher_new2 constructs a new QByteArrayMatcher object.
 ///
-/// @param pattern const char*
+/// @param pattern char*
 ///
-QByteArrayMatcher* q_bytearraymatcher_new2(const char* pattern);
+QByteArrayMatcher* q_bytearraymatcher_new2(char* pattern);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearraymatcher.html)
 
 /// q_bytearraymatcher_new3 constructs a new QByteArrayMatcher object.
 ///
-/// @param pattern const char*
+/// @param pattern char*
 ///
-QByteArrayMatcher* q_bytearraymatcher_new3(const char* pattern);
+QByteArrayMatcher* q_bytearraymatcher_new3(char* pattern);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearraymatcher.html)
 
@@ -68,9 +68,9 @@ void q_bytearraymatcher_operator_assign(void* self, void* other);
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearraymatcher.html#setPattern)
 ///
 /// @param self QByteArrayMatcher*
-/// @param pattern const char*
+/// @param pattern char*
 ///
-void q_bytearraymatcher_set_pattern(void* self, const char* pattern);
+void q_bytearraymatcher_set_pattern(void* self, char* pattern);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearraymatcher.html#indexIn)
 ///
@@ -83,9 +83,9 @@ int64_t q_bytearraymatcher_index_in(void* self, const char* str, int64_t lenVal)
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearraymatcher.html#indexIn)
 ///
 /// @param self QByteArrayMatcher*
-/// @param data const char*
+/// @param data char*
 ///
-int64_t q_bytearraymatcher_index_in2(void* self, const char* data);
+int64_t q_bytearraymatcher_index_in2(void* self, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearraymatcher.html#pattern)
 ///
@@ -107,10 +107,10 @@ int64_t q_bytearraymatcher_index_in3(void* self, const char* str, int64_t lenVal
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearraymatcher.html#indexIn)
 ///
 /// @param self QByteArrayMatcher*
-/// @param data const char*
+/// @param data char*
 /// @param from int64_t
 ///
-int64_t q_bytearraymatcher_index_in22(void* self, const char* data, int64_t from);
+int64_t q_bytearraymatcher_index_in22(void* self, char* data, int64_t from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearraymatcher.html#dtor.QByteArrayMatcher)
 ///

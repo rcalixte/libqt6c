@@ -19,11 +19,11 @@ QLatin1String* q_latin1string_new4(const char* s, int64_t sz) {
     return QLatin1String_new4(s, sz);
 }
 
-QLatin1String* q_latin1string_new5(const char* s) {
+QLatin1String* q_latin1string_new5(char* s) {
     return QLatin1String_new5(qstring(s));
 }
 
-QLatin1String* q_latin1string_new6(const char* s) {
+QLatin1String* q_latin1string_new6(char* s) {
     return QLatin1String_new6(qstring(s));
 }
 

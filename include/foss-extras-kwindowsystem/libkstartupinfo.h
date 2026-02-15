@@ -107,22 +107,22 @@ void k_startupinfo_app_started();
 
 /// [Upstream resources](https://api.kde.org/kstartupinfo.html#appStarted)
 ///
-/// @param startup_id const char*
+/// @param startup_id char*
 ///
-void k_startupinfo_app_started2(const char* startup_id);
+void k_startupinfo_app_started2(char* startup_id);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfo.html#setStartupId)
 ///
-/// @param startup_id const char*
+/// @param startup_id char*
 ///
-void k_startupinfo_set_startup_id(const char* startup_id);
+void k_startupinfo_set_startup_id(char* startup_id);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfo.html#setNewStartupId)
 ///
 /// @param window QWindow*
-/// @param startup_id const char*
+/// @param startup_id char*
 ///
-void k_startupinfo_set_new_startup_id(void* window, const char* startup_id);
+void k_startupinfo_set_new_startup_id(void* window, char* startup_id);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfo.html#createNewStartupId)
 ///
@@ -371,9 +371,9 @@ const char* k_startupinfo_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KStartupInfo*
-/// @param name char*
+/// @param name const char*
 ///
-void k_startupinfo_set_object_name(void* self, char* name);
+void k_startupinfo_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1227,9 +1227,9 @@ bool k_startupinfoid_operator_lesser(void* self, void* id);
 /// [Upstream resources](https://api.kde.org/kstartupinfoid.html#initId)
 ///
 /// @param self KStartupInfoId*
-/// @param id const char*
+/// @param id char*
 ///
-void k_startupinfoid_init_id1(void* self, const char* id);
+void k_startupinfoid_init_id1(void* self, char* id);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfoid.html#dtor.KStartupInfoId)
 ///
@@ -1353,9 +1353,9 @@ int32_t k_startupinfodata_desktop(void* self);
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#setWMClass)
 ///
 /// @param self KStartupInfoData*
-/// @param wmclass const char*
+/// @param wmclass char*
 ///
-void k_startupinfodata_set_w_m_class(void* self, const char* wmclass);
+void k_startupinfodata_set_w_m_class(void* self, char* wmclass);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#findWMClass)
 ///
@@ -1482,9 +1482,9 @@ void k_startupinfodata_operator_assign(void* self, void* data);
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#setHostname)
 ///
 /// @param self KStartupInfoData*
-/// @param hostname const char*
+/// @param hostname char*
 ///
-void k_startupinfodata_set_hostname1(void* self, const char* hostname);
+void k_startupinfodata_set_hostname1(void* self, char* hostname);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#dtor.KStartupInfoData)
 ///

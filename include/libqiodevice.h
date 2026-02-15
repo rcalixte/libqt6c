@@ -515,9 +515,9 @@ long long q_iodevice_write2(void* self, const char* data);
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// @param self QIODevice*
-/// @param data const char*
+/// @param data char*
 ///
-long long q_iodevice_write3(void* self, const char* data);
+long long q_iodevice_write3(void* self, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#peek)
 ///
@@ -903,9 +903,9 @@ const char* q_iodevice_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QIODevice*
-/// @param name char*
+/// @param name const char*
 ///
-void q_iodevice_set_object_name(void* self, char* name);
+void q_iodevice_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

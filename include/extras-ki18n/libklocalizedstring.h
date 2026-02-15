@@ -194,9 +194,9 @@ char* k_localizedstring_untranslated_text(void* self);
 
 /// [Upstream resources](https://api.kde.org/klocalizedstring.html#setApplicationDomain)
 ///
-/// @param domain const char*
+/// @param domain char*
 ///
-void k_localizedstring_set_application_domain(const char* domain);
+void k_localizedstring_set_application_domain(char* domain);
 
 /// [Upstream resources](https://api.kde.org/klocalizedstring.html#applicationDomain)
 ///
@@ -234,18 +234,18 @@ libqt_list k_localizedstring_available_application_translations();
 
 /// [Upstream resources](https://api.kde.org/klocalizedstring.html#availableDomainTranslations)
 ///
-/// @param domain const char*
+/// @param domain char*
 ///
 /// @return libqt_list set of const char*
 ///
-libqt_list k_localizedstring_available_domain_translations(const char* domain);
+libqt_list k_localizedstring_available_domain_translations(char* domain);
 
 /// [Upstream resources](https://api.kde.org/klocalizedstring.html#addDomainLocaleDir)
 ///
-/// @param domain const char*
+/// @param domain char*
 /// @param path const char*
 ///
-void k_localizedstring_add_domain_locale_dir(const char* domain, const char* path);
+void k_localizedstring_add_domain_locale_dir(char* domain, const char* path);
 
 /// [Upstream resources](https://api.kde.org/klocalizedstring.html#localizedFilePath)
 ///

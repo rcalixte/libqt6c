@@ -33,16 +33,16 @@ QIODevice* q_imageiohandler_device(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#setFormat)
 ///
 /// @param self QImageIOHandler*
-/// @param format const char*
+/// @param format char*
 ///
-void q_imageiohandler_set_format(void* self, const char* format);
+void q_imageiohandler_set_format(void* self, char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#setFormat)
 ///
 /// @param self QImageIOHandler*
-/// @param format const char*
+/// @param format char*
 ///
-void q_imageiohandler_set_format2(void* self, const char* format);
+void q_imageiohandler_set_format2(void* self, char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#format)
 ///
@@ -472,20 +472,20 @@ const char* q_imageioplugin_tr(const char* s);
 ///
 /// @param self QImageIOPlugin*
 /// @param device QIODevice*
-/// @param format const char*
+/// @param format char*
 ///
 /// @return flag of enum QImageIOPlugin__Capability
 ///
-int32_t q_imageioplugin_capabilities(void* self, void* device, const char* format);
+int32_t q_imageioplugin_capabilities(void* self, void* device, char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageioplugin.html#capabilities)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QImageIOPlugin*
-/// @param callback int32_t func(QImageIOPlugin* self, QIODevice* device, const char* format)
+/// @param callback int32_t func(QImageIOPlugin* self, QIODevice* device, libqt_string format)
 ///
-void q_imageioplugin_on_capabilities(void* self, int32_t (*callback)(void*, void*, const char*));
+void q_imageioplugin_on_capabilities(void* self, int32_t (*callback)(void*, void*, libqt_string));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageioplugin.html#capabilities)
 ///
@@ -493,28 +493,28 @@ void q_imageioplugin_on_capabilities(void* self, int32_t (*callback)(void*, void
 ///
 /// @param self QImageIOPlugin*
 /// @param device QIODevice*
-/// @param format const char*
+/// @param format char*
 ///
 /// @return flag of enum QImageIOPlugin__Capability
 ///
-int32_t q_imageioplugin_qbase_capabilities(void* self, void* device, const char* format);
+int32_t q_imageioplugin_qbase_capabilities(void* self, void* device, char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageioplugin.html#create)
 ///
 /// @param self QImageIOPlugin*
 /// @param device QIODevice*
-/// @param format const char*
+/// @param format char*
 ///
-QImageIOHandler* q_imageioplugin_create(void* self, void* device, const char* format);
+QImageIOHandler* q_imageioplugin_create(void* self, void* device, char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageioplugin.html#create)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QImageIOPlugin*
-/// @param callback QImageIOHandler* func(QImageIOPlugin* self, QIODevice* device, const char* format)
+/// @param callback QImageIOHandler* func(QImageIOPlugin* self, QIODevice* device, libqt_string format)
 ///
-void q_imageioplugin_on_create(void* self, QImageIOHandler* (*callback)(void*, void*, const char*));
+void q_imageioplugin_on_create(void* self, QImageIOHandler* (*callback)(void*, void*, libqt_string));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageioplugin.html#create)
 ///
@@ -522,9 +522,9 @@ void q_imageioplugin_on_create(void* self, QImageIOHandler* (*callback)(void*, v
 ///
 /// @param self QImageIOPlugin*
 /// @param device QIODevice*
-/// @param format const char*
+/// @param format char*
 ///
-QImageIOHandler* q_imageioplugin_qbase_create(void* self, void* device, const char* format);
+QImageIOHandler* q_imageioplugin_qbase_create(void* self, void* device, char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -560,9 +560,9 @@ const char* q_imageioplugin_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QImageIOPlugin*
-/// @param name char*
+/// @param name const char*
 ///
-void q_imageioplugin_set_object_name(void* self, char* name);
+void q_imageioplugin_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

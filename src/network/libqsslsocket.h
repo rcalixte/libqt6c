@@ -1135,9 +1135,9 @@ void q_sslsocket_set_private_key3(void* self, const char* fileName, int32_t algo
 /// @param fileName const char*
 /// @param algorithm enum QSsl__KeyAlgorithm
 /// @param format enum QSsl__EncodingFormat
-/// @param passPhrase const char*
+/// @param passPhrase char*
 ///
-void q_sslsocket_set_private_key4(void* self, const char* fileName, int32_t algorithm, int32_t format, const char* passPhrase);
+void q_sslsocket_set_private_key4(void* self, const char* fileName, int32_t algorithm, int32_t format, char* passPhrase);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslsocket.html#waitForEncrypted)
 ///
@@ -1725,9 +1725,9 @@ long long q_sslsocket_write2(void* self, const char* data);
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// @param self QSslSocket*
-/// @param data const char*
+/// @param data char*
 ///
-long long q_sslsocket_write3(void* self, const char* data);
+long long q_sslsocket_write3(void* self, char* data);
 
 /// Inherited from QIODevice
 ///
@@ -1928,9 +1928,9 @@ const char* q_sslsocket_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QSslSocket*
-/// @param name char*
+/// @param name const char*
 ///
-void q_sslsocket_set_object_name(void* self, char* name);
+void q_sslsocket_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

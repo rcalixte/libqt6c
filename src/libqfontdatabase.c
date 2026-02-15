@@ -158,7 +158,7 @@ int32_t q_fontdatabase_add_application_font(const char* fileName) {
     return QFontDatabase_AddApplicationFont(qstring(fileName));
 }
 
-int32_t q_fontdatabase_add_application_font_from_data(const char* fontData) {
+int32_t q_fontdatabase_add_application_font_from_data(char* fontData) {
     return QFontDatabase_AddApplicationFontFromData(qstring(fontData));
 }
 

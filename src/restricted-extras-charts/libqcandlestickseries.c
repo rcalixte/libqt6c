@@ -455,7 +455,7 @@ const char* q_candlestickseries_object_name(void* self) {
     return _ret;
 }
 
-void q_candlestickseries_set_object_name(void* self, char* name) {
+void q_candlestickseries_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

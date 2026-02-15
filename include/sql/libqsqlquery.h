@@ -94,9 +94,9 @@ bool q_sqlquery_is_null(void* self, int field);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquery.html#isNull)
 ///
 /// @param self QSqlQuery*
-/// @param name char*
+/// @param name const char*
 ///
-bool q_sqlquery_is_null2(void* self, char* name);
+bool q_sqlquery_is_null2(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquery.html#at)
 ///
@@ -184,9 +184,9 @@ QVariant* q_sqlquery_value(void* self, int i);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquery.html#value)
 ///
 /// @param self QSqlQuery*
-/// @param name char*
+/// @param name const char*
 ///
-QVariant* q_sqlquery_value2(void* self, char* name);
+QVariant* q_sqlquery_value2(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlquery.html#setNumericalPrecisionPolicy)
 ///

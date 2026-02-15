@@ -164,7 +164,7 @@ const char* q_designerwidgetfactoryinterface_object_name(void* self) {
     return _ret;
 }
 
-void q_designerwidgetfactoryinterface_set_object_name(void* self, char* name) {
+void q_designerwidgetfactoryinterface_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

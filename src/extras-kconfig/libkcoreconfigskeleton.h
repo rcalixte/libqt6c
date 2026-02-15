@@ -449,10 +449,10 @@ void k_configskeletonitem_delete(void* self);
 /// k_propertyskeletonitem_new constructs a new KPropertySkeletonItem object.
 ///
 /// @param object QObject*
-/// @param propertyName const char*
+/// @param propertyName char*
 /// @param defaultValue QVariant*
 ///
-KPropertySkeletonItem* k_propertyskeletonitem_new(void* object, const char* propertyName, void* defaultValue);
+KPropertySkeletonItem* k_propertyskeletonitem_new(void* object, char* propertyName, void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html)
 
@@ -2097,9 +2097,9 @@ const char* k_coreconfigskeleton_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param name char*
+/// @param name const char*
 ///
-void k_coreconfigskeleton_set_object_name(void* self, char* name);
+void k_coreconfigskeleton_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

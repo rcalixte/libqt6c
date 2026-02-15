@@ -139,7 +139,7 @@ void QSettings_SetAtomicSyncRequired(QSettings* self, bool enable) {
     self->setAtomicSyncRequired(enable);
 }
 
-void QSettings_BeginGroup(QSettings* self, char* prefix) {
+void QSettings_BeginGroup(QSettings* self, const char* prefix) {
     self->beginGroup(QAnyStringView(prefix));
 }
 
@@ -159,11 +159,11 @@ libqt_string QSettings_Group(const QSettings* self) {
     return _str;
 }
 
-int QSettings_BeginReadArray(QSettings* self, char* prefix) {
+int QSettings_BeginReadArray(QSettings* self, const char* prefix) {
     return self->beginReadArray(QAnyStringView(prefix));
 }
 
-void QSettings_BeginWriteArray(QSettings* self, char* prefix) {
+void QSettings_BeginWriteArray(QSettings* self, const char* prefix) {
     self->beginWriteArray(QAnyStringView(prefix));
 }
 
@@ -242,23 +242,23 @@ bool QSettings_IsWritable(const QSettings* self) {
     return self->isWritable();
 }
 
-void QSettings_SetValue(QSettings* self, char* key, const QVariant* value) {
+void QSettings_SetValue(QSettings* self, const char* key, const QVariant* value) {
     self->setValue(QAnyStringView(key), *value);
 }
 
-QVariant* QSettings_Value(const QSettings* self, char* key, const QVariant* defaultValue) {
+QVariant* QSettings_Value(const QSettings* self, const char* key, const QVariant* defaultValue) {
     return new QVariant(self->value(QAnyStringView(key), *defaultValue));
 }
 
-QVariant* QSettings_Value2(const QSettings* self, char* key) {
+QVariant* QSettings_Value2(const QSettings* self, const char* key) {
     return new QVariant(self->value(QAnyStringView(key)));
 }
 
-void QSettings_Remove(QSettings* self, char* key) {
+void QSettings_Remove(QSettings* self, const char* key) {
     self->remove(QAnyStringView(key));
 }
 
-bool QSettings_Contains(const QSettings* self, char* key) {
+bool QSettings_Contains(const QSettings* self, const char* key) {
     return self->contains(QAnyStringView(key));
 }
 
@@ -335,7 +335,7 @@ bool QSettings_Event(QSettings* self, QEvent* event) {
     return {};
 }
 
-void QSettings_BeginWriteArray2(QSettings* self, char* prefix, int size) {
+void QSettings_BeginWriteArray2(QSettings* self, const char* prefix, int size) {
     self->beginWriteArray(QAnyStringView(prefix), static_cast<int>(size));
 }
 

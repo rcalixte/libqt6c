@@ -1068,7 +1068,7 @@ char* k_finddialog_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_finddialog_restore_geometry(void* self, const char* geometry) {
+bool k_finddialog_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1424,7 +1424,7 @@ const char* k_finddialog_object_name(void* self) {
     return _ret;
 }
 
-void k_finddialog_set_object_name(void* self, char* name) {
+void k_finddialog_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2120,15 +2120,15 @@ void k_finddialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
     KFindDialog_OnHideEvent((KFindDialog*)self, (intptr_t)callback);
 }
 
-bool k_finddialog_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_finddialog_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KFindDialog_NativeEvent((KFindDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_finddialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_finddialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KFindDialog_QBaseNativeEvent((KFindDialog*)self, qstring(eventType), message, result);
 }
 
-void k_finddialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_finddialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KFindDialog_OnNativeEvent((KFindDialog*)self, (intptr_t)callback);
 }
 

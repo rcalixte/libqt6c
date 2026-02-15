@@ -956,7 +956,7 @@ char* q_videowidget_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_videowidget_restore_geometry(void* self, const char* geometry) {
+bool q_videowidget_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1312,7 +1312,7 @@ const char* q_videowidget_object_name(void* self) {
     return _ret;
 }
 
-void q_videowidget_set_object_name(void* self, char* name) {
+void q_videowidget_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1876,15 +1876,15 @@ void q_videowidget_on_drop_event(void* self, void (*callback)(void*, void*)) {
     QVideoWidget_OnDropEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
-bool q_videowidget_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_videowidget_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QVideoWidget_NativeEvent((QVideoWidget*)self, qstring(eventType), message, result);
 }
 
-bool q_videowidget_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_videowidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QVideoWidget_QBaseNativeEvent((QVideoWidget*)self, qstring(eventType), message, result);
 }
 
-void q_videowidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_videowidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QVideoWidget_OnNativeEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 

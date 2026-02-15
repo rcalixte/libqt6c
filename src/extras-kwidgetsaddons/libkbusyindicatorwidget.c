@@ -943,7 +943,7 @@ char* k_busyindicatorwidget_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_busyindicatorwidget_restore_geometry(void* self, const char* geometry) {
+bool k_busyindicatorwidget_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1299,7 +1299,7 @@ const char* k_busyindicatorwidget_object_name(void* self) {
     return _ret;
 }
 
-void k_busyindicatorwidget_set_object_name(void* self, char* name) {
+void k_busyindicatorwidget_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1863,15 +1863,15 @@ void k_busyindicatorwidget_on_drop_event(void* self, void (*callback)(void*, voi
     KBusyIndicatorWidget_OnDropEvent((KBusyIndicatorWidget*)self, (intptr_t)callback);
 }
 
-bool k_busyindicatorwidget_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_busyindicatorwidget_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KBusyIndicatorWidget_NativeEvent((KBusyIndicatorWidget*)self, qstring(eventType), message, result);
 }
 
-bool k_busyindicatorwidget_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_busyindicatorwidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KBusyIndicatorWidget_QBaseNativeEvent((KBusyIndicatorWidget*)self, qstring(eventType), message, result);
 }
 
-void k_busyindicatorwidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_busyindicatorwidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KBusyIndicatorWidget_OnNativeEvent((KBusyIndicatorWidget*)self, (intptr_t)callback);
 }
 

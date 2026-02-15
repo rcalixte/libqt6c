@@ -137,7 +137,7 @@ const char* q_signalmapper_object_name(void* self) {
     return _ret;
 }
 
-void q_signalmapper_set_object_name(void* self, char* name) {
+void q_signalmapper_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

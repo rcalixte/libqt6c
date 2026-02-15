@@ -1255,7 +1255,7 @@ char* q_tabwidget_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_tabwidget_restore_geometry(void* self, const char* geometry) {
+bool q_tabwidget_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1611,7 +1611,7 @@ const char* q_tabwidget_object_name(void* self) {
     return _ret;
 }
 
-void q_tabwidget_set_object_name(void* self, char* name) {
+void q_tabwidget_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2139,15 +2139,15 @@ void q_tabwidget_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QTabWidget_OnHideEvent((QTabWidget*)self, (intptr_t)callback);
 }
 
-bool q_tabwidget_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_tabwidget_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QTabWidget_NativeEvent((QTabWidget*)self, qstring(eventType), message, result);
 }
 
-bool q_tabwidget_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_tabwidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QTabWidget_QBaseNativeEvent((QTabWidget*)self, qstring(eventType), message, result);
 }
 
-void q_tabwidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_tabwidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QTabWidget_OnNativeEvent((QTabWidget*)self, (intptr_t)callback);
 }
 

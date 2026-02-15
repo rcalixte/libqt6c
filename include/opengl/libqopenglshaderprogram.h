@@ -119,9 +119,9 @@ bool q_openglshader_compile_source_code(void* self, const char* source);
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshader.html#compileSourceCode)
 ///
 /// @param self QOpenGLShader*
-/// @param source const char*
+/// @param source char*
 ///
-bool q_openglshader_compile_source_code2(void* self, const char* source);
+bool q_openglshader_compile_source_code2(void* self, char* source);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshader.html#compileSourceCode)
 ///
@@ -212,9 +212,9 @@ const char* q_openglshader_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QOpenGLShader*
-/// @param name char*
+/// @param name const char*
 ///
-void q_openglshader_set_object_name(void* self, char* name);
+void q_openglshader_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1145,9 +1145,9 @@ bool q_openglshaderprogram_add_shader_from_source_code(void* self, int32_t type,
 ///
 /// @param self QOpenGLShaderProgram*
 /// @param type flag of enum QOpenGLShader__ShaderTypeBit
-/// @param source const char*
+/// @param source char*
 ///
-bool q_openglshaderprogram_add_shader_from_source_code2(void* self, int32_t type, const char* source);
+bool q_openglshaderprogram_add_shader_from_source_code2(void* self, int32_t type, char* source);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#addShaderFromSourceCode)
 ///
@@ -1177,9 +1177,9 @@ bool q_openglshaderprogram_add_cacheable_shader_from_source_code(void* self, int
 ///
 /// @param self QOpenGLShaderProgram*
 /// @param type flag of enum QOpenGLShader__ShaderTypeBit
-/// @param source const char*
+/// @param source char*
 ///
-bool q_openglshaderprogram_add_cacheable_shader_from_source_code2(void* self, int32_t type, const char* source);
+bool q_openglshaderprogram_add_cacheable_shader_from_source_code2(void* self, int32_t type, char* source);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#addCacheableShaderFromSourceCode)
 ///
@@ -1324,10 +1324,10 @@ void q_openglshaderprogram_bind_attribute_location(void* self, const char* name,
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#bindAttributeLocation)
 ///
 /// @param self QOpenGLShaderProgram*
-/// @param name const char*
+/// @param name char*
 /// @param location int
 ///
-void q_openglshaderprogram_bind_attribute_location2(void* self, const char* name, int location);
+void q_openglshaderprogram_bind_attribute_location2(void* self, char* name, int location);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#bindAttributeLocation)
 ///
@@ -1347,9 +1347,9 @@ int32_t q_openglshaderprogram_attribute_location(void* self, const char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#attributeLocation)
 ///
 /// @param self QOpenGLShaderProgram*
-/// @param name const char*
+/// @param name char*
 ///
-int32_t q_openglshaderprogram_attribute_location2(void* self, const char* name);
+int32_t q_openglshaderprogram_attribute_location2(void* self, char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#attributeLocation)
 ///
@@ -1662,9 +1662,9 @@ int32_t q_openglshaderprogram_uniform_location(void* self, const char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#uniformLocation)
 ///
 /// @param self QOpenGLShaderProgram*
-/// @param name const char*
+/// @param name char*
 ///
-int32_t q_openglshaderprogram_uniform_location2(void* self, const char* name);
+int32_t q_openglshaderprogram_uniform_location2(void* self, char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#uniformLocation)
 ///
@@ -2231,9 +2231,9 @@ const char* q_openglshaderprogram_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QOpenGLShaderProgram*
-/// @param name char*
+/// @param name const char*
 ///
-void q_openglshaderprogram_set_object_name(void* self, char* name);
+void q_openglshaderprogram_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

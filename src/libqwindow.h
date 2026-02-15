@@ -1689,31 +1689,31 @@ void q_window_qbase_tablet_event(void* self, void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#nativeEvent)
 ///
 /// @param self QWindow*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_window_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_window_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#nativeEvent)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QWindow*
-/// @param callback bool func(QWindow* self, const char* eventType, void* message, intptr_t* result)
+/// @param callback bool func(QWindow* self, libqt_string eventType, void* message, intptr_t* result)
 ///
-void q_window_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
+void q_window_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#nativeEvent)
 ///
 /// Base class method implementation
 ///
 /// @param self QWindow*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_window_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_window_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1772,9 +1772,9 @@ const char* q_window_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QWindow*
-/// @param name char*
+/// @param name const char*
 ///
-void q_window_set_object_name(void* self, char* name);
+void q_window_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

@@ -21,9 +21,9 @@ QNetworkDatagram* q_networkdatagram_new();
 
 /// q_networkdatagram_new2 constructs a new QNetworkDatagram object.
 ///
-/// @param data const char*
+/// @param data char*
 ///
-QNetworkDatagram* q_networkdatagram_new2(const char* data);
+QNetworkDatagram* q_networkdatagram_new2(char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html)
 
@@ -37,20 +37,20 @@ QNetworkDatagram* q_networkdatagram_new3(void* other);
 
 /// q_networkdatagram_new4 constructs a new QNetworkDatagram object.
 ///
-/// @param data const char*
+/// @param data char*
 /// @param destinationAddress QHostAddress*
 ///
-QNetworkDatagram* q_networkdatagram_new4(const char* data, void* destinationAddress);
+QNetworkDatagram* q_networkdatagram_new4(char* data, void* destinationAddress);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html)
 
 /// q_networkdatagram_new5 constructs a new QNetworkDatagram object.
 ///
-/// @param data const char*
+/// @param data char*
 /// @param destinationAddress QHostAddress*
 /// @param port unsigned short
 ///
-QNetworkDatagram* q_networkdatagram_new5(const char* data, void* destinationAddress, unsigned short port);
+QNetworkDatagram* q_networkdatagram_new5(char* data, void* destinationAddress, unsigned short port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#operator-eq)
 ///
@@ -160,16 +160,16 @@ char* q_networkdatagram_data(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#setData)
 ///
 /// @param self QNetworkDatagram*
-/// @param data const char*
+/// @param data char*
 ///
-void q_networkdatagram_set_data(void* self, const char* data);
+void q_networkdatagram_set_data(void* self, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#makeReply)
 ///
 /// @param self QNetworkDatagram*
-/// @param payload const char*
+/// @param payload char*
 ///
-QNetworkDatagram* q_networkdatagram_make_reply(void* self, const char* payload);
+QNetworkDatagram* q_networkdatagram_make_reply(void* self, char* payload);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#setSender)
 ///

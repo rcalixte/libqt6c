@@ -1204,7 +1204,7 @@ char* k_bookmarkcontextmenu_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_bookmarkcontextmenu_restore_geometry(void* self, const char* geometry) {
+bool k_bookmarkcontextmenu_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1556,7 +1556,7 @@ const char* k_bookmarkcontextmenu_object_name(void* self) {
     return _ret;
 }
 
-void k_bookmarkcontextmenu_set_object_name(void* self, char* name) {
+void k_bookmarkcontextmenu_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2240,15 +2240,15 @@ void k_bookmarkcontextmenu_on_show_event(void* self, void (*callback)(void*, voi
     KBookmarkContextMenu_OnShowEvent((KBookmarkContextMenu*)self, (intptr_t)callback);
 }
 
-bool k_bookmarkcontextmenu_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_bookmarkcontextmenu_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KBookmarkContextMenu_NativeEvent((KBookmarkContextMenu*)self, qstring(eventType), message, result);
 }
 
-bool k_bookmarkcontextmenu_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_bookmarkcontextmenu_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KBookmarkContextMenu_QBaseNativeEvent((KBookmarkContextMenu*)self, qstring(eventType), message, result);
 }
 
-void k_bookmarkcontextmenu_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_bookmarkcontextmenu_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KBookmarkContextMenu_OnNativeEvent((KBookmarkContextMenu*)self, (intptr_t)callback);
 }
 

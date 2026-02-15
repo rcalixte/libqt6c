@@ -2008,9 +2008,9 @@ char* q_dialogbuttonbox_save_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QDialogButtonBox*
-/// @param geometry const char*
+/// @param geometry char*
 ///
-bool q_dialogbuttonbox_restore_geometry(void* self, const char* geometry);
+bool q_dialogbuttonbox_restore_geometry(void* self, char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2816,9 +2816,9 @@ const char* q_dialogbuttonbox_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QDialogButtonBox*
-/// @param name char*
+/// @param name const char*
 ///
-void q_dialogbuttonbox_set_object_name(void* self, char* name);
+void q_dialogbuttonbox_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4362,11 +4362,11 @@ void q_dialogbuttonbox_on_hide_event(void* self, void (*callback)(void*, void*))
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QDialogButtonBox*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_dialogbuttonbox_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_dialogbuttonbox_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4375,11 +4375,11 @@ bool q_dialogbuttonbox_native_event(void* self, const char* eventType, void* mes
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QDialogButtonBox*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_dialogbuttonbox_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_dialogbuttonbox_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4388,9 +4388,9 @@ bool q_dialogbuttonbox_qbase_native_event(void* self, const char* eventType, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDialogButtonBox*
-/// @param callback bool func(QDialogButtonBox* self, const char* eventType, void* message, intptr_t* result)
+/// @param callback bool func(QDialogButtonBox* self, libqt_string eventType, void* message, intptr_t* result)
 ///
-void q_dialogbuttonbox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
+void q_dialogbuttonbox_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///

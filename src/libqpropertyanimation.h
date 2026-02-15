@@ -22,9 +22,9 @@ QPropertyAnimation* q_propertyanimation_new();
 /// q_propertyanimation_new2 constructs a new QPropertyAnimation object.
 ///
 /// @param target QObject*
-/// @param propertyName const char*
+/// @param propertyName char*
 ///
-QPropertyAnimation* q_propertyanimation_new2(void* target, const char* propertyName);
+QPropertyAnimation* q_propertyanimation_new2(void* target, char* propertyName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertyanimation.html)
 
@@ -39,10 +39,10 @@ QPropertyAnimation* q_propertyanimation_new3(void* parent);
 /// q_propertyanimation_new4 constructs a new QPropertyAnimation object.
 ///
 /// @param target QObject*
-/// @param propertyName const char*
+/// @param propertyName char*
 /// @param parent QObject*
 ///
-QPropertyAnimation* q_propertyanimation_new4(void* target, const char* propertyName, void* parent);
+QPropertyAnimation* q_propertyanimation_new4(void* target, char* propertyName, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -141,9 +141,9 @@ char* q_propertyanimation_property_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertyanimation.html#setPropertyName)
 ///
 /// @param self QPropertyAnimation*
-/// @param propertyName const char*
+/// @param propertyName char*
 ///
-void q_propertyanimation_set_property_name(void* self, const char* propertyName);
+void q_propertyanimation_set_property_name(void* self, char* propertyName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertyanimation.html#event)
 ///
@@ -597,9 +597,9 @@ const char* q_propertyanimation_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QPropertyAnimation*
-/// @param name char*
+/// @param name const char*
 ///
-void q_propertyanimation_set_object_name(void* self, char* name);
+void q_propertyanimation_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

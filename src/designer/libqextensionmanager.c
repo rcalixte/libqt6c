@@ -114,7 +114,7 @@ const char* q_extensionmanager_object_name(void* self) {
     return _ret;
 }
 
-void q_extensionmanager_set_object_name(void* self, char* name) {
+void q_extensionmanager_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

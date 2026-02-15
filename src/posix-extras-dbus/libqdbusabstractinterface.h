@@ -79,9 +79,9 @@ const char* q_dbusabstractinterfacebase_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QDBusAbstractInterfaceBase*
-/// @param name char*
+/// @param name const char*
 ///
-void q_dbusabstractinterfacebase_set_object_name(void* self, char* name);
+void q_dbusabstractinterfacebase_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -762,9 +762,9 @@ const char* q_dbusabstractinterface_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QDBusAbstractInterface*
-/// @param name char*
+/// @param name const char*
 ///
-void q_dbusabstractinterface_set_object_name(void* self, char* name);
+void q_dbusabstractinterface_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

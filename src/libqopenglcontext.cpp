@@ -161,20 +161,19 @@ QOpenGLExtraFunctions* QOpenGLContext_ExtraFunctions(const QOpenGLContext* self)
     return self->extraFunctions();
 }
 
-libqt_list /* set of const char* */ QOpenGLContext_Extensions(const QOpenGLContext* self) {
+libqt_list /* set of libqt_string */ QOpenGLContext_Extensions(const QOpenGLContext* self) {
     QSet<QByteArray> _ret = self->extensions();
     // Convert QSet<> from C++ memory to manually-managed C memory
-    const char** _arr = static_cast<const char**>(malloc(sizeof(const char*) * _ret.size()));
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
     int _sctr = 0;
     QSetIterator<QByteArray> _itr(_ret);
     while (_itr.hasNext()) {
         QByteArray _sv_qb = _itr.next();
         libqt_string _sv_str;
         _sv_str.len = _sv_qb.length();
-        _sv_str.data = static_cast<const char*>(malloc(_sv_str.len + 1));
+        _sv_str.data = static_cast<char*>(malloc(_sv_str.len));
         memcpy((void*)_sv_str.data, _sv_qb.data(), _sv_str.len);
-        ((char*)_sv_str.data)[_sv_str.len] = '\0';
-        _arr[_sctr++] = _sv_str.data;
+        _arr[_sctr++] = _sv_str;
     }
     libqt_list _out;
     _out.len = _ret.size();

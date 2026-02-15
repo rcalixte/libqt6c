@@ -89,7 +89,7 @@ const char* k_colorschemewatcher_object_name(void* self) {
     return _ret;
 }
 
-void k_colorschemewatcher_set_object_name(void* self, char* name) {
+void k_colorschemewatcher_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

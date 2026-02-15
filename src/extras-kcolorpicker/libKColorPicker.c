@@ -1090,7 +1090,7 @@ char* k_colorpicker__kcolorpicker_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_colorpicker__kcolorpicker_restore_geometry(void* self, const char* geometry) {
+bool k_colorpicker__kcolorpicker_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1446,7 +1446,7 @@ const char* k_colorpicker__kcolorpicker_object_name(void* self) {
     return _ret;
 }
 
-void k_colorpicker__kcolorpicker_set_object_name(void* self, char* name) {
+void k_colorpicker__kcolorpicker_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2154,15 +2154,15 @@ void k_colorpicker__kcolorpicker_on_hide_event(void* self, void (*callback)(void
     kColorPicker__KColorPicker_OnHideEvent((kColorPicker__KColorPicker*)self, (intptr_t)callback);
 }
 
-bool k_colorpicker__kcolorpicker_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_colorpicker__kcolorpicker_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return kColorPicker__KColorPicker_NativeEvent((kColorPicker__KColorPicker*)self, qstring(eventType), message, result);
 }
 
-bool k_colorpicker__kcolorpicker_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_colorpicker__kcolorpicker_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return kColorPicker__KColorPicker_QBaseNativeEvent((kColorPicker__KColorPicker*)self, qstring(eventType), message, result);
 }
 
-void k_colorpicker__kcolorpicker_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_colorpicker__kcolorpicker_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     kColorPicker__KColorPicker_OnNativeEvent((kColorPicker__KColorPicker*)self, (intptr_t)callback);
 }
 

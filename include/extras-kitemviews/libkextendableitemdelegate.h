@@ -484,9 +484,9 @@ const char* k_extendableitemdelegate_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KExtendableItemDelegate*
-/// @param name char*
+/// @param name const char*
 ///
-void k_extendableitemdelegate_set_object_name(void* self, char* name);
+void k_extendableitemdelegate_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

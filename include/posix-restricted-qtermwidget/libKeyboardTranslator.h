@@ -290,9 +290,9 @@ char* k_onsole__keyboardtranslator__entry_text(void* self);
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
-/// @param text const char*
+/// @param text char*
 ///
-void k_onsole__keyboardtranslator__entry_set_text(void* self, const char* text);
+void k_onsole__keyboardtranslator__entry_set_text(void* self, char* text);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///

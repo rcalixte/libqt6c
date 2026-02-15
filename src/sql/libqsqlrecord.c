@@ -32,7 +32,7 @@ QVariant* q_sqlrecord_value(void* self, int i) {
     return QSqlRecord_Value((QSqlRecord*)self, i);
 }
 
-QVariant* q_sqlrecord_value2(void* self, char* name) {
+QVariant* q_sqlrecord_value2(void* self, const char* name) {
     return QSqlRecord_Value2((QSqlRecord*)self, name);
 }
 
@@ -40,7 +40,7 @@ void q_sqlrecord_set_value(void* self, int i, void* val) {
     QSqlRecord_SetValue((QSqlRecord*)self, i, (QVariant*)val);
 }
 
-void q_sqlrecord_set_value2(void* self, char* name, void* val) {
+void q_sqlrecord_set_value2(void* self, const char* name, void* val) {
     QSqlRecord_SetValue2((QSqlRecord*)self, name, (QVariant*)val);
 }
 
@@ -48,7 +48,7 @@ void q_sqlrecord_set_null(void* self, int i) {
     QSqlRecord_SetNull((QSqlRecord*)self, i);
 }
 
-void q_sqlrecord_set_null2(void* self, char* name) {
+void q_sqlrecord_set_null2(void* self, const char* name) {
     QSqlRecord_SetNull2((QSqlRecord*)self, name);
 }
 
@@ -56,11 +56,11 @@ bool q_sqlrecord_is_null(void* self, int i) {
     return QSqlRecord_IsNull((QSqlRecord*)self, i);
 }
 
-bool q_sqlrecord_is_null2(void* self, char* name) {
+bool q_sqlrecord_is_null2(void* self, const char* name) {
     return QSqlRecord_IsNull2((QSqlRecord*)self, name);
 }
 
-int32_t q_sqlrecord_index_of(void* self, char* name) {
+int32_t q_sqlrecord_index_of(void* self, const char* name) {
     return QSqlRecord_IndexOf((QSqlRecord*)self, name);
 }
 
@@ -75,7 +75,7 @@ QSqlField* q_sqlrecord_field(void* self, int i) {
     return QSqlRecord_Field((QSqlRecord*)self, i);
 }
 
-QSqlField* q_sqlrecord_field2(void* self, char* name) {
+QSqlField* q_sqlrecord_field2(void* self, const char* name) {
     return QSqlRecord_Field2((QSqlRecord*)self, name);
 }
 
@@ -83,11 +83,11 @@ bool q_sqlrecord_is_generated(void* self, int i) {
     return QSqlRecord_IsGenerated((QSqlRecord*)self, i);
 }
 
-bool q_sqlrecord_is_generated2(void* self, char* name) {
+bool q_sqlrecord_is_generated2(void* self, const char* name) {
     return QSqlRecord_IsGenerated2((QSqlRecord*)self, name);
 }
 
-void q_sqlrecord_set_generated(void* self, char* name, bool generated) {
+void q_sqlrecord_set_generated(void* self, const char* name, bool generated) {
     QSqlRecord_SetGenerated((QSqlRecord*)self, name, generated);
 }
 
@@ -115,7 +115,7 @@ bool q_sqlrecord_is_empty(void* self) {
     return QSqlRecord_IsEmpty((QSqlRecord*)self);
 }
 
-bool q_sqlrecord_contains(void* self, char* name) {
+bool q_sqlrecord_contains(void* self, const char* name) {
     return QSqlRecord_Contains((QSqlRecord*)self, name);
 }
 

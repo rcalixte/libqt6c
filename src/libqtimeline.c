@@ -210,7 +210,7 @@ const char* q_timeline_object_name(void* self) {
     return _ret;
 }
 
-void q_timeline_set_object_name(void* self, char* name) {
+void q_timeline_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

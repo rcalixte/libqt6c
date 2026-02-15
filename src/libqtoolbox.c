@@ -1064,7 +1064,7 @@ char* q_toolbox_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_toolbox_restore_geometry(void* self, const char* geometry) {
+bool q_toolbox_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1420,7 +1420,7 @@ const char* q_toolbox_object_name(void* self) {
     return _ret;
 }
 
-void q_toolbox_set_object_name(void* self, char* name) {
+void q_toolbox_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2044,15 +2044,15 @@ void q_toolbox_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QToolBox_OnHideEvent((QToolBox*)self, (intptr_t)callback);
 }
 
-bool q_toolbox_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_toolbox_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QToolBox_NativeEvent((QToolBox*)self, qstring(eventType), message, result);
 }
 
-bool q_toolbox_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_toolbox_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QToolBox_QBaseNativeEvent((QToolBox*)self, qstring(eventType), message, result);
 }
 
-void q_toolbox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_toolbox_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QToolBox_OnNativeEvent((QToolBox*)self, (intptr_t)callback);
 }
 

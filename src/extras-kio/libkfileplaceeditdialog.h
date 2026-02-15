@@ -1935,9 +1935,9 @@ char* k_fileplaceeditdialog_save_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self KFilePlaceEditDialog*
-/// @param geometry const char*
+/// @param geometry char*
 ///
-bool k_fileplaceeditdialog_restore_geometry(void* self, const char* geometry);
+bool k_fileplaceeditdialog_restore_geometry(void* self, char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2743,9 +2743,9 @@ const char* k_fileplaceeditdialog_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KFilePlaceEditDialog*
-/// @param name char*
+/// @param name const char*
 ///
-void k_fileplaceeditdialog_set_object_name(void* self, char* name);
+void k_fileplaceeditdialog_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4514,11 +4514,11 @@ void k_fileplaceeditdialog_on_hide_event(void* self, void (*callback)(void*, voi
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KFilePlaceEditDialog*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_fileplaceeditdialog_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool k_fileplaceeditdialog_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4527,11 +4527,11 @@ bool k_fileplaceeditdialog_native_event(void* self, const char* eventType, void*
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KFilePlaceEditDialog*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_fileplaceeditdialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool k_fileplaceeditdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4540,9 +4540,9 @@ bool k_fileplaceeditdialog_qbase_native_event(void* self, const char* eventType,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFilePlaceEditDialog*
-/// @param callback bool func(KFilePlaceEditDialog* self, const char* eventType, void* message, intptr_t* result)
+/// @param callback bool func(KFilePlaceEditDialog* self, libqt_string eventType, void* message, intptr_t* result)
 ///
-void k_fileplaceeditdialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
+void k_fileplaceeditdialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///

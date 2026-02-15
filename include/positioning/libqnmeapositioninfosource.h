@@ -367,31 +367,31 @@ bool q_nmeapositioninfosource_qbase_parse_pos_info_from_nmea_data(void* self, co
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeapositioninfosource.html#parsePosInfoFromNmeaData)
 ///
 /// @param self QNmeaPositionInfoSource*
-/// @param data const char*
+/// @param data char*
 /// @param posInfo QGeoPositionInfo*
 /// @param hasFix bool*
 ///
-bool q_nmeapositioninfosource_parse_pos_info_from_nmea_data2(void* self, const char* data, void* posInfo, bool* hasFix);
+bool q_nmeapositioninfosource_parse_pos_info_from_nmea_data2(void* self, char* data, void* posInfo, bool* hasFix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeapositioninfosource.html#parsePosInfoFromNmeaData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QNmeaPositionInfoSource*
-/// @param callback bool func(QNmeaPositionInfoSource* self, const char* data, QGeoPositionInfo* posInfo, bool* hasFix)
+/// @param callback bool func(QNmeaPositionInfoSource* self, char* data, QGeoPositionInfo* posInfo, bool* hasFix)
 ///
-void q_nmeapositioninfosource_on_parse_pos_info_from_nmea_data2(void* self, bool (*callback)(void*, const char*, void*, bool*));
+void q_nmeapositioninfosource_on_parse_pos_info_from_nmea_data2(void* self, bool (*callback)(void*, char*, void*, bool*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeapositioninfosource.html#parsePosInfoFromNmeaData)
 ///
 /// Base class method implementation
 ///
 /// @param self QNmeaPositionInfoSource*
-/// @param data const char*
+/// @param data char*
 /// @param posInfo QGeoPositionInfo*
 /// @param hasFix bool*
 ///
-bool q_nmeapositioninfosource_qbase_parse_pos_info_from_nmea_data2(void* self, const char* data, void* posInfo, bool* hasFix);
+bool q_nmeapositioninfosource_qbase_parse_pos_info_from_nmea_data2(void* self, char* data, void* posInfo, bool* hasFix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeapositioninfosource.html#setError)
 ///
@@ -577,9 +577,9 @@ const char* q_nmeapositioninfosource_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QNmeaPositionInfoSource*
-/// @param name char*
+/// @param name const char*
 ///
-void q_nmeapositioninfosource_set_object_name(void* self, char* name);
+void q_nmeapositioninfosource_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

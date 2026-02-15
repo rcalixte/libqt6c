@@ -160,7 +160,7 @@ char* q_sslconfiguration_session_ticket(void* self) {
     return _ret;
 }
 
-void q_sslconfiguration_set_session_ticket(void* self, const char* sessionTicket) {
+void q_sslconfiguration_set_session_ticket(void* self, char* sessionTicket) {
     QSslConfiguration_SetSessionTicket((QSslConfiguration*)self, qstring(sessionTicket));
 }
 
@@ -193,7 +193,7 @@ char* q_sslconfiguration_pre_shared_key_identity_hint(void* self) {
     return _ret;
 }
 
-void q_sslconfiguration_set_pre_shared_key_identity_hint(void* self, const char* hint) {
+void q_sslconfiguration_set_pre_shared_key_identity_hint(void* self, char* hint) {
     QSslConfiguration_SetPreSharedKeyIdentityHint((QSslConfiguration*)self, qstring(hint));
 }
 
@@ -238,7 +238,7 @@ libqt_map /* of char* to QVariant* */ q_sslconfiguration_backend_configuration(v
     return _ret;
 }
 
-void q_sslconfiguration_set_backend_configuration_option(void* self, const char* name, void* value) {
+void q_sslconfiguration_set_backend_configuration_option(void* self, char* name, void* value) {
     QSslConfiguration_SetBackendConfigurationOption((QSslConfiguration*)self, qstring(name), (QVariant*)value);
 }
 

@@ -1029,7 +1029,7 @@ char* q_colordialog_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_colordialog_restore_geometry(void* self, const char* geometry) {
+bool q_colordialog_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1385,7 +1385,7 @@ const char* q_colordialog_object_name(void* self) {
     return _ret;
 }
 
-void q_colordialog_set_object_name(void* self, char* name) {
+void q_colordialog_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2069,15 +2069,15 @@ void q_colordialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QColorDialog_OnHideEvent((QColorDialog*)self, (intptr_t)callback);
 }
 
-bool q_colordialog_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_colordialog_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QColorDialog_NativeEvent((QColorDialog*)self, qstring(eventType), message, result);
 }
 
-bool q_colordialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_colordialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QColorDialog_QBaseNativeEvent((QColorDialog*)self, qstring(eventType), message, result);
 }
 
-void q_colordialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_colordialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QColorDialog_OnNativeEvent((QColorDialog*)self, (intptr_t)callback);
 }
 

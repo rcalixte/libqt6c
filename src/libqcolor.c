@@ -68,7 +68,7 @@ void q_color_move_assign(void* self, void* other) {
     QColor_MoveAssign((QColor*)self, (QColor*)other);
 }
 
-QColor* q_color_from_string(char* name) {
+QColor* q_color_from_string(const char* name) {
     return QColor_FromString(name);
 }
 
@@ -458,7 +458,7 @@ bool q_color_is_valid_color(const char* name) {
     return QColor_IsValidColor(qstring(name));
 }
 
-bool q_color_is_valid_color_name(char* param1) {
+bool q_color_is_valid_color_name(const char* param1) {
     return QColor_IsValidColorName(param1);
 }
 

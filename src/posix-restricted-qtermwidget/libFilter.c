@@ -88,7 +88,7 @@ const char* k_onsole__filter_object_name(void* self) {
     return _ret;
 }
 
-void k_onsole__filter_set_object_name(void* self, char* name) {
+void k_onsole__filter_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -540,7 +540,7 @@ const char* k_onsole__regexpfilter_object_name(void* self) {
     return _ret;
 }
 
-void k_onsole__regexpfilter_set_object_name(void* self, char* name) {
+void k_onsole__regexpfilter_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1080,7 +1080,7 @@ const char* k_onsole__urlfilter_object_name(void* self) {
     return _ret;
 }
 
-void k_onsole__urlfilter_set_object_name(void* self, char* name) {
+void k_onsole__urlfilter_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1562,7 +1562,7 @@ const char* k_onsole__filterobject_object_name(void* self) {
     return _ret;
 }
 
-void k_onsole__filterobject_set_object_name(void* self, char* name) {
+void k_onsole__filterobject_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

@@ -63,9 +63,9 @@ QUuid* q_uuid_new5(void* id128);
 
 /// q_uuid_new6 constructs a new QUuid object.
 ///
-/// @param stringVal char*
+/// @param stringVal const char*
 ///
-QUuid* q_uuid_new6(char* stringVal);
+QUuid* q_uuid_new6(const char* stringVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html)
 
@@ -100,9 +100,9 @@ void q_uuid_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#fromString)
 ///
-/// @param stringVal char*
+/// @param stringVal const char*
 ///
-QUuid* q_uuid_from_string(char* stringVal);
+QUuid* q_uuid_from_string(const char* stringVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#toString)
 ///
@@ -142,9 +142,9 @@ QUuid* q_uuid_from_bytes(void* bytes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#fromRfc4122)
 ///
-/// @param param1 const char*
+/// @param param1 char*
 ///
-QUuid* q_uuid_from_rfc4122(const char* param1);
+QUuid* q_uuid_from_rfc4122(char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#isNull)
 ///
@@ -159,16 +159,16 @@ QUuid* q_uuid_create_uuid();
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#createUuidV5)
 ///
 /// @param ns QUuid*
-/// @param baseData const char*
+/// @param baseData char*
 ///
-QUuid* q_uuid_create_uuid_v5(void* ns, const char* baseData);
+QUuid* q_uuid_create_uuid_v5(void* ns, char* baseData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#createUuidV3)
 ///
 /// @param ns QUuid*
-/// @param baseData const char*
+/// @param baseData char*
 ///
-QUuid* q_uuid_create_uuid_v3(void* ns, const char* baseData);
+QUuid* q_uuid_create_uuid_v3(void* ns, char* baseData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#variant)
 ///
@@ -281,11 +281,11 @@ QUuid__Id128Bytes* q_uuid__id128bytes_new2(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid-id128bytes.html#operator)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+/// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QUuid__Id128Bytes*
 ///
-const char* q_uuid__id128bytes_to_q_byte_array_view(void* self);
+char* q_uuid__id128bytes_to_q_byte_array_view(void* self);
 
 /// Delete this object from C++ memory.
 ///

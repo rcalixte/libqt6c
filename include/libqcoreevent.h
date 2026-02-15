@@ -490,9 +490,9 @@ void q_childevent_delete(void* self);
 
 /// q_dynamicpropertychangeevent_new constructs a new QDynamicPropertyChangeEvent object.
 ///
-/// @param name const char*
+/// @param name char*
 ///
-QDynamicPropertyChangeEvent* q_dynamicpropertychangeevent_new(const char* name);
+QDynamicPropertyChangeEvent* q_dynamicpropertychangeevent_new(char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdynamicpropertychangeevent.html#clone)
 ///

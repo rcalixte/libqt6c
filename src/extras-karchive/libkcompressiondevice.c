@@ -91,7 +91,7 @@ void k_compressiondevice_qbase_close(void* self) {
     KCompressionDevice_QBaseClose((KCompressionDevice*)self);
 }
 
-void k_compressiondevice_set_orig_file_name(void* self, const char* fileName) {
+void k_compressiondevice_set_orig_file_name(void* self, char* fileName) {
     KCompressionDevice_SetOrigFileName((KCompressionDevice*)self, qstring(fileName));
 }
 
@@ -286,7 +286,7 @@ long long k_compressiondevice_write2(void* self, const char* data) {
     return QIODevice_Write2((QIODevice*)self, data);
 }
 
-long long k_compressiondevice_write3(void* self, const char* data) {
+long long k_compressiondevice_write3(void* self, char* data) {
     return QIODevice_Write3((QIODevice*)self, qstring(data));
 }
 
@@ -386,7 +386,7 @@ const char* k_compressiondevice_object_name(void* self) {
     return _ret;
 }
 
-void k_compressiondevice_set_object_name(void* self, char* name) {
+void k_compressiondevice_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

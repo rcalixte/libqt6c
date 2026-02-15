@@ -291,9 +291,9 @@ const char* k_pagewidgetitem_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KPageWidgetItem*
-/// @param name char*
+/// @param name const char*
 ///
-void k_pagewidgetitem_set_object_name(void* self, char* name);
+void k_pagewidgetitem_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1805,9 +1805,9 @@ const char* k_pagewidgetmodel_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KPageWidgetModel*
-/// @param name char*
+/// @param name const char*
 ///
-void k_pagewidgetmodel_set_object_name(void* self, char* name);
+void k_pagewidgetmodel_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

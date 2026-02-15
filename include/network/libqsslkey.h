@@ -21,10 +21,10 @@ QSslKey* q_sslkey_new();
 
 /// q_sslkey_new2 constructs a new QSslKey object.
 ///
-/// @param encoded const char*
+/// @param encoded char*
 /// @param algorithm enum QSsl__KeyAlgorithm
 ///
-QSslKey* q_sslkey_new2(const char* encoded, int32_t algorithm);
+QSslKey* q_sslkey_new2(char* encoded, int32_t algorithm);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html)
 
@@ -55,34 +55,34 @@ QSslKey* q_sslkey_new5(void* other);
 
 /// q_sslkey_new6 constructs a new QSslKey object.
 ///
-/// @param encoded const char*
+/// @param encoded char*
 /// @param algorithm enum QSsl__KeyAlgorithm
 /// @param format enum QSsl__EncodingFormat
 ///
-QSslKey* q_sslkey_new6(const char* encoded, int32_t algorithm, int32_t format);
+QSslKey* q_sslkey_new6(char* encoded, int32_t algorithm, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html)
 
 /// q_sslkey_new7 constructs a new QSslKey object.
 ///
-/// @param encoded const char*
+/// @param encoded char*
 /// @param algorithm enum QSsl__KeyAlgorithm
 /// @param format enum QSsl__EncodingFormat
 /// @param type enum QSsl__KeyType
 ///
-QSslKey* q_sslkey_new7(const char* encoded, int32_t algorithm, int32_t format, int32_t type);
+QSslKey* q_sslkey_new7(char* encoded, int32_t algorithm, int32_t format, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html)
 
 /// q_sslkey_new8 constructs a new QSslKey object.
 ///
-/// @param encoded const char*
+/// @param encoded char*
 /// @param algorithm enum QSsl__KeyAlgorithm
 /// @param format enum QSsl__EncodingFormat
 /// @param type enum QSsl__KeyType
-/// @param passPhrase const char*
+/// @param passPhrase char*
 ///
-QSslKey* q_sslkey_new8(const char* encoded, int32_t algorithm, int32_t format, int32_t type, const char* passPhrase);
+QSslKey* q_sslkey_new8(char* encoded, int32_t algorithm, int32_t format, int32_t type, char* passPhrase);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html)
 
@@ -113,9 +113,9 @@ QSslKey* q_sslkey_new10(void* device, int32_t algorithm, int32_t format, int32_t
 /// @param algorithm enum QSsl__KeyAlgorithm
 /// @param format enum QSsl__EncodingFormat
 /// @param type enum QSsl__KeyType
-/// @param passPhrase const char*
+/// @param passPhrase char*
 ///
-QSslKey* q_sslkey_new11(void* device, int32_t algorithm, int32_t format, int32_t type, const char* passPhrase);
+QSslKey* q_sslkey_new11(void* device, int32_t algorithm, int32_t format, int32_t type, char* passPhrase);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html)
 
@@ -215,18 +215,18 @@ bool q_sslkey_operator_not_equal(void* self, void* key);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSslKey*
-/// @param passPhrase const char*
+/// @param passPhrase char*
 ///
-char* q_sslkey_to_pem1(void* self, const char* passPhrase);
+char* q_sslkey_to_pem1(void* self, char* passPhrase);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html#toDer)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QSslKey*
-/// @param passPhrase const char*
+/// @param passPhrase char*
 ///
-char* q_sslkey_to_der1(void* self, const char* passPhrase);
+char* q_sslkey_to_der1(void* self, char* passPhrase);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslkey.html#dtor.QSslKey)
 ///

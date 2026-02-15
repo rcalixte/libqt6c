@@ -904,7 +904,7 @@ char* k_sslinfodialog_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_sslinfodialog_restore_geometry(void* self, const char* geometry) {
+bool k_sslinfodialog_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1260,7 +1260,7 @@ const char* k_sslinfodialog_object_name(void* self) {
     return _ret;
 }
 
-void k_sslinfodialog_set_object_name(void* self, char* name) {
+void k_sslinfodialog_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1968,15 +1968,15 @@ void k_sslinfodialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
     KSslInfoDialog_OnHideEvent((KSslInfoDialog*)self, (intptr_t)callback);
 }
 
-bool k_sslinfodialog_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_sslinfodialog_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KSslInfoDialog_NativeEvent((KSslInfoDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_sslinfodialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_sslinfodialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KSslInfoDialog_QBaseNativeEvent((KSslInfoDialog*)self, qstring(eventType), message, result);
 }
 
-void k_sslinfodialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_sslinfodialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KSslInfoDialog_OnNativeEvent((KSslInfoDialog*)self, (intptr_t)callback);
 }
 

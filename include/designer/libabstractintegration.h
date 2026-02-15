@@ -731,9 +731,9 @@ const char* q_designerintegrationinterface_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QDesignerIntegrationInterface*
-/// @param name char*
+/// @param name const char*
 ///
-void q_designerintegrationinterface_set_object_name(void* self, char* name);
+void q_designerintegrationinterface_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -2280,9 +2280,9 @@ const char* q_designerintegration_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QDesignerIntegration*
-/// @param name char*
+/// @param name const char*
 ///
-void q_designerintegration_set_object_name(void* self, char* name);
+void q_designerintegration_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

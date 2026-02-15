@@ -1058,7 +1058,7 @@ char* q_openglwidget_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_openglwidget_restore_geometry(void* self, const char* geometry) {
+bool q_openglwidget_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1414,7 +1414,7 @@ const char* q_openglwidget_object_name(void* self) {
     return _ret;
 }
 
-void q_openglwidget_set_object_name(void* self, char* name) {
+void q_openglwidget_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2002,15 +2002,15 @@ void q_openglwidget_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QOpenGLWidget_OnHideEvent((QOpenGLWidget*)self, (intptr_t)callback);
 }
 
-bool q_openglwidget_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_openglwidget_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QOpenGLWidget_NativeEvent((QOpenGLWidget*)self, qstring(eventType), message, result);
 }
 
-bool q_openglwidget_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_openglwidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QOpenGLWidget_QBaseNativeEvent((QOpenGLWidget*)self, qstring(eventType), message, result);
 }
 
-void q_openglwidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_openglwidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QOpenGLWidget_OnNativeEvent((QOpenGLWidget*)self, (intptr_t)callback);
 }
 

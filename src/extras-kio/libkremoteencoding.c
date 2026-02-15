@@ -10,7 +10,7 @@ KRemoteEncoding* k_remoteencoding_new2(const char* name) {
     return KRemoteEncoding_new2(name);
 }
 
-const char* k_remoteencoding_decode(void* self, const char* name) {
+const char* k_remoteencoding_decode(void* self, char* name) {
     libqt_string _str = KRemoteEncoding_Decode((KRemoteEncoding*)self, qstring(name));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

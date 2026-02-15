@@ -1038,9 +1038,9 @@ const char* k_descendantsproxymodel_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KDescendantsProxyModel*
-/// @param name char*
+/// @param name const char*
 ///
-void k_descendantsproxymodel_set_object_name(void* self, char* name);
+void k_descendantsproxymodel_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

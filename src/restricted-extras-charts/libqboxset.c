@@ -234,7 +234,7 @@ const char* q_boxset_object_name(void* self) {
     return _ret;
 }
 
-void q_boxset_set_object_name(void* self, char* name) {
+void q_boxset_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

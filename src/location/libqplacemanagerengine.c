@@ -506,7 +506,7 @@ const char* q_placemanagerengine_object_name(void* self) {
     return _ret;
 }
 
-void q_placemanagerengine_set_object_name(void* self, char* name) {
+void q_placemanagerengine_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

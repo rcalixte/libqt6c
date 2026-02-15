@@ -721,7 +721,7 @@ const char* q_rasterwindow_object_name(void* self) {
     return _ret;
 }
 
-void q_rasterwindow_set_object_name(void* self, char* name) {
+void q_rasterwindow_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1253,15 +1253,15 @@ void q_rasterwindow_on_tablet_event(void* self, void (*callback)(void*, void*)) 
     QRasterWindow_OnTabletEvent((QRasterWindow*)self, (intptr_t)callback);
 }
 
-bool q_rasterwindow_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_rasterwindow_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QRasterWindow_NativeEvent((QRasterWindow*)self, qstring(eventType), message, result);
 }
 
-bool q_rasterwindow_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_rasterwindow_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QRasterWindow_QBaseNativeEvent((QRasterWindow*)self, qstring(eventType), message, result);
 }
 
-void q_rasterwindow_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_rasterwindow_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QRasterWindow_OnNativeEvent((QRasterWindow*)self, (intptr_t)callback);
 }
 

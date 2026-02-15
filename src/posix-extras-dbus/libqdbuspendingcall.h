@@ -246,9 +246,9 @@ const char* q_dbuspendingcallwatcher_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QDBusPendingCallWatcher*
-/// @param name char*
+/// @param name const char*
 ///
-void q_dbuspendingcallwatcher_set_object_name(void* self, char* name);
+void q_dbuspendingcallwatcher_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

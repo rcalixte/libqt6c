@@ -29,9 +29,9 @@ QStringEncoder* q_stringencoder_new2(int32_t encoding);
 
 /// q_stringencoder_new3 constructs a new QStringEncoder object.
 ///
-/// @param name char*
+/// @param name const char*
 ///
-QStringEncoder* q_stringencoder_new3(char* name);
+QStringEncoder* q_stringencoder_new3(const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringencoder.html)
 
@@ -46,10 +46,10 @@ QStringEncoder* q_stringencoder_new4(int32_t encoding, int32_t flags);
 
 /// q_stringencoder_new5 constructs a new QStringEncoder object.
 ///
-/// @param name char*
+/// @param name const char*
 /// @param flags flag of enum QStringConverterBase__Flag
 ///
-QStringEncoder* q_stringencoder_new5(char* name, int32_t flags);
+QStringEncoder* q_stringencoder_new5(const char* name, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringencoder.html#requiredSpace)
 ///
@@ -136,9 +136,9 @@ QStringDecoder* q_stringdecoder_new2();
 
 /// q_stringdecoder_new3 constructs a new QStringDecoder object.
 ///
-/// @param name char*
+/// @param name const char*
 ///
-QStringDecoder* q_stringdecoder_new3(char* name);
+QStringDecoder* q_stringdecoder_new3(const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringdecoder.html)
 
@@ -153,10 +153,10 @@ QStringDecoder* q_stringdecoder_new4(int32_t encoding, int32_t flags);
 
 /// q_stringdecoder_new5 constructs a new QStringDecoder object.
 ///
-/// @param name char*
+/// @param name const char*
 /// @param f flag of enum QStringConverterBase__Flag
 ///
-QStringDecoder* q_stringdecoder_new5(char* name, int32_t f);
+QStringDecoder* q_stringdecoder_new5(const char* name, int32_t f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringdecoder.html#requiredSpace)
 ///
@@ -169,15 +169,15 @@ int64_t q_stringdecoder_required_space(void* self, int64_t inputLength);
 ///
 /// @param self QStringDecoder*
 /// @param out QChar*
-/// @param ba const char*
+/// @param ba char*
 ///
-QChar* q_stringdecoder_append_to_buffer(void* self, void* out, const char* ba);
+QChar* q_stringdecoder_append_to_buffer(void* self, void* out, char* ba);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringdecoder.html#decoderForHtml)
 ///
-/// @param data const char*
+/// @param data char*
 ///
-QStringDecoder* q_stringdecoder_decoder_for_html(const char* data);
+QStringDecoder* q_stringdecoder_decoder_for_html(char* data);
 
 /// Inherited from QStringConverter
 ///

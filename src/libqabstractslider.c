@@ -1115,7 +1115,7 @@ char* q_abstractslider_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_abstractslider_restore_geometry(void* self, const char* geometry) {
+bool q_abstractslider_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1471,7 +1471,7 @@ const char* q_abstractslider_object_name(void* self) {
     return _ret;
 }
 
-void q_abstractslider_set_object_name(void* self, char* name) {
+void q_abstractslider_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2071,15 +2071,15 @@ void q_abstractslider_on_hide_event(void* self, void (*callback)(void*, void*)) 
     QAbstractSlider_OnHideEvent((QAbstractSlider*)self, (intptr_t)callback);
 }
 
-bool q_abstractslider_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_abstractslider_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QAbstractSlider_NativeEvent((QAbstractSlider*)self, qstring(eventType), message, result);
 }
 
-bool q_abstractslider_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_abstractslider_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QAbstractSlider_QBaseNativeEvent((QAbstractSlider*)self, qstring(eventType), message, result);
 }
 
-void q_abstractslider_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_abstractslider_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QAbstractSlider_OnNativeEvent((QAbstractSlider*)self, (intptr_t)callback);
 }
 

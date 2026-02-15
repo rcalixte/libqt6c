@@ -65,10 +65,10 @@ void q_metatype_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#registerNormalizedTypedef)
 ///
-/// @param normalizedTypeName const char*
+/// @param normalizedTypeName char*
 /// @param type QMetaType*
 ///
-void q_metatype_register_normalized_typedef(const char* normalizedTypeName, void* type);
+void q_metatype_register_normalized_typedef(char* normalizedTypeName, void* type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#type)
 ///
@@ -78,9 +78,9 @@ int32_t q_metatype_type(const char* typeName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#type)
 ///
-/// @param typeName const char*
+/// @param typeName char*
 ///
-int32_t q_metatype_type2(const char* typeName);
+int32_t q_metatype_type2(char* typeName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#typeName)
 ///
@@ -327,9 +327,9 @@ QMetaType* q_metatype_underlying_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#fromName)
 ///
-/// @param name const char*
+/// @param name char*
 ///
-QMetaType* q_metatype_from_name(const char* name);
+QMetaType* q_metatype_from_name(char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#debugStream)
 ///

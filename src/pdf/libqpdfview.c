@@ -1183,7 +1183,7 @@ char* q_pdfview_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_pdfview_restore_geometry(void* self, const char* geometry) {
+bool q_pdfview_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1539,7 +1539,7 @@ const char* q_pdfview_object_name(void* self) {
     return _ret;
 }
 
-void q_pdfview_set_object_name(void* self, char* name) {
+void q_pdfview_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2187,15 +2187,15 @@ void q_pdfview_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QPdfView_OnHideEvent((QPdfView*)self, (intptr_t)callback);
 }
 
-bool q_pdfview_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_pdfview_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QPdfView_NativeEvent((QPdfView*)self, qstring(eventType), message, result);
 }
 
-bool q_pdfview_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_pdfview_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QPdfView_QBaseNativeEvent((QPdfView*)self, qstring(eventType), message, result);
 }
 
-void q_pdfview_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_pdfview_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QPdfView_OnNativeEvent((QPdfView*)self, (intptr_t)callback);
 }
 

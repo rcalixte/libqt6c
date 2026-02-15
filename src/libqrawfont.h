@@ -30,10 +30,10 @@ QRawFont* q_rawfont_new2(const char* fileName, double pixelSize);
 
 /// q_rawfont_new3 constructs a new QRawFont object.
 ///
-/// @param fontData const char*
+/// @param fontData char*
 /// @param pixelSize double
 ///
-QRawFont* q_rawfont_new3(const char* fontData, double pixelSize);
+QRawFont* q_rawfont_new3(char* fontData, double pixelSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html)
 
@@ -57,11 +57,11 @@ QRawFont* q_rawfont_new5(const char* fileName, double pixelSize, int32_t hinting
 
 /// q_rawfont_new6 constructs a new QRawFont object.
 ///
-/// @param fontData const char*
+/// @param fontData char*
 /// @param pixelSize double
 /// @param hintingPreference enum QFont__HintingPreference
 ///
-QRawFont* q_rawfont_new6(const char* fontData, double pixelSize, int32_t hintingPreference);
+QRawFont* q_rawfont_new6(char* fontData, double pixelSize, int32_t hintingPreference);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#operator-eq)
 ///
@@ -298,11 +298,11 @@ void q_rawfont_load_from_file(void* self, const char* fileName, double pixelSize
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#loadFromData)
 ///
 /// @param self QRawFont*
-/// @param fontData const char*
+/// @param fontData char*
 /// @param pixelSize double
 /// @param hintingPreference enum QFont__HintingPreference
 ///
-void q_rawfont_load_from_data(void* self, const char* fontData, double pixelSize, int32_t hintingPreference);
+void q_rawfont_load_from_data(void* self, char* fontData, double pixelSize, int32_t hintingPreference);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#supportsCharacter)
 ///

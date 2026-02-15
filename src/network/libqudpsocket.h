@@ -194,11 +194,11 @@ long long q_udpsocket_write_datagram2(void* self, const char* data, long long le
 /// [Upstream resources](https://doc.qt.io/qt-6/qudpsocket.html#writeDatagram)
 ///
 /// @param self QUdpSocket*
-/// @param datagram const char*
+/// @param datagram char*
 /// @param host QHostAddress*
 /// @param port unsigned short
 ///
-long long q_udpsocket_write_datagram3(void* self, const char* datagram, void* host, unsigned short port);
+long long q_udpsocket_write_datagram3(void* self, char* datagram, void* host, unsigned short port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -775,9 +775,9 @@ long long q_udpsocket_write2(void* self, const char* data);
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// @param self QUdpSocket*
-/// @param data const char*
+/// @param data char*
 ///
-long long q_udpsocket_write3(void* self, const char* data);
+long long q_udpsocket_write3(void* self, char* data);
 
 /// Inherited from QIODevice
 ///
@@ -978,9 +978,9 @@ const char* q_udpsocket_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QUdpSocket*
-/// @param name char*
+/// @param name const char*
 ///
-void q_udpsocket_set_object_name(void* self, char* name);
+void q_udpsocket_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

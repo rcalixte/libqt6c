@@ -197,7 +197,7 @@ const char* q_placesearchsuggestionreply_object_name(void* self) {
     return _ret;
 }
 
-void q_placesearchsuggestionreply_set_object_name(void* self, char* name) {
+void q_placesearchsuggestionreply_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

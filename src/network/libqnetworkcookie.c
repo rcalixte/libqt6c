@@ -12,11 +12,11 @@ QNetworkCookie* q_networkcookie_new2(void* other) {
     return QNetworkCookie_new2((QNetworkCookie*)other);
 }
 
-QNetworkCookie* q_networkcookie_new3(const char* name) {
+QNetworkCookie* q_networkcookie_new3(char* name) {
     return QNetworkCookie_new3(qstring(name));
 }
 
-QNetworkCookie* q_networkcookie_new4(const char* name, const char* value) {
+QNetworkCookie* q_networkcookie_new4(char* name, char* value) {
     return QNetworkCookie_new4(qstring(name), qstring(value));
 }
 
@@ -101,7 +101,7 @@ char* q_networkcookie_name(void* self) {
     return _ret;
 }
 
-void q_networkcookie_set_name(void* self, const char* cookieName) {
+void q_networkcookie_set_name(void* self, char* cookieName) {
     QNetworkCookie_SetName((QNetworkCookie*)self, qstring(cookieName));
 }
 
@@ -112,7 +112,7 @@ char* q_networkcookie_value(void* self) {
     return _ret;
 }
 
-void q_networkcookie_set_value(void* self, const char* value) {
+void q_networkcookie_set_value(void* self, char* value) {
     QNetworkCookie_SetValue((QNetworkCookie*)self, qstring(value));
 }
 
@@ -131,7 +131,7 @@ void q_networkcookie_normalize(void* self, void* url) {
     QNetworkCookie_Normalize((QNetworkCookie*)self, (QUrl*)url);
 }
 
-libqt_list /* of QNetworkCookie* */ q_networkcookie_parse_cookies(const char* cookieString) {
+libqt_list /* of QNetworkCookie* */ q_networkcookie_parse_cookies(char* cookieString) {
     libqt_list _arr = QNetworkCookie_ParseCookies(qstring(cookieString));
     return _arr;
 }

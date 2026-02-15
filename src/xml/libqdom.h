@@ -1573,10 +1573,10 @@ int32_t q_domdocument_node_type(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#setContent)
 ///
 /// @param self QDomDocument*
-/// @param text const char*
+/// @param text char*
 /// @param namespaceProcessing bool
 ///
-bool q_domdocument_set_content(void* self, const char* text, bool namespaceProcessing);
+bool q_domdocument_set_content(void* self, char* text, bool namespaceProcessing);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#setContent)
 ///
@@ -1605,9 +1605,9 @@ bool q_domdocument_set_content7(void* self, void* reader, bool namespaceProcessi
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#setContent)
 ///
 /// @param self QDomDocument*
-/// @param data char*
+/// @param data const char*
 ///
-QDomDocument__ParseResult* q_domdocument_set_content8(void* self, char* data);
+QDomDocument__ParseResult* q_domdocument_set_content8(void* self, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#setContent)
 ///
@@ -1642,10 +1642,10 @@ char* q_domdocument_to_byte_array(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#setContent)
 ///
 /// @param self QDomDocument*
-/// @param data char*
+/// @param data const char*
 /// @param options flag of enum QDomDocument__ParseOption
 ///
-QDomDocument__ParseResult* q_domdocument_set_content22(void* self, char* data, int32_t options);
+QDomDocument__ParseResult* q_domdocument_set_content22(void* self, const char* data, int32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#setContent)
 ///

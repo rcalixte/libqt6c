@@ -107,7 +107,7 @@ const char* k_abstractwidgetjobtracker_object_name(void* self) {
     return _ret;
 }
 
-void k_abstractwidgetjobtracker_set_object_name(void* self, char* name) {
+void k_abstractwidgetjobtracker_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

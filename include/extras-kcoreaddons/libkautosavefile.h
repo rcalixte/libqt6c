@@ -251,9 +251,9 @@ char* k_autosavefile_encode_name(const char* fileName);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param localFileName const char*
+/// @param localFileName char*
 ///
-const char* k_autosavefile_decode_name(const char* localFileName);
+const char* k_autosavefile_decode_name(char* localFileName);
 
 /// Inherited from QFile
 ///
@@ -737,9 +737,9 @@ long long k_autosavefile_write2(void* self, const char* data);
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// @param self KAutoSaveFile*
-/// @param data const char*
+/// @param data char*
 ///
-long long k_autosavefile_write3(void* self, const char* data);
+long long k_autosavefile_write3(void* self, char* data);
 
 /// Inherited from QIODevice
 ///
@@ -940,9 +940,9 @@ const char* k_autosavefile_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KAutoSaveFile*
-/// @param name char*
+/// @param name const char*
 ///
-void k_autosavefile_set_object_name(void* self, char* name);
+void k_autosavefile_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

@@ -287,7 +287,7 @@ Attica__PostJob* k_attica__provider_edit_remote_account(void* self, void* accoun
     return Attica__Provider_EditRemoteAccount((Attica__Provider*)self, (Attica__RemoteAccount*)account);
 }
 
-Attica__PostJob* k_attica__provider_upload_tarball_to_build_service(void* self, const char* projectId, const char* fileName, const char* payload) {
+Attica__PostJob* k_attica__provider_upload_tarball_to_build_service(void* self, const char* projectId, const char* fileName, char* payload) {
     return Attica__Provider_UploadTarballToBuildService((Attica__Provider*)self, qstring(projectId), qstring(fileName), qstring(payload));
 }
 
@@ -303,7 +303,7 @@ Attica__PostJob* k_attica__provider_set_download_file(void* self, const char* co
     return Attica__Provider_SetDownloadFile((Attica__Provider*)self, qstring(contentId), qstring(fileName), (QIODevice*)payload);
 }
 
-Attica__PostJob* k_attica__provider_set_download_file2(void* self, const char* contentId, const char* fileName, const char* payload) {
+Attica__PostJob* k_attica__provider_set_download_file2(void* self, const char* contentId, const char* fileName, char* payload) {
     return Attica__Provider_SetDownloadFile2((Attica__Provider*)self, qstring(contentId), qstring(fileName), qstring(payload));
 }
 
@@ -311,7 +311,7 @@ Attica__PostJob* k_attica__provider_delete_download_file(void* self, const char*
     return Attica__Provider_DeleteDownloadFile((Attica__Provider*)self, qstring(contentId));
 }
 
-Attica__PostJob* k_attica__provider_set_preview_image(void* self, const char* contentId, const char* previewId, const char* fileName, const char* image) {
+Attica__PostJob* k_attica__provider_set_preview_image(void* self, const char* contentId, const char* previewId, const char* fileName, char* image) {
     return Attica__Provider_SetPreviewImage((Attica__Provider*)self, qstring(contentId), qstring(previewId), qstring(fileName), qstring(image));
 }
 

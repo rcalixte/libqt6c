@@ -383,7 +383,7 @@ const char* q_stackedbarseries_object_name(void* self) {
     return _ret;
 }
 
-void q_stackedbarseries_set_object_name(void* self, char* name) {
+void q_stackedbarseries_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

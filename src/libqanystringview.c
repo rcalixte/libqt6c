@@ -6,7 +6,7 @@ QAnyStringView* q_anystringview_new(const char* other) {
     return QAnyStringView_new(other);
 }
 
-QAnyStringView* q_anystringview_new2(char* other) {
+QAnyStringView* q_anystringview_new2(const char* other) {
     return QAnyStringView_new2(other);
 }
 
@@ -14,7 +14,7 @@ QAnyStringView* q_anystringview_new3() {
     return QAnyStringView_new3();
 }
 
-QAnyStringView* q_anystringview_new4(const char* str) {
+QAnyStringView* q_anystringview_new4(char* str) {
     return QAnyStringView_new4(qstring(str));
 }
 
@@ -34,53 +34,53 @@ void q_anystringview_move_assign(void* self, void* other) {
     QAnyStringView_MoveAssign((QAnyStringView*)self, (QAnyStringView*)other);
 }
 
-char* q_anystringview_mid(void* self, int64_t pos) {
-    char* _ret = QAnyStringView_Mid((QAnyStringView*)self, pos);
+const char* q_anystringview_mid(void* self, int64_t pos) {
+    const char* _ret = QAnyStringView_Mid((QAnyStringView*)self, pos);
     return _ret;
 }
 
-char* q_anystringview_left(void* self, int64_t n) {
-    char* _ret = QAnyStringView_Left((QAnyStringView*)self, n);
+const char* q_anystringview_left(void* self, int64_t n) {
+    const char* _ret = QAnyStringView_Left((QAnyStringView*)self, n);
     return _ret;
 }
 
-char* q_anystringview_right(void* self, int64_t n) {
-    char* _ret = QAnyStringView_Right((QAnyStringView*)self, n);
+const char* q_anystringview_right(void* self, int64_t n) {
+    const char* _ret = QAnyStringView_Right((QAnyStringView*)self, n);
     return _ret;
 }
 
-char* q_anystringview_sliced(void* self, int64_t pos) {
-    char* _ret = QAnyStringView_Sliced((QAnyStringView*)self, pos);
+const char* q_anystringview_sliced(void* self, int64_t pos) {
+    const char* _ret = QAnyStringView_Sliced((QAnyStringView*)self, pos);
     return _ret;
 }
 
-char* q_anystringview_sliced2(void* self, int64_t pos, int64_t n) {
-    char* _ret = QAnyStringView_Sliced2((QAnyStringView*)self, pos, n);
+const char* q_anystringview_sliced2(void* self, int64_t pos, int64_t n) {
+    const char* _ret = QAnyStringView_Sliced2((QAnyStringView*)self, pos, n);
     return _ret;
 }
 
-char* q_anystringview_first(void* self, int64_t n) {
-    char* _ret = QAnyStringView_First((QAnyStringView*)self, n);
+const char* q_anystringview_first(void* self, int64_t n) {
+    const char* _ret = QAnyStringView_First((QAnyStringView*)self, n);
     return _ret;
 }
 
-char* q_anystringview_last(void* self, int64_t n) {
-    char* _ret = QAnyStringView_Last((QAnyStringView*)self, n);
+const char* q_anystringview_last(void* self, int64_t n) {
+    const char* _ret = QAnyStringView_Last((QAnyStringView*)self, n);
     return _ret;
 }
 
-char* q_anystringview_chopped(void* self, int64_t n) {
-    char* _ret = QAnyStringView_Chopped((QAnyStringView*)self, n);
+const char* q_anystringview_chopped(void* self, int64_t n) {
+    const char* _ret = QAnyStringView_Chopped((QAnyStringView*)self, n);
     return _ret;
 }
 
-char* q_anystringview_slice(void* self, int64_t pos) {
-    char* _ret = QAnyStringView_Slice((QAnyStringView*)self, pos);
+const char* q_anystringview_slice(void* self, int64_t pos) {
+    const char* _ret = QAnyStringView_Slice((QAnyStringView*)self, pos);
     return _ret;
 }
 
-char* q_anystringview_slice2(void* self, int64_t pos, int64_t n) {
-    char* _ret = QAnyStringView_Slice2((QAnyStringView*)self, pos, n);
+const char* q_anystringview_slice2(void* self, int64_t pos, int64_t n) {
+    const char* _ret = QAnyStringView_Slice2((QAnyStringView*)self, pos, n);
     return _ret;
 }
 
@@ -107,11 +107,11 @@ const void* q_anystringview_data(void* self) {
     return QAnyStringView_Data((QAnyStringView*)self);
 }
 
-int32_t q_anystringview_compare(char* lhs, char* rhs) {
+int32_t q_anystringview_compare(const char* lhs, const char* rhs) {
     return QAnyStringView_Compare(lhs, rhs);
 }
 
-bool q_anystringview_equal(char* lhs, char* rhs) {
+bool q_anystringview_equal(const char* lhs, const char* rhs) {
     return QAnyStringView_Equal(lhs, rhs);
 }
 
@@ -147,12 +147,12 @@ int64_t q_anystringview_length(void* self) {
     return QAnyStringView_Length((QAnyStringView*)self);
 }
 
-char* q_anystringview_mid2(void* self, int64_t pos, int64_t n) {
-    char* _ret = QAnyStringView_Mid2((QAnyStringView*)self, pos, n);
+const char* q_anystringview_mid2(void* self, int64_t pos, int64_t n) {
+    const char* _ret = QAnyStringView_Mid2((QAnyStringView*)self, pos, n);
     return _ret;
 }
 
-int32_t q_anystringview_compare3(char* lhs, char* rhs, int32_t cs) {
+int32_t q_anystringview_compare3(const char* lhs, const char* rhs, int32_t cs) {
     return QAnyStringView_Compare3(lhs, rhs, cs);
 }
 

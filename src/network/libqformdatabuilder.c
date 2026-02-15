@@ -17,7 +17,7 @@ void q_formdatapartbuilder_swap(void* self, void* other) {
     QFormDataPartBuilder_Swap((QFormDataPartBuilder*)self, (QFormDataPartBuilder*)other);
 }
 
-QFormDataPartBuilder* q_formdatapartbuilder_set_body(void* self, const char* data) {
+QFormDataPartBuilder* q_formdatapartbuilder_set_body(void* self, char* data) {
     return QFormDataPartBuilder_SetBody((QFormDataPartBuilder*)self, qstring(data));
 }
 
@@ -29,19 +29,19 @@ QFormDataPartBuilder* q_formdatapartbuilder_set_headers(void* self, void* header
     return QFormDataPartBuilder_SetHeaders((QFormDataPartBuilder*)self, (QHttpHeaders*)headers);
 }
 
-QFormDataPartBuilder* q_formdatapartbuilder_set_body2(void* self, const char* data, char* fileName) {
+QFormDataPartBuilder* q_formdatapartbuilder_set_body2(void* self, char* data, const char* fileName) {
     return QFormDataPartBuilder_SetBody2((QFormDataPartBuilder*)self, qstring(data), fileName);
 }
 
-QFormDataPartBuilder* q_formdatapartbuilder_set_body3(void* self, const char* data, char* fileName, char* mimeType) {
+QFormDataPartBuilder* q_formdatapartbuilder_set_body3(void* self, char* data, const char* fileName, const char* mimeType) {
     return QFormDataPartBuilder_SetBody3((QFormDataPartBuilder*)self, qstring(data), fileName, mimeType);
 }
 
-QFormDataPartBuilder* q_formdatapartbuilder_set_body_device2(void* self, void* body, char* fileName) {
+QFormDataPartBuilder* q_formdatapartbuilder_set_body_device2(void* self, void* body, const char* fileName) {
     return QFormDataPartBuilder_SetBodyDevice2((QFormDataPartBuilder*)self, (QIODevice*)body, fileName);
 }
 
-QFormDataPartBuilder* q_formdatapartbuilder_set_body_device3(void* self, void* body, char* fileName, char* mimeType) {
+QFormDataPartBuilder* q_formdatapartbuilder_set_body_device3(void* self, void* body, const char* fileName, const char* mimeType) {
     return QFormDataPartBuilder_SetBodyDevice3((QFormDataPartBuilder*)self, (QIODevice*)body, fileName, mimeType);
 }
 
@@ -57,7 +57,7 @@ void q_formdatabuilder_swap(void* self, void* other) {
     QFormDataBuilder_Swap((QFormDataBuilder*)self, (QFormDataBuilder*)other);
 }
 
-QFormDataPartBuilder* q_formdatabuilder_part(void* self, char* name) {
+QFormDataPartBuilder* q_formdatabuilder_part(void* self, const char* name) {
     return QFormDataBuilder_Part((QFormDataBuilder*)self, name);
 }
 

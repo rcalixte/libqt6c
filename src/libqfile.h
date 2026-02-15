@@ -159,9 +159,9 @@ char* q_file_encode_name(const char* fileName);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param localFileName const char*
+/// @param localFileName char*
 ///
-const char* q_file_decode_name(const char* localFileName);
+const char* q_file_decode_name(char* localFileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfile.html#decodeName)
 ///
@@ -747,9 +747,9 @@ long long q_file_write2(void* self, const char* data);
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// @param self QFile*
-/// @param data const char*
+/// @param data char*
 ///
-long long q_file_write3(void* self, const char* data);
+long long q_file_write3(void* self, char* data);
 
 /// Inherited from QIODevice
 ///
@@ -950,9 +950,9 @@ const char* q_file_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QFile*
-/// @param name char*
+/// @param name const char*
 ///
-void q_file_set_object_name(void* self, char* name);
+void q_file_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

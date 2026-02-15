@@ -312,9 +312,9 @@ bool q_colorspace_is_valid_target(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolorspace.html#fromIccProfile)
 ///
-/// @param iccProfile const char*
+/// @param iccProfile char*
 ///
-QColorSpace* q_colorspace_from_icc_profile(const char* iccProfile);
+QColorSpace* q_colorspace_from_icc_profile(char* iccProfile);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolorspace.html#iccProfile)
 ///

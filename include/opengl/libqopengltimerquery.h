@@ -192,9 +192,9 @@ const char* q_opengltimerquery_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QOpenGLTimerQuery*
-/// @param name char*
+/// @param name const char*
 ///
-void q_opengltimerquery_set_object_name(void* self, char* name);
+void q_opengltimerquery_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1198,9 +1198,9 @@ const char* q_opengltimemonitor_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QOpenGLTimeMonitor*
-/// @param name char*
+/// @param name const char*
 ///
-void q_opengltimemonitor_set_object_name(void* self, char* name);
+void q_opengltimemonitor_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

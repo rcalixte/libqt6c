@@ -413,9 +413,9 @@ const char* k_texteditor__abstractannotationitemdelegate_object_name(void* self)
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KTextEditor__AbstractAnnotationItemDelegate*
-/// @param name char*
+/// @param name const char*
 ///
-void k_texteditor__abstractannotationitemdelegate_set_object_name(void* self, char* name);
+void k_texteditor__abstractannotationitemdelegate_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

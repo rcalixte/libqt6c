@@ -929,7 +929,7 @@ char* k_tooltipwidget_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_tooltipwidget_restore_geometry(void* self, const char* geometry) {
+bool k_tooltipwidget_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1285,7 +1285,7 @@ const char* k_tooltipwidget_object_name(void* self) {
     return _ret;
 }
 
-void k_tooltipwidget_set_object_name(void* self, char* name) {
+void k_tooltipwidget_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1873,15 +1873,15 @@ void k_tooltipwidget_on_show_event(void* self, void (*callback)(void*, void*)) {
     KToolTipWidget_OnShowEvent((KToolTipWidget*)self, (intptr_t)callback);
 }
 
-bool k_tooltipwidget_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_tooltipwidget_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KToolTipWidget_NativeEvent((KToolTipWidget*)self, qstring(eventType), message, result);
 }
 
-bool k_tooltipwidget_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_tooltipwidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KToolTipWidget_QBaseNativeEvent((KToolTipWidget*)self, qstring(eventType), message, result);
 }
 
-void k_tooltipwidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_tooltipwidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KToolTipWidget_OnNativeEvent((KToolTipWidget*)self, (intptr_t)callback);
 }
 

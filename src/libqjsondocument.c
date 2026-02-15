@@ -80,7 +80,7 @@ QVariant* q_jsondocument_to_variant(void* self) {
     return QJsonDocument_ToVariant((QJsonDocument*)self);
 }
 
-QJsonDocument* q_jsondocument_from_json(const char* json) {
+QJsonDocument* q_jsondocument_from_json(char* json) {
     return QJsonDocument_FromJson(qstring(json));
 }
 
@@ -131,7 +131,7 @@ bool q_jsondocument_is_null(void* self) {
     return QJsonDocument_IsNull((QJsonDocument*)self);
 }
 
-QJsonDocument* q_jsondocument_from_json2(const char* json, void* error) {
+QJsonDocument* q_jsondocument_from_json2(char* json, void* error) {
     return QJsonDocument_FromJson2(qstring(json), (QJsonParseError*)error);
 }
 

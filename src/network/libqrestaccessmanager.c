@@ -79,7 +79,7 @@ QNetworkReply* q_restaccessmanager_get(void* self, void* request) {
     return QRestAccessManager_Get((QRestAccessManager*)self, (QNetworkRequest*)request);
 }
 
-QNetworkReply* q_restaccessmanager_get2(void* self, void* request, const char* data) {
+QNetworkReply* q_restaccessmanager_get2(void* self, void* request, char* data) {
     return QRestAccessManager_Get2((QRestAccessManager*)self, (QNetworkRequest*)request, qstring(data));
 }
 
@@ -124,7 +124,7 @@ QNetworkReply* q_restaccessmanager_post2(void* self, void* request, libqt_map /*
     return _out;
 }
 
-QNetworkReply* q_restaccessmanager_post3(void* self, void* request, const char* data) {
+QNetworkReply* q_restaccessmanager_post3(void* self, void* request, char* data) {
     return QRestAccessManager_Post3((QRestAccessManager*)self, (QNetworkRequest*)request, qstring(data));
 }
 
@@ -169,7 +169,7 @@ QNetworkReply* q_restaccessmanager_put2(void* self, void* request, libqt_map /* 
     return _out;
 }
 
-QNetworkReply* q_restaccessmanager_put3(void* self, void* request, const char* data) {
+QNetworkReply* q_restaccessmanager_put3(void* self, void* request, char* data) {
     return QRestAccessManager_Put3((QRestAccessManager*)self, (QNetworkRequest*)request, qstring(data));
 }
 
@@ -214,7 +214,7 @@ QNetworkReply* q_restaccessmanager_patch2(void* self, void* request, libqt_map /
     return _out;
 }
 
-QNetworkReply* q_restaccessmanager_patch3(void* self, void* request, const char* data) {
+QNetworkReply* q_restaccessmanager_patch3(void* self, void* request, char* data) {
     return QRestAccessManager_Patch3((QRestAccessManager*)self, (QNetworkRequest*)request, qstring(data));
 }
 
@@ -222,15 +222,15 @@ QNetworkReply* q_restaccessmanager_patch4(void* self, void* request, void* data)
     return QRestAccessManager_Patch4((QRestAccessManager*)self, (QNetworkRequest*)request, (QIODevice*)data);
 }
 
-QNetworkReply* q_restaccessmanager_send_custom_request(void* self, void* request, const char* method, const char* data) {
+QNetworkReply* q_restaccessmanager_send_custom_request(void* self, void* request, char* method, char* data) {
     return QRestAccessManager_SendCustomRequest((QRestAccessManager*)self, (QNetworkRequest*)request, qstring(method), qstring(data));
 }
 
-QNetworkReply* q_restaccessmanager_send_custom_request2(void* self, void* request, const char* method, void* data) {
+QNetworkReply* q_restaccessmanager_send_custom_request2(void* self, void* request, char* method, void* data) {
     return QRestAccessManager_SendCustomRequest2((QRestAccessManager*)self, (QNetworkRequest*)request, qstring(method), (QIODevice*)data);
 }
 
-QNetworkReply* q_restaccessmanager_send_custom_request3(void* self, void* request, const char* method, void* data) {
+QNetworkReply* q_restaccessmanager_send_custom_request3(void* self, void* request, char* method, void* data) {
     return QRestAccessManager_SendCustomRequest3((QRestAccessManager*)self, (QNetworkRequest*)request, qstring(method), (QHttpMultiPart*)data);
 }
 
@@ -255,7 +255,7 @@ const char* q_restaccessmanager_object_name(void* self) {
     return _ret;
 }
 
-void q_restaccessmanager_set_object_name(void* self, char* name) {
+void q_restaccessmanager_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

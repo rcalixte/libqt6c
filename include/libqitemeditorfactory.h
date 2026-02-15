@@ -98,9 +98,9 @@ char* q_itemeditorfactory_value_property_name(void* self, int userType);
 /// Allows for overriding the related default method
 ///
 /// @param self QItemEditorFactory*
-/// @param callback char* func(QItemEditorFactory* self, int userType)
+/// @param callback libqt_string func(QItemEditorFactory* self, int userType)
 ///
-void q_itemeditorfactory_on_value_property_name(void* self, char* (*callback)(void*, int));
+void q_itemeditorfactory_on_value_property_name(void* self, libqt_string (*callback)(void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorfactory.html#valuePropertyName)
 ///

@@ -132,9 +132,9 @@ QNetworkReply* q_restaccessmanager_get(void* self, void* request);
 ///
 /// @param self QRestAccessManager*
 /// @param request QNetworkRequest*
-/// @param data const char*
+/// @param data char*
 ///
-QNetworkReply* q_restaccessmanager_get2(void* self, void* request, const char* data);
+QNetworkReply* q_restaccessmanager_get2(void* self, void* request, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrestaccessmanager.html#get)
 ///
@@ -172,9 +172,9 @@ QNetworkReply* q_restaccessmanager_post2(void* self, void* request, libqt_map da
 ///
 /// @param self QRestAccessManager*
 /// @param request QNetworkRequest*
-/// @param data const char*
+/// @param data char*
 ///
-QNetworkReply* q_restaccessmanager_post3(void* self, void* request, const char* data);
+QNetworkReply* q_restaccessmanager_post3(void* self, void* request, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrestaccessmanager.html#post)
 ///
@@ -212,9 +212,9 @@ QNetworkReply* q_restaccessmanager_put2(void* self, void* request, libqt_map dat
 ///
 /// @param self QRestAccessManager*
 /// @param request QNetworkRequest*
-/// @param data const char*
+/// @param data char*
 ///
-QNetworkReply* q_restaccessmanager_put3(void* self, void* request, const char* data);
+QNetworkReply* q_restaccessmanager_put3(void* self, void* request, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrestaccessmanager.html#put)
 ///
@@ -252,9 +252,9 @@ QNetworkReply* q_restaccessmanager_patch2(void* self, void* request, libqt_map d
 ///
 /// @param self QRestAccessManager*
 /// @param request QNetworkRequest*
-/// @param data const char*
+/// @param data char*
 ///
-QNetworkReply* q_restaccessmanager_patch3(void* self, void* request, const char* data);
+QNetworkReply* q_restaccessmanager_patch3(void* self, void* request, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrestaccessmanager.html#patch)
 ///
@@ -268,28 +268,28 @@ QNetworkReply* q_restaccessmanager_patch4(void* self, void* request, void* data)
 ///
 /// @param self QRestAccessManager*
 /// @param request QNetworkRequest*
-/// @param method const char*
-/// @param data const char*
+/// @param method char*
+/// @param data char*
 ///
-QNetworkReply* q_restaccessmanager_send_custom_request(void* self, void* request, const char* method, const char* data);
+QNetworkReply* q_restaccessmanager_send_custom_request(void* self, void* request, char* method, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrestaccessmanager.html#sendCustomRequest)
 ///
 /// @param self QRestAccessManager*
 /// @param request QNetworkRequest*
-/// @param method const char*
+/// @param method char*
 /// @param data QIODevice*
 ///
-QNetworkReply* q_restaccessmanager_send_custom_request2(void* self, void* request, const char* method, void* data);
+QNetworkReply* q_restaccessmanager_send_custom_request2(void* self, void* request, char* method, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrestaccessmanager.html#sendCustomRequest)
 ///
 /// @param self QRestAccessManager*
 /// @param request QNetworkRequest*
-/// @param method const char*
+/// @param method char*
 /// @param data QHttpMultiPart*
 ///
-QNetworkReply* q_restaccessmanager_send_custom_request3(void* self, void* request, const char* method, void* data);
+QNetworkReply* q_restaccessmanager_send_custom_request3(void* self, void* request, char* method, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -325,9 +325,9 @@ const char* q_restaccessmanager_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QRestAccessManager*
-/// @param name char*
+/// @param name const char*
 ///
-void q_restaccessmanager_set_object_name(void* self, char* name);
+void q_restaccessmanager_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

@@ -439,9 +439,9 @@ const char* k_pagemodel_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KPageModel*
-/// @param name char*
+/// @param name const char*
 ///
-void k_pagemodel_set_object_name(void* self, char* name);
+void k_pagemodel_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

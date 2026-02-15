@@ -170,9 +170,9 @@ const char* q_webenginewebauthuxrequest_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QWebEngineWebAuthUxRequest*
-/// @param name char*
+/// @param name const char*
 ///
-void q_webenginewebauthuxrequest_set_object_name(void* self, char* name);
+void q_webenginewebauthuxrequest_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

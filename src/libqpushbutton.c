@@ -1174,7 +1174,7 @@ char* q_pushbutton_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_pushbutton_restore_geometry(void* self, const char* geometry) {
+bool q_pushbutton_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1530,7 +1530,7 @@ const char* q_pushbutton_object_name(void* self) {
     return _ret;
 }
 
-void q_pushbutton_set_object_name(void* self, char* name) {
+void q_pushbutton_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2118,15 +2118,15 @@ void q_pushbutton_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QPushButton_OnHideEvent((QPushButton*)self, (intptr_t)callback);
 }
 
-bool q_pushbutton_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_pushbutton_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QPushButton_NativeEvent((QPushButton*)self, qstring(eventType), message, result);
 }
 
-bool q_pushbutton_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_pushbutton_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QPushButton_QBaseNativeEvent((QPushButton*)self, qstring(eventType), message, result);
 }
 
-void q_pushbutton_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_pushbutton_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QPushButton_OnNativeEvent((QPushButton*)self, (intptr_t)callback);
 }
 

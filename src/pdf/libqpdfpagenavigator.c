@@ -187,7 +187,7 @@ const char* q_pdfpagenavigator_object_name(void* self) {
     return _ret;
 }
 
-void q_pdfpagenavigator_set_object_name(void* self, char* name) {
+void q_pdfpagenavigator_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

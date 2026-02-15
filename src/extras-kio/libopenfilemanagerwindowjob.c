@@ -74,7 +74,7 @@ char* k_io__openfilemanagerwindowjob_startup_id(void* self) {
     return _ret;
 }
 
-void k_io__openfilemanagerwindowjob_set_startup_id(void* self, const char* startupId) {
+void k_io__openfilemanagerwindowjob_set_startup_id(void* self, char* startupId) {
     KIO__OpenFileManagerWindowJob_SetStartupId((KIO__OpenFileManagerWindowJob*)self, qstring(startupId));
 }
 
@@ -238,7 +238,7 @@ const char* k_io__openfilemanagerwindowjob_object_name(void* self) {
     return _ret;
 }
 
-void k_io__openfilemanagerwindowjob_set_object_name(void* self, char* name) {
+void k_io__openfilemanagerwindowjob_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -808,6 +808,6 @@ void k_io__openfilemanagerwindowjob_delete(void* self) {
     KIO__OpenFileManagerWindowJob_Delete((KIO__OpenFileManagerWindowJob*)(self));
 }
 
-KIO__OpenFileManagerWindowJob* k_io_highlight_in_file_manager(libqt_list /* of QUrl* */ param1, const char* param2) {
+KIO__OpenFileManagerWindowJob* k_io_highlight_in_file_manager(libqt_list /* of QUrl* */ param1, char* param2) {
     return KIO_HighlightInFileManager(param1, qstring(param2));
 }

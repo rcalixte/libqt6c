@@ -131,9 +131,9 @@ char* q_networkrequestfactory_bearer_token(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#setBearerToken)
 ///
 /// @param self QNetworkRequestFactory*
-/// @param token const char*
+/// @param token char*
 ///
-void q_networkrequestfactory_set_bearer_token(void* self, const char* token);
+void q_networkrequestfactory_set_bearer_token(void* self, char* token);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#clearBearerToken)
 ///

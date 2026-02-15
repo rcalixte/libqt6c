@@ -355,9 +355,9 @@ const char* q_scilexerhex_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QsciLexerHex*
-/// @param name char*
+/// @param name const char*
 ///
-void q_scilexerhex_set_object_name(void* self, char* name);
+void q_scilexerhex_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -2164,9 +2164,9 @@ char* q_scilexerhex_qbase_text_as_bytes(void* self, const char* text);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerHex*
-/// @param callback char* func(QsciLexerHex* self, const char* text)
+/// @param callback libqt_string func(QsciLexerHex* self, const char* text)
 ///
-void q_scilexerhex_on_text_as_bytes(void* self, char* (*callback)(void*, const char*));
+void q_scilexerhex_on_text_as_bytes(void* self, libqt_string (*callback)(void*, const char*));
 
 /// Inherited from QsciLexer
 ///
