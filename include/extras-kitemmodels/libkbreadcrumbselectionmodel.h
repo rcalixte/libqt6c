@@ -522,9 +522,9 @@ const char* k_breadcrumbselectionmodel_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KBreadcrumbSelectionModel*
-/// @param name char*
+/// @param name const char*
 ///
-void k_breadcrumbselectionmodel_set_object_name(void* self, char* name);
+void k_breadcrumbselectionmodel_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

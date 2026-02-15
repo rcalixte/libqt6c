@@ -175,9 +175,9 @@ void q_webengineview_set_html(void* self, const char* html);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#setContent)
 ///
 /// @param self QWebEngineView*
-/// @param data const char*
+/// @param data char*
 ///
-void q_webengineview_set_content(void* self, const char* data);
+void q_webengineview_set_content(void* self, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#history)
 ///
@@ -806,19 +806,19 @@ void q_webengineview_set_html2(void* self, const char* html, void* baseUrl);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#setContent)
 ///
 /// @param self QWebEngineView*
-/// @param data const char*
+/// @param data char*
 /// @param mimeType const char*
 ///
-void q_webengineview_set_content2(void* self, const char* data, const char* mimeType);
+void q_webengineview_set_content2(void* self, char* data, const char* mimeType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#setContent)
 ///
 /// @param self QWebEngineView*
-/// @param data const char*
+/// @param data char*
 /// @param mimeType const char*
 /// @param baseUrl QUrl*
 ///
-void q_webengineview_set_content3(void* self, const char* data, const char* mimeType, void* baseUrl);
+void q_webengineview_set_content3(void* self, char* data, const char* mimeType, void* baseUrl);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#triggerPageAction)
 ///
@@ -2476,9 +2476,9 @@ char* q_webengineview_save_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QWebEngineView*
-/// @param geometry const char*
+/// @param geometry char*
 ///
-bool q_webengineview_restore_geometry(void* self, const char* geometry);
+bool q_webengineview_restore_geometry(void* self, char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -3284,9 +3284,9 @@ const char* q_webengineview_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QWebEngineView*
-/// @param name char*
+/// @param name const char*
 ///
-void q_webengineview_set_object_name(void* self, char* name);
+void q_webengineview_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4535,11 +4535,11 @@ void q_webengineview_on_action_event(void* self, void (*callback)(void*, void*))
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_webengineview_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_webengineview_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4548,11 +4548,11 @@ bool q_webengineview_native_event(void* self, const char* eventType, void* messa
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_webengineview_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_webengineview_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4561,9 +4561,9 @@ bool q_webengineview_qbase_native_event(void* self, const char* eventType, void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback bool func(QWebEngineView* self, const char* eventType, void* message, intptr_t* result)
+/// @param callback bool func(QWebEngineView* self, libqt_string eventType, void* message, intptr_t* result)
 ///
-void q_webengineview_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
+void q_webengineview_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///

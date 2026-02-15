@@ -301,7 +301,7 @@ const char* q_scilexercss_object_name(void* self) {
     return _ret;
 }
 
-void q_scilexercss_set_object_name(void* self, char* name) {
+void q_scilexercss_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -921,7 +921,7 @@ char* q_scilexercss_qbase_text_as_bytes(void* self, const char* text) {
     return _ret;
 }
 
-void q_scilexercss_on_text_as_bytes(void* self, char* (*callback)(void*, const char*)) {
+void q_scilexercss_on_text_as_bytes(void* self, libqt_string (*callback)(void*, const char*)) {
     QsciLexerCSS_OnTextAsBytes((QsciLexerCSS*)self, (intptr_t)callback);
 }
 

@@ -2302,9 +2302,9 @@ char* k_recentfilesmenu_save_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self KRecentFilesMenu*
-/// @param geometry const char*
+/// @param geometry char*
 ///
-bool k_recentfilesmenu_restore_geometry(void* self, const char* geometry);
+bool k_recentfilesmenu_restore_geometry(void* self, char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -3110,9 +3110,9 @@ const char* k_recentfilesmenu_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KRecentFilesMenu*
-/// @param name char*
+/// @param name const char*
 ///
-void k_recentfilesmenu_set_object_name(void* self, char* name);
+void k_recentfilesmenu_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4823,11 +4823,11 @@ void k_recentfilesmenu_on_show_event(void* self, void (*callback)(void*, void*))
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_recentfilesmenu_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool k_recentfilesmenu_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4836,11 +4836,11 @@ bool k_recentfilesmenu_native_event(void* self, const char* eventType, void* mes
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_recentfilesmenu_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool k_recentfilesmenu_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4849,9 +4849,9 @@ bool k_recentfilesmenu_qbase_native_event(void* self, const char* eventType, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback bool func(KRecentFilesMenu* self, const char* eventType, void* message, intptr_t* result)
+/// @param callback bool func(KRecentFilesMenu* self, libqt_string eventType, void* message, intptr_t* result)
 ///
-void k_recentfilesmenu_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
+void k_recentfilesmenu_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///

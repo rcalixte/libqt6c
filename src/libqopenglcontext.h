@@ -104,9 +104,9 @@ const char* q_openglcontextgroup_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QOpenGLContextGroup*
-/// @param name char*
+/// @param name const char*
 ///
-void q_openglcontextgroup_set_object_name(void* self, char* name);
+void q_openglcontextgroup_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -765,9 +765,9 @@ libqt_list q_openglcontext_extensions(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#hasExtension)
 ///
 /// @param self QOpenGLContext*
-/// @param extension const char*
+/// @param extension char*
 ///
-bool q_openglcontext_has_extension(void* self, const char* extension);
+bool q_openglcontext_has_extension(void* self, char* extension);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#openGLModuleType)
 ///
@@ -863,9 +863,9 @@ const char* q_openglcontext_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QOpenGLContext*
-/// @param name char*
+/// @param name const char*
 ///
-void q_openglcontext_set_object_name(void* self, char* name);
+void q_openglcontext_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

@@ -32,7 +32,7 @@ char* k_archivefile_data(void* self) {
     return _ret;
 }
 
-void k_archivefile_on_data(void* self, char* (*callback)()) {
+void k_archivefile_on_data(void* self, libqt_string (*callback)()) {
     KArchiveFile_OnData((KArchiveFile*)self, (intptr_t)callback);
 }
 

@@ -1037,7 +1037,7 @@ char* k_assistantdialog_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_assistantdialog_restore_geometry(void* self, const char* geometry) {
+bool k_assistantdialog_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1393,7 +1393,7 @@ const char* k_assistantdialog_object_name(void* self) {
     return _ret;
 }
 
-void k_assistantdialog_set_object_name(void* self, char* name) {
+void k_assistantdialog_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2089,15 +2089,15 @@ void k_assistantdialog_on_hide_event(void* self, void (*callback)(void*, void*))
     KAssistantDialog_OnHideEvent((KAssistantDialog*)self, (intptr_t)callback);
 }
 
-bool k_assistantdialog_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_assistantdialog_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KAssistantDialog_NativeEvent((KAssistantDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_assistantdialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_assistantdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KAssistantDialog_QBaseNativeEvent((KAssistantDialog*)self, qstring(eventType), message, result);
 }
 
-void k_assistantdialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_assistantdialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KAssistantDialog_OnNativeEvent((KAssistantDialog*)self, (intptr_t)callback);
 }
 

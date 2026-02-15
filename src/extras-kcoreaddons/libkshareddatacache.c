@@ -17,7 +17,7 @@ void k_shareddatacache_set_eviction_policy(void* self, int32_t newPolicy) {
     KSharedDataCache_SetEvictionPolicy((KSharedDataCache*)self, newPolicy);
 }
 
-bool k_shareddatacache_insert(void* self, const char* key, const char* data) {
+bool k_shareddatacache_insert(void* self, const char* key, char* data) {
     return KSharedDataCache_Insert((KSharedDataCache*)self, qstring(key), qstring(data));
 }
 

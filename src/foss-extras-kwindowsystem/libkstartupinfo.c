@@ -61,15 +61,15 @@ void k_startupinfo_app_started() {
     KStartupInfo_AppStarted();
 }
 
-void k_startupinfo_app_started2(const char* startup_id) {
+void k_startupinfo_app_started2(char* startup_id) {
     KStartupInfo_AppStarted2(qstring(startup_id));
 }
 
-void k_startupinfo_set_startup_id(const char* startup_id) {
+void k_startupinfo_set_startup_id(char* startup_id) {
     KStartupInfo_SetStartupId(qstring(startup_id));
 }
 
-void k_startupinfo_set_new_startup_id(void* window, const char* startup_id) {
+void k_startupinfo_set_new_startup_id(void* window, char* startup_id) {
     KStartupInfo_SetNewStartupId((QWindow*)window, qstring(startup_id));
 }
 
@@ -215,7 +215,7 @@ const char* k_startupinfo_object_name(void* self) {
     return _ret;
 }
 
-void k_startupinfo_set_object_name(void* self, char* name) {
+void k_startupinfo_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -594,7 +594,7 @@ bool k_startupinfoid_operator_lesser(void* self, void* id) {
     return KStartupInfoId_OperatorLesser((KStartupInfoId*)self, (KStartupInfoId*)id);
 }
 
-void k_startupinfoid_init_id1(void* self, const char* id) {
+void k_startupinfoid_init_id1(void* self, char* id) {
     KStartupInfoId_InitId1((KStartupInfoId*)self, qstring(id));
 }
 
@@ -683,7 +683,7 @@ int32_t k_startupinfodata_desktop(void* self) {
     return KStartupInfoData_Desktop((KStartupInfoData*)self);
 }
 
-void k_startupinfodata_set_w_m_class(void* self, const char* wmclass) {
+void k_startupinfodata_set_w_m_class(void* self, char* wmclass) {
     KStartupInfoData_SetWMClass((KStartupInfoData*)self, qstring(wmclass));
 }
 
@@ -768,7 +768,7 @@ void k_startupinfodata_operator_assign(void* self, void* data) {
     KStartupInfoData_OperatorAssign((KStartupInfoData*)self, (KStartupInfoData*)data);
 }
 
-void k_startupinfodata_set_hostname1(void* self, const char* hostname) {
+void k_startupinfodata_set_hostname1(void* self, char* hostname) {
     KStartupInfoData_SetHostname1((KStartupInfoData*)self, qstring(hostname));
 }
 

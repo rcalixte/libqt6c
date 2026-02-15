@@ -638,9 +638,9 @@ const char* q_abstractbarseries_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QAbstractBarSeries*
-/// @param name char*
+/// @param name const char*
 ///
-void q_abstractbarseries_set_object_name(void* self, char* name);
+void q_abstractbarseries_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

@@ -89,9 +89,9 @@ void k_io__mimetypejob_set_async_data_enabled(void* self, bool enabled);
 /// [Upstream resources](https://api.kde.org/kio-transferjob.html#sendAsyncData)
 ///
 /// @param self KIO__MimetypeJob*
-/// @param data const char*
+/// @param data char*
 ///
-void k_io__mimetypejob_send_async_data(void* self, const char* data);
+void k_io__mimetypejob_send_async_data(void* self, char* data);
 
 /// Inherited from KIO::TransferJob
 ///
@@ -126,18 +126,18 @@ void k_io__mimetypejob_set_total_size(void* self, uint64_t bytes);
 ///
 /// @param self KIO__MimetypeJob*
 /// @param job KIO__Job*
-/// @param data const char*
+/// @param data char*
 ///
-void k_io__mimetypejob_data(void* self, void* job, const char* data);
+void k_io__mimetypejob_data(void* self, void* job, char* data);
 
 /// Inherited from KIO::TransferJob
 ///
 /// [Upstream resources](https://api.kde.org/kio-transferjob.html#data)
 ///
 /// @param self KIO__MimetypeJob*
-/// @param callback void func(KIO__MimetypeJob* self, KIO__Job* job, const char* data)
+/// @param callback void func(KIO__MimetypeJob* self, KIO__Job* job, libqt_string data)
 ///
-void k_io__mimetypejob_on_data(void* self, void (*callback)(void*, void*, const char*));
+void k_io__mimetypejob_on_data(void* self, void (*callback)(void*, void*, libqt_string));
 
 /// Inherited from KIO::TransferJob
 ///
@@ -154,9 +154,9 @@ void k_io__mimetypejob_data_req(void* self, void* job, char* data);
 /// [Upstream resources](https://api.kde.org/kio-transferjob.html#dataReq)
 ///
 /// @param self KIO__MimetypeJob*
-/// @param callback void func(KIO__MimetypeJob* self, KIO__Job* job, char* data)
+/// @param callback void func(KIO__MimetypeJob* self, KIO__Job* job, libqt_string data)
 ///
-void k_io__mimetypejob_on_data_req(void* self, void (*callback)(void*, void*, char*));
+void k_io__mimetypejob_on_data_req(void* self, void (*callback)(void*, void*, libqt_string));
 
 /// Inherited from KIO::TransferJob
 ///
@@ -758,9 +758,9 @@ const char* k_io__mimetypejob_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KIO__MimetypeJob*
-/// @param name char*
+/// @param name const char*
 ///
-void k_io__mimetypejob_set_object_name(void* self, char* name);
+void k_io__mimetypejob_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

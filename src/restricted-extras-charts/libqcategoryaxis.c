@@ -816,7 +816,7 @@ const char* q_categoryaxis_object_name(void* self) {
     return _ret;
 }
 
-void q_categoryaxis_set_object_name(void* self, char* name) {
+void q_categoryaxis_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

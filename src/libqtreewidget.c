@@ -2359,7 +2359,7 @@ char* q_treewidget_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_treewidget_restore_geometry(void* self, const char* geometry) {
+bool q_treewidget_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -2715,7 +2715,7 @@ const char* q_treewidget_object_name(void* self) {
     return _ret;
 }
 
-void q_treewidget_set_object_name(void* self, char* name) {
+void q_treewidget_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -3929,15 +3929,15 @@ void q_treewidget_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QTreeWidget_OnHideEvent((QTreeWidget*)self, (intptr_t)callback);
 }
 
-bool q_treewidget_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_treewidget_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QTreeWidget_NativeEvent((QTreeWidget*)self, qstring(eventType), message, result);
 }
 
-bool q_treewidget_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_treewidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QTreeWidget_QBaseNativeEvent((QTreeWidget*)self, qstring(eventType), message, result);
 }
 
-void q_treewidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_treewidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QTreeWidget_OnNativeEvent((QTreeWidget*)self, (intptr_t)callback);
 }
 

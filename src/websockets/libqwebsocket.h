@@ -327,9 +327,9 @@ long long q_websocket_send_text_message(void* self, const char* message);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#sendBinaryMessage)
 ///
 /// @param self QWebSocket*
-/// @param data const char*
+/// @param data char*
 ///
-long long q_websocket_send_binary_message(void* self, const char* data);
+long long q_websocket_send_binary_message(void* self, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#ignoreSslErrors)
 ///
@@ -575,17 +575,17 @@ void q_websocket_on_text_frame_received(void* self, void (*callback)(void*, cons
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#binaryFrameReceived)
 ///
 /// @param self QWebSocket*
-/// @param frame const char*
+/// @param frame char*
 /// @param isLastFrame bool
 ///
-void q_websocket_binary_frame_received(void* self, const char* frame, bool isLastFrame);
+void q_websocket_binary_frame_received(void* self, char* frame, bool isLastFrame);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#binaryFrameReceived)
 ///
 /// @param self QWebSocket*
-/// @param callback void func(QWebSocket* self, const char* frame, bool isLastFrame)
+/// @param callback void func(QWebSocket* self, libqt_string frame, bool isLastFrame)
 ///
-void q_websocket_on_binary_frame_received(void* self, void (*callback)(void*, const char*, bool));
+void q_websocket_on_binary_frame_received(void* self, void (*callback)(void*, libqt_string, bool));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#textMessageReceived)
 ///
@@ -604,16 +604,16 @@ void q_websocket_on_text_message_received(void* self, void (*callback)(void*, co
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#binaryMessageReceived)
 ///
 /// @param self QWebSocket*
-/// @param message const char*
+/// @param message char*
 ///
-void q_websocket_binary_message_received(void* self, const char* message);
+void q_websocket_binary_message_received(void* self, char* message);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#binaryMessageReceived)
 ///
 /// @param self QWebSocket*
-/// @param callback void func(QWebSocket* self, const char* message)
+/// @param callback void func(QWebSocket* self, libqt_string message)
 ///
-void q_websocket_on_binary_message_received(void* self, void (*callback)(void*, const char*));
+void q_websocket_on_binary_message_received(void* self, void (*callback)(void*, libqt_string));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#error)
 ///
@@ -640,16 +640,16 @@ void q_websocket_on_error_occurred(void* self, void (*callback)(void*, int32_t))
 ///
 /// @param self QWebSocket*
 /// @param elapsedTime uint64_t
-/// @param payload const char*
+/// @param payload char*
 ///
-void q_websocket_pong(void* self, uint64_t elapsedTime, const char* payload);
+void q_websocket_pong(void* self, uint64_t elapsedTime, char* payload);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#pong)
 ///
 /// @param self QWebSocket*
-/// @param callback void func(QWebSocket* self, uint64_t elapsedTime, const char* payload)
+/// @param callback void func(QWebSocket* self, uint64_t elapsedTime, libqt_string payload)
 ///
-void q_websocket_on_pong(void* self, void (*callback)(void*, uint64_t, const char*));
+void q_websocket_on_pong(void* self, void (*callback)(void*, uint64_t, libqt_string));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#bytesWritten)
 ///
@@ -790,9 +790,9 @@ void q_websocket_close2(void* self, int32_t closeCode, const char* reason);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#ping)
 ///
 /// @param self QWebSocket*
-/// @param payload const char*
+/// @param payload char*
 ///
-void q_websocket_ping1(void* self, const char* payload);
+void q_websocket_ping1(void* self, char* payload);
 
 /// Inherited from QObject
 ///
@@ -809,9 +809,9 @@ const char* q_websocket_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QWebSocket*
-/// @param name char*
+/// @param name const char*
 ///
-void q_websocket_set_object_name(void* self, char* name);
+void q_websocket_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

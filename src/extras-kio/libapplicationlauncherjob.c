@@ -45,7 +45,7 @@ void k_io__applicationlauncherjob_set_suggested_file_name(void* self, const char
     KIO__ApplicationLauncherJob_SetSuggestedFileName((KIO__ApplicationLauncherJob*)self, qstring(suggestedFileName));
 }
 
-void k_io__applicationlauncherjob_set_startup_id(void* self, const char* startupId) {
+void k_io__applicationlauncherjob_set_startup_id(void* self, char* startupId) {
     KIO__ApplicationLauncherJob_SetStartupId((KIO__ApplicationLauncherJob*)self, qstring(startupId));
 }
 
@@ -225,7 +225,7 @@ const char* k_io__applicationlauncherjob_object_name(void* self) {
     return _ret;
 }
 
-void k_io__applicationlauncherjob_set_object_name(void* self, char* name) {
+void k_io__applicationlauncherjob_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

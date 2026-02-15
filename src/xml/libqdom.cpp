@@ -703,7 +703,7 @@ bool QDomDocument_SetContent7(QDomDocument* self, QXmlStreamReader* reader, bool
     return self->setContent(reader, namespaceProcessing);
 }
 
-QDomDocument__ParseResult* QDomDocument_SetContent8(QDomDocument* self, char* data) {
+QDomDocument__ParseResult* QDomDocument_SetContent8(QDomDocument* self, const char* data) {
     return new QDomDocument::ParseResult(self->setContent(QAnyStringView(data)));
 }
 
@@ -731,13 +731,12 @@ libqt_string QDomDocument_ToByteArray(const QDomDocument* self) {
     QByteArray _qb = self->toByteArray();
     libqt_string _str;
     _str.len = _qb.length();
-    _str.data = static_cast<const char*>(malloc(_str.len + 1));
+    _str.data = static_cast<char*>(malloc(_str.len));
     memcpy((void*)_str.data, _qb.data(), _str.len);
-    ((char*)_str.data)[_str.len] = '\0';
     return _str;
 }
 
-QDomDocument__ParseResult* QDomDocument_SetContent22(QDomDocument* self, char* data, int options) {
+QDomDocument__ParseResult* QDomDocument_SetContent22(QDomDocument* self, const char* data, int options) {
     return new QDomDocument::ParseResult(self->setContent(QAnyStringView(data), static_cast<QDomDocument::ParseOptions>(options)));
 }
 
@@ -765,9 +764,8 @@ libqt_string QDomDocument_ToByteArray1(const QDomDocument* self, int indent) {
     QByteArray _qb = self->toByteArray(static_cast<int>(indent));
     libqt_string _str;
     _str.len = _qb.length();
-    _str.data = static_cast<const char*>(malloc(_str.len + 1));
+    _str.data = static_cast<char*>(malloc(_str.len));
     memcpy((void*)_str.data, _qb.data(), _str.len);
-    ((char*)_str.data)[_str.len] = '\0';
     return _str;
 }
 

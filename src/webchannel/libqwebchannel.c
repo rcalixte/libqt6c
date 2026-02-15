@@ -179,7 +179,7 @@ const char* q_webchannel_object_name(void* self) {
     return _ret;
 }
 
-void q_webchannel_set_object_name(void* self, char* name) {
+void q_webchannel_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

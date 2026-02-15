@@ -24,7 +24,7 @@ char* q_sslpresharedkeyauthenticator_identity_hint(void* self) {
     return _ret;
 }
 
-void q_sslpresharedkeyauthenticator_set_identity(void* self, const char* identity) {
+void q_sslpresharedkeyauthenticator_set_identity(void* self, char* identity) {
     QSslPreSharedKeyAuthenticator_SetIdentity((QSslPreSharedKeyAuthenticator*)self, qstring(identity));
 }
 
@@ -39,7 +39,7 @@ int32_t q_sslpresharedkeyauthenticator_maximum_identity_length(void* self) {
     return QSslPreSharedKeyAuthenticator_MaximumIdentityLength((QSslPreSharedKeyAuthenticator*)self);
 }
 
-void q_sslpresharedkeyauthenticator_set_pre_shared_key(void* self, const char* preSharedKey) {
+void q_sslpresharedkeyauthenticator_set_pre_shared_key(void* self, char* preSharedKey) {
     QSslPreSharedKeyAuthenticator_SetPreSharedKey((QSslPreSharedKeyAuthenticator*)self, qstring(preSharedKey));
 }
 

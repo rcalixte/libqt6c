@@ -32,7 +32,7 @@ void k_io__filejob_read(void* self, uint64_t size) {
     KIO__FileJob_Read((KIO__FileJob*)self, size);
 }
 
-void k_io__filejob_write(void* self, const char* data) {
+void k_io__filejob_write(void* self, char* data) {
     KIO__FileJob_Write((KIO__FileJob*)self, qstring(data));
 }
 
@@ -52,11 +52,11 @@ uint64_t k_io__filejob_size(void* self) {
     return KIO__FileJob_Size((KIO__FileJob*)self);
 }
 
-void k_io__filejob_data(void* self, void* job, const char* data) {
+void k_io__filejob_data(void* self, void* job, char* data) {
     KIO__FileJob_Data((KIO__FileJob*)self, (KIO__Job*)job, qstring(data));
 }
 
-void k_io__filejob_on_data(void* self, void (*callback)(void*, void*, const char*)) {
+void k_io__filejob_on_data(void* self, void (*callback)(void*, void*, libqt_string)) {
     KIO__FileJob_Connect_Data((KIO__FileJob*)self, (intptr_t)callback);
 }
 
@@ -467,7 +467,7 @@ const char* k_io__filejob_object_name(void* self) {
     return _ret;
 }
 
-void k_io__filejob_set_object_name(void* self, char* name) {
+void k_io__filejob_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

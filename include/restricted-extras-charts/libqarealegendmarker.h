@@ -464,9 +464,9 @@ const char* q_arealegendmarker_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QAreaLegendMarker*
-/// @param name char*
+/// @param name const char*
 ///
-void q_arealegendmarker_set_object_name(void* self, char* name);
+void q_arealegendmarker_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

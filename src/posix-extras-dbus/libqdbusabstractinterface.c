@@ -43,7 +43,7 @@ const char* q_dbusabstractinterfacebase_object_name(void* self) {
     return _ret;
 }
 
-void q_dbusabstractinterfacebase_set_object_name(void* self, char* name) {
+void q_dbusabstractinterfacebase_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -394,7 +394,7 @@ const char* q_dbusabstractinterface_object_name(void* self) {
     return _ret;
 }
 
-void q_dbusabstractinterface_set_object_name(void* self, char* name) {
+void q_dbusabstractinterface_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

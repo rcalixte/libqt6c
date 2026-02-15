@@ -1076,9 +1076,9 @@ const char* q_textdocument_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QTextDocument*
-/// @param name char*
+/// @param name const char*
 ///
-void q_textdocument_set_object_name(void* self, char* name);
+void q_textdocument_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

@@ -1254,7 +1254,7 @@ char* q_label_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_label_restore_geometry(void* self, const char* geometry) {
+bool q_label_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1610,7 +1610,7 @@ const char* q_label_object_name(void* self) {
     return _ret;
 }
 
-void q_label_set_object_name(void* self, char* name) {
+void q_label_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2114,15 +2114,15 @@ void q_label_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QLabel_OnHideEvent((QLabel*)self, (intptr_t)callback);
 }
 
-bool q_label_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_label_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QLabel_NativeEvent((QLabel*)self, qstring(eventType), message, result);
 }
 
-bool q_label_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_label_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QLabel_QBaseNativeEvent((QLabel*)self, qstring(eventType), message, result);
 }
 
-void q_label_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_label_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QLabel_OnNativeEvent((QLabel*)self, (intptr_t)callback);
 }
 

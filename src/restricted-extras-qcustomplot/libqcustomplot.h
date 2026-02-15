@@ -3498,9 +3498,9 @@ const char* q_cplayer_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPLayer*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cplayer_set_object_name(void* self, char* name);
+void q_cplayer_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4961,9 +4961,9 @@ const char* q_cplayerable_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPLayerable*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cplayerable_set_object_name(void* self, char* name);
+void q_cplayerable_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -6812,9 +6812,9 @@ const char* q_cpselectionrect_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPSelectionRect*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpselectionrect_set_object_name(void* self, char* name);
+void q_cpselectionrect_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -8358,9 +8358,9 @@ const char* q_cpmargingroup_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPMarginGroup*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpmargingroup_set_object_name(void* self, char* name);
+void q_cpmargingroup_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -9802,9 +9802,9 @@ const char* q_cplayoutelement_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPLayoutElement*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cplayoutelement_set_object_name(void* self, char* name);
+void q_cplayoutelement_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -11803,9 +11803,9 @@ const char* q_cplayout_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPLayout*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cplayout_set_object_name(void* self, char* name);
+void q_cplayout_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -14230,9 +14230,9 @@ const char* q_cplayoutgrid_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPLayoutGrid*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cplayoutgrid_set_object_name(void* self, char* name);
+void q_cplayoutgrid_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -16542,9 +16542,9 @@ const char* q_cplayoutinset_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPLayoutInset*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cplayoutinset_set_object_name(void* self, char* name);
+void q_cplayoutinset_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -22403,9 +22403,9 @@ const char* q_cpgrid_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPGrid*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpgrid_set_object_name(void* self, char* name);
+void q_cpgrid_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -25188,9 +25188,9 @@ const char* q_cpaxis_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPAxis*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpaxis_set_object_name(void* self, char* name);
+void q_cpaxis_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -27481,9 +27481,9 @@ const char* q_cpabstractplottable_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPAbstractPlottable*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpabstractplottable_set_object_name(void* self, char* name);
+void q_cpabstractplottable_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -29832,9 +29832,9 @@ const char* q_cpabstractitem_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPAbstractItem*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpabstractitem_set_object_name(void* self, char* name);
+void q_cpabstractitem_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -34869,9 +34869,9 @@ char* q_customplot_save_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QCustomPlot*
-/// @param geometry const char*
+/// @param geometry char*
 ///
-bool q_customplot_restore_geometry(void* self, const char* geometry);
+bool q_customplot_restore_geometry(void* self, char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -35677,9 +35677,9 @@ const char* q_customplot_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCustomPlot*
-/// @param name char*
+/// @param name const char*
 ///
-void q_customplot_set_object_name(void* self, char* name);
+void q_customplot_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -36963,11 +36963,11 @@ void q_customplot_on_hide_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QCustomPlot*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_customplot_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_customplot_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -36976,11 +36976,11 @@ bool q_customplot_native_event(void* self, const char* eventType, void* message,
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QCustomPlot*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_customplot_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_customplot_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -36989,9 +36989,9 @@ bool q_customplot_qbase_native_event(void* self, const char* eventType, void* me
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCustomPlot*
-/// @param callback bool func(QCustomPlot* self, const char* eventType, void* message, intptr_t* result)
+/// @param callback bool func(QCustomPlot* self, libqt_string eventType, void* message, intptr_t* result)
 ///
-void q_customplot_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
+void q_customplot_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///
@@ -39656,9 +39656,9 @@ const char* q_cpaxisrect_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPAxisRect*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpaxisrect_set_object_name(void* self, char* name);
+void q_cpaxisrect_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -41624,9 +41624,9 @@ const char* q_cpabstractlegenditem_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPAbstractLegendItem*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpabstractlegenditem_set_object_name(void* self, char* name);
+void q_cpabstractlegenditem_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -43662,9 +43662,9 @@ const char* q_cpplottablelegenditem_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPPlottableLegendItem*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpplottablelegenditem_set_object_name(void* self, char* name);
+void q_cpplottablelegenditem_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -46398,9 +46398,9 @@ const char* q_cplegend_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPLegend*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cplegend_set_object_name(void* self, char* name);
+void q_cplegend_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -49076,9 +49076,9 @@ const char* q_cptextelement_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPTextElement*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cptextelement_set_object_name(void* self, char* name);
+void q_cptextelement_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -51072,9 +51072,9 @@ const char* q_cpcolorscale_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPColorScale*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpcolorscale_set_object_name(void* self, char* name);
+void q_cpcolorscale_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -53945,9 +53945,9 @@ const char* q_cpgraph_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPGraph*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpgraph_set_object_name(void* self, char* name);
+void q_cpgraph_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -57007,9 +57007,9 @@ const char* q_cpcurve_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPCurve*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpcurve_set_object_name(void* self, char* name);
+void q_cpcurve_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -59072,9 +59072,9 @@ const char* q_cpbarsgroup_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPBarsGroup*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpbarsgroup_set_object_name(void* self, char* name);
+void q_cpbarsgroup_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -61015,9 +61015,9 @@ const char* q_cpbars_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPBars*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpbars_set_object_name(void* self, char* name);
+void q_cpbars_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -63785,9 +63785,9 @@ const char* q_cpstatisticalbox_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPStatisticalBox*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpstatisticalbox_set_object_name(void* self, char* name);
+void q_cpstatisticalbox_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -66627,9 +66627,9 @@ const char* q_cpcolormap_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPColorMap*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpcolormap_set_object_name(void* self, char* name);
+void q_cpcolormap_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -69146,9 +69146,9 @@ const char* q_cpfinancial_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPFinancial*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpfinancial_set_object_name(void* self, char* name);
+void q_cpfinancial_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -72119,9 +72119,9 @@ const char* q_cperrorbars_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPErrorBars*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cperrorbars_set_object_name(void* self, char* name);
+void q_cperrorbars_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -74033,9 +74033,9 @@ const char* q_cpitemstraightline_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPItemStraightLine*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpitemstraightline_set_object_name(void* self, char* name);
+void q_cpitemstraightline_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -76036,9 +76036,9 @@ const char* q_cpitemline_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPItemLine*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpitemline_set_object_name(void* self, char* name);
+void q_cpitemline_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -78022,9 +78022,9 @@ const char* q_cpitemcurve_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPItemCurve*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpitemcurve_set_object_name(void* self, char* name);
+void q_cpitemcurve_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -80080,9 +80080,9 @@ const char* q_cpitemrect_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPItemRect*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpitemrect_set_object_name(void* self, char* name);
+void q_cpitemrect_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -82300,9 +82300,9 @@ const char* q_cpitemtext_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPItemText*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpitemtext_set_object_name(void* self, char* name);
+void q_cpitemtext_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -84343,9 +84343,9 @@ const char* q_cpitemellipse_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPItemEllipse*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpitemellipse_set_object_name(void* self, char* name);
+void q_cpitemellipse_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -86557,9 +86557,9 @@ const char* q_cpitempixmap_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPItemPixmap*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpitempixmap_set_object_name(void* self, char* name);
+void q_cpitempixmap_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -88579,9 +88579,9 @@ const char* q_cpitemtracer_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPItemTracer*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpitemtracer_set_object_name(void* self, char* name);
+void q_cpitemtracer_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -90586,9 +90586,9 @@ const char* q_cpitembracket_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPItemBracket*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cpitembracket_set_object_name(void* self, char* name);
+void q_cpitembracket_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -93424,9 +93424,9 @@ const char* q_cppolaraxisradial_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPPolarAxisRadial*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cppolaraxisradial_set_object_name(void* self, char* name);
+void q_cppolaraxisradial_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -96273,9 +96273,9 @@ const char* q_cppolaraxisangular_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPPolarAxisAngular*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cppolaraxisangular_set_object_name(void* self, char* name);
+void q_cppolaraxisangular_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -98018,9 +98018,9 @@ const char* q_cppolargrid_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPPolarGrid*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cppolargrid_set_object_name(void* self, char* name);
+void q_cppolargrid_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -100035,9 +100035,9 @@ const char* q_cppolarlegenditem_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPPolarLegendItem*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cppolarlegenditem_set_object_name(void* self, char* name);
+void q_cppolarlegenditem_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -102707,9 +102707,9 @@ const char* q_cppolargraph_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QCPPolarGraph*
-/// @param name char*
+/// @param name const char*
 ///
-void q_cppolargraph_set_object_name(void* self, char* name);
+void q_cppolargraph_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

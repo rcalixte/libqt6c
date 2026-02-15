@@ -1497,7 +1497,7 @@ char* k_urlcombobox_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_urlcombobox_restore_geometry(void* self, const char* geometry) {
+bool k_urlcombobox_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1853,7 +1853,7 @@ const char* k_urlcombobox_object_name(void* self) {
     return _ret;
 }
 
-void k_urlcombobox_set_object_name(void* self, char* name) {
+void k_urlcombobox_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2684,15 +2684,15 @@ void k_urlcombobox_on_drop_event(void* self, void (*callback)(void*, void*)) {
     KUrlComboBox_OnDropEvent((KUrlComboBox*)self, (intptr_t)callback);
 }
 
-bool k_urlcombobox_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_urlcombobox_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KUrlComboBox_NativeEvent((KUrlComboBox*)self, qstring(eventType), message, result);
 }
 
-bool k_urlcombobox_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_urlcombobox_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KUrlComboBox_QBaseNativeEvent((KUrlComboBox*)self, qstring(eventType), message, result);
 }
 
-void k_urlcombobox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_urlcombobox_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KUrlComboBox_OnNativeEvent((KUrlComboBox*)self, (intptr_t)callback);
 }
 

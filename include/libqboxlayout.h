@@ -954,9 +954,9 @@ const char* q_boxlayout_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QBoxLayout*
-/// @param name char*
+/// @param name const char*
 ///
-void q_boxlayout_set_object_name(void* self, char* name);
+void q_boxlayout_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -2830,9 +2830,9 @@ const char* q_hboxlayout_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QHBoxLayout*
-/// @param name char*
+/// @param name const char*
 ///
-void q_hboxlayout_set_object_name(void* self, char* name);
+void q_hboxlayout_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -5189,9 +5189,9 @@ const char* q_vboxlayout_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QVBoxLayout*
-/// @param name char*
+/// @param name const char*
 ///
-void q_vboxlayout_set_object_name(void* self, char* name);
+void q_vboxlayout_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

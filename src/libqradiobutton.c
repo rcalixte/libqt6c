@@ -1092,7 +1092,7 @@ char* q_radiobutton_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_radiobutton_restore_geometry(void* self, const char* geometry) {
+bool q_radiobutton_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1448,7 +1448,7 @@ const char* q_radiobutton_object_name(void* self) {
     return _ret;
 }
 
-void q_radiobutton_set_object_name(void* self, char* name) {
+void q_radiobutton_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2072,15 +2072,15 @@ void q_radiobutton_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QRadioButton_OnHideEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
-bool q_radiobutton_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_radiobutton_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QRadioButton_NativeEvent((QRadioButton*)self, qstring(eventType), message, result);
 }
 
-bool q_radiobutton_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_radiobutton_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QRadioButton_QBaseNativeEvent((QRadioButton*)self, qstring(eventType), message, result);
 }
 
-void q_radiobutton_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_radiobutton_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QRadioButton_OnNativeEvent((QRadioButton*)self, (intptr_t)callback);
 }
 

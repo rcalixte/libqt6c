@@ -2103,7 +2103,7 @@ char* q_abstractitemview_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_abstractitemview_restore_geometry(void* self, const char* geometry) {
+bool q_abstractitemview_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -2459,7 +2459,7 @@ const char* q_abstractitemview_object_name(void* self) {
     return _ret;
 }
 
-void q_abstractitemview_set_object_name(void* self, char* name) {
+void q_abstractitemview_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2987,15 +2987,15 @@ void q_abstractitemview_on_hide_event(void* self, void (*callback)(void*, void*)
     QAbstractItemView_OnHideEvent((QAbstractItemView*)self, (intptr_t)callback);
 }
 
-bool q_abstractitemview_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_abstractitemview_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QAbstractItemView_NativeEvent((QAbstractItemView*)self, qstring(eventType), message, result);
 }
 
-bool q_abstractitemview_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_abstractitemview_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QAbstractItemView_QBaseNativeEvent((QAbstractItemView*)self, qstring(eventType), message, result);
 }
 
-void q_abstractitemview_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_abstractitemview_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QAbstractItemView_OnNativeEvent((QAbstractItemView*)self, (intptr_t)callback);
 }
 

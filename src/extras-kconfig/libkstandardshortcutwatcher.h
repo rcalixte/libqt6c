@@ -107,9 +107,9 @@ const char* k_standardshortcut__standardshortcutwatcher_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
-/// @param name char*
+/// @param name const char*
 ///
-void k_standardshortcut__standardshortcutwatcher_set_object_name(void* self, char* name);
+void k_standardshortcut__standardshortcutwatcher_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

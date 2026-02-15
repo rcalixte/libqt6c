@@ -67,9 +67,9 @@ char* k_archivefile_data(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KArchiveFile*
-/// @param callback char* func()
+/// @param callback libqt_string func()
 ///
-void k_archivefile_on_data(void* self, char* (*callback)());
+void k_archivefile_on_data(void* self, libqt_string (*callback)());
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#data)
 ///

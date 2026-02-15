@@ -15,7 +15,7 @@ QCborStreamReader* q_cborstreamreader_new3(unsigned char* data, int64_t lenVal) 
     return QCborStreamReader_new3(data, lenVal);
 }
 
-QCborStreamReader* q_cborstreamreader_new4(const char* data) {
+QCborStreamReader* q_cborstreamreader_new4(char* data) {
     return QCborStreamReader_new4(qstring(data));
 }
 
@@ -31,7 +31,7 @@ QIODevice* q_cborstreamreader_device(void* self) {
     return QCborStreamReader_Device((QCborStreamReader*)self);
 }
 
-void q_cborstreamreader_add_data(void* self, const char* data) {
+void q_cborstreamreader_add_data(void* self, char* data) {
     QCborStreamReader_AddData((QCborStreamReader*)self, qstring(data));
 }
 

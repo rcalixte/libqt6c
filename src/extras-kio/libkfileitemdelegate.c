@@ -319,7 +319,7 @@ const char* k_fileitemdelegate_object_name(void* self) {
     return _ret;
 }
 
-void k_fileitemdelegate_set_object_name(void* self, char* name) {
+void k_fileitemdelegate_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

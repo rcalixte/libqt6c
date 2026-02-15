@@ -254,9 +254,9 @@ const char* q_windowcapture_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QWindowCapture*
-/// @param name char*
+/// @param name const char*
 ///
-void q_windowcapture_set_object_name(void* self, char* name);
+void q_windowcapture_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

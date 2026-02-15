@@ -1406,9 +1406,9 @@ char* q_widget_save_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QWidget*
-/// @param geometry const char*
+/// @param geometry char*
 ///
-bool q_widget_restore_geometry(void* self, const char* geometry);
+bool q_widget_restore_geometry(void* self, char* geometry);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
@@ -2633,31 +2633,31 @@ void q_widget_qbase_hide_event(void* self, void* event);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// @param self QWidget*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_widget_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_widget_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback bool func(QWidget* self, const char* eventType, void* message, intptr_t* result)
+/// @param callback bool func(QWidget* self, libqt_string eventType, void* message, intptr_t* result)
 ///
-void q_widget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
+void q_widget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Base class method implementation
 ///
 /// @param self QWidget*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_widget_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_widget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
 ///
@@ -3303,9 +3303,9 @@ const char* q_widget_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QWidget*
-/// @param name char*
+/// @param name const char*
 ///
-void q_widget_set_object_name(void* self, char* name);
+void q_widget_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

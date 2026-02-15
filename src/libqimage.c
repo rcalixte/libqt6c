@@ -408,7 +408,7 @@ bool q_image_load2(void* self, const char* fileName) {
     return QImage_Load2((QImage*)self, qstring(fileName));
 }
 
-bool q_image_load_from_data(void* self, const char* data) {
+bool q_image_load_from_data(void* self, char* data) {
     return QImage_LoadFromData((QImage*)self, qstring(data));
 }
 
@@ -416,7 +416,7 @@ bool q_image_load_from_data2(void* self, unsigned char* buf, int lenVal) {
     return QImage_LoadFromData2((QImage*)self, buf, lenVal);
 }
 
-bool q_image_load_from_data3(void* self, const char* data) {
+bool q_image_load_from_data3(void* self, char* data) {
     return QImage_LoadFromData3((QImage*)self, qstring(data));
 }
 
@@ -428,7 +428,7 @@ bool q_image_save2(void* self, void* device) {
     return QImage_Save2((QImage*)self, (QIODevice*)device);
 }
 
-QImage* q_image_from_data(const char* data) {
+QImage* q_image_from_data(char* data) {
     return QImage_FromData(qstring(data));
 }
 
@@ -436,7 +436,7 @@ QImage* q_image_from_data2(unsigned char* data, int size) {
     return QImage_FromData2(data, size);
 }
 
-QImage* q_image_from_data3(const char* data) {
+QImage* q_image_from_data3(char* data) {
     return QImage_FromData3(qstring(data));
 }
 
@@ -730,7 +730,7 @@ bool q_image_load22(void* self, const char* fileName, const char* format) {
     return QImage_Load22((QImage*)self, qstring(fileName), format);
 }
 
-bool q_image_load_from_data22(void* self, const char* data, const char* format) {
+bool q_image_load_from_data22(void* self, char* data, const char* format) {
     return QImage_LoadFromData22((QImage*)self, qstring(data), format);
 }
 
@@ -738,7 +738,7 @@ bool q_image_load_from_data32(void* self, unsigned char* buf, int lenVal, const 
     return QImage_LoadFromData32((QImage*)self, buf, lenVal, format);
 }
 
-bool q_image_load_from_data23(void* self, const char* data, const char* format) {
+bool q_image_load_from_data23(void* self, char* data, const char* format) {
     return QImage_LoadFromData23((QImage*)self, qstring(data), format);
 }
 
@@ -758,7 +758,7 @@ bool q_image_save32(void* self, void* device, const char* format, int quality) {
     return QImage_Save32((QImage*)self, (QIODevice*)device, format, quality);
 }
 
-QImage* q_image_from_data22(const char* data, const char* format) {
+QImage* q_image_from_data22(char* data, const char* format) {
     return QImage_FromData22(qstring(data), format);
 }
 
@@ -766,7 +766,7 @@ QImage* q_image_from_data32(unsigned char* data, int size, const char* format) {
     return QImage_FromData32(data, size, format);
 }
 
-QImage* q_image_from_data23(const char* data, const char* format) {
+QImage* q_image_from_data23(char* data, const char* format) {
     return QImage_FromData23(qstring(data), format);
 }
 

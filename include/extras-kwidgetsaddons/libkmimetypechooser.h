@@ -1811,9 +1811,9 @@ char* k_mimetypechooser_save_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self KMimeTypeChooser*
-/// @param geometry const char*
+/// @param geometry char*
 ///
-bool k_mimetypechooser_restore_geometry(void* self, const char* geometry);
+bool k_mimetypechooser_restore_geometry(void* self, char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2619,9 +2619,9 @@ const char* k_mimetypechooser_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KMimeTypeChooser*
-/// @param name char*
+/// @param name const char*
 ///
-void k_mimetypechooser_set_object_name(void* self, char* name);
+void k_mimetypechooser_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4198,11 +4198,11 @@ void k_mimetypechooser_on_hide_event(void* self, void (*callback)(void*, void*))
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_mimetypechooser_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool k_mimetypechooser_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4211,11 +4211,11 @@ bool k_mimetypechooser_native_event(void* self, const char* eventType, void* mes
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_mimetypechooser_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool k_mimetypechooser_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4224,9 +4224,9 @@ bool k_mimetypechooser_qbase_native_event(void* self, const char* eventType, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback bool func(KMimeTypeChooser* self, const char* eventType, void* message, intptr_t* result)
+/// @param callback bool func(KMimeTypeChooser* self, libqt_string eventType, void* message, intptr_t* result)
 ///
-void k_mimetypechooser_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
+void k_mimetypechooser_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///
@@ -6972,9 +6972,9 @@ char* k_mimetypechooserdialog_save_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param geometry const char*
+/// @param geometry char*
 ///
-bool k_mimetypechooserdialog_restore_geometry(void* self, const char* geometry);
+bool k_mimetypechooserdialog_restore_geometry(void* self, char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -7780,9 +7780,9 @@ const char* k_mimetypechooserdialog_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param name char*
+/// @param name const char*
 ///
-void k_mimetypechooserdialog_set_object_name(void* self, char* name);
+void k_mimetypechooserdialog_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -9520,11 +9520,11 @@ void k_mimetypechooserdialog_on_hide_event(void* self, void (*callback)(void*, v
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_mimetypechooserdialog_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool k_mimetypechooserdialog_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -9533,11 +9533,11 @@ bool k_mimetypechooserdialog_native_event(void* self, const char* eventType, voi
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_mimetypechooserdialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool k_mimetypechooserdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -9546,9 +9546,9 @@ bool k_mimetypechooserdialog_qbase_native_event(void* self, const char* eventTyp
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback bool func(KMimeTypeChooserDialog* self, const char* eventType, void* message, intptr_t* result)
+/// @param callback bool func(KMimeTypeChooserDialog* self, libqt_string eventType, void* message, intptr_t* result)
 ///
-void k_mimetypechooserdialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
+void k_mimetypechooserdialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///

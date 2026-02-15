@@ -50,9 +50,9 @@ libqt_list q_mimedatabase_mime_types_for_file_name(void* self, const char* fileN
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedatabase.html#mimeTypeForData)
 ///
 /// @param self QMimeDatabase*
-/// @param data const char*
+/// @param data char*
 ///
-QMimeType* q_mimedatabase_mime_type_for_data(void* self, const char* data);
+QMimeType* q_mimedatabase_mime_type_for_data(void* self, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedatabase.html#mimeTypeForData)
 ///
@@ -80,9 +80,9 @@ QMimeType* q_mimedatabase_mime_type_for_file_name_and_data(void* self, const cha
 ///
 /// @param self QMimeDatabase*
 /// @param fileName const char*
-/// @param data const char*
+/// @param data char*
 ///
-QMimeType* q_mimedatabase_mime_type_for_file_name_and_data2(void* self, const char* fileName, const char* data);
+QMimeType* q_mimedatabase_mime_type_for_file_name_and_data2(void* self, const char* fileName, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedatabase.html#suffixForFileName)
 ///

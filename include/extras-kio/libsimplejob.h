@@ -569,9 +569,9 @@ const char* k_io__simplejob_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KIO__SimpleJob*
-/// @param name char*
+/// @param name const char*
 ///
-void k_io__simplejob_set_object_name(void* self, char* name);
+void k_io__simplejob_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1137,20 +1137,20 @@ KIO__SimpleJob* k_io_symlink(const char* param1, void* param2, int32_t param3);
 /// [Upstream resources](https://api.kde.org/kio.html#special)
 ///
 /// @param param1 QUrl*
-/// @param param2 const char*
+/// @param param2 char*
 /// @param param3 flag of enum KIO__JobFlag
 ///
-KIO__SimpleJob* k_io_special(void* param1, const char* param2, int32_t param3);
+KIO__SimpleJob* k_io_special(void* param1, char* param2, int32_t param3);
 
 /// [Upstream resources](https://api.kde.org/kio.html#mount)
 ///
 /// @param param1 bool
-/// @param param2 const char*
+/// @param param2 char*
 /// @param param3 const char*
 /// @param param4 const char*
 /// @param param5 flag of enum KIO__JobFlag
 ///
-KIO__SimpleJob* k_io_mount(bool param1, const char* param2, const char* param3, const char* param4, int32_t param5);
+KIO__SimpleJob* k_io_mount(bool param1, char* param2, const char* param3, const char* param4, int32_t param5);
 
 /// [Upstream resources](https://api.kde.org/kio.html#unmount)
 ///

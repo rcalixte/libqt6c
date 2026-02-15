@@ -1885,9 +1885,9 @@ char* k_urlrequesterdialog_save_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self KUrlRequesterDialog*
-/// @param geometry const char*
+/// @param geometry char*
 ///
-bool k_urlrequesterdialog_restore_geometry(void* self, const char* geometry);
+bool k_urlrequesterdialog_restore_geometry(void* self, char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2693,9 +2693,9 @@ const char* k_urlrequesterdialog_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KUrlRequesterDialog*
-/// @param name char*
+/// @param name const char*
 ///
-void k_urlrequesterdialog_set_object_name(void* self, char* name);
+void k_urlrequesterdialog_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4464,11 +4464,11 @@ void k_urlrequesterdialog_on_hide_event(void* self, void (*callback)(void*, void
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KUrlRequesterDialog*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_urlrequesterdialog_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool k_urlrequesterdialog_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4477,11 +4477,11 @@ bool k_urlrequesterdialog_native_event(void* self, const char* eventType, void* 
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KUrlRequesterDialog*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_urlrequesterdialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool k_urlrequesterdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4490,9 +4490,9 @@ bool k_urlrequesterdialog_qbase_native_event(void* self, const char* eventType, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlRequesterDialog*
-/// @param callback bool func(KUrlRequesterDialog* self, const char* eventType, void* message, intptr_t* result)
+/// @param callback bool func(KUrlRequesterDialog* self, libqt_string eventType, void* message, intptr_t* result)
 ///
-void k_urlrequesterdialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
+void k_urlrequesterdialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///

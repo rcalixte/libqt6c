@@ -240,7 +240,7 @@ const char* q_abstractnetworkcache_object_name(void* self) {
     return _ret;
 }
 
-void q_abstractnetworkcache_set_object_name(void* self, char* name) {
+void q_abstractnetworkcache_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

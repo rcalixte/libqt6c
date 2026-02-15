@@ -27,19 +27,19 @@ QMovie* q_movie_new4(void* parent) {
     return QMovie_new4((QObject*)parent);
 }
 
-QMovie* q_movie_new5(void* device, const char* format) {
+QMovie* q_movie_new5(void* device, char* format) {
     return QMovie_new5((QIODevice*)device, qstring(format));
 }
 
-QMovie* q_movie_new6(void* device, const char* format, void* parent) {
+QMovie* q_movie_new6(void* device, char* format, void* parent) {
     return QMovie_new6((QIODevice*)device, qstring(format), (QObject*)parent);
 }
 
-QMovie* q_movie_new7(const char* fileName, const char* format) {
+QMovie* q_movie_new7(const char* fileName, char* format) {
     return QMovie_new7(qstring(fileName), qstring(format));
 }
 
-QMovie* q_movie_new8(const char* fileName, const char* format, void* parent) {
+QMovie* q_movie_new8(const char* fileName, char* format, void* parent) {
     return QMovie_new8(qstring(fileName), qstring(format), (QObject*)parent);
 }
 
@@ -124,7 +124,7 @@ const char* q_movie_file_name(void* self) {
     return _ret;
 }
 
-void q_movie_set_format(void* self, const char* format) {
+void q_movie_set_format(void* self, char* format) {
     QMovie_SetFormat((QMovie*)self, qstring(format));
 }
 
@@ -311,7 +311,7 @@ const char* q_movie_object_name(void* self) {
     return _ret;
 }
 
-void q_movie_set_object_name(void* self, char* name) {
+void q_movie_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

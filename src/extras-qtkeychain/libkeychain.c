@@ -127,7 +127,7 @@ const char* q_keychain__job_object_name(void* self) {
     return _ret;
 }
 
-void q_keychain__job_set_object_name(void* self, char* name) {
+void q_keychain__job_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -498,7 +498,7 @@ const char* q_keychain__readpasswordjob_object_name(void* self) {
     return _ret;
 }
 
-void q_keychain__readpasswordjob_set_object_name(void* self, char* name) {
+void q_keychain__readpasswordjob_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -905,7 +905,7 @@ const char* q_keychain__writepasswordjob_tr(const char* s) {
     return _ret;
 }
 
-void q_keychain__writepasswordjob_set_binary_data(void* self, const char* data) {
+void q_keychain__writepasswordjob_set_binary_data(void* self, char* data) {
     QKeychain__WritePasswordJob_SetBinaryData((QKeychain__WritePasswordJob*)self, qstring(data));
 }
 
@@ -1007,7 +1007,7 @@ const char* q_keychain__writepasswordjob_object_name(void* self) {
     return _ret;
 }
 
-void q_keychain__writepasswordjob_set_object_name(void* self, char* name) {
+void q_keychain__writepasswordjob_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1508,7 +1508,7 @@ const char* q_keychain__deletepasswordjob_object_name(void* self) {
     return _ret;
 }
 
-void q_keychain__deletepasswordjob_set_object_name(void* self, char* name) {
+void q_keychain__deletepasswordjob_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

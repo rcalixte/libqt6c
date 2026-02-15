@@ -902,7 +902,7 @@ char* q_designeractioneditorinterface_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_designeractioneditorinterface_restore_geometry(void* self, const char* geometry) {
+bool q_designeractioneditorinterface_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1258,7 +1258,7 @@ const char* q_designeractioneditorinterface_object_name(void* self) {
     return _ret;
 }
 
-void q_designeractioneditorinterface_set_object_name(void* self, char* name) {
+void q_designeractioneditorinterface_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1894,15 +1894,15 @@ void q_designeractioneditorinterface_on_hide_event(void* self, void (*callback)(
     QDesignerActionEditorInterface_OnHideEvent((QDesignerActionEditorInterface*)self, (intptr_t)callback);
 }
 
-bool q_designeractioneditorinterface_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_designeractioneditorinterface_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QDesignerActionEditorInterface_NativeEvent((QDesignerActionEditorInterface*)self, qstring(eventType), message, result);
 }
 
-bool q_designeractioneditorinterface_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_designeractioneditorinterface_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QDesignerActionEditorInterface_QBaseNativeEvent((QDesignerActionEditorInterface*)self, qstring(eventType), message, result);
 }
 
-void q_designeractioneditorinterface_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_designeractioneditorinterface_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QDesignerActionEditorInterface_OnNativeEvent((QDesignerActionEditorInterface*)self, (intptr_t)callback);
 }
 

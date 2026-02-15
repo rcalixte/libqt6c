@@ -1048,9 +1048,9 @@ const char* q_identityproxymodel_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QIdentityProxyModel*
-/// @param name char*
+/// @param name const char*
 ///
-void q_identityproxymodel_set_object_name(void* self, char* name);
+void q_identityproxymodel_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

@@ -63,7 +63,7 @@ char* q_url_to_encoded(void* self) {
     return _ret;
 }
 
-QUrl* q_url_from_encoded(const char* input) {
+QUrl* q_url_from_encoded(char* input) {
     return QUrl_FromEncoded(qstring(input));
 }
 
@@ -251,7 +251,7 @@ bool q_url_is_detached(void* self) {
     return QUrl_IsDetached((QUrl*)self);
 }
 
-const char* q_url_from_percent_encoding(const char* param1) {
+const char* q_url_from_percent_encoding(char* param1) {
     libqt_string _str = QUrl_FromPercentEncoding(qstring(param1));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -265,7 +265,7 @@ char* q_url_to_percent_encoding(const char* param1) {
     return _ret;
 }
 
-const char* q_url_from_ace(const char* domain) {
+const char* q_url_from_ace(char* domain) {
     libqt_string _str = QUrl_FromAce(qstring(domain));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -352,7 +352,7 @@ void q_url_set_url2(void* self, const char* url, int32_t mode) {
     QUrl_SetUrl2((QUrl*)self, qstring(url), mode);
 }
 
-QUrl* q_url_from_encoded2(const char* input, int32_t mode) {
+QUrl* q_url_from_encoded2(char* input, int32_t mode) {
     return QUrl_FromEncoded2(qstring(input), mode);
 }
 
@@ -463,21 +463,21 @@ void q_url_set_fragment2(void* self, const char* fragment, int32_t mode) {
     QUrl_SetFragment2((QUrl*)self, qstring(fragment), mode);
 }
 
-char* q_url_to_percent_encoding2(const char* param1, const char* exclude) {
+char* q_url_to_percent_encoding2(const char* param1, char* exclude) {
     libqt_string _str = QUrl_ToPercentEncoding2(qstring(param1), qstring(exclude));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_url_to_percent_encoding3(const char* param1, const char* exclude, const char* include) {
+char* q_url_to_percent_encoding3(const char* param1, char* exclude, char* include) {
     libqt_string _str = QUrl_ToPercentEncoding3(qstring(param1), qstring(exclude), qstring(include));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_url_from_ace2(const char* domain, uint32_t options) {
+const char* q_url_from_ace2(char* domain, uint32_t options) {
     libqt_string _str = QUrl_FromAce2(qstring(domain), options);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

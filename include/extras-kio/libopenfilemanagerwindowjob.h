@@ -124,9 +124,9 @@ char* k_io__openfilemanagerwindowjob_startup_id(void* self);
 /// [Upstream resources](https://api.kde.org/kio-openfilemanagerwindowjob.html#setStartupId)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
-/// @param startupId const char*
+/// @param startupId char*
 ///
-void k_io__openfilemanagerwindowjob_set_startup_id(void* self, const char* startupId);
+void k_io__openfilemanagerwindowjob_set_startup_id(void* self, char* startupId);
 
 /// [Upstream resources](https://api.kde.org/kio-openfilemanagerwindowjob.html#start)
 ///
@@ -458,9 +458,9 @@ const char* k_io__openfilemanagerwindowjob_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
-/// @param name char*
+/// @param name const char*
 ///
-void k_io__openfilemanagerwindowjob_set_object_name(void* self, char* name);
+void k_io__openfilemanagerwindowjob_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1874,9 +1874,9 @@ void k_io__openfilemanagerwindowjob_delete(void* self);
 /// [Upstream resources](https://api.kde.org/kio.html#highlightInFileManager)
 ///
 /// @param param1 libqt_list of QUrl*
-/// @param param2 const char*
+/// @param param2 char*
 ///
-KIO__OpenFileManagerWindowJob* k_io_highlight_in_file_manager(libqt_list param1, const char* param2);
+KIO__OpenFileManagerWindowJob* k_io_highlight_in_file_manager(libqt_list param1, char* param2);
 
 /// [Upstream resources](https://api.kde.org/kio-openfilemanagerwindowjob.html#public-types)
 

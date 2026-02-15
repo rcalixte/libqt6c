@@ -103,7 +103,7 @@ const char* k_dialogjobuidelegate_object_name(void* self) {
     return _ret;
 }
 
-void k_dialogjobuidelegate_set_object_name(void* self, char* name) {
+void k_dialogjobuidelegate_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

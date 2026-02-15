@@ -83,9 +83,9 @@ void k_io__applicationlauncherjob_set_suggested_file_name(void* self, const char
 /// [Upstream resources](https://api.kde.org/kio-applicationlauncherjob.html#setStartupId)
 ///
 /// @param self KIO__ApplicationLauncherJob*
-/// @param startupId const char*
+/// @param startupId char*
 ///
-void k_io__applicationlauncherjob_set_startup_id(void* self, const char* startupId);
+void k_io__applicationlauncherjob_set_startup_id(void* self, char* startupId);
 
 /// [Upstream resources](https://api.kde.org/kio-applicationlauncherjob.html#start)
 ///
@@ -445,9 +445,9 @@ const char* k_io__applicationlauncherjob_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KIO__ApplicationLauncherJob*
-/// @param name char*
+/// @param name const char*
 ///
-void k_io__applicationlauncherjob_set_object_name(void* self, char* name);
+void k_io__applicationlauncherjob_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

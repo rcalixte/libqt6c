@@ -116,16 +116,16 @@ char* q_webenginehttprequest_post_data(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#setPostData)
 ///
 /// @param self QWebEngineHttpRequest*
-/// @param postData const char*
+/// @param postData char*
 ///
-void q_webenginehttprequest_set_post_data(void* self, const char* postData);
+void q_webenginehttprequest_set_post_data(void* self, char* postData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#hasHeader)
 ///
 /// @param self QWebEngineHttpRequest*
-/// @param headerName const char*
+/// @param headerName char*
 ///
-bool q_webenginehttprequest_has_header(void* self, const char* headerName);
+bool q_webenginehttprequest_has_header(void* self, char* headerName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#headers)
 ///
@@ -140,24 +140,24 @@ const char** q_webenginehttprequest_headers(void* self);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QWebEngineHttpRequest*
-/// @param headerName const char*
+/// @param headerName char*
 ///
-char* q_webenginehttprequest_header(void* self, const char* headerName);
+char* q_webenginehttprequest_header(void* self, char* headerName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#setHeader)
 ///
 /// @param self QWebEngineHttpRequest*
-/// @param headerName const char*
-/// @param value const char*
+/// @param headerName char*
+/// @param value char*
 ///
-void q_webenginehttprequest_set_header(void* self, const char* headerName, const char* value);
+void q_webenginehttprequest_set_header(void* self, char* headerName, char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#unsetHeader)
 ///
 /// @param self QWebEngineHttpRequest*
-/// @param headerName const char*
+/// @param headerName char*
 ///
-void q_webenginehttprequest_unset_header(void* self, const char* headerName);
+void q_webenginehttprequest_unset_header(void* self, char* headerName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#dtor.QWebEngineHttpRequest)
 ///

@@ -934,7 +934,7 @@ char* k_filecustomdialog_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_filecustomdialog_restore_geometry(void* self, const char* geometry) {
+bool k_filecustomdialog_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1290,7 +1290,7 @@ const char* k_filecustomdialog_object_name(void* self) {
     return _ret;
 }
 
-void k_filecustomdialog_set_object_name(void* self, char* name) {
+void k_filecustomdialog_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1986,15 +1986,15 @@ void k_filecustomdialog_on_hide_event(void* self, void (*callback)(void*, void*)
     KFileCustomDialog_OnHideEvent((KFileCustomDialog*)self, (intptr_t)callback);
 }
 
-bool k_filecustomdialog_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_filecustomdialog_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KFileCustomDialog_NativeEvent((KFileCustomDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_filecustomdialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_filecustomdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KFileCustomDialog_QBaseNativeEvent((KFileCustomDialog*)self, qstring(eventType), message, result);
 }
 
-void k_filecustomdialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_filecustomdialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KFileCustomDialog_OnNativeEvent((KFileCustomDialog*)self, (intptr_t)callback);
 }
 

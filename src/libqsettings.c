@@ -130,7 +130,7 @@ void q_settings_set_atomic_sync_required(void* self, bool enable) {
     QSettings_SetAtomicSyncRequired((QSettings*)self, enable);
 }
 
-void q_settings_begin_group(void* self, char* prefix) {
+void q_settings_begin_group(void* self, const char* prefix) {
     QSettings_BeginGroup((QSettings*)self, prefix);
 }
 
@@ -145,11 +145,11 @@ const char* q_settings_group(void* self) {
     return _ret;
 }
 
-int32_t q_settings_begin_read_array(void* self, char* prefix) {
+int32_t q_settings_begin_read_array(void* self, const char* prefix) {
     return QSettings_BeginReadArray((QSettings*)self, prefix);
 }
 
-void q_settings_begin_write_array(void* self, char* prefix) {
+void q_settings_begin_write_array(void* self, const char* prefix) {
     QSettings_BeginWriteArray((QSettings*)self, prefix);
 }
 
@@ -222,23 +222,23 @@ bool q_settings_is_writable(void* self) {
     return QSettings_IsWritable((QSettings*)self);
 }
 
-void q_settings_set_value(void* self, char* key, void* value) {
+void q_settings_set_value(void* self, const char* key, void* value) {
     QSettings_SetValue((QSettings*)self, key, (QVariant*)value);
 }
 
-QVariant* q_settings_value(void* self, char* key, void* defaultValue) {
+QVariant* q_settings_value(void* self, const char* key, void* defaultValue) {
     return QSettings_Value((QSettings*)self, key, (QVariant*)defaultValue);
 }
 
-QVariant* q_settings_value2(void* self, char* key) {
+QVariant* q_settings_value2(void* self, const char* key) {
     return QSettings_Value2((QSettings*)self, key);
 }
 
-void q_settings_remove(void* self, char* key) {
+void q_settings_remove(void* self, const char* key) {
     QSettings_Remove((QSettings*)self, key);
 }
 
-bool q_settings_contains(void* self, char* key) {
+bool q_settings_contains(void* self, const char* key) {
     return QSettings_Contains((QSettings*)self, key);
 }
 
@@ -317,7 +317,7 @@ const char* q_settings_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_settings_begin_write_array2(void* self, char* prefix, int size) {
+void q_settings_begin_write_array2(void* self, const char* prefix, int size) {
     QSettings_BeginWriteArray2((QSettings*)self, prefix, size);
 }
 
@@ -328,7 +328,7 @@ const char* q_settings_object_name(void* self) {
     return _ret;
 }
 
-void q_settings_set_object_name(void* self, char* name) {
+void q_settings_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

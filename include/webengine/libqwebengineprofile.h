@@ -301,24 +301,24 @@ QWebEngineClientHints* q_webengineprofile_client_hints(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#urlSchemeHandler)
 ///
 /// @param self QWebEngineProfile*
-/// @param param1 const char*
+/// @param param1 char*
 ///
-const QWebEngineUrlSchemeHandler* q_webengineprofile_url_scheme_handler(void* self, const char* param1);
+const QWebEngineUrlSchemeHandler* q_webengineprofile_url_scheme_handler(void* self, char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#installUrlSchemeHandler)
 ///
 /// @param self QWebEngineProfile*
-/// @param scheme const char*
+/// @param scheme char*
 /// @param param2 QWebEngineUrlSchemeHandler*
 ///
-void q_webengineprofile_install_url_scheme_handler(void* self, const char* scheme, void* param2);
+void q_webengineprofile_install_url_scheme_handler(void* self, char* scheme, void* param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#removeUrlScheme)
 ///
 /// @param self QWebEngineProfile*
-/// @param scheme const char*
+/// @param scheme char*
 ///
-void q_webengineprofile_remove_url_scheme(void* self, const char* scheme);
+void q_webengineprofile_remove_url_scheme(void* self, char* scheme);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#removeUrlSchemeHandler)
 ///
@@ -500,9 +500,9 @@ const char* q_webengineprofile_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QWebEngineProfile*
-/// @param name char*
+/// @param name const char*
 ///
-void q_webengineprofile_set_object_name(void* self, char* name);
+void q_webengineprofile_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

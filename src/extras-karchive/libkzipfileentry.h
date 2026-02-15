@@ -104,9 +104,9 @@ char* k_zipfileentry_data(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KZipFileEntry*
-/// @param callback char* func()
+/// @param callback libqt_string func()
 ///
-void k_zipfileentry_on_data(void* self, char* (*callback)());
+void k_zipfileentry_on_data(void* self, libqt_string (*callback)());
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#data)
 ///

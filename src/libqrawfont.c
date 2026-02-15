@@ -16,7 +16,7 @@ QRawFont* q_rawfont_new2(const char* fileName, double pixelSize) {
     return QRawFont_new2(qstring(fileName), pixelSize);
 }
 
-QRawFont* q_rawfont_new3(const char* fontData, double pixelSize) {
+QRawFont* q_rawfont_new3(char* fontData, double pixelSize) {
     return QRawFont_new3(qstring(fontData), pixelSize);
 }
 
@@ -28,7 +28,7 @@ QRawFont* q_rawfont_new5(const char* fileName, double pixelSize, int32_t hinting
     return QRawFont_new5(qstring(fileName), pixelSize, hintingPreference);
 }
 
-QRawFont* q_rawfont_new6(const char* fontData, double pixelSize, int32_t hintingPreference) {
+QRawFont* q_rawfont_new6(char* fontData, double pixelSize, int32_t hintingPreference) {
     return QRawFont_new6(qstring(fontData), pixelSize, hintingPreference);
 }
 
@@ -169,7 +169,7 @@ void q_rawfont_load_from_file(void* self, const char* fileName, double pixelSize
     QRawFont_LoadFromFile((QRawFont*)self, qstring(fileName), pixelSize, hintingPreference);
 }
 
-void q_rawfont_load_from_data(void* self, const char* fontData, double pixelSize, int32_t hintingPreference) {
+void q_rawfont_load_from_data(void* self, char* fontData, double pixelSize, int32_t hintingPreference) {
     QRawFont_LoadFromData((QRawFont*)self, qstring(fontData), pixelSize, hintingPreference);
 }
 

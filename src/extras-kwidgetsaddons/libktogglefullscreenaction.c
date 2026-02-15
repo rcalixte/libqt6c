@@ -413,7 +413,7 @@ const char* k_togglefullscreenaction_object_name(void* self) {
     return _ret;
 }
 
-void k_togglefullscreenaction_set_object_name(void* self, char* name) {
+void k_togglefullscreenaction_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

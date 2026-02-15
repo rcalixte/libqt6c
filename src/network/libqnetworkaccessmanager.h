@@ -254,9 +254,9 @@ QNetworkReply* q_networkaccessmanager_get2(void* self, void* request, void* data
 ///
 /// @param self QNetworkAccessManager*
 /// @param request QNetworkRequest*
-/// @param data const char*
+/// @param data char*
 ///
-QNetworkReply* q_networkaccessmanager_get3(void* self, void* request, const char* data);
+QNetworkReply* q_networkaccessmanager_get3(void* self, void* request, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#post)
 ///
@@ -270,9 +270,9 @@ QNetworkReply* q_networkaccessmanager_post(void* self, void* request, void* data
 ///
 /// @param self QNetworkAccessManager*
 /// @param request QNetworkRequest*
-/// @param data const char*
+/// @param data char*
 ///
-QNetworkReply* q_networkaccessmanager_post2(void* self, void* request, const char* data);
+QNetworkReply* q_networkaccessmanager_post2(void* self, void* request, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#put)
 ///
@@ -286,9 +286,9 @@ QNetworkReply* q_networkaccessmanager_put(void* self, void* request, void* data)
 ///
 /// @param self QNetworkAccessManager*
 /// @param request QNetworkRequest*
-/// @param data const char*
+/// @param data char*
 ///
-QNetworkReply* q_networkaccessmanager_put2(void* self, void* request, const char* data);
+QNetworkReply* q_networkaccessmanager_put2(void* self, void* request, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#deleteResource)
 ///
@@ -301,18 +301,18 @@ QNetworkReply* q_networkaccessmanager_delete_resource(void* self, void* request)
 ///
 /// @param self QNetworkAccessManager*
 /// @param request QNetworkRequest*
-/// @param verb const char*
+/// @param verb char*
 ///
-QNetworkReply* q_networkaccessmanager_send_custom_request(void* self, void* request, const char* verb);
+QNetworkReply* q_networkaccessmanager_send_custom_request(void* self, void* request, char* verb);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#sendCustomRequest)
 ///
 /// @param self QNetworkAccessManager*
 /// @param request QNetworkRequest*
-/// @param verb const char*
-/// @param data const char*
+/// @param verb char*
+/// @param data char*
 ///
-QNetworkReply* q_networkaccessmanager_send_custom_request2(void* self, void* request, const char* verb, const char* data);
+QNetworkReply* q_networkaccessmanager_send_custom_request2(void* self, void* request, char* verb, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#post)
 ///
@@ -334,10 +334,10 @@ QNetworkReply* q_networkaccessmanager_put4(void* self, void* request, void* mult
 ///
 /// @param self QNetworkAccessManager*
 /// @param request QNetworkRequest*
-/// @param verb const char*
+/// @param verb char*
 /// @param multiPart QHttpMultiPart*
 ///
-QNetworkReply* q_networkaccessmanager_send_custom_request3(void* self, void* request, const char* verb, void* multiPart);
+QNetworkReply* q_networkaccessmanager_send_custom_request3(void* self, void* request, char* verb, void* multiPart);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#connectToHostEncrypted)
 ///
@@ -591,10 +591,10 @@ void q_networkaccessmanager_enable_strict_transport_security_store2(void* self, 
 ///
 /// @param self QNetworkAccessManager*
 /// @param request QNetworkRequest*
-/// @param verb const char*
+/// @param verb char*
 /// @param data QIODevice*
 ///
-QNetworkReply* q_networkaccessmanager_send_custom_request32(void* self, void* request, const char* verb, void* data);
+QNetworkReply* q_networkaccessmanager_send_custom_request32(void* self, void* request, char* verb, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#connectToHostEncrypted)
 ///
@@ -643,9 +643,9 @@ const char* q_networkaccessmanager_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QNetworkAccessManager*
-/// @param name char*
+/// @param name const char*
 ///
-void q_networkaccessmanager_set_object_name(void* self, char* name);
+void q_networkaccessmanager_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

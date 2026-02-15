@@ -29,9 +29,9 @@ QDataStream* q_datastream_new2(void* param1);
 
 /// q_datastream_new3 constructs a new QDataStream object.
 ///
-/// @param param1 const char*
+/// @param param1 char*
 ///
-QDataStream* q_datastream_new3(const char* param1);
+QDataStream* q_datastream_new3(char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#device)
 ///

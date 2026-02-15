@@ -888,7 +888,7 @@ char* k_pixmapsequencewidget_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_pixmapsequencewidget_restore_geometry(void* self, const char* geometry) {
+bool k_pixmapsequencewidget_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1244,7 +1244,7 @@ const char* k_pixmapsequencewidget_object_name(void* self) {
     return _ret;
 }
 
-void k_pixmapsequencewidget_set_object_name(void* self, char* name) {
+void k_pixmapsequencewidget_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1868,15 +1868,15 @@ void k_pixmapsequencewidget_on_hide_event(void* self, void (*callback)(void*, vo
     KPixmapSequenceWidget_OnHideEvent((KPixmapSequenceWidget*)self, (intptr_t)callback);
 }
 
-bool k_pixmapsequencewidget_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_pixmapsequencewidget_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KPixmapSequenceWidget_NativeEvent((KPixmapSequenceWidget*)self, qstring(eventType), message, result);
 }
 
-bool k_pixmapsequencewidget_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_pixmapsequencewidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KPixmapSequenceWidget_QBaseNativeEvent((KPixmapSequenceWidget*)self, qstring(eventType), message, result);
 }
 
-void k_pixmapsequencewidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_pixmapsequencewidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KPixmapSequenceWidget_OnNativeEvent((KPixmapSequenceWidget*)self, (intptr_t)callback);
 }
 

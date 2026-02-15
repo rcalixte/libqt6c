@@ -22,11 +22,11 @@ QSslCertificate* q_sslcertificate_new4(void* device, int32_t format) {
     return QSslCertificate_new4((QIODevice*)device, format);
 }
 
-QSslCertificate* q_sslcertificate_new5(const char* data) {
+QSslCertificate* q_sslcertificate_new5(char* data) {
     return QSslCertificate_new5(qstring(data));
 }
 
-QSslCertificate* q_sslcertificate_new6(const char* data, int32_t format) {
+QSslCertificate* q_sslcertificate_new6(char* data, int32_t format) {
     return QSslCertificate_new6(qstring(data), format);
 }
 
@@ -102,7 +102,7 @@ const char** q_sslcertificate_issuer_info(void* self, int32_t info) {
     return _ret;
 }
 
-const char** q_sslcertificate_issuer_info2(void* self, const char* attribute) {
+const char** q_sslcertificate_issuer_info2(void* self, char* attribute) {
     libqt_list _arr = QSslCertificate_IssuerInfo2((QSslCertificate*)self, qstring(attribute));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -140,7 +140,7 @@ const char** q_sslcertificate_subject_info(void* self, int32_t info) {
     return _ret;
 }
 
-const char** q_sslcertificate_subject_info2(void* self, const char* attribute) {
+const char** q_sslcertificate_subject_info2(void* self, char* attribute) {
     libqt_list _arr = QSslCertificate_SubjectInfo2((QSslCertificate*)self, qstring(attribute));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -324,7 +324,7 @@ libqt_list /* of QSslCertificate* */ q_sslcertificate_from_device(void* device) 
     return _arr;
 }
 
-libqt_list /* of QSslCertificate* */ q_sslcertificate_from_data(const char* data) {
+libqt_list /* of QSslCertificate* */ q_sslcertificate_from_data(char* data) {
     libqt_list _arr = QSslCertificate_FromData(qstring(data));
     return _arr;
 }
@@ -364,7 +364,7 @@ libqt_list /* of QSslCertificate* */ q_sslcertificate_from_device2(void* device,
     return _arr;
 }
 
-libqt_list /* of QSslCertificate* */ q_sslcertificate_from_data2(const char* data, int32_t format) {
+libqt_list /* of QSslCertificate* */ q_sslcertificate_from_data2(char* data, int32_t format) {
     libqt_list _arr = QSslCertificate_FromData2(qstring(data), format);
     return _arr;
 }
@@ -378,7 +378,7 @@ bool q_sslcertificate_import_pkcs124(void* device, void* key, void* cert, libqt_
     return QSslCertificate_ImportPkcs124((QIODevice*)device, (QSslKey*)key, (QSslCertificate*)cert, caCertificates);
 }
 
-bool q_sslcertificate_import_pkcs125(void* device, void* key, void* cert, libqt_list /* of QSslCertificate* */ caCertificates, const char* passPhrase) {
+bool q_sslcertificate_import_pkcs125(void* device, void* key, void* cert, libqt_list /* of QSslCertificate* */ caCertificates, char* passPhrase) {
     return QSslCertificate_ImportPkcs125((QIODevice*)device, (QSslKey*)key, (QSslCertificate*)cert, caCertificates, qstring(passPhrase));
 }
 

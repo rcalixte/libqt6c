@@ -118,7 +118,7 @@ void q_webengineview_set_html(void* self, const char* html) {
     QWebEngineView_SetHtml((QWebEngineView*)self, qstring(html));
 }
 
-void q_webengineview_set_content(void* self, const char* data) {
+void q_webengineview_set_content(void* self, char* data) {
     QWebEngineView_SetContent((QWebEngineView*)self, qstring(data));
 }
 
@@ -470,11 +470,11 @@ void q_webengineview_set_html2(void* self, const char* html, void* baseUrl) {
     QWebEngineView_SetHtml2((QWebEngineView*)self, qstring(html), (QUrl*)baseUrl);
 }
 
-void q_webengineview_set_content2(void* self, const char* data, const char* mimeType) {
+void q_webengineview_set_content2(void* self, char* data, const char* mimeType) {
     QWebEngineView_SetContent2((QWebEngineView*)self, qstring(data), qstring(mimeType));
 }
 
-void q_webengineview_set_content3(void* self, const char* data, const char* mimeType, void* baseUrl) {
+void q_webengineview_set_content3(void* self, char* data, const char* mimeType, void* baseUrl) {
     QWebEngineView_SetContent3((QWebEngineView*)self, qstring(data), qstring(mimeType), (QUrl*)baseUrl);
 }
 
@@ -1267,7 +1267,7 @@ char* q_webengineview_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_webengineview_restore_geometry(void* self, const char* geometry) {
+bool q_webengineview_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1623,7 +1623,7 @@ const char* q_webengineview_object_name(void* self) {
     return _ret;
 }
 
-void q_webengineview_set_object_name(void* self, char* name) {
+void q_webengineview_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2139,15 +2139,15 @@ void q_webengineview_on_action_event(void* self, void (*callback)(void*, void*))
     QWebEngineView_OnActionEvent((QWebEngineView*)self, (intptr_t)callback);
 }
 
-bool q_webengineview_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_webengineview_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QWebEngineView_NativeEvent((QWebEngineView*)self, qstring(eventType), message, result);
 }
 
-bool q_webengineview_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_webengineview_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QWebEngineView_QBaseNativeEvent((QWebEngineView*)self, qstring(eventType), message, result);
 }
 
-void q_webengineview_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_webengineview_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QWebEngineView_OnNativeEvent((QWebEngineView*)self, (intptr_t)callback);
 }
 

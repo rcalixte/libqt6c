@@ -1264,7 +1264,7 @@ char* q_mdiarea_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_mdiarea_restore_geometry(void* self, const char* geometry) {
+bool q_mdiarea_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1620,7 +1620,7 @@ const char* q_mdiarea_object_name(void* self) {
     return _ret;
 }
 
-void q_mdiarea_set_object_name(void* self, char* name) {
+void q_mdiarea_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2220,15 +2220,15 @@ void q_mdiarea_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QMdiArea_OnHideEvent((QMdiArea*)self, (intptr_t)callback);
 }
 
-bool q_mdiarea_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_mdiarea_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QMdiArea_NativeEvent((QMdiArea*)self, qstring(eventType), message, result);
 }
 
-bool q_mdiarea_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_mdiarea_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QMdiArea_QBaseNativeEvent((QMdiArea*)self, qstring(eventType), message, result);
 }
 
-void q_mdiarea_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_mdiarea_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QMdiArea_OnNativeEvent((QMdiArea*)self, (intptr_t)callback);
 }
 

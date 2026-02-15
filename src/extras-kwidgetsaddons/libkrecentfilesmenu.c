@@ -1126,7 +1126,7 @@ char* k_recentfilesmenu_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_recentfilesmenu_restore_geometry(void* self, const char* geometry) {
+bool k_recentfilesmenu_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1482,7 +1482,7 @@ const char* k_recentfilesmenu_object_name(void* self) {
     return _ret;
 }
 
-void k_recentfilesmenu_set_object_name(void* self, char* name) {
+void k_recentfilesmenu_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2166,15 +2166,15 @@ void k_recentfilesmenu_on_show_event(void* self, void (*callback)(void*, void*))
     KRecentFilesMenu_OnShowEvent((KRecentFilesMenu*)self, (intptr_t)callback);
 }
 
-bool k_recentfilesmenu_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_recentfilesmenu_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KRecentFilesMenu_NativeEvent((KRecentFilesMenu*)self, qstring(eventType), message, result);
 }
 
-bool k_recentfilesmenu_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_recentfilesmenu_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KRecentFilesMenu_QBaseNativeEvent((KRecentFilesMenu*)self, qstring(eventType), message, result);
 }
 
-void k_recentfilesmenu_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_recentfilesmenu_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KRecentFilesMenu_OnNativeEvent((KRecentFilesMenu*)self, (intptr_t)callback);
 }
 

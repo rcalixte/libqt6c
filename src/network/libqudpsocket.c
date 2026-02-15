@@ -115,7 +115,7 @@ long long q_udpsocket_write_datagram2(void* self, const char* data, long long le
     return QUdpSocket_WriteDatagram2((QUdpSocket*)self, data, lenVal, (QHostAddress*)host, port);
 }
 
-long long q_udpsocket_write_datagram3(void* self, const char* datagram, void* host, unsigned short port) {
+long long q_udpsocket_write_datagram3(void* self, char* datagram, void* host, unsigned short port) {
     return QUdpSocket_WriteDatagram3((QUdpSocket*)self, qstring(datagram), (QHostAddress*)host, port);
 }
 
@@ -396,7 +396,7 @@ long long q_udpsocket_write2(void* self, const char* data) {
     return QIODevice_Write2((QIODevice*)self, data);
 }
 
-long long q_udpsocket_write3(void* self, const char* data) {
+long long q_udpsocket_write3(void* self, char* data) {
     return QIODevice_Write3((QIODevice*)self, qstring(data));
 }
 
@@ -496,7 +496,7 @@ const char* q_udpsocket_object_name(void* self) {
     return _ret;
 }
 
-void q_udpsocket_set_object_name(void* self, char* name) {
+void q_udpsocket_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

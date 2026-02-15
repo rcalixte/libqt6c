@@ -1754,7 +1754,7 @@ char* k_richtextwidget_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_richtextwidget_restore_geometry(void* self, const char* geometry) {
+bool k_richtextwidget_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -2106,7 +2106,7 @@ const char* k_richtextwidget_object_name(void* self) {
     return _ret;
 }
 
-void k_richtextwidget_set_object_name(void* self, char* name) {
+void k_richtextwidget_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -3018,15 +3018,15 @@ void k_richtextwidget_on_hide_event(void* self, void (*callback)(void*, void*)) 
     KRichTextWidget_OnHideEvent((KRichTextWidget*)self, (intptr_t)callback);
 }
 
-bool k_richtextwidget_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_richtextwidget_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KRichTextWidget_NativeEvent((KRichTextWidget*)self, qstring(eventType), message, result);
 }
 
-bool k_richtextwidget_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_richtextwidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KRichTextWidget_QBaseNativeEvent((KRichTextWidget*)self, qstring(eventType), message, result);
 }
 
-void k_richtextwidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_richtextwidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KRichTextWidget_OnNativeEvent((KRichTextWidget*)self, (intptr_t)callback);
 }
 

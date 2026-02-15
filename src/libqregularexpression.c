@@ -195,7 +195,7 @@ int32_t q_regularexpressionmatch_last_captured_index(void* self) {
     return QRegularExpressionMatch_LastCapturedIndex((QRegularExpressionMatch*)self);
 }
 
-bool q_regularexpressionmatch_has_captured(void* self, char* name) {
+bool q_regularexpressionmatch_has_captured(void* self, const char* name) {
     return QRegularExpressionMatch_HasCaptured((QRegularExpressionMatch*)self, name);
 }
 
@@ -210,7 +210,7 @@ const char* q_regularexpressionmatch_captured(void* self) {
     return _ret;
 }
 
-const char* q_regularexpressionmatch_captured2(void* self, char* name) {
+const char* q_regularexpressionmatch_captured2(void* self, const char* name) {
     libqt_string _str = QRegularExpressionMatch_Captured2((QRegularExpressionMatch*)self, name);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -248,15 +248,15 @@ int64_t q_regularexpressionmatch_captured_end(void* self) {
     return QRegularExpressionMatch_CapturedEnd((QRegularExpressionMatch*)self);
 }
 
-int64_t q_regularexpressionmatch_captured_start2(void* self, char* name) {
+int64_t q_regularexpressionmatch_captured_start2(void* self, const char* name) {
     return QRegularExpressionMatch_CapturedStart2((QRegularExpressionMatch*)self, name);
 }
 
-int64_t q_regularexpressionmatch_captured_length2(void* self, char* name) {
+int64_t q_regularexpressionmatch_captured_length2(void* self, const char* name) {
     return QRegularExpressionMatch_CapturedLength2((QRegularExpressionMatch*)self, name);
 }
 
-int64_t q_regularexpressionmatch_captured_end2(void* self, char* name) {
+int64_t q_regularexpressionmatch_captured_end2(void* self, const char* name) {
     return QRegularExpressionMatch_CapturedEnd2((QRegularExpressionMatch*)self, name);
 }
 

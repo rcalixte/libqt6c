@@ -883,7 +883,7 @@ int32_t q_domdocument_node_type(void* self) {
     return QDomDocument_NodeType((QDomDocument*)self);
 }
 
-bool q_domdocument_set_content(void* self, const char* text, bool namespaceProcessing) {
+bool q_domdocument_set_content(void* self, char* text, bool namespaceProcessing) {
     return QDomDocument_SetContent((QDomDocument*)self, qstring(text), namespaceProcessing);
 }
 
@@ -899,7 +899,7 @@ bool q_domdocument_set_content7(void* self, void* reader, bool namespaceProcessi
     return QDomDocument_SetContent7((QDomDocument*)self, (QXmlStreamReader*)reader, namespaceProcessing);
 }
 
-QDomDocument__ParseResult* q_domdocument_set_content8(void* self, char* data) {
+QDomDocument__ParseResult* q_domdocument_set_content8(void* self, const char* data) {
     return QDomDocument_SetContent8((QDomDocument*)self, data);
 }
 
@@ -925,7 +925,7 @@ char* q_domdocument_to_byte_array(void* self) {
     return _ret;
 }
 
-QDomDocument__ParseResult* q_domdocument_set_content22(void* self, char* data, int32_t options) {
+QDomDocument__ParseResult* q_domdocument_set_content22(void* self, const char* data, int32_t options) {
     return QDomDocument_SetContent22((QDomDocument*)self, data, options);
 }
 

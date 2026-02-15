@@ -83,7 +83,7 @@ QVariant* q_networkreply_header(void* self, int32_t header) {
     return QNetworkReply_Header((QNetworkReply*)self, header);
 }
 
-bool q_networkreply_has_raw_header(void* self, char* headerName) {
+bool q_networkreply_has_raw_header(void* self, const char* headerName) {
     return QNetworkReply_HasRawHeader((QNetworkReply*)self, headerName);
 }
 
@@ -106,7 +106,7 @@ const char** q_networkreply_raw_header_list(void* self) {
     return _ret;
 }
 
-char* q_networkreply_raw_header(void* self, char* headerName) {
+char* q_networkreply_raw_header(void* self, const char* headerName) {
     libqt_string _str = QNetworkReply_RawHeader((QNetworkReply*)self, headerName);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -404,7 +404,7 @@ long long q_networkreply_write2(void* self, const char* data) {
     return QIODevice_Write2((QIODevice*)self, data);
 }
 
-long long q_networkreply_write3(void* self, const char* data) {
+long long q_networkreply_write3(void* self, char* data) {
     return QIODevice_Write3((QIODevice*)self, qstring(data));
 }
 
@@ -520,7 +520,7 @@ const char* q_networkreply_object_name(void* self) {
     return _ret;
 }
 
-void q_networkreply_set_object_name(void* self, char* name) {
+void q_networkreply_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

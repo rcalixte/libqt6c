@@ -60,7 +60,7 @@ bool QSqlQuery_IsNull(const QSqlQuery* self, int field) {
     return self->isNull(static_cast<int>(field));
 }
 
-bool QSqlQuery_IsNull2(const QSqlQuery* self, char* name) {
+bool QSqlQuery_IsNull2(const QSqlQuery* self, const char* name) {
     return self->isNull(QAnyStringView(name));
 }
 
@@ -125,7 +125,7 @@ QVariant* QSqlQuery_Value(const QSqlQuery* self, int i) {
     return new QVariant(self->value(static_cast<int>(i)));
 }
 
-QVariant* QSqlQuery_Value2(const QSqlQuery* self, char* name) {
+QVariant* QSqlQuery_Value2(const QSqlQuery* self, const char* name) {
     return new QVariant(self->value(QAnyStringView(name)));
 }
 

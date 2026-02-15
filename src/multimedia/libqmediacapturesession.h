@@ -405,9 +405,9 @@ const char* q_mediacapturesession_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QMediaCaptureSession*
-/// @param name char*
+/// @param name const char*
 ///
-void q_mediacapturesession_set_object_name(void* self, char* name);
+void q_mediacapturesession_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

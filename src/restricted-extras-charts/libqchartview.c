@@ -1417,7 +1417,7 @@ char* q_chartview_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_chartview_restore_geometry(void* self, const char* geometry) {
+bool q_chartview_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1765,7 +1765,7 @@ const char* q_chartview_object_name(void* self) {
     return _ret;
 }
 
-void q_chartview_set_object_name(void* self, char* name) {
+void q_chartview_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2509,15 +2509,15 @@ void q_chartview_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QChartView_OnHideEvent((QChartView*)self, (intptr_t)callback);
 }
 
-bool q_chartview_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_chartview_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QChartView_NativeEvent((QChartView*)self, qstring(eventType), message, result);
 }
 
-bool q_chartview_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_chartview_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QChartView_QBaseNativeEvent((QChartView*)self, qstring(eventType), message, result);
 }
 
-void q_chartview_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_chartview_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QChartView_OnNativeEvent((QChartView*)self, (intptr_t)callback);
 }
 

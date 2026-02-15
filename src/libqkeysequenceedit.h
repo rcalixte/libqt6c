@@ -1969,9 +1969,9 @@ char* q_keysequenceedit_save_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QKeySequenceEdit*
-/// @param geometry const char*
+/// @param geometry char*
 ///
-bool q_keysequenceedit_restore_geometry(void* self, const char* geometry);
+bool q_keysequenceedit_restore_geometry(void* self, char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2777,9 +2777,9 @@ const char* q_keysequenceedit_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QKeySequenceEdit*
-/// @param name char*
+/// @param name const char*
 ///
-void q_keysequenceedit_set_object_name(void* self, char* name);
+void q_keysequenceedit_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4224,11 +4224,11 @@ void q_keysequenceedit_on_hide_event(void* self, void (*callback)(void*, void*))
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_keysequenceedit_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_keysequenceedit_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4237,11 +4237,11 @@ bool q_keysequenceedit_native_event(void* self, const char* eventType, void* mes
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_keysequenceedit_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_keysequenceedit_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4250,9 +4250,9 @@ bool q_keysequenceedit_qbase_native_event(void* self, const char* eventType, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback bool func(QKeySequenceEdit* self, const char* eventType, void* message, intptr_t* result)
+/// @param callback bool func(QKeySequenceEdit* self, libqt_string eventType, void* message, intptr_t* result)
 ///
-void q_keysequenceedit_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
+void q_keysequenceedit_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///

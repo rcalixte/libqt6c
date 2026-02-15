@@ -1275,9 +1275,9 @@ const char* k_recentfilesaction_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KRecentFilesAction*
-/// @param name char*
+/// @param name const char*
 ///
-void k_recentfilesaction_set_object_name(void* self, char* name);
+void k_recentfilesaction_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

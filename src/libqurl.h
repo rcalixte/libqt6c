@@ -104,9 +104,9 @@ char* q_url_to_encoded(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#fromEncoded)
 ///
-/// @param input const char*
+/// @param input char*
 ///
-QUrl* q_url_from_encoded(const char* input);
+QUrl* q_url_from_encoded(char* input);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#fromUserInput)
 ///
@@ -371,9 +371,9 @@ bool q_url_is_detached(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 const char*
+/// @param param1 char*
 ///
-const char* q_url_from_percent_encoding(const char* param1);
+const char* q_url_from_percent_encoding(char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#toPercentEncoding)
 ///
@@ -387,9 +387,9 @@ char* q_url_to_percent_encoding(const char* param1);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param domain const char*
+/// @param domain char*
 ///
-const char* q_url_from_ace(const char* domain);
+const char* q_url_from_ace(char* domain);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#toAce)
 ///
@@ -437,10 +437,10 @@ void q_url_set_url2(void* self, const char* url, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#fromEncoded)
 ///
-/// @param input const char*
+/// @param input char*
 /// @param mode enum QUrl__ParsingMode
 ///
-QUrl* q_url_from_encoded2(const char* input, int32_t mode);
+QUrl* q_url_from_encoded2(char* input, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#fromUserInput)
 ///
@@ -614,28 +614,28 @@ void q_url_set_fragment2(void* self, const char* fragment, int32_t mode);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param param1 const char*
-/// @param exclude const char*
+/// @param exclude char*
 ///
-char* q_url_to_percent_encoding2(const char* param1, const char* exclude);
+char* q_url_to_percent_encoding2(const char* param1, char* exclude);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#toPercentEncoding)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param param1 const char*
-/// @param exclude const char*
-/// @param include const char*
+/// @param exclude char*
+/// @param include char*
 ///
-char* q_url_to_percent_encoding3(const char* param1, const char* exclude, const char* include);
+char* q_url_to_percent_encoding3(const char* param1, char* exclude, char* include);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#fromAce)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param domain const char*
+/// @param domain char*
 /// @param options flag of enum QUrl__AceProcessingOption
 ///
-const char* q_url_from_ace2(const char* domain, uint32_t options);
+const char* q_url_from_ace2(char* domain, uint32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#toAce)
 ///

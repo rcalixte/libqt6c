@@ -90,7 +90,7 @@ const char* q_styleplugin_object_name(void* self) {
     return _ret;
 }
 
-void q_styleplugin_set_object_name(void* self, char* name) {
+void q_styleplugin_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

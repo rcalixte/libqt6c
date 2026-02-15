@@ -123,7 +123,7 @@ const char* k_datevalidator_object_name(void* self) {
     return _ret;
 }
 
-void k_datevalidator_set_object_name(void* self, char* name) {
+void k_datevalidator_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

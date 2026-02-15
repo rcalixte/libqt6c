@@ -32,21 +32,21 @@ QFormDataPartBuilder* QFormDataPartBuilder_SetHeaders(QFormDataPartBuilder* self
     return new QFormDataPartBuilder(self->setHeaders(*headers));
 }
 
-QFormDataPartBuilder* QFormDataPartBuilder_SetBody2(QFormDataPartBuilder* self, libqt_string data, char* fileName) {
+QFormDataPartBuilder* QFormDataPartBuilder_SetBody2(QFormDataPartBuilder* self, libqt_string data, const char* fileName) {
     QByteArrayView data_QByteArrayView(data.data, data.len);
     return new QFormDataPartBuilder(self->setBody(data_QByteArrayView, QAnyStringView(fileName)));
 }
 
-QFormDataPartBuilder* QFormDataPartBuilder_SetBody3(QFormDataPartBuilder* self, libqt_string data, char* fileName, char* mimeType) {
+QFormDataPartBuilder* QFormDataPartBuilder_SetBody3(QFormDataPartBuilder* self, libqt_string data, const char* fileName, const char* mimeType) {
     QByteArrayView data_QByteArrayView(data.data, data.len);
     return new QFormDataPartBuilder(self->setBody(data_QByteArrayView, QAnyStringView(fileName), QAnyStringView(mimeType)));
 }
 
-QFormDataPartBuilder* QFormDataPartBuilder_SetBodyDevice2(QFormDataPartBuilder* self, QIODevice* body, char* fileName) {
+QFormDataPartBuilder* QFormDataPartBuilder_SetBodyDevice2(QFormDataPartBuilder* self, QIODevice* body, const char* fileName) {
     return new QFormDataPartBuilder(self->setBodyDevice(body, QAnyStringView(fileName)));
 }
 
-QFormDataPartBuilder* QFormDataPartBuilder_SetBodyDevice3(QFormDataPartBuilder* self, QIODevice* body, char* fileName, char* mimeType) {
+QFormDataPartBuilder* QFormDataPartBuilder_SetBodyDevice3(QFormDataPartBuilder* self, QIODevice* body, const char* fileName, const char* mimeType) {
     return new QFormDataPartBuilder(self->setBodyDevice(body, QAnyStringView(fileName), QAnyStringView(mimeType)));
 }
 
@@ -62,7 +62,7 @@ void QFormDataBuilder_Swap(QFormDataBuilder* self, QFormDataBuilder* other) {
     self->swap(*other);
 }
 
-QFormDataPartBuilder* QFormDataBuilder_Part(QFormDataBuilder* self, char* name) {
+QFormDataPartBuilder* QFormDataBuilder_Part(QFormDataBuilder* self, const char* name) {
     return new QFormDataPartBuilder(self->part(QAnyStringView(name)));
 }
 

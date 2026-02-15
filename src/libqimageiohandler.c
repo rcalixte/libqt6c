@@ -22,11 +22,11 @@ QIODevice* q_imageiohandler_device(void* self) {
     return QImageIOHandler_Device((QImageIOHandler*)self);
 }
 
-void q_imageiohandler_set_format(void* self, const char* format) {
+void q_imageiohandler_set_format(void* self, char* format) {
     QImageIOHandler_SetFormat((QImageIOHandler*)self, qstring(format));
 }
 
-void q_imageiohandler_set_format2(void* self, const char* format) {
+void q_imageiohandler_set_format2(void* self, char* format) {
     QImageIOHandler_SetFormat2((QImageIOHandler*)self, qstring(format));
 }
 
@@ -252,27 +252,27 @@ const char* q_imageioplugin_tr(const char* s) {
     return _ret;
 }
 
-int32_t q_imageioplugin_capabilities(void* self, void* device, const char* format) {
+int32_t q_imageioplugin_capabilities(void* self, void* device, char* format) {
     return QImageIOPlugin_Capabilities((QImageIOPlugin*)self, (QIODevice*)device, qstring(format));
 }
 
-void q_imageioplugin_on_capabilities(void* self, int32_t (*callback)(void*, void*, const char*)) {
+void q_imageioplugin_on_capabilities(void* self, int32_t (*callback)(void*, void*, libqt_string)) {
     QImageIOPlugin_OnCapabilities((QImageIOPlugin*)self, (intptr_t)callback);
 }
 
-int32_t q_imageioplugin_qbase_capabilities(void* self, void* device, const char* format) {
+int32_t q_imageioplugin_qbase_capabilities(void* self, void* device, char* format) {
     return QImageIOPlugin_QBaseCapabilities((QImageIOPlugin*)self, (QIODevice*)device, qstring(format));
 }
 
-QImageIOHandler* q_imageioplugin_create(void* self, void* device, const char* format) {
+QImageIOHandler* q_imageioplugin_create(void* self, void* device, char* format) {
     return QImageIOPlugin_Create((QImageIOPlugin*)self, (QIODevice*)device, qstring(format));
 }
 
-void q_imageioplugin_on_create(void* self, QImageIOHandler* (*callback)(void*, void*, const char*)) {
+void q_imageioplugin_on_create(void* self, QImageIOHandler* (*callback)(void*, void*, libqt_string)) {
     QImageIOPlugin_OnCreate((QImageIOPlugin*)self, (intptr_t)callback);
 }
 
-QImageIOHandler* q_imageioplugin_qbase_create(void* self, void* device, const char* format) {
+QImageIOHandler* q_imageioplugin_qbase_create(void* self, void* device, char* format) {
     return QImageIOPlugin_QBaseCreate((QImageIOPlugin*)self, (QIODevice*)device, qstring(format));
 }
 
@@ -297,7 +297,7 @@ const char* q_imageioplugin_object_name(void* self) {
     return _ret;
 }
 
-void q_imageioplugin_set_object_name(void* self, char* name) {
+void q_imageioplugin_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

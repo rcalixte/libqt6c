@@ -253,7 +253,7 @@ const char* q_scilexerjson_object_name(void* self) {
     return _ret;
 }
 
-void q_scilexerjson_set_object_name(void* self, char* name) {
+void q_scilexerjson_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -897,7 +897,7 @@ char* q_scilexerjson_qbase_text_as_bytes(void* self, const char* text) {
     return _ret;
 }
 
-void q_scilexerjson_on_text_as_bytes(void* self, char* (*callback)(void*, const char*)) {
+void q_scilexerjson_on_text_as_bytes(void* self, libqt_string (*callback)(void*, const char*)) {
     QsciLexerJSON_OnTextAsBytes((QsciLexerJSON*)self, (intptr_t)callback);
 }
 

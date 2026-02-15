@@ -331,7 +331,7 @@ const char* q_geopositioninfosource_object_name(void* self) {
     return _ret;
 }
 
-void q_geopositioninfosource_set_object_name(void* self, char* name) {
+void q_geopositioninfosource_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

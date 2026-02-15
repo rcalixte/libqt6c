@@ -67,7 +67,7 @@ const char* q_openglcontextgroup_object_name(void* self) {
     return _ret;
 }
 
-void q_openglcontextgroup_set_object_name(void* self, char* name) {
+void q_openglcontextgroup_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -406,7 +406,7 @@ libqt_list /* set of char* */ q_openglcontext_extensions(void* self) {
     return QOpenGLContext_Extensions((QOpenGLContext*)self);
 }
 
-bool q_openglcontext_has_extension(void* self, const char* extension) {
+bool q_openglcontext_has_extension(void* self, char* extension) {
     return QOpenGLContext_HasExtension((QOpenGLContext*)self, qstring(extension));
 }
 
@@ -467,7 +467,7 @@ const char* q_openglcontext_object_name(void* self) {
     return _ret;
 }
 
-void q_openglcontext_set_object_name(void* self, char* name) {
+void q_openglcontext_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

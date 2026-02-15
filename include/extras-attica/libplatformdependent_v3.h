@@ -111,9 +111,9 @@ const char* k_attica__platformdependentv3_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self Attica__PlatformDependentV3*
-/// @param name char*
+/// @param name const char*
 ///
-void k_attica__platformdependentv3_set_object_name(void* self, char* name);
+void k_attica__platformdependentv3_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -568,9 +568,9 @@ QNetworkReply* k_attica__platformdependentv3_put(void* self, void* request, void
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param request QNetworkRequest*
-/// @param data const char*
+/// @param data char*
 ///
-QNetworkReply* k_attica__platformdependentv3_put2(void* self, void* request, const char* data);
+QNetworkReply* k_attica__platformdependentv3_put2(void* self, void* request, char* data);
 
 /// Inherited from Attica::PlatformDependentV2
 ///
@@ -695,9 +695,9 @@ QNetworkReply* k_attica__platformdependentv3_post(void* self, void* request, voi
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param request QNetworkRequest*
-/// @param data const char*
+/// @param data char*
 ///
-QNetworkReply* k_attica__platformdependentv3_post2(void* self, void* request, const char* data);
+QNetworkReply* k_attica__platformdependentv3_post2(void* self, void* request, char* data);
 
 /// Inherited from Attica::PlatformDependent
 ///

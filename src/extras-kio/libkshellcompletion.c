@@ -383,7 +383,7 @@ const char* k_shellcompletion_object_name(void* self) {
     return _ret;
 }
 
-void k_shellcompletion_set_object_name(void* self, char* name) {
+void k_shellcompletion_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

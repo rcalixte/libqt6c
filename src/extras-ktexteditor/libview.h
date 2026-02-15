@@ -2484,9 +2484,9 @@ char* k_texteditor__view_save_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self KTextEditor__View*
-/// @param geometry const char*
+/// @param geometry char*
 ///
-bool k_texteditor__view_restore_geometry(void* self, const char* geometry);
+bool k_texteditor__view_restore_geometry(void* self, char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -3352,9 +3352,9 @@ const char* k_texteditor__view_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KTextEditor__View*
-/// @param name char*
+/// @param name const char*
 ///
-void k_texteditor__view_set_object_name(void* self, char* name);
+void k_texteditor__view_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

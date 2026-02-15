@@ -184,7 +184,7 @@ const char* q_audiodecoder_object_name(void* self) {
     return _ret;
 }
 
-void q_audiodecoder_set_object_name(void* self, char* name) {
+void q_audiodecoder_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

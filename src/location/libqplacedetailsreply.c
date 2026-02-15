@@ -162,7 +162,7 @@ const char* q_placedetailsreply_object_name(void* self) {
     return _ret;
 }
 
-void q_placedetailsreply_set_object_name(void* self, char* name) {
+void q_placedetailsreply_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

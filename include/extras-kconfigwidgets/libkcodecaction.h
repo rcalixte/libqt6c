@@ -159,16 +159,16 @@ bool k_codecaction_set_current_codec(void* self, const char* codecName);
 /// [Upstream resources](https://api.kde.org/kcodecaction.html#codecNameTriggered)
 ///
 /// @param self KCodecAction*
-/// @param name const char*
+/// @param name char*
 ///
-void k_codecaction_codec_name_triggered(void* self, const char* name);
+void k_codecaction_codec_name_triggered(void* self, char* name);
 
 /// [Upstream resources](https://api.kde.org/kcodecaction.html#codecNameTriggered)
 ///
 /// @param self KCodecAction*
-/// @param callback void func(KCodecAction* self, const char* name)
+/// @param callback void func(KCodecAction* self, libqt_string name)
 ///
-void k_codecaction_on_codec_name_triggered(void* self, void (*callback)(void*, const char*));
+void k_codecaction_on_codec_name_triggered(void* self, void (*callback)(void*, libqt_string));
 
 /// [Upstream resources](https://api.kde.org/kcodecaction.html#defaultItemTriggered)
 ///
@@ -1229,9 +1229,9 @@ const char* k_codecaction_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KCodecAction*
-/// @param name char*
+/// @param name const char*
 ///
-void k_codecaction_set_object_name(void* self, char* name);
+void k_codecaction_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

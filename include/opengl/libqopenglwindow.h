@@ -1748,9 +1748,9 @@ const char* q_openglwindow_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QOpenGLWindow*
-/// @param name char*
+/// @param name const char*
 ///
-void q_openglwindow_set_object_name(void* self, char* name);
+void q_openglwindow_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3011,11 +3011,11 @@ void q_openglwindow_on_tablet_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QOpenGLWindow*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_openglwindow_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_openglwindow_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWindow
 ///
@@ -3024,11 +3024,11 @@ bool q_openglwindow_native_event(void* self, const char* eventType, void* messag
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QOpenGLWindow*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_openglwindow_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_openglwindow_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWindow
 ///
@@ -3037,9 +3037,9 @@ bool q_openglwindow_qbase_native_event(void* self, const char* eventType, void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QOpenGLWindow*
-/// @param callback bool func(QOpenGLWindow* self, const char* eventType, void* message, intptr_t* result)
+/// @param callback bool func(QOpenGLWindow* self, libqt_string eventType, void* message, intptr_t* result)
 ///
-void q_openglwindow_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
+void q_openglwindow_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
 /// Inherited from QObject
 ///

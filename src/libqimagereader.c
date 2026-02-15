@@ -19,11 +19,11 @@ QImageReader* q_imagereader_new3(const char* fileName) {
     return QImageReader_new3(qstring(fileName));
 }
 
-QImageReader* q_imagereader_new4(void* device, const char* format) {
+QImageReader* q_imagereader_new4(void* device, char* format) {
     return QImageReader_new4((QIODevice*)device, qstring(format));
 }
 
-QImageReader* q_imagereader_new5(const char* fileName, const char* format) {
+QImageReader* q_imagereader_new5(const char* fileName, char* format) {
     return QImageReader_new5(qstring(fileName), qstring(format));
 }
 
@@ -34,7 +34,7 @@ const char* q_imagereader_tr(const char* sourceText) {
     return _ret;
 }
 
-void q_imagereader_set_format(void* self, const char* format) {
+void q_imagereader_set_format(void* self, char* format) {
     QImageReader_SetFormat((QImageReader*)self, qstring(format));
 }
 
@@ -303,7 +303,7 @@ const char** q_imagereader_supported_mime_types() {
     return _ret;
 }
 
-const char** q_imagereader_image_formats_for_mime_type(const char* mimeType) {
+const char** q_imagereader_image_formats_for_mime_type(char* mimeType) {
     libqt_list _arr = QImageReader_ImageFormatsForMimeType(qstring(mimeType));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));

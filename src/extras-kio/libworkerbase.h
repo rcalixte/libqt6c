@@ -77,11 +77,11 @@ void k_io__workerresult_delete(void* self);
 
 /// k_io__workerbase_new constructs a new KIO::WorkerBase object.
 ///
-/// @param protocol const char*
-/// @param poolSocket const char*
-/// @param appSocket const char*
+/// @param protocol char*
+/// @param poolSocket char*
+/// @param appSocket char*
 ///
-KIO__WorkerBase* k_io__workerbase_new(const char* protocol, const char* poolSocket, const char* appSocket);
+KIO__WorkerBase* k_io__workerbase_new(char* protocol, char* poolSocket, char* appSocket);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#exit)
 ///
@@ -98,9 +98,9 @@ void k_io__workerbase_dispatch_loop(void* self);
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#data)
 ///
 /// @param self KIO__WorkerBase*
-/// @param data const char*
+/// @param data char*
 ///
-void k_io__workerbase_data(void* self, const char* data);
+void k_io__workerbase_data(void* self, char* data);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#dataReq)
 ///
@@ -509,27 +509,27 @@ KIO__WorkerResult* k_io__workerbase_qbase_read(void* self, uint64_t size);
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#write)
 ///
 /// @param self KIO__WorkerBase*
-/// @param data const char*
+/// @param data char*
 ///
-KIO__WorkerResult* k_io__workerbase_write(void* self, const char* data);
+KIO__WorkerResult* k_io__workerbase_write(void* self, char* data);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#write)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KIO__WorkerBase*
-/// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, const char* data)
+/// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, libqt_string data)
 ///
-void k_io__workerbase_on_write(void* self, KIO__WorkerResult* (*callback)(void*, const char*));
+void k_io__workerbase_on_write(void* self, KIO__WorkerResult* (*callback)(void*, libqt_string));
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#write)
 ///
 /// Base class method implementation
 ///
 /// @param self KIO__WorkerBase*
-/// @param data const char*
+/// @param data char*
 ///
-KIO__WorkerResult* k_io__workerbase_qbase_write(void* self, const char* data);
+KIO__WorkerResult* k_io__workerbase_qbase_write(void* self, char* data);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#seek)
 ///
@@ -937,27 +937,27 @@ KIO__WorkerResult* k_io__workerbase_qbase_del(void* self, void* url, bool isfile
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#special)
 ///
 /// @param self KIO__WorkerBase*
-/// @param data const char*
+/// @param data char*
 ///
-KIO__WorkerResult* k_io__workerbase_special(void* self, const char* data);
+KIO__WorkerResult* k_io__workerbase_special(void* self, char* data);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#special)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KIO__WorkerBase*
-/// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, const char* data)
+/// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, libqt_string data)
 ///
-void k_io__workerbase_on_special(void* self, KIO__WorkerResult* (*callback)(void*, const char*));
+void k_io__workerbase_on_special(void* self, KIO__WorkerResult* (*callback)(void*, libqt_string));
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#special)
 ///
 /// Base class method implementation
 ///
 /// @param self KIO__WorkerBase*
-/// @param data const char*
+/// @param data char*
 ///
-KIO__WorkerResult* k_io__workerbase_qbase_special(void* self, const char* data);
+KIO__WorkerResult* k_io__workerbase_qbase_special(void* self, char* data);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#fileSystemFreeSpace)
 ///
@@ -1259,9 +1259,9 @@ const char* k_io__workerbase_config_value22(void* self, const char* key, const c
 ///
 /// @param self KIO__WorkerBase*
 /// @param timeout int
-/// @param data const char*
+/// @param data char*
 ///
-void k_io__workerbase_set_timeout_special_command2(void* self, int timeout, const char* data);
+void k_io__workerbase_set_timeout_special_command2(void* self, int timeout, char* data);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#openPasswordDialog)
 ///

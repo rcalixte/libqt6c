@@ -2734,9 +2734,9 @@ char* q_tabbar_save_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QTabBar*
-/// @param geometry const char*
+/// @param geometry char*
 ///
-bool q_tabbar_restore_geometry(void* self, const char* geometry);
+bool q_tabbar_restore_geometry(void* self, char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -3542,9 +3542,9 @@ const char* q_tabbar_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QTabBar*
-/// @param name char*
+/// @param name const char*
 ///
-void q_tabbar_set_object_name(void* self, char* name);
+void q_tabbar_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4696,11 +4696,11 @@ void q_tabbar_on_drop_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_tabbar_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_tabbar_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4709,11 +4709,11 @@ bool q_tabbar_native_event(void* self, const char* eventType, void* message, int
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_tabbar_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_tabbar_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4722,9 +4722,9 @@ bool q_tabbar_qbase_native_event(void* self, const char* eventType, void* messag
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback bool func(QTabBar* self, const char* eventType, void* message, intptr_t* result)
+/// @param callback bool func(QTabBar* self, libqt_string eventType, void* message, intptr_t* result)
 ///
-void q_tabbar_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
+void q_tabbar_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///

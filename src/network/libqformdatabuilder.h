@@ -35,9 +35,9 @@ void q_formdatapartbuilder_swap(void* self, void* other);
 /// [Upstream resources](https://doc.qt.io/qt-6/qformdatapartbuilder.html#setBody)
 ///
 /// @param self QFormDataPartBuilder*
-/// @param data const char*
+/// @param data char*
 ///
-QFormDataPartBuilder* q_formdatapartbuilder_set_body(void* self, const char* data);
+QFormDataPartBuilder* q_formdatapartbuilder_set_body(void* self, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qformdatapartbuilder.html#setBodyDevice)
 ///
@@ -56,36 +56,36 @@ QFormDataPartBuilder* q_formdatapartbuilder_set_headers(void* self, void* header
 /// [Upstream resources](https://doc.qt.io/qt-6/qformdatapartbuilder.html#setBody)
 ///
 /// @param self QFormDataPartBuilder*
-/// @param data const char*
-/// @param fileName char*
+/// @param data char*
+/// @param fileName const char*
 ///
-QFormDataPartBuilder* q_formdatapartbuilder_set_body2(void* self, const char* data, char* fileName);
+QFormDataPartBuilder* q_formdatapartbuilder_set_body2(void* self, char* data, const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qformdatapartbuilder.html#setBody)
 ///
 /// @param self QFormDataPartBuilder*
-/// @param data const char*
-/// @param fileName char*
-/// @param mimeType char*
+/// @param data char*
+/// @param fileName const char*
+/// @param mimeType const char*
 ///
-QFormDataPartBuilder* q_formdatapartbuilder_set_body3(void* self, const char* data, char* fileName, char* mimeType);
+QFormDataPartBuilder* q_formdatapartbuilder_set_body3(void* self, char* data, const char* fileName, const char* mimeType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qformdatapartbuilder.html#setBodyDevice)
 ///
 /// @param self QFormDataPartBuilder*
 /// @param body QIODevice*
-/// @param fileName char*
+/// @param fileName const char*
 ///
-QFormDataPartBuilder* q_formdatapartbuilder_set_body_device2(void* self, void* body, char* fileName);
+QFormDataPartBuilder* q_formdatapartbuilder_set_body_device2(void* self, void* body, const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qformdatapartbuilder.html#setBodyDevice)
 ///
 /// @param self QFormDataPartBuilder*
 /// @param body QIODevice*
-/// @param fileName char*
-/// @param mimeType char*
+/// @param fileName const char*
+/// @param mimeType const char*
 ///
-QFormDataPartBuilder* q_formdatapartbuilder_set_body_device3(void* self, void* body, char* fileName, char* mimeType);
+QFormDataPartBuilder* q_formdatapartbuilder_set_body_device3(void* self, void* body, const char* fileName, const char* mimeType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qformdatapartbuilder.html#dtor.QFormDataPartBuilder)
 ///
@@ -111,9 +111,9 @@ void q_formdatabuilder_swap(void* self, void* other);
 /// [Upstream resources](https://doc.qt.io/qt-6/qformdatabuilder.html#part)
 ///
 /// @param self QFormDataBuilder*
-/// @param name char*
+/// @param name const char*
 ///
-QFormDataPartBuilder* q_formdatabuilder_part(void* self, char* name);
+QFormDataPartBuilder* q_formdatabuilder_part(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qformdatabuilder.html#dtor.QFormDataBuilder)
 ///

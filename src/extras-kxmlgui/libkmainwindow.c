@@ -578,7 +578,7 @@ char* k_mainwindow_save_state(void* self) {
     return _ret;
 }
 
-bool k_mainwindow_restore_state(void* self, const char* state) {
+bool k_mainwindow_restore_state(void* self, char* state) {
     return QMainWindow_RestoreState((QMainWindow*)self, qstring(state));
 }
 
@@ -629,7 +629,7 @@ char* k_mainwindow_save_state1(void* self, int version) {
     return _ret;
 }
 
-bool k_mainwindow_restore_state2(void* self, const char* state, int version) {
+bool k_mainwindow_restore_state2(void* self, char* state, int version) {
     return QMainWindow_RestoreState2((QMainWindow*)self, qstring(state), version);
 }
 
@@ -1406,7 +1406,7 @@ char* k_mainwindow_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_mainwindow_restore_geometry(void* self, const char* geometry) {
+bool k_mainwindow_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1762,7 +1762,7 @@ const char* k_mainwindow_object_name(void* self) {
     return _ret;
 }
 
-void k_mainwindow_set_object_name(void* self, char* name) {
+void k_mainwindow_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2374,15 +2374,15 @@ void k_mainwindow_on_hide_event(void* self, void (*callback)(void*, void*)) {
     KMainWindow_OnHideEvent((KMainWindow*)self, (intptr_t)callback);
 }
 
-bool k_mainwindow_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_mainwindow_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KMainWindow_NativeEvent((KMainWindow*)self, qstring(eventType), message, result);
 }
 
-bool k_mainwindow_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_mainwindow_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KMainWindow_QBaseNativeEvent((KMainWindow*)self, qstring(eventType), message, result);
 }
 
-void k_mainwindow_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_mainwindow_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KMainWindow_OnNativeEvent((KMainWindow*)self, (intptr_t)callback);
 }
 

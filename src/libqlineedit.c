@@ -1482,7 +1482,7 @@ char* q_lineedit_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_lineedit_restore_geometry(void* self, const char* geometry) {
+bool q_lineedit_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1830,7 +1830,7 @@ const char* q_lineedit_object_name(void* self) {
     return _ret;
 }
 
-void q_lineedit_set_object_name(void* self, char* name) {
+void q_lineedit_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2262,15 +2262,15 @@ void q_lineedit_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QLineEdit_OnHideEvent((QLineEdit*)self, (intptr_t)callback);
 }
 
-bool q_lineedit_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_lineedit_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QLineEdit_NativeEvent((QLineEdit*)self, qstring(eventType), message, result);
 }
 
-bool q_lineedit_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_lineedit_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QLineEdit_QBaseNativeEvent((QLineEdit*)self, qstring(eventType), message, result);
 }
 
-void q_lineedit_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_lineedit_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QLineEdit_OnNativeEvent((QLineEdit*)self, (intptr_t)callback);
 }
 

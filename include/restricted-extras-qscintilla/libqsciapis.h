@@ -377,9 +377,9 @@ const char* q_sciapis_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QsciAPIs*
-/// @param name char*
+/// @param name const char*
 ///
-void q_sciapis_set_object_name(void* self, char* name);
+void q_sciapis_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

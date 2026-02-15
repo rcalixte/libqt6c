@@ -6,7 +6,7 @@ QNetworkDatagram* q_networkdatagram_new() {
     return QNetworkDatagram_new();
 }
 
-QNetworkDatagram* q_networkdatagram_new2(const char* data) {
+QNetworkDatagram* q_networkdatagram_new2(char* data) {
     return QNetworkDatagram_new2(qstring(data));
 }
 
@@ -14,11 +14,11 @@ QNetworkDatagram* q_networkdatagram_new3(void* other) {
     return QNetworkDatagram_new3((QNetworkDatagram*)other);
 }
 
-QNetworkDatagram* q_networkdatagram_new4(const char* data, void* destinationAddress) {
+QNetworkDatagram* q_networkdatagram_new4(char* data, void* destinationAddress) {
     return QNetworkDatagram_new4(qstring(data), (QHostAddress*)destinationAddress);
 }
 
-QNetworkDatagram* q_networkdatagram_new5(const char* data, void* destinationAddress, unsigned short port) {
+QNetworkDatagram* q_networkdatagram_new5(char* data, void* destinationAddress, unsigned short port) {
     return QNetworkDatagram_new5(qstring(data), (QHostAddress*)destinationAddress, port);
 }
 
@@ -89,11 +89,11 @@ char* q_networkdatagram_data(void* self) {
     return _ret;
 }
 
-void q_networkdatagram_set_data(void* self, const char* data) {
+void q_networkdatagram_set_data(void* self, char* data) {
     QNetworkDatagram_SetData((QNetworkDatagram*)self, qstring(data));
 }
 
-QNetworkDatagram* q_networkdatagram_make_reply(void* self, const char* payload) {
+QNetworkDatagram* q_networkdatagram_make_reply(void* self, char* payload) {
     return QNetworkDatagram_MakeReply((QNetworkDatagram*)self, qstring(payload));
 }
 

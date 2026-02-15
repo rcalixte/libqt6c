@@ -22,9 +22,9 @@ QImageWriter* q_imagewriter_new();
 /// q_imagewriter_new2 constructs a new QImageWriter object.
 ///
 /// @param device QIODevice*
-/// @param format const char*
+/// @param format char*
 ///
-QImageWriter* q_imagewriter_new2(void* device, const char* format);
+QImageWriter* q_imagewriter_new2(void* device, char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagewriter.html)
 
@@ -39,9 +39,9 @@ QImageWriter* q_imagewriter_new3(const char* fileName);
 /// q_imagewriter_new4 constructs a new QImageWriter object.
 ///
 /// @param fileName const char*
-/// @param format const char*
+/// @param format char*
 ///
-QImageWriter* q_imagewriter_new4(const char* fileName, const char* format);
+QImageWriter* q_imagewriter_new4(const char* fileName, char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -54,9 +54,9 @@ const char* q_imagewriter_tr(const char* sourceText);
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagewriter.html#setFormat)
 ///
 /// @param self QImageWriter*
-/// @param format const char*
+/// @param format char*
 ///
-void q_imagewriter_set_format(void* self, const char* format);
+void q_imagewriter_set_format(void* self, char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagewriter.html#format)
 ///
@@ -123,9 +123,9 @@ int32_t q_imagewriter_compression(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagewriter.html#setSubType)
 ///
 /// @param self QImageWriter*
-/// @param type const char*
+/// @param type char*
 ///
-void q_imagewriter_set_sub_type(void* self, const char* type);
+void q_imagewriter_set_sub_type(void* self, char* type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagewriter.html#subType)
 ///
@@ -244,9 +244,9 @@ const char** q_imagewriter_supported_mime_types();
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param mimeType const char*
+/// @param mimeType char*
 ///
-const char** q_imagewriter_image_formats_for_mime_type(const char* mimeType);
+const char** q_imagewriter_image_formats_for_mime_type(char* mimeType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

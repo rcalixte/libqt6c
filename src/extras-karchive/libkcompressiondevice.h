@@ -170,9 +170,9 @@ void k_compressiondevice_qbase_close(void* self);
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#setOrigFileName)
 ///
 /// @param self KCompressionDevice*
-/// @param fileName const char*
+/// @param fileName char*
 ///
-void k_compressiondevice_set_orig_file_name(void* self, const char* fileName);
+void k_compressiondevice_set_orig_file_name(void* self, char* fileName);
 
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#setSkipHeaders)
 ///
@@ -554,9 +554,9 @@ long long k_compressiondevice_write2(void* self, const char* data);
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// @param self KCompressionDevice*
-/// @param data const char*
+/// @param data char*
 ///
-long long k_compressiondevice_write3(void* self, const char* data);
+long long k_compressiondevice_write3(void* self, char* data);
 
 /// Inherited from QIODevice
 ///
@@ -757,9 +757,9 @@ const char* k_compressiondevice_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KCompressionDevice*
-/// @param name char*
+/// @param name const char*
 ///
-void k_compressiondevice_set_object_name(void* self, char* name);
+void k_compressiondevice_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

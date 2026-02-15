@@ -98,7 +98,7 @@ const char* k_syntaxhighlighting__definitiondownloader_object_name(void* self) {
     return _ret;
 }
 
-void k_syntaxhighlighting__definitiondownloader_set_object_name(void* self, char* name) {
+void k_syntaxhighlighting__definitiondownloader_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

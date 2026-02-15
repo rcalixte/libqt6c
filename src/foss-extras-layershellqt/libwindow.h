@@ -311,9 +311,9 @@ const char* k_layershellqt__window_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self LayerShellQt__Window*
-/// @param name char*
+/// @param name const char*
 ///
-void k_layershellqt__window_set_object_name(void* self, char* name);
+void k_layershellqt__window_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

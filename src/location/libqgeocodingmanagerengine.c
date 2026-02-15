@@ -211,7 +211,7 @@ const char* q_geocodingmanagerengine_object_name(void* self) {
     return _ret;
 }
 
-void q_geocodingmanagerengine_set_object_name(void* self, char* name) {
+void q_geocodingmanagerengine_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

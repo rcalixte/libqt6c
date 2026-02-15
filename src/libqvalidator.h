@@ -214,9 +214,9 @@ const char* q_validator_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QValidator*
-/// @param name char*
+/// @param name const char*
 ///
-void q_validator_set_object_name(void* self, char* name);
+void q_validator_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1318,9 +1318,9 @@ const char* q_intvalidator_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QIntValidator*
-/// @param name char*
+/// @param name const char*
 ///
-void q_intvalidator_set_object_name(void* self, char* name);
+void q_intvalidator_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -2489,9 +2489,9 @@ const char* q_doublevalidator_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QDoubleValidator*
-/// @param name char*
+/// @param name const char*
 ///
-void q_doublevalidator_set_object_name(void* self, char* name);
+void q_doublevalidator_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3531,9 +3531,9 @@ const char* q_regularexpressionvalidator_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QRegularExpressionValidator*
-/// @param name char*
+/// @param name const char*
 ///
-void q_regularexpressionvalidator_set_object_name(void* self, char* name);
+void q_regularexpressionvalidator_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

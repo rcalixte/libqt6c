@@ -1182,7 +1182,7 @@ char* k_colorbutton_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_colorbutton_restore_geometry(void* self, const char* geometry) {
+bool k_colorbutton_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1538,7 +1538,7 @@ const char* k_colorbutton_object_name(void* self) {
     return _ret;
 }
 
-void k_colorbutton_set_object_name(void* self, char* name) {
+void k_colorbutton_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2150,15 +2150,15 @@ void k_colorbutton_on_hide_event(void* self, void (*callback)(void*, void*)) {
     KColorButton_OnHideEvent((KColorButton*)self, (intptr_t)callback);
 }
 
-bool k_colorbutton_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_colorbutton_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KColorButton_NativeEvent((KColorButton*)self, qstring(eventType), message, result);
 }
 
-bool k_colorbutton_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_colorbutton_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KColorButton_QBaseNativeEvent((KColorButton*)self, qstring(eventType), message, result);
 }
 
-void k_colorbutton_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_colorbutton_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KColorButton_OnNativeEvent((KColorButton*)self, (intptr_t)callback);
 }
 

@@ -12,7 +12,7 @@ QAnyStringView* QAnyStringView_new(const char* other) {
     return new QAnyStringView(QAnyStringView(other));
 }
 
-QAnyStringView* QAnyStringView_new2(char* other) {
+QAnyStringView* QAnyStringView_new2(const char* other) {
     return new QAnyStringView(std::move(QAnyStringView(other)));
 }
 
@@ -42,7 +42,7 @@ void QAnyStringView_MoveAssign(QAnyStringView* self, QAnyStringView* other) {
     *self = std::move(*other);
 }
 
-char* QAnyStringView_Mid(const QAnyStringView* self, ptrdiff_t pos) {
+const char* QAnyStringView_Mid(const QAnyStringView* self, ptrdiff_t pos) {
     QAnyStringView _ret = self->mid((qsizetype)(pos));
     QString _qstr = _ret.toString();
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
@@ -52,10 +52,10 @@ char* QAnyStringView_Mid(const QAnyStringView* self, ptrdiff_t pos) {
     _str.data = static_cast<const char*>(malloc(_str.len + 1));
     memcpy((void*)_str.data, _b.data(), _str.len);
     ((char*)_str.data)[_str.len] = '\0';
-    return (char*)_str.data;
+    return _str.data;
 }
 
-char* QAnyStringView_Left(const QAnyStringView* self, ptrdiff_t n) {
+const char* QAnyStringView_Left(const QAnyStringView* self, ptrdiff_t n) {
     QAnyStringView _ret = self->left((qsizetype)(n));
     QString _qstr = _ret.toString();
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
@@ -65,10 +65,10 @@ char* QAnyStringView_Left(const QAnyStringView* self, ptrdiff_t n) {
     _str.data = static_cast<const char*>(malloc(_str.len + 1));
     memcpy((void*)_str.data, _b.data(), _str.len);
     ((char*)_str.data)[_str.len] = '\0';
-    return (char*)_str.data;
+    return _str.data;
 }
 
-char* QAnyStringView_Right(const QAnyStringView* self, ptrdiff_t n) {
+const char* QAnyStringView_Right(const QAnyStringView* self, ptrdiff_t n) {
     QAnyStringView _ret = self->right((qsizetype)(n));
     QString _qstr = _ret.toString();
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
@@ -78,10 +78,10 @@ char* QAnyStringView_Right(const QAnyStringView* self, ptrdiff_t n) {
     _str.data = static_cast<const char*>(malloc(_str.len + 1));
     memcpy((void*)_str.data, _b.data(), _str.len);
     ((char*)_str.data)[_str.len] = '\0';
-    return (char*)_str.data;
+    return _str.data;
 }
 
-char* QAnyStringView_Sliced(const QAnyStringView* self, ptrdiff_t pos) {
+const char* QAnyStringView_Sliced(const QAnyStringView* self, ptrdiff_t pos) {
     QAnyStringView _ret = self->sliced((qsizetype)(pos));
     QString _qstr = _ret.toString();
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
@@ -91,10 +91,10 @@ char* QAnyStringView_Sliced(const QAnyStringView* self, ptrdiff_t pos) {
     _str.data = static_cast<const char*>(malloc(_str.len + 1));
     memcpy((void*)_str.data, _b.data(), _str.len);
     ((char*)_str.data)[_str.len] = '\0';
-    return (char*)_str.data;
+    return _str.data;
 }
 
-char* QAnyStringView_Sliced2(const QAnyStringView* self, ptrdiff_t pos, ptrdiff_t n) {
+const char* QAnyStringView_Sliced2(const QAnyStringView* self, ptrdiff_t pos, ptrdiff_t n) {
     QAnyStringView _ret = self->sliced((qsizetype)(pos), (qsizetype)(n));
     QString _qstr = _ret.toString();
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
@@ -104,10 +104,10 @@ char* QAnyStringView_Sliced2(const QAnyStringView* self, ptrdiff_t pos, ptrdiff_
     _str.data = static_cast<const char*>(malloc(_str.len + 1));
     memcpy((void*)_str.data, _b.data(), _str.len);
     ((char*)_str.data)[_str.len] = '\0';
-    return (char*)_str.data;
+    return _str.data;
 }
 
-char* QAnyStringView_First(const QAnyStringView* self, ptrdiff_t n) {
+const char* QAnyStringView_First(const QAnyStringView* self, ptrdiff_t n) {
     QAnyStringView _ret = self->first((qsizetype)(n));
     QString _qstr = _ret.toString();
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
@@ -117,10 +117,10 @@ char* QAnyStringView_First(const QAnyStringView* self, ptrdiff_t n) {
     _str.data = static_cast<const char*>(malloc(_str.len + 1));
     memcpy((void*)_str.data, _b.data(), _str.len);
     ((char*)_str.data)[_str.len] = '\0';
-    return (char*)_str.data;
+    return _str.data;
 }
 
-char* QAnyStringView_Last(const QAnyStringView* self, ptrdiff_t n) {
+const char* QAnyStringView_Last(const QAnyStringView* self, ptrdiff_t n) {
     QAnyStringView _ret = self->last((qsizetype)(n));
     QString _qstr = _ret.toString();
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
@@ -130,10 +130,10 @@ char* QAnyStringView_Last(const QAnyStringView* self, ptrdiff_t n) {
     _str.data = static_cast<const char*>(malloc(_str.len + 1));
     memcpy((void*)_str.data, _b.data(), _str.len);
     ((char*)_str.data)[_str.len] = '\0';
-    return (char*)_str.data;
+    return _str.data;
 }
 
-char* QAnyStringView_Chopped(const QAnyStringView* self, ptrdiff_t n) {
+const char* QAnyStringView_Chopped(const QAnyStringView* self, ptrdiff_t n) {
     QAnyStringView _ret = self->chopped((qsizetype)(n));
     QString _qstr = _ret.toString();
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
@@ -143,10 +143,10 @@ char* QAnyStringView_Chopped(const QAnyStringView* self, ptrdiff_t n) {
     _str.data = static_cast<const char*>(malloc(_str.len + 1));
     memcpy((void*)_str.data, _b.data(), _str.len);
     ((char*)_str.data)[_str.len] = '\0';
-    return (char*)_str.data;
+    return _str.data;
 }
 
-char* QAnyStringView_Slice(QAnyStringView* self, ptrdiff_t pos) {
+const char* QAnyStringView_Slice(QAnyStringView* self, ptrdiff_t pos) {
     QAnyStringView _ret = self->slice((qsizetype)(pos));
     QString _qstr = _ret.toString();
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
@@ -156,10 +156,10 @@ char* QAnyStringView_Slice(QAnyStringView* self, ptrdiff_t pos) {
     _str.data = static_cast<const char*>(malloc(_str.len + 1));
     memcpy((void*)_str.data, _b.data(), _str.len);
     ((char*)_str.data)[_str.len] = '\0';
-    return (char*)_str.data;
+    return _str.data;
 }
 
-char* QAnyStringView_Slice2(QAnyStringView* self, ptrdiff_t pos, ptrdiff_t n) {
+const char* QAnyStringView_Slice2(QAnyStringView* self, ptrdiff_t pos, ptrdiff_t n) {
     QAnyStringView _ret = self->slice((qsizetype)(pos), (qsizetype)(n));
     QString _qstr = _ret.toString();
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
@@ -169,7 +169,7 @@ char* QAnyStringView_Slice2(QAnyStringView* self, ptrdiff_t pos, ptrdiff_t n) {
     _str.data = static_cast<const char*>(malloc(_str.len + 1));
     memcpy((void*)_str.data, _b.data(), _str.len);
     ((char*)_str.data)[_str.len] = '\0';
-    return (char*)_str.data;
+    return _str.data;
 }
 
 void QAnyStringView_Truncate(QAnyStringView* self, ptrdiff_t n) {
@@ -200,11 +200,11 @@ const void* QAnyStringView_Data(const QAnyStringView* self) {
     return (const void*)self->data();
 }
 
-int QAnyStringView_Compare(char* lhs, char* rhs) {
+int QAnyStringView_Compare(const char* lhs, const char* rhs) {
     return QAnyStringView::compare(QAnyStringView(lhs), QAnyStringView(rhs));
 }
 
-bool QAnyStringView_Equal(char* lhs, char* rhs) {
+bool QAnyStringView_Equal(const char* lhs, const char* rhs) {
     return QAnyStringView::equal(QAnyStringView(lhs), QAnyStringView(rhs));
 }
 
@@ -240,7 +240,7 @@ ptrdiff_t QAnyStringView_Length(const QAnyStringView* self) {
     return static_cast<ptrdiff_t>(self->length());
 }
 
-char* QAnyStringView_Mid2(const QAnyStringView* self, ptrdiff_t pos, ptrdiff_t n) {
+const char* QAnyStringView_Mid2(const QAnyStringView* self, ptrdiff_t pos, ptrdiff_t n) {
     QAnyStringView _ret = self->mid((qsizetype)(pos), (qsizetype)(n));
     QString _qstr = _ret.toString();
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
@@ -250,10 +250,10 @@ char* QAnyStringView_Mid2(const QAnyStringView* self, ptrdiff_t pos, ptrdiff_t n
     _str.data = static_cast<const char*>(malloc(_str.len + 1));
     memcpy((void*)_str.data, _b.data(), _str.len);
     ((char*)_str.data)[_str.len] = '\0';
-    return (char*)_str.data;
+    return _str.data;
 }
 
-int QAnyStringView_Compare3(char* lhs, char* rhs, int cs) {
+int QAnyStringView_Compare3(const char* lhs, const char* rhs, int cs) {
     return QAnyStringView::compare(QAnyStringView(lhs), QAnyStringView(rhs), static_cast<Qt::CaseSensitivity>(cs));
 }
 

@@ -120,9 +120,9 @@ QVariant* q_networkreply_header(void* self, int32_t header);
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkreply.html#hasRawHeader)
 ///
 /// @param self QNetworkReply*
-/// @param headerName char*
+/// @param headerName const char*
 ///
-bool q_networkreply_has_raw_header(void* self, char* headerName);
+bool q_networkreply_has_raw_header(void* self, const char* headerName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkreply.html#rawHeaderList)
 ///
@@ -137,9 +137,9 @@ const char** q_networkreply_raw_header_list(void* self);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QNetworkReply*
-/// @param headerName char*
+/// @param headerName const char*
 ///
-char* q_networkreply_raw_header(void* self, char* headerName);
+char* q_networkreply_raw_header(void* self, const char* headerName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkreply.html#rawHeaderPairs)
 ///
@@ -659,9 +659,9 @@ long long q_networkreply_write2(void* self, const char* data);
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// @param self QNetworkReply*
-/// @param data const char*
+/// @param data char*
 ///
-long long q_networkreply_write3(void* self, const char* data);
+long long q_networkreply_write3(void* self, char* data);
 
 /// Inherited from QIODevice
 ///
@@ -899,9 +899,9 @@ const char* q_networkreply_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QNetworkReply*
-/// @param name char*
+/// @param name const char*
 ///
-void q_networkreply_set_object_name(void* self, char* name);
+void q_networkreply_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

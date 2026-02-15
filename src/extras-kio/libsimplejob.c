@@ -380,7 +380,7 @@ const char* k_io__simplejob_object_name(void* self) {
     return _ret;
 }
 
-void k_io__simplejob_set_object_name(void* self, char* name) {
+void k_io__simplejob_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -640,11 +640,11 @@ KIO__SimpleJob* k_io_symlink(const char* param1, void* param2, int32_t param3) {
     return KIO_Symlink(qstring(param1), (QUrl*)param2, param3);
 }
 
-KIO__SimpleJob* k_io_special(void* param1, const char* param2, int32_t param3) {
+KIO__SimpleJob* k_io_special(void* param1, char* param2, int32_t param3) {
     return KIO_Special((QUrl*)param1, qstring(param2), param3);
 }
 
-KIO__SimpleJob* k_io_mount(bool param1, const char* param2, const char* param3, const char* param4, int32_t param5) {
+KIO__SimpleJob* k_io_mount(bool param1, char* param2, const char* param3, const char* param4, int32_t param5) {
     return KIO_Mount(param1, qstring(param2), qstring(param3), qstring(param4), param5);
 }
 

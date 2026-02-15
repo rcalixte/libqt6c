@@ -143,9 +143,9 @@ QVariant* q_jsondocument_to_variant(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#fromJson)
 ///
-/// @param json const char*
+/// @param json char*
 ///
-QJsonDocument* q_jsondocument_from_json(const char* json);
+QJsonDocument* q_jsondocument_from_json(char* json);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#toJson)
 ///
@@ -221,10 +221,10 @@ bool q_jsondocument_is_null(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#fromJson)
 ///
-/// @param json const char*
+/// @param json char*
 /// @param error QJsonParseError*
 ///
-QJsonDocument* q_jsondocument_from_json2(const char* json, void* error);
+QJsonDocument* q_jsondocument_from_json2(char* json, void* error);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#toJson)
 ///

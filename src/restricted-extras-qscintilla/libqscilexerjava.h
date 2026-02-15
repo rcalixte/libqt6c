@@ -544,9 +544,9 @@ const char* q_scilexerjava_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QsciLexerJava*
-/// @param name char*
+/// @param name const char*
 ///
-void q_scilexerjava_set_object_name(void* self, char* name);
+void q_scilexerjava_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -2483,9 +2483,9 @@ char* q_scilexerjava_qbase_text_as_bytes(void* self, const char* text);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback char* func(QsciLexerJava* self, const char* text)
+/// @param callback libqt_string func(QsciLexerJava* self, const char* text)
 ///
-void q_scilexerjava_on_text_as_bytes(void* self, char* (*callback)(void*, const char*));
+void q_scilexerjava_on_text_as_bytes(void* self, libqt_string (*callback)(void*, const char*));
 
 /// Inherited from QsciLexer
 ///

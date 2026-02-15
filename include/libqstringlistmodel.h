@@ -940,9 +940,9 @@ const char* q_stringlistmodel_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QStringListModel*
-/// @param name char*
+/// @param name const char*
 ///
-void q_stringlistmodel_set_object_name(void* self, char* name);
+void q_stringlistmodel_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

@@ -251,9 +251,9 @@ void q_webenginepage_set_html(void* self, const char* html);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#setContent)
 ///
 /// @param self QWebEnginePage*
-/// @param data const char*
+/// @param data char*
 ///
-void q_webenginepage_set_content(void* self, const char* data);
+void q_webenginepage_set_content(void* self, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#title)
 ///
@@ -1299,19 +1299,19 @@ void q_webenginepage_set_html2(void* self, const char* html, void* baseUrl);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#setContent)
 ///
 /// @param self QWebEnginePage*
-/// @param data const char*
+/// @param data char*
 /// @param mimeType const char*
 ///
-void q_webenginepage_set_content2(void* self, const char* data, const char* mimeType);
+void q_webenginepage_set_content2(void* self, char* data, const char* mimeType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#setContent)
 ///
 /// @param self QWebEnginePage*
-/// @param data const char*
+/// @param data char*
 /// @param mimeType const char*
 /// @param baseUrl QUrl*
 ///
-void q_webenginepage_set_content3(void* self, const char* data, const char* mimeType, void* baseUrl);
+void q_webenginepage_set_content3(void* self, char* data, const char* mimeType, void* baseUrl);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#runJavaScript)
 ///
@@ -1369,9 +1369,9 @@ const char* q_webenginepage_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QWebEnginePage*
-/// @param name char*
+/// @param name const char*
 ///
-void q_webenginepage_set_object_name(void* self, char* name);
+void q_webenginepage_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

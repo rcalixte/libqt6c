@@ -1110,7 +1110,7 @@ char* k_selector_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_selector_restore_geometry(void* self, const char* geometry) {
+bool k_selector_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1462,7 +1462,7 @@ const char* k_selector_object_name(void* self) {
     return _ret;
 }
 
-void k_selector_set_object_name(void* self, char* name) {
+void k_selector_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2074,15 +2074,15 @@ void k_selector_on_hide_event(void* self, void (*callback)(void*, void*)) {
     KSelector_OnHideEvent((KSelector*)self, (intptr_t)callback);
 }
 
-bool k_selector_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_selector_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KSelector_NativeEvent((KSelector*)self, qstring(eventType), message, result);
 }
 
-bool k_selector_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_selector_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KSelector_QBaseNativeEvent((KSelector*)self, qstring(eventType), message, result);
 }
 
-void k_selector_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_selector_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KSelector_OnNativeEvent((KSelector*)self, (intptr_t)callback);
 }
 
@@ -3466,7 +3466,7 @@ char* k_gradientselector_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_gradientselector_restore_geometry(void* self, const char* geometry) {
+bool k_gradientselector_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -3818,7 +3818,7 @@ const char* k_gradientselector_object_name(void* self) {
     return _ret;
 }
 
-void k_gradientselector_set_object_name(void* self, char* name) {
+void k_gradientselector_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -4502,15 +4502,15 @@ void k_gradientselector_on_hide_event(void* self, void (*callback)(void*, void*)
     KGradientSelector_OnHideEvent((KGradientSelector*)self, (intptr_t)callback);
 }
 
-bool k_gradientselector_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_gradientselector_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KGradientSelector_NativeEvent((KGradientSelector*)self, qstring(eventType), message, result);
 }
 
-bool k_gradientselector_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_gradientselector_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KGradientSelector_QBaseNativeEvent((KGradientSelector*)self, qstring(eventType), message, result);
 }
 
-void k_gradientselector_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_gradientselector_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KGradientSelector_OnNativeEvent((KGradientSelector*)self, (intptr_t)callback);
 }
 

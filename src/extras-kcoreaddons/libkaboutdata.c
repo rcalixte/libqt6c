@@ -325,7 +325,7 @@ KAboutData* k_aboutdata_set_program_logo(void* self, void* image) {
     return KAboutData_SetProgramLogo((KAboutData*)self, (QVariant*)image);
 }
 
-KAboutData* k_aboutdata_set_version(void* self, const char* version) {
+KAboutData* k_aboutdata_set_version(void* self, char* version) {
     return KAboutData_SetVersion((KAboutData*)self, qstring(version));
 }
 
@@ -361,15 +361,15 @@ KAboutData* k_aboutdata_set_homepage(void* self, const char* homepage) {
     return KAboutData_SetHomepage((KAboutData*)self, qstring(homepage));
 }
 
-KAboutData* k_aboutdata_set_bug_address(void* self, const char* bugAddress) {
+KAboutData* k_aboutdata_set_bug_address(void* self, char* bugAddress) {
     return KAboutData_SetBugAddress((KAboutData*)self, qstring(bugAddress));
 }
 
-KAboutData* k_aboutdata_set_organization_domain(void* self, const char* domain) {
+KAboutData* k_aboutdata_set_organization_domain(void* self, char* domain) {
     return KAboutData_SetOrganizationDomain((KAboutData*)self, qstring(domain));
 }
 
-KAboutData* k_aboutdata_set_product_name(void* self, const char* name) {
+KAboutData* k_aboutdata_set_product_name(void* self, char* name) {
     return KAboutData_SetProductName((KAboutData*)self, qstring(name));
 }
 

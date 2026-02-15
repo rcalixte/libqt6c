@@ -267,7 +267,7 @@ const char* q_scilexerjava_object_name(void* self) {
     return _ret;
 }
 
-void q_scilexerjava_set_object_name(void* self, char* name) {
+void q_scilexerjava_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1049,7 +1049,7 @@ char* q_scilexerjava_qbase_text_as_bytes(void* self, const char* text) {
     return _ret;
 }
 
-void q_scilexerjava_on_text_as_bytes(void* self, char* (*callback)(void*, const char*)) {
+void q_scilexerjava_on_text_as_bytes(void* self, libqt_string (*callback)(void*, const char*)) {
     QsciLexerJava_OnTextAsBytes((QsciLexerJava*)self, (intptr_t)callback);
 }
 

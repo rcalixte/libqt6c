@@ -238,7 +238,7 @@ const char* q_abstractanimation_object_name(void* self) {
     return _ret;
 }
 
-void q_abstractanimation_set_object_name(void* self, char* name) {
+void q_abstractanimation_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -730,7 +730,7 @@ const char* q_animationdriver_object_name(void* self) {
     return _ret;
 }
 
-void q_animationdriver_set_object_name(void* self, char* name) {
+void q_animationdriver_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

@@ -151,7 +151,7 @@ bool q_colorspace_is_valid_target(void* self) {
     return QColorSpace_IsValidTarget((QColorSpace*)self);
 }
 
-QColorSpace* q_colorspace_from_icc_profile(const char* iccProfile) {
+QColorSpace* q_colorspace_from_icc_profile(char* iccProfile) {
     return QColorSpace_FromIccProfile(qstring(iccProfile));
 }
 

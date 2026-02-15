@@ -200,7 +200,7 @@ const char* q_inputmethod_object_name(void* self) {
     return _ret;
 }
 
-void q_inputmethod_set_object_name(void* self, char* name) {
+void q_inputmethod_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

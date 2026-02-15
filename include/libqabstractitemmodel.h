@@ -2469,9 +2469,9 @@ const char* q_abstractitemmodel_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QAbstractItemModel*
-/// @param name char*
+/// @param name const char*
 ///
-void q_abstractitemmodel_set_object_name(void* self, char* name);
+void q_abstractitemmodel_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4009,9 +4009,9 @@ const char* q_abstracttablemodel_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QAbstractTableModel*
-/// @param name char*
+/// @param name const char*
 ///
-void q_abstracttablemodel_set_object_name(void* self, char* name);
+void q_abstracttablemodel_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -7447,9 +7447,9 @@ const char* q_abstractlistmodel_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QAbstractListModel*
-/// @param name char*
+/// @param name const char*
 ///
-void q_abstractlistmodel_set_object_name(void* self, char* name);
+void q_abstractlistmodel_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

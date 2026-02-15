@@ -199,7 +199,7 @@ const char* q_clipboard_object_name(void* self) {
     return _ret;
 }
 
-void q_clipboard_set_object_name(void* self, char* name) {
+void q_clipboard_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

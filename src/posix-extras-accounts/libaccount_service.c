@@ -244,7 +244,7 @@ const char* q_accounts__accountservice_object_name(void* self) {
     return _ret;
 }
 
-void q_accounts__accountservice_set_object_name(void* self, char* name) {
+void q_accounts__accountservice_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

@@ -256,7 +256,7 @@ const char* k_linkitemselectionmodel_object_name(void* self) {
     return _ret;
 }
 
-void k_linkitemselectionmodel_set_object_name(void* self, char* name) {
+void k_linkitemselectionmodel_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

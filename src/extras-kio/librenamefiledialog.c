@@ -910,7 +910,7 @@ char* k_io__renamefiledialog_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_io__renamefiledialog_restore_geometry(void* self, const char* geometry) {
+bool k_io__renamefiledialog_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1266,7 +1266,7 @@ const char* k_io__renamefiledialog_object_name(void* self) {
     return _ret;
 }
 
-void k_io__renamefiledialog_set_object_name(void* self, char* name) {
+void k_io__renamefiledialog_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1974,15 +1974,15 @@ void k_io__renamefiledialog_on_hide_event(void* self, void (*callback)(void*, vo
     KIO__RenameFileDialog_OnHideEvent((KIO__RenameFileDialog*)self, (intptr_t)callback);
 }
 
-bool k_io__renamefiledialog_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_io__renamefiledialog_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KIO__RenameFileDialog_NativeEvent((KIO__RenameFileDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_io__renamefiledialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_io__renamefiledialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KIO__RenameFileDialog_QBaseNativeEvent((KIO__RenameFileDialog*)self, qstring(eventType), message, result);
 }
 
-void k_io__renamefiledialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_io__renamefiledialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KIO__RenameFileDialog_OnNativeEvent((KIO__RenameFileDialog*)self, (intptr_t)callback);
 }
 

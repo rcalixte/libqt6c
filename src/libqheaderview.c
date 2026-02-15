@@ -365,7 +365,7 @@ char* q_headerview_save_state(void* self) {
     return _ret;
 }
 
-bool q_headerview_restore_state(void* self, const char* state) {
+bool q_headerview_restore_state(void* self, char* state) {
     return QHeaderView_RestoreState((QHeaderView*)self, qstring(state));
 }
 
@@ -2057,7 +2057,7 @@ char* q_headerview_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_headerview_restore_geometry(void* self, const char* geometry) {
+bool q_headerview_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -2413,7 +2413,7 @@ const char* q_headerview_object_name(void* self) {
     return _ret;
 }
 
-void q_headerview_set_object_name(void* self, char* name) {
+void q_headerview_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -3327,15 +3327,15 @@ void q_headerview_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QHeaderView_OnHideEvent((QHeaderView*)self, (intptr_t)callback);
 }
 
-bool q_headerview_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_headerview_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QHeaderView_NativeEvent((QHeaderView*)self, qstring(eventType), message, result);
 }
 
-bool q_headerview_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_headerview_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QHeaderView_QBaseNativeEvent((QHeaderView*)self, qstring(eventType), message, result);
 }
 
-void q_headerview_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_headerview_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QHeaderView_OnNativeEvent((QHeaderView*)self, (intptr_t)callback);
 }
 

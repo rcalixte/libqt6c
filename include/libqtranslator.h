@@ -293,9 +293,9 @@ const char* q_translator_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QTranslator*
-/// @param name char*
+/// @param name const char*
 ///
-void q_translator_set_object_name(void* self, char* name);
+void q_translator_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

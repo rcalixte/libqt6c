@@ -939,7 +939,7 @@ char* k_pixmapregionselectorwidget_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_pixmapregionselectorwidget_restore_geometry(void* self, const char* geometry) {
+bool k_pixmapregionselectorwidget_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1295,7 +1295,7 @@ const char* k_pixmapregionselectorwidget_object_name(void* self) {
     return _ret;
 }
 
-void k_pixmapregionselectorwidget_set_object_name(void* self, char* name) {
+void k_pixmapregionselectorwidget_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1931,15 +1931,15 @@ void k_pixmapregionselectorwidget_on_hide_event(void* self, void (*callback)(voi
     KPixmapRegionSelectorWidget_OnHideEvent((KPixmapRegionSelectorWidget*)self, (intptr_t)callback);
 }
 
-bool k_pixmapregionselectorwidget_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_pixmapregionselectorwidget_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KPixmapRegionSelectorWidget_NativeEvent((KPixmapRegionSelectorWidget*)self, qstring(eventType), message, result);
 }
 
-bool k_pixmapregionselectorwidget_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_pixmapregionselectorwidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KPixmapRegionSelectorWidget_QBaseNativeEvent((KPixmapRegionSelectorWidget*)self, qstring(eventType), message, result);
 }
 
-void k_pixmapregionselectorwidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_pixmapregionselectorwidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KPixmapRegionSelectorWidget_OnNativeEvent((KPixmapRegionSelectorWidget*)self, (intptr_t)callback);
 }
 

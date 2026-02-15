@@ -850,9 +850,9 @@ long long q_localsocket_write2(void* self, const char* data);
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// @param self QLocalSocket*
-/// @param data const char*
+/// @param data char*
 ///
-long long q_localsocket_write3(void* self, const char* data);
+long long q_localsocket_write3(void* self, char* data);
 
 /// Inherited from QIODevice
 ///
@@ -1053,9 +1053,9 @@ const char* q_localsocket_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QLocalSocket*
-/// @param name char*
+/// @param name const char*
 ///
-void q_localsocket_set_object_name(void* self, char* name);
+void q_localsocket_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

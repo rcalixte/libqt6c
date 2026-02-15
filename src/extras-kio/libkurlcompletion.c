@@ -506,7 +506,7 @@ const char* k_urlcompletion_object_name(void* self) {
     return _ret;
 }
 
-void k_urlcompletion_set_object_name(void* self, char* name) {
+void k_urlcompletion_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

@@ -88,11 +88,11 @@ bool k_codecaction_set_current_codec(void* self, const char* codecName) {
     return KCodecAction_SetCurrentCodec((KCodecAction*)self, qstring(codecName));
 }
 
-void k_codecaction_codec_name_triggered(void* self, const char* name) {
+void k_codecaction_codec_name_triggered(void* self, char* name) {
     KCodecAction_CodecNameTriggered((KCodecAction*)self, qstring(name));
 }
 
-void k_codecaction_on_codec_name_triggered(void* self, void (*callback)(void*, const char*)) {
+void k_codecaction_on_codec_name_triggered(void* self, void (*callback)(void*, libqt_string)) {
     KCodecAction_Connect_CodecNameTriggered((KCodecAction*)self, (intptr_t)callback);
 }
 
@@ -628,7 +628,7 @@ const char* k_codecaction_object_name(void* self) {
     return _ret;
 }
 
-void k_codecaction_set_object_name(void* self, char* name) {
+void k_codecaction_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

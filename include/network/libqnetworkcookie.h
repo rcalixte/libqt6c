@@ -29,18 +29,18 @@ QNetworkCookie* q_networkcookie_new2(void* other);
 
 /// q_networkcookie_new3 constructs a new QNetworkCookie object.
 ///
-/// @param name const char*
+/// @param name char*
 ///
-QNetworkCookie* q_networkcookie_new3(const char* name);
+QNetworkCookie* q_networkcookie_new3(char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html)
 
 /// q_networkcookie_new4 constructs a new QNetworkCookie object.
 ///
-/// @param name const char*
-/// @param value const char*
+/// @param name char*
+/// @param value char*
 ///
-QNetworkCookie* q_networkcookie_new4(const char* name, const char* value);
+QNetworkCookie* q_networkcookie_new4(char* name, char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html#operator-eq)
 ///
@@ -171,9 +171,9 @@ char* q_networkcookie_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html#setName)
 ///
 /// @param self QNetworkCookie*
-/// @param cookieName const char*
+/// @param cookieName char*
 ///
-void q_networkcookie_set_name(void* self, const char* cookieName);
+void q_networkcookie_set_name(void* self, char* cookieName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html#value)
 ///
@@ -186,9 +186,9 @@ char* q_networkcookie_value(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html#setValue)
 ///
 /// @param self QNetworkCookie*
-/// @param value const char*
+/// @param value char*
 ///
-void q_networkcookie_set_value(void* self, const char* value);
+void q_networkcookie_set_value(void* self, char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html#toRawForm)
 ///
@@ -214,11 +214,11 @@ void q_networkcookie_normalize(void* self, void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html#parseCookies)
 ///
-/// @param cookieString const char*
+/// @param cookieString char*
 ///
 /// @return libqt_list of QNetworkCookie*
 ///
-libqt_list q_networkcookie_parse_cookies(const char* cookieString);
+libqt_list q_networkcookie_parse_cookies(char* cookieString);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html#toRawForm)
 ///

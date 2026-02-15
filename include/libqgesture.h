@@ -188,9 +188,9 @@ const char* q_gesture_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QGesture*
-/// @param name char*
+/// @param name const char*
 ///
-void q_gesture_set_object_name(void* self, char* name);
+void q_gesture_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1238,9 +1238,9 @@ const char* q_pangesture_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QPanGesture*
-/// @param name char*
+/// @param name const char*
 ///
-void q_pangesture_set_object_name(void* self, char* name);
+void q_pangesture_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -2390,9 +2390,9 @@ const char* q_pinchgesture_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QPinchGesture*
-/// @param name char*
+/// @param name const char*
 ///
-void q_pinchgesture_set_object_name(void* self, char* name);
+void q_pinchgesture_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3424,9 +3424,9 @@ const char* q_swipegesture_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QSwipeGesture*
-/// @param name char*
+/// @param name const char*
 ///
-void q_swipegesture_set_object_name(void* self, char* name);
+void q_swipegesture_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4442,9 +4442,9 @@ const char* q_tapgesture_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QTapGesture*
-/// @param name char*
+/// @param name const char*
 ///
-void q_tapgesture_set_object_name(void* self, char* name);
+void q_tapgesture_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -5470,9 +5470,9 @@ const char* q_tapandholdgesture_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QTapAndHoldGesture*
-/// @param name char*
+/// @param name const char*
 ///
-void q_tapandholdgesture_set_object_name(void* self, char* name);
+void q_tapandholdgesture_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

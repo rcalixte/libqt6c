@@ -219,9 +219,9 @@ const char* k_xmessages_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KXMessages*
-/// @param name char*
+/// @param name const char*
 ///
-void k_xmessages_set_object_name(void* self, char* name);
+void k_xmessages_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

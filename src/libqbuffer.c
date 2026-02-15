@@ -72,7 +72,7 @@ const char* q_buffer_buffer2(void* self) {
     return _ret;
 }
 
-void q_buffer_set_data(void* self, const char* data) {
+void q_buffer_set_data(void* self, char* data) {
     QBuffer_SetData((QBuffer*)self, qstring(data));
 }
 
@@ -334,7 +334,7 @@ long long q_buffer_write2(void* self, const char* data) {
     return QIODevice_Write2((QIODevice*)self, data);
 }
 
-long long q_buffer_write3(void* self, const char* data) {
+long long q_buffer_write3(void* self, char* data) {
     return QIODevice_Write3((QIODevice*)self, qstring(data));
 }
 
@@ -434,7 +434,7 @@ const char* q_buffer_object_name(void* self) {
     return _ret;
 }
 
-void q_buffer_set_object_name(void* self, char* name) {
+void q_buffer_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

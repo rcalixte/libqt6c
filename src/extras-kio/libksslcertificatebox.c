@@ -860,7 +860,7 @@ char* k_sslcertificatebox_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_sslcertificatebox_restore_geometry(void* self, const char* geometry) {
+bool k_sslcertificatebox_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1216,7 +1216,7 @@ const char* k_sslcertificatebox_object_name(void* self) {
     return _ret;
 }
 
-void k_sslcertificatebox_set_object_name(void* self, char* name) {
+void k_sslcertificatebox_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1852,15 +1852,15 @@ void k_sslcertificatebox_on_hide_event(void* self, void (*callback)(void*, void*
     KSslCertificateBox_OnHideEvent((KSslCertificateBox*)self, (intptr_t)callback);
 }
 
-bool k_sslcertificatebox_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_sslcertificatebox_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KSslCertificateBox_NativeEvent((KSslCertificateBox*)self, qstring(eventType), message, result);
 }
 
-bool k_sslcertificatebox_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_sslcertificatebox_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KSslCertificateBox_QBaseNativeEvent((KSslCertificateBox*)self, qstring(eventType), message, result);
 }
 
-void k_sslcertificatebox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_sslcertificatebox_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KSslCertificateBox_OnNativeEvent((KSslCertificateBox*)self, (intptr_t)callback);
 }
 

@@ -469,9 +469,9 @@ const char* q_graphicseffect_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QGraphicsEffect*
-/// @param name char*
+/// @param name const char*
 ///
-void q_graphicseffect_set_object_name(void* self, char* name);
+void q_graphicseffect_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1532,9 +1532,9 @@ const char* q_graphicscolorizeeffect_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QGraphicsColorizeEffect*
-/// @param name char*
+/// @param name const char*
 ///
-void q_graphicscolorizeeffect_set_object_name(void* self, char* name);
+void q_graphicscolorizeeffect_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -2845,9 +2845,9 @@ const char* q_graphicsblureffect_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QGraphicsBlurEffect*
-/// @param name char*
+/// @param name const char*
 ///
-void q_graphicsblureffect_set_object_name(void* self, char* name);
+void q_graphicsblureffect_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4191,9 +4191,9 @@ const char* q_graphicsdropshadoweffect_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QGraphicsDropShadowEffect*
-/// @param name char*
+/// @param name const char*
 ///
-void q_graphicsdropshadoweffect_set_object_name(void* self, char* name);
+void q_graphicsdropshadoweffect_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -5444,9 +5444,9 @@ const char* q_graphicsopacityeffect_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QGraphicsOpacityEffect*
-/// @param name char*
+/// @param name const char*
 ///
-void q_graphicsopacityeffect_set_object_name(void* self, char* name);
+void q_graphicsopacityeffect_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

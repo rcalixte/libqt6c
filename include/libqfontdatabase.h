@@ -203,9 +203,9 @@ int32_t q_fontdatabase_add_application_font(const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#addApplicationFontFromData)
 ///
-/// @param fontData const char*
+/// @param fontData char*
 ///
-int32_t q_fontdatabase_add_application_font_from_data(const char* fontData);
+int32_t q_fontdatabase_add_application_font_from_data(char* fontData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontdatabase.html#applicationFontFamilies)
 ///

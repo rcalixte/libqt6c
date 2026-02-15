@@ -116,9 +116,9 @@ const char* q_textobject_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QTextObject*
-/// @param name char*
+/// @param name const char*
 ///
-void q_textobject_set_object_name(void* self, char* name);
+void q_textobject_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -672,9 +672,9 @@ const char* q_textblockgroup_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QTextBlockGroup*
-/// @param name char*
+/// @param name const char*
 ///
-void q_textblockgroup_set_object_name(void* self, char* name);
+void q_textblockgroup_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1325,9 +1325,9 @@ const char* q_textframe_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QTextFrame*
-/// @param name char*
+/// @param name const char*
 ///
-void q_textframe_set_object_name(void* self, char* name);
+void q_textframe_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

@@ -1152,7 +1152,7 @@ char* q_checkbox_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_checkbox_restore_geometry(void* self, const char* geometry) {
+bool q_checkbox_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1508,7 +1508,7 @@ const char* q_checkbox_object_name(void* self) {
     return _ret;
 }
 
-void q_checkbox_set_object_name(void* self, char* name) {
+void q_checkbox_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2108,15 +2108,15 @@ void q_checkbox_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QCheckBox_OnHideEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
-bool q_checkbox_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_checkbox_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QCheckBox_NativeEvent((QCheckBox*)self, qstring(eventType), message, result);
 }
 
-bool q_checkbox_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_checkbox_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QCheckBox_QBaseNativeEvent((QCheckBox*)self, qstring(eventType), message, result);
 }
 
-void q_checkbox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_checkbox_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QCheckBox_OnNativeEvent((QCheckBox*)self, (intptr_t)callback);
 }
 

@@ -23,14 +23,14 @@ const char** k_emailaddress_split_address_list(const char* param1);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#splitAddress)
 ///
-/// @param param1 const char*
+/// @param param1 char*
 /// @param param2 char*
 /// @param param3 char*
 /// @param param4 char*
 ///
 /// @return enum KEmailAddress__EmailParseResult
 ///
-int32_t k_emailaddress_split_address(const char* param1, char* param2, char* param3, char* param4);
+int32_t k_emailaddress_split_address(char* param1, char* param2, char* param3, char* param4);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#splitAddress)
 ///
@@ -84,18 +84,18 @@ const char* k_emailaddress_simple_email_address_error_msg();
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param param1 const char*
+/// @param param1 char*
 ///
-char* k_emailaddress_extract_email_address(const char* param1);
+char* k_emailaddress_extract_email_address(char* param1);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#extractEmailAddress)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param param1 const char*
+/// @param param1 char*
 /// @param param2 const char*
 ///
-char* k_emailaddress_extract_email_address2(const char* param1, const char* param2);
+char* k_emailaddress_extract_email_address2(char* param1, const char* param2);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#extractEmailAddress)
 ///
@@ -118,18 +118,18 @@ const char* k_emailaddress_extract_email_address4(const char* param1, const char
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param param1 const char*
+/// @param param1 char*
 ///
-char* k_emailaddress_first_email_address(const char* param1);
+char* k_emailaddress_first_email_address(char* param1);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#firstEmailAddress)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param param1 const char*
+/// @param param1 char*
 /// @param param2 const char*
 ///
-char* k_emailaddress_first_email_address2(const char* param1, const char* param2);
+char* k_emailaddress_first_email_address2(char* param1, const char* param2);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#firstEmailAddress)
 ///

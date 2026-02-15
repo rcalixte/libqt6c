@@ -1039,7 +1039,7 @@ char* k_imageannotator__kimageannotator_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_imageannotator__kimageannotator_restore_geometry(void* self, const char* geometry) {
+bool k_imageannotator__kimageannotator_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1395,7 +1395,7 @@ const char* k_imageannotator__kimageannotator_object_name(void* self) {
     return _ret;
 }
 
-void k_imageannotator__kimageannotator_set_object_name(void* self, char* name) {
+void k_imageannotator__kimageannotator_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2019,15 +2019,15 @@ void k_imageannotator__kimageannotator_on_hide_event(void* self, void (*callback
     kImageAnnotator__KImageAnnotator_OnHideEvent((kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
 }
 
-bool k_imageannotator__kimageannotator_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_imageannotator__kimageannotator_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return kImageAnnotator__KImageAnnotator_NativeEvent((kImageAnnotator__KImageAnnotator*)self, qstring(eventType), message, result);
 }
 
-bool k_imageannotator__kimageannotator_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_imageannotator__kimageannotator_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return kImageAnnotator__KImageAnnotator_QBaseNativeEvent((kImageAnnotator__KImageAnnotator*)self, qstring(eventType), message, result);
 }
 
-void k_imageannotator__kimageannotator_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_imageannotator__kimageannotator_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     kImageAnnotator__KImageAnnotator_OnNativeEvent((kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
 }
 

@@ -75,7 +75,7 @@ void k_io__openurljob_set_suggested_file_name(void* self, const char* suggestedF
     KIO__OpenUrlJob_SetSuggestedFileName((KIO__OpenUrlJob*)self, qstring(suggestedFileName));
 }
 
-void k_io__openurljob_set_startup_id(void* self, const char* startupId) {
+void k_io__openurljob_set_startup_id(void* self, char* startupId) {
     KIO__OpenUrlJob_SetStartupId((KIO__OpenUrlJob*)self, qstring(startupId));
 }
 
@@ -279,7 +279,7 @@ const char* k_io__openurljob_object_name(void* self) {
     return _ret;
 }
 
-void k_io__openurljob_set_object_name(void* self, char* name) {
+void k_io__openurljob_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

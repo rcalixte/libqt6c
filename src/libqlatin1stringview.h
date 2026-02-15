@@ -47,17 +47,17 @@ QLatin1String* q_latin1string_new4(const char* s, int64_t sz);
 
 /// q_latin1string_new5 constructs a new QLatin1String object.
 ///
-/// @param s const char*
+/// @param s char*
 ///
-QLatin1String* q_latin1string_new5(const char* s);
+QLatin1String* q_latin1string_new5(char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html)
 
 /// q_latin1string_new6 constructs a new QLatin1String object.
 ///
-/// @param s const char*
+/// @param s char*
 ///
-QLatin1String* q_latin1string_new6(const char* s);
+QLatin1String* q_latin1string_new6(char* s);
 
 /// q_latin1string_copy_assign shallow copies `other` into `self`.
 ///

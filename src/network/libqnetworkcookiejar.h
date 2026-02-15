@@ -342,9 +342,9 @@ const char* q_networkcookiejar_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QNetworkCookieJar*
-/// @param name char*
+/// @param name const char*
 ///
-void q_networkcookiejar_set_object_name(void* self, char* name);
+void q_networkcookiejar_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

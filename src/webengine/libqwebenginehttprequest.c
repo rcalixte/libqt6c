@@ -86,11 +86,11 @@ char* q_webenginehttprequest_post_data(void* self) {
     return _ret;
 }
 
-void q_webenginehttprequest_set_post_data(void* self, const char* postData) {
+void q_webenginehttprequest_set_post_data(void* self, char* postData) {
     QWebEngineHttpRequest_SetPostData((QWebEngineHttpRequest*)self, qstring(postData));
 }
 
-bool q_webenginehttprequest_has_header(void* self, const char* headerName) {
+bool q_webenginehttprequest_has_header(void* self, char* headerName) {
     return QWebEngineHttpRequest_HasHeader((QWebEngineHttpRequest*)self, qstring(headerName));
 }
 
@@ -113,18 +113,18 @@ const char** q_webenginehttprequest_headers(void* self) {
     return _ret;
 }
 
-char* q_webenginehttprequest_header(void* self, const char* headerName) {
+char* q_webenginehttprequest_header(void* self, char* headerName) {
     libqt_string _str = QWebEngineHttpRequest_Header((QWebEngineHttpRequest*)self, qstring(headerName));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_webenginehttprequest_set_header(void* self, const char* headerName, const char* value) {
+void q_webenginehttprequest_set_header(void* self, char* headerName, char* value) {
     QWebEngineHttpRequest_SetHeader((QWebEngineHttpRequest*)self, qstring(headerName), qstring(value));
 }
 
-void q_webenginehttprequest_unset_header(void* self, const char* headerName) {
+void q_webenginehttprequest_unset_header(void* self, char* headerName) {
     QWebEngineHttpRequest_UnsetHeader((QWebEngineHttpRequest*)self, qstring(headerName));
 }
 

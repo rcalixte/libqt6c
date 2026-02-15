@@ -312,9 +312,9 @@ int32_t q_regularexpressionmatch_last_captured_index(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#hasCaptured)
 ///
 /// @param self QRegularExpressionMatch*
-/// @param name char*
+/// @param name const char*
 ///
-bool q_regularexpressionmatch_has_captured(void* self, char* name);
+bool q_regularexpressionmatch_has_captured(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#hasCaptured)
 ///
@@ -336,9 +336,9 @@ const char* q_regularexpressionmatch_captured(void* self);
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QRegularExpressionMatch*
-/// @param name char*
+/// @param name const char*
 ///
-const char* q_regularexpressionmatch_captured2(void* self, char* name);
+const char* q_regularexpressionmatch_captured2(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedTexts)
 ///
@@ -369,23 +369,23 @@ int64_t q_regularexpressionmatch_captured_end(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedStart)
 ///
 /// @param self QRegularExpressionMatch*
-/// @param name char*
+/// @param name const char*
 ///
-int64_t q_regularexpressionmatch_captured_start2(void* self, char* name);
+int64_t q_regularexpressionmatch_captured_start2(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedLength)
 ///
 /// @param self QRegularExpressionMatch*
-/// @param name char*
+/// @param name const char*
 ///
-int64_t q_regularexpressionmatch_captured_length2(void* self, char* name);
+int64_t q_regularexpressionmatch_captured_length2(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedEnd)
 ///
 /// @param self QRegularExpressionMatch*
-/// @param name char*
+/// @param name const char*
 ///
-int64_t q_regularexpressionmatch_captured_end2(void* self, char* name);
+int64_t q_regularexpressionmatch_captured_end2(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qregularexpressionmatch.html#captured)
 ///

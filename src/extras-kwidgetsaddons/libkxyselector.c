@@ -989,7 +989,7 @@ char* k_xyselector_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_xyselector_restore_geometry(void* self, const char* geometry) {
+bool k_xyselector_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1341,7 +1341,7 @@ const char* k_xyselector_object_name(void* self) {
     return _ret;
 }
 
-void k_xyselector_set_object_name(void* self, char* name) {
+void k_xyselector_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1917,15 +1917,15 @@ void k_xyselector_on_hide_event(void* self, void (*callback)(void*, void*)) {
     KXYSelector_OnHideEvent((KXYSelector*)self, (intptr_t)callback);
 }
 
-bool k_xyselector_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_xyselector_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KXYSelector_NativeEvent((KXYSelector*)self, qstring(eventType), message, result);
 }
 
-bool k_xyselector_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_xyselector_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KXYSelector_QBaseNativeEvent((KXYSelector*)self, qstring(eventType), message, result);
 }
 
-void k_xyselector_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_xyselector_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KXYSelector_OnNativeEvent((KXYSelector*)self, (intptr_t)callback);
 }
 

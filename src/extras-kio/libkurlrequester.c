@@ -1104,7 +1104,7 @@ char* k_urlrequester_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_urlrequester_restore_geometry(void* self, const char* geometry) {
+bool k_urlrequester_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1460,7 +1460,7 @@ const char* k_urlrequester_object_name(void* self) {
     return _ret;
 }
 
-void k_urlrequester_set_object_name(void* self, char* name) {
+void k_urlrequester_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2096,15 +2096,15 @@ void k_urlrequester_on_hide_event(void* self, void (*callback)(void*, void*)) {
     KUrlRequester_OnHideEvent((KUrlRequester*)self, (intptr_t)callback);
 }
 
-bool k_urlrequester_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_urlrequester_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KUrlRequester_NativeEvent((KUrlRequester*)self, qstring(eventType), message, result);
 }
 
-bool k_urlrequester_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_urlrequester_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KUrlRequester_QBaseNativeEvent((KUrlRequester*)self, qstring(eventType), message, result);
 }
 
-void k_urlrequester_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_urlrequester_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KUrlRequester_OnNativeEvent((KUrlRequester*)self, (intptr_t)callback);
 }
 
@@ -3416,7 +3416,7 @@ char* k_urlcomborequester_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_urlcomborequester_restore_geometry(void* self, const char* geometry) {
+bool k_urlcomborequester_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -3772,7 +3772,7 @@ const char* k_urlcomborequester_object_name(void* self) {
     return _ret;
 }
 
-void k_urlcomborequester_set_object_name(void* self, char* name) {
+void k_urlcomborequester_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -4444,15 +4444,15 @@ void k_urlcomborequester_on_hide_event(void* self, void (*callback)(void*, void*
     KUrlComboRequester_OnHideEvent((KUrlComboRequester*)self, (intptr_t)callback);
 }
 
-bool k_urlcomborequester_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_urlcomborequester_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KUrlComboRequester_NativeEvent((KUrlComboRequester*)self, qstring(eventType), message, result);
 }
 
-bool k_urlcomborequester_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_urlcomborequester_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KUrlComboRequester_QBaseNativeEvent((KUrlComboRequester*)self, qstring(eventType), message, result);
 }
 
-void k_urlcomborequester_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_urlcomborequester_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KUrlComboRequester_OnNativeEvent((KUrlComboRequester*)self, (intptr_t)callback);
 }
 

@@ -204,7 +204,7 @@ const char* q_scilexernasm_object_name(void* self) {
     return _ret;
 }
 
-void q_scilexernasm_set_object_name(void* self, char* name) {
+void q_scilexernasm_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -974,7 +974,7 @@ char* q_scilexernasm_qbase_text_as_bytes(void* self, const char* text) {
     return _ret;
 }
 
-void q_scilexernasm_on_text_as_bytes(void* self, char* (*callback)(void*, const char*)) {
+void q_scilexernasm_on_text_as_bytes(void* self, libqt_string (*callback)(void*, const char*)) {
     QsciLexerNASM_OnTextAsBytes((QsciLexerNASM*)self, (intptr_t)callback);
 }
 

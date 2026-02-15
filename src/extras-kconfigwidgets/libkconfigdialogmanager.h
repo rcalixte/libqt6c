@@ -248,9 +248,9 @@ char* k_configdialogmanager_get_user_property(void* self, void* widget);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfigDialogManager*
-/// @param callback char* func(KConfigDialogManager* self, QWidget* widget)
+/// @param callback libqt_string func(KConfigDialogManager* self, QWidget* widget)
 ///
-void k_configdialogmanager_on_get_user_property(void* self, char* (*callback)(void*, void*));
+void k_configdialogmanager_on_get_user_property(void* self, libqt_string (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getUserProperty)
 ///
@@ -275,9 +275,9 @@ char* k_configdialogmanager_get_custom_property(void* self, void* widget);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfigDialogManager*
-/// @param callback char* func(KConfigDialogManager* self, QWidget* widget)
+/// @param callback libqt_string func(KConfigDialogManager* self, QWidget* widget)
 ///
-void k_configdialogmanager_on_get_custom_property(void* self, char* (*callback)(void*, void*));
+void k_configdialogmanager_on_get_custom_property(void* self, libqt_string (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getCustomProperty)
 ///
@@ -302,9 +302,9 @@ char* k_configdialogmanager_get_user_property_changed_signal(void* self, void* w
 /// Allows for overriding the related default method
 ///
 /// @param self KConfigDialogManager*
-/// @param callback char* func(KConfigDialogManager* self, QWidget* widget)
+/// @param callback libqt_string func(KConfigDialogManager* self, QWidget* widget)
 ///
-void k_configdialogmanager_on_get_user_property_changed_signal(void* self, char* (*callback)(void*, void*));
+void k_configdialogmanager_on_get_user_property_changed_signal(void* self, libqt_string (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getUserPropertyChangedSignal)
 ///
@@ -329,9 +329,9 @@ char* k_configdialogmanager_get_custom_property_changed_signal(void* self, void*
 /// Allows for overriding the related default method
 ///
 /// @param self KConfigDialogManager*
-/// @param callback char* func(KConfigDialogManager* self, QWidget* widget)
+/// @param callback libqt_string func(KConfigDialogManager* self, QWidget* widget)
 ///
-void k_configdialogmanager_on_get_custom_property_changed_signal(void* self, char* (*callback)(void*, void*));
+void k_configdialogmanager_on_get_custom_property_changed_signal(void* self, libqt_string (*callback)(void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getCustomPropertyChangedSignal)
 ///
@@ -478,9 +478,9 @@ const char* k_configdialogmanager_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KConfigDialogManager*
-/// @param name char*
+/// @param name const char*
 ///
-void k_configdialogmanager_set_object_name(void* self, char* name);
+void k_configdialogmanager_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

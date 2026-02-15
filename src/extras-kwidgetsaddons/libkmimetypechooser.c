@@ -1008,7 +1008,7 @@ char* k_mimetypechooser_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_mimetypechooser_restore_geometry(void* self, const char* geometry) {
+bool k_mimetypechooser_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1364,7 +1364,7 @@ const char* k_mimetypechooser_object_name(void* self) {
     return _ret;
 }
 
-void k_mimetypechooser_set_object_name(void* self, char* name) {
+void k_mimetypechooser_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2000,15 +2000,15 @@ void k_mimetypechooser_on_hide_event(void* self, void (*callback)(void*, void*))
     KMimeTypeChooser_OnHideEvent((KMimeTypeChooser*)self, (intptr_t)callback);
 }
 
-bool k_mimetypechooser_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_mimetypechooser_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KMimeTypeChooser_NativeEvent((KMimeTypeChooser*)self, qstring(eventType), message, result);
 }
 
-bool k_mimetypechooser_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_mimetypechooser_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KMimeTypeChooser_QBaseNativeEvent((KMimeTypeChooser*)self, qstring(eventType), message, result);
 }
 
-void k_mimetypechooser_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_mimetypechooser_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KMimeTypeChooser_OnNativeEvent((KMimeTypeChooser*)self, (intptr_t)callback);
 }
 
@@ -3362,7 +3362,7 @@ char* k_mimetypechooserdialog_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_mimetypechooserdialog_restore_geometry(void* self, const char* geometry) {
+bool k_mimetypechooserdialog_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -3718,7 +3718,7 @@ const char* k_mimetypechooserdialog_object_name(void* self) {
     return _ret;
 }
 
-void k_mimetypechooserdialog_set_object_name(void* self, char* name) {
+void k_mimetypechooserdialog_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -4414,15 +4414,15 @@ void k_mimetypechooserdialog_on_hide_event(void* self, void (*callback)(void*, v
     KMimeTypeChooserDialog_OnHideEvent((KMimeTypeChooserDialog*)self, (intptr_t)callback);
 }
 
-bool k_mimetypechooserdialog_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_mimetypechooserdialog_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KMimeTypeChooserDialog_NativeEvent((KMimeTypeChooserDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_mimetypechooserdialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_mimetypechooserdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KMimeTypeChooserDialog_QBaseNativeEvent((KMimeTypeChooserDialog*)self, qstring(eventType), message, result);
 }
 
-void k_mimetypechooserdialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_mimetypechooserdialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KMimeTypeChooserDialog_OnNativeEvent((KMimeTypeChooserDialog*)self, (intptr_t)callback);
 }
 

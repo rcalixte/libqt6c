@@ -498,7 +498,7 @@ const char* k_selectionproxymodel_object_name(void* self) {
     return _ret;
 }
 
-void k_selectionproxymodel_set_object_name(void* self, char* name) {
+void k_selectionproxymodel_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

@@ -99,7 +99,7 @@ QIODevice* q_webengineurlrequestjob_request_body(void* self) {
     return QWebEngineUrlRequestJob_RequestBody((QWebEngineUrlRequestJob*)self);
 }
 
-void q_webengineurlrequestjob_reply(void* self, const char* contentType, void* device) {
+void q_webengineurlrequestjob_reply(void* self, char* contentType, void* device) {
     QWebEngineUrlRequestJob_Reply((QWebEngineUrlRequestJob*)self, qstring(contentType), (QIODevice*)device);
 }
 
@@ -188,7 +188,7 @@ const char* q_webengineurlrequestjob_object_name(void* self) {
     return _ret;
 }
 
-void q_webengineurlrequestjob_set_object_name(void* self, char* name) {
+void q_webengineurlrequestjob_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

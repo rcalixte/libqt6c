@@ -424,9 +424,9 @@ const char* q_abstractanimation_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QAbstractAnimation*
-/// @param name char*
+/// @param name const char*
 ///
-void q_abstractanimation_set_object_name(void* self, char* name);
+void q_abstractanimation_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1483,9 +1483,9 @@ const char* q_animationdriver_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QAnimationDriver*
-/// @param name char*
+/// @param name const char*
 ///
-void q_animationdriver_set_object_name(void* self, char* name);
+void q_animationdriver_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

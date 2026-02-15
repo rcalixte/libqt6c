@@ -885,7 +885,7 @@ char* k_treewidgetsearchlinewidget_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_treewidgetsearchlinewidget_restore_geometry(void* self, const char* geometry) {
+bool k_treewidgetsearchlinewidget_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1241,7 +1241,7 @@ const char* k_treewidgetsearchlinewidget_object_name(void* self) {
     return _ret;
 }
 
-void k_treewidgetsearchlinewidget_set_object_name(void* self, char* name) {
+void k_treewidgetsearchlinewidget_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1877,15 +1877,15 @@ void k_treewidgetsearchlinewidget_on_hide_event(void* self, void (*callback)(voi
     KTreeWidgetSearchLineWidget_OnHideEvent((KTreeWidgetSearchLineWidget*)self, (intptr_t)callback);
 }
 
-bool k_treewidgetsearchlinewidget_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_treewidgetsearchlinewidget_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KTreeWidgetSearchLineWidget_NativeEvent((KTreeWidgetSearchLineWidget*)self, qstring(eventType), message, result);
 }
 
-bool k_treewidgetsearchlinewidget_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_treewidgetsearchlinewidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KTreeWidgetSearchLineWidget_QBaseNativeEvent((KTreeWidgetSearchLineWidget*)self, qstring(eventType), message, result);
 }
 
-void k_treewidgetsearchlinewidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_treewidgetsearchlinewidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KTreeWidgetSearchLineWidget_OnNativeEvent((KTreeWidgetSearchLineWidget*)self, (intptr_t)callback);
 }
 

@@ -117,7 +117,7 @@ const char* q_opengltimerquery_object_name(void* self) {
     return _ret;
 }
 
-void q_opengltimerquery_set_object_name(void* self, char* name) {
+void q_opengltimerquery_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -580,7 +580,7 @@ const char* q_opengltimemonitor_object_name(void* self) {
     return _ret;
 }
 
-void q_opengltimemonitor_set_object_name(void* self, char* name) {
+void q_opengltimemonitor_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

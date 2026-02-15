@@ -193,7 +193,7 @@ char* k_configdialogmanager_get_user_property(void* self, void* widget) {
     return _ret;
 }
 
-void k_configdialogmanager_on_get_user_property(void* self, char* (*callback)(void*, void*)) {
+void k_configdialogmanager_on_get_user_property(void* self, libqt_string (*callback)(void*, void*)) {
     KConfigDialogManager_OnGetUserProperty((KConfigDialogManager*)self, (intptr_t)callback);
 }
 
@@ -211,7 +211,7 @@ char* k_configdialogmanager_get_custom_property(void* self, void* widget) {
     return _ret;
 }
 
-void k_configdialogmanager_on_get_custom_property(void* self, char* (*callback)(void*, void*)) {
+void k_configdialogmanager_on_get_custom_property(void* self, libqt_string (*callback)(void*, void*)) {
     KConfigDialogManager_OnGetCustomProperty((KConfigDialogManager*)self, (intptr_t)callback);
 }
 
@@ -229,7 +229,7 @@ char* k_configdialogmanager_get_user_property_changed_signal(void* self, void* w
     return _ret;
 }
 
-void k_configdialogmanager_on_get_user_property_changed_signal(void* self, char* (*callback)(void*, void*)) {
+void k_configdialogmanager_on_get_user_property_changed_signal(void* self, libqt_string (*callback)(void*, void*)) {
     KConfigDialogManager_OnGetUserPropertyChangedSignal((KConfigDialogManager*)self, (intptr_t)callback);
 }
 
@@ -247,7 +247,7 @@ char* k_configdialogmanager_get_custom_property_changed_signal(void* self, void*
     return _ret;
 }
 
-void k_configdialogmanager_on_get_custom_property_changed_signal(void* self, char* (*callback)(void*, void*)) {
+void k_configdialogmanager_on_get_custom_property_changed_signal(void* self, libqt_string (*callback)(void*, void*)) {
     KConfigDialogManager_OnGetCustomPropertyChangedSignal((KConfigDialogManager*)self, (intptr_t)callback);
 }
 
@@ -327,7 +327,7 @@ const char* k_configdialogmanager_object_name(void* self) {
     return _ret;
 }
 
-void k_configdialogmanager_set_object_name(void* self, char* name) {
+void k_configdialogmanager_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

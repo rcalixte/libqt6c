@@ -46,7 +46,7 @@ const char* q_audiolistener_object_name(void* self) {
     return _ret;
 }
 
-void q_audiolistener_set_object_name(void* self, char* name) {
+void q_audiolistener_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

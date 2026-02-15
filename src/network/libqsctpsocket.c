@@ -396,7 +396,7 @@ long long q_sctpsocket_write2(void* self, const char* data) {
     return QIODevice_Write2((QIODevice*)self, data);
 }
 
-long long q_sctpsocket_write3(void* self, const char* data) {
+long long q_sctpsocket_write3(void* self, char* data) {
     return QIODevice_Write3((QIODevice*)self, qstring(data));
 }
 
@@ -496,7 +496,7 @@ const char* q_sctpsocket_object_name(void* self) {
     return _ret;
 }
 
-void q_sctpsocket_set_object_name(void* self, char* name) {
+void q_sctpsocket_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

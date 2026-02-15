@@ -184,9 +184,9 @@ const char* k_windowinsetscontroller_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KWindowInsetsController*
-/// @param name char*
+/// @param name const char*
 ///
-void k_windowinsetscontroller_set_object_name(void* self, char* name);
+void k_windowinsetscontroller_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

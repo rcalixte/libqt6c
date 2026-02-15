@@ -146,7 +146,7 @@ char* k_autosavefile_encode_name(const char* fileName) {
     return _ret;
 }
 
-const char* k_autosavefile_decode_name(const char* localFileName) {
+const char* k_autosavefile_decode_name(char* localFileName) {
     libqt_string _str = QFile_DecodeName(qstring(localFileName));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -383,7 +383,7 @@ long long k_autosavefile_write2(void* self, const char* data) {
     return QIODevice_Write2((QIODevice*)self, data);
 }
 
-long long k_autosavefile_write3(void* self, const char* data) {
+long long k_autosavefile_write3(void* self, char* data) {
     return QIODevice_Write3((QIODevice*)self, qstring(data));
 }
 
@@ -483,7 +483,7 @@ const char* k_autosavefile_object_name(void* self) {
     return _ret;
 }
 
-void k_autosavefile_set_object_name(void* self, char* name) {
+void k_autosavefile_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

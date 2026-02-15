@@ -190,9 +190,9 @@ const char* k_abstractviewadapter_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KAbstractViewAdapter*
-/// @param name char*
+/// @param name const char*
 ///
-void k_abstractviewadapter_set_object_name(void* self, char* name);
+void k_abstractviewadapter_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

@@ -193,9 +193,9 @@ const char* k_colorschememanager_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KColorSchemeManager*
-/// @param name char*
+/// @param name const char*
 ///
-void k_colorschememanager_set_object_name(void* self, char* name);
+void k_colorschememanager_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

@@ -902,9 +902,9 @@ const char* k_svg__framesvg_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KSvg__FrameSvg*
-/// @param name char*
+/// @param name const char*
 ///
-void k_svg__framesvg_set_object_name(void* self, char* name);
+void k_svg__framesvg_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

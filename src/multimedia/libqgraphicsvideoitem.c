@@ -297,7 +297,7 @@ const char* q_graphicsvideoitem_object_name(void* self) {
     return _ret;
 }
 
-void q_graphicsvideoitem_set_object_name(void* self, char* name) {
+void q_graphicsvideoitem_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

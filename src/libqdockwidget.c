@@ -1017,7 +1017,7 @@ char* q_dockwidget_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_dockwidget_restore_geometry(void* self, const char* geometry) {
+bool q_dockwidget_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1373,7 +1373,7 @@ const char* q_dockwidget_object_name(void* self) {
     return _ret;
 }
 
-void q_dockwidget_set_object_name(void* self, char* name) {
+void q_dockwidget_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1973,15 +1973,15 @@ void q_dockwidget_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QDockWidget_OnHideEvent((QDockWidget*)self, (intptr_t)callback);
 }
 
-bool q_dockwidget_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_dockwidget_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QDockWidget_NativeEvent((QDockWidget*)self, qstring(eventType), message, result);
 }
 
-bool q_dockwidget_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_dockwidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QDockWidget_QBaseNativeEvent((QDockWidget*)self, qstring(eventType), message, result);
 }
 
-void q_dockwidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_dockwidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QDockWidget_OnNativeEvent((QDockWidget*)self, (intptr_t)callback);
 }
 

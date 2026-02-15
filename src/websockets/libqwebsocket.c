@@ -212,7 +212,7 @@ long long q_websocket_send_text_message(void* self, const char* message) {
     return QWebSocket_SendTextMessage((QWebSocket*)self, qstring(message));
 }
 
-long long q_websocket_send_binary_message(void* self, const char* data) {
+long long q_websocket_send_binary_message(void* self, char* data) {
     return QWebSocket_SendBinaryMessage((QWebSocket*)self, qstring(data));
 }
 
@@ -364,11 +364,11 @@ void q_websocket_on_text_frame_received(void* self, void (*callback)(void*, cons
     QWebSocket_Connect_TextFrameReceived((QWebSocket*)self, (intptr_t)callback);
 }
 
-void q_websocket_binary_frame_received(void* self, const char* frame, bool isLastFrame) {
+void q_websocket_binary_frame_received(void* self, char* frame, bool isLastFrame) {
     QWebSocket_BinaryFrameReceived((QWebSocket*)self, qstring(frame), isLastFrame);
 }
 
-void q_websocket_on_binary_frame_received(void* self, void (*callback)(void*, const char*, bool)) {
+void q_websocket_on_binary_frame_received(void* self, void (*callback)(void*, libqt_string, bool)) {
     QWebSocket_Connect_BinaryFrameReceived((QWebSocket*)self, (intptr_t)callback);
 }
 
@@ -380,11 +380,11 @@ void q_websocket_on_text_message_received(void* self, void (*callback)(void*, co
     QWebSocket_Connect_TextMessageReceived((QWebSocket*)self, (intptr_t)callback);
 }
 
-void q_websocket_binary_message_received(void* self, const char* message) {
+void q_websocket_binary_message_received(void* self, char* message) {
     QWebSocket_BinaryMessageReceived((QWebSocket*)self, qstring(message));
 }
 
-void q_websocket_on_binary_message_received(void* self, void (*callback)(void*, const char*)) {
+void q_websocket_on_binary_message_received(void* self, void (*callback)(void*, libqt_string)) {
     QWebSocket_Connect_BinaryMessageReceived((QWebSocket*)self, (intptr_t)callback);
 }
 
@@ -400,11 +400,11 @@ void q_websocket_on_error_occurred(void* self, void (*callback)(void*, int32_t))
     QWebSocket_Connect_ErrorOccurred((QWebSocket*)self, (intptr_t)callback);
 }
 
-void q_websocket_pong(void* self, uint64_t elapsedTime, const char* payload) {
+void q_websocket_pong(void* self, uint64_t elapsedTime, char* payload) {
     QWebSocket_Pong((QWebSocket*)self, elapsedTime, qstring(payload));
 }
 
-void q_websocket_on_pong(void* self, void (*callback)(void*, uint64_t, const char*)) {
+void q_websocket_on_pong(void* self, void (*callback)(void*, uint64_t, libqt_string)) {
     QWebSocket_Connect_Pong((QWebSocket*)self, (intptr_t)callback);
 }
 
@@ -486,7 +486,7 @@ void q_websocket_close2(void* self, int32_t closeCode, const char* reason) {
     QWebSocket_Close2((QWebSocket*)self, closeCode, qstring(reason));
 }
 
-void q_websocket_ping1(void* self, const char* payload) {
+void q_websocket_ping1(void* self, char* payload) {
     QWebSocket_Ping1((QWebSocket*)self, qstring(payload));
 }
 
@@ -497,7 +497,7 @@ const char* q_websocket_object_name(void* self) {
     return _ret;
 }
 
-void q_websocket_set_object_name(void* self, char* name) {
+void q_websocket_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

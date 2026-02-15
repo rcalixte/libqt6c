@@ -702,7 +702,7 @@ const char* q_coloraxis_object_name(void* self) {
     return _ret;
 }
 
-void q_coloraxis_set_object_name(void* self, char* name) {
+void q_coloraxis_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

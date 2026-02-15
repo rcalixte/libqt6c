@@ -445,7 +445,7 @@ const char* k_toolbarlabelaction_object_name(void* self) {
     return _ret;
 }
 
-void k_toolbarlabelaction_set_object_name(void* self, char* name) {
+void k_toolbarlabelaction_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

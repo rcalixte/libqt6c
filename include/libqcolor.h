@@ -151,9 +151,9 @@ void q_color_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#fromString)
 ///
-/// @param name char*
+/// @param name const char*
 ///
-QColor* q_color_from_string(char* name);
+QColor* q_color_from_string(const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#operator-eq)
 ///
@@ -801,9 +801,9 @@ bool q_color_is_valid_color(const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#isValidColorName)
 ///
-/// @param param1 char*
+/// @param param1 const char*
 ///
-bool q_color_is_valid_color_name(char* param1);
+bool q_color_is_valid_color_name(const char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#name)
 ///

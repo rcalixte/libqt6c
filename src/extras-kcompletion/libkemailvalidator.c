@@ -118,7 +118,7 @@ const char* k_emailvalidator_object_name(void* self) {
     return _ret;
 }
 
-void k_emailvalidator_set_object_name(void* self, char* name) {
+void k_emailvalidator_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

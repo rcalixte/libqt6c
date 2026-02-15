@@ -140,7 +140,7 @@ char* k_localizedstring_untranslated_text(void* self) {
     return _ret;
 }
 
-void k_localizedstring_set_application_domain(const char* domain) {
+void k_localizedstring_set_application_domain(char* domain) {
     KLocalizedString_SetApplicationDomain(qstring(domain));
 }
 
@@ -197,11 +197,11 @@ libqt_list /* set of const char* */ k_localizedstring_available_application_tran
     return KLocalizedString_AvailableApplicationTranslations();
 }
 
-libqt_list /* set of const char* */ k_localizedstring_available_domain_translations(const char* domain) {
+libqt_list /* set of const char* */ k_localizedstring_available_domain_translations(char* domain) {
     return KLocalizedString_AvailableDomainTranslations(qstring(domain));
 }
 
-void k_localizedstring_add_domain_locale_dir(const char* domain, const char* path) {
+void k_localizedstring_add_domain_locale_dir(char* domain, const char* path) {
     KLocalizedString_AddDomainLocaleDir(qstring(domain), qstring(path));
 }
 

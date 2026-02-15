@@ -193,7 +193,7 @@ const char* q_scilexermarkdown_object_name(void* self) {
     return _ret;
 }
 
-void q_scilexermarkdown_set_object_name(void* self, char* name) {
+void q_scilexermarkdown_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -897,7 +897,7 @@ char* q_scilexermarkdown_qbase_text_as_bytes(void* self, const char* text) {
     return _ret;
 }
 
-void q_scilexermarkdown_on_text_as_bytes(void* self, char* (*callback)(void*, const char*)) {
+void q_scilexermarkdown_on_text_as_bytes(void* self, libqt_string (*callback)(void*, const char*)) {
     QsciLexerMarkdown_OnTextAsBytes((QsciLexerMarkdown*)self, (intptr_t)callback);
 }
 

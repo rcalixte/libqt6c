@@ -1205,7 +1205,7 @@ char* q_mdisubwindow_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_mdisubwindow_restore_geometry(void* self, const char* geometry) {
+bool q_mdisubwindow_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1561,7 +1561,7 @@ const char* q_mdisubwindow_object_name(void* self) {
     return _ret;
 }
 
-void q_mdisubwindow_set_object_name(void* self, char* name) {
+void q_mdisubwindow_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1981,15 +1981,15 @@ void q_mdisubwindow_on_drop_event(void* self, void (*callback)(void*, void*)) {
     QMdiSubWindow_OnDropEvent((QMdiSubWindow*)self, (intptr_t)callback);
 }
 
-bool q_mdisubwindow_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_mdisubwindow_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QMdiSubWindow_NativeEvent((QMdiSubWindow*)self, qstring(eventType), message, result);
 }
 
-bool q_mdisubwindow_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_mdisubwindow_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QMdiSubWindow_QBaseNativeEvent((QMdiSubWindow*)self, qstring(eventType), message, result);
 }
 
-void q_mdisubwindow_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_mdisubwindow_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QMdiSubWindow_OnNativeEvent((QMdiSubWindow*)self, (intptr_t)callback);
 }
 

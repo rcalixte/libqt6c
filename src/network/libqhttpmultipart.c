@@ -35,11 +35,11 @@ void q_httppart_set_header(void* self, int32_t header, void* value) {
     QHttpPart_SetHeader((QHttpPart*)self, header, (QVariant*)value);
 }
 
-void q_httppart_set_raw_header(void* self, const char* headerName, const char* headerValue) {
+void q_httppart_set_raw_header(void* self, char* headerName, char* headerValue) {
     QHttpPart_SetRawHeader((QHttpPart*)self, qstring(headerName), qstring(headerValue));
 }
 
-void q_httppart_set_body(void* self, const char* body) {
+void q_httppart_set_body(void* self, char* body) {
     QHttpPart_SetBody((QHttpPart*)self, qstring(body));
 }
 
@@ -125,7 +125,7 @@ char* q_httpmultipart_boundary(void* self) {
     return _ret;
 }
 
-void q_httpmultipart_set_boundary(void* self, const char* boundary) {
+void q_httpmultipart_set_boundary(void* self, char* boundary) {
     QHttpMultiPart_SetBoundary((QHttpMultiPart*)self, qstring(boundary));
 }
 
@@ -150,7 +150,7 @@ const char* q_httpmultipart_object_name(void* self) {
     return _ret;
 }
 
-void q_httpmultipart_set_object_name(void* self, char* name) {
+void q_httpmultipart_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

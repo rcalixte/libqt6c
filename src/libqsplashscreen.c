@@ -949,7 +949,7 @@ char* q_splashscreen_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_splashscreen_restore_geometry(void* self, const char* geometry) {
+bool q_splashscreen_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1305,7 +1305,7 @@ const char* q_splashscreen_object_name(void* self) {
     return _ret;
 }
 
-void q_splashscreen_set_object_name(void* self, char* name) {
+void q_splashscreen_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1917,15 +1917,15 @@ void q_splashscreen_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QSplashScreen_OnHideEvent((QSplashScreen*)self, (intptr_t)callback);
 }
 
-bool q_splashscreen_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_splashscreen_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QSplashScreen_NativeEvent((QSplashScreen*)self, qstring(eventType), message, result);
 }
 
-bool q_splashscreen_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_splashscreen_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QSplashScreen_QBaseNativeEvent((QSplashScreen*)self, qstring(eventType), message, result);
 }
 
-void q_splashscreen_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_splashscreen_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QSplashScreen_OnNativeEvent((QSplashScreen*)self, (intptr_t)callback);
 }
 

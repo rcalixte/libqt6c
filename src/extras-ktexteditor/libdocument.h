@@ -1408,9 +1408,9 @@ bool k_texteditor__document_open_stream(void* self, const char* mimeType, void* 
 /// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#writeStream)
 ///
 /// @param self KTextEditor__Document*
-/// @param data const char*
+/// @param data char*
 ///
-bool k_texteditor__document_write_stream(void* self, const char* data);
+bool k_texteditor__document_write_stream(void* self, char* data);
 
 /// Inherited from KParts::ReadOnlyPart
 ///
@@ -1639,9 +1639,9 @@ const char* k_texteditor__document_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KTextEditor__Document*
-/// @param name char*
+/// @param name const char*
 ///
-void k_texteditor__document_set_object_name(void* self, char* name);
+void k_texteditor__document_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

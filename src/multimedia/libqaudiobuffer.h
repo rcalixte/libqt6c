@@ -29,10 +29,10 @@ QAudioBuffer* q_audiobuffer_new2(void* other);
 
 /// q_audiobuffer_new3 constructs a new QAudioBuffer object.
 ///
-/// @param data const char*
+/// @param data char*
 /// @param format QAudioFormat*
 ///
-QAudioBuffer* q_audiobuffer_new3(const char* data, void* format);
+QAudioBuffer* q_audiobuffer_new3(char* data, void* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html)
 
@@ -47,11 +47,11 @@ QAudioBuffer* q_audiobuffer_new4(int numFrames, void* format);
 
 /// q_audiobuffer_new5 constructs a new QAudioBuffer object.
 ///
-/// @param data const char*
+/// @param data char*
 /// @param format QAudioFormat*
 /// @param startTime long long
 ///
-QAudioBuffer* q_audiobuffer_new5(const char* data, void* format, long long startTime);
+QAudioBuffer* q_audiobuffer_new5(char* data, void* format, long long startTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html)
 

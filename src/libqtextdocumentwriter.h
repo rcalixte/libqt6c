@@ -22,9 +22,9 @@ QTextDocumentWriter* q_textdocumentwriter_new();
 /// q_textdocumentwriter_new2 constructs a new QTextDocumentWriter object.
 ///
 /// @param device QIODevice*
-/// @param format const char*
+/// @param format char*
 ///
-QTextDocumentWriter* q_textdocumentwriter_new2(void* device, const char* format);
+QTextDocumentWriter* q_textdocumentwriter_new2(void* device, char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentwriter.html)
 
@@ -39,16 +39,16 @@ QTextDocumentWriter* q_textdocumentwriter_new3(const char* fileName);
 /// q_textdocumentwriter_new4 constructs a new QTextDocumentWriter object.
 ///
 /// @param fileName const char*
-/// @param format const char*
+/// @param format char*
 ///
-QTextDocumentWriter* q_textdocumentwriter_new4(const char* fileName, const char* format);
+QTextDocumentWriter* q_textdocumentwriter_new4(const char* fileName, char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentwriter.html#setFormat)
 ///
 /// @param self QTextDocumentWriter*
-/// @param format const char*
+/// @param format char*
 ///
-void q_textdocumentwriter_set_format(void* self, const char* format);
+void q_textdocumentwriter_set_format(void* self, char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentwriter.html#format)
 ///

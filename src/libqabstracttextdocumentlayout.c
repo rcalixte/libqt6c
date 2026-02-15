@@ -318,7 +318,7 @@ const char* q_abstracttextdocumentlayout_object_name(void* self) {
     return _ret;
 }
 
-void q_abstracttextdocumentlayout_set_object_name(void* self, char* name) {
+void q_abstracttextdocumentlayout_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

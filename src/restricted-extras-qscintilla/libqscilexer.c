@@ -600,7 +600,7 @@ char* q_scilexer_text_as_bytes(void* self, const char* text) {
     return _ret;
 }
 
-void q_scilexer_on_text_as_bytes(void* self, char* (*callback)(void*, const char*)) {
+void q_scilexer_on_text_as_bytes(void* self, libqt_string (*callback)(void*, const char*)) {
     QsciLexer_OnTextAsBytes((QsciLexer*)self, (intptr_t)callback);
 }
 
@@ -658,7 +658,7 @@ const char* q_scilexer_object_name(void* self) {
     return _ret;
 }
 
-void q_scilexer_set_object_name(void* self, char* name) {
+void q_scilexer_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

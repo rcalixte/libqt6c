@@ -1336,7 +1336,7 @@ const char* q_abstractitemmodel_object_name(void* self) {
     return _ret;
 }
 
-void q_abstractitemmodel_set_object_name(void* self, char* name) {
+void q_abstractitemmodel_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2004,7 +2004,7 @@ const char* q_abstracttablemodel_object_name(void* self) {
     return _ret;
 }
 
-void q_abstracttablemodel_set_object_name(void* self, char* name) {
+void q_abstracttablemodel_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -3450,7 +3450,7 @@ const char* q_abstractlistmodel_object_name(void* self) {
     return _ret;
 }
 
-void q_abstractlistmodel_set_object_name(void* self, char* name) {
+void q_abstractlistmodel_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

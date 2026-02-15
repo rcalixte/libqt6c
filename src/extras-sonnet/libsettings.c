@@ -384,7 +384,7 @@ const char* k_sonnet__settings_object_name(void* self) {
     return _ret;
 }
 
-void k_sonnet__settings_set_object_name(void* self, char* name) {
+void k_sonnet__settings_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

@@ -29,18 +29,18 @@ QTextStream* q_textstream_new2(void* device);
 
 /// q_textstream_new3 constructs a new QTextStream object.
 ///
-/// @param array const char*
+/// @param array char*
 ///
-QTextStream* q_textstream_new3(const char* array);
+QTextStream* q_textstream_new3(char* array);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html)
 
 /// q_textstream_new4 constructs a new QTextStream object.
 ///
-/// @param array const char*
+/// @param array char*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
 ///
-QTextStream* q_textstream_new4(const char* array, int32_t openMode);
+QTextStream* q_textstream_new4(char* array, int32_t openMode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#setEncoding)
 ///
@@ -500,9 +500,9 @@ QTextStream* q_textstream_operator_shift_left14(void* self, const char* s);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///
 /// @param self QTextStream*
-/// @param array const char*
+/// @param array char*
 ///
-QTextStream* q_textstream_operator_shift_left17(void* self, const char* array);
+QTextStream* q_textstream_operator_shift_left17(void* self, char* array);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///

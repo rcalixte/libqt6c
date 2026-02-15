@@ -653,7 +653,7 @@ void q_sslsocket_set_private_key3(void* self, const char* fileName, int32_t algo
     QSslSocket_SetPrivateKey3((QSslSocket*)self, qstring(fileName), algorithm, format);
 }
 
-void q_sslsocket_set_private_key4(void* self, const char* fileName, int32_t algorithm, int32_t format, const char* passPhrase) {
+void q_sslsocket_set_private_key4(void* self, const char* fileName, int32_t algorithm, int32_t format, char* passPhrase) {
     QSslSocket_SetPrivateKey4((QSslSocket*)self, qstring(fileName), algorithm, format, qstring(passPhrase));
 }
 
@@ -939,7 +939,7 @@ long long q_sslsocket_write2(void* self, const char* data) {
     return QIODevice_Write2((QIODevice*)self, data);
 }
 
-long long q_sslsocket_write3(void* self, const char* data) {
+long long q_sslsocket_write3(void* self, char* data) {
     return QIODevice_Write3((QIODevice*)self, qstring(data));
 }
 
@@ -1039,7 +1039,7 @@ const char* q_sslsocket_object_name(void* self) {
     return _ret;
 }
 
-void q_sslsocket_set_object_name(void* self, char* name) {
+void q_sslsocket_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

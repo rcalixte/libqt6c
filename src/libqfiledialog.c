@@ -280,7 +280,7 @@ char* q_filedialog_save_state(void* self) {
     return _ret;
 }
 
-bool q_filedialog_restore_state(void* self, const char* state) {
+bool q_filedialog_restore_state(void* self, char* state) {
     return QFileDialog_RestoreState((QFileDialog*)self, qstring(state));
 }
 
@@ -566,7 +566,7 @@ libqt_list /* of QUrl* */ q_filedialog_get_open_file_urls() {
     return _arr;
 }
 
-void q_filedialog_save_file_content(const char* fileContent, const char* fileNameHint) {
+void q_filedialog_save_file_content(char* fileContent, const char* fileNameHint) {
     QFileDialog_SaveFileContent(qstring(fileContent), qstring(fileNameHint));
 }
 
@@ -868,7 +868,7 @@ libqt_list /* of QUrl* */ q_filedialog_get_open_file_urls4(void* parent, const c
     return _arr;
 }
 
-void q_filedialog_save_file_content3(const char* fileContent, const char* fileNameHint, void* parent) {
+void q_filedialog_save_file_content3(char* fileContent, const char* fileNameHint, void* parent) {
     QFileDialog_SaveFileContent3(qstring(fileContent), qstring(fileNameHint), (QWidget*)parent);
 }
 
@@ -1689,7 +1689,7 @@ char* q_filedialog_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_filedialog_restore_geometry(void* self, const char* geometry) {
+bool q_filedialog_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -2045,7 +2045,7 @@ const char* q_filedialog_object_name(void* self) {
     return _ret;
 }
 
-void q_filedialog_set_object_name(void* self, char* name) {
+void q_filedialog_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2717,15 +2717,15 @@ void q_filedialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QFileDialog_OnHideEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
-bool q_filedialog_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_filedialog_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QFileDialog_NativeEvent((QFileDialog*)self, qstring(eventType), message, result);
 }
 
-bool q_filedialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_filedialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QFileDialog_QBaseNativeEvent((QFileDialog*)self, qstring(eventType), message, result);
 }
 
-void q_filedialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_filedialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QFileDialog_OnNativeEvent((QFileDialog*)self, (intptr_t)callback);
 }
 

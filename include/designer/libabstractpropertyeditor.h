@@ -1931,9 +1931,9 @@ char* q_designerpropertyeditorinterface_save_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QDesignerPropertyEditorInterface*
-/// @param geometry const char*
+/// @param geometry char*
 ///
-bool q_designerpropertyeditorinterface_restore_geometry(void* self, const char* geometry);
+bool q_designerpropertyeditorinterface_restore_geometry(void* self, char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2739,9 +2739,9 @@ const char* q_designerpropertyeditorinterface_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QDesignerPropertyEditorInterface*
-/// @param name char*
+/// @param name const char*
 ///
-void q_designerpropertyeditorinterface_set_object_name(void* self, char* name);
+void q_designerpropertyeditorinterface_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4318,11 +4318,11 @@ void q_designerpropertyeditorinterface_on_hide_event(void* self, void (*callback
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QDesignerPropertyEditorInterface*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_designerpropertyeditorinterface_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_designerpropertyeditorinterface_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4331,11 +4331,11 @@ bool q_designerpropertyeditorinterface_native_event(void* self, const char* even
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QDesignerPropertyEditorInterface*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_designerpropertyeditorinterface_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_designerpropertyeditorinterface_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4344,9 +4344,9 @@ bool q_designerpropertyeditorinterface_qbase_native_event(void* self, const char
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDesignerPropertyEditorInterface*
-/// @param callback bool func(QDesignerPropertyEditorInterface* self, const char* eventType, void* message, intptr_t* result)
+/// @param callback bool func(QDesignerPropertyEditorInterface* self, libqt_string eventType, void* message, intptr_t* result)
 ///
-void q_designerpropertyeditorinterface_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
+void q_designerpropertyeditorinterface_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///

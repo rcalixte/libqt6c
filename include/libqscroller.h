@@ -313,9 +313,9 @@ const char* q_scroller_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QScroller*
-/// @param name char*
+/// @param name const char*
 ///
-void q_scroller_set_object_name(void* self, char* name);
+void q_scroller_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

@@ -1763,9 +1763,9 @@ const char* q_graphicsproxywidget_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QGraphicsProxyWidget*
-/// @param name char*
+/// @param name const char*
 ///
-void q_graphicsproxywidget_set_object_name(void* self, char* name);
+void q_graphicsproxywidget_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

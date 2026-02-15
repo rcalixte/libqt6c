@@ -46,7 +46,7 @@ void q_webengineurlrequestinfo_redirect(void* self, void* url) {
     QWebEngineUrlRequestInfo_Redirect((QWebEngineUrlRequestInfo*)self, (QUrl*)url);
 }
 
-void q_webengineurlrequestinfo_set_http_header(void* self, const char* name, const char* value) {
+void q_webengineurlrequestinfo_set_http_header(void* self, char* name, char* value) {
     QWebEngineUrlRequestInfo_SetHttpHeader((QWebEngineUrlRequestInfo*)self, qstring(name), qstring(value));
 }
 

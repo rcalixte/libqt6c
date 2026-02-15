@@ -1314,7 +1314,7 @@ char* k_texteditor__view_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_texteditor__view_restore_geometry(void* self, const char* geometry) {
+bool k_texteditor__view_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1698,7 +1698,7 @@ const char* k_texteditor__view_object_name(void* self) {
     return _ret;
 }
 
-void k_texteditor__view_set_object_name(void* self, char* name) {
+void k_texteditor__view_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

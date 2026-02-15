@@ -140,7 +140,7 @@ const char* k_io__fileundomanager_object_name(void* self) {
     return _ret;
 }
 
-void k_io__fileundomanager_set_object_name(void* self, char* name) {
+void k_io__fileundomanager_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

@@ -255,7 +255,7 @@ void k_configskeletonitem_delete(void* self) {
     KConfigSkeletonItem_Delete((KConfigSkeletonItem*)(self));
 }
 
-KPropertySkeletonItem* k_propertyskeletonitem_new(void* object, const char* propertyName, void* defaultValue) {
+KPropertySkeletonItem* k_propertyskeletonitem_new(void* object, char* propertyName, void* defaultValue) {
     return KPropertySkeletonItem_new((QObject*)object, qstring(propertyName), (QVariant*)defaultValue);
 }
 
@@ -1149,7 +1149,7 @@ const char* k_coreconfigskeleton_object_name(void* self) {
     return _ret;
 }
 
-void k_coreconfigskeleton_set_object_name(void* self, char* name) {
+void k_coreconfigskeleton_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

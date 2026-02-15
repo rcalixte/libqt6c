@@ -42,9 +42,9 @@ const char* k_io__storedtransferjob_tr(const char* s);
 /// [Upstream resources](https://api.kde.org/kio-storedtransferjob.html#setData)
 ///
 /// @param self KIO__StoredTransferJob*
-/// @param arr const char*
+/// @param arr char*
 ///
-void k_io__storedtransferjob_set_data(void* self, const char* arr);
+void k_io__storedtransferjob_set_data(void* self, char* arr);
 
 /// [Upstream resources](https://api.kde.org/kio-storedtransferjob.html#data)
 ///
@@ -104,9 +104,9 @@ void k_io__storedtransferjob_set_async_data_enabled(void* self, bool enabled);
 /// [Upstream resources](https://api.kde.org/kio-transferjob.html#sendAsyncData)
 ///
 /// @param self KIO__StoredTransferJob*
-/// @param data const char*
+/// @param data char*
 ///
-void k_io__storedtransferjob_send_async_data(void* self, const char* data);
+void k_io__storedtransferjob_send_async_data(void* self, char* data);
 
 /// Inherited from KIO::TransferJob
 ///
@@ -150,9 +150,9 @@ void k_io__storedtransferjob_data_req(void* self, void* job, char* data);
 /// [Upstream resources](https://api.kde.org/kio-transferjob.html#dataReq)
 ///
 /// @param self KIO__StoredTransferJob*
-/// @param callback void func(KIO__StoredTransferJob* self, KIO__Job* job, char* data)
+/// @param callback void func(KIO__StoredTransferJob* self, KIO__Job* job, libqt_string data)
 ///
-void k_io__storedtransferjob_on_data_req(void* self, void (*callback)(void*, void*, char*));
+void k_io__storedtransferjob_on_data_req(void* self, void (*callback)(void*, void*, libqt_string));
 
 /// Inherited from KIO::TransferJob
 ///
@@ -754,9 +754,9 @@ const char* k_io__storedtransferjob_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KIO__StoredTransferJob*
-/// @param name char*
+/// @param name const char*
 ///
-void k_io__storedtransferjob_set_object_name(void* self, char* name);
+void k_io__storedtransferjob_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1301,20 +1301,20 @@ KIO__StoredTransferJob* k_io_stored_put(void* param1, void* param2, int param3, 
 
 /// [Upstream resources](https://api.kde.org/kio.html#storedPut)
 ///
-/// @param param1 const char*
+/// @param param1 char*
 /// @param param2 QUrl*
 /// @param param3 int
 /// @param param4 flag of enum KIO__JobFlag
 ///
-KIO__StoredTransferJob* k_io_stored_put2(const char* param1, void* param2, int param3, int32_t param4);
+KIO__StoredTransferJob* k_io_stored_put2(char* param1, void* param2, int param3, int32_t param4);
 
 /// [Upstream resources](https://api.kde.org/kio.html#storedHttpPost)
 ///
-/// @param param1 const char*
+/// @param param1 char*
 /// @param param2 QUrl*
 /// @param param3 flag of enum KIO__JobFlag
 ///
-KIO__StoredTransferJob* k_io_stored_http_post(const char* param1, void* param2, int32_t param3);
+KIO__StoredTransferJob* k_io_stored_http_post(char* param1, void* param2, int32_t param3);
 
 /// [Upstream resources](https://api.kde.org/kio.html#storedHttpPost)
 ///

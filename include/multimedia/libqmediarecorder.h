@@ -612,9 +612,9 @@ const char* q_mediarecorder_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QMediaRecorder*
-/// @param name char*
+/// @param name const char*
 ///
-void q_mediarecorder_set_object_name(void* self, char* name);
+void q_mediarecorder_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

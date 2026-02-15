@@ -276,7 +276,7 @@ const char* q_graphicssvgitem_object_name(void* self) {
     return _ret;
 }
 
-void q_graphicssvgitem_set_object_name(void* self, char* name) {
+void q_graphicssvgitem_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

@@ -943,7 +943,7 @@ char* k_newpasswordwidget_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_newpasswordwidget_restore_geometry(void* self, const char* geometry) {
+bool k_newpasswordwidget_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1299,7 +1299,7 @@ const char* k_newpasswordwidget_object_name(void* self) {
     return _ret;
 }
 
-void k_newpasswordwidget_set_object_name(void* self, char* name) {
+void k_newpasswordwidget_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1935,15 +1935,15 @@ void k_newpasswordwidget_on_hide_event(void* self, void (*callback)(void*, void*
     KNewPasswordWidget_OnHideEvent((KNewPasswordWidget*)self, (intptr_t)callback);
 }
 
-bool k_newpasswordwidget_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_newpasswordwidget_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KNewPasswordWidget_NativeEvent((KNewPasswordWidget*)self, qstring(eventType), message, result);
 }
 
-bool k_newpasswordwidget_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_newpasswordwidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KNewPasswordWidget_QBaseNativeEvent((KNewPasswordWidget*)self, qstring(eventType), message, result);
 }
 
-void k_newpasswordwidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_newpasswordwidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KNewPasswordWidget_OnNativeEvent((KNewPasswordWidget*)self, (intptr_t)callback);
 }
 

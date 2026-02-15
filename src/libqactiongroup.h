@@ -258,9 +258,9 @@ const char* q_actiongroup_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QActionGroup*
-/// @param name char*
+/// @param name const char*
 ///
-void q_actiongroup_set_object_name(void* self, char* name);
+void q_actiongroup_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

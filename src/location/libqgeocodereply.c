@@ -237,7 +237,7 @@ const char* q_geocodereply_object_name(void* self) {
     return _ret;
 }
 
-void q_geocodereply_set_object_name(void* self, char* name) {
+void q_geocodereply_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

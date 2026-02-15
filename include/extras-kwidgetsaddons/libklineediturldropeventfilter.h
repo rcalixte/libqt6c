@@ -159,9 +159,9 @@ const char* k_lineediturldropeventfilter_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KLineEditUrlDropEventFilter*
-/// @param name char*
+/// @param name const char*
 ///
-void k_lineediturldropeventfilter_set_object_name(void* self, char* name);
+void k_lineediturldropeventfilter_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

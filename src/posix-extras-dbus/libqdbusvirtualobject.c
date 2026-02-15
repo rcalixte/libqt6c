@@ -109,7 +109,7 @@ const char* q_dbusvirtualobject_object_name(void* self) {
     return _ret;
 }
 
-void q_dbusvirtualobject_set_object_name(void* self, char* name) {
+void q_dbusvirtualobject_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

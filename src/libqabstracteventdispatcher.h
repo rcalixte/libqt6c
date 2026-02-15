@@ -170,11 +170,11 @@ void q_abstracteventdispatcher_remove_native_event_filter(void* self, void* filt
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#filterNativeEvent)
 ///
 /// @param self QAbstractEventDispatcher*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_abstracteventdispatcher_filter_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_abstracteventdispatcher_filter_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#aboutToBlock)
 ///
@@ -261,9 +261,9 @@ const char* q_abstracteventdispatcher_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QAbstractEventDispatcher*
-/// @param name char*
+/// @param name const char*
 ///
-void q_abstracteventdispatcher_set_object_name(void* self, char* name);
+void q_abstracteventdispatcher_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -932,11 +932,11 @@ void q_abstracteventdispatcherv2_remove_native_event_filter(void* self, void* fi
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#filterNativeEvent)
 ///
 /// @param self QAbstractEventDispatcherV2*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_abstracteventdispatcherv2_filter_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_abstracteventdispatcherv2_filter_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QAbstractEventDispatcher
 ///
@@ -1014,9 +1014,9 @@ const char* q_abstracteventdispatcherv2_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QAbstractEventDispatcherV2*
-/// @param name char*
+/// @param name const char*
 ///
-void q_abstracteventdispatcherv2_set_object_name(void* self, char* name);
+void q_abstracteventdispatcherv2_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

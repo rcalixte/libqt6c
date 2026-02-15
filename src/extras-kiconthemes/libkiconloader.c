@@ -517,7 +517,7 @@ const char* k_iconloader_object_name(void* self) {
     return _ret;
 }
 
-void k_iconloader_set_object_name(void* self, char* name) {
+void k_iconloader_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

@@ -373,9 +373,9 @@ const char* q_scilexeredifact_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QsciLexerEDIFACT*
-/// @param name char*
+/// @param name const char*
 ///
-void q_scilexeredifact_set_object_name(void* self, char* name);
+void q_scilexeredifact_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -2112,9 +2112,9 @@ char* q_scilexeredifact_qbase_text_as_bytes(void* self, const char* text);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerEDIFACT*
-/// @param callback char* func(QsciLexerEDIFACT* self, const char* text)
+/// @param callback libqt_string func(QsciLexerEDIFACT* self, const char* text)
 ///
-void q_scilexeredifact_on_text_as_bytes(void* self, char* (*callback)(void*, const char*));
+void q_scilexeredifact_on_text_as_bytes(void* self, libqt_string (*callback)(void*, const char*));
 
 /// Inherited from QsciLexer
 ///

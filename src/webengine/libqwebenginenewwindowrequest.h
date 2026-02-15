@@ -125,9 +125,9 @@ const char* q_webenginenewwindowrequest_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QWebEngineNewWindowRequest*
-/// @param name char*
+/// @param name const char*
 ///
-void q_webenginenewwindowrequest_set_object_name(void* self, char* name);
+void q_webenginenewwindowrequest_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

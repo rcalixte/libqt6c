@@ -293,9 +293,9 @@ const char* k_notificationreplyaction_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KNotificationReplyAction*
-/// @param name char*
+/// @param name const char*
 ///
-void k_notificationreplyaction_set_object_name(void* self, char* name);
+void k_notificationreplyaction_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

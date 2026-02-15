@@ -8,7 +8,7 @@ QImageWriter* q_imagewriter_new() {
     return QImageWriter_new();
 }
 
-QImageWriter* q_imagewriter_new2(void* device, const char* format) {
+QImageWriter* q_imagewriter_new2(void* device, char* format) {
     return QImageWriter_new2((QIODevice*)device, qstring(format));
 }
 
@@ -16,7 +16,7 @@ QImageWriter* q_imagewriter_new3(const char* fileName) {
     return QImageWriter_new3(qstring(fileName));
 }
 
-QImageWriter* q_imagewriter_new4(const char* fileName, const char* format) {
+QImageWriter* q_imagewriter_new4(const char* fileName, char* format) {
     return QImageWriter_new4(qstring(fileName), qstring(format));
 }
 
@@ -27,7 +27,7 @@ const char* q_imagewriter_tr(const char* sourceText) {
     return _ret;
 }
 
-void q_imagewriter_set_format(void* self, const char* format) {
+void q_imagewriter_set_format(void* self, char* format) {
     QImageWriter_SetFormat((QImageWriter*)self, qstring(format));
 }
 
@@ -73,7 +73,7 @@ int32_t q_imagewriter_compression(void* self) {
     return QImageWriter_Compression((QImageWriter*)self);
 }
 
-void q_imagewriter_set_sub_type(void* self, const char* type) {
+void q_imagewriter_set_sub_type(void* self, char* type) {
     QImageWriter_SetSubType((QImageWriter*)self, qstring(type));
 }
 
@@ -192,7 +192,7 @@ const char** q_imagewriter_supported_mime_types() {
     return _ret;
 }
 
-const char** q_imagewriter_image_formats_for_mime_type(const char* mimeType) {
+const char** q_imagewriter_image_formats_for_mime_type(char* mimeType) {
     libqt_list _arr = QImageWriter_ImageFormatsForMimeType(qstring(mimeType));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));

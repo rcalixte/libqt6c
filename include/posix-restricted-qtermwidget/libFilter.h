@@ -158,9 +158,9 @@ const char* k_onsole__filter_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self Konsole__Filter*
-/// @param name char*
+/// @param name const char*
 ///
-void k_onsole__filter_set_object_name(void* self, char* name);
+void k_onsole__filter_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1208,9 +1208,9 @@ const char* k_onsole__regexpfilter_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self Konsole__RegExpFilter*
-/// @param name char*
+/// @param name const char*
 ///
-void k_onsole__regexpfilter_set_object_name(void* self, char* name);
+void k_onsole__regexpfilter_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -2441,9 +2441,9 @@ const char* k_onsole__urlfilter_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self Konsole__UrlFilter*
-/// @param name char*
+/// @param name const char*
 ///
-void k_onsole__urlfilter_set_object_name(void* self, char* name);
+void k_onsole__urlfilter_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3531,9 +3531,9 @@ const char* k_onsole__filterobject_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self Konsole__FilterObject*
-/// @param name char*
+/// @param name const char*
 ///
-void k_onsole__filterobject_set_object_name(void* self, char* name);
+void k_onsole__filterobject_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

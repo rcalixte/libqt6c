@@ -143,9 +143,9 @@ void k_emailclientlauncherjob_set_attachments(void* self, libqt_list urls);
 /// [Upstream resources](https://api.kde.org/kemailclientlauncherjob.html#setStartupId)
 ///
 /// @param self KEMailClientLauncherJob*
-/// @param startupId const char*
+/// @param startupId char*
 ///
-void k_emailclientlauncherjob_set_startup_id(void* self, const char* startupId);
+void k_emailclientlauncherjob_set_startup_id(void* self, char* startupId);
 
 /// [Upstream resources](https://api.kde.org/kemailclientlauncherjob.html#start)
 ///
@@ -477,9 +477,9 @@ const char* k_emailclientlauncherjob_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KEMailClientLauncherJob*
-/// @param name char*
+/// @param name const char*
 ///
-void k_emailclientlauncherjob_set_object_name(void* self, char* name);
+void k_emailclientlauncherjob_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

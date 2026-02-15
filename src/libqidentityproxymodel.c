@@ -478,7 +478,7 @@ const char* q_identityproxymodel_object_name(void* self) {
     return _ret;
 }
 
-void q_identityproxymodel_set_object_name(void* self, char* name) {
+void q_identityproxymodel_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

@@ -103,7 +103,7 @@ void q_datawidgetmapper_add_mapping(void* self, void* widget, int section) {
     QDataWidgetMapper_AddMapping((QDataWidgetMapper*)self, (QWidget*)widget, section);
 }
 
-void q_datawidgetmapper_add_mapping2(void* self, void* widget, int section, const char* propertyName) {
+void q_datawidgetmapper_add_mapping2(void* self, void* widget, int section, char* propertyName) {
     QDataWidgetMapper_AddMapping2((QDataWidgetMapper*)self, (QWidget*)widget, section, qstring(propertyName));
 }
 
@@ -203,7 +203,7 @@ const char* q_datawidgetmapper_object_name(void* self) {
     return _ret;
 }
 
-void q_datawidgetmapper_set_object_name(void* self, char* name) {
+void q_datawidgetmapper_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

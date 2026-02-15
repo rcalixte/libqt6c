@@ -62,7 +62,7 @@ void k_terminallauncherjob_set_working_directory(void* self, const char* working
     KTerminalLauncherJob_SetWorkingDirectory((KTerminalLauncherJob*)self, qstring(workingDirectory));
 }
 
-void k_terminallauncherjob_set_startup_id(void* self, const char* startupId) {
+void k_terminallauncherjob_set_startup_id(void* self, char* startupId) {
     KTerminalLauncherJob_SetStartupId((KTerminalLauncherJob*)self, qstring(startupId));
 }
 
@@ -230,7 +230,7 @@ const char* k_terminallauncherjob_object_name(void* self) {
     return _ret;
 }
 
-void k_terminallauncherjob_set_object_name(void* self, char* name) {
+void k_terminallauncherjob_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

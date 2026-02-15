@@ -935,7 +935,7 @@ bool k_texteditor__document_open_stream(void* self, const char* mimeType, void* 
     return KParts__ReadOnlyPart_OpenStream((KParts__ReadOnlyPart*)self, qstring(mimeType), (QUrl*)url);
 }
 
-bool k_texteditor__document_write_stream(void* self, const char* data) {
+bool k_texteditor__document_write_stream(void* self, char* data) {
     return KParts__ReadOnlyPart_WriteStream((KParts__ReadOnlyPart*)self, qstring(data));
 }
 
@@ -1042,7 +1042,7 @@ const char* k_texteditor__document_object_name(void* self) {
     return _ret;
 }
 
-void k_texteditor__document_set_object_name(void* self, char* name) {
+void k_texteditor__document_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

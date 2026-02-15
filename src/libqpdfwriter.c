@@ -126,7 +126,7 @@ int32_t q_pdfwriter_resolution(void* self) {
     return QPdfWriter_Resolution((QPdfWriter*)self);
 }
 
-void q_pdfwriter_set_document_xmp_metadata(void* self, const char* xmpMetadata) {
+void q_pdfwriter_set_document_xmp_metadata(void* self, char* xmpMetadata) {
     QPdfWriter_SetDocumentXmpMetadata((QPdfWriter*)self, qstring(xmpMetadata));
 }
 
@@ -137,7 +137,7 @@ char* q_pdfwriter_document_xmp_metadata(void* self) {
     return _ret;
 }
 
-void q_pdfwriter_add_file_attachment(void* self, const char* fileName, const char* data) {
+void q_pdfwriter_add_file_attachment(void* self, const char* fileName, char* data) {
     QPdfWriter_AddFileAttachment((QPdfWriter*)self, qstring(fileName), qstring(data));
 }
 
@@ -195,7 +195,7 @@ const char* q_pdfwriter_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_pdfwriter_add_file_attachment3(void* self, const char* fileName, const char* data, const char* mimeType) {
+void q_pdfwriter_add_file_attachment3(void* self, const char* fileName, char* data, const char* mimeType) {
     QPdfWriter_AddFileAttachment3((QPdfWriter*)self, qstring(fileName), qstring(data), qstring(mimeType));
 }
 
@@ -206,7 +206,7 @@ const char* q_pdfwriter_object_name(void* self) {
     return _ret;
 }
 
-void q_pdfwriter_set_object_name(void* self, char* name) {
+void q_pdfwriter_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

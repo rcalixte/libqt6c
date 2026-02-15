@@ -115,11 +115,11 @@ QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier_cookie_generator_
 ///
 /// @param self QDtlsClientVerifier*
 /// @param socket QUdpSocket*
-/// @param dgram const char*
+/// @param dgram char*
 /// @param address QHostAddress*
 /// @param port unsigned short
 ///
-bool q_dtlsclientverifier_verify_client(void* self, void* socket, const char* dgram, void* address, unsigned short port);
+bool q_dtlsclientverifier_verify_client(void* self, void* socket, char* dgram, void* address, unsigned short port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtlsclientverifier.html#verifiedHello)
 ///
@@ -179,9 +179,9 @@ const char* q_dtlsclientverifier_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QDtlsClientVerifier*
-/// @param name char*
+/// @param name const char*
 ///
-void q_dtlsclientverifier_set_object_name(void* self, char* name);
+void q_dtlsclientverifier_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1230,9 +1230,9 @@ int32_t q_dtls_session_protocol(void* self);
 ///
 /// @param self QDtls*
 /// @param socket QUdpSocket*
-/// @param dgram const char*
+/// @param dgram char*
 ///
-long long q_dtls_write_datagram_encrypted(void* self, void* socket, const char* dgram);
+long long q_dtls_write_datagram_encrypted(void* self, void* socket, char* dgram);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtls.html#decryptDatagram)
 ///
@@ -1240,9 +1240,9 @@ long long q_dtls_write_datagram_encrypted(void* self, void* socket, const char* 
 ///
 /// @param self QDtls*
 /// @param socket QUdpSocket*
-/// @param dgram const char*
+/// @param dgram char*
 ///
-char* q_dtls_decrypt_datagram(void* self, void* socket, const char* dgram);
+char* q_dtls_decrypt_datagram(void* self, void* socket, char* dgram);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtls.html#dtlsError)
 ///
@@ -1334,9 +1334,9 @@ bool q_dtls_set_peer3(void* self, void* address, unsigned short port, const char
 ///
 /// @param self QDtls*
 /// @param socket QUdpSocket*
-/// @param dgram const char*
+/// @param dgram char*
 ///
-bool q_dtls_do_handshake2(void* self, void* socket, const char* dgram);
+bool q_dtls_do_handshake2(void* self, void* socket, char* dgram);
 
 /// Inherited from QObject
 ///
@@ -1353,9 +1353,9 @@ const char* q_dtls_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QDtls*
-/// @param name char*
+/// @param name const char*
 ///
-void q_dtls_set_object_name(void* self, char* name);
+void q_dtls_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -2176,9 +2176,9 @@ QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier__generatorparamet
 /// q_dtlsclientverifier__generatorparameters_new2 constructs a new QDtlsClientVerifier::GeneratorParameters object.
 ///
 /// @param a enum QCryptographicHash__Algorithm
-/// @param s const char*
+/// @param s char*
 ///
-QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier__generatorparameters_new2(int32_t a, const char* s);
+QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier__generatorparameters_new2(int32_t a, char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtlsclientverifier-generatorparameters.html)
 

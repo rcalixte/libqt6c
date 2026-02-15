@@ -410,7 +410,7 @@ const char* k_onsole__emulation_object_name(void* self) {
     return _ret;
 }
 
-void k_onsole__emulation_set_object_name(void* self, char* name) {
+void k_onsole__emulation_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

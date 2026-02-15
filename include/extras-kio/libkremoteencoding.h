@@ -30,9 +30,9 @@ KRemoteEncoding* k_remoteencoding_new2(const char* name);
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KRemoteEncoding*
-/// @param name const char*
+/// @param name char*
 ///
-const char* k_remoteencoding_decode(void* self, const char* name);
+const char* k_remoteencoding_decode(void* self, char* name);
 
 /// [Upstream resources](https://api.kde.org/kremoteencoding.html#encode)
 ///

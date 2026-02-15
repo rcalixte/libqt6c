@@ -1975,9 +1975,9 @@ char* q_stackedwidget_save_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QStackedWidget*
-/// @param geometry const char*
+/// @param geometry char*
 ///
-bool q_stackedwidget_restore_geometry(void* self, const char* geometry);
+bool q_stackedwidget_restore_geometry(void* self, char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2783,9 +2783,9 @@ const char* q_stackedwidget_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QStackedWidget*
-/// @param name char*
+/// @param name const char*
 ///
-void q_stackedwidget_set_object_name(void* self, char* name);
+void q_stackedwidget_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4395,11 +4395,11 @@ void q_stackedwidget_on_hide_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_stackedwidget_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_stackedwidget_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4408,11 +4408,11 @@ bool q_stackedwidget_native_event(void* self, const char* eventType, void* messa
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_stackedwidget_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_stackedwidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4421,9 +4421,9 @@ bool q_stackedwidget_qbase_native_event(void* self, const char* eventType, void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback bool func(QStackedWidget* self, const char* eventType, void* message, intptr_t* result)
+/// @param callback bool func(QStackedWidget* self, libqt_string eventType, void* message, intptr_t* result)
 ///
-void q_stackedwidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
+void q_stackedwidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///

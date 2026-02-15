@@ -143,7 +143,7 @@ const char* q_pluginloader_object_name(void* self) {
     return _ret;
 }
 
-void q_pluginloader_set_object_name(void* self, char* name) {
+void q_pluginloader_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

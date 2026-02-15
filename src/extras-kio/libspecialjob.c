@@ -16,7 +16,7 @@ KIO__SpecialJob* k_io__specialjob_new(void* url) {
     return KIO__SpecialJob_new((QUrl*)url);
 }
 
-KIO__SpecialJob* k_io__specialjob_new2(void* url, const char* data) {
+KIO__SpecialJob* k_io__specialjob_new2(void* url, char* data) {
     return KIO__SpecialJob_new2((QUrl*)url, qstring(data));
 }
 
@@ -63,7 +63,7 @@ const char* k_io__specialjob_tr(const char* s) {
     return _ret;
 }
 
-void k_io__specialjob_set_arguments(void* self, const char* data) {
+void k_io__specialjob_set_arguments(void* self, char* data) {
     KIO__SpecialJob_SetArguments((KIO__SpecialJob*)self, qstring(data));
 }
 
@@ -100,7 +100,7 @@ void k_io__specialjob_set_async_data_enabled(void* self, bool enabled) {
     KIO__TransferJob_SetAsyncDataEnabled((KIO__TransferJob*)self, enabled);
 }
 
-void k_io__specialjob_send_async_data(void* self, const char* data) {
+void k_io__specialjob_send_async_data(void* self, char* data) {
     KIO__TransferJob_SendAsyncData((KIO__TransferJob*)self, qstring(data));
 }
 
@@ -119,11 +119,11 @@ void k_io__specialjob_set_total_size(void* self, uint64_t bytes) {
     KIO__TransferJob_SetTotalSize((KIO__TransferJob*)self, bytes);
 }
 
-void k_io__specialjob_data(void* self, void* job, const char* data) {
+void k_io__specialjob_data(void* self, void* job, char* data) {
     KIO__TransferJob_Data((KIO__TransferJob*)self, (KIO__Job*)job, qstring(data));
 }
 
-void k_io__specialjob_on_data(void* self, void (*callback)(void*, void*, const char*)) {
+void k_io__specialjob_on_data(void* self, void (*callback)(void*, void*, libqt_string)) {
     KIO__TransferJob_Connect_Data((KIO__TransferJob*)self, (intptr_t)callback);
 }
 
@@ -131,7 +131,7 @@ void k_io__specialjob_data_req(void* self, void* job, char* data) {
     KIO__TransferJob_DataReq((KIO__TransferJob*)self, (KIO__Job*)job, qstring(data));
 }
 
-void k_io__specialjob_on_data_req(void* self, void (*callback)(void*, void*, char*)) {
+void k_io__specialjob_on_data_req(void* self, void (*callback)(void*, void*, libqt_string)) {
     KIO__TransferJob_Connect_DataReq((KIO__TransferJob*)self, (intptr_t)callback);
 }
 
@@ -481,7 +481,7 @@ const char* k_io__specialjob_object_name(void* self) {
     return _ret;
 }
 
-void k_io__specialjob_set_object_name(void* self, char* name) {
+void k_io__specialjob_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -721,15 +721,15 @@ void k_io__specialjob_on_slot_finished(void* self, void (*callback)()) {
     KIO__SpecialJob_OnSlotFinished((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
-void k_io__specialjob_slot_data(void* self, const char* data) {
+void k_io__specialjob_slot_data(void* self, char* data) {
     KIO__SpecialJob_SlotData((KIO__SpecialJob*)self, qstring(data));
 }
 
-void k_io__specialjob_qbase_slot_data(void* self, const char* data) {
+void k_io__specialjob_qbase_slot_data(void* self, char* data) {
     KIO__SpecialJob_QBaseSlotData((KIO__SpecialJob*)self, qstring(data));
 }
 
-void k_io__specialjob_on_slot_data(void* self, void (*callback)(void*, const char*)) {
+void k_io__specialjob_on_slot_data(void* self, void (*callback)(void*, libqt_string)) {
     KIO__SpecialJob_OnSlotData((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 

@@ -75,7 +75,7 @@ QUrl* k_urlnavigator_location_url(void* self) {
     return KUrlNavigator_LocationUrl((KUrlNavigator*)self);
 }
 
-void k_urlnavigator_save_location_state(void* self, const char* state) {
+void k_urlnavigator_save_location_state(void* self, char* state) {
     KUrlNavigator_SaveLocationState((KUrlNavigator*)self, qstring(state));
 }
 
@@ -1238,7 +1238,7 @@ char* k_urlnavigator_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_urlnavigator_restore_geometry(void* self, const char* geometry) {
+bool k_urlnavigator_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1594,7 +1594,7 @@ const char* k_urlnavigator_object_name(void* self) {
     return _ret;
 }
 
-void k_urlnavigator_set_object_name(void* self, char* name) {
+void k_urlnavigator_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2134,15 +2134,15 @@ void k_urlnavigator_on_hide_event(void* self, void (*callback)(void*, void*)) {
     KUrlNavigator_OnHideEvent((KUrlNavigator*)self, (intptr_t)callback);
 }
 
-bool k_urlnavigator_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_urlnavigator_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KUrlNavigator_NativeEvent((KUrlNavigator*)self, qstring(eventType), message, result);
 }
 
-bool k_urlnavigator_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_urlnavigator_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KUrlNavigator_QBaseNativeEvent((KUrlNavigator*)self, qstring(eventType), message, result);
 }
 
-void k_urlnavigator_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_urlnavigator_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KUrlNavigator_OnNativeEvent((KUrlNavigator*)self, (intptr_t)callback);
 }
 

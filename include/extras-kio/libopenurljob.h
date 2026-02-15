@@ -137,9 +137,9 @@ void k_io__openurljob_set_suggested_file_name(void* self, const char* suggestedF
 /// [Upstream resources](https://api.kde.org/kio-openurljob.html#setStartupId)
 ///
 /// @param self KIO__OpenUrlJob*
-/// @param startupId const char*
+/// @param startupId char*
 ///
-void k_io__openurljob_set_startup_id(void* self, const char* startupId);
+void k_io__openurljob_set_startup_id(void* self, char* startupId);
 
 /// [Upstream resources](https://api.kde.org/kio-openurljob.html#setRunExecutables)
 ///
@@ -543,9 +543,9 @@ const char* k_io__openurljob_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KIO__OpenUrlJob*
-/// @param name char*
+/// @param name const char*
 ///
-void k_io__openurljob_set_object_name(void* self, char* name);
+void k_io__openurljob_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

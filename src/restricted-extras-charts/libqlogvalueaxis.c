@@ -700,7 +700,7 @@ const char* q_logvalueaxis_object_name(void* self) {
     return _ret;
 }
 
-void q_logvalueaxis_set_object_name(void* self, char* name) {
+void q_logvalueaxis_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

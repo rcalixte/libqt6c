@@ -20,7 +20,7 @@ QCalendar* q_calendar_new4(int32_t system) {
     return QCalendar_new4(system);
 }
 
-QCalendar* q_calendar_new5(char* name) {
+QCalendar* q_calendar_new5(const char* name) {
     return QCalendar_new5(name);
 }
 

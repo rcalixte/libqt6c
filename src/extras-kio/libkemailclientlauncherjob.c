@@ -115,7 +115,7 @@ void k_emailclientlauncherjob_set_attachments(void* self, libqt_list /* of QUrl*
     KEMailClientLauncherJob_SetAttachments((KEMailClientLauncherJob*)self, urls);
 }
 
-void k_emailclientlauncherjob_set_startup_id(void* self, const char* startupId) {
+void k_emailclientlauncherjob_set_startup_id(void* self, char* startupId) {
     KEMailClientLauncherJob_SetStartupId((KEMailClientLauncherJob*)self, qstring(startupId));
 }
 
@@ -279,7 +279,7 @@ const char* k_emailclientlauncherjob_object_name(void* self) {
     return _ret;
 }
 
-void k_emailclientlauncherjob_set_object_name(void* self, char* name) {
+void k_emailclientlauncherjob_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

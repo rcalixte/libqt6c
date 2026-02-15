@@ -13,11 +13,11 @@ QTextStream* q_textstream_new2(void* device) {
     return QTextStream_new2((QIODevice*)device);
 }
 
-QTextStream* q_textstream_new3(const char* array) {
+QTextStream* q_textstream_new3(char* array) {
     return QTextStream_new3(qstring(array));
 }
 
-QTextStream* q_textstream_new4(const char* array, int32_t openMode) {
+QTextStream* q_textstream_new4(char* array, int32_t openMode) {
     return QTextStream_new4(qstring(array), openMode);
 }
 
@@ -297,7 +297,7 @@ QTextStream* q_textstream_operator_shift_left14(void* self, const char* s) {
     return QTextStream_OperatorShiftLeft14((QTextStream*)self, qstring(s));
 }
 
-QTextStream* q_textstream_operator_shift_left17(void* self, const char* array) {
+QTextStream* q_textstream_operator_shift_left17(void* self, char* array) {
     return QTextStream_OperatorShiftLeft17((QTextStream*)self, qstring(array));
 }
 

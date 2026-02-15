@@ -210,7 +210,7 @@ const char* k_pagemodel_object_name(void* self) {
     return _ret;
 }
 
-void k_pagemodel_set_object_name(void* self, char* name) {
+void k_pagemodel_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

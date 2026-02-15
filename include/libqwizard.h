@@ -2432,9 +2432,9 @@ char* q_wizard_save_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QWizard*
-/// @param geometry const char*
+/// @param geometry char*
 ///
-bool q_wizard_restore_geometry(void* self, const char* geometry);
+bool q_wizard_restore_geometry(void* self, char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -3240,9 +3240,9 @@ const char* q_wizard_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QWizard*
-/// @param name char*
+/// @param name const char*
 ///
-void q_wizard_set_object_name(void* self, char* name);
+void q_wizard_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4815,11 +4815,11 @@ void q_wizard_on_hide_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QWizard*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_wizard_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_wizard_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4828,11 +4828,11 @@ bool q_wizard_native_event(void* self, const char* eventType, void* message, int
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_wizard_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_wizard_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4841,9 +4841,9 @@ bool q_wizard_qbase_native_event(void* self, const char* eventType, void* messag
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback bool func(QWizard* self, const char* eventType, void* message, intptr_t* result)
+/// @param callback bool func(QWizard* self, libqt_string eventType, void* message, intptr_t* result)
 ///
-void q_wizard_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
+void q_wizard_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///
@@ -7749,9 +7749,9 @@ char* q_wizardpage_save_geometry(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QWizardPage*
-/// @param geometry const char*
+/// @param geometry char*
 ///
-bool q_wizardpage_restore_geometry(void* self, const char* geometry);
+bool q_wizardpage_restore_geometry(void* self, char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -8557,9 +8557,9 @@ const char* q_wizardpage_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QWizardPage*
-/// @param name char*
+/// @param name const char*
 ///
-void q_wizardpage_set_object_name(void* self, char* name);
+void q_wizardpage_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -10136,11 +10136,11 @@ void q_wizardpage_on_hide_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_wizardpage_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_wizardpage_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -10149,11 +10149,11 @@ bool q_wizardpage_native_event(void* self, const char* eventType, void* message,
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param eventType const char*
+/// @param eventType char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_wizardpage_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
+bool q_wizardpage_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -10162,9 +10162,9 @@ bool q_wizardpage_qbase_native_event(void* self, const char* eventType, void* me
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback bool func(QWizardPage* self, const char* eventType, void* message, intptr_t* result)
+/// @param callback bool func(QWizardPage* self, libqt_string eventType, void* message, intptr_t* result)
 ///
-void q_wizardpage_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
+void q_wizardpage_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///

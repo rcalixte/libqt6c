@@ -237,9 +237,9 @@ const char* k_sycoca_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KSycoca*
-/// @param name char*
+/// @param name const char*
 ///
-void k_sycoca_set_object_name(void* self, char* name);
+void k_sycoca_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

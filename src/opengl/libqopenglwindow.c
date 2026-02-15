@@ -851,7 +851,7 @@ const char* q_openglwindow_object_name(void* self) {
     return _ret;
 }
 
-void q_openglwindow_set_object_name(void* self, char* name) {
+void q_openglwindow_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1371,15 +1371,15 @@ void q_openglwindow_on_tablet_event(void* self, void (*callback)(void*, void*)) 
     QOpenGLWindow_OnTabletEvent((QOpenGLWindow*)self, (intptr_t)callback);
 }
 
-bool q_openglwindow_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_openglwindow_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QOpenGLWindow_NativeEvent((QOpenGLWindow*)self, qstring(eventType), message, result);
 }
 
-bool q_openglwindow_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_openglwindow_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QOpenGLWindow_QBaseNativeEvent((QOpenGLWindow*)self, qstring(eventType), message, result);
 }
 
-void q_openglwindow_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_openglwindow_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QOpenGLWindow_OnNativeEvent((QOpenGLWindow*)self, (intptr_t)callback);
 }
 

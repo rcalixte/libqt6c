@@ -74,9 +74,8 @@ libqt_string KStartupInfo_CreateNewStartupId() {
     QByteArray _qb = KStartupInfo::createNewStartupId();
     libqt_string _str;
     _str.len = _qb.length();
-    _str.data = static_cast<const char*>(malloc(_str.len + 1));
+    _str.data = static_cast<char*>(malloc(_str.len));
     memcpy((void*)_str.data, _qb.data(), _str.len);
-    ((char*)_str.data)[_str.len] = '\0';
     return _str;
 }
 
@@ -84,9 +83,8 @@ libqt_string KStartupInfo_CreateNewStartupIdForTimestamp(unsigned int timestamp)
     QByteArray _qb = KStartupInfo::createNewStartupIdForTimestamp(static_cast<quint32>(timestamp));
     libqt_string _str;
     _str.len = _qb.length();
-    _str.data = static_cast<const char*>(malloc(_str.len + 1));
+    _str.data = static_cast<char*>(malloc(_str.len));
     memcpy((void*)_str.data, _qb.data(), _str.len);
-    ((char*)_str.data)[_str.len] = '\0';
     return _str;
 }
 
@@ -150,9 +148,8 @@ libqt_string KStartupInfo_WindowStartupId(uintptr_t w) {
     QByteArray _qb = KStartupInfo::windowStartupId(static_cast<WId>(w));
     libqt_string _str;
     _str.len = _qb.length();
-    _str.data = static_cast<const char*>(malloc(_str.len + 1));
+    _str.data = static_cast<char*>(malloc(_str.len));
     memcpy((void*)_str.data, _qb.data(), _str.len);
-    ((char*)_str.data)[_str.len] = '\0';
     return _str;
 }
 
@@ -612,9 +609,8 @@ libqt_string KStartupInfoId_Id(const KStartupInfoId* self) {
     const QByteArray _qb = self->id();
     libqt_string _str;
     _str.len = _qb.length();
-    _str.data = static_cast<const char*>(malloc(_str.len + 1));
+    _str.data = static_cast<char*>(malloc(_str.len));
     memcpy((void*)_str.data, _qb.data(), _str.len);
-    ((char*)_str.data)[_str.len] = '\0';
     return _str;
 }
 
@@ -772,9 +768,8 @@ libqt_string KStartupInfoData_FindWMClass(const KStartupInfoData* self) {
     const QByteArray _qb = self->findWMClass();
     libqt_string _str;
     _str.len = _qb.length();
-    _str.data = static_cast<const char*>(malloc(_str.len + 1));
+    _str.data = static_cast<char*>(malloc(_str.len));
     memcpy((void*)_str.data, _qb.data(), _str.len);
-    ((char*)_str.data)[_str.len] = '\0';
     return _str;
 }
 
@@ -782,9 +777,8 @@ libqt_string KStartupInfoData_WMClass(const KStartupInfoData* self) {
     QByteArray _qb = self->WMClass();
     libqt_string _str;
     _str.len = _qb.length();
-    _str.data = static_cast<const char*>(malloc(_str.len + 1));
+    _str.data = static_cast<char*>(malloc(_str.len));
     memcpy((void*)_str.data, _qb.data(), _str.len);
-    ((char*)_str.data)[_str.len] = '\0';
     return _str;
 }
 
@@ -817,9 +811,8 @@ libqt_string KStartupInfoData_Hostname(const KStartupInfoData* self) {
     QByteArray _qb = self->hostname();
     libqt_string _str;
     _str.len = _qb.length();
-    _str.data = static_cast<const char*>(malloc(_str.len + 1));
+    _str.data = static_cast<char*>(malloc(_str.len));
     memcpy((void*)_str.data, _qb.data(), _str.len);
-    ((char*)_str.data)[_str.len] = '\0';
     return _str;
 }
 

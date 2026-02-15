@@ -452,9 +452,9 @@ void q_networkproxy_set_header(void* self, int32_t header, void* value);
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#hasRawHeader)
 ///
 /// @param self QNetworkProxy*
-/// @param headerName const char*
+/// @param headerName char*
 ///
-bool q_networkproxy_has_raw_header(void* self, const char* headerName);
+bool q_networkproxy_has_raw_header(void* self, char* headerName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#rawHeaderList)
 ///
@@ -469,17 +469,17 @@ const char** q_networkproxy_raw_header_list(void* self);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QNetworkProxy*
-/// @param headerName const char*
+/// @param headerName char*
 ///
-char* q_networkproxy_raw_header(void* self, const char* headerName);
+char* q_networkproxy_raw_header(void* self, char* headerName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#setRawHeader)
 ///
 /// @param self QNetworkProxy*
-/// @param headerName const char*
-/// @param value const char*
+/// @param headerName char*
+/// @param value char*
 ///
-void q_networkproxy_set_raw_header(void* self, const char* headerName, const char* value);
+void q_networkproxy_set_raw_header(void* self, char* headerName, char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#dtor.QNetworkProxy)
 ///

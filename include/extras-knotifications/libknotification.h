@@ -182,9 +182,9 @@ const char* k_notificationaction_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KNotificationAction*
-/// @param name char*
+/// @param name const char*
 ///
-void k_notificationaction_set_object_name(void* self, char* name);
+void k_notificationaction_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1780,9 +1780,9 @@ const char* k_notification_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self KNotification*
-/// @param name char*
+/// @param name const char*
 ///
-void k_notification_set_object_name(void* self, char* name);
+void k_notification_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

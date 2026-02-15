@@ -74,15 +74,15 @@ bool k_filterbase_qbase_read_header(void* self) {
     return KFilterBase_QBaseReadHeader((KFilterBase*)self);
 }
 
-bool k_filterbase_write_header(void* self, const char* filename) {
+bool k_filterbase_write_header(void* self, char* filename) {
     return KFilterBase_WriteHeader((KFilterBase*)self, qstring(filename));
 }
 
-void k_filterbase_on_write_header(void* self, bool (*callback)(void*, const char*)) {
+void k_filterbase_on_write_header(void* self, bool (*callback)(void*, libqt_string)) {
     KFilterBase_OnWriteHeader((KFilterBase*)self, (intptr_t)callback);
 }
 
-bool k_filterbase_qbase_write_header(void* self, const char* filename) {
+bool k_filterbase_qbase_write_header(void* self, char* filename) {
     return KFilterBase_QBaseWriteHeader((KFilterBase*)self, qstring(filename));
 }
 

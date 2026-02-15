@@ -197,9 +197,9 @@ const char* q_filesystemwatcher_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QFileSystemWatcher*
-/// @param name char*
+/// @param name const char*
 ///
-void q_filesystemwatcher_set_object_name(void* self, char* name);
+void q_filesystemwatcher_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

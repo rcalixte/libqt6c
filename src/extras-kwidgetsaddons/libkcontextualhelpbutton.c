@@ -1104,7 +1104,7 @@ char* k_contextualhelpbutton_save_geometry(void* self) {
     return _ret;
 }
 
-bool k_contextualhelpbutton_restore_geometry(void* self, const char* geometry) {
+bool k_contextualhelpbutton_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1460,7 +1460,7 @@ const char* k_contextualhelpbutton_object_name(void* self) {
     return _ret;
 }
 
-void k_contextualhelpbutton_set_object_name(void* self, char* name) {
+void k_contextualhelpbutton_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -2156,15 +2156,15 @@ void k_contextualhelpbutton_on_hide_event(void* self, void (*callback)(void*, vo
     KContextualHelpButton_OnHideEvent((KContextualHelpButton*)self, (intptr_t)callback);
 }
 
-bool k_contextualhelpbutton_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_contextualhelpbutton_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KContextualHelpButton_NativeEvent((KContextualHelpButton*)self, qstring(eventType), message, result);
 }
 
-bool k_contextualhelpbutton_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool k_contextualhelpbutton_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return KContextualHelpButton_QBaseNativeEvent((KContextualHelpButton*)self, qstring(eventType), message, result);
 }
 
-void k_contextualhelpbutton_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void k_contextualhelpbutton_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     KContextualHelpButton_OnNativeEvent((KContextualHelpButton*)self, (intptr_t)callback);
 }
 

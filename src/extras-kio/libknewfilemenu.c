@@ -578,7 +578,7 @@ const char* k_newfilemenu_object_name(void* self) {
     return _ret;
 }
 
-void k_newfilemenu_set_object_name(void* self, char* name) {
+void k_newfilemenu_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

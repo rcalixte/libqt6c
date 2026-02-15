@@ -877,7 +877,7 @@ char* q_designerobjectinspectorinterface_save_geometry(void* self) {
     return _ret;
 }
 
-bool q_designerobjectinspectorinterface_restore_geometry(void* self, const char* geometry) {
+bool q_designerobjectinspectorinterface_restore_geometry(void* self, char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1233,7 +1233,7 @@ const char* q_designerobjectinspectorinterface_object_name(void* self) {
     return _ret;
 }
 
-void q_designerobjectinspectorinterface_set_object_name(void* self, char* name) {
+void q_designerobjectinspectorinterface_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
@@ -1869,15 +1869,15 @@ void q_designerobjectinspectorinterface_on_hide_event(void* self, void (*callbac
     QDesignerObjectInspectorInterface_OnHideEvent((QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
 }
 
-bool q_designerobjectinspectorinterface_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_designerobjectinspectorinterface_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QDesignerObjectInspectorInterface_NativeEvent((QDesignerObjectInspectorInterface*)self, qstring(eventType), message, result);
 }
 
-bool q_designerobjectinspectorinterface_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
+bool q_designerobjectinspectorinterface_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
     return QDesignerObjectInspectorInterface_QBaseNativeEvent((QDesignerObjectInspectorInterface*)self, qstring(eventType), message, result);
 }
 
-void q_designerobjectinspectorinterface_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+void q_designerobjectinspectorinterface_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
     QDesignerObjectInspectorInterface_OnNativeEvent((QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
 }
 

@@ -864,9 +864,9 @@ const char* q_webenginehistorymodel_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param name char*
+/// @param name const char*
 ///
-void q_webenginehistorymodel_set_object_name(void* self, char* name);
+void q_webenginehistorymodel_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1652,9 +1652,9 @@ const char* q_webenginehistory_object_name(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
 /// @param self QWebEngineHistory*
-/// @param name char*
+/// @param name const char*
 ///
-void q_webenginehistory_set_object_name(void* self, char* name);
+void q_webenginehistory_set_object_name(void* self, const char* name);
 
 /// Inherited from QObject
 ///

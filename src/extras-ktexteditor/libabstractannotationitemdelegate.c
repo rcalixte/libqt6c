@@ -223,7 +223,7 @@ const char* k_texteditor__abstractannotationitemdelegate_object_name(void* self)
     return _ret;
 }
 
-void k_texteditor__abstractannotationitemdelegate_set_object_name(void* self, char* name) {
+void k_texteditor__abstractannotationitemdelegate_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

@@ -407,7 +407,7 @@ const char* q_action_object_name(void* self) {
     return _ret;
 }
 
-void q_action_set_object_name(void* self, char* name) {
+void q_action_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

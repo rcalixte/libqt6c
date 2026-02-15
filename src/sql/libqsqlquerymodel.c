@@ -612,7 +612,7 @@ const char* q_sqlquerymodel_object_name(void* self) {
     return _ret;
 }
 
-void q_sqlquerymodel_set_object_name(void* self, char* name) {
+void q_sqlquerymodel_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 

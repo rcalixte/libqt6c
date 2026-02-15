@@ -416,11 +416,11 @@ void k_configgroup_write_entry4(void* self, const char* key, const char* value) 
     KConfigGroup_WriteEntry4((KConfigGroup*)self, key, qstring(value));
 }
 
-void k_configgroup_write_entry5(void* self, const char* key, const char* value) {
+void k_configgroup_write_entry5(void* self, const char* key, char* value) {
     KConfigGroup_WriteEntry5((KConfigGroup*)self, qstring(key), qstring(value));
 }
 
-void k_configgroup_write_entry6(void* self, const char* key, const char* value) {
+void k_configgroup_write_entry6(void* self, const char* key, char* value) {
     KConfigGroup_WriteEntry6((KConfigGroup*)self, key, qstring(value));
 }
 
@@ -829,11 +829,11 @@ void k_configgroup_write_entry35(void* self, const char* key, const char* value,
     KConfigGroup_WriteEntry35((KConfigGroup*)self, key, qstring(value), pFlags);
 }
 
-void k_configgroup_write_entry36(void* self, const char* key, const char* value, int32_t pFlags) {
+void k_configgroup_write_entry36(void* self, const char* key, char* value, int32_t pFlags) {
     KConfigGroup_WriteEntry36((KConfigGroup*)self, qstring(key), qstring(value), pFlags);
 }
 
-void k_configgroup_write_entry37(void* self, const char* key, const char* value, int32_t pFlags) {
+void k_configgroup_write_entry37(void* self, const char* key, char* value, int32_t pFlags) {
     KConfigGroup_WriteEntry37((KConfigGroup*)self, key, qstring(value), pFlags);
 }
 

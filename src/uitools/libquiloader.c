@@ -235,7 +235,7 @@ const char* q_uiloader_object_name(void* self) {
     return _ret;
 }
 
-void q_uiloader_set_object_name(void* self, char* name) {
+void q_uiloader_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
