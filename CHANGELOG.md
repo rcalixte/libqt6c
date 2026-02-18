@@ -1,4 +1,8 @@
 
+### 6.8.2 rev61 (18 February 2026)
+
+* Add [Qt State Machine](https://doc.qt.io/qt-6/qtstatemachine-index.html) (#111)
+
 ### 6.8.2 rev60 (15 February 2026)
 
 * **BREAKING CHANGE:** Update projections for QAnyStringView, QByteArray, and QByteArrayView (#110)
