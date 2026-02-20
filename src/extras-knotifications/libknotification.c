@@ -584,6 +584,10 @@ KNotificationReplyAction* k_notification_reply_action(void* self) {
     return KNotification_ReplyAction((KNotification*)self);
 }
 
+void k_notification_set_reply_action(void* self, void* replyAction) {
+    KNotification_SetReplyAction((KNotification*)self, (KNotificationReplyAction*)replyAction);
+}
+
 int32_t k_notification_flags(void* self) {
     return KNotification_Flags((KNotification*)self);
 }

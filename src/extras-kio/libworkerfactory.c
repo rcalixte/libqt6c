@@ -1,3 +1,4 @@
+#include "libworkerbase.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
@@ -21,6 +22,10 @@ const char* k_io__workerfactory_tr(const char* s) {
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
+}
+
+KIO__WorkerBase* k_io__workerfactory_create_worker(void* self, char* pool, char* app) {
+    return KIO__WorkerFactory_CreateWorker((KIO__WorkerFactory*)self, qstring(pool), qstring(app));
 }
 
 const char* k_io__workerfactory_tr2(const char* s, const char* c) {
