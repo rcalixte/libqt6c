@@ -39,6 +39,14 @@ int32_t k_io__workerfactory_metacall(void* self, int32_t param1, int param2, voi
 ///
 const char* k_io__workerfactory_tr(const char* s);
 
+/// [Upstream resources](https://api.kde.org/kio-workerfactory.html#createWorker)
+///
+/// @param self KIO__WorkerFactory*
+/// @param pool char*
+/// @param app char*
+///
+KIO__WorkerBase* k_io__workerfactory_create_worker(void* self, char* pool, char* app);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`

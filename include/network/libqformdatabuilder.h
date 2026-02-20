@@ -115,6 +115,19 @@ void q_formdatabuilder_swap(void* self, void* other);
 ///
 QFormDataPartBuilder* q_formdatabuilder_part(void* self, const char* name);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qformdatabuilder.html#buildMultiPart)
+///
+/// @param self QFormDataBuilder*
+///
+QHttpMultiPart* q_formdatabuilder_build_multi_part(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qformdatabuilder.html#buildMultiPart)
+///
+/// @param self QFormDataBuilder*
+/// @param options flag of enum QFormDataBuilder__Option
+///
+QHttpMultiPart* q_formdatabuilder_build_multi_part1(void* self, int32_t options);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qformdatabuilder.html#dtor.QFormDataBuilder)
 ///
 /// Delete this object from C++ memory.

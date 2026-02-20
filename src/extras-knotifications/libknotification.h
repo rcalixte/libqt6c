@@ -1199,6 +1199,13 @@ void k_notification_clear_actions(void* self);
 ///
 KNotificationReplyAction* k_notification_reply_action(void* self);
 
+/// [Upstream resources](https://api.kde.org/knotification.html#setReplyAction)
+///
+/// @param self KNotification*
+/// @param replyAction KNotificationReplyAction* (WARNING: The library takes ownership of this parameter's memory and attempting to access it will lead to a crash.)
+///
+void k_notification_set_reply_action(void* self, void* replyAction);
+
 /// [Upstream resources](https://api.kde.org/knotification.html#flags)
 ///
 /// @param self KNotification*

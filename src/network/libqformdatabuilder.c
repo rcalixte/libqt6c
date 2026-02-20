@@ -1,6 +1,7 @@
 #include "../libqanystringview.hpp"
 #include "../libqbytearrayview.hpp"
 #include "libqhttpheaders.hpp"
+#include "libqhttpmultipart.hpp"
 #include "../libqiodevice.hpp"
 #include "libqformdatabuilder.hpp"
 #include "libqformdatabuilder.h"
@@ -59,6 +60,14 @@ void q_formdatabuilder_swap(void* self, void* other) {
 
 QFormDataPartBuilder* q_formdatabuilder_part(void* self, const char* name) {
     return QFormDataBuilder_Part((QFormDataBuilder*)self, name);
+}
+
+QHttpMultiPart* q_formdatabuilder_build_multi_part(void* self) {
+    return QFormDataBuilder_BuildMultiPart((QFormDataBuilder*)self);
+}
+
+QHttpMultiPart* q_formdatabuilder_build_multi_part1(void* self, int32_t options) {
+    return QFormDataBuilder_BuildMultiPart1((QFormDataBuilder*)self, options);
 }
 
 void q_formdatabuilder_delete(void* self) {

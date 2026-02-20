@@ -20,12 +20,16 @@ QVideoFrame* q_videoframe_new3(void* image) {
     return QVideoFrame_new3((QImage*)image);
 }
 
-QVideoFrame* q_videoframe_new4(void* other) {
-    return QVideoFrame_new4((QVideoFrame*)other);
+QVideoFrame* q_videoframe_new4(void* videoBuffer) {
+    return QVideoFrame_new4((QAbstractVideoBuffer*)videoBuffer);
 }
 
-QVideoFrame* q_videoframe_new5(void* buffer, void* format) {
-    return QVideoFrame_new5((QAbstractVideoBuffer*)buffer, (QVideoFrameFormat*)format);
+QVideoFrame* q_videoframe_new5(void* other) {
+    return QVideoFrame_new5((QVideoFrame*)other);
+}
+
+QVideoFrame* q_videoframe_new6(void* buffer, void* format) {
+    return QVideoFrame_new6((QAbstractVideoBuffer*)buffer, (QVideoFrameFormat*)format);
 }
 
 void q_videoframe_swap(void* self, void* other) {

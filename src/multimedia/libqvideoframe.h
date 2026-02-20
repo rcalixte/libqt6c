@@ -37,18 +37,26 @@ QVideoFrame* q_videoframe_new3(void* image);
 
 /// q_videoframe_new4 constructs a new QVideoFrame object.
 ///
-/// @param other QVideoFrame*
+/// @param videoBuffer QAbstractVideoBuffer* (WARNING: The library takes ownership of this parameter's memory and attempting to access it will lead to a crash.)
 ///
-QVideoFrame* q_videoframe_new4(void* other);
+QVideoFrame* q_videoframe_new4(void* videoBuffer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html)
 
 /// q_videoframe_new5 constructs a new QVideoFrame object.
 ///
+/// @param other QVideoFrame*
+///
+QVideoFrame* q_videoframe_new5(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html)
+
+/// q_videoframe_new6 constructs a new QVideoFrame object.
+///
 /// @param buffer QAbstractVideoBuffer*
 /// @param format QVideoFrameFormat*
 ///
-QVideoFrame* q_videoframe_new5(void* buffer, void* format);
+QVideoFrame* q_videoframe_new6(void* buffer, void* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#swap)
 ///
