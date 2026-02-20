@@ -82,8 +82,9 @@ func operatorToUrl(cmdUrl string) string {
 }
 
 const (
-	preUrl  = "/// [Upstream resources]("
-	postUrl = ")\n"
+	preUrl           = "/// [Upstream resources]("
+	postUrl          = ")\n"
+	uniquePtrWarning = " (WARNING: The library takes ownership of this parameter's memory and attempting to access it will lead to a crash.)"
 )
 
 func (cfs *cFileState) getPageUrl(pageType PageType, pageName, cmdURL, className string) string {
@@ -684,6 +685,10 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 		if p.IsChronoSeconds() {
 			secType := strings.Split(p.ParameterType, "::")[2]
 			pType += " of " + secType
+		}
+
+		if p.UniquePtr {
+			pType += uniquePtrWarning
 		}
 
 		if isSlot {
