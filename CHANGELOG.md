@@ -1,4 +1,10 @@
 
+### 6.8.2 rev62 (22 February 2026)
+* **BREAKING CHANGES:**
+  * Extend supported containers and fix some callback types (#116)
+  * Remove header containing deprecated class (#113)
+  * Add initial support for smart pointers (#112)
+
 ### 6.8.2 rev61 (18 February 2026)
 
 * Add [Qt State Machine](https://doc.qt.io/qt-6/qtstatemachine-index.html) (#111)
