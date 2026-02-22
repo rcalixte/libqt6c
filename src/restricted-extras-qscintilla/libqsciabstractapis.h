@@ -113,7 +113,7 @@ void q_sciabstractapis_update_auto_completion_list(void* self, const char* conte
 /// @param self QsciAbstractAPIs*
 /// @param callback void func(QsciAbstractAPIs* self, const char** context, const char** list)
 ///
-void q_sciabstractapis_on_update_auto_completion_list(void* self, void (*callback)(void*, const char***, const char***));
+void q_sciabstractapis_on_update_auto_completion_list(void* self, void (*callback)(void*, const char**, const char**));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAbstractAPIs.html)
 ///
@@ -169,7 +169,7 @@ const char** q_sciabstractapis_call_tips(void* self, const char* context[static 
 /// @param self QsciAbstractAPIs*
 /// @param callback const char** func(QsciAbstractAPIs* self, const char** context, int commas, enum QsciScintilla__CallTipsStyle style, libqt_list of int shifts)
 ///
-void q_sciabstractapis_on_call_tips(void* self, const char** (*callback)(void*, const char***, int, int32_t, libqt_list));
+void q_sciabstractapis_on_call_tips(void* self, const char** (*callback)(void*, const char**, int, int32_t, libqt_list));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAbstractAPIs.html)
 ///

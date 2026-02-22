@@ -2236,7 +2236,7 @@ void k_urlcombobox_qbase_set_completed_items(void* self, const char* items[stati
     free(items_qstr);
 }
 
-void k_urlcombobox_on_set_completed_items(void* self, void (*callback)(void*, const char***, bool)) {
+void k_urlcombobox_on_set_completed_items(void* self, void (*callback)(void*, const char**, bool)) {
     KUrlComboBox_OnSetCompletedItems((KUrlComboBox*)self, (intptr_t)callback);
 }
 

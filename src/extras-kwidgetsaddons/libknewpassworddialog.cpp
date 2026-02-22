@@ -207,12 +207,13 @@ void KNewPasswordDialog_Connect_NewPassword(KNewPasswordDialog* self, intptr_t s
         const QString password_ret = password;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray password_b = password_ret.toUtf8();
-        char* password_str = static_cast<char*>(malloc(password_b.length() + 1));
-        memcpy(password_str, password_b.data(), password_b.length());
-        password_str[password_b.length()] = '\0';
+        auto password_str_len = password_b.length();
+        char* password_str = static_cast<char*>(malloc(password_str_len + 1));
+        memcpy(password_str, password_b.data(), password_str_len);
+        password_str[password_str_len] = '\0';
         const char* sigval1 = password_str;
         slotFunc(self, sigval1);
-        free(password_str);
+        libqt_free(password_str);
     });
 }
 

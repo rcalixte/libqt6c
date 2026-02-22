@@ -440,7 +440,7 @@ void q_termwidget_set_environment(void* self, const char* environment[static 1])
 /// @param self QTermWidget*
 /// @param callback void func(QTermWidget* self, const char** environment)
 ///
-void q_termwidget_on_set_environment(void* self, void (*callback)(void*, const char***));
+void q_termwidget_on_set_environment(void* self, void (*callback)(void*, const char**));
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -540,7 +540,7 @@ void q_termwidget_set_args(void* self, const char* args[static 1]);
 /// @param self QTermWidget*
 /// @param callback void func(QTermWidget* self, const char** args)
 ///
-void q_termwidget_on_set_args(void* self, void (*callback)(void*, const char***));
+void q_termwidget_on_set_args(void* self, void (*callback)(void*, const char**));
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///

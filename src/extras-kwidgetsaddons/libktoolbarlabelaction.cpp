@@ -81,12 +81,13 @@ void KToolBarLabelAction_Connect_TextChanged(KToolBarLabelAction* self, intptr_t
         const QString newText_ret = newText;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray newText_b = newText_ret.toUtf8();
-        char* newText_str = static_cast<char*>(malloc(newText_b.length() + 1));
-        memcpy(newText_str, newText_b.data(), newText_b.length());
-        newText_str[newText_b.length()] = '\0';
+        auto newText_str_len = newText_b.length();
+        char* newText_str = static_cast<char*>(malloc(newText_str_len + 1));
+        memcpy(newText_str, newText_b.data(), newText_str_len);
+        newText_str[newText_str_len] = '\0';
         const char* sigval1 = newText_str;
         slotFunc(self, sigval1);
-        free(newText_str);
+        libqt_free(newText_str);
     });
 }
 

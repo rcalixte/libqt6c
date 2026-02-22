@@ -538,7 +538,7 @@ void q_filedialog_files_selected(void* self, const char* files[static 1]);
 /// @param self QFileDialog*
 /// @param callback void func(QFileDialog* self, const char** files)
 ///
-void q_filedialog_on_files_selected(void* self, void (*callback)(void*, const char***));
+void q_filedialog_on_files_selected(void* self, void (*callback)(void*, const char**));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#currentChanged)
 ///

@@ -117,20 +117,22 @@ void Solid__GenericInterface_Connect_ConditionRaised(Solid__GenericInterface* se
         const QString condition_ret = condition;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray condition_b = condition_ret.toUtf8();
-        char* condition_str = static_cast<char*>(malloc(condition_b.length() + 1));
-        memcpy(condition_str, condition_b.data(), condition_b.length());
-        condition_str[condition_b.length()] = '\0';
+        auto condition_str_len = condition_b.length();
+        char* condition_str = static_cast<char*>(malloc(condition_str_len + 1));
+        memcpy(condition_str, condition_b.data(), condition_str_len);
+        condition_str[condition_str_len] = '\0';
         const char* sigval1 = condition_str;
         const QString reason_ret = reason;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray reason_b = reason_ret.toUtf8();
-        char* reason_str = static_cast<char*>(malloc(reason_b.length() + 1));
-        memcpy(reason_str, reason_b.data(), reason_b.length());
-        reason_str[reason_b.length()] = '\0';
+        auto reason_str_len = reason_b.length();
+        char* reason_str = static_cast<char*>(malloc(reason_str_len + 1));
+        memcpy(reason_str, reason_b.data(), reason_str_len);
+        reason_str[reason_str_len] = '\0';
         const char* sigval2 = reason_str;
         slotFunc(self, sigval1, sigval2);
-        free(condition_str);
-        free(reason_str);
+        libqt_free(condition_str);
+        libqt_free(reason_str);
     });
 }
 

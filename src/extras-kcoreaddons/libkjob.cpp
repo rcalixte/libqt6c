@@ -202,12 +202,13 @@ void KJob_Connect_InfoMessage(KJob* self, intptr_t slot) {
         const QString message_ret = message;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray message_b = message_ret.toUtf8();
-        char* message_str = static_cast<char*>(malloc(message_b.length() + 1));
-        memcpy(message_str, message_b.data(), message_b.length());
-        message_str[message_b.length()] = '\0';
+        auto message_str_len = message_b.length();
+        char* message_str = static_cast<char*>(malloc(message_str_len + 1));
+        memcpy(message_str, message_b.data(), message_str_len);
+        message_str[message_str_len] = '\0';
         const char* sigval2 = message_str;
         slotFunc(self, sigval1, sigval2);
-        free(message_str);
+        libqt_free(message_str);
     });
 }
 
@@ -223,12 +224,13 @@ void KJob_Connect_Warning(KJob* self, intptr_t slot) {
         const QString message_ret = message;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray message_b = message_ret.toUtf8();
-        char* message_str = static_cast<char*>(malloc(message_b.length() + 1));
-        memcpy(message_str, message_b.data(), message_b.length());
-        message_str[message_b.length()] = '\0';
+        auto message_str_len = message_b.length();
+        char* message_str = static_cast<char*>(malloc(message_str_len + 1));
+        memcpy(message_str, message_b.data(), message_str_len);
+        message_str[message_str_len] = '\0';
         const char* sigval2 = message_str;
         slotFunc(self, sigval1, sigval2);
-        free(message_str);
+        libqt_free(message_str);
     });
 }
 

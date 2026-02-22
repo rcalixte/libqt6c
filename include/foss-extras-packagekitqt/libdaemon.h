@@ -570,7 +570,7 @@ void q_packagekit__daemon_transaction_list_changed(void* self, const char* tids[
 /// @param self PackageKit__Daemon*
 /// @param callback void func(PackageKit__Daemon* self, const char** tids)
 ///
-void q_packagekit__daemon_on_transaction_list_changed(void* self, void (*callback)(void*, const char***));
+void q_packagekit__daemon_on_transaction_list_changed(void* self, void (*callback)(void*, const char**));
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///

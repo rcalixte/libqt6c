@@ -532,7 +532,7 @@ void q_packagekit__transaction_files(void* self, const char* packageID, const ch
 /// @param self PackageKit__Transaction*
 /// @param callback void func(PackageKit__Transaction* self, const char* packageID, const char** filenames)
 ///
-void q_packagekit__transaction_on_files(void* self, void (*callback)(void*, const char*, const char***));
+void q_packagekit__transaction_on_files(void* self, void (*callback)(void*, const char*, const char**));
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -602,7 +602,7 @@ void q_packagekit__transaction_update_detail(void* self, const char* packageID, 
 /// @param self PackageKit__Transaction*
 /// @param callback void func(PackageKit__Transaction* self, const char* packageID, const char** updates, const char** obsoletes, const char** vendorUrls, const char** bugzillaUrls, const char** cveUrls, enum PackageKit__Transaction__Restart restart, const char* updateText, const char* changelog, enum PackageKit__Transaction__UpdateState state, QDateTime* issued, QDateTime* updated)
 ///
-void q_packagekit__transaction_on_update_detail(void* self, void (*callback)(void*, const char*, const char***, const char***, const char***, const char***, const char***, int32_t, const char*, const char*, int32_t, void*, void*));
+void q_packagekit__transaction_on_update_detail(void* self, void (*callback)(void*, const char*, const char**, const char**, const char**, const char**, const char**, int32_t, const char*, const char*, int32_t, void*, void*));
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///

@@ -149,7 +149,7 @@ void q_signon__authservice_methods_available(void* self, const char* methods[sta
 /// @param self SignOn__AuthService*
 /// @param callback void func(SignOn__AuthService* self, const char** methods)
 ///
-void q_signon__authservice_on_methods_available(void* self, void (*callback)(void*, const char***));
+void q_signon__authservice_on_methods_available(void* self, void (*callback)(void*, const char**));
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1AuthService.html)
 ///
@@ -164,7 +164,7 @@ void q_signon__authservice_mechanisms_available(void* self, const char* method, 
 /// @param self SignOn__AuthService*
 /// @param callback void func(SignOn__AuthService* self, const char* method, const char** mechanisms)
 ///
-void q_signon__authservice_on_mechanisms_available(void* self, void (*callback)(void*, const char*, const char***));
+void q_signon__authservice_on_mechanisms_available(void* self, void (*callback)(void*, const char*, const char**));
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1AuthService.html)
 ///

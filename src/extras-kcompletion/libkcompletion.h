@@ -372,7 +372,7 @@ void k_completion_set_items(void* self, const char* itemList[static 1]);
 /// @param self KCompletion*
 /// @param callback void func(KCompletion* self, const char** itemList)
 ///
-void k_completion_on_set_items(void* self, void (*callback)(void*, const char***));
+void k_completion_on_set_items(void* self, void (*callback)(void*, const char**));
 
 /// [Upstream resources](https://api.kde.org/kcompletion.html#setItems)
 ///
@@ -454,7 +454,7 @@ void k_completion_matches(void* self, const char* matchlist[static 1]);
 /// @param self KCompletion*
 /// @param callback void func(KCompletion* self, const char** matchlist)
 ///
-void k_completion_on_matches(void* self, void (*callback)(void*, const char***));
+void k_completion_on_matches(void* self, void (*callback)(void*, const char**));
 
 /// [Upstream resources](https://api.kde.org/kcompletion.html#multipleMatches)
 ///
@@ -483,7 +483,7 @@ void k_completion_post_process_matches(void* self, const char* matchList[static 
 /// @param self KCompletion*
 /// @param callback void func(KCompletion* self, const char** matchList)
 ///
-void k_completion_on_post_process_matches(void* self, void (*callback)(void*, const char***));
+void k_completion_on_post_process_matches(void* self, void (*callback)(void*, const char**));
 
 /// [Upstream resources](https://api.kde.org/kcompletion.html#postProcessMatches)
 ///

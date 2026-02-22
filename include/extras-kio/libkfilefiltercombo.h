@@ -4505,7 +4505,7 @@ void k_filefiltercombo_qbase_set_completed_items(void* self, const char* items[s
 /// @param self KFileFilterCombo*
 /// @param callback void func(KFileFilterCombo* self, const char** items, bool autoSuggest)
 ///
-void k_filefiltercombo_on_set_completed_items(void* self, void (*callback)(void*, const char***, bool));
+void k_filefiltercombo_on_set_completed_items(void* self, void (*callback)(void*, const char**, bool));
 
 /// Inherited from KComboBox
 ///

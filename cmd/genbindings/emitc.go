@@ -264,7 +264,7 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, i
 	}
 
 	if k, v, containerType, ok := p.QMapOf(); ok {
-		maybePointer := ifv(containerType == "QMultiHash" || containerType == "QMultiMap", "*", "")
+		maybePointer := ifv(IsMultiHashMap(containerType), "*", "")
 		if maybePointer == "" && !isReturnType {
 			if _, _, ok := v.QListOf(); ok {
 				maybePointer = "*"
@@ -511,7 +511,7 @@ func (p CppParameter) returnAllocComment(cfs *cFileState, returnType string) str
 			maybeMapFree = "\n/// free(map);"
 		}
 
-		isQMulti := ifv(containerType == "QMultiHash" || containerType == "QMultiMap", true, false)
+		isQMulti := IsMultiHashMap(containerType)
 		inner := valueType.ParameterType
 
 		if keyType.ParameterType == "QString" || keyType.ParameterType == "QByteArray" {
@@ -649,7 +649,7 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 		}
 
 		if k, v, containerType, ok := p.QMapOf(); ok {
-			maybePointer := ifv(containerType == "QMultiHash" || containerType == "QMultiMap", "*", "")
+			maybePointer := ifv(IsMultiHashMap(containerType), "*", "")
 			if maybePointer == "" {
 				if _, _, ok := v.QListOf(); ok {
 					maybePointer = "*"
@@ -748,7 +748,7 @@ func (cfs *cFileState) emitParametersC(params []CppParameter, isSlot bool) strin
 			}
 			if isSlot {
 				if l, _, ok := p.QListOf(); ok && (l.ParameterType == "QString" || l.ParameterType == "QByteArray") {
-					pType = "const char**"
+					pType = "const char*"
 				}
 			}
 		}
@@ -915,7 +915,7 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 		// QMap<K,V>
 		kType := k.RenderTypeC(cfs, false, true, true)
 		vType := v.RenderTypeC(cfs, false, true, true)
-		isQMulti := ifv(containerType == "QMultiHash" || containerType == "QMultiMap", true, false)
+		isQMulti := IsMultiHashMap(containerType)
 		var isQList bool
 
 		if e, ok := KnownEnums[k.ParameterType]; ok {
@@ -1314,7 +1314,7 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 		// QMap<K,V>
 		kType := k.RenderTypeC(cfs, false, true, true)
 		vType := v.RenderTypeC(cfs, false, true, true)
-		isQMulti := ifv(containerType == "QMultiHash" || containerType == "QMultiMap", true, false)
+		isQMulti := IsMultiHashMap(containerType)
 
 		var keyAssign, keyFree, keyInnerFree, keyMallocFree, keyIter, valueAssign, valueFree, valueInnerFree, valueIter string
 		keyOut := kType

@@ -8163,7 +8163,7 @@ void q_cpaxisticker_generate(void* self, void* range, void* locale, void* format
     free(tickLabels_qstr);
 }
 
-void q_cpaxisticker_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char***)) {
+void q_cpaxisticker_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**)) {
     QCPAxisTicker_OnGenerate((QCPAxisTicker*)self, (intptr_t)callback);
 }
 
@@ -8518,7 +8518,7 @@ void q_cpaxistickerdatetime_qbase_generate(void* self, void* range, void* locale
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickerdatetime_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char***)) {
+void q_cpaxistickerdatetime_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**)) {
     QCPAxisTickerDateTime_OnGenerate((QCPAxisTickerDateTime*)self, (intptr_t)callback);
 }
 
@@ -8761,7 +8761,7 @@ void q_cpaxistickertime_qbase_generate(void* self, void* range, void* locale, vo
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickertime_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char***)) {
+void q_cpaxistickertime_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**)) {
     QCPAxisTickerTime_OnGenerate((QCPAxisTickerTime*)self, (intptr_t)callback);
 }
 
@@ -8973,7 +8973,7 @@ void q_cpaxistickerfixed_qbase_generate(void* self, void* range, void* locale, v
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickerfixed_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char***)) {
+void q_cpaxistickerfixed_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**)) {
     QCPAxisTickerFixed_OnGenerate((QCPAxisTickerFixed*)self, (intptr_t)callback);
 }
 
@@ -9378,7 +9378,7 @@ void q_cpaxistickertext_qbase_generate(void* self, void* range, void* locale, vo
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickertext_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char***)) {
+void q_cpaxistickertext_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**)) {
     QCPAxisTickerText_OnGenerate((QCPAxisTickerText*)self, (intptr_t)callback);
 }
 
@@ -9709,7 +9709,7 @@ void q_cpaxistickerpi_qbase_generate(void* self, void* range, void* locale, void
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickerpi_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char***)) {
+void q_cpaxistickerpi_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**)) {
     QCPAxisTickerPi_OnGenerate((QCPAxisTickerPi*)self, (intptr_t)callback);
 }
 
@@ -9935,7 +9935,7 @@ void q_cpaxistickerlog_qbase_generate(void* self, void* range, void* locale, voi
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickerlog_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char***)) {
+void q_cpaxistickerlog_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list /* of double */, libqt_list /* of double */, const char**)) {
     QCPAxisTickerLog_OnGenerate((QCPAxisTickerLog*)self, (intptr_t)callback);
 }
 

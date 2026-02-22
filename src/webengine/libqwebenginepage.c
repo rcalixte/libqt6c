@@ -713,7 +713,7 @@ const char** q_webenginepage_choose_files(void* self, int32_t mode, const char* 
     return _ret;
 }
 
-void q_webenginepage_on_choose_files(void* self, const char** (*callback)(void*, int32_t, const char***, const char***)) {
+void q_webenginepage_on_choose_files(void* self, const char** (*callback)(void*, int32_t, const char**, const char**)) {
     QWebEnginePage_OnChooseFiles((QWebEnginePage*)self, (intptr_t)callback);
 }
 

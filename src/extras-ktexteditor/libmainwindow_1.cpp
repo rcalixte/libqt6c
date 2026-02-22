@@ -196,13 +196,14 @@ void KTextEditor__MainWindow_Connect_PluginViewCreated(KTextEditor__MainWindow* 
         const QString name_ret = name;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray name_b = name_ret.toUtf8();
-        char* name_str = static_cast<char*>(malloc(name_b.length() + 1));
-        memcpy(name_str, name_b.data(), name_b.length());
-        name_str[name_b.length()] = '\0';
+        auto name_str_len = name_b.length();
+        char* name_str = static_cast<char*>(malloc(name_str_len + 1));
+        memcpy(name_str, name_b.data(), name_str_len);
+        name_str[name_str_len] = '\0';
         const char* sigval1 = name_str;
         QObject* sigval2 = pluginView;
         slotFunc(self, sigval1, sigval2);
-        free(name_str);
+        libqt_free(name_str);
     });
 }
 
@@ -217,13 +218,14 @@ void KTextEditor__MainWindow_Connect_PluginViewDeleted(KTextEditor__MainWindow* 
         const QString name_ret = name;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray name_b = name_ret.toUtf8();
-        char* name_str = static_cast<char*>(malloc(name_b.length() + 1));
-        memcpy(name_str, name_b.data(), name_b.length());
-        name_str[name_b.length()] = '\0';
+        auto name_str_len = name_b.length();
+        char* name_str = static_cast<char*>(malloc(name_str_len + 1));
+        memcpy(name_str, name_b.data(), name_str_len);
+        name_str[name_str_len] = '\0';
         const char* sigval1 = name_str;
         QObject* sigval2 = pluginView;
         slotFunc(self, sigval1, sigval2);
-        free(name_str);
+        libqt_free(name_str);
     });
 }
 

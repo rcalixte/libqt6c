@@ -119,7 +119,7 @@ void k_previewwidgetbase_set_supported_mime_types(void* self, const char* mimeTy
     free(mimeTypes_qstr);
 }
 
-void k_previewwidgetbase_on_set_supported_mime_types(void* self, void (*callback)(void*, const char***)) {
+void k_previewwidgetbase_on_set_supported_mime_types(void* self, void (*callback)(void*, const char**)) {
     KPreviewWidgetBase_OnSetSupportedMimeTypes((KPreviewWidgetBase*)self, (intptr_t)callback);
 }
 

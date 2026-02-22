@@ -103,7 +103,7 @@ void q_placesearchsuggestionreply_set_suggestions(void* self, const char* sugges
     free(suggestions_qstr);
 }
 
-void q_placesearchsuggestionreply_on_set_suggestions(void* self, void (*callback)(void*, const char***)) {
+void q_placesearchsuggestionreply_on_set_suggestions(void* self, void (*callback)(void*, const char**)) {
     QPlaceSearchSuggestionReply_OnSetSuggestions((QPlaceSearchSuggestionReply*)self, (intptr_t)callback);
 }
 

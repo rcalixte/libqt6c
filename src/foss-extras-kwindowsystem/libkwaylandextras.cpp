@@ -55,12 +55,13 @@ void KWaylandExtras_Connect_XdgActivationTokenArrived(KWaylandExtras* self, intp
         const QString token_ret = token;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray token_b = token_ret.toUtf8();
-        char* token_str = static_cast<char*>(malloc(token_b.length() + 1));
-        memcpy(token_str, token_b.data(), token_b.length());
-        token_str[token_b.length()] = '\0';
+        auto token_str_len = token_b.length();
+        char* token_str = static_cast<char*>(malloc(token_str_len + 1));
+        memcpy(token_str, token_b.data(), token_str_len);
+        token_str[token_str_len] = '\0';
         const char* sigval2 = token_str;
         slotFunc(self, sigval1, sigval2);
-        free(token_str);
+        libqt_free(token_str);
     });
 }
 
@@ -76,11 +77,12 @@ void KWaylandExtras_Connect_WindowExported(KWaylandExtras* self, intptr_t slot) 
         const QString handle_ret = handle;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray handle_b = handle_ret.toUtf8();
-        char* handle_str = static_cast<char*>(malloc(handle_b.length() + 1));
-        memcpy(handle_str, handle_b.data(), handle_b.length());
-        handle_str[handle_b.length()] = '\0';
+        auto handle_str_len = handle_b.length();
+        char* handle_str = static_cast<char*>(malloc(handle_str_len + 1));
+        memcpy(handle_str, handle_b.data(), handle_str_len);
+        handle_str[handle_str_len] = '\0';
         const char* sigval2 = handle_str;
         slotFunc(self, sigval1, sigval2);
-        free(handle_str);
+        libqt_free(handle_str);
     });
 }

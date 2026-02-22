@@ -603,12 +603,13 @@ void QWindow_Connect_WindowTitleChanged(QWindow* self, intptr_t slot) {
         const QString title_ret = title;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray title_b = title_ret.toUtf8();
-        char* title_str = static_cast<char*>(malloc(title_b.length() + 1));
-        memcpy(title_str, title_b.data(), title_b.length());
-        title_str[title_b.length()] = '\0';
+        auto title_str_len = title_b.length();
+        char* title_str = static_cast<char*>(malloc(title_str_len + 1));
+        memcpy(title_str, title_b.data(), title_str_len);
+        title_str[title_str_len] = '\0';
         const char* sigval1 = title_str;
         slotFunc(self, sigval1);
-        free(title_str);
+        libqt_free(title_str);
     });
 }
 

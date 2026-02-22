@@ -365,44 +365,49 @@ void PackageKit__Transaction_Connect_Category(PackageKit__Transaction* self, int
         const QString parentId_ret = parentId;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray parentId_b = parentId_ret.toUtf8();
-        char* parentId_str = static_cast<char*>(malloc(parentId_b.length() + 1));
-        memcpy(parentId_str, parentId_b.data(), parentId_b.length());
-        parentId_str[parentId_b.length()] = '\0';
+        auto parentId_str_len = parentId_b.length();
+        char* parentId_str = static_cast<char*>(malloc(parentId_str_len + 1));
+        memcpy(parentId_str, parentId_b.data(), parentId_str_len);
+        parentId_str[parentId_str_len] = '\0';
         const char* sigval1 = parentId_str;
         const QString categoryId_ret = categoryId;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray categoryId_b = categoryId_ret.toUtf8();
-        char* categoryId_str = static_cast<char*>(malloc(categoryId_b.length() + 1));
-        memcpy(categoryId_str, categoryId_b.data(), categoryId_b.length());
-        categoryId_str[categoryId_b.length()] = '\0';
+        auto categoryId_str_len = categoryId_b.length();
+        char* categoryId_str = static_cast<char*>(malloc(categoryId_str_len + 1));
+        memcpy(categoryId_str, categoryId_b.data(), categoryId_str_len);
+        categoryId_str[categoryId_str_len] = '\0';
         const char* sigval2 = categoryId_str;
         const QString name_ret = name;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray name_b = name_ret.toUtf8();
-        char* name_str = static_cast<char*>(malloc(name_b.length() + 1));
-        memcpy(name_str, name_b.data(), name_b.length());
-        name_str[name_b.length()] = '\0';
+        auto name_str_len = name_b.length();
+        char* name_str = static_cast<char*>(malloc(name_str_len + 1));
+        memcpy(name_str, name_b.data(), name_str_len);
+        name_str[name_str_len] = '\0';
         const char* sigval3 = name_str;
         const QString summary_ret = summary;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray summary_b = summary_ret.toUtf8();
-        char* summary_str = static_cast<char*>(malloc(summary_b.length() + 1));
-        memcpy(summary_str, summary_b.data(), summary_b.length());
-        summary_str[summary_b.length()] = '\0';
+        auto summary_str_len = summary_b.length();
+        char* summary_str = static_cast<char*>(malloc(summary_str_len + 1));
+        memcpy(summary_str, summary_b.data(), summary_str_len);
+        summary_str[summary_str_len] = '\0';
         const char* sigval4 = summary_str;
         const QString icon_ret = icon;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray icon_b = icon_ret.toUtf8();
-        char* icon_str = static_cast<char*>(malloc(icon_b.length() + 1));
-        memcpy(icon_str, icon_b.data(), icon_b.length());
-        icon_str[icon_b.length()] = '\0';
+        auto icon_str_len = icon_b.length();
+        char* icon_str = static_cast<char*>(malloc(icon_str_len + 1));
+        memcpy(icon_str, icon_b.data(), icon_str_len);
+        icon_str[icon_str_len] = '\0';
         const char* sigval5 = icon_str;
         slotFunc(self, sigval1, sigval2, sigval3, sigval4, sigval5);
-        free(parentId_str);
-        free(categoryId_str);
-        free(name_str);
-        free(summary_str);
-        free(icon_str);
+        libqt_free(parentId_str);
+        libqt_free(categoryId_str);
+        libqt_free(name_str);
+        libqt_free(summary_str);
+        libqt_free(icon_str);
     });
 }
 
@@ -419,20 +424,22 @@ void PackageKit__Transaction_Connect_DistroUpgrade(PackageKit__Transaction* self
         const QString name_ret = name;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray name_b = name_ret.toUtf8();
-        char* name_str = static_cast<char*>(malloc(name_b.length() + 1));
-        memcpy(name_str, name_b.data(), name_b.length());
-        name_str[name_b.length()] = '\0';
+        auto name_str_len = name_b.length();
+        char* name_str = static_cast<char*>(malloc(name_str_len + 1));
+        memcpy(name_str, name_b.data(), name_str_len);
+        name_str[name_str_len] = '\0';
         const char* sigval2 = name_str;
         const QString description_ret = description;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray description_b = description_ret.toUtf8();
-        char* description_str = static_cast<char*>(malloc(description_b.length() + 1));
-        memcpy(description_str, description_b.data(), description_b.length());
-        description_str[description_b.length()] = '\0';
+        auto description_str_len = description_b.length();
+        char* description_str = static_cast<char*>(malloc(description_str_len + 1));
+        memcpy(description_str, description_b.data(), description_str_len);
+        description_str[description_str_len] = '\0';
         const char* sigval3 = description_str;
         slotFunc(self, sigval1, sigval2, sigval3);
-        free(name_str);
-        free(description_str);
+        libqt_free(name_str);
+        libqt_free(description_str);
     });
 }
 
@@ -448,12 +455,13 @@ void PackageKit__Transaction_Connect_ErrorCode(PackageKit__Transaction* self, in
         const QString details_ret = details;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray details_b = details_ret.toUtf8();
-        char* details_str = static_cast<char*>(malloc(details_b.length() + 1));
-        memcpy(details_str, details_b.data(), details_b.length());
-        details_str[details_b.length()] = '\0';
+        auto details_str_len = details_b.length();
+        char* details_str = static_cast<char*>(malloc(details_str_len + 1));
+        memcpy(details_str, details_b.data(), details_str_len);
+        details_str[details_str_len] = '\0';
         const char* sigval2 = details_str;
         slotFunc(self, sigval1, sigval2);
-        free(details_str);
+        libqt_free(details_str);
     });
 }
 
@@ -471,36 +479,40 @@ void PackageKit__Transaction_Connect_EulaRequired(PackageKit__Transaction* self,
         const QString eulaID_ret = eulaID;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray eulaID_b = eulaID_ret.toUtf8();
-        char* eulaID_str = static_cast<char*>(malloc(eulaID_b.length() + 1));
-        memcpy(eulaID_str, eulaID_b.data(), eulaID_b.length());
-        eulaID_str[eulaID_b.length()] = '\0';
+        auto eulaID_str_len = eulaID_b.length();
+        char* eulaID_str = static_cast<char*>(malloc(eulaID_str_len + 1));
+        memcpy(eulaID_str, eulaID_b.data(), eulaID_str_len);
+        eulaID_str[eulaID_str_len] = '\0';
         const char* sigval1 = eulaID_str;
         const QString packageID_ret = packageID;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray packageID_b = packageID_ret.toUtf8();
-        char* packageID_str = static_cast<char*>(malloc(packageID_b.length() + 1));
-        memcpy(packageID_str, packageID_b.data(), packageID_b.length());
-        packageID_str[packageID_b.length()] = '\0';
+        auto packageID_str_len = packageID_b.length();
+        char* packageID_str = static_cast<char*>(malloc(packageID_str_len + 1));
+        memcpy(packageID_str, packageID_b.data(), packageID_str_len);
+        packageID_str[packageID_str_len] = '\0';
         const char* sigval2 = packageID_str;
         const QString vendor_ret = vendor;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray vendor_b = vendor_ret.toUtf8();
-        char* vendor_str = static_cast<char*>(malloc(vendor_b.length() + 1));
-        memcpy(vendor_str, vendor_b.data(), vendor_b.length());
-        vendor_str[vendor_b.length()] = '\0';
+        auto vendor_str_len = vendor_b.length();
+        char* vendor_str = static_cast<char*>(malloc(vendor_str_len + 1));
+        memcpy(vendor_str, vendor_b.data(), vendor_str_len);
+        vendor_str[vendor_str_len] = '\0';
         const char* sigval3 = vendor_str;
         const QString licenseAgreement_ret = licenseAgreement;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray licenseAgreement_b = licenseAgreement_ret.toUtf8();
-        char* licenseAgreement_str = static_cast<char*>(malloc(licenseAgreement_b.length() + 1));
-        memcpy(licenseAgreement_str, licenseAgreement_b.data(), licenseAgreement_b.length());
-        licenseAgreement_str[licenseAgreement_b.length()] = '\0';
+        auto licenseAgreement_str_len = licenseAgreement_b.length();
+        char* licenseAgreement_str = static_cast<char*>(malloc(licenseAgreement_str_len + 1));
+        memcpy(licenseAgreement_str, licenseAgreement_b.data(), licenseAgreement_str_len);
+        licenseAgreement_str[licenseAgreement_str_len] = '\0';
         const char* sigval4 = licenseAgreement_str;
         slotFunc(self, sigval1, sigval2, sigval3, sigval4);
-        free(eulaID_str);
-        free(packageID_str);
-        free(vendor_str);
-        free(licenseAgreement_str);
+        libqt_free(eulaID_str);
+        libqt_free(packageID_str);
+        libqt_free(vendor_str);
+        libqt_free(licenseAgreement_str);
     });
 }
 
@@ -517,20 +529,22 @@ void PackageKit__Transaction_Connect_MediaChangeRequired(PackageKit__Transaction
         const QString id_ret = id;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray id_b = id_ret.toUtf8();
-        char* id_str = static_cast<char*>(malloc(id_b.length() + 1));
-        memcpy(id_str, id_b.data(), id_b.length());
-        id_str[id_b.length()] = '\0';
+        auto id_str_len = id_b.length();
+        char* id_str = static_cast<char*>(malloc(id_str_len + 1));
+        memcpy(id_str, id_b.data(), id_str_len);
+        id_str[id_str_len] = '\0';
         const char* sigval2 = id_str;
         const QString text_ret = text;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray text_b = text_ret.toUtf8();
-        char* text_str = static_cast<char*>(malloc(text_b.length() + 1));
-        memcpy(text_str, text_b.data(), text_b.length());
-        text_str[text_b.length()] = '\0';
+        auto text_str_len = text_b.length();
+        char* text_str = static_cast<char*>(malloc(text_str_len + 1));
+        memcpy(text_str, text_b.data(), text_str_len);
+        text_str[text_str_len] = '\0';
         const char* sigval3 = text_str;
         slotFunc(self, sigval1, sigval2, sigval3);
-        free(id_str);
-        free(text_str);
+        libqt_free(id_str);
+        libqt_free(text_str);
     });
 }
 
@@ -545,14 +559,15 @@ void PackageKit__Transaction_Connect_ItemProgress(PackageKit__Transaction* self,
         const QString itemID_ret = itemID;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray itemID_b = itemID_ret.toUtf8();
-        char* itemID_str = static_cast<char*>(malloc(itemID_b.length() + 1));
-        memcpy(itemID_str, itemID_b.data(), itemID_b.length());
-        itemID_str[itemID_b.length()] = '\0';
+        auto itemID_str_len = itemID_b.length();
+        char* itemID_str = static_cast<char*>(malloc(itemID_str_len + 1));
+        memcpy(itemID_str, itemID_b.data(), itemID_str_len);
+        itemID_str[itemID_str_len] = '\0';
         const char* sigval1 = itemID_str;
         int sigval2 = static_cast<int>(status);
         unsigned int sigval3 = static_cast<unsigned int>(percentage);
         slotFunc(self, sigval1, sigval2, sigval3);
-        free(itemID_str);
+        libqt_free(itemID_str);
     });
 }
 
@@ -574,26 +589,28 @@ void PackageKit__Transaction_Connect_Files(PackageKit__Transaction* self, intptr
         const QString packageID_ret = packageID;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray packageID_b = packageID_ret.toUtf8();
-        char* packageID_str = static_cast<char*>(malloc(packageID_b.length() + 1));
-        memcpy(packageID_str, packageID_b.data(), packageID_b.length());
-        packageID_str[packageID_b.length()] = '\0';
+        auto packageID_str_len = packageID_b.length();
+        char* packageID_str = static_cast<char*>(malloc(packageID_str_len + 1));
+        memcpy(packageID_str, packageID_b.data(), packageID_str_len);
+        packageID_str[packageID_str_len] = '\0';
         const char* sigval1 = packageID_str;
         const QList<QString>& filenames_ret = filenames;
         // Convert QString from UTF-16 in C++ RAII memory to null-terminated UTF-8 chars in manually-managed C memory
         const char** filenames_arr = static_cast<const char**>(malloc(sizeof(const char*) * (filenames_ret.size() + 1)));
         for (qsizetype i = 0; i < filenames_ret.size(); ++i) {
             QByteArray filenames_b = filenames_ret[i].toUtf8();
-            char* filenames_str = static_cast<char*>(malloc(filenames_b.length() + 1));
-            memcpy(filenames_str, filenames_b.data(), filenames_b.length());
-            filenames_str[filenames_b.length()] = '\0';
+            auto filenames_str_len = filenames_b.length();
+            char* filenames_str = static_cast<char*>(malloc(filenames_str_len + 1));
+            memcpy(filenames_str, filenames_b.data(), filenames_str_len);
+            filenames_str[filenames_str_len] = '\0';
             filenames_arr[i] = filenames_str;
         }
         // Append sentinel null terminator to the list
         filenames_arr[filenames_ret.size()] = nullptr;
         const char** sigval2 = filenames_arr;
         slotFunc(self, sigval1, sigval2);
-        free(packageID_str);
-        free(filenames_arr);
+        libqt_free(packageID_str);
+        libqt_free(filenames_arr);
     });
 }
 
@@ -623,20 +640,22 @@ void PackageKit__Transaction_Connect_Package(PackageKit__Transaction* self, intp
         const QString packageID_ret = packageID;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray packageID_b = packageID_ret.toUtf8();
-        char* packageID_str = static_cast<char*>(malloc(packageID_b.length() + 1));
-        memcpy(packageID_str, packageID_b.data(), packageID_b.length());
-        packageID_str[packageID_b.length()] = '\0';
+        auto packageID_str_len = packageID_b.length();
+        char* packageID_str = static_cast<char*>(malloc(packageID_str_len + 1));
+        memcpy(packageID_str, packageID_b.data(), packageID_str_len);
+        packageID_str[packageID_str_len] = '\0';
         const char* sigval2 = packageID_str;
         const QString summary_ret = summary;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray summary_b = summary_ret.toUtf8();
-        char* summary_str = static_cast<char*>(malloc(summary_b.length() + 1));
-        memcpy(summary_str, summary_b.data(), summary_b.length());
-        summary_str[summary_b.length()] = '\0';
+        auto summary_str_len = summary_b.length();
+        char* summary_str = static_cast<char*>(malloc(summary_str_len + 1));
+        memcpy(summary_str, summary_b.data(), summary_str_len);
+        summary_str[summary_str_len] = '\0';
         const char* sigval3 = summary_str;
         slotFunc(self, sigval1, sigval2, sigval3);
-        free(packageID_str);
-        free(summary_str);
+        libqt_free(packageID_str);
+        libqt_free(summary_str);
     });
 }
 
@@ -702,18 +721,20 @@ void PackageKit__Transaction_Connect_UpdateDetail(PackageKit__Transaction* self,
         const QString packageID_ret = packageID;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray packageID_b = packageID_ret.toUtf8();
-        char* packageID_str = static_cast<char*>(malloc(packageID_b.length() + 1));
-        memcpy(packageID_str, packageID_b.data(), packageID_b.length());
-        packageID_str[packageID_b.length()] = '\0';
+        auto packageID_str_len = packageID_b.length();
+        char* packageID_str = static_cast<char*>(malloc(packageID_str_len + 1));
+        memcpy(packageID_str, packageID_b.data(), packageID_str_len);
+        packageID_str[packageID_str_len] = '\0';
         const char* sigval1 = packageID_str;
         const QList<QString>& updates_ret = updates;
         // Convert QString from UTF-16 in C++ RAII memory to null-terminated UTF-8 chars in manually-managed C memory
         const char** updates_arr = static_cast<const char**>(malloc(sizeof(const char*) * (updates_ret.size() + 1)));
         for (qsizetype i = 0; i < updates_ret.size(); ++i) {
             QByteArray updates_b = updates_ret[i].toUtf8();
-            char* updates_str = static_cast<char*>(malloc(updates_b.length() + 1));
-            memcpy(updates_str, updates_b.data(), updates_b.length());
-            updates_str[updates_b.length()] = '\0';
+            auto updates_str_len = updates_b.length();
+            char* updates_str = static_cast<char*>(malloc(updates_str_len + 1));
+            memcpy(updates_str, updates_b.data(), updates_str_len);
+            updates_str[updates_str_len] = '\0';
             updates_arr[i] = updates_str;
         }
         // Append sentinel null terminator to the list
@@ -724,9 +745,10 @@ void PackageKit__Transaction_Connect_UpdateDetail(PackageKit__Transaction* self,
         const char** obsoletes_arr = static_cast<const char**>(malloc(sizeof(const char*) * (obsoletes_ret.size() + 1)));
         for (qsizetype i = 0; i < obsoletes_ret.size(); ++i) {
             QByteArray obsoletes_b = obsoletes_ret[i].toUtf8();
-            char* obsoletes_str = static_cast<char*>(malloc(obsoletes_b.length() + 1));
-            memcpy(obsoletes_str, obsoletes_b.data(), obsoletes_b.length());
-            obsoletes_str[obsoletes_b.length()] = '\0';
+            auto obsoletes_str_len = obsoletes_b.length();
+            char* obsoletes_str = static_cast<char*>(malloc(obsoletes_str_len + 1));
+            memcpy(obsoletes_str, obsoletes_b.data(), obsoletes_str_len);
+            obsoletes_str[obsoletes_str_len] = '\0';
             obsoletes_arr[i] = obsoletes_str;
         }
         // Append sentinel null terminator to the list
@@ -737,9 +759,10 @@ void PackageKit__Transaction_Connect_UpdateDetail(PackageKit__Transaction* self,
         const char** vendorUrls_arr = static_cast<const char**>(malloc(sizeof(const char*) * (vendorUrls_ret.size() + 1)));
         for (qsizetype i = 0; i < vendorUrls_ret.size(); ++i) {
             QByteArray vendorUrls_b = vendorUrls_ret[i].toUtf8();
-            char* vendorUrls_str = static_cast<char*>(malloc(vendorUrls_b.length() + 1));
-            memcpy(vendorUrls_str, vendorUrls_b.data(), vendorUrls_b.length());
-            vendorUrls_str[vendorUrls_b.length()] = '\0';
+            auto vendorUrls_str_len = vendorUrls_b.length();
+            char* vendorUrls_str = static_cast<char*>(malloc(vendorUrls_str_len + 1));
+            memcpy(vendorUrls_str, vendorUrls_b.data(), vendorUrls_str_len);
+            vendorUrls_str[vendorUrls_str_len] = '\0';
             vendorUrls_arr[i] = vendorUrls_str;
         }
         // Append sentinel null terminator to the list
@@ -750,9 +773,10 @@ void PackageKit__Transaction_Connect_UpdateDetail(PackageKit__Transaction* self,
         const char** bugzillaUrls_arr = static_cast<const char**>(malloc(sizeof(const char*) * (bugzillaUrls_ret.size() + 1)));
         for (qsizetype i = 0; i < bugzillaUrls_ret.size(); ++i) {
             QByteArray bugzillaUrls_b = bugzillaUrls_ret[i].toUtf8();
-            char* bugzillaUrls_str = static_cast<char*>(malloc(bugzillaUrls_b.length() + 1));
-            memcpy(bugzillaUrls_str, bugzillaUrls_b.data(), bugzillaUrls_b.length());
-            bugzillaUrls_str[bugzillaUrls_b.length()] = '\0';
+            auto bugzillaUrls_str_len = bugzillaUrls_b.length();
+            char* bugzillaUrls_str = static_cast<char*>(malloc(bugzillaUrls_str_len + 1));
+            memcpy(bugzillaUrls_str, bugzillaUrls_b.data(), bugzillaUrls_str_len);
+            bugzillaUrls_str[bugzillaUrls_str_len] = '\0';
             bugzillaUrls_arr[i] = bugzillaUrls_str;
         }
         // Append sentinel null terminator to the list
@@ -763,9 +787,10 @@ void PackageKit__Transaction_Connect_UpdateDetail(PackageKit__Transaction* self,
         const char** cveUrls_arr = static_cast<const char**>(malloc(sizeof(const char*) * (cveUrls_ret.size() + 1)));
         for (qsizetype i = 0; i < cveUrls_ret.size(); ++i) {
             QByteArray cveUrls_b = cveUrls_ret[i].toUtf8();
-            char* cveUrls_str = static_cast<char*>(malloc(cveUrls_b.length() + 1));
-            memcpy(cveUrls_str, cveUrls_b.data(), cveUrls_b.length());
-            cveUrls_str[cveUrls_b.length()] = '\0';
+            auto cveUrls_str_len = cveUrls_b.length();
+            char* cveUrls_str = static_cast<char*>(malloc(cveUrls_str_len + 1));
+            memcpy(cveUrls_str, cveUrls_b.data(), cveUrls_str_len);
+            cveUrls_str[cveUrls_str_len] = '\0';
             cveUrls_arr[i] = cveUrls_str;
         }
         // Append sentinel null terminator to the list
@@ -775,16 +800,18 @@ void PackageKit__Transaction_Connect_UpdateDetail(PackageKit__Transaction* self,
         const QString updateText_ret = updateText;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray updateText_b = updateText_ret.toUtf8();
-        char* updateText_str = static_cast<char*>(malloc(updateText_b.length() + 1));
-        memcpy(updateText_str, updateText_b.data(), updateText_b.length());
-        updateText_str[updateText_b.length()] = '\0';
+        auto updateText_str_len = updateText_b.length();
+        char* updateText_str = static_cast<char*>(malloc(updateText_str_len + 1));
+        memcpy(updateText_str, updateText_b.data(), updateText_str_len);
+        updateText_str[updateText_str_len] = '\0';
         const char* sigval8 = updateText_str;
         const QString changelog_ret = changelog;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray changelog_b = changelog_ret.toUtf8();
-        char* changelog_str = static_cast<char*>(malloc(changelog_b.length() + 1));
-        memcpy(changelog_str, changelog_b.data(), changelog_b.length());
-        changelog_str[changelog_b.length()] = '\0';
+        auto changelog_str_len = changelog_b.length();
+        char* changelog_str = static_cast<char*>(malloc(changelog_str_len + 1));
+        memcpy(changelog_str, changelog_b.data(), changelog_str_len);
+        changelog_str[changelog_str_len] = '\0';
         const char* sigval9 = changelog_str;
         int sigval10 = static_cast<int>(state);
         const QDateTime& issued_ret = issued;
@@ -794,14 +821,14 @@ void PackageKit__Transaction_Connect_UpdateDetail(PackageKit__Transaction* self,
         // Cast returned reference into pointer
         QDateTime* sigval12 = const_cast<QDateTime*>(&updated_ret);
         slotFunc(self, sigval1, sigval2, sigval3, sigval4, sigval5, sigval6, sigval7, sigval8, sigval9, sigval10, sigval11, sigval12);
-        free(packageID_str);
-        free(updates_arr);
-        free(obsoletes_arr);
-        free(vendorUrls_arr);
-        free(bugzillaUrls_arr);
-        free(cveUrls_arr);
-        free(updateText_str);
-        free(changelog_str);
+        libqt_free(packageID_str);
+        libqt_free(updates_arr);
+        libqt_free(obsoletes_arr);
+        libqt_free(vendorUrls_arr);
+        libqt_free(bugzillaUrls_arr);
+        libqt_free(cveUrls_arr);
+        libqt_free(updateText_str);
+        libqt_free(changelog_str);
     });
 }
 
@@ -817,21 +844,23 @@ void PackageKit__Transaction_Connect_RepoDetail(PackageKit__Transaction* self, i
         const QString repoId_ret = repoId;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray repoId_b = repoId_ret.toUtf8();
-        char* repoId_str = static_cast<char*>(malloc(repoId_b.length() + 1));
-        memcpy(repoId_str, repoId_b.data(), repoId_b.length());
-        repoId_str[repoId_b.length()] = '\0';
+        auto repoId_str_len = repoId_b.length();
+        char* repoId_str = static_cast<char*>(malloc(repoId_str_len + 1));
+        memcpy(repoId_str, repoId_b.data(), repoId_str_len);
+        repoId_str[repoId_str_len] = '\0';
         const char* sigval1 = repoId_str;
         const QString description_ret = description;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray description_b = description_ret.toUtf8();
-        char* description_str = static_cast<char*>(malloc(description_b.length() + 1));
-        memcpy(description_str, description_b.data(), description_b.length());
-        description_str[description_b.length()] = '\0';
+        auto description_str_len = description_b.length();
+        char* description_str = static_cast<char*>(malloc(description_str_len + 1));
+        memcpy(description_str, description_b.data(), description_str_len);
+        description_str[description_str_len] = '\0';
         const char* sigval2 = description_str;
         bool sigval3 = enabled;
         slotFunc(self, sigval1, sigval2, sigval3);
-        free(repoId_str);
-        free(description_str);
+        libqt_free(repoId_str);
+        libqt_free(description_str);
     });
 }
 
@@ -852,61 +881,68 @@ void PackageKit__Transaction_Connect_RepoSignatureRequired(PackageKit__Transacti
         const QString packageID_ret = packageID;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray packageID_b = packageID_ret.toUtf8();
-        char* packageID_str = static_cast<char*>(malloc(packageID_b.length() + 1));
-        memcpy(packageID_str, packageID_b.data(), packageID_b.length());
-        packageID_str[packageID_b.length()] = '\0';
+        auto packageID_str_len = packageID_b.length();
+        char* packageID_str = static_cast<char*>(malloc(packageID_str_len + 1));
+        memcpy(packageID_str, packageID_b.data(), packageID_str_len);
+        packageID_str[packageID_str_len] = '\0';
         const char* sigval1 = packageID_str;
         const QString repoName_ret = repoName;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray repoName_b = repoName_ret.toUtf8();
-        char* repoName_str = static_cast<char*>(malloc(repoName_b.length() + 1));
-        memcpy(repoName_str, repoName_b.data(), repoName_b.length());
-        repoName_str[repoName_b.length()] = '\0';
+        auto repoName_str_len = repoName_b.length();
+        char* repoName_str = static_cast<char*>(malloc(repoName_str_len + 1));
+        memcpy(repoName_str, repoName_b.data(), repoName_str_len);
+        repoName_str[repoName_str_len] = '\0';
         const char* sigval2 = repoName_str;
         const QString keyUrl_ret = keyUrl;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray keyUrl_b = keyUrl_ret.toUtf8();
-        char* keyUrl_str = static_cast<char*>(malloc(keyUrl_b.length() + 1));
-        memcpy(keyUrl_str, keyUrl_b.data(), keyUrl_b.length());
-        keyUrl_str[keyUrl_b.length()] = '\0';
+        auto keyUrl_str_len = keyUrl_b.length();
+        char* keyUrl_str = static_cast<char*>(malloc(keyUrl_str_len + 1));
+        memcpy(keyUrl_str, keyUrl_b.data(), keyUrl_str_len);
+        keyUrl_str[keyUrl_str_len] = '\0';
         const char* sigval3 = keyUrl_str;
         const QString keyUserid_ret = keyUserid;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray keyUserid_b = keyUserid_ret.toUtf8();
-        char* keyUserid_str = static_cast<char*>(malloc(keyUserid_b.length() + 1));
-        memcpy(keyUserid_str, keyUserid_b.data(), keyUserid_b.length());
-        keyUserid_str[keyUserid_b.length()] = '\0';
+        auto keyUserid_str_len = keyUserid_b.length();
+        char* keyUserid_str = static_cast<char*>(malloc(keyUserid_str_len + 1));
+        memcpy(keyUserid_str, keyUserid_b.data(), keyUserid_str_len);
+        keyUserid_str[keyUserid_str_len] = '\0';
         const char* sigval4 = keyUserid_str;
         const QString keyId_ret = keyId;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray keyId_b = keyId_ret.toUtf8();
-        char* keyId_str = static_cast<char*>(malloc(keyId_b.length() + 1));
-        memcpy(keyId_str, keyId_b.data(), keyId_b.length());
-        keyId_str[keyId_b.length()] = '\0';
+        auto keyId_str_len = keyId_b.length();
+        char* keyId_str = static_cast<char*>(malloc(keyId_str_len + 1));
+        memcpy(keyId_str, keyId_b.data(), keyId_str_len);
+        keyId_str[keyId_str_len] = '\0';
         const char* sigval5 = keyId_str;
         const QString keyFingerprint_ret = keyFingerprint;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray keyFingerprint_b = keyFingerprint_ret.toUtf8();
-        char* keyFingerprint_str = static_cast<char*>(malloc(keyFingerprint_b.length() + 1));
-        memcpy(keyFingerprint_str, keyFingerprint_b.data(), keyFingerprint_b.length());
-        keyFingerprint_str[keyFingerprint_b.length()] = '\0';
+        auto keyFingerprint_str_len = keyFingerprint_b.length();
+        char* keyFingerprint_str = static_cast<char*>(malloc(keyFingerprint_str_len + 1));
+        memcpy(keyFingerprint_str, keyFingerprint_b.data(), keyFingerprint_str_len);
+        keyFingerprint_str[keyFingerprint_str_len] = '\0';
         const char* sigval6 = keyFingerprint_str;
         const QString keyTimestamp_ret = keyTimestamp;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray keyTimestamp_b = keyTimestamp_ret.toUtf8();
-        char* keyTimestamp_str = static_cast<char*>(malloc(keyTimestamp_b.length() + 1));
-        memcpy(keyTimestamp_str, keyTimestamp_b.data(), keyTimestamp_b.length());
-        keyTimestamp_str[keyTimestamp_b.length()] = '\0';
+        auto keyTimestamp_str_len = keyTimestamp_b.length();
+        char* keyTimestamp_str = static_cast<char*>(malloc(keyTimestamp_str_len + 1));
+        memcpy(keyTimestamp_str, keyTimestamp_b.data(), keyTimestamp_str_len);
+        keyTimestamp_str[keyTimestamp_str_len] = '\0';
         const char* sigval7 = keyTimestamp_str;
         int sigval8 = static_cast<int>(type);
         slotFunc(self, sigval1, sigval2, sigval3, sigval4, sigval5, sigval6, sigval7, sigval8);
-        free(packageID_str);
-        free(repoName_str);
-        free(keyUrl_str);
-        free(keyUserid_str);
-        free(keyId_str);
-        free(keyFingerprint_str);
-        free(keyTimestamp_str);
+        libqt_free(packageID_str);
+        libqt_free(repoName_str);
+        libqt_free(keyUrl_str);
+        libqt_free(keyUserid_str);
+        libqt_free(keyId_str);
+        libqt_free(keyFingerprint_str);
+        libqt_free(keyTimestamp_str);
     });
 }
 
@@ -922,12 +958,13 @@ void PackageKit__Transaction_Connect_RequireRestart(PackageKit__Transaction* sel
         const QString packageID_ret = packageID;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray packageID_b = packageID_ret.toUtf8();
-        char* packageID_str = static_cast<char*>(malloc(packageID_b.length() + 1));
-        memcpy(packageID_str, packageID_b.data(), packageID_b.length());
-        packageID_str[packageID_b.length()] = '\0';
+        auto packageID_str_len = packageID_b.length();
+        char* packageID_str = static_cast<char*>(malloc(packageID_str_len + 1));
+        memcpy(packageID_str, packageID_b.data(), packageID_str_len);
+        packageID_str[packageID_str_len] = '\0';
         const char* sigval2 = packageID_str;
         slotFunc(self, sigval1, sigval2);
-        free(packageID_str);
+        libqt_free(packageID_str);
     });
 }
 

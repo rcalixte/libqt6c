@@ -122,12 +122,13 @@ void Solid__Battery_Connect_PresentStateChanged(Solid__Battery* self, intptr_t s
         const QString udi_ret = udi;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray udi_b = udi_ret.toUtf8();
-        char* udi_str = static_cast<char*>(malloc(udi_b.length() + 1));
-        memcpy(udi_str, udi_b.data(), udi_b.length());
-        udi_str[udi_b.length()] = '\0';
+        auto udi_str_len = udi_b.length();
+        char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
+        memcpy(udi_str, udi_b.data(), udi_str_len);
+        udi_str[udi_str_len] = '\0';
         const char* sigval2 = udi_str;
         slotFunc(self, sigval1, sigval2);
-        free(udi_str);
+        libqt_free(udi_str);
     });
 }
 
@@ -143,12 +144,13 @@ void Solid__Battery_Connect_ChargePercentChanged(Solid__Battery* self, intptr_t 
         const QString udi_ret = udi;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray udi_b = udi_ret.toUtf8();
-        char* udi_str = static_cast<char*>(malloc(udi_b.length() + 1));
-        memcpy(udi_str, udi_b.data(), udi_b.length());
-        udi_str[udi_b.length()] = '\0';
+        auto udi_str_len = udi_b.length();
+        char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
+        memcpy(udi_str, udi_b.data(), udi_str_len);
+        udi_str[udi_str_len] = '\0';
         const char* sigval2 = udi_str;
         slotFunc(self, sigval1, sigval2);
-        free(udi_str);
+        libqt_free(udi_str);
     });
 }
 
@@ -164,12 +166,13 @@ void Solid__Battery_Connect_CapacityChanged(Solid__Battery* self, intptr_t slot)
         const QString udi_ret = udi;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray udi_b = udi_ret.toUtf8();
-        char* udi_str = static_cast<char*>(malloc(udi_b.length() + 1));
-        memcpy(udi_str, udi_b.data(), udi_b.length());
-        udi_str[udi_b.length()] = '\0';
+        auto udi_str_len = udi_b.length();
+        char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
+        memcpy(udi_str, udi_b.data(), udi_str_len);
+        udi_str[udi_str_len] = '\0';
         const char* sigval2 = udi_str;
         slotFunc(self, sigval1, sigval2);
-        free(udi_str);
+        libqt_free(udi_str);
     });
 }
 
@@ -185,12 +188,13 @@ void Solid__Battery_Connect_CycleCountChanged(Solid__Battery* self, intptr_t slo
         const QString udi_ret = udi;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray udi_b = udi_ret.toUtf8();
-        char* udi_str = static_cast<char*>(malloc(udi_b.length() + 1));
-        memcpy(udi_str, udi_b.data(), udi_b.length());
-        udi_str[udi_b.length()] = '\0';
+        auto udi_str_len = udi_b.length();
+        char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
+        memcpy(udi_str, udi_b.data(), udi_str_len);
+        udi_str[udi_str_len] = '\0';
         const char* sigval2 = udi_str;
         slotFunc(self, sigval1, sigval2);
-        free(udi_str);
+        libqt_free(udi_str);
     });
 }
 
@@ -206,12 +210,13 @@ void Solid__Battery_Connect_PowerSupplyStateChanged(Solid__Battery* self, intptr
         const QString udi_ret = udi;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray udi_b = udi_ret.toUtf8();
-        char* udi_str = static_cast<char*>(malloc(udi_b.length() + 1));
-        memcpy(udi_str, udi_b.data(), udi_b.length());
-        udi_str[udi_b.length()] = '\0';
+        auto udi_str_len = udi_b.length();
+        char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
+        memcpy(udi_str, udi_b.data(), udi_str_len);
+        udi_str[udi_str_len] = '\0';
         const char* sigval2 = udi_str;
         slotFunc(self, sigval1, sigval2);
-        free(udi_str);
+        libqt_free(udi_str);
     });
 }
 
@@ -239,12 +244,13 @@ void Solid__Battery_Connect_TimeToEmptyChanged(Solid__Battery* self, intptr_t sl
         const QString udi_ret = udi;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray udi_b = udi_ret.toUtf8();
-        char* udi_str = static_cast<char*>(malloc(udi_b.length() + 1));
-        memcpy(udi_str, udi_b.data(), udi_b.length());
-        udi_str[udi_b.length()] = '\0';
+        auto udi_str_len = udi_b.length();
+        char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
+        memcpy(udi_str, udi_b.data(), udi_str_len);
+        udi_str[udi_str_len] = '\0';
         const char* sigval2 = udi_str;
         slotFunc(self, sigval1, sigval2);
-        free(udi_str);
+        libqt_free(udi_str);
     });
 }
 
@@ -260,12 +266,13 @@ void Solid__Battery_Connect_TimeToFullChanged(Solid__Battery* self, intptr_t slo
         const QString udi_ret = udi;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray udi_b = udi_ret.toUtf8();
-        char* udi_str = static_cast<char*>(malloc(udi_b.length() + 1));
-        memcpy(udi_str, udi_b.data(), udi_b.length());
-        udi_str[udi_b.length()] = '\0';
+        auto udi_str_len = udi_b.length();
+        char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
+        memcpy(udi_str, udi_b.data(), udi_str_len);
+        udi_str[udi_str_len] = '\0';
         const char* sigval2 = udi_str;
         slotFunc(self, sigval1, sigval2);
-        free(udi_str);
+        libqt_free(udi_str);
     });
 }
 
@@ -281,12 +288,13 @@ void Solid__Battery_Connect_EnergyChanged(Solid__Battery* self, intptr_t slot) {
         const QString udi_ret = udi;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray udi_b = udi_ret.toUtf8();
-        char* udi_str = static_cast<char*>(malloc(udi_b.length() + 1));
-        memcpy(udi_str, udi_b.data(), udi_b.length());
-        udi_str[udi_b.length()] = '\0';
+        auto udi_str_len = udi_b.length();
+        char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
+        memcpy(udi_str, udi_b.data(), udi_str_len);
+        udi_str[udi_str_len] = '\0';
         const char* sigval2 = udi_str;
         slotFunc(self, sigval1, sigval2);
-        free(udi_str);
+        libqt_free(udi_str);
     });
 }
 
@@ -302,12 +310,13 @@ void Solid__Battery_Connect_EnergyFullChanged(Solid__Battery* self, intptr_t slo
         const QString udi_ret = udi;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray udi_b = udi_ret.toUtf8();
-        char* udi_str = static_cast<char*>(malloc(udi_b.length() + 1));
-        memcpy(udi_str, udi_b.data(), udi_b.length());
-        udi_str[udi_b.length()] = '\0';
+        auto udi_str_len = udi_b.length();
+        char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
+        memcpy(udi_str, udi_b.data(), udi_str_len);
+        udi_str[udi_str_len] = '\0';
         const char* sigval2 = udi_str;
         slotFunc(self, sigval1, sigval2);
-        free(udi_str);
+        libqt_free(udi_str);
     });
 }
 
@@ -323,12 +332,13 @@ void Solid__Battery_Connect_EnergyFullDesignChanged(Solid__Battery* self, intptr
         const QString udi_ret = udi;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray udi_b = udi_ret.toUtf8();
-        char* udi_str = static_cast<char*>(malloc(udi_b.length() + 1));
-        memcpy(udi_str, udi_b.data(), udi_b.length());
-        udi_str[udi_b.length()] = '\0';
+        auto udi_str_len = udi_b.length();
+        char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
+        memcpy(udi_str, udi_b.data(), udi_str_len);
+        udi_str[udi_str_len] = '\0';
         const char* sigval2 = udi_str;
         slotFunc(self, sigval1, sigval2);
-        free(udi_str);
+        libqt_free(udi_str);
     });
 }
 
@@ -344,12 +354,13 @@ void Solid__Battery_Connect_EnergyRateChanged(Solid__Battery* self, intptr_t slo
         const QString udi_ret = udi;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray udi_b = udi_ret.toUtf8();
-        char* udi_str = static_cast<char*>(malloc(udi_b.length() + 1));
-        memcpy(udi_str, udi_b.data(), udi_b.length());
-        udi_str[udi_b.length()] = '\0';
+        auto udi_str_len = udi_b.length();
+        char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
+        memcpy(udi_str, udi_b.data(), udi_str_len);
+        udi_str[udi_str_len] = '\0';
         const char* sigval2 = udi_str;
         slotFunc(self, sigval1, sigval2);
-        free(udi_str);
+        libqt_free(udi_str);
     });
 }
 
@@ -365,12 +376,13 @@ void Solid__Battery_Connect_VoltageChanged(Solid__Battery* self, intptr_t slot) 
         const QString udi_ret = udi;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray udi_b = udi_ret.toUtf8();
-        char* udi_str = static_cast<char*>(malloc(udi_b.length() + 1));
-        memcpy(udi_str, udi_b.data(), udi_b.length());
-        udi_str[udi_b.length()] = '\0';
+        auto udi_str_len = udi_b.length();
+        char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
+        memcpy(udi_str, udi_b.data(), udi_str_len);
+        udi_str[udi_str_len] = '\0';
         const char* sigval2 = udi_str;
         slotFunc(self, sigval1, sigval2);
-        free(udi_str);
+        libqt_free(udi_str);
     });
 }
 
@@ -386,12 +398,13 @@ void Solid__Battery_Connect_TemperatureChanged(Solid__Battery* self, intptr_t sl
         const QString udi_ret = udi;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray udi_b = udi_ret.toUtf8();
-        char* udi_str = static_cast<char*>(malloc(udi_b.length() + 1));
-        memcpy(udi_str, udi_b.data(), udi_b.length());
-        udi_str[udi_b.length()] = '\0';
+        auto udi_str_len = udi_b.length();
+        char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
+        memcpy(udi_str, udi_b.data(), udi_str_len);
+        udi_str[udi_str_len] = '\0';
         const char* sigval2 = udi_str;
         slotFunc(self, sigval1, sigval2);
-        free(udi_str);
+        libqt_free(udi_str);
     });
 }
 
@@ -407,12 +420,13 @@ void Solid__Battery_Connect_RemainingTimeChanged(Solid__Battery* self, intptr_t 
         const QString udi_ret = udi;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray udi_b = udi_ret.toUtf8();
-        char* udi_str = static_cast<char*>(malloc(udi_b.length() + 1));
-        memcpy(udi_str, udi_b.data(), udi_b.length());
-        udi_str[udi_b.length()] = '\0';
+        auto udi_str_len = udi_b.length();
+        char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
+        memcpy(udi_str, udi_b.data(), udi_str_len);
+        udi_str[udi_str_len] = '\0';
         const char* sigval2 = udi_str;
         slotFunc(self, sigval1, sigval2);
-        free(udi_str);
+        libqt_free(udi_str);
     });
 }
 
@@ -428,12 +442,13 @@ void Solid__Battery_Connect_ChargeStateChanged2(Solid__Battery* self, intptr_t s
         const QString udi_ret = udi;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray udi_b = udi_ret.toUtf8();
-        char* udi_str = static_cast<char*>(malloc(udi_b.length() + 1));
-        memcpy(udi_str, udi_b.data(), udi_b.length());
-        udi_str[udi_b.length()] = '\0';
+        auto udi_str_len = udi_b.length();
+        char* udi_str = static_cast<char*>(malloc(udi_str_len + 1));
+        memcpy(udi_str, udi_b.data(), udi_str_len);
+        udi_str[udi_str_len] = '\0';
         const char* sigval2 = udi_str;
         slotFunc(self, sigval1, sigval2);
-        free(udi_str);
+        libqt_free(udi_str);
     });
 }
 

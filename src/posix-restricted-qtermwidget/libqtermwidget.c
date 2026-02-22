@@ -249,7 +249,7 @@ void q_termwidget_set_environment(void* self, const char* environment[static 1])
     free(environment_qstr);
 }
 
-void q_termwidget_on_set_environment(void* self, void (*callback)(void*, const char***)) {
+void q_termwidget_on_set_environment(void* self, void (*callback)(void*, const char**)) {
     QTermWidget_OnSetEnvironment((QTermWidget*)self, (intptr_t)callback);
 }
 
@@ -324,7 +324,7 @@ void q_termwidget_set_args(void* self, const char* args[static 1]) {
     free(args_qstr);
 }
 
-void q_termwidget_on_set_args(void* self, void (*callback)(void*, const char***)) {
+void q_termwidget_on_set_args(void* self, void (*callback)(void*, const char**)) {
     QTermWidget_OnSetArgs((QTermWidget*)self, (intptr_t)callback);
 }
 

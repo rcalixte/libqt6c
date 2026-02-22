@@ -131,7 +131,7 @@ void k_shellcompletion_post_process_matches(void* self, const char* matches[stat
 /// @param self KShellCompletion*
 /// @param callback void func(KShellCompletion* self, const char** matches)
 ///
-void k_shellcompletion_on_post_process_matches(void* self, void (*callback)(void*, const char***));
+void k_shellcompletion_on_post_process_matches(void* self, void (*callback)(void*, const char**));
 
 /// [Upstream resources](https://api.kde.org/kshellcompletion.html#postProcessMatches)
 ///
@@ -449,7 +449,7 @@ void k_shellcompletion_matches(void* self, const char* matchlist[static 1]);
 /// @param self KShellCompletion*
 /// @param callback void func(KShellCompletion* self, const char** matchlist)
 ///
-void k_shellcompletion_on_matches(void* self, void (*callback)(void*, const char***));
+void k_shellcompletion_on_matches(void* self, void (*callback)(void*, const char**));
 
 /// Inherited from KCompletion
 ///
@@ -1435,7 +1435,7 @@ void k_shellcompletion_qbase_set_items(void* self, const char* itemList[static 1
 /// @param self KShellCompletion*
 /// @param callback void func(KShellCompletion* self, const char** itemList)
 ///
-void k_shellcompletion_on_set_items(void* self, void (*callback)(void*, const char***));
+void k_shellcompletion_on_set_items(void* self, void (*callback)(void*, const char**));
 
 /// Inherited from KCompletion
 ///

@@ -241,7 +241,7 @@ void k_historycombobox_insert_items(void* self, const char* items[static 1]);
 /// @param self KHistoryComboBox*
 /// @param callback void func(KHistoryComboBox* self, const char** items)
 ///
-void k_historycombobox_on_insert_items(void* self, void (*callback)(void*, const char***));
+void k_historycombobox_on_insert_items(void* self, void (*callback)(void*, const char**));
 
 /// [Upstream resources](https://api.kde.org/khistorycombobox.html#insertItems)
 ///
@@ -4577,7 +4577,7 @@ void k_historycombobox_qbase_set_completed_items(void* self, const char* items[s
 /// @param self KHistoryComboBox*
 /// @param callback void func(KHistoryComboBox* self, const char** items, bool autoSuggest)
 ///
-void k_historycombobox_on_set_completed_items(void* self, void (*callback)(void*, const char***, bool));
+void k_historycombobox_on_set_completed_items(void* self, void (*callback)(void*, const char**, bool));
 
 /// Inherited from KComboBox
 ///
