@@ -4619,7 +4619,7 @@ void k_urlcombobox_qbase_set_completed_items(void* self, const char* items[stati
 /// @param self KUrlComboBox*
 /// @param callback void func(KUrlComboBox* self, const char** items, bool autoSuggest)
 ///
-void k_urlcombobox_on_set_completed_items(void* self, void (*callback)(void*, const char***, bool));
+void k_urlcombobox_on_set_completed_items(void* self, void (*callback)(void*, const char**, bool));
 
 /// Inherited from KComboBox
 ///

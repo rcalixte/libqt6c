@@ -210,12 +210,13 @@ void QValueAxis_Connect_LabelFormatChanged(QValueAxis* self, intptr_t slot) {
         const QString format_ret = format;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray format_b = format_ret.toUtf8();
-        char* format_str = static_cast<char*>(malloc(format_b.length() + 1));
-        memcpy(format_str, format_b.data(), format_b.length());
-        format_str[format_b.length()] = '\0';
+        auto format_str_len = format_b.length();
+        char* format_str = static_cast<char*>(malloc(format_str_len + 1));
+        memcpy(format_str, format_b.data(), format_str_len);
+        format_str[format_str_len] = '\0';
         const char* sigval1 = format_str;
         slotFunc(self, sigval1);
-        free(format_str);
+        libqt_free(format_str);
     });
 }
 

@@ -112,7 +112,7 @@ void k_urifiltersearchprovider_set_keys(void* self, const char* keys[static 1]) 
     free(keys_qstr);
 }
 
-void k_urifiltersearchprovider_on_set_keys(void* self, void (*callback)(void*, const char***)) {
+void k_urifiltersearchprovider_on_set_keys(void* self, void (*callback)(void*, const char**)) {
     KUriFilterSearchProvider_OnSetKeys((KUriFilterSearchProvider*)self, (intptr_t)callback);
 }
 

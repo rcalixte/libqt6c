@@ -780,12 +780,13 @@ void Accounts__Account_Connect_DisplayNameChanged(Accounts__Account* self, intpt
         const QString displayName_ret = displayName;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray displayName_b = displayName_ret.toUtf8();
-        char* displayName_str = static_cast<char*>(malloc(displayName_b.length() + 1));
-        memcpy(displayName_str, displayName_b.data(), displayName_b.length());
-        displayName_str[displayName_b.length()] = '\0';
+        auto displayName_str_len = displayName_b.length();
+        char* displayName_str = static_cast<char*>(malloc(displayName_str_len + 1));
+        memcpy(displayName_str, displayName_b.data(), displayName_str_len);
+        displayName_str[displayName_str_len] = '\0';
         const char* sigval1 = displayName_str;
         slotFunc(self, sigval1);
-        free(displayName_str);
+        libqt_free(displayName_str);
     });
 }
 
@@ -800,13 +801,14 @@ void Accounts__Account_Connect_EnabledChanged(Accounts__Account* self, intptr_t 
         const QString serviceName_ret = serviceName;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray serviceName_b = serviceName_ret.toUtf8();
-        char* serviceName_str = static_cast<char*>(malloc(serviceName_b.length() + 1));
-        memcpy(serviceName_str, serviceName_b.data(), serviceName_b.length());
-        serviceName_str[serviceName_b.length()] = '\0';
+        auto serviceName_str_len = serviceName_b.length();
+        char* serviceName_str = static_cast<char*>(malloc(serviceName_str_len + 1));
+        memcpy(serviceName_str, serviceName_b.data(), serviceName_str_len);
+        serviceName_str[serviceName_str_len] = '\0';
         const char* sigval1 = serviceName_str;
         bool sigval2 = enabled;
         slotFunc(self, sigval1, sigval2);
-        free(serviceName_str);
+        libqt_free(serviceName_str);
     });
 }
 

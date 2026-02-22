@@ -109,7 +109,7 @@ void q_packagekit__offline_prepared_updates(void* self, const char* updates[stat
 /// @param self PackageKit__Offline*
 /// @param callback void func(PackageKit__Offline* self, const char** updates)
 ///
-void q_packagekit__offline_on_prepared_updates(void* self, void (*callback)(void*, const char***));
+void q_packagekit__offline_on_prepared_updates(void* self, void (*callback)(void*, const char**));
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///

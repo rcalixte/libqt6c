@@ -75,12 +75,13 @@ void QFileSystemModel_Connect_RootPathChanged(QFileSystemModel* self, intptr_t s
         const QString newPath_ret = newPath;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray newPath_b = newPath_ret.toUtf8();
-        char* newPath_str = static_cast<char*>(malloc(newPath_b.length() + 1));
-        memcpy(newPath_str, newPath_b.data(), newPath_b.length());
-        newPath_str[newPath_b.length()] = '\0';
+        auto newPath_str_len = newPath_b.length();
+        char* newPath_str = static_cast<char*>(malloc(newPath_str_len + 1));
+        memcpy(newPath_str, newPath_b.data(), newPath_str_len);
+        newPath_str[newPath_str_len] = '\0';
         const char* sigval1 = newPath_str;
         slotFunc(self, sigval1);
-        free(newPath_str);
+        libqt_free(newPath_str);
     });
 }
 
@@ -97,28 +98,31 @@ void QFileSystemModel_Connect_FileRenamed(QFileSystemModel* self, intptr_t slot)
         const QString path_ret = path;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray path_b = path_ret.toUtf8();
-        char* path_str = static_cast<char*>(malloc(path_b.length() + 1));
-        memcpy(path_str, path_b.data(), path_b.length());
-        path_str[path_b.length()] = '\0';
+        auto path_str_len = path_b.length();
+        char* path_str = static_cast<char*>(malloc(path_str_len + 1));
+        memcpy(path_str, path_b.data(), path_str_len);
+        path_str[path_str_len] = '\0';
         const char* sigval1 = path_str;
         const QString oldName_ret = oldName;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray oldName_b = oldName_ret.toUtf8();
-        char* oldName_str = static_cast<char*>(malloc(oldName_b.length() + 1));
-        memcpy(oldName_str, oldName_b.data(), oldName_b.length());
-        oldName_str[oldName_b.length()] = '\0';
+        auto oldName_str_len = oldName_b.length();
+        char* oldName_str = static_cast<char*>(malloc(oldName_str_len + 1));
+        memcpy(oldName_str, oldName_b.data(), oldName_str_len);
+        oldName_str[oldName_str_len] = '\0';
         const char* sigval2 = oldName_str;
         const QString newName_ret = newName;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray newName_b = newName_ret.toUtf8();
-        char* newName_str = static_cast<char*>(malloc(newName_b.length() + 1));
-        memcpy(newName_str, newName_b.data(), newName_b.length());
-        newName_str[newName_b.length()] = '\0';
+        auto newName_str_len = newName_b.length();
+        char* newName_str = static_cast<char*>(malloc(newName_str_len + 1));
+        memcpy(newName_str, newName_b.data(), newName_str_len);
+        newName_str[newName_str_len] = '\0';
         const char* sigval3 = newName_str;
         slotFunc(self, sigval1, sigval2, sigval3);
-        free(path_str);
-        free(oldName_str);
-        free(newName_str);
+        libqt_free(path_str);
+        libqt_free(oldName_str);
+        libqt_free(newName_str);
     });
 }
 
@@ -133,12 +137,13 @@ void QFileSystemModel_Connect_DirectoryLoaded(QFileSystemModel* self, intptr_t s
         const QString path_ret = path;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray path_b = path_ret.toUtf8();
-        char* path_str = static_cast<char*>(malloc(path_b.length() + 1));
-        memcpy(path_str, path_b.data(), path_b.length());
-        path_str[path_b.length()] = '\0';
+        auto path_str_len = path_b.length();
+        char* path_str = static_cast<char*>(malloc(path_str_len + 1));
+        memcpy(path_str, path_b.data(), path_str_len);
+        path_str[path_str_len] = '\0';
         const char* sigval1 = path_str;
         slotFunc(self, sigval1);
-        free(path_str);
+        libqt_free(path_str);
     });
 }
 

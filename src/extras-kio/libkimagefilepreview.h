@@ -4798,7 +4798,7 @@ void k_imagefilepreview_qbase_set_supported_mime_types(void* self, const char* m
 /// @param self KImageFilePreview*
 /// @param callback void func(KImageFilePreview* self, const char** mimeTypes)
 ///
-void k_imagefilepreview_on_set_supported_mime_types(void* self, void (*callback)(void*, const char***));
+void k_imagefilepreview_on_set_supported_mime_types(void* self, void (*callback)(void*, const char**));
 
 /// Inherited from QWidget
 ///

@@ -128,15 +128,16 @@ void KIO__CopyJob_Connect_Linking(KIO__CopyJob* self, intptr_t slot) {
         const QString target_ret = target;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray target_b = target_ret.toUtf8();
-        char* target_str = static_cast<char*>(malloc(target_b.length() + 1));
-        memcpy(target_str, target_b.data(), target_b.length());
-        target_str[target_b.length()] = '\0';
+        auto target_str_len = target_b.length();
+        char* target_str = static_cast<char*>(malloc(target_str_len + 1));
+        memcpy(target_str, target_b.data(), target_str_len);
+        target_str[target_str_len] = '\0';
         const char* sigval2 = target_str;
         const QUrl& to_ret = to;
         // Cast returned reference into pointer
         QUrl* sigval3 = const_cast<QUrl*>(&to_ret);
         slotFunc(self, sigval1, sigval2, sigval3);
-        free(target_str);
+        libqt_free(target_str);
     });
 }
 
@@ -229,15 +230,16 @@ void KIO__CopyJob_Connect_CopyingLinkDone(KIO__CopyJob* self, intptr_t slot) {
         const QString target_ret = target;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray target_b = target_ret.toUtf8();
-        char* target_str = static_cast<char*>(malloc(target_b.length() + 1));
-        memcpy(target_str, target_b.data(), target_b.length());
-        target_str[target_b.length()] = '\0';
+        auto target_str_len = target_b.length();
+        char* target_str = static_cast<char*>(malloc(target_str_len + 1));
+        memcpy(target_str, target_b.data(), target_str_len);
+        target_str[target_str_len] = '\0';
         const char* sigval3 = target_str;
         const QUrl& to_ret = to;
         // Cast returned reference into pointer
         QUrl* sigval4 = const_cast<QUrl*>(&to_ret);
         slotFunc(self, sigval1, sigval2, sigval3, sigval4);
-        free(target_str);
+        libqt_free(target_str);
     });
 }
 

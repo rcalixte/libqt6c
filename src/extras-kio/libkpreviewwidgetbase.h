@@ -162,7 +162,7 @@ void k_previewwidgetbase_set_supported_mime_types(void* self, const char* mimeTy
 /// @param self KPreviewWidgetBase*
 /// @param callback void func(KPreviewWidgetBase* self, const char** mimeTypes)
 ///
-void k_previewwidgetbase_on_set_supported_mime_types(void* self, void (*callback)(void*, const char***));
+void k_previewwidgetbase_on_set_supported_mime_types(void* self, void (*callback)(void*, const char**));
 
 /// [Upstream resources](https://api.kde.org/kpreviewwidgetbase.html#setSupportedMimeTypes)
 ///

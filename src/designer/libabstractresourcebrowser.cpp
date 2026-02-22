@@ -120,12 +120,13 @@ void QDesignerResourceBrowserInterface_Connect_CurrentPathChanged(QDesignerResou
         const QString filePath_ret = filePath;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray filePath_b = filePath_ret.toUtf8();
-        char* filePath_str = static_cast<char*>(malloc(filePath_b.length() + 1));
-        memcpy(filePath_str, filePath_b.data(), filePath_b.length());
-        filePath_str[filePath_b.length()] = '\0';
+        auto filePath_str_len = filePath_b.length();
+        char* filePath_str = static_cast<char*>(malloc(filePath_str_len + 1));
+        memcpy(filePath_str, filePath_b.data(), filePath_str_len);
+        filePath_str[filePath_str_len] = '\0';
         const char* sigval1 = filePath_str;
         slotFunc(self, sigval1);
-        free(filePath_str);
+        libqt_free(filePath_str);
     });
 }
 
@@ -140,12 +141,13 @@ void QDesignerResourceBrowserInterface_Connect_PathActivated(QDesignerResourceBr
         const QString filePath_ret = filePath;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray filePath_b = filePath_ret.toUtf8();
-        char* filePath_str = static_cast<char*>(malloc(filePath_b.length() + 1));
-        memcpy(filePath_str, filePath_b.data(), filePath_b.length());
-        filePath_str[filePath_b.length()] = '\0';
+        auto filePath_str_len = filePath_b.length();
+        char* filePath_str = static_cast<char*>(malloc(filePath_str_len + 1));
+        memcpy(filePath_str, filePath_b.data(), filePath_str_len);
+        filePath_str[filePath_str_len] = '\0';
         const char* sigval1 = filePath_str;
         slotFunc(self, sigval1);
-        free(filePath_str);
+        libqt_free(filePath_str);
     });
 }
 

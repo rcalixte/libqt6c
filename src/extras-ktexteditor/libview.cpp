@@ -150,12 +150,13 @@ void KTextEditor__View_Connect_TextInserted(KTextEditor__View* self, intptr_t sl
         const QString text_ret = text;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray text_b = text_ret.toUtf8();
-        char* text_str = static_cast<char*>(malloc(text_b.length() + 1));
-        memcpy(text_str, text_b.data(), text_b.length());
-        text_str[text_b.length()] = '\0';
+        auto text_str_len = text_b.length();
+        char* text_str = static_cast<char*>(malloc(text_str_len + 1));
+        memcpy(text_str, text_b.data(), text_str_len);
+        text_str[text_str_len] = '\0';
         const char* sigval3 = text_str;
         slotFunc(self, sigval1, sigval2, sigval3);
-        free(text_str);
+        libqt_free(text_str);
     });
 }
 

@@ -295,12 +295,13 @@ void QWebEngineView_Connect_TitleChanged(QWebEngineView* self, intptr_t slot) {
         const QString title_ret = title;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray title_b = title_ret.toUtf8();
-        char* title_str = static_cast<char*>(malloc(title_b.length() + 1));
-        memcpy(title_str, title_b.data(), title_b.length());
-        title_str[title_b.length()] = '\0';
+        auto title_str_len = title_b.length();
+        char* title_str = static_cast<char*>(malloc(title_str_len + 1));
+        memcpy(title_str, title_b.data(), title_str_len);
+        title_str[title_str_len] = '\0';
         const char* sigval1 = title_str;
         slotFunc(self, sigval1);
-        free(title_str);
+        libqt_free(title_str);
     });
 }
 
@@ -381,13 +382,14 @@ void QWebEngineView_Connect_PdfPrintingFinished(QWebEngineView* self, intptr_t s
         const QString filePath_ret = filePath;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray filePath_b = filePath_ret.toUtf8();
-        char* filePath_str = static_cast<char*>(malloc(filePath_b.length() + 1));
-        memcpy(filePath_str, filePath_b.data(), filePath_b.length());
-        filePath_str[filePath_b.length()] = '\0';
+        auto filePath_str_len = filePath_b.length();
+        char* filePath_str = static_cast<char*>(malloc(filePath_str_len + 1));
+        memcpy(filePath_str, filePath_b.data(), filePath_str_len);
+        filePath_str[filePath_str_len] = '\0';
         const char* sigval1 = filePath_str;
         bool sigval2 = success;
         slotFunc(self, sigval1, sigval2);
-        free(filePath_str);
+        libqt_free(filePath_str);
     });
 }
 

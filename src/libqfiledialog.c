@@ -449,7 +449,7 @@ void q_filedialog_files_selected(void* self, const char* files[static 1]) {
     free(files_qstr);
 }
 
-void q_filedialog_on_files_selected(void* self, void (*callback)(void*, const char***)) {
+void q_filedialog_on_files_selected(void* self, void (*callback)(void*, const char**)) {
     QFileDialog_Connect_FilesSelected((QFileDialog*)self, (intptr_t)callback);
 }
 

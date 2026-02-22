@@ -18479,7 +18479,7 @@ void q_cpaxisticker_generate(void* self, void* range, void* locale, void* format
 /// @param self QCPAxisTicker*
 /// @param callback void func(QCPAxisTicker* self, QCPRange* range, QLocale* locale, QChar* formatChar, int precision, libqt_list of double ticks, libqt_list of double subTicks, const char** tickLabels)
 ///
-void q_cpaxisticker_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char***));
+void q_cpaxisticker_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
@@ -19104,7 +19104,7 @@ void q_cpaxistickerdatetime_qbase_generate(void* self, void* range, void* locale
 /// @param self QCPAxisTickerDateTime*
 /// @param callback void func(QCPAxisTickerDateTime* self, QCPRange* range, QLocale* locale, QChar* formatChar, int precision, libqt_list of double ticks, libqt_list of double subTicks, const char** tickLabels)
 ///
-void q_cpaxistickerdatetime_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char***));
+void q_cpaxistickerdatetime_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19578,7 +19578,7 @@ void q_cpaxistickertime_qbase_generate(void* self, void* range, void* locale, vo
 /// @param self QCPAxisTickerTime*
 /// @param callback void func(QCPAxisTickerTime* self, QCPRange* range, QLocale* locale, QChar* formatChar, int precision, libqt_list of double ticks, libqt_list of double subTicks, const char** tickLabels)
 ///
-void q_cpaxistickertime_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char***));
+void q_cpaxistickertime_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20002,7 +20002,7 @@ void q_cpaxistickerfixed_qbase_generate(void* self, void* range, void* locale, v
 /// @param self QCPAxisTickerFixed*
 /// @param callback void func(QCPAxisTickerFixed* self, QCPRange* range, QLocale* locale, QChar* formatChar, int precision, libqt_list of double ticks, libqt_list of double subTicks, const char** tickLabels)
 ///
-void q_cpaxistickerfixed_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char***));
+void q_cpaxistickerfixed_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20639,7 +20639,7 @@ void q_cpaxistickertext_qbase_generate(void* self, void* range, void* locale, vo
 /// @param self QCPAxisTickerText*
 /// @param callback void func(QCPAxisTickerText* self, QCPRange* range, QLocale* locale, QChar* formatChar, int precision, libqt_list of double ticks, libqt_list of double subTicks, const char** tickLabels)
 ///
-void q_cpaxistickertext_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char***));
+void q_cpaxistickertext_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -21249,7 +21249,7 @@ void q_cpaxistickerpi_qbase_generate(void* self, void* range, void* locale, void
 /// @param self QCPAxisTickerPi*
 /// @param callback void func(QCPAxisTickerPi* self, QCPRange* range, QLocale* locale, QChar* formatChar, int precision, libqt_list of double ticks, libqt_list of double subTicks, const char** tickLabels)
 ///
-void q_cpaxistickerpi_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char***));
+void q_cpaxistickerpi_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -21702,7 +21702,7 @@ void q_cpaxistickerlog_qbase_generate(void* self, void* range, void* locale, voi
 /// @param self QCPAxisTickerLog*
 /// @param callback void func(QCPAxisTickerLog* self, QCPRange* range, QLocale* locale, QChar* formatChar, int precision, libqt_list of double ticks, libqt_list of double subTicks, const char** tickLabels)
 ///
-void q_cpaxistickerlog_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char***));
+void q_cpaxistickerlog_on_generate(void* self, void (*callback)(void*, void*, void*, void*, int, libqt_list, libqt_list, const char**));
 
 /// Inherited from QCPAxisTicker
 ///

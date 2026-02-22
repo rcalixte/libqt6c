@@ -414,7 +414,7 @@ void k_urlcompletion_post_process_matches(void* self, const char* matches[static
 /// @param self KUrlCompletion*
 /// @param callback void func(KUrlCompletion* self, const char** matches)
 ///
-void k_urlcompletion_on_post_process_matches(void* self, void (*callback)(void*, const char***));
+void k_urlcompletion_on_post_process_matches(void* self, void (*callback)(void*, const char**));
 
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#postProcessMatches)
 ///
@@ -689,7 +689,7 @@ void k_urlcompletion_matches(void* self, const char* matchlist[static 1]);
 /// @param self KUrlCompletion*
 /// @param callback void func(KUrlCompletion* self, const char** matchlist)
 ///
-void k_urlcompletion_on_matches(void* self, void (*callback)(void*, const char***));
+void k_urlcompletion_on_matches(void* self, void (*callback)(void*, const char**));
 
 /// Inherited from KCompletion
 ///
@@ -1353,7 +1353,7 @@ void k_urlcompletion_qbase_set_items(void* self, const char* itemList[static 1])
 /// @param self KUrlCompletion*
 /// @param callback void func(KUrlCompletion* self, const char** itemList)
 ///
-void k_urlcompletion_on_set_items(void* self, void (*callback)(void*, const char***));
+void k_urlcompletion_on_set_items(void* self, void (*callback)(void*, const char**));
 
 /// Inherited from KCompletion
 ///

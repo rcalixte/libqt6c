@@ -966,12 +966,13 @@ void QTermWidget_Connect_Bell(QTermWidget* self, intptr_t slot) {
         const QString message_ret = message;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray message_b = message_ret.toUtf8();
-        char* message_str = static_cast<char*>(malloc(message_b.length() + 1));
-        memcpy(message_str, message_b.data(), message_b.length());
-        message_str[message_b.length()] = '\0';
+        auto message_str_len = message_b.length();
+        char* message_str = static_cast<char*>(malloc(message_str_len + 1));
+        memcpy(message_str, message_b.data(), message_str_len);
+        message_str[message_str_len] = '\0';
         const char* sigval1 = message_str;
         slotFunc(self, sigval1);
-        free(message_str);
+        libqt_free(message_str);
     });
 }
 
@@ -1021,12 +1022,13 @@ void QTermWidget_Connect_ProfileChanged(QTermWidget* self, intptr_t slot) {
         const QString profile_ret = profile;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray profile_b = profile_ret.toUtf8();
-        char* profile_str = static_cast<char*>(malloc(profile_b.length() + 1));
-        memcpy(profile_str, profile_b.data(), profile_b.length());
-        profile_str[profile_b.length()] = '\0';
+        auto profile_str_len = profile_b.length();
+        char* profile_str = static_cast<char*>(malloc(profile_str_len + 1));
+        memcpy(profile_str, profile_b.data(), profile_str_len);
+        profile_str[profile_str_len] = '\0';
         const char* sigval1 = profile_str;
         slotFunc(self, sigval1);
-        free(profile_str);
+        libqt_free(profile_str);
     });
 }
 
@@ -1052,12 +1054,13 @@ void QTermWidget_Connect_ReceivedData(QTermWidget* self, intptr_t slot) {
         const QString text_ret = text;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray text_b = text_ret.toUtf8();
-        char* text_str = static_cast<char*>(malloc(text_b.length() + 1));
-        memcpy(text_str, text_b.data(), text_b.length());
-        text_str[text_b.length()] = '\0';
+        auto text_str_len = text_b.length();
+        char* text_str = static_cast<char*>(malloc(text_str_len + 1));
+        memcpy(text_str, text_b.data(), text_str_len);
+        text_str[text_str_len] = '\0';
         const char* sigval1 = text_str;
         slotFunc(self, sigval1);
-        free(text_str);
+        libqt_free(text_str);
     });
 }
 

@@ -202,12 +202,13 @@ void QUndoGroup_Connect_UndoTextChanged(QUndoGroup* self, intptr_t slot) {
         const QString undoText_ret = undoText;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray undoText_b = undoText_ret.toUtf8();
-        char* undoText_str = static_cast<char*>(malloc(undoText_b.length() + 1));
-        memcpy(undoText_str, undoText_b.data(), undoText_b.length());
-        undoText_str[undoText_b.length()] = '\0';
+        auto undoText_str_len = undoText_b.length();
+        char* undoText_str = static_cast<char*>(malloc(undoText_str_len + 1));
+        memcpy(undoText_str, undoText_b.data(), undoText_str_len);
+        undoText_str[undoText_str_len] = '\0';
         const char* sigval1 = undoText_str;
         slotFunc(self, sigval1);
-        free(undoText_str);
+        libqt_free(undoText_str);
     });
 }
 
@@ -222,12 +223,13 @@ void QUndoGroup_Connect_RedoTextChanged(QUndoGroup* self, intptr_t slot) {
         const QString redoText_ret = redoText;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray redoText_b = redoText_ret.toUtf8();
-        char* redoText_str = static_cast<char*>(malloc(redoText_b.length() + 1));
-        memcpy(redoText_str, redoText_b.data(), redoText_b.length());
-        redoText_str[redoText_b.length()] = '\0';
+        auto redoText_str_len = redoText_b.length();
+        char* redoText_str = static_cast<char*>(malloc(redoText_str_len + 1));
+        memcpy(redoText_str, redoText_b.data(), redoText_str_len);
+        redoText_str[redoText_str_len] = '\0';
         const char* sigval1 = redoText_str;
         slotFunc(self, sigval1);
-        free(redoText_str);
+        libqt_free(redoText_str);
     });
 }
 

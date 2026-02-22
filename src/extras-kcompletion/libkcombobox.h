@@ -432,7 +432,7 @@ void k_combobox_set_completed_items(void* self, const char* items[static 1], boo
 /// @param self KComboBox*
 /// @param callback void func(KComboBox* self, const char** items, bool autoSuggest)
 ///
-void k_combobox_on_set_completed_items(void* self, void (*callback)(void*, const char***, bool));
+void k_combobox_on_set_completed_items(void* self, void (*callback)(void*, const char**, bool));
 
 /// [Upstream resources](https://api.kde.org/kcombobox.html#setCompletedItems)
 ///

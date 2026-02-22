@@ -283,12 +283,13 @@ void KUrlRequester_Connect_TextChanged(KUrlRequester* self, intptr_t slot) {
         const QString param1_ret = param1;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray param1_b = param1_ret.toUtf8();
-        char* param1_str = static_cast<char*>(malloc(param1_b.length() + 1));
-        memcpy(param1_str, param1_b.data(), param1_b.length());
-        param1_str[param1_b.length()] = '\0';
+        auto param1_str_len = param1_b.length();
+        char* param1_str = static_cast<char*>(malloc(param1_str_len + 1));
+        memcpy(param1_str, param1_b.data(), param1_str_len);
+        param1_str[param1_str_len] = '\0';
         const char* sigval1 = param1_str;
         slotFunc(self, sigval1);
-        free(param1_str);
+        libqt_free(param1_str);
     });
 }
 
@@ -303,12 +304,13 @@ void KUrlRequester_Connect_TextEdited(KUrlRequester* self, intptr_t slot) {
         const QString param1_ret = param1;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray param1_b = param1_ret.toUtf8();
-        char* param1_str = static_cast<char*>(malloc(param1_b.length() + 1));
-        memcpy(param1_str, param1_b.data(), param1_b.length());
-        param1_str[param1_b.length()] = '\0';
+        auto param1_str_len = param1_b.length();
+        char* param1_str = static_cast<char*>(malloc(param1_str_len + 1));
+        memcpy(param1_str, param1_b.data(), param1_str_len);
+        param1_str[param1_str_len] = '\0';
         const char* sigval1 = param1_str;
         slotFunc(self, sigval1);
-        free(param1_str);
+        libqt_free(param1_str);
     });
 }
 
@@ -323,12 +325,13 @@ void KUrlRequester_Connect_ReturnPressed(KUrlRequester* self, intptr_t slot) {
         const QString text_ret = text;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray text_b = text_ret.toUtf8();
-        char* text_str = static_cast<char*>(malloc(text_b.length() + 1));
-        memcpy(text_str, text_b.data(), text_b.length());
-        text_str[text_b.length()] = '\0';
+        auto text_str_len = text_b.length();
+        char* text_str = static_cast<char*>(malloc(text_str_len + 1));
+        memcpy(text_str, text_b.data(), text_str_len);
+        text_str[text_str_len] = '\0';
         const char* sigval1 = text_str;
         slotFunc(self, sigval1);
-        free(text_str);
+        libqt_free(text_str);
     });
 }
 

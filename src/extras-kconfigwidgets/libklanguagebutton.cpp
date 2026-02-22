@@ -152,12 +152,13 @@ void KLanguageButton_Connect_Activated(KLanguageButton* self, intptr_t slot) {
         const QString languageCode_ret = languageCode;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray languageCode_b = languageCode_ret.toUtf8();
-        char* languageCode_str = static_cast<char*>(malloc(languageCode_b.length() + 1));
-        memcpy(languageCode_str, languageCode_b.data(), languageCode_b.length());
-        languageCode_str[languageCode_b.length()] = '\0';
+        auto languageCode_str_len = languageCode_b.length();
+        char* languageCode_str = static_cast<char*>(malloc(languageCode_str_len + 1));
+        memcpy(languageCode_str, languageCode_b.data(), languageCode_str_len);
+        languageCode_str[languageCode_str_len] = '\0';
         const char* sigval1 = languageCode_str;
         slotFunc(self, sigval1);
-        free(languageCode_str);
+        libqt_free(languageCode_str);
     });
 }
 
@@ -172,12 +173,13 @@ void KLanguageButton_Connect_Highlighted(KLanguageButton* self, intptr_t slot) {
         const QString languageCode_ret = languageCode;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray languageCode_b = languageCode_ret.toUtf8();
-        char* languageCode_str = static_cast<char*>(malloc(languageCode_b.length() + 1));
-        memcpy(languageCode_str, languageCode_b.data(), languageCode_b.length());
-        languageCode_str[languageCode_b.length()] = '\0';
+        auto languageCode_str_len = languageCode_b.length();
+        char* languageCode_str = static_cast<char*>(malloc(languageCode_str_len + 1));
+        memcpy(languageCode_str, languageCode_b.data(), languageCode_str_len);
+        languageCode_str[languageCode_str_len] = '\0';
         const char* sigval1 = languageCode_str;
         slotFunc(self, sigval1);
-        free(languageCode_str);
+        libqt_free(languageCode_str);
     });
 }
 

@@ -79,7 +79,7 @@ void q_signon__authsession_mechanisms_available(void* self, const char* mechanis
     free(mechanisms_qstr);
 }
 
-void q_signon__authsession_on_mechanisms_available(void* self, void (*callback)(void*, const char***)) {
+void q_signon__authsession_on_mechanisms_available(void* self, void (*callback)(void*, const char**)) {
     SignOn__AuthSession_Connect_MechanismsAvailable((SignOn__AuthSession*)self, (intptr_t)callback);
 }
 

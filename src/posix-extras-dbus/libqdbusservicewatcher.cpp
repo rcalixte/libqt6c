@@ -133,12 +133,13 @@ void QDBusServiceWatcher_Connect_ServiceRegistered(QDBusServiceWatcher* self, in
         const QString service_ret = service;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray service_b = service_ret.toUtf8();
-        char* service_str = static_cast<char*>(malloc(service_b.length() + 1));
-        memcpy(service_str, service_b.data(), service_b.length());
-        service_str[service_b.length()] = '\0';
+        auto service_str_len = service_b.length();
+        char* service_str = static_cast<char*>(malloc(service_str_len + 1));
+        memcpy(service_str, service_b.data(), service_str_len);
+        service_str[service_str_len] = '\0';
         const char* sigval1 = service_str;
         slotFunc(self, sigval1);
-        free(service_str);
+        libqt_free(service_str);
     });
 }
 
@@ -153,12 +154,13 @@ void QDBusServiceWatcher_Connect_ServiceUnregistered(QDBusServiceWatcher* self, 
         const QString service_ret = service;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray service_b = service_ret.toUtf8();
-        char* service_str = static_cast<char*>(malloc(service_b.length() + 1));
-        memcpy(service_str, service_b.data(), service_b.length());
-        service_str[service_b.length()] = '\0';
+        auto service_str_len = service_b.length();
+        char* service_str = static_cast<char*>(malloc(service_str_len + 1));
+        memcpy(service_str, service_b.data(), service_str_len);
+        service_str[service_str_len] = '\0';
         const char* sigval1 = service_str;
         slotFunc(self, sigval1);
-        free(service_str);
+        libqt_free(service_str);
     });
 }
 
@@ -175,28 +177,31 @@ void QDBusServiceWatcher_Connect_ServiceOwnerChanged(QDBusServiceWatcher* self, 
         const QString service_ret = service;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray service_b = service_ret.toUtf8();
-        char* service_str = static_cast<char*>(malloc(service_b.length() + 1));
-        memcpy(service_str, service_b.data(), service_b.length());
-        service_str[service_b.length()] = '\0';
+        auto service_str_len = service_b.length();
+        char* service_str = static_cast<char*>(malloc(service_str_len + 1));
+        memcpy(service_str, service_b.data(), service_str_len);
+        service_str[service_str_len] = '\0';
         const char* sigval1 = service_str;
         const QString oldOwner_ret = oldOwner;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray oldOwner_b = oldOwner_ret.toUtf8();
-        char* oldOwner_str = static_cast<char*>(malloc(oldOwner_b.length() + 1));
-        memcpy(oldOwner_str, oldOwner_b.data(), oldOwner_b.length());
-        oldOwner_str[oldOwner_b.length()] = '\0';
+        auto oldOwner_str_len = oldOwner_b.length();
+        char* oldOwner_str = static_cast<char*>(malloc(oldOwner_str_len + 1));
+        memcpy(oldOwner_str, oldOwner_b.data(), oldOwner_str_len);
+        oldOwner_str[oldOwner_str_len] = '\0';
         const char* sigval2 = oldOwner_str;
         const QString newOwner_ret = newOwner;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray newOwner_b = newOwner_ret.toUtf8();
-        char* newOwner_str = static_cast<char*>(malloc(newOwner_b.length() + 1));
-        memcpy(newOwner_str, newOwner_b.data(), newOwner_b.length());
-        newOwner_str[newOwner_b.length()] = '\0';
+        auto newOwner_str_len = newOwner_b.length();
+        char* newOwner_str = static_cast<char*>(malloc(newOwner_str_len + 1));
+        memcpy(newOwner_str, newOwner_b.data(), newOwner_str_len);
+        newOwner_str[newOwner_str_len] = '\0';
         const char* sigval3 = newOwner_str;
         slotFunc(self, sigval1, sigval2, sigval3);
-        free(service_str);
-        free(oldOwner_str);
-        free(newOwner_str);
+        libqt_free(service_str);
+        libqt_free(oldOwner_str);
+        libqt_free(newOwner_str);
     });
 }
 

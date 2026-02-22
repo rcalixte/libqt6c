@@ -129,7 +129,7 @@ void q_signon__identity_methods_available(void* self, const char* methods[static
     free(methods_qstr);
 }
 
-void q_signon__identity_on_methods_available(void* self, void (*callback)(void*, const char***)) {
+void q_signon__identity_on_methods_available(void* self, void (*callback)(void*, const char**)) {
     SignOn__Identity_Connect_MethodsAvailable((SignOn__Identity*)self, (intptr_t)callback);
 }
 

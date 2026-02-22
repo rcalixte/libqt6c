@@ -113,7 +113,7 @@ void q_signon__authsession_mechanisms_available(void* self, const char* mechanis
 /// @param self SignOn__AuthSession*
 /// @param callback void func(SignOn__AuthSession* self, const char** mechanisms)
 ///
-void q_signon__authsession_on_mechanisms_available(void* self, void (*callback)(void*, const char***));
+void q_signon__authsession_on_mechanisms_available(void* self, void (*callback)(void*, const char**));
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1AuthSession.html)
 ///

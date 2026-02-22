@@ -685,12 +685,13 @@ void QObject_Connect_ObjectNameChanged(QObject* self, intptr_t slot) {
         const QString objectName_ret = objectName;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray objectName_b = objectName_ret.toUtf8();
-        char* objectName_str = static_cast<char*>(malloc(objectName_b.length() + 1));
-        memcpy(objectName_str, objectName_b.data(), objectName_b.length());
-        objectName_str[objectName_b.length()] = '\0';
+        auto objectName_str_len = objectName_b.length();
+        char* objectName_str = static_cast<char*>(malloc(objectName_str_len + 1));
+        memcpy(objectName_str, objectName_b.data(), objectName_str_len);
+        objectName_str[objectName_str_len] = '\0';
         const char* sigval1 = objectName_str;
         slotFunc(self, sigval1);
-        free(objectName_str);
+        libqt_free(objectName_str);
     });
 }
 
